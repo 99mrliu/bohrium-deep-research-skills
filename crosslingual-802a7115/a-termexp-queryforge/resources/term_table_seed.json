@@ -1,0 +1,52 @@
+{
+  "term_table_format": "1.0",
+  "note": "小规模格式示范术语表（3 个概念）。仅用于演示字段结构与来源标注方式，不是完整词表；实际使用时由 Agent 依据案例材料、受控词表（MeSH/DeCS/EMTREE 等）与种子论文关键词扩充，每个变体必须带来源与置信字段。",
+  "languages_declared": ["en", "zh", "pt", "es", "ja", "de"],
+  "concepts": [
+    {
+      "concept_id": "c1",
+      "label_en": "pyroptosis",
+      "definition_hint": "gasdermin-mediated inflammatory programmed cell death",
+      "variants": [
+        {"lang": "en", "term": "pyroptosis", "type": "preferred", "source": "MeSH:D000080634", "confidence": 0.99, "verified": true},
+        {"lang": "en", "term": "pyroptotic cell death", "type": "synonym", "source": "seed-paper-keywords", "confidence": 0.9, "verified": true},
+        {"lang": "zh", "term": "细胞焦亡", "type": "preferred", "source": "seed-paper-keywords", "confidence": 0.95, "verified": true},
+        {"lang": "zh", "term": "细胞炎性坏死", "type": "synonym", "source": "author-given-translation", "confidence": 0.6, "verified": false},
+        {"lang": "pt", "term": "piroptose", "type": "preferred", "source": "DeCS:000080634", "confidence": 0.95, "verified": true},
+        {"lang": "es", "term": "piroptosis", "type": "preferred", "source": "DeCS:000080634", "confidence": 0.95, "verified": true},
+        {"lang": "ja", "term": "パイロトーシス", "type": "transliteration", "source": "controlled-translation", "confidence": 0.8, "verified": false},
+        {"lang": "de", "term": "Pyroptose", "type": "preferred", "source": "controlled-translation", "confidence": 0.85, "verified": true}
+      ]
+    },
+    {
+      "concept_id": "c2",
+      "label_en": "soybean",
+      "definition_hint": "Glycine max (L.) Merr.",
+      "variants": [
+        {"lang": "en", "term": "soybean", "type": "preferred", "source": "AGROVOC:35782", "confidence": 0.99, "verified": true},
+        {"lang": "en", "term": "Glycine max", "type": "latin-name", "source": "AGROVOC:35782", "confidence": 0.99, "verified": true},
+        {"lang": "en", "term": "soya bean", "type": "synonym", "source": "AGROVOC:35782", "confidence": 0.9, "verified": true},
+        {"lang": "zh", "term": "大豆", "type": "preferred", "source": "seed-paper-keywords", "confidence": 0.95, "verified": true},
+        {"lang": "pt", "term": "soja", "type": "preferred", "source": "AGROVOC:35782", "confidence": 0.95, "verified": true},
+        {"lang": "es", "term": "soja", "type": "preferred", "source": "AGROVOC:35782", "confidence": 0.95, "verified": true},
+        {"lang": "ja", "term": "ダイズ", "type": "transliteration", "source": "controlled-translation", "confidence": 0.85, "verified": true},
+        {"lang": "de", "term": "Sojabohne", "type": "preferred", "source": "controlled-translation", "confidence": 0.85, "verified": true}
+      ]
+    },
+    {
+      "concept_id": "c3",
+      "label_en": "dengue virus",
+      "definition_hint": "DENV; flavivirus causing dengue fever",
+      "variants": [
+        {"lang": "en", "term": "dengue virus", "type": "preferred", "source": "MeSH:D003716", "confidence": 0.99, "verified": true},
+        {"lang": "en", "term": "DENV", "type": "abbreviation", "source": "MeSH:D003716", "confidence": 0.9, "verified": true, "ambiguity_note": "DENV 在部分语种文献中与 DENV-1/2/3/4 血清型缩写共现，须与全称联用消歧"},
+        {"lang": "zh", "term": "登革病毒", "type": "preferred", "source": "seed-paper-keywords", "confidence": 0.95, "verified": true},
+        {"lang": "zh", "term": "登革热病毒", "type": "synonym", "source": "seed-paper-keywords", "confidence": 0.9, "verified": true},
+        {"lang": "pt", "term": "vírus da dengue", "type": "preferred", "source": "DeCS:003716", "confidence": 0.95, "verified": true},
+        {"lang": "es", "term": "virus del dengue", "type": "preferred", "source": "DeCS:003716", "confidence": 0.95, "verified": true},
+        {"lang": "ja", "term": "デングウイルス", "type": "transliteration", "source": "controlled-translation", "confidence": 0.85, "verified": true},
+        {"lang": "de", "term": "Dengue-Virus", "type": "preferred", "source": "controlled-translation", "confidence": 0.85, "verified": true}
+      ]
+    }
+  ]
+}
