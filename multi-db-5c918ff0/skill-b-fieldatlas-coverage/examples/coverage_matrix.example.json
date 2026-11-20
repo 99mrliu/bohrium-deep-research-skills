@@ -1,0 +1,529 @@
+{
+  "sources": [
+    "crossref",
+    "europepmc",
+    "publisher"
+  ],
+  "fields": [
+    "identifiers.doi",
+    "identifiers.pmid",
+    "identifiers.pmcid",
+    "title",
+    "authors",
+    "container",
+    "year",
+    "volume",
+    "issue",
+    "pages",
+    "type",
+    "abstract",
+    "pub_date",
+    "cited_by",
+    "references",
+    "license",
+    "status"
+  ],
+  "matrix": {
+    "crossref": {
+      "identifiers.doi": {
+        "present": 6,
+        "missing": 1,
+        "unknown": 0,
+        "not_provided": 0
+      },
+      "identifiers.pmid": {
+        "present": 0,
+        "missing": 0,
+        "unknown": 0,
+        "not_provided": 7
+      },
+      "identifiers.pmcid": {
+        "present": 0,
+        "missing": 0,
+        "unknown": 0,
+        "not_provided": 7
+      },
+      "title": {
+        "present": 7,
+        "missing": 0,
+        "unknown": 0,
+        "not_provided": 0
+      },
+      "authors": {
+        "present": 7,
+        "missing": 0,
+        "unknown": 0,
+        "not_provided": 0
+      },
+      "container": {
+        "present": 7,
+        "missing": 0,
+        "unknown": 0,
+        "not_provided": 0
+      },
+      "year": {
+        "present": 7,
+        "missing": 0,
+        "unknown": 0,
+        "not_provided": 0
+      },
+      "volume": {
+        "present": 7,
+        "missing": 0,
+        "unknown": 0,
+        "not_provided": 0
+      },
+      "issue": {
+        "present": 7,
+        "missing": 0,
+        "unknown": 0,
+        "not_provided": 0
+      },
+      "pages": {
+        "present": 7,
+        "missing": 0,
+        "unknown": 0,
+        "not_provided": 0
+      },
+      "type": {
+        "present": 7,
+        "missing": 0,
+        "unknown": 0,
+        "not_provided": 0
+      },
+      "abstract": {
+        "present": 0,
+        "missing": 0,
+        "unknown": 0,
+        "not_provided": 7
+      },
+      "pub_date": {
+        "present": 7,
+        "missing": 0,
+        "unknown": 0,
+        "not_provided": 0
+      },
+      "cited_by": {
+        "present": 7,
+        "missing": 0,
+        "unknown": 0,
+        "not_provided": 0
+      },
+      "references": {
+        "present": 4,
+        "missing": 3,
+        "unknown": 0,
+        "not_provided": 0
+      },
+      "license": {
+        "present": 0,
+        "missing": 0,
+        "unknown": 0,
+        "not_provided": 7
+      },
+      "status": {
+        "present": 0,
+        "missing": 0,
+        "unknown": 0,
+        "not_provided": 7
+      }
+    },
+    "europepmc": {
+      "identifiers.doi": {
+        "present": 6,
+        "missing": 1,
+        "unknown": 0,
+        "not_provided": 0
+      },
+      "identifiers.pmid": {
+        "present": 7,
+        "missing": 0,
+        "unknown": 0,
+        "not_provided": 0
+      },
+      "identifiers.pmcid": {
+        "present": 4,
+        "missing": 3,
+        "unknown": 0,
+        "not_provided": 0
+      },
+      "title": {
+        "present": 7,
+        "missing": 0,
+        "unknown": 0,
+        "not_provided": 0
+      },
+      "authors": {
+        "present": 6,
+        "missing": 0,
+        "unknown": 1,
+        "not_provided": 0
+      },
+      "container": {
+        "present": 6,
+        "missing": 1,
+        "unknown": 0,
+        "not_provided": 0
+      },
+      "year": {
+        "present": 7,
+        "missing": 0,
+        "unknown": 0,
+        "not_provided": 0
+      },
+      "volume": {
+        "present": 7,
+        "missing": 0,
+        "unknown": 0,
+        "not_provided": 0
+      },
+      "issue": {
+        "present": 7,
+        "missing": 0,
+        "unknown": 0,
+        "not_provided": 0
+      },
+      "pages": {
+        "present": 7,
+        "missing": 0,
+        "unknown": 0,
+        "not_provided": 0
+      },
+      "type": {
+        "present": 7,
+        "missing": 0,
+        "unknown": 0,
+        "not_provided": 0
+      },
+      "abstract": {
+        "present": 7,
+        "missing": 0,
+        "unknown": 0,
+        "not_provided": 0
+      },
+      "pub_date": {
+        "present": 7,
+        "missing": 0,
+        "unknown": 0,
+        "not_provided": 0
+      },
+      "cited_by": {
+        "present": 7,
+        "missing": 0,
+        "unknown": 0,
+        "not_provided": 0
+      },
+      "references": {
+        "present": 0,
+        "missing": 0,
+        "unknown": 0,
+        "not_provided": 7
+      },
+      "license": {
+        "present": 0,
+        "missing": 0,
+        "unknown": 0,
+        "not_provided": 7
+      },
+      "status": {
+        "present": 7,
+        "missing": 0,
+        "unknown": 0,
+        "not_provided": 0
+      }
+    },
+    "publisher": {
+      "identifiers.doi": {
+        "present": 4,
+        "missing": 1,
+        "unknown": 0,
+        "not_provided": 0
+      },
+      "identifiers.pmid": {
+        "present": 0,
+        "missing": 0,
+        "unknown": 0,
+        "not_provided": 5
+      },
+      "identifiers.pmcid": {
+        "present": 0,
+        "missing": 0,
+        "unknown": 0,
+        "not_provided": 5
+      },
+      "title": {
+        "present": 5,
+        "missing": 0,
+        "unknown": 0,
+        "not_provided": 0
+      },
+      "authors": {
+        "present": 5,
+        "missing": 0,
+        "unknown": 0,
+        "not_provided": 0
+      },
+      "container": {
+        "present": 5,
+        "missing": 0,
+        "unknown": 0,
+        "not_provided": 0
+      },
+      "year": {
+        "present": 5,
+        "missing": 0,
+        "unknown": 0,
+        "not_provided": 0
+      },
+      "volume": {
+        "present": 5,
+        "missing": 0,
+        "unknown": 0,
+        "not_provided": 0
+      },
+      "issue": {
+        "present": 5,
+        "missing": 0,
+        "unknown": 0,
+        "not_provided": 0
+      },
+      "pages": {
+        "present": 5,
+        "missing": 0,
+        "unknown": 0,
+        "not_provided": 0
+      },
+      "type": {
+        "present": 5,
+        "missing": 0,
+        "unknown": 0,
+        "not_provided": 0
+      },
+      "abstract": {
+        "present": 3,
+        "missing": 2,
+        "unknown": 0,
+        "not_provided": 0
+      },
+      "pub_date": {
+        "present": 4,
+        "missing": 1,
+        "unknown": 0,
+        "not_provided": 0
+      },
+      "cited_by": {
+        "present": 0,
+        "missing": 0,
+        "unknown": 0,
+        "not_provided": 5
+      },
+      "references": {
+        "present": 0,
+        "missing": 0,
+        "unknown": 0,
+        "not_provided": 5
+      },
+      "license": {
+        "present": 0,
+        "missing": 0,
+        "unknown": 0,
+        "not_provided": 5
+      },
+      "status": {
+        "present": 0,
+        "missing": 0,
+        "unknown": 0,
+        "not_provided": 5
+      }
+    }
+  },
+  "total_records": 19,
+  "unique_papers": 9,
+  "clusters": [
+    {
+      "cluster_key": "doi:10.55123/synth.0001",
+      "sources": [
+        "crossref",
+        "europepmc",
+        "publisher"
+      ],
+      "title": "Adaptive mesh refinement for glacier flow models",
+      "year": 2023,
+      "doi": "10.55123/synth.0001",
+      "retracted": false
+    },
+    {
+      "cluster_key": "doi:10.55123/synth.0002",
+      "sources": [
+        "crossref",
+        "europepmc"
+      ],
+      "title": "Bayesian calibration of urban drainage simulations",
+      "year": 2022,
+      "doi": "10.55123/synth.0002",
+      "retracted": false
+    },
+    {
+      "cluster_key": "doi:10.55123/synth.0003",
+      "sources": [
+        "crossref",
+        "europepmc"
+      ],
+      "title": "Ion channel gating kinetics revisited",
+      "year": 2021,
+      "doi": "10.55123/synth.0003",
+      "retracted": true
+    },
+    {
+      "cluster_key": "doi:10.55123/synth.0004",
+      "sources": [
+        "europepmc",
+        "publisher"
+      ],
+      "title": "Soil moisture retrieval from synthetic aperture radar.",
+      "year": 2024,
+      "doi": "10.55123/synth.0004",
+      "retracted": false
+    },
+    {
+      "cluster_key": "doi:10.55123/synth.0006",
+      "sources": [
+        "crossref",
+        "europepmc",
+        "publisher"
+      ],
+      "title": "Neural surrogates for groundwater transport",
+      "year": 2023,
+      "doi": "10.55123/synth.0006",
+      "retracted": false
+    },
+    {
+      "cluster_key": "doi:10.55123/synth.0007",
+      "sources": [
+        "crossref",
+        "europepmc",
+        "publisher"
+      ],
+      "title": "Thermal limits of intertidal invertebrates",
+      "year": 2019,
+      "doi": "10.55123/synth.0007",
+      "retracted": false
+    },
+    {
+      "cluster_key": "doi:10.55123/synth.0008",
+      "sources": [
+        "crossref"
+      ],
+      "title": "Acoustic monitoring of nocturnal pollinators",
+      "year": 2022,
+      "doi": "10.55123/synth.0008",
+      "retracted": false
+    },
+    {
+      "cluster_key": "ty:community assembly rules in alpine meadows::2020",
+      "sources": [
+        "crossref",
+        "publisher"
+      ],
+      "title": "Community assembly rules in alpine meadows",
+      "year": 2020,
+      "doi": null,
+      "retracted": false
+    },
+    {
+      "cluster_key": "ty:metagenomic survey of permafrost thaw ponds::2021",
+      "sources": [
+        "europepmc"
+      ],
+      "title": "Metagenomic survey of permafrost thaw ponds.",
+      "year": 2021,
+      "doi": null,
+      "retracted": false
+    }
+  ],
+  "single_source_unique": [
+    {
+      "cluster_key": "doi:10.55123/synth.0008",
+      "source": "crossref",
+      "title": "Acoustic monitoring of nocturnal pollinators",
+      "year": 2022,
+      "doi": "10.55123/synth.0008",
+      "retracted": false
+    },
+    {
+      "cluster_key": "ty:metagenomic survey of permafrost thaw ponds::2021",
+      "source": "europepmc",
+      "title": "Metagenomic survey of permafrost thaw ponds.",
+      "year": 2021,
+      "doi": null,
+      "retracted": false
+    }
+  ],
+  "systematic_gaps": [
+    {
+      "field": "license",
+      "reason": "not_provided_in_all_sources",
+      "per_source": {
+        "crossref": {
+          "present": 0,
+          "missing": 0,
+          "unknown": 0,
+          "not_provided": 7
+        },
+        "europepmc": {
+          "present": 0,
+          "missing": 0,
+          "unknown": 0,
+          "not_provided": 7
+        },
+        "publisher": {
+          "present": 0,
+          "missing": 0,
+          "unknown": 0,
+          "not_provided": 5
+        }
+      },
+      "note": "三个/全部来源在该字段均无 present 值，列为系统性缺口字段。"
+    }
+  ],
+  "retracted_records": [
+    {
+      "cluster_key": "doi:10.55123/synth.0003",
+      "title": "Ion channel gating kinetics revisited",
+      "doi": "10.55123/synth.0003",
+      "sources": [
+        "crossref",
+        "europepmc"
+      ]
+    }
+  ],
+  "reconciliation": {
+    "per_source": {
+      "crossref": {
+        "returned": 7,
+        "parsed": 7,
+        "dropped": 0,
+        "parse_rate": 1.0
+      },
+      "europepmc": {
+        "returned": 7,
+        "parsed": 7,
+        "dropped": 0,
+        "parse_rate": 1.0
+      },
+      "publisher": {
+        "returned": 5,
+        "parsed": 5,
+        "dropped": 0,
+        "parse_rate": 1.0
+      }
+    },
+    "grand": {
+      "returned": 19,
+      "parsed": 19,
+      "dropped": 0
+    },
+    "dropped_records": []
+  },
+  "case_id": "SYNTH-COVERAGE-001"
+}

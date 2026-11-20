@@ -1,0 +1,12 @@
+{
+  "_comment": "合成引用图（虚构）：aliases 为组织方本地对齐表中显式给出的同一作品跨标识符对应（本 skill 只消费显式对应，绝不臆造 pmid↔doi 映射）；citations 为文献间引用边。",
+  "aliases": [
+    {"pmid": "99000001", "doi": "10.99999/synth.0003",
+     "evidence": "组织方本地对齐表（合成示例）"}
+  ],
+  "citations": [
+    {"citing": "10.99999/synth.0002", "cited": "10.99999/synth.0001"},
+    {"citing": "10.99999/synth.0007", "cited": "99000001"},
+    {"citing": "10.99999/synth.0005", "cited": "10.99999/synth.0004"}
+  ]
+}

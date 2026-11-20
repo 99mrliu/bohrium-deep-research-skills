@@ -1,0 +1,40 @@
+{
+  "status": "ok",
+  "message-type": "work-list",
+  "message-version": "1.0.0",
+  "message": {
+    "facets": {},
+    "total-results": 5,
+    "items-per-page": 2,
+    "query": {"search-terms": "synthetic lattice photon routing", "start-index": 0},
+    "items": [
+      {
+        "DOI": "10.55555/synth.001",
+        "title": ["Adaptive Photon Routing in Synthetic Lattices"],
+        "author": [
+          {"given": "A.", "family": "Fermi-Synth"},
+          {"given": "B.", "family": "Bose-Synth"}
+        ],
+        "container-title": ["Journal of Synthetic Photonics"],
+        "issued": {"date-parts": [[2023]]},
+        "volume": "12",
+        "issue": "3",
+        "page": "101-110",
+        "type": "journal-article",
+        "publisher": "SynthPress"
+      },
+      {
+        "DOI": "10.55555/synth.002",
+        "title": ["Quantum Error Buffers for Noisy Intermediate Devices"],
+        "author": [{"given": "C.", "family": "Dirac-Synth"}],
+        "container-title": ["Annals of Fabricated Quantum Engineering"],
+        "issued": {"date-parts": [[2022]]},
+        "volume": "8",
+        "issue": "1",
+        "page": "45-52",
+        "type": "journal-article",
+        "publisher": "SynthPress"
+      }
+    ]
+  }
+}

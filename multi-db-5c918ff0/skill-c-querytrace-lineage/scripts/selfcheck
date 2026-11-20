@@ -1,0 +1,248 @@
+#!/usr/bin/env python3
+# -*- coding: utf-8 -*-
+"""selfcheck — querytrace-lineage-chain 自带自检入口。
+
+跑 examples/ 下的合成示例（全部数据为虚构，非真实案例）：
+  正例：parse_case / scaffold_result / query_log / build_lineage /
+        verify_chain / import_diff 全链路 exit 0，并断言：
+        - 已知重复对（DOI 小写归一 / 归一题名精确）汇入同一 canonical；
+        - 每个字段 raw_pointer 可被 verify_chain 解析回原文（四核验通过）；
+        - 丢弃 item 均有合法原因码（duplicate_of / relevance_excluded /
+          unparsed）；
+        - 分页截断被识别（2 页×2 items < total_hits 5）；
+        - publisher 记 query_unrecorded；重放 hash 一致。
+  负例：人为删掉 lineage.jsonl 中一条 raw_pointer → verify_chain exit 3
+        且 chain_gaps.jsonl 含 field_chain_broken。
+  降级例：无导入状态 → import_diff exit 2（诚实降级）。
+  健壮例：坏 JSON 材料 → 降级 unknown 留痕、不 crash。
+  另对 scripts/ 全部脚本做 py_compile。
+任一断言失败 selfcheck 以 exit 3 结束；全部通过 exit 0。
+
+用法：python3 scripts/selfcheck  （或 chmod +x 后直接执行）
+"""
+import json
+import os
+import py_compile
+import shutil
+import subprocess
+import sys
+import tempfile
+
+HERE = os.path.dirname(os.path.abspath(__file__))
+ROOT = os.path.dirname(HERE)
+EX = os.path.join(ROOT, "examples")
+PY = sys.executable
+
+results = []
+
+
+def run(argv):
+    p = subprocess.run([PY] + argv, capture_output=True, text=True)
+    return p.returncode, (p.stdout or "") + (p.stderr or "")
+
+
+def check(name, cond, detail=""):
+    results.append((name, bool(cond), detail))
+    print("%s %s%s" % ("PASS" if cond else "FAIL", name,
+                       (" | " + detail.strip().splitlines()[-1][:200])
+                       if detail else ""))
+
+
+def main():
+    tmp = tempfile.mkdtemp(prefix="querytrace_selfcheck_")
+    work = os.path.join(tmp, "work")
+    os.makedirs(work)
+    summary = os.path.join(tmp, "case_summary.json")
+    result = os.path.join(tmp, "result.json")
+    report = os.path.join(tmp, "lineage_report.md")
+    excl = os.path.join(tmp, "exclusions.json")
+
+    # relevance_excluded 由模型仲裁注入（不预置在 examples 中）
+    with open(excl, "w", encoding="utf-8") as f:
+        json.dump({"europepmc:raw_europepmc.json:item[1]": "relevance_excluded"},
+                  f, ensure_ascii=False)
+
+    # ---------- 正例：全链路 ----------
+    rc, out = run([os.path.join(HERE, "parse_case.py"),
+                   "--case", os.path.join(EX, "case.json"),
+                   "--task", os.path.join(EX, "task.md"),
+                   "--materials-dir", EX, "--out", summary])
+    ok = False
+    if rc == 0 and os.path.isfile(summary):
+        sj = json.load(open(summary, encoding="utf-8"))
+        sniffs = sorted(m["sniff"] for m in sj["materials"])
+        ok = sj.get("case_id") == "EX-SYN-C01" and \
+            sniffs.count("crossref") == 2 and "europepmc" in sniffs and \
+            "publisher" in sniffs and "import_state" in sniffs and \
+            "query_ledger" in sniffs and sj.get("import_state")
+    check("positive.parse_case exit0 + 嗅探归类", rc == 0 and ok, out)
+
+    rc, out = run([os.path.join(HERE, "scaffold_result.py"),
+                   "--summary", summary, "--out", result])
+    ok = False
+    if rc == 0 and os.path.isfile(result):
+        rj = json.load(open(result, encoding="utf-8"))
+        ok = rj.get("case_id") == "EX-SYN-C01" and \
+            all(k in rj for k in ("status", "sources", "uncertainty")) and \
+            all(k in rj for k in ("query_ledger", "lineage", "chain_gaps",
+                                  "import_diff"))
+    check("positive.scaffold_result exit0 + 合同字段", rc == 0 and ok, out)
+
+    rc, out = run([os.path.join(HERE, "query_log.py"),
+                   "--summary", summary, "--work", work])
+    audit = os.path.join(work, "query_audit.json")
+    ok = False
+    if rc == 0 and os.path.isfile(audit):
+        aj = json.load(open(audit, encoding="utf-8"))
+        pag = {p["source_db"]: p["status"] for p in aj.get("pagination") or []}
+        mc = (aj.get("mechanical_copy") or {}).get("verdict", "")
+        rl = aj.get("rate_limit") or {}
+        ok = pag.get("crossref") == "suspected_truncation" and \
+            pag.get("europepmc") == "complete" and \
+            "mechanical_copy_confirmed" not in mc and \
+            all("classification" in v for v in rl.values())
+    check("positive.query_log exit0 + 截断/机械复制/限流审计", rc == 0 and ok, out)
+
+    ledger = os.path.join(work, "query_ledger.jsonl")
+    ok = False
+    if os.path.isfile(ledger):
+        les = [json.loads(l) for l in open(ledger, encoding="utf-8") if l.strip()]
+        ok = any(e.get("query_unrecorded") for e in les) and \
+            len([e for e in les if not e.get("query_unrecorded")]) >= 3
+    check("positive.query_ledger query_unrecorded 诚实记录", ok)
+
+    rc, out = run([os.path.join(HERE, "build_lineage.py"),
+                   "--summary", summary, "--work", work,
+                   "--exclusions", excl])
+    can_path = os.path.join(work, "canonical_records.json")
+    lin_path = os.path.join(work, "lineage.jsonl")
+    uid2canon, discards = {}, {}
+    if rc == 0 and os.path.isfile(lin_path):
+        for l in open(lin_path, encoding="utf-8"):
+            if not l.strip():
+                continue
+            r = json.loads(l)
+            d = r.get("dedup_decision") or {}
+            if d.get("canonical"):
+                uid2canon[r["record_uid"]] = (d["canonical"], d["status"])
+            if r.get("discard"):
+                discards[r["record_uid"]] = r["discard"]["reason_code"]
+    canon_ids = {v[0] for v in uid2canon.values()}
+    ok_pair1 = uid2canon.get("crossref:raw_crossref_page1.json:item[1]", [None])[0] \
+        == uid2canon.get("publisher:raw_publisher.json:item[0]", [None])[0] not in (None,)
+    ok_pair2 = uid2canon.get("crossref:raw_crossref_page2.json:item[1]", [None])[0] \
+        == uid2canon.get("europepmc:raw_europepmc.json:item[0]", [None])[0] not in (None,)
+    ok_pair3 = uid2canon.get("crossref:raw_crossref_page1.json:item[0]", [None])[0] \
+        == uid2canon.get("europepmc:raw_europepmc.json:item[2]", [None])[0] not in (None,)
+    ok_dup = uid2canon.get("publisher:raw_publisher.json:item[0]", [None, ""])[1] \
+        == "duplicate_of"
+    ok_discard = discards.get("europepmc:raw_europepmc.json:item[1]") \
+        == "relevance_excluded" and \
+        discards.get("publisher:raw_publisher.json:item[2]") == "unparsed"
+    ok_count = len(canon_ids) == 5 and len(discards) == 2
+    check("positive.build_lineage exit0 + 重复对聚类(Tier1/Tier2)",
+          rc == 0 and ok_pair1 and ok_pair2 and ok_pair3, out)
+    check("positive.duplicate_of/relevance_excluded/unparsed 原因码",
+          ok_dup and ok_discard and ok_count, out)
+
+    rc, out = run([os.path.join(HERE, "verify_chain.py"),
+                   "--summary", summary, "--work", work,
+                   "--exclusions", excl, "--report", report,
+                   "--import-diff", os.path.join(work, "import_diff.json")])
+    vrep = os.path.join(work, "verify_report.json")
+    ok = False
+    if rc == 0 and os.path.isfile(vrep):
+        vr = json.load(open(vrep, encoding="utf-8"))
+        ok = vr.get("gap_count") == 0 and \
+            all(v == "pass" for v in (vr.get("checks") or {}).values()) and \
+            vr.get("replay_hash") and os.path.isfile(report) and \
+            "断链" in open(report, encoding="utf-8").read()
+    check("positive.verify_chain exit0 + 四核验通过 + 重放一致 + 报告渲染",
+          rc == 0 and ok, out)
+
+    rc, out = run([os.path.join(HERE, "import_diff.py"),
+                   "--summary", summary, "--work", work])
+    idf = os.path.join(work, "import_diff.json")
+    ok = False
+    if rc == 0 and os.path.isfile(idf):
+        d = json.load(open(idf, encoding="utf-8"))
+        cl = d.get("classes") or {}
+        ok = len(cl.get("new") or []) == 2 and \
+            any("synth.003" in str(e.get("identifier")) for e in
+                cl.get("already_imported") or []) and \
+            any("synth.004" in str(e.get("identifier")) and
+                any(f.get("field") == "pages" for f in e.get("field_diffs") or [])
+                for e in cl.get("updated") or []) and \
+            any("synth.002" in str(e.get("identifier"))
+                for e in cl.get("conflicting") or [])
+    check("positive.import_diff exit0 + 四类 diff", rc == 0 and ok, out)
+
+    # ---------- 负例：人为删除 raw_pointer → verify exit 3 ----------
+    bad_work = os.path.join(tmp, "work_bad")
+    shutil.copytree(work, bad_work)
+    bad_lin = os.path.join(bad_work, "lineage.jsonl")
+    lines = open(bad_lin, encoding="utf-8").read().splitlines()
+    r0 = json.loads(lines[0])
+    r0["field_extractions"]["doi"]["raw_pointer"] = "message.items[0].NONEXISTENT"
+    lines[0] = json.dumps(r0, ensure_ascii=False, sort_keys=True)
+    with open(bad_lin, "w", encoding="utf-8") as f:
+        f.write("\n".join(lines) + "\n")
+    rc, out = run([os.path.join(HERE, "verify_chain.py"),
+                   "--summary", summary, "--work", bad_work,
+                   "--exclusions", excl])
+    gaps = os.path.join(bad_work, "chain_gaps.jsonl")
+    ok = rc == 3 and os.path.isfile(gaps) and \
+        any("field_chain_broken" in l for l in
+            open(gaps, encoding="utf-8").read().splitlines())
+    check("negative.删除 raw_pointer → verify_chain exit3 + 断链留痕", ok, out)
+
+    # ---------- 降级例：无导入状态 → import_diff exit 2 ----------
+    sj = json.load(open(summary, encoding="utf-8"))
+    sj["import_state"] = None
+    no_state = os.path.join(tmp, "summary_nostate.json")
+    with open(no_state, "w", encoding="utf-8") as f:
+        json.dump(sj, f, ensure_ascii=False)
+    rc, out = run([os.path.join(HERE, "import_diff.py"),
+                   "--summary", no_state, "--work", work])
+    check("degrade.无导入状态 → import_diff exit2", rc == 2 and
+          "诚实降级" in out, out)
+
+    # ---------- 健壮例：坏 JSON 不 crash、留痕 ----------
+    badmat = os.path.join(tmp, "badmat")
+    shutil.copytree(EX, badmat)
+    with open(os.path.join(badmat, "raw_publisher.json"), "w",
+              encoding="utf-8") as f:
+        f.write("{this is not valid json")
+    bad_summary = os.path.join(tmp, "summary_bad.json")
+    rc, out = run([os.path.join(HERE, "parse_case.py"),
+                   "--case", os.path.join(badmat, "case.json"),
+                   "--task", os.path.join(badmat, "task.md"),
+                   "--materials-dir", badmat, "--out", bad_summary])
+    ok = rc == 0 and "Traceback" not in out
+    if ok and os.path.isfile(bad_summary):
+        bj = json.load(open(bad_summary, encoding="utf-8"))
+        pub = [m for m in bj["materials"] if m["file"] == "raw_publisher.json"]
+        ok = pub and pub[0]["sniff"] == "unknown" and \
+            "raw_publisher.json" in (bj.get("unparsed_files") or [])
+    check("robust.坏 JSON → unknown 降级 + 留痕 + 不 crash", ok, out)
+
+    # ---------- py_compile 全部脚本 ----------
+    bad = []
+    for fn in sorted(os.listdir(HERE)):
+        path = os.path.join(HERE, fn)
+        if fn.endswith(".py") or fn == "selfcheck":
+            try:
+                py_compile.compile(path, doraise=True,
+                                   cfile=os.path.join(tmp, fn + ".pyc"))
+            except py_compile.PyCompileError as e:
+                bad.append(str(e))
+    check("py_compile all scripts", not bad, "; ".join(bad))
+
+    n_fail = sum(1 for _, ok, _ in results if not ok)
+    print("----")
+    print("selfcheck 汇总: %d 项断言, %d 失败" % (len(results), n_fail))
+    return 3 if n_fail else 0
+
+
+if __name__ == "__main__":
+    sys.exit(main())

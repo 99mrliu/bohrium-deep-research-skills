@@ -1,0 +1,112 @@
+{
+  "status": "ok",
+  "message-type": "work-list",
+  "message": {
+    "total-results": 7,
+    "query": {"search-terms": "synthetic coverage audit"},
+    "items": [
+      {
+        "DOI": "10.55123/synth.0001",
+        "title": ["Adaptive mesh refinement for glacier flow models"],
+        "author": [
+          {"family": "Acker", "given": "Lena"},
+          {"family": "Bram", "given": "Tobias"}
+        ],
+        "container-title": ["Journal of Computational Geoscience"],
+        "issued": {"date-parts": [[2023, 6, 15]]},
+        "published-print": {"date-parts": [[2023, 6, 15]]},
+        "published-online": {"date-parts": [[2023, 5, 30]]},
+        "volume": "45",
+        "issue": "6",
+        "page": "881-902",
+        "type": "journal-article",
+        "is-referenced-by-count": 17,
+        "reference": [
+          {"key": "r1", "DOI": "10.55123/synth.9001"},
+          {"key": "r2", "DOI": "10.55123/synth.9002"}
+        ]
+      },
+      {
+        "DOI": "10.55123/synth.0002",
+        "title": ["Bayesian calibration of urban drainage simulations"],
+        "author": [
+          {"family": "Chen", "given": "Wei"},
+          {"family": "Okafor", "given": "Ngozi"}
+        ],
+        "container-title": ["Water Systems Letters"],
+        "issued": {"date-parts": [[2022, 3, 1]]},
+        "volume": "12",
+        "issue": "3",
+        "page": "210-228",
+        "type": "journal-article",
+        "is-referenced-by-count": 9,
+        "reference": [{"key": "r1", "unstructured": "synthetic ref"}]
+      },
+      {
+        "DOI": "10.55123/synth.0003",
+        "title": ["Ion channel gating kinetics revisited"],
+        "author": [{"family": "Dvorak", "given": "Petr"}],
+        "container-title": ["Membrane Biophysics Reports"],
+        "issued": {"date-parts": [[2021, 4, 20]]},
+        "volume": "8",
+        "issue": "2",
+        "page": "55-71",
+        "type": "journal-article",
+        "is-referenced-by-count": 23
+      },
+      {
+        "title": ["Community assembly rules in alpine meadows"],
+        "author": [{"family": "Novak", "given": "Jana"}],
+        "container-title": ["Alpine Ecology"],
+        "issued": {"date-parts": [[2020, 9, 1]]},
+        "volume": "33",
+        "issue": "4",
+        "page": "400-415",
+        "type": "journal-article",
+        "is-referenced-by-count": 31
+      },
+      {
+        "DOI": "10.55123/synth.0006",
+        "title": ["Neural surrogates for groundwater transport"],
+        "author": [
+          {"family": "Petrov", "given": "Alexei"},
+          {"family": "Sato", "given": "Haruka"},
+          {"family": "Kim", "given": "Dae"}
+        ],
+        "container-title": ["Hydroinformatics Journal"],
+        "issued": {"date-parts": [[2023, 11, 2]]},
+        "volume": "7",
+        "issue": "9",
+        "page": "1220-1241",
+        "type": "journal-article",
+        "is-referenced-by-count": 5,
+        "reference": [{"key": "r1", "DOI": "10.55123/synth.9003"}]
+      },
+      {
+        "DOI": "10.55123/synth.0007",
+        "title": ["Thermal limits of intertidal invertebrates"],
+        "author": [{"family": "Quintana", "given": "Rosa"}],
+        "container-title": ["Marine Thermal Biology"],
+        "issued": {"date-parts": [[2019, 2, 12]]},
+        "volume": "5",
+        "issue": "2",
+        "page": "88-99",
+        "type": "journal-article",
+        "is-referenced-by-count": 44,
+        "reference": [{"key": "r1", "DOI": "10.55123/synth.9004"}]
+      },
+      {
+        "DOI": "10.55123/synth.0008",
+        "title": ["Acoustic monitoring of nocturnal pollinators"],
+        "author": [{"family": "Ueda", "given": "Kenji"}],
+        "container-title": ["Bioacoustics Field Studies"],
+        "issued": {"date-parts": [[2022, 7, 19]]},
+        "volume": "14",
+        "issue": "1",
+        "page": "10-25",
+        "type": "journal-article",
+        "is-referenced-by-count": 2
+      }
+    ]
+  }
+}

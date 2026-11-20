@@ -1,0 +1,75 @@
+{
+  "_comment": "合成示例数据（虚构），仅用于 selfcheck；PMID 990000xx 号段为虚构占位，非真实 PMID。",
+  "hitCount": 4,
+  "request": {"query": "synthetic example query", "pageSize": 25},
+  "resultList": {
+    "result": [
+      {
+        "id": "99000002",
+        "source": "MED",
+        "pmid": "99000002",
+        "doi": "10.99999/synth.0002",
+        "title": "Graph neural networks predict enzyme function from sequence.",
+        "authorString": "Zhang W, Li N",
+        "journalInfo": {
+          "journal": {"title": "Journal of Synthetic Computation"},
+          "yearOfPublication": "2022",
+          "volume": "8",
+          "issue": "1",
+          "pages": "33-47"
+        },
+        "abstractText": "We show that graph neural networks can predict enzyme function directly from sequence.",
+        "pubTypeList": {"pubType": ["journal-article"]}
+      },
+      {
+        "id": "99000001",
+        "source": "MED",
+        "pmid": "99000001",
+        "title": "Deep learning for cryo-EM particle picking.",
+        "authorString": "Chen J, Park S",
+        "journalInfo": {
+          "journal": {"title": "Structural Methods Quarterly"},
+          "yearOfPublication": "2020",
+          "volume": "5",
+          "issue": "3",
+          "pages": "210-225"
+        },
+        "abstractText": "A deep residual network picks particles from cryo-EM micrographs with high recall.",
+        "pubTypeList": {"pubType": ["journal-article"]}
+      },
+      {
+        "id": "99000020",
+        "source": "MED",
+        "pmid": "99000020",
+        "title": "Machine learning for single-cell RNA-seq batch correction.",
+        "authorString": "Tanaka R, Chen J",
+        "journalInfo": {
+          "journal": {"title": "Computational Genomics Notes"},
+          "yearOfPublication": "2021",
+          "volume": "6",
+          "issue": "4",
+          "pages": "88-99"
+        },
+        "abstractText": "We benchmark machine learning methods for batch correction in single-cell RNA-seq.",
+        "pubTypeList": {"pubType": ["journal-article"]}
+      },
+      {
+        "id": "99000011",
+        "source": "MED",
+        "pmid": "99000011",
+        "doi": "10.99999/synth.0007",
+        "title": "CRISPR screens identify regulators of ferroptosis.",
+        "authorString": "Khan A, Osei K",
+        "journalInfo": {
+          "journal": {"title": "Cell Stress Reports"},
+          "yearOfPublication": "2023",
+          "volume": "9",
+          "issue": "2",
+          "pages": "150-163"
+        },
+        "abstractText": "",
+        "pubTypeList": {"pubType": ["journal-article"]}
+      }
+    ]
+  }
+}

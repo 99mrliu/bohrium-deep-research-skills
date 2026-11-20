@@ -1,0 +1,309 @@
+#!/usr/bin/env python3
+# -*- coding: utf-8 -*-
+"""selfcheck — identitymerge-dedup-engine 自带自检入口。
+
+跑 examples/ 下的合成示例（全部虚构数据，非真实案例，见 examples/README.md）：
+  正例全链路 parse_case → scaffold_result → normalize_records → dedup →
+  merge_records，断言：
+    A1 已知 DOI 重复对归并（T1_DOI_EXACT）
+    A2 跨标识符互链对归并（T1_ID_CROSSREF，仅靠引用图显式别名）
+    A3 无标识符同题名对 Tier2 归并（T2_TITLE_YEAR_FIRSTAUTHOR）
+    A4 同题名不同年份不并（NON_DUP_YEAR_MISMATCH，分属不同簇）
+    A5 T3 模糊对进仲裁队列（T3_FUZZY_ARBITRATE，绝不自动合并）
+    A6 作者串两种格式（'Surname I.' 与 'Family, Given'）解析一致
+    A7 字段缺失语义：missing（P8 无 PMID）/ unknown（P6 abstract 空串）/
+       not_provided_by 标注（P1 abstract not_provided_by_crossref）
+    A8 无仲裁文件时 arbitrate 簇保持 pending 并如实标注
+    A9 仲裁决议 merge 应用后簇归并且标 resolved_by_arbitration
+    A10 确定性排序：两次运行 merge 输出逐字节一致
+    A11 冲突日志含 P1 issue 冲突（publisher 3 vs crossref 2）
+  降级/负例：
+    D1 空材料（case/task 均缺失）→ parse_case exit 2
+    D2 坏 JSON 材料 → parse_case 不崩溃、exit 0、文件入 unparsed_files；
+       其后 normalize exit 2（无记录型材料）
+    D3 dedup 缺 normalized 输入 → exit 2
+    D4 normalized 含坏行 → dedup exit 0 且 skipped_bad_lines 留痕
+  另对 scripts/ 全部脚本 py_compile。
+
+全部断言通过 exit 0；任一断言失败 exit 3。
+
+用法：python3 scripts/selfcheck  （或 chmod +x 后直接执行）
+"""
+import json
+import os
+import py_compile
+import subprocess
+import sys
+import tempfile
+
+HERE = os.path.dirname(os.path.abspath(__file__))
+ROOT = os.path.dirname(HERE)
+EX = os.path.join(ROOT, "examples")
+PY = sys.executable
+
+results = []
+
+
+def run(argv):
+    p = subprocess.run([PY] + argv, capture_output=True, text=True)
+    return p.returncode, (p.stdout or "") + (p.stderr or "")
+
+
+def check(name, cond, detail=""):
+    results.append((name, bool(cond), detail))
+    tail = detail.strip().splitlines()[-1][:200] if detail and detail.strip() else ""
+    print("%s %s%s" % ("PASS" if cond else "FAIL", name,
+                       (" | " + tail) if (tail and not cond) else ""))
+
+
+def jload(path):
+    with open(path, encoding="utf-8") as f:
+        return json.load(f)
+
+
+def main():
+    tmp = tempfile.mkdtemp(prefix="idmerge_selfcheck_")
+    summary = os.path.join(tmp, "case_summary.json")
+    result = os.path.join(tmp, "result.json")
+    norm = os.path.join(tmp, "normalized.jsonl")
+    decisions = os.path.join(tmp, "dedup_decisions.jsonl")
+    clusters = os.path.join(tmp, "clusters.json")
+    queue = os.path.join(tmp, "arbitration_queue.json")
+    merged = os.path.join(tmp, "merged_records.json")
+    merged2 = os.path.join(tmp, "merged_records_2.json")
+    conflicts = os.path.join(tmp, "conflict_log.jsonl")
+
+    S = lambda name: os.path.join(HERE, name)
+
+    # ---------- 正例：全链路 ----------
+    rc, out = run([S("parse_case.py"),
+                   "--case", os.path.join(EX, "case.json"),
+                   "--task", os.path.join(EX, "task.md"),
+                   "--out", summary])
+    ok = False
+    if rc == 0:
+        cs = jload(summary)
+        stypes = {m["sniff_type"] for m in cs["materials"]}
+        ok = (cs["case_id"] == "EX-SYN-5C918FF0-A"
+              and {"crossref", "europepmc", "publisher"} <= stypes
+              and "reference_graph" in stypes
+              and len(cs["reference_graph_files"]) == 1
+              and not cs["unparsed_files"])
+    check("positive.parse_case exit0 + 嗅探归类", ok, out)
+
+    rc, out = run([S("scaffold_result.py"), "--summary", summary, "--out", result])
+    ok = rc == 0 and jload(result).get("case_id") == "EX-SYN-5C918FF0-A"
+    check("positive.scaffold_result exit0 + 骨架", ok, out)
+
+    rc, out = run([S("normalize_records.py"), "--summary", summary, "--out", norm])
+    recs = []
+    if rc == 0:
+        with open(norm, encoding="utf-8") as f:
+            recs = [json.loads(l) for l in f if l.strip()]
+    check("positive.normalize exit0 + 记录数>=8", rc == 0 and len(recs) >= 8, out)
+    by_uid = {r["record_uid"]: r for r in recs}
+
+    # A6 作者串两种格式解析一致（crossref 结构化 / EuropePMC 'Surname I.' /
+    # publisher 'Family, Given' 归一到同 family）
+    fam = lambda u: (by_uid[u]["authors_norm"][0]["family"].lower()
+                     if by_uid.get(u, {}).get("authors_norm") else None)
+    a6 = (fam("crossref:raw_crossref.json:1") == "zhang"
+          and fam("europepmc:raw_europepmc.json:0") == "zhang"
+          and fam("publisher:raw_publisher.json:0") == "zhang")
+    check("A6.作者两格式解析一致", a6)
+
+    rc, out = run([S("dedup.py"), "--normalized", norm, "--summary", summary,
+                   "--decisions", decisions, "--clusters", clusters,
+                   "--queue", queue])
+    decs, clu, que = [], {"clusters": []}, {"pending": []}
+    if rc == 0:
+        with open(decisions, encoding="utf-8") as f:
+            decs = [json.loads(l) for l in f if l.strip()]
+        clu, que = jload(clusters), jload(queue)
+    check("positive.dedup exit0", rc == 0, out)
+
+    def same_cluster(u1, u2):
+        for c in clu["clusters"]:
+            s = set(c["member_uids"])
+            if u1 in s and u2 in s:
+                return True
+        return False
+
+    def has_decision(reason, u1=None, u2=None, match=None):
+        for d in decs:
+            if d["reason_code"] != reason:
+                continue
+            if u1 and u2 and set(d["pair"]) != {u1, u2}:
+                continue
+            if match is not None and d["match"] != match:
+                continue
+            return True
+        return False
+
+    P1 = ("crossref:raw_crossref.json:0", "publisher:raw_publisher.json:0")
+    P3 = ("europepmc:raw_europepmc.json:1", "publisher:raw_publisher.json:1")
+    P9 = ("crossref:raw_crossref.json:4", "publisher:raw_publisher.json:5")
+    P4 = ("crossref:raw_crossref.json:2", "publisher:raw_publisher.json:2")
+    P5 = ("europepmc:raw_europepmc.json:2", "publisher:raw_publisher.json:3")
+
+    check("A1.DOI 重复对归并(T1_DOI_EXACT)",
+          same_cluster(*P1) and has_decision("T1_DOI_EXACT", *P1, match=True))
+    check("A2.跨标识符互链归并(T1_ID_CROSSREF)",
+          same_cluster(*P3) and has_decision("T1_ID_CROSSREF", *P3, match=True))
+    check("A3.无标识符 Tier2 归并(T2_TITLE_YEAR_FIRSTAUTHOR)",
+          same_cluster(*P9) and has_decision("T2_TITLE_YEAR_FIRSTAUTHOR",
+                                             *P9, match=True))
+    check("A4.同题名不同年份不并(NON_DUP_YEAR_MISMATCH)",
+          not same_cluster(*P4)
+          and has_decision("NON_DUP_YEAR_MISMATCH", *P4, match=False))
+    check("A5.T3 模糊对进仲裁(T3_FUZZY_ARBITRATE)",
+          not same_cluster(*P5)
+          and has_decision("T3_FUZZY_ARBITRATE", *P5, match="arbitrate")
+          and any(set(q["pair"]) == set(P5) for q in que["pending"]))
+
+    rc, out = run([S("merge_records.py"), "--normalized", norm,
+                   "--clusters", clusters, "--queue", queue,
+                   "--out", merged, "--conflicts", conflicts])
+    mo = jload(merged) if rc == 0 else {"records": [], "summary": {}}
+    mrecs = mo["records"]
+    check("positive.merge exit0", rc == 0, out)
+
+    def canon_with(uid):
+        for c in mrecs:
+            if uid in c["member_uids"]:
+                return c
+        return None
+
+    # A7 字段缺失三级语义
+    c8 = canon_with("crossref:raw_crossref.json:3")     # P8 仅 crossref
+    c6 = canon_with("europepmc:raw_europepmc.json:3")   # P6 abstract 空串
+    c7 = canon_with("publisher:raw_publisher.json:4")   # P7 仅 publisher 无摘要
+    c1 = canon_with("publisher:raw_publisher.json:0")   # P1
+    a7 = (c8 and c8["identifiers"]["pmid"]["status"] == "missing"
+          and c6 and c6["field_status"]["abstract"] == "unknown"
+          and c7 and c7["field_status"]["abstract"] == "missing"
+          and c1 and "crossref" in c1["field_provenance"]["abstract"]
+          .get("not_provided_by", []))
+    check("A7.missing/unknown/not_provided 语义", a7)
+
+    # A8 无仲裁文件：pending 如实标注，模糊对不并
+    c5a, c5b = canon_with(P5[0]), canon_with(P5[1])
+    a8 = (c5a and c5b and c5a["canonical_id"] != c5b["canonical_id"]
+          and c5a["arbitration_status"] == "pending_arbitration"
+          and mo["summary"]["clusters_pending_arbitration"] >= 1)
+    check("A8.无仲裁文件 pending 标注", a8)
+
+    # A11 冲突日志：P1 issue publisher=3 vs crossref=2
+    clog = []
+    if os.path.isfile(conflicts):
+        with open(conflicts, encoding="utf-8") as f:
+            clog = [json.loads(l) for l in f if l.strip()]
+    a11 = any(c["field"] == "issue"
+              and c["values_by_source"].get("publisher") == "3"
+              and c["values_by_source"].get("crossref") == "2"
+              and c["chosen"]["source"] == "publisher" for c in clog)
+    check("A11.冲突日志 issue 冲突", a11)
+
+    # A10 确定性：重跑 merge 输出逐字节一致
+    rc2, out2 = run([S("merge_records.py"), "--normalized", norm,
+                     "--clusters", clusters, "--queue", queue,
+                     "--out", merged2,
+                     "--conflicts", os.path.join(tmp, "c2.jsonl")])
+    det = False
+    if rc2 == 0:
+        with open(merged, "rb") as f:
+            b1 = f.read()
+        with open(merged2, "rb") as f:
+            b2 = f.read()
+        det = b1 == b2
+    check("A10.确定性排序可重放", det, out2)
+
+    # A9 仲裁决议应用
+    arb = os.path.join(tmp, "arbitrations.json")
+    with open(arb, "w", encoding="utf-8") as f:
+        json.dump([{"pair": list(P5), "decision": "merge",
+                    "decided_by": "selfcheck", "rationale": "合成断言"}], f)
+    merged3 = os.path.join(tmp, "merged_records_3.json")
+    rc, out = run([S("merge_records.py"), "--normalized", norm,
+                   "--clusters", clusters, "--arbitrations", arb,
+                   "--out", merged3,
+                   "--conflicts", os.path.join(tmp, "c3.jsonl")])
+    mo3 = jload(merged3) if rc == 0 else {"records": []}
+    hit = None
+    for c in mo3["records"]:
+        if set(P5) <= set(c["member_uids"]):
+            hit = c
+    check("A9.仲裁 merge 应用", rc == 0 and hit is not None
+          and hit["arbitration_status"] == "resolved_by_arbitration", out)
+
+    # ---------- 降级/负例 ----------
+    rc, out = run([S("parse_case.py"),
+                   "--case", os.path.join(tmp, "nope", "case.json"),
+                   "--task", os.path.join(tmp, "nope", "task.md"),
+                   "--out", os.path.join(tmp, "nope_summary.json")])
+    check("D1.空材料 -> parse_case exit2", rc == 2, out)
+
+    baddir = os.path.join(tmp, "badcase")
+    os.makedirs(baddir, exist_ok=True)
+    with open(os.path.join(baddir, "case.json"), "w", encoding="utf-8") as f:
+        json.dump({"case_id": "EX-SYN-BAD",
+                   "materials": [{"path": "broken.json"}]}, f)
+    with open(os.path.join(baddir, "broken.json"), "w", encoding="utf-8") as f:
+        f.write("{ this is not valid json ]")
+    badsum = os.path.join(tmp, "bad_summary.json")
+    rc, out = run([S("parse_case.py"),
+                   "--case", os.path.join(baddir, "case.json"),
+                   "--task", os.path.join(baddir, "task.md"),
+                   "--out", badsum])
+    ok = False
+    if rc == 0:
+        bs = jload(badsum)
+        ok = any("broken.json" in u["path"] for u in bs["unparsed_files"])
+    check("D2.坏 JSON 不崩溃且入 unparsed_files", ok, out)
+    rc, out = run([S("normalize_records.py"), "--summary", badsum,
+                   "--out", os.path.join(tmp, "bad_norm.jsonl")])
+    check("D2b.无记录型材料 -> normalize exit2", rc == 2, out)
+
+    rc, out = run([S("dedup.py"), "--normalized",
+                   os.path.join(tmp, "missing.jsonl"),
+                   "--decisions", os.path.join(tmp, "d.jsonl"),
+                   "--clusters", os.path.join(tmp, "c.json"),
+                   "--queue", os.path.join(tmp, "q.json")])
+    check("D3.缺 normalized -> dedup exit2", rc == 2, out)
+
+    badnorm = os.path.join(tmp, "badlines.jsonl")
+    with open(badnorm, "w", encoding="utf-8") as f:
+        f.write('{"record_uid":"x:f:0","source":"jsonl","identifiers":{},'
+                '"title_norm":"alpha","authors_norm":[],"field_status":{}}\n')
+        f.write("{ broken line\n")
+        f.write('{"record_uid":"x:f:1","source":"jsonl","identifiers":{},'
+                '"title_norm":"beta","authors_norm":[],"field_status":{}}\n')
+    rc, out = run([S("dedup.py"), "--normalized", badnorm,
+                   "--decisions", os.path.join(tmp, "d2.jsonl"),
+                   "--clusters", os.path.join(tmp, "c2x.json"),
+                   "--queue", os.path.join(tmp, "q2.json")])
+    ok = False
+    if rc == 0:
+        ok = jload(os.path.join(tmp, "c2x.json")).get("skipped_bad_lines") == 1
+    check("D4.坏行不崩溃且留痕", ok, out)
+
+    # ---------- py_compile ----------
+    bad = []
+    for fn in sorted(os.listdir(HERE)):
+        path = os.path.join(HERE, fn)
+        if fn.endswith(".py") or fn == "selfcheck":
+            try:
+                py_compile.compile(path, doraise=True,
+                                   cfile=os.path.join(tmp, fn + ".pyc"))
+            except py_compile.PyCompileError as e:
+                bad.append(str(e))
+    check("py_compile all scripts", not bad, "; ".join(bad))
+
+    n_fail = sum(1 for _, ok, _ in results if not ok)
+    print("----")
+    print("selfcheck 汇总: %d 项断言, %d 失败" % (len(results), n_fail))
+    return 3 if n_fail else 0
+
+
+if __name__ == "__main__":
+    sys.exit(main())

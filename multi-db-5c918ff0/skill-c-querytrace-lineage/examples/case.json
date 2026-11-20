@@ -1,0 +1,27 @@
+{
+  "case_id": "EX-SYN-C01",
+  "research_question": "（合成示例，非真实案例）梳理自适应光子路由及相关器件方向在三个来源库中的题录记录，并回溯每条记录的查询与响应链条。",
+  "output_contract": [
+    "case_id",
+    "skill_name",
+    "status",
+    "product",
+    "sources",
+    "uncertainty",
+    "change_records",
+    "counts",
+    "checks",
+    "query_ledger",
+    "lineage",
+    "chain_gaps",
+    "import_diff"
+  ],
+  "materials": [
+    {"path": "raw_crossref_page1.json", "role": "crossref 第 1 页原始响应"},
+    {"path": "raw_crossref_page2.json", "role": "crossref 第 2 页原始响应"},
+    {"path": "raw_europepmc.json", "role": "EuropePMC 原始响应"},
+    {"path": "raw_publisher.json", "role": "出版商接口原始响应"},
+    {"path": "query_ledger.example.jsonl", "role": "组织方记录的查询台账"},
+    {"path": "import_state.json", "role": "组织方本地增量导入状态"}
+  ]
+}

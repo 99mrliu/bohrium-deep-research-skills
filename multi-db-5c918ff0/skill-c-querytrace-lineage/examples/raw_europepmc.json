@@ -1,0 +1,59 @@
+{
+  "hitCount": 3,
+  "request": {
+    "query": "(TITLE:\"synthetic lattice\" OR TITLE:\"metamaterial cloak\")",
+    "pageSize": 25,
+    "cursorMark": "*",
+    "sort": "CITED desc"
+  },
+  "resultList": {
+    "result": [
+      {
+        "id": "90000004",
+        "source": "MED",
+        "pmid": "90000004",
+        "doi": "10.55555/synth.004",
+        "title": "Metamaterial cloaks for acoustic waveguides.",
+        "authorString": "Hertz-Synth F; Ohm-Synth G",
+        "journalInfo": {
+          "yearOfPublication": "2023",
+          "journal": {"title": "Journal of Synthetic Acoustics"},
+          "volume": "7",
+          "issue": "4",
+          "pages": "300-311"
+        },
+        "pubTypeList": {"pubType": ["journal-article"]}
+      },
+      {
+        "id": "90000005",
+        "source": "MED",
+        "pmid": "90000005",
+        "title": "Serum biomarkers of synthetic polymer exposure.",
+        "authorString": "Curie-Synth M",
+        "journalInfo": {
+          "yearOfPublication": "2021",
+          "journal": {"title": "Synthetic Toxicology Letters"},
+          "volume": "3",
+          "issue": "1",
+          "pages": "12-18"
+        },
+        "pubTypeList": {"pubType": ["journal-article"]}
+      },
+      {
+        "id": "90000001",
+        "source": "MED",
+        "pmid": "90000001",
+        "title": "Adaptive photon routing in synthetic lattices.",
+        "authorString": "Fermi-Synth A; Bose-Synth B",
+        "journalInfo": {
+          "yearOfPublication": "2023",
+          "journal": {"title": "Journal of Synthetic Photonics"},
+          "volume": "12",
+          "issue": "3",
+          "pages": "101-110"
+        },
+        "pubTypeList": {"pubType": ["journal-article"]}
+      }
+    ]
+  }
+}

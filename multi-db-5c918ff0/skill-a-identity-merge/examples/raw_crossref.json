@@ -1,0 +1,72 @@
+{
+  "status": "ok",
+  "message-type": "work-list",
+  "_comment": "合成示例数据（虚构），仅用于 selfcheck；DOI 前缀 10.99999 为虚构占位，非真实 DOI。",
+  "message": {
+    "total-results": 4,
+    "query": {"search-terms": "synthetic example query"},
+    "items": [
+      {
+        "DOI": "10.99999/SYNTH.0001",
+        "title": ["Quantum annealing for protein folding on noisy intermediate-scale devices"],
+        "author": [
+          {"given": "Wei", "family": "Zhang", "sequence": "first"},
+          {"given": "Nina", "family": "Li", "sequence": "additional"}
+        ],
+        "container-title": ["Journal of Synthetic Computation"],
+        "issued": {"date-parts": [[2021, 3, 14]]},
+        "volume": "12",
+        "issue": "2",
+        "page": "101-115",
+        "type": "journal-article"
+      },
+      {
+        "DOI": "10.99999/synth.0002",
+        "title": ["Graph neural networks predict enzyme function from sequence"],
+        "author": [
+          {"given": "Wei", "family": "Zhang"},
+          {"given": "Nina", "family": "Li"}
+        ],
+        "container-title": ["Journal of Synthetic Computation"],
+        "issued": {"date-parts": [[2022, 7, 1]]},
+        "volume": "8",
+        "issue": "1",
+        "page": "33-47",
+        "type": "journal-article",
+        "abstract": "<jats:p>We show that graph neural networks can predict enzyme function directly from sequence.</jats:p>"
+      },
+      {
+        "DOI": "10.99999/synth.0004",
+        "title": ["Annual review of synthetic biology methods"],
+        "author": [
+          {"given": "Maria", "family": "Garcia"}
+        ],
+        "container-title": ["Methods in Synthetic Biology"],
+        "issued": {"date-parts": [[2019]]},
+        "volume": "3",
+        "issue": "1",
+        "page": "1-20",
+        "type": "journal-article"
+      },
+      {
+        "DOI": "10.99999/synth.0009",
+        "title": ["Open problems in protein design"],
+        "author": [
+          {"given": "Aisha", "family": "Khan"}
+        ],
+        "container-title": ["Protein Engineering Letters"],
+        "issued": {"date-parts": [[2023, 11, 2]]},
+        "type": "journal-article"
+      },
+      {
+        "title": ["Federated learning for hospital data networks"],
+        "author": [
+          {"given": "Lena", "family": "Novak"}
+        ],
+        "container-title": ["Health Data Systems"],
+        "issued": {"date-parts": [[2022, 5, 20]]},
+        "type": "proceedings-article"
+      }
+    ]
+  }
+}

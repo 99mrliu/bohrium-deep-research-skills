@@ -1,0 +1,14 @@
+{
+  "case_id": "EX-SYN-5C918FF0-A",
+  "_comment": "合成示例案例（虚构），仅用于 selfcheck 与 SKILL.md 演示，非真实评测案例。",
+  "research_question": "合成示例：对三个数据库返回的文献记录做身份去重与确定性合并（全部数据虚构）。",
+  "output_contract": ["case_id", "skill_name", "status", "product",
+                      "evidence_matrix", "sources", "uncertainty",
+                      "change_records", "counts", "checks"],
+  "materials": [
+    {"path": "raw_crossref.json", "role": "crossref_response"},
+    {"path": "raw_europepmc.json", "role": "europepmc_response"},
+    {"path": "raw_publisher.json", "role": "publisher_response"},
+    {"path": "reference_graph.example.json", "role": "reference_graph"}
+  ]
+}

@@ -1,0 +1,47 @@
+{
+  "source": "organizer-local",
+  "exported_at": "2026-10-15T00:00:00Z",
+  "note": "合成示例：组织方本地增量导入状态（此前已导入的记录）。含 1 条完全一致（already_imported）、1 条字段更新（updated）、1 组同标识符矛盾版本（conflicting）。",
+  "records": [
+    {
+      "doi": "10.55555/synth.003",
+      "title": "Cryogenic Control of Superconducting Qubit Arrays",
+      "year": "2024",
+      "journal": "J. Synthetic Cryogenics",
+      "volume": "5",
+      "issue": "2",
+      "pages": "201-212",
+      "imported_at": "2026-09-01"
+    },
+    {
+      "doi": "10.55555/synth.004",
+      "title": "Metamaterial Cloaks for Acoustic Waveguides",
+      "year": "2023",
+      "journal": "Journal of Synthetic Acoustics",
+      "volume": "7",
+      "issue": "4",
+      "pages": "300-315",
+      "imported_at": "2026-09-01"
+    },
+    {
+      "doi": "10.55555/synth.002",
+      "title": "Quantum Error Buffers for Noisy Intermediate Devices",
+      "year": "2022",
+      "journal": "Annals of Fabricated Quantum Engineering",
+      "volume": "8",
+      "issue": "1",
+      "pages": "45-52",
+      "imported_at": "2026-08-20"
+    },
+    {
+      "doi": "10.55555/synth.002",
+      "title": "Quantum Error Buffers for Noisy Intermediate Devices",
+      "year": "2022",
+      "journal": "Annals of Fabricated Quantum Engineering",
+      "volume": "8",
+      "issue": "1",
+      "pages": "45-54",
+      "imported_at": "2026-10-02"
+    }
+  ]
+}

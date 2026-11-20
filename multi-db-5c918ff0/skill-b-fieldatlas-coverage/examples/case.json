@@ -1,0 +1,26 @@
+{
+  "case_id": "SYNTH-COVERAGE-001",
+  "title": "跨库字段覆盖与缺口审计（合成示例案例）",
+  "note": "本案例全部数据为虚构合成示例，非真实文献、非真实 DOI/PMID，仅用于 skill 自检验证。",
+  "research_question": "审计 crossref / europepmc / publisher 三个来源在若干篇（本例 9 篇）论文上的字段覆盖与系统性缺口，并核对本地增量导入状态。",
+  "output_contract": {
+    "case_id": null,
+    "skill_name": null,
+    "status": null,
+    "coverage_matrix": null,
+    "single_source_unique": null,
+    "systematic_gaps": null,
+    "status_ledger": null,
+    "import_reconcile": null,
+    "sources": null,
+    "uncertainty": null,
+    "change_records": null,
+    "checks": null
+  },
+  "materials": [
+    "raw_crossref.json",
+    "raw_europepmc.json",
+    "raw_publisher.json",
+    "import_state.json"
+  ]
+}

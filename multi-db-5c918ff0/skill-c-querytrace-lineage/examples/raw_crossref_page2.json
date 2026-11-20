@@ -1,0 +1,40 @@
+{
+  "status": "ok",
+  "message-type": "work-list",
+  "message-version": "1.0.0",
+  "message": {
+    "facets": {},
+    "total-results": 5,
+    "items-per-page": 2,
+    "query": {"search-terms": "synthetic lattice photon routing", "start-index": 2},
+    "items": [
+      {
+        "DOI": "10.55555/synth.003",
+        "title": ["Cryogenic Control of Superconducting Qubit Arrays"],
+        "author": [{"given": "E.", "family": "Pauli-Synth"}],
+        "container-title": ["J. Synthetic Cryogenics"],
+        "issued": {"date-parts": [[2024]]},
+        "volume": "5",
+        "issue": "2",
+        "page": "201-212",
+        "type": "journal-article",
+        "publisher": "SynthPress"
+      },
+      {
+        "DOI": "10.55555/synth.004",
+        "title": ["Metamaterial Cloaks for Acoustic Waveguides"],
+        "author": [
+          {"given": "F.", "family": "Hertz-Synth"},
+          {"given": "G.", "family": "Ohm-Synth"}
+        ],
+        "container-title": ["Journal of Synthetic Acoustics"],
+        "issued": {"date-parts": [[2023]]},
+        "volume": "7",
+        "issue": "4",
+        "page": "300-311",
+        "type": "journal-article",
+        "publisher": "SynthPress"
+      }
+    ]
+  }
+}

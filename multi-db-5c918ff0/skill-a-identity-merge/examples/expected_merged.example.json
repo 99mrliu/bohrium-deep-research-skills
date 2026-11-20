@@ -1,0 +1,448 @@
+{
+  "_comment": "期望输出片段（合成示例，非真实案例结果）：由 selfcheck 同款全链路在 examples/ 合成数据上运行生成，仅展示 2 条 canonical 记录；完整输出共 11 条。",
+  "records": [
+    {
+      "canonical_id": "W001",
+      "cluster_ids": [
+        "C001"
+      ],
+      "member_uids": [
+        "crossref:raw_crossref.json:0",
+        "publisher:raw_publisher.json:0"
+      ],
+      "arbitration_status": "auto",
+      "sources": [
+        "crossref",
+        "publisher"
+      ],
+      "identifiers": {
+        "doi": {
+          "value": "10.99999/synth.0001",
+          "status": "present"
+        },
+        "pmid": {
+          "value": null,
+          "status": "missing"
+        },
+        "pmcid": {
+          "value": null,
+          "status": "missing"
+        }
+      },
+      "field_status": {
+        "title": "present",
+        "year": "present",
+        "container": "present",
+        "volume": "present",
+        "issue": "present",
+        "pages": "present",
+        "type": "present",
+        "pub_date_iso": "present",
+        "abstract": "present",
+        "authors": "present"
+      },
+      "field_provenance": {
+        "doi": {
+          "value": "10.99999/synth.0001",
+          "source": "publisher",
+          "raw_excerpt": "raw_publisher.json#item[0] | {\"doi\": \"10.99999/synth.0001\", \"title\": \"Quantum annealing for protein folding on noisy intermediate-scale devices\", \"authors\": [\"Zhang, Wei\", \"Li, Nina\"], \"jou",
+          "all_sources": [
+            "crossref",
+            "publisher"
+          ],
+          "not_provided_by": [],
+          "unknown_by": []
+        },
+        "pmid": {
+          "value": null,
+          "source": null,
+          "raw_excerpt": null,
+          "all_sources": [],
+          "not_provided_by": [
+            "crossref",
+            "publisher"
+          ],
+          "unknown_by": []
+        },
+        "pmcid": {
+          "value": null,
+          "source": null,
+          "raw_excerpt": null,
+          "all_sources": [],
+          "not_provided_by": [
+            "crossref",
+            "publisher"
+          ],
+          "unknown_by": []
+        },
+        "title": {
+          "value": "Quantum annealing for protein folding on noisy intermediate-scale devices",
+          "source": "publisher",
+          "raw_excerpt": "raw_publisher.json#item[0] | {\"doi\": \"10.99999/synth.0001\", \"title\": \"Quantum annealing for protein folding on noisy intermediate-scale devices\", \"authors\": [\"Zhang, Wei\", \"Li, Nina\"], \"jou",
+          "all_sources": [
+            "crossref",
+            "publisher"
+          ],
+          "not_provided_by": [],
+          "unknown_by": []
+        },
+        "year": {
+          "value": 2021,
+          "source": "publisher",
+          "raw_excerpt": "raw_publisher.json#item[0] | {\"doi\": \"10.99999/synth.0001\", \"title\": \"Quantum annealing for protein folding on noisy intermediate-scale devices\", \"authors\": [\"Zhang, Wei\", \"Li, Nina\"], \"jou",
+          "all_sources": [
+            "crossref",
+            "publisher"
+          ],
+          "not_provided_by": [],
+          "unknown_by": []
+        },
+        "container": {
+          "value": "Journal of Synthetic Computation",
+          "source": "publisher",
+          "raw_excerpt": "raw_publisher.json#item[0] | {\"doi\": \"10.99999/synth.0001\", \"title\": \"Quantum annealing for protein folding on noisy intermediate-scale devices\", \"authors\": [\"Zhang, Wei\", \"Li, Nina\"], \"jou",
+          "all_sources": [
+            "crossref",
+            "publisher"
+          ],
+          "not_provided_by": [],
+          "unknown_by": []
+        },
+        "volume": {
+          "value": "12",
+          "source": "publisher",
+          "raw_excerpt": "raw_publisher.json#item[0] | {\"doi\": \"10.99999/synth.0001\", \"title\": \"Quantum annealing for protein folding on noisy intermediate-scale devices\", \"authors\": [\"Zhang, Wei\", \"Li, Nina\"], \"jou",
+          "all_sources": [
+            "crossref",
+            "publisher"
+          ],
+          "not_provided_by": [],
+          "unknown_by": []
+        },
+        "issue": {
+          "value": "3",
+          "source": "publisher",
+          "raw_excerpt": "raw_publisher.json#item[0] | {\"doi\": \"10.99999/synth.0001\", \"title\": \"Quantum annealing for protein folding on noisy intermediate-scale devices\", \"authors\": [\"Zhang, Wei\", \"Li, Nina\"], \"jou",
+          "all_sources": [
+            "crossref",
+            "publisher"
+          ],
+          "not_provided_by": [],
+          "unknown_by": []
+        },
+        "pages": {
+          "value": "101-115",
+          "source": "publisher",
+          "raw_excerpt": "raw_publisher.json#item[0] | {\"doi\": \"10.99999/synth.0001\", \"title\": \"Quantum annealing for protein folding on noisy intermediate-scale devices\", \"authors\": [\"Zhang, Wei\", \"Li, Nina\"], \"jou",
+          "all_sources": [
+            "crossref",
+            "publisher"
+          ],
+          "not_provided_by": [],
+          "unknown_by": []
+        },
+        "type": {
+          "value": "journal-article",
+          "source": "crossref",
+          "raw_excerpt": "raw_crossref.json#item[0] | {\"DOI\": \"10.99999/SYNTH.0001\", \"title\": [\"Quantum annealing for protein folding on noisy intermediate-scale devices\"], \"author\": [{\"given\": \"Wei\", \"family\": \"Zh",
+          "all_sources": [
+            "crossref"
+          ],
+          "not_provided_by": [
+            "publisher"
+          ],
+          "unknown_by": []
+        },
+        "pub_date_iso": {
+          "value": "2021",
+          "source": "publisher",
+          "raw_excerpt": "raw_publisher.json#item[0] | {\"doi\": \"10.99999/synth.0001\", \"title\": \"Quantum annealing for protein folding on noisy intermediate-scale devices\", \"authors\": [\"Zhang, Wei\", \"Li, Nina\"], \"jou",
+          "all_sources": [
+            "crossref",
+            "publisher"
+          ],
+          "not_provided_by": [],
+          "unknown_by": []
+        },
+        "abstract": {
+          "value": "Quantum annealing is evaluated for protein folding on NISQ hardware.",
+          "source": "publisher",
+          "raw_excerpt": "raw_publisher.json#item[0] | {\"doi\": \"10.99999/synth.0001\", \"title\": \"Quantum annealing for protein folding on noisy intermediate-scale devices\", \"authors\": [\"Zhang, Wei\", \"Li, Nina\"], \"jou",
+          "all_sources": [
+            "publisher"
+          ],
+          "not_provided_by": [
+            "crossref"
+          ],
+          "unknown_by": []
+        },
+        "authors": {
+          "value": [
+            {
+              "family": "Zhang",
+              "given": "Wei"
+            },
+            {
+              "family": "Li",
+              "given": "Nina"
+            }
+          ],
+          "source": "crossref",
+          "raw_excerpt": "raw_crossref.json#item[0] | {\"DOI\": \"10.99999/SYNTH.0001\", \"title\": [\"Quantum annealing for protein folding on noisy intermediate-scale devices\"], \"author\": [{\"given\": \"Wei\", \"family\": \"Zh",
+          "all_sources": [
+            "crossref",
+            "publisher"
+          ],
+          "not_provided_by": [],
+          "unknown_by": []
+        }
+      },
+      "title": "Quantum annealing for protein folding on noisy intermediate-scale devices",
+      "year": 2021,
+      "container": "Journal of Synthetic Computation",
+      "volume": "12",
+      "issue": "3",
+      "pages": "101-115",
+      "type": "journal-article",
+      "pub_date_iso": "2021",
+      "abstract": "Quantum annealing is evaluated for protein folding on NISQ hardware.",
+      "authors": [
+        {
+          "family": "Zhang",
+          "given": "Wei"
+        },
+        {
+          "family": "Li",
+          "given": "Nina"
+        }
+      ]
+    },
+    {
+      "canonical_id": "W003",
+      "cluster_ids": [
+        "C006"
+      ],
+      "member_uids": [
+        "europepmc:raw_europepmc.json:1",
+        "publisher:raw_publisher.json:1"
+      ],
+      "arbitration_status": "auto",
+      "sources": [
+        "europepmc",
+        "publisher"
+      ],
+      "identifiers": {
+        "doi": {
+          "value": "10.99999/synth.0003",
+          "status": "present"
+        },
+        "pmid": {
+          "value": "99000001",
+          "status": "present"
+        },
+        "pmcid": {
+          "value": null,
+          "status": "missing"
+        }
+      },
+      "field_status": {
+        "title": "present",
+        "year": "present",
+        "container": "present",
+        "volume": "present",
+        "issue": "present",
+        "pages": "present",
+        "type": "missing",
+        "pub_date_iso": "present",
+        "abstract": "present",
+        "authors": "present"
+      },
+      "field_provenance": {
+        "doi": {
+          "value": "10.99999/synth.0003",
+          "source": "publisher",
+          "raw_excerpt": "raw_publisher.json#item[1] | {\"doi\": \"10.99999/synth.0003\", \"title\": \"Deep learning for cryo-EM particle picking\", \"authors\": [\"Chen, Jing\", \"Park, Sora\"], \"journal\": \"Structural Methods Qu",
+          "all_sources": [
+            "publisher"
+          ],
+          "not_provided_by": [
+            "europepmc"
+          ],
+          "unknown_by": []
+        },
+        "pmid": {
+          "value": "99000001",
+          "source": "europepmc",
+          "raw_excerpt": "raw_europepmc.json#item[1] | {\"id\": \"99000001\", \"source\": \"MED\", \"pmid\": \"99000001\", \"title\": \"Deep learning for cryo-EM particle picking.\", \"authorString\": \"Chen J, Park S\", \"journalInfo\":",
+          "all_sources": [
+            "europepmc"
+          ],
+          "not_provided_by": [
+            "publisher"
+          ],
+          "unknown_by": []
+        },
+        "pmcid": {
+          "value": null,
+          "source": null,
+          "raw_excerpt": null,
+          "all_sources": [],
+          "not_provided_by": [
+            "europepmc",
+            "publisher"
+          ],
+          "unknown_by": []
+        },
+        "title": {
+          "value": "Deep learning for cryo-EM particle picking",
+          "source": "publisher",
+          "raw_excerpt": "raw_publisher.json#item[1] | {\"doi\": \"10.99999/synth.0003\", \"title\": \"Deep learning for cryo-EM particle picking\", \"authors\": [\"Chen, Jing\", \"Park, Sora\"], \"journal\": \"Structural Methods Qu",
+          "all_sources": [
+            "europepmc",
+            "publisher"
+          ],
+          "not_provided_by": [],
+          "unknown_by": []
+        },
+        "year": {
+          "value": 2020,
+          "source": "publisher",
+          "raw_excerpt": "raw_publisher.json#item[1] | {\"doi\": \"10.99999/synth.0003\", \"title\": \"Deep learning for cryo-EM particle picking\", \"authors\": [\"Chen, Jing\", \"Park, Sora\"], \"journal\": \"Structural Methods Qu",
+          "all_sources": [
+            "europepmc",
+            "publisher"
+          ],
+          "not_provided_by": [],
+          "unknown_by": []
+        },
+        "container": {
+          "value": "Structural Methods Quarterly",
+          "source": "publisher",
+          "raw_excerpt": "raw_publisher.json#item[1] | {\"doi\": \"10.99999/synth.0003\", \"title\": \"Deep learning for cryo-EM particle picking\", \"authors\": [\"Chen, Jing\", \"Park, Sora\"], \"journal\": \"Structural Methods Qu",
+          "all_sources": [
+            "europepmc",
+            "publisher"
+          ],
+          "not_provided_by": [],
+          "unknown_by": []
+        },
+        "volume": {
+          "value": "5",
+          "source": "publisher",
+          "raw_excerpt": "raw_publisher.json#item[1] | {\"doi\": \"10.99999/synth.0003\", \"title\": \"Deep learning for cryo-EM particle picking\", \"authors\": [\"Chen, Jing\", \"Park, Sora\"], \"journal\": \"Structural Methods Qu",
+          "all_sources": [
+            "europepmc",
+            "publisher"
+          ],
+          "not_provided_by": [],
+          "unknown_by": []
+        },
+        "issue": {
+          "value": "3",
+          "source": "publisher",
+          "raw_excerpt": "raw_publisher.json#item[1] | {\"doi\": \"10.99999/synth.0003\", \"title\": \"Deep learning for cryo-EM particle picking\", \"authors\": [\"Chen, Jing\", \"Park, Sora\"], \"journal\": \"Structural Methods Qu",
+          "all_sources": [
+            "europepmc",
+            "publisher"
+          ],
+          "not_provided_by": [],
+          "unknown_by": []
+        },
+        "pages": {
+          "value": "210-225",
+          "source": "publisher",
+          "raw_excerpt": "raw_publisher.json#item[1] | {\"doi\": \"10.99999/synth.0003\", \"title\": \"Deep learning for cryo-EM particle picking\", \"authors\": [\"Chen, Jing\", \"Park, Sora\"], \"journal\": \"Structural Methods Qu",
+          "all_sources": [
+            "europepmc",
+            "publisher"
+          ],
+          "not_provided_by": [],
+          "unknown_by": []
+        },
+        "type": {
+          "value": null,
+          "source": null,
+          "raw_excerpt": null,
+          "all_sources": [],
+          "not_provided_by": [
+            "europepmc",
+            "publisher"
+          ],
+          "unknown_by": []
+        },
+        "pub_date_iso": {
+          "value": "2020",
+          "source": "publisher",
+          "raw_excerpt": "raw_publisher.json#item[1] | {\"doi\": \"10.99999/synth.0003\", \"title\": \"Deep learning for cryo-EM particle picking\", \"authors\": [\"Chen, Jing\", \"Park, Sora\"], \"journal\": \"Structural Methods Qu",
+          "all_sources": [
+            "europepmc",
+            "publisher"
+          ],
+          "not_provided_by": [],
+          "unknown_by": []
+        },
+        "abstract": {
+          "value": "A deep residual network picks particles from cryo-EM micrographs with high recall.",
+          "source": "europepmc",
+          "raw_excerpt": "raw_europepmc.json#item[1] | {\"id\": \"99000001\", \"source\": \"MED\", \"pmid\": \"99000001\", \"title\": \"Deep learning for cryo-EM particle picking.\", \"authorString\": \"Chen J, Park S\", \"journalInfo\":",
+          "all_sources": [
+            "europepmc",
+            "publisher"
+          ],
+          "not_provided_by": [],
+          "unknown_by": []
+        },
+        "authors": {
+          "value": [
+            {
+              "family": "Chen",
+              "given": "J"
+            },
+            {
+              "family": "Park",
+              "given": "S"
+            }
+          ],
+          "source": "europepmc",
+          "raw_excerpt": "raw_europepmc.json#item[1] | {\"id\": \"99000001\", \"source\": \"MED\", \"pmid\": \"99000001\", \"title\": \"Deep learning for cryo-EM particle picking.\", \"authorString\": \"Chen J, Park S\", \"journalInfo\":",
+          "all_sources": [
+            "europepmc",
+            "publisher"
+          ],
+          "not_provided_by": [],
+          "unknown_by": []
+        }
+      },
+      "title": "Deep learning for cryo-EM particle picking",
+      "year": 2020,
+      "container": "Structural Methods Quarterly",
+      "volume": "5",
+      "issue": "3",
+      "pages": "210-225",
+      "type": null,
+      "pub_date_iso": "2020",
+      "abstract": "A deep residual network picks particles from cryo-EM micrographs with high recall.",
+      "authors": [
+        {
+          "family": "Chen",
+          "given": "J"
+        },
+        {
+          "family": "Park",
+          "given": "S"
+        }
+      ]
+    }
+  ],
+  "summary": {
+    "input_records": 15,
+    "canonical_records": 11,
+    "clusters_auto": 9,
+    "clusters_resolved_by_arbitration": 0,
+    "clusters_pending_arbitration": 2,
+    "conflicts": 10,
+    "arbitrations_applied": 0,
+    "arbitrations_rejected_or_split": 0,
+    "sort_rule": "按 (归一 DOI 或 归一题名) 字典序升序；canonical_id 排序后分配"
+  }
+}

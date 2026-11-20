@@ -1,0 +1,390 @@
+#!/usr/bin/env python3
+# -*- coding: utf-8 -*-
+"""selfcheck — 用 examples/ 合成数据跑通全链路并断言关键行为。
+
+正例（exit 0 预期）：
+  A. py_compile 全部脚本；
+  B. parse_case → sources_found 含 crossref/europepmc/publisher，import_state 定位；
+  C. scaffold_result → result.json 含 output_contract 全部字段；
+  D. map_fields → 19 张卡片；三级缺失语义断言：
+       - EuropePMC pmid 99001234 的 authors.status == unknown（authorString 空串）；
+       - Crossref 记录 abstract.status == not_provided（载荷整体无 abstract 键）；
+       - Crossref identifiers.pmid == not_provided（静态清单）；
+       - publisher DOI 大写已小写化；authors 统一为 [{family, given}]；
+       - EuropePMC abstract HTML 标签已剥离；
+       - P3（pmid 99001003）retracted == true；
+  E. status_ledger → 含 withdrawn_retracted 与 schema_drift 两类；
+  F. import_reconcile → already=1 / new=7 / conflict=1（issue 不一致）；
+  G. coverage_matrix → 系统性缺口 == [license]；单库独有 == 2（crossref+europepmc）；
+       覆盖矩阵与 examples/coverage_matrix.example.json 回归基线一致；
+  H. 撤回标记被单列入 coverage_matrix.retracted_records。
+
+负例（降级断言）：
+  N1. 空材料目录 → parse_case exit 2；
+  N2. 坏 JSON 文件 → 嗅探 unknown 逐名留痕，主流程不崩溃且 exit 0；
+  N3. 无导入状态 → import_reconcile exit 2。
+
+任一断言失败 → exit 3。
+"""
+import json
+import os
+import py_compile
+import shutil
+import subprocess
+import sys
+import tempfile
+
+SCRIPT_DIR = os.path.dirname(os.path.abspath(__file__))
+SKILL_DIR = os.path.dirname(SCRIPT_DIR)
+EXAMPLES = os.path.join(SKILL_DIR, "examples")
+SCRIPTS = [os.path.join(SCRIPT_DIR, n) for n in
+           ("parse_case.py", "scaffold_result.py", "map_fields.py",
+            "coverage_matrix.py", "status_ledger.py", "import_reconcile.py")]
+
+FAILURES = []
+
+
+def fail(msg):
+    FAILURES.append(msg)
+    print("FAIL: %s" % msg, file=sys.stderr)
+
+
+def ok(msg):
+    print("  ok: %s" % msg)
+
+
+def run(script, args, expect=None):
+    cmd = [sys.executable, os.path.join(SCRIPT_DIR, script)] + args
+    p = subprocess.run(cmd, capture_output=True, text=True)
+    detail = "cmd=%s rc=%d\n%s%s" % (" ".join(cmd), p.returncode,
+                                     p.stdout.strip(), p.stderr.strip())
+    if expect is not None and p.returncode != expect:
+        fail("退出码不符合预期 (%s 期望 %d): %s" % (script, expect, detail))
+    return p, detail
+
+
+def load(path):
+    with open(path, "r", encoding="utf-8") as f:
+        return json.load(f)
+
+
+def read_cards(path):
+    with open(path, "r", encoding="utf-8") as f:
+        return [json.loads(ln) for ln in f if ln.strip()]
+
+
+def card_of(cards, source, needle):
+    for c in cards:
+        if c["source"] == source and needle in json.dumps(c, ensure_ascii=False):
+            return c
+    return None
+
+
+def main():
+    tmp = tempfile.mkdtemp(prefix="fieldatlas_selfcheck_")
+    inp = os.path.join(tmp, "input")
+    work = os.path.join(tmp, "work")
+    out = os.path.join(tmp, "output")
+    os.makedirs(inp)
+    for name in os.listdir(EXAMPLES):
+        if name != "coverage_matrix.example.json":
+            shutil.copy(os.path.join(EXAMPLES, name), os.path.join(inp, name))
+
+    print("[A] py_compile 全部脚本（字节码输出到临时目录，不污染 bundle）")
+    compile_dir = os.path.join(tmp, "pyc")
+    os.makedirs(compile_dir, exist_ok=True)
+    for s in SCRIPTS + [os.path.join(SCRIPT_DIR, "selfcheck")]:
+        try:
+            py_compile.compile(s, cfile=os.path.join(
+                compile_dir, os.path.basename(s) + ".pyc"), doraise=True)
+            ok("compile %s" % os.path.basename(s))
+        except py_compile.PyCompileError as e:
+            fail("py_compile 失败: %s: %s" % (s, e))
+
+    print("[B] parse_case（正例）")
+    p, d = run("parse_case.py", ["--case", os.path.join(inp, "case.json"),
+                                 "--task", os.path.join(inp, "task.md"),
+                                 "--input-dir", inp,
+                                 "--out", os.path.join(work, "case_summary.json")],
+               expect=0)
+    if p.returncode == 0:
+        summ = load(os.path.join(work, "case_summary.json"))
+        if {"crossref", "europepmc", "publisher"} <= set(summ["sources_found"]):
+            ok("sources_found=%s" % summ["sources_found"])
+        else:
+            fail("sources_found 缺少来源: %s" % summ["sources_found"])
+        if summ.get("import_state"):
+            ok("import_state 定位: %s" % summ["import_state"])
+        else:
+            fail("import_state 未定位")
+        sniffs = {m["path"].split("/")[-1]: m["sniff"] for m in summ["materials"]}
+        for f, want in (("raw_crossref.json", "crossref"),
+                        ("raw_europepmc.json", "europepmc"),
+                        ("raw_publisher.json", "publisher"),
+                        ("import_state.json", "import_state")):
+            if sniffs.get(f) != want:
+                fail("嗅探错误: %s 期望 %s 实际 %s" % (f, want, sniffs.get(f)))
+
+    print("[C] scaffold_result")
+    p, _ = run("scaffold_result.py",
+               ["--summary", os.path.join(work, "case_summary.json"),
+                "--out", os.path.join(out, "result.json")], expect=0)
+    if p.returncode == 0:
+        res = load(os.path.join(out, "result.json"))
+        missing = [k for k in res.keys() if k not in res or k not in res]
+        for k in summ["output_contract"]:
+            if k not in res:
+                fail("result.json 缺 output_contract 字段: %s" % k)
+        ok("result.json 合同字段齐全" if not missing else "")
+
+    print("[D] map_fields + 字段卡片断言")
+    p, d = run("map_fields.py",
+               ["--summary", os.path.join(work, "case_summary.json"),
+                "--out", os.path.join(work, "field_cards.jsonl"),
+                "--report", os.path.join(work, "map_report.json")], expect=0)
+    cards = read_cards(os.path.join(work, "field_cards.jsonl")) if p.returncode == 0 else []
+    if p.returncode == 0:
+        if len(cards) != 19:
+            fail("卡片数期望 19，实际 %d" % len(cards))
+        else:
+            ok("19 张字段卡片")
+        c9 = card_of(cards, "europepmc", "99001234")
+        if not c9:
+            fail("找不到 EuropePMC pmid 99001234 卡片")
+        else:
+            if c9["fields"]["authors"]["status"] != "unknown":
+                fail("authorString 空串应判 unknown，实际 %s"
+                     % c9["fields"]["authors"]["status"])
+            else:
+                ok("authorString 空串 → authors=unknown")
+            if c9["fields"]["container"]["status"] != "missing":
+                fail("journalInfo.journal 缺失应判 container=missing，实际 %s"
+                     % c9["fields"]["container"]["status"])
+            else:
+                ok("journalInfo.journal 缺失 → container=missing（动态）")
+        c8 = card_of(cards, "crossref", "synth.0008")
+        if c8["fields"]["abstract"]["status"] != "not_provided":
+            fail("Crossref 无 abstract 键应判 not_provided，实际 %s"
+                 % c8["fields"]["abstract"]["status"])
+        else:
+            ok("Crossref 无 abstract 键 → not_provided")
+        if c8["fields"]["identifiers.pmid"]["status"] != "not_provided":
+            fail("Crossref pmid 静态 not_provided 断言失败: %s"
+                 % c8["fields"]["identifiers.pmid"]["status"])
+        else:
+            ok("Crossref pmid → 静态 not_provided")
+        cp1 = card_of(cards, "publisher", "synth.0001")
+        if (cp1["fields"]["identifiers.doi"]["value"]
+                != "10.55123/synth.0001"):
+            fail("publisher DOI 未小写化: %s"
+                 % cp1["fields"]["identifiers.doi"]["value"])
+        else:
+            ok("publisher DOI 大写 → 小写化")
+        au = cp1["fields"]["authors"]["value"]
+        if not (isinstance(au, list) and au[0].get("family") == "Acker"
+                and au[1].get("family") == "Bram"):
+            fail("publisher 作者串解析失败: %r" % au)
+        else:
+            ok("publisher 作者串 → [{family, given}]")
+        ce1 = card_of(cards, "europepmc", "synth.0001")
+        abst = ce1["fields"]["abstract"]["value"] or ""
+        if "<" in abst or ">" in abst:
+            fail("EuropePMC abstract HTML 未剥离: %r" % abst[:60])
+        else:
+            ok("abstract HTML 标签已剥离")
+        c3 = card_of(cards, "europepmc", "99001003")
+        if not c3.get("retracted"):
+            fail("P3 撤回标记（Retracted Publication）未被识别")
+        else:
+            ok("retracted 标记识别（P3）")
+        mrep = load(os.path.join(work, "map_report.json"))
+        if not mrep.get("drift_log"):
+            fail("map_report 应含 schema 漂移日志（journalInfo.journal 缺失）")
+        else:
+            ok("schema 漂移留痕 %d 条" % len(mrep["drift_log"]))
+        if mrep["totals"]["crossref"] != {"returned": 7, "parsed": 7, "dropped": 0}:
+            fail("crossref 对账数值错误: %s" % mrep["totals"]["crossref"])
+        else:
+            ok("库间对账数值正确（crossref 7/7/0）")
+
+    print("[E] status_ledger")
+    p, _ = run("status_ledger.py",
+               ["--summary", os.path.join(work, "case_summary.json"),
+                "--map-report", os.path.join(work, "map_report.json"),
+                "--cards", os.path.join(work, "field_cards.jsonl"),
+                "--out", os.path.join(work, "status_ledger.json"),
+                "--uncertainty-out", os.path.join(work, "uncertainty_draft.json")],
+               expect=0)
+    if p.returncode == 0:
+        ledger = load(os.path.join(work, "status_ledger.json"))
+        cats = set(ledger["summary"])
+        for want in ("withdrawn_retracted", "schema_drift"):
+            if want not in cats:
+                fail("状态台账缺少类别: %s（实际 %s）" % (want, cats))
+        if {"withdrawn_retracted", "schema_drift"} <= cats:
+            ok("台账含 withdrawn_retracted + schema_drift")
+        if ledger["summary"].get("withdrawn_retracted") != 1:
+            fail("撤回记录应单列为 1 条，实际 %s"
+                 % ledger["summary"].get("withdrawn_retracted"))
+        else:
+            ok("撤回标记单列入台账（去重后 1 条）")
+
+    print("[F] import_reconcile")
+    p, _ = run("import_reconcile.py",
+               ["--summary", os.path.join(work, "case_summary.json"),
+                "--cards", os.path.join(work, "field_cards.jsonl"),
+                "--out", os.path.join(work, "import_reconcile.json")], expect=0)
+    if p.returncode == 0:
+        rec = load(os.path.join(work, "import_reconcile.json"))
+        ms = rec["match_stats"]
+        if (ms["already_imported"], ms["new_candidates"],
+                ms["conflicting_updates"]) != (1, 7, 1):
+            fail("导入对账三类数值错误: %s" % ms)
+        else:
+            ok("导入对账 already=1 / new=7 / conflict=1")
+        if rec["conflicting_updates"][0]["diffs"][0]["field"] != "issue":
+            fail("冲突字段应为 issue: %r" % rec["conflicting_updates"][0]["diffs"])
+        else:
+            ok("冲突字段=issue（1 vs 2）")
+
+    print("[G] coverage_matrix + 回归基线")
+    p, d = run("coverage_matrix.py",
+               ["--cards", os.path.join(work, "field_cards.jsonl"),
+                "--map-report", os.path.join(work, "map_report.json"),
+                "--ledger", os.path.join(work, "status_ledger.json"),
+                "--summary", os.path.join(work, "case_summary.json"),
+                "--out", os.path.join(work, "coverage_matrix.json"),
+                "--md", os.path.join(work, "coverage_report.md")], expect=0)
+    if p.returncode == 0:
+        cov = load(os.path.join(work, "coverage_matrix.json"))
+        gap_fields = [g["field"] for g in cov["systematic_gaps"]]
+        if gap_fields != ["license"]:
+            fail("系统性缺口字段期望 [license]，实际 %s" % gap_fields)
+        else:
+            ok("系统性缺口识别 = [license]")
+        ss = {(e["source"], e["cluster_key"].split(":")[0])
+              for e in cov["single_source_unique"]}
+        if cov["single_source_unique"] and len(cov["single_source_unique"]) == 2 \
+                and {e["source"] for e in cov["single_source_unique"]} \
+                == {"crossref", "europepmc"}:
+            ok("单库独有 = 2（crossref 1 + europepmc 1）")
+        else:
+            fail("单库独有识别错误: %r" % cov["single_source_unique"])
+        if cov["unique_papers"] != 9 or cov["total_records"] != 19:
+            fail("论文/记录计数错误: papers=%d records=%d"
+                 % (cov["unique_papers"], cov["total_records"]))
+        else:
+            ok("9 篇论文 / 19 条记录对账一致")
+        if len(cov["retracted_records"]) != 1:
+            fail("retracted_records 应为 1 条: %r" % cov["retracted_records"])
+        else:
+            ok("撤回记录单列于 coverage_matrix.retracted_records")
+        if cov["matrix"]["crossref"]["license"]["not_provided"] != 7:
+            fail("crossref license not_provided 期望 7: %s"
+                 % cov["matrix"]["crossref"]["license"])
+        fixture_path = os.path.join(EXAMPLES, "coverage_matrix.example.json")
+        if os.path.isfile(fixture_path):
+            fixture = load(fixture_path)
+            for key in ("matrix", "systematic_gaps", "single_source_unique",
+                        "unique_papers", "total_records"):
+                if fixture.get(key) != cov.get(key):
+                    fail("与回归基线 coverage_matrix.example.json 不一致: %s"
+                         % key)
+            if "matrix" in fixture and fixture["matrix"] == cov["matrix"] \
+                    and fixture["systematic_gaps"] == cov["systematic_gaps"]:
+                ok("与回归基线一致（matrix/缺口/独有）")
+        else:
+            fail("examples/coverage_matrix.example.json 回归基线缺失")
+
+    print("[N1] 负例：空材料目录 → parse_case exit 2")
+    empty_inp = os.path.join(tmp, "empty_input")
+    os.makedirs(empty_inp)
+    with open(os.path.join(empty_inp, "case.json"), "w", encoding="utf-8") as f:
+        json.dump({"case_id": "EMPTY", "materials": []}, f)
+    p, _ = run("parse_case.py", ["--case", os.path.join(empty_inp, "case.json"),
+                                 "--task", os.path.join(empty_inp, "task.md"),
+                                 "--input-dir", empty_inp,
+                                 "--out", os.path.join(work, "empty_summary.json")],
+               expect=2)
+    if p.returncode == 2:
+        ok("空材料 → exit 2（诚实降级）")
+
+    print("[N2] 负例：坏 JSON 不崩溃且逐名留痕")
+    bad_inp = os.path.join(tmp, "bad_input")
+    shutil.copytree(inp, bad_inp)
+    with open(os.path.join(bad_inp, "broken.json"), "w", encoding="utf-8") as f:
+        f.write("{ this is not valid json [[[\n")
+    p, _ = run("parse_case.py", ["--case", os.path.join(bad_inp, "case.json"),
+                                 "--task", os.path.join(bad_inp, "task.md"),
+                                 "--input-dir", bad_inp,
+                                 "--out", os.path.join(work, "bad_summary.json")],
+               expect=0)
+    if p.returncode == 0:
+        bad_summ = load(os.path.join(work, "bad_summary.json"))
+        bad_mat = [m for m in bad_summ["materials"]
+                   if m["path"].endswith("broken.json")]
+        if bad_mat and bad_mat[0]["sniff"] == "unknown" \
+                and any("坏 JSON" in n or "解析失败" in n for n in bad_mat[0]["notes"]):
+            ok("坏 JSON → sniff=unknown 且逐名留痕")
+        else:
+            fail("坏 JSON 未按预期留痕: %r" % bad_mat)
+        p2, _ = run("map_fields.py",
+                    ["--summary", os.path.join(work, "bad_summary.json"),
+                     "--out", os.path.join(work, "bad_cards.jsonl"),
+                     "--report", os.path.join(work, "bad_map_report.json")],
+                    expect=0)
+        if p2.returncode == 0:
+            bad_rep = load(os.path.join(work, "bad_map_report.json"))
+            if any("broken.json" in s.get("path", "") or
+                   "broken.json" in (s.get("reason") or "")
+                   for s in bad_rep.get("skipped_files", [])) or \
+               any("broken.json" in m["path"] for m in bad_summ["unparsed_files"]):
+                ok("坏 JSON 文件在 map_report/summary 中留痕且主流程不崩溃")
+            else:
+                fail("坏 JSON 未在 map_report 留痕")
+        else:
+            fail("map_fields 在坏 JSON 场景不应非 0 退出: rc=%d" % p2.returncode)
+
+    print("[N3] 负例：无导入状态 → import_reconcile exit 2")
+    no_state_inp = os.path.join(tmp, "no_state_input")
+    shutil.copytree(inp, no_state_inp)
+    os.remove(os.path.join(no_state_inp, "import_state.json"))
+    p, _ = run("parse_case.py", ["--case",
+                                 os.path.join(no_state_inp, "case.json"),
+                                 "--task", os.path.join(no_state_inp, "task.md"),
+                                 "--input-dir", no_state_inp,
+                                 "--out", os.path.join(work, "ns_summary.json")],
+               expect=0)
+    if p.returncode == 0:
+        p, _ = run("import_reconcile.py",
+                   ["--summary", os.path.join(work, "ns_summary.json"),
+                    "--cards", os.path.join(work, "field_cards.jsonl"),
+                    "--out", os.path.join(work, "ns_reconcile.json")], expect=2)
+        if p.returncode == 2:
+            ok("无导入状态 → exit 2（诚实降级）")
+
+    print("[N4] --help 可用性")
+    for s in ("parse_case.py", "scaffold_result.py", "map_fields.py",
+              "coverage_matrix.py", "status_ledger.py", "import_reconcile.py"):
+        p = subprocess.run([sys.executable, os.path.join(SCRIPT_DIR, s), "--help"],
+                           capture_output=True, text=True)
+        if p.returncode != 0 or "usage" not in p.stdout.lower():
+            fail("--help 不可用: %s" % s)
+    ok("全部脚本 --help 可用")
+
+    shutil.rmtree(tmp, ignore_errors=True)
+    if FAILURES:
+        print("\nselfcheck 失败 %d 项：" % len(FAILURES), file=sys.stderr)
+        for f_ in FAILURES:
+            print("  - %s" % f_, file=sys.stderr)
+        return 3
+    print("\nselfcheck 全部通过（exit 0）")
+    return 0
+
+
+if __name__ == "__main__":
+    try:
+        sys.exit(main())
+    except Exception as e:
+        print("ERROR: selfcheck 未捕获异常（exit 3）: %r" % e, file=sys.stderr)
+        sys.exit(3)
