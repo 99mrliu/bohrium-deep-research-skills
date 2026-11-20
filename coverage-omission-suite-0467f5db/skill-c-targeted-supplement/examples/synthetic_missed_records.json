@@ -1,0 +1,34 @@
+{
+  "_comment": "合成示例（SYNTHETIC EXAMPLE）：演示漏检记录 JSON 片段结构；人名与文献均为虚构。",
+  "missed_records": [
+    {
+      "ref_id": "R0007",
+      "doi": "10.9999/syn.2021.0007",
+      "pmid": null,
+      "title": "Coupled eddy-current braking in superconducting maglev bearings",
+      "title_norm": "coupled eddy current braking in superconducting maglev bearings",
+      "year": "2021",
+      "first_author": "nakamura",
+      "miss_category": "有标题有标识符（可补检）",
+      "expected_queries": [
+        {"archetype": "原词补全式", "quoted_terms": ["eddy", "current", "braking", "superconducting"]},
+        {"archetype": "作者+年锚定式", "quoted_terms": ["nakamura", "2020", "2021", "2022"]},
+        {"archetype": "引文追踪式"},
+        {"archetype": "来源切换式"}
+      ]
+    },
+    {
+      "ref_id": "R0008",
+      "doi": null,
+      "pmid": null,
+      "title": null,
+      "title_norm": null,
+      "year": "2019",
+      "first_author": "osborn",
+      "miss_category": "记录异常（标题与标识符俱缺）",
+      "expected_queries": [
+        {"archetype": "作者+年锚定式", "quoted_terms": ["osborn", "2019"], "note": "无标题退化为作者+年"}
+      ]
+    }
+  ]
+}

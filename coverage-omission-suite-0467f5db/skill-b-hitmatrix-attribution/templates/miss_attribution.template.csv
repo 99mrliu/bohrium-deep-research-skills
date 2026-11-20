@@ -1,0 +1,6 @@
+ref_id,primary_category,sub_reason,query_id,field,date_window,evidence_file,evidence_field,evidence_snippet
+REF_EXAMPLE_3,VOCAB_GAP,record_vocabulary_not_covered_by_any_query,q1,query_string,,"materials/crossref_index.json",title/keywords,"未被任何查询覆盖的词汇: triboelectric, nanogenerator（合成示例）"
+REF_EXAMPLE_4,TIME_WINDOW,window_removal_makes_query_hit,q2,date_window,"{""from"": 2021, ""to"": 2024}","materials/pubmed_index.json",year,"记录年份 2019 落在查询 q2 时间窗之外；移除时间窗后同一查询可命中（合成示例）"
+REF_EXAMPLE_5,SOURCE_ABSENT,identifier_not_in_any_source_index,,,,"materials/crossref_index.json",doi/pmid/arxiv/venue,"来源 crossref 索引 N 条记录，无匹配标识符（合成示例）"
+# primary_category ∈ RECORD_ANOMALY|SOURCE_ABSENT|TIME_WINDOW|FIELD_RESTRICTION|VOCAB_GAP|UNDETERMINED
+# 每条漏检恰好一行主归因；query_id/field/date_window 为致漏指针，SOURCE_ABSENT 与 RECORD_ANOMALY 可为空

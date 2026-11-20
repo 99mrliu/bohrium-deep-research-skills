@@ -1,0 +1,7 @@
+ref_id,ref_title,QUERY_ID|SOURCE|EXECUTED_AT,QUERY_ID_2|SOURCE_2|EXECUTED_AT_2,any_hit
+REF_EXAMPLE_1,"示例：参考条目标题（合成示例）","hit:L1:1.0000:3","miss:-:0.0000:-",hit
+REF_EXAMPLE_2,"示例：另一条参考（合成示例）","ambiguous:L3:0.5450:7","hit:L2:0.8333:1",hit
+REF_EXAMPLE_3,"示例：漏检条目（合成示例）","miss:-:0.0000:-","miss:-:0.0000:-",miss
+# 单元格式: status:match_level:score:rank_in_results
+# status ∈ hit|miss|ambiguous|source_unavailable；score 为 L2/L3 实际 token F1，L1 记 1.0
+# 覆盖率只允许由本矩阵复算：命中=该行任一单元 status=hit；ambiguous 不计命中

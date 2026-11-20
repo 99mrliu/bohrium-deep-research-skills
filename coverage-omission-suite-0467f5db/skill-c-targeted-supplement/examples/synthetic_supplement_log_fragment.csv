@@ -1,0 +1,6 @@
+# 合成示例（SYNTHETIC EXAMPLE）：supplement_log.csv 片段，数据为虚构，仅演示列结构与记账方式。
+query_id,batch,archetype,hypothesis,target_miss_ids,generated_from,quoted_terms,source,files_searched,candidates_returned,newly_covered_ids,marginal_gain,verdict
+Q-B1-001,B1,原词补全式,漏检记录标题原词未被初始检索命中，原词补全可在本地题录中命中,R0007,R0007,eddy current braking superconducting,标题规范化全串匹配,4,1,R0007,1,effective
+Q-B1-002,B1,原词补全式,漏检记录标题原词未被初始检索命中，原词补全可在本地题录中命中,R0008,R0008,osborn,无标题退化为作者+年,4,0,,0,zero
+Q-B2-001,B2,作者+年锚定式,标题变体导致漏检，以第一作者姓氏与年份±1锚定可定位同一记录,R0008,R0008,nakamura 2020 2021 2022,姓氏+年份窗口,3,0,,0,zero
+Q-B3-001,B3,引文追踪式,漏检记录的引文邻域可能携带其完整题录,R0008,R0008,osborn,引文串前向追踪 + 后向核对,3,0,,0,zero

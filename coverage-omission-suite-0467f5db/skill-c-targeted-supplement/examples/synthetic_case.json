@@ -1,0 +1,19 @@
+{
+  "_comment": "合成示例（SYNTHETIC EXAMPLE）：仅用于演示工件格式，非真实案例。",
+  "case_id": "SYN-C-0001",
+  "materials": {
+    "reference_graph": "materials/reference_graph.json",
+    "crossref_response": "materials/crossref_base.json",
+    "europepmc_response": "materials/europepmc_extra.json",
+    "corpus_dir": "materials/corpus"
+  },
+  "budget": {
+    "max_queries": 64,
+    "max_seconds": 600
+  },
+  "output_contract": {
+    "coverage_after": "补检后覆盖率（0..1）",
+    "misses_remaining": "残余漏检条数（整数）",
+    "marginal_gain_evidence": "边际收益证据（supplement_log.csv 路径）"
+  }
+}

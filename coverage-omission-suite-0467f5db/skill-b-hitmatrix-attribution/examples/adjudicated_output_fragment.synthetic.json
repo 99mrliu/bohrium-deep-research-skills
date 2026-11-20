@@ -1,0 +1,57 @@
+{
+  "_comment": "合成示例：adjudication.json 片段（R7 标识符冲突裁决拒绝、R9 临界近似裁决接受），数据全部虚构",
+  "cells": [
+    {
+      "ref_id": "R7",
+      "cell_key": "q1a|crossref|2026-11-01T09:00:00Z",
+      "query_id": "q1a",
+      "source": "crossref",
+      "executed_at": "2026-11-01T09:00:00Z",
+      "status": "miss",
+      "match_level": null,
+      "score": 0.0,
+      "rank_in_results": null,
+      "evidence": "identifier_conflict: doi 相等但标题 F1=0.000 < 0.3; adjudication=reject"
+    },
+    {
+      "ref_id": "R7",
+      "cell_key": "q2|crossref|2026-11-01T09:10:00Z",
+      "query_id": "q2",
+      "source": "crossref",
+      "executed_at": "2026-11-01T09:10:00Z",
+      "status": "miss",
+      "match_level": null,
+      "score": 0.0,
+      "rank_in_results": null,
+      "evidence": null
+    },
+    {
+      "ref_id": "R9",
+      "cell_key": "q1a|crossref|2026-11-01T09:00:00Z",
+      "query_id": "q1a",
+      "source": "crossref",
+      "executed_at": "2026-11-01T09:00:00Z",
+      "status": "miss",
+      "match_level": null,
+      "score": 0.0,
+      "rank_in_results": null,
+      "evidence": null
+    },
+    {
+      "ref_id": "R9",
+      "cell_key": "q2|crossref|2026-11-01T09:10:00Z",
+      "query_id": "q2",
+      "source": "crossref",
+      "executed_at": "2026-11-01T09:10:00Z",
+      "status": "hit",
+      "match_level": "L3(adjudicated)",
+      "score": 0.5556,
+      "rank_in_results": 2,
+      "evidence": "borderline_f1: 0.556 in [0.5, 0.6), needs adjudication; adjudication=accept"
+    }
+  ],
+  "decisions_applied": {
+    "R7::q1a|crossref|2026-11-01T09:00:00Z": "reject",
+    "R9::q2|crossref|2026-11-01T09:10:00Z": "accept"
+  }
+}

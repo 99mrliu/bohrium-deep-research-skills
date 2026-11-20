@@ -1,0 +1,87 @@
+{
+  "_note": "合成示例：仅演示冻结参考集两条记录的形状（片段，非完整文件）；内容虚构，非任何真实案例答案。",
+  "schema_version": "1.0.0",
+  "case_id": "synthetic-demo-001",
+  "frozen_at": "2026-01-01T00:00:00Z",
+  "frozen_by": "refset_build.py",
+  "records": [
+    {
+      "ref_id": "REF-0001",
+      "title": "Example Study on Synthetic Widgets A",
+      "authors": "Doe J; Roe K",
+      "year": "2021",
+      "journal": "Journal of Synthetic Examples",
+      "doi": "10.1234/syn.2021.001",
+      "pmid": "12345001",
+      "pmcid": null,
+      "arxiv": null,
+      "verification_status": "verified",
+      "verification_source": "local_response",
+      "verification_evidence": [
+        {
+          "via": "doi",
+          "id": "10.1234/syn.2021.001",
+          "channel": "local",
+          "entry": {
+            "file": "materials/crossref_batch1.json",
+            "json_ptr": "[0]",
+            "title": "Example Study on Synthetic Widgets A",
+            "journal": "Journal of Synthetic Examples",
+            "year": "2021"
+          }
+        }
+      ],
+      "inclusion_reason": "parsed_from:csv",
+      "source": ["materials/expert_list.csv#L2"],
+      "merged_from": ["materials/expert_list.csv#L3"],
+      "disposition": "include",
+      "flags": [],
+      "usable": true,
+      "usable_for_fulltext": true
+    },
+    {
+      "ref_id": "REF-0003",
+      "title": "Retraction of Example Claim on Widgets B",
+      "authors": "Smith A",
+      "year": "2022",
+      "journal": "Journal of Synthetic Examples",
+      "doi": "10.1234/syn.2022.099",
+      "pmid": "12345099",
+      "pmcid": null,
+      "arxiv": null,
+      "verification_status": "verified",
+      "verification_source": "local_response",
+      "verification_evidence": [
+        {
+          "via": "pmid",
+          "id": "12345099",
+          "channel": "local",
+          "entry": {
+            "file": "materials/europepmc_batch1.json",
+            "json_ptr": "[1]",
+            "title": "Retraction of Example Claim on Widgets B",
+            "journal": "Journal of Synthetic Examples",
+            "year": "2022"
+          }
+        }
+      ],
+      "inclusion_reason": "parsed_from:csv",
+      "source": ["materials/expert_list.csv#L4"],
+      "merged_from": [],
+      "disposition": "exclude_retracted",
+      "flags": [],
+      "usable": false,
+      "usable_for_fulltext": true
+    }
+  ],
+  "stats": {
+    "total": 2,
+    "usable": 1,
+    "verified": 2,
+    "needs_manual_review": 0,
+    "excluded": 1,
+    "merged_away": 1
+  },
+  "status": "complete",
+  "limitations": []
+}

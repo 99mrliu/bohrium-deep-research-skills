@@ -1,0 +1,18 @@
+{
+  "_note": "合成示例：仅演示 case.json 结构，非任何真实案例。",
+  "case_id": "synthetic-demo-001",
+  "materials_dir": "./materials",
+  "materials": [
+    {"path": "materials/expert_list.csv", "kind": "bibliography"},
+    {"path": "materials/crossref_batch1.json", "kind": "crossref_response"},
+    {"path": "materials/europepmc_batch1.json", "kind": "europepmc_response"}
+  ],
+  "output_contract": [
+    "denominator",
+    "hit",
+    "miss",
+    "coverage_ratio",
+    "miss_list",
+    "miss_attribution"
+  ]
+}

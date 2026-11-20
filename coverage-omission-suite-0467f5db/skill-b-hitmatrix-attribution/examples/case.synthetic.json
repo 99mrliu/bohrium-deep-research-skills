@@ -1,0 +1,59 @@
+{
+  "_comment": "合成示例：本文件及其引用的全部材料均为虚构数据，仅用于演示与冒烟测试，不代表任何真实文献、真实检索或真实覆盖率。配合 materials.synthetic.json 使用：先将其 files 映射按键名解包为相对路径文件，再运行流水线。",
+  "case_id": "SYNTH-DEMO-001",
+  "materials_dir": "materials",
+  "reference_set": [
+    {"ref_id": "R1", "title": "Graph neural networks for molecular property prediction",
+     "authors": ["Zhang, Wei"], "year": 2021, "doi": "10.1000/syn.2021.001",
+     "venue": "J. Synth. Chem. Inf."},
+    {"ref_id": "R2", "title": "Triboelectric nanogenerator based biomechanical energy harvesting",
+     "authors": ["Wang, Li"], "year": 2020, "doi": "10.1000/syn.2020.002",
+     "keywords": ["triboelectric", "energy harvesting"]},
+    {"ref_id": "R3", "title": "Deep reinforcement learning for robotic manipulation",
+     "authors": ["Liu, Yang"], "year": 2019, "doi": "10.1000/syn.2019.003"},
+    {"ref_id": "R4", "title": "Photocatalytic water splitting with perovskite oxides",
+     "authors": ["Chen, Jing"], "year": 2022, "doi": "10.1000/syn.2022.004",
+     "abstract": "We demonstrate solar hydrogen production via photocatalytic water splitting using perovskite oxide semiconductors."},
+    {"ref_id": "R5", "title": "Single cell RNA sequencing reveals tumor heterogeneity",
+     "authors": ["Kim, Soo"], "year": 2023, "pmid": "38000001"},
+    {"ref_id": "R6", "title": "Quantum error correction with surface codes",
+     "authors": ["Fowler, Austin"], "year": 2018, "arxiv": "arXiv:1208.0928"},
+    {"ref_id": "R7", "title": "CRISPR screening for cancer dependencies",
+     "authors": ["Shalem, Ophir"], "year": 2022, "doi": "10.1000/syn.2022.007"},
+    {"ref_id": "R8", "title": "Attention mechanisms in transformer networks",
+     "authors": ["Vaswani, Ashish"], "year": 2017},
+    {"ref_id": "R9", "title": "Neural architecture search with reinforcement learning for vision tasks",
+     "authors": ["Zoph, Barret"], "year": 2017},
+    {"ref_id": "R10", "title": "Graph neural networks for molecular property prediction",
+     "authors": ["Zhang, Wei"], "year": 2021, "doi": "10.1000/syn.2021.001",
+     "duplicate_of": "R1"},
+    {"ref_id": "R11", "title": "Miracle cure study (retracted)",
+     "authors": ["Doe, John"], "year": 2015, "retracted": true}
+  ],
+  "search_log": [
+    {"query_id": "q1a", "source": "crossref", "executed_at": "2026-11-01T09:00:00Z",
+     "query_string": "graph neural networks molecular property", "fields": ["any"],
+     "date_window": {"from": 2021, "to": 2024},
+     "results_file": "materials/crossref_q1a_results.json"},
+    {"query_id": "q1b", "source": "crossref", "executed_at": "2026-11-01T09:05:00Z",
+     "query_string": "deep reinforcement learning robotic manipulation", "fields": ["any"],
+     "date_window": {"from": 2021, "to": 2024},
+     "results_file": "materials/crossref_q1b_results.json"},
+    {"query_id": "q2", "source": "crossref", "executed_at": "2026-11-01T09:10:00Z",
+     "query_string": "attention transformer neural architecture", "fields": ["title"],
+     "date_window": null, "results_file": "materials/crossref_q2_results.json"},
+    {"query_id": "q3", "source": "crossref", "executed_at": "2026-11-01T09:15:00Z",
+     "query_string": "solar hydrogen production", "fields": ["title"],
+     "date_window": null, "results_file": "materials/crossref_q3_results.json"}
+  ],
+  "output_contract": {
+    "required_fields": ["status", "coverage", "misses", "supplements",
+                        "sources", "uncertainty", "limitations"]
+  },
+  "extra": {
+    "sources": [
+      {"source": "crossref", "index_file": "materials/crossref_index.json"},
+      {"source": "pubmed", "index_file": "materials/pubmed_index.json"}
+    ]
+  }
+}

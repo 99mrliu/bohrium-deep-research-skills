@@ -1,0 +1,90 @@
+{
+  "_comment": "合成示例：本文件打包了 case.synthetic.json 引用的全部本地材料（检索响应留存文件与来源索引文件），全部为虚构记录。解包方法：python3 -c \"import json,os;d=json.load(open('materials.synthetic.json'));[ (os.makedirs(os.path.dirname(k),exist_ok=True), json.dump(v,open(k,'w'),ensure_ascii=False,indent=2)) for k,v in d['files'].items() ]\"",
+  "files": {
+    "materials/crossref_q1a_results.json": {
+      "_comment": "合成示例：q1a 的留存响应",
+      "results": [
+        {"doi": "10.1000/syn.2021.001",
+         "title": "Graph Neural Networks for Molecular Property Prediction",
+         "authors": [{"family": "Zhang", "given": "Wei"}], "year": 2021,
+         "venue": "J. Synth. Chem. Inf."},
+        {"doi": "10.1000/syn.2022.007",
+         "title": "Annual Review of Fluid Mechanics Methods",
+         "authors": [{"family": "Moin", "given": "Parviz"}], "year": 2022,
+         "venue": "Annu. Synth. Fluid Mech."},
+        {"doi": "10.1000/syn.2023.010", "title": "Survey of graph embedding techniques",
+         "authors": [{"family": "Goyal", "given": "Palash"}], "year": 2023,
+         "venue": "Synth. Comput. Surveys"}
+      ]
+    },
+    "materials/crossref_q1b_results.json": {
+      "_comment": "合成示例：q1b 的留存响应（2019 年的 R3 被时间窗截断，未出现在响应中）",
+      "results": [
+        {"doi": "10.1000/syn.2023.010", "title": "Survey of graph embedding techniques",
+         "authors": [{"family": "Goyal", "given": "Palash"}], "year": 2023,
+         "venue": "Synth. Comput. Surveys"}
+      ]
+    },
+    "materials/crossref_q2_results.json": {
+      "_comment": "合成示例：q2（title 字段）的留存响应",
+      "results": [
+        {"title": "Attention mechanisms in deep transformer networks",
+         "authors": ["Ashish Vaswani"], "year": 2017, "venue": "Synth. ML Conf."},
+        {"title": "Neural architecture search with reinforcement principles in game playing",
+         "authors": ["Barret Zoph"], "year": 2017, "venue": "Synth. ML Conf."}
+      ]
+    },
+    "materials/crossref_q3_results.json": {
+      "_comment": "合成示例：q3（title 字段）的留存响应（R4 标题不含 solar hydrogen，未返回）",
+      "results": [
+        {"doi": "10.1000/syn.2023.010", "title": "Survey of graph embedding techniques",
+         "authors": [{"family": "Goyal", "given": "Palash"}], "year": 2023,
+         "venue": "Synth. Comput. Surveys"}
+      ]
+    },
+    "materials/crossref_index.json": {
+      "_comment": "合成示例：crossref 来源的本地索引快照（探针与补检的可检语料）",
+      "records": [
+        {"doi": "10.1000/syn.2021.001",
+         "title": "Graph Neural Networks for Molecular Property Prediction",
+         "authors": [{"family": "Zhang", "given": "Wei"}], "year": 2021,
+         "venue": "J. Synth. Chem. Inf."},
+        {"doi": "10.1000/syn.2020.002",
+         "title": "Triboelectric Nanogenerator Based Biomechanical Energy Harvesting",
+         "authors": [{"family": "Wang", "given": "Li"}], "year": 2020,
+         "venue": "Synth. Energy J."},
+        {"doi": "10.1000/syn.2019.003",
+         "title": "Deep Reinforcement Learning for Robotic Manipulation",
+         "authors": [{"family": "Liu", "given": "Yang"}], "year": 2019,
+         "venue": "Synth. Robotics J."},
+        {"doi": "10.1000/syn.2022.004",
+         "title": "Photocatalytic Water Splitting with Perovskite Oxides",
+         "authors": [{"family": "Chen", "given": "Jing"}], "year": 2022,
+         "venue": "Synth. Catal. Lett.",
+         "abstract": "We demonstrate solar hydrogen production via photocatalytic water splitting using perovskite oxide semiconductors."},
+        {"doi": "10.1000/syn.2022.007",
+         "title": "Annual Review of Fluid Mechanics Methods",
+         "authors": [{"family": "Moin", "given": "Parviz"}], "year": 2022,
+         "venue": "Annu. Synth. Fluid Mech."},
+        {"title": "Attention mechanisms in deep transformer networks",
+         "authors": ["Ashish Vaswani"], "year": 2017, "venue": "Synth. ML Conf."},
+        {"title": "Neural architecture search with reinforcement principles in game playing",
+         "authors": ["Barret Zoph"], "year": 2017, "venue": "Synth. ML Conf."},
+        {"doi": "10.1000/syn.2023.010", "title": "Survey of graph embedding techniques",
+         "authors": [{"family": "Goyal", "given": "Palash"}], "year": 2023,
+         "venue": "Synth. Comput. Surveys"}
+      ]
+    },
+    "materials/pubmed_index.json": {
+      "_comment": "合成示例：pubmed 来源的本地索引快照（检索记录未覆盖该来源）",
+      "records": [
+        {"pmid": "38000001",
+         "title": "Single-cell RNA sequencing reveals tumor heterogeneity",
+         "authors": ["Soo Kim"], "year": 2023, "venue": "Synth. Cell Genomics",
+         "abstract": "Single cell transcriptomics of tumor samples reveals heterogeneity."},
+        {"pmid": "38000002", "title": "Tumor microenvironment profiling in melanoma",
+         "authors": ["Alice Park"], "year": 2021, "venue": "Synth. Oncol. J."}
+      ]
+    }
+  }
+}

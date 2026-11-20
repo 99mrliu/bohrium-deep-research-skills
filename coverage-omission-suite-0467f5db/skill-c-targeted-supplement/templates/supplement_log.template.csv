@@ -1,0 +1,9 @@
+query_id,batch,archetype,hypothesis,target_miss_ids,generated_from,quoted_terms,source,files_searched,candidates_returned,newly_covered_ids,marginal_gain,verdict
+# query_id: 形如 Q-B1-003；batch: 批次号 B1/B2…（固定顺序 a原词补全→b作者+年→c引文追踪→d来源切换）
+# archetype: 原词补全式 / 作者+年锚定式 / 引文追踪式 / 来源切换式
+# hypothesis: 针对哪类漏检的假设（一句话）
+# target_miss_ids: 目标漏检 ref_id（分号分隔）
+# generated_from: 漏检记录 ref_id；quoted_terms: 引用的原文词项（空格分隔）
+# source: 执行说明（含切换前后来源文件）
+# marginal_gain: 本查询经冻结参考集重匹配后的新增覆盖条数；零收益如实记 0
+# verdict: effective / marginal / zero（禁止删除 zero 行）

@@ -1,0 +1,6 @@
+# 合成示例：hit_matrix.csv 片段，取自对 case.synthetic.json 的冒烟运行，数据全部虚构
+# 单元格式 status:match_level:score:rank_in_results
+ref_id,ref_title,q1a|crossref|2026-11-01T09:00:00Z,q1b|crossref|2026-11-01T09:05:00Z,q2|crossref|2026-11-01T09:10:00Z,q3|crossref|2026-11-01T09:15:00Z,any_hit
+R1,Graph neural networks for molecular property prediction,hit:L1:1.0000:1,miss:-:0.0000:-,miss:-:0.0000:-,miss:-:0.0000:-,hit
+R8,Attention mechanisms in transformer networks,miss:-:0.0000:-,miss:-:0.0000:-,hit:L2:0.9091:1,miss:-:0.0000:-,hit
+R9,Neural architecture search with reinforcement learning for vision tasks,miss:-:0.0000:-,miss:-:0.0000:-,hit:L3(adjudicated):0.5556:2,miss:-:0.0000:-,hit

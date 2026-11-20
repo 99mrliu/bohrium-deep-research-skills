@@ -1,0 +1,53 @@
+{
+  "schema_version": "1.0.0",
+  "case_id": "<与 case.json 一致的案例标识>",
+  "frozen_at": "<ISO8601 UTC 时间>",
+  "frozen_by": "refset_build.py",
+  "denominator_policy": "分母仅来自案例本地参考材料（题录文件、专家清单、参考图谱），与任何检索结果无关；条目经核验、去重、处置后冻结。",
+  "records": [
+    {
+      "ref_id": "REF-0001",
+      "title": "<文献题名>",
+      "authors": "<作者串，可空>",
+      "year": "<四位出版年，可空>",
+      "journal": "<刊名，可空>",
+      "doi": "<规范化 DOI 或 null>",
+      "pmid": "<规范化 PMID 或 null>",
+      "pmcid": "<规范化 PMCID 或 null>",
+      "arxiv": "<规范化 arXiv 或 null>",
+      "verification_status": "verified | unverified | identifier_conflict",
+      "verification_source": "local_response | live_api_cached | null",
+      "verification_evidence": [
+        {
+          "via": "doi | pmid | pmcid",
+          "id": "<命中时使用的标识符>",
+          "channel": "local | live",
+          "entry": {
+            "file": "<本地响应文件相对路径>",
+            "json_ptr": "<JSON 索引，如 [3]>",
+            "title": "<响应中的题名>",
+            "journal": "<响应中的刊名>",
+            "year": "<响应中的出版年>"
+          }
+        }
+      ],
+      "inclusion_reason": "parsed_from:bibtex | parsed_from:ris | parsed_from:csv | parsed_from:json | parsed_from:pdf",
+      "source": ["<材料相对路径#位置指针>"],
+      "merged_from": ["<被并记录的出处指针>"],
+      "disposition": "include | exclude_retracted | needs_manual_review | flag_keep_no_fulltext",
+      "flags": ["no_fulltext_url", "identifier_conflict", "no_identifier"],
+      "usable": true,
+      "usable_for_fulltext": true
+    }
+  ],
+  "stats": {
+    "total": 0,
+    "usable": 0,
+    "verified": 0,
+    "needs_manual_review": 0,
+    "excluded": 0,
+    "merged_away": 0
+  },
+  "status": "complete | partial | failed",
+  "limitations": ["<诚实降级说明>"]
+}
