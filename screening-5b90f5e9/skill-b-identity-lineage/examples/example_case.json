@@ -1,0 +1,25 @@
+{
+  "case_id": "example-synthetic-01",
+  "_disclaimer": "本案例为完全虚构的合成数据，仅用于演示流水线，不对应任何真实文献。",
+  "research_question": "在慢病与重症管理场景中，人工智能与数字健康干预（深度学习预测模型、远程医疗、可穿戴设备等）改善患者结局的原始临床研究证据。",
+  "eligibility": {
+    "include": "AI/数字健康干预用于慢病或重症管理；原始临床研究（试验、队列等）；报告患者相关结局。",
+    "exclude": "非临床人群或纯计算/体外研究；综述、社论、研究方案；与数字健康无关的干预。"
+  },
+  "output_contract": [
+    "case_id",
+    "skill_name",
+    "status",
+    "product",
+    "evidence_matrix",
+    "sources",
+    "uncertainty",
+    "change_records",
+    "counts",
+    "checks"
+  ],
+  "materials": [
+    "example_exports/source_a.json",
+    "example_exports/source_b.ris"
+  ]
+}

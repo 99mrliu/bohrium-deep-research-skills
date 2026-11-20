@@ -1,0 +1,34 @@
+{
+  "_notice": "合成虚构示例：本案例与其中所有文献、DOI、标注者均为虚构，仅用于演示流程。",
+  "case_id": "example-synthetic-001",
+  "research_question": "在成年2型糖尿病患者中，连续血糖监测（CGM）相比自我血糖监测（SMBG）对 HbA1c 的影响：仅纳入英文发表的随机对照试验（虚构示例问题）。",
+  "eligibility_criteria": {
+    "population": "成人（>=18岁）2型糖尿病",
+    "intervention": "连续血糖监测（CGM，含实时与间歇扫描式）",
+    "comparator": "自我血糖监测（SMBG）或常规护理",
+    "outcome": "HbA1c",
+    "design": "随机对照试验",
+    "language": "英文"
+  },
+  "output_contract": [
+    "case_id",
+    "research_question",
+    "screening_mode",
+    "total_identified",
+    "duplicates_removed",
+    "total_screened",
+    "included",
+    "excluded",
+    "needs_human_review",
+    "percent_agreement",
+    "kappa_binary",
+    "kappa_three_class",
+    "disagreements_total",
+    "disagreement_type_counts",
+    "arbitrations",
+    "human_confirmation_required",
+    "final_labels",
+    "audit_trail",
+    "uncertainty_statement"
+  ]
+}

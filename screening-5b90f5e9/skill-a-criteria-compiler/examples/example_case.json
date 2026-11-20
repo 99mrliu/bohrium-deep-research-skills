@@ -1,0 +1,19 @@
+{
+  "_notice": "合成示例，非真实评测案例。所有文献、DOI、作者均为虚构。",
+  "case_id": "synth-demo-01",
+  "research_question": "在成年 2 型糖尿病患者中，SGLT2 抑制剂对比安慰剂能否降低心血管不良结局？（虚构主题，仅作演示）",
+  "criteria_text": "纳入标准：INC1 研究对象为确诊 2 型糖尿病的成人（≥18 岁）；INC2 干预为 SGLT2 抑制剂、对照为安慰剂或标准照护；INC3 报告至少一项心血管结局（心血管死亡、心肌梗死、卒中、心衰住院等）。排除标准：EXC1 非成人、动物或体外研究；EXC2 非随机对照设计（观察性研究、综述、病例报告、无数据的会议摘要）。仅纳入英文文献。",
+  "eligible_languages_hint": ["en"],
+  "output_contract": [
+    "case_id",
+    "skill_name",
+    "status",
+    "product",
+    "evidence_matrix",
+    "sources",
+    "uncertainty",
+    "change_records",
+    "counts",
+    "checks"
+  ]
+}

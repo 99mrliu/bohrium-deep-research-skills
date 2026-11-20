@@ -1,0 +1,54 @@
+{
+  "_notice": "合成示例，非真实评测案例。由模型按 example_case.json 的 criteria_text 编译（演示产物）。",
+  "version": "v1.0.0",
+  "research_question": "在成年 2 型糖尿病患者中，SGLT2 抑制剂对比安慰剂能否降低心血管不良结局？（虚构主题，仅作演示）",
+  "eligible_languages": ["en"],
+  "criteria": [
+    {
+      "criterion_id": "INC1",
+      "type": "inclusion",
+      "statement": "研究对象为确诊 2 型糖尿病的成人（≥18 岁）",
+      "predicate": "题名/摘要明确报告受试者为 2 型糖尿病成人则 pass；明确为未成年人、动物或体外研究则 fail；人群为 2 型糖尿病与其他状态混合（如糖尿病前期）或未说明年龄则 uncertain",
+      "evidence_required": true,
+      "reason_code": "EX-POPULATION",
+      "boundary_notes": "混合人群（糖尿病+糖尿病前期）判 uncertain，注 BND-PARTIAL-OVERLAP"
+    },
+    {
+      "criterion_id": "INC2",
+      "type": "inclusion",
+      "statement": "干预为 SGLT2 抑制剂、对照为安慰剂或标准照护",
+      "predicate": "摘要明确报告 SGLT2 抑制剂（empagliflozin/dapagliflozin/canagliflozin/ertugliflozin/sotagliflozin 等）与安慰剂或标准照护对照则 pass；无 SGLT2 抑制剂或无对照则 fail；干预不明则 uncertain",
+      "evidence_required": true,
+      "reason_code": "EX-INTERVENTION",
+      "boundary_notes": "活性对照药（如 DPP-4 抑制剂）视为标准照护，pass"
+    },
+    {
+      "criterion_id": "INC3",
+      "type": "inclusion",
+      "statement": "报告至少一项心血管结局（心血管死亡、心肌梗死、卒中、心衰住院等）",
+      "predicate": "摘要明确报告心血管结局为终点/结局指标则 pass；明确仅报告非心血管结局（如 HbA1c）则 fail；摘要未说明结局则 uncertain",
+      "evidence_required": true,
+      "reason_code": "EX-OUTCOME",
+      "boundary_notes": "心血管事件仅作为不良事件顺带记录时，判 uncertain 并注 BND-ABSTRACT-ONLY 由人工定夺"
+    },
+    {
+      "criterion_id": "EXC1",
+      "type": "exclusion",
+      "statement": "非成人、动物或体外研究",
+      "predicate": "摘要明确人群为未成年人（<18 岁）、动物或体外实验则 fail；明确为成人人群则 pass",
+      "evidence_required": true,
+      "reason_code": "EX-POPULATION",
+      "boundary_notes": "与 INC1 互为镜像；任一处 fail 即触发"
+    },
+    {
+      "criterion_id": "EXC2",
+      "type": "exclusion",
+      "statement": "非随机对照设计（观察性研究、综述、病例报告、无数据的会议摘要）",
+      "predicate": "题名/摘要明示 retrospective/prospective cohort、case-control、review、editorial、case report 则 fail；明示随机分配（randomly assigned/randomized）则 pass；设计不明则 uncertain",
+      "evidence_required": true,
+      "reason_code": "EX-DESIGN",
+      "boundary_notes": "设计类型无法从摘要确认时判 uncertain 并注 BND-ABSTRACT-ONLY"
+    }
+  ],
+  "changelog": []
+}

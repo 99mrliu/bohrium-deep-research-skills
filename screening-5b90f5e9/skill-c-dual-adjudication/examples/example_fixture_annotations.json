@@ -1,0 +1,34 @@
+{
+  "_notice": "合成虚构冲突标注 fixture：两位标注者 FX-A / FX-B 均为虚构，含 3 处分歧（R05/R06/R07）。本文件是输入 fixture（输入材料），不是事实、不是金标准，任何一方标注都不得当作正确答案。",
+  "_fixture": true,
+  "annotators": [
+    {
+      "annotator_id": "FX-A-fictional",
+      "annotations": [
+        {"record_id": "R01", "decision": "include", "reason": "INC-DES", "evidence": "240 adults with type 2 diabetes were randomized to CGM or SMBG"},
+        {"record_id": "R02", "decision": "exclude", "reason": "EXC-DUP", "evidence": "Continuous glucose monitoring versus self-monitoring"},
+        {"record_id": "R03", "decision": "exclude", "reason": "EXC-POP", "evidence": "adolescents with type 1 diabetes"},
+        {"record_id": "R04", "decision": "exclude", "reason": "EXC-DES", "evidence": "We systematically reviewed randomized trials of CGM"},
+        {"record_id": "R05", "decision": "include", "reason": "INC-POP", "evidence": "prespecified subgroup analysis in type 2 diabetes showed HbA1c reduction"},
+        {"record_id": "R06", "decision": "include", "reason": "INC-POP", "evidence": "Twenty adults with type 2 diabetes used a factory-calibrated CGM"},
+        {"record_id": "R07", "decision": "uncertain", "reason": "UNC-META", "evidence": "", "comment": "摘要为空，无法核实人群与结局"},
+        {"record_id": "R08", "decision": "exclude", "reason": "EXC-LANG", "evidence": "一项随机对照试验"},
+        {"record_id": "R09", "decision": "uncertain", "reason": "UNC-BOUND", "evidence": "results pending full publication", "comment": "仅会议摘要，全文未发表"}
+      ]
+    },
+    {
+      "annotator_id": "FX-B-fictional",
+      "annotations": [
+        {"record_id": "R01", "decision": "include", "reason": "INC-DES", "evidence": "randomized to CGM or SMBG for 26 weeks"},
+        {"record_id": "R02", "decision": "exclude", "reason": "EXC-DUP", "evidence": "randomized controlled trial"},
+        {"record_id": "R03", "decision": "exclude", "reason": "EXC-POP", "evidence": "type 1 diabetes"},
+        {"record_id": "R04", "decision": "exclude", "reason": "EXC-DES", "evidence": "a systematic review and meta-analysis"},
+        {"record_id": "R05", "decision": "exclude", "reason": "EXC-POP", "evidence": "adults with type 1 (n=90) or type 2 (n=90) diabetes"},
+        {"record_id": "R06", "decision": "exclude", "reason": "EXC-OUT", "evidence": "glycemic outcomes including HbA1c were not assessed"},
+        {"record_id": "R07", "decision": "exclude", "reason": "EXC-INFO", "evidence": "Glucose monitoring patterns in primary care"},
+        {"record_id": "R08", "decision": "exclude", "reason": "EXC-LANG", "evidence": "持续葡萄糖监测对2型糖尿病患者血糖控制的影响"},
+        {"record_id": "R09", "decision": "uncertain", "reason": "UNC-BOUND", "evidence": "Conference abstract only", "comment": "结果待全文发表"}
+      ]
+    }
+  ]
+}

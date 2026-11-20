@@ -1,0 +1,7 @@
+{"canonical_id": "can-001", "decision": "exclude", "reason_code": "EX-INT", "evidence_quote": "We randomly assigned 240 adults with obesity to once-weekly semaglutide or placebo", "note": "药物减重试验，非 AI/数字健康干预"}
+{"canonical_id": "can-002", "decision": "exclude", "reason_code": "EX-DESIGN", "evidence_quote": "We synthesized 38 studies evaluating deep learning algorithms", "note": "系统综述，非原始临床研究"}
+{"canonical_id": "can-003", "decision": "exclude", "reason_code": "EX-POP", "evidence_quote": "molecular property benchmarks", "note": "纯计算基准研究，无临床人群"}
+{"canonical_id": "can-004", "decision": "include", "reason_code": "IN-INT", "evidence_quote": "deep learning models on 40,000 ICU admissions to predict in-hospital mortality", "note": "深度学习用于重症管理的原始临床研究"}
+{"canonical_id": "can-005", "decision": "needs_human", "reason_code": "BND-ABSTRACT-ONLY", "evidence_quote": null, "note": "摘要缺失（field_status.abstract=missing），无法锚定证据，需人工获取全文"}
+{"canonical_id": "can-006", "decision": "include", "reason_code": "IN-POP", "evidence_quote": "mortality prediction in cardiac ICU patients using waveform data", "note": "深度学习用于心脏 ICU 患者结局预测的原始研究"}
+{"canonical_id": "can-007", "decision": "include", "reason_code": "IN-INT", "evidence_quote": "telemedicine follow-up reduced 12-month readmission by 22 percent", "note": "远程医疗用于慢性心衰管理的队列研究"}

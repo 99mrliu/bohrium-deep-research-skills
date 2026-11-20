@@ -1,0 +1,15 @@
+{
+  "_disclaimer": "合成示例：以下仲裁针对 examples/ 虚构数据，演示一次 merge 与一次 split。",
+  "arbitrations": [
+    {
+      "pair": "source_a-003|source_b-003",
+      "decision": "merge",
+      "rationale": "同一研究的两个版本：题名完全一致、首作者相同（Chen）；source_a-003 为 arXiv 预印本（2105.12345, 2021），source_b-003 为期刊正式版（DOI 10.1000/gnn789, 2022），构成版本谱系，按 version_chain 规则合并并取正式版为 canonical。"
+    },
+    {
+      "pair": "source_a-004|source_b-004",
+      "decision": "split",
+      "rationale": "题名高度相似（Jaccard 0.9）且首作者相同，但研究人群不同（综合 ICU 40,000 例 vs 心脏 ICU 8,200 例波形数据）、期刊与 DOI 均不同（10.1000/icu001 vs 10.1000/icu002），判定为两项不同研究，显式 split 防误并。"
+    }
+  ]
+}
