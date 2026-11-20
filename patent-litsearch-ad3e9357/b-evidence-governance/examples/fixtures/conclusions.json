@@ -1,0 +1,41 @@
+{
+  "conclusions": [
+    {
+      "claim_id": "C-low",
+      "statement": "虚构低置信结论：引文未核验+状态过期+同族口径不明+覆盖不全+单一来源+状态未知",
+      "fields_present": [
+        "quote",
+        "locator",
+        "source_kind",
+        "status",
+        "query_date",
+        "sources"
+      ],
+      "evidence_verified": false,
+      "family_scope_known": false,
+      "corpus_coverage": "partial",
+      "source_count": 1,
+      "status_query_date": "2020-01-01",
+      "status_value": "未知"
+    },
+    {
+      "claim_id": "C-high",
+      "statement": "虚构高置信结论：字段齐备、双来源、引文已核验",
+      "fields_present": [
+        "quote",
+        "locator",
+        "source_kind",
+        "status",
+        "query_date",
+        "sources"
+      ],
+      "evidence_verified": true,
+      "match_mode": "verbatim",
+      "family_scope_known": true,
+      "corpus_coverage": "complete",
+      "source_count": 2,
+      "status_query_date": "2026-11-20",
+      "status_value": "授权"
+    }
+  ]
+}

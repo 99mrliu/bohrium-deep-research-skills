@@ -1,0 +1,41 @@
+{
+  "note": "合成示例语料（illustrative，非正式案例结果）",
+  "records": [
+    {
+      "id": "rec1",
+      "numbers": [
+        "US 10,293,847 B2",
+        "US 2018/0293847 A1",
+        "US 15/654,321"
+      ],
+      "priorities": [
+        "US 15/654,321"
+      ],
+      "title": "示例涂层装置（虚构）",
+      "locator": "$.records[0]"
+    },
+    {
+      "id": "rec2",
+      "numbers": [
+        "WO 2019/123456 A1"
+      ],
+      "priorities": [
+        "US 15/654,321",
+        "US 16/000,111"
+      ],
+      "title": "示例涂层装置（虚构）- 国际申请",
+      "locator": "$.records[1]"
+    },
+    {
+      "id": "rec3",
+      "numbers": [
+        "CN 110123456 A"
+      ],
+      "priorities": [
+        "CN 201810123456.7"
+      ],
+      "title": "示例涂层方法（虚构，无关联族）",
+      "locator": "$.records[2]"
+    }
+  ]
+}

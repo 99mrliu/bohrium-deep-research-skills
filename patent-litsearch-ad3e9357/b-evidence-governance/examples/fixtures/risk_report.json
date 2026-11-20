@@ -1,0 +1,66 @@
+{
+  "conclusions_file": "/Users/liuhengshen/Desktop/bhr_product/3rd/4/submit/submit-ad3e9357-b-evidence-governance/skill/examples/fixtures/conclusions.json",
+  "grading_date": "2026-11-20",
+  "total": 2,
+  "grades": {
+    "high": 1,
+    "medium": 0,
+    "low": 1
+  },
+  "results": [
+    {
+      "claim_id": "C-low",
+      "statement": "虚构低置信结论：引文未核验+状态过期+同族口径不明+覆盖不全+单一来源+状态未知",
+      "score": 10,
+      "grade": "low",
+      "triggered_rules": [
+        {
+          "rule": "R-G2",
+          "desc": "状态过期：法律状态查询日期距今过久（2515 天）",
+          "points": 2
+        },
+        {
+          "rule": "R-G3",
+          "desc": "同族口径不明：观察到的链接不构成完整同族，未声明口径",
+          "points": 1
+        },
+        {
+          "rule": "R-G4",
+          "desc": "语料覆盖不全：有限语料未覆盖全部目标范围（partial）",
+          "points": 1
+        },
+        {
+          "rule": "R-G6",
+          "desc": "单一来源：结论仅有一个独立来源支撑",
+          "points": 1
+        },
+        {
+          "rule": "R-G7",
+          "desc": "引文未核验：结论所附引文未通过确定性回核",
+          "points": 3
+        },
+        {
+          "rule": "R-G8",
+          "desc": "法律状态未知：当前官方法律状态未知，结论带不确定性",
+          "points": 2
+        }
+      ],
+      "review_checklist": [
+        "重新查询官方登记簿，更新 query_date 与 staleness 备注",
+        "在结论中写明'仅观察到的链接，不构成完整同族'，必要时人工核查 INPADOC",
+        "列出未覆盖的语料缺口（如未提供的同族成员/对比文件），结论限缩到已覆盖范围",
+        "补充第二独立来源；补不到则在结论中标注'单一来源'",
+        "先跑 scripts/quote_audit.py 修复引文，再重新分级",
+        "按 rules/legal_status_protocol.md 执行登记优先查询；仍未知则保持'未知'措辞"
+      ]
+    },
+    {
+      "claim_id": "C-high",
+      "statement": "虚构高置信结论：字段齐备、双来源、引文已核验",
+      "score": 0,
+      "grade": "high",
+      "triggered_rules": [],
+      "review_checklist": []
+    }
+  ]
+}

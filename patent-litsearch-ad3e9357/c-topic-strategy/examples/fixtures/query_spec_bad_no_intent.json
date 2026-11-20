@@ -1,0 +1,21 @@
+{
+  "topic": "负例夹具（虚构）：词项缺 intent，应触发 R6（illustrative only）",
+  "version": "0.1",
+  "mode": "topic",
+  "blocks": [
+    {
+      "name": "过程",
+      "terms": [
+        {"term": "fermentation", "intent": ""},
+        {"term": "reactor", "intent": "识别设备类文献"}
+      ]
+    },
+    {
+      "name": "手段",
+      "terms": [
+        {"term": "membrane aeration", "intent": "主题的区分性技术手段"}
+      ]
+    }
+  ],
+  "facets": {}
+}

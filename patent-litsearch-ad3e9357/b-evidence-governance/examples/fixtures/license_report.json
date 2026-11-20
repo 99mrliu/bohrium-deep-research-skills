@@ -1,0 +1,45 @@
+{
+  "source_file": "/Users/liuhengshen/Desktop/bhr_product/3rd/4/submit/submit-ad3e9357-b-evidence-governance/skill/examples/fixtures/sources.json",
+  "total": 3,
+  "tiers": {
+    "green": 1,
+    "yellow": 1,
+    "red": 1
+  },
+  "results": [
+    {
+      "name": "国家知识产权局 CNIPA 中国专利公布公告",
+      "url": "http://epub.cnipa.gov.cn",
+      "tier": "green",
+      "tier_label": "官方公开库",
+      "display_fields": "全部公开著录项目、权利要求书、说明书、法律状态快照；展示时必须标注来源与查询日期",
+      "retention": "可留存公开字段快照与查询日期；快照须随结果注明'截至查询日期'",
+      "degradation": null,
+      "access_declared": "public"
+    },
+    {
+      "name": "Google Patents",
+      "url": "https://patents.google.com",
+      "tier": "yellow",
+      "tier_label": "开放聚合（需注明来源）",
+      "display_fields": "可展示著录项目与摘要级信息，必须注明'聚合来源，非官方登记'；法律状态只能作线索（leads_only）",
+      "retention": "禁止批量留存全文；逐条引用须回到官方源复核",
+      "degradation": "黄级源线索须用绿级官方源复核后方可升级为结论；复核失败则相关结论标 unknown",
+      "access_declared": "public"
+    },
+    {
+      "name": "PatSnap 智慧芽",
+      "url": "https://www.patsnap.com",
+      "tier": "red",
+      "tier_label": "许可受限（登录/付费/协议限制）",
+      "display_fields": "仅可书写结论性描述；不得转载受限字段原文、不展示库内专有标引",
+      "retention": "禁止程序化抓取、禁止批量下载、禁止二次分发；违反许可的访问一律不做",
+      "degradation": "能力降级方案：红色源禁止抓取时，改用绿色官方库（CNIPA/USPTO/EPO/WIPO）逐项替代；红级源独有字段（如增值法律状态、引证分析）无法覆盖的，在输出中显式标注'覆盖缺口：字段 X 暂无绿色源可核'，相关结论降级并列入人工复核清单",
+      "access_declared": "login",
+      "green_alternatives": [
+        "国家知识产权局 CNIPA 中国专利公布公告"
+      ],
+      "coverage_gap": "覆盖缺口标注要求：红色源 PatSnap 智慧芽 的受限字段若绿色替代源无法覆盖，输出中必须逐字段标注缺口并把相关结论降级"
+    }
+  ]
+}

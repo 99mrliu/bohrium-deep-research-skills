@@ -1,0 +1,45 @@
+{
+  "case_id": "case-fixture-001",
+  "status": "partial",
+  "claims": [],
+  "legal_status": {
+    "records": [],
+    "protocol": "rules/legal_status_protocol.md（登记优先；未知纪律）",
+    "note": "当前官方法律状态未核验前一律填'未知'，不得编造"
+  },
+  "authorization": {
+    "tiers": [],
+    "rules": "rules/authorization_boundary.md（绿/黄/红分级与降级方案）"
+  },
+  "sources": [],
+  "uncertainty": [
+    "骨架初始状态：各项结论尚未完成引文闸控与状态核验"
+  ],
+  "change_records": [
+    {
+      "timestamp": "2026-11-20T15:38:28+08:00",
+      "action": "scaffold_created",
+      "detail": "由 scaffold_result.py 生成；status=partial，待管线逐步填充"
+    }
+  ],
+  "_evidence_governance": {
+    "pipeline": [
+      "scripts/evidence_ledger.py append/validate（登记证据）",
+      "scripts/quote_audit.py（确定性引文回核）",
+      "scripts/status_ledger.py validate（法律状态核验协议）",
+      "scripts/license_tiers.py classify（数据源授权分级）",
+      "scripts/risk_grade.py grade（结论风险分级）"
+    ],
+    "discipline": "所有输出论断必须引文闸控：逐字引文+定位+回核通过"
+  },
+  "summary": "",
+  "claim_chart": [],
+  "legal_status_table": [],
+  "risk_notes": "",
+  "_contract_mirrored_fields": [
+    "summary",
+    "claim_chart",
+    "legal_status_table",
+    "risk_notes"
+  ]
+}

@@ -1,0 +1,32 @@
+{
+  "topic": "示例主题（虚构）：膜曝气发酵反应器（illustrative only，非正式案例结果）",
+  "version": "1.0",
+  "mode": "topic",
+  "blocks": [
+    {
+      "name": "过程与设备",
+      "terms": [
+        {"term": "fermentation", "intent": "识别涉及发酵过程的相关文献（核心工艺词）"},
+        {"term": "reactor", "intent": "识别设备类文献，防止只命中工艺论文而漏掉装置专利"}
+      ]
+    },
+    {
+      "name": "核心技术手段",
+      "terms": [
+        {"term": "membrane aeration", "intent": "主题的区分性技术手段，直接限定相关集合"},
+        {"term": "aeration", "intent": "上位表述，防止膜字缺失或改写时漏检（查全兜底）"}
+      ]
+    },
+    {
+      "name": "应用对象",
+      "terms": [
+        {"term": "microbial", "intent": "限定作用对象为微生物体系，排除纯化工曝气"},
+        {"term": "cell culture", "intent": "同义应用场景表述，覆盖生物医药领域写法"}
+      ]
+    }
+  ],
+  "facets": {
+    "classification": ["C12M 1/00"],
+    "year_range": ["2015", "2026"]
+  }
+}

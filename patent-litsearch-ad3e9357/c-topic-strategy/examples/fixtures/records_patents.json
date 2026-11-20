@@ -1,0 +1,29 @@
+{
+  "_comment": "示例夹具：全部虚构，仅供 selfcheck 使用，illustrative only，非正式案例结果。两件记录属于同一虚构同族 FAM-ILLUS-001，用于验证同族去重。",
+  "records": [
+    {
+      "publication_number": "XX1000001A1",
+      "kind_code": "A1",
+      "title": "Illustrative bio-fermentation reactor with membrane aeration",
+      "abstract": "An illustrative reactor using membrane aeration for microbial fermentation processes. This record is fictional and for self-test only.",
+      "claims": "1. A reactor comprising a membrane aeration module configured for microbial cell culture in a fermentation broth.",
+      "applicant": "EXAMPLE BIOTECH CO",
+      "ipc": ["C12M 1/00", "A01N 63/00"],
+      "priority_number": "XXPR2020-0001",
+      "family_id": "FAM-ILLUS-001",
+      "publication_date": "2021-03-15"
+    },
+    {
+      "publication_number": "XX1000002B1",
+      "kind_code": "B1",
+      "title": "Illustrative bio-fermentation reactor with membrane aeration",
+      "abstract": "Granted family member of the same illustrative invention (fictional, self-test only).",
+      "claims": "1. A reactor comprising a membrane aeration module configured for microbial cell culture.",
+      "applicant": "EXAMPLE BIOTECH CO",
+      "ipc": ["A01N 63/00"],
+      "priority_number": "XXPR2020-0001",
+      "family_id": "FAM-ILLUS-001",
+      "publication_date": "2022-01-10"
+    }
+  ]
+}

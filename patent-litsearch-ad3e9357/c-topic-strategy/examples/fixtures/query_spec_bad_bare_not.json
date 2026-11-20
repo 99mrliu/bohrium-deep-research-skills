@@ -1,0 +1,21 @@
+{
+  "topic": "负例夹具（虚构）：裸 NOT，应触发 R4（illustrative only）",
+  "version": "0.1",
+  "mode": "topic",
+  "blocks": [
+    {
+      "name": "过程",
+      "terms": [
+        {"term": "fermentation", "intent": "识别发酵过程相关文献"},
+        {"term": "reactor", "intent": "识别设备类文献"}
+      ]
+    },
+    {
+      "name": "排除块",
+      "terms": [
+        {"term": "NOT welding", "intent": "试图排除焊接干扰，但同块内 NOT 之前没有正向词项，属于裸 NOT"}
+      ]
+    }
+  ],
+  "facets": {}
+}
