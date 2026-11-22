@@ -1,0 +1,24 @@
+{
+  "_comment": "ILLUSTRATIVE EXAMPLE — synthetic paper and numbers, not a formal case result.",
+  "case_id": "DEMO-SYNTH",
+  "spine": "defense",
+  "duration_sec": 600,
+  "slides": [
+    {"index": 1, "role": "title", "headline": "Demo-Net: reducing detection error for small objects under limited labels", "support": [{"kind": "none", "locator": "title page"}], "time_sec": 30, "transition": "I will start from the problem this work sets out to solve.", "notes_hint": "introduce self and venue", "source_slide": null},
+    {"index": 2, "role": "context", "headline": "Small-object detection drives two downstream costs in our setting", "support": [{"kind": "quote", "locator": "paper.pdf p.1 Sec.1"}], "time_sec": 60, "transition": "The setting matters because of these two costs.", "notes_hint": "define small object as <32px per paper definition", "source_slide": null},
+    {"index": 3, "role": "gap", "headline": "Prior detectors lose most of their accuracy exactly on the smallest objects", "support": [{"kind": "table", "locator": "paper.pdf p.3 Table 1"}], "time_sec": 75, "transition": "Existing methods were not built for this regime.", "notes_hint": "fairness: cite strongest prior baseline", "source_slide": null},
+    {"index": 4, "role": "idea", "headline": "The key idea is to align features across scales before classification", "support": [{"kind": "figure", "locator": "paper.pdf p.4 Fig.1"}], "time_sec": 90, "transition": "Our approach rests on one observation about scale misalignment.", "notes_hint": "walk the diagram left to right", "source_slide": null},
+    {"index": 5, "role": "method", "headline": "The alignment module adds two parameters per stage and no extra labels", "support": [{"kind": "quote", "locator": "paper.pdf p.5 Sec.3.2"}], "time_sec": 75, "transition": "The idea becomes concrete in a small module.", "notes_hint": "emphasize label-free property, skip derivation", "source_slide": null},
+    {"index": 6, "role": "result", "headline": "Demo-Net reduces small-object error by 12% relative under the paper's benchmark conditions", "support": [{"kind": "figure", "locator": "paper.pdf p.6 Fig.2"}], "time_sec": 120, "transition": "Does the module pay off? The main comparison says it does.", "notes_hint": "state dataset, split and metric exactly as in paper", "key_result": true, "source_slide": null},
+    {"index": 7, "role": "limitation", "headline": "Gains shrink to within noise when labels are abundant, suggesting where the method does not help", "support": [{"kind": "table", "locator": "paper.pdf p.7 Table 3"}], "time_sec": 75, "transition": "The benefit is conditional, and the ablation shows the boundary.", "notes_hint": "own the limitation before committee asks", "source_slide": null},
+    {"index": 8, "role": "takeaway", "headline": "Cross-scale alignment is a cheap, validated fix for small objects in the limited-label regime", "support": [{"kind": "figure", "locator": "paper.pdf p.6 Fig.2"}], "time_sec": 75, "transition": "To close: one claim, at the strength the evidence supports.", "notes_hint": "answer the opening question; invite questions", "source_slide": null}
+  ],
+  "backups": [
+    {"index": 9, "role": "backup", "headline": "Full ablation grid across label budgets", "support": [{"kind": "table", "locator": "paper.pdf p.8 Table 4"}], "time_sec": 0, "transition": "", "notes_hint": "for 'what about more labels' follow-ups", "source_slide": null}
+  ],
+  "objection_map": [
+    {"question": "Is the gap real?", "slide": 3},
+    {"question": "Is the validation adequate?", "slide": 6},
+    {"question": "What exactly is the contribution boundary?", "slide": 7}
+  ]
+}

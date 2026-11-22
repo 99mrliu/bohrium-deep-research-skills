@@ -1,0 +1,29 @@
+{
+  "_comment": "ILLUSTRATIVE EXAMPLE — synthetic paper and numbers, not a formal case result.",
+  "claims": [
+    {
+      "id": "C01",
+      "statement": "Demo-Net reduces small-object error to 22.0 AP_small versus 25.0 for the re-implemented baseline on the benchmark test split",
+      "kind": "measured",
+      "strength": "established",
+      "locator": {"file": "paper.pdf", "pdf_page": 6, "printed_page": 4, "section": "4.1", "exhibit": "Figure 2"},
+      "anchor": "error drops from 25.0 to 22.0 AP_small on the test split",
+      "attribution": "this_work",
+      "conditions": "benchmark X, test split, 10% label budget",
+      "notes": "relative change 12% computed from the two source values; both numbers must appear on the slide with the comparator",
+      "slides": [6]
+    },
+    {
+      "id": "C02",
+      "statement": "With full labels the gain over the baseline is within run-to-run noise",
+      "kind": "measured",
+      "strength": "preliminary",
+      "locator": {"file": "paper.pdf", "pdf_page": 7, "printed_page": 5, "section": "4.3", "exhibit": "Table 3"},
+      "anchor": "full-label ablation differs by 0.3 AP_small across 2 runs",
+      "attribution": "this_work",
+      "conditions": "full-label setting, 2 runs only",
+      "notes": "only 2 runs; keep 'suggests/within noise' wording, do not generalize",
+      "slides": [7]
+    }
+  ]
+}

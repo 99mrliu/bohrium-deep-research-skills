@@ -1,0 +1,30 @@
+{
+  "_comment": "ILLUSTRATIVE EXAMPLE — synthetic template report, not a formal case artifact.",
+  "file": "target-template.pptx",
+  "slide_size_emu": [12192000, 6858000],
+  "slide_count": 3,
+  "masters": [
+    {
+      "index": 0,
+      "name": "Office Theme",
+      "layouts": [
+        {"index": 0, "name": "Title Slide",
+         "placeholders": [
+           {"idx": 0, "type": "TITLE (13)", "left": 685800, "top": 1600200, "width": 10515600, "height": 1325563},
+           {"idx": 1, "type": "SUBTITLE (14)", "left": 685800, "top": 3100000, "width": 10515600, "height": 800000}
+         ]},
+        {"index": 1, "name": "Title and Content",
+         "placeholders": [
+           {"idx": 0, "type": "TITLE (13)", "left": 685800, "top": 228600, "width": 10515600, "height": 800000},
+           {"idx": 1, "type": "BODY (2)", "left": 685800, "top": 1200000, "width": 10515600, "height": 5000000}
+         ]}
+      ]
+    }
+  ],
+  "theme_fonts": {"major": "ExampleSans Light", "minor": "ExampleSans"},
+  "slides": [
+    {"index": 1, "layout": "Title Slide", "master": "Office Theme", "shapes": 3,
+     "pictures": 0, "empty_placeholders": 0, "has_notes": false,
+     "texts_preview": ["Sample Title / Sample subtitle"]}
+  ]
+}
