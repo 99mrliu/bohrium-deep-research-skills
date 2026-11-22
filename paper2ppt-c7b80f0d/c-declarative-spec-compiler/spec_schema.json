@@ -1,0 +1,90 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "https://github.com/99mrliu/bohrium-deep-research-skills/tree/main/paper2ppt-c7b80f0d/c-declarative-spec-compiler/spec_schema.json",
+  "title": "deck.spec.json — ppt-spec-compiler declarative slide spec",
+  "description": "The ONE artifact the agent hand-writes. scripts/validate_spec.py mirrors this schema with stdlib checks; scripts/compile_deck.py compiles it to .pptx. Constraint violations above meta-level caps (max_bullets, slide_limit) are compiler-managed demotions/overflows, not schema errors; absurd sizes (>15 bullets, >40 slides) are schema errors.",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["slides"],
+  "properties": {
+    "meta": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["title"],
+      "properties": {
+        "case_id": {"type": "string", "description": "copied verbatim from /input/case.json"},
+        "title": {"type": "string", "minLength": 1, "description": "deck title (paper title or talk title)"},
+        "audience": {"type": "string", "description": "e.g. 'thesis defense committee', 'group meeting', 'conference 12-min talk'"},
+        "language": {"type": "string", "description": "BCP-47-ish, e.g. 'en', 'zh-CN'"},
+        "slide_limit": {"type": "integer", "minimum": 1, "maximum": 40, "default": 20,
+                        "description": "max slides in the timed talk; overflow is moved to a labelled backup section at compile time"},
+        "max_bullets": {"type": "integer", "minimum": 1, "maximum": 15, "default": 6,
+                        "description": "max bullets per slide; surplus bullets are demoted to speaker notes at compile time"},
+        "footer_prefix": {"type": "string", "default": "Source: ",
+                          "description": "prefix of the stamped evidence footer, e.g. 'Source: ' or '来源：'"},
+        "time_limit": {"type": "string", "description": "informational, e.g. '12 min'"}
+      }
+    },
+    "slides": {
+      "type": "array",
+      "minItems": 1,
+      "maxItems": 40,
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": ["id", "kind", "notes"],
+        "properties": {
+          "id": {"type": "string", "description": "stable unique id, e.g. 's03-method'"},
+          "kind": {"type": "string",
+                   "enum": ["title", "section", "content", "figure", "table",
+                            "two-column", "conclusion", "backup"]},
+          "claim": {"type": "string",
+                    "description": "exactly ONE sentence stating the slide's claim; required on content/figure/table/two-column/conclusion slides"},
+          "title": {"type": "string",
+                    "description": "display title; defaults to the claim; long titles are wrapped (2 lines) then elided at compile time"},
+          "bullets": {"type": "array", "items": {"type": "string"},
+                      "description": "short speakable phrases; numbers/units copied verbatim from the paper"},
+          "evidence": {
+            "type": "array",
+            "description": "locators into the paper; REQUIRED and non-empty on content/figure/table slides; stamped as the slide footer",
+            "items": {
+              "type": "object",
+              "additionalProperties": false,
+              "required": ["ref"],
+              "properties": {
+                "ref": {"type": "string", "minLength": 1,
+                        "description": "e.g. 'Fig. 2', 'Table 1', 'Sec. 3.2', 'p. 7 col. 2'"},
+                "page": {"type": "integer", "minimum": 1},
+                "quote": {"type": "string",
+                          "description": "optional short verbatim quote backing the claim; never paraphrased"}
+              }
+            }
+          },
+          "image": {
+            "type": "object",
+            "additionalProperties": false,
+            "required": ["path"],
+            "properties": {
+              "path": {"type": "string",
+                       "description": "PNG path relative to the spec file (absolute allowed); inserted aspect-preserved"},
+              "caption": {"type": "string"}
+            }
+          },
+          "table": {
+            "type": "object",
+            "additionalProperties": false,
+            "required": ["columns", "rows"],
+            "properties": {
+              "columns": {"type": "array", "minItems": 1, "items": {"type": "string"}},
+              "rows": {"type": "array",
+                       "items": {"type": "array", "items": {"type": ["string", "number"]}},
+                       "description": "rows beyond 8 are compacted into notes at compile time"}
+            }
+          },
+          "notes": {"type": "string", "minLength": 1,
+                    "description": "speaker notes: transitions, emphasis, Q&A backup; must NOT merely repeat the bullets"}
+        }
+      }
+    }
+  }
+}
