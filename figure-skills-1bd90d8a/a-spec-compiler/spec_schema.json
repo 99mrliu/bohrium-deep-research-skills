@@ -1,0 +1,235 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "figure.spec.json — fig-spec-compiler declarative figure specification",
+  "description": "Single hand-authored artifact consumed by scripts/compile_figure.py. Every data-bearing element MUST carry provenance: data.source (file+column+row), source_locator (e.g. \"paper.pdf#page=4,table=2\"), \"derived\" (formula/rule), or \"manual\": true (agent's own layout/styling decision only — never for source data values). \"uncertain\": true is supported on series, nodes, edges and annotations: the compiler renders the element with a dashed outline and records the uncertainty in mapping_ledger.json.",
+  "type": "object",
+  "required": ["version", "case_id", "canvas", "mode"],
+  "additionalProperties": false,
+  "properties": {
+    "version": {"type": "string", "enum": ["1.0"]},
+    "case_id": {"type": "string", "description": "Copied verbatim from /input/case.json."},
+    "title": {"type": "string", "description": "Figure-level title (optional)."},
+    "canvas": {
+      "type": "object",
+      "required": ["width_mm", "height_mm"],
+      "additionalProperties": false,
+      "properties": {
+        "width_mm": {"type": "number", "exclusiveMinimum": 20},
+        "height_mm": {"type": "number", "exclusiveMinimum": 20},
+        "background": {"type": "string", "default": "#ffffff", "description": "Hex color or \"none\" for transparent."}
+      }
+    },
+    "mode": {"type": "string", "enum": ["chart", "diagram"]},
+    "layout": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "cols": {"type": "integer", "minimum": 1, "description": "Panel grid columns for multi-panel charts. Default min(n,2)."}
+      }
+    },
+    "chart": {"$ref": "#/definitions/chartPanel", "description": "Single-panel chart shorthand (mode=chart)."},
+    "panels": {
+      "type": "array",
+      "items": {"$ref": "#/definitions/chartPanel"},
+      "minItems": 1,
+      "description": "Multi-panel chart (mode=chart). Use either chart OR panels, not both. Each panel has its own axes, series, legend and annotations."
+    },
+    "diagram": {"$ref": "#/definitions/diagram", "description": "Required when mode=diagram."}
+  },
+  "definitions": {
+    "axis": {
+      "type": "object",
+      "required": ["label"],
+      "additionalProperties": false,
+      "properties": {
+        "label": {"type": "string"},
+        "unit": {"type": "string", "description": "Rendered as \"label (unit)\". Keep magnitude explicit (e.g. use 10^3 cells or log scale, do not silently rescale)."},
+        "scale": {"type": "string", "enum": ["linear", "log", "categorical"], "default": "linear",
+                  "description": "x may be categorical (grouped_bar/line); y is linear or log only."},
+        "min": {"type": "number", "description": "Explicit axis lower bound (numeric axes)."},
+        "max": {"type": "number"},
+        "ticks": {"type": "array", "items": {"type": "number"}, "description": "Explicit tick values; otherwise nice ticks (1/2/2.5/5 x 10^n) are generated."}
+      }
+    },
+    "series": {
+      "type": "object",
+      "required": ["name", "glyph", "data"],
+      "additionalProperties": false,
+      "properties": {
+        "name": {"type": "string", "description": "Series label, copied verbatim from source (this is the legend text)."},
+        "glyph": {"type": "string", "enum": ["bar", "line", "marker"]},
+        "marker": {"type": "string", "enum": ["circle", "square", "triangle", "none"], "default": "circle"},
+        "color": {"type": "string", "description": "Hex color; default from deterministic palette by series order."},
+        "unit": {"type": "string", "description": "Optional per-series unit; validator warns when series on one axis disagree."},
+        "error_meaning": {"type": "string", "description": "Meaning of error bars, e.g. \"SD\", \"SEM\", \"95% CI\". REQUIRED by good practice whenever column_yerr/yerr is used; validator warns if absent."},
+        "data": {
+          "type": "object",
+          "description": "EITHER {source: {...}} (file-bound) OR {values: [...], source_locator: \"...\"} (inline values transcribed from a paper/table). One of the two forms is REQUIRED.",
+          "properties": {
+            "source": {
+              "type": "object",
+              "required": ["path", "column_y"],
+              "additionalProperties": false,
+              "properties": {
+                "path": {"type": "string", "description": "Data file path, relative to the spec file directory or absolute."},
+                "format": {"type": "string", "enum": ["csv", "tsv", "json"], "description": "Default inferred from extension. json = list of records or dict of columns."},
+                "column_x": {"type": "string", "description": "Category/x column. REQUIRED for grouped_bar and line; optional for scatter (else row order)."},
+                "column_y": {"type": "string"},
+                "column_yerr": {"type": "string", "description": "Symmetric error column."},
+                "rows": {"type": "array", "items": {"type": "integer"}, "description": "0-based data-row indices to include (header excluded). Default: all rows."}
+              }
+            },
+            "values": {
+              "type": "array",
+              "items": {
+                "type": "object",
+                "required": ["x", "y"],
+                "properties": {
+                  "x": {"type": ["string", "number"]},
+                  "y": {"type": ["number", "null"], "description": "null = missing value; compiler draws a gap and records it."},
+                  "yerr": {"type": ["number", "null"]}
+                }
+              }
+            },
+            "source_locator": {"type": "string", "description": "Where the inline values were transcribed from, e.g. \"paper.pdf#page=4,table=2,row=3\". REQUIRED with values."}
+          }
+        },
+        "derived": {"type": "string", "description": "Formula/rule if values are computed, e.g. \"ratio of col B to col A\"."},
+        "manual": {"type": "boolean", "description": "true = styling-only element; never use to excuse missing data provenance."},
+        "uncertain": {"type": "boolean", "default": false, "description": "Rendered dashed; recorded in ledger. Use instead of guessing a value."}
+      }
+    },
+    "annotation": {
+      "type": "object",
+      "required": ["text", "x", "y"],
+      "additionalProperties": false,
+      "properties": {
+        "text": {"type": "string"},
+        "x": {"type": ["number", "string"], "description": "Data x (number, or category name) when data_coords is true; mm from panel left otherwise."},
+        "y": {"type": "number"},
+        "data_coords": {"type": "boolean", "default": true},
+        "anchor": {"type": "string", "enum": ["start", "middle", "end"], "default": "middle"},
+        "color": {"type": "string"},
+        "source_locator": {"type": "string"},
+        "derived": {"type": "string"},
+        "manual": {"type": "boolean"},
+        "uncertain": {"type": "boolean"}
+      }
+    },
+    "chartPanel": {
+      "type": "object",
+      "required": ["type", "axes", "series"],
+      "additionalProperties": false,
+      "properties": {
+        "type": {"type": "string", "enum": ["grouped_bar", "line", "scatter"]},
+        "title": {"type": "string", "description": "Panel title (e.g. \"A\")."},
+        "axes": {
+          "type": "object",
+          "required": ["x", "y"],
+          "additionalProperties": false,
+          "properties": {"x": {"$ref": "#/definitions/axis"}, "y": {"$ref": "#/definitions/axis"}}
+        },
+        "series": {"type": "array", "items": {"$ref": "#/definitions/series"}, "minItems": 1},
+        "annotations": {"type": "array", "items": {"$ref": "#/definitions/annotation"}},
+        "legend": {
+          "type": "object",
+          "additionalProperties": false,
+          "properties": {
+            "position": {"type": "string", "enum": ["top-right", "top-left", "bottom-right", "bottom-left", "none"], "default": "top-right"}
+          }
+        }
+      }
+    },
+    "diagram": {
+      "type": "object",
+      "required": ["nodes"],
+      "additionalProperties": false,
+      "properties": {
+        "title": {"type": "string"},
+        "compartments": {
+          "type": "array",
+          "description": "Background regions (e.g. nucleus, cytoplasm). Drawn behind nodes. Coordinates are 0-100 relative canvas units (x right, y DOWN from top).",
+          "items": {
+            "type": "object",
+            "required": ["x", "y", "w", "h"],
+            "additionalProperties": false,
+            "properties": {
+              "id": {"type": "string"},
+              "x": {"type": "number", "minimum": 0, "maximum": 100},
+              "y": {"type": "number", "minimum": 0, "maximum": 100},
+              "w": {"type": "number"},
+              "h": {"type": "number"},
+              "label": {"type": "string"},
+              "fill": {"type": "string"},
+              "manual": {"type": "boolean"}
+            }
+          }
+        },
+        "nodes": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "required": ["id", "shape", "x", "y", "w", "h", "label"],
+            "additionalProperties": false,
+            "properties": {
+              "id": {"type": "string"},
+              "shape": {"type": "string", "enum": ["rounded_rect", "ellipse", "cylinder", "diamond"],
+                        "description": "rounded_rect=process/protein complex; ellipse=molecule/gene; cylinder=storage/metabolite pool; diamond=decision/branch."},
+              "x": {"type": "number", "description": "Center x, 0-100 relative."},
+              "y": {"type": "number", "description": "Center y, 0-100 relative (down)."},
+              "w": {"type": "number"},
+              "h": {"type": "number"},
+              "label": {"type": "string", "description": "Entity name copied VERBATIM from the source (gene/protein/species/compound spelling must match)."},
+              "fill": {"type": "string"},
+              "source_locator": {"type": "string", "description": "REQUIRED unless derived/manual, e.g. \"paper.pdf#page=3,fig2,paragraph=2\"."},
+              "derived": {"type": "string"},
+              "manual": {"type": "boolean"},
+              "uncertain": {"type": "boolean"},
+              "comment": {"type": "string", "description": "Free note, e.g. \"gene name italicized in source; kept roman for SVG text\"."}
+            }
+          }
+        },
+        "edges": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "required": ["from", "to", "style"],
+            "additionalProperties": false,
+            "properties": {
+              "from": {"type": "string", "description": "node id"},
+              "to": {"type": "string"},
+              "style": {"type": "string", "enum": ["arrow", "blunt", "tbar", "dashed"],
+                        "description": "arrow=activates/promotes; tbar=inhibits/blocks; blunt=plain connection/binding; dashed=indirect/putative (arrow head)."},
+              "label": {"type": "string"},
+              "route": {"type": "string", "enum": ["straight", "elbow"], "default": "straight"},
+              "source_locator": {"type": "string", "description": "REQUIRED unless derived/manual."},
+              "derived": {"type": "string"},
+              "manual": {"type": "boolean"},
+              "uncertain": {"type": "boolean"}
+            }
+          }
+        },
+        "legend": {
+          "type": "object",
+          "additionalProperties": false,
+          "properties": {
+            "position": {"type": "string", "enum": ["top-right", "top-left", "bottom-right", "bottom-left", "none"], "default": "bottom-left"},
+            "items": {
+              "type": "array",
+              "items": {
+                "type": "object",
+                "required": ["label"],
+                "properties": {
+                  "label": {"type": "string"},
+                  "fill": {"type": "string", "description": "Swatch color."},
+                  "style": {"type": "string", "enum": ["arrow", "tbar", "blunt", "dashed"], "description": "Edge-style swatch instead of color swatch."},
+                  "manual": {"type": "boolean"}
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

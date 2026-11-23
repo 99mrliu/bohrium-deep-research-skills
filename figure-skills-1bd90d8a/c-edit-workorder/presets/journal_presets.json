@@ -1,0 +1,72 @@
+{
+  "presets_version": "1.0",
+  "note": "Widths follow common journal column specs. Color is RGB at authoring time; CMYK conversion happens at the publisher. font_min_pt/font_max_pt are checked at the FINAL physical scale.",
+  "presets": {
+    "generic": {
+      "name": "generic",
+      "width_mm": 120,
+      "dpi": 300,
+      "font_min_pt": 5,
+      "font_max_pt": 9,
+      "background": "white",
+      "transparent_allowed": false,
+      "color_note": "RGB; CMYK conversion happens at the publisher",
+      "description": "Safe default when the case names no venue: single-and-a-half column width, 300 dpi raster export."
+    },
+    "nature_single": {
+      "name": "nature_single",
+      "width_mm": 89,
+      "dpi": 300,
+      "font_min_pt": 5,
+      "font_max_pt": 7,
+      "background": "white",
+      "transparent_allowed": false,
+      "color_note": "RGB; CMYK conversion happens at the publisher",
+      "description": "Nature single column (89 mm). Nature guide: text 5-7 pt, 300+ dpi."
+    },
+    "nature_double": {
+      "name": "nature_double",
+      "width_mm": 183,
+      "dpi": 300,
+      "font_min_pt": 5,
+      "font_max_pt": 7,
+      "background": "white",
+      "transparent_allowed": false,
+      "color_note": "RGB; CMYK conversion happens at the publisher",
+      "description": "Nature double column (183 mm) full-page width."
+    },
+    "science_single": {
+      "name": "science_single",
+      "width_mm": 86,
+      "dpi": 300,
+      "font_min_pt": 5,
+      "font_max_pt": 7,
+      "background": "white",
+      "transparent_allowed": false,
+      "color_note": "RGB; CMYK conversion happens at the publisher",
+      "description": "Science single column (~86 mm, 3.4 in)."
+    },
+    "science_double": {
+      "name": "science_double",
+      "width_mm": 178,
+      "dpi": 300,
+      "font_min_pt": 5,
+      "font_max_pt": 7,
+      "background": "white",
+      "transparent_allowed": false,
+      "color_note": "RGB; CMYK conversion happens at the publisher",
+      "description": "Science double column (~178 mm, 7 in)."
+    },
+    "presentation": {
+      "name": "presentation",
+      "width_mm": 160,
+      "dpi": 150,
+      "font_min_pt": 12,
+      "font_max_pt": 28,
+      "background": "any",
+      "transparent_allowed": true,
+      "color_note": "RGB (screen)",
+      "description": "Slides/poster: larger text floor, 150 dpi is enough for screen, transparent background allowed."
+    }
+  }
+}
