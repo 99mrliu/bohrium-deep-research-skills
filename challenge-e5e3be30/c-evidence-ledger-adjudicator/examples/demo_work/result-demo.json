@@ -1,0 +1,246 @@
+{
+  "case_id": "example-ledger-001",
+  "status": "complete",
+  "verdicts": [
+    {
+      "claim_id": "C1",
+      "claim": "在 2 型糖尿病成人中，每日服用 PerillaSeed-X 持续 12 周可显著降低空腹血糖。",
+      "verdict": "supported",
+      "base_verdict": "supported",
+      "conflict": false,
+      "anchor_table": [
+        {
+          "anchor_id": "A1",
+          "type": "condition",
+          "text": "在 2 型糖尿病成人中",
+          "core": false,
+          "covered": true,
+          "covered_by": [
+            "E1(pro/direct/same)"
+          ]
+        },
+        {
+          "anchor_id": "A2",
+          "type": "number",
+          "text": "2",
+          "core": true,
+          "covered": true,
+          "covered_by": [
+            "E1(pro/direct/same)"
+          ]
+        },
+        {
+          "anchor_id": "A3",
+          "type": "number",
+          "text": "12",
+          "core": true,
+          "covered": true,
+          "covered_by": [
+            "E1(pro/direct/same)"
+          ]
+        },
+        {
+          "anchor_id": "A4",
+          "type": "comparator",
+          "text": "显著",
+          "core": true,
+          "covered": true,
+          "covered_by": [
+            "E1(pro/direct/same)"
+          ]
+        },
+        {
+          "anchor_id": "A5",
+          "type": "comparator",
+          "text": "降低",
+          "core": true,
+          "covered": true,
+          "covered_by": [
+            "E1(pro/direct/same)"
+          ]
+        }
+      ],
+      "evidence_ids": [
+        "E1"
+      ]
+    },
+    {
+      "claim_id": "C2",
+      "claim": "PerillaSeed-X 可使 2 型糖尿病患者的糖化血红蛋白（HbA1c）降低 30%。",
+      "verdict": "partially_supported",
+      "base_verdict": "supported",
+      "conflict": true,
+      "anchor_table": [
+        {
+          "anchor_id": "A1",
+          "type": "condition",
+          "text": "2 型糖尿病患者",
+          "core": false,
+          "covered": true,
+          "covered_by": [
+            "E1(pro/direct/same)",
+            "E2(con/direct/opposite)"
+          ]
+        },
+        {
+          "anchor_id": "A2",
+          "type": "number",
+          "text": "2",
+          "core": true,
+          "covered": true,
+          "covered_by": [
+            "E1(pro/direct/same)",
+            "E2(con/direct/opposite)"
+          ]
+        },
+        {
+          "anchor_id": "A3",
+          "type": "comparator",
+          "text": "降低",
+          "core": true,
+          "covered": true,
+          "covered_by": [
+            "E1(pro/direct/same)",
+            "E2(con/direct/opposite)"
+          ]
+        },
+        {
+          "anchor_id": "A4",
+          "type": "number",
+          "text": "30%",
+          "core": true,
+          "covered": true,
+          "covered_by": [
+            "E1(pro/direct/same)",
+            "E2(con/direct/opposite)"
+          ]
+        }
+      ],
+      "evidence_ids": [
+        "E1",
+        "E2"
+      ]
+    },
+    {
+      "claim_id": "C3",
+      "claim": "PerillaSeed-X 对肝功能指标 ALT 无影响。",
+      "verdict": "contradicted",
+      "base_verdict": "contradicted",
+      "conflict": false,
+      "anchor_table": [
+        {
+          "anchor_id": "A1",
+          "type": "negation",
+          "text": "无",
+          "core": true,
+          "covered": true,
+          "covered_by": [
+            "E1(con/direct/opposite)"
+          ]
+        }
+      ],
+      "evidence_ids": [
+        "E1"
+      ]
+    },
+    {
+      "claim_id": "C4",
+      "claim": "PerillaSeed-X 可改善 2 型糖尿病患者的睡眠质量。",
+      "verdict": "insufficient_evidence",
+      "base_verdict": "insufficient_evidence",
+      "conflict": false,
+      "anchor_table": [
+        {
+          "anchor_id": "A1",
+          "type": "condition",
+          "text": "2 型糖尿病患者",
+          "core": false,
+          "covered": true,
+          "covered_by": [
+            "E1(pro/topical/same)",
+            "E2(pro/topical/same)"
+          ]
+        },
+        {
+          "anchor_id": "A2",
+          "type": "comparator",
+          "text": "改善",
+          "core": true,
+          "covered": true,
+          "covered_by": [
+            "E1(pro/topical/same)"
+          ]
+        },
+        {
+          "anchor_id": "A3",
+          "type": "number",
+          "text": "2",
+          "core": true,
+          "covered": true,
+          "covered_by": [
+            "E1(pro/topical/same)"
+          ]
+        }
+      ],
+      "evidence_ids": [
+        "E1",
+        "E2"
+      ]
+    }
+  ],
+  "sources": [
+    {
+      "source_id": "paper.txt",
+      "title": "PerillaSeed-X 合成示例论文",
+      "type": "paper",
+      "locator": "examples/paper.txt"
+    }
+  ],
+  "conflicts": [
+    {
+      "claim_id": "C2",
+      "claim_text": "PerillaSeed-X 可使 2 型糖尿病患者的糖化血红蛋白（HbA1c）降低 30%。",
+      "shared_anchors": [
+        {
+          "anchor_id": "A1",
+          "type": "condition",
+          "text": "2 型糖尿病患者"
+        },
+        {
+          "anchor_id": "A2",
+          "type": "number",
+          "text": "2"
+        },
+        {
+          "anchor_id": "A3",
+          "type": "comparator",
+          "text": "降低"
+        },
+        {
+          "anchor_id": "A4",
+          "type": "number",
+          "text": "30%"
+        }
+      ],
+      "pro": {
+        "evidence_id": "E1",
+        "quote": "结果：治疗组空腹血糖较安慰剂组显著降低；糖化血红蛋白（HbA1c）较基线降低 30%；总体安全性良好。",
+        "page": 1,
+        "section": "摘要"
+      },
+      "con": {
+        "evidence_id": "E2",
+        "quote": "表 1. … HbA1c 较基线变化 | -8% | -1% | 0.04 … 正文：HbA1c 方面，治疗组较基线降低 8%，与安慰剂组（−1%）的差异具有统计学意义（p=0.04）。",
+        "page": 3,
+        "section": "3 结果 / 表 1"
+      },
+      "resolution_rule": "references/verdict-rules.md R7（双方 direct 对撞 → 判定降级一档；result.json 中必须并列双方原话与定位）"
+    }
+  ],
+  "uncertainty": [
+    "C2 摘要与表 1 数值不一致，冲突未消解，需作者更正"
+  ],
+  "change_records": [
+    "demo 输入：evidence 为人工预填演示数据；C2/C4 锚点文本做过编辑性清理"
+  ]
+}

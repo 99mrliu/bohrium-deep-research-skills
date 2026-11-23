@@ -1,0 +1,44 @@
+{
+  "conflicts": [
+    {
+      "claim_id": "C2",
+      "claim_text": "PerillaSeed-X 可使 2 型糖尿病患者的糖化血红蛋白（HbA1c）降低 30%。",
+      "shared_anchors": [
+        {
+          "anchor_id": "A1",
+          "type": "condition",
+          "text": "2 型糖尿病患者"
+        },
+        {
+          "anchor_id": "A2",
+          "type": "number",
+          "text": "2"
+        },
+        {
+          "anchor_id": "A3",
+          "type": "comparator",
+          "text": "降低"
+        },
+        {
+          "anchor_id": "A4",
+          "type": "number",
+          "text": "30%"
+        }
+      ],
+      "pro": {
+        "evidence_id": "E1",
+        "quote": "结果：治疗组空腹血糖较安慰剂组显著降低；糖化血红蛋白（HbA1c）较基线降低 30%；总体安全性良好。",
+        "page": 1,
+        "section": "摘要"
+      },
+      "con": {
+        "evidence_id": "E2",
+        "quote": "表 1. … HbA1c 较基线变化 | -8% | -1% | 0.04 … 正文：HbA1c 方面，治疗组较基线降低 8%，与安慰剂组（−1%）的差异具有统计学意义（p=0.04）。",
+        "page": 3,
+        "section": "3 结果 / 表 1"
+      },
+      "resolution_rule": "references/verdict-rules.md R7（双方 direct 对撞 → 判定降级一档；result.json 中必须并列双方原话与定位）"
+    }
+  ],
+  "count": 1
+}

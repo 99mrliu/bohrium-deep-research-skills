@@ -1,0 +1,77 @@
+{
+  "generator": "quote_audit.py",
+  "input_result": "/Users/liuhengshen/Desktop/bhr_product/e5e3be30-5new/a-source-fidelity-auditor/examples/out/sample_result.json",
+  "input_pages": "/Users/liuhengshen/Desktop/bhr_product/e5e3be30-5new/a-source-fidelity-auditor/examples/out/pages.jsonl",
+  "thresholds": {
+    "verbatim_ok": 0.95,
+    "near_match": 0.8
+  },
+  "summary": {
+    "total": 4,
+    "pass": 4,
+    "warnings": 0,
+    "failures": 0
+  },
+  "entries": [
+    {
+      "index": 1,
+      "claim_id": "C1",
+      "json_path": "$.evidence[0]",
+      "quote_preview": "在 280 °C、2.0 MPa 条件下，NFO-700 的 CO2 转化率达到 78%，",
+      "annotated_page": 2,
+      "annotated_printed_page": null,
+      "normalized": true,
+      "found_pages": [
+        2
+      ],
+      "verdict": "verbatim_ok",
+      "ratio": 1.0,
+      "issues": []
+    },
+    {
+      "index": 2,
+      "claim_id": "C2",
+      "json_path": "$.evidence[1]",
+      "quote_preview": "当温度升至 350 °C 时，因\"活性相烧结\"，转化率下降至 54%。",
+      "annotated_page": 3,
+      "annotated_printed_page": null,
+      "normalized": true,
+      "found_pages": [
+        3
+      ],
+      "verdict": "verbatim_ok",
+      "ratio": 1.0,
+      "issues": []
+    },
+    {
+      "index": 3,
+      "claim_id": "C3",
+      "json_path": "$.evidence[2]",
+      "quote_preview": "未考察含硫气氛（如 SO2）对催化剂结构与活性的影响。",
+      "annotated_page": 3,
+      "annotated_printed_page": null,
+      "normalized": true,
+      "found_pages": [
+        3
+      ],
+      "verdict": "verbatim_ok",
+      "ratio": 1.0,
+      "issues": []
+    },
+    {
+      "index": 4,
+      "claim_id": "C4",
+      "json_path": "$.evidence[3]",
+      "quote_preview": "NFO-700 的 CO2 转化率达到 78%，较商业 Ni/Al2O3 基准（62%）提高 16 个百分点",
+      "annotated_page": 2,
+      "annotated_printed_page": null,
+      "normalized": true,
+      "found_pages": [
+        2
+      ],
+      "verdict": "verbatim_ok",
+      "ratio": 1.0,
+      "issues": []
+    }
+  ]
+}

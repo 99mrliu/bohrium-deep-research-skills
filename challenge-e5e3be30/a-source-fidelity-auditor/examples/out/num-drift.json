@@ -1,0 +1,33 @@
+{
+  "generator": "num_drift.py",
+  "inputs": {
+    "claims": "/Users/liuhengshen/Desktop/bhr_product/e5e3be30-5new/a-source-fidelity-auditor/examples/claims.json",
+    "quotes_source": "/Users/liuhengshen/Desktop/bhr_product/e5e3be30-5new/a-source-fidelity-auditor/examples/out/sample_result.json"
+  },
+  "summary": {
+    "claims": 4,
+    "claims_with_evidence": 4,
+    "claims_without_evidence": 0,
+    "drift_items": 2
+  },
+  "drift": [
+    {
+      "claim_id": "C2",
+      "kind": "missing_in_quote",
+      "claim_number": "90%",
+      "claim_value": 0.9,
+      "message": "论断数值未出现在所引 quote 中：疑似外推或来源不明"
+    },
+    {
+      "claim_id": "C4",
+      "kind": "value_mismatch",
+      "claim_number": "78.2%",
+      "claim_value": 0.782,
+      "quote_number": "78%",
+      "quote_value": 0.78,
+      "relative_diff": 0.002564,
+      "message": "论断数值与原文接近但不相等：疑似四舍五入改写/誊抄漂移"
+    }
+  ],
+  "no_evidence": []
+}

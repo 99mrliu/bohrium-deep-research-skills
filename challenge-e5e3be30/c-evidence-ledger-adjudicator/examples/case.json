@@ -1,0 +1,24 @@
+{
+  "case_id": "example-ledger-001",
+  "output_contract": {
+    "case_id": "string，必须与输入 case_id 一致",
+    "status": "complete | partial | failed（诚实上报）",
+    "verdicts": [
+      {
+        "claim_id": "string",
+        "claim": "string",
+        "verdict": "supported | partially_supported | contradicted | insufficient_evidence",
+        "base_verdict": "string（R7 降级前基准判定）",
+        "conflict": "boolean",
+        "anchor_table": "逐锚点核对表（来自 verdict_engine --update）",
+        "evidence_ids": ["引用的证据 id"]
+      }
+    ],
+    "sources": [
+      {"source_id": "string", "title": "string", "type": "paper|dataset|other", "locator": "文件名/页码/URL"}
+    ],
+    "conflicts": "conflict_pairs.py 输出的冲突记录（并列双方 quote 与定位）",
+    "uncertainty": ["不确定项说明"],
+    "change_records": ["对台账/骨架/判定的所有人工干预记录"]
+  }
+}

@@ -1,0 +1,19 @@
+{
+  "case_id": "demo-dualpass-001",
+  "note": "合成示例：演示双通道标注质控流水线的最小案例，不对应真实评测输入",
+  "task": "对照 examples/paper.txt（虚构论文）核验 examples/claims.json 中的 5 条论断，输出四级判定、证据来源与质量指标。",
+  "inputs": {
+    "paper": "examples/paper.txt",
+    "claims": "examples/claims.json",
+    "pass_a_demo": "examples/passA.json",
+    "pass_b_demo": "examples/passB.json"
+  },
+  "output_contract": {
+    "verdicts": "对象：claim_id → {verdict, evidence_pages, needs_review}",
+    "quality": "对象：cohens_kappa, mean_page_jaccard, exact_overlap_ratio, n_needs_review",
+    "status": "success | partial | failed",
+    "sources": "数组：每条非 insufficient 论断的页码与原文引句",
+    "uncertainty": "字符串：含 kappa、定位一致率、needs_review 计数的诚实说明",
+    "change_records": "数组：流水线各阶段记录"
+  }
+}

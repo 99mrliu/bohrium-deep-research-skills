@@ -1,0 +1,26 @@
+{
+  "claim_id": "c2",
+  "verdict": "partially_supported",
+  "rule": "R6",
+  "rationale": "部分子判断获支持、部分证据不足或部分成立，整论断 partially_supported。",
+  "breakdown": [
+    {
+      "id": "c2#a1",
+      "type": "comparison",
+      "core": true,
+      "verdict": "supported",
+      "weight": 1.0,
+      "weight_share": 0.5,
+      "note": "原文：延伸率由 8.1% 提高至 15.2%，数值一致"
+    },
+    {
+      "id": "c2#a2",
+      "type": "comparison",
+      "core": true,
+      "verdict": "insufficient_evidence",
+      "weight": 1.0,
+      "weight_share": 0.5,
+      "note": "原文明确声明'未测量热导率'；未报告≠反驳"
+    }
+  ]
+}

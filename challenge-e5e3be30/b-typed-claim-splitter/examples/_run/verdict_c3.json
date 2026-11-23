@@ -1,0 +1,17 @@
+{
+  "claim_id": "c3",
+  "verdict": "insufficient_evidence",
+  "rule": "R4",
+  "rationale": "全部子判断均缺乏可核验证据，整论断 insufficient_evidence。",
+  "breakdown": [
+    {
+      "id": "c3#a1",
+      "type": "comparison",
+      "core": true,
+      "verdict": "insufficient_evidence",
+      "weight": 1.0,
+      "weight_share": 1.0,
+      "note": "原文明确声明未开展任何腐蚀性能测试，亦无与 2024 铝合金的对比"
+    }
+  ]
+}

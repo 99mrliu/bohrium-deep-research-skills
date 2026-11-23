@@ -1,0 +1,37 @@
+[
+  {
+    "claim_id": "C1",
+    "verdict": "supported",
+    "evidence_pages": [1],
+    "evidence_quote": "NPC-800 delivers a specific capacity of 412 mAh/g after 200 cycles at 0.1 A/g, corresponding to a capacity retention of 91%.",
+    "rationale": "摘要逐字给出 0.1 A/g、200 次、412 mAh/g，全部槽位吻合"
+  },
+  {
+    "claim_id": "C2",
+    "verdict": "partially_supported",
+    "evidence_pages": [4],
+    "evidence_quote": "We tentatively attribute the capacity advantage of NPC-800 over NPC-900 in part to its higher nitrogen content... the present data do not allow a definitive causal assignment.",
+    "rationale": "原文为 tentative/in part 的弱归因，论断称'明确归因'，断言升级"
+  },
+  {
+    "claim_id": "C3",
+    "verdict": "supported",
+    "evidence_pages": [4],
+    "evidence_quote": "The hierarchical pore structure facilitates electrolyte infiltration and shortens ion diffusion pathways.",
+    "rationale": "摘要与讨论均将孔结构与性能关联，判支持（Pass A 演示判定，偏宽松）"
+  },
+  {
+    "claim_id": "C4",
+    "verdict": "contradicted",
+    "evidence_pages": [3],
+    "evidence_quote": "At 1 A/g, NPC-800 retains 78% of its initial capacity after 1000 cycles.",
+    "rationale": "原文 78% 与论断'超过 80%'直接冲突"
+  },
+  {
+    "claim_id": "C5",
+    "verdict": "insufficient_evidence",
+    "evidence_pages": [],
+    "evidence_quote": "",
+    "rationale": "原文明确所有测试在 25 °C 进行，未报告 55 °C 工况"
+  }
+]

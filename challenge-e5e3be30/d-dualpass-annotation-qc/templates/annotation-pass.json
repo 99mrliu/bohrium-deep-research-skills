@@ -1,0 +1,23 @@
+[
+  {
+    "claim_id": "C1",
+    "verdict": "supported",
+    "evidence_pages": [1, 3],
+    "evidence_quote": "在此粘贴原文逐字引句（≤80 词，禁止改写）；insufficient_evidence 时留空字符串",
+    "rationale": "判定理由（≤50 字）：指出论断哪些槽位被原文覆盖/冲突/未报告"
+  },
+  {
+    "claim_id": "C2",
+    "verdict": "partially_supported",
+    "evidence_pages": [4],
+    "evidence_quote": "",
+    "rationale": "示例：范围扩大——原文仅测 5 A/g 单一倍率，论断断言所有倍率"
+  },
+  {
+    "claim_id": "C3",
+    "verdict": "insufficient_evidence",
+    "evidence_pages": [],
+    "evidence_quote": "",
+    "rationale": "示例：全文未报告该温度条件下的测试；已尽检索义务（关键词+摘要+结论+图表）"
+  }
+]

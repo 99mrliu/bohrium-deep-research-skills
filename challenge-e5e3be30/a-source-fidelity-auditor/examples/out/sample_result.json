@@ -1,0 +1,42 @@
+{
+  "case_id": "SYNTH-EXAMPLE-001",
+  "claims": [
+    {"claim_id": "C1", "claim_text": "NFO-700 在 280 °C、2.0 MPa 条件下 CO2 转化率达到 78%。"},
+    {"claim_id": "C2", "claim_text": "在 350 °C 下 NFO-700 的 CO2 转化率超过 90%。"},
+    {"claim_id": "C3", "claim_text": "NFO-700 在含 SO2 的工业烟气中可保持稳定活性。"},
+    {"claim_id": "C4", "claim_text": "NFO-700 将 CO2 转化率从 62% 提升至 78.2%，提高了 16 个百分点。"}
+  ],
+  "verdicts": [
+    {"claim_id": "C1", "verdict": "supported",
+     "rationale": "原文第 2 页明确报告 280 °C、2.0 MPa 下转化率达 78%。"},
+    {"claim_id": "C2", "verdict": "contradicted",
+     "rationale": "原文第 3 页报告 350 °C 时转化率下降至 54%，与'超过 90%'直接冲突。"},
+    {"claim_id": "C3", "verdict": "insufficient_evidence",
+     "rationale": "原文第 3 页明确写'未考察含硫气氛'，属未报告，不能判反驳。"},
+    {"claim_id": "C4", "verdict": "partially_supported",
+     "rationale": "'62%→78%、提高 16 个百分点'有原文支持，但论断写成 78.2% 系数值漂移。"}
+  ],
+  "evidence": [
+    {"claim_id": "C1", "page": 2, "section": "3.1 催化活性",
+     "quote": "在 280 °C、2.0 MPa 条件下，NFO-700 的 CO2 转化率达到 78%，"},
+    {"claim_id": "C2", "page": 3, "section": "3.2 热稳定性",
+     "quote": "当温度升至 350 °C 时，因\"活性相烧结\"，转化率下降至 54%。"},
+    {"claim_id": "C3", "page": 3, "section": "3.3 限制",
+     "quote": "未考察含硫气氛（如 SO2）对催化剂结构与活性的影响。"},
+    {"claim_id": "C4", "page": 2, "section": "3.1 催化活性",
+     "quote": "NFO-700 的 CO2 转化率达到 78%，较商业 Ni/Al2O3 基准（62%）提高 16 个百分点"}
+  ],
+  "sources": [
+    {"type": "paper", "file": "paper.txt", "note": "合成示例论文（虚构）", "pages_used": [2, 3]}
+  ],
+  "uncertainty": [
+    "全部材料为合成示例，不构成真实科研结论。",
+    "C4 的 78.2% 在原文中不存在（原文为 78%），已由 num_drift.py 标记。"
+  ],
+  "status": "success",
+  "change_records": [
+    {"step": 1, "action": "写入骨架 result.json（status=partial 占位）"},
+    {"step": 2, "action": "填充四条论断的判定与证据 quote"},
+    {"step": 3, "action": "quote_audit.py 保真门通过后将 status 覆写为 success"}
+  ]
+}

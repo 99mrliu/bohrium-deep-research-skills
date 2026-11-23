@@ -1,0 +1,19 @@
+{
+  "case_id": "synth-hx300-demo-001",
+  "note": "合成示例 case，仅用于演示；output_contract 列出 result.json 必须包含的全部字段。",
+  "output_contract": [
+    "case_id",
+    "status",
+    "claim_verdicts",
+    "decomposition_report",
+    "coverage_report",
+    "evidence_links",
+    "sources",
+    "uncertainty",
+    "change_records"
+  ],
+  "inputs": {
+    "claims_file": "claims.json",
+    "paper_file": "paper.txt"
+  }
+}

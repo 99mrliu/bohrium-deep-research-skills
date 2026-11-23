@@ -1,0 +1,29 @@
+{
+  "_meta": {
+    "note": "【合成示例论断 · SYNTHETIC EXAMPLE CLAIMS】与 paper.txt（虚构论文）配套，仅演示四种典型核验场景；论断是待核验的问题，不是权威事实。",
+    "scenarios": {
+      "C1": "supported：论断与原文一致",
+      "C2": "contradicted：论断与原文直接冲突（90% vs 54%）",
+      "C3": "insufficient_evidence：原文明确写了'未考察'，属未报告而非反驳",
+      "C4": "数值漂移：论断把 78% 改写成 78.2%（应被 num_drift.py 判 value_mismatch）"
+    }
+  },
+  "claims": [
+    {
+      "claim_id": "C1",
+      "claim_text": "NFO-700 在 280 °C、2.0 MPa 条件下 CO2 转化率达到 78%。"
+    },
+    {
+      "claim_id": "C2",
+      "claim_text": "在 350 °C 下 NFO-700 的 CO2 转化率超过 90%。"
+    },
+    {
+      "claim_id": "C3",
+      "claim_text": "NFO-700 在含 SO2 的工业烟气中可保持稳定活性。"
+    },
+    {
+      "claim_id": "C4",
+      "claim_text": "NFO-700 将 CO2 转化率从 62% 提升至 78.2%，提高了 16 个百分点。"
+    }
+  ]
+}

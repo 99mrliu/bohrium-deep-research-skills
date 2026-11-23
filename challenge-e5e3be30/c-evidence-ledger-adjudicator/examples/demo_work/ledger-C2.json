@@ -1,0 +1,155 @@
+{
+  "_演示输入": "本文件为 run_example.sh 的预填演示台账；正式运行时 evidence 由模型阅读论文后逐条填写。本例演示摘要与正文数值不一致导致的 direct 对撞（R4→R7 降级）。",
+  "schema_version": "1.0",
+  "claim_id": "C2",
+  "claim_text": "PerillaSeed-X 可使 2 型糖尿病患者的糖化血红蛋白（HbA1c）降低 30%。",
+  "anchors": [
+    {
+      "id": "A1",
+      "type": "condition",
+      "text": "2 型糖尿病患者",
+      "core": false
+    },
+    {
+      "id": "A2",
+      "type": "number",
+      "text": "2",
+      "core": true,
+      "variants": [
+        "2",
+        "two",
+        "二"
+      ]
+    },
+    {
+      "id": "A3",
+      "type": "comparator",
+      "text": "降低",
+      "core": true,
+      "antonym": "提升"
+    },
+    {
+      "id": "A4",
+      "type": "number",
+      "text": "30%",
+      "core": true,
+      "variants": [
+        "30%",
+        "30％",
+        "0.3",
+        "thirty percent",
+        "百分之三十",
+        "30",
+        "thirty",
+        "三十"
+      ]
+    }
+  ],
+  "evidence": [
+    {
+      "evidence_id": "E1",
+      "side": "pro",
+      "strength": "direct",
+      "polarity": "same",
+      "covers": [
+        "A1",
+        "A2",
+        "A3",
+        "A4"
+      ],
+      "quote": "结果：治疗组空腹血糖较安慰剂组显著降低；糖化血红蛋白（HbA1c）较基线降低 30%；总体安全性良好。",
+      "page": 1,
+      "section": "摘要",
+      "annotator_note": "摘要直接给出 30%，覆盖全部锚点。"
+    },
+    {
+      "evidence_id": "E2",
+      "side": "con",
+      "strength": "direct",
+      "polarity": "opposite",
+      "covers": [
+        "A1",
+        "A2",
+        "A3",
+        "A4"
+      ],
+      "quote": "表 1. … HbA1c 较基线变化 | -8% | -1% | 0.04 … 正文：HbA1c 方面，治疗组较基线降低 8%，与安慰剂组（−1%）的差异具有统计学意义（p=0.04）。",
+      "page": 3,
+      "section": "3 结果 / 表 1",
+      "annotator_note": "同一结局同一人群，正文表 1 的数值（8%）在数值锚点 A4(30%) 上与论断相反 → polarity=opposite。"
+    }
+  ],
+  "adjudication": {
+    "verdict": "partially_supported",
+    "base_verdict": "supported",
+    "base_rule": "R4",
+    "downgraded": true,
+    "conflict": true,
+    "conflict_pairs": [
+      {
+        "pro_evidence": "E1",
+        "con_evidence": "E2",
+        "shared_anchors": [
+          "A1",
+          "A2",
+          "A3",
+          "A4"
+        ]
+      }
+    ],
+    "anchor_table": [
+      {
+        "anchor_id": "A1",
+        "type": "condition",
+        "text": "2 型糖尿病患者",
+        "core": false,
+        "covered": true,
+        "covered_by": [
+          "E1(pro/direct/same)",
+          "E2(con/direct/opposite)"
+        ]
+      },
+      {
+        "anchor_id": "A2",
+        "type": "number",
+        "text": "2",
+        "core": true,
+        "covered": true,
+        "covered_by": [
+          "E1(pro/direct/same)",
+          "E2(con/direct/opposite)"
+        ]
+      },
+      {
+        "anchor_id": "A3",
+        "type": "comparator",
+        "text": "降低",
+        "core": true,
+        "covered": true,
+        "covered_by": [
+          "E1(pro/direct/same)",
+          "E2(con/direct/opposite)"
+        ]
+      },
+      {
+        "anchor_id": "A4",
+        "type": "number",
+        "text": "30%",
+        "core": true,
+        "covered": true,
+        "covered_by": [
+          "E1(pro/direct/same)",
+          "E2(con/direct/opposite)"
+        ]
+      }
+    ],
+    "reasons": [
+      "R4 → base=supported",
+      "pro_full=True (PRO_D=1, 覆盖 4/4 锚点)",
+      "con_core=True (CON_D=1, 核心锚点覆盖 3/3)",
+      "R7 conflict 降级: supported → partially_supported（对撞 1 组）"
+    ],
+    "engine": "verdict_engine.py v1.0",
+    "rules_doc": "references/verdict-rules.md"
+  }
+}

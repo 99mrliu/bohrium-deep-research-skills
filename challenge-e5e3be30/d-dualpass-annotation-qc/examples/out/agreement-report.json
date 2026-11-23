@@ -1,0 +1,114 @@
+{
+  "n_claims": 5,
+  "verdict_agreement": {
+    "observed_agreement_po": 0.8,
+    "expected_agreement_pe": 0.24,
+    "cohens_kappa": 0.7368,
+    "kappa_note": null,
+    "marginals_a": {
+      "supported": 2,
+      "partially_supported": 1,
+      "contradicted": 1,
+      "insufficient_evidence": 1
+    },
+    "marginals_b": {
+      "supported": 1,
+      "partially_supported": 1,
+      "insufficient_evidence": 2,
+      "contradicted": 1
+    }
+  },
+  "location_agreement": {
+    "mean_page_jaccard": 0.7,
+    "exact_overlap_ratio": 0.8
+  },
+  "disagreements": {
+    "verdict": [
+      {
+        "claim_id": "C3",
+        "verdict_a": "supported",
+        "verdict_b": "insufficient_evidence"
+      }
+    ],
+    "location_only": [
+      {
+        "claim_id": "C2",
+        "pages_a": [
+          4
+        ],
+        "pages_b": [
+          2
+        ]
+      }
+    ]
+  },
+  "per_claim": [
+    {
+      "claim_id": "C1",
+      "verdict_a": "supported",
+      "verdict_b": "supported",
+      "verdict_agree": true,
+      "pages_a": [
+        1
+      ],
+      "pages_b": [
+        1
+      ],
+      "page_jaccard": 1.0,
+      "page_exact_overlap": true
+    },
+    {
+      "claim_id": "C2",
+      "verdict_a": "partially_supported",
+      "verdict_b": "partially_supported",
+      "verdict_agree": true,
+      "pages_a": [
+        4
+      ],
+      "pages_b": [
+        2
+      ],
+      "page_jaccard": 0.0,
+      "page_exact_overlap": false
+    },
+    {
+      "claim_id": "C3",
+      "verdict_a": "supported",
+      "verdict_b": "insufficient_evidence",
+      "verdict_agree": false,
+      "pages_a": [
+        4
+      ],
+      "pages_b": [
+        3,
+        4
+      ],
+      "page_jaccard": 0.5,
+      "page_exact_overlap": true
+    },
+    {
+      "claim_id": "C4",
+      "verdict_a": "contradicted",
+      "verdict_b": "contradicted",
+      "verdict_agree": true,
+      "pages_a": [
+        3
+      ],
+      "pages_b": [
+        3
+      ],
+      "page_jaccard": 1.0,
+      "page_exact_overlap": true
+    },
+    {
+      "claim_id": "C5",
+      "verdict_a": "insufficient_evidence",
+      "verdict_b": "insufficient_evidence",
+      "verdict_agree": true,
+      "pages_a": [],
+      "pages_b": [],
+      "page_jaccard": 1.0,
+      "page_exact_overlap": true
+    }
+  ]
+}

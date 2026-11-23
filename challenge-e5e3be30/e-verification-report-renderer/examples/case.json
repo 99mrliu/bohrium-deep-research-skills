@@ -1,0 +1,14 @@
+{
+  "case_id": "DEMO-E-001",
+  "_note": "合成示例 case：配合 paper.txt / claims.json / verdicts.json 演示完整流水线",
+  "output_contract": {
+    "verdicts": "array：每条论断的判定对象 {claim_id, claim_text, verdict, quotes, rationale, uncertainty, conflicts}",
+    "summary": "string：总体结论摘要（一段中文）",
+    "verdict_distribution": "object：四级判定计数 {supported, partially_supported, contradicted, insufficient_evidence}",
+    "evidence_cards_path": "string：证据卡片 Markdown 文件路径",
+    "report_markdown_path": "string：核验报告 Markdown 文件路径",
+    "report_preview_path": "string：真实渲染预览文件路径（PDF 或自包含 HTML）",
+    "render_chain_used": "string：实际使用的渲染链（xelatex / pdflatex / pandoc / html）",
+    "open_questions": "array：未决问题清单（无则空数组）"
+  }
+}

@@ -1,0 +1,23 @@
+{
+  "_演示输入": "本文件为 run_example.sh 的预填演示台账；正式运行时 evidence 由模型阅读论文后逐条填写。本例演示否定锚点被反向 direct 证据覆盖 → R3 contradicted。",
+  "schema_version": "1.0",
+  "claim_id": "C3",
+  "claim_text": "PerillaSeed-X 对肝功能指标 ALT 无影响。",
+  "anchors": [
+    {"id": "A1", "type": "negation", "text": "无", "core": true}
+  ],
+  "evidence": [
+    {
+      "evidence_id": "E1",
+      "side": "con",
+      "strength": "direct",
+      "polarity": "opposite",
+      "covers": ["A1"],
+      "quote": "治疗组 ALT 较基线升高 15%（p=0.02），3 例受试者因肝酶升高停药；安慰剂组 ALT 较基线变化 +1%。",
+      "page": 4,
+      "section": "4 安全性",
+      "annotator_note": "证据正面触及'无影响'主张本身并给出相反的显著升高 → 覆盖否定锚点 A1，polarity=opposite。"
+    }
+  ],
+  "adjudication": null
+}

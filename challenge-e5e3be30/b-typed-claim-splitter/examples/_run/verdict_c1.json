@@ -1,0 +1,44 @@
+{
+  "claim_id": "c1",
+  "verdict": "contradicted",
+  "rule": "R2",
+  "rationale": "核心子判断 c1#a4 与文献证据冲突，方向/数值/极性被推翻，整论断 contradicted。",
+  "breakdown": [
+    {
+      "id": "c1#a1",
+      "type": "comparison",
+      "core": true,
+      "verdict": "supported",
+      "weight": 1.0,
+      "weight_share": 0.25,
+      "note": "原文：600°C 538±11 MPa vs 500°C 412±9 MPa，提高约 30.6%≈30%，方向一致"
+    },
+    {
+      "id": "c1#a2",
+      "type": "comparison",
+      "core": true,
+      "verdict": "supported",
+      "weight": 1.0,
+      "weight_share": 0.25,
+      "note": "原文：生产成本较传统铸造工艺降低约 12%"
+    },
+    {
+      "id": "c1#a3",
+      "type": "causal",
+      "core": true,
+      "verdict": "supported",
+      "weight": 1.0,
+      "weight_share": 0.25,
+      "note": "原文：强度提升归因于晶粒细化与弥散强化，与论断的因果表述一致"
+    },
+    {
+      "id": "c1#a4",
+      "type": "scope",
+      "core": true,
+      "verdict": "contradicted",
+      "weight": 1.0,
+      "weight_share": 0.25,
+      "note": "原文：结论'仅适用于 6xxx 系铝合金'，与'适用于所有铝合金'直接冲突（核心范围断言）"
+    }
+  ]
+}

@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8"/>
+<title>文献证据核验报告</title>
+<style>
+body{font-family:-apple-system,'PingFang SC','Hiragino Sans GB','Microsoft YaHei',
+ 'Noto Sans CJK SC',sans-serif;max-width:960px;margin:2em auto;padding:0 1.2em;
+ color:#222;line-height:1.65}
+h1{border-bottom:3px solid #2c5f8a;padding-bottom:.3em}
+h2{border-bottom:1px solid #ccc;padding-bottom:.2em;margin-top:1.6em}
+table{border-collapse:collapse;width:100%;margin:1em 0;font-size:.95em}
+th,td{border:1px solid #bbb;padding:.45em .6em;text-align:left;vertical-align:top}
+th{background:#eef3f8}
+tr:nth-child(even) td{background:#fafafa}
+strong{color:#2c5f8a}
+hr{border:none;border-top:1px dashed #bbb;margin:1.5em 0}
+</style>
+</head>
+<body>
+<h1>文献证据核验报告</h1>
+<h2>封面信息</h2>
+<table>
+<thead><tr><th>项目</th><th>内容</th></tr></thead>
+<tbody>
+<tr><td>case_id</td><td>DEMO-E-001</td></tr>
+<tr><td>生成日期</td><td>2026-11-23</td></tr>
+<tr><td>论断总数</td><td>3</td></tr>
+<tr><td>result.json status</td><td>success</td></tr>
+</tbody></table>
+<h2>四级判定分布</h2>
+<table>
+<thead><tr><th>判定</th><th>含义</th><th>数量</th></tr></thead>
+<tbody>
+<tr><td>supported</td><td>支持</td><td>1</td></tr>
+<tr><td>partially_supported</td><td>部分支持</td><td>1</td></tr>
+<tr><td>contradicted</td><td>反驳</td><td>1</td></tr>
+<tr><td>insufficient_evidence</td><td>证据不足</td><td>0</td></tr>
+</tbody></table>
+<h2>论断判定统计表</h2>
+<table>
+<thead><tr><th>claim_id</th><th>判定</th><th>不确定性</th></tr></thead>
+<tbody>
+<tr><td>C1</td><td>supported</td><td>（无）</td></tr>
+<tr><td>C2</td><td>contradicted</td><td>（无）</td></tr>
+<tr><td>C3</td><td>partially_supported</td><td>光学测量与电镜观察结论相反，可能因样品制备或观测条件差异导致，需作者澄清。</td></tr>
+</tbody></table>
+<h2>不确定性汇总</h2>
+<ul><li><strong>C3</strong>：光学测量与电镜观察结论相反，可能因样品制备或观测条件差异导致，需作者澄清。</li></ul>
+<h2>证据卡片全文</h2>
+<h1>证据卡片集（DEMO-E-001 合成示例）</h1>
+<p>共 3 条论断的判定卡片。判定四级枚举：supported（支持）/ partially_supported（部分支持）/ contradicted（反驳）/ insufficient_evidence（证据不足）。</p>
+<h2>证据卡片 C1</h2>
+<table>
+<thead><tr><th>项目</th><th>内容</th></tr></thead>
+<tbody>
+<tr><td>论断原文</td><td>CsPbBr3 纳米晶在甲苯中的光致发光量子产率达到 87%。</td></tr>
+<tr><td>判定</td><td><strong>supported</strong>（支持）</td></tr>
+<tr><td>判定理由</td><td>摘要逐字报告甲苯中量子产率达 87%，与论断一致；第二条证据补充发光峰位以加强定位。</td></tr>
+<tr><td>不确定性</td><td>（无）</td></tr>
+</tbody></table>
+<h3>逐字证据（2 条）</h3>
+<table>
+<thead><tr><th>#</th><th>引用（逐字）</th><th>页码</th><th>段落</th><th>来源</th></tr></thead>
+<tbody>
+<tr><td>1</td><td>“The photoluminescence quantum yield of the CsPbBr3 nanocrystals reached 87% in toluene”</td><td>第 1 页</td><td>Abstract</td><td>paper.txt p.1</td></tr>
+<tr><td>2</td><td>“the sample's emission peak was centered at 515 nm”</td><td>第 2 页</td><td>3. Optical Characterization</td><td>paper.txt p.2（原文为弯引号 sample’s，演示归一化匹配）</td></tr>
+</tbody></table>
+<hr/>
+<h2>证据卡片 C2</h2>
+<table>
+<thead><tr><th>项目</th><th>内容</th></tr></thead>
+<tbody>
+<tr><td>论断原文</td><td>该合成反应全程在室温（25 °C）下进行，无需加热。</td></tr>
+<tr><td>判定</td><td><strong>contradicted</strong>（反驳）</td></tr>
+<tr><td>判定理由</td><td>方法部分明确记载加热至 120 °C 并保温 30 分钟，与“室温、无需加热”的论断直接矛盾。</td></tr>
+<tr><td>不确定性</td><td>（无）</td></tr>
+</tbody></table>
+<h3>逐字证据（1 条）</h3>
+<table>
+<thead><tr><th>#</th><th>引用（逐字）</th><th>页码</th><th>段落</th><th>来源</th></tr></thead>
+<tbody>
+<tr><td>1</td><td>“The reaction mixture was heated to 120 °C and maintained at this temperature for 30 minutes”</td><td>第 2 页</td><td>2. Methods</td><td>paper.txt p.2</td></tr>
+</tbody></table>
+<hr/>
+<h2>证据卡片 C3</h2>
+<table>
+<thead><tr><th>项目</th><th>内容</th></tr></thead>
+<tbody>
+<tr><td>论断原文</td><td>储存 30 天后该纳米晶材料保持稳定，未发生团聚。</td></tr>
+<tr><td>判定</td><td><strong>partially_supported</strong>（部分支持）</td></tr>
+<tr><td>判定理由</td><td>4.1 节的光学观测支持论断；但 4.3 节 TEM 观测到显著团聚，两处表述直接冲突，故判部分支持并并列双方原话。</td></tr>
+<tr><td>不确定性</td><td>光学测量与电镜观察结论相反，可能因样品制备或观测条件差异导致，需作者澄清。</td></tr>
+</tbody></table>
+<h3>逐字证据（1 条）</h3>
+<table>
+<thead><tr><th>#</th><th>引用（逐字）</th><th>页码</th><th>段落</th><th>来源</th></tr></thead>
+<tbody>
+<tr><td>1</td><td>“No aggregation was observed after 30 days of storage under ambient conditions”</td><td>第 3 页</td><td>4.1 Shelf Storage</td><td>paper.txt p.3</td></tr>
+</tbody></table>
+<h3>冲突证据并列（双方原话，不作取舍）</h3>
+<p>冲突 1：同一篇论文内部两处表述冲突（光学 vs 电镜）</p>
+<table>
+<thead><tr><th>立场</th><th>引用（逐字）</th><th>页码</th><th>来源</th></tr></thead>
+<tbody>
+<tr><td>甲方</td><td>“No aggregation was observed after 30 days of storage under ambient conditions”</td><td>第 3 页</td><td>paper.txt p.3 §4.1</td></tr>
+<tr><td>乙方</td><td>“TEM images revealed significant aggregation of the nanocrystals after 30 days of storage”</td><td>第 3 页</td><td>paper.txt p.3 §4.3</td></tr>
+</tbody></table>
+<hr/>
+<h2>渲染链实际路径与降级说明</h2>
+<ul><li>xelatex: 未安装（which 未找到），跳过</li><li>pdflatex: 未安装（which 未找到），跳过</li><li>pandoc: 未安装（which 未找到），跳过</li><li>html: 成功（自包含 HTML 预览）</li></ul>
+<ul><li>最终采用渲染链：<strong>html</strong></li><li>预览产物：`verification-report.html`（真实渲染生成，未伪造；最终字节数见 render-info.json）</li><li>渲染降级声明：优先渲染链（xelatex）不可用或失败，本预览为降级产物，版式可能与 LaTeX/PDF 版存在差异。</li></ul>
+</body>
+</html>

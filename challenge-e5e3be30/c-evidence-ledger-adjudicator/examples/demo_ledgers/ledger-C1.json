@@ -1,0 +1,27 @@
+{
+  "_演示输入": "本文件为 run_example.sh 的预填演示台账（evidence 由人工按 examples/paper.txt 填好）；正式运行时 evidence 由模型阅读论文后逐条填写。锚点文本已从骨架做了编辑性清理（去掉重复条件式），相当于一次合规的锚点修正。",
+  "schema_version": "1.0",
+  "claim_id": "C1",
+  "claim_text": "在 2 型糖尿病成人中，每日服用 PerillaSeed-X 持续 12 周可显著降低空腹血糖。",
+  "anchors": [
+    {"id": "A1", "type": "condition", "text": "在 2 型糖尿病成人中", "core": false},
+    {"id": "A2", "type": "number", "text": "2", "core": true, "variants": ["2", "two", "二"]},
+    {"id": "A3", "type": "number", "text": "12", "core": true, "variants": ["12", "twelve", "十二"]},
+    {"id": "A4", "type": "comparator", "text": "显著", "core": true, "antonym": null},
+    {"id": "A5", "type": "comparator", "text": "降低", "core": true, "antonym": "提升"}
+  ],
+  "evidence": [
+    {
+      "evidence_id": "E1",
+      "side": "pro",
+      "strength": "direct",
+      "polarity": "same",
+      "covers": ["A1", "A2", "A3", "A4", "A5"],
+      "quote": "表 1. 主要代谢指标较基线的变化（第 12 周）… 空腹血糖变化 (mmol/L) | -1.8 | -0.2 | 0.003 … 正文：第 12 周时，治疗组空腹血糖较安慰剂组显著降低（组间差 −1.6 mmol/L，p=0.003）。",
+      "page": 3,
+      "section": "3 结果 / 表 1",
+      "annotator_note": "试验对象即 120 例 2 型糖尿病成人、干预 12 周（方法 p.2），覆盖条件与周期锚点；结果表行+正文句覆盖显著性与方向锚点。"
+    }
+  ],
+  "adjudication": null
+}

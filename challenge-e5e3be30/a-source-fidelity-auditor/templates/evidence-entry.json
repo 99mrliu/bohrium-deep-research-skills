@@ -1,0 +1,26 @@
+{
+  "_comment": "证据条目模板：result.json 的 evidence 列表中每一项应含以下字段。fidelity 块由 quote_audit.py 机检后回填；quote 必须填写原文原始形式（不要预先归一化）。",
+  "claim_id": "C1",
+  "sub_claim_id": "C1-a",
+  "sub_claim_type": "fact | comparison | causal | scope",
+  "section": "3.1 催化活性",
+  "page": 2,
+  "printed_page": null,
+  "quote": "（从 pages.jsonl 对应页复制的原文原句，含原始标点与全角字符）",
+  "verdict": "supported | partially_supported | contradicted | insufficient_evidence",
+  "rationale": "判定理由：说明 quote 与论断在比较对象/方向/条件/数值上的对应关系",
+  "fidelity": {
+    "verdict": "verbatim_ok | near_match | not_found",
+    "ratio": 1.0,
+    "normalized": false,
+    "found_pages": [2],
+    "issues": [],
+    "audited_by": "quote_audit.py",
+    "audited_at": "（ISO 时间戳，机检后回填）"
+  },
+  "num_drift": {
+    "checked_by": "num_drift.py",
+    "drift_items": []
+  },
+  "uncertainty": "（可选）该证据的残余不确定性，如扫描页、图表数据无法机检等"
+}

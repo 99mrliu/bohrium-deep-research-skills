@@ -1,0 +1,177 @@
+{
+  "meta": {
+    "tool": "coverage_matrix.py",
+    "version": "1.0.0"
+  },
+  "summary": {
+    "claims": 3,
+    "omissions": 3,
+    "overlaps": 0,
+    "passed": false
+  },
+  "claims": [
+    {
+      "claim_id": "c1",
+      "n_slots": 8,
+      "n_atoms": 4,
+      "matrix": {
+        "slot_order": [
+          "c1#s1",
+          "c1#s2",
+          "c1#s3",
+          "c1#s4",
+          "c1#s5",
+          "c1#s6",
+          "c1#s7",
+          "c1#s8"
+        ],
+        "rows": [
+          {
+            "atom_id": "c1#a1",
+            "type": "comparison",
+            "predicate_stem": "提高",
+            "c1#s1": 0,
+            "c1#s2": 0,
+            "c1#s3": 0,
+            "c1#s4": 0,
+            "c1#s5": 0,
+            "c1#s6": 0,
+            "c1#s7": 0,
+            "c1#s8": 0
+          },
+          {
+            "atom_id": "c1#a2",
+            "type": "comparison",
+            "predicate_stem": "降低",
+            "c1#s1": 0,
+            "c1#s2": 0,
+            "c1#s3": 0,
+            "c1#s4": 1,
+            "c1#s5": 1,
+            "c1#s6": 0,
+            "c1#s7": 0,
+            "c1#s8": 0
+          },
+          {
+            "atom_id": "c1#a3",
+            "type": "causal",
+            "predicate_stem": "为",
+            "c1#s1": 0,
+            "c1#s2": 0,
+            "c1#s3": 0,
+            "c1#s4": 0,
+            "c1#s5": 0,
+            "c1#s6": 1,
+            "c1#s7": 0,
+            "c1#s8": 0
+          },
+          {
+            "atom_id": "c1#a4",
+            "type": "scope",
+            "predicate_stem": "适用",
+            "c1#s1": 0,
+            "c1#s2": 0,
+            "c1#s3": 0,
+            "c1#s4": 0,
+            "c1#s5": 0,
+            "c1#s6": 0,
+            "c1#s7": 1,
+            "c1#s8": 1
+          }
+        ]
+      },
+      "omissions": [
+        {
+          "slot_id": "c1#s1",
+          "category": "condition",
+          "text": "在 600°C 退火下",
+          "reason": "槽位未被任何子判断认领（拆解遗漏，必须返工）"
+        },
+        {
+          "slot_id": "c1#s2",
+          "category": "comparator",
+          "text": "提高",
+          "reason": "槽位未被任何子判断认领（拆解遗漏，必须返工）"
+        },
+        {
+          "slot_id": "c1#s3",
+          "category": "comparator",
+          "text": "30%",
+          "reason": "槽位未被任何子判断认领（拆解遗漏，必须返工）"
+        }
+      ],
+      "overlaps": [],
+      "mismatch_notes": [
+        "槽位 c1#s1 位于子判断 c1#a1 区间 [0,39) 内但未列入其 covers_slots",
+        "槽位 c1#s2 位于子判断 c1#a1 区间 [0,39) 内但未列入其 covers_slots",
+        "槽位 c1#s3 位于子判断 c1#a1 区间 [0,39) 内但未列入其 covers_slots"
+      ],
+      "infos": [],
+      "passed": false
+    },
+    {
+      "claim_id": "c2",
+      "n_slots": 5,
+      "n_atoms": 2,
+      "matrix": {
+        "slot_order": [
+          "c2#s1",
+          "c2#s2",
+          "c2#s3",
+          "c2#s4",
+          "c2#s5"
+        ],
+        "rows": [
+          {
+            "atom_id": "c2#a1",
+            "type": "comparison",
+            "predicate_stem": "提高",
+            "c2#s1": 1,
+            "c2#s2": 1,
+            "c2#s3": 0,
+            "c2#s4": 0,
+            "c2#s5": 0
+          },
+          {
+            "atom_id": "c2#a2",
+            "type": "comparison",
+            "predicate_stem": "提升",
+            "c2#s1": 0,
+            "c2#s2": 0,
+            "c2#s3": 1,
+            "c2#s4": 1,
+            "c2#s5": 1
+          }
+        ]
+      },
+      "omissions": [],
+      "overlaps": [],
+      "mismatch_notes": [],
+      "infos": [],
+      "passed": true
+    },
+    {
+      "claim_id": "c3",
+      "n_slots": 1,
+      "n_atoms": 1,
+      "matrix": {
+        "slot_order": [
+          "c3#s1"
+        ],
+        "rows": [
+          {
+            "atom_id": "c3#a1",
+            "type": "comparison",
+            "predicate_stem": "低于",
+            "c3#s1": 1
+          }
+        ]
+      },
+      "omissions": [],
+      "overlaps": [],
+      "mismatch_notes": [],
+      "infos": [],
+      "passed": true
+    }
+  ]
+}

@@ -1,0 +1,36 @@
+{
+  "_演示输入": "本文件为 run_example.sh 的预填演示台账；正式运行时 evidence 由模型阅读论文后逐条填写。本例演示'主题相关≠支持'：模型初判 supported，被 verdict_engine 按 R6 压回 insufficient_evidence；E1 故意把 covers 标满以演示 ledger_validate 的 W2 警告。",
+  "schema_version": "1.0",
+  "claim_id": "C4",
+  "claim_text": "PerillaSeed-X 可改善 2 型糖尿病患者的睡眠质量。",
+  "anchors": [
+    {"id": "A1", "type": "condition", "text": "2 型糖尿病患者", "core": false},
+    {"id": "A2", "type": "comparator", "text": "改善", "core": true, "antonym": "恶化"},
+    {"id": "A3", "type": "number", "text": "2", "core": true, "variants": ["2", "two", "二"]}
+  ],
+  "evidence": [
+    {
+      "evidence_id": "E1",
+      "side": "pro",
+      "strength": "topical",
+      "polarity": "same",
+      "covers": ["A1", "A2", "A3"],
+      "quote": "除血糖外，睡眠质量等患者报告结局在本领域日益受到关注，但多数天然产物试验未予评估。",
+      "page": 1,
+      "section": "1 引言",
+      "annotator_note": "模型初判倾向 supported（主题相关、语气正面）；按规范只能标 topical，covers 标满全部锚点是过度标注，留给 validate W2 抓出。"
+    },
+    {
+      "evidence_id": "E2",
+      "side": "pro",
+      "strength": "topical",
+      "polarity": "same",
+      "covers": ["A1"],
+      "quote": "未评估睡眠质量等患者报告结局。",
+      "page": 4,
+      "section": "5 限制",
+      "annotator_note": "限制段确认该结局未测量：未报告≠反驳，故标 topical/same 而非 opposite。"
+    }
+  ],
+  "adjudication": null
+}

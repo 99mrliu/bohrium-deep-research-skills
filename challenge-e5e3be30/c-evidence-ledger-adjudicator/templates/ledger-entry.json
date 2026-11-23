@@ -1,0 +1,41 @@
+{
+  "_说明": "ledger-<claim_id>.json 的标准形态。由 scripts/ledger_init.py 生成骨架，模型填写 evidence，scripts/verdict_engine.py --update 写回 adjudication。anchors 可增删（须在 change_records 说明）。",
+  "schema_version": "1.0",
+  "claim_id": "C1",
+  "claim_text": "<论断原文>",
+  "anchors": [
+    {
+      "id": "A1",
+      "type": "number | comparator | negation | condition | causal | quantifier",
+      "text": "<锚点原文片段>",
+      "core": true,
+      "variants": ["30%", "0.3", "thirty percent", "百分之三十"],
+      "antonym": "<仅 comparator：反义词或 null>"
+    }
+  ],
+  "evidence": [],
+  "adjudication": null,
+  "_evidence_item_template": {
+    "evidence_id": "E1",
+    "side": "pro | con",
+    "strength": "direct | indirect | topical",
+    "polarity": "same | opposite",
+    "covers": ["A1", "A2"],
+    "quote": "<论文逐字原文，非空>",
+    "page": 3,
+    "section": "3 结果 / 表 1",
+    "annotator_note": "<可选：模型取证备注，如'初判倾向 supported，待引擎裁定'>"
+  },
+  "_adjudication_shape": {
+    "verdict": "supported | partially_supported | contradicted | insufficient_evidence",
+    "base_verdict": "<R7 降级前的基准判定>",
+    "base_rule": "R1..R6",
+    "downgraded": false,
+    "conflict": false,
+    "conflict_pairs": [],
+    "anchor_table": [],
+    "reasons": [],
+    "engine": "verdict_engine.py v1.0",
+    "rules_doc": "references/verdict-rules.md"
+  }
+}

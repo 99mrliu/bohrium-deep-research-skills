@@ -1,0 +1,24 @@
+{
+  "_meta": {
+    "note": "【合成示例 case · SYNTHETIC EXAMPLE CASE】演示输入结构，非评测正式案例。评测时以 /input/case.json 实际内容为准。"
+  },
+  "case_id": "SYNTH-EXAMPLE-001",
+  "title": "合成示例：核验关于虚构催化剂 NFO-700 的四条论断",
+  "materials": ["paper.txt"],
+  "claims_file": "claims.json",
+  "output_contract": {
+    "description": "result.json 必须包含以下全部字段（允许在骨架阶段先给占位值并逐步覆写）：",
+    "fields": [
+      "case_id",
+      "claims",
+      "verdicts",
+      "evidence",
+      "sources",
+      "uncertainty",
+      "status",
+      "change_records"
+    ],
+    "status_enum": ["success", "partial", "cannot_determine", "refused"],
+    "verdict_enum": ["supported", "partially_supported", "contradicted", "insufficient_evidence"]
+  }
+}

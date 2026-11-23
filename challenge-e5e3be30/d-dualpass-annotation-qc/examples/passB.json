@@ -1,0 +1,37 @@
+[
+  {
+    "claim_id": "C1",
+    "verdict": "supported",
+    "evidence_pages": [1],
+    "evidence_quote": "在 0.1 A/g 下循环 200 次后比容量为 412 mAh/g，容量保持率 91%。",
+    "rationale": "摘要中文段逐字对应，四槽位全部吻合"
+  },
+  {
+    "claim_id": "C2",
+    "verdict": "partially_supported",
+    "evidence_pages": [2],
+    "evidence_quote": "Nitrogen content measured by XPS was 8.7 at% for NPC-800 and 4.2 at% for NPC-900.",
+    "rationale": "仅定位到氮含量数据（页2），未见明确归因句；判部分支持（演示定位分歧：漏检页4讨论）"
+  },
+  {
+    "claim_id": "C3",
+    "verdict": "insufficient_evidence",
+    "evidence_pages": [3, 4],
+    "evidence_quote": "分级孔结构在多个样品中均与更好的倍率表现相关（相关性观察，非因果证明）。",
+    "rationale": "原文明确标注'相关性观察，非因果证明'，因果断言无充分证据（Pass B 演示判定，偏严格）"
+  },
+  {
+    "claim_id": "C4",
+    "verdict": "contradicted",
+    "evidence_pages": [3],
+    "evidence_quote": "At 1 A/g, NPC-800 retains 78% of its initial capacity after 1000 cycles (Figure 4).",
+    "rationale": "78% < 80%，与论断直接冲突"
+  },
+  {
+    "claim_id": "C5",
+    "verdict": "insufficient_evidence",
+    "evidence_pages": [],
+    "evidence_quote": "",
+    "rationale": "检索 温度/高温/55 均无命中；实验节注明 25 °C 环境温度"
+  }
+]

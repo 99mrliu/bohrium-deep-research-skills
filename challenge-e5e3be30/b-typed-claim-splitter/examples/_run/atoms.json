@@ -1,0 +1,350 @@
+{
+  "meta": {
+    "tool": "cue_scan.py",
+    "version": "1.0.0",
+    "lexicon_version": "1.0.0",
+    "note": "启发式拆解建议：拆分点与类型须经人工/模型复核后方可作为核验单元。"
+  },
+  "claims": [
+    {
+      "id": "c1",
+      "text": "HX-300 在 600°C 退火下抗拉强度比 500°C 退火提高约 30%，并且生产成本较传统工艺降低 12%，因为纳米晶粒细化与弥散相析出，适用于所有铝合金。",
+      "slots": [
+        {
+          "category": "condition",
+          "term": "re:在[^，。；]{1,15}下",
+          "text": "在 600°C 退火下",
+          "start": 7,
+          "end": 18,
+          "slot_id": "c1#s1"
+        },
+        {
+          "category": "comparator",
+          "term": "提高",
+          "text": "提高",
+          "start": 32,
+          "end": 34,
+          "slot_id": "c1#s2"
+        },
+        {
+          "category": "comparator",
+          "term": "re:\\d+(\\.\\d+)?\\s?%",
+          "text": "30%",
+          "start": 36,
+          "end": 39,
+          "slot_id": "c1#s3"
+        },
+        {
+          "category": "comparator",
+          "term": "降低",
+          "text": "降低",
+          "start": 51,
+          "end": 53,
+          "slot_id": "c1#s4"
+        },
+        {
+          "category": "comparator",
+          "term": "re:\\d+(\\.\\d+)?\\s?%",
+          "text": "12%",
+          "start": 54,
+          "end": 57,
+          "slot_id": "c1#s5"
+        },
+        {
+          "category": "causal",
+          "term": "因为",
+          "text": "因为",
+          "start": 58,
+          "end": 60,
+          "slot_id": "c1#s6"
+        },
+        {
+          "category": "scope",
+          "term": "适用于",
+          "text": "适用于",
+          "start": 73,
+          "end": 76,
+          "slot_id": "c1#s7"
+        },
+        {
+          "category": "scope",
+          "term": "所有",
+          "text": "所有",
+          "start": 76,
+          "end": 78,
+          "slot_id": "c1#s8"
+        }
+      ],
+      "split_points": [
+        {
+          "pos": 39,
+          "cut_end": 40,
+          "kind": "weak",
+          "delimiter": "，"
+        },
+        {
+          "pos": 40,
+          "cut_end": 42,
+          "kind": "strong",
+          "delimiter": "并且"
+        },
+        {
+          "pos": 41,
+          "cut_end": 42,
+          "kind": "weak",
+          "delimiter": "且"
+        },
+        {
+          "pos": 57,
+          "cut_end": 58,
+          "kind": "weak",
+          "delimiter": "，"
+        },
+        {
+          "pos": 58,
+          "cut_end": 58,
+          "kind": "causal_marker",
+          "delimiter": "因为"
+        },
+        {
+          "pos": 72,
+          "cut_end": 73,
+          "kind": "weak",
+          "delimiter": "，"
+        },
+        {
+          "pos": 73,
+          "cut_end": 73,
+          "kind": "scope_marker",
+          "delimiter": "适用于"
+        }
+      ],
+      "atoms": [
+        {
+          "atom_id": "c1#a1",
+          "type": "comparison",
+          "text": "HX-300 在 600°C 退火下抗拉强度比 500°C 退火提高约 30%",
+          "span": [
+            0,
+            39
+          ],
+          "predicate_stem": "提高",
+          "covers_slots": [
+            "c1#s1",
+            "c1#s2",
+            "c1#s3"
+          ],
+          "modifiers": {
+            "condition": [
+              "在 600°C 退火下"
+            ]
+          },
+          "evidence_needed": "两个比较对象各自的数值/方向与样本信息，以及比较方向是否一致"
+        },
+        {
+          "atom_id": "c1#a2",
+          "type": "comparison",
+          "text": "生产成本较传统工艺降低 12%",
+          "span": [
+            42,
+            57
+          ],
+          "predicate_stem": "降低",
+          "covers_slots": [
+            "c1#s4",
+            "c1#s5"
+          ],
+          "modifiers": {},
+          "evidence_needed": "两个比较对象各自的数值/方向与样本信息，以及比较方向是否一致"
+        },
+        {
+          "atom_id": "c1#a3",
+          "type": "causal",
+          "text": "因为纳米晶粒细化与弥散相析出",
+          "span": [
+            58,
+            72
+          ],
+          "predicate_stem": "为",
+          "covers_slots": [
+            "c1#s6"
+          ],
+          "modifiers": {},
+          "evidence_needed": "机制性证据（显微组织、对照实验、统计中介分析或作者明确的因果表述）"
+        },
+        {
+          "atom_id": "c1#a4",
+          "type": "scope",
+          "text": "适用于所有铝合金",
+          "span": [
+            73,
+            81
+          ],
+          "predicate_stem": "适用",
+          "covers_slots": [
+            "c1#s7",
+            "c1#s8"
+          ],
+          "modifiers": {},
+          "evidence_needed": "原文关于适用范围/对象/条件限定的明确表述"
+        }
+      ],
+      "slot_mapping": {
+        "c1#s1": "c1#a1",
+        "c1#s2": "c1#a1",
+        "c1#s3": "c1#a1",
+        "c1#s4": "c1#a2",
+        "c1#s5": "c1#a2",
+        "c1#s6": "c1#a3",
+        "c1#s7": "c1#a4",
+        "c1#s8": "c1#a4"
+      },
+      "warnings": []
+    },
+    {
+      "id": "c2",
+      "text": "600°C 退火使 HX-300 延伸率提高至 15.2%，且热导率显著提升 20%。",
+      "slots": [
+        {
+          "category": "comparator",
+          "term": "提高",
+          "text": "提高",
+          "start": 20,
+          "end": 22,
+          "slot_id": "c2#s1"
+        },
+        {
+          "category": "comparator",
+          "term": "re:\\d+(\\.\\d+)?\\s?%",
+          "text": "15.2%",
+          "start": 24,
+          "end": 29,
+          "slot_id": "c2#s2"
+        },
+        {
+          "category": "significance",
+          "term": "显著",
+          "text": "显著",
+          "start": 34,
+          "end": 36,
+          "slot_id": "c2#s3"
+        },
+        {
+          "category": "comparator",
+          "term": "提升",
+          "text": "提升",
+          "start": 36,
+          "end": 38,
+          "slot_id": "c2#s4"
+        },
+        {
+          "category": "comparator",
+          "term": "re:\\d+(\\.\\d+)?\\s?%",
+          "text": "20%",
+          "start": 39,
+          "end": 42,
+          "slot_id": "c2#s5"
+        }
+      ],
+      "split_points": [
+        {
+          "pos": 29,
+          "cut_end": 31,
+          "kind": "weak",
+          "delimiter": "，且"
+        },
+        {
+          "pos": 30,
+          "cut_end": 31,
+          "kind": "weak",
+          "delimiter": "且"
+        }
+      ],
+      "atoms": [
+        {
+          "atom_id": "c2#a1",
+          "type": "comparison",
+          "text": "600°C 退火使 HX-300 延伸率提高至 15.2%",
+          "span": [
+            0,
+            29
+          ],
+          "predicate_stem": "提高",
+          "covers_slots": [
+            "c2#s1",
+            "c2#s2"
+          ],
+          "modifiers": {},
+          "evidence_needed": "两个比较对象各自的数值/方向与样本信息，以及比较方向是否一致"
+        },
+        {
+          "atom_id": "c2#a2",
+          "type": "comparison",
+          "text": "热导率显著提升 20%",
+          "span": [
+            31,
+            42
+          ],
+          "predicate_stem": "提升",
+          "covers_slots": [
+            "c2#s3",
+            "c2#s4",
+            "c2#s5"
+          ],
+          "modifiers": {
+            "significance": [
+              "显著"
+            ]
+          },
+          "evidence_needed": "两个比较对象各自的数值/方向与样本信息，以及比较方向是否一致"
+        }
+      ],
+      "slot_mapping": {
+        "c2#s1": "c2#a1",
+        "c2#s2": "c2#a1",
+        "c2#s3": "c2#a2",
+        "c2#s4": "c2#a2",
+        "c2#s5": "c2#a2"
+      },
+      "warnings": []
+    },
+    {
+      "id": "c3",
+      "text": "HX-300 在海洋环境中的腐蚀速率低于 2024 铝合金。",
+      "slots": [
+        {
+          "category": "comparator",
+          "term": "低于",
+          "text": "低于",
+          "start": 18,
+          "end": 20,
+          "slot_id": "c3#s1"
+        }
+      ],
+      "split_points": [],
+      "atoms": [
+        {
+          "atom_id": "c3#a1",
+          "type": "comparison",
+          "text": "HX-300 在海洋环境中的腐蚀速率低于 2024 铝合金",
+          "span": [
+            0,
+            29
+          ],
+          "predicate_stem": "低于",
+          "covers_slots": [
+            "c3#s1"
+          ],
+          "modifiers": {},
+          "evidence_needed": "两个比较对象各自的数值/方向与样本信息，以及比较方向是否一致"
+        }
+      ],
+      "slot_mapping": {
+        "c3#s1": "c3#a1"
+      },
+      "warnings": [
+        "检测到比较词但论断未被拆分：注意核实比较对象是否完整（可能为隐含比较）。"
+      ]
+    }
+  ]
+}

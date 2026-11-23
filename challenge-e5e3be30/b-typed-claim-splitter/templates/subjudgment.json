@@ -1,0 +1,26 @@
+{
+  "atom_id": "<claim_id>#a<N>",
+  "type": "fact | comparison | causal | scope",
+  "text": "<子判断原文片段>",
+  "span": [0, 0],
+  "predicate_stem": "<谓词主干启发式抽取结果>",
+  "covers_slots": ["<claim_id>#s<N>"],
+  "modifiers": {
+    "negation": ["<否定词原词，若有——核验时不得吞掉>"],
+    "significance": ["<显著性限定原词，若有>"],
+    "condition": ["<条件限定原词，若有>"]
+  },
+  "evidence_needed": "<该类型子判断所需证据类型>",
+  "verdict": "supported | partially_supported | contradicted | insufficient_evidence",
+  "core": true,
+  "weight": 1.0,
+  "evidence": [
+    {
+      "source": "<PDF 文件名>",
+      "locator": "<页码/段落/句子>",
+      "quote": "<支持或冲突的原文原话>"
+    }
+  ],
+  "uncertainty": "<证据强度、间接性、翻译风险等>",
+  "note": "<核验者备注>"
+}

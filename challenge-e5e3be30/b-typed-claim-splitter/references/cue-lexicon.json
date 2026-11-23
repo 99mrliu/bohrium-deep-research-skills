@@ -1,0 +1,49 @@
+{
+  "version": "1.0.0",
+  "note": "中英双语线索词表。六大语义槽位类别 + 拆分辅助配置。zh 词条按子串匹配；en 词条按词边界正则匹配（不区分大小写）；以 re: 开头的词条按正则匹配。本表为启发式起点，可按领域扩展。",
+  "categories": {
+    "comparator": {
+      "description": "比较词：表明论断含两个对象/条件之间的比较及方向",
+      "zh": ["高于", "低于", "优于", "劣于", "超过", "不及", "相当于", "倍", "提高", "提升", "降低", "减少", "增大", "减小", "改善", "更快", "更慢", "更强", "更弱", "更多", "更少", "更高", "更低", "更好", "更差", "re:\\d+(\\.\\d+)?\\s?%"],
+      "en": ["higher than", "lower than", "better than", "worse than", "more than", "less than", "greater than", "exceeds", "outperforms", "increase", "increased", "decrease", "decreased", "improve", "improved", "reduce", "reduced", "than", "re:\\d+(\\.\\d+)?\\s?%"]
+    },
+    "negation": {
+      "description": "否定词：反转所在子判断的极性，吞掉否定词是最常见的拆解错误",
+      "zh": ["无显著", "未显著", "不显著", "没有", "并非", "并未", "不能", "不会", "不再", "无", "未", "不"],
+      "en": ["no significant", "not significant", "no", "not", "never", "without", "fails to", "did not", "does not"]
+    },
+    "significance": {
+      "description": "显著性词：统计显著性/效应量限定，通常作为修饰槽位附着于所在子判断",
+      "zh": ["显著性", "显著", "统计学意义", "re:p\\s?[<≤=]\\s?0\\.\\d+"],
+      "en": ["significant", "significantly", "statistically significant", "re:p\\s?[<≤=]\\s?0\\.\\d+", "effect size"]
+    },
+    "condition": {
+      "description": "条件词：论断成立的前提条件，丢失条件等于改变论断",
+      "zh": ["条件下", "情况下", "当", "若", "如果", "前提是", "re:在[^，。；]{1,15}下"],
+      "en": ["under", "when", "if", "provided that", "given", "at", "subject to"]
+    },
+    "causal": {
+      "description": "因果标记：表明论断含因果/机制断言，需独立的机制性证据",
+      "zh": ["因为", "由于", "导致", "引起", "归因于", "源于", "因此", "所以", "从而", "致使"],
+      "en": ["because", "due to", "leads to", "lead to", "causes", "caused by", "attributed to", "results in", "therefore", "hence", "owing to"]
+    },
+    "scope": {
+      "description": "范围/量词限定：适用对象与条件的普适性断言，'所有'与'部分'之差即支持与反驳之差",
+      "zh": ["适用于", "所有", "全部", "任何", "各种", "普遍", "仅", "只", "仅限", "唯一", "均", "都"],
+      "en": ["applies to", "applicable to", "all", "any", "every", "only", "solely", "universal", "universally", "exclusively"]
+    }
+  },
+  "split_delimiters": {
+    "zh_strong": ["并且", "同时", "；", ";"],
+    "zh_weak": ["，且", "且", "而", "，", "。"],
+    "en_weak": [" and ", " while ", " whereas ", "; "]
+  },
+  "clause_markers": {
+    "causal": ["因为", "由于", "because", "due to", "attributed to", "owing to"],
+    "scope": ["仅适用于", "适用于", "applies to", "applicable to"]
+  },
+  "predicate_hints": {
+    "zh": ["是", "为", "有", "具有", "达到", "提高", "提升", "降低", "减少", "增加", "增大", "减小", "改善", "优于", "劣于", "高于", "低于", "等于", "导致", "引起", "抑制", "促进", "适用", "包含", "产生", "影响", "改变", "维持", "超过"],
+    "en": ["is", "are", "was", "were", "has", "have", "had", "increase", "increased", "decrease", "decreased", "improve", "improved", "reduce", "reduced", "exceeds", "leads", "causes", "achieves", "reaches", "shows", "demonstrates", "applies"]
+  }
+}
