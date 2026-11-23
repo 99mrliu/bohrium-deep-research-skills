@@ -1,0 +1,134 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "https://example.local/claims.schema.json",
+  "title": "claims.json — machine-checkable claims table for figure-audit-loop",
+  "type": "object",
+  "required": ["entities", "edges"],
+  "additionalProperties": false,
+  "properties": {
+    "note": {
+      "type": "string",
+      "description": "Free-form provenance note, e.g. 'synthetic example' or the paper/materials this table was extracted from."
+    },
+    "title": {
+      "type": "string",
+      "description": "Figure title rendered on the canvas."
+    },
+    "entities": {
+      "type": "array",
+      "minItems": 1,
+      "items": {
+        "type": "object",
+        "required": ["id", "label", "type", "source"],
+        "additionalProperties": false,
+        "properties": {
+          "id": {"type": "string", "minLength": 1,
+                 "description": "Stable identifier used in SVG ids as entity:<id>."},
+          "label": {"type": "string", "minLength": 1,
+                    "description": "Visible label; genes are rendered italic, proteins upright."},
+          "type": {"enum": ["gene", "protein", "complex", "small_molecule", "cell_type", "other"]},
+          "compartment": {"type": "string",
+                          "description": "Cellular compartment / band name, e.g. 'extracellular', 'membrane', 'cytosol', 'nucleus'."},
+          "source": {"type": "string", "minLength": 1,
+                     "description": "Source locator: paper figure/table/sentence or data file + row, e.g. 'paper p.7 Fig.3B' or 'data.csv:row12'."},
+          "encodings": {
+            "type": "object",
+            "description": "Data values driving visual encodings, keyed by field name, e.g. {\"log2FC\": 1.8}.",
+            "additionalProperties": {"type": "number"}
+          }
+        }
+      }
+    },
+    "edges": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["id", "from", "to", "kind", "evidence", "source"],
+        "additionalProperties": false,
+        "properties": {
+          "id": {"type": "string", "minLength": 1,
+                 "description": "Used in SVG ids as edge:<id>."},
+          "from": {"type": "string", "minLength": 1,
+                   "description": "Entity id at the regulatory SOURCE of the interaction."},
+          "to": {"type": "string", "minLength": 1,
+                 "description": "Entity id at the TARGET (arrowhead / T-bar end)."},
+          "kind": {"enum": ["activates", "inhibits", "binds", "phosphorylates", "ubiquitinates", "transports", "recruits", "modifies"]},
+          "evidence": {"enum": ["confirmed", "uncertain"],
+                       "description": "If the materials do not establish direction or effect, use 'uncertain' — never invent certainty. Rendered dashed."},
+          "source": {"type": "string", "minLength": 1,
+                     "description": "Source locator for this interaction claim."}
+        }
+      }
+    },
+    "encodings": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["channel", "field", "scale", "source"],
+        "additionalProperties": false,
+        "properties": {
+          "channel": {"enum": ["fill", "size", "width"]},
+          "field": {"type": "string", "minLength": 1,
+                    "description": "Key in entities[].encodings this channel maps."},
+          "scale": {"type": "string",
+                    "description": "Scale spec, e.g. 'diverging:#2166ac-#f7f7f7-#b2182b;min=-2;max=2'."},
+          "source": {"type": "string", "minLength": 1,
+                     "description": "Data locator, e.g. 'results.csv column log2FC'. Numbers must be traceable."}
+        }
+      }
+    },
+    "legend": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["item", "meaning"],
+        "additionalProperties": false,
+        "properties": {
+          "item": {"type": "string", "minLength": 1,
+                   "description": "Legend item id; appears as legend-swatch:<item> in the SVG."},
+          "meaning": {"type": "string"},
+          "color": {"type": "string",
+                    "description": "Optional explicit swatch color '#rrggbb'. If omitted, colors for '<field>_low|_mid|_high' derive from the fill encoding scale."}
+        }
+      }
+    },
+    "expected_labels": {
+      "type": "array",
+      "items": {"type": "string"},
+      "description": "Key labels that MUST appear as text in the rendered figure (used by SVG-text check and optional OCR check)."
+    },
+    "color_checks": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["element", "role", "expect_color_hex"],
+        "additionalProperties": false,
+        "properties": {
+          "element": {"type": "string", "minLength": 1,
+                      "description": "SVG element id to sample, e.g. 'legend-swatch:log2FC_low' or 'entity:RTK'."},
+          "role": {"enum": ["legend_swatch", "node_fill"]},
+          "expect_color_hex": {"type": "string", "pattern": "^#[0-9a-fA-F]{6}$"},
+          "region": {
+            "type": "array", "items": {"type": "number"}, "minItems": 4, "maxItems": 4,
+            "description": "Optional [x0,y0,x1,y1] as fractions of the canvas; overrides bbox lookup from the SVG."
+          }
+        }
+      }
+    },
+    "edit_expectations": {
+      "type": "object",
+      "description": "Case kind (3) only: what the source-preserving edit must change and what it must NOT touch.",
+      "additionalProperties": false,
+      "properties": {
+        "changed_elements": {
+          "type": "array", "items": {"type": "string"},
+          "description": "SVG element ids that MUST differ between before.svg and after.svg."
+        },
+        "unchanged_sample": {
+          "type": "array", "items": {"type": "string"},
+          "description": "SVG element ids that MUST remain byte-identical."
+        }
+      }
+    }
+  }
+}

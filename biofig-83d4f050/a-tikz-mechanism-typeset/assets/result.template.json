@@ -1,0 +1,28 @@
+{
+  "case_id": "<string: case identifier copied verbatim from /input/case.json>",
+  "status": "<success | partial | failed -- be honest; 'partial' REQUIRES the limits field below naming exactly what is missing and why>",
+  "limits": "<only when status=partial: e.g. 'no latex engine on PATH: .tex source delivered and verified syntactically, PDF/PNG exports missing'>",
+  "editable_source": "<absolute path to the main .tex source, e.g. /app/output/figure.tex>",
+  "export_artifact": [
+    "<absolute path to exported PDF>",
+    "<absolute path to exported PNG (state DPI in compliance_checks)>",
+    "<absolute path to exported SVG if an SVG exporter existed>"
+  ],
+  "content_map": {
+    "<key figure element: entity/edge/legend entry/numeric value>": "<source locator in the materials, e.g. 'paper.pdf p.4 Fig.2', 'paper.pdf p.6 para 2: IL-6 binds IL-6R', 'data.csv:log2FC row GeneD=3.05'>",
+    "edge:KinB -> TFc (phosphorylation)": "<example shape: 'paper.pdf p.5 Results para 1'>",
+    "value:bar height group B": "<example shape: 'results.tsv:value where group=B'>"
+  },
+  "compliance_checks": [
+    {"name": "compile", "status": "<pass|fail|skipped>", "detail": "<engine used, error count>"},
+    {"name": "fonts_embedded", "status": "<pass|fail|skipped>", "detail": "<pdffonts summary or 'pdffonts missing: not verified'>"},
+    {"name": "labels_present", "status": "<pass|fail|skipped>", "detail": "<N/M expected labels found via pdftotext; missing listed>"},
+    {"name": "pixel_probe", "status": "<pass|fail|skipped>", "detail": "<PNG WxH, distinct probe colors, DPI>"},
+    {"name": "legend_data_consistency", "status": "<pass|fail|skipped>", "detail": "<legend entries vs data file columns/series compared>"}
+  ],
+  "exceptions": [
+    "<every ambiguity, missing tool, unresolved conflict, e.g. 'pdftocairo/pdf2svg/dvisvgm absent: SVG not produced, PDF is the vector deliverable', 'upstream direction of edge X unclear in materials: drawn as uncertain and marked ?'>"
+  ],
+  "generator": "tikz-mechanism-typeset skill (LaTeX/TikZ typeset-driven)",
+  "notes": "<optional free text: what was built, which scripts produced which artifact>"
+}

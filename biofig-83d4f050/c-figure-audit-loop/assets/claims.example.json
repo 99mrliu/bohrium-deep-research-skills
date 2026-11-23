@@ -1,0 +1,50 @@
+{
+  "note": "synthetic example — toy pathway invented for the skill demo; all source locators are fictional",
+  "title": "Synthetic RTK pathway (demo)",
+  "entities": [
+    {"id": "LIGAND", "label": "Ligand", "type": "small_molecule",
+     "compartment": "extracellular", "source": "synthetic:demo-table row1"},
+    {"id": "RTK", "label": "RTK", "type": "protein",
+     "compartment": "membrane", "source": "synthetic:demo-table row2",
+     "encodings": {"log2FC": 1.8}},
+    {"id": "ADAPTOR", "label": "Adaptor", "type": "protein",
+     "compartment": "cytosol", "source": "synthetic:demo-table row3",
+     "encodings": {"log2FC": 0.2}},
+    {"id": "KINASE", "label": "Kinase", "type": "protein",
+     "compartment": "cytosol", "source": "synthetic:demo-table row4",
+     "encodings": {"log2FC": -1.5}},
+    {"id": "TF", "label": "TF", "type": "gene",
+     "compartment": "nucleus", "source": "synthetic:demo-table row5"}
+  ],
+  "edges": [
+    {"id": "e1", "from": "LIGAND", "to": "RTK", "kind": "binds",
+     "evidence": "confirmed", "source": "synthetic:demo-fig panelA"},
+    {"id": "e2", "from": "RTK", "to": "ADAPTOR", "kind": "activates",
+     "evidence": "confirmed", "source": "synthetic:demo-fig panelA"},
+    {"id": "e3", "from": "ADAPTOR", "to": "KINASE", "kind": "phosphorylates",
+     "evidence": "confirmed", "source": "synthetic:demo-fig panelB"},
+    {"id": "e4", "from": "KINASE", "to": "TF", "kind": "inhibits",
+     "evidence": "uncertain", "source": "synthetic:demo-fig panelC (direction unclear in source)"}
+  ],
+  "encodings": [
+    {"channel": "fill", "field": "log2FC",
+     "scale": "diverging:#2166ac-#f7f7f7-#b2182b;min=-2;max=2",
+     "source": "synthetic:demo-data.csv column log2FC"}
+  ],
+  "legend": [
+    {"item": "log2FC_low", "meaning": "log2FC = -2 (down)"},
+    {"item": "log2FC_mid", "meaning": "log2FC = 0"},
+    {"item": "log2FC_high", "meaning": "log2FC = +2 (up)"},
+    {"item": "uncertain_edge", "meaning": "dashed edge = uncertain evidence",
+     "color": "#999999"}
+  ],
+  "expected_labels": ["RTK", "Kinase", "log2FC"],
+  "color_checks": [
+    {"element": "legend-swatch:log2FC_low", "role": "legend_swatch",
+     "expect_color_hex": "#2166ac"},
+    {"element": "legend-swatch:log2FC_high", "role": "legend_swatch",
+     "expect_color_hex": "#b2182b"},
+    {"element": "entity:RTK", "role": "node_fill",
+     "expect_color_hex": "#b92e3f"}
+  ]
+}

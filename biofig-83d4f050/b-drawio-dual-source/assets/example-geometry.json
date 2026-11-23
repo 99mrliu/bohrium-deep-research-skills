@@ -1,0 +1,34 @@
+{
+  "id": "synthetic-egfr-toy",
+  "note": "SYNTHETIC toy pathway for pipeline testing only. Not from any paper or dataset; all entities, edges and values are invented.",
+  "canvas": {"width": 1200, "height": 850},
+  "compartments": [
+    {"id": "outside", "label": "细胞外 Extracellular", "band": "extracellular"},
+    {"id": "mem", "label": "细胞膜 Membrane", "band": "membrane"},
+    {"id": "cyto", "label": "细胞质 Cytosol", "band": "cytosol"}
+  ],
+  "entities": [
+    {"id": "egf", "label": "EGF", "type": "small_molecule", "compartment": "outside", "col": 0},
+    {"id": "egfr", "label": "EGFR", "type": "receptor", "compartment": "mem", "col": 1},
+    {"id": "akt", "label": "AKT", "type": "protein", "compartment": "cyto", "col": 2},
+    {"id": "myc", "label": "MYC", "type": "gene", "compartment": "cyto", "col": 3},
+    {"id": "p21", "label": "p21", "type": "protein", "compartment": "cyto", "col": 3}
+  ],
+  "edges": [
+    {"id": "e1", "from": "egf", "to": "egfr", "kind": "binding", "source": "synthetic: invented"},
+    {"id": "e2", "from": "egfr", "to": "akt", "kind": "activation", "source": "synthetic: invented"},
+    {"id": "e3", "from": "akt", "to": "myc", "kind": "phosphorylation", "source": "synthetic: invented"},
+    {"id": "e4", "from": "myc", "to": "p21", "kind": "inhibition", "source": "synthetic: invented"}
+  ],
+  "encodings": [
+    {"kind": "log2fc_color", "field": "log2FC", "source": "example-data.csv:log2FC",
+     "legend": "log2FC", "map": {"akt": 1.8, "myc": 1.1, "p21": -1.4}}
+  ],
+  "sources": {
+    "egf": "synthetic: invented",
+    "egfr": "synthetic: invented",
+    "akt": "synthetic: invented",
+    "myc": "synthetic: invented",
+    "p21": "synthetic: invented"
+  }
+}

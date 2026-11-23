@@ -1,0 +1,20 @@
+{
+  "case_id": "<case id from /input/case.json>",
+  "status": "success | partial | failed  (partial/failed MUST name limits in exceptions)",
+  "editable_source": ["/app/output/figure.drawio", "/app/output/figure.svg"],
+  "export_artifact": ["/app/output/figure.png", "/app/output/figure.pdf"],
+  "content_map": {
+    "entity:egfr": "paper.pdf p.4 Fig.2 panel B",
+    "edge:e3": "paper.pdf p.5 paragraph 2 (AKT phosphorylates MYC)",
+    "entity:akt#fill": "data.csv:log2FC row AKT = 1.80",
+    "chart:expression#bar:2": "data.csv row 4: log2FC = -1.40"
+  },
+  "compliance_checks": [
+    {"name": "drawio_parses", "status": "pass", "detail": "..."},
+    {"name": "svg_ids_and_labels", "status": "pass", "detail": "..."},
+    {"name": "legend_consistency", "status": "pass", "detail": "..."},
+    {"name": "png_size_expected", "status": "pass", "detail": "..."},
+    {"name": "color_checks", "status": "pass", "detail": "..."}
+  ],
+  "exceptions": []
+}

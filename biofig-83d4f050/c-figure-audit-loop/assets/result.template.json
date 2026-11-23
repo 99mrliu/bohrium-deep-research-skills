@@ -1,0 +1,28 @@
+{
+  "case_id": "<case id from /input/case.json>",
+  "status": "partial",
+  "editable_source": [
+    "/app/output/figure.svg",
+    "/app/work/claims.json"
+  ],
+  "export_artifact": [
+    "/app/output/figure.png",
+    "/app/output/figure.pdf"
+  ],
+  "content_map": {
+    "entity:RTK": "paper p.7 Fig.3B — receptor node",
+    "edge:e2": "paper p.8 paragraph 2 — 'RTK activates ADAPTOR'",
+    "encoding:fill:log2FC": "data/results.csv column log2FC",
+    "legend:log2FC_low": "data/results.csv scale min"
+  },
+  "compliance_checks": [
+    {"check": "audit_run.summary", "result": "0 errors, 0 warnings, 2 skipped",
+     "report": "/app/work/audit/audit_report.json"},
+    {"check": "pdf.fonts_embedded", "result": "skipped",
+     "note": "pdffonts not on PATH — NOT counted as passed"}
+  ],
+  "exceptions": [
+    "example: edge e4 direction only weakly supported by source; marked evidence=uncertain and left dashed",
+    "example: OCR label check skipped (tesseract unavailable)"
+  ]
+}

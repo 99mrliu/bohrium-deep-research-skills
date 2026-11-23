@@ -1,0 +1,58 @@
+%% =====================================================================
+%% 【示例 / SYNTHETIC EXAMPLE】example-mechanism.tex
+%% This is a SYNTHETIC toy pathway for demonstrating the biopathway.tex
+%% style library ONLY. All entities/edges below are invented; it is NOT
+%% derived from any real case material and must never be shipped as a
+%% case deliverable. 本文件为合成示例，非真实案例结果。
+%%
+%% Compile:  pdflatex example-mechanism.tex   (needs tikz + pgfplots)
+%% Entities: LIGAND-X (small molecule), RcptA (receptor), KinB (protein),
+%%           TFc (gene/TF), TargetD (gene). 3 edge types shown:
+%%           activate / inhibit / phosphorylate (+ transport).
+%% =====================================================================
+\documentclass[tikz,border=6pt]{standalone}
+\input{biopathway.tex}
+
+\begin{document}
+\begin{tikzpicture}[node distance=1.1cm and 1.6cm]
+
+  %% ---- compartment bands (background first) ----
+  \begin{scope}[on background layer]
+    \fill[extracellularband] (-6.5, 1.4) rectangle (6.5, 3.4);
+    \fill[membraneband]      (-6.5, 0.6) rectangle (6.5, 1.4);
+    \fill[cytosolband]       (-6.5,-3.6) rectangle (6.5, 0.6);
+    \fill[nucleusband]       ( 1.0,-3.6) rectangle (6.5,-1.2);
+  \end{scope}
+  \node[bandlabel] at (-6.4, 3.35) {extracellular};
+  \node[bandlabel] at (-6.4, 1.38) {membrane};
+  \node[bandlabel] at (-6.4, 0.55) {cytosol};
+  \node[bandlabel] at ( 1.1,-1.25) {nucleus};
+  \pic at (0,1.0) {bilayer={6.5}};
+
+  %% ---- entities ----
+  \node[smallmolecule] (lig) at (-3.5, 2.4) {LIGAND-X};
+  \node[receptor]      (rcp) at (-3.5, 1.0) {RcptA};
+  \node[protein]       (kin) at (-1.2,-0.8) {KinB};
+  \node[protein]       (rep) at (-4.6,-2.2) {RepE};
+  \node[protein]       (tf)  at ( 3.6,-1.9) {TFc};
+  \node[gene]          (tgt) at ( 3.6,-3.0) {\gene{TargetD}};
+
+  %% ---- edges (mechanism semantics) ----
+  \draw[activate]      (lig) -- (rcp);
+  \draw[activate]      (rcp.south) |- (kin.west);
+  \draw[phosphorylate] (kin) -- (tf);
+  \draw[transport]     (kin.south) -- ++(0,-0.9) node[ann, right] {shuttle};
+  \draw[inhibit]       (rep) -- (kin);
+  \draw[activate]      (tf) -- (tgt);
+
+  %% ---- legend ----
+  \node[legendframe, anchor=north west] at (-6.4, -3.8) {%
+    \begin{tabular}{@{}ll@{}}
+      \multicolumn{2}{@{}l}{\textbf{Legend (synthetic)}}\\[2pt]
+      \legendrow{activate}{activation}%
+      \legendrow{inhibit}{inhibition}%
+      \legendrow{phosphorylate}{phosphorylation}%
+    \end{tabular}};
+
+\end{tikzpicture}
+\end{document}
