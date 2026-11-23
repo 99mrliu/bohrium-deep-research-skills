@@ -1,0 +1,18 @@
+{
+  "case_id": "SYNTH-EXAMPLE-GATE-METRICS",
+  "synthetic": true,
+  "note": "SYNTHETIC EXAMPLE input for contract-gatekeeper (metrics_only branch: no formula representation, no recalculable data). Fabricated; not a platform case.",
+  "paper": {"title": "Synthetic benchmark snapshot (fabricated)"},
+  "artifacts": {},
+  "reported_metrics": [
+    {"name": "test_accuracy", "value": 0.913, "condition": "held-out split"}
+  ],
+  "output_contract": {
+    "required_fields": ["case_id", "status", "answers", "evidence", "uncertainty", "artifacts"],
+    "field_types": {
+      "case_id": "string", "status": "string", "answers": "object",
+      "evidence": "array", "uncertainty": "object", "artifacts": "object"
+    },
+    "status_enum": ["success", "partial", "insufficient_evidence", "failed"]
+  }
+}

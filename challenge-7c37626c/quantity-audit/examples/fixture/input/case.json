@@ -1,0 +1,11 @@
+{
+  "case_id": "SYNTH-EXAMPLE-AUDIT-01",
+  "synthetic": true,
+  "note": "SYNTHETIC EXAMPLE input for quantity-audit. Fabricated; not a platform case.",
+  "paper": {"title": "Synthetic mobility note (fabricated)"},
+  "artifacts": {},
+  "output_contract": {
+    "required_fields": ["case_id", "status", "answers", "evidence", "uncertainty", "artifacts"],
+    "status_enum": ["success", "partial", "insufficient_evidence", "failed"]
+  }
+}

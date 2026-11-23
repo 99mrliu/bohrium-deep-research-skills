@@ -1,0 +1,64 @@
+{
+  "note": "SYNTHETIC EXAMPLE claims: invented paper, invented numbers. Demonstrates the verdict vocabulary (PASS, MISMATCH, DIM_MISMATCH). Not platform results.",
+  "claims": [
+    {
+      "claim_id": "eq1-einstein-D",
+      "formula_latex": "D = \\frac{\\mu k_{\\mathrm{B}} T}{q}",
+      "binding": {
+        "mu": {"value": 4e-4, "unit": "cm^2 V^-1 s^-1",
+               "source": "synthetic sec 'Model': zero-field mobility"},
+        "k_B": {"value": 8.617e-5, "unit": "eV/K",
+                "source": "synthetic sec 'Model': Boltzmann constant"},
+        "T": {"value": 300, "unit": "K",
+              "source": "synthetic sec 'Model': T = 300 K"},
+        "q": {"value": 1.602e-19, "unit": "C",
+              "source": "synthetic sec 'Model': elementary charge"}
+      },
+      "reported": {"value": 1.03e-5, "unit": "cm^2 s^-1",
+                   "source": "synthetic Table 1"},
+      "tolerance_rel": 0.05
+    },
+    {
+      "claim_id": "eq2-poole-frenkel-mu",
+      "formula_latex": "\\mu ( E ) = \\mu_{0} \\exp \\left( \\beta \\sqrt{E} \\right)",
+      "binding": {
+        "mu_0": {"value": 4e-4, "unit": "cm^2 V^-1 s^-1",
+                 "source": "synthetic sec 'Model'"},
+        "beta": {"value": 2e-3, "unit": "(V cm^-1)^-1/2",
+                 "source": "synthetic sec 'Model'"},
+        "E": {"value": 1e4, "unit": "V cm^-1",
+              "source": "synthetic exercise value (chosen for the example)"}
+      },
+      "reported": {"value": 4.886e-4, "unit": "cm^2 V^-1 s^-1",
+                   "source": "synthetic sec 'Consistency check'"},
+      "tolerance_rel": 0.02
+    },
+    {
+      "claim_id": "counterexample-wrong-D",
+      "formula_latex": "D = \\frac{\\mu k_{\\mathrm{B}} T}{q}",
+      "binding": {
+        "mu": {"value": 4e-4, "unit": "cm^2 V^-1 s^-1",
+               "source": "synthetic"},
+        "k_B": {"value": 8.617e-5, "unit": "eV/K", "source": "synthetic"},
+        "T": {"value": 300, "unit": "K", "source": "synthetic"},
+        "q": {"value": 1.602e-19, "unit": "C", "source": "synthetic"}
+      },
+      "reported": {"value": 1.03e-7, "unit": "cm^2 s^-1",
+                   "source": "synthetic counter-example (deliberately off by 2 decades)"},
+      "tolerance_rel": 0.05
+    },
+    {
+      "claim_id": "counterexample-dim-err",
+      "formula_latex": "D = \\frac{\\mu k_{\\mathrm{B}} T}{q}",
+      "binding": {
+        "mu": {"value": 4e-4, "unit": "cm^2 V^-1 s^-1",
+               "source": "synthetic"},
+        "k_B": {"value": 8.617e-5, "unit": "eV/K", "source": "synthetic"},
+        "T": {"value": 300, "unit": "K", "source": "synthetic"},
+        "q": {"value": 1.602e-19, "unit": "C", "source": "synthetic"}
+      },
+      "reported": {"value": 1.03e-5, "unit": "cm s^-1",
+                   "source": "synthetic counter-example (wrong unit exponent)"}
+    }
+  ]
+}

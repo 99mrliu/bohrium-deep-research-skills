@@ -1,0 +1,11 @@
+{
+  "case_id": "SYNTH-EXAMPLE-RENDER-01",
+  "synthetic": true,
+  "note": "SYNTHETIC EXAMPLE input for render-review-studio. Fabricated; not a platform case.",
+  "paper": {"title": "Synthetic mobility note (fabricated)"},
+  "artifacts": {"pdf": "artifacts/paper.pdf"},
+  "output_contract": {
+    "required_fields": ["case_id", "status", "answers", "evidence", "uncertainty", "artifacts"],
+    "status_enum": ["success", "partial", "insufficient_evidence", "failed"]
+  }
+}

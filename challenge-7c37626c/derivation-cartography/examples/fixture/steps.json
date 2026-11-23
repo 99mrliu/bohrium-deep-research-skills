@@ -1,0 +1,27 @@
+{
+  "note": "SYNTHETIC EXAMPLE steps: one complete, one deliberately defective (no justification) so the fail-closed gate behavior is visible.",
+  "steps": [
+    {
+      "step_id": "s1",
+      "from": "eq2",
+      "to": "eq1",
+      "action": "set the field E to zero so exp(beta*sqrt(E)) reduces to 1 and mu becomes mu_0",
+      "justification": "limiting case stated in sec s2: 'Equation (1) is recovered when the electric field vanishes, since exp(0) = 1'",
+      "locator": "sec s2, paragraph 1",
+      "assumptions": ["electric field E = 0"],
+      "approximations": [],
+      "boundary_conditions": []
+    },
+    {
+      "step_id": "s2",
+      "from": "eq1",
+      "to": "reported:table-1",
+      "action": "substitute mu_0 = 4e-4 cm^2 V^-1 s^-1, k_B, T = 300 K and q into the Einstein relation",
+      "justification": "",
+      "locator": "sec s2, paragraph 1; Table 1",
+      "assumptions": [],
+      "approximations": [],
+      "boundary_conditions": []
+    }
+  ]
+}

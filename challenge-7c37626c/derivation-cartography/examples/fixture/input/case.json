@@ -1,0 +1,13 @@
+{
+  "case_id": "SYNTH-EXAMPLE-CARTOGRAPHY-01",
+  "synthetic": true,
+  "note": "SYNTHETIC EXAMPLE input for derivation-cartography. Fabricated; not a platform case.",
+  "paper": {"title": "Synthetic mobility note (fabricated)"},
+  "artifacts": {
+    "publisher_source_xml": "artifacts/publisher-source.xml"
+  },
+  "output_contract": {
+    "required_fields": ["case_id", "status", "answers", "evidence", "uncertainty", "artifacts"],
+    "status_enum": ["success", "partial", "insufficient_evidence", "failed"]
+  }
+}
