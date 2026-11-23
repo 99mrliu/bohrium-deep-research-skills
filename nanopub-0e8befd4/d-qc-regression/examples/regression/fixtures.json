@@ -1,0 +1,56 @@
+{
+  "description": "SYNTHETIC regression fixtures - 12 known-error synthetic cases for qc_gate. NOT official test cases.",
+  "fixtures": [
+    {"name": "quote_plural_changed",
+     "ledger": {"source_text": "The tool supports 5 identifier schemes, including DOI and arXiv.", "claims": [{"id": "F1", "text": "PaperTrail supports DOI and arXiv.", "subject": "PaperTrail", "relation": "supports", "object": "DOI and arXiv", "qualifiers": [], "polarity": "positive", "modality": "asserted", "status": "asserted", "source": {"title": "PaperTrail"}, "evidence": {"quote": "The tool supports 5 identifier scheme, including DOI and arXiv.", "location": {}}}]},
+     "expect_codes": ["E_QUOTE_NOT_VERBATIM"]},
+
+    {"name": "pronoun_subject",
+     "ledger": {"source_text": "The tool supports 5 identifier schemes, including DOI and arXiv.", "claims": [{"id": "F2", "text": "It supports 5 identifier schemes.", "subject": "It", "relation": "supports", "object": "5 identifier schemes", "qualifiers": [], "polarity": "positive", "modality": "asserted", "status": "asserted", "source": {"title": "PaperTrail"}, "evidence": {"quote": "The tool supports 5 identifier schemes", "location": {}}}]},
+     "expect_codes": ["E_PRONOUN_SUBJECT"]},
+
+    {"name": "relation_out_of_vocab",
+     "ledger": {"source_text": "PaperTrail flagged 3.2% of DOI links as unresolvable.", "claims": [{"id": "F3", "text": "PaperTrail wins against LinkRot.", "subject": "PaperTrail", "relation": "wins_against", "object": "LinkRot", "qualifiers": [], "polarity": "positive", "modality": "asserted", "status": "asserted", "source": {"title": "PaperTrail"}, "evidence": {"quote": "PaperTrail flagged 3.2% of DOI links as unresolvable.", "location": {}}}]},
+     "expect_codes": ["E_RELATION_UNKNOWN"]},
+
+    {"name": "source_metadata_missing",
+     "ledger": {"source_text": "The tool supports 5 identifier schemes.", "claims": [{"id": "F4", "text": "PaperTrail supports 5 identifier schemes.", "subject": "PaperTrail", "relation": "supports", "object": "5 identifier schemes", "qualifiers": [], "polarity": "positive", "modality": "asserted", "status": "asserted", "source": {}, "evidence": {"quote": "The tool supports 5 identifier schemes.", "location": {}}}]},
+     "expect_codes": ["E_SOURCE_METADATA_MISSING"]},
+
+    {"name": "exact_duplicate",
+     "ledger": {"source_text": "The tool supports 5 identifier schemes.", "claims": [
+       {"id": "F5a", "text": "PaperTrail supports 5 identifier schemes.", "subject": "PaperTrail", "relation": "supports", "object": "5 identifier schemes", "qualifiers": [], "polarity": "positive", "modality": "asserted", "status": "asserted", "source": {"title": "PaperTrail"}, "evidence": {"quote": "The tool supports 5 identifier schemes.", "location": {}}},
+       {"id": "F5b", "text": "PaperTrail supports five identifier schemes.", "subject": "PaperTrail", "relation": "supports", "object": "5 identifier schemes", "qualifiers": [], "polarity": "positive", "modality": "asserted", "status": "asserted", "source": {"title": "PaperTrail"}, "evidence": {"quote": "The tool supports 5 identifier schemes.", "location": {}}}]},
+     "expect_codes": ["E_DUPLICATE"]},
+
+    {"name": "number_not_in_quote",
+     "ledger": {"source_text": "The first pass uses a hash index with k=19.", "claims": [{"id": "F6", "text": "The first pass uses a hash index with k=25.", "subject": "First pass", "relation": "has_parameter", "object": "hash index k=25", "qualifiers": [], "polarity": "positive", "modality": "asserted", "status": "asserted", "source": {"title": "AlignX"}, "evidence": {"quote": "The first pass uses a hash index with k=19.", "location": {}}}]},
+     "expect_codes": ["W_NUMBER_NOT_IN_QUOTE"]},
+
+    {"name": "hedge_dropped",
+     "ledger": {"source_text": "We suggest that the same pipeline may extend to preprint repositories.", "claims": [{"id": "F7", "text": "The pipeline extends to preprint repositories.", "subject": "Pipeline", "relation": "applies_to", "object": "preprint repositories", "qualifiers": [], "polarity": "positive", "modality": "asserted", "status": "asserted", "source": {"title": "PaperTrail"}, "evidence": {"quote": "We suggest that the same pipeline may extend to preprint repositories.", "location": {}}}]},
+     "expect_codes": ["W_HEDGE_MISMATCH"]},
+
+    {"name": "evidence_too_broad",
+     "ledger": {"source_text": "PaperTrail is a citation integrity checker that scans open-access corpora for broken identifier links. On a crawl of 12,000 articles, PaperTrail flagged 3.2% of DOI links as unresolvable and completed the scan in 4.5 hours. The tool supports 5 identifier schemes, including DOI and arXiv. We suggest that the same pipeline may extend to preprint repositories in a future release of the tool.", "claims": [{"id": "F8", "text": "PaperTrail flagged 3.2% of DOI links as unresolvable.", "subject": "PaperTrail", "relation": "has_value", "object": "3.2% unresolvable DOI links", "qualifiers": [], "polarity": "positive", "modality": "asserted", "status": "asserted", "source": {"title": "PaperTrail"}, "evidence": {"quote": "PaperTrail is a citation integrity checker that scans open-access corpora for broken identifier links. On a crawl of 12,000 articles, PaperTrail flagged 3.2% of DOI links as unresolvable and completed the scan in 4.5 hours. The tool supports 5 identifier schemes, including DOI and arXiv. We suggest that the same pipeline may extend to preprint repositories in a future release of the tool.", "location": {}}}]},
+     "expect_codes": ["W_EVIDENCE_TOO_BROAD"]},
+
+    {"name": "atomic_bundle",
+     "ledger": {"source_text": "AlignX achieved 97.4% mapping accuracy and supports paired-end reads.", "claims": [{"id": "F9", "text": "AlignX outperforms ClassicAlign and supports paired-end reads.", "subject": "AlignX", "relation": "outperforms", "object": "ClassicAlign", "qualifiers": [], "polarity": "positive", "modality": "asserted", "status": "asserted", "source": {"title": "AlignX"}, "evidence": {"quote": "AlignX achieved 97.4% mapping accuracy and supports paired-end reads.", "location": {}}}]},
+     "expect_codes": ["W_ATOMIC_BUNDLE"]},
+
+    {"name": "conflict_unresolved",
+     "ledger": {"source_text": "The tool supports 5 identifier schemes.", "claims": [
+       {"id": "F10a", "text": "PaperTrail supports 5 identifier schemes.", "subject": "PaperTrail", "relation": "supports", "object": "5 identifier schemes", "qualifiers": ["scope: current release"], "polarity": "positive", "modality": "asserted", "status": "asserted", "source": {"title": "PaperTrail"}, "evidence": {"quote": "The tool supports 5 identifier schemes.", "location": {}}},
+       {"id": "F10b", "text": "PaperTrail supports 7 identifier schemes.", "subject": "PaperTrail", "relation": "supports", "object": "7 identifier schemes", "qualifiers": ["scope: current release"], "polarity": "positive", "modality": "asserted", "status": "asserted", "source": {"title": "PaperTrail"}, "evidence": {"quote": "The tool supports 5 identifier schemes.", "location": {}}}]},
+     "expect_codes": ["W_CONFLICT_UNRESOLVED", "W_NUMBER_NOT_IN_QUOTE"]},
+
+    {"name": "not_reported_without_scope",
+     "ledger": {"source_text": "PaperTrail checks identifier-based links.", "claims": [{"id": "F11", "text": "Whether PaperTrail handles rate limits is not reported.", "subject": "PaperTrail", "relation": "has_property", "object": "rate-limit handling", "qualifiers": [], "polarity": "positive", "modality": "asserted", "status": "not_reported", "source": {"title": "PaperTrail"}, "evidence": {"quote": "", "location": {}}}]},
+     "expect_codes": ["E_SCOPE_MISSING"]},
+
+    {"name": "asserted_without_quote",
+     "ledger": {"source_text": "PaperTrail checks identifier-based links.", "claims": [{"id": "F12", "text": "PaperTrail checks identifier-based links.", "subject": "PaperTrail", "relation": "supports", "object": "identifier-based links", "qualifiers": [], "polarity": "positive", "modality": "asserted", "status": "asserted", "source": {"title": "PaperTrail"}, "evidence": {"quote": "", "location": {}}}]},
+     "expect_codes": ["E_EVIDENCE_MISSING"]}
+  ]
+}

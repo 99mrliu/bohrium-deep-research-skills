@@ -1,0 +1,130 @@
+@prefix np: <http://www.nanopub.org/nschema#> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix npl: <https://nanopub.local/schema#> .
+
+<https://nanopub.local/RA81oTYtYHpr0DdkEbLCz_HIfYuCvcJ0YO> a np:Nanopublication .
+<https://nanopub.local/RA81oTYtYHpr0DdkEbLCz_HIfYuCvcJ0YO#head> {
+  <https://nanopub.local/RA81oTYtYHpr0DdkEbLCz_HIfYuCvcJ0YO> np:hasAssertion <https://nanopub.local/RA81oTYtYHpr0DdkEbLCz_HIfYuCvcJ0YO#assertion> ;
+    np:hasProvenance <https://nanopub.local/RA81oTYtYHpr0DdkEbLCz_HIfYuCvcJ0YO#provenance> ;
+    np:hasPublicationInfo <https://nanopub.local/RA81oTYtYHpr0DdkEbLCz_HIfYuCvcJ0YO#pubinfo> .
+}
+<https://nanopub.local/RA81oTYtYHpr0DdkEbLCz_HIfYuCvcJ0YO#assertion> {
+  <https://nanopub.local/entity/dosetrack-GTBIBldO> <https://nanopub.local/rel/inhibits> "missed doses (22% reduction)" .
+  <https://nanopub.local/entity/dosetrack-GTBIBldO> npl:claimText "DoseTrack reduced missed doses by 22% relative to standard care in an 8-week pilot with 41 families." .
+  <https://nanopub.local/entity/dosetrack-GTBIBldO> npl:qualifier "baseline: standard care" .
+  <https://nanopub.local/entity/dosetrack-GTBIBldO> npl:qualifier "trial: 8-week pilot, 41 families" .
+}
+<https://nanopub.local/RA81oTYtYHpr0DdkEbLCz_HIfYuCvcJ0YO#provenance> {
+  <https://nanopub.local/RA81oTYtYHpr0DdkEbLCz_HIfYuCvcJ0YO#assertion> prov:wasDerivedFrom <https://nanopub.local/source/dosetrack-v1> .
+  <https://nanopub.local/source/dosetrack-v1> dcterms:title "DoseTrack: a wearable dosing reminder for pediatric asthma" .
+  <https://nanopub.local/source/dosetrack-v1> npl:identifier "10.0000/synth.2022.010v1 (fictional)" .
+  <https://nanopub.local/source/dosetrack-v1> npl:sha256 "a575ca8fd893b7f9ef81c66e93329fea9e2bcddec6599056b9db1bfa9979d672" .
+  <https://nanopub.local/RA81oTYtYHpr0DdkEbLCz_HIfYuCvcJ0YO#assertion> npl:evidenceQuote "In a 8-week pilot with 41 families, DoseTrack reduced missed doses by 22%\nrelative to standard care." .
+}
+<https://nanopub.local/RA81oTYtYHpr0DdkEbLCz_HIfYuCvcJ0YO#pubinfo> {
+  <https://nanopub.local/RA81oTYtYHpr0DdkEbLCz_HIfYuCvcJ0YO> dcterms:creator "J. Fictional" .
+  <https://nanopub.local/RA81oTYtYHpr0DdkEbLCz_HIfYuCvcJ0YO> dcterms:creator "K. Madeup" .
+  <https://nanopub.local/RA81oTYtYHpr0DdkEbLCz_HIfYuCvcJ0YO> dcterms:created "2026-11-23T16:34:01Z" .
+}
+
+<https://nanopub.local/RADpVGpgqZk2uLjKHanI3T7J-74OMnKuzY> a np:Nanopublication .
+<https://nanopub.local/RADpVGpgqZk2uLjKHanI3T7J-74OMnKuzY#head> {
+  <https://nanopub.local/RADpVGpgqZk2uLjKHanI3T7J-74OMnKuzY> np:hasAssertion <https://nanopub.local/RADpVGpgqZk2uLjKHanI3T7J-74OMnKuzY#assertion> ;
+    np:hasProvenance <https://nanopub.local/RADpVGpgqZk2uLjKHanI3T7J-74OMnKuzY#provenance> ;
+    np:hasPublicationInfo <https://nanopub.local/RADpVGpgqZk2uLjKHanI3T7J-74OMnKuzY#pubinfo> .
+}
+<https://nanopub.local/RADpVGpgqZk2uLjKHanI3T7J-74OMnKuzY#assertion> {
+  <https://nanopub.local/entity/dosetrack-GTBIBldO> <https://nanopub.local/rel/applies_to> "children aged 6-12 with asthma" .
+  <https://nanopub.local/entity/dosetrack-GTBIBldO> npl:claimText "DoseTrack is a wearable dosing reminder for children aged 6-12 with asthma." .
+}
+<https://nanopub.local/RADpVGpgqZk2uLjKHanI3T7J-74OMnKuzY#provenance> {
+  <https://nanopub.local/RADpVGpgqZk2uLjKHanI3T7J-74OMnKuzY#assertion> prov:wasDerivedFrom <https://nanopub.local/source/dosetrack-v1> .
+  <https://nanopub.local/source/dosetrack-v1> dcterms:title "DoseTrack: a wearable dosing reminder for pediatric asthma" .
+  <https://nanopub.local/source/dosetrack-v1> npl:identifier "10.0000/synth.2022.010v1 (fictional)" .
+  <https://nanopub.local/source/dosetrack-v1> npl:sha256 "a575ca8fd893b7f9ef81c66e93329fea9e2bcddec6599056b9db1bfa9979d672" .
+  <https://nanopub.local/RADpVGpgqZk2uLjKHanI3T7J-74OMnKuzY#assertion> npl:evidenceQuote "DoseTrack is a wearable dosing reminder for children aged 6-12 with asthma." .
+}
+<https://nanopub.local/RADpVGpgqZk2uLjKHanI3T7J-74OMnKuzY#pubinfo> {
+  <https://nanopub.local/RADpVGpgqZk2uLjKHanI3T7J-74OMnKuzY> dcterms:creator "J. Fictional" .
+  <https://nanopub.local/RADpVGpgqZk2uLjKHanI3T7J-74OMnKuzY> dcterms:creator "K. Madeup" .
+  <https://nanopub.local/RADpVGpgqZk2uLjKHanI3T7J-74OMnKuzY> dcterms:created "2026-11-23T16:34:01Z" .
+}
+
+<https://nanopub.local/RAGFWxOC5jvmVzb1I-1x0j-ewBiScb71WH> a np:Nanopublication .
+<https://nanopub.local/RAGFWxOC5jvmVzb1I-1x0j-ewBiScb71WH#head> {
+  <https://nanopub.local/RAGFWxOC5jvmVzb1I-1x0j-ewBiScb71WH> np:hasAssertion <https://nanopub.local/RAGFWxOC5jvmVzb1I-1x0j-ewBiScb71WH#assertion> ;
+    np:hasProvenance <https://nanopub.local/RAGFWxOC5jvmVzb1I-1x0j-ewBiScb71WH#provenance> ;
+    np:hasPublicationInfo <https://nanopub.local/RAGFWxOC5jvmVzb1I-1x0j-ewBiScb71WH#pubinfo> .
+}
+<https://nanopub.local/RAGFWxOC5jvmVzb1I-1x0j-ewBiScb71WH#assertion> {
+  <https://nanopub.local/entity/dosetrack-wristband-battery-cCR5RFih> <https://nanopub.local/rel/has_value> "5 days per charge" .
+  <https://nanopub.local/entity/dosetrack-wristband-battery-cCR5RFih> npl:claimText "The DoseTrack wristband battery lasts 5 days per charge." .
+}
+<https://nanopub.local/RAGFWxOC5jvmVzb1I-1x0j-ewBiScb71WH#provenance> {
+  <https://nanopub.local/RAGFWxOC5jvmVzb1I-1x0j-ewBiScb71WH#assertion> prov:wasDerivedFrom <https://nanopub.local/source/dosetrack-v1> .
+  <https://nanopub.local/source/dosetrack-v1> dcterms:title "DoseTrack: a wearable dosing reminder for pediatric asthma" .
+  <https://nanopub.local/source/dosetrack-v1> npl:identifier "10.0000/synth.2022.010v1 (fictional)" .
+  <https://nanopub.local/source/dosetrack-v1> npl:sha256 "a575ca8fd893b7f9ef81c66e93329fea9e2bcddec6599056b9db1bfa9979d672" .
+  <https://nanopub.local/RAGFWxOC5jvmVzb1I-1x0j-ewBiScb71WH#assertion> npl:evidenceQuote "The wristband battery lasts 5 days per charge." .
+  <https://nanopub.local/RAGFWxOC5jvmVzb1I-1x0j-ewBiScb71WH#assertion> prov:wasDerivedFrom <https://nanopub.local/source/dosetrack-v2> .
+  <https://nanopub.local/source/dosetrack-v2> dcterms:title "DoseTrack: a wearable dosing reminder for pediatric asthma" .
+  <https://nanopub.local/source/dosetrack-v2> npl:identifier "10.0000/synth.2022.010v2 (fictional)" .
+  <https://nanopub.local/source/dosetrack-v2> npl:sha256 "b6d694e93a51f2de1e0e79ff74855a4962837426067b9747eeacb7ab797006c4" .
+  <https://nanopub.local/RAGFWxOC5jvmVzb1I-1x0j-ewBiScb71WH#assertion> npl:evidenceQuote "The wristband battery\nlasts 5 days per charge." .
+}
+<https://nanopub.local/RAGFWxOC5jvmVzb1I-1x0j-ewBiScb71WH#pubinfo> {
+  <https://nanopub.local/RAGFWxOC5jvmVzb1I-1x0j-ewBiScb71WH> dcterms:creator "J. Fictional" .
+  <https://nanopub.local/RAGFWxOC5jvmVzb1I-1x0j-ewBiScb71WH> dcterms:creator "K. Madeup" .
+  <https://nanopub.local/RAGFWxOC5jvmVzb1I-1x0j-ewBiScb71WH> dcterms:created "2026-11-23T16:34:01Z" .
+}
+
+<https://nanopub.local/RAPD7xtsSggFkdIGWpiJrdYQLB1MfyQv6g> a np:Nanopublication .
+<https://nanopub.local/RAPD7xtsSggFkdIGWpiJrdYQLB1MfyQv6g#head> {
+  <https://nanopub.local/RAPD7xtsSggFkdIGWpiJrdYQLB1MfyQv6g> np:hasAssertion <https://nanopub.local/RAPD7xtsSggFkdIGWpiJrdYQLB1MfyQv6g#assertion> ;
+    np:hasProvenance <https://nanopub.local/RAPD7xtsSggFkdIGWpiJrdYQLB1MfyQv6g#provenance> ;
+    np:hasPublicationInfo <https://nanopub.local/RAPD7xtsSggFkdIGWpiJrdYQLB1MfyQv6g#pubinfo> .
+}
+<https://nanopub.local/RAPD7xtsSggFkdIGWpiJrdYQLB1MfyQv6g#assertion> {
+  <https://nanopub.local/entity/dosetrack-GTBIBldO> <https://nanopub.local/rel/reports> "device-related adverse events" .
+  <https://nanopub.local/entity/dosetrack-GTBIBldO> npl:claimText "No device-related adverse events were reported for DoseTrack." .
+  <https://nanopub.local/entity/dosetrack-GTBIBldO> npl:polarity "negative" .
+  <https://nanopub.local/entity/dosetrack-GTBIBldO> npl:qualifier "scope: 8-week pilot" .
+}
+<https://nanopub.local/RAPD7xtsSggFkdIGWpiJrdYQLB1MfyQv6g#provenance> {
+  <https://nanopub.local/RAPD7xtsSggFkdIGWpiJrdYQLB1MfyQv6g#assertion> prov:wasDerivedFrom <https://nanopub.local/source/dosetrack-v2> .
+  <https://nanopub.local/source/dosetrack-v2> dcterms:title "DoseTrack: a wearable dosing reminder for pediatric asthma" .
+  <https://nanopub.local/source/dosetrack-v2> npl:identifier "10.0000/synth.2022.010v2 (fictional)" .
+  <https://nanopub.local/source/dosetrack-v2> npl:sha256 "b6d694e93a51f2de1e0e79ff74855a4962837426067b9747eeacb7ab797006c4" .
+  <https://nanopub.local/RAPD7xtsSggFkdIGWpiJrdYQLB1MfyQv6g#assertion> npl:evidenceQuote "No device-related adverse events were reported." .
+}
+<https://nanopub.local/RAPD7xtsSggFkdIGWpiJrdYQLB1MfyQv6g#pubinfo> {
+  <https://nanopub.local/RAPD7xtsSggFkdIGWpiJrdYQLB1MfyQv6g> dcterms:creator "J. Fictional" .
+  <https://nanopub.local/RAPD7xtsSggFkdIGWpiJrdYQLB1MfyQv6g> dcterms:creator "K. Madeup" .
+  <https://nanopub.local/RAPD7xtsSggFkdIGWpiJrdYQLB1MfyQv6g> dcterms:created "2026-11-23T16:34:01Z" .
+}
+
+<https://nanopub.local/RAnkFp6ZljhpOKdBFKwXlhPpHFODlYkSCS> a np:Nanopublication .
+<https://nanopub.local/RAnkFp6ZljhpOKdBFKwXlhPpHFODlYkSCS#head> {
+  <https://nanopub.local/RAnkFp6ZljhpOKdBFKwXlhPpHFODlYkSCS> np:hasAssertion <https://nanopub.local/RAnkFp6ZljhpOKdBFKwXlhPpHFODlYkSCS#assertion> ;
+    np:hasProvenance <https://nanopub.local/RAnkFp6ZljhpOKdBFKwXlhPpHFODlYkSCS#provenance> ;
+    np:hasPublicationInfo <https://nanopub.local/RAnkFp6ZljhpOKdBFKwXlhPpHFODlYkSCS#pubinfo> .
+}
+<https://nanopub.local/RAnkFp6ZljhpOKdBFKwXlhPpHFODlYkSCS#assertion> {
+  <https://nanopub.local/entity/dosetrack-GTBIBldO> <https://nanopub.local/rel/inhibits> "missed doses (24% reduction)" .
+  <https://nanopub.local/entity/dosetrack-GTBIBldO> npl:claimText "DoseTrack reduced missed doses by 24% relative to standard care in an 8-week pilot with 41 families (revised after data audit)." .
+  <https://nanopub.local/entity/dosetrack-GTBIBldO> npl:qualifier "baseline: standard care" .
+  <https://nanopub.local/entity/dosetrack-GTBIBldO> npl:qualifier "trial: 8-week pilot, 41 families" .
+}
+<https://nanopub.local/RAnkFp6ZljhpOKdBFKwXlhPpHFODlYkSCS#provenance> {
+  <https://nanopub.local/RAnkFp6ZljhpOKdBFKwXlhPpHFODlYkSCS#assertion> prov:wasDerivedFrom <https://nanopub.local/source/dosetrack-v2> .
+  <https://nanopub.local/source/dosetrack-v2> dcterms:title "DoseTrack: a wearable dosing reminder for pediatric asthma" .
+  <https://nanopub.local/source/dosetrack-v2> npl:identifier "10.0000/synth.2022.010v2 (fictional)" .
+  <https://nanopub.local/source/dosetrack-v2> npl:sha256 "b6d694e93a51f2de1e0e79ff74855a4962837426067b9747eeacb7ab797006c4" .
+  <https://nanopub.local/RAnkFp6ZljhpOKdBFKwXlhPpHFODlYkSCS#assertion> npl:evidenceQuote "DoseTrack reduced missed doses by 24%\nrelative to standard care (revised after data audit)." .
+}
+<https://nanopub.local/RAnkFp6ZljhpOKdBFKwXlhPpHFODlYkSCS#pubinfo> {
+  <https://nanopub.local/RAnkFp6ZljhpOKdBFKwXlhPpHFODlYkSCS> dcterms:creator "J. Fictional" .
+  <https://nanopub.local/RAnkFp6ZljhpOKdBFKwXlhPpHFODlYkSCS> dcterms:creator "K. Madeup" .
+  <https://nanopub.local/RAnkFp6ZljhpOKdBFKwXlhPpHFODlYkSCS> dcterms:created "2026-11-23T16:34:01Z" .
+}

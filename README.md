@@ -21,3 +21,17 @@ Bohrium Playground 挑战 [深度研究 Agent：文献综述：综合证据，�
 | [c-fidelity-audit](translation-5a9928c1/c-fidelity-audit/) | 译文保真核验与人工接管 | 过程质量控制：数字/单位/引用/图表编号/否定与限定五类不变量核验，阻断项拦截交付，未决项全部进入人工确认清单 |
 
 三者互不依赖，可单独安装到 `/skills/weekly-skill` 使用；各目录 examples/ 内为合成示例（非正式案例结果），详见各 SKILL.md。
+
+## Nanopublication（product-arena-09-0e8befd4，阅读14）
+
+挑战 [Nanopublication：科研阅读：回答问题，也给出依据](https://play.bohrium.com/challenge/product-arena-09-0e8befd4) 的五个相互独立参赛作品，位于 [nanopub-0e8befd4/](nanopub-0e8befd4/)。每个目录是一个自足的可加载 Skill（SKILL.md + scripts + references + examples），五方向重心错位、零共享文件：
+
+| 目录 | Skill | 方向重心 |
+|-|-|-|
+| [a-claim-atomizer](nanopub-0e8befd4/a-claim-atomizer/) | 原子断言拆解与粒度核验 | 上游拆解工程：独立可判真判据、复合谓语/限定丢失/模态升级机检 lint、受控关系词表、20 条拆解样例 |
+| [b-evidence-anchor](nanopub-0e8befd4/b-evidence-anchor/) | 证据锚定与原文复定位 | 证据绑定工程：页/行/偏移三级索引、引文机器复定位门禁、歧义与跨行连字符处置 |
+| [c-provenance-ledger](nanopub-0e8befd4/c-provenance-ledger/) | 来源身份与可追溯台账 | 来源元数据工程：SHA-256 指纹核验、内容寻址 URI 落账、跨来源去重、版本对照、TriG/JSONL 导出 |
+| [d-qc-regression](nanopub-0e8befd4/d-qc-regression/) | 质量门与反例回归 | 过程质量控制：逐条对抗性核验与可复现依据、诚实状态机、12 例已知错误合成题集回归 |
+| [e-export-review](nanopub-0e8befd4/e-export-review/) | 结构化导出与人工复核 | 下游消费工程：schema 校验、JSONL/CSV/MD/HTML 导出、独立回读交叉核验一致性 |
+
+五者互不依赖，可单独安装到 `/skills/weekly-skill` 使用；各目录 examples/ 内为合成示例（非正式案例结果），详见各 SKILL.md。

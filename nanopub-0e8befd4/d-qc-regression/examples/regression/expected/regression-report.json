@@ -1,0 +1,150 @@
+{
+  "tool": "run_regression",
+  "version": "1.0.0",
+  "gate_version": "1.0.0",
+  "fixtures_total": 12,
+  "results": [
+    {
+      "name": "quote_plural_changed",
+      "expected": [
+        "E_QUOTE_NOT_VERBATIM"
+      ],
+      "produced": [
+        "E_QUOTE_NOT_VERBATIM"
+      ],
+      "missing": [],
+      "status": "pass"
+    },
+    {
+      "name": "pronoun_subject",
+      "expected": [
+        "E_PRONOUN_SUBJECT"
+      ],
+      "produced": [
+        "E_PRONOUN_SUBJECT",
+        "E_PRONOUN_SUBJECT"
+      ],
+      "missing": [],
+      "status": "pass"
+    },
+    {
+      "name": "relation_out_of_vocab",
+      "expected": [
+        "E_RELATION_UNKNOWN"
+      ],
+      "produced": [
+        "E_RELATION_UNKNOWN"
+      ],
+      "missing": [],
+      "status": "pass"
+    },
+    {
+      "name": "source_metadata_missing",
+      "expected": [
+        "E_SOURCE_METADATA_MISSING"
+      ],
+      "produced": [
+        "E_SOURCE_METADATA_MISSING"
+      ],
+      "missing": [],
+      "status": "pass"
+    },
+    {
+      "name": "exact_duplicate",
+      "expected": [
+        "E_DUPLICATE"
+      ],
+      "produced": [
+        "E_DUPLICATE"
+      ],
+      "missing": [],
+      "status": "pass"
+    },
+    {
+      "name": "number_not_in_quote",
+      "expected": [
+        "W_NUMBER_NOT_IN_QUOTE"
+      ],
+      "produced": [
+        "W_NUMBER_NOT_IN_QUOTE"
+      ],
+      "missing": [],
+      "status": "pass"
+    },
+    {
+      "name": "hedge_dropped",
+      "expected": [
+        "W_HEDGE_MISMATCH"
+      ],
+      "produced": [
+        "W_HEDGE_MISMATCH"
+      ],
+      "missing": [],
+      "status": "pass"
+    },
+    {
+      "name": "evidence_too_broad",
+      "expected": [
+        "W_EVIDENCE_TOO_BROAD"
+      ],
+      "produced": [
+        "W_HEDGE_MISMATCH",
+        "W_EVIDENCE_TOO_BROAD"
+      ],
+      "missing": [],
+      "status": "pass"
+    },
+    {
+      "name": "atomic_bundle",
+      "expected": [
+        "W_ATOMIC_BUNDLE"
+      ],
+      "produced": [
+        "W_ATOMIC_BUNDLE"
+      ],
+      "missing": [],
+      "status": "pass"
+    },
+    {
+      "name": "conflict_unresolved",
+      "expected": [
+        "W_CONFLICT_UNRESOLVED",
+        "W_NUMBER_NOT_IN_QUOTE"
+      ],
+      "produced": [
+        "W_NUMBER_NOT_IN_QUOTE",
+        "W_CONFLICT_UNRESOLVED",
+        "W_CONFLICT_UNRESOLVED"
+      ],
+      "missing": [],
+      "status": "pass"
+    },
+    {
+      "name": "not_reported_without_scope",
+      "expected": [
+        "E_SCOPE_MISSING"
+      ],
+      "produced": [
+        "E_SCOPE_MISSING"
+      ],
+      "missing": [],
+      "status": "pass"
+    },
+    {
+      "name": "asserted_without_quote",
+      "expected": [
+        "E_EVIDENCE_MISSING"
+      ],
+      "produced": [
+        "E_EVIDENCE_MISSING"
+      ],
+      "missing": [],
+      "status": "pass"
+    }
+  ],
+  "summary": {
+    "passed": 12,
+    "failed": 0,
+    "gate": "pass"
+  }
+}

@@ -1,0 +1,237 @@
+{
+  "tool": "qc_gate",
+  "version": "1.0.0",
+  "case_id": "synthetic-demo-bad",
+  "claims_total": 9,
+  "results": [
+    {
+      "id": "X-01",
+      "verdict": "reject",
+      "status": "asserted",
+      "adjudication": null,
+      "findings": [
+        {
+          "code": "E_QUOTE_NOT_VERBATIM",
+          "message": "引文在来源文本中找不到（归一化后）：改写/翻译/拼接均不允许",
+          "evidence": "PaperTrail flagged 3.2% of DOI link as unresolvable"
+        }
+      ]
+    },
+    {
+      "id": "X-02",
+      "verdict": "reject",
+      "status": "asserted",
+      "adjudication": null,
+      "findings": [
+        {
+          "code": "E_PRONOUN_SUBJECT",
+          "message": "subject 是代词，必须解析为实体",
+          "evidence": "It"
+        },
+        {
+          "code": "E_PRONOUN_SUBJECT",
+          "message": "断言文本以代词开头",
+          "evidence": "it"
+        }
+      ]
+    },
+    {
+      "id": "X-03",
+      "verdict": "review",
+      "status": "asserted",
+      "adjudication": null,
+      "findings": [
+        {
+          "code": "W_NUMBER_NOT_IN_QUOTE",
+          "message": "断言数值不在引文中",
+          "evidence": {
+            "number": "7.5",
+            "quote": "completed the scan in 4.5 hours"
+          }
+        },
+        {
+          "code": "W_CONFLICT_UNRESOLVED",
+          "message": "['X-03', 'X-07'] 同主体同关系、客体签名相似但取值不同，须标 conflict 或写 adjudication",
+          "evidence": {
+            "group": [
+              "X-03",
+              "X-07"
+            ],
+            "objects": [
+              "scan completed in 7.5 hours",
+              "scan completed in 4.5 hours"
+            ]
+          }
+        },
+        {
+          "code": "W_CONFLICT_UNRESOLVED",
+          "message": "['X-03', 'X-08'] 同主体同关系、客体签名相似但取值不同，须标 conflict 或写 adjudication",
+          "evidence": {
+            "group": [
+              "X-03",
+              "X-08"
+            ],
+            "objects": [
+              "scan completed in 7.5 hours",
+              "scan completed in 4.8 hours"
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "id": "X-04",
+      "verdict": "review",
+      "status": "asserted",
+      "adjudication": null,
+      "findings": [
+        {
+          "code": "W_HEDGE_MISMATCH",
+          "message": "引文含模态词但断言升级为事实",
+          "evidence": {
+            "hedges": [
+              "may",
+              "suggest"
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "id": "X-05",
+      "verdict": "pass",
+      "status": "asserted",
+      "adjudication": null,
+      "findings": []
+    },
+    {
+      "id": "X-06",
+      "verdict": "reject",
+      "status": "asserted",
+      "adjudication": null,
+      "findings": [
+        {
+          "code": "E_DUPLICATE",
+          "message": "与 X-05 语义键相同",
+          "evidence": {
+            "duplicate_of": "X-05"
+          }
+        }
+      ]
+    },
+    {
+      "id": "X-07",
+      "verdict": "review",
+      "status": "asserted",
+      "adjudication": null,
+      "findings": [
+        {
+          "code": "W_CONFLICT_UNRESOLVED",
+          "message": "['X-03', 'X-07'] 同主体同关系、客体签名相似但取值不同，须标 conflict 或写 adjudication",
+          "evidence": {
+            "group": [
+              "X-03",
+              "X-07"
+            ],
+            "objects": [
+              "scan completed in 7.5 hours",
+              "scan completed in 4.5 hours"
+            ]
+          }
+        },
+        {
+          "code": "W_CONFLICT_UNRESOLVED",
+          "message": "['X-07', 'X-08'] 同主体同关系、客体签名相似但取值不同，须标 conflict 或写 adjudication",
+          "evidence": {
+            "group": [
+              "X-07",
+              "X-08"
+            ],
+            "objects": [
+              "scan completed in 4.5 hours",
+              "scan completed in 4.8 hours"
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "id": "X-08",
+      "verdict": "review",
+      "status": "asserted",
+      "adjudication": null,
+      "findings": [
+        {
+          "code": "W_NUMBER_NOT_IN_QUOTE",
+          "message": "断言数值不在引文中",
+          "evidence": {
+            "number": "4.8",
+            "quote": "completed the scan in 4.5 hours"
+          }
+        },
+        {
+          "code": "W_CONFLICT_UNRESOLVED",
+          "message": "['X-03', 'X-08'] 同主体同关系、客体签名相似但取值不同，须标 conflict 或写 adjudication",
+          "evidence": {
+            "group": [
+              "X-03",
+              "X-08"
+            ],
+            "objects": [
+              "scan completed in 7.5 hours",
+              "scan completed in 4.8 hours"
+            ]
+          }
+        },
+        {
+          "code": "W_CONFLICT_UNRESOLVED",
+          "message": "['X-07', 'X-08'] 同主体同关系、客体签名相似但取值不同，须标 conflict 或写 adjudication",
+          "evidence": {
+            "group": [
+              "X-07",
+              "X-08"
+            ],
+            "objects": [
+              "scan completed in 4.5 hours",
+              "scan completed in 4.8 hours"
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "id": "X-09",
+      "verdict": "reject",
+      "status": "not_reported",
+      "adjudication": null,
+      "findings": [
+        {
+          "code": "E_SCOPE_MISSING",
+          "message": "not_reported 必须写 searched_scope（检索范围）"
+        }
+      ]
+    }
+  ],
+  "summary": {
+    "verdicts": {
+      "reject": 3,
+      "review": 3,
+      "pass": 3
+    },
+    "reject_open": 4,
+    "review_open": 4,
+    "special_entries": 1,
+    "by_code": {
+      "E_DUPLICATE": 1,
+      "E_PRONOUN_SUBJECT": 2,
+      "E_QUOTE_NOT_VERBATIM": 1,
+      "E_SCOPE_MISSING": 1,
+      "W_CONFLICT_UNRESOLVED": 6,
+      "W_HEDGE_MISMATCH": 1,
+      "W_NUMBER_NOT_IN_QUOTE": 2
+    },
+    "status_cap": "partial",
+    "status_note": "存在 reject：修复/删除/降级后复检，禁止 success",
+    "gate": "fail"
+  }
+}

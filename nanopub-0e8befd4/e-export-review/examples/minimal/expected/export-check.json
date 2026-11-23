@@ -1,0 +1,38 @@
+{
+  "tool": "check_exports",
+  "version": "1.0.0",
+  "case_id": "synthetic-cryomesh",
+  "checks": [
+    {
+      "check": "jsonl_parse",
+      "ok": true,
+      "detail": "20/20 条，ID 集合一致=True"
+    },
+    {
+      "check": "csv_parse",
+      "ok": true,
+      "detail": "20/20 条，ID 集合一致=True"
+    },
+    {
+      "check": "manifest_hashes",
+      "ok": true,
+      "detail": "全部文件哈希一致"
+    },
+    {
+      "check": "csv_columns",
+      "ok": true,
+      "detail": "CSV 列序与 manifest 一致=True"
+    },
+    {
+      "check": "review.md_coverage",
+      "ok": true,
+      "detail": "覆盖全部 ID"
+    },
+    {
+      "check": "review.html_coverage",
+      "ok": true,
+      "detail": "覆盖全部 ID"
+    }
+  ],
+  "verdict": "PASS"
+}

@@ -1,0 +1,88 @@
+{
+  "tool": "mint_nanopubs",
+  "version": "1.0.0",
+  "sources": [
+    {
+      "source_id": "dosetrack-v1",
+      "title": "DoseTrack: a wearable dosing reminder for pediatric asthma",
+      "identifier": {
+        "kind": "doi",
+        "value": "10.0000/synth.2022.010v1 (fictional)"
+      },
+      "version": "v1",
+      "fingerprint": "ok",
+      "sha256": "a575ca8fd893b7f9ef81c66e93329fea9e2bcddec6599056b9db1bfa9979d672"
+    },
+    {
+      "source_id": "dosetrack-v2",
+      "title": "DoseTrack: a wearable dosing reminder for pediatric asthma",
+      "identifier": {
+        "kind": "doi",
+        "value": "10.0000/synth.2022.010v2 (fictional)"
+      },
+      "version": "v2",
+      "fingerprint": "ok",
+      "sha256": "b6d694e93a51f2de1e0e79ff74855a4962837426067b9747eeacb7ab797006c4"
+    }
+  ],
+  "claims_input": 6,
+  "merges": [
+    {
+      "key": "-xC_5ZEmLzLUO2N-L9t9APylvv-Edq08",
+      "kept": "https://nanopub.local/RAGFWxOC5jvmVzb1I-1x0j-ewBiScb71WH",
+      "added_claim_id": "C-04",
+      "source_id": "dosetrack-v2",
+      "detail": "语义键一致，合并保留全部来源绑定"
+    }
+  ],
+  "conflicts": [
+    {
+      "subject": "dosetrack",
+      "relation": "inhibits",
+      "qualifiers": [
+        "baseline: standard care",
+        "trial: 8-week pilot, 41 families"
+      ],
+      "objects": [
+        "missed doses (22% reduction)",
+        "missed doses (24% reduction)"
+      ],
+      "claim_uris": [
+        "https://nanopub.local/RA81oTYtYHpr0DdkEbLCz_HIfYuCvcJ0YO",
+        "https://nanopub.local/RAnkFp6ZljhpOKdBFKwXlhPpHFODlYkSCS"
+      ],
+      "detail": "同主体同关系同限定但客体不同：只报告，不裁定"
+    }
+  ],
+  "version_chains": [
+    {
+      "supersedes": "dosetrack-v2 supersedes dosetrack-v1",
+      "only_new": [
+        "WRv84RAy7z5i3GiGyAXwqvjmh1TjejMD",
+        "c6F-nixSVXU73v9kTf6SfyXgYVW-l70u"
+      ],
+      "only_old": [
+        "7SEFZbmhDCiqUV38deqJA1D9cinq4edm",
+        "DkNwnjoPTLbqiSGzr2rwlIRAblhnuhHo"
+      ],
+      "both": [
+        "-xC_5ZEmLzLUO2N-L9t9APylvv-Edq08"
+      ],
+      "detail": "仅旧/仅新断言保留原位，不擅自以新替旧"
+    }
+  ],
+  "errors": [],
+  "summary": {
+    "claims_input": 6,
+    "unique_claims": 5,
+    "merged_events": 1,
+    "conflicts": 1,
+    "sources": 2,
+    "fingerprint_errors": 0,
+    "outputs": {
+      "jsonl": "/Users/liuhengshen/Desktop/bhr_product/nano14/gh-repo/nanopub-0e8befd4/c-provenance-ledger/examples/minimal/expected/nanopubs.jsonl",
+      "trig": "/Users/liuhengshen/Desktop/bhr_product/nano14/gh-repo/nanopub-0e8befd4/c-provenance-ledger/examples/minimal/expected/nanopubs.trig"
+    },
+    "gate": "pass"
+  }
+}

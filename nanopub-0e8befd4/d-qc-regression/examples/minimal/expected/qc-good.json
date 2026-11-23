@@ -1,0 +1,48 @@
+{
+  "tool": "qc_gate",
+  "version": "1.0.0",
+  "case_id": "synthetic-demo",
+  "claims_total": 4,
+  "results": [
+    {
+      "id": "D-01",
+      "verdict": "pass",
+      "status": "asserted",
+      "adjudication": null,
+      "findings": []
+    },
+    {
+      "id": "D-02",
+      "verdict": "pass",
+      "status": "asserted",
+      "adjudication": null,
+      "findings": []
+    },
+    {
+      "id": "D-03",
+      "verdict": "pass",
+      "status": "asserted",
+      "adjudication": null,
+      "findings": []
+    },
+    {
+      "id": "D-04",
+      "verdict": "pass",
+      "status": "asserted",
+      "adjudication": null,
+      "findings": []
+    }
+  ],
+  "summary": {
+    "verdicts": {
+      "pass": 4
+    },
+    "reject_open": 0,
+    "review_open": 0,
+    "special_entries": 0,
+    "by_code": {},
+    "status_cap": "success",
+    "status_note": "门通过，可按 success 交付",
+    "gate": "pass"
+  }
+}

@@ -1,0 +1,19 @@
+SYNTHETIC EXAMPLE — fictional excerpt, written for this skill's interface demonstration.
+It is NOT a real paper and NOT an official test case. Any resemblance is coincidental.
+
+AlignX: a two-pass short-read aligner for noisy long k-mers
+F. Example, G. Demo. Synthetic Journal of Methods, 2024. doi:10.0000/synth.2024.001 (fictional)
+
+[Page 1, Abstract]
+AlignX is a two-pass short-read aligner that extends the seed-and-extend scheme of
+ClassicAlign. It automatically chooses between ungapped and gapped extension and
+supports both single-end and paired-end reads. On the simulated S1 dataset, AlignX
+achieved 97.4% mapping accuracy with default parameters, outperforming ClassicAlign
+(94.1%) and FastMap (95.8%). We propose that the second pass may reduce soft-clipping
+artifacts in repetitive regions, though this remains to be tested on real data.
+
+[Page 2, Methods, excerpt]
+The first pass uses a hash index with k=19 and a maximum of 3 candidate bins per read.
+The second pass re-scores only reads whose first-pass mapping quality is below 30.
+AlignX requires at least 8 GB of memory for human-genome indexing and runs in time
+linear in the number of reads.

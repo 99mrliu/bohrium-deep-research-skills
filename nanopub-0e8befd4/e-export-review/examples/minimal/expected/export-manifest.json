@@ -1,0 +1,41 @@
+{
+  "tool": "export_bundle",
+  "version": "1.0.0",
+  "case_id": "synthetic-cryomesh",
+  "claims": 20,
+  "csv_columns": [
+    "id",
+    "text",
+    "subject",
+    "relation",
+    "object",
+    "qualifiers",
+    "polarity",
+    "modality",
+    "status",
+    "confidence_level",
+    "confidence_rationale",
+    "evidence_quote",
+    "evidence_location",
+    "evidence_kind",
+    "source_id"
+  ],
+  "files": {
+    "claims.jsonl": {
+      "sha256": "f2ce40ce918a91f63ae7652bc5afc7060a749c4c3a039cc46ee6b804801b6b17",
+      "bytes": 10019
+    },
+    "claims.csv": {
+      "sha256": "8fbbd8c77c3859e06236ac3a4dca7ffc145b24268050a33aca93dabdd4d63d5c",
+      "bytes": 5836
+    },
+    "review.md": {
+      "sha256": "9fbb262cef8beb29ca04bfd11c9a249ca9d90dc8658db1526ce2fba7095a9b14",
+      "bytes": 9184
+    },
+    "review.html": {
+      "sha256": "fa0de5273542ed63383a82db90a478b3a8d79cf0c81dd73d8c8c95b4ba2b3546",
+      "bytes": 8389
+    }
+  }
+}

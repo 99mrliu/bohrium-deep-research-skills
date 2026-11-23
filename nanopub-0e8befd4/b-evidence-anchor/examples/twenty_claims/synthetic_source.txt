@@ -1,0 +1,38 @@
+SYNTHETIC EXAMPLE - fictional excerpt for interface demonstration only.
+NOT a real paper, NOT an official test case.
+
+GreenTune: a feedback irrigation controller for greenhouse tomato
+H. Sample, I. Placeholder. Synthetic Horticulture Letters, 2023. (fictional)
+
+Abstract
+GreenTune is a feedback irrigation controller that adjusts daily irrigation
+volumes from soil moisture sensors. In a 12-week trial across 24 greenhouses,
+GreenTune reduced water use by 18.5% relative to timer-based control while
+maintaining marketable yield (9.2 kg/m2 vs 9.1 kg/m2). The controller lowers
+irrigation frequency when the measured transpira-
+tion rate falls below a calibrated threshold. We observed no significant
+difference in fruit soluble solids between the two schedules.
+Methods (excerpt)
+Soil volumetric water content was logged every 10 minutes at 15 cm depth.
+Irrigation was triggered when the running average dropped below 35% VWC for
+more than 30 minutes. The calibrated transpiration threshold was set during a
+7-day baseline period. Daily irrigation totals were summed at midnight and
+exported per zone; daily irrigation records were audited weekly by staff.
+The trial ran from March to June 2022 in two climate zones. Each greenhouse
+was split into a GreenTune zone and a timer zone of equal area.
+Results (excerpt)
+Across the 24 greenhouses, mean daily water use was 2.4 L/m2 under GreenTune
+and 2.9 L/m2 under timer control. Fruit mass per plant was 3.8 kg with
+GreenTune and 3.7 kg with the timer schedule. Sensor faults occurred in 3 of
+288 sensor-weeks and were excluded from the analysis.
+
+Table 1 (transcription). Water and yield by climate zone.
+Zone | Water (L/m2/day) GreenTune | Water timer | Yield (kg/m2) GreenTune | Yield timer
+Coastal | 2.2 | 2.7 | 9.4 | 9.3
+Inland | 2.6 | 3.1 | 9.0 | 8.9
+Note: values are zone means over the 12-week trial.
+
+Limitations (excerpt)
+GreenTune is not evaluated for open-field crops. The controller requires a
+mains power supply; a battery variant is planned but untested. Calibration
+currently assumes loam soils and may drift in sandy substrates.
