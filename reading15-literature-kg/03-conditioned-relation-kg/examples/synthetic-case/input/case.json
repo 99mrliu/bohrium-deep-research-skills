@@ -1,0 +1,19 @@
+{
+  "case_id": "synthetic-conditioned-relation-demo",
+  "synthetic": true,
+  "doi": "10.0000/synth.p1",
+  "title": "Low-Resource Neural Machine Translation: A Conditioned Evaluation of TransA and TransB (SYNTHETIC)",
+  "authors": ["Synthetic Author A", "Synthetic Author B"],
+  "note": "SYNTHETIC 演示案例，非平台正式案例；根元数据 doi/title/authors 仅属于第一篇（primary），不得套用到第二篇。",
+  "output_contract": {
+    "graph_summary": "实体与关系计数及类型分布",
+    "evidence_bound_graph": "graph.json/graph.jsonl，节点与边均含 source_id+JATS paragraph_id+逐字短引",
+    "relation_audit": "关系校验与条件 lint 报告",
+    "conflicts": "源内/跨源冲突清单（全部保留，不静默解决）",
+    "queries": "至少 3 个真实执行的查询及结果子图与证据",
+    "merge_report": "跨篇合并/不合并决定及依据",
+    "preview": "可读预览（graph.svg/graph.dot/graph_preview.md）",
+    "uncertainty": "不确定性与限制",
+    "status": "运行状态"
+  }
+}

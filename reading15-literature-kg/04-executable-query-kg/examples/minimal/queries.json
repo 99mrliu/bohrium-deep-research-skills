@@ -1,0 +1,49 @@
+{
+  "note": "SYNTHETIC 合成示例查询集（验收查询）：6 条，含 1 条真实无结果查询与 1 条单源（跨源为空）查询",
+  "queries": [
+    {
+      "id": "Q1",
+      "op": "node_lookup",
+      "params": {"name": "spiro-OMeTAD"},
+      "expect": "ok：命中合并节点 n:spiro，证据来自 S1 与 S2 两篇"
+    },
+    {
+      "id": "Q2",
+      "op": "neighborhood",
+      "params": {"node": "n:tio2", "depth": 1, "direction": "any",
+                 "relation": ["制备", "促进"], "types": ["Method", "Metric"]},
+      "expect": "ok：制备它的方法（旋涂法/化学气相沉积法）与它促进的指标（光电转换效率），EXPLAIN 给出关系匹配规则"
+    },
+    {
+      "id": "Q3",
+      "op": "shortest_path",
+      "params": {"from": "n:spin-coating", "to": "n:stability",
+                 "direction": "any", "max_depth": 6},
+      "expect": "ok：类型化两跳路径 旋涂法 ←优于— 化学气相沉积法 —促进→ 稳定性（跨 S1/S2）"
+    },
+    {
+      "id": "Q4",
+      "op": "cross_source",
+      "params": {"node": "n:tio2"},
+      "expect": "ok：证据来自 S1、S2 两个不同来源（跨篇证据）"
+    },
+    {
+      "id": "Q5",
+      "op": "node_lookup",
+      "params": {"name": "钙钛矿量子点"},
+      "expect": "empty：真实无结果——图中不存在该概念，必须诚实为空，不得编造"
+    },
+    {
+      "id": "Q6",
+      "op": "merge_decisions",
+      "params": {"decision": "all"},
+      "expect": "ok：2 条 merge + 3 条 no_merge，均含依据与证据"
+    },
+    {
+      "id": "Q7",
+      "op": "cross_source",
+      "params": {"node": "n:pce"},
+      "expect": "empty：光电转换效率只有 S1 单源证据，诚实报告不构成跨源"
+    }
+  ]
+}

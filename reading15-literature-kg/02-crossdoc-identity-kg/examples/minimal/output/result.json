@@ -1,0 +1,953 @@
+{
+  "case_id": "EXAMPLE-SYNTH-001",
+  "status": "success",
+  "graph": {
+    "file": "graph.json",
+    "node_count": 12,
+    "edge_count": 12
+  },
+  "identity_decisions": [
+    {
+      "decision_id": "D-0001",
+      "candidate_keys": [
+        "li7la3zr2o12",
+        "lithium lanthanum zirconium oxide",
+        "llzo"
+      ],
+      "pair": [
+        "M-A1",
+        "M-B1"
+      ],
+      "sources": [
+        "SYN-A",
+        "SYN-B"
+      ],
+      "decision": "MERGE",
+      "merge_basis": [
+        {
+          "attribute": "chemical_formula",
+          "value_a": "Li7La3Zr2O12",
+          "value_b": "Li7La3Zr2O12",
+          "kind": "defining_match"
+        }
+      ],
+      "blocking_evidence": [],
+      "rationale": "定义性属性一致，无阻断项，允许合并"
+    },
+    {
+      "decision_id": "D-0002",
+      "candidate_keys": [
+        "sintering"
+      ],
+      "pair": [
+        "M-A2",
+        "M-B2"
+      ],
+      "sources": [
+        "SYN-A",
+        "SYN-B"
+      ],
+      "decision": "KEEP_DISTINCT",
+      "merge_basis": [],
+      "blocking_evidence": [
+        {
+          "attribute": "conditions",
+          "value_a": "1100 C, 12 h, magnesia crucible",
+          "value_b": "1230 C, 2 h, air",
+          "kind": "defining_conflict"
+        }
+      ],
+      "rationale": "存在阻断性冲突证据（不同样品/模型/数据集/条件或数值/单位冲突），不得合并"
+    },
+    {
+      "decision_id": "D-0003",
+      "candidate_keys": [
+        "x ray diffraction",
+        "xrd"
+      ],
+      "pair": [
+        "M-A3",
+        "M-B3"
+      ],
+      "sources": [
+        "SYN-A",
+        "SYN-B"
+      ],
+      "decision": "UNDECIDED",
+      "merge_basis": [],
+      "blocking_evidence": [],
+      "rationale": "仅规范化别名相同，无定义性属性证据，证据不足"
+    },
+    {
+      "decision_id": "D-0004",
+      "candidate_keys": [
+        "random forest model"
+      ],
+      "pair": [
+        "M-A4",
+        "M-B4"
+      ],
+      "sources": [
+        "SYN-A",
+        "SYN-B"
+      ],
+      "decision": "KEEP_DISTINCT",
+      "merge_basis": [
+        {
+          "attribute": "architecture",
+          "value_a": "random forest",
+          "value_b": "random forest",
+          "kind": "defining_match"
+        }
+      ],
+      "blocking_evidence": [
+        {
+          "attribute": "R2",
+          "value_a": 0.81,
+          "unit_a": "1",
+          "value_b": 0.74,
+          "unit_b": "1",
+          "kind": "numeric_conflict"
+        }
+      ],
+      "rationale": "存在阻断性冲突证据（不同样品/模型/数据集/条件或数值/单位冲突），不得合并"
+    },
+    {
+      "decision_id": "D-0005",
+      "candidate_keys": [
+        "synthion"
+      ],
+      "pair": [
+        "M-A5",
+        "M-B5"
+      ],
+      "sources": [
+        "SYN-A",
+        "SYN-B"
+      ],
+      "decision": "KEEP_DISTINCT",
+      "merge_basis": [],
+      "blocking_evidence": [
+        {
+          "attribute": "dataset_version",
+          "value_a": "1",
+          "value_b": "2",
+          "kind": "defining_conflict"
+        }
+      ],
+      "rationale": "存在阻断性冲突证据（不同样品/模型/数据集/条件或数值/单位冲突），不得合并"
+    },
+    {
+      "decision_id": "D-0006",
+      "candidate_keys": [
+        "latp",
+        "li1.3al0.3ti1.7 po4 3"
+      ],
+      "pair": [
+        "M-A6",
+        "M-B6"
+      ],
+      "sources": [
+        "SYN-A",
+        "SYN-B"
+      ],
+      "decision": "MERGE",
+      "merge_basis": [
+        {
+          "attribute": "chemical_formula",
+          "value_a": "Li1.3Al0.3Ti1.7(PO4)3",
+          "value_b": "Li1.3Al0.3Ti1.7(PO4)3",
+          "kind": "defining_match"
+        }
+      ],
+      "blocking_evidence": [],
+      "rationale": "定义性属性一致，无阻断项，允许合并"
+    }
+  ],
+  "conflicts": [
+    {
+      "kind": "measurement_conflict_kept_separate",
+      "node_id": "E-0001",
+      "node_name": "LLZO",
+      "metric": "ionic conductivity",
+      "values": [
+        {
+          "source_id": "SYN-A",
+          "value": 0.00032,
+          "unit": "S/cm",
+          "conditions": "25 C",
+          "edge_id": "R-A1"
+        },
+        {
+          "source_id": "SYN-B",
+          "value": 0.0011,
+          "unit": "S/cm",
+          "conditions": "25 C, Ta-doped",
+          "edge_id": "R-B1"
+        }
+      ],
+      "policy": "各来源数值分别保留并附条件，不合并为单一结论"
+    }
+  ],
+  "queries": [
+    {
+      "query_id": "Q1",
+      "spec": {
+        "query_id": "Q1",
+        "type": "neighbors",
+        "node_name": "LLZO",
+        "description": "合并后 LLZO 节点的一跳邻居：应同时看到两篇论文的关系与各自证据。"
+      },
+      "status": "ok",
+      "result": {
+        "node": "E-0001",
+        "name": "LLZO",
+        "neighbors": [
+          {
+            "neighbor": "AUX-0001",
+            "neighbor_name": "ionic conductivity",
+            "predicate": "has_measurement",
+            "direction": "out",
+            "edge_id": "R-A1",
+            "evidence": [
+              {
+                "source_id": "SYN-A",
+                "paragraph_id": "p-0001",
+                "quote": "measured a total ionic conductivity of 3.2e-4 S/cm at 25 C"
+              }
+            ]
+          },
+          {
+            "neighbor": "E-0002",
+            "neighbor_name": "sintering",
+            "predicate": "applied_to",
+            "direction": "in",
+            "edge_id": "R-A2",
+            "evidence": [
+              {
+                "source_id": "SYN-A",
+                "paragraph_id": "p-0002",
+                "quote": "The LLZO green pellets were sintered at 1100 C for 12 h"
+              }
+            ]
+          },
+          {
+            "neighbor": "E-0003",
+            "neighbor_name": "XRD",
+            "predicate": "characterized_by",
+            "direction": "out",
+            "edge_id": "R-A3",
+            "evidence": [
+              {
+                "source_id": "SYN-A",
+                "paragraph_id": "p-0003",
+                "quote": "confirmed the cubic garnet phase of the LLZO pellets"
+              }
+            ]
+          },
+          {
+            "neighbor": "E-0006",
+            "neighbor_name": "LATP",
+            "predicate": "compared_with",
+            "direction": "out",
+            "edge_id": "R-A6",
+            "evidence": [
+              {
+                "source_id": "SYN-A",
+                "paragraph_id": "p-0005",
+                "quote": "LLZO shows better stability against lithium metal"
+              }
+            ]
+          },
+          {
+            "neighbor": "AUX-0002",
+            "neighbor_name": "ionic conductivity",
+            "predicate": "has_measurement",
+            "direction": "out",
+            "edge_id": "R-B1",
+            "evidence": [
+              {
+                "source_id": "SYN-B",
+                "paragraph_id": "p-0001",
+                "quote": "we report a conductivity of 1.1e-3 S/cm for Ta-doped LLZO at 25 C"
+              }
+            ]
+          },
+          {
+            "neighbor": "E-0007",
+            "neighbor_name": "sintering",
+            "predicate": "applied_to",
+            "direction": "in",
+            "edge_id": "R-B2",
+            "evidence": [
+              {
+                "source_id": "SYN-B",
+                "paragraph_id": "p-0002",
+                "quote": "samples were sintered at 1230 C for 2 h in air"
+              }
+            ]
+          },
+          {
+            "neighbor": "E-0008",
+            "neighbor_name": "XRD",
+            "predicate": "characterized_by",
+            "direction": "out",
+            "edge_id": "R-B3",
+            "evidence": [
+              {
+                "source_id": "SYN-B",
+                "paragraph_id": "p-0003",
+                "quote": "XRD patterns indicate a cubic garnet structure for all sintered samples"
+              }
+            ]
+          },
+          {
+            "neighbor": "E-0006",
+            "neighbor_name": "LATP",
+            "predicate": "outperforms",
+            "direction": "out",
+            "edge_id": "R-B6",
+            "evidence": [
+              {
+                "source_id": "SYN-B",
+                "paragraph_id": "p-0005",
+                "quote": "LLZO outperforms LATP (Li1.3Al0.3Ti1.7(PO4)3) in critical current density"
+              }
+            ]
+          }
+        ]
+      },
+      "evidence": [
+        {
+          "source_id": "SYN-A",
+          "paragraph_id": "p-0001",
+          "quote": "measured a total ionic conductivity of 3.2e-4 S/cm at 25 C"
+        },
+        {
+          "source_id": "SYN-A",
+          "paragraph_id": "p-0002",
+          "quote": "The LLZO green pellets were sintered at 1100 C for 12 h"
+        },
+        {
+          "source_id": "SYN-A",
+          "paragraph_id": "p-0003",
+          "quote": "confirmed the cubic garnet phase of the LLZO pellets"
+        },
+        {
+          "source_id": "SYN-A",
+          "paragraph_id": "p-0005",
+          "quote": "LLZO shows better stability against lithium metal"
+        },
+        {
+          "source_id": "SYN-B",
+          "paragraph_id": "p-0001",
+          "quote": "we report a conductivity of 1.1e-3 S/cm for Ta-doped LLZO at 25 C"
+        },
+        {
+          "source_id": "SYN-B",
+          "paragraph_id": "p-0002",
+          "quote": "samples were sintered at 1230 C for 2 h in air"
+        },
+        {
+          "source_id": "SYN-B",
+          "paragraph_id": "p-0003",
+          "quote": "XRD patterns indicate a cubic garnet structure for all sintered samples"
+        },
+        {
+          "source_id": "SYN-B",
+          "paragraph_id": "p-0005",
+          "quote": "LLZO outperforms LATP (Li1.3Al0.3Ti1.7(PO4)3) in critical current density"
+        }
+      ]
+    },
+    {
+      "query_id": "Q2",
+      "spec": {
+        "query_id": "Q2",
+        "type": "filter",
+        "entity_type": "material",
+        "description": "全部材料类实体：LLZO 与 LATP 为 MERGED，并保留双来源。"
+      },
+      "status": "ok",
+      "result": {
+        "nodes": [
+          {
+            "id": "E-0001",
+            "name": "LLZO",
+            "entity_type": "material",
+            "identity_status": "MERGED",
+            "sources": [
+              {
+                "mention_id": "M-A1",
+                "source_id": "SYN-A",
+                "paragraph_id": "p-0001",
+                "quote": "We synthesized Li7La3Zr2O12 (LLZO) pellets by a solid-state reaction"
+              },
+              {
+                "mention_id": "M-B1",
+                "source_id": "SYN-B",
+                "paragraph_id": "p-0001",
+                "quote": "Lithium lanthanum zirconium oxide (LLZO, Li7La3Zr2O12) is a promising solid electrolyte"
+              }
+            ]
+          },
+          {
+            "id": "E-0006",
+            "name": "LATP",
+            "entity_type": "material",
+            "identity_status": "MERGED",
+            "sources": [
+              {
+                "mention_id": "M-A6",
+                "source_id": "SYN-A",
+                "paragraph_id": "p-0005",
+                "quote": "Compared with LATP (Li1.3Al0.3Ti1.7(PO4)3), LLZO shows better stability against lithium metal"
+              },
+              {
+                "mention_id": "M-B6",
+                "source_id": "SYN-B",
+                "paragraph_id": "p-0005",
+                "quote": "LLZO outperforms LATP (Li1.3Al0.3Ti1.7(PO4)3) in critical current density"
+              }
+            ]
+          }
+        ],
+        "edges": [
+          {
+            "id": "R-A1",
+            "subject": "E-0001",
+            "predicate": "has_measurement",
+            "object": "AUX-0001",
+            "evidence": [
+              {
+                "source_id": "SYN-A",
+                "paragraph_id": "p-0001",
+                "quote": "measured a total ionic conductivity of 3.2e-4 S/cm at 25 C"
+              }
+            ]
+          },
+          {
+            "id": "R-A2",
+            "subject": "E-0002",
+            "predicate": "applied_to",
+            "object": "E-0001",
+            "evidence": [
+              {
+                "source_id": "SYN-A",
+                "paragraph_id": "p-0002",
+                "quote": "The LLZO green pellets were sintered at 1100 C for 12 h"
+              }
+            ]
+          },
+          {
+            "id": "R-A3",
+            "subject": "E-0001",
+            "predicate": "characterized_by",
+            "object": "E-0003",
+            "evidence": [
+              {
+                "source_id": "SYN-A",
+                "paragraph_id": "p-0003",
+                "quote": "confirmed the cubic garnet phase of the LLZO pellets"
+              }
+            ]
+          },
+          {
+            "id": "R-A4",
+            "subject": "E-0004",
+            "predicate": "trained_on",
+            "object": "E-0005",
+            "evidence": [
+              {
+                "source_id": "SYN-A",
+                "paragraph_id": "p-0004",
+                "quote": "We trained a random forest model (RF-A) on the SynthIon-1 dataset"
+              }
+            ]
+          },
+          {
+            "id": "R-A5",
+            "subject": "E-0004",
+            "predicate": "predicts",
+            "object": "AUX-0001",
+            "evidence": [
+              {
+                "source_id": "SYN-A",
+                "paragraph_id": "p-0004",
+                "quote": "to predict ionic conductivity, achieving an R2 of 0.81"
+              }
+            ]
+          },
+          {
+            "id": "R-A6",
+            "subject": "E-0001",
+            "predicate": "compared_with",
+            "object": "E-0006",
+            "evidence": [
+              {
+                "source_id": "SYN-A",
+                "paragraph_id": "p-0005",
+                "quote": "LLZO shows better stability against lithium metal"
+              }
+            ]
+          },
+          {
+            "id": "R-B1",
+            "subject": "E-0001",
+            "predicate": "has_measurement",
+            "object": "AUX-0002",
+            "evidence": [
+              {
+                "source_id": "SYN-B",
+                "paragraph_id": "p-0001",
+                "quote": "we report a conductivity of 1.1e-3 S/cm for Ta-doped LLZO at 25 C"
+              }
+            ]
+          },
+          {
+            "id": "R-B2",
+            "subject": "E-0007",
+            "predicate": "applied_to",
+            "object": "E-0001",
+            "evidence": [
+              {
+                "source_id": "SYN-B",
+                "paragraph_id": "p-0002",
+                "quote": "samples were sintered at 1230 C for 2 h in air"
+              }
+            ]
+          },
+          {
+            "id": "R-B3",
+            "subject": "E-0001",
+            "predicate": "characterized_by",
+            "object": "E-0008",
+            "evidence": [
+              {
+                "source_id": "SYN-B",
+                "paragraph_id": "p-0003",
+                "quote": "XRD patterns indicate a cubic garnet structure for all sintered samples"
+              }
+            ]
+          },
+          {
+            "id": "R-B4",
+            "subject": "E-0009",
+            "predicate": "trained_on",
+            "object": "E-0010",
+            "evidence": [
+              {
+                "source_id": "SYN-B",
+                "paragraph_id": "p-0004",
+                "quote": "We used the SynthIon-2 dataset and trained a random forest model (RF-B)"
+              }
+            ]
+          },
+          {
+            "id": "R-B5",
+            "subject": "E-0009",
+            "predicate": "predicts",
+            "object": "AUX-0002",
+            "evidence": [
+              {
+                "source_id": "SYN-B",
+                "paragraph_id": "p-0004",
+                "quote": "to predict ionic conductivity, reaching an R2 of 0.74"
+              }
+            ]
+          },
+          {
+            "id": "R-B6",
+            "subject": "E-0001",
+            "predicate": "outperforms",
+            "object": "E-0006",
+            "evidence": [
+              {
+                "source_id": "SYN-B",
+                "paragraph_id": "p-0005",
+                "quote": "LLZO outperforms LATP (Li1.3Al0.3Ti1.7(PO4)3) in critical current density"
+              }
+            ]
+          }
+        ]
+      },
+      "evidence": [
+        {
+          "source_id": "SYN-A",
+          "paragraph_id": "p-0001",
+          "quote": "measured a total ionic conductivity of 3.2e-4 S/cm at 25 C"
+        },
+        {
+          "source_id": "SYN-A",
+          "paragraph_id": "p-0002",
+          "quote": "The LLZO green pellets were sintered at 1100 C for 12 h"
+        },
+        {
+          "source_id": "SYN-A",
+          "paragraph_id": "p-0003",
+          "quote": "confirmed the cubic garnet phase of the LLZO pellets"
+        },
+        {
+          "source_id": "SYN-A",
+          "paragraph_id": "p-0004",
+          "quote": "We trained a random forest model (RF-A) on the SynthIon-1 dataset"
+        },
+        {
+          "source_id": "SYN-A",
+          "paragraph_id": "p-0004",
+          "quote": "to predict ionic conductivity, achieving an R2 of 0.81"
+        },
+        {
+          "source_id": "SYN-A",
+          "paragraph_id": "p-0005",
+          "quote": "LLZO shows better stability against lithium metal"
+        },
+        {
+          "source_id": "SYN-B",
+          "paragraph_id": "p-0001",
+          "quote": "we report a conductivity of 1.1e-3 S/cm for Ta-doped LLZO at 25 C"
+        },
+        {
+          "source_id": "SYN-B",
+          "paragraph_id": "p-0002",
+          "quote": "samples were sintered at 1230 C for 2 h in air"
+        },
+        {
+          "source_id": "SYN-B",
+          "paragraph_id": "p-0003",
+          "quote": "XRD patterns indicate a cubic garnet structure for all sintered samples"
+        },
+        {
+          "source_id": "SYN-B",
+          "paragraph_id": "p-0004",
+          "quote": "We used the SynthIon-2 dataset and trained a random forest model (RF-B)"
+        },
+        {
+          "source_id": "SYN-B",
+          "paragraph_id": "p-0004",
+          "quote": "to predict ionic conductivity, reaching an R2 of 0.74"
+        },
+        {
+          "source_id": "SYN-B",
+          "paragraph_id": "p-0005",
+          "quote": "LLZO outperforms LATP (Li1.3Al0.3Ti1.7(PO4)3) in critical current density"
+        }
+      ]
+    },
+    {
+      "query_id": "Q3",
+      "spec": {
+        "query_id": "Q3",
+        "type": "path",
+        "start_name": "SynthIon-1",
+        "end_name": "SynthIon-2",
+        "description": "两个 KEEP_DISTINCT 数据集之间的最短路径：经由合并的 LLZO 节点连通，但两个数据集节点保持分离。"
+      },
+      "status": "ok",
+      "result": {
+        "path": [
+          {
+            "id": "E-0005",
+            "name": "SynthIon-1"
+          },
+          {
+            "id": "E-0004",
+            "name": "random forest model"
+          },
+          {
+            "id": "AUX-0001",
+            "name": "ionic conductivity"
+          },
+          {
+            "id": "E-0001",
+            "name": "LLZO"
+          },
+          {
+            "id": "AUX-0002",
+            "name": "ionic conductivity"
+          },
+          {
+            "id": "E-0009",
+            "name": "Random Forest Model"
+          },
+          {
+            "id": "E-0010",
+            "name": "SynthIon-2"
+          }
+        ],
+        "length": 6
+      },
+      "evidence": [
+        {
+          "source_id": "SYN-B",
+          "paragraph_id": "p-0004",
+          "quote": "We used the SynthIon-2 dataset and trained a random forest model (RF-B)"
+        },
+        {
+          "source_id": "SYN-B",
+          "paragraph_id": "p-0004",
+          "quote": "to predict ionic conductivity, reaching an R2 of 0.74"
+        },
+        {
+          "source_id": "SYN-B",
+          "paragraph_id": "p-0001",
+          "quote": "we report a conductivity of 1.1e-3 S/cm for Ta-doped LLZO at 25 C"
+        },
+        {
+          "source_id": "SYN-A",
+          "paragraph_id": "p-0001",
+          "quote": "measured a total ionic conductivity of 3.2e-4 S/cm at 25 C"
+        },
+        {
+          "source_id": "SYN-A",
+          "paragraph_id": "p-0004",
+          "quote": "to predict ionic conductivity, achieving an R2 of 0.81"
+        },
+        {
+          "source_id": "SYN-A",
+          "paragraph_id": "p-0004",
+          "quote": "We trained a random forest model (RF-A) on the SynthIon-1 dataset"
+        }
+      ]
+    },
+    {
+      "query_id": "Q4",
+      "spec": {
+        "query_id": "Q4",
+        "type": "filter",
+        "predicate": "has_measurement",
+        "description": "全部测量边：同一指标在两个来源下数值不同，分别保留并记录冲突。"
+      },
+      "status": "ok",
+      "result": {
+        "nodes": [
+          {
+            "id": "E-0001",
+            "name": "LLZO",
+            "entity_type": "material",
+            "identity_status": "MERGED",
+            "sources": [
+              {
+                "mention_id": "M-A1",
+                "source_id": "SYN-A",
+                "paragraph_id": "p-0001",
+                "quote": "We synthesized Li7La3Zr2O12 (LLZO) pellets by a solid-state reaction"
+              },
+              {
+                "mention_id": "M-B1",
+                "source_id": "SYN-B",
+                "paragraph_id": "p-0001",
+                "quote": "Lithium lanthanum zirconium oxide (LLZO, Li7La3Zr2O12) is a promising solid electrolyte"
+              }
+            ]
+          },
+          {
+            "id": "E-0002",
+            "name": "sintering",
+            "entity_type": "method",
+            "identity_status": "SINGLETON",
+            "sources": [
+              {
+                "mention_id": "M-A2",
+                "source_id": "SYN-A",
+                "paragraph_id": "p-0002",
+                "quote": "sintered at 1100 C for 12 h in a magnesia crucible"
+              }
+            ]
+          },
+          {
+            "id": "E-0003",
+            "name": "XRD",
+            "entity_type": "method",
+            "identity_status": "SINGLETON",
+            "sources": [
+              {
+                "mention_id": "M-A3",
+                "source_id": "SYN-A",
+                "paragraph_id": "p-0003",
+                "quote": "X-ray diffraction (XRD) confirmed the cubic garnet phase of the LLZO pellets"
+              }
+            ]
+          },
+          {
+            "id": "E-0004",
+            "name": "random forest model",
+            "entity_type": "model",
+            "identity_status": "SINGLETON",
+            "sources": [
+              {
+                "mention_id": "M-A4",
+                "source_id": "SYN-A",
+                "paragraph_id": "p-0004",
+                "quote": "We trained a random forest model (RF-A) on the SynthIon-1 dataset"
+              }
+            ]
+          },
+          {
+            "id": "E-0005",
+            "name": "SynthIon-1",
+            "entity_type": "dataset",
+            "identity_status": "SINGLETON",
+            "sources": [
+              {
+                "mention_id": "M-A5",
+                "source_id": "SYN-A",
+                "paragraph_id": "p-0004",
+                "quote": "on the SynthIon-1 dataset"
+              }
+            ]
+          },
+          {
+            "id": "E-0006",
+            "name": "LATP",
+            "entity_type": "material",
+            "identity_status": "MERGED",
+            "sources": [
+              {
+                "mention_id": "M-A6",
+                "source_id": "SYN-A",
+                "paragraph_id": "p-0005",
+                "quote": "Compared with LATP (Li1.3Al0.3Ti1.7(PO4)3), LLZO shows better stability against lithium metal"
+              },
+              {
+                "mention_id": "M-B6",
+                "source_id": "SYN-B",
+                "paragraph_id": "p-0005",
+                "quote": "LLZO outperforms LATP (Li1.3Al0.3Ti1.7(PO4)3) in critical current density"
+              }
+            ]
+          },
+          {
+            "id": "E-0007",
+            "name": "sintering",
+            "entity_type": "method",
+            "identity_status": "SINGLETON",
+            "sources": [
+              {
+                "mention_id": "M-B2",
+                "source_id": "SYN-B",
+                "paragraph_id": "p-0002",
+                "quote": "sintered at 1230 C for 2 h in air"
+              }
+            ]
+          },
+          {
+            "id": "E-0008",
+            "name": "XRD",
+            "entity_type": "method",
+            "identity_status": "SINGLETON",
+            "sources": [
+              {
+                "mention_id": "M-B3",
+                "source_id": "SYN-B",
+                "paragraph_id": "p-0003",
+                "quote": "XRD patterns indicate a cubic garnet structure for all sintered samples"
+              }
+            ]
+          },
+          {
+            "id": "E-0009",
+            "name": "Random Forest Model",
+            "entity_type": "model",
+            "identity_status": "SINGLETON",
+            "sources": [
+              {
+                "mention_id": "M-B4",
+                "source_id": "SYN-B",
+                "paragraph_id": "p-0004",
+                "quote": "trained a random forest model (RF-B) to predict ionic conductivity, reaching an R2 of 0.74"
+              }
+            ]
+          },
+          {
+            "id": "E-0010",
+            "name": "SynthIon-2",
+            "entity_type": "dataset",
+            "identity_status": "SINGLETON",
+            "sources": [
+              {
+                "mention_id": "M-B5",
+                "source_id": "SYN-B",
+                "paragraph_id": "p-0004",
+                "quote": "We used the SynthIon-2 dataset"
+              }
+            ]
+          },
+          {
+            "id": "AUX-0001",
+            "name": "ionic conductivity",
+            "entity_type": "metric",
+            "identity_status": "SOURCE_SCOPED",
+            "sources": [
+              {
+                "mention_id": null,
+                "source_id": "SYN-A",
+                "paragraph_id": "p-0001",
+                "quote": "measured a total ionic conductivity of 3.2e-4 S/cm at 25 C"
+              }
+            ]
+          },
+          {
+            "id": "AUX-0002",
+            "name": "ionic conductivity",
+            "entity_type": "metric",
+            "identity_status": "SOURCE_SCOPED",
+            "sources": [
+              {
+                "mention_id": null,
+                "source_id": "SYN-B",
+                "paragraph_id": "p-0001",
+                "quote": "we report a conductivity of 1.1e-3 S/cm for Ta-doped LLZO at 25 C"
+              }
+            ]
+          }
+        ],
+        "edges": [
+          {
+            "id": "R-A1",
+            "subject": "E-0001",
+            "predicate": "has_measurement",
+            "object": "AUX-0001",
+            "evidence": [
+              {
+                "source_id": "SYN-A",
+                "paragraph_id": "p-0001",
+                "quote": "measured a total ionic conductivity of 3.2e-4 S/cm at 25 C"
+              }
+            ]
+          },
+          {
+            "id": "R-B1",
+            "subject": "E-0001",
+            "predicate": "has_measurement",
+            "object": "AUX-0002",
+            "evidence": [
+              {
+                "source_id": "SYN-B",
+                "paragraph_id": "p-0001",
+                "quote": "we report a conductivity of 1.1e-3 S/cm for Ta-doped LLZO at 25 C"
+              }
+            ]
+          }
+        ]
+      },
+      "evidence": [
+        {
+          "source_id": "SYN-A",
+          "paragraph_id": "p-0001",
+          "quote": "measured a total ionic conductivity of 3.2e-4 S/cm at 25 C"
+        },
+        {
+          "source_id": "SYN-B",
+          "paragraph_id": "p-0001",
+          "quote": "we report a conductivity of 1.1e-3 S/cm for Ta-doped LLZO at 25 C"
+        }
+      ]
+    }
+  ],
+  "uncertainties": [
+    "XRD 在两篇论文中仅为通用术语提及，证据不足，裁决为 UNDECIDED",
+    "LLZO 电导率两来源数值不同（3.2e-4 与 1.1e-3 S/cm），分别保留，不合成结论"
+  ],
+  "label": "SYNTHETIC EXAMPLE OUTPUT（合成示例输出，非正式案例结果）"
+}

@@ -1,0 +1,38 @@
+{
+  "source_id": "SYN-P1",
+  "synthetic": true,
+  "doi": "10.0000/synth.p1",
+  "title": "Low-Resource Neural Machine Translation: A Conditioned Evaluation of TransA and TransB (SYNTHETIC)",
+  "paragraphs": [
+    {
+      "paragraph_id": "SYN-P1.abs.p1",
+      "section": "abstract",
+      "text": "We evaluate two translation models, TransA and TransB, on the low-resource benchmark LowMT-100 under a 10k sentence-pair training budget."
+    },
+    {
+      "paragraph_id": "SYN-P1.s1.p1",
+      "section": "introduction",
+      "text": "TransB was previously reported to achieve 41.2 BLEU on the high-resource WMT benchmark [7]."
+    },
+    {
+      "paragraph_id": "SYN-P1.s2.p1",
+      "section": "methods",
+      "text": "All models are trained on the LowMT-100 training split consisting of 10,000 sentence pairs and evaluated with BLEU on the official test split."
+    },
+    {
+      "paragraph_id": "SYN-P1.s3.p1",
+      "section": "results",
+      "text": "TransA achieves 32.4 BLEU on LowMT-100, while TransB achieves 29.8 BLEU under the same low-resource condition."
+    },
+    {
+      "paragraph_id": "SYN-P1.s3.p2",
+      "section": "results",
+      "text": "TransA therefore outperforms TransB by 2.6 BLEU points on LowMT-100 under the 10k-pair condition; the LSTM-M baseline reaches 24.1 BLEU."
+    },
+    {
+      "paragraph_id": "SYN-P1.s4.p1",
+      "section": "discussion",
+      "text": "We hypothesize that TransA's advantage stems from its deeper encoder, though this requires further ablation."
+    }
+  ]
+}

@@ -1,0 +1,13 @@
+id,type,name,aliases,n_evidence,sources
+n:concl-a,Conclusion,二氧化钛提升电子抽取速率从而提升效率,,1,S1
+n:concl-b,Conclusion,化学气相沉积二氧化钛薄膜稳定性更优,,1,S2
+n:cond-light,Condition,连续光照100小时,,1,S2
+n:cvd,Method,化学气相沉积法,CVD,1,S2
+n:device,Task,钙钛矿太阳能电池,,1,S1
+n:pce,Metric,光电转换效率,PCE,1,S1
+n:sample-a,Sample,样品A,,1,S1
+n:sample-b,Sample,样品B,,1,S2
+n:spin-coating,Method,旋涂法,spin coating,1,S1
+n:spiro,Material,spiro-OMeTAD,,2,S1|S2
+n:stability,Metric,稳定性,,1,S2
+n:tio2,Material,二氧化钛,TiO2|二氧化钛薄膜,2,S1|S2

@@ -1,0 +1,27 @@
+图谱文本预览（节点 12，边 12）
+
+[E-0001] LLZO (material) <MERGED> sources=SYN-A,SYN-B merged_from=M-A1,M-B1
+[E-0002] sintering (method) <SINGLETON> sources=SYN-A merged_from=-
+[E-0003] XRD (method) <SINGLETON> sources=SYN-A merged_from=-
+[E-0004] random forest model (model) <SINGLETON> sources=SYN-A merged_from=-
+[E-0005] SynthIon-1 (dataset) <SINGLETON> sources=SYN-A merged_from=-
+[E-0006] LATP (material) <MERGED> sources=SYN-A,SYN-B merged_from=M-A6,M-B6
+[E-0007] sintering (method) <SINGLETON> sources=SYN-B merged_from=-
+[E-0008] XRD (method) <SINGLETON> sources=SYN-B merged_from=-
+[E-0009] Random Forest Model (model) <SINGLETON> sources=SYN-B merged_from=-
+[E-0010] SynthIon-2 (dataset) <SINGLETON> sources=SYN-B merged_from=-
+[AUX-0001] ionic conductivity (metric) <SOURCE_SCOPED> sources=SYN-A merged_from=-
+[AUX-0002] ionic conductivity (metric) <SOURCE_SCOPED> sources=SYN-B merged_from=-
+
+E-0001 --has_measurement--> AUX-0001  @SYN-A#p-0001 "measured a total ionic conductivity of 3.2e-4 S/cm at 25 C"
+E-0002 --applied_to--> E-0001  @SYN-A#p-0002 "The LLZO green pellets were sintered at 1100 C for 12 h"
+E-0001 --characterized_by--> E-0003  @SYN-A#p-0003 "confirmed the cubic garnet phase of the LLZO pellets"
+E-0004 --trained_on--> E-0005  @SYN-A#p-0004 "We trained a random forest model (RF-A) on the SynthIon-1 da"
+E-0004 --predicts--> AUX-0001  @SYN-A#p-0004 "to predict ionic conductivity, achieving an R2 of 0.81"
+E-0001 --compared_with--> E-0006  @SYN-A#p-0005 "LLZO shows better stability against lithium metal"
+E-0001 --has_measurement--> AUX-0002  @SYN-B#p-0001 "we report a conductivity of 1.1e-3 S/cm for Ta-doped LLZO at"
+E-0007 --applied_to--> E-0001  @SYN-B#p-0002 "samples were sintered at 1230 C for 2 h in air"
+E-0001 --characterized_by--> E-0008  @SYN-B#p-0003 "XRD patterns indicate a cubic garnet structure for all sinte"
+E-0009 --trained_on--> E-0010  @SYN-B#p-0004 "We used the SynthIon-2 dataset and trained a random forest m"
+E-0009 --predicts--> AUX-0002  @SYN-B#p-0004 "to predict ionic conductivity, reaching an R2 of 0.74"
+E-0001 --outperforms--> E-0006  @SYN-B#p-0005 "LLZO outperforms LATP (Li1.3Al0.3Ti1.7(PO4)3) in critical cu"

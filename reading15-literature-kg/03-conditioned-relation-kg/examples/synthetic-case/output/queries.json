@@ -1,0 +1,386 @@
+{
+  "executor": "query_run.py (deterministic, stdlib)",
+  "n_queries": 4,
+  "n_executed": 4,
+  "results": [
+    {
+      "status": "executed",
+      "n_results": 2,
+      "no_global_winner": true,
+      "note": "结果仅在查询给定的条件作用域内成立",
+      "conflict_flags": [],
+      "subgraph": {
+        "nodes": [
+          {
+            "kind": "node",
+            "node_id": "n_distilT",
+            "type": "model",
+            "label": "DistilT",
+            "aliases": [],
+            "evidence": [
+              {
+                "source_id": "SYN-P2",
+                "paragraph_id": "SYN-P2.abs.p1",
+                "quote": "We present DistilT, a compact translation model"
+              }
+            ]
+          },
+          {
+            "kind": "node",
+            "node_id": "n_transA",
+            "type": "model",
+            "label": "TransA",
+            "aliases": [],
+            "evidence": [
+              {
+                "source_id": "SYN-P1",
+                "paragraph_id": "SYN-P1.abs.p1",
+                "quote": "two translation models, TransA and TransB"
+              }
+            ]
+          },
+          {
+            "kind": "node",
+            "node_id": "n_transB",
+            "type": "model",
+            "label": "TransB",
+            "aliases": [],
+            "evidence": [
+              {
+                "source_id": "SYN-P1",
+                "paragraph_id": "SYN-P1.abs.p1",
+                "quote": "TransA and TransB, on the low-resource benchmark"
+              }
+            ]
+          }
+        ],
+        "edges": [
+          {
+            "kind": "edge",
+            "edge_id": "e1",
+            "relation": "outperforms",
+            "subject": "n_transA",
+            "object": "n_transB",
+            "voice": "primary-results",
+            "polarity": "positive",
+            "conditions": {
+              "dataset": "n_lowmt",
+              "metric": "n_bleu",
+              "condition": "n_lowres"
+            },
+            "comparator": "n_transB",
+            "measurement": {
+              "kind": "margin",
+              "value": 2.6,
+              "unit": "BLEU"
+            },
+            "used_as_primary_evidence": true,
+            "evidence": [
+              {
+                "source_id": "SYN-P1",
+                "paragraph_id": "SYN-P1.s3.p2",
+                "quote": "TransA therefore outperforms TransB by 2.6 BLEU points on LowMT-100 under the 10k-pair condition"
+              }
+            ]
+          },
+          {
+            "kind": "edge",
+            "edge_id": "e6",
+            "relation": "outperforms",
+            "subject": "n_distilT",
+            "object": "n_transB",
+            "voice": "primary-results",
+            "polarity": "positive",
+            "conditions": {
+              "dataset": "n_lowmt",
+              "metric": "n_bleu",
+              "condition": "n_lowres"
+            },
+            "comparator": "n_transB",
+            "measurement": {
+              "kind": "margin",
+              "value": 0.5,
+              "unit": "BLEU"
+            },
+            "used_as_primary_evidence": true,
+            "evidence": [
+              {
+                "source_id": "SYN-P2",
+                "paragraph_id": "SYN-P2.s3.p1",
+                "quote": "DistilT outperforms TransB by 0.5 BLEU"
+              }
+            ]
+          }
+        ],
+        "evidence": [
+          {
+            "edge_id": "e1",
+            "source_id": "SYN-P1",
+            "paragraph_id": "SYN-P1.s3.p2",
+            "quote": "TransA therefore outperforms TransB by 2.6 BLEU points on LowMT-100 under the 10k-pair condition"
+          },
+          {
+            "edge_id": "e6",
+            "source_id": "SYN-P2",
+            "paragraph_id": "SYN-P2.s3.p1",
+            "quote": "DistilT outperforms TransB by 0.5 BLEU"
+          }
+        ]
+      },
+      "query_id": "q1",
+      "question": "在 LowMT-100 / BLEU / low-resource 条件下，哪些模型被报告优于 TransB？",
+      "type": "compare"
+    },
+    {
+      "status": "executed",
+      "n_results": 2,
+      "conflict_flags": [
+        "e3",
+        "e8"
+      ],
+      "subgraph": {
+        "nodes": [
+          {
+            "kind": "node",
+            "node_id": "n_lowmt",
+            "type": "dataset",
+            "label": "LowMT-100",
+            "aliases": [
+              "LowMT100"
+            ],
+            "evidence": [
+              {
+                "source_id": "SYN-P1",
+                "paragraph_id": "SYN-P1.s2.p1",
+                "quote": "the LowMT-100 training split consisting of 10,000 sentence pairs"
+              }
+            ]
+          },
+          {
+            "kind": "node",
+            "node_id": "n_transB",
+            "type": "model",
+            "label": "TransB",
+            "aliases": [],
+            "evidence": [
+              {
+                "source_id": "SYN-P1",
+                "paragraph_id": "SYN-P1.abs.p1",
+                "quote": "TransA and TransB, on the low-resource benchmark"
+              }
+            ]
+          }
+        ],
+        "edges": [
+          {
+            "kind": "edge",
+            "edge_id": "e3",
+            "relation": "measured_on",
+            "subject": "n_transB",
+            "object": "n_lowmt",
+            "voice": "primary-results",
+            "polarity": "neutral",
+            "conditions": {
+              "dataset": "n_lowmt",
+              "metric": "n_bleu",
+              "condition": "n_lowres"
+            },
+            "measurement": {
+              "kind": "score",
+              "value": 29.8,
+              "unit": "BLEU"
+            },
+            "used_as_primary_evidence": true,
+            "evidence": [
+              {
+                "source_id": "SYN-P1",
+                "paragraph_id": "SYN-P1.s3.p1",
+                "quote": "TransB achieves 29.8 BLEU under the same low-resource condition"
+              }
+            ],
+            "in_conflict": true
+          },
+          {
+            "kind": "edge",
+            "edge_id": "e8",
+            "relation": "measured_on",
+            "subject": "n_transB",
+            "object": "n_lowmt",
+            "voice": "primary-results",
+            "polarity": "neutral",
+            "conditions": {
+              "dataset": "n_lowmt",
+              "metric": "n_bleu",
+              "condition": "n_lowres"
+            },
+            "measurement": {
+              "kind": "score",
+              "value": 30.5,
+              "unit": "BLEU"
+            },
+            "used_as_primary_evidence": true,
+            "evidence": [
+              {
+                "source_id": "SYN-P2",
+                "paragraph_id": "SYN-P2.s3.p1",
+                "quote": "TransB achieves 30.5 BLEU under the low-resource condition"
+              }
+            ],
+            "in_conflict": true
+          }
+        ],
+        "evidence": [
+          {
+            "edge_id": "e3",
+            "source_id": "SYN-P1",
+            "paragraph_id": "SYN-P1.s3.p1",
+            "quote": "TransB achieves 29.8 BLEU under the same low-resource condition"
+          },
+          {
+            "edge_id": "e8",
+            "source_id": "SYN-P2",
+            "paragraph_id": "SYN-P2.s3.p1",
+            "quote": "TransB achieves 30.5 BLEU under the low-resource condition"
+          }
+        ]
+      },
+      "query_id": "q2",
+      "question": "TransB 在 LowMT-100 上的 BLEU 测量值有哪些？是否存在冲突？",
+      "type": "measurements"
+    },
+    {
+      "status": "executed",
+      "answer": "no_direct_relation",
+      "n_results": 0,
+      "cooccurrence_notes": [
+        {
+          "nodes": [
+            "n_transA",
+            "n_distilT"
+          ],
+          "decision": "不建边：两篇仅共现于低资源翻译主题，P2 明确写到 no direct comparison between them has been reported；跨篇共现不是直接关系。",
+          "evidence": {
+            "source_id": "SYN-P2",
+            "paragraph_id": "SYN-P2.s1.p1",
+            "quote": "TransA and DistilT both target low-resource translation, but no direct comparison between them has been reported."
+          }
+        }
+      ],
+      "note": "跨篇/同篇共现不是直接关系；不做无证据连边",
+      "subgraph": {
+        "nodes": [
+          {
+            "kind": "node",
+            "node_id": "n_distilT",
+            "type": "model",
+            "label": "DistilT",
+            "aliases": [],
+            "evidence": [
+              {
+                "source_id": "SYN-P2",
+                "paragraph_id": "SYN-P2.abs.p1",
+                "quote": "We present DistilT, a compact translation model"
+              }
+            ]
+          },
+          {
+            "kind": "node",
+            "node_id": "n_transA",
+            "type": "model",
+            "label": "TransA",
+            "aliases": [],
+            "evidence": [
+              {
+                "source_id": "SYN-P1",
+                "paragraph_id": "SYN-P1.abs.p1",
+                "quote": "two translation models, TransA and TransB"
+              }
+            ]
+          }
+        ],
+        "edges": [],
+        "evidence": []
+      },
+      "query_id": "q3",
+      "question": "TransA 与 DistilT 之间是否存在直接比较关系？",
+      "type": "direct_relation"
+    },
+    {
+      "status": "executed",
+      "n_results": 1,
+      "conflict_flags": [],
+      "subgraph": {
+        "nodes": [
+          {
+            "kind": "node",
+            "node_id": "n_transB",
+            "type": "model",
+            "label": "TransB",
+            "aliases": [],
+            "evidence": [
+              {
+                "source_id": "SYN-P1",
+                "paragraph_id": "SYN-P1.abs.p1",
+                "quote": "TransA and TransB, on the low-resource benchmark"
+              }
+            ]
+          },
+          {
+            "kind": "node",
+            "node_id": "n_wmt",
+            "type": "dataset",
+            "label": "WMT (high-resource)",
+            "aliases": [],
+            "evidence": [
+              {
+                "source_id": "SYN-P1",
+                "paragraph_id": "SYN-P1.s1.p1",
+                "quote": "the high-resource WMT benchmark"
+              }
+            ]
+          }
+        ],
+        "edges": [
+          {
+            "kind": "edge",
+            "edge_id": "e5",
+            "relation": "measured_on",
+            "subject": "n_transB",
+            "object": "n_wmt",
+            "voice": "cited-background",
+            "polarity": "neutral",
+            "conditions": {
+              "dataset": "n_wmt",
+              "metric": "n_bleu",
+              "condition": "high-resource"
+            },
+            "measurement": {
+              "kind": "score",
+              "value": 41.2,
+              "unit": "BLEU"
+            },
+            "used_as_primary_evidence": false,
+            "evidence": [
+              {
+                "source_id": "SYN-P1",
+                "paragraph_id": "SYN-P1.s1.p1",
+                "quote": "TransB was previously reported to achieve 41.2 BLEU on the high-resource WMT benchmark [7]"
+              }
+            ]
+          }
+        ],
+        "evidence": [
+          {
+            "edge_id": "e5",
+            "source_id": "SYN-P1",
+            "paragraph_id": "SYN-P1.s1.p1",
+            "quote": "TransB was previously reported to achieve 41.2 BLEU on the high-resource WMT benchmark [7]"
+          }
+        ]
+      },
+      "query_id": "q4",
+      "question": "TransB 在 WMT（高资源）上的报告值是什么？能否作为一手证据？",
+      "type": "measurements"
+    }
+  ]
+}

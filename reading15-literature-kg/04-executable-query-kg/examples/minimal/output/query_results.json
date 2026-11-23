@@ -1,0 +1,507 @@
+{
+  "graph_hash": "b8238206ade6d605ae60085356263f3e3d0bc1af9a27ddfd72e2ddb5fd5cdc5e",
+  "results": [
+    {
+      "explain": {
+        "hit": "'spiro-OMeTAD' → n:spiro",
+        "match_rule": "name 与 aliases 去空白、小写化后精确匹配；不做模糊/语义扩展。"
+      },
+      "id": "Q1",
+      "matches": [
+        {
+          "aliases": [],
+          "evidence": [
+            {
+              "paragraph_id": "p-a-2",
+              "quote": "spiro-OMeTAD空穴传输层",
+              "source_id": "S1"
+            },
+            {
+              "paragraph_id": "p-b-1",
+              "quote": "spiro-OMeTAD作为空穴传输材料",
+              "source_id": "S2"
+            }
+          ],
+          "id": "n:spiro",
+          "name": "spiro-OMeTAD",
+          "type": "Material"
+        }
+      ],
+      "op": "node_lookup",
+      "params": {
+        "name": "spiro-OMeTAD"
+      },
+      "query_hash": "62e113c5599c6cc33b3e704c36cd4fc2c94b204ec31f7014f7deb62048bf942f",
+      "result_hash": "7ba985073b47e5830550e41a04901e78cfa13cbfe89319eb8fe1ee184d6b6eeb",
+      "status": "ok"
+    },
+    {
+      "explain": {
+        "depth": 1,
+        "direction": "any",
+        "hit_counts": {
+          "edges": 3,
+          "nodes": 4
+        },
+        "node_resolution": "按节点 id 直接命中",
+        "relation_rule": "关系过滤：边的 relation 经去空白、小写化后与列表 [\"制备\", \"促进\"] 做精确匹配（OR 语义）。",
+        "type_filter": [
+          "Method",
+          "Metric"
+        ]
+      },
+      "id": "Q2",
+      "matches": {
+        "edges": [
+          {
+            "dst": "n:tio2",
+            "evidence": [
+              {
+                "paragraph_id": "p-a-1",
+                "quote": "采用旋涂法制备二氧化钛电子传输层",
+                "source_id": "S1"
+              }
+            ],
+            "id": "e1",
+            "relation": "制备",
+            "src": "n:spin-coating"
+          },
+          {
+            "conditions": "S1 作者自述的机理判断（作者观点，非直接测量）",
+            "dst": "n:pce",
+            "evidence": [
+              {
+                "paragraph_id": "p-a-3",
+                "quote": "这是效率提升的主要原因",
+                "source_id": "S1"
+              }
+            ],
+            "id": "e5",
+            "relation": "促进",
+            "src": "n:tio2"
+          },
+          {
+            "dst": "n:tio2",
+            "evidence": [
+              {
+                "paragraph_id": "p-b-1",
+                "quote": "使用化学气相沉积法制备了二氧化钛薄膜",
+                "source_id": "S2"
+              }
+            ],
+            "id": "e6",
+            "relation": "制备",
+            "src": "n:cvd"
+          }
+        ],
+        "nodes": [
+          {
+            "aliases": [
+              "CVD"
+            ],
+            "evidence": [
+              {
+                "paragraph_id": "p-b-1",
+                "quote": "化学气相沉积法",
+                "source_id": "S2"
+              }
+            ],
+            "id": "n:cvd",
+            "name": "化学气相沉积法",
+            "type": "Method"
+          },
+          {
+            "aliases": [
+              "PCE"
+            ],
+            "evidence": [
+              {
+                "paragraph_id": "p-a-2",
+                "quote": "光电转换效率",
+                "source_id": "S1"
+              }
+            ],
+            "id": "n:pce",
+            "name": "光电转换效率",
+            "type": "Metric"
+          },
+          {
+            "aliases": [
+              "spin coating"
+            ],
+            "evidence": [
+              {
+                "paragraph_id": "p-a-1",
+                "quote": "旋涂法",
+                "source_id": "S1"
+              }
+            ],
+            "id": "n:spin-coating",
+            "name": "旋涂法",
+            "type": "Method"
+          },
+          {
+            "aliases": [
+              "TiO2",
+              "二氧化钛薄膜"
+            ],
+            "evidence": [
+              {
+                "paragraph_id": "p-a-1",
+                "quote": "二氧化钛电子传输层",
+                "source_id": "S1"
+              },
+              {
+                "paragraph_id": "p-b-1",
+                "quote": "二氧化钛薄膜",
+                "source_id": "S2"
+              }
+            ],
+            "id": "n:tio2",
+            "name": "二氧化钛",
+            "type": "Material"
+          }
+        ]
+      },
+      "op": "neighborhood",
+      "params": {
+        "depth": 1,
+        "direction": "any",
+        "node": "n:tio2",
+        "relation": [
+          "制备",
+          "促进"
+        ],
+        "types": [
+          "Method",
+          "Metric"
+        ]
+      },
+      "query_hash": "11139a863d29262d6b3fb4f286d63a4090b9d2749bec7b04dc75dd72ea0aca75",
+      "result_hash": "c68f571d5cafb9d016c4828f615d4321346f87f0b63f8348422af8cbefd75cf7",
+      "status": "ok"
+    },
+    {
+      "explain": {
+        "algorithm": "BFS（按 edge_id 排序展开，确定性最短路径）",
+        "direction": "any",
+        "from_resolution": "按节点 id 直接命中",
+        "max_depth": 6,
+        "path_length": 2,
+        "relation_rule": "未限定关系：所有关系类型均匹配。",
+        "to_resolution": "按节点 id 直接命中"
+      },
+      "id": "Q3",
+      "op": "shortest_path",
+      "params": {
+        "direction": "any",
+        "from": "n:spin-coating",
+        "max_depth": 6,
+        "to": "n:stability"
+      },
+      "path": {
+        "edges": [
+          {
+            "conditions": "仅限稳定性维度，为 S2 的对比结论；不代表效率维度优劣",
+            "dst": "n:spin-coating",
+            "evidence": [
+              {
+                "paragraph_id": "p-b-3",
+                "quote": "与旋涂法制备的薄膜相比",
+                "source_id": "S2"
+              }
+            ],
+            "id": "e8",
+            "relation": "优于",
+            "src": "n:cvd"
+          },
+          {
+            "conditions": "S2 的结论性陈述，作用对象为 S2 的薄膜与器件",
+            "dst": "n:stability",
+            "evidence": [
+              {
+                "paragraph_id": "p-b-3",
+                "quote": "更优的稳定性",
+                "source_id": "S2"
+              }
+            ],
+            "id": "e11",
+            "relation": "促进",
+            "src": "n:cvd"
+          }
+        ],
+        "length": 2,
+        "nodes": [
+          {
+            "aliases": [
+              "spin coating"
+            ],
+            "id": "n:spin-coating",
+            "name": "旋涂法",
+            "type": "Method"
+          },
+          {
+            "aliases": [
+              "CVD"
+            ],
+            "id": "n:cvd",
+            "name": "化学气相沉积法",
+            "type": "Method"
+          },
+          {
+            "aliases": [],
+            "id": "n:stability",
+            "name": "稳定性",
+            "type": "Metric"
+          }
+        ]
+      },
+      "query_hash": "ed6fcf73eb1a0703508d5b6dfb0c35042051e32350e200a0505b069f1cbc5b28",
+      "result_hash": "216dc065fd89f490eb30525ec69bae71885c86681e30da5a256634cd9d8fc58b",
+      "status": "ok"
+    },
+    {
+      "evidence_by_source": {
+        "S1": [
+          {
+            "paragraph_id": "p-a-1",
+            "quote": "二氧化钛电子传输层",
+            "source_id": "S1"
+          },
+          {
+            "paragraph_id": "p-a-1",
+            "quote": "并将其应用于钙钛矿太阳能电池",
+            "source_id": "S1",
+            "via_edge": "e2"
+          },
+          {
+            "paragraph_id": "p-a-3",
+            "quote": "这是效率提升的主要原因",
+            "source_id": "S1",
+            "via_edge": "e5"
+          },
+          {
+            "paragraph_id": "p-a-1",
+            "quote": "采用旋涂法制备二氧化钛电子传输层",
+            "source_id": "S1",
+            "via_edge": "e1"
+          }
+        ],
+        "S2": [
+          {
+            "paragraph_id": "p-b-1",
+            "quote": "二氧化钛薄膜",
+            "source_id": "S2"
+          },
+          {
+            "paragraph_id": "p-b-1",
+            "quote": "使用化学气相沉积法制备了二氧化钛薄膜",
+            "source_id": "S2",
+            "via_edge": "e6"
+          }
+        ]
+      },
+      "explain": {
+        "distinct_sources": [
+          "S1",
+          "S2"
+        ],
+        "node_resolution": "按节点 id 直接命中",
+        "rule": "汇总节点自身证据与其所有关联边证据中的 source_id，统计不同来源数；>=2 视为具备跨源证据。"
+      },
+      "id": "Q4",
+      "node": {
+        "aliases": [
+          "TiO2",
+          "二氧化钛薄膜"
+        ],
+        "evidence": [
+          {
+            "paragraph_id": "p-a-1",
+            "quote": "二氧化钛电子传输层",
+            "source_id": "S1"
+          },
+          {
+            "paragraph_id": "p-b-1",
+            "quote": "二氧化钛薄膜",
+            "source_id": "S2"
+          }
+        ],
+        "id": "n:tio2",
+        "name": "二氧化钛",
+        "type": "Material"
+      },
+      "op": "cross_source",
+      "params": {
+        "node": "n:tio2"
+      },
+      "query_hash": "02861ad0ed1901683f96a6c1dbc6a6753a2fb791fba61ffe409f503aff39c4e7",
+      "result_hash": "64df9785d6b849fff2071e6decc5ee59835865ffcfa6415897dcf4574ca5ddf1",
+      "sources": [
+        "S1",
+        "S2"
+      ],
+      "status": "ok"
+    },
+    {
+      "explain": {
+        "match_rule": "name 与 aliases 去空白、小写化后精确匹配；不做模糊/语义扩展。"
+      },
+      "id": "Q5",
+      "matches": [],
+      "op": "node_lookup",
+      "params": {
+        "name": "钙钛矿量子点"
+      },
+      "query_hash": "3a290e802db0f34f1877951f17f4d320e74b9b13b3828db988969beec1f2d462",
+      "reason": "未找到名称/别名为 '钙钛矿量子点' 的节点（空结果，如实报告）",
+      "result_hash": "d7f70be65c905f98f14bdf011d377f514989e98b9eafc321df15e9b48989024f",
+      "status": "empty"
+    },
+    {
+      "decisions": [
+        {
+          "canonical_node": "n:tio2",
+          "decision": "merge",
+          "evidence": [
+            {
+              "paragraph_id": "p-a-1",
+              "quote": "二氧化钛电子传输层",
+              "source_id": "S1"
+            },
+            {
+              "paragraph_id": "p-b-1",
+              "quote": "二氧化钛薄膜",
+              "source_id": "S2"
+            }
+          ],
+          "id": "m1",
+          "left": "S1「二氧化钛电子传输层」(p-a-1)",
+          "rationale": "两篇均指同一化学材料 TiO2，仅形态描述不同（传输层/薄膜）；合并为同一 Material 概念节点，证据分别保留来源。",
+          "right": "S2「二氧化钛薄膜」(p-b-1)"
+        },
+        {
+          "canonical_node": "n:spiro",
+          "decision": "merge",
+          "evidence": [
+            {
+              "paragraph_id": "p-a-2",
+              "quote": "spiro-OMeTAD空穴传输层",
+              "source_id": "S1"
+            },
+            {
+              "paragraph_id": "p-b-1",
+              "quote": "spiro-OMeTAD作为空穴传输材料",
+              "source_id": "S2"
+            }
+          ],
+          "id": "m2",
+          "left": "S1「spiro-OMeTAD空穴传输层」(p-a-2)",
+          "rationale": "同名材料、同一角色（空穴传输），跨篇合并；各自证据保留来源。",
+          "right": "S2「spiro-OMeTAD作为空穴传输材料」(p-b-1)"
+        },
+        {
+          "canonical_node": null,
+          "decision": "no_merge",
+          "evidence": [
+            {
+              "paragraph_id": "p-a-2",
+              "quote": "样品A（有效面积0.1平方厘米）",
+              "source_id": "S1"
+            },
+            {
+              "paragraph_id": "p-b-2",
+              "quote": "样品B（有效面积1.0平方厘米）",
+              "source_id": "S2"
+            }
+          ],
+          "id": "m3",
+          "left": "n:sample-a（S1 样品A，0.1平方厘米）",
+          "rationale": "不同物理样品：面积、制备方法与测量数值均不同（18.5%效率 vs 100小时后90%保持率）；即使器件类型相近也绝不合并，数值不可互相移植。",
+          "right": "n:sample-b（S2 样品B，1.0平方厘米）"
+        },
+        {
+          "canonical_node": null,
+          "decision": "no_merge",
+          "evidence": [
+            {
+              "paragraph_id": "p-a-1",
+              "quote": "旋涂法",
+              "source_id": "S1"
+            },
+            {
+              "paragraph_id": "p-b-1",
+              "quote": "化学气相沉积法",
+              "source_id": "S2"
+            }
+          ],
+          "id": "m4",
+          "left": "n:spin-coating（旋涂法，S1）",
+          "rationale": "两者都「制备二氧化钛」但是不同方法；S2 的「优于」仅指稳定性维度。不能因为作用对象相同就把两种方法合并为一个节点。",
+          "right": "n:cvd（化学气相沉积法，S2）"
+        },
+        {
+          "canonical_node": null,
+          "decision": "no_merge",
+          "evidence": [
+            {
+              "paragraph_id": "p-a-2",
+              "quote": "获得了18.5%的光电转换效率",
+              "source_id": "S1"
+            },
+            {
+              "paragraph_id": "p-b-2",
+              "quote": "保持了初始效率的90%，表现出良好的稳定性",
+              "source_id": "S2"
+            }
+          ],
+          "id": "m5",
+          "left": "n:pce（光电转换效率18.5%，S1 样品A）",
+          "rationale": "不同指标、不同数值、不同实验条件；禁止把两篇的数值结果合成一个结论。",
+          "right": "n:stability（100小时后90%保持率，S2 样品B）"
+        }
+      ],
+      "explain": {
+        "filter": "all",
+        "hit": 5,
+        "rule": "merge=跨篇同一概念已合并为 canonical_node（含依据）；no_merge=同名/相似但不得合并（不同样品/条件/指标/对象，含依据）。"
+      },
+      "id": "Q6",
+      "op": "merge_decisions",
+      "params": {
+        "decision": "all"
+      },
+      "query_hash": "42165195e1a970f2f9a324425e0e09fa551f865e4e639d950ba9c4e05fe1467c",
+      "result_hash": "5a2ed868351a367e7166ff206e5db9cc450e03b50941f26a6595609850fcf48d",
+      "status": "ok"
+    },
+    {
+      "explain": {
+        "distinct_sources": [
+          "S1"
+        ],
+        "node_resolution": "按节点 id 直接命中",
+        "rule": "汇总节点自身证据与其所有关联边证据中的 source_id，统计不同来源数；>=2 视为具备跨源证据。"
+      },
+      "id": "Q7",
+      "op": "cross_source",
+      "params": {
+        "node": "n:pce"
+      },
+      "query_hash": "44e9aa32eb9e7a2d80bbdb6a23af168cfa5b68052e22d7eba03a86a6559bfaee",
+      "reason": "节点 n:pce 的证据只来自 1 个来源（S1），不构成跨源证据（如实报告）",
+      "result_hash": "2dd7074651be5e316cf079b9f0cb288a7b6ebc0121f11bfae90189a0bb6dcc45",
+      "sources": [
+        "S1"
+      ],
+      "status": "empty"
+    }
+  ],
+  "results_hash": "c5c7df514e0492e10da3d8cf12c7fc8c39f505f3b2f66c6e3ad9498b8c55685a",
+  "summary": {
+    "empty": 2,
+    "error": 0,
+    "ok": 5,
+    "total": 7
+  }
+}

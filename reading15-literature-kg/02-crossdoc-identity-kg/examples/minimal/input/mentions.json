@@ -1,0 +1,105 @@
+{
+  "meta": {
+    "label": "SYNTHETIC EXAMPLE（合成示例）",
+    "notice": "12 条提及记录，模拟 Agent 语义抽取结果；仅用于演示。",
+    "generic_terms": ["sintering", "xrd", "x ray diffraction"]
+  },
+  "mentions": [
+    {
+      "mention_id": "M-A1", "source_id": "SYN-A", "paragraph_id": "p-0001",
+      "surface": "LLZO", "entity_type": "material",
+      "aliases": ["lithium lanthanum zirconium oxide", "Li7La3Zr2O12"],
+      "quote": "We synthesized Li7La3Zr2O12 (LLZO) pellets by a solid-state reaction",
+      "properties": {"chemical_formula": "Li7La3Zr2O12"},
+      "numbers": []
+    },
+    {
+      "mention_id": "M-A2", "source_id": "SYN-A", "paragraph_id": "p-0002",
+      "surface": "sintering", "entity_type": "method",
+      "aliases": [],
+      "quote": "sintered at 1100 C for 12 h in a magnesia crucible",
+      "properties": {"conditions": "1100 C, 12 h, magnesia crucible"},
+      "numbers": []
+    },
+    {
+      "mention_id": "M-A3", "source_id": "SYN-A", "paragraph_id": "p-0003",
+      "surface": "XRD", "entity_type": "method",
+      "aliases": ["X-ray diffraction"],
+      "quote": "X-ray diffraction (XRD) confirmed the cubic garnet phase of the LLZO pellets",
+      "properties": {},
+      "numbers": []
+    },
+    {
+      "mention_id": "M-A4", "source_id": "SYN-A", "paragraph_id": "p-0004",
+      "surface": "random forest model", "entity_type": "model",
+      "aliases": ["RF-A"],
+      "quote": "We trained a random forest model (RF-A) on the SynthIon-1 dataset",
+      "properties": {"architecture": "random forest"},
+      "numbers": [{"name": "R2", "value": 0.81, "unit": "1"}]
+    },
+    {
+      "mention_id": "M-A5", "source_id": "SYN-A", "paragraph_id": "p-0004",
+      "surface": "SynthIon-1", "entity_type": "dataset",
+      "aliases": ["SynthIon"],
+      "quote": "on the SynthIon-1 dataset",
+      "properties": {"dataset_version": "1"},
+      "numbers": []
+    },
+    {
+      "mention_id": "M-A6", "source_id": "SYN-A", "paragraph_id": "p-0005",
+      "surface": "LATP", "entity_type": "material",
+      "aliases": ["Li1.3Al0.3Ti1.7(PO4)3"],
+      "quote": "Compared with LATP (Li1.3Al0.3Ti1.7(PO4)3), LLZO shows better stability against lithium metal",
+      "properties": {"chemical_formula": "Li1.3Al0.3Ti1.7(PO4)3"},
+      "numbers": []
+    },
+    {
+      "mention_id": "M-B1", "source_id": "SYN-B", "paragraph_id": "p-0001",
+      "surface": "lithium lanthanum zirconium oxide", "entity_type": "material",
+      "aliases": ["LLZO", "Li7La3Zr2O12"],
+      "quote": "Lithium lanthanum zirconium oxide (LLZO, Li7La3Zr2O12) is a promising solid electrolyte",
+      "properties": {"chemical_formula": "Li7La3Zr2O12"},
+      "numbers": []
+    },
+    {
+      "mention_id": "M-B2", "source_id": "SYN-B", "paragraph_id": "p-0002",
+      "surface": "sintering", "entity_type": "method",
+      "aliases": [],
+      "quote": "sintered at 1230 C for 2 h in air",
+      "properties": {"conditions": "1230 C, 2 h, air"},
+      "numbers": []
+    },
+    {
+      "mention_id": "M-B3", "source_id": "SYN-B", "paragraph_id": "p-0003",
+      "surface": "XRD", "entity_type": "method",
+      "aliases": ["X-ray diffraction"],
+      "quote": "XRD patterns indicate a cubic garnet structure for all sintered samples",
+      "properties": {},
+      "numbers": []
+    },
+    {
+      "mention_id": "M-B4", "source_id": "SYN-B", "paragraph_id": "p-0004",
+      "surface": "Random Forest Model", "entity_type": "model",
+      "aliases": ["RF-B"],
+      "quote": "trained a random forest model (RF-B) to predict ionic conductivity, reaching an R2 of 0.74",
+      "properties": {"architecture": "random forest"},
+      "numbers": [{"name": "R2", "value": 0.74, "unit": "1"}]
+    },
+    {
+      "mention_id": "M-B5", "source_id": "SYN-B", "paragraph_id": "p-0004",
+      "surface": "SynthIon-2", "entity_type": "dataset",
+      "aliases": ["SynthIon"],
+      "quote": "We used the SynthIon-2 dataset",
+      "properties": {"dataset_version": "2"},
+      "numbers": []
+    },
+    {
+      "mention_id": "M-B6", "source_id": "SYN-B", "paragraph_id": "p-0005",
+      "surface": "LATP", "entity_type": "material",
+      "aliases": ["Li1.3Al0.3Ti1.7(PO4)3"],
+      "quote": "LLZO outperforms LATP (Li1.3Al0.3Ti1.7(PO4)3) in critical current density",
+      "properties": {"chemical_formula": "Li1.3Al0.3Ti1.7(PO4)3"},
+      "numbers": []
+    }
+  ]
+}

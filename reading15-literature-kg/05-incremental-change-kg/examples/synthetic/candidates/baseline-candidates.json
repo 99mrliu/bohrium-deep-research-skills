@@ -1,0 +1,95 @@
+{
+  "schema": "kg-candidates/1",
+  "case_id": "SYNTH-INCREMENTAL-001",
+  "synthetic": true,
+  "_comment": "SYNTHETIC 示例：Agent 阅读 primary 论文后编写的 baseline 语义候选。每个节点/边都绑定 source_id + JATS paragraph_id + 原文短引，由 kg_verify.py 逐字校验。",
+  "nodes": [
+    {
+      "type": "material",
+      "label": "LiFePO4/C composite",
+      "evidence": [
+        {"source_id": "primary", "paragraph_id": "p1.001", "quote": "a LiFePO4/C composite cathode"}
+      ]
+    },
+    {
+      "type": "method",
+      "label": "sol-gel method",
+      "evidence": [
+        {"source_id": "primary", "paragraph_id": "p1.003", "quote": "prepared by a sol-gel method"}
+      ]
+    },
+    {
+      "type": "material",
+      "label": "commercial carbon black",
+      "evidence": [
+        {"source_id": "primary", "paragraph_id": "p1.003", "quote": "commercial carbon black as the carbon source"}
+      ]
+    },
+    {
+      "type": "material",
+      "label": "hydrothermal reference sample",
+      "evidence": [
+        {"source_id": "primary", "paragraph_id": "p1.004", "quote": "the hydrothermal reference sample, which gave 141 mAh/g"}
+      ]
+    },
+    {
+      "type": "metric",
+      "label": "discharge capacity",
+      "evidence": [
+        {"source_id": "primary", "paragraph_id": "p1.001", "quote": "a discharge capacity of 158 mAh/g at 0.1 C"}
+      ]
+    },
+    {
+      "type": "task",
+      "label": "lithium-ion battery cathode",
+      "evidence": [
+        {"source_id": "primary", "paragraph_id": "p1.002", "quote": "olivine cathode material for lithium-ion batteries"}
+      ]
+    }
+  ],
+  "edges": [
+    {
+      "relation": "synthesized_by",
+      "from": "LiFePO4/C composite",
+      "to": "sol-gel method",
+      "evidence": [
+        {"source_id": "primary", "paragraph_id": "p1.003", "quote": "The LiFePO4/C composite was prepared by a sol-gel method"}
+      ]
+    },
+    {
+      "relation": "uses",
+      "from": "LiFePO4/C composite",
+      "to": "commercial carbon black",
+      "attributes": {"role": "carbon source"},
+      "evidence": [
+        {"source_id": "primary", "paragraph_id": "p1.003", "quote": "using commercial carbon black as the carbon source"}
+      ]
+    },
+    {
+      "relation": "delivers_capacity",
+      "from": "LiFePO4/C composite",
+      "to": "discharge capacity",
+      "attributes": {"value": "158 mAh/g", "condition": "0.1 C"},
+      "evidence": [
+        {"source_id": "primary", "paragraph_id": "p1.001", "quote": "delivers a discharge capacity of 158 mAh/g at 0.1 C"}
+      ]
+    },
+    {
+      "relation": "outperforms",
+      "from": "LiFePO4/C composite",
+      "to": "hydrothermal reference sample",
+      "attributes": {"value": "158 vs 141 mAh/g", "condition": "0.1 C"},
+      "evidence": [
+        {"source_id": "primary", "paragraph_id": "p1.004", "quote": "outperforming the hydrothermal reference sample, which gave 141 mAh/g"}
+      ]
+    },
+    {
+      "relation": "applied_to",
+      "from": "LiFePO4/C composite",
+      "to": "lithium-ion battery cathode",
+      "evidence": [
+        {"source_id": "primary", "paragraph_id": "p1.002", "quote": "olivine cathode material for lithium-ion batteries"}
+      ]
+    }
+  ]
+}

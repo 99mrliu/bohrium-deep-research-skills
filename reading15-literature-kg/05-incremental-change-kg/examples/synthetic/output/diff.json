@@ -1,0 +1,252 @@
+{
+  "added_edges": [
+    {
+      "attributes": {
+        "condition": "0.1 C",
+        "value": "149 mAh/g"
+      },
+      "conflict_group": null,
+      "evidence": [
+        {
+          "paragraph_id": "p2.003",
+          "quote": "The LFP/C electrode delivered 149 mAh/g at 0.1 C",
+          "source_id": "secondary"
+        }
+      ],
+      "from": "n_mat_29a6b6b9",
+      "id": "e_del_8049e38e",
+      "relation": "delivers_capacity",
+      "status": "active",
+      "to": "n_mtr_7c1cd688"
+    },
+    {
+      "attributes": {
+        "claim": "higher rate capability"
+      },
+      "conflict_group": "cf_b39462fd",
+      "evidence": [
+        {
+          "paragraph_id": "p2.004",
+          "quote": "our hydrothermal LFP/C shows higher rate capability than sol-gel derived powders",
+          "source_id": "secondary"
+        }
+      ],
+      "from": "n_mat_29a6b6b9",
+      "id": "e_out_a6c00e17",
+      "relation": "outperforms",
+      "status": "conflicted",
+      "to": "n_mat_d3d8d3bf"
+    },
+    {
+      "attributes": {},
+      "conflict_group": null,
+      "evidence": [
+        {
+          "paragraph_id": "p2.001",
+          "quote": "We synthesize an LFP/C composite (LiFePO4/C, hereafter LFP/C) by a hydrothermal method",
+          "source_id": "secondary"
+        }
+      ],
+      "from": "n_mat_29a6b6b9",
+      "id": "e_syn_aa16e708",
+      "relation": "synthesized_by",
+      "status": "active",
+      "to": "n_mtd_fcdbf779"
+    },
+    {
+      "attributes": {
+        "role": "conductive additive"
+      },
+      "conflict_group": null,
+      "evidence": [
+        {
+          "paragraph_id": "p2.002",
+          "quote": "Commercial carbon black was added as a conductive additive during electrode fabrication",
+          "source_id": "secondary"
+        }
+      ],
+      "from": "n_mat_29a6b6b9",
+      "id": "e_use_4e1dc752",
+      "relation": "uses",
+      "status": "active",
+      "to": "n_mat_bbb0bb6d_2"
+    }
+  ],
+  "added_nodes": [
+    {
+      "aliases": [],
+      "evidence": [
+        {
+          "paragraph_id": "p2.002",
+          "quote": "Commercial carbon black was added as a conductive additive",
+          "source_id": "secondary"
+        }
+      ],
+      "id": "n_mat_bbb0bb6d_2",
+      "label": "commercial carbon black",
+      "status": "active",
+      "type": "material"
+    },
+    {
+      "aliases": [],
+      "evidence": [
+        {
+          "paragraph_id": "p2.004",
+          "quote": "sol-gel derived powders",
+          "source_id": "secondary"
+        }
+      ],
+      "id": "n_mat_d3d8d3bf",
+      "label": "sol-gel derived powders",
+      "status": "active",
+      "type": "material"
+    },
+    {
+      "aliases": [],
+      "evidence": [
+        {
+          "paragraph_id": "p2.001",
+          "quote": "by a hydrothermal method",
+          "source_id": "secondary"
+        }
+      ],
+      "id": "n_mtd_fcdbf779",
+      "label": "hydrothermal method",
+      "status": "active",
+      "type": "method"
+    }
+  ],
+  "baseline_version": "v1",
+  "case_id": "SYNTH-INCREMENTAL-001",
+  "changed_edges": [
+    {
+      "changes": [
+        {
+          "after": "cf_b39462fd",
+          "before": null,
+          "field": "conflict_group"
+        },
+        {
+          "after": "conflicted",
+          "before": "active",
+          "field": "status"
+        }
+      ],
+      "id": "e_out_bc8f5646"
+    }
+  ],
+  "changed_nodes": [
+    {
+      "changes": [
+        {
+          "after": [
+            {
+              "evidence": [
+                {
+                  "paragraph_id": "p2.001",
+                  "quote": "an LFP/C composite (LiFePO4/C, hereafter LFP/C)",
+                  "source_id": "secondary"
+                }
+              ],
+              "label": "LFP/C",
+              "note": "p2.001 显式给出全称与缩写的同一指称：'an LFP/C composite (LiFePO4/C, hereafter LFP/C)'，属同一材料的真别名；非通用术语同名。"
+            }
+          ],
+          "before": [],
+          "field": "aliases"
+        },
+        {
+          "after": [
+            {
+              "paragraph_id": "p1.001",
+              "quote": "a LiFePO4/C composite cathode",
+              "source_id": "primary"
+            },
+            {
+              "paragraph_id": "p2.001",
+              "quote": "an LFP/C composite (LiFePO4/C, hereafter LFP/C)",
+              "source_id": "secondary"
+            }
+          ],
+          "before": [
+            {
+              "paragraph_id": "p1.001",
+              "quote": "a LiFePO4/C composite cathode",
+              "source_id": "primary"
+            }
+          ],
+          "field": "evidence"
+        }
+      ],
+      "id": "n_mat_29a6b6b9"
+    },
+    {
+      "changes": [
+        {
+          "after": [
+            {
+              "node": "n_mat_bbb0bb6d_2",
+              "reason": "'commercial carbon black' 是通用商品材料术语：p1.003 用作碳源、p2.002 用作导电添加剂，两篇均无批号/供应商信息，无证据表明是同一物理样品，故保持区分不合并。"
+            }
+          ],
+          "before": null,
+          "field": "related_but_distinct"
+        }
+      ],
+      "id": "n_mat_bbb0bb6d"
+    },
+    {
+      "changes": [
+        {
+          "after": [
+            {
+              "paragraph_id": "p1.001",
+              "quote": "a discharge capacity of 158 mAh/g at 0.1 C",
+              "source_id": "primary"
+            },
+            {
+              "paragraph_id": "p1.004",
+              "quote": "At 0.1 C the composite delivered 158 mAh/g",
+              "source_id": "primary"
+            }
+          ],
+          "before": [
+            {
+              "paragraph_id": "p1.001",
+              "quote": "a discharge capacity of 158 mAh/g at 0.1 C",
+              "source_id": "primary"
+            }
+          ],
+          "field": "evidence"
+        }
+      ],
+      "id": "n_mtr_7c1cd688"
+    }
+  ],
+  "conflicts": [
+    {
+      "conflict_group": "cf_b39462fd",
+      "edge_ids": [
+        "e_out_a6c00e17",
+        "e_out_bc8f5646"
+      ]
+    }
+  ],
+  "current_version": "v2",
+  "removed_edge_ids": [],
+  "removed_node_ids": [],
+  "schema": "kg-diff/1",
+  "summary": {
+    "added_edges": 4,
+    "added_nodes": 3,
+    "changed_edges": 1,
+    "changed_nodes": 3,
+    "conflict_groups": 1,
+    "edges_baseline": 5,
+    "edges_current": 9,
+    "nodes_baseline": 6,
+    "nodes_current": 9,
+    "removed_edges": 0,
+    "removed_nodes": 0
+  }
+}

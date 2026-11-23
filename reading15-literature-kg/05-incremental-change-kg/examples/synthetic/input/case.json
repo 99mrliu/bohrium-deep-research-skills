@@ -1,0 +1,15 @@
+{
+  "case_id": "SYNTH-INCREMENTAL-001",
+  "synthetic": true,
+  "doi": "10.0000/synth.0001",
+  "title": "Sol-gel synthesis of a LiFePO4/C composite cathode (SYNTHETIC)",
+  "authors": ["A. Zhang", "B. Li"],
+  "output_contract": {
+    "graph": "完整图谱（当前版本 + 封存基线）",
+    "queries": "至少 3 个真实执行的查询及证据",
+    "changes": "增量变更记录与台账",
+    "evidence": "来源与证据定位",
+    "status": "运行状态",
+    "uncertainty": "不确定性与未报告项"
+  }
+}

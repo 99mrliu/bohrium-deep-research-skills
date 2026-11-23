@@ -1,0 +1,99 @@
+{
+  "case_id": "synthetic-conditioned-relation-demo",
+  "skill": "03-conditioned-relation-kg",
+  "status": "success",
+  "sources": [
+    {
+      "source_id": "SYN-P1",
+      "role": "primary",
+      "file": "primary-material.json"
+    },
+    {
+      "source_id": "SYN-P2",
+      "role": "secondary",
+      "file": "secondary-material.json"
+    }
+  ],
+  "uncertainty": [
+    "冲突 K1_numeric（e3, e8）未解决，全部保留",
+    "查询 q3：无直接关系（共现≠关系），如实回答"
+  ],
+  "changes": [
+    "bootstrap: 早期部分 result.json",
+    "validate+lint: 关系校验与条件降级",
+    "conflict_detect: 冲突保留",
+    "query_run: 确定性查询执行",
+    "assemble: 镜像 output_contract"
+  ],
+  "contract_mirror": {
+    "graph_summary": {
+      "path": "/Users/liuhengshen/Desktop/bhr_product/reading15/bundles/03-conditioned-relation-kg/examples/synthetic-case/output/graph.json",
+      "n_nodes": 9,
+      "n_edges": 9
+    },
+    "evidence_bound_graph": {
+      "graph_json": "/Users/liuhengshen/Desktop/bhr_product/reading15/bundles/03-conditioned-relation-kg/examples/synthetic-case/output/graph.json",
+      "graph_jsonl": "/Users/liuhengshen/Desktop/bhr_product/reading15/bundles/03-conditioned-relation-kg/examples/synthetic-case/output/graph.jsonl",
+      "note": "每个节点/边均含 source_id + JATS paragraph_id + 逐字短引"
+    },
+    "relation_audit": {
+      "path": "/Users/liuhengshen/Desktop/bhr_product/reading15/bundles/03-conditioned-relation-kg/examples/synthetic-case/output/relation_audit.json",
+      "n_errors": 0,
+      "n_warnings": 0
+    },
+    "conflicts": {
+      "path": "/Users/liuhengshen/Desktop/bhr_product/reading15/bundles/03-conditioned-relation-kg/examples/synthetic-case/output/conflicts.json",
+      "n_conflicts": 1,
+      "policy": "冲突全部保留，绝不静默解决"
+    },
+    "queries": {
+      "path": "/Users/liuhengshen/Desktop/bhr_product/reading15/bundles/03-conditioned-relation-kg/examples/synthetic-case/output/queries.json",
+      "n_executed": 4
+    },
+    "merge_report": {
+      "path": "/Users/liuhengshen/Desktop/bhr_product/reading15/bundles/03-conditioned-relation-kg/examples/synthetic-case/output/merge_report.json"
+    },
+    "preview": {
+      "svg": "/Users/liuhengshen/Desktop/bhr_product/reading15/bundles/03-conditioned-relation-kg/examples/synthetic-case/output/graph.svg",
+      "dot": "/Users/liuhengshen/Desktop/bhr_product/reading15/bundles/03-conditioned-relation-kg/examples/synthetic-case/output/graph.dot",
+      "markdown": "/Users/liuhengshen/Desktop/bhr_product/reading15/bundles/03-conditioned-relation-kg/examples/synthetic-case/output/graph_preview.md"
+    },
+    "uncertainty": [
+      "冲突 K1_numeric（e3, e8）未解决，全部保留",
+      "查询 q3：无直接关系（共现≠关系），如实回答"
+    ],
+    "status": "success"
+  },
+  "graph_summary": {
+    "path": "/Users/liuhengshen/Desktop/bhr_product/reading15/bundles/03-conditioned-relation-kg/examples/synthetic-case/output/graph.json",
+    "n_nodes": 9,
+    "n_edges": 9
+  },
+  "evidence_bound_graph": {
+    "graph_json": "/Users/liuhengshen/Desktop/bhr_product/reading15/bundles/03-conditioned-relation-kg/examples/synthetic-case/output/graph.json",
+    "graph_jsonl": "/Users/liuhengshen/Desktop/bhr_product/reading15/bundles/03-conditioned-relation-kg/examples/synthetic-case/output/graph.jsonl",
+    "note": "每个节点/边均含 source_id + JATS paragraph_id + 逐字短引"
+  },
+  "relation_audit": {
+    "path": "/Users/liuhengshen/Desktop/bhr_product/reading15/bundles/03-conditioned-relation-kg/examples/synthetic-case/output/relation_audit.json",
+    "n_errors": 0,
+    "n_warnings": 0
+  },
+  "conflicts": {
+    "path": "/Users/liuhengshen/Desktop/bhr_product/reading15/bundles/03-conditioned-relation-kg/examples/synthetic-case/output/conflicts.json",
+    "n_conflicts": 1,
+    "policy": "冲突全部保留，绝不静默解决"
+  },
+  "queries": {
+    "path": "/Users/liuhengshen/Desktop/bhr_product/reading15/bundles/03-conditioned-relation-kg/examples/synthetic-case/output/queries.json",
+    "n_executed": 4
+  },
+  "merge_report": {
+    "path": "/Users/liuhengshen/Desktop/bhr_product/reading15/bundles/03-conditioned-relation-kg/examples/synthetic-case/output/merge_report.json"
+  },
+  "preview": {
+    "svg": "/Users/liuhengshen/Desktop/bhr_product/reading15/bundles/03-conditioned-relation-kg/examples/synthetic-case/output/graph.svg",
+    "dot": "/Users/liuhengshen/Desktop/bhr_product/reading15/bundles/03-conditioned-relation-kg/examples/synthetic-case/output/graph.dot",
+    "markdown": "/Users/liuhengshen/Desktop/bhr_product/reading15/bundles/03-conditioned-relation-kg/examples/synthetic-case/output/graph_preview.md"
+  }
+}

@@ -1,0 +1,58 @@
+{
+  "case_id": "SYNTHETIC-MINIMAL-001",
+  "contract_notes": [
+    "合同键 'external_enrichment' 在本流程中无对应产物，按诚实缺失规则置 null（未省略）"
+  ],
+  "honest_partial": false,
+  "input_hashes": {
+    "case": "ca7dec03837342110e8e00277712a27b5f60263c62df6785ccac9f5d2d82c00c",
+    "corpus": "6a38ca7b5102b648e41319ade14054e92fce3a5f573f4a4cb02d2708a466112c",
+    "graph": "6afe70d589f32f292535fdb68c27adc9dfb843608b304e577d695e889517f737",
+    "queries": "a8244054f2c677f24ceda47d7861cacda042f7797f3788ad1aa7b7f3f3ebaae7",
+    "verify": "b3468fa4f888a0d08403a92b1534665a2ccd13f8a3f1d6c62619ed185b0ecbaa"
+  },
+  "normalize_warnings": [],
+  "output_files": [
+    "graph.json",
+    "graph.jsonl",
+    "ledger.json",
+    "preview.dot",
+    "preview.svg",
+    "queries.json",
+    "result.json",
+    "verify_report.json"
+  ],
+  "skipped_inputs": [
+    {
+      "bytes": 514,
+      "path": "secondary-publisher.xml",
+      "reason": "非 JSON 旁挂文件，未解析；仅登记存在性与摘要以供溯源审计",
+      "sha256": "f6c614a0aeec734928d474c59b7f2238aa5ede98dbd8f1fbdad082725b9d3821"
+    }
+  ],
+  "steps": [
+    {
+      "detail": "语料发现/归一化/缺陷登记",
+      "step": "normalize_input"
+    },
+    {
+      "detail": "证据地址/引文/归属/合并纪律/覆盖度校验",
+      "step": "verify_evidence"
+    },
+    {
+      "detail": "确定性图谱构建",
+      "step": "build_graph"
+    },
+    {
+      "detail": "确定性查询批量执行",
+      "step": "query_graph"
+    },
+    {
+      "detail": "合同键动态镜像与产物装配",
+      "step": "assemble_result"
+    }
+  ],
+  "verify_errors": [],
+  "verify_ok": true,
+  "verify_warnings": []
+}

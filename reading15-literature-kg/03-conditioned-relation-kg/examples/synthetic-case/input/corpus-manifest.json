@@ -1,0 +1,29 @@
+{
+  "synthetic": true,
+  "note": "SYNTHETIC 语料清单；sha256 为文件实际哈希，便于复核。",
+  "items": [
+    {
+      "source_id": "SYN-P1",
+      "doi": "10.0000/synth.p1",
+      "title": "Low-Resource Neural Machine Translation: A Conditioned Evaluation of TransA and TransB (SYNTHETIC)",
+      "authors": [
+        "Synthetic Author A",
+        "Synthetic Author B"
+      ],
+      "license": "CC0-1.0 (synthetic fixture)",
+      "file": "primary-material.json",
+      "sha256": "44770395785d26144c0c6ac4bd7ce10d1dcd7ffc932c592f4ae39234db421571"
+    },
+    {
+      "source_id": "SYN-P2",
+      "doi": "10.0000/synth.p2",
+      "title": "DistilT: Compact Translation Models via Conditioned Distillation (SYNTHETIC)",
+      "authors": [
+        "Synthetic Author C"
+      ],
+      "license": "CC0-1.0 (synthetic fixture)",
+      "file": "secondary-material.json",
+      "sha256": "ee0de5b22b1099a0fae075573a427736b716dacf8857f3b1b26be83d90123aa2"
+    }
+  ]
+}

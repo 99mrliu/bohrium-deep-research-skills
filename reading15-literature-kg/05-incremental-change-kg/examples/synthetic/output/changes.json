@@ -1,0 +1,343 @@
+{
+  "base_version": "v1",
+  "case_id": "SYNTH-INCREMENTAL-001",
+  "new_version": "v2",
+  "operations": [
+    {
+      "absorbed_label": "LFP/C",
+      "after": {
+        "aliases": [
+          "LFP/C"
+        ],
+        "evidence": [
+          {
+            "paragraph_id": "p1.001",
+            "quote": "a LiFePO4/C composite cathode",
+            "source_id": "primary"
+          },
+          {
+            "paragraph_id": "p2.001",
+            "quote": "an LFP/C composite (LiFePO4/C, hereafter LFP/C)",
+            "source_id": "secondary"
+          }
+        ],
+        "id": "n_mat_29a6b6b9",
+        "label": "LiFePO4/C composite",
+        "status": "active",
+        "type": "material"
+      },
+      "before": {
+        "aliases": [],
+        "evidence": [
+          {
+            "paragraph_id": "p1.001",
+            "quote": "a LiFePO4/C composite cathode",
+            "source_id": "primary"
+          }
+        ],
+        "id": "n_mat_29a6b6b9",
+        "label": "LiFePO4/C composite",
+        "status": "active",
+        "type": "material"
+      },
+      "evidence": [
+        {
+          "paragraph_id": "p2.001",
+          "quote": "an LFP/C composite (LiFePO4/C, hereafter LFP/C)",
+          "source_id": "secondary"
+        }
+      ],
+      "op": "MERGE",
+      "reason": "p2.001 显式给出全称与缩写的同一指称：'an LFP/C composite (LiFePO4/C, hereafter LFP/C)'，属同一材料的真别名；非通用术语同名。",
+      "seq": 1,
+      "target": "n_mat_29a6b6b9"
+    },
+    {
+      "after": {
+        "aliases": [],
+        "evidence": [
+          {
+            "paragraph_id": "p2.001",
+            "quote": "by a hydrothermal method",
+            "source_id": "secondary"
+          }
+        ],
+        "id": "n_mtd_fcdbf779",
+        "label": "hydrothermal method",
+        "status": "active",
+        "type": "method"
+      },
+      "before": null,
+      "evidence": [
+        {
+          "paragraph_id": "p2.001",
+          "quote": "by a hydrothermal method",
+          "source_id": "secondary"
+        }
+      ],
+      "op": "ADD",
+      "reason": "",
+      "seq": 2,
+      "target": "n_mtd_fcdbf779"
+    },
+    {
+      "after": {
+        "attributes": {},
+        "conflict_group": null,
+        "evidence": [
+          {
+            "paragraph_id": "p2.001",
+            "quote": "We synthesize an LFP/C composite (LiFePO4/C, hereafter LFP/C) by a hydrothermal method",
+            "source_id": "secondary"
+          }
+        ],
+        "from": "n_mat_29a6b6b9",
+        "id": "e_syn_aa16e708",
+        "relation": "synthesized_by",
+        "status": "active",
+        "to": "n_mtd_fcdbf779"
+      },
+      "before": null,
+      "evidence": [
+        {
+          "paragraph_id": "p2.001",
+          "quote": "We synthesize an LFP/C composite (LiFePO4/C, hereafter LFP/C) by a hydrothermal method",
+          "source_id": "secondary"
+        }
+      ],
+      "op": "ADD",
+      "reason": "",
+      "seq": 3,
+      "target": "e_syn_aa16e708"
+    },
+    {
+      "after": {
+        "aliases": [],
+        "evidence": [
+          {
+            "paragraph_id": "p2.002",
+            "quote": "Commercial carbon black was added as a conductive additive",
+            "source_id": "secondary"
+          }
+        ],
+        "id": "n_mat_bbb0bb6d_2",
+        "label": "commercial carbon black",
+        "status": "active",
+        "type": "material"
+      },
+      "before": null,
+      "distinct_from": "n_mat_bbb0bb6d",
+      "evidence": [
+        {
+          "paragraph_id": "p2.002",
+          "quote": "Commercial carbon black was added as a conductive additive",
+          "source_id": "secondary"
+        }
+      ],
+      "op": "KEEP_DISTINCT",
+      "reason": "'commercial carbon black' 是通用商品材料术语：p1.003 用作碳源、p2.002 用作导电添加剂，两篇均无批号/供应商信息，无证据表明是同一物理样品，故保持区分不合并。",
+      "seq": 4,
+      "target": "n_mat_bbb0bb6d_2"
+    },
+    {
+      "after": {
+        "attributes": {
+          "role": "conductive additive"
+        },
+        "conflict_group": null,
+        "evidence": [
+          {
+            "paragraph_id": "p2.002",
+            "quote": "Commercial carbon black was added as a conductive additive during electrode fabrication",
+            "source_id": "secondary"
+          }
+        ],
+        "from": "n_mat_29a6b6b9",
+        "id": "e_use_4e1dc752",
+        "relation": "uses",
+        "status": "active",
+        "to": "n_mat_bbb0bb6d_2"
+      },
+      "before": null,
+      "evidence": [
+        {
+          "paragraph_id": "p2.002",
+          "quote": "Commercial carbon black was added as a conductive additive during electrode fabrication",
+          "source_id": "secondary"
+        }
+      ],
+      "op": "ADD",
+      "reason": "",
+      "seq": 5,
+      "target": "e_use_4e1dc752"
+    },
+    {
+      "after": {
+        "attributes": {
+          "condition": "0.1 C",
+          "value": "149 mAh/g"
+        },
+        "conflict_group": null,
+        "evidence": [
+          {
+            "paragraph_id": "p2.003",
+            "quote": "The LFP/C electrode delivered 149 mAh/g at 0.1 C",
+            "source_id": "secondary"
+          }
+        ],
+        "from": "n_mat_29a6b6b9",
+        "id": "e_del_8049e38e",
+        "relation": "delivers_capacity",
+        "status": "active",
+        "to": "n_mtr_7c1cd688"
+      },
+      "before": null,
+      "evidence": [
+        {
+          "paragraph_id": "p2.003",
+          "quote": "The LFP/C electrode delivered 149 mAh/g at 0.1 C",
+          "source_id": "secondary"
+        }
+      ],
+      "op": "ADD",
+      "reason": "",
+      "seq": 6,
+      "target": "e_del_8049e38e"
+    },
+    {
+      "after": {
+        "aliases": [],
+        "evidence": [
+          {
+            "paragraph_id": "p1.001",
+            "quote": "a discharge capacity of 158 mAh/g at 0.1 C",
+            "source_id": "primary"
+          },
+          {
+            "paragraph_id": "p1.004",
+            "quote": "At 0.1 C the composite delivered 158 mAh/g",
+            "source_id": "primary"
+          }
+        ],
+        "id": "n_mtr_7c1cd688",
+        "label": "discharge capacity",
+        "status": "active",
+        "type": "metric"
+      },
+      "before": {
+        "aliases": [],
+        "evidence": [
+          {
+            "paragraph_id": "p1.001",
+            "quote": "a discharge capacity of 158 mAh/g at 0.1 C",
+            "source_id": "primary"
+          }
+        ],
+        "id": "n_mtr_7c1cd688",
+        "label": "discharge capacity",
+        "status": "active",
+        "type": "metric"
+      },
+      "evidence": [
+        {
+          "paragraph_id": "p1.004",
+          "quote": "At 0.1 C the composite delivered 158 mAh/g",
+          "source_id": "primary"
+        }
+      ],
+      "op": "UPDATE_EVIDENCE",
+      "reason": "",
+      "seq": 7,
+      "target": "n_mtr_7c1cd688"
+    },
+    {
+      "after": {
+        "aliases": [],
+        "evidence": [
+          {
+            "paragraph_id": "p2.004",
+            "quote": "sol-gel derived powders",
+            "source_id": "secondary"
+          }
+        ],
+        "id": "n_mat_d3d8d3bf",
+        "label": "sol-gel derived powders",
+        "status": "active",
+        "type": "material"
+      },
+      "before": null,
+      "evidence": [
+        {
+          "paragraph_id": "p2.004",
+          "quote": "sol-gel derived powders",
+          "source_id": "secondary"
+        }
+      ],
+      "op": "ADD",
+      "reason": "",
+      "seq": 8,
+      "target": "n_mat_d3d8d3bf"
+    },
+    {
+      "after": {
+        "attributes": {
+          "claim": "higher rate capability"
+        },
+        "conflict_group": "cf_b39462fd",
+        "evidence": [
+          {
+            "paragraph_id": "p2.004",
+            "quote": "our hydrothermal LFP/C shows higher rate capability than sol-gel derived powders",
+            "source_id": "secondary"
+          }
+        ],
+        "from": "n_mat_29a6b6b9",
+        "id": "e_out_a6c00e17",
+        "relation": "outperforms",
+        "status": "conflicted",
+        "to": "n_mat_d3d8d3bf"
+      },
+      "before": {
+        "attributes": {
+          "condition": "0.1 C",
+          "value": "158 vs 141 mAh/g"
+        },
+        "conflict_group": null,
+        "evidence": [
+          {
+            "paragraph_id": "p1.004",
+            "quote": "outperforming the hydrothermal reference sample, which gave 141 mAh/g",
+            "source_id": "primary"
+          }
+        ],
+        "from": "n_mat_29a6b6b9",
+        "id": "e_out_bc8f5646",
+        "relation": "outperforms",
+        "status": "active",
+        "to": "n_mat_9f9f2e2e"
+      },
+      "conflict_group": "cf_b39462fd",
+      "conflicts_with": "e_out_bc8f5646",
+      "evidence": [
+        {
+          "paragraph_id": "p2.004",
+          "quote": "our hydrothermal LFP/C shows higher rate capability than sol-gel derived powders",
+          "source_id": "secondary"
+        }
+      ],
+      "op": "CONFLICT",
+      "reason": "p1.004 称溶胶凝胶 LiFePO4/C 优于水热参比样品（158 vs 141 mAh/g，0.1 C）；p2.004 称水热 LFP/C 倍率性能高于溶胶凝胶粉体。两篇结论方向相反，且样品、方法与测试条件不同，不可合并为单一结论，双方并列保留。",
+      "seq": 9,
+      "target": "e_out_a6c00e17"
+    }
+  ],
+  "schema": "kg-changes/1",
+  "summary": {
+    "ADD": 5,
+    "CONFLICT": 1,
+    "KEEP_DISTINCT": 1,
+    "MERGE": 1,
+    "UPDATE_EVIDENCE": 1
+  },
+  "synthetic": true
+}

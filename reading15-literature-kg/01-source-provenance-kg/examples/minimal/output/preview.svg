@@ -1,0 +1,69 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1650" height="358" viewBox="0 0 1650 358" font-family="monospace">
+<rect width="1650" height="358" fill="#ffffff"/>
+<text x="16" y="26" font-size="14" fill="#333">case SYNTHETIC-MINIMAL-001（SYNTHETIC 预览，布局仅用于阅读）</text>
+<text x="90" y="52" font-size="11" fill="#999">[paper]</text>
+<text x="350" y="52" font-size="11" fill="#999">[sample]</text>
+<text x="610" y="52" font-size="11" fill="#999">[method]</text>
+<text x="870" y="52" font-size="11" fill="#999">[condition]</text>
+<text x="1130" y="52" font-size="11" fill="#999">[metric]</text>
+<text x="1390" y="52" font-size="11" fill="#999">[claim]</text>
+<line x1="130" y1="80" x2="390" y2="80" stroke="#bbbbbb" stroke-width="1.2"/>
+<text x="260" y="77" font-size="8" fill="#888888">describes</text>
+<line x1="130" y1="80" x2="1430" y2="80" stroke="#bbbbbb" stroke-width="1.2"/>
+<text x="780" y="77" font-size="8" fill="#888888">reports_claim</text>
+<line x1="130" y1="164" x2="1430" y2="164" stroke="#bbbbbb" stroke-width="1.2"/>
+<text x="780" y="161" font-size="8" fill="#888888">reports_claim</text>
+<line x1="130" y1="164" x2="390" y2="164" stroke="#bbbbbb" stroke-width="1.2"/>
+<text x="260" y="161" font-size="8" fill="#888888">describes</text>
+<line x1="390" y1="80" x2="650" y2="80" stroke="#bbbbbb" stroke-width="1.2"/>
+<text x="520" y="77" font-size="8" fill="#888888">produced_by</text>
+<line x1="390" y1="80" x2="910" y2="80" stroke="#bbbbbb" stroke-width="1.2"/>
+<text x="650" y="77" font-size="8" fill="#888888">processed_under</text>
+<line x1="390" y1="80" x2="1170" y2="80" stroke="#bbbbbb" stroke-width="1.2"/>
+<text x="780" y="77" font-size="8" fill="#888888">characterized_by</text>
+<line x1="390" y1="164" x2="650" y2="80" stroke="#bbbbbb" stroke-width="1.2"/>
+<text x="520" y="119" font-size="8" fill="#888888">produced_by</text>
+<line x1="390" y1="164" x2="910" y2="164" stroke="#bbbbbb" stroke-width="1.2"/>
+<text x="650" y="161" font-size="8" fill="#888888">processed_under</text>
+<line x1="390" y1="164" x2="1170" y2="164" stroke="#bbbbbb" stroke-width="1.2"/>
+<text x="780" y="161" font-size="8" fill="#888888">characterized_by</text>
+<circle cx="1430" cy="80" r="14" fill="#d2691e" stroke="#333333" stroke-width="1"/>
+<text x="1450" y="78" font-size="11" fill="#111111">n_claim_load_p1</text>
+<text x="1450" y="92" font-size="9" fill="#555555">optimal solid loading = 20 vol% (P1 claim) [P1]</text>
+<circle cx="1430" cy="164" r="14" fill="#d2691e" stroke="#333333" stroke-width="1"/>
+<text x="1450" y="162" font-size="11" fill="#111111">n_claim_load_s1</text>
+<text x="1450" y="176" font-size="9" fill="#555555">optimal solid loading = 30 vol% (S1 claim) [S1]</text>
+<circle cx="910" cy="80" r="14" fill="#9467bd" stroke="#333333" stroke-width="1"/>
+<text x="930" y="78" font-size="11" fill="#111111">n_cond_sint_p1</text>
+<text x="930" y="92" font-size="9" fill="#555555">sintering 1250 °C in air (P1) [P1]</text>
+<circle cx="910" cy="164" r="14" fill="#9467bd" stroke="#333333" stroke-width="1"/>
+<text x="930" y="162" font-size="11" fill="#111111">n_cond_sint_s1</text>
+<text x="930" y="176" font-size="9" fill="#555555">sintering 1350 °C in air (S1) [S1]</text>
+<circle cx="650" cy="80" r="14" fill="#b8860b" stroke="#333333" stroke-width="1"/>
+<text x="670" y="78" font-size="11" fill="#111111">n_method_fc</text>
+<text x="670" y="92" font-size="9" fill="#555555">freeze-casting [P1,S1]</text>
+<circle cx="650" cy="164" r="14" fill="#b8860b" stroke="#333333" stroke-width="1"/>
+<text x="670" y="162" font-size="11" fill="#111111">n_method_fc_p1</text>
+<text x="670" y="176" font-size="9" fill="#555555">freeze-casting (mention in P1) [P1]</text>
+<circle cx="650" cy="248" r="14" fill="#b8860b" stroke="#333333" stroke-width="1"/>
+<text x="670" y="246" font-size="11" fill="#111111">n_method_fc_s1</text>
+<text x="670" y="260" font-size="9" fill="#555555">freeze-casting (mention in S1) [S1]</text>
+<circle cx="1170" cy="80" r="14" fill="#c0392b" stroke="#333333" stroke-width="1"/>
+<text x="1190" y="78" font-size="11" fill="#111111">n_metric_por_p1</text>
+<text x="1190" y="92" font-size="9" fill="#555555">total porosity 42 % (sample AL-P1) [P1]</text>
+<circle cx="1170" cy="164" r="14" fill="#c0392b" stroke="#333333" stroke-width="1"/>
+<text x="1190" y="162" font-size="11" fill="#111111">n_metric_por_s1</text>
+<text x="1190" y="176" font-size="9" fill="#555555">total porosity 38 % (sample AL-S1) [S1]</text>
+<circle cx="130" cy="80" r="14" fill="#4a6fa5" stroke="#333333" stroke-width="1"/>
+<text x="150" y="78" font-size="11" fill="#111111">n_paper_p1</text>
+<text x="150" y="92" font-size="9" fill="#555555">SYNTHETIC PAPER P1: Freeze-cast alumina scaffolds sintered at low temperature [P1]</text>
+<circle cx="130" cy="164" r="14" fill="#4a6fa5" stroke="#333333" stroke-width="1"/>
+<text x="150" y="162" font-size="11" fill="#111111">n_paper_s1</text>
+<text x="150" y="176" font-size="9" fill="#555555">SYNTHETIC PAPER S1: Freeze-cast alumina membranes for filtration [S1]</text>
+<circle cx="390" cy="80" r="14" fill="#2e8b57" stroke="#333333" stroke-width="1"/>
+<text x="410" y="78" font-size="11" fill="#111111">n_sample_al_p1</text>
+<text x="410" y="92" font-size="9" fill="#555555">sample AL-P1 (alumina scaffold) [P1]</text>
+<circle cx="390" cy="164" r="14" fill="#2e8b57" stroke="#333333" stroke-width="1"/>
+<text x="410" y="162" font-size="11" fill="#111111">n_sample_al_s1</text>
+<text x="410" y="176" font-size="9" fill="#555555">sample AL-S1 (alumina membrane) [S1]</text>
+</svg>

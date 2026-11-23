@@ -1,0 +1,605 @@
+{
+  "case_id": "SYNTHETIC-MINIMAL-001",
+  "conflicts": [
+    {
+      "claims": [
+        {
+          "node": "n_claim_load_p1"
+        },
+        {
+          "node": "n_claim_load_s1"
+        }
+      ],
+      "conflict_id": "c1",
+      "evidence": [
+        {
+          "paragraph_id": "P1.p2",
+          "quote": "a solid loading of 20 vol%, which this synthetic paper claims to be the optimal loading",
+          "source_id": "P1"
+        },
+        {
+          "paragraph_id": "S1.p2",
+          "quote": "The optimal solid loading claimed in this synthetic paper is 30 vol%.",
+          "source_id": "S1"
+        }
+      ],
+      "note": "P1 主张 20 vol%、S1 主张 30 vol%；按规则原样保留两个冲突数值，不取平均、不择一、不静默消解。",
+      "resolution": "preserved",
+      "topic": "optimal solid loading for freeze-cast alumina"
+    }
+  ],
+  "edges": [
+    {
+      "edge_id": "e1",
+      "evidence": [
+        {
+          "paragraph_id": "P1.p1",
+          "quote": "an alumina scaffold, denoted sample AL-P1",
+          "source_id": "P1"
+        }
+      ],
+      "object": "n_sample_al_p1",
+      "source_ids": [
+        "P1"
+      ],
+      "subject": "n_paper_p1",
+      "type": "describes"
+    },
+    {
+      "edge_id": "e9",
+      "evidence": [
+        {
+          "paragraph_id": "P1.p2",
+          "quote": "a solid loading of 20 vol%, which this synthetic paper claims to be the optimal loading",
+          "source_id": "P1"
+        }
+      ],
+      "object": "n_claim_load_p1",
+      "source_ids": [
+        "P1"
+      ],
+      "subject": "n_paper_p1",
+      "type": "reports_claim"
+    },
+    {
+      "edge_id": "e10",
+      "evidence": [
+        {
+          "paragraph_id": "S1.p2",
+          "quote": "The optimal solid loading claimed in this synthetic paper is 30 vol%.",
+          "source_id": "S1"
+        }
+      ],
+      "object": "n_claim_load_s1",
+      "source_ids": [
+        "S1"
+      ],
+      "subject": "n_paper_s1",
+      "type": "reports_claim"
+    },
+    {
+      "edge_id": "e2",
+      "evidence": [
+        {
+          "paragraph_id": "S1.p1",
+          "quote": "an alumina membrane, denoted sample AL-S1",
+          "source_id": "S1"
+        }
+      ],
+      "object": "n_sample_al_s1",
+      "source_ids": [
+        "S1"
+      ],
+      "subject": "n_paper_s1",
+      "type": "describes"
+    },
+    {
+      "edge_id": "e3",
+      "evidence": [
+        {
+          "paragraph_id": "P1.p1",
+          "quote": "produced by freeze-casting an aqueous alumina slurry",
+          "source_id": "P1"
+        }
+      ],
+      "object": "n_method_fc",
+      "source_ids": [
+        "P1"
+      ],
+      "subject": "n_sample_al_p1",
+      "type": "produced_by"
+    },
+    {
+      "edge_id": "e5",
+      "evidence": [
+        {
+          "paragraph_id": "P1.p2",
+          "quote": "was then sintered in air at 1250 °C",
+          "source_id": "P1"
+        }
+      ],
+      "object": "n_cond_sint_p1",
+      "source_ids": [
+        "P1"
+      ],
+      "subject": "n_sample_al_p1",
+      "type": "processed_under"
+    },
+    {
+      "edge_id": "e7",
+      "evidence": [
+        {
+          "paragraph_id": "P1.p3",
+          "quote": "The total porosity of sample AL-P1",
+          "source_id": "P1"
+        }
+      ],
+      "object": "n_metric_por_p1",
+      "source_ids": [
+        "P1"
+      ],
+      "subject": "n_sample_al_p1",
+      "type": "characterized_by"
+    },
+    {
+      "edge_id": "e4",
+      "evidence": [
+        {
+          "paragraph_id": "S1.p1",
+          "quote": "prepared by freeze-casting",
+          "source_id": "S1"
+        }
+      ],
+      "object": "n_method_fc",
+      "source_ids": [
+        "S1"
+      ],
+      "subject": "n_sample_al_s1",
+      "type": "produced_by"
+    },
+    {
+      "edge_id": "e6",
+      "evidence": [
+        {
+          "paragraph_id": "S1.p2",
+          "quote": "was sintered in air at 1350 °C",
+          "source_id": "S1"
+        }
+      ],
+      "object": "n_cond_sint_s1",
+      "source_ids": [
+        "S1"
+      ],
+      "subject": "n_sample_al_s1",
+      "type": "processed_under"
+    },
+    {
+      "edge_id": "e8",
+      "evidence": [
+        {
+          "paragraph_id": "S1.p3",
+          "quote": "The total porosity of sample AL-S1",
+          "source_id": "S1"
+        }
+      ],
+      "object": "n_metric_por_s1",
+      "source_ids": [
+        "S1"
+      ],
+      "subject": "n_sample_al_s1",
+      "type": "characterized_by"
+    }
+  ],
+  "format": "provenance-kg/1",
+  "merges": [
+    {
+      "evidence": [
+        {
+          "paragraph_id": "P1.p1",
+          "quote": "Freeze-casting is a shaping route for porous ceramics",
+          "source_id": "P1"
+        },
+        {
+          "paragraph_id": "S1.p1",
+          "quote": "prepared by freeze-casting",
+          "source_id": "S1"
+        }
+      ],
+      "justification": "两来源使用同一规范化键 method:freeze-casting，指同一种通用成形方法（generic method concept）；合并仅断言“同一方法概念”，不断言相同样本、相同参数或相同数值。",
+      "members": [
+        "n_method_fc_p1",
+        "n_method_fc_s1"
+      ],
+      "merge_id": "m1",
+      "node": "n_method_fc"
+    }
+  ],
+  "nodes": [
+    {
+      "attributes": {
+        "topic": "optimal solid loading",
+        "unit": "vol%",
+        "value": "20"
+      },
+      "canonical_key": "claim:optimal-solid-loading:P1",
+      "evidence": [
+        {
+          "paragraph_id": "P1.p2",
+          "quote": "a solid loading of 20 vol%, which this synthetic paper claims to be the optimal loading",
+          "source_id": "P1"
+        }
+      ],
+      "kind": "claim",
+      "label": "optimal solid loading = 20 vol% (P1 claim)",
+      "node_id": "n_claim_load_p1",
+      "source_ids": [
+        "P1"
+      ]
+    },
+    {
+      "attributes": {
+        "topic": "optimal solid loading",
+        "unit": "vol%",
+        "value": "30"
+      },
+      "canonical_key": "claim:optimal-solid-loading:S1",
+      "evidence": [
+        {
+          "paragraph_id": "S1.p2",
+          "quote": "The optimal solid loading claimed in this synthetic paper is 30 vol%.",
+          "source_id": "S1"
+        }
+      ],
+      "kind": "claim",
+      "label": "optimal solid loading = 30 vol% (S1 claim)",
+      "node_id": "n_claim_load_s1",
+      "source_ids": [
+        "S1"
+      ]
+    },
+    {
+      "attributes": {
+        "atmosphere": "air",
+        "parameter": "sintering_temperature",
+        "unit": "°C",
+        "value": "1250"
+      },
+      "canonical_key": "condition:sintering:P1:1250C:air",
+      "evidence": [
+        {
+          "paragraph_id": "P1.p2",
+          "quote": "was then sintered in air at 1250 °C",
+          "source_id": "P1"
+        }
+      ],
+      "kind": "condition",
+      "label": "sintering 1250 °C in air (P1)",
+      "node_id": "n_cond_sint_p1",
+      "source_ids": [
+        "P1"
+      ]
+    },
+    {
+      "attributes": {
+        "atmosphere": "air",
+        "parameter": "sintering_temperature",
+        "unit": "°C",
+        "value": "1350"
+      },
+      "canonical_key": "condition:sintering:S1:1350C:air",
+      "evidence": [
+        {
+          "paragraph_id": "S1.p2",
+          "quote": "was sintered in air at 1350 °C",
+          "source_id": "S1"
+        }
+      ],
+      "kind": "condition",
+      "label": "sintering 1350 °C in air (S1)",
+      "node_id": "n_cond_sint_s1",
+      "source_ids": [
+        "S1"
+      ]
+    },
+    {
+      "attributes": {
+        "generic_term": "freeze-casting",
+        "merged": true
+      },
+      "canonical_key": "method:freeze-casting",
+      "evidence": [
+        {
+          "paragraph_id": "P1.p1",
+          "quote": "Freeze-casting is a shaping route for porous ceramics",
+          "source_id": "P1"
+        },
+        {
+          "paragraph_id": "S1.p1",
+          "quote": "prepared by freeze-casting",
+          "source_id": "S1"
+        }
+      ],
+      "kind": "method",
+      "label": "freeze-casting",
+      "node_id": "n_method_fc",
+      "source_ids": [
+        "P1",
+        "S1"
+      ]
+    },
+    {
+      "attributes": {
+        "generic_term": "freeze-casting"
+      },
+      "canonical_key": "method:freeze-casting",
+      "evidence": [
+        {
+          "paragraph_id": "P1.p1",
+          "quote": "produced by freeze-casting an aqueous alumina slurry",
+          "source_id": "P1"
+        }
+      ],
+      "kind": "method",
+      "label": "freeze-casting (mention in P1)",
+      "merged_into": "n_method_fc",
+      "node_id": "n_method_fc_p1",
+      "source_ids": [
+        "P1"
+      ]
+    },
+    {
+      "attributes": {
+        "generic_term": "freeze-casting"
+      },
+      "canonical_key": "method:freeze-casting",
+      "evidence": [
+        {
+          "paragraph_id": "S1.p1",
+          "quote": "prepared by freeze-casting",
+          "source_id": "S1"
+        }
+      ],
+      "kind": "method",
+      "label": "freeze-casting (mention in S1)",
+      "merged_into": "n_method_fc",
+      "node_id": "n_method_fc_s1",
+      "source_ids": [
+        "S1"
+      ]
+    },
+    {
+      "attributes": {
+        "measurement_method": "Archimedes method",
+        "property": "total porosity",
+        "unit": "%",
+        "value": "42"
+      },
+      "canonical_key": "metric:total-porosity:sample:AL-P1",
+      "evidence": [
+        {
+          "paragraph_id": "P1.p3",
+          "quote": "was 42 %",
+          "source_id": "P1"
+        }
+      ],
+      "kind": "metric",
+      "label": "total porosity 42 % (sample AL-P1)",
+      "node_id": "n_metric_por_p1",
+      "source_ids": [
+        "P1"
+      ]
+    },
+    {
+      "attributes": {
+        "measurement_method": "mercury intrusion porosimetry",
+        "property": "total porosity",
+        "unit": "%",
+        "value": "38"
+      },
+      "canonical_key": "metric:total-porosity:sample:AL-S1",
+      "evidence": [
+        {
+          "paragraph_id": "S1.p3",
+          "quote": "was 38 %",
+          "source_id": "S1"
+        }
+      ],
+      "kind": "metric",
+      "label": "total porosity 38 % (sample AL-S1)",
+      "node_id": "n_metric_por_s1",
+      "source_ids": [
+        "S1"
+      ]
+    },
+    {
+      "attributes": {
+        "authors": [
+          "A. Synthetic",
+          "B. Example"
+        ],
+        "doi": "10.0000/synthetic.p1.0001",
+        "title": "SYNTHETIC PAPER P1: Freeze-cast alumina scaffolds sintered at low temperature"
+      },
+      "canonical_key": "paper:10.0000/synthetic.p1.0001",
+      "evidence": [
+        {
+          "paragraph_id": "P1.p1",
+          "quote": "This SYNTHETIC paper studies an alumina scaffold",
+          "source_id": "P1"
+        }
+      ],
+      "kind": "paper",
+      "label": "SYNTHETIC PAPER P1: Freeze-cast alumina scaffolds sintered at low temperature",
+      "node_id": "n_paper_p1",
+      "source_ids": [
+        "P1"
+      ]
+    },
+    {
+      "attributes": {
+        "authors": [
+          "C. Toy",
+          "D. Demo"
+        ],
+        "doi": "10.0000/synthetic.s1.0002",
+        "title": "SYNTHETIC PAPER S1: Freeze-cast alumina membranes for filtration"
+      },
+      "canonical_key": "paper:10.0000/synthetic.s1.0002",
+      "evidence": [
+        {
+          "paragraph_id": "S1.p1",
+          "quote": "This SYNTHETIC paper reports an alumina membrane",
+          "source_id": "S1"
+        }
+      ],
+      "kind": "paper",
+      "label": "SYNTHETIC PAPER S1: Freeze-cast alumina membranes for filtration",
+      "node_id": "n_paper_s1",
+      "source_ids": [
+        "S1"
+      ]
+    },
+    {
+      "attributes": {
+        "form": "scaffold",
+        "material": "alumina"
+      },
+      "canonical_key": "sample:AL-P1",
+      "evidence": [
+        {
+          "paragraph_id": "P1.p1",
+          "quote": "an alumina scaffold, denoted sample AL-P1",
+          "source_id": "P1"
+        }
+      ],
+      "kind": "sample",
+      "label": "sample AL-P1 (alumina scaffold)",
+      "node_id": "n_sample_al_p1",
+      "source_ids": [
+        "P1"
+      ]
+    },
+    {
+      "attributes": {
+        "form": "membrane",
+        "material": "alumina"
+      },
+      "canonical_key": "sample:AL-S1",
+      "evidence": [
+        {
+          "paragraph_id": "S1.p1",
+          "quote": "an alumina membrane, denoted sample AL-S1",
+          "source_id": "S1"
+        }
+      ],
+      "kind": "sample",
+      "label": "sample AL-S1 (alumina membrane)",
+      "node_id": "n_sample_al_s1",
+      "source_ids": [
+        "S1"
+      ]
+    }
+  ],
+  "nonmerges": [
+    {
+      "evidence": [
+        {
+          "paragraph_id": "S1.p1",
+          "quote": "Sample AL-S1 is a physically distinct specimen",
+          "source_id": "S1"
+        }
+      ],
+      "members": [
+        "n_sample_al_p1",
+        "n_sample_al_s1"
+      ],
+      "nonmerge_id": "nm1",
+      "reason": "两者共享通用材料名 alumina 与通用方法名 freeze-casting，但 S1 明确声明其为不同配方、不同物理样品；通用术语相同 ≠ 同一物理对象，禁止合并。"
+    },
+    {
+      "evidence": [
+        {
+          "paragraph_id": "P1.p3",
+          "quote": "was 42 %",
+          "source_id": "P1"
+        },
+        {
+          "paragraph_id": "S1.p3",
+          "quote": "was 38 %",
+          "source_id": "S1"
+        }
+      ],
+      "members": [
+        "n_metric_por_p1",
+        "n_metric_por_s1"
+      ],
+      "nonmerge_id": "nm2",
+      "reason": "同名属性 total porosity，但测量对象（不同样品）、数值（42 % 与 38 %）与测量方法（Archimedes 与压汞法）均不同；数值绝不并入同一结论。"
+    },
+    {
+      "evidence": [
+        {
+          "paragraph_id": "P1.p2",
+          "quote": "was then sintered in air at 1250 °C",
+          "source_id": "P1"
+        },
+        {
+          "paragraph_id": "S1.p2",
+          "quote": "was sintered in air at 1350 °C",
+          "source_id": "S1"
+        }
+      ],
+      "members": [
+        "n_cond_sint_p1",
+        "n_cond_sint_s1"
+      ],
+      "nonmerge_id": "nm3",
+      "reason": "同为烧结温度条件，但取值不同（1250 °C 与 1350 °C）且作用于不同样品；条件不同不得合并为单一工艺窗口。"
+    }
+  ],
+  "primary_paper": "n_paper_p1",
+  "stats": {
+    "conflict_count": 1,
+    "edge_count": 10,
+    "merge_count": 1,
+    "node_count": 13,
+    "node_count_by_kind": {
+      "claim": 2,
+      "condition": 2,
+      "method": 3,
+      "metric": 2,
+      "paper": 2,
+      "sample": 2
+    },
+    "nonmerge_count": 3,
+    "source_ids": [
+      "P1",
+      "S1"
+    ],
+    "unreported_count": 2
+  },
+  "unreported": [
+    {
+      "evidence": [
+        {
+          "paragraph_id": "P1.p2",
+          "quote": "The dwell time at the sintering temperature is not reported in this synthetic source.",
+          "source_id": "P1"
+        }
+      ],
+      "reason": "primary 来源明确声明未报告烧结保温时间；secondary 来源同样未给出该参数，记为未报告而非缺失值填充。",
+      "topic": "sintering dwell time"
+    },
+    {
+      "evidence": [
+        {
+          "paragraph_id": "S1.p3",
+          "quote": "No mechanical strength data are reported in this synthetic source.",
+          "source_id": "S1"
+        }
+      ],
+      "reason": "secondary 来源明确声明未报告力学强度；primary 来源亦未涉及，禁止臆造。",
+      "topic": "mechanical strength"
+    }
+  ]
+}

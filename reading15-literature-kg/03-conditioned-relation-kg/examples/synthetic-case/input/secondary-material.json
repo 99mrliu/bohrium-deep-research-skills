@@ -1,0 +1,33 @@
+{
+  "source_id": "SYN-P2",
+  "synthetic": true,
+  "doi": "10.0000/synth.p2",
+  "title": "DistilT: Compact Translation Models via Conditioned Distillation (SYNTHETIC)",
+  "paragraphs": [
+    {
+      "paragraph_id": "SYN-P2.abs.p1",
+      "section": "abstract",
+      "text": "We present DistilT, a compact translation model distilled from TransB, and evaluate it on LowMT100 under a low-resource budget."
+    },
+    {
+      "paragraph_id": "SYN-P2.s1.p1",
+      "section": "related-work",
+      "text": "TransA and DistilT both target low-resource translation, but no direct comparison between them has been reported."
+    },
+    {
+      "paragraph_id": "SYN-P2.s2.p1",
+      "section": "methods",
+      "text": "DistilT is trained by knowledge distillation from TransB on the LowMT100 training split of 10,000 sentence pairs."
+    },
+    {
+      "paragraph_id": "SYN-P2.s2.p2",
+      "section": "methods",
+      "text": "TransB-ft, a fine-tuned variant of TransB for the medical domain, is outside the scope of this evaluation."
+    },
+    {
+      "paragraph_id": "SYN-P2.s3.p1",
+      "section": "results",
+      "text": "On LowMT100, DistilT achieves 31.0 BLEU and TransB achieves 30.5 BLEU under the low-resource condition; DistilT outperforms TransB by 0.5 BLEU."
+    }
+  ]
+}

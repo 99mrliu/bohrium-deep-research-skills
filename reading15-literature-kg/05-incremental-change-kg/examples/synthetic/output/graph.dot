@@ -1,0 +1,21 @@
+digraph kg {
+  rankdir=LR; node [shape=box, style=filled];
+  "n_mat_29a6b6b9" [label="material: LiFePO4/C composite", fillcolor="#cde4ff"];
+  "n_mat_9f9f2e2e" [label="material: hydrothermal reference sample", fillcolor="#cde4ff"];
+  "n_mat_bbb0bb6d" [label="material: commercial carbon black", fillcolor="#cde4ff"];
+  "n_mat_bbb0bb6d_2" [label="material: commercial carbon black", fillcolor="#cde4ff"];
+  "n_mat_d3d8d3bf" [label="material: sol-gel derived powders", fillcolor="#cde4ff"];
+  "n_mtd_8ea853ed" [label="method: sol-gel method", fillcolor="#d8f5d0"];
+  "n_mtd_fcdbf779" [label="method: hydrothermal method", fillcolor="#d8f5d0"];
+  "n_mtr_7c1cd688" [label="metric: discharge capacity", fillcolor="#ffd9d9"];
+  "n_tsk_3ff09b99" [label="task: lithium-ion battery cathode", fillcolor="#fff2c8"];
+  "n_mat_29a6b6b9" -> "n_tsk_3ff09b99" [label="applied_to"];
+  "n_mat_29a6b6b9" -> "n_mtr_7c1cd688" [label="delivers_capacity\n149 mAh/g 0.1 C"];
+  "n_mat_29a6b6b9" -> "n_mtr_7c1cd688" [label="delivers_capacity\n158 mAh/g 0.1 C"];
+  "n_mat_29a6b6b9" -> "n_mat_d3d8d3bf" [label="outperforms" color="#cc0000", fontcolor="#cc0000"];
+  "n_mat_29a6b6b9" -> "n_mat_9f9f2e2e" [label="outperforms\n158 vs 141 mAh/g 0.1 C" color="#cc0000", fontcolor="#cc0000"];
+  "n_mat_29a6b6b9" -> "n_mtd_8ea853ed" [label="synthesized_by"];
+  "n_mat_29a6b6b9" -> "n_mtd_fcdbf779" [label="synthesized_by"];
+  "n_mat_29a6b6b9" -> "n_mat_bbb0bb6d_2" [label="uses"];
+  "n_mat_29a6b6b9" -> "n_mat_bbb0bb6d" [label="uses"];
+}

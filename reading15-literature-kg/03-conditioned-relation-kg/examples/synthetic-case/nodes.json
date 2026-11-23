@@ -1,0 +1,60 @@
+{
+  "synthetic": true,
+  "note": "SYNTHETIC 节点定义；每个节点绑定 source_id + JATS paragraph_id + 逐字短引。",
+  "nodes": [
+    {
+      "node_id": "n_transA", "type": "model", "label": "TransA",
+      "aliases": [],
+      "evidence": [{"source_id": "SYN-P1", "paragraph_id": "SYN-P1.abs.p1",
+                    "quote": "two translation models, TransA and TransB"}]
+    },
+    {
+      "node_id": "n_transB", "type": "model", "label": "TransB",
+      "aliases": [],
+      "evidence": [{"source_id": "SYN-P1", "paragraph_id": "SYN-P1.abs.p1",
+                    "quote": "TransA and TransB, on the low-resource benchmark"}]
+    },
+    {
+      "node_id": "n_distilT", "type": "model", "label": "DistilT",
+      "aliases": [],
+      "evidence": [{"source_id": "SYN-P2", "paragraph_id": "SYN-P2.abs.p1",
+                    "quote": "We present DistilT, a compact translation model"}]
+    },
+    {
+      "node_id": "n_lstmM", "type": "model", "label": "LSTM-M",
+      "aliases": [],
+      "evidence": [{"source_id": "SYN-P1", "paragraph_id": "SYN-P1.s3.p2",
+                    "quote": "the LSTM-M baseline reaches 24.1 BLEU"}]
+    },
+    {
+      "node_id": "n_lowmt", "type": "dataset", "label": "LowMT-100",
+      "aliases": ["LowMT100"],
+      "evidence": [{"source_id": "SYN-P1", "paragraph_id": "SYN-P1.s2.p1",
+                    "quote": "the LowMT-100 training split consisting of 10,000 sentence pairs"}]
+    },
+    {
+      "node_id": "n_wmt", "type": "dataset", "label": "WMT (high-resource)",
+      "aliases": [],
+      "evidence": [{"source_id": "SYN-P1", "paragraph_id": "SYN-P1.s1.p1",
+                    "quote": "the high-resource WMT benchmark"}]
+    },
+    {
+      "node_id": "n_bleu", "type": "metric", "label": "BLEU",
+      "aliases": [],
+      "evidence": [{"source_id": "SYN-P1", "paragraph_id": "SYN-P1.s2.p1",
+                    "quote": "evaluated with BLEU on the official test split"}]
+    },
+    {
+      "node_id": "n_lowres", "type": "condition", "label": "low-resource 10k-pair budget",
+      "aliases": ["10k sentence-pair training budget", "low-resource condition"],
+      "evidence": [{"source_id": "SYN-P1", "paragraph_id": "SYN-P1.abs.p1",
+                    "quote": "under a 10k sentence-pair training budget"}]
+    },
+    {
+      "node_id": "n_mt", "type": "task", "label": "machine translation",
+      "aliases": ["translation"],
+      "evidence": [{"source_id": "SYN-P1", "paragraph_id": "SYN-P1.abs.p1",
+                    "quote": "two translation models"}]
+    }
+  ]
+}

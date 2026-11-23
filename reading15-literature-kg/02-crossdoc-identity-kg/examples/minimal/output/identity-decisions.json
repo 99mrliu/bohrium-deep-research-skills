@@ -1,0 +1,158 @@
+[
+  {
+    "decision_id": "D-0001",
+    "candidate_keys": [
+      "li7la3zr2o12",
+      "lithium lanthanum zirconium oxide",
+      "llzo"
+    ],
+    "pair": [
+      "M-A1",
+      "M-B1"
+    ],
+    "sources": [
+      "SYN-A",
+      "SYN-B"
+    ],
+    "decision": "MERGE",
+    "merge_basis": [
+      {
+        "attribute": "chemical_formula",
+        "value_a": "Li7La3Zr2O12",
+        "value_b": "Li7La3Zr2O12",
+        "kind": "defining_match"
+      }
+    ],
+    "blocking_evidence": [],
+    "rationale": "定义性属性一致，无阻断项，允许合并"
+  },
+  {
+    "decision_id": "D-0002",
+    "candidate_keys": [
+      "sintering"
+    ],
+    "pair": [
+      "M-A2",
+      "M-B2"
+    ],
+    "sources": [
+      "SYN-A",
+      "SYN-B"
+    ],
+    "decision": "KEEP_DISTINCT",
+    "merge_basis": [],
+    "blocking_evidence": [
+      {
+        "attribute": "conditions",
+        "value_a": "1100 C, 12 h, magnesia crucible",
+        "value_b": "1230 C, 2 h, air",
+        "kind": "defining_conflict"
+      }
+    ],
+    "rationale": "存在阻断性冲突证据（不同样品/模型/数据集/条件或数值/单位冲突），不得合并"
+  },
+  {
+    "decision_id": "D-0003",
+    "candidate_keys": [
+      "x ray diffraction",
+      "xrd"
+    ],
+    "pair": [
+      "M-A3",
+      "M-B3"
+    ],
+    "sources": [
+      "SYN-A",
+      "SYN-B"
+    ],
+    "decision": "UNDECIDED",
+    "merge_basis": [],
+    "blocking_evidence": [],
+    "rationale": "仅规范化别名相同，无定义性属性证据，证据不足"
+  },
+  {
+    "decision_id": "D-0004",
+    "candidate_keys": [
+      "random forest model"
+    ],
+    "pair": [
+      "M-A4",
+      "M-B4"
+    ],
+    "sources": [
+      "SYN-A",
+      "SYN-B"
+    ],
+    "decision": "KEEP_DISTINCT",
+    "merge_basis": [
+      {
+        "attribute": "architecture",
+        "value_a": "random forest",
+        "value_b": "random forest",
+        "kind": "defining_match"
+      }
+    ],
+    "blocking_evidence": [
+      {
+        "attribute": "R2",
+        "value_a": 0.81,
+        "unit_a": "1",
+        "value_b": 0.74,
+        "unit_b": "1",
+        "kind": "numeric_conflict"
+      }
+    ],
+    "rationale": "存在阻断性冲突证据（不同样品/模型/数据集/条件或数值/单位冲突），不得合并"
+  },
+  {
+    "decision_id": "D-0005",
+    "candidate_keys": [
+      "synthion"
+    ],
+    "pair": [
+      "M-A5",
+      "M-B5"
+    ],
+    "sources": [
+      "SYN-A",
+      "SYN-B"
+    ],
+    "decision": "KEEP_DISTINCT",
+    "merge_basis": [],
+    "blocking_evidence": [
+      {
+        "attribute": "dataset_version",
+        "value_a": "1",
+        "value_b": "2",
+        "kind": "defining_conflict"
+      }
+    ],
+    "rationale": "存在阻断性冲突证据（不同样品/模型/数据集/条件或数值/单位冲突），不得合并"
+  },
+  {
+    "decision_id": "D-0006",
+    "candidate_keys": [
+      "latp",
+      "li1.3al0.3ti1.7 po4 3"
+    ],
+    "pair": [
+      "M-A6",
+      "M-B6"
+    ],
+    "sources": [
+      "SYN-A",
+      "SYN-B"
+    ],
+    "decision": "MERGE",
+    "merge_basis": [
+      {
+        "attribute": "chemical_formula",
+        "value_a": "Li1.3Al0.3Ti1.7(PO4)3",
+        "value_b": "Li1.3Al0.3Ti1.7(PO4)3",
+        "kind": "defining_match"
+      }
+    ],
+    "blocking_evidence": [],
+    "rationale": "定义性属性一致，无阻断项，允许合并"
+  }
+]

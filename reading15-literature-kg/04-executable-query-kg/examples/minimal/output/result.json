@@ -1,0 +1,460 @@
+{
+  "artifacts": [
+    {
+      "bytes": 880,
+      "name": "edges.csv",
+      "path": "output/edges.csv",
+      "sha256": "1ffd5b8f5849f2017e85dc93d9603363fff6fe53c6d163a82da66cee5c4a7b69"
+    },
+    {
+      "bytes": 12117,
+      "name": "graph.json",
+      "path": "output/graph.json",
+      "sha256": "cc6f7ce9ab8f766cffe354d8407bfe5d0ec405d971ad6ee04a3ad7a33004de8d"
+    },
+    {
+      "bytes": 8401,
+      "name": "graph.jsonl",
+      "path": "output/graph.jsonl",
+      "sha256": "99a1b6604b0583c168fa2afb2edf4c529237e88c9beb152154a341ca547e69b0"
+    },
+    {
+      "bytes": 6155,
+      "name": "graph.md",
+      "path": "output/graph.md",
+      "sha256": "433e6059775d0070aaed33edc4ee4224acfaba81fc213eeca7ffa9b6c91dbcb4"
+    },
+    {
+      "bytes": 8801,
+      "name": "graph.svg",
+      "path": "output/graph.svg",
+      "sha256": "f8ff69b3fc37e4e8a25ddba923830d5be1818334b83fc71e3af89dd068c89938"
+    },
+    {
+      "bytes": 1257,
+      "name": "manifest.json",
+      "path": "output/manifest.json",
+      "sha256": "7f3e46a1e78ee7124f5198e13beade07a3ac5e08b636f30680e29e9dead028f1"
+    },
+    {
+      "bytes": 631,
+      "name": "nodes.csv",
+      "path": "output/nodes.csv",
+      "sha256": "7ec496db791a040b6ec7e178a42b5fe31d406852e8758aca55bea87b310ecfc0"
+    },
+    {
+      "bytes": 15526,
+      "name": "query_results.json",
+      "path": "output/query_results.json",
+      "sha256": "dd1ade4fa4533f5fdda04e00281184da2ed171cf3c1c59ca5a4981ebb752273b"
+    },
+    {
+      "bytes": 1105,
+      "name": "query_snapshot.json",
+      "path": "output/query_snapshot.json",
+      "sha256": "b3fcd8e6128d8eb9de1cdeadb27e88490c7848e1671733efc1bdd9ca5f26bf20"
+    },
+    {
+      "bytes": 13549,
+      "name": "result.json",
+      "path": "output/result.json",
+      "sha256": "bc29700e58f44494db2a48e075ea7bb94787359b32cfdfa0ed01b8e8d4afab9f"
+    },
+    {
+      "bytes": 369,
+      "name": "validation_report.json",
+      "path": "output/validation_report.json",
+      "sha256": "21545ef4dd3d9fd61bf30b4b28a0b9436728264bbe6a8ca11ed89583a125929e"
+    }
+  ],
+  "case_id": "SYNTHETIC-MINIMAL-EXAMPLE",
+  "changes": [
+    "阶段1：校验完成（structural_ok=True, evidence_ok=True, 证据 26 条）",
+    "阶段2：导出 graph.json/jsonl/csv/md/svg + manifest（graph_hash=b8238206ade6d605）",
+    "阶段3：执行查询 7 条（ok=5 empty=2 error=0）"
+  ],
+  "counts": {
+    "edges": 12,
+    "merge_decisions": 5,
+    "nodes": 12,
+    "sources": 2
+  },
+  "evidence_check": {
+    "artifact": {
+      "bytes": 369,
+      "path": "output/validation_report.json",
+      "sha256": "21545ef4dd3d9fd61bf30b4b28a0b9436728264bbe6a8ca11ed89583a125929e"
+    },
+    "checked_evidence": 26,
+    "ok": true,
+    "status": "done"
+  },
+  "graph": {
+    "artifacts": [
+      {
+        "bytes": 12117,
+        "path": "output/graph.json",
+        "sha256": "cc6f7ce9ab8f766cffe354d8407bfe5d0ec405d971ad6ee04a3ad7a33004de8d"
+      },
+      {
+        "bytes": 8401,
+        "path": "output/graph.jsonl",
+        "sha256": "99a1b6604b0583c168fa2afb2edf4c529237e88c9beb152154a341ca547e69b0"
+      },
+      {
+        "bytes": 631,
+        "path": "output/nodes.csv",
+        "sha256": "7ec496db791a040b6ec7e178a42b5fe31d406852e8758aca55bea87b310ecfc0"
+      },
+      {
+        "bytes": 880,
+        "path": "output/edges.csv",
+        "sha256": "1ffd5b8f5849f2017e85dc93d9603363fff6fe53c6d163a82da66cee5c4a7b69"
+      }
+    ],
+    "status": "done"
+  },
+  "graph_hash": "b8238206ade6d605ae60085356263f3e3d0bc1af9a27ddfd72e2ddb5fd5cdc5e",
+  "label": "SYNTHETIC",
+  "merge_report": {
+    "decisions": [
+      {
+        "canonical_node": "n:tio2",
+        "decision": "merge",
+        "evidence": [
+          {
+            "paragraph_id": "p-a-1",
+            "quote": "二氧化钛电子传输层",
+            "source_id": "S1"
+          },
+          {
+            "paragraph_id": "p-b-1",
+            "quote": "二氧化钛薄膜",
+            "source_id": "S2"
+          }
+        ],
+        "id": "m1",
+        "left": "S1「二氧化钛电子传输层」(p-a-1)",
+        "rationale": "两篇均指同一化学材料 TiO2，仅形态描述不同（传输层/薄膜）；合并为同一 Material 概念节点，证据分别保留来源。",
+        "right": "S2「二氧化钛薄膜」(p-b-1)"
+      },
+      {
+        "canonical_node": "n:spiro",
+        "decision": "merge",
+        "evidence": [
+          {
+            "paragraph_id": "p-a-2",
+            "quote": "spiro-OMeTAD空穴传输层",
+            "source_id": "S1"
+          },
+          {
+            "paragraph_id": "p-b-1",
+            "quote": "spiro-OMeTAD作为空穴传输材料",
+            "source_id": "S2"
+          }
+        ],
+        "id": "m2",
+        "left": "S1「spiro-OMeTAD空穴传输层」(p-a-2)",
+        "rationale": "同名材料、同一角色（空穴传输），跨篇合并；各自证据保留来源。",
+        "right": "S2「spiro-OMeTAD作为空穴传输材料」(p-b-1)"
+      },
+      {
+        "canonical_node": null,
+        "decision": "no_merge",
+        "evidence": [
+          {
+            "paragraph_id": "p-a-2",
+            "quote": "样品A（有效面积0.1平方厘米）",
+            "source_id": "S1"
+          },
+          {
+            "paragraph_id": "p-b-2",
+            "quote": "样品B（有效面积1.0平方厘米）",
+            "source_id": "S2"
+          }
+        ],
+        "id": "m3",
+        "left": "n:sample-a（S1 样品A，0.1平方厘米）",
+        "rationale": "不同物理样品：面积、制备方法与测量数值均不同（18.5%效率 vs 100小时后90%保持率）；即使器件类型相近也绝不合并，数值不可互相移植。",
+        "right": "n:sample-b（S2 样品B，1.0平方厘米）"
+      },
+      {
+        "canonical_node": null,
+        "decision": "no_merge",
+        "evidence": [
+          {
+            "paragraph_id": "p-a-1",
+            "quote": "旋涂法",
+            "source_id": "S1"
+          },
+          {
+            "paragraph_id": "p-b-1",
+            "quote": "化学气相沉积法",
+            "source_id": "S2"
+          }
+        ],
+        "id": "m4",
+        "left": "n:spin-coating（旋涂法，S1）",
+        "rationale": "两者都「制备二氧化钛」但是不同方法；S2 的「优于」仅指稳定性维度。不能因为作用对象相同就把两种方法合并为一个节点。",
+        "right": "n:cvd（化学气相沉积法，S2）"
+      },
+      {
+        "canonical_node": null,
+        "decision": "no_merge",
+        "evidence": [
+          {
+            "paragraph_id": "p-a-2",
+            "quote": "获得了18.5%的光电转换效率",
+            "source_id": "S1"
+          },
+          {
+            "paragraph_id": "p-b-2",
+            "quote": "保持了初始效率的90%，表现出良好的稳定性",
+            "source_id": "S2"
+          }
+        ],
+        "id": "m5",
+        "left": "n:pce（光电转换效率18.5%，S1 样品A）",
+        "rationale": "不同指标、不同数值、不同实验条件；禁止把两篇的数值结果合成一个结论。",
+        "right": "n:stability（100小时后90%保持率，S2 样品B）"
+      }
+    ],
+    "n_decisions": 5,
+    "status": "done"
+  },
+  "output_contract": {
+    "evidence_check": {
+      "artifact": {
+        "bytes": 369,
+        "path": "output/validation_report.json",
+        "sha256": "21545ef4dd3d9fd61bf30b4b28a0b9436728264bbe6a8ca11ed89583a125929e"
+      },
+      "checked_evidence": 26,
+      "ok": true,
+      "status": "done"
+    },
+    "graph": {
+      "artifacts": [
+        {
+          "bytes": 12117,
+          "path": "output/graph.json",
+          "sha256": "cc6f7ce9ab8f766cffe354d8407bfe5d0ec405d971ad6ee04a3ad7a33004de8d"
+        },
+        {
+          "bytes": 8401,
+          "path": "output/graph.jsonl",
+          "sha256": "99a1b6604b0583c168fa2afb2edf4c529237e88c9beb152154a341ca547e69b0"
+        },
+        {
+          "bytes": 631,
+          "path": "output/nodes.csv",
+          "sha256": "7ec496db791a040b6ec7e178a42b5fe31d406852e8758aca55bea87b310ecfc0"
+        },
+        {
+          "bytes": 880,
+          "path": "output/edges.csv",
+          "sha256": "1ffd5b8f5849f2017e85dc93d9603363fff6fe53c6d163a82da66cee5c4a7b69"
+        }
+      ],
+      "status": "done"
+    },
+    "merge_report": {
+      "decisions": [
+        {
+          "canonical_node": "n:tio2",
+          "decision": "merge",
+          "evidence": [
+            {
+              "paragraph_id": "p-a-1",
+              "quote": "二氧化钛电子传输层",
+              "source_id": "S1"
+            },
+            {
+              "paragraph_id": "p-b-1",
+              "quote": "二氧化钛薄膜",
+              "source_id": "S2"
+            }
+          ],
+          "id": "m1",
+          "left": "S1「二氧化钛电子传输层」(p-a-1)",
+          "rationale": "两篇均指同一化学材料 TiO2，仅形态描述不同（传输层/薄膜）；合并为同一 Material 概念节点，证据分别保留来源。",
+          "right": "S2「二氧化钛薄膜」(p-b-1)"
+        },
+        {
+          "canonical_node": "n:spiro",
+          "decision": "merge",
+          "evidence": [
+            {
+              "paragraph_id": "p-a-2",
+              "quote": "spiro-OMeTAD空穴传输层",
+              "source_id": "S1"
+            },
+            {
+              "paragraph_id": "p-b-1",
+              "quote": "spiro-OMeTAD作为空穴传输材料",
+              "source_id": "S2"
+            }
+          ],
+          "id": "m2",
+          "left": "S1「spiro-OMeTAD空穴传输层」(p-a-2)",
+          "rationale": "同名材料、同一角色（空穴传输），跨篇合并；各自证据保留来源。",
+          "right": "S2「spiro-OMeTAD作为空穴传输材料」(p-b-1)"
+        },
+        {
+          "canonical_node": null,
+          "decision": "no_merge",
+          "evidence": [
+            {
+              "paragraph_id": "p-a-2",
+              "quote": "样品A（有效面积0.1平方厘米）",
+              "source_id": "S1"
+            },
+            {
+              "paragraph_id": "p-b-2",
+              "quote": "样品B（有效面积1.0平方厘米）",
+              "source_id": "S2"
+            }
+          ],
+          "id": "m3",
+          "left": "n:sample-a（S1 样品A，0.1平方厘米）",
+          "rationale": "不同物理样品：面积、制备方法与测量数值均不同（18.5%效率 vs 100小时后90%保持率）；即使器件类型相近也绝不合并，数值不可互相移植。",
+          "right": "n:sample-b（S2 样品B，1.0平方厘米）"
+        },
+        {
+          "canonical_node": null,
+          "decision": "no_merge",
+          "evidence": [
+            {
+              "paragraph_id": "p-a-1",
+              "quote": "旋涂法",
+              "source_id": "S1"
+            },
+            {
+              "paragraph_id": "p-b-1",
+              "quote": "化学气相沉积法",
+              "source_id": "S2"
+            }
+          ],
+          "id": "m4",
+          "left": "n:spin-coating（旋涂法，S1）",
+          "rationale": "两者都「制备二氧化钛」但是不同方法；S2 的「优于」仅指稳定性维度。不能因为作用对象相同就把两种方法合并为一个节点。",
+          "right": "n:cvd（化学气相沉积法，S2）"
+        },
+        {
+          "canonical_node": null,
+          "decision": "no_merge",
+          "evidence": [
+            {
+              "paragraph_id": "p-a-2",
+              "quote": "获得了18.5%的光电转换效率",
+              "source_id": "S1"
+            },
+            {
+              "paragraph_id": "p-b-2",
+              "quote": "保持了初始效率的90%，表现出良好的稳定性",
+              "source_id": "S2"
+            }
+          ],
+          "id": "m5",
+          "left": "n:pce（光电转换效率18.5%，S1 样品A）",
+          "rationale": "不同指标、不同数值、不同实验条件；禁止把两篇的数值结果合成一个结论。",
+          "right": "n:stability（100小时后90%保持率，S2 样品B）"
+        }
+      ],
+      "n_decisions": 5,
+      "status": "done"
+    },
+    "preview": {
+      "artifacts": [
+        {
+          "bytes": 6155,
+          "path": "output/graph.md",
+          "sha256": "433e6059775d0070aaed33edc4ee4224acfaba81fc213eeca7ffa9b6c91dbcb4"
+        },
+        {
+          "bytes": 8801,
+          "path": "output/graph.svg",
+          "sha256": "f8ff69b3fc37e4e8a25ddba923830d5be1818334b83fc71e3af89dd068c89938"
+        }
+      ],
+      "status": "done"
+    },
+    "queries": {
+      "artifact": {
+        "bytes": 15526,
+        "path": "output/query_results.json",
+        "sha256": "dd1ade4fa4533f5fdda04e00281184da2ed171cf3c1c59ca5a4981ebb752273b"
+      },
+      "status": "done",
+      "summary": {
+        "empty": 2,
+        "error": 0,
+        "ok": 5,
+        "total": 7
+      }
+    }
+  },
+  "partial": false,
+  "preview": {
+    "artifacts": [
+      {
+        "bytes": 6155,
+        "path": "output/graph.md",
+        "sha256": "433e6059775d0070aaed33edc4ee4224acfaba81fc213eeca7ffa9b6c91dbcb4"
+      },
+      {
+        "bytes": 8801,
+        "path": "output/graph.svg",
+        "sha256": "f8ff69b3fc37e4e8a25ddba923830d5be1818334b83fc71e3af89dd068c89938"
+      }
+    ],
+    "status": "done"
+  },
+  "queries": {
+    "artifact": {
+      "bytes": 15526,
+      "path": "output/query_results.json",
+      "sha256": "dd1ade4fa4533f5fdda04e00281184da2ed171cf3c1c59ca5a4981ebb752273b"
+    },
+    "status": "done",
+    "summary": {
+      "empty": 2,
+      "error": 0,
+      "ok": 5,
+      "total": 7
+    }
+  },
+  "query_summary": {
+    "empty": 2,
+    "error": 0,
+    "ok": 5,
+    "total": 7
+  },
+  "snapshot_hash": "74e350f2e1be25f841be7fcd0d81b5047b21963c568c0c87296f5fb2a6bb4550",
+  "sources": [
+    {
+      "authors": [
+        "合成作者甲",
+        "合成作者乙"
+      ],
+      "doi": "10.0000/synth-primary",
+      "file": "primary-material.json",
+      "role": "primary",
+      "source_id": "S1",
+      "title": "合成示例论文A：二氧化钛电子传输层对钙钛矿电池性能的影响（SYNTHETIC）"
+    },
+    {
+      "authors": [
+        "合成作者丙"
+      ],
+      "doi": "10.0000/synth-secondary",
+      "file": "secondary-material.json",
+      "role": "secondary",
+      "source_id": "S2",
+      "title": "合成示例论文B：化学气相沉积二氧化钛薄膜的稳定性研究（SYNTHETIC）"
+    }
+  ],
+  "status": "success",
+  "uncertainty": [],
+  "validation_ok": true
+}

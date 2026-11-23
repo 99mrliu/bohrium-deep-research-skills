@@ -1,0 +1,35 @@
+{
+  "meta": {
+    "label": "SYNTHETIC EXAMPLE（合成示例）",
+    "notice": "以下两段文字为本 Skill 演示而人工编写的合成文本，不是真实论文；DOI 为虚构占位。仅用于演示跨篇身份裁决与图谱构建流程，不得冒充正式案例结果。",
+    "id_note": "paragraph_id 模拟组织方 JATS 段落 ID，不是 PDF 页码。"
+  },
+  "papers": {
+    "SYN-A": {
+      "doi": "10.0000/synthetic.paper.a",
+      "title": "Synthetic Paper A: Conductivity of LLZO Solid Electrolyte (fabricated demo text)",
+      "authors": ["合成作者 甲"],
+      "license": "synthetic-demo-text",
+      "paragraphs": {
+        "p-0001": "We synthesized Li7La3Zr2O12 (LLZO) pellets by a solid-state reaction and measured a total ionic conductivity of 3.2e-4 S/cm at 25 C.",
+        "p-0002": "The LLZO green pellets were sintered at 1100 C for 12 h in a magnesia crucible.",
+        "p-0003": "X-ray diffraction (XRD) confirmed the cubic garnet phase of the LLZO pellets.",
+        "p-0004": "We trained a random forest model (RF-A) on the SynthIon-1 dataset to predict ionic conductivity, achieving an R2 of 0.81.",
+        "p-0005": "Compared with LATP (Li1.3Al0.3Ti1.7(PO4)3), LLZO shows better stability against lithium metal."
+      }
+    },
+    "SYN-B": {
+      "doi": "10.0000/synthetic.paper.b",
+      "title": "Synthetic Paper B: Ta-Doped LLZO and a Second Conductivity Dataset (fabricated demo text)",
+      "authors": ["合成作者 乙"],
+      "license": "synthetic-demo-text",
+      "paragraphs": {
+        "p-0001": "Lithium lanthanum zirconium oxide (LLZO, Li7La3Zr2O12) is a promising solid electrolyte, and we report a conductivity of 1.1e-3 S/cm for Ta-doped LLZO at 25 C.",
+        "p-0002": "The Ta-doped LLZO samples were sintered at 1230 C for 2 h in air.",
+        "p-0003": "XRD patterns indicate a cubic garnet structure for all sintered samples.",
+        "p-0004": "We used the SynthIon-2 dataset and trained a random forest model (RF-B) to predict ionic conductivity, reaching an R2 of 0.74.",
+        "p-0005": "Under our test conditions, LLZO outperforms LATP (Li1.3Al0.3Ti1.7(PO4)3) in critical current density."
+      }
+    }
+  }
+}

@@ -1,0 +1,99 @@
+{
+  "case_id": "SYNTH-INCREMENTAL-001",
+  "changes": {
+    "file": "changes.json",
+    "jsonl": "changes.jsonl",
+    "ledger": "change-ledger.md",
+    "summary": {
+      "ADD": 5,
+      "CONFLICT": 1,
+      "KEEP_DISTINCT": 1,
+      "MERGE": 1,
+      "UPDATE_EVIDENCE": 1
+    }
+  },
+  "evidence": {
+    "note": "每个实质节点/边均含 source_id + JATS paragraph_id + 原文短引；本包无 PDF 页码，未使用页码定位",
+    "sources": [
+      {
+        "authors": [
+          "A. Zhang",
+          "B. Li"
+        ],
+        "doi": "10.0000/synth.0001",
+        "file": "primary-material.json",
+        "license": "CC-BY-4.0",
+        "sha256": "synthetic-sha-primary-0001",
+        "source_id": "primary",
+        "title": "Sol-gel synthesis of a LiFePO4/C composite cathode (SYNTHETIC)"
+      },
+      {
+        "authors": [
+          "C. Wang"
+        ],
+        "doi": "10.0000/synth.0002",
+        "file": "secondary-material.json",
+        "license": "CC-BY-4.0",
+        "sha256": "synthetic-sha-secondary-0002",
+        "source_id": "secondary",
+        "title": "Hydrothermal growth of LFP/C for lithium storage (SYNTHETIC)"
+      }
+    ]
+  },
+  "graph": {
+    "baseline": "graph-baseline.json",
+    "current": "graph-current.json",
+    "jsonl": [
+      "graph-baseline.jsonl",
+      "graph-current.jsonl"
+    ],
+    "preview": [
+      "graph.dot",
+      "graph.svg",
+      "graph-preview.md"
+    ]
+  },
+  "queries": {
+    "executed": 5,
+    "file": "queries.json",
+    "note": "全部为真实执行，含证据"
+  },
+  "schema": "kg-result/1",
+  "skill": "05-incremental-change-kg",
+  "sources": [
+    {
+      "authors": [
+        "A. Zhang",
+        "B. Li"
+      ],
+      "doi": "10.0000/synth.0001",
+      "file": "primary-material.json",
+      "license": "CC-BY-4.0",
+      "sha256": "synthetic-sha-primary-0001",
+      "source_id": "primary",
+      "title": "Sol-gel synthesis of a LiFePO4/C composite cathode (SYNTHETIC)"
+    },
+    {
+      "authors": [
+        "C. Wang"
+      ],
+      "doi": "10.0000/synth.0002",
+      "file": "secondary-material.json",
+      "license": "CC-BY-4.0",
+      "sha256": "synthetic-sha-secondary-0002",
+      "source_id": "secondary",
+      "title": "Hydrothermal growth of LFP/C for lithium storage (SYNTHETIC)"
+    }
+  ],
+  "status": "success",
+  "status_reason": "全部产物齐备",
+  "summary": "增量文献知识图谱：baseline v1（primary 封存）已建；当前版本 v2。节点 9、边 9；变更操作 {'ADD': 5, 'CONFLICT': 1, 'KEEP_DISTINCT': 1, 'MERGE': 1, 'UPDATE_EVIDENCE': 1}；真实执行查询 5 个；未裁决冲突 1 组。",
+  "synthetic": true,
+  "uncertainty": [
+    "存在 1 组未裁决冲突边（conflict_group 见 graph-current.json），双方证据并列保留，未合并为单一结论"
+  ],
+  "versions": {
+    "baseline": "graph-baseline.json",
+    "current": "graph-current.json"
+  }
+}

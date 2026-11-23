@@ -1,0 +1,21 @@
+{
+  "meta": {"label": "SYNTHETIC EXAMPLE（合成示例）"},
+  "queries": [
+    {
+      "query_id": "Q1", "type": "neighbors", "node_name": "LLZO",
+      "description": "合并后 LLZO 节点的一跳邻居：应同时看到两篇论文的关系与各自证据。"
+    },
+    {
+      "query_id": "Q2", "type": "filter", "entity_type": "material",
+      "description": "全部材料类实体：LLZO 与 LATP 为 MERGED，并保留双来源。"
+    },
+    {
+      "query_id": "Q3", "type": "path", "start_name": "SynthIon-1", "end_name": "SynthIon-2",
+      "description": "两个 KEEP_DISTINCT 数据集之间的最短路径：经由合并的 LLZO 节点连通，但两个数据集节点保持分离。"
+    },
+    {
+      "query_id": "Q4", "type": "filter", "predicate": "has_measurement",
+      "description": "全部测量边：同一指标在两个来源下数值不同，分别保留并记录冲突。"
+    }
+  ]
+}

@@ -1,0 +1,157 @@
+{
+  "bundle": "03-conditioned-relation-kg",
+  "synthetic": true,
+  "n_checks": 18,
+  "n_pass": 18,
+  "all_pass": true,
+  "commands": [
+    {
+      "name": "S0_bootstrap",
+      "cmd": "python3 scripts/case_bootstrap.py --input /Users/liuhengshen/Desktop/bhr_product/reading15/bundles/03-conditioned-relation-kg/examples/synthetic-case/input --out /Users/liuhengshen/Desktop/bhr_product/reading15/bundles/03-conditioned-relation-kg/examples/synthetic-case/output",
+      "exit_code": 0,
+      "stdout": "bootstrap: case_id=synthetic-conditioned-relation-demo contract_keys=9 -> /Users/liuhengshen/Desktop/bhr_product/reading15/bundles/03-conditioned-relation-kg/examples/synthetic-case/output/result.json",
+      "stderr": ""
+    },
+    {
+      "name": "S1_validate",
+      "cmd": "python3 scripts/relation_validate.py --relations /Users/liuhengshen/Desktop/bhr_product/reading15/bundles/03-conditioned-relation-kg/examples/synthetic-case/relations.json --input /Users/liuhengshen/Desktop/bhr_product/reading15/bundles/03-conditioned-relation-kg/examples/synthetic-case/input --nodes /Users/liuhengshen/Desktop/bhr_product/reading15/bundles/03-conditioned-relation-kg/examples/synthetic-case/nodes.json --out /Users/liuhengshen/Desktop/bhr_product/reading15/bundles/03-conditioned-relation-kg/examples/synthetic-case/output/relation_audit.json",
+      "exit_code": 0,
+      "stdout": "validate: edges=9 errors=0 warnings=0 -> /Users/liuhengshen/Desktop/bhr_product/reading15/bundles/03-conditioned-relation-kg/examples/synthetic-case/output/relation_audit.json",
+      "stderr": ""
+    },
+    {
+      "name": "S2_lint",
+      "cmd": "python3 scripts/condition_lint.py --relations /Users/liuhengshen/Desktop/bhr_product/reading15/bundles/03-conditioned-relation-kg/examples/synthetic-case/relations.json --out /Users/liuhengshen/Desktop/bhr_product/reading15/bundles/03-conditioned-relation-kg/examples/synthetic-case/work/relations_linted.json --findings /Users/liuhengshen/Desktop/bhr_product/reading15/bundles/03-conditioned-relation-kg/examples/synthetic-case/output/lint_findings.json",
+      "exit_code": 0,
+      "stdout": "lint: edges=9 findings=0 -> /Users/liuhengshen/Desktop/bhr_product/reading15/bundles/03-conditioned-relation-kg/examples/synthetic-case/work/relations_linted.json",
+      "stderr": ""
+    },
+    {
+      "name": "S3_conflicts",
+      "cmd": "python3 scripts/conflict_detect.py --relations /Users/liuhengshen/Desktop/bhr_product/reading15/bundles/03-conditioned-relation-kg/examples/synthetic-case/work/relations_linted.json --out /Users/liuhengshen/Desktop/bhr_product/reading15/bundles/03-conditioned-relation-kg/examples/synthetic-case/output/conflicts.json",
+      "exit_code": 0,
+      "stdout": "conflicts: 1 found -> /Users/liuhengshen/Desktop/bhr_product/reading15/bundles/03-conditioned-relation-kg/examples/synthetic-case/output/conflicts.json",
+      "stderr": ""
+    },
+    {
+      "name": "S4_graph",
+      "cmd": "python3 scripts/graph_build.py --nodes /Users/liuhengshen/Desktop/bhr_product/reading15/bundles/03-conditioned-relation-kg/examples/synthetic-case/nodes.json --relations /Users/liuhengshen/Desktop/bhr_product/reading15/bundles/03-conditioned-relation-kg/examples/synthetic-case/work/relations_linted.json --merges /Users/liuhengshen/Desktop/bhr_product/reading15/bundles/03-conditioned-relation-kg/examples/synthetic-case/merge_decisions.json --outdir /Users/liuhengshen/Desktop/bhr_product/reading15/bundles/03-conditioned-relation-kg/examples/synthetic-case/output",
+      "exit_code": 0,
+      "stdout": "graph: nodes=9 edges=9 merges=1 non_merges=1 -> /Users/liuhengshen/Desktop/bhr_product/reading15/bundles/03-conditioned-relation-kg/examples/synthetic-case/output",
+      "stderr": ""
+    },
+    {
+      "name": "S5_queries",
+      "cmd": "python3 scripts/query_run.py --graph /Users/liuhengshen/Desktop/bhr_product/reading15/bundles/03-conditioned-relation-kg/examples/synthetic-case/output/graph.jsonl --queries /Users/liuhengshen/Desktop/bhr_product/reading15/bundles/03-conditioned-relation-kg/examples/synthetic-case/queries_spec.json --out /Users/liuhengshen/Desktop/bhr_product/reading15/bundles/03-conditioned-relation-kg/examples/synthetic-case/output/queries.json",
+      "exit_code": 0,
+      "stdout": "queries: executed=4/4 -> /Users/liuhengshen/Desktop/bhr_product/reading15/bundles/03-conditioned-relation-kg/examples/synthetic-case/output/queries.json",
+      "stderr": ""
+    },
+    {
+      "name": "S6_preview",
+      "cmd": "python3 scripts/graph_preview.py --graph /Users/liuhengshen/Desktop/bhr_product/reading15/bundles/03-conditioned-relation-kg/examples/synthetic-case/output/graph.json --outdir /Users/liuhengshen/Desktop/bhr_product/reading15/bundles/03-conditioned-relation-kg/examples/synthetic-case/output",
+      "exit_code": 0,
+      "stdout": "preview: graph.dot / graph.svg / graph_preview.md -> /Users/liuhengshen/Desktop/bhr_product/reading15/bundles/03-conditioned-relation-kg/examples/synthetic-case/output",
+      "stderr": ""
+    },
+    {
+      "name": "S7_assemble",
+      "cmd": "python3 scripts/assemble.py --case /Users/liuhengshen/Desktop/bhr_product/reading15/bundles/03-conditioned-relation-kg/examples/synthetic-case/input/case.json --outdir /Users/liuhengshen/Desktop/bhr_product/reading15/bundles/03-conditioned-relation-kg/examples/synthetic-case/output",
+      "exit_code": 0,
+      "stdout": "assemble: contract keys mirrored=9 status=success -> /Users/liuhengshen/Desktop/bhr_product/reading15/bundles/03-conditioned-relation-kg/examples/synthetic-case/output/result.json",
+      "stderr": ""
+    }
+  ],
+  "checks": [
+    {
+      "id": "S0_bootstrap",
+      "pass": true,
+      "detail": "exit=0"
+    },
+    {
+      "id": "S1_validate",
+      "pass": true,
+      "detail": "exit=0"
+    },
+    {
+      "id": "S2_lint",
+      "pass": true,
+      "detail": "exit=0"
+    },
+    {
+      "id": "S3_conflicts",
+      "pass": true,
+      "detail": "exit=0"
+    },
+    {
+      "id": "S4_graph",
+      "pass": true,
+      "detail": "exit=0"
+    },
+    {
+      "id": "S5_queries",
+      "pass": true,
+      "detail": "exit=0"
+    },
+    {
+      "id": "S6_preview",
+      "pass": true,
+      "detail": "exit=0"
+    },
+    {
+      "id": "S7_assemble",
+      "pass": true,
+      "detail": "exit=0"
+    },
+    {
+      "id": "P1_validate_clean",
+      "pass": true,
+      "detail": "errors=0 warnings=0"
+    },
+    {
+      "id": "P2_nodes_ge8",
+      "pass": true,
+      "detail": "nodes=9"
+    },
+    {
+      "id": "P3_edges_ge9",
+      "pass": true,
+      "detail": "edges=9"
+    },
+    {
+      "id": "P4_queries_ge3",
+      "pass": true,
+      "detail": "executed=4"
+    },
+    {
+      "id": "P5_conflict_flagged",
+      "pass": true,
+      "detail": "K1=1 total=1"
+    },
+    {
+      "id": "P6_contract_mirrored",
+      "pass": true,
+      "detail": "keys=9/9"
+    },
+    {
+      "id": "N1_mismatch_quote_rejected",
+      "pass": true,
+      "detail": "{\"match\": false, \"source_id\": \"SYN-P1\", \"paragraph_id\": \"SYN-P1.s3.p1\", \"normalized_quote\": \"TransA achieves 99.9 BLEU on LowMT-100\", \"reason\": \"quote_not_verbatim_substring\"}"
+    },
+    {
+      "id": "N2_global_comparison_downgraded",
+      "pass": true,
+      "detail": "findings=['C1']"
+    },
+    {
+      "id": "N3_cited_voice_rejected",
+      "pass": true,
+      "detail": "rules=['R8']"
+    },
+    {
+      "id": "N4_conflict_evidence_flagged",
+      "pass": true,
+      "detail": "edges e3/e8 marked in_conflict"
+    }
+  ]
+}

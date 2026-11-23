@@ -1,0 +1,22 @@
+digraph G {
+  rankdir=LR;
+  node [shape=ellipse, style=filled, fillcolor="#EEE"];
+  "n_transA" [label="TransA\n(model)", fillcolor="#4C78A8"];
+  "n_transB" [label="TransB\n(model)", fillcolor="#4C78A8"];
+  "n_distilT" [label="DistilT\n(model)", fillcolor="#4C78A8"];
+  "n_lstmM" [label="LSTM-M\n(model)", fillcolor="#4C78A8"];
+  "n_lowmt" [label="LowMT-100\n(dataset)", fillcolor="#F58518"];
+  "n_wmt" [label="WMT (high-resource)\n(dataset)", fillcolor="#F58518"];
+  "n_bleu" [label="BLEU\n(metric)", fillcolor="#54A24B"];
+  "n_lowres" [label="low-resource 10k-pair budget\n(condition)", fillcolor="#B279A2"];
+  "n_mt" [label="machine translation\n(task)", fillcolor="#E45756"];
+  "n_transA" -> "n_transB" [label="outperforms"];
+  "n_transA" -> "n_lowmt" [label="measured_on"];
+  "n_transB" -> "n_lowmt" [label="measured_on ⚠conflict"];
+  "n_lstmM" -> "n_lowmt" [label="measured_on"];
+  "n_transB" -> "n_wmt" [label="measured_on [cited]"];
+  "n_distilT" -> "n_transB" [label="outperforms"];
+  "n_distilT" -> "n_lowmt" [label="measured_on"];
+  "n_transB" -> "n_lowmt" [label="measured_on ⚠conflict"];
+  "n_distilT" -> "n_transB" [label="derives_from"];
+}

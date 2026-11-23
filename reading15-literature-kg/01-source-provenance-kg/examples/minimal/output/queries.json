@@ -1,0 +1,423 @@
+{
+  "format": "provenance-kg-queries/1",
+  "queries": [
+    {
+      "error": null,
+      "ok": true,
+      "params": {
+        "hops": 1,
+        "node": "n_method_fc"
+      },
+      "query_id": "q1",
+      "result": {
+        "edges": [
+          {
+            "edge_id": "e3",
+            "evidence": [
+              {
+                "paragraph_id": "P1.p1",
+                "quote": "produced by freeze-casting an aqueous alumina slurry",
+                "source_id": "P1"
+              }
+            ],
+            "object": "n_method_fc",
+            "source_ids": [
+              "P1"
+            ],
+            "subject": "n_sample_al_p1",
+            "type": "produced_by"
+          },
+          {
+            "edge_id": "e4",
+            "evidence": [
+              {
+                "paragraph_id": "S1.p1",
+                "quote": "prepared by freeze-casting",
+                "source_id": "S1"
+              }
+            ],
+            "object": "n_method_fc",
+            "source_ids": [
+              "S1"
+            ],
+            "subject": "n_sample_al_s1",
+            "type": "produced_by"
+          }
+        ],
+        "nodes": [
+          {
+            "attributes": {
+              "generic_term": "freeze-casting",
+              "merged": true
+            },
+            "canonical_key": "method:freeze-casting",
+            "evidence": [
+              {
+                "paragraph_id": "P1.p1",
+                "quote": "Freeze-casting is a shaping route for porous ceramics",
+                "source_id": "P1"
+              },
+              {
+                "paragraph_id": "S1.p1",
+                "quote": "prepared by freeze-casting",
+                "source_id": "S1"
+              }
+            ],
+            "kind": "method",
+            "label": "freeze-casting",
+            "node_id": "n_method_fc",
+            "source_ids": [
+              "P1",
+              "S1"
+            ]
+          },
+          {
+            "attributes": {
+              "form": "scaffold",
+              "material": "alumina"
+            },
+            "canonical_key": "sample:AL-P1",
+            "evidence": [
+              {
+                "paragraph_id": "P1.p1",
+                "quote": "an alumina scaffold, denoted sample AL-P1",
+                "source_id": "P1"
+              }
+            ],
+            "kind": "sample",
+            "label": "sample AL-P1 (alumina scaffold)",
+            "node_id": "n_sample_al_p1",
+            "source_ids": [
+              "P1"
+            ]
+          },
+          {
+            "attributes": {
+              "form": "membrane",
+              "material": "alumina"
+            },
+            "canonical_key": "sample:AL-S1",
+            "evidence": [
+              {
+                "paragraph_id": "S1.p1",
+                "quote": "an alumina membrane, denoted sample AL-S1",
+                "source_id": "S1"
+              }
+            ],
+            "kind": "sample",
+            "label": "sample AL-S1 (alumina membrane)",
+            "node_id": "n_sample_al_s1",
+            "source_ids": [
+              "S1"
+            ]
+          }
+        ]
+      },
+      "summary": {
+        "edge_count": 2,
+        "node_count": 3
+      },
+      "type": "neighborhood"
+    },
+    {
+      "error": null,
+      "ok": true,
+      "params": {
+        "kind": "metric"
+      },
+      "query_id": "q2",
+      "result": {
+        "edges": [],
+        "nodes": [
+          {
+            "attributes": {
+              "measurement_method": "Archimedes method",
+              "property": "total porosity",
+              "unit": "%",
+              "value": "42"
+            },
+            "canonical_key": "metric:total-porosity:sample:AL-P1",
+            "evidence": [
+              {
+                "paragraph_id": "P1.p3",
+                "quote": "was 42 %",
+                "source_id": "P1"
+              }
+            ],
+            "kind": "metric",
+            "label": "total porosity 42 % (sample AL-P1)",
+            "node_id": "n_metric_por_p1",
+            "source_ids": [
+              "P1"
+            ]
+          },
+          {
+            "attributes": {
+              "measurement_method": "mercury intrusion porosimetry",
+              "property": "total porosity",
+              "unit": "%",
+              "value": "38"
+            },
+            "canonical_key": "metric:total-porosity:sample:AL-S1",
+            "evidence": [
+              {
+                "paragraph_id": "S1.p3",
+                "quote": "was 38 %",
+                "source_id": "S1"
+              }
+            ],
+            "kind": "metric",
+            "label": "total porosity 38 % (sample AL-S1)",
+            "node_id": "n_metric_por_s1",
+            "source_ids": [
+              "S1"
+            ]
+          }
+        ]
+      },
+      "summary": {
+        "edge_count": 0,
+        "node_count": 2
+      },
+      "type": "by-type"
+    },
+    {
+      "error": null,
+      "ok": true,
+      "params": {
+        "from": "n_paper_p1",
+        "to": "n_paper_s1"
+      },
+      "query_id": "q3",
+      "result": {
+        "edges": [
+          {
+            "edge_id": "e1",
+            "evidence": [
+              {
+                "paragraph_id": "P1.p1",
+                "quote": "an alumina scaffold, denoted sample AL-P1",
+                "source_id": "P1"
+              }
+            ],
+            "object": "n_sample_al_p1",
+            "source_ids": [
+              "P1"
+            ],
+            "subject": "n_paper_p1",
+            "type": "describes"
+          },
+          {
+            "edge_id": "e2",
+            "evidence": [
+              {
+                "paragraph_id": "S1.p1",
+                "quote": "an alumina membrane, denoted sample AL-S1",
+                "source_id": "S1"
+              }
+            ],
+            "object": "n_sample_al_s1",
+            "source_ids": [
+              "S1"
+            ],
+            "subject": "n_paper_s1",
+            "type": "describes"
+          },
+          {
+            "edge_id": "e3",
+            "evidence": [
+              {
+                "paragraph_id": "P1.p1",
+                "quote": "produced by freeze-casting an aqueous alumina slurry",
+                "source_id": "P1"
+              }
+            ],
+            "object": "n_method_fc",
+            "source_ids": [
+              "P1"
+            ],
+            "subject": "n_sample_al_p1",
+            "type": "produced_by"
+          },
+          {
+            "edge_id": "e4",
+            "evidence": [
+              {
+                "paragraph_id": "S1.p1",
+                "quote": "prepared by freeze-casting",
+                "source_id": "S1"
+              }
+            ],
+            "object": "n_method_fc",
+            "source_ids": [
+              "S1"
+            ],
+            "subject": "n_sample_al_s1",
+            "type": "produced_by"
+          }
+        ],
+        "nodes": [
+          {
+            "attributes": {
+              "generic_term": "freeze-casting",
+              "merged": true
+            },
+            "canonical_key": "method:freeze-casting",
+            "evidence": [
+              {
+                "paragraph_id": "P1.p1",
+                "quote": "Freeze-casting is a shaping route for porous ceramics",
+                "source_id": "P1"
+              },
+              {
+                "paragraph_id": "S1.p1",
+                "quote": "prepared by freeze-casting",
+                "source_id": "S1"
+              }
+            ],
+            "kind": "method",
+            "label": "freeze-casting",
+            "node_id": "n_method_fc",
+            "source_ids": [
+              "P1",
+              "S1"
+            ]
+          },
+          {
+            "attributes": {
+              "authors": [
+                "A. Synthetic",
+                "B. Example"
+              ],
+              "doi": "10.0000/synthetic.p1.0001",
+              "title": "SYNTHETIC PAPER P1: Freeze-cast alumina scaffolds sintered at low temperature"
+            },
+            "canonical_key": "paper:10.0000/synthetic.p1.0001",
+            "evidence": [
+              {
+                "paragraph_id": "P1.p1",
+                "quote": "This SYNTHETIC paper studies an alumina scaffold",
+                "source_id": "P1"
+              }
+            ],
+            "kind": "paper",
+            "label": "SYNTHETIC PAPER P1: Freeze-cast alumina scaffolds sintered at low temperature",
+            "node_id": "n_paper_p1",
+            "source_ids": [
+              "P1"
+            ]
+          },
+          {
+            "attributes": {
+              "authors": [
+                "C. Toy",
+                "D. Demo"
+              ],
+              "doi": "10.0000/synthetic.s1.0002",
+              "title": "SYNTHETIC PAPER S1: Freeze-cast alumina membranes for filtration"
+            },
+            "canonical_key": "paper:10.0000/synthetic.s1.0002",
+            "evidence": [
+              {
+                "paragraph_id": "S1.p1",
+                "quote": "This SYNTHETIC paper reports an alumina membrane",
+                "source_id": "S1"
+              }
+            ],
+            "kind": "paper",
+            "label": "SYNTHETIC PAPER S1: Freeze-cast alumina membranes for filtration",
+            "node_id": "n_paper_s1",
+            "source_ids": [
+              "S1"
+            ]
+          },
+          {
+            "attributes": {
+              "form": "scaffold",
+              "material": "alumina"
+            },
+            "canonical_key": "sample:AL-P1",
+            "evidence": [
+              {
+                "paragraph_id": "P1.p1",
+                "quote": "an alumina scaffold, denoted sample AL-P1",
+                "source_id": "P1"
+              }
+            ],
+            "kind": "sample",
+            "label": "sample AL-P1 (alumina scaffold)",
+            "node_id": "n_sample_al_p1",
+            "source_ids": [
+              "P1"
+            ]
+          },
+          {
+            "attributes": {
+              "form": "membrane",
+              "material": "alumina"
+            },
+            "canonical_key": "sample:AL-S1",
+            "evidence": [
+              {
+                "paragraph_id": "S1.p1",
+                "quote": "an alumina membrane, denoted sample AL-S1",
+                "source_id": "S1"
+              }
+            ],
+            "kind": "sample",
+            "label": "sample AL-S1 (alumina membrane)",
+            "node_id": "n_sample_al_s1",
+            "source_ids": [
+              "S1"
+            ]
+          }
+        ],
+        "path_length_edges": 4
+      },
+      "summary": {
+        "edge_count": 4,
+        "node_count": 5
+      },
+      "type": "path"
+    },
+    {
+      "error": null,
+      "ok": true,
+      "params": {
+        "kind": "sample",
+        "source_id": "S1"
+      },
+      "query_id": "q4",
+      "result": {
+        "edges": [],
+        "nodes": [
+          {
+            "attributes": {
+              "form": "membrane",
+              "material": "alumina"
+            },
+            "canonical_key": "sample:AL-S1",
+            "evidence": [
+              {
+                "paragraph_id": "S1.p1",
+                "quote": "an alumina membrane, denoted sample AL-S1",
+                "source_id": "S1"
+              }
+            ],
+            "kind": "sample",
+            "label": "sample AL-S1 (alumina membrane)",
+            "node_id": "n_sample_al_s1",
+            "source_ids": [
+              "S1"
+            ]
+          }
+        ]
+      },
+      "summary": {
+        "edge_count": 0,
+        "node_count": 1
+      },
+      "type": "by-type"
+    }
+  ]
+}

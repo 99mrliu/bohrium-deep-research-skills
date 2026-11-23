@@ -1,0 +1,42 @@
+{
+  "schema": "kg-query-spec/1",
+  "synthetic": true,
+  "_comment": "SYNTHETIC 示例查询清单：4 个查询全部真实执行，覆盖 baseline 与 current 两个版本，含一个跨版本对比查询（q2）。",
+  "queries": [
+    {
+      "name": "q1_capacity_by_material",
+      "question": "当前图谱中哪些材料报告了放电容量？不同论文的数值与条件是否分开保存？",
+      "graph": "current",
+      "op": "find_edges",
+      "args": {"relation": "delivers_capacity"}
+    },
+    {
+      "name": "q2_node_change_baseline_vs_current",
+      "question": "LiFePO4/C composite 节点从 baseline 到 current 发生了什么变化（别名/证据/历史）？",
+      "graph": "both",
+      "op": "node_history",
+      "args": {"label": "LiFePO4/C composite"}
+    },
+    {
+      "name": "q3_conflicts",
+      "question": "当前图谱中有哪些未裁决冲突？双方的原文证据分别是什么？",
+      "graph": "current",
+      "op": "conflicts",
+      "args": {}
+    },
+    {
+      "name": "q4_generic_sample_distinct",
+      "question": "baseline 中'commercial carbon black'相关记录有哪些？（对照：current 中同名通用样品是否被保持区分，见 q4b）",
+      "graph": "baseline",
+      "op": "find_nodes",
+      "args": {"label_contains": "carbon black"}
+    },
+    {
+      "name": "q4b_generic_sample_distinct_current",
+      "question": "current 中'commercial carbon black'是否为两个保持区分的节点？各自证据是什么？",
+      "graph": "current",
+      "op": "find_nodes",
+      "args": {"label_contains": "carbon black"}
+    }
+  ]
+}

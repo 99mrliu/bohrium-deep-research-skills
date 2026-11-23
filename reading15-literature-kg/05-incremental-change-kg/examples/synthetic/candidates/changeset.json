@@ -1,0 +1,117 @@
+{
+  "schema": "kg-changeset/1",
+  "case_id": "SYNTH-INCREMENTAL-001",
+  "synthetic": true,
+  "base_version": "v1",
+  "_comment": "SYNTHETIC 示例：Agent 阅读 secondary 论文后编写的变更集。演示五种操作：MERGE（真别名，有显式证据）、ADD（新实体/新边）、KEEP_DISTINCT（通用样品不合并）、UPDATE_EVIDENCE（只追加证据）、CONFLICT（冲突保留不覆盖）。",
+  "operations": [
+    {
+      "op": "MERGE",
+      "candidate": {
+        "type": "material",
+        "label": "LFP/C",
+        "evidence": [
+          {"source_id": "secondary", "paragraph_id": "p2.001", "quote": "an LFP/C composite (LiFePO4/C, hereafter LFP/C)"}
+        ]
+      },
+      "into": {"label": "LiFePO4/C composite"},
+      "justification": "p2.001 显式给出全称与缩写的同一指称：'an LFP/C composite (LiFePO4/C, hereafter LFP/C)'，属同一材料的真别名；非通用术语同名。"
+    },
+    {
+      "op": "ADD",
+      "kind": "node",
+      "node": {
+        "type": "method",
+        "label": "hydrothermal method",
+        "evidence": [
+          {"source_id": "secondary", "paragraph_id": "p2.001", "quote": "by a hydrothermal method"}
+        ]
+      }
+    },
+    {
+      "op": "ADD",
+      "kind": "edge",
+      "edge": {
+        "relation": "synthesized_by",
+        "from": {"label": "LFP/C"},
+        "to": {"label": "hydrothermal method"},
+        "evidence": [
+          {"source_id": "secondary", "paragraph_id": "p2.001", "quote": "We synthesize an LFP/C composite (LiFePO4/C, hereafter LFP/C) by a hydrothermal method"}
+        ]
+      }
+    },
+    {
+      "op": "KEEP_DISTINCT",
+      "candidate": {
+        "type": "material",
+        "label": "commercial carbon black",
+        "evidence": [
+          {"source_id": "secondary", "paragraph_id": "p2.002", "quote": "Commercial carbon black was added as a conductive additive"}
+        ]
+      },
+      "distinct_from": {"label": "commercial carbon black"},
+      "reason": "'commercial carbon black' 是通用商品材料术语：p1.003 用作碳源、p2.002 用作导电添加剂，两篇均无批号/供应商信息，无证据表明是同一物理样品，故保持区分不合并。"
+    },
+    {
+      "op": "ADD",
+      "kind": "edge",
+      "edge": {
+        "relation": "uses",
+        "from": {"label": "LFP/C"},
+        "to": {"ref": "op:4"},
+        "attributes": {"role": "conductive additive"},
+        "evidence": [
+          {"source_id": "secondary", "paragraph_id": "p2.002", "quote": "Commercial carbon black was added as a conductive additive during electrode fabrication"}
+        ]
+      }
+    },
+    {
+      "op": "ADD",
+      "kind": "edge",
+      "edge": {
+        "relation": "delivers_capacity",
+        "from": {"label": "LFP/C"},
+        "to": {"label": "discharge capacity"},
+        "attributes": {"value": "149 mAh/g", "condition": "0.1 C"},
+        "evidence": [
+          {"source_id": "secondary", "paragraph_id": "p2.003", "quote": "The LFP/C electrode delivered 149 mAh/g at 0.1 C"}
+        ]
+      },
+      "_note": "数值 149 与 baseline 的 158 来自不同论文的不同样品/方法，分开成两条边保存，不得合并取平均。"
+    },
+    {
+      "op": "UPDATE_EVIDENCE",
+      "target": {"label": "discharge capacity"},
+      "add_evidence": [
+        {"source_id": "primary", "paragraph_id": "p1.004", "quote": "At 0.1 C the composite delivered 158 mAh/g"}
+      ],
+      "_note": "为 metric 节点追加 p1.004 的结果段证据（只增不改）。"
+    },
+    {
+      "op": "ADD",
+      "kind": "node",
+      "node": {
+        "type": "material",
+        "label": "sol-gel derived powders",
+        "evidence": [
+          {"source_id": "secondary", "paragraph_id": "p2.004", "quote": "sol-gel derived powders"}
+        ]
+      }
+    },
+    {
+      "op": "CONFLICT",
+      "candidate": {
+        "relation": "outperforms",
+        "from": {"label": "LFP/C"},
+        "to": {"ref": "op:8"},
+        "attributes": {"claim": "higher rate capability"},
+        "evidence": [
+          {"source_id": "secondary", "paragraph_id": "p2.004", "quote": "our hydrothermal LFP/C shows higher rate capability than sol-gel derived powders"}
+        ]
+      },
+      "conflicts_with": {"id": "e_out_bc8f5646"},
+      "reason": "p1.004 称溶胶凝胶 LiFePO4/C 优于水热参比样品（158 vs 141 mAh/g，0.1 C）；p2.004 称水热 LFP/C 倍率性能高于溶胶凝胶粉体。两篇结论方向相反，且样品、方法与测试条件不同，不可合并为单一结论，双方并列保留。",
+      "_note": "conflicts_with 使用 baseline 封存后从 graph-v1.json 读得的稳定边 ID（溶胶凝胶 LiFePO4/C --outperforms--> hydrothermal reference sample）。"
+    }
+  ]
+}

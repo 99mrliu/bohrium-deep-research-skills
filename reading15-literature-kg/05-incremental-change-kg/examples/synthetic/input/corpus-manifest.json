@@ -1,0 +1,25 @@
+{
+  "schema": "corpus-manifest/1",
+  "synthetic": true,
+  "note": "SYNTHETIC 合成示例清单：DOI/作者/哈希均为占位，仅用于演示接口，非真实论文。",
+  "sources": [
+    {
+      "source_id": "primary",
+      "doi": "10.0000/synth.0001",
+      "title": "Sol-gel synthesis of a LiFePO4/C composite cathode (SYNTHETIC)",
+      "authors": ["A. Zhang", "B. Li"],
+      "license": "CC-BY-4.0",
+      "sha256": "synthetic-sha-primary-0001",
+      "file": "primary-material.json"
+    },
+    {
+      "source_id": "secondary",
+      "doi": "10.0000/synth.0002",
+      "title": "Hydrothermal growth of LFP/C for lithium storage (SYNTHETIC)",
+      "authors": ["C. Wang"],
+      "license": "CC-BY-4.0",
+      "sha256": "synthetic-sha-secondary-0002",
+      "file": "secondary-material.json"
+    }
+  ]
+}

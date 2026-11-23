@@ -1,0 +1,27 @@
+digraph provenance_kg {
+  rankdir=LR;
+  node [shape=box, style="rounded,filled", fillcolor="#f5f5f5"];
+  "n_claim_load_p1" [label="n_claim_load_p1\noptimal solid loading = 20 vol% (P1 claim) (P1)"];
+  "n_claim_load_s1" [label="n_claim_load_s1\noptimal solid loading = 30 vol% (S1 claim) (S1)"];
+  "n_cond_sint_p1" [label="n_cond_sint_p1\nsintering 1250 °C in air (P1) (P1)"];
+  "n_cond_sint_s1" [label="n_cond_sint_s1\nsintering 1350 °C in air (S1) (S1)"];
+  "n_method_fc" [label="n_method_fc\nfreeze-casting (P1,S1)"];
+  "n_method_fc_p1" [label="n_method_fc_p1\nfreeze-casting (mention in P1) (P1)"];
+  "n_method_fc_s1" [label="n_method_fc_s1\nfreeze-casting (mention in S1) (S1)"];
+  "n_metric_por_p1" [label="n_metric_por_p1\ntotal porosity 42 % (sample AL-P1) (P1)"];
+  "n_metric_por_s1" [label="n_metric_por_s1\ntotal porosity 38 % (sample AL-S1) (S1)"];
+  "n_paper_p1" [label="n_paper_p1\nSYNTHETIC PAPER P1: Freeze-cast alumina scaffolds sintered at low temperature (P1)"];
+  "n_paper_s1" [label="n_paper_s1\nSYNTHETIC PAPER S1: Freeze-cast alumina membranes for filtration (S1)"];
+  "n_sample_al_p1" [label="n_sample_al_p1\nsample AL-P1 (alumina scaffold) (P1)"];
+  "n_sample_al_s1" [label="n_sample_al_s1\nsample AL-S1 (alumina membrane) (S1)"];
+  "n_paper_p1" -> "n_sample_al_p1" [label="describes"];
+  "n_paper_p1" -> "n_claim_load_p1" [label="reports_claim"];
+  "n_paper_s1" -> "n_claim_load_s1" [label="reports_claim"];
+  "n_paper_s1" -> "n_sample_al_s1" [label="describes"];
+  "n_sample_al_p1" -> "n_method_fc" [label="produced_by"];
+  "n_sample_al_p1" -> "n_cond_sint_p1" [label="processed_under"];
+  "n_sample_al_p1" -> "n_metric_por_p1" [label="characterized_by"];
+  "n_sample_al_s1" -> "n_method_fc" [label="produced_by"];
+  "n_sample_al_s1" -> "n_cond_sint_s1" [label="processed_under"];
+  "n_sample_al_s1" -> "n_metric_por_s1" [label="characterized_by"];
+}

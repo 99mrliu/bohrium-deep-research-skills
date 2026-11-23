@@ -1,0 +1,30 @@
+{
+  "note": "SYNTHETIC 合成示例清单（非正式案例材料）",
+  "items": [
+    {
+      "source_id": "S1",
+      "doi": "10.0000/synth-primary",
+      "title": "合成示例论文A：二氧化钛电子传输层对钙钛矿电池性能的影响（SYNTHETIC）",
+      "authors": [
+        "合成作者甲",
+        "合成作者乙"
+      ],
+      "file": "primary-material.json",
+      "sha256": "f0346062e3ec523d2a1da29cfa9bc51d6281e11a2eae93c2bdbe49d5018933df",
+      "license": "SYNTHETIC-CC0",
+      "role": "primary"
+    },
+    {
+      "source_id": "S2",
+      "doi": "10.0000/synth-secondary",
+      "title": "合成示例论文B：化学气相沉积二氧化钛薄膜的稳定性研究（SYNTHETIC）",
+      "authors": [
+        "合成作者丙"
+      ],
+      "file": "secondary-material.json",
+      "sha256": "7d57d5f6b66bb444a2fab67726322abe6e9400e245269a24959983845a86acf0",
+      "license": "SYNTHETIC-CC0",
+      "role": "secondary"
+    }
+  ]
+}

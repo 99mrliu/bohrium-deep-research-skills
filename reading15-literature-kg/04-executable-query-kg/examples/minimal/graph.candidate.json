@@ -1,0 +1,278 @@
+{
+  "schema_version": "1.0",
+  "graph_id": "synthetic-minimal-kg",
+  "case_id": "SYNTHETIC-MINIMAL-EXAMPLE",
+  "label": "SYNTHETIC",
+  "note": "SYNTHETIC 合成示例候选图谱：演示实体/关系/证据/合并决策的完整格式，非真实论文结论",
+  "sources": [
+    {
+      "source_id": "S1",
+      "doi": "10.0000/synth-primary",
+      "title": "合成示例论文A：二氧化钛电子传输层对钙钛矿电池性能的影响（SYNTHETIC）",
+      "authors": ["合成作者甲", "合成作者乙"],
+      "role": "primary",
+      "file": "primary-material.json"
+    },
+    {
+      "source_id": "S2",
+      "doi": "10.0000/synth-secondary",
+      "title": "合成示例论文B：化学气相沉积二氧化钛薄膜的稳定性研究（SYNTHETIC）",
+      "authors": ["合成作者丙"],
+      "role": "secondary",
+      "file": "secondary-material.json"
+    }
+  ],
+  "nodes": [
+    {
+      "id": "n:tio2",
+      "type": "Material",
+      "name": "二氧化钛",
+      "aliases": ["TiO2", "二氧化钛薄膜"],
+      "evidence": [
+        {"source_id": "S1", "paragraph_id": "p-a-1", "quote": "二氧化钛电子传输层"},
+        {"source_id": "S2", "paragraph_id": "p-b-1", "quote": "二氧化钛薄膜"}
+      ]
+    },
+    {
+      "id": "n:spiro",
+      "type": "Material",
+      "name": "spiro-OMeTAD",
+      "aliases": [],
+      "evidence": [
+        {"source_id": "S1", "paragraph_id": "p-a-2", "quote": "spiro-OMeTAD空穴传输层"},
+        {"source_id": "S2", "paragraph_id": "p-b-1", "quote": "spiro-OMeTAD作为空穴传输材料"}
+      ]
+    },
+    {
+      "id": "n:device",
+      "type": "Task",
+      "name": "钙钛矿太阳能电池",
+      "aliases": [],
+      "evidence": [
+        {"source_id": "S1", "paragraph_id": "p-a-1", "quote": "钙钛矿太阳能电池"}
+      ]
+    },
+    {
+      "id": "n:spin-coating",
+      "type": "Method",
+      "name": "旋涂法",
+      "aliases": ["spin coating"],
+      "evidence": [
+        {"source_id": "S1", "paragraph_id": "p-a-1", "quote": "旋涂法"}
+      ]
+    },
+    {
+      "id": "n:cvd",
+      "type": "Method",
+      "name": "化学气相沉积法",
+      "aliases": ["CVD"],
+      "evidence": [
+        {"source_id": "S2", "paragraph_id": "p-b-1", "quote": "化学气相沉积法"}
+      ]
+    },
+    {
+      "id": "n:pce",
+      "type": "Metric",
+      "name": "光电转换效率",
+      "aliases": ["PCE"],
+      "evidence": [
+        {"source_id": "S1", "paragraph_id": "p-a-2", "quote": "光电转换效率"}
+      ]
+    },
+    {
+      "id": "n:stability",
+      "type": "Metric",
+      "name": "稳定性",
+      "aliases": [],
+      "evidence": [
+        {"source_id": "S2", "paragraph_id": "p-b-2", "quote": "稳定性"}
+      ]
+    },
+    {
+      "id": "n:sample-a",
+      "type": "Sample",
+      "name": "样品A",
+      "aliases": [],
+      "evidence": [
+        {"source_id": "S1", "paragraph_id": "p-a-2", "quote": "样品A（有效面积0.1平方厘米）"}
+      ]
+    },
+    {
+      "id": "n:sample-b",
+      "type": "Sample",
+      "name": "样品B",
+      "aliases": [],
+      "evidence": [
+        {"source_id": "S2", "paragraph_id": "p-b-2", "quote": "样品B（有效面积1.0平方厘米）"}
+      ]
+    },
+    {
+      "id": "n:cond-light",
+      "type": "Condition",
+      "name": "连续光照100小时",
+      "aliases": [],
+      "evidence": [
+        {"source_id": "S2", "paragraph_id": "p-b-2", "quote": "连续光照100小时"}
+      ]
+    },
+    {
+      "id": "n:concl-a",
+      "type": "Conclusion",
+      "name": "二氧化钛提升电子抽取速率从而提升效率",
+      "aliases": [],
+      "evidence": [
+        {"source_id": "S1", "paragraph_id": "p-a-3", "quote": "二氧化钛的引入提升了电子抽取速率"}
+      ]
+    },
+    {
+      "id": "n:concl-b",
+      "type": "Conclusion",
+      "name": "化学气相沉积二氧化钛薄膜稳定性更优",
+      "aliases": [],
+      "evidence": [
+        {"source_id": "S2", "paragraph_id": "p-b-3", "quote": "化学气相沉积法制备的二氧化钛薄膜表现出更优的稳定性"}
+      ]
+    }
+  ],
+  "edges": [
+    {
+      "id": "e1", "src": "n:spin-coating", "dst": "n:tio2", "relation": "制备",
+      "evidence": [
+        {"source_id": "S1", "paragraph_id": "p-a-1", "quote": "采用旋涂法制备二氧化钛电子传输层"}
+      ]
+    },
+    {
+      "id": "e2", "src": "n:tio2", "dst": "n:device", "relation": "应用于",
+      "evidence": [
+        {"source_id": "S1", "paragraph_id": "p-a-1", "quote": "并将其应用于钙钛矿太阳能电池"}
+      ]
+    },
+    {
+      "id": "e3", "src": "n:device", "dst": "n:spiro", "relation": "使用",
+      "evidence": [
+        {"source_id": "S1", "paragraph_id": "p-a-2", "quote": "基于spiro-OMeTAD空穴传输层的器件"}
+      ]
+    },
+    {
+      "id": "e4", "src": "n:sample-a", "dst": "n:pce", "relation": "测得",
+      "conditions": "仅样品A、有效面积0.1平方厘米；数值18.5%不可移植到其他样品或论文",
+      "evidence": [
+        {"source_id": "S1", "paragraph_id": "p-a-2", "quote": "获得了18.5%的光电转换效率"}
+      ]
+    },
+    {
+      "id": "e5", "src": "n:tio2", "dst": "n:pce", "relation": "促进",
+      "conditions": "S1 作者自述的机理判断（作者观点，非直接测量）",
+      "evidence": [
+        {"source_id": "S1", "paragraph_id": "p-a-3", "quote": "这是效率提升的主要原因"}
+      ]
+    },
+    {
+      "id": "e6", "src": "n:cvd", "dst": "n:tio2", "relation": "制备",
+      "evidence": [
+        {"source_id": "S2", "paragraph_id": "p-b-1", "quote": "使用化学气相沉积法制备了二氧化钛薄膜"}
+      ]
+    },
+    {
+      "id": "e7", "src": "n:sample-b", "dst": "n:stability", "relation": "测得",
+      "conditions": "仅样品B、有效面积1.0平方厘米、连续光照100小时；90%保持率不可与S1的18.5%效率合并",
+      "evidence": [
+        {"source_id": "S2", "paragraph_id": "p-b-2", "quote": "保持了初始效率的90%，表现出良好的稳定性"}
+      ]
+    },
+    {
+      "id": "e8", "src": "n:cvd", "dst": "n:spin-coating", "relation": "优于",
+      "conditions": "仅限稳定性维度，为 S2 的对比结论；不代表效率维度优劣",
+      "evidence": [
+        {"source_id": "S2", "paragraph_id": "p-b-3", "quote": "与旋涂法制备的薄膜相比"}
+      ]
+    },
+    {
+      "id": "e9", "src": "n:stability", "dst": "n:concl-b", "relation": "支持",
+      "evidence": [
+        {"source_id": "S2", "paragraph_id": "p-b-3", "quote": "化学气相沉积法制备的二氧化钛薄膜表现出更优的稳定性"}
+      ]
+    },
+    {
+      "id": "e10", "src": "n:pce", "dst": "n:concl-a", "relation": "支持",
+      "evidence": [
+        {"source_id": "S1", "paragraph_id": "p-a-3", "quote": "效率提升的主要原因"}
+      ]
+    },
+    {
+      "id": "e11", "src": "n:cvd", "dst": "n:stability", "relation": "促进",
+      "conditions": "S2 的结论性陈述，作用对象为 S2 的薄膜与器件",
+      "evidence": [
+        {"source_id": "S2", "paragraph_id": "p-b-3", "quote": "更优的稳定性"}
+      ]
+    },
+    {
+      "id": "e12", "src": "n:cond-light", "dst": "n:stability", "relation": "条件约束",
+      "evidence": [
+        {"source_id": "S2", "paragraph_id": "p-b-2", "quote": "在连续光照100小时后保持了初始效率的90%"}
+      ]
+    }
+  ],
+  "merge_decisions": [
+    {
+      "id": "m1",
+      "decision": "merge",
+      "left": "S1「二氧化钛电子传输层」(p-a-1)",
+      "right": "S2「二氧化钛薄膜」(p-b-1)",
+      "canonical_node": "n:tio2",
+      "rationale": "两篇均指同一化学材料 TiO2，仅形态描述不同（传输层/薄膜）；合并为同一 Material 概念节点，证据分别保留来源。",
+      "evidence": [
+        {"source_id": "S1", "paragraph_id": "p-a-1", "quote": "二氧化钛电子传输层"},
+        {"source_id": "S2", "paragraph_id": "p-b-1", "quote": "二氧化钛薄膜"}
+      ]
+    },
+    {
+      "id": "m2",
+      "decision": "merge",
+      "left": "S1「spiro-OMeTAD空穴传输层」(p-a-2)",
+      "right": "S2「spiro-OMeTAD作为空穴传输材料」(p-b-1)",
+      "canonical_node": "n:spiro",
+      "rationale": "同名材料、同一角色（空穴传输），跨篇合并；各自证据保留来源。",
+      "evidence": [
+        {"source_id": "S1", "paragraph_id": "p-a-2", "quote": "spiro-OMeTAD空穴传输层"},
+        {"source_id": "S2", "paragraph_id": "p-b-1", "quote": "spiro-OMeTAD作为空穴传输材料"}
+      ]
+    },
+    {
+      "id": "m3",
+      "decision": "no_merge",
+      "left": "n:sample-a（S1 样品A，0.1平方厘米）",
+      "right": "n:sample-b（S2 样品B，1.0平方厘米）",
+      "canonical_node": null,
+      "rationale": "不同物理样品：面积、制备方法与测量数值均不同（18.5%效率 vs 100小时后90%保持率）；即使器件类型相近也绝不合并，数值不可互相移植。",
+      "evidence": [
+        {"source_id": "S1", "paragraph_id": "p-a-2", "quote": "样品A（有效面积0.1平方厘米）"},
+        {"source_id": "S2", "paragraph_id": "p-b-2", "quote": "样品B（有效面积1.0平方厘米）"}
+      ]
+    },
+    {
+      "id": "m4",
+      "decision": "no_merge",
+      "left": "n:spin-coating（旋涂法，S1）",
+      "right": "n:cvd（化学气相沉积法，S2）",
+      "canonical_node": null,
+      "rationale": "两者都「制备二氧化钛」但是不同方法；S2 的「优于」仅指稳定性维度。不能因为作用对象相同就把两种方法合并为一个节点。",
+      "evidence": [
+        {"source_id": "S1", "paragraph_id": "p-a-1", "quote": "旋涂法"},
+        {"source_id": "S2", "paragraph_id": "p-b-1", "quote": "化学气相沉积法"}
+      ]
+    },
+    {
+      "id": "m5",
+      "decision": "no_merge",
+      "left": "n:pce（光电转换效率18.5%，S1 样品A）",
+      "right": "n:stability（100小时后90%保持率，S2 样品B）",
+      "canonical_node": null,
+      "rationale": "不同指标、不同数值、不同实验条件；禁止把两篇的数值结果合成一个结论。",
+      "evidence": [
+        {"source_id": "S1", "paragraph_id": "p-a-2", "quote": "获得了18.5%的光电转换效率"},
+        {"source_id": "S2", "paragraph_id": "p-b-2", "quote": "保持了初始效率的90%，表现出良好的稳定性"}
+      ]
+    }
+  ]
+}

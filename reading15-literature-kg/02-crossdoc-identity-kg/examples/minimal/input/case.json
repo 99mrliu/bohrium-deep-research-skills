@@ -1,0 +1,16 @@
+{
+  "case_id": "EXAMPLE-SYNTH-001",
+  "label": "SYNTHETIC EXAMPLE（合成示例，非正式案例）",
+  "doi": "10.0000/synthetic.paper.a",
+  "title": "Synthetic Paper A: Conductivity of LLZO Solid Electrolyte (fabricated demo text)",
+  "authors": ["合成作者 甲"],
+  "output_contract": {
+    "case_id": "string",
+    "status": "string",
+    "graph": "object",
+    "identity_decisions": "array",
+    "conflicts": "array",
+    "queries": "array",
+    "uncertainties": "array"
+  }
+}

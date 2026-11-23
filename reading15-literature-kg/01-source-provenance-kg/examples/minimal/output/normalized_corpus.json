@@ -1,0 +1,74 @@
+{
+  "duplicate_paragraph_ids": {},
+  "format": "normalized-corpus/1",
+  "input_dir": "/Users/liuhengshen/Desktop/bhr_product/reading15/bundles/01-source-provenance-kg/examples/minimal",
+  "skipped": [
+    {
+      "bytes": 514,
+      "path": "secondary-publisher.xml",
+      "reason": "非 JSON 旁挂文件，未解析；仅登记存在性与摘要以供溯源审计",
+      "sha256": "f6c614a0aeec734928d474c59b7f2238aa5ede98dbd8f1fbdad082725b9d3821"
+    }
+  ],
+  "sources": [
+    {
+      "authors": [
+        "A. Synthetic",
+        "B. Example"
+      ],
+      "doi": "10.0000/synthetic.p1.0001",
+      "paragraph_count": 3,
+      "paragraphs": [
+        {
+          "id": "P1.p1",
+          "section": "Introduction",
+          "text": "Freeze-casting is a shaping route for porous ceramics. This SYNTHETIC paper studies an alumina scaffold, denoted sample AL-P1, produced by freeze-casting an aqueous alumina slurry."
+        },
+        {
+          "id": "P1.p2",
+          "section": "Methods",
+          "text": "Sample AL-P1 was cast from a slurry with a solid loading of 20 vol%, which this synthetic paper claims to be the optimal loading, and was then sintered in air at 1250 °C. The dwell time at the sintering temperature is not reported in this synthetic source."
+        },
+        {
+          "id": "P1.p3",
+          "section": "Results",
+          "text": "The total porosity of sample AL-P1, measured by the Archimedes method, was 42 %. The pore channels were aligned along the freezing direction."
+        }
+      ],
+      "path": "primary-material.json",
+      "role": "primary",
+      "source_id": "P1",
+      "title": "SYNTHETIC PAPER P1: Freeze-cast alumina scaffolds sintered at low temperature"
+    },
+    {
+      "authors": [
+        "C. Toy",
+        "D. Demo"
+      ],
+      "doi": "10.0000/synthetic.s1.0002",
+      "paragraph_count": 3,
+      "paragraphs": [
+        {
+          "id": "S1.p1",
+          "section": "Introduction",
+          "text": "This SYNTHETIC paper reports an alumina membrane, denoted sample AL-S1, prepared by freeze-casting. Sample AL-S1 is a physically distinct specimen with a different slurry formulation from any earlier synthetic sample."
+        },
+        {
+          "id": "S1.p2",
+          "section": "Methods",
+          "text": "Sample AL-S1 was sintered in air at 1350 °C. The optimal solid loading claimed in this synthetic paper is 30 vol%."
+        },
+        {
+          "id": "S1.p3",
+          "section": "Results",
+          "text": "The total porosity of sample AL-S1, measured by mercury intrusion porosimetry, was 38 %. No mechanical strength data are reported in this synthetic source."
+        }
+      ],
+      "path": "secondary-material.json",
+      "role": "secondary",
+      "source_id": "S1",
+      "title": "SYNTHETIC PAPER S1: Freeze-cast alumina membranes for filtration"
+    }
+  ],
+  "warnings": []
+}

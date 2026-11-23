@@ -1,0 +1,41 @@
+{
+  "case_id": "SYNTHETIC-MINIMAL-001",
+  "note": "SYNTHETIC 最小示例用例；非官方赛题数据。",
+  "output_contract": {
+    "case_id": null,
+    "status": null,
+    "primary_paper": null,
+    "secondary_papers": null,
+    "graph_stats": null,
+    "nodes": null,
+    "edges": null,
+    "merges": null,
+    "nonmerges": null,
+    "conflicts": null,
+    "unreported": null,
+    "queries": null,
+    "coverage": null,
+    "graph_files": null,
+    "provenance_ledger": null,
+    "notes": null,
+    "external_enrichment": null
+  },
+  "query_specs": [
+    {
+      "query_id": "q1",
+      "query": {"type": "neighborhood", "node": "n_method_fc", "hops": 1}
+    },
+    {
+      "query_id": "q2",
+      "query": {"type": "by-type", "kind": "metric"}
+    },
+    {
+      "query_id": "q3",
+      "query": {"type": "path", "from": "n_paper_p1", "to": "n_paper_s1"}
+    },
+    {
+      "query_id": "q4",
+      "query": {"type": "by-type", "kind": "sample", "source_id": "S1"}
+    }
+  ]
+}

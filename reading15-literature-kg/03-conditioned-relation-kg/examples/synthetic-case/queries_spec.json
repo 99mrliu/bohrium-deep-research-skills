@@ -1,0 +1,29 @@
+{
+  "synthetic": true,
+  "queries": [
+    {
+      "query_id": "q1",
+      "question": "在 LowMT-100 / BLEU / low-resource 条件下，哪些模型被报告优于 TransB？",
+      "type": "compare",
+      "params": {"dataset": "n_lowmt", "metric": "n_bleu", "condition": "n_lowres"}
+    },
+    {
+      "query_id": "q2",
+      "question": "TransB 在 LowMT-100 上的 BLEU 测量值有哪些？是否存在冲突？",
+      "type": "measurements",
+      "params": {"node": "n_transB", "dataset": "n_lowmt", "metric": "n_bleu"}
+    },
+    {
+      "query_id": "q3",
+      "question": "TransA 与 DistilT 之间是否存在直接比较关系？",
+      "type": "direct_relation",
+      "params": {"subject": "n_transA", "object": "n_distilT"}
+    },
+    {
+      "query_id": "q4",
+      "question": "TransB 在 WMT（高资源）上的报告值是什么？能否作为一手证据？",
+      "type": "measurements",
+      "params": {"node": "n_transB", "dataset": "n_wmt", "metric": "n_bleu"}
+    }
+  ]
+}

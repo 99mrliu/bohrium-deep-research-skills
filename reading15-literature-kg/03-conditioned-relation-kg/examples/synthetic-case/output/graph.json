@@ -1,0 +1,423 @@
+{
+  "schema": "conditioned-relation-kg/1.0",
+  "labels": [
+    "SYNTHETIC"
+  ],
+  "nodes": [
+    {
+      "node_id": "n_transA",
+      "type": "model",
+      "label": "TransA",
+      "aliases": [],
+      "evidence": [
+        {
+          "source_id": "SYN-P1",
+          "paragraph_id": "SYN-P1.abs.p1",
+          "quote": "two translation models, TransA and TransB"
+        }
+      ]
+    },
+    {
+      "node_id": "n_transB",
+      "type": "model",
+      "label": "TransB",
+      "aliases": [],
+      "evidence": [
+        {
+          "source_id": "SYN-P1",
+          "paragraph_id": "SYN-P1.abs.p1",
+          "quote": "TransA and TransB, on the low-resource benchmark"
+        }
+      ]
+    },
+    {
+      "node_id": "n_distilT",
+      "type": "model",
+      "label": "DistilT",
+      "aliases": [],
+      "evidence": [
+        {
+          "source_id": "SYN-P2",
+          "paragraph_id": "SYN-P2.abs.p1",
+          "quote": "We present DistilT, a compact translation model"
+        }
+      ]
+    },
+    {
+      "node_id": "n_lstmM",
+      "type": "model",
+      "label": "LSTM-M",
+      "aliases": [],
+      "evidence": [
+        {
+          "source_id": "SYN-P1",
+          "paragraph_id": "SYN-P1.s3.p2",
+          "quote": "the LSTM-M baseline reaches 24.1 BLEU"
+        }
+      ]
+    },
+    {
+      "node_id": "n_lowmt",
+      "type": "dataset",
+      "label": "LowMT-100",
+      "aliases": [
+        "LowMT100"
+      ],
+      "evidence": [
+        {
+          "source_id": "SYN-P1",
+          "paragraph_id": "SYN-P1.s2.p1",
+          "quote": "the LowMT-100 training split consisting of 10,000 sentence pairs"
+        }
+      ]
+    },
+    {
+      "node_id": "n_wmt",
+      "type": "dataset",
+      "label": "WMT (high-resource)",
+      "aliases": [],
+      "evidence": [
+        {
+          "source_id": "SYN-P1",
+          "paragraph_id": "SYN-P1.s1.p1",
+          "quote": "the high-resource WMT benchmark"
+        }
+      ]
+    },
+    {
+      "node_id": "n_bleu",
+      "type": "metric",
+      "label": "BLEU",
+      "aliases": [],
+      "evidence": [
+        {
+          "source_id": "SYN-P1",
+          "paragraph_id": "SYN-P1.s2.p1",
+          "quote": "evaluated with BLEU on the official test split"
+        }
+      ]
+    },
+    {
+      "node_id": "n_lowres",
+      "type": "condition",
+      "label": "low-resource 10k-pair budget",
+      "aliases": [
+        "10k sentence-pair training budget",
+        "low-resource condition"
+      ],
+      "evidence": [
+        {
+          "source_id": "SYN-P1",
+          "paragraph_id": "SYN-P1.abs.p1",
+          "quote": "under a 10k sentence-pair training budget"
+        }
+      ]
+    },
+    {
+      "node_id": "n_mt",
+      "type": "task",
+      "label": "machine translation",
+      "aliases": [
+        "translation"
+      ],
+      "evidence": [
+        {
+          "source_id": "SYN-P1",
+          "paragraph_id": "SYN-P1.abs.p1",
+          "quote": "two translation models"
+        }
+      ]
+    }
+  ],
+  "edges": [
+    {
+      "edge_id": "e1",
+      "relation": "outperforms",
+      "subject": "n_transA",
+      "object": "n_transB",
+      "voice": "primary-results",
+      "polarity": "positive",
+      "conditions": {
+        "dataset": "n_lowmt",
+        "metric": "n_bleu",
+        "condition": "n_lowres"
+      },
+      "comparator": "n_transB",
+      "measurement": {
+        "kind": "margin",
+        "value": 2.6,
+        "unit": "BLEU"
+      },
+      "used_as_primary_evidence": true,
+      "evidence": [
+        {
+          "source_id": "SYN-P1",
+          "paragraph_id": "SYN-P1.s3.p2",
+          "quote": "TransA therefore outperforms TransB by 2.6 BLEU points on LowMT-100 under the 10k-pair condition"
+        }
+      ]
+    },
+    {
+      "edge_id": "e2",
+      "relation": "measured_on",
+      "subject": "n_transA",
+      "object": "n_lowmt",
+      "voice": "primary-results",
+      "polarity": "neutral",
+      "conditions": {
+        "dataset": "n_lowmt",
+        "metric": "n_bleu",
+        "condition": "n_lowres"
+      },
+      "measurement": {
+        "kind": "score",
+        "value": 32.4,
+        "unit": "BLEU"
+      },
+      "used_as_primary_evidence": true,
+      "evidence": [
+        {
+          "source_id": "SYN-P1",
+          "paragraph_id": "SYN-P1.s3.p1",
+          "quote": "TransA achieves 32.4 BLEU on LowMT-100"
+        }
+      ]
+    },
+    {
+      "edge_id": "e3",
+      "relation": "measured_on",
+      "subject": "n_transB",
+      "object": "n_lowmt",
+      "voice": "primary-results",
+      "polarity": "neutral",
+      "conditions": {
+        "dataset": "n_lowmt",
+        "metric": "n_bleu",
+        "condition": "n_lowres"
+      },
+      "measurement": {
+        "kind": "score",
+        "value": 29.8,
+        "unit": "BLEU"
+      },
+      "used_as_primary_evidence": true,
+      "evidence": [
+        {
+          "source_id": "SYN-P1",
+          "paragraph_id": "SYN-P1.s3.p1",
+          "quote": "TransB achieves 29.8 BLEU under the same low-resource condition"
+        }
+      ],
+      "in_conflict": true
+    },
+    {
+      "edge_id": "e4",
+      "relation": "measured_on",
+      "subject": "n_lstmM",
+      "object": "n_lowmt",
+      "voice": "primary-results",
+      "polarity": "neutral",
+      "conditions": {
+        "dataset": "n_lowmt",
+        "metric": "n_bleu",
+        "condition": "n_lowres"
+      },
+      "measurement": {
+        "kind": "score",
+        "value": 24.1,
+        "unit": "BLEU"
+      },
+      "used_as_primary_evidence": true,
+      "evidence": [
+        {
+          "source_id": "SYN-P1",
+          "paragraph_id": "SYN-P1.s3.p2",
+          "quote": "the LSTM-M baseline reaches 24.1 BLEU"
+        }
+      ]
+    },
+    {
+      "edge_id": "e5",
+      "relation": "measured_on",
+      "subject": "n_transB",
+      "object": "n_wmt",
+      "voice": "cited-background",
+      "polarity": "neutral",
+      "conditions": {
+        "dataset": "n_wmt",
+        "metric": "n_bleu",
+        "condition": "high-resource"
+      },
+      "measurement": {
+        "kind": "score",
+        "value": 41.2,
+        "unit": "BLEU"
+      },
+      "used_as_primary_evidence": false,
+      "evidence": [
+        {
+          "source_id": "SYN-P1",
+          "paragraph_id": "SYN-P1.s1.p1",
+          "quote": "TransB was previously reported to achieve 41.2 BLEU on the high-resource WMT benchmark [7]"
+        }
+      ]
+    },
+    {
+      "edge_id": "e6",
+      "relation": "outperforms",
+      "subject": "n_distilT",
+      "object": "n_transB",
+      "voice": "primary-results",
+      "polarity": "positive",
+      "conditions": {
+        "dataset": "n_lowmt",
+        "metric": "n_bleu",
+        "condition": "n_lowres"
+      },
+      "comparator": "n_transB",
+      "measurement": {
+        "kind": "margin",
+        "value": 0.5,
+        "unit": "BLEU"
+      },
+      "used_as_primary_evidence": true,
+      "evidence": [
+        {
+          "source_id": "SYN-P2",
+          "paragraph_id": "SYN-P2.s3.p1",
+          "quote": "DistilT outperforms TransB by 0.5 BLEU"
+        }
+      ]
+    },
+    {
+      "edge_id": "e7",
+      "relation": "measured_on",
+      "subject": "n_distilT",
+      "object": "n_lowmt",
+      "voice": "primary-results",
+      "polarity": "neutral",
+      "conditions": {
+        "dataset": "n_lowmt",
+        "metric": "n_bleu",
+        "condition": "n_lowres"
+      },
+      "measurement": {
+        "kind": "score",
+        "value": 31.0,
+        "unit": "BLEU"
+      },
+      "used_as_primary_evidence": true,
+      "evidence": [
+        {
+          "source_id": "SYN-P2",
+          "paragraph_id": "SYN-P2.s3.p1",
+          "quote": "DistilT achieves 31.0 BLEU"
+        }
+      ]
+    },
+    {
+      "edge_id": "e8",
+      "relation": "measured_on",
+      "subject": "n_transB",
+      "object": "n_lowmt",
+      "voice": "primary-results",
+      "polarity": "neutral",
+      "conditions": {
+        "dataset": "n_lowmt",
+        "metric": "n_bleu",
+        "condition": "n_lowres"
+      },
+      "measurement": {
+        "kind": "score",
+        "value": 30.5,
+        "unit": "BLEU"
+      },
+      "used_as_primary_evidence": true,
+      "evidence": [
+        {
+          "source_id": "SYN-P2",
+          "paragraph_id": "SYN-P2.s3.p1",
+          "quote": "TransB achieves 30.5 BLEU under the low-resource condition"
+        }
+      ],
+      "in_conflict": true
+    },
+    {
+      "edge_id": "e9",
+      "relation": "derives_from",
+      "subject": "n_distilT",
+      "object": "n_transB",
+      "voice": "primary-results",
+      "polarity": "neutral",
+      "conditions": {
+        "dataset": "n_lowmt",
+        "condition": "n_lowres"
+      },
+      "used_as_primary_evidence": true,
+      "evidence": [
+        {
+          "source_id": "SYN-P2",
+          "paragraph_id": "SYN-P2.s2.p1",
+          "quote": "DistilT is trained by knowledge distillation from TransB"
+        }
+      ]
+    }
+  ],
+  "merge_report": {
+    "policy": "合并需显式依据；同名不同对象不得合并；不强迫每个别名合并",
+    "merges": [
+      {
+        "nodes": [
+          "n_lowmt"
+        ],
+        "aliases": [
+          "LowMT-100",
+          "LowMT100"
+        ],
+        "rationale": "P1 写作 LowMT-100（SYN-P1.s2.p1），P2 写作 LowMT100（SYN-P2.s2.p1）；两者均指 10,000 句对训练划分，合并为单节点 n_lowmt，别名保留。",
+        "evidence": [
+          {
+            "source_id": "SYN-P1",
+            "paragraph_id": "SYN-P1.s2.p1",
+            "quote": "the LowMT-100 training split consisting of 10,000 sentence pairs"
+          },
+          {
+            "source_id": "SYN-P2",
+            "paragraph_id": "SYN-P2.s2.p1",
+            "quote": "the LowMT100 training split of 10,000 sentence pairs"
+          }
+        ]
+      }
+    ],
+    "non_merges": [
+      {
+        "nodes": [
+          "n_transB",
+          "TransB-ft"
+        ],
+        "rationale": "P2 明确说明 TransB-ft 是 TransB 面向医学领域的微调变体且不在本次评估范围；同名前缀不等于同一对象，禁止合并，且 TransB-ft 不作为实体节点入图。",
+        "evidence": [
+          {
+            "source_id": "SYN-P2",
+            "paragraph_id": "SYN-P2.s2.p2",
+            "quote": "TransB-ft, a fine-tuned variant of TransB for the medical domain, is outside the scope of this evaluation."
+          }
+        ]
+      }
+    ]
+  },
+  "cooccurrence_notes": [
+    {
+      "nodes": [
+        "n_transA",
+        "n_distilT"
+      ],
+      "decision": "不建边：两篇仅共现于低资源翻译主题，P2 明确写到 no direct comparison between them has been reported；跨篇共现不是直接关系。",
+      "evidence": {
+        "source_id": "SYN-P2",
+        "paragraph_id": "SYN-P2.s1.p1",
+        "quote": "TransA and DistilT both target low-resource translation, but no direct comparison between them has been reported."
+      }
+    }
+  ]
+}

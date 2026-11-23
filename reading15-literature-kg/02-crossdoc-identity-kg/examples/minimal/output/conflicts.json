@@ -1,0 +1,25 @@
+[
+  {
+    "kind": "measurement_conflict_kept_separate",
+    "node_id": "E-0001",
+    "node_name": "LLZO",
+    "metric": "ionic conductivity",
+    "values": [
+      {
+        "source_id": "SYN-A",
+        "value": 0.00032,
+        "unit": "S/cm",
+        "conditions": "25 C",
+        "edge_id": "R-A1"
+      },
+      {
+        "source_id": "SYN-B",
+        "value": 0.0011,
+        "unit": "S/cm",
+        "conditions": "25 C, Ta-doped",
+        "edge_id": "R-B1"
+      }
+    ],
+    "policy": "各来源数值分别保留并附条件，不合并为单一结论"
+  }
+]

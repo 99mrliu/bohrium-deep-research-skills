@@ -1,0 +1,13 @@
+id,src,relation,dst,conditions,n_evidence,sources
+e1,n:spin-coating,制备,n:tio2,,1,S1
+e10,n:pce,支持,n:concl-a,,1,S1
+e11,n:cvd,促进,n:stability,S2 的结论性陈述，作用对象为 S2 的薄膜与器件,1,S2
+e12,n:cond-light,条件约束,n:stability,,1,S2
+e2,n:tio2,应用于,n:device,,1,S1
+e3,n:device,使用,n:spiro,,1,S1
+e4,n:sample-a,测得,n:pce,仅样品A、有效面积0.1平方厘米；数值18.5%不可移植到其他样品或论文,1,S1
+e5,n:tio2,促进,n:pce,S1 作者自述的机理判断（作者观点，非直接测量）,1,S1
+e6,n:cvd,制备,n:tio2,,1,S2
+e7,n:sample-b,测得,n:stability,仅样品B、有效面积1.0平方厘米、连续光照100小时；90%保持率不可与S1的18.5%效率合并,1,S2
+e8,n:cvd,优于,n:spin-coating,仅限稳定性维度，为 S2 的对比结论；不代表效率维度优劣,1,S2
+e9,n:stability,支持,n:concl-b,,1,S2

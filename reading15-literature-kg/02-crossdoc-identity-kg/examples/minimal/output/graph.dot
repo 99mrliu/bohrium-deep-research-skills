@@ -1,0 +1,29 @@
+digraph G {
+  rankdir=LR;
+  labelloc="t"; label="synthetic example (not real papers)";
+  node [fontname="Helvetica"];
+  "E-0001" [label="LLZO\n(material)", shape=ellipse, color=green4];
+  "E-0002" [label="sintering\n(method)", shape=ellipse, color=gray40];
+  "E-0003" [label="XRD\n(method)", shape=ellipse, color=gray40];
+  "E-0004" [label="random forest model\n(model)", shape=ellipse, color=gray40];
+  "E-0005" [label="SynthIon-1\n(dataset)", shape=ellipse, color=gray40];
+  "E-0006" [label="LATP\n(material)", shape=ellipse, color=green4];
+  "E-0007" [label="sintering\n(method)", shape=ellipse, color=gray40];
+  "E-0008" [label="XRD\n(method)", shape=ellipse, color=gray40];
+  "E-0009" [label="Random Forest Model\n(model)", shape=ellipse, color=gray40];
+  "E-0010" [label="SynthIon-2\n(dataset)", shape=ellipse, color=gray40];
+  "AUX-0001" [label="ionic conductivity\n(metric)", shape=box, color=gray70];
+  "AUX-0002" [label="ionic conductivity\n(metric)", shape=box, color=gray70];
+  "E-0001" -> "AUX-0001" [label="has_measurement"];
+  "E-0002" -> "E-0001" [label="applied_to"];
+  "E-0001" -> "E-0003" [label="characterized_by"];
+  "E-0004" -> "E-0005" [label="trained_on"];
+  "E-0004" -> "AUX-0001" [label="predicts"];
+  "E-0001" -> "E-0006" [label="compared_with"];
+  "E-0001" -> "AUX-0002" [label="has_measurement"];
+  "E-0007" -> "E-0001" [label="applied_to"];
+  "E-0001" -> "E-0008" [label="characterized_by"];
+  "E-0009" -> "E-0010" [label="trained_on"];
+  "E-0009" -> "AUX-0002" [label="predicts"];
+  "E-0001" -> "E-0006" [label="outperforms"];
+}

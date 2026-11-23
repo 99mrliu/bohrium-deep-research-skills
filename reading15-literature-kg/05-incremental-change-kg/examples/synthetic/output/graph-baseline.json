@@ -1,0 +1,292 @@
+{
+  "case_id": "SYNTH-INCREMENTAL-001",
+  "edges": [
+    {
+      "attributes": {
+        "condition": "0.1 C",
+        "value": "158 mAh/g"
+      },
+      "evidence": [
+        {
+          "paragraph_id": "p1.001",
+          "quote": "delivers a discharge capacity of 158 mAh/g at 0.1 C",
+          "source_id": "primary"
+        }
+      ],
+      "from": "n_mat_29a6b6b9",
+      "history": [
+        {
+          "note": "baseline 建图（primary 论文封存）",
+          "op": "ADD",
+          "version": "v1"
+        }
+      ],
+      "id": "e_del_c14a37e0",
+      "relation": "delivers_capacity",
+      "status": "active",
+      "to": "n_mtr_7c1cd688"
+    },
+    {
+      "attributes": {},
+      "evidence": [
+        {
+          "paragraph_id": "p1.002",
+          "quote": "olivine cathode material for lithium-ion batteries",
+          "source_id": "primary"
+        }
+      ],
+      "from": "n_mat_29a6b6b9",
+      "history": [
+        {
+          "note": "baseline 建图（primary 论文封存）",
+          "op": "ADD",
+          "version": "v1"
+        }
+      ],
+      "id": "e_app_d4952e95",
+      "relation": "applied_to",
+      "status": "active",
+      "to": "n_tsk_3ff09b99"
+    },
+    {
+      "attributes": {},
+      "evidence": [
+        {
+          "paragraph_id": "p1.003",
+          "quote": "The LiFePO4/C composite was prepared by a sol-gel method",
+          "source_id": "primary"
+        }
+      ],
+      "from": "n_mat_29a6b6b9",
+      "history": [
+        {
+          "note": "baseline 建图（primary 论文封存）",
+          "op": "ADD",
+          "version": "v1"
+        }
+      ],
+      "id": "e_syn_7c5ee1ef",
+      "relation": "synthesized_by",
+      "status": "active",
+      "to": "n_mtd_8ea853ed"
+    },
+    {
+      "attributes": {
+        "role": "carbon source"
+      },
+      "evidence": [
+        {
+          "paragraph_id": "p1.003",
+          "quote": "using commercial carbon black as the carbon source",
+          "source_id": "primary"
+        }
+      ],
+      "from": "n_mat_29a6b6b9",
+      "history": [
+        {
+          "note": "baseline 建图（primary 论文封存）",
+          "op": "ADD",
+          "version": "v1"
+        }
+      ],
+      "id": "e_use_ac3780be",
+      "relation": "uses",
+      "status": "active",
+      "to": "n_mat_bbb0bb6d"
+    },
+    {
+      "attributes": {
+        "condition": "0.1 C",
+        "value": "158 vs 141 mAh/g"
+      },
+      "evidence": [
+        {
+          "paragraph_id": "p1.004",
+          "quote": "outperforming the hydrothermal reference sample, which gave 141 mAh/g",
+          "source_id": "primary"
+        }
+      ],
+      "from": "n_mat_29a6b6b9",
+      "history": [
+        {
+          "note": "baseline 建图（primary 论文封存）",
+          "op": "ADD",
+          "version": "v1"
+        }
+      ],
+      "id": "e_out_bc8f5646",
+      "relation": "outperforms",
+      "status": "active",
+      "to": "n_mat_9f9f2e2e"
+    }
+  ],
+  "nodes": [
+    {
+      "aliases": [],
+      "evidence": [
+        {
+          "paragraph_id": "p1.001",
+          "quote": "a discharge capacity of 158 mAh/g at 0.1 C",
+          "source_id": "primary"
+        }
+      ],
+      "history": [
+        {
+          "note": "baseline 建图（primary 论文封存）",
+          "op": "ADD",
+          "version": "v1"
+        }
+      ],
+      "id": "n_mtr_7c1cd688",
+      "label": "discharge capacity",
+      "status": "active",
+      "type": "metric"
+    },
+    {
+      "aliases": [],
+      "evidence": [
+        {
+          "paragraph_id": "p1.001",
+          "quote": "a LiFePO4/C composite cathode",
+          "source_id": "primary"
+        }
+      ],
+      "history": [
+        {
+          "note": "baseline 建图（primary 论文封存）",
+          "op": "ADD",
+          "version": "v1"
+        }
+      ],
+      "id": "n_mat_29a6b6b9",
+      "label": "LiFePO4/C composite",
+      "status": "active",
+      "type": "material"
+    },
+    {
+      "aliases": [],
+      "evidence": [
+        {
+          "paragraph_id": "p1.002",
+          "quote": "olivine cathode material for lithium-ion batteries",
+          "source_id": "primary"
+        }
+      ],
+      "history": [
+        {
+          "note": "baseline 建图（primary 论文封存）",
+          "op": "ADD",
+          "version": "v1"
+        }
+      ],
+      "id": "n_tsk_3ff09b99",
+      "label": "lithium-ion battery cathode",
+      "status": "active",
+      "type": "task"
+    },
+    {
+      "aliases": [],
+      "evidence": [
+        {
+          "paragraph_id": "p1.003",
+          "quote": "commercial carbon black as the carbon source",
+          "source_id": "primary"
+        }
+      ],
+      "history": [
+        {
+          "note": "baseline 建图（primary 论文封存）",
+          "op": "ADD",
+          "version": "v1"
+        }
+      ],
+      "id": "n_mat_bbb0bb6d",
+      "label": "commercial carbon black",
+      "status": "active",
+      "type": "material"
+    },
+    {
+      "aliases": [],
+      "evidence": [
+        {
+          "paragraph_id": "p1.003",
+          "quote": "prepared by a sol-gel method",
+          "source_id": "primary"
+        }
+      ],
+      "history": [
+        {
+          "note": "baseline 建图（primary 论文封存）",
+          "op": "ADD",
+          "version": "v1"
+        }
+      ],
+      "id": "n_mtd_8ea853ed",
+      "label": "sol-gel method",
+      "status": "active",
+      "type": "method"
+    },
+    {
+      "aliases": [],
+      "evidence": [
+        {
+          "paragraph_id": "p1.004",
+          "quote": "the hydrothermal reference sample, which gave 141 mAh/g",
+          "source_id": "primary"
+        }
+      ],
+      "history": [
+        {
+          "note": "baseline 建图（primary 论文封存）",
+          "op": "ADD",
+          "version": "v1"
+        }
+      ],
+      "id": "n_mat_9f9f2e2e",
+      "label": "hydrothermal reference sample",
+      "status": "active",
+      "type": "material"
+    }
+  ],
+  "registry": {
+    "e_app_d4952e95": "n_mat_29a6b6b9|n_tsk_3ff09b99|applied_to|||primary|p1.002",
+    "e_del_c14a37e0": "n_mat_29a6b6b9|n_mtr_7c1cd688|delivers_capacity|158 mAh/g|0.1 C|primary|p1.001",
+    "e_out_bc8f5646": "n_mat_29a6b6b9|n_mat_9f9f2e2e|outperforms|158 vs 141 mAh/g|0.1 C|primary|p1.004",
+    "e_syn_7c5ee1ef": "n_mat_29a6b6b9|n_mtd_8ea853ed|synthesized_by|||primary|p1.003",
+    "e_use_ac3780be": "n_mat_29a6b6b9|n_mat_bbb0bb6d|uses|||primary|p1.003",
+    "n_mat_29a6b6b9": "primary|p1.001|lifepo4 c composite",
+    "n_mat_9f9f2e2e": "primary|p1.004|hydrothermal reference sample",
+    "n_mat_bbb0bb6d": "primary|p1.003|commercial carbon black",
+    "n_mtd_8ea853ed": "primary|p1.003|sol gel method",
+    "n_mtr_7c1cd688": "primary|p1.001|discharge capacity",
+    "n_tsk_3ff09b99": "primary|p1.002|lithium ion battery cathode"
+  },
+  "schema": "kg-graph/1",
+  "sealed": true,
+  "sources": [
+    {
+      "authors": [
+        "A. Zhang",
+        "B. Li"
+      ],
+      "doi": "10.0000/synth.0001",
+      "file": "primary-material.json",
+      "license": "CC-BY-4.0",
+      "sha256": "synthetic-sha-primary-0001",
+      "source_id": "primary",
+      "title": "Sol-gel synthesis of a LiFePO4/C composite cathode (SYNTHETIC)"
+    },
+    {
+      "authors": [
+        "C. Wang"
+      ],
+      "doi": "10.0000/synth.0002",
+      "file": "secondary-material.json",
+      "license": "CC-BY-4.0",
+      "sha256": "synthetic-sha-secondary-0002",
+      "source_id": "secondary",
+      "title": "Hydrothermal growth of LFP/C for lithium storage (SYNTHETIC)"
+    }
+  ],
+  "version": "v1"
+}

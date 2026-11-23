@@ -1,0 +1,35 @@
+{
+  "n_conflicts": 1,
+  "policy": "源内/跨源冲突一律保留，绝不静默解决",
+  "conflicts": [
+    {
+      "kind": "K1_numeric",
+      "status": "unresolved",
+      "policy": "保留全部冲突记录，不取平均、不选赢家",
+      "signature": {
+        "subject": "n_transB",
+        "relation": "measured_on",
+        "object": "n_lowmt",
+        "conditions": "condition=n_lowres|dataset=n_lowmt|metric=n_bleu",
+        "kind": "score",
+        "unit": "BLEU"
+      },
+      "edges": [
+        {
+          "edge_id": "e3",
+          "value": 29.8,
+          "sources": [
+            "SYN-P1"
+          ]
+        },
+        {
+          "edge_id": "e8",
+          "value": 30.5,
+          "sources": [
+            "SYN-P2"
+          ]
+        }
+      ]
+    }
+  ]
+}

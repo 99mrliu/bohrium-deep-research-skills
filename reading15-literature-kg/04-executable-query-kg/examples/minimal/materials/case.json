@@ -1,0 +1,12 @@
+{
+  "case_id": "SYNTHETIC-MINIMAL-EXAMPLE",
+  "note": "SYNTHETIC 合成示例：仅用于演示 Skill 接口与完整流程，非组织方正式案例",
+  "research_question": "围绕两篇合成示例论文构建带证据的文献知识图谱并执行可复核查询",
+  "output_contract": {
+    "graph": "知识图谱文件（JSON/JSONL/CSV），含实体、关系与逐条证据",
+    "queries": "至少3个实际执行的查询及其结果与证据",
+    "evidence_check": "证据核验报告（quote 对原文的精确子串核验）",
+    "merge_report": "跨篇合并与不得合并决策及依据",
+    "preview": "人类可读预览（Markdown 邻接表与 SVG）"
+  }
+}
