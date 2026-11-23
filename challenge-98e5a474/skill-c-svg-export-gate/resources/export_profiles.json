@@ -1,0 +1,17 @@
+{
+  "generic_1col": {"width_mm": 90,  "dpi": 300, "formats": ["pdf", "png"],
+                   "min_font_pt": 5, "min_linewidth_pt": 0.25,
+                   "note": "通用单栏：90 mm 宽，300 dpi"},
+  "generic_2col": {"width_mm": 180, "dpi": 300, "formats": ["pdf", "png"],
+                   "min_font_pt": 5, "min_linewidth_pt": 0.25,
+                   "note": "通用双栏：180 mm 宽，300 dpi"},
+  "nature_1col":  {"width_mm": 89,  "dpi": 300, "formats": ["pdf", "png", "eps"],
+                   "min_font_pt": 5, "min_linewidth_pt": 0.25,
+                   "note": "Nature 单栏 89 mm；EPS 依赖 inkscape/rsvg-convert"},
+  "nature_2col":  {"width_mm": 183, "dpi": 300, "formats": ["pdf", "png", "eps"],
+                   "min_font_pt": 5, "min_linewidth_pt": 0.25,
+                   "note": "Nature 双栏 183 mm"},
+  "acs_1col":     {"width_mm": 84,  "dpi": 600, "formats": ["pdf", "tiff"],
+                   "min_font_pt": 5, "min_linewidth_pt": 0.5,
+                   "note": "ACS 单栏 3.25 in，TIFF 600 dpi LZW"}
+}
