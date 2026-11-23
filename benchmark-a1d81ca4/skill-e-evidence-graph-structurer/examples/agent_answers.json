@@ -1,0 +1,37 @@
+{
+  "claims": [
+    {
+      "task": "q1",
+      "text": "摘录 A 报道该催化剂过电位为 287 mV。",
+      "evidence": [
+        {"anchor": "doc1.para1", "quote": "NiFe-LDH 催化剂的过电位为 287 mV"}
+      ]
+    },
+    {
+      "task": "q2",
+      "text": "摘录 B 报道 Tafel 斜率为 41 mV/dec。",
+      "evidence": [
+        {"anchor": "doc1.para2", "quote": "Tafel 斜率为 41 mV/dec"}
+      ]
+    },
+    {
+      "task": "q2",
+      "text": "摘录 B 报道电荷转移电阻为 12 Ω。",
+      "evidence": [
+        {"anchor": "doc1.para1", "quote": "电荷转移电阻为 12 Ω"}
+      ]
+    },
+    {
+      "task": "q3",
+      "text": "两处来源对过电位的报道不一致，应并列报告并注明分歧。",
+      "evidence": [
+        {"anchor": "doc1.para1", "quote": "过电位为 287 mV"},
+        {"anchor": "doc1.para4", "quote": "| 过电位 | 312 mV |"}
+      ]
+    },
+    {
+      "task": "q3",
+      "text": "该催化剂在碱性介质中循环 5000 次后活性无衰减。"
+    }
+  ]
+}

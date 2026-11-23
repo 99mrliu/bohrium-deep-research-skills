@@ -1,0 +1,48 @@
+{
+  "answer_summary": "已基于合成源材料起草 2 道题卡；其中第 2 题的初始版本故意使用错误锚点，用于演示机器门禁。",
+  "status_note": "合成示例：错误计划预期出现 q2 锚点漂移 fail。",
+  "item_bank": [
+    {
+      "id": "q1",
+      "task": "依据源材料第一段，报告催化剂 A 在所给反应温度下的产率，保留原文单位。",
+      "scope": "source_excerpt.txt 第 1 段",
+      "reference_answer": "产率为 82%。",
+      "rubric": {
+        "0": "未给出产率，或答案与锚定证据中的数值不一致。",
+        "1": "给出 82 但遗漏单位、温度限定或证据锚点不完整。",
+        "2": "给出 82%，条件限定正确，并提供 doc1.para1 内逐字证据。",
+        "machine_check": "答案必须包含 82%，且至少一条证据由 quote_gate 判为 pass。"
+      },
+      "evidence": [
+        {
+          "locator": "source_excerpt.txt#doc1.para1",
+          "quote": "在 500 °C 下，催化剂 A 的产率为 82%"
+        }
+      ],
+      "difficulty": "低：单句定位并抽取数值。",
+      "data_license": "完全合成材料，作者即本 Skill 示例，可用于本地测试。",
+      "unique_answer_rationale": "第一段在 500 °C 条件下唯一给出催化剂 A 的产率 82%；选择性 96% 不是产率。"
+    },
+    {
+      "id": "q2",
+      "task": "依据 Markdown 表格，报告催化剂 B 在表格所列温度下的产率，保留百分号。",
+      "scope": "source_excerpt.txt 第 2 段 Markdown 表格",
+      "reference_answer": "产率为 74%。",
+      "rubric": {
+        "0": "给出其他数值、未引用表格证据，或结论与表格锚点冲突。",
+        "1": "给出 74 但缺少百分号、催化剂/温度限定，或证据锚点不完整。",
+        "2": "给出 74%，限定催化剂 B 与 600 °C，并提供表格行逐字证据。",
+        "machine_check": "表格行证据必须在声称锚点内由 quote_gate 判为 pass。"
+      },
+      "evidence": [
+        {
+          "locator": "source_excerpt.txt#doc1.para1",
+          "quote": "| B | 600 | 74 |"
+        }
+      ],
+      "difficulty": "低：读取单行表格并排除相邻行。",
+      "data_license": "完全合成表格，作者即本 Skill 示例，可用于本地测试。",
+      "unique_answer_rationale": "表格中催化剂 B 只有一行，且温度为 600 °C、产率为 74%；相邻的 A 行不是本题对象。"
+    }
+  ]
+}

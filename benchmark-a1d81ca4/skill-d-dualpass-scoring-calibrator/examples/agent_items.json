@@ -1,0 +1,58 @@
+{
+  "task_type": "T2",
+  "item_bank": [
+    {
+      "item_id": "Q1",
+      "task": "根据摘录回答：ZnO 纳米颗粒的制备方法是什么？TEM 统计的平均粒径和标准差是多少？",
+      "material_scope": "source_excerpt.txt 的“样品与方法”和“表征结果”两节。",
+      "reference_answer": "采用溶胶-凝胶法制备；TEM 统计得到平均粒径 18.4 nm，标准差 3.2 nm。",
+      "scoring_rules": [
+        "2 分：方法、平均粒径、标准差三项均与源文一致，单位正确；",
+        "1 分：方法正确，但粒径或标准差遗漏/写错一项；",
+        "0 分：方法错误，或数值与源文矛盾。"
+      ],
+      "evidence_anchors": [
+        {
+          "source": "source_excerpt.txt",
+          "locator": {"line_start": 3, "line_end": 5},
+          "quote": "采用溶胶-凝胶法制备 ZnO 纳米颗粒，前驱体为乙酸锌。"
+        },
+        {
+          "source": "source_excerpt.txt",
+          "locator": {"line_start": 7, "line_end": 10},
+          "quote": "透射电子显微镜统计 120 个颗粒，平均粒径为 18.4 nm，标准差为 3.2 nm。"
+        }
+      ],
+      "difficulty": "易",
+      "license": "CC BY 4.0（合成示例）",
+      "boundary_notes": "源文未报告粒径分布形状；题卡不得追问该未报告信息。"
+    },
+    {
+      "item_id": "Q2",
+      "task": "根据摘录写出材料的光学带隙，并指出其表征依据。",
+      "material_scope": "source_excerpt.txt 的“表征结果”一节及数据表。",
+      "reference_answer": "光学带隙为 3.21 eV，依据为紫外-可见吸收边拟合；据此可判断其适合紫外光电器件。",
+      "scoring_rules": [
+        "2 分：带隙数值与单位正确，并明确依据为 UV-Vis 吸收边拟合；不得加入源文未报告的应用结论；",
+        "1 分：带隙正确但表征依据不完整，或加入未由源文直接支持的推断；",
+        "0 分：带隙数值错误或方法张冠李戴。"
+      ],
+      "evidence_anchors": [
+        {
+          "source": "source_excerpt.txt",
+          "locator": {"line_start": 7, "line_end": 10},
+          "quote": "紫外-可见吸收边拟合得到光学带隙 3.21 eV。"
+        },
+        {
+          "source": "source_excerpt.txt",
+          "locator": {"line_start": 7, "line_end": 10},
+          "quote": "该材料适用于紫外光电器件。"
+        }
+      ],
+      "difficulty": "中",
+      "license": "CC BY 4.0（合成示例）",
+      "boundary_notes": "源文未报告应用验证；参考答案中的应用表述是刻意保留的合成缺陷，供一致性演示裁决。",
+      "unreported_aspects": ["带隙测量不确定度", "长期稳定性"]
+    }
+  ]
+}

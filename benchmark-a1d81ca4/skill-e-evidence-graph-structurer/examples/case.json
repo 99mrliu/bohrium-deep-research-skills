@@ -1,0 +1,11 @@
+{
+  "case_id": "synthetic-demo-001",
+  "task_type_hint": "T1",
+  "output_contract": [
+    "answer_q1",
+    "answer_q2",
+    "answer_q3",
+    "confidence_note"
+  ],
+  "notes": "合成示例（SYNTHETIC）：output_contract 以字段名列表形式给出，运行时由脚本动态读取。"
+}

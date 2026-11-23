@@ -1,0 +1,29 @@
+{
+  "schema": "process-qc-guard/answers@1",
+  "note": "合成示例初稿：故意保留两处缺陷（q2 空答案 + 缺证据锚点），用于演示探针检出。",
+  "items": [
+    {
+      "id": "q1",
+      "question": "AX-700 合金的标准固溶处理温度与保温时间分别是多少？",
+      "answer": "540°C 保温 2 小时（随后室温水淬）。",
+      "evidence": "第1段",
+      "confidence": "high",
+      "uncertainty": null
+    },
+    {
+      "id": "q2",
+      "question": "该批次材料中锆（Zr）元素的含量（质量分数）是多少？",
+      "answer": "",
+      "evidence": "",
+      "confidence": "low",
+      "uncertainty": null
+    }
+  ],
+  "contract_fields": {
+    "answer_q1": "540°C，保温 2 小时",
+    "answer_q2": "",
+    "evidence": "第1段",
+    "confidence": "medium"
+  },
+  "sources": ["source_excerpt.txt 第1段"]
+}

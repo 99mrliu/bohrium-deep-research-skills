@@ -1,0 +1,29 @@
+{
+  "case_id": "synthetic-demo-001",
+  "meta": {
+    "note": "合成示例 SYNTHETIC EXAMPLE：非隐藏案例，数据为虚构",
+    "synthetic": true
+  },
+  "output_contract": [
+    {
+      "name": "answer_summary",
+      "required": true,
+      "type": "string"
+    },
+    {
+      "name": "item_bank",
+      "required": true,
+      "type": "array"
+    },
+    {
+      "name": "evidence_map",
+      "required": true,
+      "type": "object"
+    },
+    {
+      "name": "status_note",
+      "required": true,
+      "type": "string"
+    }
+  ]
+}

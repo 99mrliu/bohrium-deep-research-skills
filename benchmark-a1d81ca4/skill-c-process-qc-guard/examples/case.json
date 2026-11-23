@@ -1,0 +1,8 @@
+{
+  "case_id": "synthetic-demo-001",
+  "task_type": "T1",
+  "output_contract": {
+    "required_fields": ["answer_q1", "answer_q2", "evidence", "confidence"]
+  },
+  "note": "合成示例（SYNTHETIC EXAMPLE），仅用于演示 process-qc-guard 流程，不含真实评测数据。"
+}

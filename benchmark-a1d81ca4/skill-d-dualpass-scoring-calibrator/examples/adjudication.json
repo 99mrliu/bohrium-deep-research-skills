@@ -1,0 +1,30 @@
+{
+  "records": [
+    {
+      "item": "Q2",
+      "dimension": "correctness",
+      "pass1": 2,
+      "pass2": 1,
+      "final": 1,
+      "rationale": "",
+      "evidence_anchor": {
+        "source": "source_excerpt.txt",
+        "locator": {"line_start": 7, "line_end": 10},
+        "quote": "紫外-可见吸收边拟合得到光学带隙 3.21 eV。"
+      }
+    },
+    {
+      "item": "Q2",
+      "dimension": "correctness",
+      "pass1": 2,
+      "pass2": 1,
+      "final": 1,
+      "rationale": "参考答案的带隙数值和表征依据正确，但加入源文未报告的“适合紫外光电器件”结论；按 T2 正确性 1 分锚点，主体正确但含一处无源扩展，最终取 1。",
+      "evidence_anchor": {
+        "source": "source_excerpt.txt",
+        "locator": {"line_start": 7, "line_end": 10},
+        "quote": "紫外-可见吸收边拟合得到光学带隙 3.21 eV。"
+      }
+    }
+  ]
+}

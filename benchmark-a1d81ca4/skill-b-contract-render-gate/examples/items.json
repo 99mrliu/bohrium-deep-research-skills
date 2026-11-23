@@ -1,0 +1,26 @@
+{
+  "answer_summary": "基于合成材料段落起草 2 道 benchmark-DRAFT 题卡（正式工单为 4 道），覆盖电导率与循环稳定性、全电池性能两类考点，证据锚点均指向 source_excerpt.txt 真实行号。",
+  "item_bank": [
+    {
+      "difficulty": "easy",
+      "evidence_anchors": ["source_excerpt.txt:L5", "source_excerpt.txt:L13"],
+      "item_id": "item_1",
+      "license": "CC-BY-4.0（合成示例数据）",
+      "material_scope": "source_excerpt.txt 段落二与表格一（L5、L9-L14）",
+      "reference_answer": "室温离子电导率为 3.2 mS/cm（对应 550 ℃ 退火）；对称电池在 0.1 mA/cm2 下稳定循环 500 小时，极化电压维持在 25 mV 以内。",
+      "scoring_rubric": "电导率数值 3.2 mS/cm 正确得 2 分；电流密度 0.1 mA/cm2 与循环 500 小时正确得 2 分；极化电压 25 mV 以内正确得 1 分；满分 5 分。",
+      "task": "根据材料范围，写出 Li6PS5Cl 在 550 ℃ 退火后的室温离子电导率，以及其与锂金属负极组装的对称电池循环稳定性数据。"
+    },
+    {
+      "difficulty": "medium",
+      "evidence_anchors": ["source_excerpt.txt:L7"],
+      "item_id": "item_2",
+      "license": "CC-BY-4.0（合成示例数据）",
+      "material_scope": "source_excerpt.txt 段落三（L7）",
+      "reference_answer": "正极为 LiNi0.8Co0.1Mn0.1O2；0.5C 倍率下首圈放电比容量 185 mAh/g；循环 200 圈后容量保持率 88%。",
+      "scoring_rubric": "正极材料正确得 1 分；首圈放电比容量 185 mAh/g 正确得 2 分；200 圈容量保持率 88% 正确得 2 分；满分 5 分。",
+      "task": "概括该全电池体系所用正极材料、首圈放电比容量与 200 圈容量保持率。"
+    }
+  ],
+  "status_note": "示例流程仅起草 2 道题卡，正式工单要求 4 道，故本示例对应正式契约为部分完成；证据锚点行号已对照 source_excerpt.txt 核对。"
+}
