@@ -1,0 +1,8 @@
+{
+  "request_id": "REQ-PERMIT-01",
+  "docs": ["DOC-01", "DOC-03"],
+  "field": "qualitative_contrast_rhb_degradation",
+  "claim_type": "qualitative",
+  "required_dimensions": ["task", "pollutant", "material"],
+  "claim_text": "DOC-01 与 DOC-03 针对相同污染物（RhB）的相同任务（染料光催化降解），允许做定性对照：在相同底物与光源条件下，Ag 负载改性（g-C3N4 → g-C3N4-Ag）的表现差异可作定性讨论；材料维度仅 subset_only，报告必须注明口径差异，不做数值合并。"
+}

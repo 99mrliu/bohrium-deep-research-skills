@@ -1,0 +1,11 @@
+{
+  "case_id": "SYNTH-EXAMPLE-001",
+  "title": "合成示例：三篇光催化论文的可比性裁定与守门",
+  "output_contract": {
+    "comparison_matrix": "覆盖全部语料论文 × 六维度的可比性裁定矩阵",
+    "comparability_decisions": "全部逐维度裁定的计数与文件位置",
+    "permitted_syntheses": "获得 permit 的合成请求（含断言与归一化说明）",
+    "blocked_syntheses": "被阻断的合成请求及阻断维度",
+    "overall_verdicts": "各论文对的任务级总裁定"
+  }
+}

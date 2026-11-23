@@ -1,0 +1,8 @@
+{
+  "case_id": "SYNTH-EXAMPLE-001",
+  "task": "比较三篇光催化论文中 g-C3N4 对 RhB 的降解性能",
+  "comparison_task": "compare photocatalytic degradation performance of g-C3N4 toward RhB across the three documents",
+  "documents": ["DOC-01", "DOC-02", "DOC-03"],
+  "required_dimensions": ["task", "metric", "units", "material", "pollutant", "budget"],
+  "note": "合成示例 workorder, 仅用于演示 measurement-forge 管线; 无官方答案。"
+}

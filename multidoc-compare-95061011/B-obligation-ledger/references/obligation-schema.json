@@ -1,0 +1,71 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "obligation ledger schema",
+  "description": "义务台账（obligations.jsonl，每行一条）与关闭记录（closures.jsonl，每行一条）的字段规范。说明性文档，loader 不强制使用 JSON Schema 解析。",
+  "definitions": {
+    "status": {
+      "type": "string",
+      "enum": ["open", "answered_with_evidence", "not_reported_confirmed", "conflict_preserved", "out_of_scope"]
+    },
+    "evidence": {
+      "source_document_id": "文档 id（须存在于语料段落索引）",
+      "paragraph_id": "段落 id（document_id + paragraph_id 唯一定位一段）",
+      "quote": "从该段落原文中逐字截取的引文（脚本做子串核验）"
+    }
+  },
+  "obligation": {
+    "type": "object",
+    "required": ["obligation_id", "kind", "status"],
+    "properties": {
+      "obligation_id": {
+        "type": "string",
+        "pattern": "^(FC-.*|CMP-.*|Q-.*)$",
+        "description": "唯一 id。field_cell: FC-<字段>-<文档>；comparability: CMP-<维度>-<A>-vs-<B>；question: Q-<问题id>"
+      },
+      "case_id": {"type": ["string", "null"]},
+      "kind": {"type": "string", "enum": ["field_cell", "comparability", "question"]},
+      "document_id": {"type": ["string", "null"], "description": "field_cell 义务的目标文档"},
+      "doc_pair": {"type": ["array", "null"], "items": {"type": "string"}, "description": "comparability 义务的两个文档"},
+      "dimension": {"type": ["string", "null"], "description": "comparability 义务的可比性维度（task/metric/units/material/pollutant/budget 之一）"},
+      "field": {"type": ["string", "null"], "description": "field_cell 义务的工单字段名"},
+      "question": {"type": ["string", "null"], "description": "question 义务的问题文本"},
+      "closure_criterion": {"type": "string", "description": "该义务的关闭判据（人读）"},
+      "status": {"$ref": "#/definitions/status", "description": "open 或四种关闭状态之一；open 义务必须豁免或写入 uncertainty"},
+      "closure": {
+        "type": ["object", "null"],
+        "description": "关闭后由 close_obligations.py 写入的关闭记录（见 closure）"
+      }
+    }
+  },
+  "closure": {
+    "type": "object",
+    "required": ["obligation_id", "status"],
+    "properties": {
+      "obligation_id": {"type": "string"},
+      "status": {
+        "type": "string",
+        "enum": ["answered_with_evidence", "not_reported_confirmed", "conflict_preserved", "out_of_scope"]
+      },
+      "value": {"type": ["string", "number", "null"], "description": "回答取值；comparability 取值为 comparable/not_comparable/partially_comparable"},
+      "unit": {"type": ["string", "null"]},
+      "source_document_id": {"type": ["string", "null"]},
+      "paragraph_id": {"type": ["string", "null"]},
+      "quote": {"type": ["string", "null"], "description": "逐字引文，脚本核验其在对应段落中"},
+      "secondary_source_document_id": {"type": ["string", "null"], "description": "冲突/双方证据的另一方文档"},
+      "secondary_paragraph_id": {"type": ["string", "null"]},
+      "secondary_quote": {"type": ["string", "null"]},
+      "search_scope": {
+        "type": ["array", "null"],
+        "items": {"type": "string"},
+        "description": "not_reported_confirmed 必填：已检索的 paragraph_id 列表，逐条核对存在性"
+      },
+      "note": {"type": ["string", "null"], "description": "说明：检索范围声明 / 冲突描述 / 豁免理由"}
+    },
+    "statusRequirements": {
+      "answered_with_evidence": ["value", "source_document_id", "paragraph_id", "quote（逐字核验）"],
+      "not_reported_confirmed": ["search_scope（非空且段落存在）", "note ≥10 字符说明检索范围与结论"],
+      "conflict_preserved": ["quote + secondary_quote 双方证据（均逐字核验）", "value 或 note 描述冲突"],
+      "out_of_scope": ["note ≥10 字符说明理由"]
+    }
+  }
+}

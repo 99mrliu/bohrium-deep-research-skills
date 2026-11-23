@@ -1,0 +1,142 @@
+{
+  "schema": "condition-profiles/1",
+  "corpus_dir": "/Users/liuhengshen/Desktop/bhr_product/challenge-95061011/round3/D-comparability-court/examples/corpus",
+  "core_dimensions": [
+    "task",
+    "metric",
+    "units",
+    "material",
+    "pollutant",
+    "budget"
+  ],
+  "docs": {
+    "DOC-01": {
+      "task": {
+        "value": "染料光催化降解",
+        "paragraph_id": "P2",
+        "quote": "研究任务为染料废水的光催化降解",
+        "reported": true,
+        "line": 1
+      },
+      "pollutant": {
+        "value": "RhB",
+        "paragraph_id": "P2",
+        "quote": "目标污染物为罗丹明 B（RhB）",
+        "reported": true,
+        "line": 2
+      },
+      "material": {
+        "value": "g-C3N4",
+        "paragraph_id": "P3",
+        "quote": "催化剂材料为石墨相氮化碳 g-C3N4",
+        "reported": true,
+        "line": 3
+      },
+      "metric": {
+        "value": "eta",
+        "paragraph_id": "P4",
+        "quote": "性能评价指标为降解率 η",
+        "reported": true,
+        "line": 4
+      },
+      "units": {
+        "value": "%",
+        "paragraph_id": "P4",
+        "quote": "η = 96%",
+        "reported": true,
+        "line": 5
+      },
+      "budget": {
+        "value": "0.5 g/L",
+        "paragraph_id": "P6",
+        "quote": "催化剂投加量（budget）为 0.5 g/L",
+        "reported": true,
+        "line": 6
+      }
+    },
+    "DOC-02": {
+      "task": {
+        "value": "染料光催化降解",
+        "paragraph_id": "P2",
+        "quote": "研究任务为染料的光催化降解",
+        "reported": true,
+        "line": 7
+      },
+      "pollutant": {
+        "value": "MB",
+        "paragraph_id": "P2",
+        "quote": "目标污染物为亚甲基蓝（MB）",
+        "reported": true,
+        "line": 8
+      },
+      "material": {
+        "value": "N-TiO2",
+        "paragraph_id": "P3",
+        "quote": "催化剂为氮掺杂二氧化钛 N-TiO2",
+        "reported": true,
+        "line": 9
+      },
+      "metric": {
+        "value": "eta",
+        "paragraph_id": "P4",
+        "quote": "以降解率 η 为评价指标",
+        "reported": true,
+        "line": 10
+      },
+      "units": {
+        "value": "%",
+        "paragraph_id": "P4",
+        "quote": "η = 88%",
+        "reported": true,
+        "line": 11
+      },
+      "budget": {
+        "value": "1.0 g/L",
+        "paragraph_id": "P6",
+        "quote": "催化剂投加量为 1.0 g/L",
+        "reported": true,
+        "line": 12
+      }
+    },
+    "DOC-03": {
+      "task": {
+        "value": "染料光催化降解",
+        "paragraph_id": "P2",
+        "quote": "研究任务为染料光催化降解",
+        "reported": true,
+        "line": 13
+      },
+      "pollutant": {
+        "value": "RhB",
+        "paragraph_id": "P2",
+        "quote": "目标污染物为罗丹明 B（RhB）",
+        "reported": true,
+        "line": 14
+      },
+      "material": {
+        "value": "g-C3N4-Ag",
+        "paragraph_id": "P3",
+        "quote": "复合材料 g-C3N4-Ag",
+        "reported": true,
+        "line": 15
+      },
+      "metric": {
+        "value": "k",
+        "paragraph_id": "P4",
+        "quote": "速率常数 k = 0.031 min^-1",
+        "reported": true,
+        "line": 16
+      },
+      "units": {
+        "value": "min^-1",
+        "paragraph_id": "P4",
+        "quote": "0.031 min^-1",
+        "reported": true,
+        "line": 17
+      }
+    }
+  },
+  "warnings": [
+    "DOC-03: 核心维度 'budget' 未填写 → 裁定时按未报告（undecidable）处理"
+  ]
+}

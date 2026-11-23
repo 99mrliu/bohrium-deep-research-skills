@@ -1,0 +1,29 @@
+{
+  "case_id": "SYNTH-EXAMPLE-001",
+  "contract_fields": [
+    "comparison_matrix",
+    "comparability_assessment",
+    "synthesis",
+    "sources",
+    "uncertainty"
+  ],
+  "fallback_note": null,
+  "has_output_contract": true,
+  "partial_rule": "status=partial 时 uncertainty 必须为非空字符串列表，并写明缺失边界（哪些文档/字段/维度未覆盖）",
+  "required_fields": [
+    "case_id",
+    "comparison_matrix",
+    "comparability_assessment",
+    "synthesis",
+    "sources",
+    "uncertainty",
+    "status"
+  ],
+  "schema_version": "1.0",
+  "sources_rule": "sources 引用的 document_id/paragraph_id 必须存在于 work/cells.jsonl 记录中",
+  "status_enum": [
+    "success",
+    "partial",
+    "failed"
+  ]
+}

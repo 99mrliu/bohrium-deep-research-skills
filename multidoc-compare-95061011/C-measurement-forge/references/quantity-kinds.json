@@ -1,0 +1,85 @@
+{
+  "registry_version": "1.0.0",
+  "note": "quantity_kind 受控登记表。每个定量单元格必须绑定到恰好一个 quantity_kind; 机检拒绝未登记的量类。跨 quantity_kind 的格子一律不可比。",
+  "quantity_kinds": {
+    "degradation_efficiency": {
+      "definition": "污染物降解效率: 在给定照射时间 t 内被降解的污染物比例, 无量纲。",
+      "canonical_unit": "%",
+      "equivalent_units": ["%", "fraction", "ppm removal 类"],
+      "metric_definition_required": "必须记录计算公式(通常 η=(C0−Ct)/C0 或 1−(Ct/C0))与测定方式: 测定波长(如 554 nm)、测定仪器(如 UV-Vis 分光光度计)、C0 与 Ct 的取样时间窗。仅写 'degradation 96%' 而无公式口径者不得进入比较。",
+      "typical_metric_pitfalls": [
+        "η=(C0−Ct)/C0 与 (C0−Ct)/Ct 混用",
+        "UV-Vis 吸光度直接当浓度(未建标准曲线)",
+        "未扣除暗吸附/空白即报总降解率",
+        "不同测定波长下同一染料吸光度不可直比"
+      ]
+    },
+    "rate_constant": {
+      "definition": "准一级/准二级降解动力学速率常数 k。",
+      "canonical_unit": "s^-1",
+      "equivalent_units": ["s^-1", "min^-1", "h^-1", "1/s", "1/min", "min⁻¹"],
+      "metric_definition_required": "必须记录动力学模型(如 pseudo-first-order, ln(C0/Ct)=kt)与线性拟合区间(R²、数据点数)。速率常数与降解效率是不同的量: 二者即使在同一篇内也不可直接互换比较。",
+      "typical_metric_pitfalls": [
+        "用单点斜率冒充拟合 k",
+        "不同照射区间拟合导致 k 不可比",
+        "把 %/min 的表观速率与 min⁻¹ 的 k 混为一谈"
+      ]
+    },
+    "concentration": {
+      "definition": "污染物(染料等)的浓度, 质量/体积量纲。",
+      "canonical_unit": "g/L",
+      "equivalent_units": ["mg/L", "g/L", "µg/L", "ppm"],
+      "metric_definition_required": "注明是初始浓度 C0 还是时间 t 浓度 Ct、测定仪器与波长、以及是否为换算值(derived)。",
+      "typical_metric_pitfalls": ["C0 与 Ct 混填", "吸光度未建标曲"]
+    },
+    "catalyst_dosage": {
+      "definition": "催化剂投加量, 质量/体积量纲(常见 mg/L 或 g/L)。",
+      "canonical_unit": "g/L",
+      "equivalent_units": ["mg/L", "g/L", "mg/mL"],
+      "metric_definition_required": "注明投加量基准(单位反应液体积)与催化剂形式(粉体/复合物/负载型)。mg/L 与 g/L 混用时换算列标 derived, 原值保留。",
+      "typical_metric_pitfalls": ["mg/L 与 g/L 同一图内混用导致差 1000 倍", "投加量以催化剂质量计还是以复合物总质量计"]
+    },
+    "irradiation_time": {
+      "definition": "照射/反应时间。",
+      "canonical_unit": "min",
+      "equivalent_units": ["s", "min", "h"],
+      "metric_definition_required": "注明计时起点(灯开启时刻)与是否含暗吸附平衡段。",
+      "typical_metric_pitfalls": ["吸附平衡 30 min 与照射时间混计"]
+    },
+    "light_source_power": {
+      "definition": "光源电功率(灯/LED 额定 W)。",
+      "canonical_unit": "W",
+      "equivalent_units": ["mW", "W", "kW"],
+      "metric_definition_required": "注明灯型(Xe 灯/汞灯/LED)、额定功率与实际入射光强(若测, mW/cm² 另登记)。W 与光强 mW/cm² 是不同量类, 不可互比。",
+      "typical_metric_pitfalls": ["把灯功率当光强比较", "滤光片后有效波长未注明"]
+    },
+    "wavelength": {
+      "definition": "特征波长(带隙/监测波长/光源中心波长)。",
+      "canonical_unit": "nm",
+      "equivalent_units": ["nm", "µm"],
+      "metric_definition_required": "注明该波长的物理含义(禁带估算、染料监测、滤光截止)。",
+      "typical_metric_pitfalls": ["监测波长与带隙波长混填"]
+    },
+    "specific_surface_area": {
+      "definition": "BET 比表面积。",
+      "canonical_unit": "m^2/g",
+      "equivalent_units": ["m2/g", "m²/g", "m^2/g"],
+      "metric_definition_required": "注明仪器(BET 氮吸附)与预处理条件(脱气温度/时间)。",
+      "typical_metric_pitfalls": ["不同脱气条件导致 BET 差异"]
+    },
+    "band_gap": {
+      "definition": "半导体禁带宽度。",
+      "canonical_unit": "eV",
+      "equivalent_units": ["eV"],
+      "metric_definition_required": "注明估算方法(Kubelka-Munk 变换、Tauc plot)与截距取值。",
+      "typical_metric_pitfalls": ["直接带隙与间接带隙 Tauc 线混用"]
+    },
+    "temperature": {
+      "definition": "反应或测定温度(含室温)。",
+      "canonical_unit": "K",
+      "equivalent_units": ["°C", "℃", "K"],
+      "metric_definition_required": "注明温度是否恒温控制; °C 与 K 为仿射换算(derived)。",
+      "typical_metric_pitfalls": ["室温未定量", "光热自升温未记录"]
+    }
+  }
+}

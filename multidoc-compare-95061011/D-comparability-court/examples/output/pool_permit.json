@@ -1,0 +1,28 @@
+{
+  "request_id": "REQ-PERMIT-01",
+  "claim_type": "qualitative",
+  "field": "qualitative_contrast_rhb_degradation",
+  "docs": [
+    "DOC-01",
+    "DOC-03"
+  ],
+  "required_dimensions": [
+    "task",
+    "pollutant",
+    "material"
+  ],
+  "claim_text": "DOC-01 与 DOC-03 针对相同污染物（RhB）的相同任务（染料光催化降解），允许做定性对照：在相同底物与光源条件下，Ag 负载改性（g-C3N4 → g-C3N4-Ag）的表现差异可作定性讨论；材料维度仅 subset_only，报告必须注明口径差异，不做数值合并。",
+  "status": "permit",
+  "permit_id": "PERMIT-REQ-PERMIT-01",
+  "normalization_notes": [],
+  "caveats": [
+    "DOC-01×DOC-03 / material: 仅 subset_only——取值不一致（不同材料体系的数值不可直接平均或排名；可在同污染物、同任务下做定性对照（如改性前后趋势）。） （报告必须注明口径差异）[DEC-DOC-01--DOC-03-material]"
+  ],
+  "blocking": [],
+  "decisions_used": [
+    "DEC-DOC-01--DOC-03-task",
+    "DEC-DOC-01--DOC-03-pollutant",
+    "DEC-DOC-01--DOC-03-material"
+  ],
+  "allowed_assertion": "DOC-01 与 DOC-03 针对相同污染物（RhB）的相同任务（染料光催化降解），允许做定性对照：在相同底物与光源条件下，Ag 负载改性（g-C3N4 → g-C3N4-Ag）的表现差异可作定性讨论；材料维度仅 subset_only，报告必须注明口径差异，不做数值合并。"
+}

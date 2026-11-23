@@ -1,0 +1,66 @@
+{
+  "generated_at": "2026-11-23T11:36:48Z",
+  "tool_status": {
+    "pdftotext": "available"
+  },
+  "thresholds": {
+    "min_extracted_chars": 100,
+    "replacement_char_ratio_degraded": 0.005,
+    "layout_diff_rate_degraded": 0.3,
+    "empty_page_ratio_degraded": 0.3
+  },
+  "documents": [
+    {
+      "path": "/Users/liuhengshen/Desktop/bhr_product/challenge-95061011/round3/A-corpus-forensics/examples/corpus/DOC-A.md",
+      "mode": "text",
+      "verdict": "good",
+      "layout_diff_rate": null,
+      "total_chars": 1265,
+      "replacement_chars": 0,
+      "replacement_char_ratio": 0.0,
+      "n_lines": 15,
+      "short_line_ratio": 0.0,
+      "n_pages": 1,
+      "empty_page_ratio": 0.0
+    },
+    {
+      "path": "/Users/liuhengshen/Desktop/bhr_product/challenge-95061011/round3/A-corpus-forensics/examples/corpus/DOC-B.md",
+      "mode": "text",
+      "verdict": "good",
+      "layout_diff_rate": null,
+      "total_chars": 1146,
+      "replacement_chars": 0,
+      "replacement_char_ratio": 0.0,
+      "n_lines": 15,
+      "short_line_ratio": 0.0,
+      "n_pages": 1,
+      "empty_page_ratio": 0.0
+    },
+    {
+      "path": "/Users/liuhengshen/Desktop/bhr_product/challenge-95061011/round3/A-corpus-forensics/examples/corpus/DOC-C.md",
+      "mode": "text",
+      "verdict": "good",
+      "layout_diff_rate": null,
+      "total_chars": 1481,
+      "replacement_chars": 0,
+      "replacement_char_ratio": 0.0,
+      "n_lines": 17,
+      "short_line_ratio": 0.0,
+      "n_pages": 1,
+      "empty_page_ratio": 0.0
+    },
+    {
+      "path": "/Users/liuhengshen/Desktop/bhr_product/challenge-95061011/round3/A-corpus-forensics/examples/corpus/DOC-D.md",
+      "mode": "text",
+      "verdict": "good",
+      "layout_diff_rate": null,
+      "total_chars": 919,
+      "replacement_chars": 0,
+      "replacement_char_ratio": 0.0,
+      "n_lines": 13,
+      "short_line_ratio": 0.0,
+      "n_pages": 1,
+      "empty_page_ratio": 0.0
+    }
+  ]
+}

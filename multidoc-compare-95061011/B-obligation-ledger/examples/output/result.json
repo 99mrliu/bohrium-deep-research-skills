@@ -1,0 +1,368 @@
+{
+  "case_id": "SYNTH-EXAMPLE-001",
+  "status": "success",
+  "comparison_matrix": {
+    "removal_efficiency": {
+      "DOC-01": {
+        "status": "answered_with_evidence",
+        "value": "96（90 min，可见光，RhB）",
+        "unit": "%",
+        "source_document_id": "DOC-01",
+        "paragraph_id": "DOC-01-p1"
+      },
+      "DOC-02": {
+        "status": "answered_with_evidence",
+        "value": "88（120 min，UV，MB）",
+        "unit": "%",
+        "source_document_id": "DOC-02",
+        "paragraph_id": "DOC-02-p1"
+      },
+      "DOC-03": {
+        "status": "conflict_preserved",
+        "value": "DOC-03 未报告自身去除率数值，仅声称优于已报道的 96% 水平；与 DOC-01 的 96% 声明口径冲突，保留双方，不合并。",
+        "unit": null,
+        "source_document_id": "DOC-03",
+        "paragraph_id": "DOC-03-p2"
+      }
+    },
+    "rate_constant": {
+      "DOC-01": {
+        "status": "not_reported_confirmed",
+        "value": null,
+        "unit": null,
+        "source_document_id": null,
+        "paragraph_id": null
+      },
+      "DOC-02": {
+        "status": "answered_with_evidence",
+        "value": "0.012",
+        "unit": "min-1",
+        "source_document_id": "DOC-02",
+        "paragraph_id": "DOC-02-p3"
+      },
+      "DOC-03": {
+        "status": "answered_with_evidence",
+        "value": "0.031",
+        "unit": "min-1",
+        "source_document_id": "DOC-03",
+        "paragraph_id": "DOC-03-p1"
+      }
+    },
+    "budget": {
+      "DOC-01": {
+        "status": "answered_with_evidence",
+        "value": "约 12",
+        "unit": "CNY/g",
+        "source_document_id": "DOC-01",
+        "paragraph_id": "DOC-01-p3"
+      },
+      "DOC-02": {
+        "status": "not_reported_confirmed",
+        "value": null,
+        "unit": null,
+        "source_document_id": null,
+        "paragraph_id": null
+      },
+      "DOC-03": {
+        "status": "not_reported_confirmed",
+        "value": null,
+        "unit": null,
+        "source_document_id": null,
+        "paragraph_id": null
+      }
+    }
+  },
+  "comparability_notes": [
+    {
+      "doc_pair": [
+        "DOC-01",
+        "DOC-02"
+      ],
+      "dimension": "task",
+      "verdict": "comparable",
+      "status": "answered_with_evidence"
+    },
+    {
+      "doc_pair": [
+        "DOC-01",
+        "DOC-03"
+      ],
+      "dimension": "task",
+      "verdict": "comparable",
+      "status": "answered_with_evidence"
+    },
+    {
+      "doc_pair": [
+        "DOC-02",
+        "DOC-03"
+      ],
+      "dimension": "task",
+      "verdict": "comparable",
+      "status": "answered_with_evidence"
+    },
+    {
+      "doc_pair": [
+        "DOC-01",
+        "DOC-02"
+      ],
+      "dimension": "metric",
+      "verdict": "comparable",
+      "status": "answered_with_evidence"
+    },
+    {
+      "doc_pair": [
+        "DOC-01",
+        "DOC-03"
+      ],
+      "dimension": "metric",
+      "verdict": "not_comparable",
+      "status": "answered_with_evidence"
+    },
+    {
+      "doc_pair": [
+        "DOC-02",
+        "DOC-03"
+      ],
+      "dimension": "metric",
+      "verdict": "comparable",
+      "status": "answered_with_evidence"
+    },
+    {
+      "doc_pair": [
+        "DOC-01",
+        "DOC-02"
+      ],
+      "dimension": "units",
+      "verdict": "comparable",
+      "status": "answered_with_evidence"
+    },
+    {
+      "doc_pair": [
+        "DOC-01",
+        "DOC-03"
+      ],
+      "dimension": "units",
+      "verdict": "not_comparable",
+      "status": "answered_with_evidence"
+    },
+    {
+      "doc_pair": [
+        "DOC-02",
+        "DOC-03"
+      ],
+      "dimension": "units",
+      "verdict": "comparable",
+      "status": "answered_with_evidence"
+    },
+    {
+      "doc_pair": [
+        "DOC-01",
+        "DOC-02"
+      ],
+      "dimension": "material",
+      "verdict": "not_comparable",
+      "status": "answered_with_evidence"
+    },
+    {
+      "doc_pair": [
+        "DOC-01",
+        "DOC-03"
+      ],
+      "dimension": "material",
+      "verdict": "comparable",
+      "status": "answered_with_evidence"
+    },
+    {
+      "doc_pair": [
+        "DOC-02",
+        "DOC-03"
+      ],
+      "dimension": "material",
+      "verdict": "not_comparable",
+      "status": "answered_with_evidence"
+    },
+    {
+      "doc_pair": [
+        "DOC-01",
+        "DOC-02"
+      ],
+      "dimension": "pollutant",
+      "verdict": "not_comparable",
+      "status": "answered_with_evidence"
+    },
+    {
+      "doc_pair": [
+        "DOC-01",
+        "DOC-03"
+      ],
+      "dimension": "pollutant",
+      "verdict": "comparable",
+      "status": "answered_with_evidence"
+    },
+    {
+      "doc_pair": [
+        "DOC-02",
+        "DOC-03"
+      ],
+      "dimension": "pollutant",
+      "verdict": "not_comparable",
+      "status": "answered_with_evidence"
+    },
+    {
+      "doc_pair": [
+        "DOC-01",
+        "DOC-02"
+      ],
+      "dimension": "budget",
+      "verdict": "not_comparable",
+      "status": "answered_with_evidence"
+    },
+    {
+      "doc_pair": [
+        "DOC-01",
+        "DOC-03"
+      ],
+      "dimension": "budget",
+      "verdict": "not_comparable",
+      "status": "answered_with_evidence"
+    },
+    {
+      "doc_pair": [
+        "DOC-02",
+        "DOC-03"
+      ],
+      "dimension": "budget",
+      "verdict": "not_comparable",
+      "status": "answered_with_evidence"
+    }
+  ],
+  "coverage": {
+    "total": 29,
+    "closed": 29,
+    "open": 0,
+    "closure_rate": 1.0,
+    "by_status": {
+      "answered_with_evidence": 24,
+      "conflict_preserved": 2,
+      "not_reported_confirmed": 3
+    },
+    "by_dimension": {
+      "field:removal_efficiency": {
+        "total": 3,
+        "closed": 3,
+        "open": 0,
+        "closure_rate": 1.0,
+        "open_ids": []
+      },
+      "field:rate_constant": {
+        "total": 3,
+        "closed": 3,
+        "open": 0,
+        "closure_rate": 1.0,
+        "open_ids": []
+      },
+      "field:budget": {
+        "total": 3,
+        "closed": 3,
+        "open": 0,
+        "closure_rate": 1.0,
+        "open_ids": []
+      },
+      "dim:task": {
+        "total": 3,
+        "closed": 3,
+        "open": 0,
+        "closure_rate": 1.0,
+        "open_ids": []
+      },
+      "dim:metric": {
+        "total": 3,
+        "closed": 3,
+        "open": 0,
+        "closure_rate": 1.0,
+        "open_ids": []
+      },
+      "dim:units": {
+        "total": 3,
+        "closed": 3,
+        "open": 0,
+        "closure_rate": 1.0,
+        "open_ids": []
+      },
+      "dim:material": {
+        "total": 3,
+        "closed": 3,
+        "open": 0,
+        "closure_rate": 1.0,
+        "open_ids": []
+      },
+      "dim:pollutant": {
+        "total": 3,
+        "closed": 3,
+        "open": 0,
+        "closure_rate": 1.0,
+        "open_ids": []
+      },
+      "dim:budget": {
+        "total": 3,
+        "closed": 3,
+        "open": 0,
+        "closure_rate": 1.0,
+        "open_ids": []
+      },
+      "question": {
+        "total": 2,
+        "closed": 2,
+        "open": 0,
+        "closure_rate": 1.0,
+        "open_ids": []
+      }
+    },
+    "by_document": {
+      "DOC-01": {
+        "total": 15,
+        "closed": 15,
+        "open": 0,
+        "closure_rate": 1.0,
+        "open_ids": []
+      },
+      "DOC-02": {
+        "total": 15,
+        "closed": 15,
+        "open": 0,
+        "closure_rate": 1.0,
+        "open_ids": []
+      },
+      "DOC-03": {
+        "total": 15,
+        "closed": 15,
+        "open": 0,
+        "closure_rate": 1.0,
+        "open_ids": []
+      },
+      "(all)": {
+        "total": 2,
+        "closed": 2,
+        "open": 0,
+        "closure_rate": 1.0,
+        "open_ids": []
+      }
+    },
+    "open_obligations": []
+  },
+  "ledger": {
+    "markdown": "# 义务台账（obligation ledger）\n\n总义务 29 条；已关闭 29（100.0%）；仍 open 0。\n\n| obligation_id | 类型 | 维度/字段 | 文档 | 状态 | 取值/说明 |\n|---|---|---|---|---|---|\n| FC-removal_efficiency-DOC-01 | field_cell | removal_efficiency | DOC-01 | 已回答 | 96（90 min，可见光，RhB） |\n| FC-removal_efficiency-DOC-02 | field_cell | removal_efficiency | DOC-02 | 已回答 | 88（120 min，UV，MB） |\n| FC-removal_efficiency-DOC-03 | field_cell | removal_efficiency | DOC-03 | 冲突（已保留） | DOC-03 未报告自身去除率数值，仅声称优于已报道的 96% 水平；与 DOC-01 的 96% 声明口径冲突，保留双方，不合并。 |\n| FC-rate_constant-DOC-01 | field_cell | rate_constant | DOC-01 | 未报告（已确认） | 检索范围：DOC-01 全部 4 段；p4 明确说明未做动力学拟合、未报告速率常数，判定为未报告。 |\n| FC-rate_constant-DOC-02 | field_cell | rate_constant | DOC-02 | 已回答 | 0.012 |\n| FC-rate_constant-DOC-03 | field_cell | rate_constant | DOC-03 | 已回答 | 0.031 |\n| FC-budget-DOC-01 | field_cell | budget | DOC-01 | 已回答 | 约 12 |\n| FC-budget-DOC-02 | field_cell | budget | DOC-02 | 未报告（已确认） | 检索范围：DOC-02 全部 4 段；p4 明确说明文中未涉及制备成本或预算，判定为未报告。 |\n| FC-budget-DOC-03 | field_cell | budget | DOC-03 | 未报告（已确认） | 检索范围：DOC-03 全部 3 段；p3 明确说明未报告成本或预算信息，判定为未报告。 |\n| CMP-task-DOC-01-vs-DOC-02 | comparability | task | DOC-01 × DOC-02 | 已回答 | comparable |\n| CMP-task-DOC-01-vs-DOC-03 | comparability | task | DOC-01 × DOC-03 | 已回答 | comparable |\n| CMP-task-DOC-02-vs-DOC-03 | comparability | task | DOC-02 × DOC-03 | 已回答 | comparable |\n| CMP-metric-DOC-01-vs-DOC-02 | comparability | metric | DOC-01 × DOC-02 | 已回答 | comparable |\n| CMP-metric-DOC-01-vs-DOC-03 | comparability | metric | DOC-01 × DOC-03 | 已回答 | not_comparable |\n| CMP-metric-DOC-02-vs-DOC-03 | comparability | metric | DOC-02 × DOC-03 | 已回答 | comparable |\n| CMP-units-DOC-01-vs-DOC-02 | comparability | units | DOC-01 × DOC-02 | 已回答 | comparable |\n| CMP-units-DOC-01-vs-DOC-03 | comparability | units | DOC-01 × DOC-03 | 已回答 | not_comparable |\n| CMP-units-DOC-02-vs-DOC-03 | comparability | units | DOC-02 × DOC-03 | 已回答 | comparable |\n| CMP-material-DOC-01-vs-DOC-02 | comparability | material | DOC-01 × DOC-02 | 已回答 | not_comparable |\n| CMP-material-DOC-01-vs-DOC-03 | comparability | material | DOC-01 × DOC-03 | 已回答 | comparable |\n| CMP-material-DOC-02-vs-DOC-03 | comparability | material | DOC-02 × DOC-03 | 已回答 | not_comparable |\n| CMP-pollutant-DOC-01-vs-DOC-02 | comparability | pollutant | DOC-01 × DOC-02 | 已回答 | not_comparable |\n| CMP-pollutant-DOC-01-vs-DOC-03 | comparability | pollutant | DOC-01 × DOC-03 | 已回答 | comparable |\n| CMP-pollutant-DOC-02-vs-DOC-03 | comparability | pollutant | DOC-02 × DOC-03 | 已回答 | not_comparable |\n| CMP-budget-DOC-01-vs-DOC-02 | comparability | budget | DOC-01 × DOC-02 | 已回答 | not_comparable |\n| CMP-budget-DOC-01-vs-DOC-03 | comparability | budget | DOC-01 × DOC-03 | 已回答 | not_comparable |\n| CMP-budget-DOC-02-vs-DOC-03 | comparability | budget | DOC-02 × DOC-03 | 已回答 | not_comparable |\n| Q-1 | question | - | - | 已回答 | DOC-01 与 DOC-03 报告了可见光下的 RhB 降解：DOC-01 去除率 96%（90 min）；DOC-03 仅报速率常数 k = 0.03… |\n| Q-2 | question | - | - | 冲突（已保留） | 存在口径冲突：DOC-03 声称其 RhB 去除表现优于已报道的 96% 水平，但未给出自身去除率数值；DOC-01 报告 96%（90 min）。保留双… |\n",
+    "matrix_markdown": "# 比较矩阵（台账关闭义务的渲染视图）\n\n| 字段 \\ 文档 | DOC-01 | DOC-02 | DOC-03 |\n|---|---|---|---|\n| budget | 约 12 CNY/g 〔DOC-01#DOC-01-p3〕 | 未报告（已确认） | 未报告（已确认） |\n| rate_constant | 未报告（已确认） | 0.012 min-1 〔DOC-02#DOC-02-p3〕 | 0.031 min-1 〔DOC-03#DOC-03-p1〕 |\n| removal_efficiency | 96（90 min，可见光，RhB） % 〔DOC-01#DOC-01-p1〕 | 88（120 min，UV，MB） % 〔DOC-02#DOC-02-p1〕 | 冲突保留：DOC-03 未报告自身去除率数值，仅声称优于已报道的 96% 水平；与 DOC-01 的 96% 声明口径冲突，保留双方，不合并。 |\n\n## 可比性判定（维度 × 文档对）\n\n| 维度 | 文档对 | 判定 | 证据 |\n|---|---|---|---|\n| task | DOC-01 × DOC-02 | comparable | DOC-01#DOC-01-p1 ↔ DOC-02#DOC-02-p1 |\n| task | DOC-01 × DOC-03 | comparable | DOC-03#DOC-03-p1 |\n| task | DOC-02 × DOC-03 | comparable | DOC-02#DOC-02-p1 |\n| metric | DOC-01 × DOC-02 | comparable | DOC-01#DOC-01-p1 ↔ DOC-02#DOC-02-p1 |\n| metric | DOC-01 × DOC-03 | not_comparable | DOC-01#DOC-01-p1 ↔ DOC-03#DOC-03-p1 |\n| metric | DOC-02 × DOC-03 | comparable | DOC-02#DOC-02-p3 ↔ DOC-03#DOC-03-p1 |\n| units | DOC-01 × DOC-02 | comparable | DOC-01#DOC-01-p1 |\n| units | DOC-01 × DOC-03 | not_comparable | DOC-03#DOC-03-p1 |\n| units | DOC-02 × DOC-03 | comparable | DOC-02#DOC-02-p3 ↔ DOC-03#DOC-03-p1 |\n| material | DOC-01 × DOC-02 | not_comparable | DOC-01#DOC-01-p1 ↔ DOC-02#DOC-02-p1 |\n| material | DOC-01 × DOC-03 | comparable | DOC-03#DOC-03-p1 |\n| material | DOC-02 × DOC-03 | not_comparable | DOC-02#DOC-02-p1 ↔ DOC-03#DOC-03-p1 |\n| pollutant | DOC-01 × DOC-02 | not_comparable | DOC-01#DOC-01-p1 ↔ DOC-02#DOC-02-p1 |\n| pollutant | DOC-01 × DOC-03 | comparable | DOC-03#DOC-03-p1 |\n| pollutant | DOC-02 × DOC-03 | not_comparable | DOC-02#DOC-02-p1 ↔ DOC-03#DOC-03-p1 |\n| budget | DOC-01 × DOC-02 | not_comparable | DOC-02#DOC-02-p4 |\n| budget | DOC-01 × DOC-03 | not_comparable | DOC-03#DOC-03-p3 |\n| budget | DOC-02 × DOC-03 | not_comparable | DOC-02#DOC-02-p4 ↔ DOC-03#DOC-03-p3 |\n"
+  },
+  "sources": [
+    "DOC-01#DOC-01-p1",
+    "DOC-01#DOC-01-p3",
+    "DOC-02#DOC-02-p1",
+    "DOC-02#DOC-02-p3",
+    "DOC-02#DOC-02-p4",
+    "DOC-03#DOC-03-p1",
+    "DOC-03#DOC-03-p2",
+    "DOC-03#DOC-03-p3"
+  ],
+  "uncertainty": []
+}

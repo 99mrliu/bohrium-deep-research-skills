@@ -1,0 +1,5 @@
+{
+  "case_id": "SYNTH-EXAMPLE-001",
+  "note": "合成示例 case.json（非官方正式案例）。output_contract 规定 result.json 必须包含的顶层字段。",
+  "output_contract": ["comparison_matrix", "comparability_notes", "coverage", "ledger"]
+}

@@ -1,0 +1,18 @@
+PASS line 1    material               DOC-A      DOC-A-P003     reported  
+PASS line 2    material               DOC-B      DOC-B-P003     reported  
+PASS line 3    pollutant              DOC-A      DOC-A-P004     reported  
+PASS line 4    pollutant              DOC-B      DOC-B-P004     reported  
+PASS line 5    catalyst_dosage        DOC-A      DOC-A-P004     reported  
+PASS line 6    catalyst_dosage        DOC-B      DOC-B-P004     reported  
+PASS line 7    light_source           DOC-A      DOC-A-P005     reported  
+PASS line 8    light_source           DOC-B      DOC-B-P005     reported  
+PASS line 9    removal_efficiency     DOC-A      DOC-A-P006     reported  
+PASS line 10   removal_efficiency     DOC-B      DOC-B-P006     reported  
+PASS line 11   reaction_time          DOC-A      DOC-A-P006     reported  
+PASS line 12   reaction_time          DOC-B      DOC-B-P006     reported  
+PASS line 13   rate_constant          DOC-A      DOC-A-P007     reported  
+PASS line 14   rate_constant          DOC-B      DOC-B-P007     reported  
+PASS line 15   bet_surface_area       DOC-A      DOC-A-P008     reported  
+PASS line 16   bet_surface_area       DOC-B      DOC-B-P008     not_reported
+------------------------------------------------------------------------
+verify_anchors: 16/16 cells passed

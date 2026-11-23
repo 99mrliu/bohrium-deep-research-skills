@@ -1,0 +1,129 @@
+{
+  "generated_at": "2026-11-23T11:36:48Z",
+  "corpus_dir": "/Users/liuhengshen/Desktop/bhr_product/challenge-95061011/round3/A-corpus-forensics/examples/corpus",
+  "tool_status": {
+    "pdftotext": "available"
+  },
+  "thresholds": {
+    "shingle_n": 8,
+    "near_duplicate_jaccard": 0.7,
+    "version_pair_jaccard": 0.2,
+    "title_similarity_jaccard": 0.5
+  },
+  "n_documents": 4,
+  "documents": [
+    {
+      "doc_id": "DOC-A",
+      "path": "DOC-A.md",
+      "abs_path": "/Users/liuhengshen/Desktop/bhr_product/challenge-95061011/round3/A-corpus-forensics/examples/corpus/DOC-A.md",
+      "format": "md",
+      "title_guess": "Photocatalytic Degradation of Rhodamine B over g-C3N4 under Visible Light",
+      "fingerprint": "f1c15b75097cd29f18ceae5520149e70a4e2bb3866626cd6b48366bdf1bd1315",
+      "n_chars": 1265,
+      "parse_fidelity": "good",
+      "parse_audit": {
+        "mode": "text",
+        "verdict": "good",
+        "layout_diff_rate": null,
+        "total_chars": 1265,
+        "replacement_chars": 0,
+        "replacement_char_ratio": 0.0,
+        "n_lines": 15,
+        "short_line_ratio": 0.0,
+        "n_pages": 1,
+        "empty_page_ratio": 0.0
+      },
+      "identity_verdict": "unique",
+      "identity_evidence": {},
+      "is_canonical": true,
+      "n_paragraphs": 8,
+      "paragraphs_file": "DOC-A.paragraphs.jsonl"
+    },
+    {
+      "doc_id": "DOC-B",
+      "path": "DOC-B.md",
+      "abs_path": "/Users/liuhengshen/Desktop/bhr_product/challenge-95061011/round3/A-corpus-forensics/examples/corpus/DOC-B.md",
+      "format": "md",
+      "title_guess": "Visible-Light-Driven N-Doped TiO2 for Methylene Blue Decolorization",
+      "fingerprint": "4d615094eb05d3de52530c4b42be31790ce2fdfd23e8c043e8644415bb016c58",
+      "n_chars": 1146,
+      "parse_fidelity": "good",
+      "parse_audit": {
+        "mode": "text",
+        "verdict": "good",
+        "layout_diff_rate": null,
+        "total_chars": 1146,
+        "replacement_chars": 0,
+        "replacement_char_ratio": 0.0,
+        "n_lines": 15,
+        "short_line_ratio": 0.0,
+        "n_pages": 1,
+        "empty_page_ratio": 0.0
+      },
+      "identity_verdict": "unique",
+      "identity_evidence": {},
+      "is_canonical": true,
+      "n_paragraphs": 8,
+      "paragraphs_file": "DOC-B.paragraphs.jsonl"
+    },
+    {
+      "doc_id": "DOC-C",
+      "path": "DOC-C.md",
+      "abs_path": "/Users/liuhengshen/Desktop/bhr_product/challenge-95061011/round3/A-corpus-forensics/examples/corpus/DOC-C.md",
+      "format": "md",
+      "title_guess": "Photocatalytic Degradation of Rhodamine B over g-C3N4 under Visible Light",
+      "fingerprint": "2eb8226ea1d87dd633df47a4375db2fe0fe5d58adcf8985bbf9f6a547e3db73d",
+      "n_chars": 1481,
+      "parse_fidelity": "good",
+      "parse_audit": {
+        "mode": "text",
+        "verdict": "good",
+        "layout_diff_rate": null,
+        "total_chars": 1481,
+        "replacement_chars": 0,
+        "replacement_char_ratio": 0.0,
+        "n_lines": 17,
+        "short_line_ratio": 0.0,
+        "n_pages": 1,
+        "empty_page_ratio": 0.0
+      },
+      "identity_verdict": "probable_version_pair",
+      "identity_evidence": {
+        "related_to": "DOC-A",
+        "shingle_jaccard": 0.6117,
+        "title_similarity": 1.0,
+        "basis": "shingle jaccard 0.612, title similarity 1.000"
+      },
+      "is_canonical": false,
+      "n_paragraphs": 9,
+      "paragraphs_file": "DOC-C.paragraphs.jsonl"
+    },
+    {
+      "doc_id": "DOC-D",
+      "path": "DOC-D.md",
+      "abs_path": "/Users/liuhengshen/Desktop/bhr_product/challenge-95061011/round3/A-corpus-forensics/examples/corpus/DOC-D.md",
+      "format": "md",
+      "title_guess": "Benchmarking LSM-Tree Compaction Strategies for Time-Series Storage",
+      "fingerprint": "f93e2e27d5be6adccf07bd256614733963ed3641e1c701b1ab5aa3a2fc68c098",
+      "n_chars": 919,
+      "parse_fidelity": "good",
+      "parse_audit": {
+        "mode": "text",
+        "verdict": "good",
+        "layout_diff_rate": null,
+        "total_chars": 919,
+        "replacement_chars": 0,
+        "replacement_char_ratio": 0.0,
+        "n_lines": 13,
+        "short_line_ratio": 0.0,
+        "n_pages": 1,
+        "empty_page_ratio": 0.0
+      },
+      "identity_verdict": "unique",
+      "identity_evidence": {},
+      "is_canonical": true,
+      "n_paragraphs": 7,
+      "paragraphs_file": "DOC-D.paragraphs.jsonl"
+    }
+  ]
+}

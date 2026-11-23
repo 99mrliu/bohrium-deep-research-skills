@@ -1,0 +1,27 @@
+{
+  "stages": {
+    "init_contract": {
+      "inputs": {
+        "examples/case.json": "bca7a110339e23887d368575411d2ee303758e2a598da10efe74cee4d1402295"
+      },
+      "outputs": [
+        "examples/work/result.schema.json",
+        "examples/output/result.json"
+      ],
+      "status": "done"
+    },
+    "render": {
+      "inputs": {
+        "examples/work/cells.jsonl": "7ac22c687647ca6c6452ac53f2ef15d1a63825177122ca72c174b9e316e24b6d",
+        "examples/work/decisions.jsonl": "33144d9bb888d3c757fc915a8a229d5a64f6e49b7fe32c969663e6595cde1b4b",
+        "examples/work/result.schema.json": "2335766c680a9e0a1a5d27f7f2eebde060e82a575f80d125c7f910f5d2c729ed"
+      },
+      "outputs": [
+        "examples/output/comparison-matrix.md",
+        "examples/output/integration-report.md",
+        "examples/output/result.json"
+      ],
+      "status": "done"
+    }
+  }
+}

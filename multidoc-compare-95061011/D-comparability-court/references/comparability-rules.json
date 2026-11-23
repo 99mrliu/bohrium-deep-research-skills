@@ -1,0 +1,110 @@
+{
+  "version": "1.0",
+  "comment": "comparability-court 裁定规则表。decide.py 逐维度按本表产出 verdict；agent 不得改写 verdict，只能补充证据。可在 extension_dimensions 中添加自由扩展键（与 profiles.jsonl 中的扩展维度同名）。",
+  "severity_order": ["blocked", "undecidable", "subset_only", "convertible", "comparable"],
+  "core_dimensions": ["task", "metric", "units", "material", "pollutant", "budget"],
+  "permit_policy": {
+    "quantitative": ["comparable", "convertible"],
+    "qualitative": ["comparable", "convertible", "subset_only"]
+  },
+  "dimensions": {
+    "task": {
+      "label": "研究任务 / 反应类型",
+      "mismatch_verdict": "blocked",
+      "note": "不同任务（如染料降解 vs 光解水产氢）之间禁止任何形式的合并比较。"
+    },
+    "metric": {
+      "label": "评价指标",
+      "mismatch_verdict": "subset_only",
+      "note": "不同指标（如降解率 η vs 速率常数 k）数值不可合并、不可排名，仅允许定性对照。"
+    },
+    "units": {
+      "label": "数值单位口径",
+      "mismatch_verdict": "blocked",
+      "unconvertible_verdict": "subset_only",
+      "note": "单位不同先查 conversions：可换算 → convertible（permit 须附归一化说明）；不可换算（分属不同指标口径）→ subset_only。",
+      "conversions": [
+        {"a": "min^-1", "b": "h^-1", "factor_a_to_b": 60.0, "note": "1 min^-1 = 60 h^-1"},
+        {"a": "g/l", "b": "mg/ml", "factor_a_to_b": 1.0, "note": "1 g/L = 1 mg/mL"},
+        {"a": "mg/l", "b": "ppm", "factor_a_to_b": 1.0, "note": "稀水溶液中 1 mg/L ≈ 1 ppm"},
+        {"a": "%", "b": "fraction", "factor_a_to_b": 0.01, "note": "百分数与小数互换：96% = 0.96"}
+      ]
+    },
+    "material": {
+      "label": "材料 / 催化剂体系",
+      "mismatch_verdict": "subset_only",
+      "note": "不同材料体系的数值不可直接平均或排名；可在同污染物、同任务下做定性对照（如改性前后趋势）。"
+    },
+    "pollutant": {
+      "label": "目标污染物 / 底物",
+      "mismatch_verdict": "blocked",
+      "note": "不同污染物（如 RhB vs MB）的降解数据物理上不可合并：禁止均值、排名与'优于'断言。"
+    },
+    "budget": {
+      "label": "预算 / 投加量 / 反应规模",
+      "mismatch_verdict": "subset_only",
+      "note": "投加量或规模不同，定量合成需按剂量归一；默认仅发定性 permit，报告中必须注明口径差异。",
+      "unconvertible_verdict": "subset_only",
+      "conversions": [
+        {"a": "g/l", "b": "mg/ml", "factor_a_to_b": 1.0, "note": "1 g/L = 1 mg/mL"}
+      ]
+    }
+  },
+  "extension_dimensions": {
+    "light_source": {
+      "label": "光源条件（扩展示例：可见光 vs 紫外）",
+      "mismatch_verdict": "subset_only",
+      "note": "演示扩展键写法：profiles.jsonl 中使用 dimension=light_source 即按此规则裁定。"
+    }
+  },
+  "aliases": {
+    "task": {
+      "染料光催化降解": "dye_photodegradation",
+      "染料废水的光催化降解": "dye_photodegradation",
+      "染料的光催化降解": "dye_photodegradation",
+      "光催化降解": "dye_photodegradation",
+      "photocatalytic degradation": "dye_photodegradation"
+    },
+    "pollutant": {
+      "rhb": "rhodamine_b",
+      "罗丹明b": "rhodamine_b",
+      "罗丹明 b": "rhodamine_b",
+      "rhodamine b": "rhodamine_b",
+      "mb": "methylene_blue",
+      "亚甲基蓝": "methylene_blue",
+      "methylene blue": "methylene_blue"
+    },
+    "metric": {
+      "eta": "eta",
+      "η": "eta",
+      "降解率": "eta",
+      "降解率η": "eta",
+      "降解率 η": "eta",
+      "k": "k",
+      "速率常数": "k",
+      "一级速率常数": "k",
+      "准一级速率常数": "k",
+      "rate constant": "k"
+    },
+    "material": {
+      "g-c3n4": "g_c3n4",
+      "石墨相氮化碳": "g_c3n4",
+      "石墨相氮化碳 g-c3n4": "g_c3n4",
+      "n-tio2": "n_tio2",
+      "氮掺杂二氧化钛": "n_tio2",
+      "g-c3n4-ag": "g_c3n4_ag"
+    },
+    "units": {
+      "％": "%",
+      "percent": "%",
+      "min-1": "min^-1",
+      "1/min": "min^-1",
+      "h-1": "h^-1"
+    },
+    "budget": {}
+  },
+  "unknown_dimension_default": {
+    "mismatch_verdict": "undecidable",
+    "note": "该维度无专项规则（未登记于 dimensions/extension_dimensions），异值时按 undecidable 处理。"
+  }
+}

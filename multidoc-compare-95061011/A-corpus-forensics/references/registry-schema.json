@@ -1,0 +1,73 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "corpus-forensics-registry schemas (descriptive)",
+  "description": "说明性 schema：registry.json / <DOCID>.paragraphs.jsonl 行 / cells.jsonl 行三份产物的字段约定。脚本以此为准，但校验以 verify_anchors.py 的机检规则为准。",
+  "definitions": {
+    "registry": {
+      "type": "object",
+      "required": ["generated_at", "corpus_dir", "documents"],
+      "properties": {
+        "generated_at": {"type": "string", "description": "UTC ISO 时间戳"},
+        "corpus_dir": {"type": "string"},
+        "tool_status": {"type": "object", "description": "如 {\"pdftotext\": \"available|missing\"}"},
+        "thresholds": {"type": "object", "description": "身份鉴定阈值回显（shingle_n 等）"},
+        "documents": {
+          "type": "array",
+          "items": {"$ref": "#/definitions/registryDocument"}
+        }
+      }
+    },
+    "registryDocument": {
+      "type": "object",
+      "required": ["doc_id", "path", "title_guess", "fingerprint", "parse_fidelity",
+                   "identity_verdict", "n_paragraphs", "paragraphs_file"],
+      "properties": {
+        "doc_id": {"type": "string", "description": "由文件名净化得到，如 DOC-A"},
+        "path": {"type": "string", "description": "相对语料目录的路径"},
+        "abs_path": {"type": "string"},
+        "format": {"type": "string", "enum": ["md", "txt", "jsonl", "pdf"]},
+        "title_guess": {"type": "string", "description": "首个非空行（去 # 前缀）"},
+        "fingerprint": {"type": ["string", "null"], "description": "sha256(规范化全文)；不可读为 null"},
+        "n_chars": {"type": "integer"},
+        "parse_fidelity": {"type": "string",
+          "enum": ["good", "degraded", "failed", "tool_missing", "skipped"]},
+        "parse_audit": {"type": "object", "description": "parse_audit.py 的信号明细"},
+        "identity_verdict": {"type": "string",
+          "enum": ["unique", "exact_duplicate", "near_duplicate",
+                   "probable_version_pair", "undetermined"]},
+        "identity_evidence": {"type": "object",
+          "description": "如 {\"related_to\",\"shingle_jaccard\",\"title_similarity\",\"basis\"}"},
+        "is_canonical": {"type": "boolean", "description": "仅 unique 为 true；下游只能引用 true 的文档"},
+        "n_paragraphs": {"type": "integer"},
+        "paragraphs_file": {"type": "string", "description": "<DOCID>.paragraphs.jsonl"}
+      }
+    },
+    "paragraphLine": {
+      "type": "object",
+      "description": "<DOCID>.paragraphs.jsonl 的每一行",
+      "required": ["doc_id", "paragraph_id", "content_hash", "text"],
+      "properties": {
+        "doc_id": {"type": "string"},
+        "paragraph_id": {"type": "string", "description": "<DOCID>-P<序号>；jsonl 语料可沿用原 id"},
+        "content_hash": {"type": "string", "description": "sha256(规范化段落文本) 前 12 位十六进制"},
+        "text": {"type": "string", "description": "段落原文（quote 必须逐字出现于此）"}
+      }
+    },
+    "cellLine": {
+      "type": "object",
+      "description": "cells.jsonl 的每一行：比较矩阵的一个单元格",
+      "required": ["field", "status", "source_document_id", "paragraph_id"],
+      "properties": {
+        "field": {"type": "string", "description": "共同字段名，如 removal_efficiency"},
+        "value": {"description": "status=reported 时必填非空；not_reported 时不得出现"},
+        "status": {"type": "string", "enum": ["reported", "not_reported", "unclear", "conflict"]},
+        "source_document_id": {"type": "string", "description": "必须是 is_canonical=true 的文档"},
+        "paragraph_id": {"type": "string"},
+        "content_hash": {"type": "string", "description": "必须与注册表重算值一致"},
+        "quote": {"type": "string", "description": "所引段落的逐字子串；reported 必填"},
+        "units": {"type": "string", "description": "可选，单位标注"},
+        "note": {"type": "string", "description": "可选，如可比性说明"}
+      }
+    }
+  }
+}

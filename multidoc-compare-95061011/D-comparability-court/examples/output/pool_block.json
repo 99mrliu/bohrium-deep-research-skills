@@ -1,0 +1,99 @@
+{
+  "request_id": "REQ-BLOCK-01",
+  "claim_type": "quantitative",
+  "field": "degradation_rate_eta",
+  "docs": [
+    "DOC-01",
+    "DOC-02"
+  ],
+  "required_dimensions": [
+    "task",
+    "metric",
+    "units",
+    "material",
+    "pollutant",
+    "budget"
+  ],
+  "claim_text": "对 DOC-01 与 DOC-02 的降解率 η 求均值并排名，断言 DOC-01 优于 DOC-02。",
+  "status": "block",
+  "permit_id": null,
+  "normalization_notes": [],
+  "caveats": [],
+  "blocking": [
+    {
+      "decision_id": "DEC-DOC-01--DOC-02-material",
+      "doc_pair": [
+        "DOC-01",
+        "DOC-02"
+      ],
+      "dimension": "material",
+      "verdict": "subset_only",
+      "note": "取值不一致（不同材料体系的数值不可直接平均或排名；可在同污染物、同任务下做定性对照（如改性前后趋势）。）",
+      "value_a": {
+        "value": "g-C3N4",
+        "paragraph_id": "P3",
+        "quote": "催化剂材料为石墨相氮化碳 g-C3N4",
+        "reported": true
+      },
+      "value_b": {
+        "value": "N-TiO2",
+        "paragraph_id": "P3",
+        "quote": "催化剂为氮掺杂二氧化钛 N-TiO2",
+        "reported": true
+      }
+    },
+    {
+      "decision_id": "DEC-DOC-01--DOC-02-pollutant",
+      "doc_pair": [
+        "DOC-01",
+        "DOC-02"
+      ],
+      "dimension": "pollutant",
+      "verdict": "blocked",
+      "note": "取值不一致（不同污染物（如 RhB vs MB）的降解数据物理上不可合并：禁止均值、排名与'优于'断言。）",
+      "value_a": {
+        "value": "RhB",
+        "paragraph_id": "P2",
+        "quote": "目标污染物为罗丹明 B（RhB）",
+        "reported": true
+      },
+      "value_b": {
+        "value": "MB",
+        "paragraph_id": "P2",
+        "quote": "目标污染物为亚甲基蓝（MB）",
+        "reported": true
+      }
+    },
+    {
+      "decision_id": "DEC-DOC-01--DOC-02-budget",
+      "doc_pair": [
+        "DOC-01",
+        "DOC-02"
+      ],
+      "dimension": "budget",
+      "verdict": "subset_only",
+      "note": "取值不一致且不在可换算表内（投加量或规模不同，定量合成需按剂量归一；默认仅发定性 permit，报告中必须注明口径差异。）",
+      "value_a": {
+        "value": "0.5 g/L",
+        "paragraph_id": "P6",
+        "quote": "催化剂投加量（budget）为 0.5 g/L",
+        "reported": true
+      },
+      "value_b": {
+        "value": "1.0 g/L",
+        "paragraph_id": "P6",
+        "quote": "催化剂投加量为 1.0 g/L",
+        "reported": true
+      }
+    }
+  ],
+  "decisions_used": [
+    "DEC-DOC-01--DOC-02-task",
+    "DEC-DOC-01--DOC-02-metric",
+    "DEC-DOC-01--DOC-02-units",
+    "DEC-DOC-01--DOC-02-material",
+    "DEC-DOC-01--DOC-02-pollutant",
+    "DEC-DOC-01--DOC-02-budget"
+  ],
+  "blocked_assertion": "对 DOC-01 与 DOC-02 的降解率 η 求均值并排名，断言 DOC-01 优于 DOC-02。"
+}

@@ -1,0 +1,19 @@
+{
+  "case_id": "SYNTH-EXAMPLE-001",
+  "schema": "org.bohrium.comparison-workorder/v2",
+  "task_summary": "Compare the experimental conditions and photocatalytic dye-degradation performance reported by the synthetic corpus papers, with full source anchoring.",
+  "dimensions": {
+    "task": "photocatalytic dye degradation",
+    "metric": ["removal efficiency", "apparent rate constant"],
+    "units": ["%", "min^-1"],
+    "material": ["g-C3N4", "N-TiO2"],
+    "pollutant": ["Rhodamine B", "RhB", "methylene blue", "MB"],
+    "budget": ["catalyst dosage", "reaction time", "initial concentration"]
+  },
+  "documents": [
+    "corpus/DOC-A.md",
+    "corpus/DOC-B.md",
+    "corpus/DOC-C.md",
+    "corpus/DOC-D.md"
+  ]
+}

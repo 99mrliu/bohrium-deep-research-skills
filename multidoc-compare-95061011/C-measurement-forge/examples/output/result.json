@@ -1,0 +1,177 @@
+{
+  "case_id": "SYNTH-EXAMPLE-001",
+  "main_result": null,
+  "_note_contract": "case.json 无 output_contract, 退化为 {case_id, status, 主结果, sources, uncertainty}",
+  "status": "partial",
+  "sources": [
+    {
+      "document_id": "DOC-01"
+    },
+    {
+      "document_id": "DOC-02"
+    },
+    {
+      "document_id": "DOC-03"
+    }
+  ],
+  "comparability": {
+    "by_quantity_kind": {
+      "catalyst_dosage": {
+        "units": {
+          "verdict": "comparable",
+          "detail": "量纲一致 L^-3·M; 单位写法 ['g/L', 'mg/L'] 可互相换算(换算值标 derived)"
+        },
+        "metric": {
+          "verdict": "comparable",
+          "detail": "口径一致(auto): 催化剂投加量, 以单位反应液体积的 g-C3N4 粉体质量计"
+        },
+        "task": {
+          "verdict": "comparable",
+          "detail": "取值一致: photocatalytic_degradation"
+        },
+        "material": {
+          "verdict": "comparable",
+          "detail": "取值一致: g-C3N4"
+        },
+        "pollutant": {
+          "verdict": "comparable",
+          "detail": "取值一致: RhB"
+        },
+        "budget": {
+          "verdict": "not_comparable",
+          "detail": "取值不同, 不得合并: M-002=300 W Xe lamp; M-005=300 W Xe lamp + 420 nm cutoff; M-007=150 W LED"
+        }
+      },
+      "concentration": {
+        "units": {
+          "verdict": "comparable",
+          "detail": "量纲一致 L^-3·M; 单位写法 ['mg/L'] 可互相换算(换算值标 derived)"
+        },
+        "metric": {
+          "verdict": "comparable",
+          "detail": "口径一致(auto): RhB 初始浓度 C0"
+        },
+        "task": {
+          "verdict": "comparable",
+          "detail": "取值一致: photocatalytic_degradation"
+        },
+        "material": {
+          "verdict": "comparable",
+          "detail": "取值一致: g-C3N4"
+        },
+        "pollutant": {
+          "verdict": "comparable",
+          "detail": "取值一致: RhB"
+        },
+        "budget": {
+          "verdict": "comparable",
+          "detail": "取值一致: 300 W Xe lamp"
+        }
+      },
+      "degradation_efficiency": {
+        "units": {
+          "verdict": "comparable",
+          "detail": "量纲一致 1(无量纲); 单位写法 ['%', 'fraction'] 可互相换算(换算值标 derived)"
+        },
+        "metric": {
+          "verdict": "review",
+          "detail": "口径不一致(auto 标记, agent 复核): M-001: η=(C0−Ct)/C0, UV-2600 UV-Vis 分光光度计测定 554 nm 吸光度, 30 min 暗吸附平; M-006: 1−Ct/C0, 554 nm 吸光度, 同型号 UV-Vis 仪器"
+        },
+        "task": {
+          "verdict": "comparable",
+          "detail": "取值一致: photocatalytic_degradation"
+        },
+        "material": {
+          "verdict": "comparable",
+          "detail": "取值一致: g-C3N4"
+        },
+        "pollutant": {
+          "verdict": "comparable",
+          "detail": "取值一致: RhB"
+        },
+        "budget": {
+          "verdict": "not_comparable",
+          "detail": "取值不同, 不得合并: M-001=300 W Xe lamp; M-006=150 W LED"
+        }
+      },
+      "rate_constant": {
+        "units": {
+          "verdict": "comparable",
+          "detail": "量纲一致 T^-1; 单位写法 ['min⁻¹'] 可互相换算(换算值标 derived)"
+        },
+        "metric": {
+          "verdict": "comparable",
+          "detail": "口径一致(auto): pseudo-first-order: ln(C0/Ct)=kt, 前 60 min 线性拟合, R²=0.98"
+        },
+        "task": {
+          "verdict": "comparable",
+          "detail": "取值一致: photocatalytic_degradation"
+        },
+        "material": {
+          "verdict": "comparable",
+          "detail": "取值一致: g-C3N4"
+        },
+        "pollutant": {
+          "verdict": "comparable",
+          "detail": "取值一致: RhB"
+        },
+        "budget": {
+          "verdict": "comparable",
+          "detail": "取值一致: 300 W Xe lamp + 420 nm cutoff"
+        }
+      }
+    },
+    "cross_kind": [
+      {
+        "pair": [
+          "catalyst_dosage",
+          "concentration"
+        ],
+        "verdict": "not_comparable",
+        "reason": "quantity_kind 不同, 机检直接判不可比"
+      },
+      {
+        "pair": [
+          "catalyst_dosage",
+          "degradation_efficiency"
+        ],
+        "verdict": "not_comparable",
+        "reason": "quantity_kind 不同, 机检直接判不可比"
+      },
+      {
+        "pair": [
+          "catalyst_dosage",
+          "rate_constant"
+        ],
+        "verdict": "not_comparable",
+        "reason": "quantity_kind 不同, 机检直接判不可比"
+      },
+      {
+        "pair": [
+          "concentration",
+          "degradation_efficiency"
+        ],
+        "verdict": "not_comparable",
+        "reason": "quantity_kind 不同, 机检直接判不可比"
+      },
+      {
+        "pair": [
+          "concentration",
+          "rate_constant"
+        ],
+        "verdict": "not_comparable",
+        "reason": "quantity_kind 不同, 机检直接判不可比"
+      },
+      {
+        "pair": [
+          "degradation_efficiency",
+          "rate_constant"
+        ],
+        "verdict": "not_comparable",
+        "reason": "quantity_kind 不同, 机检直接判不可比"
+      }
+    ],
+    "rule": "metric/units 两维由单位代数自动判; 其余四维由 conditions 比对; 未报告项保留"
+  },
+  "uncertainty": "agent 待填: 抽取遗漏风险/口径歧义/换算精度; partial 必须写明缺失边界"
+}

@@ -1,0 +1,12 @@
+{
+  "case_id": "SYNTH-EXAMPLE-001",
+  "version": "v2-synthetic",
+  "note": "合成示例工单：三篇虚构光催化降解论文的多文档比较。所有数据均为虚构，仅供演示义务台账流程。",
+  "documents": ["DOC-01", "DOC-02", "DOC-03"],
+  "dimensions": ["task", "metric", "units", "material", "pollutant", "budget"],
+  "fields": ["removal_efficiency", "rate_constant", "budget"],
+  "questions": [
+    {"id": "1", "question": "哪些论文报告了可见光下的 RhB 降解性能？各自的定量指标分别是什么？"},
+    {"id": "2", "question": "各论文之间是否存在相互矛盾的性能声明？若有，保留双方证据，不得合并。"}
+  ]
+}

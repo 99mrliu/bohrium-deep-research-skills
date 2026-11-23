@@ -1,0 +1,13 @@
+{
+  "case_id": "SYNTH-EXAMPLE-001",
+  "task": "比较多篇可见光光催化论文的染料降解性能，产出覆盖全部语料论文的共同字段比较矩阵与六维度可比性判定。",
+  "output_contract": {
+    "comparison_matrix": "覆盖全部语料论文的共同字段比较矩阵，每格带 exact source_document_id 与 paragraph_id",
+    "comparability_assessment": "task/metric/units/material/pollutant/budget 六维度可比性判定",
+    "synthesis": "定量合成判定与结论（不可比项不得合并）",
+    "sources": "引用来源清单（document_id + paragraph_ids）",
+    "uncertainty": "不确定性与缺失边界"
+  },
+  "budget": {"max_model_requests": 64, "max_seconds": 900},
+  "note": "合成示例数据，非官方正式案例。"
+}

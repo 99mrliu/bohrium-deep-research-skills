@@ -1,0 +1,13 @@
+{
+  "case_id": "SYNTH-EXAMPLE-001",
+  "title": "合成示例：三篇光催化论文的多文档比较工单",
+  "documents": ["DOC-01", "DOC-02", "DOC-03"],
+  "dimensions": ["task", "metric", "units", "material", "pollutant", "budget"],
+  "instructions": [
+    "对全部语料论文构建共同字段比较矩阵，每格带 source_document_id 与 paragraph_id",
+    "任何定量合成之前先检验六维度可比性",
+    "不得合并不同污染物或不同材料体系的数值",
+    "保留不可比与未报告项"
+  ],
+  "synthesis_requests": ["REQ-PERMIT-01", "REQ-BLOCK-01"]
+}

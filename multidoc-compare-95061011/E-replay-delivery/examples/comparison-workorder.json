@@ -1,0 +1,36 @@
+{
+  "workorder_id": "WO-SYNTH-001",
+  "case_id": "SYNTH-EXAMPLE-001",
+  "interface_version": "v2",
+  "task_statement": "比较 DOC-01、DOC-02、DOC-03 三篇（合成）光催化论文的染料降解性能。",
+  "reference_basis": {
+    "task": "可见光光催化染料降解",
+    "metric": "degradation_efficiency_pct",
+    "units": "%",
+    "material_family": "g-C3N4 基",
+    "pollutant": "罗丹明B (RhB)",
+    "budget": "催化剂投加量 (mg)"
+  },
+  "documents": [
+    {"document_id": "DOC-01", "path": "corpus/DOC-01.jsonl"},
+    {"document_id": "DOC-02", "path": "corpus/DOC-02.jsonl"},
+    {"document_id": "DOC-03", "path": "corpus/DOC-03.jsonl"}
+  ],
+  "common_fields": [
+    "material",
+    "pollutant",
+    "degradation_efficiency_pct",
+    "rate_constant_k",
+    "reaction_time_min",
+    "catalyst_dosage_mg"
+  ],
+  "rules": [
+    "比较矩阵覆盖全部语料论文的共同字段",
+    "每格带 exact source_document_id 与 paragraph_id",
+    "任何定量合成之前检验 task/metric/units/material/pollutant/budget 六维度可比性",
+    "不得合并不同数据集或不同染料",
+    "保留不可比与未报告项",
+    "单篇摘要不满足多文档比较"
+  ],
+  "note": "合成示例数据，非官方正式案例。"
+}
