@@ -1,0 +1,39 @@
+{
+  "case_id": "synthetic-case-c-0001",
+  "status": "partial",
+  "result": {
+    "answer": {
+      "summary": "Reading order follows the geometric column rule."
+    },
+    "evidence": {
+      "quotes": [
+        "q1",
+        "q2",
+        "q3"
+      ]
+    },
+    "boundaries": {
+      "not_reported": [
+        "原文未报道装置校准信息（q4 按 waiver 保留并标注）"
+      ],
+      "cannot_judge": [
+        "q3 引文与原文有 1 处拼写差异（horizental/vertical），未通过逐字门禁，已从交付引文中剔除"
+      ]
+    }
+  },
+  "sources": [
+    "sources/page1.txt",
+    "sources/page2.txt"
+  ],
+  "uncertainty": [
+    "[not_reported] 原文未报道装置校准信息（q4 按 waiver 保留并标注）",
+    "[cannot_judge] q3 引文与原文有 1 处拼写差异（horizental/vertical），未通过逐字门禁，已从交付引文中剔除",
+    "[quote_gate] 引文门禁未过：1 近似/0 缺失/0 违规"
+  ],
+  "handoff": [
+    "如需引用方法原文，请以第 1 页 2. Method 节为准"
+  ],
+  "change_record": [
+    "status_writer: status=partial, boundaries=2 类"
+  ]
+}

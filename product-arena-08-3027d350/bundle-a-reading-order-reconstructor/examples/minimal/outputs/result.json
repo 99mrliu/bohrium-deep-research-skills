@@ -1,0 +1,90 @@
+{
+  "case_id": "synthetic-case-a-0001",
+  "status": "partial",
+  "result": {
+    "fulltext": {
+      "path": "fulltext.md",
+      "format": "markdown-with-anchors"
+    },
+    "sections": [
+      {
+        "level": 0,
+        "title": "A Synthetic Study of Column Ordering",
+        "anchor": "p1.c0.b2",
+        "page": 1
+      },
+      {
+        "level": 1,
+        "title": "1. Introduction",
+        "anchor": "p1.c1.b6",
+        "page": 1
+      },
+      {
+        "level": 1,
+        "title": "2. Method",
+        "anchor": "p1.c2.b9",
+        "page": 1
+      },
+      {
+        "level": 1,
+        "title": "3. Results",
+        "anchor": "p2.c1.b15",
+        "page": 2
+      }
+    ],
+    "captions": [
+      {
+        "anchor": "p1.c2.b12",
+        "page": 1,
+        "text": "Fig. 1. Synthetic apparatus used to generate word coordinates."
+      },
+      {
+        "anchor": "p2.c1.b17",
+        "page": 2,
+        "text": "Table 1. Synthetic parameters for the experiment.\np1 0.97 12 0.04\np2 0.93 34 0.07"
+      }
+    ],
+    "references": [
+      {
+        "anchor": "p2.c1.b18",
+        "page": 2,
+        "text": "References\n[1] Doe A., Roe B. Synthetic columns. Synth J 2024, 12: 1-2."
+      },
+      {
+        "anchor": "p2.c2.b20",
+        "page": 2,
+        "text": "[2] Anonymous. Reading order by geometry. Preprint 2025.\n[3] Roe B. Barriers in two column layouts. Synth J 2026, 13: 5.\n[4] Doe A. Gutter widths for column cuts. Synth J 2026, 13: 6.\n[5] Coe E. Continuation across pages. Synth J 2026, 13: 7."
+      }
+    ],
+    "provenance": {
+      "blocks": "blocks.jsonl",
+      "coverage": "coverage.json"
+    },
+    "reading_questions": null
+  },
+  "evidence": {
+    "blocks_jsonl": "blocks.jsonl",
+    "coverage": {
+      "raw_chars": 1319,
+      "kept_chars": 1281,
+      "dropped": {
+        "header_footer": 38
+      },
+      "coverage_pct": 97.12,
+      "note": "dropped 均有类别记账；unreadable 部分在 result.json 的 uncertainty 中如实列出，不靠猜测补齐"
+    },
+    "provenance_rule": "每个块带 page/column/bbox，可回指原文坐标"
+  },
+  "uncertainty": [
+    "契约字段 reading_questions 无可靠填充来源，如实置空"
+  ],
+  "sources": [
+    "/tmp/ro_work/blocks.jsonl"
+  ],
+  "change_record": [
+    "extract_words → order_blocks → assemble_output 流水线生成"
+  ],
+  "notes": [
+    "跨页续接以 continues_from 标注，未合并文本"
+  ]
+}

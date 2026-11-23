@@ -1,0 +1,12 @@
+{
+  "case_id": "synthetic-case-b-0001",
+  "note": "合成示例输入（非正式测试案例）：两页保版式文本，含空白对齐表与线框表，仅演示技能接口与运行流程。",
+  "materials": ["page01.txt", "page02.txt"],
+  "output_contract": {
+    "fields": [
+      {"name": "tables", "type": "list", "required": true},
+      {"name": "machine_readable", "type": "list", "required": true},
+      {"name": "provenance", "type": "object", "required": true}
+    ]
+  }
+}

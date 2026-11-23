@@ -1,0 +1,40 @@
+{
+  "status": "fail",
+  "counts": {
+    "verified": 2,
+    "near_miss": 1,
+    "missing": 0,
+    "waived": 1,
+    "violations": 0
+  },
+  "verified": [
+    {
+      "id": "q1",
+      "source": "page1.txt",
+      "page": 1
+    },
+    {
+      "id": "q2",
+      "source": "page2.txt",
+      "page": 2
+    }
+  ],
+  "near_miss": [
+    {
+      "id": "q3",
+      "nearest_ratio": 0.837,
+      "nearest": " 2. method word coordinates are clustered into lines, and lines into blocks by vertical gap ",
+      "nearest_file": "page1.txt"
+    }
+  ],
+  "missing": [],
+  "waived": [
+    {
+      "id": "q4",
+      "reason": "该引文来自任务方提供的口头补充说明，原文未报道；按 waiver 保留并标注边界",
+      "nearest_ratio": 0.4
+    }
+  ],
+  "violations": [],
+  "rule": "未通过门禁的引文不得进入 result.json；豁免必须带 waiver_reason"
+}

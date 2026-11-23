@@ -1,0 +1,11 @@
+1. Introduction
+
+The synthetic study investigates column ordering in scientific PDFs. Text
+extraction must preserve the original reading order across both columns.
+Every extracted paragraph carries a page number and a bounding box.
+
+2. Method
+
+Word coordinates are clustered into lines, and lines into blocks by
+vertical gap analysis. The header and footer are removed by position and
+cross-page repetition. All numbers in this example are invented.

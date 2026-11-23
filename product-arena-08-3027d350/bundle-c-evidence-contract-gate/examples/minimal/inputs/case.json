@@ -1,0 +1,12 @@
+{
+  "case_id": "synthetic-case-c-0001",
+  "note": "合成示例输入（非正式测试案例）：合成抽取文本与引文清单，仅演示证据门禁/覆盖台账/契约校验的接口与流程。",
+  "output_contract": {
+    "fields": [
+      {"name": "answer", "type": "object", "required": true},
+      {"name": "evidence", "type": "object", "required": true},
+      {"name": "boundaries", "type": "object", "required": true},
+      {"name": "optional_notes", "type": "object", "required": false}
+    ]
+  }
+}

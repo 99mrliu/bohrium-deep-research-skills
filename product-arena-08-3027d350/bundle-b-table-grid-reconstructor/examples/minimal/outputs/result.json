@@ -1,0 +1,75 @@
+{
+  "case_id": "synthetic-case-b-0001",
+  "status": "partial",
+  "result": {
+    "tables": [
+      {
+        "table_id": "Table_1",
+        "page": 1,
+        "json": "table_Table_1.json",
+        "markdown": "table_Table_1.md",
+        "csv": "table_Table_1.csv",
+        "n_rows": 5,
+        "n_cols": 4,
+        "notes": [
+          "行 4 列 2 空单元格未判定"
+        ]
+      },
+      {
+        "table_id": "Table_2",
+        "page": 2,
+        "json": "table_Table_2.json",
+        "markdown": "table_Table_2.md",
+        "csv": "table_Table_2.csv",
+        "n_rows": 4,
+        "n_cols": 3,
+        "notes": [
+          "行 3 列 1 空单元格未判定"
+        ]
+      }
+    ],
+    "machine_readable": [
+      {
+        "table_id": "Table_1",
+        "page": 1,
+        "json": "table_Table_1.json",
+        "markdown": "table_Table_1.md",
+        "csv": "table_Table_1.csv",
+        "n_rows": 5,
+        "n_cols": 4,
+        "notes": [
+          "行 4 列 2 空单元格未判定"
+        ]
+      },
+      {
+        "table_id": "Table_2",
+        "page": 2,
+        "json": "table_Table_2.json",
+        "markdown": "table_Table_2.md",
+        "csv": "table_Table_2.csv",
+        "n_rows": 4,
+        "n_cols": 3,
+        "notes": [
+          "行 3 列 1 空单元格未判定"
+        ]
+      }
+    ],
+    "provenance": {
+      "rule": "每表带 page 与源行区间 region，单元格带 row/col 与合并标记"
+    }
+  },
+  "evidence": {
+    "tables_index": "tables_index.json",
+    "reconstruction_report": "reconstruction_report.json"
+  },
+  "uncertainty": [
+    "单元格歧义（共 2 条，详见 reconstruction_report.json）：Table_1: 行 4 列 2 空单元格未判定",
+    "单元格歧义（共 2 条，详见 reconstruction_report.json）：Table_2: 行 3 列 1 空单元格未判定"
+  ],
+  "sources": [
+    "tables_index.json"
+  ],
+  "change_record": [
+    "extract_layout → detect_tables → reconstruct_grid"
+  ]
+}

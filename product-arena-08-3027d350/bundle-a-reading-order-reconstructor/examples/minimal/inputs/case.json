@@ -1,0 +1,15 @@
+{
+  "case_id": "synthetic-case-a-0001",
+  "note": "合成示例输入（非正式测试案例）：双栏两页合成论文的词表，仅用于演示技能接口与运行流程。",
+  "materials": ["words.tsv"],
+  "output_contract": {
+    "fields": [
+      {"name": "fulltext", "type": "path", "required": true},
+      {"name": "sections", "type": "list", "required": true},
+      {"name": "captions", "type": "list", "required": true},
+      {"name": "references", "type": "list", "required": true},
+      {"name": "provenance", "type": "object", "required": true},
+      {"name": "reading_questions", "type": "object", "required": false}
+    ]
+  }
+}

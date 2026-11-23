@@ -1,0 +1,24 @@
+SYNTH J. 12 (2026) 1
+1. Introduction
+
+The synthetic study investigates column ordering in scientific PDFs. Text
+extraction must preserve the original reading order across both columns.
+Every extracted paragraph carries a page number and a bounding box.
+
+2. Method
+
+Word coordinates are clustered into lines, and lines into blocks by
+vertical gap analysis. The header and footer are removed by position and
+cross-page repetition. All numbers in this example are invented.
+SYNTH J. 12 (2026) 2
+3. Results
+
+Reading order follows the geometric column rule. The reconstruction
+recovered 19 blocks from 234 words on two pages. Coverage accounting
+attributes every dropped character to a declared category.
+
+References
+
+[1] Doe A., Roe B. Synthetic columns. Synth J 2024, 12: 1-2.
+Page 1 of 2
+Page 2 of 2

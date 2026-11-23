@@ -1,0 +1,61 @@
+{
+  "verdict": "PASS",
+  "fails": [],
+  "warns": [
+    "非必需字段 optional_notes 缺失"
+  ],
+  "checks": [
+    {
+      "check": "case_id_match",
+      "ok": true,
+      "case": "synthetic-case-c-0001",
+      "result": "synthetic-case-c-0001"
+    },
+    {
+      "check": "field:answer",
+      "ok": true,
+      "level": "ok",
+      "required": true,
+      "present": true,
+      "empty": false
+    },
+    {
+      "check": "field:evidence",
+      "ok": true,
+      "level": "ok",
+      "required": true,
+      "present": true,
+      "empty": false
+    },
+    {
+      "check": "field:boundaries",
+      "ok": true,
+      "level": "ok",
+      "required": true,
+      "present": true,
+      "empty": false
+    },
+    {
+      "check": "field:optional_notes",
+      "ok": true,
+      "level": "warn",
+      "required": false,
+      "present": false,
+      "empty": true
+    },
+    {
+      "check": "status_enum",
+      "ok": true,
+      "value": "partial"
+    },
+    {
+      "check": "partial_explained",
+      "ok": true
+    },
+    {
+      "check": "evidence_present",
+      "ok": true
+    }
+  ],
+  "rule": "FAIL 的 result.json 不得交付；修复后重新校验"
+}

@@ -1,0 +1,60 @@
+{
+  "verdict": "FAIL",
+  "fails": [
+    "契约字段 boundaries 缺失或未解释置空",
+    "缺少 evidence/sources 定位信息"
+  ],
+  "warns": [
+    "非必需字段 optional_notes 缺失"
+  ],
+  "checks": [
+    {
+      "check": "case_id_match",
+      "ok": true,
+      "case": "synthetic-case-c-0001",
+      "result": "synthetic-case-c-0001"
+    },
+    {
+      "check": "field:answer",
+      "ok": true,
+      "level": "ok",
+      "required": true,
+      "present": true,
+      "empty": false
+    },
+    {
+      "check": "field:evidence",
+      "ok": true,
+      "level": "ok",
+      "required": true,
+      "present": true,
+      "empty": false
+    },
+    {
+      "check": "field:boundaries",
+      "ok": false,
+      "level": "fail",
+      "required": true,
+      "present": false,
+      "empty": true
+    },
+    {
+      "check": "field:optional_notes",
+      "ok": true,
+      "level": "warn",
+      "required": false,
+      "present": false,
+      "empty": true
+    },
+    {
+      "check": "status_enum",
+      "ok": true,
+      "value": "success"
+    },
+    {
+      "check": "evidence_present",
+      "ok": false
+    }
+  ],
+  "rule": "FAIL 的 result.json 不得交付；修复后重新校验"
+}

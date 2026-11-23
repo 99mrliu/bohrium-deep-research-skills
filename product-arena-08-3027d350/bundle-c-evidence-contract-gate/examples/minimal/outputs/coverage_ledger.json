@@ -1,0 +1,24 @@
+{
+  "status": "balanced",
+  "raw_chars": 664,
+  "kept_chars": 616,
+  "kept_detail": [
+    {
+      "file": "page1.txt",
+      "chars": 380
+    },
+    {
+      "file": "page2.txt",
+      "chars": 236
+    }
+  ],
+  "dropped": {
+    "header_footer": 48
+  },
+  "dropped_total": 48,
+  "unaccounted_chars": 0,
+  "unaccounted_pct": 0.0,
+  "threshold_pct": 2.0,
+  "rule": "unaccounted_pct > 阈值时，result.json 的 status 必须为 partial，并在 uncertainty 列出未解释字符的可能来源",
+  "notes": []
+}
