@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="271.46mm" height="93.13mm" viewBox="0 0 1026.00 352.00" font-family="'Hiragino Sans GB','Heiti SC','PingFang SC','Noto Sans CJK SC','Source Han Sans SC','WenQuanYi Micro Hei','Microsoft YaHei',SimHei,sans-serif">
+  <defs>
+    <marker id="arrow-energy" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#e65100"/></marker>
+    <marker id="arrow-information" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#2e7d32"/></marker>
+    <marker id="arrow-material" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#1565c0"/></marker>
+  </defs>
+  <rect id="background" x="0" y="0" width="1026.00" height="352.00" fill="#fdfdfd"/>
+  <g id="layer-title">
+    <text id="title" x="513.00" y="24.00" text-anchor="middle" font-size="18.00" font-weight="bold" fill="#1a237e">微型催化加氢循环工艺流程（合成示例）</text>
+  </g>
+  <g id="layer-content">
+  <g id="layer-edges">
+    <g id="edge-e00" data-eid="e00" data-from="tank" data-to="pump" data-flow="material" data-backflow="false">
+      <path d="M132.00,156.00 L162.00,156.00 L162.00,117.00 L192.00,117.00" fill="none" stroke="#1565c0" stroke-width="1.80" marker-end="url(#arrow-material)"/>
+      <text x="162.00" y="132.50" text-anchor="middle" font-size="10.00" fill="#1565c0" stroke="#ffffff" stroke-width="3" paint-order="stroke">原料液</text>
+    </g>
+    <g id="edge-e01" data-eid="e01" data-from="pump" data-to="hx" data-flow="material" data-backflow="false">
+      <path d="M264.00,117.00 L294.00,117.00 L294.00,117.00 L324.00,117.00" fill="none" stroke="#1565c0" stroke-width="1.80" marker-end="url(#arrow-material)"/>
+      <text x="294.00" y="113.00" text-anchor="middle" font-size="10.00" fill="#1565c0" stroke="#ffffff" stroke-width="3" paint-order="stroke">加压进料</text>
+    </g>
+    <g id="edge-e02" data-eid="e02" data-from="hx" data-to="rxr" data-flow="material" data-backflow="false">
+      <path d="M396.00,117.00 L426.00,117.00 L426.00,117.00 L456.00,117.00" fill="none" stroke="#1565c0" stroke-width="1.80" marker-end="url(#arrow-material)"/>
+      <text x="426.00" y="113.00" text-anchor="middle" font-size="10.00" fill="#1565c0" stroke="#ffffff" stroke-width="3" paint-order="stroke">预热进料</text>
+    </g>
+    <g id="edge-e03" data-eid="e03" data-from="rxr" data-to="cond" data-flow="material" data-backflow="false">
+      <path d="M562.00,117.00 L592.00,117.00 L592.00,117.00 L622.00,117.00" fill="none" stroke="#1565c0" stroke-width="1.80" marker-end="url(#arrow-material)"/>
+      <text x="592.00" y="113.00" text-anchor="middle" font-size="10.00" fill="#1565c0" stroke="#ffffff" stroke-width="3" paint-order="stroke">反应流出物</text>
+    </g>
+    <g id="edge-e04" data-eid="e04" data-from="cond" data-to="sep" data-flow="material" data-backflow="false">
+      <path d="M694.00,117.00 L724.00,117.00 L724.00,117.00 L754.00,117.00" fill="none" stroke="#1565c0" stroke-width="1.80" marker-end="url(#arrow-material)"/>
+      <text x="724.00" y="113.00" text-anchor="middle" font-size="10.00" fill="#1565c0" stroke="#ffffff" stroke-width="3" paint-order="stroke">冷却流出物</text>
+    </g>
+    <g id="edge-e05" data-eid="e05" data-from="sep" data-to="prod" data-flow="material" data-backflow="false">
+      <path d="M847.00,117.00 L877.00,117.00 L877.00,117.00 L907.00,117.00" fill="none" stroke="#1565c0" stroke-width="1.80" marker-end="url(#arrow-material)"/>
+      <text x="877.00" y="113.00" text-anchor="middle" font-size="10.00" fill="#1565c0" stroke="#ffffff" stroke-width="3" paint-order="stroke">液体产品</text>
+    </g>
+    <g id="edge-e06" data-eid="e06" data-from="sep" data-to="hx" data-flow="material" data-backflow="true">
+      <path d="M794.50,143.00 L794.50,150.00 L744.00,150.00 L744.00,202.00 L314.00,202.00 L314.00,150.00 L354.00,150.00 L354.00,143.00" fill="none" stroke="#1565c0" stroke-width="1.80" stroke-dasharray="5 3" marker-end="url(#arrow-material)"/>
+      <text x="529.00" y="197.00" text-anchor="middle" font-size="10.00" fill="#1565c0" stroke="#ffffff" stroke-width="3" paint-order="stroke">循环氢气（回流）</text>
+    </g>
+    <g id="edge-e07" data-eid="e07" data-from="heater" data-to="hx" data-flow="energy" data-backflow="false">
+      <path d="M68.00,104.00 L68.00,111.00 L148.00,111.00 L148.00,216.00 L308.00,216.00 L308.00,150.00 L366.00,150.00 L366.00,143.00" fill="none" stroke="#e65100" stroke-width="1.60" stroke-dasharray="7 3" marker-end="url(#arrow-energy)"/>
+      <text x="228.00" y="211.00" text-anchor="middle" font-size="10.00" fill="#e65100" stroke="#ffffff" stroke-width="3" paint-order="stroke">电加热</text>
+    </g>
+    <g id="edge-e08" data-eid="e08" data-from="sep" data-to="pump" data-flow="information" data-backflow="true">
+      <path d="M806.50,143.00 L806.50,150.00 L732.00,150.00 L732.00,230.00 L170.00,230.00 L170.00,150.00 L228.00,150.00 L228.00,143.00" fill="none" stroke="#2e7d32" stroke-width="1.30" stroke-dasharray="2 3" marker-end="url(#arrow-information)"/>
+      <text x="451.00" y="225.00" text-anchor="middle" font-size="10.00" fill="#2e7d32" stroke="#ffffff" stroke-width="3" paint-order="stroke">低流量联锁</text>
+    </g>
+  </g>
+  <g id="layer-nodes">
+    <g id="node-tank" data-eid="tank" data-kind="data" transform="translate(28.00,130.00)">
+      <polygon points="12.00,0.00 104.00,0.00 92.00,52.00 0.00,52.00" fill="#ffffff" stroke="#37474f" stroke-width="1.5"/>
+      <text x="52.00" y="23.00" text-anchor="middle" font-size="13.00" font-weight="bold" fill="#212121">原料储罐</text>
+      <text x="52.00" y="38.00" text-anchor="middle" font-size="10.50" fill="#616161">T-101</text>
+    </g>
+    <g id="node-heater" data-eid="heater" data-kind="unit" transform="translate(28.00,52.00)">
+      <rect x="0" y="0" width="80.00" height="52.00" rx="8" fill="#ffffff" stroke="#37474f" stroke-width="1.5"/>
+      <text x="40.00" y="23.00" text-anchor="middle" font-size="13.00" font-weight="bold" fill="#212121">电加热器</text>
+      <text x="40.00" y="38.00" text-anchor="middle" font-size="10.50" fill="#616161">H-101</text>
+    </g>
+    <g id="node-pump" data-eid="pump" data-kind="unit" transform="translate(192.00,91.00)">
+      <rect x="0" y="0" width="72.00" height="52.00" rx="8" fill="#ffffff" stroke="#37474f" stroke-width="1.5"/>
+      <text x="36.00" y="23.00" text-anchor="middle" font-size="13.00" font-weight="bold" fill="#212121">进料泵</text>
+      <text x="36.00" y="38.00" text-anchor="middle" font-size="10.50" fill="#616161">P-101</text>
+    </g>
+    <g id="node-hx" data-eid="hx" data-kind="unit" transform="translate(324.00,91.00)">
+      <rect x="0" y="0" width="72.00" height="52.00" rx="8" fill="#ffffff" stroke="#37474f" stroke-width="1.5"/>
+      <text x="36.00" y="23.00" text-anchor="middle" font-size="13.00" font-weight="bold" fill="#212121">预热器</text>
+      <text x="36.00" y="38.00" text-anchor="middle" font-size="10.50" fill="#616161">E-101</text>
+    </g>
+    <g id="node-rxr" data-eid="rxr" data-kind="unit" transform="translate(456.00,75.00)">
+      <rect x="0" y="0" width="106.00" height="84.00" rx="8" fill="#ffffff" stroke="#37474f" stroke-width="1.5"/>
+      <text x="53.00" y="23.00" text-anchor="middle" font-size="13.00" font-weight="bold" fill="#212121">固定床反应器</text>
+      <text x="53.00" y="38.00" text-anchor="middle" font-size="10.50" fill="#616161">R-101</text>
+      <line x1="8" y1="46.00" x2="98.00" y2="46.00" stroke="#37474f" stroke-width="0.75"/>
+      <text x="53.00" y="55.00" text-anchor="middle" font-size="10.50" fill="#616161">催化剂床层</text>
+      <line x1="8" y1="62.00" x2="98.00" y2="62.00" stroke="#37474f" stroke-width="0.75"/>
+      <text x="53.00" y="71.00" text-anchor="middle" font-size="10.50" fill="#616161">夹套加热</text>
+    </g>
+    <g id="node-cond" data-eid="cond" data-kind="unit" transform="translate(622.00,91.00)">
+      <rect x="0" y="0" width="72.00" height="52.00" rx="8" fill="#ffffff" stroke="#37474f" stroke-width="1.5"/>
+      <text x="36.00" y="23.00" text-anchor="middle" font-size="13.00" font-weight="bold" fill="#212121">冷凝器</text>
+      <text x="36.00" y="38.00" text-anchor="middle" font-size="10.50" fill="#616161">E-102</text>
+    </g>
+    <g id="node-sep" data-eid="sep" data-kind="unit" transform="translate(754.00,91.00)">
+      <rect x="0" y="0" width="93.00" height="52.00" rx="8" fill="#ffffff" stroke="#37474f" stroke-width="1.5"/>
+      <text x="46.50" y="23.00" text-anchor="middle" font-size="13.00" font-weight="bold" fill="#212121">气液分离罐</text>
+      <text x="46.50" y="38.00" text-anchor="middle" font-size="10.50" fill="#616161">V-101</text>
+    </g>
+    <g id="node-prod" data-eid="prod" data-kind="data" transform="translate(907.00,91.00)">
+      <polygon points="12.00,0.00 91.00,0.00 79.00,52.00 0.00,52.00" fill="#ffffff" stroke="#37474f" stroke-width="1.5"/>
+      <text x="45.50" y="23.00" text-anchor="middle" font-size="13.00" font-weight="bold" fill="#212121">产品罐</text>
+      <text x="45.50" y="38.00" text-anchor="middle" font-size="10.50" fill="#616161">T-102</text>
+    </g>
+  </g>
+  <g id="layer-legend">
+    <rect x="28.00" y="264.00" width="970.00" height="60.00" rx="6" fill="#ffffff" stroke="#cfd8dc" stroke-width="1"/>
+    <text x="40.00" y="282.00" font-size="10.50" font-weight="bold" fill="#212121">图例</text>
+    <line x1="52.00" y1="298.00" x2="84.00" y2="298.00" stroke="#e65100" stroke-width="1.60" stroke-dasharray="7 3" marker-end="url(#arrow-energy)"/>
+    <text x="90.00" y="302.00" font-size="10.50" fill="#212121">energy</text>
+    <line x1="147.28" y1="298.00" x2="179.28" y2="298.00" stroke="#2e7d32" stroke-width="1.30" stroke-dasharray="2 3" marker-end="url(#arrow-information)"/>
+    <text x="185.28" y="302.00" font-size="10.50" fill="#212121">information</text>
+    <line x1="271.96" y1="298.00" x2="303.96" y2="298.00" stroke="#1565c0" stroke-width="1.80" marker-end="url(#arrow-material)"/>
+    <text x="309.96" y="302.00" font-size="10.50" fill="#212121">material</text>
+    <polygon points="383.00,292.00 407.00,292.00 403.00,304.00 379.00,304.00" fill="#ffffff" stroke="#37474f"/>
+    <text x="417.00" y="302.00" font-size="10.50" fill="#212121">数据/储罐</text>
+    <rect x="486.88" y="292.00" width="28" height="12" rx="3" fill="#ffffff" stroke="#37474f"/>
+    <text x="524.88" y="302.00" font-size="10.50" fill="#212121">装置单元</text>
+    <line x1="588.88" y1="298.00" x2="620.88" y2="298.00" stroke="#1565c0" stroke-width="1.80" stroke-dasharray="5 3"/>
+    <text x="626.88" y="302.00" font-size="10.50" fill="#212121">回流边(底部绕行)</text>
+  </g>
+  </g>
+</svg>

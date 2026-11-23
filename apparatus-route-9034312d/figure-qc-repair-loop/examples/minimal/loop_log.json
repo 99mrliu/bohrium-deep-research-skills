@@ -1,0 +1,35 @@
+{
+  "max_rounds": 2,
+  "rounds": [
+    {
+      "round": 1,
+      "ir": "/Users/liuhengshen/Desktop/bhr_product/3rd/4/submit/submit-9034312d-c-qc-repair-loop/skill/examples/minimal/figure_ir.v1.json",
+      "svg": "/Users/liuhengshen/Desktop/bhr_product/3rd/4/submit/submit-9034312d-c-qc-repair-loop/skill/examples/minimal/figure.round1.svg",
+      "qc_report": "/Users/liuhengshen/Desktop/bhr_product/3rd/4/submit/submit-9034312d-c-qc-repair-loop/skill/examples/minimal/qc_report.round1.json",
+      "errors": 5,
+      "warns": 1,
+      "codes": [
+        "DANGLING_EDGE",
+        "LABEL_SOURCE_MISMATCH",
+        "LEGEND_MISMATCH",
+        "NUMBERING_GAP",
+        "TEXT_OVERFLOW"
+      ],
+      "export_report": null,
+      "action": "needs_repair"
+    },
+    {
+      "round": 2,
+      "ir": "/Users/liuhengshen/Desktop/bhr_product/3rd/4/submit/submit-9034312d-c-qc-repair-loop/skill/examples/minimal/figure_ir.v2.json",
+      "svg": "/Users/liuhengshen/Desktop/bhr_product/3rd/4/submit/submit-9034312d-c-qc-repair-loop/skill/examples/minimal/figure.round2.svg",
+      "qc_report": "/Users/liuhengshen/Desktop/bhr_product/3rd/4/submit/submit-9034312d-c-qc-repair-loop/skill/examples/minimal/qc_report.round2.json",
+      "errors": 0,
+      "warns": 0,
+      "codes": [],
+      "export_report": "/tmp/c_qc_out/export_report.json",
+      "action": "clean"
+    }
+  ],
+  "status": "clean",
+  "residual_defects": []
+}

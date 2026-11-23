@@ -1,0 +1,65 @@
+{
+  "back_edges": [
+    "e06",
+    "e08"
+  ],
+  "canvas": {
+    "height_mm": 93.13,
+    "mode": "auto",
+    "width_mm": 271.46
+  },
+  "counts": {
+    "edges": 9,
+    "lanes": 0,
+    "layers": 7,
+    "nodes": 8
+  },
+  "determinism": {
+    "checked": true,
+    "identical": true,
+    "method": "in-process double render; 跨进程请再运行一次并 diff SVG"
+  },
+  "detour_edges": [
+    "e06",
+    "e07",
+    "e08"
+  ],
+  "flow_types_used": [
+    "energy",
+    "information",
+    "material"
+  ],
+  "font_chain": [
+    "Hiragino Sans GB",
+    "Heiti SC",
+    "PingFang SC",
+    "Noto Sans CJK SC",
+    "Source Han Sans SC",
+    "WenQuanYi Micro Hei",
+    "Microsoft YaHei",
+    "SimHei",
+    "sans-serif"
+  ],
+  "fonts_detected": [
+    "Heiti SC",
+    "Hiragino Sans GB"
+  ],
+  "kind": "apparatus",
+  "legend_entries": [
+    "energy",
+    "information",
+    "material",
+    "数据/储罐",
+    "装置单元",
+    "回流边(底部绕行)"
+  ],
+  "node_kinds_used": [
+    "data",
+    "unit"
+  ],
+  "scale": 1.0,
+  "spec_sha256": "b3caa9152d0364d5bdb34abfbb6483c9ffb9070f01bb7d0e7fbbe03236078e9f",
+  "svg_sha256": "64f0e774e863ca8cb20e21f1a2526f8c74233afbbe49174975e8c37dda3d6e54",
+  "title": "微型催化加氢循环工艺流程（合成示例）",
+  "warnings": []
+}

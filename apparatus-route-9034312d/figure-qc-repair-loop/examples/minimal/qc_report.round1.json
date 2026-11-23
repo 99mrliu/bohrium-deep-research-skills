@@ -1,0 +1,63 @@
+{
+  "ir": "/Users/liuhengshen/Desktop/bhr_product/3rd/4/submit/submit-9034312d-c-qc-repair-loop/skill/examples/minimal/figure_ir.v1.json",
+  "svg": "/Users/liuhengshen/Desktop/bhr_product/3rd/4/submit/submit-9034312d-c-qc-repair-loop/skill/examples/minimal/figure.round1.svg",
+  "source_dir": "/Users/liuhengshen/Desktop/bhr_product/3rd/4/submit/submit-9034312d-c-qc-repair-loop/skill/examples/minimal/sources",
+  "round": 1,
+  "defects": [
+    {
+      "code": "DANGLING_EDGE",
+      "severity": "error",
+      "element": "e2",
+      "evidence": "边 e2 的 to 端点 'n9' 不在 IR nodes 中（现有: ['n1', 'n2', 'n3', 'n4']…）",
+      "suggested_fix": "把边的 from/to 改为 IR 中存在的节点 id；若源文本并无此连接，删除该边——禁止凭空补齐连接。"
+    },
+    {
+      "code": "DANGLING_EDGE",
+      "severity": "error",
+      "element": "e2",
+      "evidence": "边 e2 终点 (4.0,4.0) 未触及任何节点盒（箭头悬空）",
+      "suggested_fix": "把边的 from/to 改为 IR 中存在的节点 id；若源文本并无此连接，删除该边——禁止凭空补齐连接。"
+    },
+    {
+      "code": "NUMBERING_GAP",
+      "severity": "error",
+      "element": "n1,n2,n3",
+      "evidence": "有序节点编号 [1, 2, 4] 不是连续 1..3（缺 [3]；重复 无）",
+      "suggested_fix": "把有序节点的 order 重排为 1..n 连续整数，并与源文本步骤顺序一一对应。"
+    },
+    {
+      "code": "LABEL_SOURCE_MISMATCH",
+      "severity": "warn",
+      "element": "n2",
+      "evidence": "节点 '光照恒温培养光生物反应器（内置LED阵列）' 的词元在源文本中找不到: ['内置']",
+      "suggested_fix": "标签用词与源文本不一致：改用源文本中的原词（或确认是合理缩写并在 uncertainties 说明）。"
+    },
+    {
+      "code": "LEGEND_MISMATCH",
+      "severity": "error",
+      "element": "legend:material",
+      "evidence": "图例色块 (stroke=#e37702, dash=None) 与边实际样式 [('#1f77b4', None)] 不一致",
+      "suggested_fix": "删除 IR legend 中的自定义 color/dash（或删掉整个 legend 让渲染器按用到的边类型自动生成），使图例与边样式一致。"
+    },
+    {
+      "code": "TEXT_OVERFLOW",
+      "severity": "error",
+      "element": "n2",
+      "evidence": "标签 '光照恒温培养光生物反应器（内置LED阵列…' 估算宽 82.5 > 盒宽 46.0",
+      "suggested_fix": "标签超出节点盒：缩短标签用词（用源文本中的简称），或在 IR canvas 中加大画布/拆行。"
+    }
+  ],
+  "notes": [],
+  "summary": {
+    "errors": 5,
+    "warns": 1,
+    "total": 6,
+    "codes": [
+      "DANGLING_EDGE",
+      "LABEL_SOURCE_MISMATCH",
+      "LEGEND_MISMATCH",
+      "NUMBERING_GAP",
+      "TEXT_OVERFLOW"
+    ]
+  }
+}

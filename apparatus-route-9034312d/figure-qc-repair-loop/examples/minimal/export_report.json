@@ -1,0 +1,66 @@
+{
+  "svg": "/tmp/c_qc_out/figure.svg",
+  "attempts": [
+    {
+      "tool": "cairosvg",
+      "target": "pdf",
+      "status": "failed",
+      "detail": "OSError: no library called \"cairo-2\" was found\nno library called \"cairo\" was found\nno library called \"libcairo-2\" was found\ncannot load library 'libcairo.so.2': dlopen(libcairo.so.2, 0x0002): tried: 'libcairo.so.2' (relative path not allowed in hardened program), '/System/Volumes/Preboot/Cryptexes/OSlibcairo.so.2' (no such file), '/Users/liuhengshen/Library/Application Support/com.bohrium.runtime/darwin-aarch64/python-de66ff4b2cc30dc6/dependencies/python/lib/libcairo.so.2' (no such file), '/usr/lib/libcairo.so.2' (no such file, not in dyld cache), 'libcairo.so.2' (relative path not allowed in hardened program).  Additionally, ctypes.util.find_library() did not manage to locate a library called 'libcairo.so.2'\ncannot load library 'libcairo.2.dylib': dlopen(libcairo.2.dylib, 0x0002): tried: 'libcairo.2.dylib' (relative path not allowed in hardened program), '/System/Volumes/Preboot/Cryptexes/OSlibcairo.2.dylib' (no such file), '/Users/liuhengshen/Library/Application Support/com.bohrium.runtime/darwin-aarch64/python-de66ff4b2cc30dc6/dependencies/python/lib/libcairo.2.dylib' (no such file), '/usr/lib/libcairo.2.dylib' (no such file, not in dyld cache), 'libcairo.2.dylib' (relative path not allowed in hardened program).  Additionally, ctypes.util.find_library() did not manage to locate a library called 'libcairo.2.dylib'\ncannot load library 'libcairo-2.dll': dlopen(libcairo-2.dll, 0x0002): tried: 'libcairo-2.dll' (relative path not allowed in hardened program), '/System/Volumes/Preboot/Cryptexes/OSlibcairo-2.dll' (no such file), '/Users/liuhengshen/Library/Application Support/com.bohrium.runtime/darwin-aarch64/python-de66ff4b2cc30dc6/dependencies/python/lib/libcairo-2.dll' (no such file), '/usr/lib/libcairo-2.dll' (no such file, not in dyld cache), 'libcairo-2.dll' (relative path not allowed in hardened program).  Additionally, ctypes.util.find_library() did not manage to locate a library called 'libcairo-2.dll'"
+    },
+    {
+      "tool": "rsvg-convert",
+      "target": "pdf",
+      "status": "failed",
+      "detail": "RuntimeError: rsvg-convert 不在 PATH"
+    },
+    {
+      "tool": "inkscape",
+      "target": "pdf",
+      "status": "failed",
+      "detail": "RuntimeError: inkscape 不在 PATH"
+    },
+    {
+      "tool": "chrome-headless",
+      "target": "pdf",
+      "status": "ok"
+    },
+    {
+      "tool": "cairosvg",
+      "target": "png",
+      "status": "failed",
+      "detail": "OSError: no library called \"cairo-2\" was found\nno library called \"cairo\" was found\nno library called \"libcairo-2\" was found\ncannot load library 'libcairo.so.2': dlopen(libcairo.so.2, 0x0002): tried: 'libcairo.so.2' (relative path not allowed in hardened program), '/System/Volumes/Preboot/Cryptexes/OSlibcairo.so.2' (no such file), '/Users/liuhengshen/Library/Application Support/com.bohrium.runtime/darwin-aarch64/python-de66ff4b2cc30dc6/dependencies/python/lib/libcairo.so.2' (no such file), '/usr/lib/libcairo.so.2' (no such file, not in dyld cache), 'libcairo.so.2' (relative path not allowed in hardened program).  Additionally, ctypes.util.find_library() did not manage to locate a library called 'libcairo.so.2'\ncannot load library 'libcairo.2.dylib': dlopen(libcairo.2.dylib, 0x0002): tried: 'libcairo.2.dylib' (relative path not allowed in hardened program), '/System/Volumes/Preboot/Cryptexes/OSlibcairo.2.dylib' (no such file), '/Users/liuhengshen/Library/Application Support/com.bohrium.runtime/darwin-aarch64/python-de66ff4b2cc30dc6/dependencies/python/lib/libcairo.2.dylib' (no such file), '/usr/lib/libcairo.2.dylib' (no such file, not in dyld cache), 'libcairo.2.dylib' (relative path not allowed in hardened program).  Additionally, ctypes.util.find_library() did not manage to locate a library called 'libcairo.2.dylib'\ncannot load library 'libcairo-2.dll': dlopen(libcairo-2.dll, 0x0002): tried: 'libcairo-2.dll' (relative path not allowed in hardened program), '/System/Volumes/Preboot/Cryptexes/OSlibcairo-2.dll' (no such file), '/Users/liuhengshen/Library/Application Support/com.bohrium.runtime/darwin-aarch64/python-de66ff4b2cc30dc6/dependencies/python/lib/libcairo-2.dll' (no such file), '/usr/lib/libcairo-2.dll' (no such file, not in dyld cache), 'libcairo-2.dll' (relative path not allowed in hardened program).  Additionally, ctypes.util.find_library() did not manage to locate a library called 'libcairo-2.dll'"
+    },
+    {
+      "tool": "rsvg-convert",
+      "target": "png",
+      "status": "failed",
+      "detail": "RuntimeError: rsvg-convert 不在 PATH"
+    },
+    {
+      "tool": "inkscape",
+      "target": "png",
+      "status": "failed",
+      "detail": "RuntimeError: inkscape 不在 PATH"
+    },
+    {
+      "tool": "chrome-headless",
+      "target": "png",
+      "status": "ok"
+    }
+  ],
+  "pdf": {
+    "status": "ok",
+    "tool": "chrome-headless",
+    "path": "/tmp/c_qc_out/figure.pdf"
+  },
+  "png": {
+    "status": "ok",
+    "tool": "chrome-headless",
+    "path": "/tmp/c_qc_out/figure.png"
+  },
+  "overall": "ok",
+  "canvas_mm": {
+    "w": 214.6,
+    "h": 58.0
+  }
+}

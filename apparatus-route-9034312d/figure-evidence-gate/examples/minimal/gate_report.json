@@ -1,0 +1,80 @@
+{
+  "tool": "evidence_gate.py",
+  "ledger": "/Users/liuhengshen/Desktop/bhr_product/3rd/4/submit/submit-9034312d-a-evidence-gate/skill/examples/minimal/ledger.json",
+  "sources_dir": "/Users/liuhengshen/Desktop/bhr_product/3rd/4/submit/submit-9034312d-a-evidence-gate/skill/examples/minimal/sources",
+  "summary": {
+    "total": 8,
+    "verified": 7,
+    "unverified": 0,
+    "missing-source-file": 0,
+    "invalid": 0,
+    "waived": 1
+  },
+  "elements": [
+    {
+      "id": "stage-1",
+      "kind": "stage",
+      "verdict": "verified",
+      "detail": {
+        "locator": "methods_excerpt.txt 第3行（合成 Methods 摘录标题行）"
+      }
+    },
+    {
+      "id": "step-1",
+      "kind": "step",
+      "verdict": "verified",
+      "detail": {
+        "locator": "methods_excerpt.txt 第4行"
+      }
+    },
+    {
+      "id": "app-1",
+      "kind": "apparatus-unit",
+      "verdict": "verified",
+      "detail": {
+        "locator": "methods_excerpt.txt 第5行"
+      }
+    },
+    {
+      "id": "step-2",
+      "kind": "step",
+      "verdict": "verified",
+      "detail": {
+        "locator": "methods_excerpt.txt 第6行"
+      }
+    },
+    {
+      "id": "app-2",
+      "kind": "apparatus-unit",
+      "verdict": "verified",
+      "detail": {
+        "locator": "methods_excerpt.txt 第7行"
+      }
+    },
+    {
+      "id": "data-1",
+      "kind": "data-item",
+      "verdict": "verified",
+      "detail": {
+        "locator": "methods_excerpt.txt 第8行"
+      }
+    },
+    {
+      "id": "data-2",
+      "kind": "data-item",
+      "verdict": "verified",
+      "detail": {
+        "locator": "methods_excerpt.txt 第9行"
+      }
+    },
+    {
+      "id": "note-1",
+      "kind": "note",
+      "verdict": "waived",
+      "detail": {
+        "waiver_reason": "合成示例中专门演示豁免路径：该注记是绘图约定说明，不对应源文本中的事实性陈述；豁免情况已在 gate_report.json 与最终交付记录中如实披露。"
+      }
+    }
+  ],
+  "verdict": "passed"
+}

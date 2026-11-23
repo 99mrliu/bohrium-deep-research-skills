@@ -1,0 +1,55 @@
+{
+  "kind": "apparatus",
+  "title": "微型催化加氢循环工艺流程（合成示例）",
+  "canvas": "auto",
+  "styles": {
+    "flow_types": {
+      "material": {"stroke": "#1565c0", "dash": "", "width": 1.8, "color": "#1565c0"},
+      "energy": {"stroke": "#e65100", "dash": "7 3", "width": 1.6, "color": "#e65100"},
+      "information": {"stroke": "#2e7d32", "dash": "2 3", "width": 1.3, "color": "#2e7d32"}
+    },
+    "palette": {
+      "node_fill": "#ffffff", "node_stroke": "#37474f", "text": "#212121",
+      "background": "#fdfdfd", "title": "#1a237e"
+    }
+  },
+  "nodes": [
+    {"id": "tank", "label": "原料储罐", "kind": "data", "sublabel": "T-101",
+     "source": {"locator": "合成示例§1", "quote": "合成数据：原料液储存于 T-101"}},
+    {"id": "heater", "label": "电加热器", "kind": "unit", "sublabel": "H-101",
+     "source": {"locator": "合成示例§2", "quote": "合成数据：H-101 向预热器供电加热"}},
+    {"id": "pump", "label": "进料泵", "kind": "unit", "sublabel": "P-101",
+     "source": {"locator": "合成示例§1", "quote": "合成数据：P-101 加压输送原料液"}},
+    {"id": "hx", "label": "预热器", "kind": "unit", "sublabel": "E-101",
+     "source": {"locator": "合成示例§2", "quote": "合成数据：E-101 将进料预热至 220°C"}},
+    {"id": "rxr", "label": "固定床反应器", "kind": "unit", "sublabel": "R-101",
+     "parts": ["催化剂床层", "夹套加热"],
+     "source": {"locator": "合成示例§3", "quote": "合成数据：R-101 内装填加氢催化剂"}},
+    {"id": "cond", "label": "冷凝器", "kind": "unit", "sublabel": "E-102",
+     "source": {"locator": "合成示例§4", "quote": "合成数据：E-102 冷却反应流出物"}},
+    {"id": "sep", "label": "气液分离罐", "kind": "unit", "sublabel": "V-101",
+     "source": {"locator": "合成示例§4", "quote": "合成数据：V-101 分离循环氢与液体产品"}},
+    {"id": "prod", "label": "产品罐", "kind": "data", "sublabel": "T-102",
+     "source": {"locator": "合成示例§5", "quote": "合成数据：液体产品收集于 T-102"}}
+  ],
+  "edges": [
+    {"id": "e00", "from": "tank", "to": "pump", "flow_type": "material", "label": "原料液",
+     "source": {"locator": "合成示例§1", "quote": "合成数据：T-101 出料进入 P-101"}},
+    {"id": "e01", "from": "pump", "to": "hx", "flow_type": "material", "label": "加压进料",
+     "source": {"locator": "合成示例§1", "quote": "合成数据：P-101 出口接 E-101"}},
+    {"id": "e02", "from": "hx", "to": "rxr", "flow_type": "material", "label": "预热进料",
+     "source": {"locator": "合成示例§2", "quote": "合成数据：预热后进料进入 R-101"}},
+    {"id": "e03", "from": "rxr", "to": "cond", "flow_type": "material", "label": "反应流出物",
+     "source": {"locator": "合成示例§3", "quote": "合成数据：流出物经 E-102 冷却"}},
+    {"id": "e04", "from": "cond", "to": "sep", "flow_type": "material", "label": "冷却流出物",
+     "source": {"locator": "合成示例§4", "quote": "合成数据：冷却物料进入 V-101"}},
+    {"id": "e05", "from": "sep", "to": "prod", "flow_type": "material", "label": "液体产品",
+     "source": {"locator": "合成示例§5", "quote": "合成数据：V-101 底部液体进入 T-102"}},
+    {"id": "e06", "from": "sep", "to": "hx", "flow_type": "material", "label": "循环氢气（回流）",
+     "source": {"locator": "合成示例§4", "quote": "合成数据：V-101 顶部氢气循环回 E-101"}},
+    {"id": "e07", "from": "heater", "to": "hx", "flow_type": "energy", "label": "电加热",
+     "source": {"locator": "合成示例§2", "quote": "合成数据：H-101 为 E-101 供热"}},
+    {"id": "e08", "from": "sep", "to": "pump", "flow_type": "information", "label": "低流量联锁",
+     "source": {"locator": "合成示例§4", "quote": "合成数据：V-101 液位联锁停 P-101"}}
+  ]
+}

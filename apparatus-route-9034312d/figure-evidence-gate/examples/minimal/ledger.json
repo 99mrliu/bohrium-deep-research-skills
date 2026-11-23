@@ -1,0 +1,108 @@
+{
+  "meta": {
+    "title": "豆粕多肽酶解-纯化工艺路线（合成示例）",
+    "description": "最小合成示例台账：演示 evidence_gate + ledger_render 流程，非真实案例结果。",
+    "synthetic": true
+  },
+  "case_id": "synthetic-minimal-example",
+  "elements": [
+    {
+      "id": "stage-1",
+      "kind": "stage",
+      "label": "酶解-纯化工艺路线",
+      "order": 1,
+      "connects_to": [],
+      "source": {
+        "file": "methods_excerpt.txt",
+        "locator": "methods_excerpt.txt 第3行（合成 Methods 摘录标题行）",
+        "quote": "合成 Methods 摘录（虚拟）："
+      }
+    },
+    {
+      "id": "step-1",
+      "kind": "step",
+      "label": "豆粕粉与磷酸盐缓冲液混合",
+      "order": 2,
+      "connects_to": ["app-1"],
+      "source": {
+        "file": "methods_excerpt.txt",
+        "locator": "methods_excerpt.txt 第4行",
+        "quote": "将 5 g 豆粕粉加入 250 mL 三角瓶，加入 100 mL 磷酸盐缓冲液（pH 7.0）。"
+      }
+    },
+    {
+      "id": "app-1",
+      "kind": "apparatus-unit",
+      "label": "恒温摇床酶解（37 °C, 180 rpm, 4 h）",
+      "order": 3,
+      "connects_to": ["step-2"],
+      "source": {
+        "file": "methods_excerpt.txt",
+        "locator": "methods_excerpt.txt 第5行",
+        "quote": "三角瓶置于恒温摇床，在 37 °C、180 rpm 条件下酶解 4 h。"
+      }
+    },
+    {
+      "id": "step-2",
+      "kind": "step",
+      "label": "0.45 μm 微孔滤膜过滤",
+      "order": 4,
+      "connects_to": ["app-2"],
+      "source": {
+        "file": "methods_excerpt.txt",
+        "locator": "methods_excerpt.txt 第6行",
+        "quote": "酶解液经 0.45 μm 微孔滤膜过滤，收集滤液。"
+      }
+    },
+    {
+      "id": "app-2",
+      "kind": "apparatus-unit",
+      "label": "Sephadex G-25 凝胶柱洗脱",
+      "order": 5,
+      "connects_to": ["data-1"],
+      "source": {
+        "file": "methods_excerpt.txt",
+        "locator": "methods_excerpt.txt 第7行",
+        "quote": "滤液上样至 Sephadex G-25 凝胶柱，用去离子水洗脱，流速 1 mL/min。"
+      }
+    },
+    {
+      "id": "data-1",
+      "kind": "data-item",
+      "label": "多肽粗品（冻干 24 h）",
+      "order": 6,
+      "connects_to": ["data-2"],
+      "source": {
+        "file": "methods_excerpt.txt",
+        "locator": "methods_excerpt.txt 第8行",
+        "quote": "收集洗脱峰，冻干 24 h 得到多肽粗品。"
+      }
+    },
+    {
+      "id": "data-2",
+      "kind": "data-item",
+      "label": "凯氏定氮氮含量（n=3）",
+      "order": 7,
+      "connects_to": [],
+      "source": {
+        "file": "methods_excerpt.txt",
+        "locator": "methods_excerpt.txt 第9行",
+        "quote": "采用凯氏定氮法测定粗品氮含量，每个样品平行测定 3 次。"
+      }
+    },
+    {
+      "id": "note-1",
+      "kind": "note",
+      "label": "注：箭头仅表示工艺先后顺序",
+      "order": 8,
+      "connects_to": [],
+      "waived": true,
+      "waiver_reason": "合成示例中专门演示豁免路径：该注记是绘图约定说明，不对应源文本中的事实性陈述；豁免情况已在 gate_report.json 与最终交付记录中如实披露。",
+      "source": {
+        "file": "methods_excerpt.txt",
+        "locator": "（无——豁免元素）",
+        "quote": "（豁免，无对应原文）"
+      }
+    }
+  ]
+}

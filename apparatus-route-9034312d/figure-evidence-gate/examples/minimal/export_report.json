@@ -1,0 +1,72 @@
+{
+  "tool": "export_svg.py",
+  "svg": "/Users/liuhengshen/Desktop/bhr_product/3rd/4/submit/submit-9034312d-a-evidence-gate/skill/examples/minimal/figure.svg",
+  "attempts": [
+    {
+      "tool": "cairosvg",
+      "target": "pdf",
+      "status": "failed",
+      "detail": "OSError: no library called \"cairo-2\" was found\nno library called \"cairo\" was found\nno library called \"libcairo-2\" was found\ncannot load library 'libcairo.so.2': dlopen(libcairo.so.2, 0x0002): tried: 'libcairo.so.2' (relative path not allowed in hardened program), '/System/Volumes/Preboot/Cryptexes/O"
+    },
+    {
+      "tool": "rsvg-convert",
+      "target": "pdf",
+      "status": "unavailable",
+      "detail": "工具未安装/未找到"
+    },
+    {
+      "tool": "inkscape",
+      "target": "pdf",
+      "status": "unavailable",
+      "detail": "工具未安装/未找到"
+    },
+    {
+      "tool": "chrome-headless",
+      "target": "pdf",
+      "status": "ok",
+      "detail": ""
+    },
+    {
+      "tool": "cairosvg",
+      "target": "png",
+      "status": "failed",
+      "detail": "OSError: no library called \"cairo-2\" was found\nno library called \"cairo\" was found\nno library called \"libcairo-2\" was found\ncannot load library 'libcairo.so.2': dlopen(libcairo.so.2, 0x0002): tried: 'libcairo.so.2' (relative path not allowed in hardened program), '/System/Volumes/Preboot/Cryptexes/O"
+    },
+    {
+      "tool": "rsvg-convert",
+      "target": "png",
+      "status": "unavailable",
+      "detail": "工具未安装/未找到"
+    },
+    {
+      "tool": "inkscape",
+      "target": "png",
+      "status": "unavailable",
+      "detail": "工具未安装/未找到"
+    },
+    {
+      "tool": "chrome-headless",
+      "target": "png",
+      "status": "ok",
+      "detail": ""
+    }
+  ],
+  "pdf": {
+    "status": "ok",
+    "tool": "chrome-headless",
+    "path": "/tmp/a.pdf",
+    "bytes": 229351
+  },
+  "png": {
+    "status": "ok",
+    "tool": "chrome-headless",
+    "path": "/tmp/a.png",
+    "bytes": 196564
+  },
+  "overall": "ok",
+  "canvas_px": {
+    "w": 2095,
+    "h": 262
+  },
+  "local_environment_note": "本报告为 2026-11-23 在 macOS (arm64) 上的真实运行输出，仅作示例。本机工具可用性：cairosvg 可 import 但缺少 libcairo 系统库（故 status=failed，回退链如实记录并继续）；rsvg-convert、inkscape 未安装（unavailable）；最终由 Chrome headless（/Applications/Google Chrome.app）完成 PDF(--print-to-pdf) 与 PNG(--screenshot, 2x) 导出。为遵守 skill/ 内不得含二进制文件的约束，导出的 PDF/PNG 写入 /tmp 未随包分发；上面的 path/bytes 为当时实测值。在评测容器中工具可用性可能不同，脚本会沿回退链降级并在报告中如实记录。"
+}

@@ -1,0 +1,22 @@
+{
+  "title": "微型藻类光生物反应器流程（合成示例 v2·已修复）",
+  "nodes": [
+    {"id": "n1", "label": "培养基配制", "kind": "step", "order": 1,
+     "source": {"locator": "excerpt.txt 第3行", "quote": "步骤1 培养基配制"}},
+    {"id": "n2", "label": "光照恒温培养反应器", "kind": "step", "order": 2,
+     "source": {"locator": "excerpt.txt 第4行", "quote": "将藻种接入光照恒温培养反应器"}},
+    {"id": "n3", "label": "离心收获", "kind": "step", "order": 3,
+     "source": {"locator": "excerpt.txt 第5行", "quote": "步骤3 离心收获"}},
+    {"id": "n4", "label": "藻泥收集槽", "kind": "output",
+     "source": {"locator": "excerpt.txt 第6行", "quote": "离心所得藻泥进入藻泥收集槽"}}
+  ],
+  "edges": [
+    {"id": "e1", "from": "n1", "to": "n2", "kind": "sequence",
+     "source": {"locator": "excerpt.txt 第3-4行", "quote": "步骤1 培养基配制"}},
+    {"id": "e2", "from": "n2", "to": "n3", "kind": "material", "label": "藻液",
+     "source": {"locator": "excerpt.txt 第5行", "quote": "培养结束后藻液经管道送入离心机"}},
+    {"id": "e3", "from": "n3", "to": "n4", "kind": "material", "label": "藻泥",
+     "source": {"locator": "excerpt.txt 第6行", "quote": "离心所得藻泥进入藻泥收集槽"}}
+  ],
+  "canvas": "auto"
+}

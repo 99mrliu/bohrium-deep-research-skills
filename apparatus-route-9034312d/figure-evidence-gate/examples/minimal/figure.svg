@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="2095" height="262" viewBox="0 0 2095 262" font-family="PingFang SC, Hiragino Sans GB, Microsoft YaHei, Noto Sans CJK SC, sans-serif">
+  <defs><marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M 0 0 L 10 5 L 0 10 z" fill="#495057"/></marker></defs>
+  <rect x="0" y="0" width="2095" height="262" fill="#ffffff"/>
+  <g id="title-block"><text x="40" y="34" font-size="18" font-weight="bold" fill="#212529">豆粕多肽酶解-纯化工艺路线（合成示例）</text>
+  <text x="40" y="56" font-size="11" fill="#868e96">case: synthetic-minimal-example · 由 ledger.json 确定性渲染 · 每个图元携带 data-eid 可回查证据</text></g>
+  <g id="edges">
+    <path d="M 459.6 127.0 C 514.6 127.0, 514.6 127.0, 567.6 127.0" fill="none" stroke="#495057" stroke-width="1.4" marker-end="url(#arrow)"/>
+    <path d="M 727.6 127.0 C 782.6 127.0, 782.6 127.0, 835.6 127.0" fill="none" stroke="#495057" stroke-width="1.4" marker-end="url(#arrow)"/>
+    <path d="M 995.6 127.0 C 1050.6 127.0, 1050.6 127.0, 1103.6 127.0" fill="none" stroke="#495057" stroke-width="1.4" marker-end="url(#arrow)"/>
+    <path d="M 1225.6 127.0 C 1280.6 127.0, 1280.6 127.0, 1333.6 127.0" fill="none" stroke="#495057" stroke-width="1.4" marker-end="url(#arrow)"/>
+    <path d="M 1500.0 127.0 C 1555.0 127.0, 1555.0 127.0, 1608.0 127.0" fill="none" stroke="#495057" stroke-width="1.4" marker-end="url(#arrow)"/>
+  </g>
+  <g id="el-stage-1" data-eid="stage-1" class="kind-stage">
+    <title>合成 Methods 摘录（虚拟）：</title>
+    <polygon points="40.0,84.0 162.8,84.0 178.8,127.0 162.8,170.0 40.0,170.0 56.0,127.0" fill="#fff3bf" stroke="#f08c00" stroke-width="1.6"/>
+    <text x="109.4" y="114.0" font-size="13" fill="#212529" text-anchor="middle" font-weight="bold">酶解-纯化工艺路线</text>
+    <text x="109.4" y="132.0" font-size="9.5" fill="#868e96" text-anchor="middle">⟪methods_excerpt.txt</text>
+    <text x="109.4" y="144.0" font-size="9.5" fill="#868e96" text-anchor="middle">第3行（合成 Methods</text>
+    <text x="109.4" y="156.0" font-size="9.5" fill="#868e96" text-anchor="middle">摘录标题行）⟫</text>
+  </g>
+  <g id="el-step-1" data-eid="step-1" class="kind-step">
+    <title>将 5 g 豆粕粉加入 250 mL 三角瓶，加入 100 mL 磷酸盐缓冲液（pH 7.0）。</title>
+    <rect x="288.8" y="86.0" width="170.8" height="82.0" fill="#e6fcf5" stroke="#0ca678" stroke-width="1.6"/>
+    <circle cx="307.8" cy="102.0" r="11" fill="#0ca678"/>
+    <text x="307.8" y="106.5" font-size="12" fill="#ffffff" text-anchor="middle" font-weight="bold">1</text>
+    <text x="374.2" y="120.0" font-size="13" fill="#212529" text-anchor="middle" font-weight="bold">豆粕粉与磷酸盐缓冲液混</text>
+    <text x="374.2" y="138.0" font-size="13" fill="#212529" text-anchor="middle" font-weight="bold">合</text>
+    <text x="374.2" y="156.0" font-size="9.5" fill="#868e96" text-anchor="middle">⟪methods_excerpt.txt 第4行⟫</text>
+  </g>
+  <g id="el-app-1" data-eid="app-1" class="kind-apparatus-unit">
+    <title>三角瓶置于恒温摇床，在 37 °C、180 rpm 条件下酶解 4 h。</title>
+    <rect x="569.6" y="89.0" width="158.0" height="76.0" rx="12" ry="12" fill="#e8f0fe" stroke="#3b5bdb" stroke-width="1.6"/>
+    <text x="648.6" y="119.0" font-size="13" fill="#212529" text-anchor="middle" font-weight="bold">恒温摇床酶解（37 °C,</text>
+    <text x="648.6" y="137.0" font-size="13" fill="#212529" text-anchor="middle" font-weight="bold">180 rpm, 4 h）</text>
+    <text x="648.6" y="155.0" font-size="9.5" fill="#868e96" text-anchor="middle">⟪methods_excerpt.txt 第5行⟫</text>
+  </g>
+  <g id="el-step-2" data-eid="step-2" class="kind-step">
+    <title>酶解液经 0.45 μm 微孔滤膜过滤，收集滤液。</title>
+    <rect x="837.6" y="95.0" width="158.0" height="64.0" fill="#e6fcf5" stroke="#0ca678" stroke-width="1.6"/>
+    <circle cx="856.6" cy="111.0" r="11" fill="#0ca678"/>
+    <text x="856.6" y="115.5" font-size="12" fill="#ffffff" text-anchor="middle" font-weight="bold">2</text>
+    <text x="916.6" y="129.0" font-size="13" fill="#212529" text-anchor="middle" font-weight="bold">0.45 μm 微孔滤膜过滤</text>
+    <text x="916.6" y="147.0" font-size="9.5" fill="#868e96" text-anchor="middle">⟪methods_excerpt.txt 第6行⟫</text>
+  </g>
+  <g id="el-app-2" data-eid="app-2" class="kind-apparatus-unit">
+    <title>滤液上样至 Sephadex G-25 凝胶柱，用去离子水洗脱，流速 1 mL/min。</title>
+    <rect x="1105.6" y="89.0" width="120.0" height="76.0" rx="12" ry="12" fill="#e8f0fe" stroke="#3b5bdb" stroke-width="1.6"/>
+    <text x="1165.6" y="119.0" font-size="13" fill="#212529" text-anchor="middle" font-weight="bold">Sephadex G-25</text>
+    <text x="1165.6" y="137.0" font-size="13" fill="#212529" text-anchor="middle" font-weight="bold">凝胶柱洗脱</text>
+    <text x="1165.6" y="155.0" font-size="9.5" fill="#868e96" text-anchor="middle">⟪methods_excerpt.txt 第7行⟫</text>
+  </g>
+  <g id="el-data-1" data-eid="data-1" class="kind-data-item">
+    <title>收集洗脱峰，冻干 24 h 得到多肽粗品。</title>
+    <polygon points="1347.6,98.0 1500.0,98.0 1488.0,156.0 1335.6,156.0" fill="#f3e8ff" stroke="#9c36b5" stroke-width="1.6"/>
+    <text x="1417.8" y="128.0" font-size="13" fill="#212529" text-anchor="middle" font-weight="bold">多肽粗品（冻干 24 h）</text>
+    <text x="1417.8" y="146.0" font-size="9.5" fill="#868e96" text-anchor="middle">⟪methods_excerpt.txt 第8行⟫</text>
+  </g>
+  <g id="el-data-2" data-eid="data-2" class="kind-data-item">
+    <title>采用凯氏定氮法测定粗品氮含量，每个样品平行测定 3 次。</title>
+    <polygon points="1622.0,98.0 1774.4,98.0 1762.4,156.0 1610.0,156.0" fill="#f3e8ff" stroke="#9c36b5" stroke-width="1.6"/>
+    <text x="1692.2" y="128.0" font-size="13" fill="#212529" text-anchor="middle" font-weight="bold">凯氏定氮氮含量（n=3）</text>
+    <text x="1692.2" y="146.0" font-size="9.5" fill="#868e96" text-anchor="middle">⟪methods_excerpt.txt 第9行⟫</text>
+  </g>
+  <g id="el-note-1" data-eid="note-1" class="kind-note">
+    <title>（豁免，无对应原文）</title>
+    <rect x="1884.4" y="89.0" width="170.8" height="76.0" fill="#fff9db" stroke="#fab005" stroke-width="1.6" stroke-dasharray="6 4"/>
+    <text x="1969.8" y="119.0" font-size="13" fill="#212529" text-anchor="middle" font-weight="bold">注：箭头仅表示工艺先后</text>
+    <text x="1969.8" y="137.0" font-size="13" fill="#212529" text-anchor="middle" font-weight="bold">顺序</text>
+    <text x="1969.8" y="155.0" font-size="9.5" fill="#868e96" text-anchor="middle">⟪（无——豁免元素）⟫</text>
+    <text x="2051.2" y="101.0" font-size="9" fill="#f08c00" text-anchor="end">[waived]</text>
+  </g>
+  <g id="legend">
+    <text x="40.0" y="218.0" font-size="12" font-weight="bold" fill="#343a40">图例</text>
+  <rect x="84.0" y="208.0" width="14" height="11" rx="3" fill="#e8f0fe" stroke="#3b5bdb"/>
+  <text x="102.0" y="218.0" font-size="11" fill="#495057">装置单元</text>
+  <rect x="173.6" y="208.0" width="14" height="11" rx="3" fill="#e6fcf5" stroke="#0ca678"/>
+  <text x="191.6" y="218.0" font-size="11" fill="#495057">步骤</text>
+  <rect x="238.4" y="208.0" width="14" height="11" rx="3" fill="#fff3bf" stroke="#f08c00"/>
+  <text x="256.4" y="218.0" font-size="11" fill="#495057">阶段</text>
+  <rect x="303.2" y="208.0" width="14" height="11" rx="3" fill="#f3e8ff" stroke="#9c36b5"/>
+  <text x="321.2" y="218.0" font-size="11" fill="#495057">数据项</text>
+  <rect x="380.4" y="208.0" width="14" height="11" rx="3" fill="#ffe8e8" stroke="#e03131"/>
+  <text x="398.4" y="218.0" font-size="11" fill="#495057">流/物流</text>
+  <rect x="463.8" y="208.0" width="14" height="11" rx="3" fill="#f8f9fa" stroke="#868e96" stroke-dasharray="4 3"/>
+  <text x="481.8" y="218.0" font-size="11" fill="#495057">注记</text>
+  <line x1="528.6" y1="214.0" x2="548.6" y2="214.0" stroke="#495057" stroke-width="1.4" marker-end="url(#arrow)"/>
+  <text x="554.6" y="218.0" font-size="11" fill="#495057">连接</text>
+  <text x="40.0" y="240.0" font-size="11" fill="#868e96">元素 8 · 已验证 7 · 豁免 1 · 连线 5</text>
+  </g>
+</svg>

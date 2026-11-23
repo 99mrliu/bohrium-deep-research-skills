@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="216.8mm" height="58mm" viewBox="0 0 216.8 58">
+<title>微型藻类光生物反应器流程（合成示例 v1·含4处预埋缺陷）</title>
+<defs>
+<marker id="arr-sequence" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M 0 1 L 9 5 L 0 9 z" fill="#666666"/></marker>
+<marker id="arr-material" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M 0 1 L 9 5 L 0 9 z" fill="#1f77b4"/></marker>
+</defs>
+<rect x="0" y="0" width="216.8" height="58" fill="#ffffff" stroke="none"/>
+<text x="8" y="10.08" font-size="5.2" font-weight="bold" font-family="PingFang SC, Noto Sans CJK SC, Source Han Sans SC, WenQuanYi Micro Hei, Microsoft YaHei, sans-serif" fill="#111111">微型藻类光生物反应器流程（合成示例 v1·含4处预埋缺陷）</text>
+<g data-eid="e1" data-kind="sequence">
+<path d="M 35 24 L 61 24" fill="none" stroke="#666666" stroke-width="0.9" marker-end="url(#arr-sequence)"/>
+</g>
+<g data-eid="e2" data-kind="material" data-dangling="to">
+<path d="M 107 24 L 4 4" fill="none" stroke="#1f77b4" stroke-width="0.9" marker-end="url(#arr-material)"/>
+<text x="55.5" y="12.4" font-size="3.4" text-anchor="middle" font-family="PingFang SC, Noto Sans CJK SC, Source Han Sans SC, WenQuanYi Micro Hei, Microsoft YaHei, sans-serif" fill="#1f77b4">藻液</text>
+</g>
+<g data-eid="e3" data-kind="material">
+<path d="M 155.8 24 L 181.8 24" fill="none" stroke="#1f77b4" stroke-width="0.9" marker-end="url(#arr-material)"/>
+<text x="168.8" y="22.4" font-size="3.4" text-anchor="middle" font-family="PingFang SC, Noto Sans CJK SC, Source Han Sans SC, WenQuanYi Micro Hei, Microsoft YaHei, sans-serif" fill="#1f77b4">藻泥</text>
+</g>
+<g data-node-id="n1">
+<rect x="8" y="18" width="27" height="12" rx="1.5" fill="#fff7e6" stroke="#333333" stroke-width="0.5"/>
+<text x="21.5" y="24" font-size="4.2" text-anchor="middle" dominant-baseline="central" font-family="PingFang SC, Noto Sans CJK SC, Source Han Sans SC, WenQuanYi Micro Hei, Microsoft YaHei, sans-serif" fill="#111111">培养基配制</text>
+<circle cx="8" cy="18" r="3.2" fill="#ffffff" stroke="#333333" stroke-width="0.5"/>
+<text data-badge="1" x="8" y="18" font-size="3" text-anchor="middle" dominant-baseline="central" font-family="PingFang SC, Noto Sans CJK SC, Source Han Sans SC, WenQuanYi Micro Hei, Microsoft YaHei, sans-serif" fill="#111111">S1</text>
+</g>
+<g data-node-id="n2">
+<rect x="61" y="18" width="46" height="12" rx="1.5" fill="#fff7e6" stroke="#333333" stroke-width="0.5"/>
+<text x="84" y="24" font-size="4.2" text-anchor="middle" dominant-baseline="central" font-family="PingFang SC, Noto Sans CJK SC, Source Han Sans SC, WenQuanYi Micro Hei, Microsoft YaHei, sans-serif" fill="#111111">光照恒温培养光生物反应器（内置LED阵列）</text>
+<circle cx="61" cy="18" r="3.2" fill="#ffffff" stroke="#333333" stroke-width="0.5"/>
+<text data-badge="1" x="61" y="18" font-size="3" text-anchor="middle" dominant-baseline="central" font-family="PingFang SC, Noto Sans CJK SC, Source Han Sans SC, WenQuanYi Micro Hei, Microsoft YaHei, sans-serif" fill="#111111">S2</text>
+</g>
+<g data-node-id="n3">
+<rect x="133" y="18" width="22.8" height="12" rx="1.5" fill="#fff7e6" stroke="#333333" stroke-width="0.5"/>
+<text x="144.4" y="24" font-size="4.2" text-anchor="middle" dominant-baseline="central" font-family="PingFang SC, Noto Sans CJK SC, Source Han Sans SC, WenQuanYi Micro Hei, Microsoft YaHei, sans-serif" fill="#111111">离心收获</text>
+<circle cx="133" cy="18" r="3.2" fill="#ffffff" stroke="#333333" stroke-width="0.5"/>
+<text data-badge="1" x="133" y="18" font-size="3" text-anchor="middle" dominant-baseline="central" font-family="PingFang SC, Noto Sans CJK SC, Source Han Sans SC, WenQuanYi Micro Hei, Microsoft YaHei, sans-serif" fill="#111111">S4</text>
+</g>
+<g data-node-id="n4">
+<rect x="181.8" y="18" width="27" height="12" rx="1.5" fill="#f7f7f7" stroke="#333333" stroke-width="0.5"/>
+<text x="195.3" y="24" font-size="4.2" text-anchor="middle" dominant-baseline="central" font-family="PingFang SC, Noto Sans CJK SC, Source Han Sans SC, WenQuanYi Micro Hei, Microsoft YaHei, sans-serif" fill="#111111">藻泥收集槽</text>
+</g>
+<g data-legend="1">
+<g data-legend-entry="1" data-kind="material">
+<line x1="8" y1="38" x2="20" y2="38" stroke="#e37702" stroke-width="0.9"/>
+<text x="23" y="38" font-size="3.4" dominant-baseline="central" font-family="PingFang SC, Noto Sans CJK SC, Source Han Sans SC, WenQuanYi Micro Hei, Microsoft YaHei, sans-serif" fill="#333333">物料流</text>
+</g>
+<g data-legend-entry="1" data-kind="sequence">
+<line x1="8" y1="45" x2="20" y2="45" stroke="#666666" stroke-width="0.9"/>
+<text x="23" y="45" font-size="3.4" dominant-baseline="central" font-family="PingFang SC, Noto Sans CJK SC, Source Han Sans SC, WenQuanYi Micro Hei, Microsoft YaHei, sans-serif" fill="#333333">步骤顺序</text>
+</g>
+</g>
+</svg>
