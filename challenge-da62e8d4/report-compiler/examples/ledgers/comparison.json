@@ -1,0 +1,60 @@
+{
+  "schema": "comparison/v1",
+  "_note": "合成示例（synthetic），非正式案例结果。比较台账：每行一个（指标 × 方法），paper_value/reproduced_value/abs_diff/rel_diff/within 由上游判定流程填写，编译器只做机械复核（按 targets 容差重算 within）。",
+  "entries": [
+    {
+      "metric_id": "m_acc",
+      "method": "method_a",
+      "paper_value": 0.934,
+      "reproduced_value": 0.933,
+      "abs_diff": 0.001,
+      "rel_diff": 0.00107066,
+      "within": true
+    },
+    {
+      "metric_id": "m_acc",
+      "method": "method_b",
+      "paper_value": 0.934,
+      "reproduced_value": 0.901,
+      "abs_diff": 0.033,
+      "rel_diff": 0.0353328,
+      "within": false
+    },
+    {
+      "metric_id": "m_f1",
+      "method": "method_a",
+      "paper_value": 0.881,
+      "reproduced_value": 0.881,
+      "abs_diff": 0.0,
+      "rel_diff": 0.0,
+      "within": true
+    },
+    {
+      "metric_id": "m_f1",
+      "method": "method_b",
+      "paper_value": 0.881,
+      "reproduced_value": 0.872,
+      "abs_diff": 0.009,
+      "rel_diff": 0.0102157,
+      "within": true
+    },
+    {
+      "metric_id": "m_rt",
+      "method": "method_a",
+      "paper_value": 120.0,
+      "reproduced_value": 119.0,
+      "abs_diff": 1.0,
+      "rel_diff": 0.00833333,
+      "within": true
+    },
+    {
+      "metric_id": "m_rt",
+      "method": "method_b",
+      "paper_value": 120.0,
+      "reproduced_value": 130.0,
+      "abs_diff": 10.0,
+      "rel_diff": 0.0833333,
+      "within": true
+    }
+  ]
+}

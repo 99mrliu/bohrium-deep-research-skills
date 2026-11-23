@@ -1,0 +1,66 @@
+{
+  "schema": "runs/v1",
+  "_note": "合成示例（synthetic），非正式案例结果。运行台账：每个（方法 × 指标）一条记录，含多种子观测值、环境与命令。",
+  "runs": [
+    {
+      "run_id": "r_a_acc",
+      "method": "method_a",
+      "metric_id": "m_acc",
+      "seeds": [42, 43, 44],
+      "values": [0.931, 0.936, 0.932],
+      "env": "Python 3.12.14 / macOS arm64（合成示例环境）",
+      "command": "python3 candidate_a/run.py --metric accuracy --seeds 42,43,44",
+      "status": "ok"
+    },
+    {
+      "run_id": "r_b_acc",
+      "method": "method_b",
+      "metric_id": "m_acc",
+      "seeds": [42, 43, 44],
+      "values": [0.899, 0.903, 0.901],
+      "env": "Python 3.12.14 / macOS arm64（合成示例环境）",
+      "command": "python3 candidate_b/run.py --metric accuracy --seeds 42,43,44",
+      "status": "ok"
+    },
+    {
+      "run_id": "r_a_f1",
+      "method": "method_a",
+      "metric_id": "m_f1",
+      "seeds": [42, 43, 44],
+      "values": [0.878, 0.885, 0.880],
+      "env": "Python 3.12.14 / macOS arm64（合成示例环境）",
+      "command": "python3 candidate_a/run.py --metric f1 --seeds 42,43,44",
+      "status": "ok"
+    },
+    {
+      "run_id": "r_b_f1",
+      "method": "method_b",
+      "metric_id": "m_f1",
+      "seeds": [42, 43, 44],
+      "values": [0.871, 0.869, 0.876],
+      "env": "Python 3.12.14 / macOS arm64（合成示例环境）",
+      "command": "python3 candidate_b/run.py --metric f1 --seeds 42,43,44",
+      "status": "ok"
+    },
+    {
+      "run_id": "r_a_rt",
+      "method": "method_a",
+      "metric_id": "m_rt",
+      "seeds": [42, 43, 44],
+      "values": [116.0, 122.0, 119.0],
+      "env": "Python 3.12.14 / macOS arm64（合成示例环境）",
+      "command": "python3 candidate_a/run.py --metric runtime --seeds 42,43,44",
+      "status": "ok"
+    },
+    {
+      "run_id": "r_b_rt",
+      "method": "method_b",
+      "metric_id": "m_rt",
+      "seeds": [42, 43, 44],
+      "values": [126.0, 135.0, 129.0],
+      "env": "Python 3.12.14 / macOS arm64（合成示例环境）",
+      "command": "python3 candidate_b/run.py --metric runtime --seeds 42,43,44",
+      "status": "ok"
+    }
+  ]
+}

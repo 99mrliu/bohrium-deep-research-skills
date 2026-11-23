@@ -1,0 +1,80 @@
+{
+  "_note": "合成示例（synthetic）预期输出副本，非正式案例结果；created_at/targets_sha256 等时间戳与哈希字段以实际运行为准。",
+  "_schema": "tolerance-court/tolerances/v1",
+  "created_at": "2026-11-23T16:05:32+00:00",
+  "targets_sha256": "9212f49f6a09199fa56dee4a576453d239832ce1ebc103bef3c536fe930cfaba",
+  "k": 1.0,
+  "change_records": [],
+  "items": [
+    {
+      "name": "accuracy",
+      "paper_value": "0.152",
+      "paper_value_num": 0.152,
+      "unit": "-",
+      "aggregation": "mean",
+      "kind": "deterministic",
+      "k_applied": 1.0,
+      "rationale": "",
+      "derivation": "case_given",
+      "reason": "案例给定容差，逐字照抄：±0.01",
+      "tolerance_abs": 0.01,
+      "tolerance_rel": 0.06578947368421052
+    },
+    {
+      "name": "latency_ms",
+      "paper_value": "72.1",
+      "paper_value_num": 72.1,
+      "unit": "ms",
+      "aggregation": "median",
+      "kind": "deterministic",
+      "k_applied": 1.0,
+      "rationale": "",
+      "derivation": "half_ulp",
+      "reason": "四舍五入半单位推导（小数 1 位，半单位=0.5×10^-1）：±0.05",
+      "tolerance_abs": 0.05,
+      "tolerance_rel": 0.000693481276005548
+    },
+    {
+      "name": "throughput",
+      "paper_value": "1.2e3",
+      "paper_value_num": 1200.0,
+      "unit": "req/s",
+      "aggregation": "median",
+      "kind": "deterministic",
+      "k_applied": 1.0,
+      "rationale": "",
+      "derivation": "half_ulp",
+      "reason": "四舍五入半单位推导（科学计数法：尾数 1.2（1 位小数）×10^3，半单位=5×10^1）：±50",
+      "tolerance_abs": 50.0,
+      "tolerance_rel": 0.041666666666666664
+    },
+    {
+      "name": "rouge_l",
+      "paper_value": "0.412",
+      "paper_value_num": 0.412,
+      "unit": "-",
+      "aggregation": "mean",
+      "kind": "stochastic",
+      "k_applied": 1.0,
+      "rationale": "",
+      "derivation": "half_ulp",
+      "reason": "四舍五入半单位推导（小数 3 位，半单位=0.5×10^-3）：±0.0005",
+      "tolerance_abs": 0.0005,
+      "tolerance_rel": 0.0012135922330097088
+    },
+    {
+      "name": "ablation_score",
+      "paper_value": null,
+      "paper_value_num": null,
+      "unit": "-",
+      "aggregation": "single",
+      "kind": "deterministic",
+      "k_applied": 1.0,
+      "rationale": "",
+      "derivation": "none",
+      "reason": "论文未报告数值（或仅给图）：无法推容差，裁决判 not_comparable，不得编造",
+      "tolerance_abs": null,
+      "tolerance_rel": null
+    }
+  ]
+}

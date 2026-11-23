@@ -1,0 +1,31 @@
+{
+  "generator": "audit_report.py 1.0",
+  "overall": "PASS",
+  "checks": [
+    {
+      "id": "map_entries_consistent",
+      "status": "PASS",
+      "detail": "全部 53 项登记与台账一致"
+    },
+    {
+      "id": "comparison_coverage",
+      "status": "PASS",
+      "detail": "比较表 6 行与 comparison.json 全覆盖且逐格一致"
+    },
+    {
+      "id": "conclusion_no_orphans",
+      "status": "PASS",
+      "detail": "结论段无孤儿数字，分级一致：partially_reproducible"
+    },
+    {
+      "id": "figures_present",
+      "status": "PASS",
+      "detail": "3 个图文件存在且非空"
+    },
+    {
+      "id": "result_contract",
+      "status": "PASS",
+      "detail": "case_id 与 output_contract 全部 4 个字段齐备"
+    }
+  ]
+}

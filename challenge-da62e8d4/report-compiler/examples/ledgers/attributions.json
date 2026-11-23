@@ -1,0 +1,13 @@
+{
+  "schema": "attributions/v1",
+  "_note": "合成示例（synthetic），非正式案例结果。差异归因台账：每条超差/异常必须给出原因假设与证据指针。",
+  "attributions": [
+    {
+      "metric_id": "m_acc",
+      "method": "method_b",
+      "cause": "候选实现 B 的输入预处理与论文描述不一致：序列截断长度取 128，而论文方法节描述为 256，长样本信息丢失导致 accuracy 系统性偏低",
+      "evidence": "runs.json#/runs/1（r_b_acc 三种子 0.899/0.903/0.901 均低于论文值，方向一致，属系统偏差而非随机波动）；工作日志 /app/work/runs/method_b_acc.log 中截断统计",
+      "confidence": "medium"
+    }
+  ]
+}

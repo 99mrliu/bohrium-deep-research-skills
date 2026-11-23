@@ -1,0 +1,41 @@
+{
+  "schema": "inventory/v1",
+  "_note": "合成示例（synthetic），非正式案例结果。材料清单台账：每份输入材料一条记录，缺失材料必须显式登记 status=missing。",
+  "materials": [
+    {
+      "id": "paper-pdf",
+      "kind": "paper_pdf",
+      "status": "present",
+      "locator": "/input/paper.pdf",
+      "note": "题目提供的真实论文 PDF（合成示例中为示意路径）"
+    },
+    {
+      "id": "code-method-a",
+      "kind": "candidate_code",
+      "status": "present",
+      "locator": "/input/candidate_a/",
+      "note": "候选数值方法 A（组织方合成代码，非作者原代码）"
+    },
+    {
+      "id": "code-method-b",
+      "kind": "candidate_code",
+      "status": "present",
+      "locator": "/input/candidate_b/",
+      "note": "候选数值方法 B（组织方合成代码，非作者原代码）"
+    },
+    {
+      "id": "author-repo",
+      "kind": "author_repository",
+      "status": "missing",
+      "locator": null,
+      "note": "作者官方仓库未随题提供且无法访问（预期情况），已显式登记，不得假装拥有"
+    },
+    {
+      "id": "raw-data",
+      "kind": "dataset",
+      "status": "missing",
+      "locator": null,
+      "note": "论文原始评测数据未随题提供（预期情况）；运行使用的是组织方合成数据，结论不得写成论文数值复现"
+    }
+  ]
+}

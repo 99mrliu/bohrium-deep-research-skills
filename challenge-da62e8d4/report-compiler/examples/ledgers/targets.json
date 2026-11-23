@@ -1,0 +1,30 @@
+{
+  "schema": "targets/v1",
+  "_note": "合成示例（synthetic），非正式案例结果。指标目标台账：论文报告值、单位、容差与来源定位。",
+  "metrics": [
+    {
+      "id": "m_acc",
+      "name": "准确率 accuracy",
+      "paper_value": 0.934,
+      "unit": "比例",
+      "tolerance": {"type": "abs", "value": 0.01},
+      "source_locator": "论文 Table 2, p.5"
+    },
+    {
+      "id": "m_f1",
+      "name": "F1 分数",
+      "paper_value": 0.881,
+      "unit": "比例",
+      "tolerance": {"type": "abs", "value": 0.015},
+      "source_locator": "论文 Table 2, p.5"
+    },
+    {
+      "id": "m_rt",
+      "name": "推理耗时 runtime",
+      "paper_value": 120.0,
+      "unit": "s",
+      "tolerance": {"type": "rel", "value": 0.2},
+      "source_locator": "论文 Table 3, p.7"
+    }
+  ]
+}

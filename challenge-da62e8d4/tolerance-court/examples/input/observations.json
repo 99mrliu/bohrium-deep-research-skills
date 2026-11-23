@@ -1,0 +1,46 @@
+{
+  "method_a": {
+    "accuracy": {
+      "values": [0.149, 0.151, 0.150],
+      "logs": ["runs/method_a_seed1.log", "runs/method_a_seed2.log", "runs/method_a_seed3.log"]
+    },
+    "latency_ms": {
+      "values": [72.0, 72.2, 72.1],
+      "logs": ["runs/method_a_seed1.log", "runs/method_a_seed2.log", "runs/method_a_seed3.log"]
+    },
+    "throughput": {
+      "values": [1210, 1190, 1205],
+      "logs": ["runs/method_a_seed1.log", "runs/method_a_seed2.log", "runs/method_a_seed3.log"]
+    },
+    "rouge_l": {
+      "values": [0.4124, 0.4135, 0.4110, 0.4140, 0.4130],
+      "logs": ["runs/method_a_seed1.log", "runs/method_a_seed2.log", "runs/method_a_seed3.log", "runs/method_a_seed4.log", "runs/method_a_seed5.log"]
+    },
+    "ablation_score": {
+      "values": [0.9],
+      "logs": ["runs/method_a_ablation.log"]
+    }
+  },
+  "method_b": {
+    "accuracy": {
+      "values": [0.121, 0.120, 0.122],
+      "logs": ["runs/method_b_seed1.log", "runs/method_b_seed2.log", "runs/method_b_seed3.log"]
+    },
+    "latency_ms": {
+      "values": [75.0, 75.1, 75.2],
+      "logs": ["runs/method_b_seed1.log", "runs/method_b_seed2.log", "runs/method_b_seed3.log"]
+    },
+    "throughput": {
+      "values": [],
+      "logs": ["runs/method_b_crash.log"]
+    },
+    "rouge_l": {
+      "values": [0.40],
+      "logs": ["runs/method_b_seed1.log"]
+    },
+    "ablation_score": {
+      "values": [0.5],
+      "logs": ["runs/method_b_ablation.log"]
+    }
+  }
+}

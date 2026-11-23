@@ -1,0 +1,25 @@
+{
+  "_annotation": "合成示例（synthetic），非正式案例结果。本文件是一次真实运行的预期副本，用于对照 verdict/字段结构；其中绝对路径、wall_time_seconds、随机数值与 sha256 哈希随机器与运行而变，逐字段相等不是预期。",
+  "status": "ok",
+  "file": "/Users/liuhengshen/Desktop/bhr_product/da62-5dir/bundles/rng-determinism-lab/examples/input/method_unseeded.py",
+  "imports": [
+    {
+      "line": 8,
+      "kind": "import",
+      "module": "random",
+      "alias": null
+    }
+  ],
+  "rng_calls": [
+    {
+      "line": 12,
+      "call": "random.random"
+    }
+  ],
+  "seed_calls": [],
+  "risks": [],
+  "seeded": false,
+  "warnings": [
+    "发现 1 处随机数调用但没有任何播种（seed）调用：同机重跑结果可能不稳定，属未播种 RNG。"
+  ]
+}

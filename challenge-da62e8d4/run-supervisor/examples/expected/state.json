@@ -1,0 +1,161 @@
+{
+  "version": 1,
+  "case_id": "synthetic-demo-001",
+  "contract_fields": [
+    "metric_table",
+    "chosen_candidate",
+    "discrepancy_cause",
+    "reproducibility_verdict",
+    "data_gaps"
+  ],
+  "case_path": "/Users/liuhengshen/Desktop/bhr_product/da62-5dir/bundles/run-supervisor/examples/input/case.json",
+  "work_dir": "/Users/liuhengshen/Desktop/bhr_product/da62-5dir/selftest/run-supervisor/expected_src/work",
+  "output_dir": "/Users/liuhengshen/Desktop/bhr_product/da62-5dir/selftest/run-supervisor/expected_src/output",
+  "result_path": "/Users/liuhengshen/Desktop/bhr_product/da62-5dir/selftest/run-supervisor/expected_src/output/result.json",
+  "budget_seconds": 900,
+  "start_epoch": 1795450027.5705018,
+  "start_iso": "2026-11-24T00:07:07+08:00",
+  "phases": {
+    "inventory": {
+      "status": "done",
+      "ts": "2026-11-24T00:07:07+08:00",
+      "evidence": [
+        "/Users/liuhengshen/Desktop/bhr_product/da62-5dir/selftest/run-supervisor/expected_src/work/notes/inventory.md"
+      ],
+      "note": ""
+    },
+    "targets": {
+      "status": "done",
+      "ts": "2026-11-24T00:07:08+08:00",
+      "evidence": [
+        "/Users/liuhengshen/Desktop/bhr_product/da62-5dir/selftest/run-supervisor/expected_src/work/notes/targets.md"
+      ],
+      "note": ""
+    },
+    "tolerances": {
+      "status": "done",
+      "ts": "2026-11-24T00:07:08+08:00",
+      "evidence": [
+        "/Users/liuhengshen/Desktop/bhr_product/da62-5dir/selftest/run-supervisor/expected_src/work/notes/tolerances.md"
+      ],
+      "note": ""
+    },
+    "run": {
+      "status": "done",
+      "ts": "2026-11-24T00:07:09+08:00",
+      "evidence": [
+        "/Users/liuhengshen/Desktop/bhr_product/da62-5dir/selftest/run-supervisor/expected_src/work/runs/method_ok/meta.json",
+        "/Users/liuhengshen/Desktop/bhr_product/da62-5dir/selftest/run-supervisor/expected_src/work/runs/method_fail/meta.json"
+      ],
+      "note": "method_ok 成功；method_fail 崩溃（exit 1），已记为证据"
+    },
+    "compare": {
+      "status": "done",
+      "ts": "2026-11-24T00:07:10+08:00",
+      "evidence": [
+        "/Users/liuhengshen/Desktop/bhr_product/da62-5dir/selftest/run-supervisor/expected_src/work/notes/compare.md"
+      ],
+      "note": ""
+    },
+    "conclude": {
+      "status": "done",
+      "ts": "2026-11-24T00:07:10+08:00",
+      "evidence": [
+        "/Users/liuhengshen/Desktop/bhr_product/da62-5dir/selftest/run-supervisor/expected_src/output/result.json"
+      ],
+      "note": "结论已写入 result.json 合约字段"
+    }
+  },
+  "runs": [
+    {
+      "name": "method_ok",
+      "cmd": [
+        "python3",
+        "/Users/liuhengshen/Desktop/bhr_product/da62-5dir/bundles/run-supervisor/examples/input/method_ok.py"
+      ],
+      "exit_code": 0,
+      "timeout": false,
+      "timeout_seconds": 60,
+      "wall_seconds": 0.243,
+      "started": "2026-11-24T00:07:08+08:00",
+      "ended": "2026-11-24T00:07:08+08:00",
+      "log_dir": "/Users/liuhengshen/Desktop/bhr_product/da62-5dir/selftest/run-supervisor/expected_src/work/runs/method_ok"
+    },
+    {
+      "name": "method_fail",
+      "cmd": [
+        "python3",
+        "/Users/liuhengshen/Desktop/bhr_product/da62-5dir/bundles/run-supervisor/examples/input/method_fail.py"
+      ],
+      "exit_code": 1,
+      "timeout": false,
+      "timeout_seconds": 60,
+      "wall_seconds": 0.316,
+      "started": "2026-11-24T00:07:09+08:00",
+      "ended": "2026-11-24T00:07:09+08:00",
+      "log_dir": "/Users/liuhengshen/Desktop/bhr_product/da62-5dir/selftest/run-supervisor/expected_src/work/runs/method_fail"
+    }
+  ],
+  "change_records": [
+    {
+      "ts": "2026-11-24T00:07:07+08:00",
+      "actor": "run-supervisor",
+      "action": "init",
+      "detail": "初始化：case_id=synthetic-demo-001，合约字段 5 个，预算 900 秒；建立六阶段 pending 状态机。"
+    },
+    {
+      "ts": "2026-11-24T00:07:07+08:00",
+      "actor": "run-supervisor",
+      "action": "phase",
+      "detail": "阶段 inventory 登记为 done；证据 1 个；备注：（无）"
+    },
+    {
+      "ts": "2026-11-24T00:07:08+08:00",
+      "actor": "run-supervisor",
+      "action": "phase",
+      "detail": "阶段 targets 登记为 done；证据 1 个；备注：（无）"
+    },
+    {
+      "ts": "2026-11-24T00:07:08+08:00",
+      "actor": "run-supervisor",
+      "action": "phase",
+      "detail": "阶段 tolerances 登记为 done；证据 1 个；备注：（无）"
+    },
+    {
+      "ts": "2026-11-24T00:07:08+08:00",
+      "actor": "run-supervisor",
+      "action": "run",
+      "detail": "候选 method_ok 运行结束：exit_code=0 timeout=False 墙钟 0.2s（成功）"
+    },
+    {
+      "ts": "2026-11-24T00:07:09+08:00",
+      "actor": "run-supervisor",
+      "action": "run",
+      "detail": "候选 method_fail 运行结束：exit_code=1 timeout=False 墙钟 0.3s（失败——记为证据，流程继续）"
+    },
+    {
+      "ts": "2026-11-24T00:07:09+08:00",
+      "actor": "run-supervisor",
+      "action": "phase",
+      "detail": "阶段 run 登记为 done；证据 2 个；备注：method_ok 成功；method_fail 崩溃（exit 1），已记为证据"
+    },
+    {
+      "ts": "2026-11-24T00:07:10+08:00",
+      "actor": "run-supervisor",
+      "action": "phase",
+      "detail": "阶段 compare 登记为 done；证据 1 个；备注：（无）"
+    },
+    {
+      "ts": "2026-11-24T00:07:10+08:00",
+      "actor": "run-supervisor",
+      "action": "phase",
+      "detail": "阶段 conclude 登记为 done；证据 1 个；备注：结论已写入 result.json 合约字段"
+    },
+    {
+      "ts": "2026-11-24T00:07:11+08:00",
+      "actor": "run-supervisor",
+      "action": "finalize",
+      "detail": "finalize：从证据重算总状态=partial（核心阶段 done=['inventory', 'targets', 'run']；候选失败/超时=['method_fail']）"
+    }
+  ]
+}

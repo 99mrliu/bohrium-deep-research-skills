@@ -1,0 +1,157 @@
+{
+  "case_id": "synthetic-demo-001",
+  "status": "partial",
+  "generated_by": "run-supervisor",
+  "sources": {
+    "method_ok 指标": "runs/method_ok/stdout.txt",
+    "method_fail 崩溃": "runs/method_fail/stderr.txt"
+  },
+  "uncertainty": [
+    "候选 method_fail 运行失败（exit=1），其指标不可用；stderr 见 /Users/liuhengshen/Desktop/bhr_product/da62-5dir/selftest/run-supervisor/expected_src/work/runs/method_fail"
+  ],
+  "change_records": [
+    {
+      "ts": "2026-11-24T00:07:07+08:00",
+      "actor": "run-supervisor",
+      "action": "init",
+      "detail": "初始化：case_id=synthetic-demo-001，合约字段 5 个，预算 900 秒；建立六阶段 pending 状态机。"
+    },
+    {
+      "ts": "2026-11-24T00:07:07+08:00",
+      "actor": "run-supervisor",
+      "action": "phase",
+      "detail": "阶段 inventory 登记为 done；证据 1 个；备注：（无）"
+    },
+    {
+      "ts": "2026-11-24T00:07:08+08:00",
+      "actor": "run-supervisor",
+      "action": "phase",
+      "detail": "阶段 targets 登记为 done；证据 1 个；备注：（无）"
+    },
+    {
+      "ts": "2026-11-24T00:07:08+08:00",
+      "actor": "run-supervisor",
+      "action": "phase",
+      "detail": "阶段 tolerances 登记为 done；证据 1 个；备注：（无）"
+    },
+    {
+      "ts": "2026-11-24T00:07:08+08:00",
+      "actor": "run-supervisor",
+      "action": "run",
+      "detail": "候选 method_ok 运行结束：exit_code=0 timeout=False 墙钟 0.2s（成功）"
+    },
+    {
+      "ts": "2026-11-24T00:07:09+08:00",
+      "actor": "run-supervisor",
+      "action": "run",
+      "detail": "候选 method_fail 运行结束：exit_code=1 timeout=False 墙钟 0.3s（失败——记为证据，流程继续）"
+    },
+    {
+      "ts": "2026-11-24T00:07:09+08:00",
+      "actor": "run-supervisor",
+      "action": "phase",
+      "detail": "阶段 run 登记为 done；证据 2 个；备注：method_ok 成功；method_fail 崩溃（exit 1），已记为证据"
+    },
+    {
+      "ts": "2026-11-24T00:07:10+08:00",
+      "actor": "run-supervisor",
+      "action": "phase",
+      "detail": "阶段 compare 登记为 done；证据 1 个；备注：（无）"
+    },
+    {
+      "ts": "2026-11-24T00:07:10+08:00",
+      "actor": "run-supervisor",
+      "action": "phase",
+      "detail": "阶段 conclude 登记为 done；证据 1 个；备注：结论已写入 result.json 合约字段"
+    },
+    {
+      "ts": "2026-11-24T00:07:11+08:00",
+      "actor": "run-supervisor",
+      "action": "finalize",
+      "detail": "finalize：从证据重算总状态=partial（核心阶段 done=['inventory', 'targets', 'run']；候选失败/超时=['method_fail']）"
+    }
+  ],
+  "phases": {
+    "inventory": {
+      "status": "done",
+      "ts": "2026-11-24T00:07:07+08:00",
+      "evidence": [
+        "/Users/liuhengshen/Desktop/bhr_product/da62-5dir/selftest/run-supervisor/expected_src/work/notes/inventory.md"
+      ],
+      "note": ""
+    },
+    "targets": {
+      "status": "done",
+      "ts": "2026-11-24T00:07:08+08:00",
+      "evidence": [
+        "/Users/liuhengshen/Desktop/bhr_product/da62-5dir/selftest/run-supervisor/expected_src/work/notes/targets.md"
+      ],
+      "note": ""
+    },
+    "tolerances": {
+      "status": "done",
+      "ts": "2026-11-24T00:07:08+08:00",
+      "evidence": [
+        "/Users/liuhengshen/Desktop/bhr_product/da62-5dir/selftest/run-supervisor/expected_src/work/notes/tolerances.md"
+      ],
+      "note": ""
+    },
+    "run": {
+      "status": "done",
+      "ts": "2026-11-24T00:07:09+08:00",
+      "evidence": [
+        "/Users/liuhengshen/Desktop/bhr_product/da62-5dir/selftest/run-supervisor/expected_src/work/runs/method_ok/meta.json",
+        "/Users/liuhengshen/Desktop/bhr_product/da62-5dir/selftest/run-supervisor/expected_src/work/runs/method_fail/meta.json"
+      ],
+      "note": "method_ok 成功；method_fail 崩溃（exit 1），已记为证据"
+    },
+    "compare": {
+      "status": "done",
+      "ts": "2026-11-24T00:07:10+08:00",
+      "evidence": [
+        "/Users/liuhengshen/Desktop/bhr_product/da62-5dir/selftest/run-supervisor/expected_src/work/notes/compare.md"
+      ],
+      "note": ""
+    },
+    "conclude": {
+      "status": "done",
+      "ts": "2026-11-24T00:07:10+08:00",
+      "evidence": [
+        "/Users/liuhengshen/Desktop/bhr_product/da62-5dir/selftest/run-supervisor/expected_src/output/result.json"
+      ],
+      "note": "结论已写入 result.json 合约字段"
+    }
+  },
+  "runs": [
+    {
+      "name": "method_ok",
+      "exit_code": 0,
+      "timeout": false,
+      "wall_seconds": 0.243,
+      "log_dir": "/Users/liuhengshen/Desktop/bhr_product/da62-5dir/selftest/run-supervisor/expected_src/work/runs/method_ok"
+    },
+    {
+      "name": "method_fail",
+      "exit_code": 1,
+      "timeout": false,
+      "wall_seconds": 0.316,
+      "log_dir": "/Users/liuhengshen/Desktop/bhr_product/da62-5dir/selftest/run-supervisor/expected_src/work/runs/method_fail"
+    }
+  ],
+  "field_notes": {},
+  "metric_table": [
+    {
+      "candidate": "method_ok",
+      "accuracy": 0.901,
+      "rmse": 0.124,
+      "source": "runs/method_ok/stdout.txt（合成示例）"
+    }
+  ],
+  "chosen_candidate": "method_ok",
+  "discrepancy_cause": "method_fail 以 exit 1 崩溃，无指标产出；归因于候选代码自身错误（见 runs/method_fail/stderr.txt），与论文数值无关——合成代码不等于作者原代码。",
+  "reproducibility_verdict": "partial：仅 method_ok 在合成数据上通过指标核对；这不构成论文数值复现。",
+  "data_gaps": [
+    "原始数据缺失（预期情况）",
+    "作者官方仓库缺失（预期情况）"
+  ]
+}

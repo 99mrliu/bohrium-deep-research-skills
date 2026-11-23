@@ -1,0 +1,82 @@
+{
+  "_annotation": "合成示例（synthetic），非正式案例结果。本文件是一次真实运行的预期副本，用于对照 verdict/字段结构；其中绝对路径、wall_time_seconds、随机数值与 sha256 哈希随机器与运行而变，逐字段相等不是预期。",
+  "name": "stable",
+  "runs": 3,
+  "timeout_seconds": 60.0,
+  "command": [
+    "python3",
+    "/Users/liuhengshen/Desktop/bhr_product/da62-5dir/bundles/rng-determinism-lab/examples/input/method_stable.py"
+  ],
+  "env_overrides": {
+    "PYTHONHASHSEED": "0"
+  },
+  "verdict": "identical",
+  "exit_codes": [
+    0,
+    0,
+    0
+  ],
+  "exit_codes_uniform": true,
+  "spawn_errors": [],
+  "timeout_runs": [],
+  "runs_detail": [
+    {
+      "command": [
+        "python3",
+        "/Users/liuhengshen/Desktop/bhr_product/da62-5dir/bundles/rng-determinism-lab/examples/input/method_stable.py"
+      ],
+      "cwd": "/Users/liuhengshen/Desktop/bhr_product/da62-5dir/selftest/rng-determinism-lab/example_run/replay_stable/run_1",
+      "env_overrides": {
+        "PYTHONHASHSEED": "0"
+      },
+      "exit_code": 0,
+      "wall_time_seconds": 0.408304,
+      "timeout": false,
+      "spawn_error": null,
+      "run": 1,
+      "stdout_num_count": 4
+    },
+    {
+      "command": [
+        "python3",
+        "/Users/liuhengshen/Desktop/bhr_product/da62-5dir/bundles/rng-determinism-lab/examples/input/method_stable.py"
+      ],
+      "cwd": "/Users/liuhengshen/Desktop/bhr_product/da62-5dir/selftest/rng-determinism-lab/example_run/replay_stable/run_2",
+      "env_overrides": {
+        "PYTHONHASHSEED": "0"
+      },
+      "exit_code": 0,
+      "wall_time_seconds": 0.615433,
+      "timeout": false,
+      "spawn_error": null,
+      "run": 2,
+      "stdout_num_count": 4
+    },
+    {
+      "command": [
+        "python3",
+        "/Users/liuhengshen/Desktop/bhr_product/da62-5dir/bundles/rng-determinism-lab/examples/input/method_stable.py"
+      ],
+      "cwd": "/Users/liuhengshen/Desktop/bhr_product/da62-5dir/selftest/rng-determinism-lab/example_run/replay_stable/run_3",
+      "env_overrides": {
+        "PYTHONHASHSEED": "0"
+      },
+      "exit_code": 0,
+      "wall_time_seconds": 0.443397,
+      "timeout": false,
+      "spawn_error": null,
+      "run": 3,
+      "stdout_num_count": 4
+    }
+  ],
+  "stdout_comparison": {
+    "byte_identical": true,
+    "numeric_sequences_identical": true,
+    "first_divergence": null
+  },
+  "artifacts": {},
+  "notes": [
+    "判定为机械比较（字节级/数值序列级），不构成与论文数值的任何比较结论。",
+    "unstable 表示同机重跑已不可复现；在与论文或跨机比较之前必须先固定随机性来源。"
+  ]
+}

@@ -1,0 +1,32 @@
+{
+  "schema": "result/v1",
+  "_note": "合成示例（synthetic），非正式案例结果。result 台账即最终 /app/output/result.json 的内容底账：case_id、output_contract 全字段、诚实 status、来源定位、不确定性、变更记录。",
+  "case_id": "synthetic-demo-001",
+  "status": "partial",
+  "output_contract": {
+    "summary": "两个候选方法在 3 项指标上共 6 条比较：5 条在容差内，1 条（method_b / accuracy）超差且已归因于预处理截断长度不一致。",
+    "comparison_table": "见编译产物 report.md 的“指标比较”节（由 comparison.json 机械注入，行数与台账一致）。",
+    "conclusion_grade": "partially_reproducible",
+    "artifacts": "report.md / report.html / figures/comparison_<指标>.svg|png / report_map.json / audit.json"
+  },
+  "sources": [
+    "论文指标值：/input/paper.pdf Table 2 (p.5) 与 Table 3 (p.7)",
+    "复现观测值：runs.json 各 run_id 对应的运行日志 /app/work/runs/*.log",
+    "候选代码：/input/candidate_a/ 与 /input/candidate_b/（组织方合成代码，非作者原代码）"
+  ],
+  "uncertainties": [
+    "论文未报告逐种子方差，容差判定基于 3 种子均值，n=3 的波动估计较弱",
+    "运行使用组织方合成数据，其分布与论文真实评测数据可能不同，结论不能外推为论文数值复现",
+    "method_b accuracy 超差的归因（截断长度）置信度为 medium，未做受控消融确认"
+  ],
+  "changelog": [
+    {
+      "time": "2026-11-23T10:00:00Z",
+      "change": "初版六台账建立，两方法三指标完成运行核对"
+    },
+    {
+      "time": "2026-11-23T11:30:00Z",
+      "change": "修正 m_f1 复现值聚合方式：由单种子值改为 3 种子均值，comparison.json 与 runs.json 同步更新"
+    }
+  ]
+}
