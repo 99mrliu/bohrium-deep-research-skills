@@ -1,0 +1,21 @@
+{
+  "case_id": "synthetic-knowledge-atom-demo",
+  "materials": [{"name": "paper.txt", "role": "paper_text_export",
+                 "note": "synthetic fixture, not a real paper"}],
+  "output_contract": {
+    "type": "object",
+    "required": ["case_id", "answer"],
+    "properties": {
+      "case_id": {"type": "string"},
+      "answer": {
+        "type": "object",
+        "required": ["paper_card", "knowledge_points"],
+        "properties": {
+          "paper_card": {"type": "object"},
+          "knowledge_points": {"type": "array"}
+        }
+      }
+    },
+    "additionalProperties": true
+  }
+}

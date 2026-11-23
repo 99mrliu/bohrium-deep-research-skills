@@ -1,0 +1,35 @@
+SYNTHETIC EXAMPLE INPUT — 本文为演示接口而虚构，非真实论文，非正式案例。
+Low-cost soil moisture sensor network for smallholder plots
+M. Dummy and P. Example, Institute of Fabricated Agronomy
+
+Abstract
+We deployed a 12-node capacitive soil moisture network on three
+smallholder plots for one growing season. Nodes sampled every 15 minutes
+and achieved 96 percent packet delivery over a LoRa link. The sensor
+drift after one season was 2.1 percent of reading.
+
+1. Introduction
+Irrigation advice for smallholder plots is limited by the cost of soil
+moisture sensing. We built a capacitive sensor node at 14 USD per unit
+and tested it under field conditions.
+
+2. Deployment
+Twelve nodes were installed at 10 cm and 30 cm depths on three plots.
+Data were transmitted over LoRa to a single gateway. The season lasted
+16 weeks.
+
+3. Findings
+Packet delivery averaged 96 percent over the season. Sensor drift after
+16 weeks was 2.1 percent of reading against gravimetric references.
+Irrigation events were detected within one sampling interval in 41 of 44
+cases.
+
+4. Limitations
+One season and three plots limit generality. Saline soils were not
+tested. The 14 USD cost excludes the gateway.
+
+5. Conclusion
+The low-cost network delivered reliable seasonal monitoring on three
+plots; multi-season durability remains open.
+References
+[1] Example P. Fabricated field sensing. J. Invented Agronomy 2024.

@@ -1,0 +1,23 @@
+{
+  "case_id": "synthetic-source-fidelity-demo",
+  "materials": [
+    {"name": "paper.txt", "role": "paper_text_export",
+     "note": "synthetic single-column text export with form-feed page break"}
+  ],
+  "output_contract": {
+    "type": "object",
+    "required": ["case_id", "answer"],
+    "properties": {
+      "case_id": {"type": "string"},
+      "answer": {
+        "type": "object",
+        "required": ["main_finding", "key_numbers"],
+        "properties": {
+          "main_finding": {"type": "string"},
+          "key_numbers": {"type": "array"}
+        }
+      }
+    },
+    "additionalProperties": true
+  }
+}

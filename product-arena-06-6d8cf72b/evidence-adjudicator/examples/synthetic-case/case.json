@@ -1,0 +1,27 @@
+{
+  "case_id": "synthetic-evidence-adjudicator-demo",
+  "materials": [{"name": "paper.txt", "role": "paper_text_export",
+                 "note": "synthetic fixture, not a real paper"}],
+  "questions": [
+    "阴影条件下微逆相比组串逆变器的年发电量增益是多少？",
+    "在无遮挡参考屋顶上两者差异是多少？",
+    "论文报告的年衰减率（degradation rate）是多少？"
+  ],
+  "output_contract": {
+    "type": "object",
+    "required": ["case_id", "answer"],
+    "properties": {
+      "case_id": {"type": "string"},
+      "answer": {
+        "type": "object",
+        "required": ["q1", "q2", "q3"],
+        "properties": {
+          "q1": {"type": ["string", "null"]},
+          "q2": {"type": ["string", "null"]},
+          "q3": {"type": ["string", "null"]}
+        }
+      }
+    },
+    "additionalProperties": true
+  }
+}

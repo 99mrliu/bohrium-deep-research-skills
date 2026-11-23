@@ -1,0 +1,29 @@
+{
+  "case_id": "synthetic-delivery-studio-demo",
+  "answer": {
+    "notes_summary": "12 节点低成本土壤湿度网络在 3 块小农地块完成一季监测：送达率 96%、漂移 2.1%；多季耐久性未验证（合成示例）。",
+    "key_metrics": [
+      {
+        "name": "packet delivery",
+        "value": "96%",
+        "anchor": "p1-l8"
+      },
+      {
+        "name": "drift",
+        "value": "2.1% of reading",
+        "anchor": "p1-l23"
+      }
+    ]
+  },
+  "status": "success",
+  "sources": [
+    {
+      "path": "paper.txt (synthetic fixture)"
+    }
+  ],
+  "uncertainty": [],
+  "limits": [
+    "SYNTHETIC EXAMPLE：虚构论文，仅演示接口，非正式案例结果。"
+  ],
+  "_LABEL": "SYNTHETIC EXAMPLE OUTPUT — 合成示例示意输出，非正式案例结果；由 run_example.sh 在本机真实运行生成。"
+}

@@ -1,0 +1,75 @@
+{
+  "case_id": "synthetic-source-fidelity-demo",
+  "answer": {
+    "main_finding": "在 1100 C 炉循环实验中，Aerolite-7 涂层平均存活 420 次循环，高于 YSZ 基线的 265 次（合成示例论断）。",
+    "key_numbers": [
+      {
+        "value": 420,
+        "meaning": "Aerolite-7 平均循环寿命",
+        "anchor": "p1-l20",
+        "quote": "420 cycles (n = 6, sd = 31)"
+      },
+      {
+        "value": 265,
+        "meaning": "YSZ 基线平均循环寿命",
+        "anchor": "p1-l21",
+        "quote": "265 cycles (n = 6, sd = 24)"
+      },
+      {
+        "value": "14 percent",
+        "meaning": "Aerolite-7 孔隙率",
+        "anchor": "p1-l22",
+        "quote": "14 percent for Aerolite-7"
+      }
+    ]
+  },
+  "evidence": {
+    "main_finding": {
+      "anchor": "p1-l20",
+      "quote": "420 cycles (n = 6, sd = 31)"
+    }
+  },
+  "limitations_kept": [
+    {
+      "claim": "900 C 下差异不显著，结论仅限 1100 C 条件。",
+      "anchor": "p1-l27",
+      "quote": "the difference was not significant"
+    },
+    {
+      "claim": "未测试抗冲蚀性能；莫来石原料为实验室级。",
+      "anchor": "p1-l27",
+      "quote": "We did not test erosion resistance"
+    }
+  ],
+  "status": "success",
+  "contract": {
+    "problems": [],
+    "warnings": []
+  },
+  "fidelity": {
+    "status": "ok",
+    "backend": "text-file",
+    "sha256": "f5fdae090c73ff39c9f1e4ea687ed75de843c2690079388ae60fac96d3404425",
+    "empty_pages": []
+  },
+  "anchor_check": {
+    "verdict": "pass",
+    "items_passed": 6,
+    "needs_review": 0,
+    "hard_failures": 0
+  },
+  "sources": [
+    {
+      "doc_id": "synthetic-source-fidelity-demo",
+      "sha256": "f5fdae090c73ff39c9f1e4ea687ed75de843c2690079388ae60fac96d3404425",
+      "backend": "text-file",
+      "path": "paper.txt (synthetic fixture)"
+    }
+  ],
+  "limits": [
+    "SYNTHETIC EXAMPLE：虚构论文，仅演示接口，非正式案例结果。"
+  ],
+  "uncertainty": [],
+  "change_records": [],
+  "_LABEL": "SYNTHETIC EXAMPLE OUTPUT — 合成示例示意输出，非正式案例结果；由 run_example.sh 在本机真实运行生成。"
+}

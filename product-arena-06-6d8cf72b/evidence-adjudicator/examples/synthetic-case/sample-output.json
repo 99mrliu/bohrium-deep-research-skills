@@ -1,0 +1,33 @@
+{
+  "case_id": "synthetic-evidence-adjudicator-demo",
+  "answer": {
+    "q1": "部分阴影下微逆每 kWp 年发电量平均高 8.2%（范围 3.1%–14.7%）。",
+    "q2": "无遮挡屋顶差异 0.4%，在仿真容差内。",
+    "q3": null
+  },
+  "status": "success",
+  "adjudication": {
+    "verdicts": {
+      "q1": "supported",
+      "q2": "supported",
+      "q3": "not_reported"
+    },
+    "violations": [],
+    "contract_problems": [],
+    "coverage": "3/3"
+  },
+  "sources": [
+    {
+      "doc_id": "synthetic-evidence-adjudicator-demo",
+      "sha256": "749d7fad07888967806fe22b75c185ec53bd91c5a02a1f06ba5964c7c670755f",
+      "backend": "text-file"
+    }
+  ],
+  "uncertainty": [
+    "q3 为 not_reported：已检索 degradation/aging 等词，范围为全部窗口（合成示例）。"
+  ],
+  "limits": [
+    "SYNTHETIC EXAMPLE：虚构论文，仅演示接口，非正式案例结果。"
+  ],
+  "_LABEL": "SYNTHETIC EXAMPLE OUTPUT — 合成示例示意输出，非正式案例结果；由 run_example.sh 在本机真实运行生成。"
+}

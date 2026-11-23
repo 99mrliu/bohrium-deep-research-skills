@@ -1,0 +1,33 @@
+{
+  "case_id": "synthetic-contract-pilot-demo",
+  "materials": [{"name": "paper.txt", "role": "paper_text_export",
+                 "note": "synthetic fixture, not a real paper"}],
+  "output_contract": {
+    "type": "object",
+    "required": ["case_id", "answer"],
+    "properties": {
+      "case_id": {"type": "string"},
+      "answer": {
+        "type": "object",
+        "required": ["summary", "measurements", "open_question"],
+        "properties": {
+          "summary": {"type": "string", "minLength": 10},
+          "measurements": {
+            "type": "array", "minItems": 1,
+            "items": {
+              "type": "object",
+              "required": ["name", "value", "unit"],
+              "properties": {
+                "name": {"type": "string"},
+                "value": {"type": "number"},
+                "unit": {"type": "string", "enum": ["mm", "MPa", "percent", "cycles"]}
+              }
+            }
+          },
+          "open_question": {"type": ["string", "null"]}
+        }
+      }
+    },
+    "additionalProperties": true
+  }
+}

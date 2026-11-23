@@ -1,0 +1,37 @@
+{
+  "case_id": "synthetic-contract-pilot-demo",
+  "answer": {
+    "summary": "竹纤维复合板（12 mm）三点弯曲强度均值 48 MPa，1 kHz 吸声系数 0.62（合成示例摘要）。",
+    "measurements": [
+      {
+        "name": "bending strength",
+        "value": 48,
+        "unit": "MPa"
+      },
+      {
+        "name": "panel thickness",
+        "value": 12,
+        "unit": "mm"
+      }
+    ],
+    "open_question": null
+  },
+  "status": "success",
+  "evidence": {
+    "summary": "Mean bending strength was 48 MPa (n = 5, sd = 4)",
+    "open_question": "durability under humidity cycling remains an open question"
+  },
+  "limits": [
+    "SYNTHETIC EXAMPLE：虚构论文，仅演示接口，非正式案例结果。"
+  ],
+  "null_reasons": {
+    "$.answer.open_question": "正文中 open question 已由结论段命名（humidity cycling durability），无其他未答问题；字段按要求留 null。"
+  },
+  "validation": {
+    "problems": [],
+    "warnings": [],
+    "unexplained_nulls": [],
+    "verdict": "pass"
+  },
+  "_LABEL": "SYNTHETIC EXAMPLE OUTPUT — 合成示例示意输出，非正式案例结果；由 run_example.sh 在本机真实运行生成。"
+}

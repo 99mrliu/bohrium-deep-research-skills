@@ -1,0 +1,43 @@
+{
+  "case_id": "synthetic-knowledge-atom-demo",
+  "answer": {
+    "paper_card": {
+      "question": "Bloom 过滤器不支持删除，如何以较低内存代价支持删除（合成示例）。",
+      "method": "Counting Bloom Sketch：4 比特计数器 + k 哈希位置递增/递减 [m-01]",
+      "data": "一百万均匀随机合成键",
+      "main_findings": [
+        "9.6 bits/key 时 FPR 0.9% [f-01]",
+        "删除 10% 键后 FPR < 1.1% [f-02]"
+      ],
+      "limitations": [
+        "仅均匀合成负载 [l-01]"
+      ]
+    },
+    "knowledge_points": [
+      "c-01",
+      "m-01",
+      "f-01",
+      "f-02",
+      "l-01",
+      "v-01"
+    ]
+  },
+  "status": "success",
+  "checks": {
+    "contract_problems": [],
+    "kb_lint": "pass",
+    "kb_warnings": 0
+  },
+  "sources": [
+    {
+      "doc_id": "synthetic-knowledge-atom-demo",
+      "sha256": "afa644160809b6efc82447483ebdd9581f8990110ebaf3667f5014e3a2548765",
+      "backend": "text-file"
+    }
+  ],
+  "uncertainty": [],
+  "limits": [
+    "SYNTHETIC EXAMPLE：虚构论文，仅演示接口，非正式案例结果。"
+  ],
+  "_LABEL": "SYNTHETIC EXAMPLE OUTPUT — 合成示例示意输出，非正式案例结果；由 run_example.sh 在本机真实运行生成。"
+}

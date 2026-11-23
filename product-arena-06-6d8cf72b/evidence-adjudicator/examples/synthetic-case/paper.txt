@@ -1,0 +1,39 @@
+SYNTHETIC EXAMPLE INPUT — 本文为演示接口而虚构，非真实论文，非正式案例。
+Micro-inverter versus string inverter yield on shaded urban rooftops
+K. Sample and L. Dummy, Institute of Invented Energy Systems
+
+Abstract
+We compared micro-inverter and string-inverter rooftop photovoltaic
+systems on 24 simulated urban houses over one synthetic year. Under
+partial shading the micro-inverter configuration produced 8.2 percent
+more annual energy per installed kilowatt-peak.
+
+1. Introduction
+Urban rooftops suffer partial shading from chimneys and trees. String
+inverters lose disproportionate energy when one panel is shaded. We
+tested whether module-level power electronics recover this loss in a
+simulated housing stock.
+
+2. Setup
+Twenty-four synthetic roof geometries were generated procedurally. Each
+roof was simulated twice: once with a string inverter and once with
+micro-inverters, using the same irradiance series. Shading objects were
+assigned from a fixed random seed.
+
+3. Results
+Across the 24 roofs the micro-inverter configuration yielded a mean of
+8.2 percent more annual energy per kWp (range 3.1 to 14.7 percent). On
+unshaded reference roofs the difference was 0.4 percent, within
+simulation tolerance. Inverter cost was not modelled.
+
+4. Discussion
+The gain concentrates on roofs with more than two hours of daily shade.
+The study did not measure real hardware; all results are simulation
+output with fixed seed 42.
+
+5. Conclusion
+Module-level power electronics recover most shading loss in the
+simulated housing stock; economic comparison remains out of scope.
+References
+[1] Dummy L. Synthetic solar studies. J. Fabricated Energy 2022.
+

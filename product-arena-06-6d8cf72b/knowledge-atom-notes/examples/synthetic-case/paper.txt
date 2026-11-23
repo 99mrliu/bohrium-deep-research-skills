@@ -1,0 +1,38 @@
+SYNTHETIC EXAMPLE INPUT — 本文为演示接口而虚构，非真实论文，非正式案例。
+The Counting Bloom Sketch: space-efficient approximate membership with deletion
+S. Toy and A. Mock, Department of Fabricated Computing
+
+Abstract
+We introduce the Counting Bloom Sketch (CBS), a probabilistic set
+representation that supports element deletion. On synthetic workloads
+with one million keys, CBS uses 9.6 bits per key at a false positive
+rate of 0.9 percent, while a plain Bloom filter cannot delete at all.
+
+1. Introduction
+Approximate membership structures trade a small error rate for large
+memory savings. The classic Bloom filter answers membership queries but
+does not support deletion. The Counting Bloom Sketch replaces each bit
+with a small counter.
+
+2. Design
+CBS allocates m counters of 4 bits each. Insertion increments k hash
+positions; deletion decrements them. A counter saturates at 15, so
+overflow is possible when many collisions occur on one position.
+
+3. Evaluation
+We generated one million synthetic keys with a uniform random source.
+At 9.6 bits per key the observed false positive rate was 0.9 percent.
+Deletion of 10 percent of keys kept the false positive rate below
+1.1 percent. Throughput reached 1.4 million inserts per second.
+
+4. Limitations
+The evaluation uses uniform synthetic keys only; skewed real workloads
+were not measured. Counter overflow was not observed at our scale but
+remains possible for adversarial inputs.
+
+5. Conclusion
+CBS supports deletion with 4-bit counters at modest memory cost on
+uniform synthetic workloads.
+References
+[1] Mock A. Imaginary filters. Journal of Fabricated Structures 2021.
+

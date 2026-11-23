@@ -1,0 +1,21 @@
+{
+  "case_id": "synthetic-delivery-studio-demo",
+  "materials": [{"name": "paper.txt", "role": "paper_text_export",
+                 "note": "synthetic fixture, not a real paper"}],
+  "output_contract": {
+    "type": "object",
+    "required": ["case_id", "answer"],
+    "properties": {
+      "case_id": {"type": "string"},
+      "answer": {
+        "type": "object",
+        "required": ["notes_summary", "key_metrics"],
+        "properties": {
+          "notes_summary": {"type": "string"},
+          "key_metrics": {"type": "array"}
+        }
+      }
+    },
+    "additionalProperties": true
+  }
+}
