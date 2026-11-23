@@ -1,0 +1,89 @@
+{
+ "case_id": "SYN-E-001",
+ "paper_id": "SYN-2026-Alloy-08",
+ "material_version": "synthetic-v1",
+ "status": "completed",
+ "answers": [
+  {
+   "question_id": "Q1",
+   "answer": "ECAP 四道次后 UTS 为 385 MPa、断后延伸率 14.2%（初始应变速率 1e-3 per s）；粗晶态对应值为 312 MPa 与 21.5%。强度升高而塑性下降（两者均为实测，比较为并列陈述）。",
+   "conditions": [
+    "室温 ECAP 四道次",
+    "初始应变速率 1e-3 per s"
+   ],
+   "status": "answered",
+   "claims": [
+    {
+     "claim_id": "Q1-C1",
+     "text": "四道次后 UTS 385 MPa、延伸率 14.2%，粗晶态 312 MPa、21.5%",
+     "kind": "reported",
+     "evidence": [
+      {
+       "paragraph_id": "P2",
+       "quote": "an ultimate tensile strength of 385 MPa and an elongation to failure of 14.2 percent, compared with 312 MPa and 21.5 percent for the coarse-grained counterpart"
+      }
+     ]
+    }
+   ],
+   "unanswered_parts": []
+  },
+  {
+   "question_id": "Q2",
+   "answer": "显微硬度由未处理态 92 HV 升至四道次后 128 HV（P3）。作者将强塑性权衡归因于超细晶中位错储存能力下降（作者解释，P4）；织构效应未单独分离。耐蚀性未测试，材料未报告（已核对 P5 明确说明）。",
+   "conditions": [
+    "四道次 ECAP",
+    "3.5 wt percent NaCl（未测试，仅说明）"
+   ],
+   "status": "answered",
+   "claims": [
+    {
+     "claim_id": "Q2-C1",
+     "text": "显微硬度由 92 HV 升至 128 HV",
+     "kind": "reported",
+     "evidence": [
+      {
+       "paragraph_id": "P3",
+       "quote": "increased from 92 HV in the as-received state to 128 HV after four passes"
+      }
+     ]
+    },
+    {
+     "claim_id": "Q2-C2",
+     "text": "作者将强塑性权衡归因于超细晶位错储存能力下降，织构效应未单独分离",
+     "kind": "reported",
+     "evidence": [
+      {
+       "paragraph_id": "P4",
+       "quote": "interpreted by the authors as a consequence of reduced dislocation storage capacity in ultrafine grains; texture effects were not separately deconvoluted"
+      }
+     ]
+    },
+    {
+     "claim_id": "Q2-C3",
+     "text": "耐蚀性未测试（材料未报告）",
+     "kind": "reported",
+     "evidence": [
+      {
+       "paragraph_id": "P5",
+       "quote": "Corrosion performance in 3.5 wt percent NaCl solution was not tested"
+      }
+     ]
+    }
+   ],
+   "unanswered_parts": []
+  }
+ ],
+ "coverage": {
+  "read_sections": [],
+  "unread_sections": []
+ },
+ "sources": [
+  "P1",
+  "P2",
+  "P3",
+  "P4",
+  "P5"
+ ],
+ "uncertainty": "织构效应未单独分离；耐蚀性未测试，两者按材料原意如实保留。",
+ "change_log": "v1: 首次合成示例运行，无修订。"
+}

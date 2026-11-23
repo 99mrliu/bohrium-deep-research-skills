@@ -1,0 +1,114 @@
+{
+ "case_id": "SYN-B-001",
+ "paper_id": "SYN-2026-Lattice-12",
+ "material_version": "synthetic-v1",
+ "status": "completed",
+ "answers": [
+  {
+   "question_id": "Q1",
+   "answer": "点阵结构屈服强度为 245 MPa（弹性模量 3.1 GPa）；测试条件为 ASTM E9 室温准静态压缩，横梁速度 1 mm/min、试样直径 8 mm；相同测试协议下致密参照试样为 960 MPa（模量 110 GPa），点阵约为致密样的 25.5%（由 P3 两值计算，属推断）。",
+   "conditions": [
+    "ASTM E9 室温准静态压缩",
+    "crosshead speed 1 mm/min",
+    "specimens of 8 mm diameter"
+   ],
+   "status": "answered",
+   "claims": [
+    {
+     "claim_id": "Q1-C1",
+     "text": "点阵屈服强度 245 MPa、模量 3.1 GPa，致密参照 960 MPa、模量 110 GPa",
+     "kind": "reported",
+     "evidence": [
+      {
+       "paragraph_id": "P3",
+       "quote": "a yield strength of 245 MPa and an elastic modulus of 3.1 GPa, while the fully dense reference reached 960 MPa"
+      }
+     ]
+    },
+    {
+     "claim_id": "Q1-C2",
+     "text": "测试按 ASTM E9 在室温进行，横梁速度 1 mm/min，试样直径 8 mm",
+     "kind": "reported",
+     "evidence": [
+      {
+       "paragraph_id": "P2",
+       "quote": "performed at room temperature following ASTM E9, with a crosshead speed of 1 mm/min on cylindrical specimens of 8 mm diameter"
+      }
+     ]
+    },
+    {
+     "claim_id": "Q1-C3",
+     "text": "点阵屈服强度约为致密样的 25.5%（245/960 计算值）",
+     "kind": "inferred",
+     "evidence": [
+      {
+       "paragraph_id": "P3",
+       "quote": "245 MPa"
+      },
+      {
+       "paragraph_id": "P3",
+       "quote": "960 MPa"
+      }
+     ]
+    }
+   ],
+   "unanswered_parts": []
+  },
+  {
+   "question_id": "Q2",
+   "answer": "热等静压（920 degrees C、100 MPa、2 h）后屈服强度提高到 268 MPa，提升约 9.4%。疲劳寿命未被测量（conflicts 扫描 'fatigue life' 返回 NONE，P6 原文明确说未测量）。作者将点阵强度较低归因于节点处的应力集中。",
+   "conditions": [
+    "HIP: 920 degrees C, 100 MPa, 2 h"
+   ],
+   "status": "answered",
+   "claims": [
+    {
+     "claim_id": "Q2-C1",
+     "text": "HIP 后处理将屈服强度提高到 268 MPa（约 +9.4%）",
+     "kind": "reported",
+     "evidence": [
+      {
+       "paragraph_id": "P7",
+       "quote": "hot isostatic pressing at 920 degrees C and 100 MPa for 2 h increased the yield strength to 268 MPa, an improvement of about 9.4 percent"
+      }
+     ]
+    },
+    {
+     "claim_id": "Q2-C2",
+     "text": "疲劳寿命未被测量（有依据地说明未报告）",
+     "kind": "reported",
+     "evidence": [
+      {
+       "paragraph_id": "P6",
+       "quote": "fatigue life was not measured in this study"
+      }
+     ]
+    },
+    {
+     "claim_id": "Q2-C3",
+     "text": "作者将点阵强度较低归因于节点应力集中",
+     "kind": "reported",
+     "evidence": [
+      {
+       "paragraph_id": "P6",
+       "quote": "authors attribute the lower yield strength of the lattice to nodal stress concentrations"
+      }
+     ]
+    }
+   ],
+   "unanswered_parts": []
+  }
+ ],
+ "coverage": {
+  "read_sections": [
+   "P1",
+   "P2",
+   "P3",
+   "P4",
+   "P5",
+   "P6",
+   "P7"
+  ],
+  "unread_sections": []
+ }
+}

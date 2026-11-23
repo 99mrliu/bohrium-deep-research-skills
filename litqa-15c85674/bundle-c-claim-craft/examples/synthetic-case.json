@@ -1,0 +1,19 @@
+{
+  "case_id": "SYN-C-001",
+  "paper_id": "SYN-2026-ML-33",
+  "material_version": "synthetic-v1",
+  "task": "仅依据给定材料回答下列中文问题，并为每条论断给出段落编号与逐字引文。",
+  "paragraphs": [
+    {"paragraph_id": "P1", "text": "Abstract. We propose GraphMixer, a lightweight graph neural network that replaces message passing with a two-stage mixing operator, trained on three node classification benchmarks with a fixed budget of 100 epochs."},
+    {"paragraph_id": "P2", "text": "Experiments use the Cora, CiteSeer, and PubMed datasets with the standard public splits; all models are trained with Adam at a learning rate of 0.01 and weight decay 5e-4, averaged over 10 random seeds."},
+    {"paragraph_id": "P3", "text": "GraphMixer achieves 83.2 percent test accuracy on Cora, outperforming GCN by 1.5 percentage points and matching the deeper GAT baseline within 0.2 points, while using 41 percent fewer parameters than GAT."},
+    {"paragraph_id": "P4", "text": "Table 3. Node classification accuracy (percent): Cora, GraphMixer 83.2, GCN 81.7, GAT 83.0; CiteSeer, GraphMixer 71.9, GCN 71.5, GAT 72.2; PubMed, GraphMixer 79.1, GCN 79.0, GAT 79.4."},
+    {"paragraph_id": "P5", "text": "An ablation removing the second mixing stage lowers Cora accuracy to 81.0 percent, suggesting the two-stage design is responsible for most of the gain."},
+    {"paragraph_id": "P6", "text": "Training time per epoch is 12 ms on a single RTX 3090 for the Cora graph; however, scalability to graphs larger than PubMed was not evaluated."},
+    {"paragraph_id": "P7", "text": "On PubMed the difference between GraphMixer and GCN (0.1 points) is smaller than the standard deviation across seeds, so we do not claim an improvement on this dataset."}
+  ],
+  "questions": [
+    {"question_id": "Q1", "text": "GraphMixer 在 Cora 上的测试准确率是多少？与 GCN、GAT 相比如何？实验设置是什么？"},
+    {"question_id": "Q2", "text": "两阶段混合算子的贡献有何消融证据？论文对 PubMed 上的提升是否下结论？可扩展性是否评估？"}
+  ]
+}

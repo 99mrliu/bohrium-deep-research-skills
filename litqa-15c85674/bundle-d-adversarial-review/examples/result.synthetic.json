@@ -1,0 +1,139 @@
+{
+ "case_id": "SYN-D-001",
+ "paper_id": "SYN-2026-EnvCat-21",
+ "material_version": "synthetic-v1",
+ "status": "completed",
+ "answers": [
+  {
+   "question_id": "Q1",
+   "answer": "正文报告 92.5%（10 mg/L，可见光，120 min），显著高于 Bi2WO6 的 54.0% 与 BiOI 的 61.2%；摘要报告为 91.8%，与正文数值不一致，原因未说明，并列保留。制备为 160 degrees C、12 h 溶剂热法（乙二醇溶剂）。",
+   "conditions": [
+    "visible light (lambda greater than 420 nm), 120 min, 10 mg/L",
+    "solvothermal 160 degrees C, 12 h, ethylene glycol"
+   ],
+   "status": "answered",
+   "claims": [
+    {
+     "claim_id": "Q1-C1",
+     "text": "复合材料在可见光下 120 min 去除环丙沙星 92.5%，单组分 Bi2WO6 为 54.0%、BiOI 为 61.2%",
+     "kind": "reported",
+     "evidence": [
+      {
+       "paragraph_id": "P3",
+       "quote": "removed 92.5 percent of ciprofloxacin (10 mg/L) within 120 min, compared with 54.0 percent for pristine Bi2WO6 and 61.2 percent for pristine BiOI"
+      }
+     ]
+    },
+    {
+     "claim_id": "Q1-C2",
+     "text": "摘要报告的去除率为 91.8%，与正文 P3 的 92.5% 不一致，原文未说明差异原因",
+     "kind": "reported",
+     "evidence": [
+      {
+       "paragraph_id": "P1",
+       "quote": "achieved 91.8 percent removal of ciprofloxacin within 120 min under visible light"
+      },
+      {
+       "paragraph_id": "P3",
+       "quote": "removed 92.5 percent of ciprofloxacin (10 mg/L) within 120 min"
+      }
+     ]
+    },
+    {
+     "claim_id": "Q1-C3",
+     "text": "由 P3 对比可知，复合材料去除率（92.5%）显著高于 Bi2WO6（54.0%）与 BiOI（61.2%）",
+     "kind": "inferred",
+     "evidence": [
+      {
+       "paragraph_id": "P3",
+       "quote": "removed 92.5 percent of ciprofloxacin (10 mg/L) within 120 min, compared with 54.0 percent for pristine Bi2WO6 and 61.2 percent for pristine BiOI"
+      }
+     ]
+    },
+    {
+     "claim_id": "Q1-C4",
+     "text": "制备条件为溶剂热法 160 摄氏度 12 小时，乙二醇为溶剂",
+     "kind": "reported",
+     "evidence": [
+      {
+       "paragraph_id": "P2",
+       "quote": "solvothermal method at 160 degrees C for 12 h, using ethylene glycol as the solvent"
+      }
+     ]
+    }
+   ],
+   "unanswered_parts": []
+  },
+  {
+   "question_id": "Q2",
+   "answer": "五次循环活性无显著损失；空穴为主要活性物种；铋溶出未测量，浸出风险不能排除；TOC 去除率 47.8%（120 min）。",
+   "conditions": [
+    "five runs cycling test",
+    "120 min"
+   ],
+   "status": "answered",
+   "claims": [
+    {
+     "claim_id": "Q2-C1",
+     "text": "五次循环后活性无显著损失",
+     "kind": "reported",
+     "evidence": [
+      {
+       "paragraph_id": "P4",
+       "quote": "Cycling tests over five runs showed no significant loss of activity"
+      }
+     ]
+    },
+    {
+     "claim_id": "Q2-C2",
+     "text": "铋溶出未测量，潜在浸出不能排除",
+     "kind": "reported",
+     "evidence": [
+      {
+       "paragraph_id": "P4",
+       "quote": "the release of dissolved bismuth during irradiation was not measured, so potential leaching cannot be excluded"
+      }
+     ]
+    },
+    {
+     "claim_id": "Q2-C3",
+     "text": "空穴是环丙沙星降解的主要活性物种",
+     "kind": "reported",
+     "evidence": [
+      {
+       "paragraph_id": "P5",
+       "quote": "identified holes as the main reactive species for ciprofloxacin degradation"
+      }
+     ]
+    },
+    {
+     "claim_id": "Q2-C4",
+     "text": "TOC 去除率达 47.8%（120 min）",
+     "kind": "reported",
+     "evidence": [
+      {
+       "paragraph_id": "P6",
+       "quote": "TOC removal reached 47.8 percent after 120 min"
+      }
+     ]
+    },
+    {
+     "claim_id": "Q2-C5",
+     "text": "复合材料表观速率常数为 0.023 per min，高于 Bi2WO6（0.008）与 BiOI（0.010）",
+     "kind": "reported",
+     "evidence": [
+      {
+       "paragraph_id": "P7",
+       "quote": "The apparent rate constant was 0.023 per min for the composite, 0.008 per min for Bi2WO6 and 0.010 per min for BiOI"
+      }
+     ]
+    }
+   ],
+   "unanswered_parts": []
+  }
+ ],
+ "coverage": {
+  "read_sections": [],
+  "unread_sections": []
+ }
+}

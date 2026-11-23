@@ -1,0 +1,94 @@
+{
+ "case_id": "SYN-A-001",
+ "paper_id": "SYN-2026-Photocat-07",
+ "material_version": "synthetic-v1",
+ "status": "completed",
+ "answers": [
+  {
+   "question_id": "Q1",
+   "answer": "比表面积（BET）为 42.6 m2/g，约为未掺杂样品的 1.8 倍（未掺杂样品 23.7 m2/g，见表格 P4）；合成条件为尿素在 550 degrees C 空气中一步热聚合。",
+   "conditions": [
+    "BET 法测定",
+    "合成：urea, one-step thermal polymerization, 550 degrees C, air"
+   ],
+   "status": "answered",
+   "claims": [
+    {
+     "claim_id": "Q1-C1",
+     "text": "g-C3N4-N 的 BET 比表面积为 42.6 m2/g，约为未掺杂样品的 1.8 倍",
+     "kind": "reported",
+     "evidence": [
+      {
+       "paragraph_id": "P2",
+       "quote": "the specific surface area measured by BET was 42.6 m2/g, roughly 1.8 times that of the undoped reference sample"
+      },
+      {
+       "paragraph_id": "P4",
+       "quote": "undoped g-C3N4, degradation 61.3 percent, BET area 23.7 m2/g"
+      }
+     ]
+    },
+    {
+     "claim_id": "Q1-C2",
+     "text": "合成方法为尿素在 550 degrees C、空气气氛下的一步热聚合",
+     "kind": "reported",
+     "evidence": [
+      {
+       "paragraph_id": "P1",
+       "quote": "synthesized by a one-step thermal polymerization of urea at 550 degrees C under air"
+      }
+     ]
+    }
+   ],
+   "unanswered_parts": []
+  },
+  {
+   "question_id": "Q2",
+   "answer": "在模拟太阳光（AM 1.5G，100 mW/cm2）下，90 min 内对 10 mg/L 罗丹明 B 的降解率为 92.5%（相同条件下未掺杂样品仅 61.3%）。捕获实验表明主导活性物种为超氧自由基；羟基自由基捕获未显著抑制降解。",
+   "conditions": [
+    "AM 1.5G, 100 mW/cm2 模拟太阳光",
+    "10 mg/L rhodamine B",
+    "90 min 反应时间"
+   ],
+   "status": "answered",
+   "claims": [
+    {
+     "claim_id": "Q2-C1",
+     "text": "g-C3N4-N 在 90 min 内降解 92.5% 的 10 mg/L 罗丹明 B，未掺杂样品为 61.3%",
+     "kind": "reported",
+     "evidence": [
+      {
+       "paragraph_id": "P3",
+       "quote": "degraded 92.5 percent of a 10 mg/L rhodamine B solution within 90 min, whereas the undoped sample reached only 61.3 percent"
+      }
+     ]
+    },
+    {
+     "claim_id": "Q2-C2",
+     "text": "主导活性物种为超氧自由基",
+     "kind": "reported",
+     "evidence": [
+      {
+       "paragraph_id": "P7",
+       "quote": "superoxide radicals were the dominant reactive species"
+      }
+     ]
+    }
+   ],
+   "unanswered_parts": []
+  }
+ ],
+ "coverage": {
+  "read_sections": [
+   "P1",
+   "P2",
+   "P3",
+   "P4",
+   "P5",
+   "P6",
+   "P7",
+   "P8"
+  ],
+  "unread_sections": []
+ }
+}

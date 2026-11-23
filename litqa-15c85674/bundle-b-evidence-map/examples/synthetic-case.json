@@ -1,0 +1,19 @@
+{
+  "case_id": "SYN-B-001",
+  "paper_id": "SYN-2026-Lattice-12",
+  "material_version": "synthetic-v1",
+  "task": "仅依据给定材料回答下列中文问题，并为每条论断给出段落编号与逐字引文。",
+  "paragraphs": [
+    {"paragraph_id": "P1", "text": "Abstract. A Ti-6Al-4V lattice structure was fabricated by selective laser melting with a laser power of 170 W and a scan speed of 1100 mm/s, yielding a relative density of 99.2 percent."},
+    {"paragraph_id": "P2", "text": "Quasi-static compression tests were performed at room temperature following ASTM E9, with a crosshead speed of 1 mm/min on cylindrical specimens of 8 mm diameter."},
+    {"paragraph_id": "P3", "text": "The lattice exhibited a yield strength of 245 MPa and an elastic modulus of 3.1 GPa, while the fully dense reference reached 960 MPa under the same test protocol."},
+    {"paragraph_id": "P4", "text": "Failure initiated by layer-by-layer collapse at the stress concentrators near the nodes, as confirmed by in-situ imaging at 30 frames per second."},
+    {"paragraph_id": "P5", "text": "Table 2. Mechanical properties: lattice, yield strength 245 MPa, modulus 3.1 GPa, densification strain 62 percent; dense reference, yield strength 960 MPa, modulus 110 GPa."},
+    {"paragraph_id": "P6", "text": "The authors attribute the lower yield strength of the lattice to nodal stress concentrations, but fatigue life was not measured in this study."},
+    {"paragraph_id": "P7", "text": "Post-processing by hot isostatic pressing at 920 degrees C and 100 MPa for 2 h increased the yield strength to 268 MPa, an improvement of about 9.4 percent."}
+  ],
+  "questions": [
+    {"question_id": "Q1", "text": "点阵结构的屈服强度是多少？测试条件是什么？与致密试样相比如何？"},
+    {"question_id": "Q2", "text": "热等静压后处理对屈服强度有何影响？疲劳寿命是否有报告？作者如何解释点阵强度较低的原因？"}
+  ]
+}

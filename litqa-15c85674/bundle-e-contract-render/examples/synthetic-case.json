@@ -1,0 +1,28 @@
+{
+  "case_id": "SYN-E-001",
+  "paper_id": "SYN-2026-Alloy-08",
+  "material_version": "synthetic-v1",
+  "task": "仅依据给定材料回答下列中文问题，并为每条论断给出段落编号与逐字引文。",
+  "output_contract": {
+    "case_id": "与输入一致",
+    "paper_id": "与输入一致",
+    "material_version": "与输入一致",
+    "status": "completed | partial | input_error",
+    "answers": "逐题回答数组",
+    "coverage": "阅读范围",
+    "sources": "引用段落清单",
+    "uncertainty": "不确定性说明",
+    "change_log": "过程变更记录"
+  },
+  "paragraphs": [
+    {"paragraph_id": "P1", "text": "Abstract. An Al-0.5Mg-0.4Si alloy was processed by equal-channel angular pressing for four passes at room temperature, producing an ultrafine-grained microstructure with a mean grain size of 480 nm."},
+    {"paragraph_id": "P2", "text": "Tensile tests at an initial strain rate of 1e-3 per s gave an ultimate tensile strength of 385 MPa and an elongation to failure of 14.2 percent, compared with 312 MPa and 21.5 percent for the coarse-grained counterpart."},
+    {"paragraph_id": "P3", "text": "Microhardness increased from 92 HV in the as-received state to 128 HV after four passes, following the profile of the imposed strain."},
+    {"paragraph_id": "P4", "text": "The strength-ductility trade-off is interpreted by the authors as a consequence of reduced dislocation storage capacity in ultrafine grains; texture effects were not separately deconvoluted."},
+    {"paragraph_id": "P5", "text": "Corrosion performance in 3.5 wt percent NaCl solution was not tested and remains an open question for service applications."}
+  ],
+  "questions": [
+    {"question_id": "Q1", "text": "ECAP 四道次后合金的极限抗拉强度与延伸率是多少？与粗晶态相比如何？测试条件是什么？"},
+    {"question_id": "Q2", "text": "显微硬度如何变化？作者如何解释强塑性权衡？耐蚀性是否有报告？"}
+  ]
+}

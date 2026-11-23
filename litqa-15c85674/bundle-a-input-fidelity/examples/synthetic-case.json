@@ -1,0 +1,20 @@
+{
+  "case_id": "SYN-A-001",
+  "paper_id": "SYN-2026-Photocat-07",
+  "material_version": "synthetic-v1",
+  "task": "仅依据给定材料回答下列中文问题，并为每条论断给出段落编号与逐字引文。",
+  "paragraphs": [
+    {"paragraph_id": "P1", "text": "Abstract. A nitrogen-doped carbon nitride (g-C3N4-N) photocatalyst was synthesized by a one-step thermal polymerization of urea at 550 degrees C under air."},
+    {"paragraph_id": "P2", "text": "The crystal structure was characterized by X-ray diffraction, and the specific surface area measured by BET was 42.6 m2/g, roughly 1.8 times that of the undoped reference sample."},
+    {"paragraph_id": "P3", "text": "Under simulated sunlight (AM 1.5G, 100 mW/cm2), the g-C3N4-N sample degraded 92.5 percent of a 10 mg/L rhodamine B solution within 90 min, whereas the undoped sample reached only 61.3 percent under identical conditions."},
+    {"paragraph_id": "P4", "text": "Table 1. Comparison of photocatalysts: g-C3N4-N, degradation 92.5 percent, BET area 42.6 m2/g, band gap 2.41 eV; undoped g-C3N4, degradation 61.3 percent, BET area 23.7 m2/g, band gap 2.78 eV."},
+    {"paragraph_id": "P5", "text": "The authors attribute the enhanced activity to nitrogen doping, which narrows the band gap from 2.78 eV to 2.41 eV and improves charge separation; however, long-term cycling stability was not evaluated in this study."},
+    {"paragraph_id": "P6", "text": "Figure 1. Photocatalytic degradation curves of rhodamine B as a function of irradiation time for g-C3N4-N and the undoped reference."},
+    {"paragraph_id": "P7", "text": "Trapping experiments indicated that superoxide radicals were the dominant reactive species, while hydroxyl radical trapping showed no significant suppression of degradation."},
+    {"paragraph_id": "P8", "text": "Chen et al. (2024) reported a similar urea-derived carbon nitride with a BET area of 31.2 m2/g, lower than the value obtained here."}
+  ],
+  "questions": [
+    {"question_id": "Q1", "text": "g-C3N4-N 的比表面积是多少？与未掺杂样品相比如何？合成条件是什么？"},
+    {"question_id": "Q2", "text": "在模拟太阳光下，g-C3N4-N 对罗丹明 B 的降解率达到多少？反应条件是什么？主导活性物种是什么？"}
+  ]
+}
