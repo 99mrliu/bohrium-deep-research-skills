@@ -1,0 +1,84 @@
+{
+  "unmapped_columns": [
+    {
+      "column": "case.json/records::Instrument Serial",
+      "source_id": "case.json/records",
+      "header": "Instrument Serial",
+      "reason": "no_alias_candidate",
+      "semantic_type": "identifier",
+      "samples": [
+        "SN-8891"
+      ],
+      "type_evidence": {
+        "kind_counts": {
+          "missing": 5,
+          "string": 1
+        },
+        "uniqueness": 1.0,
+        "rule": "TYPE-002 >=90% unique, identifier-shaped tokens, no spaces"
+      }
+    },
+    {
+      "column": "case.json/material_csv::Mystery Column",
+      "source_id": "case.json/material_csv",
+      "header": "Mystery Column",
+      "reason": "no_alias_candidate",
+      "semantic_type": "identifier",
+      "samples": [
+        "zz1",
+        "zz2",
+        "zz3",
+        "zz4",
+        "zz5"
+      ],
+      "type_evidence": {
+        "kind_counts": {
+          "string": 6
+        },
+        "uniqueness": 1.0,
+        "rule": "TYPE-002 >=90% unique, identifier-shaped tokens, no spaces"
+      }
+    },
+    {
+      "column": "case.json:material-batch-c.csv::weird_col",
+      "source_id": "case.json:material-batch-c.csv",
+      "header": "weird_col",
+      "reason": "no_alias_candidate",
+      "semantic_type": "identifier",
+      "samples": [
+        "c1",
+        "c2",
+        "c3",
+        "c4"
+      ],
+      "type_evidence": {
+        "kind_counts": {
+          "string": 4
+        },
+        "uniqueness": 1.0,
+        "rule": "TYPE-002 >=90% unique, identifier-shaped tokens, no spaces"
+      }
+    }
+  ],
+  "unknown_units": [
+    {
+      "dimension": "energy",
+      "unit_text": "eVee",
+      "columns": [
+        "case.json/records::Ea (eVee)"
+      ],
+      "rows": [
+        "R000005"
+      ]
+    }
+  ],
+  "schema_version": "1.0.0",
+  "dictionary_id": "lit-extract-core",
+  "unresolved_contract_fields": [
+    {
+      "field": "adjudication_workbook",
+      "expected_type": "string",
+      "reason": "unknown_contract_field"
+    }
+  ]
+}

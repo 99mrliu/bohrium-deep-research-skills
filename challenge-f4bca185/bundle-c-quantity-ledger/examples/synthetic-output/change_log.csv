@@ -1,0 +1,54 @@
+id,record_id,coordinates,field,action,rule_id,from,to,note
+CH0001,s01,examples/synthetic-case.json#$.records[0],property,alias_rename,SCHEMA.alias.metric,property,metric,
+CH0002,s01,examples/synthetic-case.json#$.records[0],value,range_parsed,LEX.range,1.5–2.5,"{""low"": ""1.5"", ""high"": ""2.5""}",
+CH0003,s01,examples/synthetic-case.json#$.records[0],value,unit_converted,CV0001,1.5–2.5 eV,target J,multiplier=1.602176634E-19 offset=0
+CH0004,s02,examples/synthetic-case.json#$.records[1],property,alias_rename,SCHEMA.alias.metric,property,metric,
+CH0005,s02,examples/synthetic-case.json#$.records[1],value,uncertainty_split,LEX.plus_minus,0.98 ± 0.02,"{""value"": ""0.98"", ""uncertainty"": ""0.02""}",symmetric uncertainty kept as a separate field; derived bounds are flagged
+CH0006,s02,examples/synthetic-case.json#$.records[1],value,unit_converted,CV0002,0.98 ± 0.02 g/cm^3,target kg m^-3,multiplier=1000 offset=0
+CH0007,s03,examples/synthetic-case.json#$.records[2],property,alias_rename,SCHEMA.alias.metric,property,metric,
+CH0008,s03,examples/synthetic-case.json#$.records[2],value,unit_converted,CV0003,3.2×10⁻⁴ mol L−1,target mol m^-3,multiplier=1000 offset=0
+CH0009,s04,examples/synthetic-case.json#$.records[3],property,alias_rename,SCHEMA.alias.metric,property,metric,
+CH0010,s04,examples/synthetic-case.json#$.records[3],unit,unit_extracted_from_value,LEX.embedded_unit,1.2 mg/L,mg/L,
+CH0011,s04,examples/synthetic-case.json#$.records[3],value,unit_converted,CV0004,1.2 mg/L mg/L,target kg m^-3,multiplier=0.001 offset=0
+CH0012,s05,examples/synthetic-case.json#$.records[4],property,alias_rename,SCHEMA.alias.metric,property,metric,
+CH0013,s05,examples/synthetic-case.json#$.records[4],value,unit_converted,CV0005,350 °C,target K,multiplier=1 offset=273.15
+CH0014,s06,examples/synthetic-case.json#$.records[5],property,alias_rename,SCHEMA.alias.metric,property,metric,
+CH0015,s06,examples/synthetic-case.json#$.records[5],value,unit_converted,CV0006,120 ppm,target 1,multiplier=0.000001 offset=0
+CH0016,s07,examples/synthetic-case.json#$.records[6],property,alias_rename,SCHEMA.alias.metric,property,metric,
+CH0017,s08,examples/synthetic-case.json#$.records[7],property,alias_rename,SCHEMA.alias.metric,property,metric,
+CH0018,s09,examples/synthetic-case.json#$.records[8],property,alias_rename,SCHEMA.alias.metric,property,metric,
+CH0019,s10,examples/synthetic-case.json#$.records[9],property,alias_rename,SCHEMA.alias.metric,property,metric,
+CH0020,s10,examples/synthetic-case.json#$.records[9],value,uncertainty_split,LEX.plus_minus,0.98 ± 0.02,"{""value"": ""0.98"", ""uncertainty"": ""0.02""}",symmetric uncertainty kept as a separate field; derived bounds are flagged
+CH0021,s10,examples/synthetic-case.json#$.records[9],value,unit_converted,CV0007,0.98 ± 0.02 g/cm^3,target kg m^-3,multiplier=1000 offset=0
+CH0022,s11,examples/synthetic-case.json#$.records[10],property,alias_rename,SCHEMA.alias.metric,property,metric,
+CH0023,s11,examples/synthetic-case.json#$.records[10],value,unit_converted,CV0008,"1,75 kPa",target Pa,multiplier=1000 offset=0
+CH0024,s12,examples/synthetic-case.json#$.records[11],property,alias_rename,SCHEMA.alias.metric,property,metric,
+CH0025,s13,examples/synthetic-case.json#$.records[12],property,alias_rename,SCHEMA.alias.metric,property,metric,
+CH0026,s13,examples/synthetic-case.json#$.records[12],value,unit_converted,CV0009,760 Torr,target Pa,multiplier=133.3223684210526315789473684 offset=0
+CH0027,s14,examples/synthetic-case.json#$.records[13],property,alias_rename,SCHEMA.alias.metric,property,metric,
+CH0028,s14,examples/synthetic-case.json#$.records[13],value,range_parsed,LEX.range,−5–−2,"{""low"": ""-5"", ""high"": ""-2""}",
+CH0029,s14,examples/synthetic-case.json#$.records[13],value,unit_converted,CV0010,−5–−2 °C,target K,multiplier=1 offset=273.15
+CH0030,s15,examples/synthetic-case.json#$.records[14],property,alias_rename,SCHEMA.alias.metric,property,metric,
+CH0031,s15,examples/synthetic-case.json#$.records[14],value,unit_converted,CV0011,−1 234.5 mg,target kg,multiplier=0.000001 offset=0
+CH0032,R0016,examples/synthetic-extra.csv#row2,Compound,alias_rename,SCHEMA.alias.material,Compound,material,
+CH0033,R0016,examples/synthetic-extra.csv#row2,Property,alias_rename,SCHEMA.alias.metric,Property,metric,
+CH0034,R0016,examples/synthetic-extra.csv#row2,Result,alias_rename,SCHEMA.alias.value,Result,value,
+CH0035,R0016,examples/synthetic-extra.csv#row2,UoM,alias_rename,SCHEMA.alias.unit,UoM,unit,
+CH0036,R0016,examples/synthetic-extra.csv#row2,Source,alias_rename,SCHEMA.alias.source_id,Source,source_id,
+CH0037,R0016,examples/synthetic-extra.csv#row2,Page,alias_rename,SCHEMA.alias.page,Page,page,
+CH0038,R0016,examples/synthetic-extra.csv#row2,value,uncertainty_split,LEX.parenthesis_last_digits,50.5(4),"{""value"": ""50.5"", ""uncertainty"": ""0.4""}",symmetric uncertainty kept as a separate field; derived bounds are flagged
+CH0039,R0016,examples/synthetic-extra.csv#row2,value,unit_converted,CV0012,50.5(4) J mol−1 K−1,target J mol^-1 K^-1,multiplier=1 offset=0
+CH0040,R0017,examples/synthetic-extra.csv#row3,Compound,alias_rename,SCHEMA.alias.material,Compound,material,
+CH0041,R0017,examples/synthetic-extra.csv#row3,Property,alias_rename,SCHEMA.alias.metric,Property,metric,
+CH0042,R0017,examples/synthetic-extra.csv#row3,Result,alias_rename,SCHEMA.alias.value,Result,value,
+CH0043,R0017,examples/synthetic-extra.csv#row3,UoM,alias_rename,SCHEMA.alias.unit,UoM,unit,
+CH0044,R0017,examples/synthetic-extra.csv#row3,Source,alias_rename,SCHEMA.alias.source_id,Source,source_id,
+CH0045,R0017,examples/synthetic-extra.csv#row3,Page,alias_rename,SCHEMA.alias.page,Page,page,
+CH0046,R0018,examples/synthetic-extra.csv#row4,Compound,alias_rename,SCHEMA.alias.material,Compound,material,
+CH0047,R0018,examples/synthetic-extra.csv#row4,Property,alias_rename,SCHEMA.alias.metric,Property,metric,
+CH0048,R0018,examples/synthetic-extra.csv#row4,Result,alias_rename,SCHEMA.alias.value,Result,value,
+CH0049,R0018,examples/synthetic-extra.csv#row4,UoM,alias_rename,SCHEMA.alias.unit,UoM,unit,
+CH0050,R0018,examples/synthetic-extra.csv#row4,Source,alias_rename,SCHEMA.alias.source_id,Source,source_id,
+CH0051,R0018,examples/synthetic-extra.csv#row4,Page,alias_rename,SCHEMA.alias.page,Page,page,
+CH0052,R0018,examples/synthetic-extra.csv#row4,value,unit_converted,CV0013,2.65 g/cm^3,target kg m^-3,multiplier=1000 offset=0
+CH0053,s02,examples/synthetic-case.json#$.records[1],record,duplicate_flagged,DEDUP.conservative_key,,DUP001,same material+metric+normalized value+unit+conditions+source locators; not merged

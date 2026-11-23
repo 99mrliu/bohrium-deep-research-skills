@@ -1,0 +1,1892 @@
+{
+  "case_id": "synthetic-demo-0001",
+  "schema_version": "1.0.0",
+  "records": [
+    {
+      "row_id": "R000001",
+      "source_id": "case.json/records",
+      "locator": "/records/0",
+      "values": {
+        "record_id": {
+          "raw": "A1",
+          "source_column": "extraction.id",
+          "flags": [],
+          "value": "A1",
+          "low": null,
+          "high": null,
+          "uncertainty": null,
+          "unit": null,
+          "kind": "identifier",
+          "value_normalized": "a1"
+        },
+        "doi": {
+          "raw": "10.1234/syn.001",
+          "source_column": "extraction.doi",
+          "flags": [],
+          "value": "10.1234/syn.001",
+          "low": null,
+          "high": null,
+          "uncertainty": null,
+          "unit": null,
+          "kind": "identifier",
+          "value_normalized": "10.1234/syn.001"
+        },
+        "material": {
+          "raw": "Pt/Al2O3",
+          "source_column": "material.name",
+          "flags": [],
+          "value": "Pt/Al2O3",
+          "low": null,
+          "high": null,
+          "uncertainty": null,
+          "unit": null,
+          "kind": "string"
+        },
+        "property": {
+          "raw": "CO oxidation yield",
+          "source_column": "property",
+          "flags": [],
+          "value": "CO oxidation yield",
+          "low": null,
+          "high": null,
+          "uncertainty": null,
+          "unit": null,
+          "kind": "string"
+        },
+        "temperature": {
+          "raw": "300 °C",
+          "source_column": "conditions.temperature",
+          "flags": [],
+          "value": 573.15,
+          "low": null,
+          "high": null,
+          "uncertainty": null,
+          "unit": "K",
+          "kind": "value"
+        },
+        "pressure": {
+          "raw": "1 bar",
+          "source_column": "conditions.pressure",
+          "flags": [],
+          "value": 0.1,
+          "low": null,
+          "high": null,
+          "uncertainty": null,
+          "unit": "MPa",
+          "kind": "value"
+        },
+        "yield": {
+          "raw": "72-80 %",
+          "source_column": "yield",
+          "flags": [],
+          "value": null,
+          "low": 72.0,
+          "high": 80.0,
+          "uncertainty": null,
+          "unit": "%",
+          "kind": "range"
+        },
+        "notes": {
+          "raw": "Table 2",
+          "source_column": "notes",
+          "flags": [],
+          "value": "Table 2",
+          "low": null,
+          "high": null,
+          "uncertainty": null,
+          "unit": null,
+          "kind": "string"
+        },
+        "energy": {
+          "raw": null,
+          "source_column": null,
+          "flags": [
+            "absent_column"
+          ],
+          "value": null,
+          "low": null,
+          "high": null,
+          "uncertainty": null,
+          "unit": null
+        }
+      },
+      "unmapped_values": {},
+      "flags": [
+        "absent_column"
+      ],
+      "raw": {
+        "extraction.id": "A1",
+        "extraction.doi": "10.1234/syn.001",
+        "material.name": "Pt/Al2O3",
+        "property": "CO oxidation yield",
+        "conditions.temperature": "300 °C",
+        "conditions.pressure": "1 bar",
+        "yield": "72-80 %",
+        "notes": "Table 2"
+      },
+      "duplicate_group": "DG-0001",
+      "duplicate_status": "exact_duplicate_candidate;context_value_conflict"
+    },
+    {
+      "row_id": "R000002",
+      "source_id": "case.json/records",
+      "locator": "/records/1",
+      "values": {
+        "record_id": {
+          "raw": "A1-dup",
+          "source_column": "extraction.id",
+          "flags": [],
+          "value": "A1-dup",
+          "low": null,
+          "high": null,
+          "uncertainty": null,
+          "unit": null,
+          "kind": "identifier",
+          "value_normalized": "a1-dup"
+        },
+        "doi": {
+          "raw": "10.1234/syn.001",
+          "source_column": "extraction.doi",
+          "flags": [],
+          "value": "10.1234/syn.001",
+          "low": null,
+          "high": null,
+          "uncertainty": null,
+          "unit": null,
+          "kind": "identifier",
+          "value_normalized": "10.1234/syn.001"
+        },
+        "material": {
+          "raw": "Pt/Al2O3",
+          "source_column": "material.name",
+          "flags": [],
+          "value": "Pt/Al2O3",
+          "low": null,
+          "high": null,
+          "uncertainty": null,
+          "unit": null,
+          "kind": "string"
+        },
+        "property": {
+          "raw": "CO oxidation yield",
+          "source_column": "property",
+          "flags": [],
+          "value": "CO oxidation yield",
+          "low": null,
+          "high": null,
+          "uncertainty": null,
+          "unit": null,
+          "kind": "string"
+        },
+        "temperature": {
+          "raw": "300 °C",
+          "source_column": "conditions.temperature",
+          "flags": [],
+          "value": 573.15,
+          "low": null,
+          "high": null,
+          "uncertainty": null,
+          "unit": "K",
+          "kind": "value"
+        },
+        "pressure": {
+          "raw": "1 bar",
+          "source_column": "conditions.pressure",
+          "flags": [],
+          "value": 0.1,
+          "low": null,
+          "high": null,
+          "uncertainty": null,
+          "unit": "MPa",
+          "kind": "value"
+        },
+        "yield": {
+          "raw": "72-80 %",
+          "source_column": "yield",
+          "flags": [],
+          "value": null,
+          "low": 72.0,
+          "high": 80.0,
+          "uncertainty": null,
+          "unit": "%",
+          "kind": "range"
+        },
+        "notes": {
+          "raw": "Table 2 (second extraction pass)",
+          "source_column": "notes",
+          "flags": [],
+          "value": "Table 2 (second extraction pass)",
+          "low": null,
+          "high": null,
+          "uncertainty": null,
+          "unit": null,
+          "kind": "string"
+        },
+        "energy": {
+          "raw": null,
+          "source_column": null,
+          "flags": [
+            "absent_column"
+          ],
+          "value": null,
+          "low": null,
+          "high": null,
+          "uncertainty": null,
+          "unit": null
+        }
+      },
+      "unmapped_values": {},
+      "flags": [
+        "absent_column"
+      ],
+      "raw": {
+        "extraction.id": "A1-dup",
+        "extraction.doi": "10.1234/syn.001",
+        "material.name": "Pt/Al2O3",
+        "property": "CO oxidation yield",
+        "conditions.temperature": "300 °C",
+        "conditions.pressure": "1 bar",
+        "yield": "72-80 %",
+        "notes": "Table 2 (second extraction pass)"
+      },
+      "duplicate_group": "DG-0001",
+      "duplicate_status": "exact_duplicate_candidate;context_value_conflict"
+    },
+    {
+      "row_id": "R000003",
+      "source_id": "case.json/records",
+      "locator": "/records/2",
+      "values": {
+        "record_id": {
+          "raw": "A1-conflict",
+          "source_column": "extraction.id",
+          "flags": [],
+          "value": "A1-conflict",
+          "low": null,
+          "high": null,
+          "uncertainty": null,
+          "unit": null,
+          "kind": "identifier",
+          "value_normalized": "a1-conflict"
+        },
+        "doi": {
+          "raw": "10.1234/syn.001",
+          "source_column": "extraction.doi",
+          "flags": [],
+          "value": "10.1234/syn.001",
+          "low": null,
+          "high": null,
+          "uncertainty": null,
+          "unit": null,
+          "kind": "identifier",
+          "value_normalized": "10.1234/syn.001"
+        },
+        "material": {
+          "raw": "Pt/Al2O3",
+          "source_column": "material.name",
+          "flags": [],
+          "value": "Pt/Al2O3",
+          "low": null,
+          "high": null,
+          "uncertainty": null,
+          "unit": null,
+          "kind": "string"
+        },
+        "property": {
+          "raw": "CO oxidation yield",
+          "source_column": "property",
+          "flags": [],
+          "value": "CO oxidation yield",
+          "low": null,
+          "high": null,
+          "uncertainty": null,
+          "unit": null,
+          "kind": "string"
+        },
+        "temperature": {
+          "raw": "300 °C",
+          "source_column": "conditions.temperature",
+          "flags": [],
+          "value": 573.15,
+          "low": null,
+          "high": null,
+          "uncertainty": null,
+          "unit": "K",
+          "kind": "value"
+        },
+        "pressure": {
+          "raw": "1 bar",
+          "source_column": "conditions.pressure",
+          "flags": [],
+          "value": 0.1,
+          "low": null,
+          "high": null,
+          "uncertainty": null,
+          "unit": "MPa",
+          "kind": "value"
+        },
+        "yield": {
+          "raw": "65 %",
+          "source_column": "yield",
+          "flags": [],
+          "value": 65.0,
+          "low": null,
+          "high": null,
+          "uncertainty": null,
+          "unit": "%",
+          "kind": "value"
+        },
+        "notes": {
+          "raw": "Table 2 (conflicting third pass - must stay unmerged)",
+          "source_column": "notes",
+          "flags": [],
+          "value": "Table 2 (conflicting third pass - must stay unmerged)",
+          "low": null,
+          "high": null,
+          "uncertainty": null,
+          "unit": null,
+          "kind": "string"
+        },
+        "energy": {
+          "raw": null,
+          "source_column": null,
+          "flags": [
+            "absent_column"
+          ],
+          "value": null,
+          "low": null,
+          "high": null,
+          "uncertainty": null,
+          "unit": null
+        }
+      },
+      "unmapped_values": {},
+      "flags": [
+        "absent_column"
+      ],
+      "raw": {
+        "extraction.id": "A1-conflict",
+        "extraction.doi": "10.1234/syn.001",
+        "material.name": "Pt/Al2O3",
+        "property": "CO oxidation yield",
+        "conditions.temperature": "300 °C",
+        "conditions.pressure": "1 bar",
+        "yield": "65 %",
+        "notes": "Table 2 (conflicting third pass - must stay unmerged)"
+      },
+      "duplicate_group": "DG-0001",
+      "duplicate_status": "context_value_conflict"
+    },
+    {
+      "row_id": "R000004",
+      "source_id": "case.json/records",
+      "locator": "/records/3",
+      "values": {
+        "record_id": {
+          "raw": "A2",
+          "source_column": "extraction.id",
+          "flags": [],
+          "value": "A2",
+          "low": null,
+          "high": null,
+          "uncertainty": null,
+          "unit": null,
+          "kind": "identifier",
+          "value_normalized": "a2"
+        },
+        "doi": {
+          "raw": "10.1234/syn.001",
+          "source_column": "extraction.doi",
+          "flags": [],
+          "value": "10.1234/syn.001",
+          "low": null,
+          "high": null,
+          "uncertainty": null,
+          "unit": null,
+          "kind": "identifier",
+          "value_normalized": "10.1234/syn.001"
+        },
+        "material": {
+          "raw": "Pt/Al2O3",
+          "source_column": "material.name",
+          "flags": [],
+          "value": "Pt/Al2O3",
+          "low": null,
+          "high": null,
+          "uncertainty": null,
+          "unit": null,
+          "kind": "string"
+        },
+        "property": {
+          "raw": "CO oxidation yield",
+          "source_column": "property",
+          "flags": [],
+          "value": "CO oxidation yield",
+          "low": null,
+          "high": null,
+          "uncertainty": null,
+          "unit": null,
+          "kind": "string"
+        },
+        "temperature": {
+          "raw": "573 K",
+          "source_column": "conditions.temperature",
+          "flags": [],
+          "value": 573.0,
+          "low": null,
+          "high": null,
+          "uncertainty": null,
+          "unit": "K",
+          "kind": "value"
+        },
+        "pressure": {
+          "raw": "0.1 MPa",
+          "source_column": "conditions.pressure",
+          "flags": [],
+          "value": 0.1,
+          "low": null,
+          "high": null,
+          "uncertainty": null,
+          "unit": "MPa",
+          "kind": "value"
+        },
+        "yield": {
+          "raw": null,
+          "source_column": "yield",
+          "flags": [
+            "missing"
+          ],
+          "value": null,
+          "low": null,
+          "high": null,
+          "uncertainty": null,
+          "unit": null
+        },
+        "notes": {
+          "raw": "yield not reported",
+          "source_column": "notes",
+          "flags": [],
+          "value": "yield not reported",
+          "low": null,
+          "high": null,
+          "uncertainty": null,
+          "unit": null,
+          "kind": "string"
+        },
+        "energy": {
+          "raw": null,
+          "source_column": null,
+          "flags": [
+            "absent_column"
+          ],
+          "value": null,
+          "low": null,
+          "high": null,
+          "uncertainty": null,
+          "unit": null
+        }
+      },
+      "unmapped_values": {},
+      "flags": [
+        "absent_column",
+        "missing"
+      ],
+      "raw": {
+        "extraction.id": "A2",
+        "extraction.doi": "10.1234/syn.001",
+        "material.name": "Pt/Al2O3",
+        "property": "CO oxidation yield",
+        "conditions.temperature": "573 K",
+        "conditions.pressure": "0.1 MPa",
+        "yield": null,
+        "notes": "yield not reported"
+      },
+      "duplicate_status": "unique",
+      "duplicate_group": null
+    },
+    {
+      "row_id": "R000005",
+      "source_id": "case.json/records",
+      "locator": "/records/4",
+      "values": {
+        "record_id": {
+          "raw": "A3",
+          "source_column": "extraction.id",
+          "flags": [],
+          "value": "A3",
+          "low": null,
+          "high": null,
+          "uncertainty": null,
+          "unit": null,
+          "kind": "identifier",
+          "value_normalized": "a3"
+        },
+        "doi": {
+          "raw": "10.1234/syn.001",
+          "source_column": "extraction.doi",
+          "flags": [],
+          "value": "10.1234/syn.001",
+          "low": null,
+          "high": null,
+          "uncertainty": null,
+          "unit": null,
+          "kind": "identifier",
+          "value_normalized": "10.1234/syn.001"
+        },
+        "material": {
+          "raw": "Pt/Al2O3",
+          "source_column": "material.name",
+          "flags": [],
+          "value": "Pt/Al2O3",
+          "low": null,
+          "high": null,
+          "uncertainty": null,
+          "unit": null,
+          "kind": "string"
+        },
+        "property": {
+          "raw": "activation energy",
+          "source_column": "property",
+          "flags": [],
+          "value": "activation energy",
+          "low": null,
+          "high": null,
+          "uncertainty": null,
+          "unit": null,
+          "kind": "string"
+        },
+        "temperature": {
+          "raw": "573 K",
+          "source_column": "conditions.temperature",
+          "flags": [],
+          "value": 573.0,
+          "low": null,
+          "high": null,
+          "uncertainty": null,
+          "unit": "K",
+          "kind": "value"
+        },
+        "pressure": {
+          "raw": "0.1 MPa",
+          "source_column": "conditions.pressure",
+          "flags": [],
+          "value": 0.1,
+          "low": null,
+          "high": null,
+          "uncertainty": null,
+          "unit": "MPa",
+          "kind": "value"
+        },
+        "yield": {
+          "raw": "high",
+          "source_column": "yield",
+          "flags": [
+            "unparseable_numeric"
+          ],
+          "value": null,
+          "low": null,
+          "high": null,
+          "uncertainty": null,
+          "unit": null,
+          "kind": "unparseable"
+        },
+        "notes": {
+          "raw": "unknown unit eVee invented for the demo; yield value is unparseable",
+          "source_column": "notes",
+          "flags": [],
+          "value": "unknown unit eVee invented for the demo; yield value is unparseable",
+          "low": null,
+          "high": null,
+          "uncertainty": null,
+          "unit": null,
+          "kind": "string"
+        },
+        "energy": {
+          "raw": "1.2",
+          "source_column": "Ea (eVee)",
+          "flags": [
+            "unknown_unit"
+          ],
+          "value": null,
+          "low": null,
+          "high": null,
+          "uncertainty": null,
+          "unit": null,
+          "kind": "value_unknown_unit",
+          "unit_raw": "eVee"
+        }
+      },
+      "unmapped_values": {
+        "Instrument Serial": "SN-8891"
+      },
+      "flags": [
+        "unknown_unit",
+        "unparseable_numeric"
+      ],
+      "raw": {
+        "extraction.id": "A3",
+        "extraction.doi": "10.1234/syn.001",
+        "material.name": "Pt/Al2O3",
+        "property": "activation energy",
+        "conditions.temperature": "573 K",
+        "conditions.pressure": "0.1 MPa",
+        "Ea (eVee)": "1.2",
+        "yield": "high",
+        "Instrument Serial": "SN-8891",
+        "notes": "unknown unit eVee invented for the demo; yield value is unparseable"
+      },
+      "duplicate_status": "unique",
+      "duplicate_group": null
+    },
+    {
+      "row_id": "R000006",
+      "source_id": "case.json/records",
+      "locator": "/records/5",
+      "values": {
+        "record_id": {
+          "raw": "A4",
+          "source_column": "extraction.id",
+          "flags": [],
+          "value": "A4",
+          "low": null,
+          "high": null,
+          "uncertainty": null,
+          "unit": null,
+          "kind": "identifier",
+          "value_normalized": "a4"
+        },
+        "doi": {
+          "raw": "10.1234/syn.004",
+          "source_column": "extraction.doi",
+          "flags": [],
+          "value": "10.1234/syn.004",
+          "low": null,
+          "high": null,
+          "uncertainty": null,
+          "unit": null,
+          "kind": "identifier",
+          "value_normalized": "10.1234/syn.004"
+        },
+        "material": {
+          "raw": "Au/TiO2",
+          "source_column": "material.name",
+          "flags": [],
+          "value": "Au/TiO2",
+          "low": null,
+          "high": null,
+          "uncertainty": null,
+          "unit": null,
+          "kind": "string"
+        },
+        "property": {
+          "raw": "CO oxidation yield",
+          "source_column": "property",
+          "flags": [],
+          "value": "CO oxidation yield",
+          "low": null,
+          "high": null,
+          "uncertainty": null,
+          "unit": null,
+          "kind": "string"
+        },
+        "temperature": {
+          "raw": "280 °C",
+          "source_column": "conditions.temperature",
+          "flags": [],
+          "value": 553.15,
+          "low": null,
+          "high": null,
+          "uncertainty": null,
+          "unit": "K",
+          "kind": "value"
+        },
+        "pressure": {
+          "raw": "1.5 bar",
+          "source_column": "conditions.pressure",
+          "flags": [],
+          "value": 0.15,
+          "low": null,
+          "high": null,
+          "uncertainty": null,
+          "unit": "MPa",
+          "kind": "value"
+        },
+        "yield": {
+          "raw": "145 %",
+          "source_column": "yield",
+          "flags": [
+            "out_of_plausible_range"
+          ],
+          "value": 145.0,
+          "low": null,
+          "high": null,
+          "uncertainty": null,
+          "unit": "%",
+          "kind": "value"
+        },
+        "notes": {
+          "raw": "implausible percent kept for anomaly review",
+          "source_column": "notes",
+          "flags": [],
+          "value": "implausible percent kept for anomaly review",
+          "low": null,
+          "high": null,
+          "uncertainty": null,
+          "unit": null,
+          "kind": "string"
+        },
+        "energy": {
+          "raw": null,
+          "source_column": null,
+          "flags": [
+            "absent_column"
+          ],
+          "value": null,
+          "low": null,
+          "high": null,
+          "uncertainty": null,
+          "unit": null
+        }
+      },
+      "unmapped_values": {},
+      "flags": [
+        "absent_column",
+        "out_of_plausible_range"
+      ],
+      "raw": {
+        "extraction.id": "A4",
+        "extraction.doi": "10.1234/syn.004",
+        "material.name": "Au/TiO2",
+        "property": "CO oxidation yield",
+        "conditions.temperature": "280 °C",
+        "conditions.pressure": "1.5 bar",
+        "yield": "145 %",
+        "notes": "implausible percent kept for anomaly review"
+      },
+      "duplicate_status": "unique",
+      "duplicate_group": null
+    },
+    {
+      "row_id": "R000007",
+      "source_id": "case.json/material_csv",
+      "locator": "case.json/material_csv#row2",
+      "values": {
+        "material": {
+          "raw": "Cu/ZnO",
+          "source_column": "Material Name",
+          "flags": [],
+          "value": "Cu/ZnO",
+          "low": null,
+          "high": null,
+          "uncertainty": null,
+          "unit": null,
+          "kind": "string"
+        },
+        "doi": {
+          "raw": "10.1234/syn.002",
+          "source_column": "DOI",
+          "flags": [],
+          "value": "10.1234/syn.002",
+          "low": null,
+          "high": null,
+          "uncertainty": null,
+          "unit": null,
+          "kind": "identifier",
+          "value_normalized": "10.1234/syn.002"
+        },
+        "property": {
+          "raw": "methanol yield",
+          "source_column": "Property",
+          "flags": [],
+          "value": "methanol yield",
+          "low": null,
+          "high": null,
+          "uncertainty": null,
+          "unit": null,
+          "kind": "string"
+        },
+        "temperature": {
+          "raw": "523",
+          "source_column": "T / K",
+          "flags": [],
+          "value": 523.0,
+          "low": null,
+          "high": null,
+          "uncertainty": null,
+          "unit": "K",
+          "kind": "value"
+        },
+        "pressure": {
+          "raw": "3.0",
+          "source_column": "P_MPa",
+          "flags": [],
+          "value": 3.0,
+          "low": null,
+          "high": null,
+          "uncertainty": null,
+          "unit": "MPa",
+          "kind": "value"
+        },
+        "yield": {
+          "raw": "55",
+          "source_column": "Yield_min (%)",
+          "flags": [],
+          "value": null,
+          "low": 55.0,
+          "high": 61.0,
+          "uncertainty": null,
+          "unit": "%",
+          "kind": "range_component",
+          "components": {
+            "low": "55",
+            "high": "61"
+          }
+        },
+        "selectivity": {
+          "raw": "88 %",
+          "source_column": "Selectivity",
+          "flags": [],
+          "value": 88.0,
+          "low": null,
+          "high": null,
+          "uncertainty": null,
+          "unit": "%",
+          "kind": "value"
+        },
+        "notes": {
+          "raw": "Table 1",
+          "source_column": "Notes",
+          "flags": [],
+          "value": "Table 1",
+          "low": null,
+          "high": null,
+          "uncertainty": null,
+          "unit": null,
+          "kind": "string"
+        }
+      },
+      "unmapped_values": {
+        "Mystery Column": "zz1"
+      },
+      "flags": [],
+      "raw": {
+        "Material Name": "Cu/ZnO",
+        "DOI": "10.1234/syn.002",
+        "Property": "methanol yield",
+        "T / K": "523",
+        "P_MPa": "3.0",
+        "Yield_min (%)": "55",
+        "Yield_max (%)": "61",
+        "Selectivity": "88 %",
+        "Notes": "Table 1",
+        "Mystery Column": "zz1"
+      },
+      "duplicate_group": "DG-0002",
+      "duplicate_status": "exact_duplicate_candidate;context_value_conflict"
+    },
+    {
+      "row_id": "R000008",
+      "source_id": "case.json/material_csv",
+      "locator": "case.json/material_csv#row3",
+      "values": {
+        "material": {
+          "raw": "Cu/ZnO",
+          "source_column": "Material Name",
+          "flags": [],
+          "value": "Cu/ZnO",
+          "low": null,
+          "high": null,
+          "uncertainty": null,
+          "unit": null,
+          "kind": "string"
+        },
+        "doi": {
+          "raw": "10.1234/syn.002",
+          "source_column": "DOI",
+          "flags": [],
+          "value": "10.1234/syn.002",
+          "low": null,
+          "high": null,
+          "uncertainty": null,
+          "unit": null,
+          "kind": "identifier",
+          "value_normalized": "10.1234/syn.002"
+        },
+        "property": {
+          "raw": "methanol yield",
+          "source_column": "Property",
+          "flags": [],
+          "value": "methanol yield",
+          "low": null,
+          "high": null,
+          "uncertainty": null,
+          "unit": null,
+          "kind": "string"
+        },
+        "temperature": {
+          "raw": "523",
+          "source_column": "T / K",
+          "flags": [],
+          "value": 523.0,
+          "low": null,
+          "high": null,
+          "uncertainty": null,
+          "unit": "K",
+          "kind": "value"
+        },
+        "pressure": {
+          "raw": "3.0",
+          "source_column": "P_MPa",
+          "flags": [],
+          "value": 3.0,
+          "low": null,
+          "high": null,
+          "uncertainty": null,
+          "unit": "MPa",
+          "kind": "value"
+        },
+        "yield": {
+          "raw": "55",
+          "source_column": "Yield_min (%)",
+          "flags": [],
+          "value": null,
+          "low": 55.0,
+          "high": 61.0,
+          "uncertainty": null,
+          "unit": "%",
+          "kind": "range_component",
+          "components": {
+            "low": "55",
+            "high": "61"
+          }
+        },
+        "selectivity": {
+          "raw": "88 %",
+          "source_column": "Selectivity",
+          "flags": [],
+          "value": 88.0,
+          "low": null,
+          "high": null,
+          "uncertainty": null,
+          "unit": "%",
+          "kind": "value"
+        },
+        "notes": {
+          "raw": "Table 1",
+          "source_column": "Notes",
+          "flags": [],
+          "value": "Table 1",
+          "low": null,
+          "high": null,
+          "uncertainty": null,
+          "unit": null,
+          "kind": "string"
+        }
+      },
+      "unmapped_values": {
+        "Mystery Column": "zz2"
+      },
+      "flags": [],
+      "raw": {
+        "Material Name": "Cu/ZnO",
+        "DOI": "10.1234/syn.002",
+        "Property": "methanol yield",
+        "T / K": "523",
+        "P_MPa": "3.0",
+        "Yield_min (%)": "55",
+        "Yield_max (%)": "61",
+        "Selectivity": "88 %",
+        "Notes": "Table 1",
+        "Mystery Column": "zz2"
+      },
+      "duplicate_group": "DG-0002",
+      "duplicate_status": "exact_duplicate_candidate;context_value_conflict"
+    },
+    {
+      "row_id": "R000009",
+      "source_id": "case.json/material_csv",
+      "locator": "case.json/material_csv#row4",
+      "values": {
+        "material": {
+          "raw": "Cu/ZnO",
+          "source_column": "Material Name",
+          "flags": [],
+          "value": "Cu/ZnO",
+          "low": null,
+          "high": null,
+          "uncertainty": null,
+          "unit": null,
+          "kind": "string"
+        },
+        "doi": {
+          "raw": "10.1234/syn.002",
+          "source_column": "DOI",
+          "flags": [],
+          "value": "10.1234/syn.002",
+          "low": null,
+          "high": null,
+          "uncertainty": null,
+          "unit": null,
+          "kind": "identifier",
+          "value_normalized": "10.1234/syn.002"
+        },
+        "property": {
+          "raw": "methanol yield",
+          "source_column": "Property",
+          "flags": [],
+          "value": "methanol yield",
+          "low": null,
+          "high": null,
+          "uncertainty": null,
+          "unit": null,
+          "kind": "string"
+        },
+        "temperature": {
+          "raw": "523",
+          "source_column": "T / K",
+          "flags": [],
+          "value": 523.0,
+          "low": null,
+          "high": null,
+          "uncertainty": null,
+          "unit": "K",
+          "kind": "value"
+        },
+        "pressure": {
+          "raw": "3.0",
+          "source_column": "P_MPa",
+          "flags": [],
+          "value": 3.0,
+          "low": null,
+          "high": null,
+          "uncertainty": null,
+          "unit": "MPa",
+          "kind": "value"
+        },
+        "yield": {
+          "raw": "40",
+          "source_column": "Yield_min (%)",
+          "flags": [],
+          "value": null,
+          "low": 40.0,
+          "high": 48.0,
+          "uncertainty": null,
+          "unit": "%",
+          "kind": "range_component",
+          "components": {
+            "low": "40",
+            "high": "48"
+          }
+        },
+        "selectivity": {
+          "raw": "88 %",
+          "source_column": "Selectivity",
+          "flags": [],
+          "value": 88.0,
+          "low": null,
+          "high": null,
+          "uncertainty": null,
+          "unit": "%",
+          "kind": "value"
+        },
+        "notes": {
+          "raw": "Table 1 conflicting re-extraction",
+          "source_column": "Notes",
+          "flags": [],
+          "value": "Table 1 conflicting re-extraction",
+          "low": null,
+          "high": null,
+          "uncertainty": null,
+          "unit": null,
+          "kind": "string"
+        }
+      },
+      "unmapped_values": {
+        "Mystery Column": "zz3"
+      },
+      "flags": [],
+      "raw": {
+        "Material Name": "Cu/ZnO",
+        "DOI": "10.1234/syn.002",
+        "Property": "methanol yield",
+        "T / K": "523",
+        "P_MPa": "3.0",
+        "Yield_min (%)": "40",
+        "Yield_max (%)": "48",
+        "Selectivity": "88 %",
+        "Notes": "Table 1 conflicting re-extraction",
+        "Mystery Column": "zz3"
+      },
+      "duplicate_group": "DG-0002",
+      "duplicate_status": "context_value_conflict"
+    },
+    {
+      "row_id": "R000010",
+      "source_id": "case.json/material_csv",
+      "locator": "case.json/material_csv#row5",
+      "values": {
+        "material": {
+          "raw": "Fe-Co",
+          "source_column": "Material Name",
+          "flags": [],
+          "value": "Fe-Co",
+          "low": null,
+          "high": null,
+          "uncertainty": null,
+          "unit": null,
+          "kind": "string"
+        },
+        "doi": {
+          "raw": "10.1234/syn.002",
+          "source_column": "DOI",
+          "flags": [],
+          "value": "10.1234/syn.002",
+          "low": null,
+          "high": null,
+          "uncertainty": null,
+          "unit": null,
+          "kind": "identifier",
+          "value_normalized": "10.1234/syn.002"
+        },
+        "property": {
+          "raw": "methanol selectivity",
+          "source_column": "Property",
+          "flags": [],
+          "value": "methanol selectivity",
+          "low": null,
+          "high": null,
+          "uncertainty": null,
+          "unit": null,
+          "kind": "string"
+        },
+        "temperature": {
+          "raw": "523",
+          "source_column": "T / K",
+          "flags": [],
+          "value": 523.0,
+          "low": null,
+          "high": null,
+          "uncertainty": null,
+          "unit": "K",
+          "kind": "value"
+        },
+        "pressure": {
+          "raw": "3.0",
+          "source_column": "P_MPa",
+          "flags": [],
+          "value": 3.0,
+          "low": null,
+          "high": null,
+          "uncertainty": null,
+          "unit": "MPa",
+          "kind": "value"
+        },
+        "yield": {
+          "raw": "",
+          "source_column": "Yield_min (%)",
+          "flags": [
+            "missing"
+          ],
+          "value": null,
+          "low": null,
+          "high": null,
+          "uncertainty": null,
+          "unit": null
+        },
+        "selectivity": {
+          "raw": "91 %",
+          "source_column": "Selectivity",
+          "flags": [],
+          "value": 91.0,
+          "low": null,
+          "high": null,
+          "uncertainty": null,
+          "unit": "%",
+          "kind": "value"
+        },
+        "notes": {
+          "raw": "N/A",
+          "source_column": "Notes",
+          "flags": [
+            "missing"
+          ],
+          "value": null,
+          "low": null,
+          "high": null,
+          "uncertainty": null,
+          "unit": null
+        }
+      },
+      "unmapped_values": {
+        "Mystery Column": "zz4"
+      },
+      "flags": [
+        "missing"
+      ],
+      "raw": {
+        "Material Name": "Fe-Co",
+        "DOI": "10.1234/syn.002",
+        "Property": "methanol selectivity",
+        "T / K": "523",
+        "P_MPa": "3.0",
+        "Yield_min (%)": "",
+        "Yield_max (%)": "",
+        "Selectivity": "91 %",
+        "Notes": "N/A",
+        "Mystery Column": "zz4"
+      },
+      "duplicate_status": "unique",
+      "duplicate_group": null
+    },
+    {
+      "row_id": "R000011",
+      "source_id": "case.json/material_csv",
+      "locator": "case.json/material_csv#row6",
+      "values": {
+        "material": {
+          "raw": "Fe-Co",
+          "source_column": "Material Name",
+          "flags": [],
+          "value": "Fe-Co",
+          "low": null,
+          "high": null,
+          "uncertainty": null,
+          "unit": null,
+          "kind": "string"
+        },
+        "doi": {
+          "raw": "10.1234/syn.002",
+          "source_column": "DOI",
+          "flags": [],
+          "value": "10.1234/syn.002",
+          "low": null,
+          "high": null,
+          "uncertainty": null,
+          "unit": null,
+          "kind": "identifier",
+          "value_normalized": "10.1234/syn.002"
+        },
+        "property": {
+          "raw": "methanol selectivity",
+          "source_column": "Property",
+          "flags": [],
+          "value": "methanol selectivity",
+          "low": null,
+          "high": null,
+          "uncertainty": null,
+          "unit": null,
+          "kind": "string"
+        },
+        "temperature": {
+          "raw": "523",
+          "source_column": "T / K",
+          "flags": [],
+          "value": 523.0,
+          "low": null,
+          "high": null,
+          "uncertainty": null,
+          "unit": "K",
+          "kind": "value"
+        },
+        "pressure": {
+          "raw": "",
+          "source_column": "P_MPa",
+          "flags": [
+            "missing"
+          ],
+          "value": null,
+          "low": null,
+          "high": null,
+          "uncertainty": null,
+          "unit": null
+        },
+        "yield": {
+          "raw": "70",
+          "source_column": "Yield_min (%)",
+          "flags": [],
+          "value": null,
+          "low": 70.0,
+          "high": 75.0,
+          "uncertainty": null,
+          "unit": "%",
+          "kind": "range_component",
+          "components": {
+            "low": "70",
+            "high": "75"
+          }
+        },
+        "selectivity": {
+          "raw": "50 %",
+          "source_column": "Selectivity",
+          "flags": [],
+          "value": 50.0,
+          "low": null,
+          "high": null,
+          "uncertainty": null,
+          "unit": "%",
+          "kind": "value"
+        },
+        "notes": {
+          "raw": "",
+          "source_column": "Notes",
+          "flags": [
+            "missing"
+          ],
+          "value": null,
+          "low": null,
+          "high": null,
+          "uncertainty": null,
+          "unit": null
+        }
+      },
+      "unmapped_values": {
+        "Mystery Column": "zz5"
+      },
+      "flags": [
+        "missing"
+      ],
+      "raw": {
+        "Material Name": "Fe-Co",
+        "DOI": "10.1234/syn.002",
+        "Property": "methanol selectivity",
+        "T / K": "523",
+        "P_MPa": "",
+        "Yield_min (%)": "70",
+        "Yield_max (%)": "75",
+        "Selectivity": "50 %",
+        "Notes": "",
+        "Mystery Column": "zz5"
+      },
+      "duplicate_status": "unique",
+      "duplicate_group": null
+    },
+    {
+      "row_id": "R000012",
+      "source_id": "case.json/material_csv",
+      "locator": "case.json/material_csv#row7",
+      "values": {
+        "material": {
+          "raw": "Ni-MgO",
+          "source_column": "Material Name",
+          "flags": [],
+          "value": "Ni-MgO",
+          "low": null,
+          "high": null,
+          "uncertainty": null,
+          "unit": null,
+          "kind": "string"
+        },
+        "doi": {
+          "raw": "10.1234/syn.002",
+          "source_column": "DOI",
+          "flags": [],
+          "value": "10.1234/syn.002",
+          "low": null,
+          "high": null,
+          "uncertainty": null,
+          "unit": null,
+          "kind": "identifier",
+          "value_normalized": "10.1234/syn.002"
+        },
+        "property": {
+          "raw": "methane conversion",
+          "source_column": "Property",
+          "flags": [],
+          "value": "methane conversion",
+          "low": null,
+          "high": null,
+          "uncertainty": null,
+          "unit": null,
+          "kind": "string"
+        },
+        "temperature": {
+          "raw": "498",
+          "source_column": "T / K",
+          "flags": [],
+          "value": 498.0,
+          "low": null,
+          "high": null,
+          "uncertainty": null,
+          "unit": "K",
+          "kind": "value"
+        },
+        "pressure": {
+          "raw": "2.0",
+          "source_column": "P_MPa",
+          "flags": [],
+          "value": 2.0,
+          "low": null,
+          "high": null,
+          "uncertainty": null,
+          "unit": "MPa",
+          "kind": "value"
+        },
+        "yield": {
+          "raw": "80",
+          "source_column": "Yield_min (%)",
+          "flags": [
+            "range_inverted"
+          ],
+          "value": null,
+          "low": 80.0,
+          "high": 70.0,
+          "uncertainty": null,
+          "unit": "%",
+          "kind": "range_component",
+          "components": {
+            "low": "80",
+            "high": "70"
+          }
+        },
+        "selectivity": {
+          "raw": "",
+          "source_column": "Selectivity",
+          "flags": [
+            "missing"
+          ],
+          "value": null,
+          "low": null,
+          "high": null,
+          "uncertainty": null,
+          "unit": null
+        },
+        "notes": {
+          "raw": "inverted range demo",
+          "source_column": "Notes",
+          "flags": [],
+          "value": "inverted range demo",
+          "low": null,
+          "high": null,
+          "uncertainty": null,
+          "unit": null,
+          "kind": "string"
+        }
+      },
+      "unmapped_values": {
+        "Mystery Column": "zz6"
+      },
+      "flags": [
+        "missing",
+        "range_inverted"
+      ],
+      "raw": {
+        "Material Name": "Ni-MgO",
+        "DOI": "10.1234/syn.002",
+        "Property": "methane conversion",
+        "T / K": "498",
+        "P_MPa": "2.0",
+        "Yield_min (%)": "80",
+        "Yield_max (%)": "70",
+        "Selectivity": "",
+        "Notes": "inverted range demo",
+        "Mystery Column": "zz6"
+      },
+      "duplicate_status": "unique",
+      "duplicate_group": null
+    },
+    {
+      "row_id": "R000013",
+      "source_id": "case.json:material-batch-c.csv",
+      "locator": "case.json:material-batch-c.csv#row2",
+      "values": {
+        "material": {
+          "raw": "Ni/SiO2",
+          "source_column": "catalyst name",
+          "flags": [],
+          "value": "Ni/SiO2",
+          "low": null,
+          "high": null,
+          "uncertainty": null,
+          "unit": null,
+          "kind": "string"
+        },
+        "doi": {
+          "raw": "10.1234/syn.003",
+          "source_column": "文献DOI",
+          "flags": [],
+          "value": "10.1234/syn.003",
+          "low": null,
+          "high": null,
+          "uncertainty": null,
+          "unit": null,
+          "kind": "identifier",
+          "value_normalized": "10.1234/syn.003"
+        },
+        "property": {
+          "raw": "methane conversion",
+          "source_column": "指标",
+          "flags": [],
+          "value": "methane conversion",
+          "low": null,
+          "high": null,
+          "uncertainty": null,
+          "unit": null,
+          "kind": "string"
+        },
+        "temperature": {
+          "raw": "350",
+          "source_column": "温度(摄氏度)",
+          "flags": [],
+          "value": 623.15,
+          "low": null,
+          "high": null,
+          "uncertainty": null,
+          "unit": "K",
+          "kind": "value"
+        },
+        "pressure": {
+          "raw": "2.5 bar",
+          "source_column": "压力",
+          "flags": [],
+          "value": 0.25,
+          "low": null,
+          "high": null,
+          "uncertainty": null,
+          "unit": "MPa",
+          "kind": "value"
+        },
+        "yield": {
+          "raw": "66",
+          "source_column": "收率(%)",
+          "flags": [],
+          "value": 66.0,
+          "low": null,
+          "high": null,
+          "uncertainty": null,
+          "unit": "%",
+          "kind": "value"
+        },
+        "notes": {
+          "raw": "表3",
+          "source_column": "备注",
+          "flags": [],
+          "value": "表3",
+          "low": null,
+          "high": null,
+          "uncertainty": null,
+          "unit": null,
+          "kind": "string"
+        }
+      },
+      "unmapped_values": {
+        "weird_col": "c1"
+      },
+      "flags": [],
+      "raw": {
+        "catalyst name": "Ni/SiO2",
+        "文献DOI": "10.1234/syn.003",
+        "指标": "methane conversion",
+        "温度(摄氏度)": "350",
+        "压力": "2.5 bar",
+        "收率(%)": "66",
+        "备注": "表3",
+        "weird_col": "c1"
+      },
+      "duplicate_group": "DG-0003",
+      "duplicate_status": "exact_duplicate_candidate;context_value_conflict"
+    },
+    {
+      "row_id": "R000014",
+      "source_id": "case.json:material-batch-c.csv",
+      "locator": "case.json:material-batch-c.csv#row3",
+      "values": {
+        "material": {
+          "raw": "Ni/SiO2",
+          "source_column": "catalyst name",
+          "flags": [],
+          "value": "Ni/SiO2",
+          "low": null,
+          "high": null,
+          "uncertainty": null,
+          "unit": null,
+          "kind": "string"
+        },
+        "doi": {
+          "raw": "10.1234/syn.003",
+          "source_column": "文献DOI",
+          "flags": [],
+          "value": "10.1234/syn.003",
+          "low": null,
+          "high": null,
+          "uncertainty": null,
+          "unit": null,
+          "kind": "identifier",
+          "value_normalized": "10.1234/syn.003"
+        },
+        "property": {
+          "raw": "methane conversion",
+          "source_column": "指标",
+          "flags": [],
+          "value": "methane conversion",
+          "low": null,
+          "high": null,
+          "uncertainty": null,
+          "unit": null,
+          "kind": "string"
+        },
+        "temperature": {
+          "raw": "350",
+          "source_column": "温度(摄氏度)",
+          "flags": [],
+          "value": 623.15,
+          "low": null,
+          "high": null,
+          "uncertainty": null,
+          "unit": "K",
+          "kind": "value"
+        },
+        "pressure": {
+          "raw": "2.5 bar",
+          "source_column": "压力",
+          "flags": [],
+          "value": 0.25,
+          "low": null,
+          "high": null,
+          "uncertainty": null,
+          "unit": "MPa",
+          "kind": "value"
+        },
+        "yield": {
+          "raw": "66",
+          "source_column": "收率(%)",
+          "flags": [],
+          "value": 66.0,
+          "low": null,
+          "high": null,
+          "uncertainty": null,
+          "unit": "%",
+          "kind": "value"
+        },
+        "notes": {
+          "raw": "表3 二次抽取",
+          "source_column": "备注",
+          "flags": [],
+          "value": "表3 二次抽取",
+          "low": null,
+          "high": null,
+          "uncertainty": null,
+          "unit": null,
+          "kind": "string"
+        }
+      },
+      "unmapped_values": {
+        "weird_col": "c2"
+      },
+      "flags": [],
+      "raw": {
+        "catalyst name": "Ni/SiO2",
+        "文献DOI": "10.1234/syn.003",
+        "指标": "methane conversion",
+        "温度(摄氏度)": "350",
+        "压力": "2.5 bar",
+        "收率(%)": "66",
+        "备注": "表3 二次抽取",
+        "weird_col": "c2"
+      },
+      "duplicate_group": "DG-0003",
+      "duplicate_status": "exact_duplicate_candidate;context_value_conflict"
+    },
+    {
+      "row_id": "R000015",
+      "source_id": "case.json:material-batch-c.csv",
+      "locator": "case.json:material-batch-c.csv#row4",
+      "values": {
+        "material": {
+          "raw": "Ni/SiO2",
+          "source_column": "catalyst name",
+          "flags": [],
+          "value": "Ni/SiO2",
+          "low": null,
+          "high": null,
+          "uncertainty": null,
+          "unit": null,
+          "kind": "string"
+        },
+        "doi": {
+          "raw": "10.1234/syn.003",
+          "source_column": "文献DOI",
+          "flags": [],
+          "value": "10.1234/syn.003",
+          "low": null,
+          "high": null,
+          "uncertainty": null,
+          "unit": null,
+          "kind": "identifier",
+          "value_normalized": "10.1234/syn.003"
+        },
+        "property": {
+          "raw": "methane conversion",
+          "source_column": "指标",
+          "flags": [],
+          "value": "methane conversion",
+          "low": null,
+          "high": null,
+          "uncertainty": null,
+          "unit": null,
+          "kind": "string"
+        },
+        "temperature": {
+          "raw": "350",
+          "source_column": "温度(摄氏度)",
+          "flags": [],
+          "value": 623.15,
+          "low": null,
+          "high": null,
+          "uncertainty": null,
+          "unit": "K",
+          "kind": "value"
+        },
+        "pressure": {
+          "raw": "2.5 bar",
+          "source_column": "压力",
+          "flags": [],
+          "value": 0.25,
+          "low": null,
+          "high": null,
+          "uncertainty": null,
+          "unit": "MPa",
+          "kind": "value"
+        },
+        "yield": {
+          "raw": "59",
+          "source_column": "收率(%)",
+          "flags": [],
+          "value": 59.0,
+          "low": null,
+          "high": null,
+          "uncertainty": null,
+          "unit": "%",
+          "kind": "value"
+        },
+        "notes": {
+          "raw": "表3 冲突再抽取",
+          "source_column": "备注",
+          "flags": [],
+          "value": "表3 冲突再抽取",
+          "low": null,
+          "high": null,
+          "uncertainty": null,
+          "unit": null,
+          "kind": "string"
+        }
+      },
+      "unmapped_values": {
+        "weird_col": "c3"
+      },
+      "flags": [],
+      "raw": {
+        "catalyst name": "Ni/SiO2",
+        "文献DOI": "10.1234/syn.003",
+        "指标": "methane conversion",
+        "温度(摄氏度)": "350",
+        "压力": "2.5 bar",
+        "收率(%)": "59",
+        "备注": "表3 冲突再抽取",
+        "weird_col": "c3"
+      },
+      "duplicate_group": "DG-0003",
+      "duplicate_status": "context_value_conflict"
+    },
+    {
+      "row_id": "R000016",
+      "source_id": "case.json:material-batch-c.csv",
+      "locator": "case.json:material-batch-c.csv#row5",
+      "values": {
+        "material": {
+          "raw": "Co3O4",
+          "source_column": "catalyst name",
+          "flags": [],
+          "value": "Co3O4",
+          "low": null,
+          "high": null,
+          "uncertainty": null,
+          "unit": null,
+          "kind": "string"
+        },
+        "doi": {
+          "raw": "10.1234/syn.003",
+          "source_column": "文献DOI",
+          "flags": [],
+          "value": "10.1234/syn.003",
+          "low": null,
+          "high": null,
+          "uncertainty": null,
+          "unit": null,
+          "kind": "identifier",
+          "value_normalized": "10.1234/syn.003"
+        },
+        "property": {
+          "raw": "methane conversion",
+          "source_column": "指标",
+          "flags": [],
+          "value": "methane conversion",
+          "low": null,
+          "high": null,
+          "uncertainty": null,
+          "unit": null,
+          "kind": "string"
+        },
+        "temperature": {
+          "raw": "320",
+          "source_column": "温度(摄氏度)",
+          "flags": [],
+          "value": 593.15,
+          "low": null,
+          "high": null,
+          "uncertainty": null,
+          "unit": "K",
+          "kind": "value"
+        },
+        "pressure": {
+          "raw": "1.0 bar",
+          "source_column": "压力",
+          "flags": [],
+          "value": 0.1,
+          "low": null,
+          "high": null,
+          "uncertainty": null,
+          "unit": "MPa",
+          "kind": "value"
+        },
+        "yield": {
+          "raw": "88",
+          "source_column": "收率(%)",
+          "flags": [],
+          "value": 88.0,
+          "low": null,
+          "high": null,
+          "uncertainty": null,
+          "unit": "%",
+          "kind": "value"
+        },
+        "notes": {
+          "raw": "表4",
+          "source_column": "备注",
+          "flags": [],
+          "value": "表4",
+          "low": null,
+          "high": null,
+          "uncertainty": null,
+          "unit": null,
+          "kind": "string"
+        }
+      },
+      "unmapped_values": {
+        "weird_col": "c4"
+      },
+      "flags": [],
+      "raw": {
+        "catalyst name": "Co3O4",
+        "文献DOI": "10.1234/syn.003",
+        "指标": "methane conversion",
+        "温度(摄氏度)": "320",
+        "压力": "1.0 bar",
+        "收率(%)": "88",
+        "备注": "表4",
+        "weird_col": "c4"
+      },
+      "duplicate_status": "unique",
+      "duplicate_group": null
+    }
+  ]
+}

@@ -1,0 +1,138 @@
+{
+  "anomalies": [
+    {
+      "detail": "value present but unit missing; normalized value stays null",
+      "kind": "missing_unit",
+      "record_id": "r0008",
+      "rule_id": "U-004",
+      "severity": "review"
+    },
+    {
+      "detail": "missing value token 'not reported' normalized to null",
+      "kind": "missing_value",
+      "record_id": "r0009",
+      "rule_id": "V-003",
+      "severity": "review"
+    },
+    {
+      "detail": "unit 'Eg units' not in unit table; no conversion attempted, value compared raw only",
+      "kind": "unknown_unit",
+      "record_id": "r0015",
+      "rule_id": "U-003",
+      "severity": "review"
+    },
+    {
+      "detail": "interval value kept as min/max; no midpoint fabricated",
+      "kind": "range_value",
+      "record_id": "r0016",
+      "rule_id": "V-002",
+      "severity": "info"
+    },
+    {
+      "detail": "normalized value 25.0 eV outside plausible range [0.0, 15.0]; value kept unchanged, flagged for review",
+      "kind": "out_of_plausible_range",
+      "record_id": "r0017",
+      "rule_id": "A-001",
+      "severity": "review"
+    },
+    {
+      "detail": "material 'Na2SO4' not in lexicon; normalized token used as its own identity (no merging by similarity)",
+      "kind": "lexicon_miss",
+      "record_id": "r0018",
+      "rule_id": "N-006",
+      "severity": "info"
+    },
+    {
+      "detail": "material 'Na2SO4·10H2O' not in lexicon; normalized token used as its own identity (no merging by similarity)",
+      "kind": "lexicon_miss",
+      "record_id": "r0019",
+      "rule_id": "N-006",
+      "severity": "info"
+    },
+    {
+      "detail": "input columns with no canonical mapping (kept verbatim in record extras): case_id, description, extractor_version, name, synthetic",
+      "kind": "unmapped_fields",
+      "record_id": "*",
+      "rule_id": "F-002",
+      "severity": "info"
+    }
+  ],
+  "case_id": "synthetic-identity-001",
+  "note": "items the tool refuses to decide automatically; nothing here was merged or altered silently",
+  "review_items": [
+    {
+      "detail": "same identity but different measured values (value_different); both retained, never averaged",
+      "id": "q0001",
+      "kind": "conflict",
+      "record_ids": [
+        "r0001",
+        "r0006"
+      ],
+      "rule_id": "D-003",
+      "score": 12
+    },
+    {
+      "detail": "same identity but different measured values (value_different); both retained, never averaged",
+      "id": "q0002",
+      "kind": "conflict",
+      "record_ids": [
+        "r0002",
+        "r0006"
+      ],
+      "rule_id": "D-003",
+      "score": 12
+    },
+    {
+      "detail": "same identity but different measured values (value_different); both retained, never averaged",
+      "id": "q0003",
+      "kind": "conflict",
+      "record_ids": [
+        "r0006",
+        "r0007"
+      ],
+      "rule_id": "D-003",
+      "score": 12
+    },
+    {
+      "detail": "value present but unit missing; normalized value stays null",
+      "id": "q0004",
+      "kind": "missing_unit",
+      "record_ids": [
+        "r0008"
+      ],
+      "rule_id": "U-004",
+      "score": 0
+    },
+    {
+      "detail": "missing value token 'not reported' normalized to null",
+      "id": "q0005",
+      "kind": "missing_value",
+      "record_ids": [
+        "r0009"
+      ],
+      "rule_id": "V-003",
+      "score": 0
+    },
+    {
+      "detail": "unit 'Eg units' not in unit table; no conversion attempted, value compared raw only",
+      "id": "q0006",
+      "kind": "unknown_unit",
+      "record_ids": [
+        "r0015"
+      ],
+      "rule_id": "U-003",
+      "score": 0
+    },
+    {
+      "detail": "normalized value 25.0 eV outside plausible range [0.0, 15.0]; value kept unchanged, flagged for review",
+      "id": "q0007",
+      "kind": "out_of_plausible_range",
+      "record_ids": [
+        "r0017"
+      ],
+      "rule_id": "A-001",
+      "score": 0
+    }
+  ],
+  "synthetic_input": true
+}

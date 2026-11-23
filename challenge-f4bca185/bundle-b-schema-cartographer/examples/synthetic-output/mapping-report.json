@@ -1,0 +1,1181 @@
+{
+  "dictionary_id": "lit-extract-core",
+  "schema_version": "1.0.0",
+  "mappings": [
+    {
+      "column": "case.json/records::extraction.id",
+      "source_id": "case.json/records",
+      "header": "extraction.id",
+      "canonical_field": "record_id",
+      "component": null,
+      "confidence": 0.99,
+      "rule": "MAP-001 exact normalized alias match",
+      "evidence": {
+        "matched_alias": "extraction id",
+        "normalized_header": "extraction_id",
+        "header_unit_hint": null,
+        "profile_semantic_type": "identifier",
+        "type_evidence": {
+          "kind_counts": {
+            "string": 6
+          },
+          "uniqueness": 1.0,
+          "rule": "TYPE-002 >=90% unique, identifier-shaped tokens, no spaces"
+        }
+      }
+    },
+    {
+      "column": "case.json/records::extraction.doi",
+      "source_id": "case.json/records",
+      "header": "extraction.doi",
+      "canonical_field": "doi",
+      "component": null,
+      "confidence": 0.99,
+      "rule": "MAP-001 exact normalized alias match",
+      "evidence": {
+        "matched_alias": "extraction doi",
+        "normalized_header": "extraction_doi",
+        "header_unit_hint": null,
+        "profile_semantic_type": "identifier",
+        "type_evidence": {
+          "kind_counts": {
+            "numeric": 6
+          },
+          "uniqueness": 0.3333,
+          "rule": "TYPE-002b DOI-shaped values (10.<registrant>/<suffix>)"
+        }
+      }
+    },
+    {
+      "column": "case.json/records::material.name",
+      "source_id": "case.json/records",
+      "header": "material.name",
+      "canonical_field": "material",
+      "component": null,
+      "confidence": 0.99,
+      "rule": "MAP-001 exact normalized alias match",
+      "evidence": {
+        "matched_alias": "material name",
+        "normalized_header": "material_name",
+        "header_unit_hint": null,
+        "profile_semantic_type": "string",
+        "type_evidence": {
+          "kind_counts": {
+            "string": 6
+          },
+          "uniqueness": 0.3333,
+          "rule": "TYPE-001 fallback free text"
+        }
+      }
+    },
+    {
+      "column": "case.json/records::property",
+      "source_id": "case.json/records",
+      "header": "property",
+      "canonical_field": "property",
+      "component": null,
+      "confidence": 0.99,
+      "rule": "MAP-001 exact normalized alias match",
+      "evidence": {
+        "matched_alias": "property",
+        "normalized_header": "property",
+        "header_unit_hint": null,
+        "profile_semantic_type": "string",
+        "type_evidence": {
+          "kind_counts": {
+            "string": 6
+          },
+          "uniqueness": 0.3333,
+          "rule": "TYPE-001 fallback free text"
+        }
+      }
+    },
+    {
+      "column": "case.json/records::conditions.temperature",
+      "source_id": "case.json/records",
+      "header": "conditions.temperature",
+      "canonical_field": "temperature",
+      "component": null,
+      "confidence": 0.78,
+      "rule": "MAP-003 alias plus stop-word tokens",
+      "evidence": {
+        "matched_alias": "temperature",
+        "normalized_header": "conditions_temperature",
+        "header_unit_hint": null,
+        "profile_semantic_type": "numeric",
+        "type_evidence": {
+          "kind_counts": {
+            "numeric": 6
+          },
+          "uniqueness": 0.5,
+          "rule": "TYPE-003 >=80% of non-missing values parse as numbers or ranges"
+        }
+      }
+    },
+    {
+      "column": "case.json/records::conditions.pressure",
+      "source_id": "case.json/records",
+      "header": "conditions.pressure",
+      "canonical_field": "pressure",
+      "component": null,
+      "confidence": 0.78,
+      "rule": "MAP-003 alias plus stop-word tokens",
+      "evidence": {
+        "matched_alias": "pressure",
+        "normalized_header": "conditions_pressure",
+        "header_unit_hint": null,
+        "profile_semantic_type": "numeric",
+        "type_evidence": {
+          "kind_counts": {
+            "numeric": 6
+          },
+          "uniqueness": 0.5,
+          "rule": "TYPE-003 >=80% of non-missing values parse as numbers or ranges"
+        }
+      }
+    },
+    {
+      "column": "case.json/records::yield",
+      "source_id": "case.json/records",
+      "header": "yield",
+      "canonical_field": "yield",
+      "component": null,
+      "confidence": 0.99,
+      "rule": "MAP-001 exact normalized alias match",
+      "evidence": {
+        "matched_alias": "yield",
+        "normalized_header": "yield",
+        "header_unit_hint": null,
+        "profile_semantic_type": "numeric",
+        "type_evidence": {
+          "kind_counts": {
+            "range": 2,
+            "numeric": 2,
+            "missing": 1,
+            "string": 1
+          },
+          "uniqueness": 0.8,
+          "rule": "TYPE-003 >=80% of non-missing values parse as numbers or ranges"
+        }
+      }
+    },
+    {
+      "column": "case.json/records::notes",
+      "source_id": "case.json/records",
+      "header": "notes",
+      "canonical_field": "notes",
+      "component": null,
+      "confidence": 0.99,
+      "rule": "MAP-001 exact normalized alias match",
+      "evidence": {
+        "matched_alias": "notes",
+        "normalized_header": "notes",
+        "header_unit_hint": null,
+        "profile_semantic_type": "string",
+        "type_evidence": {
+          "kind_counts": {
+            "string": 6
+          },
+          "uniqueness": 1.0,
+          "rule": "TYPE-001 fallback free text"
+        }
+      }
+    },
+    {
+      "column": "case.json/records::Ea (eVee)",
+      "source_id": "case.json/records",
+      "header": "Ea (eVee)",
+      "canonical_field": "energy",
+      "component": null,
+      "confidence": 0.99,
+      "rule": "MAP-001 exact normalized alias match",
+      "evidence": {
+        "matched_alias": "ea",
+        "normalized_header": "ea",
+        "header_unit_hint": "eVee",
+        "profile_semantic_type": "numeric",
+        "type_evidence": {
+          "kind_counts": {
+            "missing": 5,
+            "numeric": 1
+          },
+          "uniqueness": 1.0,
+          "rule": "TYPE-003 >=80% of non-missing values parse as numbers or ranges"
+        }
+      }
+    },
+    {
+      "column": "case.json/material_csv::Material Name",
+      "source_id": "case.json/material_csv",
+      "header": "Material Name",
+      "canonical_field": "material",
+      "component": null,
+      "confidence": 0.99,
+      "rule": "MAP-001 exact normalized alias match",
+      "evidence": {
+        "matched_alias": "material name",
+        "normalized_header": "material_name",
+        "header_unit_hint": null,
+        "profile_semantic_type": "string",
+        "type_evidence": {
+          "kind_counts": {
+            "string": 6
+          },
+          "uniqueness": 0.5,
+          "rule": "TYPE-001 fallback free text"
+        }
+      }
+    },
+    {
+      "column": "case.json/material_csv::DOI",
+      "source_id": "case.json/material_csv",
+      "header": "DOI",
+      "canonical_field": "doi",
+      "component": null,
+      "confidence": 0.99,
+      "rule": "MAP-001 exact normalized alias match",
+      "evidence": {
+        "matched_alias": "doi",
+        "normalized_header": "doi",
+        "header_unit_hint": null,
+        "profile_semantic_type": "identifier",
+        "type_evidence": {
+          "kind_counts": {
+            "numeric": 6
+          },
+          "uniqueness": 0.1667,
+          "rule": "TYPE-002b DOI-shaped values (10.<registrant>/<suffix>)"
+        }
+      }
+    },
+    {
+      "column": "case.json/material_csv::Property",
+      "source_id": "case.json/material_csv",
+      "header": "Property",
+      "canonical_field": "property",
+      "component": null,
+      "confidence": 0.99,
+      "rule": "MAP-001 exact normalized alias match",
+      "evidence": {
+        "matched_alias": "property",
+        "normalized_header": "property",
+        "header_unit_hint": null,
+        "profile_semantic_type": "string",
+        "type_evidence": {
+          "kind_counts": {
+            "string": 6
+          },
+          "uniqueness": 0.5,
+          "rule": "TYPE-001 fallback free text"
+        }
+      }
+    },
+    {
+      "column": "case.json/material_csv::T / K",
+      "source_id": "case.json/material_csv",
+      "header": "T / K",
+      "canonical_field": "temperature",
+      "component": null,
+      "confidence": 0.995,
+      "rule": "MAP-001 exact normalized alias match + MAP-005 unit-hint disambiguation",
+      "evidence": {
+        "matched_alias": "t",
+        "normalized_header": "t",
+        "header_unit_hint": "k",
+        "profile_semantic_type": "numeric",
+        "type_evidence": {
+          "kind_counts": {
+            "numeric": 6
+          },
+          "uniqueness": 0.3333,
+          "rule": "TYPE-003 >=80% of non-missing values parse as numbers or ranges"
+        }
+      }
+    },
+    {
+      "column": "case.json/material_csv::P_MPa",
+      "source_id": "case.json/material_csv",
+      "header": "P_MPa",
+      "canonical_field": "pressure",
+      "component": null,
+      "confidence": 0.92,
+      "rule": "MAP-002 alias plus '_UNIT' suffix convention",
+      "evidence": {
+        "matched_alias": "p",
+        "normalized_header": "p_mpa",
+        "header_unit_hint": "mpa",
+        "profile_semantic_type": "numeric",
+        "type_evidence": {
+          "kind_counts": {
+            "numeric": 5,
+            "missing": 1
+          },
+          "uniqueness": 0.4,
+          "rule": "TYPE-003 >=80% of non-missing values parse as numbers or ranges"
+        }
+      }
+    },
+    {
+      "column": "case.json/material_csv::Yield_min (%)",
+      "source_id": "case.json/material_csv",
+      "header": "Yield_min (%)",
+      "canonical_field": "yield",
+      "component": "low",
+      "confidence": 0.99,
+      "rule": "MAP-004 component (min/low/max/high) convention on aliased header",
+      "evidence": {
+        "matched_alias": "yield",
+        "normalized_header": "yield",
+        "header_unit_hint": "%",
+        "profile_semantic_type": "numeric",
+        "type_evidence": {
+          "kind_counts": {
+            "numeric": 5,
+            "missing": 1
+          },
+          "uniqueness": 0.8,
+          "rule": "TYPE-003 >=80% of non-missing values parse as numbers or ranges"
+        }
+      }
+    },
+    {
+      "column": "case.json/material_csv::Yield_max (%)",
+      "source_id": "case.json/material_csv",
+      "header": "Yield_max (%)",
+      "canonical_field": "yield",
+      "component": "high",
+      "confidence": 0.99,
+      "rule": "MAP-004 component (min/low/max/high) convention on aliased header",
+      "evidence": {
+        "matched_alias": "yield",
+        "normalized_header": "yield",
+        "header_unit_hint": "%",
+        "profile_semantic_type": "numeric",
+        "type_evidence": {
+          "kind_counts": {
+            "numeric": 5,
+            "missing": 1
+          },
+          "uniqueness": 0.8,
+          "rule": "TYPE-003 >=80% of non-missing values parse as numbers or ranges"
+        }
+      }
+    },
+    {
+      "column": "case.json/material_csv::Selectivity",
+      "source_id": "case.json/material_csv",
+      "header": "Selectivity",
+      "canonical_field": "selectivity",
+      "component": null,
+      "confidence": 0.99,
+      "rule": "MAP-001 exact normalized alias match",
+      "evidence": {
+        "matched_alias": "selectivity",
+        "normalized_header": "selectivity",
+        "header_unit_hint": null,
+        "profile_semantic_type": "numeric",
+        "type_evidence": {
+          "kind_counts": {
+            "numeric": 5,
+            "missing": 1
+          },
+          "uniqueness": 0.6,
+          "rule": "TYPE-003 >=80% of non-missing values parse as numbers or ranges"
+        }
+      }
+    },
+    {
+      "column": "case.json/material_csv::Notes",
+      "source_id": "case.json/material_csv",
+      "header": "Notes",
+      "canonical_field": "notes",
+      "component": null,
+      "confidence": 0.99,
+      "rule": "MAP-001 exact normalized alias match",
+      "evidence": {
+        "matched_alias": "notes",
+        "normalized_header": "notes",
+        "header_unit_hint": null,
+        "profile_semantic_type": "string",
+        "type_evidence": {
+          "kind_counts": {
+            "string": 4,
+            "missing": 2
+          },
+          "uniqueness": 0.75,
+          "rule": "TYPE-001 fallback free text"
+        }
+      }
+    },
+    {
+      "column": "case.json:material-batch-c.csv::catalyst name",
+      "source_id": "case.json:material-batch-c.csv",
+      "header": "catalyst name",
+      "canonical_field": "material",
+      "component": null,
+      "confidence": 0.99,
+      "rule": "MAP-001 exact normalized alias match",
+      "evidence": {
+        "matched_alias": "catalyst name",
+        "normalized_header": "catalyst_name",
+        "header_unit_hint": null,
+        "profile_semantic_type": "string",
+        "type_evidence": {
+          "kind_counts": {
+            "string": 4
+          },
+          "uniqueness": 0.5,
+          "rule": "TYPE-001 fallback free text"
+        }
+      }
+    },
+    {
+      "column": "case.json:material-batch-c.csv::文献DOI",
+      "source_id": "case.json:material-batch-c.csv",
+      "header": "文献DOI",
+      "canonical_field": "doi",
+      "component": null,
+      "confidence": 0.99,
+      "rule": "MAP-001 exact normalized alias match",
+      "evidence": {
+        "matched_alias": "文献doi",
+        "normalized_header": "文献doi",
+        "header_unit_hint": null,
+        "profile_semantic_type": "identifier",
+        "type_evidence": {
+          "kind_counts": {
+            "numeric": 4
+          },
+          "uniqueness": 0.25,
+          "rule": "TYPE-002b DOI-shaped values (10.<registrant>/<suffix>)"
+        }
+      }
+    },
+    {
+      "column": "case.json:material-batch-c.csv::指标",
+      "source_id": "case.json:material-batch-c.csv",
+      "header": "指标",
+      "canonical_field": "property",
+      "component": null,
+      "confidence": 0.99,
+      "rule": "MAP-001 exact normalized alias match",
+      "evidence": {
+        "matched_alias": "指标",
+        "normalized_header": "指标",
+        "header_unit_hint": null,
+        "profile_semantic_type": "string",
+        "type_evidence": {
+          "kind_counts": {
+            "string": 4
+          },
+          "uniqueness": 0.25,
+          "rule": "TYPE-001 fallback free text"
+        }
+      }
+    },
+    {
+      "column": "case.json:material-batch-c.csv::温度(摄氏度)",
+      "source_id": "case.json:material-batch-c.csv",
+      "header": "温度(摄氏度)",
+      "canonical_field": "temperature",
+      "component": null,
+      "confidence": 0.99,
+      "rule": "MAP-001 exact normalized alias match",
+      "evidence": {
+        "matched_alias": "温度",
+        "normalized_header": "温度",
+        "header_unit_hint": "摄氏度",
+        "profile_semantic_type": "numeric",
+        "type_evidence": {
+          "kind_counts": {
+            "numeric": 4
+          },
+          "uniqueness": 0.5,
+          "rule": "TYPE-003 >=80% of non-missing values parse as numbers or ranges"
+        }
+      }
+    },
+    {
+      "column": "case.json:material-batch-c.csv::压力",
+      "source_id": "case.json:material-batch-c.csv",
+      "header": "压力",
+      "canonical_field": "pressure",
+      "component": null,
+      "confidence": 0.99,
+      "rule": "MAP-001 exact normalized alias match",
+      "evidence": {
+        "matched_alias": "压力",
+        "normalized_header": "压力",
+        "header_unit_hint": null,
+        "profile_semantic_type": "numeric",
+        "type_evidence": {
+          "kind_counts": {
+            "numeric": 4
+          },
+          "uniqueness": 0.5,
+          "rule": "TYPE-003 >=80% of non-missing values parse as numbers or ranges"
+        }
+      }
+    },
+    {
+      "column": "case.json:material-batch-c.csv::收率(%)",
+      "source_id": "case.json:material-batch-c.csv",
+      "header": "收率(%)",
+      "canonical_field": "yield",
+      "component": null,
+      "confidence": 0.99,
+      "rule": "MAP-001 exact normalized alias match",
+      "evidence": {
+        "matched_alias": "收率",
+        "normalized_header": "收率",
+        "header_unit_hint": "%",
+        "profile_semantic_type": "numeric",
+        "type_evidence": {
+          "kind_counts": {
+            "numeric": 4
+          },
+          "uniqueness": 0.75,
+          "rule": "TYPE-003 >=80% of non-missing values parse as numbers or ranges"
+        }
+      }
+    },
+    {
+      "column": "case.json:material-batch-c.csv::备注",
+      "source_id": "case.json:material-batch-c.csv",
+      "header": "备注",
+      "canonical_field": "notes",
+      "component": null,
+      "confidence": 0.99,
+      "rule": "MAP-001 exact normalized alias match",
+      "evidence": {
+        "matched_alias": "备注",
+        "normalized_header": "备注",
+        "header_unit_hint": null,
+        "profile_semantic_type": "string",
+        "type_evidence": {
+          "kind_counts": {
+            "string": 4
+          },
+          "uniqueness": 1.0,
+          "rule": "TYPE-001 fallback free text"
+        }
+      }
+    }
+  ],
+  "unmapped_columns": [
+    {
+      "column": "case.json/records::Instrument Serial",
+      "source_id": "case.json/records",
+      "header": "Instrument Serial",
+      "reason": "no_alias_candidate",
+      "semantic_type": "identifier",
+      "samples": [
+        "SN-8891"
+      ],
+      "type_evidence": {
+        "kind_counts": {
+          "missing": 5,
+          "string": 1
+        },
+        "uniqueness": 1.0,
+        "rule": "TYPE-002 >=90% unique, identifier-shaped tokens, no spaces"
+      }
+    },
+    {
+      "column": "case.json/material_csv::Mystery Column",
+      "source_id": "case.json/material_csv",
+      "header": "Mystery Column",
+      "reason": "no_alias_candidate",
+      "semantic_type": "identifier",
+      "samples": [
+        "zz1",
+        "zz2",
+        "zz3",
+        "zz4",
+        "zz5"
+      ],
+      "type_evidence": {
+        "kind_counts": {
+          "string": 6
+        },
+        "uniqueness": 1.0,
+        "rule": "TYPE-002 >=90% unique, identifier-shaped tokens, no spaces"
+      }
+    },
+    {
+      "column": "case.json:material-batch-c.csv::weird_col",
+      "source_id": "case.json:material-batch-c.csv",
+      "header": "weird_col",
+      "reason": "no_alias_candidate",
+      "semantic_type": "identifier",
+      "samples": [
+        "c1",
+        "c2",
+        "c3",
+        "c4"
+      ],
+      "type_evidence": {
+        "kind_counts": {
+          "string": 4
+        },
+        "uniqueness": 1.0,
+        "rule": "TYPE-002 >=90% unique, identifier-shaped tokens, no spaces"
+      }
+    }
+  ],
+  "column_profiles": {
+    "case.json/records::extraction.id": {
+      "source_id": "case.json/records",
+      "header": "extraction.id",
+      "samples": [
+        "A1",
+        "A1-dup",
+        "A1-conflict",
+        "A2",
+        "A3"
+      ],
+      "non_missing": 6,
+      "semantic_type": "identifier",
+      "type_evidence": {
+        "kind_counts": {
+          "string": 6
+        },
+        "uniqueness": 1.0,
+        "rule": "TYPE-002 >=90% unique, identifier-shaped tokens, no spaces"
+      }
+    },
+    "case.json/records::extraction.doi": {
+      "source_id": "case.json/records",
+      "header": "extraction.doi",
+      "samples": [
+        "10.1234/syn.001",
+        "10.1234/syn.001",
+        "10.1234/syn.001",
+        "10.1234/syn.001",
+        "10.1234/syn.001"
+      ],
+      "non_missing": 6,
+      "semantic_type": "identifier",
+      "type_evidence": {
+        "kind_counts": {
+          "numeric": 6
+        },
+        "uniqueness": 0.3333,
+        "rule": "TYPE-002b DOI-shaped values (10.<registrant>/<suffix>)"
+      }
+    },
+    "case.json/records::material.name": {
+      "source_id": "case.json/records",
+      "header": "material.name",
+      "samples": [
+        "Pt/Al2O3",
+        "Pt/Al2O3",
+        "Pt/Al2O3",
+        "Pt/Al2O3",
+        "Pt/Al2O3"
+      ],
+      "non_missing": 6,
+      "semantic_type": "string",
+      "type_evidence": {
+        "kind_counts": {
+          "string": 6
+        },
+        "uniqueness": 0.3333,
+        "rule": "TYPE-001 fallback free text"
+      }
+    },
+    "case.json/records::property": {
+      "source_id": "case.json/records",
+      "header": "property",
+      "samples": [
+        "CO oxidation yield",
+        "CO oxidation yield",
+        "CO oxidation yield",
+        "CO oxidation yield",
+        "activation energy"
+      ],
+      "non_missing": 6,
+      "semantic_type": "string",
+      "type_evidence": {
+        "kind_counts": {
+          "string": 6
+        },
+        "uniqueness": 0.3333,
+        "rule": "TYPE-001 fallback free text"
+      }
+    },
+    "case.json/records::conditions.temperature": {
+      "source_id": "case.json/records",
+      "header": "conditions.temperature",
+      "samples": [
+        "300 °C",
+        "300 °C",
+        "300 °C",
+        "573 K",
+        "573 K"
+      ],
+      "non_missing": 6,
+      "semantic_type": "numeric",
+      "type_evidence": {
+        "kind_counts": {
+          "numeric": 6
+        },
+        "uniqueness": 0.5,
+        "rule": "TYPE-003 >=80% of non-missing values parse as numbers or ranges"
+      }
+    },
+    "case.json/records::conditions.pressure": {
+      "source_id": "case.json/records",
+      "header": "conditions.pressure",
+      "samples": [
+        "1 bar",
+        "1 bar",
+        "1 bar",
+        "0.1 MPa",
+        "0.1 MPa"
+      ],
+      "non_missing": 6,
+      "semantic_type": "numeric",
+      "type_evidence": {
+        "kind_counts": {
+          "numeric": 6
+        },
+        "uniqueness": 0.5,
+        "rule": "TYPE-003 >=80% of non-missing values parse as numbers or ranges"
+      }
+    },
+    "case.json/records::yield": {
+      "source_id": "case.json/records",
+      "header": "yield",
+      "samples": [
+        "72-80 %",
+        "72-80 %",
+        "65 %",
+        "high",
+        "145 %"
+      ],
+      "non_missing": 5,
+      "semantic_type": "numeric",
+      "type_evidence": {
+        "kind_counts": {
+          "range": 2,
+          "numeric": 2,
+          "missing": 1,
+          "string": 1
+        },
+        "uniqueness": 0.8,
+        "rule": "TYPE-003 >=80% of non-missing values parse as numbers or ranges"
+      }
+    },
+    "case.json/records::notes": {
+      "source_id": "case.json/records",
+      "header": "notes",
+      "samples": [
+        "Table 2",
+        "Table 2 (second extraction pass)",
+        "Table 2 (conflicting third pass - must stay unmerged)",
+        "yield not reported",
+        "unknown unit eVee invented for the demo; yield value is unparseable"
+      ],
+      "non_missing": 6,
+      "semantic_type": "string",
+      "type_evidence": {
+        "kind_counts": {
+          "string": 6
+        },
+        "uniqueness": 1.0,
+        "rule": "TYPE-001 fallback free text"
+      }
+    },
+    "case.json/records::Ea (eVee)": {
+      "source_id": "case.json/records",
+      "header": "Ea (eVee)",
+      "samples": [
+        "1.2"
+      ],
+      "non_missing": 1,
+      "semantic_type": "numeric",
+      "type_evidence": {
+        "kind_counts": {
+          "missing": 5,
+          "numeric": 1
+        },
+        "uniqueness": 1.0,
+        "rule": "TYPE-003 >=80% of non-missing values parse as numbers or ranges"
+      }
+    },
+    "case.json/records::Instrument Serial": {
+      "source_id": "case.json/records",
+      "header": "Instrument Serial",
+      "samples": [
+        "SN-8891"
+      ],
+      "non_missing": 1,
+      "semantic_type": "identifier",
+      "type_evidence": {
+        "kind_counts": {
+          "missing": 5,
+          "string": 1
+        },
+        "uniqueness": 1.0,
+        "rule": "TYPE-002 >=90% unique, identifier-shaped tokens, no spaces"
+      }
+    },
+    "case.json/material_csv::Material Name": {
+      "source_id": "case.json/material_csv",
+      "header": "Material Name",
+      "samples": [
+        "Cu/ZnO",
+        "Cu/ZnO",
+        "Cu/ZnO",
+        "Fe-Co",
+        "Fe-Co"
+      ],
+      "non_missing": 6,
+      "semantic_type": "string",
+      "type_evidence": {
+        "kind_counts": {
+          "string": 6
+        },
+        "uniqueness": 0.5,
+        "rule": "TYPE-001 fallback free text"
+      }
+    },
+    "case.json/material_csv::DOI": {
+      "source_id": "case.json/material_csv",
+      "header": "DOI",
+      "samples": [
+        "10.1234/syn.002",
+        "10.1234/syn.002",
+        "10.1234/syn.002",
+        "10.1234/syn.002",
+        "10.1234/syn.002"
+      ],
+      "non_missing": 6,
+      "semantic_type": "identifier",
+      "type_evidence": {
+        "kind_counts": {
+          "numeric": 6
+        },
+        "uniqueness": 0.1667,
+        "rule": "TYPE-002b DOI-shaped values (10.<registrant>/<suffix>)"
+      }
+    },
+    "case.json/material_csv::Property": {
+      "source_id": "case.json/material_csv",
+      "header": "Property",
+      "samples": [
+        "methanol yield",
+        "methanol yield",
+        "methanol yield",
+        "methanol selectivity",
+        "methanol selectivity"
+      ],
+      "non_missing": 6,
+      "semantic_type": "string",
+      "type_evidence": {
+        "kind_counts": {
+          "string": 6
+        },
+        "uniqueness": 0.5,
+        "rule": "TYPE-001 fallback free text"
+      }
+    },
+    "case.json/material_csv::T / K": {
+      "source_id": "case.json/material_csv",
+      "header": "T / K",
+      "samples": [
+        "523",
+        "523",
+        "523",
+        "523",
+        "523"
+      ],
+      "non_missing": 6,
+      "semantic_type": "numeric",
+      "type_evidence": {
+        "kind_counts": {
+          "numeric": 6
+        },
+        "uniqueness": 0.3333,
+        "rule": "TYPE-003 >=80% of non-missing values parse as numbers or ranges"
+      }
+    },
+    "case.json/material_csv::P_MPa": {
+      "source_id": "case.json/material_csv",
+      "header": "P_MPa",
+      "samples": [
+        "3.0",
+        "3.0",
+        "3.0",
+        "3.0",
+        "2.0"
+      ],
+      "non_missing": 5,
+      "semantic_type": "numeric",
+      "type_evidence": {
+        "kind_counts": {
+          "numeric": 5,
+          "missing": 1
+        },
+        "uniqueness": 0.4,
+        "rule": "TYPE-003 >=80% of non-missing values parse as numbers or ranges"
+      }
+    },
+    "case.json/material_csv::Yield_min (%)": {
+      "source_id": "case.json/material_csv",
+      "header": "Yield_min (%)",
+      "samples": [
+        "55",
+        "55",
+        "40",
+        "70",
+        "80"
+      ],
+      "non_missing": 5,
+      "semantic_type": "numeric",
+      "type_evidence": {
+        "kind_counts": {
+          "numeric": 5,
+          "missing": 1
+        },
+        "uniqueness": 0.8,
+        "rule": "TYPE-003 >=80% of non-missing values parse as numbers or ranges"
+      }
+    },
+    "case.json/material_csv::Yield_max (%)": {
+      "source_id": "case.json/material_csv",
+      "header": "Yield_max (%)",
+      "samples": [
+        "61",
+        "61",
+        "48",
+        "75",
+        "70"
+      ],
+      "non_missing": 5,
+      "semantic_type": "numeric",
+      "type_evidence": {
+        "kind_counts": {
+          "numeric": 5,
+          "missing": 1
+        },
+        "uniqueness": 0.8,
+        "rule": "TYPE-003 >=80% of non-missing values parse as numbers or ranges"
+      }
+    },
+    "case.json/material_csv::Selectivity": {
+      "source_id": "case.json/material_csv",
+      "header": "Selectivity",
+      "samples": [
+        "88 %",
+        "88 %",
+        "88 %",
+        "91 %",
+        "50 %"
+      ],
+      "non_missing": 5,
+      "semantic_type": "numeric",
+      "type_evidence": {
+        "kind_counts": {
+          "numeric": 5,
+          "missing": 1
+        },
+        "uniqueness": 0.6,
+        "rule": "TYPE-003 >=80% of non-missing values parse as numbers or ranges"
+      }
+    },
+    "case.json/material_csv::Notes": {
+      "source_id": "case.json/material_csv",
+      "header": "Notes",
+      "samples": [
+        "Table 1",
+        "Table 1",
+        "Table 1 conflicting re-extraction",
+        "inverted range demo"
+      ],
+      "non_missing": 4,
+      "semantic_type": "string",
+      "type_evidence": {
+        "kind_counts": {
+          "string": 4,
+          "missing": 2
+        },
+        "uniqueness": 0.75,
+        "rule": "TYPE-001 fallback free text"
+      }
+    },
+    "case.json/material_csv::Mystery Column": {
+      "source_id": "case.json/material_csv",
+      "header": "Mystery Column",
+      "samples": [
+        "zz1",
+        "zz2",
+        "zz3",
+        "zz4",
+        "zz5"
+      ],
+      "non_missing": 6,
+      "semantic_type": "identifier",
+      "type_evidence": {
+        "kind_counts": {
+          "string": 6
+        },
+        "uniqueness": 1.0,
+        "rule": "TYPE-002 >=90% unique, identifier-shaped tokens, no spaces"
+      }
+    },
+    "case.json:material-batch-c.csv::catalyst name": {
+      "source_id": "case.json:material-batch-c.csv",
+      "header": "catalyst name",
+      "samples": [
+        "Ni/SiO2",
+        "Ni/SiO2",
+        "Ni/SiO2",
+        "Co3O4"
+      ],
+      "non_missing": 4,
+      "semantic_type": "string",
+      "type_evidence": {
+        "kind_counts": {
+          "string": 4
+        },
+        "uniqueness": 0.5,
+        "rule": "TYPE-001 fallback free text"
+      }
+    },
+    "case.json:material-batch-c.csv::文献DOI": {
+      "source_id": "case.json:material-batch-c.csv",
+      "header": "文献DOI",
+      "samples": [
+        "10.1234/syn.003",
+        "10.1234/syn.003",
+        "10.1234/syn.003",
+        "10.1234/syn.003"
+      ],
+      "non_missing": 4,
+      "semantic_type": "identifier",
+      "type_evidence": {
+        "kind_counts": {
+          "numeric": 4
+        },
+        "uniqueness": 0.25,
+        "rule": "TYPE-002b DOI-shaped values (10.<registrant>/<suffix>)"
+      }
+    },
+    "case.json:material-batch-c.csv::指标": {
+      "source_id": "case.json:material-batch-c.csv",
+      "header": "指标",
+      "samples": [
+        "methane conversion",
+        "methane conversion",
+        "methane conversion",
+        "methane conversion"
+      ],
+      "non_missing": 4,
+      "semantic_type": "string",
+      "type_evidence": {
+        "kind_counts": {
+          "string": 4
+        },
+        "uniqueness": 0.25,
+        "rule": "TYPE-001 fallback free text"
+      }
+    },
+    "case.json:material-batch-c.csv::温度(摄氏度)": {
+      "source_id": "case.json:material-batch-c.csv",
+      "header": "温度(摄氏度)",
+      "samples": [
+        "350",
+        "350",
+        "350",
+        "320"
+      ],
+      "non_missing": 4,
+      "semantic_type": "numeric",
+      "type_evidence": {
+        "kind_counts": {
+          "numeric": 4
+        },
+        "uniqueness": 0.5,
+        "rule": "TYPE-003 >=80% of non-missing values parse as numbers or ranges"
+      }
+    },
+    "case.json:material-batch-c.csv::压力": {
+      "source_id": "case.json:material-batch-c.csv",
+      "header": "压力",
+      "samples": [
+        "2.5 bar",
+        "2.5 bar",
+        "2.5 bar",
+        "1.0 bar"
+      ],
+      "non_missing": 4,
+      "semantic_type": "numeric",
+      "type_evidence": {
+        "kind_counts": {
+          "numeric": 4
+        },
+        "uniqueness": 0.5,
+        "rule": "TYPE-003 >=80% of non-missing values parse as numbers or ranges"
+      }
+    },
+    "case.json:material-batch-c.csv::收率(%)": {
+      "source_id": "case.json:material-batch-c.csv",
+      "header": "收率(%)",
+      "samples": [
+        "66",
+        "66",
+        "59",
+        "88"
+      ],
+      "non_missing": 4,
+      "semantic_type": "numeric",
+      "type_evidence": {
+        "kind_counts": {
+          "numeric": 4
+        },
+        "uniqueness": 0.75,
+        "rule": "TYPE-003 >=80% of non-missing values parse as numbers or ranges"
+      }
+    },
+    "case.json:material-batch-c.csv::备注": {
+      "source_id": "case.json:material-batch-c.csv",
+      "header": "备注",
+      "samples": [
+        "表3",
+        "表3 二次抽取",
+        "表3 冲突再抽取",
+        "表4"
+      ],
+      "non_missing": 4,
+      "semantic_type": "string",
+      "type_evidence": {
+        "kind_counts": {
+          "string": 4
+        },
+        "uniqueness": 1.0,
+        "rule": "TYPE-001 fallback free text"
+      }
+    },
+    "case.json:material-batch-c.csv::weird_col": {
+      "source_id": "case.json:material-batch-c.csv",
+      "header": "weird_col",
+      "samples": [
+        "c1",
+        "c2",
+        "c3",
+        "c4"
+      ],
+      "non_missing": 4,
+      "semantic_type": "identifier",
+      "type_evidence": {
+        "kind_counts": {
+          "string": 4
+        },
+        "uniqueness": 1.0,
+        "rule": "TYPE-002 >=90% unique, identifier-shaped tokens, no spaces"
+      }
+    }
+  }
+}

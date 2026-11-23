@@ -1,0 +1,368 @@
+{
+  "case_id": "synthetic-identity-001",
+  "change_count": 40,
+  "changes": [
+    {
+      "after": "cl-0001",
+      "before": null,
+      "change_id": "ch0001",
+      "detail": "chosen as cluster representative (most complete row, then smallest record id); values never mixed across members",
+      "field": "cluster",
+      "record_id": "r0001",
+      "rule_id": "D-008"
+    },
+    {
+      "after": "kept_separate",
+      "before": null,
+      "change_id": "ch0002",
+      "detail": "conflict with r0006: same identity but different measured values (value_different); both retained, never averaged",
+      "field": "cluster",
+      "record_id": "r0001",
+      "rule_id": "D-009"
+    },
+    {
+      "after": "band_gap",
+      "before": "band gap",
+      "change_id": "ch0003",
+      "detail": "metric alias canonicalization",
+      "field": "metric",
+      "record_id": "r0001",
+      "rule_id": "N-003"
+    },
+    {
+      "after": "cl-0001",
+      "before": null,
+      "change_id": "ch0004",
+      "detail": "merged as duplicate of cluster representative; original row retained in members[] lineage",
+      "field": "cluster",
+      "record_id": "r0002",
+      "rule_id": "D-001/D-002"
+    },
+    {
+      "after": "kept_separate",
+      "before": null,
+      "change_id": "ch0005",
+      "detail": "conflict with r0006: same identity but different measured values (value_different); both retained, never averaged",
+      "field": "cluster",
+      "record_id": "r0002",
+      "rule_id": "D-009"
+    },
+    {
+      "after": "TiO2",
+      "before": "titanium dioxide (rutile)",
+      "change_id": "ch0006",
+      "detail": "exact full-string lexicon alias",
+      "field": "material",
+      "record_id": "r0002",
+      "rule_id": "N-003"
+    },
+    {
+      "after": "band_gap",
+      "before": "bandgap",
+      "change_id": "ch0007",
+      "detail": "metric alias canonicalization",
+      "field": "metric",
+      "record_id": "r0002",
+      "rule_id": "N-003"
+    },
+    {
+      "after": "TiO2",
+      "before": "titanium dioxide (rutile)",
+      "change_id": "ch0008",
+      "detail": "phase 'rutile' split out of material string",
+      "field": "material",
+      "record_id": "r0002",
+      "rule_id": "N-004"
+    },
+    {
+      "after": "band_gap",
+      "before": "band gap",
+      "change_id": "ch0009",
+      "detail": "metric alias canonicalization",
+      "field": "metric",
+      "record_id": "r0003",
+      "rule_id": "N-003"
+    },
+    {
+      "after": "band_gap",
+      "before": "band gap",
+      "change_id": "ch0010",
+      "detail": "metric alias canonicalization",
+      "field": "metric",
+      "record_id": "r0004",
+      "rule_id": "N-003"
+    },
+    {
+      "after": "TiO2",
+      "before": "N-doped TiO2",
+      "change_id": "ch0011",
+      "detail": "exact full-string lexicon alias",
+      "field": "material",
+      "record_id": "r0005",
+      "rule_id": "N-003"
+    },
+    {
+      "after": "band_gap",
+      "before": "band gap",
+      "change_id": "ch0012",
+      "detail": "metric alias canonicalization",
+      "field": "metric",
+      "record_id": "r0005",
+      "rule_id": "N-003"
+    },
+    {
+      "after": "TiO2",
+      "before": "N-doped TiO2",
+      "change_id": "ch0013",
+      "detail": "dopant 'n' split out of material string; dopant remains part of sample identity",
+      "field": "material",
+      "record_id": "r0005",
+      "rule_id": "N-005"
+    },
+    {
+      "after": "kept_separate",
+      "before": null,
+      "change_id": "ch0014",
+      "detail": "conflict with r0001: same identity but different measured values (value_different); both retained, never averaged",
+      "field": "cluster",
+      "record_id": "r0006",
+      "rule_id": "D-009"
+    },
+    {
+      "after": "kept_separate",
+      "before": null,
+      "change_id": "ch0015",
+      "detail": "conflict with r0002: same identity but different measured values (value_different); both retained, never averaged",
+      "field": "cluster",
+      "record_id": "r0006",
+      "rule_id": "D-009"
+    },
+    {
+      "after": "kept_separate",
+      "before": null,
+      "change_id": "ch0016",
+      "detail": "conflict with r0007: same identity but different measured values (value_different); both retained, never averaged",
+      "field": "cluster",
+      "record_id": "r0006",
+      "rule_id": "D-009"
+    },
+    {
+      "after": "band_gap",
+      "before": "band gap",
+      "change_id": "ch0017",
+      "detail": "metric alias canonicalization",
+      "field": "metric",
+      "record_id": "r0006",
+      "rule_id": "N-003"
+    },
+    {
+      "after": "cl-0001",
+      "before": null,
+      "change_id": "ch0018",
+      "detail": "merged as duplicate of cluster representative; original row retained in members[] lineage",
+      "field": "cluster",
+      "record_id": "r0007",
+      "rule_id": "D-001/D-002"
+    },
+    {
+      "after": "kept_separate",
+      "before": null,
+      "change_id": "ch0019",
+      "detail": "conflict with r0006: same identity but different measured values (value_different); both retained, never averaged",
+      "field": "cluster",
+      "record_id": "r0007",
+      "rule_id": "D-009"
+    },
+    {
+      "after": "TiO2",
+      "before": "titania",
+      "change_id": "ch0020",
+      "detail": "exact full-string lexicon alias",
+      "field": "material",
+      "record_id": "r0007",
+      "rule_id": "N-003"
+    },
+    {
+      "after": "band_gap",
+      "before": "band gap",
+      "change_id": "ch0021",
+      "detail": "metric alias canonicalization",
+      "field": "metric",
+      "record_id": "r0007",
+      "rule_id": "N-003"
+    },
+    {
+      "after": "3.0 eV",
+      "before": "3000.0 meV",
+      "change_id": "ch0022",
+      "detail": "converted with formula: value = raw value * 0.001 + 0; original value retained in value_raw",
+      "field": "value",
+      "record_id": "r0007",
+      "rule_id": "U-002"
+    },
+    {
+      "after": "band_gap",
+      "before": "band gap",
+      "change_id": "ch0023",
+      "detail": "metric alias canonicalization",
+      "field": "metric",
+      "record_id": "r0008",
+      "rule_id": "N-003"
+    },
+    {
+      "after": "band_gap",
+      "before": "band gap",
+      "change_id": "ch0024",
+      "detail": "metric alias canonicalization",
+      "field": "metric",
+      "record_id": "r0009",
+      "rule_id": "N-003"
+    },
+    {
+      "after": null,
+      "before": "not reported",
+      "change_id": "ch0025",
+      "detail": "explicit missing token normalized to null (stays null)",
+      "field": "value",
+      "record_id": "r0009",
+      "rule_id": "V-003"
+    },
+    {
+      "after": "band_gap",
+      "before": "band gap",
+      "change_id": "ch0026",
+      "detail": "metric alias canonicalization",
+      "field": "metric",
+      "record_id": "r0010",
+      "rule_id": "N-003"
+    },
+    {
+      "after": "band_gap",
+      "before": "band gap",
+      "change_id": "ch0027",
+      "detail": "metric alias canonicalization",
+      "field": "metric",
+      "record_id": "r0011",
+      "rule_id": "N-003"
+    },
+    {
+      "after": "cl-0010",
+      "before": null,
+      "change_id": "ch0028",
+      "detail": "chosen as cluster representative (most complete row, then smallest record id); values never mixed across members",
+      "field": "cluster",
+      "record_id": "r0012",
+      "rule_id": "D-008"
+    },
+    {
+      "after": "band_gap",
+      "before": "band gap",
+      "change_id": "ch0029",
+      "detail": "metric alias canonicalization",
+      "field": "metric",
+      "record_id": "r0012",
+      "rule_id": "N-003"
+    },
+    {
+      "after": "298.15 K",
+      "before": "25.0 °C",
+      "change_id": "ch0030",
+      "detail": "context normalized: value * 1 + 273.15",
+      "field": "temperature",
+      "record_id": "r0012",
+      "rule_id": "U-002"
+    },
+    {
+      "after": "cl-0010",
+      "before": null,
+      "change_id": "ch0031",
+      "detail": "merged as duplicate of cluster representative; original row retained in members[] lineage",
+      "field": "cluster",
+      "record_id": "r0013",
+      "rule_id": "D-001/D-002"
+    },
+    {
+      "after": "band_gap",
+      "before": "band gap",
+      "change_id": "ch0032",
+      "detail": "metric alias canonicalization",
+      "field": "metric",
+      "record_id": "r0013",
+      "rule_id": "N-003"
+    },
+    {
+      "after": "TiO2",
+      "before": "titanium dioxide",
+      "change_id": "ch0033",
+      "detail": "exact full-string lexicon alias",
+      "field": "material",
+      "record_id": "r0014",
+      "rule_id": "N-003"
+    },
+    {
+      "after": "band_gap",
+      "before": "band gap",
+      "change_id": "ch0034",
+      "detail": "metric alias canonicalization",
+      "field": "metric",
+      "record_id": "r0014",
+      "rule_id": "N-003"
+    },
+    {
+      "after": "band_gap",
+      "before": "band gap",
+      "change_id": "ch0035",
+      "detail": "metric alias canonicalization",
+      "field": "metric",
+      "record_id": "r0015",
+      "rule_id": "N-003"
+    },
+    {
+      "after": "band_gap",
+      "before": "band gap",
+      "change_id": "ch0036",
+      "detail": "metric alias canonicalization",
+      "field": "metric",
+      "record_id": "r0016",
+      "rule_id": "N-003"
+    },
+    {
+      "after": "[2.3, 2.5]",
+      "before": "2.3-2.5",
+      "change_id": "ch0037",
+      "detail": "range parsed; kept as interval, no midpoint is fabricated",
+      "field": "value",
+      "record_id": "r0016",
+      "rule_id": "V-002"
+    },
+    {
+      "after": "band_gap",
+      "before": "band gap",
+      "change_id": "ch0038",
+      "detail": "metric alias canonicalization",
+      "field": "metric",
+      "record_id": "r0017",
+      "rule_id": "N-003"
+    },
+    {
+      "after": "particle_size",
+      "before": "particle size",
+      "change_id": "ch0039",
+      "detail": "metric alias canonicalization",
+      "field": "metric",
+      "record_id": "r0018",
+      "rule_id": "N-003"
+    },
+    {
+      "after": "particle_size",
+      "before": "particle size",
+      "change_id": "ch0040",
+      "detail": "metric alias canonicalization",
+      "field": "metric",
+      "record_id": "r0019",
+      "rule_id": "N-003"
+    }
+  ],
+  "note": "every automated change carries a rule id (see references/identity-adjudication.md); before/after keep the original string so each change traces back to the input row and source locator",
+  "synthetic_input": true
+}

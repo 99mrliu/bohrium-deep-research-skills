@@ -1,0 +1,5798 @@
+{
+  "case_id": "synthetic-demo-0001",
+  "status": "success",
+  "skill": {
+    "name": "schema-cartographer",
+    "version": "1.0.0"
+  },
+  "summary": {
+    "raw_rows": 16,
+    "cleaned_rows": 16,
+    "profiled_columns": 28,
+    "mapped_columns": 25,
+    "unmapped_columns": 3,
+    "unknown_units": 1,
+    "unit_conversions": 16,
+    "range_splits": 2,
+    "missing_cells": 12,
+    "anomalies": 4,
+    "duplicate_groups": 3,
+    "review_items": 6,
+    "change_records": 138
+  },
+  "sources": [
+    {
+      "source_id": "case.json/records",
+      "kind": "json_records",
+      "rows": 6,
+      "locator": "/records"
+    },
+    {
+      "source_id": "case.json/material_csv",
+      "kind": "csv",
+      "rows": 6,
+      "columns": [
+        "Material Name",
+        "DOI",
+        "Property",
+        "T / K",
+        "P_MPa",
+        "Yield_min (%)",
+        "Yield_max (%)",
+        "Selectivity",
+        "Notes",
+        "Mystery Column"
+      ]
+    },
+    {
+      "source_id": "case.json:material-batch-c.csv",
+      "kind": "csv",
+      "rows": 4,
+      "columns": [
+        "catalyst name",
+        "文献DOI",
+        "指标",
+        "温度(摄氏度)",
+        "压力",
+        "收率(%)",
+        "备注",
+        "weird_col"
+      ]
+    }
+  ],
+  "uncertainty": [
+    "3 columns could not be mapped to the canonical schema; their raw values are preserved in unmapped_json and unresolved-schema.json.",
+    "1 unknown unit(s) blocked conversion; affected normalized values are null and raw values are preserved.",
+    "At least one duplicate-context value conflict needs human scientific adjudication; no automatic merge was performed.",
+    "1 output_contract field(s) could not be filled faithfully; they are null and listed in unresolved_contract_fields (never fabricated)."
+  ],
+  "change_records": [
+    {
+      "change_id": "CH-000001",
+      "rule": "MAP-001 exact normalized alias match",
+      "scope": "column",
+      "row_id": null,
+      "field": "record_id",
+      "source_column": "case.json/records::extraction.id",
+      "old_value": "extraction.id",
+      "new_value": "record_id",
+      "evidence": {
+        "matched_alias": "extraction id",
+        "normalized_header": "extraction_id",
+        "header_unit_hint": null,
+        "profile_semantic_type": "identifier",
+        "type_evidence": {
+          "kind_counts": {
+            "string": 6
+          },
+          "uniqueness": 1.0,
+          "rule": "TYPE-002 >=90% unique, identifier-shaped tokens, no spaces"
+        },
+        "confidence": 0.99
+      }
+    },
+    {
+      "change_id": "CH-000002",
+      "rule": "MAP-001 exact normalized alias match",
+      "scope": "column",
+      "row_id": null,
+      "field": "doi",
+      "source_column": "case.json/records::extraction.doi",
+      "old_value": "extraction.doi",
+      "new_value": "doi",
+      "evidence": {
+        "matched_alias": "extraction doi",
+        "normalized_header": "extraction_doi",
+        "header_unit_hint": null,
+        "profile_semantic_type": "identifier",
+        "type_evidence": {
+          "kind_counts": {
+            "numeric": 6
+          },
+          "uniqueness": 0.3333,
+          "rule": "TYPE-002b DOI-shaped values (10.<registrant>/<suffix>)"
+        },
+        "confidence": 0.99
+      }
+    },
+    {
+      "change_id": "CH-000003",
+      "rule": "MAP-001 exact normalized alias match",
+      "scope": "column",
+      "row_id": null,
+      "field": "material",
+      "source_column": "case.json/records::material.name",
+      "old_value": "material.name",
+      "new_value": "material",
+      "evidence": {
+        "matched_alias": "material name",
+        "normalized_header": "material_name",
+        "header_unit_hint": null,
+        "profile_semantic_type": "string",
+        "type_evidence": {
+          "kind_counts": {
+            "string": 6
+          },
+          "uniqueness": 0.3333,
+          "rule": "TYPE-001 fallback free text"
+        },
+        "confidence": 0.99
+      }
+    },
+    {
+      "change_id": "CH-000004",
+      "rule": "MAP-001 exact normalized alias match",
+      "scope": "column",
+      "row_id": null,
+      "field": "property",
+      "source_column": "case.json/records::property",
+      "old_value": "property",
+      "new_value": "property",
+      "evidence": {
+        "matched_alias": "property",
+        "normalized_header": "property",
+        "header_unit_hint": null,
+        "profile_semantic_type": "string",
+        "type_evidence": {
+          "kind_counts": {
+            "string": 6
+          },
+          "uniqueness": 0.3333,
+          "rule": "TYPE-001 fallback free text"
+        },
+        "confidence": 0.99
+      }
+    },
+    {
+      "change_id": "CH-000005",
+      "rule": "MAP-003 alias plus stop-word tokens",
+      "scope": "column",
+      "row_id": null,
+      "field": "temperature",
+      "source_column": "case.json/records::conditions.temperature",
+      "old_value": "conditions.temperature",
+      "new_value": "temperature",
+      "evidence": {
+        "matched_alias": "temperature",
+        "normalized_header": "conditions_temperature",
+        "header_unit_hint": null,
+        "profile_semantic_type": "numeric",
+        "type_evidence": {
+          "kind_counts": {
+            "numeric": 6
+          },
+          "uniqueness": 0.5,
+          "rule": "TYPE-003 >=80% of non-missing values parse as numbers or ranges"
+        },
+        "confidence": 0.78
+      }
+    },
+    {
+      "change_id": "CH-000006",
+      "rule": "MAP-003 alias plus stop-word tokens",
+      "scope": "column",
+      "row_id": null,
+      "field": "pressure",
+      "source_column": "case.json/records::conditions.pressure",
+      "old_value": "conditions.pressure",
+      "new_value": "pressure",
+      "evidence": {
+        "matched_alias": "pressure",
+        "normalized_header": "conditions_pressure",
+        "header_unit_hint": null,
+        "profile_semantic_type": "numeric",
+        "type_evidence": {
+          "kind_counts": {
+            "numeric": 6
+          },
+          "uniqueness": 0.5,
+          "rule": "TYPE-003 >=80% of non-missing values parse as numbers or ranges"
+        },
+        "confidence": 0.78
+      }
+    },
+    {
+      "change_id": "CH-000007",
+      "rule": "MAP-001 exact normalized alias match",
+      "scope": "column",
+      "row_id": null,
+      "field": "yield",
+      "source_column": "case.json/records::yield",
+      "old_value": "yield",
+      "new_value": "yield",
+      "evidence": {
+        "matched_alias": "yield",
+        "normalized_header": "yield",
+        "header_unit_hint": null,
+        "profile_semantic_type": "numeric",
+        "type_evidence": {
+          "kind_counts": {
+            "range": 2,
+            "numeric": 2,
+            "missing": 1,
+            "string": 1
+          },
+          "uniqueness": 0.8,
+          "rule": "TYPE-003 >=80% of non-missing values parse as numbers or ranges"
+        },
+        "confidence": 0.99
+      }
+    },
+    {
+      "change_id": "CH-000008",
+      "rule": "MAP-001 exact normalized alias match",
+      "scope": "column",
+      "row_id": null,
+      "field": "notes",
+      "source_column": "case.json/records::notes",
+      "old_value": "notes",
+      "new_value": "notes",
+      "evidence": {
+        "matched_alias": "notes",
+        "normalized_header": "notes",
+        "header_unit_hint": null,
+        "profile_semantic_type": "string",
+        "type_evidence": {
+          "kind_counts": {
+            "string": 6
+          },
+          "uniqueness": 1.0,
+          "rule": "TYPE-001 fallback free text"
+        },
+        "confidence": 0.99
+      }
+    },
+    {
+      "change_id": "CH-000009",
+      "rule": "MAP-001 exact normalized alias match",
+      "scope": "column",
+      "row_id": null,
+      "field": "energy",
+      "source_column": "case.json/records::Ea (eVee)",
+      "old_value": "Ea (eVee)",
+      "new_value": "energy",
+      "evidence": {
+        "matched_alias": "ea",
+        "normalized_header": "ea",
+        "header_unit_hint": "eVee",
+        "profile_semantic_type": "numeric",
+        "type_evidence": {
+          "kind_counts": {
+            "missing": 5,
+            "numeric": 1
+          },
+          "uniqueness": 1.0,
+          "rule": "TYPE-003 >=80% of non-missing values parse as numbers or ranges"
+        },
+        "confidence": 0.99
+      }
+    },
+    {
+      "change_id": "CH-000010",
+      "rule": "MAP-001 exact normalized alias match",
+      "scope": "column",
+      "row_id": null,
+      "field": "material",
+      "source_column": "case.json/material_csv::Material Name",
+      "old_value": "Material Name",
+      "new_value": "material",
+      "evidence": {
+        "matched_alias": "material name",
+        "normalized_header": "material_name",
+        "header_unit_hint": null,
+        "profile_semantic_type": "string",
+        "type_evidence": {
+          "kind_counts": {
+            "string": 6
+          },
+          "uniqueness": 0.5,
+          "rule": "TYPE-001 fallback free text"
+        },
+        "confidence": 0.99
+      }
+    },
+    {
+      "change_id": "CH-000011",
+      "rule": "MAP-001 exact normalized alias match",
+      "scope": "column",
+      "row_id": null,
+      "field": "doi",
+      "source_column": "case.json/material_csv::DOI",
+      "old_value": "DOI",
+      "new_value": "doi",
+      "evidence": {
+        "matched_alias": "doi",
+        "normalized_header": "doi",
+        "header_unit_hint": null,
+        "profile_semantic_type": "identifier",
+        "type_evidence": {
+          "kind_counts": {
+            "numeric": 6
+          },
+          "uniqueness": 0.1667,
+          "rule": "TYPE-002b DOI-shaped values (10.<registrant>/<suffix>)"
+        },
+        "confidence": 0.99
+      }
+    },
+    {
+      "change_id": "CH-000012",
+      "rule": "MAP-001 exact normalized alias match",
+      "scope": "column",
+      "row_id": null,
+      "field": "property",
+      "source_column": "case.json/material_csv::Property",
+      "old_value": "Property",
+      "new_value": "property",
+      "evidence": {
+        "matched_alias": "property",
+        "normalized_header": "property",
+        "header_unit_hint": null,
+        "profile_semantic_type": "string",
+        "type_evidence": {
+          "kind_counts": {
+            "string": 6
+          },
+          "uniqueness": 0.5,
+          "rule": "TYPE-001 fallback free text"
+        },
+        "confidence": 0.99
+      }
+    },
+    {
+      "change_id": "CH-000013",
+      "rule": "MAP-001 exact normalized alias match + MAP-005 unit-hint disambiguation",
+      "scope": "column",
+      "row_id": null,
+      "field": "temperature",
+      "source_column": "case.json/material_csv::T / K",
+      "old_value": "T / K",
+      "new_value": "temperature",
+      "evidence": {
+        "matched_alias": "t",
+        "normalized_header": "t",
+        "header_unit_hint": "k",
+        "profile_semantic_type": "numeric",
+        "type_evidence": {
+          "kind_counts": {
+            "numeric": 6
+          },
+          "uniqueness": 0.3333,
+          "rule": "TYPE-003 >=80% of non-missing values parse as numbers or ranges"
+        },
+        "confidence": 0.995
+      }
+    },
+    {
+      "change_id": "CH-000014",
+      "rule": "MAP-002 alias plus '_UNIT' suffix convention",
+      "scope": "column",
+      "row_id": null,
+      "field": "pressure",
+      "source_column": "case.json/material_csv::P_MPa",
+      "old_value": "P_MPa",
+      "new_value": "pressure",
+      "evidence": {
+        "matched_alias": "p",
+        "normalized_header": "p_mpa",
+        "header_unit_hint": "mpa",
+        "profile_semantic_type": "numeric",
+        "type_evidence": {
+          "kind_counts": {
+            "numeric": 5,
+            "missing": 1
+          },
+          "uniqueness": 0.4,
+          "rule": "TYPE-003 >=80% of non-missing values parse as numbers or ranges"
+        },
+        "confidence": 0.92
+      }
+    },
+    {
+      "change_id": "CH-000015",
+      "rule": "MAP-004 component (min/low/max/high) convention on aliased header",
+      "scope": "column",
+      "row_id": null,
+      "field": "yield",
+      "source_column": "case.json/material_csv::Yield_min (%)",
+      "old_value": "Yield_min (%)",
+      "new_value": "yield",
+      "evidence": {
+        "matched_alias": "yield",
+        "normalized_header": "yield",
+        "header_unit_hint": "%",
+        "profile_semantic_type": "numeric",
+        "type_evidence": {
+          "kind_counts": {
+            "numeric": 5,
+            "missing": 1
+          },
+          "uniqueness": 0.8,
+          "rule": "TYPE-003 >=80% of non-missing values parse as numbers or ranges"
+        },
+        "confidence": 0.99
+      }
+    },
+    {
+      "change_id": "CH-000016",
+      "rule": "MAP-004 component (min/low/max/high) convention on aliased header",
+      "scope": "column",
+      "row_id": null,
+      "field": "yield",
+      "source_column": "case.json/material_csv::Yield_max (%)",
+      "old_value": "Yield_max (%)",
+      "new_value": "yield",
+      "evidence": {
+        "matched_alias": "yield",
+        "normalized_header": "yield",
+        "header_unit_hint": "%",
+        "profile_semantic_type": "numeric",
+        "type_evidence": {
+          "kind_counts": {
+            "numeric": 5,
+            "missing": 1
+          },
+          "uniqueness": 0.8,
+          "rule": "TYPE-003 >=80% of non-missing values parse as numbers or ranges"
+        },
+        "confidence": 0.99
+      }
+    },
+    {
+      "change_id": "CH-000017",
+      "rule": "MAP-001 exact normalized alias match",
+      "scope": "column",
+      "row_id": null,
+      "field": "selectivity",
+      "source_column": "case.json/material_csv::Selectivity",
+      "old_value": "Selectivity",
+      "new_value": "selectivity",
+      "evidence": {
+        "matched_alias": "selectivity",
+        "normalized_header": "selectivity",
+        "header_unit_hint": null,
+        "profile_semantic_type": "numeric",
+        "type_evidence": {
+          "kind_counts": {
+            "numeric": 5,
+            "missing": 1
+          },
+          "uniqueness": 0.6,
+          "rule": "TYPE-003 >=80% of non-missing values parse as numbers or ranges"
+        },
+        "confidence": 0.99
+      }
+    },
+    {
+      "change_id": "CH-000018",
+      "rule": "MAP-001 exact normalized alias match",
+      "scope": "column",
+      "row_id": null,
+      "field": "notes",
+      "source_column": "case.json/material_csv::Notes",
+      "old_value": "Notes",
+      "new_value": "notes",
+      "evidence": {
+        "matched_alias": "notes",
+        "normalized_header": "notes",
+        "header_unit_hint": null,
+        "profile_semantic_type": "string",
+        "type_evidence": {
+          "kind_counts": {
+            "string": 4,
+            "missing": 2
+          },
+          "uniqueness": 0.75,
+          "rule": "TYPE-001 fallback free text"
+        },
+        "confidence": 0.99
+      }
+    },
+    {
+      "change_id": "CH-000019",
+      "rule": "MAP-001 exact normalized alias match",
+      "scope": "column",
+      "row_id": null,
+      "field": "material",
+      "source_column": "case.json:material-batch-c.csv::catalyst name",
+      "old_value": "catalyst name",
+      "new_value": "material",
+      "evidence": {
+        "matched_alias": "catalyst name",
+        "normalized_header": "catalyst_name",
+        "header_unit_hint": null,
+        "profile_semantic_type": "string",
+        "type_evidence": {
+          "kind_counts": {
+            "string": 4
+          },
+          "uniqueness": 0.5,
+          "rule": "TYPE-001 fallback free text"
+        },
+        "confidence": 0.99
+      }
+    },
+    {
+      "change_id": "CH-000020",
+      "rule": "MAP-001 exact normalized alias match",
+      "scope": "column",
+      "row_id": null,
+      "field": "doi",
+      "source_column": "case.json:material-batch-c.csv::文献DOI",
+      "old_value": "文献DOI",
+      "new_value": "doi",
+      "evidence": {
+        "matched_alias": "文献doi",
+        "normalized_header": "文献doi",
+        "header_unit_hint": null,
+        "profile_semantic_type": "identifier",
+        "type_evidence": {
+          "kind_counts": {
+            "numeric": 4
+          },
+          "uniqueness": 0.25,
+          "rule": "TYPE-002b DOI-shaped values (10.<registrant>/<suffix>)"
+        },
+        "confidence": 0.99
+      }
+    },
+    {
+      "change_id": "CH-000021",
+      "rule": "MAP-001 exact normalized alias match",
+      "scope": "column",
+      "row_id": null,
+      "field": "property",
+      "source_column": "case.json:material-batch-c.csv::指标",
+      "old_value": "指标",
+      "new_value": "property",
+      "evidence": {
+        "matched_alias": "指标",
+        "normalized_header": "指标",
+        "header_unit_hint": null,
+        "profile_semantic_type": "string",
+        "type_evidence": {
+          "kind_counts": {
+            "string": 4
+          },
+          "uniqueness": 0.25,
+          "rule": "TYPE-001 fallback free text"
+        },
+        "confidence": 0.99
+      }
+    },
+    {
+      "change_id": "CH-000022",
+      "rule": "MAP-001 exact normalized alias match",
+      "scope": "column",
+      "row_id": null,
+      "field": "temperature",
+      "source_column": "case.json:material-batch-c.csv::温度(摄氏度)",
+      "old_value": "温度(摄氏度)",
+      "new_value": "temperature",
+      "evidence": {
+        "matched_alias": "温度",
+        "normalized_header": "温度",
+        "header_unit_hint": "摄氏度",
+        "profile_semantic_type": "numeric",
+        "type_evidence": {
+          "kind_counts": {
+            "numeric": 4
+          },
+          "uniqueness": 0.5,
+          "rule": "TYPE-003 >=80% of non-missing values parse as numbers or ranges"
+        },
+        "confidence": 0.99
+      }
+    },
+    {
+      "change_id": "CH-000023",
+      "rule": "MAP-001 exact normalized alias match",
+      "scope": "column",
+      "row_id": null,
+      "field": "pressure",
+      "source_column": "case.json:material-batch-c.csv::压力",
+      "old_value": "压力",
+      "new_value": "pressure",
+      "evidence": {
+        "matched_alias": "压力",
+        "normalized_header": "压力",
+        "header_unit_hint": null,
+        "profile_semantic_type": "numeric",
+        "type_evidence": {
+          "kind_counts": {
+            "numeric": 4
+          },
+          "uniqueness": 0.5,
+          "rule": "TYPE-003 >=80% of non-missing values parse as numbers or ranges"
+        },
+        "confidence": 0.99
+      }
+    },
+    {
+      "change_id": "CH-000024",
+      "rule": "MAP-001 exact normalized alias match",
+      "scope": "column",
+      "row_id": null,
+      "field": "yield",
+      "source_column": "case.json:material-batch-c.csv::收率(%)",
+      "old_value": "收率(%)",
+      "new_value": "yield",
+      "evidence": {
+        "matched_alias": "收率",
+        "normalized_header": "收率",
+        "header_unit_hint": "%",
+        "profile_semantic_type": "numeric",
+        "type_evidence": {
+          "kind_counts": {
+            "numeric": 4
+          },
+          "uniqueness": 0.75,
+          "rule": "TYPE-003 >=80% of non-missing values parse as numbers or ranges"
+        },
+        "confidence": 0.99
+      }
+    },
+    {
+      "change_id": "CH-000025",
+      "rule": "MAP-001 exact normalized alias match",
+      "scope": "column",
+      "row_id": null,
+      "field": "notes",
+      "source_column": "case.json:material-batch-c.csv::备注",
+      "old_value": "备注",
+      "new_value": "notes",
+      "evidence": {
+        "matched_alias": "备注",
+        "normalized_header": "备注",
+        "header_unit_hint": null,
+        "profile_semantic_type": "string",
+        "type_evidence": {
+          "kind_counts": {
+            "string": 4
+          },
+          "uniqueness": 1.0,
+          "rule": "TYPE-001 fallback free text"
+        },
+        "confidence": 0.99
+      }
+    },
+    {
+      "change_id": "CH-000026",
+      "rule": "TYPE-TEXT",
+      "scope": "cell",
+      "row_id": "R000001",
+      "field": "record_id",
+      "source_column": "case.json/records::extraction.id",
+      "old_value": "A1",
+      "new_value": "A1",
+      "evidence": {
+        "semantic_type": "identifier"
+      }
+    },
+    {
+      "change_id": "CH-000027",
+      "rule": "TYPE-TEXT",
+      "scope": "cell",
+      "row_id": "R000001",
+      "field": "doi",
+      "source_column": "case.json/records::extraction.doi",
+      "old_value": "10.1234/syn.001",
+      "new_value": "10.1234/syn.001",
+      "evidence": {
+        "semantic_type": "identifier"
+      }
+    },
+    {
+      "change_id": "CH-000028",
+      "rule": "TYPE-TEXT",
+      "scope": "cell",
+      "row_id": "R000001",
+      "field": "material",
+      "source_column": "case.json/records::material.name",
+      "old_value": "Pt/Al2O3",
+      "new_value": "Pt/Al2O3",
+      "evidence": {
+        "semantic_type": "string"
+      }
+    },
+    {
+      "change_id": "CH-000029",
+      "rule": "TYPE-TEXT",
+      "scope": "cell",
+      "row_id": "R000001",
+      "field": "property",
+      "source_column": "case.json/records::property",
+      "old_value": "CO oxidation yield",
+      "new_value": "CO oxidation yield",
+      "evidence": {
+        "semantic_type": "string"
+      }
+    },
+    {
+      "change_id": "CH-000030",
+      "rule": "UNIT-CONV",
+      "scope": "cell",
+      "row_id": "R000001",
+      "field": "temperature",
+      "source_column": "case.json/records::conditions.temperature",
+      "old_value": {
+        "raw": "300 °C",
+        "number": 300.0,
+        "unit": "degC"
+      },
+      "new_value": {
+        "value": 573.15,
+        "unit": "K"
+      },
+      "evidence": {
+        "formula": "K = degC * 1 + 273.15",
+        "factor": 1.0,
+        "offset": 273.15,
+        "precision": "12 significant digits"
+      }
+    },
+    {
+      "change_id": "CH-000031",
+      "rule": "UNIT-CONV",
+      "scope": "cell",
+      "row_id": "R000001",
+      "field": "pressure",
+      "source_column": "case.json/records::conditions.pressure",
+      "old_value": {
+        "raw": "1 bar",
+        "number": 1.0,
+        "unit": "bar"
+      },
+      "new_value": {
+        "value": 0.1,
+        "unit": "MPa"
+      },
+      "evidence": {
+        "formula": "MPa = bar * 0.1",
+        "factor": 0.1,
+        "offset": 0.0,
+        "precision": "12 significant digits"
+      }
+    },
+    {
+      "change_id": "CH-000032",
+      "rule": "RANGE-SPLIT",
+      "scope": "cell",
+      "row_id": "R000001",
+      "field": "yield",
+      "source_column": "case.json/records::yield",
+      "old_value": "72-80 %",
+      "new_value": {
+        "low": 72.0,
+        "high": 80.0
+      },
+      "evidence": {
+        "rule": "low/high endpoints preserved; no midpoint invented"
+      }
+    },
+    {
+      "change_id": "CH-000033",
+      "rule": "TYPE-TEXT",
+      "scope": "cell",
+      "row_id": "R000001",
+      "field": "notes",
+      "source_column": "case.json/records::notes",
+      "old_value": "Table 2",
+      "new_value": "Table 2",
+      "evidence": {
+        "semantic_type": "string"
+      }
+    },
+    {
+      "change_id": "CH-000034",
+      "rule": "MISS-001",
+      "scope": "cell",
+      "row_id": "R000001",
+      "field": "energy",
+      "source_column": "case.json/records::Ea (eVee)",
+      "old_value": null,
+      "new_value": null,
+      "evidence": {
+        "reason": "column absent in this row (sparse union of per-source columns); retained as null"
+      }
+    },
+    {
+      "change_id": "CH-000035",
+      "rule": "TYPE-TEXT",
+      "scope": "cell",
+      "row_id": "R000002",
+      "field": "record_id",
+      "source_column": "case.json/records::extraction.id",
+      "old_value": "A1-dup",
+      "new_value": "A1-dup",
+      "evidence": {
+        "semantic_type": "identifier"
+      }
+    },
+    {
+      "change_id": "CH-000036",
+      "rule": "TYPE-TEXT",
+      "scope": "cell",
+      "row_id": "R000002",
+      "field": "doi",
+      "source_column": "case.json/records::extraction.doi",
+      "old_value": "10.1234/syn.001",
+      "new_value": "10.1234/syn.001",
+      "evidence": {
+        "semantic_type": "identifier"
+      }
+    },
+    {
+      "change_id": "CH-000037",
+      "rule": "TYPE-TEXT",
+      "scope": "cell",
+      "row_id": "R000002",
+      "field": "material",
+      "source_column": "case.json/records::material.name",
+      "old_value": "Pt/Al2O3",
+      "new_value": "Pt/Al2O3",
+      "evidence": {
+        "semantic_type": "string"
+      }
+    },
+    {
+      "change_id": "CH-000038",
+      "rule": "TYPE-TEXT",
+      "scope": "cell",
+      "row_id": "R000002",
+      "field": "property",
+      "source_column": "case.json/records::property",
+      "old_value": "CO oxidation yield",
+      "new_value": "CO oxidation yield",
+      "evidence": {
+        "semantic_type": "string"
+      }
+    },
+    {
+      "change_id": "CH-000039",
+      "rule": "UNIT-CONV",
+      "scope": "cell",
+      "row_id": "R000002",
+      "field": "temperature",
+      "source_column": "case.json/records::conditions.temperature",
+      "old_value": {
+        "raw": "300 °C",
+        "number": 300.0,
+        "unit": "degC"
+      },
+      "new_value": {
+        "value": 573.15,
+        "unit": "K"
+      },
+      "evidence": {
+        "formula": "K = degC * 1 + 273.15",
+        "factor": 1.0,
+        "offset": 273.15,
+        "precision": "12 significant digits"
+      }
+    },
+    {
+      "change_id": "CH-000040",
+      "rule": "UNIT-CONV",
+      "scope": "cell",
+      "row_id": "R000002",
+      "field": "pressure",
+      "source_column": "case.json/records::conditions.pressure",
+      "old_value": {
+        "raw": "1 bar",
+        "number": 1.0,
+        "unit": "bar"
+      },
+      "new_value": {
+        "value": 0.1,
+        "unit": "MPa"
+      },
+      "evidence": {
+        "formula": "MPa = bar * 0.1",
+        "factor": 0.1,
+        "offset": 0.0,
+        "precision": "12 significant digits"
+      }
+    },
+    {
+      "change_id": "CH-000041",
+      "rule": "RANGE-SPLIT",
+      "scope": "cell",
+      "row_id": "R000002",
+      "field": "yield",
+      "source_column": "case.json/records::yield",
+      "old_value": "72-80 %",
+      "new_value": {
+        "low": 72.0,
+        "high": 80.0
+      },
+      "evidence": {
+        "rule": "low/high endpoints preserved; no midpoint invented"
+      }
+    },
+    {
+      "change_id": "CH-000042",
+      "rule": "TYPE-TEXT",
+      "scope": "cell",
+      "row_id": "R000002",
+      "field": "notes",
+      "source_column": "case.json/records::notes",
+      "old_value": "Table 2 (second extraction pass)",
+      "new_value": "Table 2 (second extraction pass)",
+      "evidence": {
+        "semantic_type": "string"
+      }
+    },
+    {
+      "change_id": "CH-000043",
+      "rule": "MISS-001",
+      "scope": "cell",
+      "row_id": "R000002",
+      "field": "energy",
+      "source_column": "case.json/records::Ea (eVee)",
+      "old_value": null,
+      "new_value": null,
+      "evidence": {
+        "reason": "column absent in this row (sparse union of per-source columns); retained as null"
+      }
+    },
+    {
+      "change_id": "CH-000044",
+      "rule": "TYPE-TEXT",
+      "scope": "cell",
+      "row_id": "R000003",
+      "field": "record_id",
+      "source_column": "case.json/records::extraction.id",
+      "old_value": "A1-conflict",
+      "new_value": "A1-conflict",
+      "evidence": {
+        "semantic_type": "identifier"
+      }
+    },
+    {
+      "change_id": "CH-000045",
+      "rule": "TYPE-TEXT",
+      "scope": "cell",
+      "row_id": "R000003",
+      "field": "doi",
+      "source_column": "case.json/records::extraction.doi",
+      "old_value": "10.1234/syn.001",
+      "new_value": "10.1234/syn.001",
+      "evidence": {
+        "semantic_type": "identifier"
+      }
+    },
+    {
+      "change_id": "CH-000046",
+      "rule": "TYPE-TEXT",
+      "scope": "cell",
+      "row_id": "R000003",
+      "field": "material",
+      "source_column": "case.json/records::material.name",
+      "old_value": "Pt/Al2O3",
+      "new_value": "Pt/Al2O3",
+      "evidence": {
+        "semantic_type": "string"
+      }
+    },
+    {
+      "change_id": "CH-000047",
+      "rule": "TYPE-TEXT",
+      "scope": "cell",
+      "row_id": "R000003",
+      "field": "property",
+      "source_column": "case.json/records::property",
+      "old_value": "CO oxidation yield",
+      "new_value": "CO oxidation yield",
+      "evidence": {
+        "semantic_type": "string"
+      }
+    },
+    {
+      "change_id": "CH-000048",
+      "rule": "UNIT-CONV",
+      "scope": "cell",
+      "row_id": "R000003",
+      "field": "temperature",
+      "source_column": "case.json/records::conditions.temperature",
+      "old_value": {
+        "raw": "300 °C",
+        "number": 300.0,
+        "unit": "degC"
+      },
+      "new_value": {
+        "value": 573.15,
+        "unit": "K"
+      },
+      "evidence": {
+        "formula": "K = degC * 1 + 273.15",
+        "factor": 1.0,
+        "offset": 273.15,
+        "precision": "12 significant digits"
+      }
+    },
+    {
+      "change_id": "CH-000049",
+      "rule": "UNIT-CONV",
+      "scope": "cell",
+      "row_id": "R000003",
+      "field": "pressure",
+      "source_column": "case.json/records::conditions.pressure",
+      "old_value": {
+        "raw": "1 bar",
+        "number": 1.0,
+        "unit": "bar"
+      },
+      "new_value": {
+        "value": 0.1,
+        "unit": "MPa"
+      },
+      "evidence": {
+        "formula": "MPa = bar * 0.1",
+        "factor": 0.1,
+        "offset": 0.0,
+        "precision": "12 significant digits"
+      }
+    },
+    {
+      "change_id": "CH-000050",
+      "rule": "TYPE-TEXT",
+      "scope": "cell",
+      "row_id": "R000003",
+      "field": "notes",
+      "source_column": "case.json/records::notes",
+      "old_value": "Table 2 (conflicting third pass - must stay unmerged)",
+      "new_value": "Table 2 (conflicting third pass - must stay unmerged)",
+      "evidence": {
+        "semantic_type": "string"
+      }
+    },
+    {
+      "change_id": "CH-000051",
+      "rule": "MISS-001",
+      "scope": "cell",
+      "row_id": "R000003",
+      "field": "energy",
+      "source_column": "case.json/records::Ea (eVee)",
+      "old_value": null,
+      "new_value": null,
+      "evidence": {
+        "reason": "column absent in this row (sparse union of per-source columns); retained as null"
+      }
+    },
+    {
+      "change_id": "CH-000052",
+      "rule": "TYPE-TEXT",
+      "scope": "cell",
+      "row_id": "R000004",
+      "field": "record_id",
+      "source_column": "case.json/records::extraction.id",
+      "old_value": "A2",
+      "new_value": "A2",
+      "evidence": {
+        "semantic_type": "identifier"
+      }
+    },
+    {
+      "change_id": "CH-000053",
+      "rule": "TYPE-TEXT",
+      "scope": "cell",
+      "row_id": "R000004",
+      "field": "doi",
+      "source_column": "case.json/records::extraction.doi",
+      "old_value": "10.1234/syn.001",
+      "new_value": "10.1234/syn.001",
+      "evidence": {
+        "semantic_type": "identifier"
+      }
+    },
+    {
+      "change_id": "CH-000054",
+      "rule": "TYPE-TEXT",
+      "scope": "cell",
+      "row_id": "R000004",
+      "field": "material",
+      "source_column": "case.json/records::material.name",
+      "old_value": "Pt/Al2O3",
+      "new_value": "Pt/Al2O3",
+      "evidence": {
+        "semantic_type": "string"
+      }
+    },
+    {
+      "change_id": "CH-000055",
+      "rule": "TYPE-TEXT",
+      "scope": "cell",
+      "row_id": "R000004",
+      "field": "property",
+      "source_column": "case.json/records::property",
+      "old_value": "CO oxidation yield",
+      "new_value": "CO oxidation yield",
+      "evidence": {
+        "semantic_type": "string"
+      }
+    },
+    {
+      "change_id": "CH-000056",
+      "rule": "MISS-001",
+      "scope": "cell",
+      "row_id": "R000004",
+      "field": "yield",
+      "source_column": "case.json/records::yield",
+      "old_value": null,
+      "new_value": null,
+      "evidence": {
+        "reason": "explicit missing token/null in source cell; retained as null, nothing imputed"
+      }
+    },
+    {
+      "change_id": "CH-000057",
+      "rule": "TYPE-TEXT",
+      "scope": "cell",
+      "row_id": "R000004",
+      "field": "notes",
+      "source_column": "case.json/records::notes",
+      "old_value": "yield not reported",
+      "new_value": "yield not reported",
+      "evidence": {
+        "semantic_type": "string"
+      }
+    },
+    {
+      "change_id": "CH-000058",
+      "rule": "MISS-001",
+      "scope": "cell",
+      "row_id": "R000004",
+      "field": "energy",
+      "source_column": "case.json/records::Ea (eVee)",
+      "old_value": null,
+      "new_value": null,
+      "evidence": {
+        "reason": "column absent in this row (sparse union of per-source columns); retained as null"
+      }
+    },
+    {
+      "change_id": "CH-000059",
+      "rule": "TYPE-TEXT",
+      "scope": "cell",
+      "row_id": "R000005",
+      "field": "record_id",
+      "source_column": "case.json/records::extraction.id",
+      "old_value": "A3",
+      "new_value": "A3",
+      "evidence": {
+        "semantic_type": "identifier"
+      }
+    },
+    {
+      "change_id": "CH-000060",
+      "rule": "TYPE-TEXT",
+      "scope": "cell",
+      "row_id": "R000005",
+      "field": "doi",
+      "source_column": "case.json/records::extraction.doi",
+      "old_value": "10.1234/syn.001",
+      "new_value": "10.1234/syn.001",
+      "evidence": {
+        "semantic_type": "identifier"
+      }
+    },
+    {
+      "change_id": "CH-000061",
+      "rule": "TYPE-TEXT",
+      "scope": "cell",
+      "row_id": "R000005",
+      "field": "material",
+      "source_column": "case.json/records::material.name",
+      "old_value": "Pt/Al2O3",
+      "new_value": "Pt/Al2O3",
+      "evidence": {
+        "semantic_type": "string"
+      }
+    },
+    {
+      "change_id": "CH-000062",
+      "rule": "TYPE-TEXT",
+      "scope": "cell",
+      "row_id": "R000005",
+      "field": "property",
+      "source_column": "case.json/records::property",
+      "old_value": "activation energy",
+      "new_value": "activation energy",
+      "evidence": {
+        "semantic_type": "string"
+      }
+    },
+    {
+      "change_id": "CH-000063",
+      "rule": "TYPE-TEXT",
+      "scope": "cell",
+      "row_id": "R000005",
+      "field": "notes",
+      "source_column": "case.json/records::notes",
+      "old_value": "unknown unit eVee invented for the demo; yield value is unparseable",
+      "new_value": "unknown unit eVee invented for the demo; yield value is unparseable",
+      "evidence": {
+        "semantic_type": "string"
+      }
+    },
+    {
+      "change_id": "CH-000064",
+      "rule": "TYPE-TEXT",
+      "scope": "cell",
+      "row_id": "R000006",
+      "field": "record_id",
+      "source_column": "case.json/records::extraction.id",
+      "old_value": "A4",
+      "new_value": "A4",
+      "evidence": {
+        "semantic_type": "identifier"
+      }
+    },
+    {
+      "change_id": "CH-000065",
+      "rule": "TYPE-TEXT",
+      "scope": "cell",
+      "row_id": "R000006",
+      "field": "doi",
+      "source_column": "case.json/records::extraction.doi",
+      "old_value": "10.1234/syn.004",
+      "new_value": "10.1234/syn.004",
+      "evidence": {
+        "semantic_type": "identifier"
+      }
+    },
+    {
+      "change_id": "CH-000066",
+      "rule": "TYPE-TEXT",
+      "scope": "cell",
+      "row_id": "R000006",
+      "field": "material",
+      "source_column": "case.json/records::material.name",
+      "old_value": "Au/TiO2",
+      "new_value": "Au/TiO2",
+      "evidence": {
+        "semantic_type": "string"
+      }
+    },
+    {
+      "change_id": "CH-000067",
+      "rule": "TYPE-TEXT",
+      "scope": "cell",
+      "row_id": "R000006",
+      "field": "property",
+      "source_column": "case.json/records::property",
+      "old_value": "CO oxidation yield",
+      "new_value": "CO oxidation yield",
+      "evidence": {
+        "semantic_type": "string"
+      }
+    },
+    {
+      "change_id": "CH-000068",
+      "rule": "UNIT-CONV",
+      "scope": "cell",
+      "row_id": "R000006",
+      "field": "temperature",
+      "source_column": "case.json/records::conditions.temperature",
+      "old_value": {
+        "raw": "280 °C",
+        "number": 280.0,
+        "unit": "degC"
+      },
+      "new_value": {
+        "value": 553.15,
+        "unit": "K"
+      },
+      "evidence": {
+        "formula": "K = degC * 1 + 273.15",
+        "factor": 1.0,
+        "offset": 273.15,
+        "precision": "12 significant digits"
+      }
+    },
+    {
+      "change_id": "CH-000069",
+      "rule": "UNIT-CONV",
+      "scope": "cell",
+      "row_id": "R000006",
+      "field": "pressure",
+      "source_column": "case.json/records::conditions.pressure",
+      "old_value": {
+        "raw": "1.5 bar",
+        "number": 1.5,
+        "unit": "bar"
+      },
+      "new_value": {
+        "value": 0.15,
+        "unit": "MPa"
+      },
+      "evidence": {
+        "formula": "MPa = bar * 0.1",
+        "factor": 0.1,
+        "offset": 0.0,
+        "precision": "12 significant digits"
+      }
+    },
+    {
+      "change_id": "CH-000070",
+      "rule": "TYPE-TEXT",
+      "scope": "cell",
+      "row_id": "R000006",
+      "field": "notes",
+      "source_column": "case.json/records::notes",
+      "old_value": "implausible percent kept for anomaly review",
+      "new_value": "implausible percent kept for anomaly review",
+      "evidence": {
+        "semantic_type": "string"
+      }
+    },
+    {
+      "change_id": "CH-000071",
+      "rule": "MISS-001",
+      "scope": "cell",
+      "row_id": "R000006",
+      "field": "energy",
+      "source_column": "case.json/records::Ea (eVee)",
+      "old_value": null,
+      "new_value": null,
+      "evidence": {
+        "reason": "column absent in this row (sparse union of per-source columns); retained as null"
+      }
+    },
+    {
+      "change_id": "CH-000072",
+      "rule": "TYPE-TEXT",
+      "scope": "cell",
+      "row_id": "R000007",
+      "field": "material",
+      "source_column": "case.json/material_csv::Material Name",
+      "old_value": "Cu/ZnO",
+      "new_value": "Cu/ZnO",
+      "evidence": {
+        "semantic_type": "string"
+      }
+    },
+    {
+      "change_id": "CH-000073",
+      "rule": "TYPE-TEXT",
+      "scope": "cell",
+      "row_id": "R000007",
+      "field": "doi",
+      "source_column": "case.json/material_csv::DOI",
+      "old_value": "10.1234/syn.002",
+      "new_value": "10.1234/syn.002",
+      "evidence": {
+        "semantic_type": "identifier"
+      }
+    },
+    {
+      "change_id": "CH-000074",
+      "rule": "TYPE-TEXT",
+      "scope": "cell",
+      "row_id": "R000007",
+      "field": "property",
+      "source_column": "case.json/material_csv::Property",
+      "old_value": "methanol yield",
+      "new_value": "methanol yield",
+      "evidence": {
+        "semantic_type": "string"
+      }
+    },
+    {
+      "change_id": "CH-000075",
+      "rule": "TYPE-TEXT",
+      "scope": "cell",
+      "row_id": "R000007",
+      "field": "notes",
+      "source_column": "case.json/material_csv::Notes",
+      "old_value": "Table 1",
+      "new_value": "Table 1",
+      "evidence": {
+        "semantic_type": "string"
+      }
+    },
+    {
+      "change_id": "CH-000076",
+      "rule": "TYPE-TEXT",
+      "scope": "cell",
+      "row_id": "R000008",
+      "field": "material",
+      "source_column": "case.json/material_csv::Material Name",
+      "old_value": "Cu/ZnO",
+      "new_value": "Cu/ZnO",
+      "evidence": {
+        "semantic_type": "string"
+      }
+    },
+    {
+      "change_id": "CH-000077",
+      "rule": "TYPE-TEXT",
+      "scope": "cell",
+      "row_id": "R000008",
+      "field": "doi",
+      "source_column": "case.json/material_csv::DOI",
+      "old_value": "10.1234/syn.002",
+      "new_value": "10.1234/syn.002",
+      "evidence": {
+        "semantic_type": "identifier"
+      }
+    },
+    {
+      "change_id": "CH-000078",
+      "rule": "TYPE-TEXT",
+      "scope": "cell",
+      "row_id": "R000008",
+      "field": "property",
+      "source_column": "case.json/material_csv::Property",
+      "old_value": "methanol yield",
+      "new_value": "methanol yield",
+      "evidence": {
+        "semantic_type": "string"
+      }
+    },
+    {
+      "change_id": "CH-000079",
+      "rule": "TYPE-TEXT",
+      "scope": "cell",
+      "row_id": "R000008",
+      "field": "notes",
+      "source_column": "case.json/material_csv::Notes",
+      "old_value": "Table 1",
+      "new_value": "Table 1",
+      "evidence": {
+        "semantic_type": "string"
+      }
+    },
+    {
+      "change_id": "CH-000080",
+      "rule": "TYPE-TEXT",
+      "scope": "cell",
+      "row_id": "R000009",
+      "field": "material",
+      "source_column": "case.json/material_csv::Material Name",
+      "old_value": "Cu/ZnO",
+      "new_value": "Cu/ZnO",
+      "evidence": {
+        "semantic_type": "string"
+      }
+    },
+    {
+      "change_id": "CH-000081",
+      "rule": "TYPE-TEXT",
+      "scope": "cell",
+      "row_id": "R000009",
+      "field": "doi",
+      "source_column": "case.json/material_csv::DOI",
+      "old_value": "10.1234/syn.002",
+      "new_value": "10.1234/syn.002",
+      "evidence": {
+        "semantic_type": "identifier"
+      }
+    },
+    {
+      "change_id": "CH-000082",
+      "rule": "TYPE-TEXT",
+      "scope": "cell",
+      "row_id": "R000009",
+      "field": "property",
+      "source_column": "case.json/material_csv::Property",
+      "old_value": "methanol yield",
+      "new_value": "methanol yield",
+      "evidence": {
+        "semantic_type": "string"
+      }
+    },
+    {
+      "change_id": "CH-000083",
+      "rule": "TYPE-TEXT",
+      "scope": "cell",
+      "row_id": "R000009",
+      "field": "notes",
+      "source_column": "case.json/material_csv::Notes",
+      "old_value": "Table 1 conflicting re-extraction",
+      "new_value": "Table 1 conflicting re-extraction",
+      "evidence": {
+        "semantic_type": "string"
+      }
+    },
+    {
+      "change_id": "CH-000084",
+      "rule": "TYPE-TEXT",
+      "scope": "cell",
+      "row_id": "R000010",
+      "field": "material",
+      "source_column": "case.json/material_csv::Material Name",
+      "old_value": "Fe-Co",
+      "new_value": "Fe-Co",
+      "evidence": {
+        "semantic_type": "string"
+      }
+    },
+    {
+      "change_id": "CH-000085",
+      "rule": "TYPE-TEXT",
+      "scope": "cell",
+      "row_id": "R000010",
+      "field": "doi",
+      "source_column": "case.json/material_csv::DOI",
+      "old_value": "10.1234/syn.002",
+      "new_value": "10.1234/syn.002",
+      "evidence": {
+        "semantic_type": "identifier"
+      }
+    },
+    {
+      "change_id": "CH-000086",
+      "rule": "TYPE-TEXT",
+      "scope": "cell",
+      "row_id": "R000010",
+      "field": "property",
+      "source_column": "case.json/material_csv::Property",
+      "old_value": "methanol selectivity",
+      "new_value": "methanol selectivity",
+      "evidence": {
+        "semantic_type": "string"
+      }
+    },
+    {
+      "change_id": "CH-000087",
+      "rule": "MISS-001",
+      "scope": "cell",
+      "row_id": "R000010",
+      "field": "yield",
+      "source_column": "case.json/material_csv::Yield_min (%)",
+      "old_value": "",
+      "new_value": null,
+      "evidence": {
+        "reason": "explicit missing token/null in source cell; retained as null, nothing imputed"
+      }
+    },
+    {
+      "change_id": "CH-000088",
+      "rule": "MISS-001",
+      "scope": "cell",
+      "row_id": "R000010",
+      "field": "yield",
+      "source_column": "case.json/material_csv::Yield_max (%)",
+      "old_value": "",
+      "new_value": null,
+      "evidence": {
+        "reason": "explicit missing token/null in source cell; retained as null, nothing imputed"
+      }
+    },
+    {
+      "change_id": "CH-000089",
+      "rule": "MISS-001",
+      "scope": "cell",
+      "row_id": "R000010",
+      "field": "notes",
+      "source_column": "case.json/material_csv::Notes",
+      "old_value": "N/A",
+      "new_value": null,
+      "evidence": {
+        "reason": "explicit missing token/null in source cell; retained as null, nothing imputed"
+      }
+    },
+    {
+      "change_id": "CH-000090",
+      "rule": "TYPE-TEXT",
+      "scope": "cell",
+      "row_id": "R000011",
+      "field": "material",
+      "source_column": "case.json/material_csv::Material Name",
+      "old_value": "Fe-Co",
+      "new_value": "Fe-Co",
+      "evidence": {
+        "semantic_type": "string"
+      }
+    },
+    {
+      "change_id": "CH-000091",
+      "rule": "TYPE-TEXT",
+      "scope": "cell",
+      "row_id": "R000011",
+      "field": "doi",
+      "source_column": "case.json/material_csv::DOI",
+      "old_value": "10.1234/syn.002",
+      "new_value": "10.1234/syn.002",
+      "evidence": {
+        "semantic_type": "identifier"
+      }
+    },
+    {
+      "change_id": "CH-000092",
+      "rule": "TYPE-TEXT",
+      "scope": "cell",
+      "row_id": "R000011",
+      "field": "property",
+      "source_column": "case.json/material_csv::Property",
+      "old_value": "methanol selectivity",
+      "new_value": "methanol selectivity",
+      "evidence": {
+        "semantic_type": "string"
+      }
+    },
+    {
+      "change_id": "CH-000093",
+      "rule": "MISS-001",
+      "scope": "cell",
+      "row_id": "R000011",
+      "field": "pressure",
+      "source_column": "case.json/material_csv::P_MPa",
+      "old_value": "",
+      "new_value": null,
+      "evidence": {
+        "reason": "explicit missing token/null in source cell; retained as null, nothing imputed"
+      }
+    },
+    {
+      "change_id": "CH-000094",
+      "rule": "MISS-001",
+      "scope": "cell",
+      "row_id": "R000011",
+      "field": "notes",
+      "source_column": "case.json/material_csv::Notes",
+      "old_value": "",
+      "new_value": null,
+      "evidence": {
+        "reason": "explicit missing token/null in source cell; retained as null, nothing imputed"
+      }
+    },
+    {
+      "change_id": "CH-000095",
+      "rule": "TYPE-TEXT",
+      "scope": "cell",
+      "row_id": "R000012",
+      "field": "material",
+      "source_column": "case.json/material_csv::Material Name",
+      "old_value": "Ni-MgO",
+      "new_value": "Ni-MgO",
+      "evidence": {
+        "semantic_type": "string"
+      }
+    },
+    {
+      "change_id": "CH-000096",
+      "rule": "TYPE-TEXT",
+      "scope": "cell",
+      "row_id": "R000012",
+      "field": "doi",
+      "source_column": "case.json/material_csv::DOI",
+      "old_value": "10.1234/syn.002",
+      "new_value": "10.1234/syn.002",
+      "evidence": {
+        "semantic_type": "identifier"
+      }
+    },
+    {
+      "change_id": "CH-000097",
+      "rule": "TYPE-TEXT",
+      "scope": "cell",
+      "row_id": "R000012",
+      "field": "property",
+      "source_column": "case.json/material_csv::Property",
+      "old_value": "methane conversion",
+      "new_value": "methane conversion",
+      "evidence": {
+        "semantic_type": "string"
+      }
+    },
+    {
+      "change_id": "CH-000098",
+      "rule": "MISS-001",
+      "scope": "cell",
+      "row_id": "R000012",
+      "field": "selectivity",
+      "source_column": "case.json/material_csv::Selectivity",
+      "old_value": "",
+      "new_value": null,
+      "evidence": {
+        "reason": "explicit missing token/null in source cell; retained as null, nothing imputed"
+      }
+    },
+    {
+      "change_id": "CH-000099",
+      "rule": "TYPE-TEXT",
+      "scope": "cell",
+      "row_id": "R000012",
+      "field": "notes",
+      "source_column": "case.json/material_csv::Notes",
+      "old_value": "inverted range demo",
+      "new_value": "inverted range demo",
+      "evidence": {
+        "semantic_type": "string"
+      }
+    },
+    {
+      "change_id": "CH-000100",
+      "rule": "TYPE-TEXT",
+      "scope": "cell",
+      "row_id": "R000013",
+      "field": "material",
+      "source_column": "case.json:material-batch-c.csv::catalyst name",
+      "old_value": "Ni/SiO2",
+      "new_value": "Ni/SiO2",
+      "evidence": {
+        "semantic_type": "string"
+      }
+    },
+    {
+      "change_id": "CH-000101",
+      "rule": "TYPE-TEXT",
+      "scope": "cell",
+      "row_id": "R000013",
+      "field": "doi",
+      "source_column": "case.json:material-batch-c.csv::文献DOI",
+      "old_value": "10.1234/syn.003",
+      "new_value": "10.1234/syn.003",
+      "evidence": {
+        "semantic_type": "identifier"
+      }
+    },
+    {
+      "change_id": "CH-000102",
+      "rule": "TYPE-TEXT",
+      "scope": "cell",
+      "row_id": "R000013",
+      "field": "property",
+      "source_column": "case.json:material-batch-c.csv::指标",
+      "old_value": "methane conversion",
+      "new_value": "methane conversion",
+      "evidence": {
+        "semantic_type": "string"
+      }
+    },
+    {
+      "change_id": "CH-000103",
+      "rule": "UNIT-CONV",
+      "scope": "cell",
+      "row_id": "R000013",
+      "field": "temperature",
+      "source_column": "case.json:material-batch-c.csv::温度(摄氏度)",
+      "old_value": {
+        "raw": "350",
+        "number": 350.0,
+        "unit": "degC"
+      },
+      "new_value": {
+        "value": 623.15,
+        "unit": "K"
+      },
+      "evidence": {
+        "formula": "K = degC * 1 + 273.15",
+        "factor": 1.0,
+        "offset": 273.15,
+        "precision": "12 significant digits"
+      }
+    },
+    {
+      "change_id": "CH-000104",
+      "rule": "UNIT-CONV",
+      "scope": "cell",
+      "row_id": "R000013",
+      "field": "pressure",
+      "source_column": "case.json:material-batch-c.csv::压力",
+      "old_value": {
+        "raw": "2.5 bar",
+        "number": 2.5,
+        "unit": "bar"
+      },
+      "new_value": {
+        "value": 0.25,
+        "unit": "MPa"
+      },
+      "evidence": {
+        "formula": "MPa = bar * 0.1",
+        "factor": 0.1,
+        "offset": 0.0,
+        "precision": "12 significant digits"
+      }
+    },
+    {
+      "change_id": "CH-000105",
+      "rule": "TYPE-TEXT",
+      "scope": "cell",
+      "row_id": "R000013",
+      "field": "notes",
+      "source_column": "case.json:material-batch-c.csv::备注",
+      "old_value": "表3",
+      "new_value": "表3",
+      "evidence": {
+        "semantic_type": "string"
+      }
+    },
+    {
+      "change_id": "CH-000106",
+      "rule": "TYPE-TEXT",
+      "scope": "cell",
+      "row_id": "R000014",
+      "field": "material",
+      "source_column": "case.json:material-batch-c.csv::catalyst name",
+      "old_value": "Ni/SiO2",
+      "new_value": "Ni/SiO2",
+      "evidence": {
+        "semantic_type": "string"
+      }
+    },
+    {
+      "change_id": "CH-000107",
+      "rule": "TYPE-TEXT",
+      "scope": "cell",
+      "row_id": "R000014",
+      "field": "doi",
+      "source_column": "case.json:material-batch-c.csv::文献DOI",
+      "old_value": "10.1234/syn.003",
+      "new_value": "10.1234/syn.003",
+      "evidence": {
+        "semantic_type": "identifier"
+      }
+    },
+    {
+      "change_id": "CH-000108",
+      "rule": "TYPE-TEXT",
+      "scope": "cell",
+      "row_id": "R000014",
+      "field": "property",
+      "source_column": "case.json:material-batch-c.csv::指标",
+      "old_value": "methane conversion",
+      "new_value": "methane conversion",
+      "evidence": {
+        "semantic_type": "string"
+      }
+    },
+    {
+      "change_id": "CH-000109",
+      "rule": "UNIT-CONV",
+      "scope": "cell",
+      "row_id": "R000014",
+      "field": "temperature",
+      "source_column": "case.json:material-batch-c.csv::温度(摄氏度)",
+      "old_value": {
+        "raw": "350",
+        "number": 350.0,
+        "unit": "degC"
+      },
+      "new_value": {
+        "value": 623.15,
+        "unit": "K"
+      },
+      "evidence": {
+        "formula": "K = degC * 1 + 273.15",
+        "factor": 1.0,
+        "offset": 273.15,
+        "precision": "12 significant digits"
+      }
+    },
+    {
+      "change_id": "CH-000110",
+      "rule": "UNIT-CONV",
+      "scope": "cell",
+      "row_id": "R000014",
+      "field": "pressure",
+      "source_column": "case.json:material-batch-c.csv::压力",
+      "old_value": {
+        "raw": "2.5 bar",
+        "number": 2.5,
+        "unit": "bar"
+      },
+      "new_value": {
+        "value": 0.25,
+        "unit": "MPa"
+      },
+      "evidence": {
+        "formula": "MPa = bar * 0.1",
+        "factor": 0.1,
+        "offset": 0.0,
+        "precision": "12 significant digits"
+      }
+    },
+    {
+      "change_id": "CH-000111",
+      "rule": "TYPE-TEXT",
+      "scope": "cell",
+      "row_id": "R000014",
+      "field": "notes",
+      "source_column": "case.json:material-batch-c.csv::备注",
+      "old_value": "表3 二次抽取",
+      "new_value": "表3 二次抽取",
+      "evidence": {
+        "semantic_type": "string"
+      }
+    },
+    {
+      "change_id": "CH-000112",
+      "rule": "TYPE-TEXT",
+      "scope": "cell",
+      "row_id": "R000015",
+      "field": "material",
+      "source_column": "case.json:material-batch-c.csv::catalyst name",
+      "old_value": "Ni/SiO2",
+      "new_value": "Ni/SiO2",
+      "evidence": {
+        "semantic_type": "string"
+      }
+    },
+    {
+      "change_id": "CH-000113",
+      "rule": "TYPE-TEXT",
+      "scope": "cell",
+      "row_id": "R000015",
+      "field": "doi",
+      "source_column": "case.json:material-batch-c.csv::文献DOI",
+      "old_value": "10.1234/syn.003",
+      "new_value": "10.1234/syn.003",
+      "evidence": {
+        "semantic_type": "identifier"
+      }
+    },
+    {
+      "change_id": "CH-000114",
+      "rule": "TYPE-TEXT",
+      "scope": "cell",
+      "row_id": "R000015",
+      "field": "property",
+      "source_column": "case.json:material-batch-c.csv::指标",
+      "old_value": "methane conversion",
+      "new_value": "methane conversion",
+      "evidence": {
+        "semantic_type": "string"
+      }
+    },
+    {
+      "change_id": "CH-000115",
+      "rule": "UNIT-CONV",
+      "scope": "cell",
+      "row_id": "R000015",
+      "field": "temperature",
+      "source_column": "case.json:material-batch-c.csv::温度(摄氏度)",
+      "old_value": {
+        "raw": "350",
+        "number": 350.0,
+        "unit": "degC"
+      },
+      "new_value": {
+        "value": 623.15,
+        "unit": "K"
+      },
+      "evidence": {
+        "formula": "K = degC * 1 + 273.15",
+        "factor": 1.0,
+        "offset": 273.15,
+        "precision": "12 significant digits"
+      }
+    },
+    {
+      "change_id": "CH-000116",
+      "rule": "UNIT-CONV",
+      "scope": "cell",
+      "row_id": "R000015",
+      "field": "pressure",
+      "source_column": "case.json:material-batch-c.csv::压力",
+      "old_value": {
+        "raw": "2.5 bar",
+        "number": 2.5,
+        "unit": "bar"
+      },
+      "new_value": {
+        "value": 0.25,
+        "unit": "MPa"
+      },
+      "evidence": {
+        "formula": "MPa = bar * 0.1",
+        "factor": 0.1,
+        "offset": 0.0,
+        "precision": "12 significant digits"
+      }
+    },
+    {
+      "change_id": "CH-000117",
+      "rule": "TYPE-TEXT",
+      "scope": "cell",
+      "row_id": "R000015",
+      "field": "notes",
+      "source_column": "case.json:material-batch-c.csv::备注",
+      "old_value": "表3 冲突再抽取",
+      "new_value": "表3 冲突再抽取",
+      "evidence": {
+        "semantic_type": "string"
+      }
+    },
+    {
+      "change_id": "CH-000118",
+      "rule": "TYPE-TEXT",
+      "scope": "cell",
+      "row_id": "R000016",
+      "field": "material",
+      "source_column": "case.json:material-batch-c.csv::catalyst name",
+      "old_value": "Co3O4",
+      "new_value": "Co3O4",
+      "evidence": {
+        "semantic_type": "string"
+      }
+    },
+    {
+      "change_id": "CH-000119",
+      "rule": "TYPE-TEXT",
+      "scope": "cell",
+      "row_id": "R000016",
+      "field": "doi",
+      "source_column": "case.json:material-batch-c.csv::文献DOI",
+      "old_value": "10.1234/syn.003",
+      "new_value": "10.1234/syn.003",
+      "evidence": {
+        "semantic_type": "identifier"
+      }
+    },
+    {
+      "change_id": "CH-000120",
+      "rule": "TYPE-TEXT",
+      "scope": "cell",
+      "row_id": "R000016",
+      "field": "property",
+      "source_column": "case.json:material-batch-c.csv::指标",
+      "old_value": "methane conversion",
+      "new_value": "methane conversion",
+      "evidence": {
+        "semantic_type": "string"
+      }
+    },
+    {
+      "change_id": "CH-000121",
+      "rule": "UNIT-CONV",
+      "scope": "cell",
+      "row_id": "R000016",
+      "field": "temperature",
+      "source_column": "case.json:material-batch-c.csv::温度(摄氏度)",
+      "old_value": {
+        "raw": "320",
+        "number": 320.0,
+        "unit": "degC"
+      },
+      "new_value": {
+        "value": 593.15,
+        "unit": "K"
+      },
+      "evidence": {
+        "formula": "K = degC * 1 + 273.15",
+        "factor": 1.0,
+        "offset": 273.15,
+        "precision": "12 significant digits"
+      }
+    },
+    {
+      "change_id": "CH-000122",
+      "rule": "UNIT-CONV",
+      "scope": "cell",
+      "row_id": "R000016",
+      "field": "pressure",
+      "source_column": "case.json:material-batch-c.csv::压力",
+      "old_value": {
+        "raw": "1.0 bar",
+        "number": 1.0,
+        "unit": "bar"
+      },
+      "new_value": {
+        "value": 0.1,
+        "unit": "MPa"
+      },
+      "evidence": {
+        "formula": "MPa = bar * 0.1",
+        "factor": 0.1,
+        "offset": 0.0,
+        "precision": "12 significant digits"
+      }
+    },
+    {
+      "change_id": "CH-000123",
+      "rule": "TYPE-TEXT",
+      "scope": "cell",
+      "row_id": "R000016",
+      "field": "notes",
+      "source_column": "case.json:material-batch-c.csv::备注",
+      "old_value": "表4",
+      "new_value": "表4",
+      "evidence": {
+        "semantic_type": "string"
+      }
+    },
+    {
+      "change_id": "CH-000124",
+      "rule": "DUP-EXACT",
+      "scope": "row",
+      "row_id": "R000001",
+      "field": "_duplicate",
+      "source_column": null,
+      "old_value": null,
+      "new_value": "exact_duplicate_candidate",
+      "evidence": {
+        "duplicate_group": "DG-0001",
+        "context_key": "doi=10.1234/syn.001|title=|locator=|material=pt/al2o3|property=co oxidation yield|temperature=573.15|pressure=0.1|reaction_time=",
+        "note": "flag only: no row is merged or dropped by this tool"
+      }
+    },
+    {
+      "change_id": "CH-000125",
+      "rule": "DUP-CONFLICT",
+      "scope": "row",
+      "row_id": "R000001",
+      "field": "_duplicate",
+      "source_column": null,
+      "old_value": null,
+      "new_value": "context_value_conflict",
+      "evidence": {
+        "duplicate_group": "DG-0001",
+        "context_key": "doi=10.1234/syn.001|title=|locator=|material=pt/al2o3|property=co oxidation yield|temperature=573.15|pressure=0.1|reaction_time=",
+        "note": "flag only: no row is merged or dropped by this tool"
+      }
+    },
+    {
+      "change_id": "CH-000126",
+      "rule": "DUP-EXACT",
+      "scope": "row",
+      "row_id": "R000002",
+      "field": "_duplicate",
+      "source_column": null,
+      "old_value": null,
+      "new_value": "exact_duplicate_candidate",
+      "evidence": {
+        "duplicate_group": "DG-0001",
+        "context_key": "doi=10.1234/syn.001|title=|locator=|material=pt/al2o3|property=co oxidation yield|temperature=573.15|pressure=0.1|reaction_time=",
+        "note": "flag only: no row is merged or dropped by this tool"
+      }
+    },
+    {
+      "change_id": "CH-000127",
+      "rule": "DUP-CONFLICT",
+      "scope": "row",
+      "row_id": "R000002",
+      "field": "_duplicate",
+      "source_column": null,
+      "old_value": null,
+      "new_value": "context_value_conflict",
+      "evidence": {
+        "duplicate_group": "DG-0001",
+        "context_key": "doi=10.1234/syn.001|title=|locator=|material=pt/al2o3|property=co oxidation yield|temperature=573.15|pressure=0.1|reaction_time=",
+        "note": "flag only: no row is merged or dropped by this tool"
+      }
+    },
+    {
+      "change_id": "CH-000128",
+      "rule": "DUP-CONFLICT",
+      "scope": "row",
+      "row_id": "R000003",
+      "field": "_duplicate",
+      "source_column": null,
+      "old_value": null,
+      "new_value": "context_value_conflict",
+      "evidence": {
+        "duplicate_group": "DG-0001",
+        "context_key": "doi=10.1234/syn.001|title=|locator=|material=pt/al2o3|property=co oxidation yield|temperature=573.15|pressure=0.1|reaction_time=",
+        "note": "flag only: no row is merged or dropped by this tool"
+      }
+    },
+    {
+      "change_id": "CH-000129",
+      "rule": "DUP-EXACT",
+      "scope": "row",
+      "row_id": "R000007",
+      "field": "_duplicate",
+      "source_column": null,
+      "old_value": null,
+      "new_value": "exact_duplicate_candidate",
+      "evidence": {
+        "duplicate_group": "DG-0002",
+        "context_key": "doi=10.1234/syn.002|title=|locator=|material=cu/zno|property=methanol yield|temperature=523.0|pressure=3.0|reaction_time=",
+        "note": "flag only: no row is merged or dropped by this tool"
+      }
+    },
+    {
+      "change_id": "CH-000130",
+      "rule": "DUP-CONFLICT",
+      "scope": "row",
+      "row_id": "R000007",
+      "field": "_duplicate",
+      "source_column": null,
+      "old_value": null,
+      "new_value": "context_value_conflict",
+      "evidence": {
+        "duplicate_group": "DG-0002",
+        "context_key": "doi=10.1234/syn.002|title=|locator=|material=cu/zno|property=methanol yield|temperature=523.0|pressure=3.0|reaction_time=",
+        "note": "flag only: no row is merged or dropped by this tool"
+      }
+    },
+    {
+      "change_id": "CH-000131",
+      "rule": "DUP-EXACT",
+      "scope": "row",
+      "row_id": "R000008",
+      "field": "_duplicate",
+      "source_column": null,
+      "old_value": null,
+      "new_value": "exact_duplicate_candidate",
+      "evidence": {
+        "duplicate_group": "DG-0002",
+        "context_key": "doi=10.1234/syn.002|title=|locator=|material=cu/zno|property=methanol yield|temperature=523.0|pressure=3.0|reaction_time=",
+        "note": "flag only: no row is merged or dropped by this tool"
+      }
+    },
+    {
+      "change_id": "CH-000132",
+      "rule": "DUP-CONFLICT",
+      "scope": "row",
+      "row_id": "R000008",
+      "field": "_duplicate",
+      "source_column": null,
+      "old_value": null,
+      "new_value": "context_value_conflict",
+      "evidence": {
+        "duplicate_group": "DG-0002",
+        "context_key": "doi=10.1234/syn.002|title=|locator=|material=cu/zno|property=methanol yield|temperature=523.0|pressure=3.0|reaction_time=",
+        "note": "flag only: no row is merged or dropped by this tool"
+      }
+    },
+    {
+      "change_id": "CH-000133",
+      "rule": "DUP-CONFLICT",
+      "scope": "row",
+      "row_id": "R000009",
+      "field": "_duplicate",
+      "source_column": null,
+      "old_value": null,
+      "new_value": "context_value_conflict",
+      "evidence": {
+        "duplicate_group": "DG-0002",
+        "context_key": "doi=10.1234/syn.002|title=|locator=|material=cu/zno|property=methanol yield|temperature=523.0|pressure=3.0|reaction_time=",
+        "note": "flag only: no row is merged or dropped by this tool"
+      }
+    },
+    {
+      "change_id": "CH-000134",
+      "rule": "DUP-EXACT",
+      "scope": "row",
+      "row_id": "R000013",
+      "field": "_duplicate",
+      "source_column": null,
+      "old_value": null,
+      "new_value": "exact_duplicate_candidate",
+      "evidence": {
+        "duplicate_group": "DG-0003",
+        "context_key": "doi=10.1234/syn.003|title=|locator=|material=ni/sio2|property=methane conversion|temperature=623.15|pressure=0.25|reaction_time=",
+        "note": "flag only: no row is merged or dropped by this tool"
+      }
+    },
+    {
+      "change_id": "CH-000135",
+      "rule": "DUP-CONFLICT",
+      "scope": "row",
+      "row_id": "R000013",
+      "field": "_duplicate",
+      "source_column": null,
+      "old_value": null,
+      "new_value": "context_value_conflict",
+      "evidence": {
+        "duplicate_group": "DG-0003",
+        "context_key": "doi=10.1234/syn.003|title=|locator=|material=ni/sio2|property=methane conversion|temperature=623.15|pressure=0.25|reaction_time=",
+        "note": "flag only: no row is merged or dropped by this tool"
+      }
+    },
+    {
+      "change_id": "CH-000136",
+      "rule": "DUP-EXACT",
+      "scope": "row",
+      "row_id": "R000014",
+      "field": "_duplicate",
+      "source_column": null,
+      "old_value": null,
+      "new_value": "exact_duplicate_candidate",
+      "evidence": {
+        "duplicate_group": "DG-0003",
+        "context_key": "doi=10.1234/syn.003|title=|locator=|material=ni/sio2|property=methane conversion|temperature=623.15|pressure=0.25|reaction_time=",
+        "note": "flag only: no row is merged or dropped by this tool"
+      }
+    },
+    {
+      "change_id": "CH-000137",
+      "rule": "DUP-CONFLICT",
+      "scope": "row",
+      "row_id": "R000014",
+      "field": "_duplicate",
+      "source_column": null,
+      "old_value": null,
+      "new_value": "context_value_conflict",
+      "evidence": {
+        "duplicate_group": "DG-0003",
+        "context_key": "doi=10.1234/syn.003|title=|locator=|material=ni/sio2|property=methane conversion|temperature=623.15|pressure=0.25|reaction_time=",
+        "note": "flag only: no row is merged or dropped by this tool"
+      }
+    },
+    {
+      "change_id": "CH-000138",
+      "rule": "DUP-CONFLICT",
+      "scope": "row",
+      "row_id": "R000015",
+      "field": "_duplicate",
+      "source_column": null,
+      "old_value": null,
+      "new_value": "context_value_conflict",
+      "evidence": {
+        "duplicate_group": "DG-0003",
+        "context_key": "doi=10.1234/syn.003|title=|locator=|material=ni/sio2|property=methane conversion|temperature=623.15|pressure=0.25|reaction_time=",
+        "note": "flag only: no row is merged or dropped by this tool"
+      }
+    }
+  ],
+  "artifacts": {
+    "cleaned_csv": "cleaned.csv",
+    "cleaned_json": "cleaned.json",
+    "mapping_report": "mapping-report.json",
+    "unresolved_schema": "unresolved-schema.json",
+    "review_queue": "review-queue.json",
+    "change_log": "change-log.jsonl",
+    "audit": "audit.md",
+    "result": "result.json"
+  },
+  "duplicate_groups": [
+    {
+      "duplicate_group": "DG-0001",
+      "context_key": "doi=10.1234/syn.001|title=|locator=|material=pt/al2o3|property=co oxidation yield|temperature=573.15|pressure=0.1|reaction_time=",
+      "row_ids": [
+        "R000001",
+        "R000002",
+        "R000003"
+      ],
+      "distinct_measure_signatures": 2,
+      "status": "scientific_conflict_requires_human_adjudication",
+      "exact_duplicate_subgroups": [
+        [
+          "R000001",
+          "R000002"
+        ]
+      ]
+    },
+    {
+      "duplicate_group": "DG-0002",
+      "context_key": "doi=10.1234/syn.002|title=|locator=|material=cu/zno|property=methanol yield|temperature=523.0|pressure=3.0|reaction_time=",
+      "row_ids": [
+        "R000007",
+        "R000008",
+        "R000009"
+      ],
+      "distinct_measure_signatures": 2,
+      "status": "scientific_conflict_requires_human_adjudication",
+      "exact_duplicate_subgroups": [
+        [
+          "R000007",
+          "R000008"
+        ]
+      ]
+    },
+    {
+      "duplicate_group": "DG-0003",
+      "context_key": "doi=10.1234/syn.003|title=|locator=|material=ni/sio2|property=methane conversion|temperature=623.15|pressure=0.25|reaction_time=",
+      "row_ids": [
+        "R000013",
+        "R000014",
+        "R000015"
+      ],
+      "distinct_measure_signatures": 2,
+      "status": "scientific_conflict_requires_human_adjudication",
+      "exact_duplicate_subgroups": [
+        [
+          "R000013",
+          "R000014"
+        ]
+      ]
+    }
+  ],
+  "review_required": true,
+  "input_sha256": "9c03c0b60fbc1f41b0b626f61dca18404992f60f8b583d1cd64d62305164be07",
+  "cleaned_records": [
+    {
+      "row_id": "R000001",
+      "source_id": "case.json/records",
+      "locator": "/records/0",
+      "values": {
+        "record_id": {
+          "raw": "A1",
+          "source_column": "extraction.id",
+          "flags": [],
+          "value": "A1",
+          "low": null,
+          "high": null,
+          "uncertainty": null,
+          "unit": null,
+          "kind": "identifier",
+          "value_normalized": "a1"
+        },
+        "doi": {
+          "raw": "10.1234/syn.001",
+          "source_column": "extraction.doi",
+          "flags": [],
+          "value": "10.1234/syn.001",
+          "low": null,
+          "high": null,
+          "uncertainty": null,
+          "unit": null,
+          "kind": "identifier",
+          "value_normalized": "10.1234/syn.001"
+        },
+        "material": {
+          "raw": "Pt/Al2O3",
+          "source_column": "material.name",
+          "flags": [],
+          "value": "Pt/Al2O3",
+          "low": null,
+          "high": null,
+          "uncertainty": null,
+          "unit": null,
+          "kind": "string"
+        },
+        "property": {
+          "raw": "CO oxidation yield",
+          "source_column": "property",
+          "flags": [],
+          "value": "CO oxidation yield",
+          "low": null,
+          "high": null,
+          "uncertainty": null,
+          "unit": null,
+          "kind": "string"
+        },
+        "temperature": {
+          "raw": "300 °C",
+          "source_column": "conditions.temperature",
+          "flags": [],
+          "value": 573.15,
+          "low": null,
+          "high": null,
+          "uncertainty": null,
+          "unit": "K",
+          "kind": "value"
+        },
+        "pressure": {
+          "raw": "1 bar",
+          "source_column": "conditions.pressure",
+          "flags": [],
+          "value": 0.1,
+          "low": null,
+          "high": null,
+          "uncertainty": null,
+          "unit": "MPa",
+          "kind": "value"
+        },
+        "yield": {
+          "raw": "72-80 %",
+          "source_column": "yield",
+          "flags": [],
+          "value": null,
+          "low": 72.0,
+          "high": 80.0,
+          "uncertainty": null,
+          "unit": "%",
+          "kind": "range"
+        },
+        "notes": {
+          "raw": "Table 2",
+          "source_column": "notes",
+          "flags": [],
+          "value": "Table 2",
+          "low": null,
+          "high": null,
+          "uncertainty": null,
+          "unit": null,
+          "kind": "string"
+        },
+        "energy": {
+          "raw": null,
+          "source_column": null,
+          "flags": [
+            "absent_column"
+          ],
+          "value": null,
+          "low": null,
+          "high": null,
+          "uncertainty": null,
+          "unit": null
+        }
+      },
+      "unmapped_values": {},
+      "flags": [
+        "absent_column"
+      ],
+      "raw": {
+        "extraction.id": "A1",
+        "extraction.doi": "10.1234/syn.001",
+        "material.name": "Pt/Al2O3",
+        "property": "CO oxidation yield",
+        "conditions.temperature": "300 °C",
+        "conditions.pressure": "1 bar",
+        "yield": "72-80 %",
+        "notes": "Table 2"
+      },
+      "duplicate_group": "DG-0001",
+      "duplicate_status": "exact_duplicate_candidate;context_value_conflict"
+    },
+    {
+      "row_id": "R000002",
+      "source_id": "case.json/records",
+      "locator": "/records/1",
+      "values": {
+        "record_id": {
+          "raw": "A1-dup",
+          "source_column": "extraction.id",
+          "flags": [],
+          "value": "A1-dup",
+          "low": null,
+          "high": null,
+          "uncertainty": null,
+          "unit": null,
+          "kind": "identifier",
+          "value_normalized": "a1-dup"
+        },
+        "doi": {
+          "raw": "10.1234/syn.001",
+          "source_column": "extraction.doi",
+          "flags": [],
+          "value": "10.1234/syn.001",
+          "low": null,
+          "high": null,
+          "uncertainty": null,
+          "unit": null,
+          "kind": "identifier",
+          "value_normalized": "10.1234/syn.001"
+        },
+        "material": {
+          "raw": "Pt/Al2O3",
+          "source_column": "material.name",
+          "flags": [],
+          "value": "Pt/Al2O3",
+          "low": null,
+          "high": null,
+          "uncertainty": null,
+          "unit": null,
+          "kind": "string"
+        },
+        "property": {
+          "raw": "CO oxidation yield",
+          "source_column": "property",
+          "flags": [],
+          "value": "CO oxidation yield",
+          "low": null,
+          "high": null,
+          "uncertainty": null,
+          "unit": null,
+          "kind": "string"
+        },
+        "temperature": {
+          "raw": "300 °C",
+          "source_column": "conditions.temperature",
+          "flags": [],
+          "value": 573.15,
+          "low": null,
+          "high": null,
+          "uncertainty": null,
+          "unit": "K",
+          "kind": "value"
+        },
+        "pressure": {
+          "raw": "1 bar",
+          "source_column": "conditions.pressure",
+          "flags": [],
+          "value": 0.1,
+          "low": null,
+          "high": null,
+          "uncertainty": null,
+          "unit": "MPa",
+          "kind": "value"
+        },
+        "yield": {
+          "raw": "72-80 %",
+          "source_column": "yield",
+          "flags": [],
+          "value": null,
+          "low": 72.0,
+          "high": 80.0,
+          "uncertainty": null,
+          "unit": "%",
+          "kind": "range"
+        },
+        "notes": {
+          "raw": "Table 2 (second extraction pass)",
+          "source_column": "notes",
+          "flags": [],
+          "value": "Table 2 (second extraction pass)",
+          "low": null,
+          "high": null,
+          "uncertainty": null,
+          "unit": null,
+          "kind": "string"
+        },
+        "energy": {
+          "raw": null,
+          "source_column": null,
+          "flags": [
+            "absent_column"
+          ],
+          "value": null,
+          "low": null,
+          "high": null,
+          "uncertainty": null,
+          "unit": null
+        }
+      },
+      "unmapped_values": {},
+      "flags": [
+        "absent_column"
+      ],
+      "raw": {
+        "extraction.id": "A1-dup",
+        "extraction.doi": "10.1234/syn.001",
+        "material.name": "Pt/Al2O3",
+        "property": "CO oxidation yield",
+        "conditions.temperature": "300 °C",
+        "conditions.pressure": "1 bar",
+        "yield": "72-80 %",
+        "notes": "Table 2 (second extraction pass)"
+      },
+      "duplicate_group": "DG-0001",
+      "duplicate_status": "exact_duplicate_candidate;context_value_conflict"
+    },
+    {
+      "row_id": "R000003",
+      "source_id": "case.json/records",
+      "locator": "/records/2",
+      "values": {
+        "record_id": {
+          "raw": "A1-conflict",
+          "source_column": "extraction.id",
+          "flags": [],
+          "value": "A1-conflict",
+          "low": null,
+          "high": null,
+          "uncertainty": null,
+          "unit": null,
+          "kind": "identifier",
+          "value_normalized": "a1-conflict"
+        },
+        "doi": {
+          "raw": "10.1234/syn.001",
+          "source_column": "extraction.doi",
+          "flags": [],
+          "value": "10.1234/syn.001",
+          "low": null,
+          "high": null,
+          "uncertainty": null,
+          "unit": null,
+          "kind": "identifier",
+          "value_normalized": "10.1234/syn.001"
+        },
+        "material": {
+          "raw": "Pt/Al2O3",
+          "source_column": "material.name",
+          "flags": [],
+          "value": "Pt/Al2O3",
+          "low": null,
+          "high": null,
+          "uncertainty": null,
+          "unit": null,
+          "kind": "string"
+        },
+        "property": {
+          "raw": "CO oxidation yield",
+          "source_column": "property",
+          "flags": [],
+          "value": "CO oxidation yield",
+          "low": null,
+          "high": null,
+          "uncertainty": null,
+          "unit": null,
+          "kind": "string"
+        },
+        "temperature": {
+          "raw": "300 °C",
+          "source_column": "conditions.temperature",
+          "flags": [],
+          "value": 573.15,
+          "low": null,
+          "high": null,
+          "uncertainty": null,
+          "unit": "K",
+          "kind": "value"
+        },
+        "pressure": {
+          "raw": "1 bar",
+          "source_column": "conditions.pressure",
+          "flags": [],
+          "value": 0.1,
+          "low": null,
+          "high": null,
+          "uncertainty": null,
+          "unit": "MPa",
+          "kind": "value"
+        },
+        "yield": {
+          "raw": "65 %",
+          "source_column": "yield",
+          "flags": [],
+          "value": 65.0,
+          "low": null,
+          "high": null,
+          "uncertainty": null,
+          "unit": "%",
+          "kind": "value"
+        },
+        "notes": {
+          "raw": "Table 2 (conflicting third pass - must stay unmerged)",
+          "source_column": "notes",
+          "flags": [],
+          "value": "Table 2 (conflicting third pass - must stay unmerged)",
+          "low": null,
+          "high": null,
+          "uncertainty": null,
+          "unit": null,
+          "kind": "string"
+        },
+        "energy": {
+          "raw": null,
+          "source_column": null,
+          "flags": [
+            "absent_column"
+          ],
+          "value": null,
+          "low": null,
+          "high": null,
+          "uncertainty": null,
+          "unit": null
+        }
+      },
+      "unmapped_values": {},
+      "flags": [
+        "absent_column"
+      ],
+      "raw": {
+        "extraction.id": "A1-conflict",
+        "extraction.doi": "10.1234/syn.001",
+        "material.name": "Pt/Al2O3",
+        "property": "CO oxidation yield",
+        "conditions.temperature": "300 °C",
+        "conditions.pressure": "1 bar",
+        "yield": "65 %",
+        "notes": "Table 2 (conflicting third pass - must stay unmerged)"
+      },
+      "duplicate_group": "DG-0001",
+      "duplicate_status": "context_value_conflict"
+    },
+    {
+      "row_id": "R000004",
+      "source_id": "case.json/records",
+      "locator": "/records/3",
+      "values": {
+        "record_id": {
+          "raw": "A2",
+          "source_column": "extraction.id",
+          "flags": [],
+          "value": "A2",
+          "low": null,
+          "high": null,
+          "uncertainty": null,
+          "unit": null,
+          "kind": "identifier",
+          "value_normalized": "a2"
+        },
+        "doi": {
+          "raw": "10.1234/syn.001",
+          "source_column": "extraction.doi",
+          "flags": [],
+          "value": "10.1234/syn.001",
+          "low": null,
+          "high": null,
+          "uncertainty": null,
+          "unit": null,
+          "kind": "identifier",
+          "value_normalized": "10.1234/syn.001"
+        },
+        "material": {
+          "raw": "Pt/Al2O3",
+          "source_column": "material.name",
+          "flags": [],
+          "value": "Pt/Al2O3",
+          "low": null,
+          "high": null,
+          "uncertainty": null,
+          "unit": null,
+          "kind": "string"
+        },
+        "property": {
+          "raw": "CO oxidation yield",
+          "source_column": "property",
+          "flags": [],
+          "value": "CO oxidation yield",
+          "low": null,
+          "high": null,
+          "uncertainty": null,
+          "unit": null,
+          "kind": "string"
+        },
+        "temperature": {
+          "raw": "573 K",
+          "source_column": "conditions.temperature",
+          "flags": [],
+          "value": 573.0,
+          "low": null,
+          "high": null,
+          "uncertainty": null,
+          "unit": "K",
+          "kind": "value"
+        },
+        "pressure": {
+          "raw": "0.1 MPa",
+          "source_column": "conditions.pressure",
+          "flags": [],
+          "value": 0.1,
+          "low": null,
+          "high": null,
+          "uncertainty": null,
+          "unit": "MPa",
+          "kind": "value"
+        },
+        "yield": {
+          "raw": null,
+          "source_column": "yield",
+          "flags": [
+            "missing"
+          ],
+          "value": null,
+          "low": null,
+          "high": null,
+          "uncertainty": null,
+          "unit": null
+        },
+        "notes": {
+          "raw": "yield not reported",
+          "source_column": "notes",
+          "flags": [],
+          "value": "yield not reported",
+          "low": null,
+          "high": null,
+          "uncertainty": null,
+          "unit": null,
+          "kind": "string"
+        },
+        "energy": {
+          "raw": null,
+          "source_column": null,
+          "flags": [
+            "absent_column"
+          ],
+          "value": null,
+          "low": null,
+          "high": null,
+          "uncertainty": null,
+          "unit": null
+        }
+      },
+      "unmapped_values": {},
+      "flags": [
+        "absent_column",
+        "missing"
+      ],
+      "raw": {
+        "extraction.id": "A2",
+        "extraction.doi": "10.1234/syn.001",
+        "material.name": "Pt/Al2O3",
+        "property": "CO oxidation yield",
+        "conditions.temperature": "573 K",
+        "conditions.pressure": "0.1 MPa",
+        "yield": null,
+        "notes": "yield not reported"
+      },
+      "duplicate_status": "unique",
+      "duplicate_group": null
+    },
+    {
+      "row_id": "R000005",
+      "source_id": "case.json/records",
+      "locator": "/records/4",
+      "values": {
+        "record_id": {
+          "raw": "A3",
+          "source_column": "extraction.id",
+          "flags": [],
+          "value": "A3",
+          "low": null,
+          "high": null,
+          "uncertainty": null,
+          "unit": null,
+          "kind": "identifier",
+          "value_normalized": "a3"
+        },
+        "doi": {
+          "raw": "10.1234/syn.001",
+          "source_column": "extraction.doi",
+          "flags": [],
+          "value": "10.1234/syn.001",
+          "low": null,
+          "high": null,
+          "uncertainty": null,
+          "unit": null,
+          "kind": "identifier",
+          "value_normalized": "10.1234/syn.001"
+        },
+        "material": {
+          "raw": "Pt/Al2O3",
+          "source_column": "material.name",
+          "flags": [],
+          "value": "Pt/Al2O3",
+          "low": null,
+          "high": null,
+          "uncertainty": null,
+          "unit": null,
+          "kind": "string"
+        },
+        "property": {
+          "raw": "activation energy",
+          "source_column": "property",
+          "flags": [],
+          "value": "activation energy",
+          "low": null,
+          "high": null,
+          "uncertainty": null,
+          "unit": null,
+          "kind": "string"
+        },
+        "temperature": {
+          "raw": "573 K",
+          "source_column": "conditions.temperature",
+          "flags": [],
+          "value": 573.0,
+          "low": null,
+          "high": null,
+          "uncertainty": null,
+          "unit": "K",
+          "kind": "value"
+        },
+        "pressure": {
+          "raw": "0.1 MPa",
+          "source_column": "conditions.pressure",
+          "flags": [],
+          "value": 0.1,
+          "low": null,
+          "high": null,
+          "uncertainty": null,
+          "unit": "MPa",
+          "kind": "value"
+        },
+        "yield": {
+          "raw": "high",
+          "source_column": "yield",
+          "flags": [
+            "unparseable_numeric"
+          ],
+          "value": null,
+          "low": null,
+          "high": null,
+          "uncertainty": null,
+          "unit": null,
+          "kind": "unparseable"
+        },
+        "notes": {
+          "raw": "unknown unit eVee invented for the demo; yield value is unparseable",
+          "source_column": "notes",
+          "flags": [],
+          "value": "unknown unit eVee invented for the demo; yield value is unparseable",
+          "low": null,
+          "high": null,
+          "uncertainty": null,
+          "unit": null,
+          "kind": "string"
+        },
+        "energy": {
+          "raw": "1.2",
+          "source_column": "Ea (eVee)",
+          "flags": [
+            "unknown_unit"
+          ],
+          "value": null,
+          "low": null,
+          "high": null,
+          "uncertainty": null,
+          "unit": null,
+          "kind": "value_unknown_unit",
+          "unit_raw": "eVee"
+        }
+      },
+      "unmapped_values": {
+        "Instrument Serial": "SN-8891"
+      },
+      "flags": [
+        "unknown_unit",
+        "unparseable_numeric"
+      ],
+      "raw": {
+        "extraction.id": "A3",
+        "extraction.doi": "10.1234/syn.001",
+        "material.name": "Pt/Al2O3",
+        "property": "activation energy",
+        "conditions.temperature": "573 K",
+        "conditions.pressure": "0.1 MPa",
+        "Ea (eVee)": "1.2",
+        "yield": "high",
+        "Instrument Serial": "SN-8891",
+        "notes": "unknown unit eVee invented for the demo; yield value is unparseable"
+      },
+      "duplicate_status": "unique",
+      "duplicate_group": null
+    },
+    {
+      "row_id": "R000006",
+      "source_id": "case.json/records",
+      "locator": "/records/5",
+      "values": {
+        "record_id": {
+          "raw": "A4",
+          "source_column": "extraction.id",
+          "flags": [],
+          "value": "A4",
+          "low": null,
+          "high": null,
+          "uncertainty": null,
+          "unit": null,
+          "kind": "identifier",
+          "value_normalized": "a4"
+        },
+        "doi": {
+          "raw": "10.1234/syn.004",
+          "source_column": "extraction.doi",
+          "flags": [],
+          "value": "10.1234/syn.004",
+          "low": null,
+          "high": null,
+          "uncertainty": null,
+          "unit": null,
+          "kind": "identifier",
+          "value_normalized": "10.1234/syn.004"
+        },
+        "material": {
+          "raw": "Au/TiO2",
+          "source_column": "material.name",
+          "flags": [],
+          "value": "Au/TiO2",
+          "low": null,
+          "high": null,
+          "uncertainty": null,
+          "unit": null,
+          "kind": "string"
+        },
+        "property": {
+          "raw": "CO oxidation yield",
+          "source_column": "property",
+          "flags": [],
+          "value": "CO oxidation yield",
+          "low": null,
+          "high": null,
+          "uncertainty": null,
+          "unit": null,
+          "kind": "string"
+        },
+        "temperature": {
+          "raw": "280 °C",
+          "source_column": "conditions.temperature",
+          "flags": [],
+          "value": 553.15,
+          "low": null,
+          "high": null,
+          "uncertainty": null,
+          "unit": "K",
+          "kind": "value"
+        },
+        "pressure": {
+          "raw": "1.5 bar",
+          "source_column": "conditions.pressure",
+          "flags": [],
+          "value": 0.15,
+          "low": null,
+          "high": null,
+          "uncertainty": null,
+          "unit": "MPa",
+          "kind": "value"
+        },
+        "yield": {
+          "raw": "145 %",
+          "source_column": "yield",
+          "flags": [
+            "out_of_plausible_range"
+          ],
+          "value": 145.0,
+          "low": null,
+          "high": null,
+          "uncertainty": null,
+          "unit": "%",
+          "kind": "value"
+        },
+        "notes": {
+          "raw": "implausible percent kept for anomaly review",
+          "source_column": "notes",
+          "flags": [],
+          "value": "implausible percent kept for anomaly review",
+          "low": null,
+          "high": null,
+          "uncertainty": null,
+          "unit": null,
+          "kind": "string"
+        },
+        "energy": {
+          "raw": null,
+          "source_column": null,
+          "flags": [
+            "absent_column"
+          ],
+          "value": null,
+          "low": null,
+          "high": null,
+          "uncertainty": null,
+          "unit": null
+        }
+      },
+      "unmapped_values": {},
+      "flags": [
+        "absent_column",
+        "out_of_plausible_range"
+      ],
+      "raw": {
+        "extraction.id": "A4",
+        "extraction.doi": "10.1234/syn.004",
+        "material.name": "Au/TiO2",
+        "property": "CO oxidation yield",
+        "conditions.temperature": "280 °C",
+        "conditions.pressure": "1.5 bar",
+        "yield": "145 %",
+        "notes": "implausible percent kept for anomaly review"
+      },
+      "duplicate_status": "unique",
+      "duplicate_group": null
+    },
+    {
+      "row_id": "R000007",
+      "source_id": "case.json/material_csv",
+      "locator": "case.json/material_csv#row2",
+      "values": {
+        "material": {
+          "raw": "Cu/ZnO",
+          "source_column": "Material Name",
+          "flags": [],
+          "value": "Cu/ZnO",
+          "low": null,
+          "high": null,
+          "uncertainty": null,
+          "unit": null,
+          "kind": "string"
+        },
+        "doi": {
+          "raw": "10.1234/syn.002",
+          "source_column": "DOI",
+          "flags": [],
+          "value": "10.1234/syn.002",
+          "low": null,
+          "high": null,
+          "uncertainty": null,
+          "unit": null,
+          "kind": "identifier",
+          "value_normalized": "10.1234/syn.002"
+        },
+        "property": {
+          "raw": "methanol yield",
+          "source_column": "Property",
+          "flags": [],
+          "value": "methanol yield",
+          "low": null,
+          "high": null,
+          "uncertainty": null,
+          "unit": null,
+          "kind": "string"
+        },
+        "temperature": {
+          "raw": "523",
+          "source_column": "T / K",
+          "flags": [],
+          "value": 523.0,
+          "low": null,
+          "high": null,
+          "uncertainty": null,
+          "unit": "K",
+          "kind": "value"
+        },
+        "pressure": {
+          "raw": "3.0",
+          "source_column": "P_MPa",
+          "flags": [],
+          "value": 3.0,
+          "low": null,
+          "high": null,
+          "uncertainty": null,
+          "unit": "MPa",
+          "kind": "value"
+        },
+        "yield": {
+          "raw": "55",
+          "source_column": "Yield_min (%)",
+          "flags": [],
+          "value": null,
+          "low": 55.0,
+          "high": 61.0,
+          "uncertainty": null,
+          "unit": "%",
+          "kind": "range_component",
+          "components": {
+            "low": "55",
+            "high": "61"
+          }
+        },
+        "selectivity": {
+          "raw": "88 %",
+          "source_column": "Selectivity",
+          "flags": [],
+          "value": 88.0,
+          "low": null,
+          "high": null,
+          "uncertainty": null,
+          "unit": "%",
+          "kind": "value"
+        },
+        "notes": {
+          "raw": "Table 1",
+          "source_column": "Notes",
+          "flags": [],
+          "value": "Table 1",
+          "low": null,
+          "high": null,
+          "uncertainty": null,
+          "unit": null,
+          "kind": "string"
+        }
+      },
+      "unmapped_values": {
+        "Mystery Column": "zz1"
+      },
+      "flags": [],
+      "raw": {
+        "Material Name": "Cu/ZnO",
+        "DOI": "10.1234/syn.002",
+        "Property": "methanol yield",
+        "T / K": "523",
+        "P_MPa": "3.0",
+        "Yield_min (%)": "55",
+        "Yield_max (%)": "61",
+        "Selectivity": "88 %",
+        "Notes": "Table 1",
+        "Mystery Column": "zz1"
+      },
+      "duplicate_group": "DG-0002",
+      "duplicate_status": "exact_duplicate_candidate;context_value_conflict"
+    },
+    {
+      "row_id": "R000008",
+      "source_id": "case.json/material_csv",
+      "locator": "case.json/material_csv#row3",
+      "values": {
+        "material": {
+          "raw": "Cu/ZnO",
+          "source_column": "Material Name",
+          "flags": [],
+          "value": "Cu/ZnO",
+          "low": null,
+          "high": null,
+          "uncertainty": null,
+          "unit": null,
+          "kind": "string"
+        },
+        "doi": {
+          "raw": "10.1234/syn.002",
+          "source_column": "DOI",
+          "flags": [],
+          "value": "10.1234/syn.002",
+          "low": null,
+          "high": null,
+          "uncertainty": null,
+          "unit": null,
+          "kind": "identifier",
+          "value_normalized": "10.1234/syn.002"
+        },
+        "property": {
+          "raw": "methanol yield",
+          "source_column": "Property",
+          "flags": [],
+          "value": "methanol yield",
+          "low": null,
+          "high": null,
+          "uncertainty": null,
+          "unit": null,
+          "kind": "string"
+        },
+        "temperature": {
+          "raw": "523",
+          "source_column": "T / K",
+          "flags": [],
+          "value": 523.0,
+          "low": null,
+          "high": null,
+          "uncertainty": null,
+          "unit": "K",
+          "kind": "value"
+        },
+        "pressure": {
+          "raw": "3.0",
+          "source_column": "P_MPa",
+          "flags": [],
+          "value": 3.0,
+          "low": null,
+          "high": null,
+          "uncertainty": null,
+          "unit": "MPa",
+          "kind": "value"
+        },
+        "yield": {
+          "raw": "55",
+          "source_column": "Yield_min (%)",
+          "flags": [],
+          "value": null,
+          "low": 55.0,
+          "high": 61.0,
+          "uncertainty": null,
+          "unit": "%",
+          "kind": "range_component",
+          "components": {
+            "low": "55",
+            "high": "61"
+          }
+        },
+        "selectivity": {
+          "raw": "88 %",
+          "source_column": "Selectivity",
+          "flags": [],
+          "value": 88.0,
+          "low": null,
+          "high": null,
+          "uncertainty": null,
+          "unit": "%",
+          "kind": "value"
+        },
+        "notes": {
+          "raw": "Table 1",
+          "source_column": "Notes",
+          "flags": [],
+          "value": "Table 1",
+          "low": null,
+          "high": null,
+          "uncertainty": null,
+          "unit": null,
+          "kind": "string"
+        }
+      },
+      "unmapped_values": {
+        "Mystery Column": "zz2"
+      },
+      "flags": [],
+      "raw": {
+        "Material Name": "Cu/ZnO",
+        "DOI": "10.1234/syn.002",
+        "Property": "methanol yield",
+        "T / K": "523",
+        "P_MPa": "3.0",
+        "Yield_min (%)": "55",
+        "Yield_max (%)": "61",
+        "Selectivity": "88 %",
+        "Notes": "Table 1",
+        "Mystery Column": "zz2"
+      },
+      "duplicate_group": "DG-0002",
+      "duplicate_status": "exact_duplicate_candidate;context_value_conflict"
+    },
+    {
+      "row_id": "R000009",
+      "source_id": "case.json/material_csv",
+      "locator": "case.json/material_csv#row4",
+      "values": {
+        "material": {
+          "raw": "Cu/ZnO",
+          "source_column": "Material Name",
+          "flags": [],
+          "value": "Cu/ZnO",
+          "low": null,
+          "high": null,
+          "uncertainty": null,
+          "unit": null,
+          "kind": "string"
+        },
+        "doi": {
+          "raw": "10.1234/syn.002",
+          "source_column": "DOI",
+          "flags": [],
+          "value": "10.1234/syn.002",
+          "low": null,
+          "high": null,
+          "uncertainty": null,
+          "unit": null,
+          "kind": "identifier",
+          "value_normalized": "10.1234/syn.002"
+        },
+        "property": {
+          "raw": "methanol yield",
+          "source_column": "Property",
+          "flags": [],
+          "value": "methanol yield",
+          "low": null,
+          "high": null,
+          "uncertainty": null,
+          "unit": null,
+          "kind": "string"
+        },
+        "temperature": {
+          "raw": "523",
+          "source_column": "T / K",
+          "flags": [],
+          "value": 523.0,
+          "low": null,
+          "high": null,
+          "uncertainty": null,
+          "unit": "K",
+          "kind": "value"
+        },
+        "pressure": {
+          "raw": "3.0",
+          "source_column": "P_MPa",
+          "flags": [],
+          "value": 3.0,
+          "low": null,
+          "high": null,
+          "uncertainty": null,
+          "unit": "MPa",
+          "kind": "value"
+        },
+        "yield": {
+          "raw": "40",
+          "source_column": "Yield_min (%)",
+          "flags": [],
+          "value": null,
+          "low": 40.0,
+          "high": 48.0,
+          "uncertainty": null,
+          "unit": "%",
+          "kind": "range_component",
+          "components": {
+            "low": "40",
+            "high": "48"
+          }
+        },
+        "selectivity": {
+          "raw": "88 %",
+          "source_column": "Selectivity",
+          "flags": [],
+          "value": 88.0,
+          "low": null,
+          "high": null,
+          "uncertainty": null,
+          "unit": "%",
+          "kind": "value"
+        },
+        "notes": {
+          "raw": "Table 1 conflicting re-extraction",
+          "source_column": "Notes",
+          "flags": [],
+          "value": "Table 1 conflicting re-extraction",
+          "low": null,
+          "high": null,
+          "uncertainty": null,
+          "unit": null,
+          "kind": "string"
+        }
+      },
+      "unmapped_values": {
+        "Mystery Column": "zz3"
+      },
+      "flags": [],
+      "raw": {
+        "Material Name": "Cu/ZnO",
+        "DOI": "10.1234/syn.002",
+        "Property": "methanol yield",
+        "T / K": "523",
+        "P_MPa": "3.0",
+        "Yield_min (%)": "40",
+        "Yield_max (%)": "48",
+        "Selectivity": "88 %",
+        "Notes": "Table 1 conflicting re-extraction",
+        "Mystery Column": "zz3"
+      },
+      "duplicate_group": "DG-0002",
+      "duplicate_status": "context_value_conflict"
+    },
+    {
+      "row_id": "R000010",
+      "source_id": "case.json/material_csv",
+      "locator": "case.json/material_csv#row5",
+      "values": {
+        "material": {
+          "raw": "Fe-Co",
+          "source_column": "Material Name",
+          "flags": [],
+          "value": "Fe-Co",
+          "low": null,
+          "high": null,
+          "uncertainty": null,
+          "unit": null,
+          "kind": "string"
+        },
+        "doi": {
+          "raw": "10.1234/syn.002",
+          "source_column": "DOI",
+          "flags": [],
+          "value": "10.1234/syn.002",
+          "low": null,
+          "high": null,
+          "uncertainty": null,
+          "unit": null,
+          "kind": "identifier",
+          "value_normalized": "10.1234/syn.002"
+        },
+        "property": {
+          "raw": "methanol selectivity",
+          "source_column": "Property",
+          "flags": [],
+          "value": "methanol selectivity",
+          "low": null,
+          "high": null,
+          "uncertainty": null,
+          "unit": null,
+          "kind": "string"
+        },
+        "temperature": {
+          "raw": "523",
+          "source_column": "T / K",
+          "flags": [],
+          "value": 523.0,
+          "low": null,
+          "high": null,
+          "uncertainty": null,
+          "unit": "K",
+          "kind": "value"
+        },
+        "pressure": {
+          "raw": "3.0",
+          "source_column": "P_MPa",
+          "flags": [],
+          "value": 3.0,
+          "low": null,
+          "high": null,
+          "uncertainty": null,
+          "unit": "MPa",
+          "kind": "value"
+        },
+        "yield": {
+          "raw": "",
+          "source_column": "Yield_min (%)",
+          "flags": [
+            "missing"
+          ],
+          "value": null,
+          "low": null,
+          "high": null,
+          "uncertainty": null,
+          "unit": null
+        },
+        "selectivity": {
+          "raw": "91 %",
+          "source_column": "Selectivity",
+          "flags": [],
+          "value": 91.0,
+          "low": null,
+          "high": null,
+          "uncertainty": null,
+          "unit": "%",
+          "kind": "value"
+        },
+        "notes": {
+          "raw": "N/A",
+          "source_column": "Notes",
+          "flags": [
+            "missing"
+          ],
+          "value": null,
+          "low": null,
+          "high": null,
+          "uncertainty": null,
+          "unit": null
+        }
+      },
+      "unmapped_values": {
+        "Mystery Column": "zz4"
+      },
+      "flags": [
+        "missing"
+      ],
+      "raw": {
+        "Material Name": "Fe-Co",
+        "DOI": "10.1234/syn.002",
+        "Property": "methanol selectivity",
+        "T / K": "523",
+        "P_MPa": "3.0",
+        "Yield_min (%)": "",
+        "Yield_max (%)": "",
+        "Selectivity": "91 %",
+        "Notes": "N/A",
+        "Mystery Column": "zz4"
+      },
+      "duplicate_status": "unique",
+      "duplicate_group": null
+    },
+    {
+      "row_id": "R000011",
+      "source_id": "case.json/material_csv",
+      "locator": "case.json/material_csv#row6",
+      "values": {
+        "material": {
+          "raw": "Fe-Co",
+          "source_column": "Material Name",
+          "flags": [],
+          "value": "Fe-Co",
+          "low": null,
+          "high": null,
+          "uncertainty": null,
+          "unit": null,
+          "kind": "string"
+        },
+        "doi": {
+          "raw": "10.1234/syn.002",
+          "source_column": "DOI",
+          "flags": [],
+          "value": "10.1234/syn.002",
+          "low": null,
+          "high": null,
+          "uncertainty": null,
+          "unit": null,
+          "kind": "identifier",
+          "value_normalized": "10.1234/syn.002"
+        },
+        "property": {
+          "raw": "methanol selectivity",
+          "source_column": "Property",
+          "flags": [],
+          "value": "methanol selectivity",
+          "low": null,
+          "high": null,
+          "uncertainty": null,
+          "unit": null,
+          "kind": "string"
+        },
+        "temperature": {
+          "raw": "523",
+          "source_column": "T / K",
+          "flags": [],
+          "value": 523.0,
+          "low": null,
+          "high": null,
+          "uncertainty": null,
+          "unit": "K",
+          "kind": "value"
+        },
+        "pressure": {
+          "raw": "",
+          "source_column": "P_MPa",
+          "flags": [
+            "missing"
+          ],
+          "value": null,
+          "low": null,
+          "high": null,
+          "uncertainty": null,
+          "unit": null
+        },
+        "yield": {
+          "raw": "70",
+          "source_column": "Yield_min (%)",
+          "flags": [],
+          "value": null,
+          "low": 70.0,
+          "high": 75.0,
+          "uncertainty": null,
+          "unit": "%",
+          "kind": "range_component",
+          "components": {
+            "low": "70",
+            "high": "75"
+          }
+        },
+        "selectivity": {
+          "raw": "50 %",
+          "source_column": "Selectivity",
+          "flags": [],
+          "value": 50.0,
+          "low": null,
+          "high": null,
+          "uncertainty": null,
+          "unit": "%",
+          "kind": "value"
+        },
+        "notes": {
+          "raw": "",
+          "source_column": "Notes",
+          "flags": [
+            "missing"
+          ],
+          "value": null,
+          "low": null,
+          "high": null,
+          "uncertainty": null,
+          "unit": null
+        }
+      },
+      "unmapped_values": {
+        "Mystery Column": "zz5"
+      },
+      "flags": [
+        "missing"
+      ],
+      "raw": {
+        "Material Name": "Fe-Co",
+        "DOI": "10.1234/syn.002",
+        "Property": "methanol selectivity",
+        "T / K": "523",
+        "P_MPa": "",
+        "Yield_min (%)": "70",
+        "Yield_max (%)": "75",
+        "Selectivity": "50 %",
+        "Notes": "",
+        "Mystery Column": "zz5"
+      },
+      "duplicate_status": "unique",
+      "duplicate_group": null
+    },
+    {
+      "row_id": "R000012",
+      "source_id": "case.json/material_csv",
+      "locator": "case.json/material_csv#row7",
+      "values": {
+        "material": {
+          "raw": "Ni-MgO",
+          "source_column": "Material Name",
+          "flags": [],
+          "value": "Ni-MgO",
+          "low": null,
+          "high": null,
+          "uncertainty": null,
+          "unit": null,
+          "kind": "string"
+        },
+        "doi": {
+          "raw": "10.1234/syn.002",
+          "source_column": "DOI",
+          "flags": [],
+          "value": "10.1234/syn.002",
+          "low": null,
+          "high": null,
+          "uncertainty": null,
+          "unit": null,
+          "kind": "identifier",
+          "value_normalized": "10.1234/syn.002"
+        },
+        "property": {
+          "raw": "methane conversion",
+          "source_column": "Property",
+          "flags": [],
+          "value": "methane conversion",
+          "low": null,
+          "high": null,
+          "uncertainty": null,
+          "unit": null,
+          "kind": "string"
+        },
+        "temperature": {
+          "raw": "498",
+          "source_column": "T / K",
+          "flags": [],
+          "value": 498.0,
+          "low": null,
+          "high": null,
+          "uncertainty": null,
+          "unit": "K",
+          "kind": "value"
+        },
+        "pressure": {
+          "raw": "2.0",
+          "source_column": "P_MPa",
+          "flags": [],
+          "value": 2.0,
+          "low": null,
+          "high": null,
+          "uncertainty": null,
+          "unit": "MPa",
+          "kind": "value"
+        },
+        "yield": {
+          "raw": "80",
+          "source_column": "Yield_min (%)",
+          "flags": [
+            "range_inverted"
+          ],
+          "value": null,
+          "low": 80.0,
+          "high": 70.0,
+          "uncertainty": null,
+          "unit": "%",
+          "kind": "range_component",
+          "components": {
+            "low": "80",
+            "high": "70"
+          }
+        },
+        "selectivity": {
+          "raw": "",
+          "source_column": "Selectivity",
+          "flags": [
+            "missing"
+          ],
+          "value": null,
+          "low": null,
+          "high": null,
+          "uncertainty": null,
+          "unit": null
+        },
+        "notes": {
+          "raw": "inverted range demo",
+          "source_column": "Notes",
+          "flags": [],
+          "value": "inverted range demo",
+          "low": null,
+          "high": null,
+          "uncertainty": null,
+          "unit": null,
+          "kind": "string"
+        }
+      },
+      "unmapped_values": {
+        "Mystery Column": "zz6"
+      },
+      "flags": [
+        "missing",
+        "range_inverted"
+      ],
+      "raw": {
+        "Material Name": "Ni-MgO",
+        "DOI": "10.1234/syn.002",
+        "Property": "methane conversion",
+        "T / K": "498",
+        "P_MPa": "2.0",
+        "Yield_min (%)": "80",
+        "Yield_max (%)": "70",
+        "Selectivity": "",
+        "Notes": "inverted range demo",
+        "Mystery Column": "zz6"
+      },
+      "duplicate_status": "unique",
+      "duplicate_group": null
+    },
+    {
+      "row_id": "R000013",
+      "source_id": "case.json:material-batch-c.csv",
+      "locator": "case.json:material-batch-c.csv#row2",
+      "values": {
+        "material": {
+          "raw": "Ni/SiO2",
+          "source_column": "catalyst name",
+          "flags": [],
+          "value": "Ni/SiO2",
+          "low": null,
+          "high": null,
+          "uncertainty": null,
+          "unit": null,
+          "kind": "string"
+        },
+        "doi": {
+          "raw": "10.1234/syn.003",
+          "source_column": "文献DOI",
+          "flags": [],
+          "value": "10.1234/syn.003",
+          "low": null,
+          "high": null,
+          "uncertainty": null,
+          "unit": null,
+          "kind": "identifier",
+          "value_normalized": "10.1234/syn.003"
+        },
+        "property": {
+          "raw": "methane conversion",
+          "source_column": "指标",
+          "flags": [],
+          "value": "methane conversion",
+          "low": null,
+          "high": null,
+          "uncertainty": null,
+          "unit": null,
+          "kind": "string"
+        },
+        "temperature": {
+          "raw": "350",
+          "source_column": "温度(摄氏度)",
+          "flags": [],
+          "value": 623.15,
+          "low": null,
+          "high": null,
+          "uncertainty": null,
+          "unit": "K",
+          "kind": "value"
+        },
+        "pressure": {
+          "raw": "2.5 bar",
+          "source_column": "压力",
+          "flags": [],
+          "value": 0.25,
+          "low": null,
+          "high": null,
+          "uncertainty": null,
+          "unit": "MPa",
+          "kind": "value"
+        },
+        "yield": {
+          "raw": "66",
+          "source_column": "收率(%)",
+          "flags": [],
+          "value": 66.0,
+          "low": null,
+          "high": null,
+          "uncertainty": null,
+          "unit": "%",
+          "kind": "value"
+        },
+        "notes": {
+          "raw": "表3",
+          "source_column": "备注",
+          "flags": [],
+          "value": "表3",
+          "low": null,
+          "high": null,
+          "uncertainty": null,
+          "unit": null,
+          "kind": "string"
+        }
+      },
+      "unmapped_values": {
+        "weird_col": "c1"
+      },
+      "flags": [],
+      "raw": {
+        "catalyst name": "Ni/SiO2",
+        "文献DOI": "10.1234/syn.003",
+        "指标": "methane conversion",
+        "温度(摄氏度)": "350",
+        "压力": "2.5 bar",
+        "收率(%)": "66",
+        "备注": "表3",
+        "weird_col": "c1"
+      },
+      "duplicate_group": "DG-0003",
+      "duplicate_status": "exact_duplicate_candidate;context_value_conflict"
+    },
+    {
+      "row_id": "R000014",
+      "source_id": "case.json:material-batch-c.csv",
+      "locator": "case.json:material-batch-c.csv#row3",
+      "values": {
+        "material": {
+          "raw": "Ni/SiO2",
+          "source_column": "catalyst name",
+          "flags": [],
+          "value": "Ni/SiO2",
+          "low": null,
+          "high": null,
+          "uncertainty": null,
+          "unit": null,
+          "kind": "string"
+        },
+        "doi": {
+          "raw": "10.1234/syn.003",
+          "source_column": "文献DOI",
+          "flags": [],
+          "value": "10.1234/syn.003",
+          "low": null,
+          "high": null,
+          "uncertainty": null,
+          "unit": null,
+          "kind": "identifier",
+          "value_normalized": "10.1234/syn.003"
+        },
+        "property": {
+          "raw": "methane conversion",
+          "source_column": "指标",
+          "flags": [],
+          "value": "methane conversion",
+          "low": null,
+          "high": null,
+          "uncertainty": null,
+          "unit": null,
+          "kind": "string"
+        },
+        "temperature": {
+          "raw": "350",
+          "source_column": "温度(摄氏度)",
+          "flags": [],
+          "value": 623.15,
+          "low": null,
+          "high": null,
+          "uncertainty": null,
+          "unit": "K",
+          "kind": "value"
+        },
+        "pressure": {
+          "raw": "2.5 bar",
+          "source_column": "压力",
+          "flags": [],
+          "value": 0.25,
+          "low": null,
+          "high": null,
+          "uncertainty": null,
+          "unit": "MPa",
+          "kind": "value"
+        },
+        "yield": {
+          "raw": "66",
+          "source_column": "收率(%)",
+          "flags": [],
+          "value": 66.0,
+          "low": null,
+          "high": null,
+          "uncertainty": null,
+          "unit": "%",
+          "kind": "value"
+        },
+        "notes": {
+          "raw": "表3 二次抽取",
+          "source_column": "备注",
+          "flags": [],
+          "value": "表3 二次抽取",
+          "low": null,
+          "high": null,
+          "uncertainty": null,
+          "unit": null,
+          "kind": "string"
+        }
+      },
+      "unmapped_values": {
+        "weird_col": "c2"
+      },
+      "flags": [],
+      "raw": {
+        "catalyst name": "Ni/SiO2",
+        "文献DOI": "10.1234/syn.003",
+        "指标": "methane conversion",
+        "温度(摄氏度)": "350",
+        "压力": "2.5 bar",
+        "收率(%)": "66",
+        "备注": "表3 二次抽取",
+        "weird_col": "c2"
+      },
+      "duplicate_group": "DG-0003",
+      "duplicate_status": "exact_duplicate_candidate;context_value_conflict"
+    },
+    {
+      "row_id": "R000015",
+      "source_id": "case.json:material-batch-c.csv",
+      "locator": "case.json:material-batch-c.csv#row4",
+      "values": {
+        "material": {
+          "raw": "Ni/SiO2",
+          "source_column": "catalyst name",
+          "flags": [],
+          "value": "Ni/SiO2",
+          "low": null,
+          "high": null,
+          "uncertainty": null,
+          "unit": null,
+          "kind": "string"
+        },
+        "doi": {
+          "raw": "10.1234/syn.003",
+          "source_column": "文献DOI",
+          "flags": [],
+          "value": "10.1234/syn.003",
+          "low": null,
+          "high": null,
+          "uncertainty": null,
+          "unit": null,
+          "kind": "identifier",
+          "value_normalized": "10.1234/syn.003"
+        },
+        "property": {
+          "raw": "methane conversion",
+          "source_column": "指标",
+          "flags": [],
+          "value": "methane conversion",
+          "low": null,
+          "high": null,
+          "uncertainty": null,
+          "unit": null,
+          "kind": "string"
+        },
+        "temperature": {
+          "raw": "350",
+          "source_column": "温度(摄氏度)",
+          "flags": [],
+          "value": 623.15,
+          "low": null,
+          "high": null,
+          "uncertainty": null,
+          "unit": "K",
+          "kind": "value"
+        },
+        "pressure": {
+          "raw": "2.5 bar",
+          "source_column": "压力",
+          "flags": [],
+          "value": 0.25,
+          "low": null,
+          "high": null,
+          "uncertainty": null,
+          "unit": "MPa",
+          "kind": "value"
+        },
+        "yield": {
+          "raw": "59",
+          "source_column": "收率(%)",
+          "flags": [],
+          "value": 59.0,
+          "low": null,
+          "high": null,
+          "uncertainty": null,
+          "unit": "%",
+          "kind": "value"
+        },
+        "notes": {
+          "raw": "表3 冲突再抽取",
+          "source_column": "备注",
+          "flags": [],
+          "value": "表3 冲突再抽取",
+          "low": null,
+          "high": null,
+          "uncertainty": null,
+          "unit": null,
+          "kind": "string"
+        }
+      },
+      "unmapped_values": {
+        "weird_col": "c3"
+      },
+      "flags": [],
+      "raw": {
+        "catalyst name": "Ni/SiO2",
+        "文献DOI": "10.1234/syn.003",
+        "指标": "methane conversion",
+        "温度(摄氏度)": "350",
+        "压力": "2.5 bar",
+        "收率(%)": "59",
+        "备注": "表3 冲突再抽取",
+        "weird_col": "c3"
+      },
+      "duplicate_group": "DG-0003",
+      "duplicate_status": "context_value_conflict"
+    },
+    {
+      "row_id": "R000016",
+      "source_id": "case.json:material-batch-c.csv",
+      "locator": "case.json:material-batch-c.csv#row5",
+      "values": {
+        "material": {
+          "raw": "Co3O4",
+          "source_column": "catalyst name",
+          "flags": [],
+          "value": "Co3O4",
+          "low": null,
+          "high": null,
+          "uncertainty": null,
+          "unit": null,
+          "kind": "string"
+        },
+        "doi": {
+          "raw": "10.1234/syn.003",
+          "source_column": "文献DOI",
+          "flags": [],
+          "value": "10.1234/syn.003",
+          "low": null,
+          "high": null,
+          "uncertainty": null,
+          "unit": null,
+          "kind": "identifier",
+          "value_normalized": "10.1234/syn.003"
+        },
+        "property": {
+          "raw": "methane conversion",
+          "source_column": "指标",
+          "flags": [],
+          "value": "methane conversion",
+          "low": null,
+          "high": null,
+          "uncertainty": null,
+          "unit": null,
+          "kind": "string"
+        },
+        "temperature": {
+          "raw": "320",
+          "source_column": "温度(摄氏度)",
+          "flags": [],
+          "value": 593.15,
+          "low": null,
+          "high": null,
+          "uncertainty": null,
+          "unit": "K",
+          "kind": "value"
+        },
+        "pressure": {
+          "raw": "1.0 bar",
+          "source_column": "压力",
+          "flags": [],
+          "value": 0.1,
+          "low": null,
+          "high": null,
+          "uncertainty": null,
+          "unit": "MPa",
+          "kind": "value"
+        },
+        "yield": {
+          "raw": "88",
+          "source_column": "收率(%)",
+          "flags": [],
+          "value": 88.0,
+          "low": null,
+          "high": null,
+          "uncertainty": null,
+          "unit": "%",
+          "kind": "value"
+        },
+        "notes": {
+          "raw": "表4",
+          "source_column": "备注",
+          "flags": [],
+          "value": "表4",
+          "low": null,
+          "high": null,
+          "uncertainty": null,
+          "unit": null,
+          "kind": "string"
+        }
+      },
+      "unmapped_values": {
+        "weird_col": "c4"
+      },
+      "flags": [],
+      "raw": {
+        "catalyst name": "Co3O4",
+        "文献DOI": "10.1234/syn.003",
+        "指标": "methane conversion",
+        "温度(摄氏度)": "320",
+        "压力": "1.0 bar",
+        "收率(%)": "88",
+        "备注": "表4",
+        "weird_col": "c4"
+      },
+      "duplicate_status": "unique",
+      "duplicate_group": null
+    }
+  ],
+  "review_queue": {
+    "missing": [
+      {
+        "change_id": "CH-000034",
+        "rule": "MISS-001",
+        "scope": "cell",
+        "row_id": "R000001",
+        "field": "energy",
+        "source_column": "case.json/records::Ea (eVee)",
+        "old_value": null,
+        "new_value": null,
+        "evidence": {
+          "reason": "column absent in this row (sparse union of per-source columns); retained as null"
+        }
+      },
+      {
+        "change_id": "CH-000043",
+        "rule": "MISS-001",
+        "scope": "cell",
+        "row_id": "R000002",
+        "field": "energy",
+        "source_column": "case.json/records::Ea (eVee)",
+        "old_value": null,
+        "new_value": null,
+        "evidence": {
+          "reason": "column absent in this row (sparse union of per-source columns); retained as null"
+        }
+      },
+      {
+        "change_id": "CH-000051",
+        "rule": "MISS-001",
+        "scope": "cell",
+        "row_id": "R000003",
+        "field": "energy",
+        "source_column": "case.json/records::Ea (eVee)",
+        "old_value": null,
+        "new_value": null,
+        "evidence": {
+          "reason": "column absent in this row (sparse union of per-source columns); retained as null"
+        }
+      },
+      {
+        "change_id": "CH-000056",
+        "rule": "MISS-001",
+        "scope": "cell",
+        "row_id": "R000004",
+        "field": "yield",
+        "source_column": "case.json/records::yield",
+        "old_value": null,
+        "new_value": null,
+        "evidence": {
+          "reason": "explicit missing token/null in source cell; retained as null, nothing imputed"
+        }
+      },
+      {
+        "change_id": "CH-000058",
+        "rule": "MISS-001",
+        "scope": "cell",
+        "row_id": "R000004",
+        "field": "energy",
+        "source_column": "case.json/records::Ea (eVee)",
+        "old_value": null,
+        "new_value": null,
+        "evidence": {
+          "reason": "column absent in this row (sparse union of per-source columns); retained as null"
+        }
+      },
+      {
+        "change_id": "CH-000071",
+        "rule": "MISS-001",
+        "scope": "cell",
+        "row_id": "R000006",
+        "field": "energy",
+        "source_column": "case.json/records::Ea (eVee)",
+        "old_value": null,
+        "new_value": null,
+        "evidence": {
+          "reason": "column absent in this row (sparse union of per-source columns); retained as null"
+        }
+      },
+      {
+        "change_id": "CH-000087",
+        "rule": "MISS-001",
+        "scope": "cell",
+        "row_id": "R000010",
+        "field": "yield",
+        "source_column": "case.json/material_csv::Yield_min (%)",
+        "old_value": "",
+        "new_value": null,
+        "evidence": {
+          "reason": "explicit missing token/null in source cell; retained as null, nothing imputed"
+        }
+      },
+      {
+        "change_id": "CH-000088",
+        "rule": "MISS-001",
+        "scope": "cell",
+        "row_id": "R000010",
+        "field": "yield",
+        "source_column": "case.json/material_csv::Yield_max (%)",
+        "old_value": "",
+        "new_value": null,
+        "evidence": {
+          "reason": "explicit missing token/null in source cell; retained as null, nothing imputed"
+        }
+      },
+      {
+        "change_id": "CH-000089",
+        "rule": "MISS-001",
+        "scope": "cell",
+        "row_id": "R000010",
+        "field": "notes",
+        "source_column": "case.json/material_csv::Notes",
+        "old_value": "N/A",
+        "new_value": null,
+        "evidence": {
+          "reason": "explicit missing token/null in source cell; retained as null, nothing imputed"
+        }
+      },
+      {
+        "change_id": "CH-000093",
+        "rule": "MISS-001",
+        "scope": "cell",
+        "row_id": "R000011",
+        "field": "pressure",
+        "source_column": "case.json/material_csv::P_MPa",
+        "old_value": "",
+        "new_value": null,
+        "evidence": {
+          "reason": "explicit missing token/null in source cell; retained as null, nothing imputed"
+        }
+      },
+      {
+        "change_id": "CH-000094",
+        "rule": "MISS-001",
+        "scope": "cell",
+        "row_id": "R000011",
+        "field": "notes",
+        "source_column": "case.json/material_csv::Notes",
+        "old_value": "",
+        "new_value": null,
+        "evidence": {
+          "reason": "explicit missing token/null in source cell; retained as null, nothing imputed"
+        }
+      },
+      {
+        "change_id": "CH-000098",
+        "rule": "MISS-001",
+        "scope": "cell",
+        "row_id": "R000012",
+        "field": "selectivity",
+        "source_column": "case.json/material_csv::Selectivity",
+        "old_value": "",
+        "new_value": null,
+        "evidence": {
+          "reason": "explicit missing token/null in source cell; retained as null, nothing imputed"
+        }
+      }
+    ],
+    "anomalies": [
+      {
+        "rule": "ANOM-PARSE",
+        "row_id": "R000005",
+        "field": "yield",
+        "column": "case.json/records::yield",
+        "raw": "high",
+        "message": "Numeric field value could not be parsed; kept raw, normalized value left null."
+      },
+      {
+        "rule": "UNIT-UNKNOWN",
+        "row_id": "R000005",
+        "field": "energy",
+        "column": "case.json/records::Ea (eVee)",
+        "raw": "1.2",
+        "unit": "eVee",
+        "message": "Unknown unit: raw parsed numbers kept in raw fields, normalized values left null."
+      },
+      {
+        "rule": "ANOM-OUT-OF-RANGE",
+        "row_id": "R000006",
+        "field": "yield",
+        "column": "case.json/records::yield",
+        "value": 145.0,
+        "unit": "%",
+        "expected": {
+          "unit": "%",
+          "min": 0.0,
+          "max": 100.0
+        },
+        "message": "Value outside dictionary plausible_range; kept, not clipped."
+      },
+      {
+        "rule": "ANOM-RANGE-ORDER",
+        "row_id": "R000012",
+        "field": "yield",
+        "column": "case.json/material_csv::Yield_max (%)",
+        "raw": "70",
+        "message": "Composed range has low > high after combining split columns; endpoints kept as extracted."
+      }
+    ],
+    "reviews": [
+      {
+        "review_id": "RV-00001",
+        "rule": "DUP-CONFLICT",
+        "severity": "high",
+        "kind": "duplicate_context_conflicting_values",
+        "message": "Rows ['R000001', 'R000002', 'R000003'] share the same context key 'doi=10.1234/syn.001|title=|locator=|material=pt/al2o3|property=co oxidation yield|temperature=573.15|pressure=0.1|reaction_time=' but disagree on measured values. Kept as separate rows; requires human scientific adjudication, not unit arithmetic.",
+        "evidence": {
+          "duplicate_group": "DG-0001",
+          "measure_groups": {
+            "yield=None/72.0/80.0/%": [
+              "R000001",
+              "R000002"
+            ],
+            "yield=65.0/None/None/%": [
+              "R000003"
+            ]
+          }
+        }
+      },
+      {
+        "review_id": "RV-00002",
+        "rule": "DUP-EXACT",
+        "severity": "medium",
+        "kind": "exact_duplicate_candidates",
+        "message": "Rows [['R000001', 'R000002']] agree on every context and measured value within group DG-0001; flagged as duplicate-extraction candidates. Nothing dropped automatically.",
+        "evidence": {
+          "duplicate_group": "DG-0001",
+          "context_key": "doi=10.1234/syn.001|title=|locator=|material=pt/al2o3|property=co oxidation yield|temperature=573.15|pressure=0.1|reaction_time=",
+          "exact_duplicate_subgroups": [
+            [
+              "R000001",
+              "R000002"
+            ]
+          ]
+        }
+      },
+      {
+        "review_id": "RV-00003",
+        "rule": "DUP-CONFLICT",
+        "severity": "high",
+        "kind": "duplicate_context_conflicting_values",
+        "message": "Rows ['R000007', 'R000008', 'R000009'] share the same context key 'doi=10.1234/syn.002|title=|locator=|material=cu/zno|property=methanol yield|temperature=523.0|pressure=3.0|reaction_time=' but disagree on measured values. Kept as separate rows; requires human scientific adjudication, not unit arithmetic.",
+        "evidence": {
+          "duplicate_group": "DG-0002",
+          "measure_groups": {
+            "yield=None/55.0/61.0/%;selectivity=88.0/None/None/%": [
+              "R000007",
+              "R000008"
+            ],
+            "yield=None/40.0/48.0/%;selectivity=88.0/None/None/%": [
+              "R000009"
+            ]
+          }
+        }
+      },
+      {
+        "review_id": "RV-00004",
+        "rule": "DUP-EXACT",
+        "severity": "medium",
+        "kind": "exact_duplicate_candidates",
+        "message": "Rows [['R000007', 'R000008']] agree on every context and measured value within group DG-0002; flagged as duplicate-extraction candidates. Nothing dropped automatically.",
+        "evidence": {
+          "duplicate_group": "DG-0002",
+          "context_key": "doi=10.1234/syn.002|title=|locator=|material=cu/zno|property=methanol yield|temperature=523.0|pressure=3.0|reaction_time=",
+          "exact_duplicate_subgroups": [
+            [
+              "R000007",
+              "R000008"
+            ]
+          ]
+        }
+      },
+      {
+        "review_id": "RV-00005",
+        "rule": "DUP-CONFLICT",
+        "severity": "high",
+        "kind": "duplicate_context_conflicting_values",
+        "message": "Rows ['R000013', 'R000014', 'R000015'] share the same context key 'doi=10.1234/syn.003|title=|locator=|material=ni/sio2|property=methane conversion|temperature=623.15|pressure=0.25|reaction_time=' but disagree on measured values. Kept as separate rows; requires human scientific adjudication, not unit arithmetic.",
+        "evidence": {
+          "duplicate_group": "DG-0003",
+          "measure_groups": {
+            "yield=66.0/None/None/%": [
+              "R000013",
+              "R000014"
+            ],
+            "yield=59.0/None/None/%": [
+              "R000015"
+            ]
+          }
+        }
+      },
+      {
+        "review_id": "RV-00006",
+        "rule": "DUP-EXACT",
+        "severity": "medium",
+        "kind": "exact_duplicate_candidates",
+        "message": "Rows [['R000013', 'R000014']] agree on every context and measured value within group DG-0003; flagged as duplicate-extraction candidates. Nothing dropped automatically.",
+        "evidence": {
+          "duplicate_group": "DG-0003",
+          "context_key": "doi=10.1234/syn.003|title=|locator=|material=ni/sio2|property=methane conversion|temperature=623.15|pressure=0.25|reaction_time=",
+          "exact_duplicate_subgroups": [
+            [
+              "R000013",
+              "R000014"
+            ]
+          ]
+        }
+      }
+    ]
+  },
+  "mapping_report": {
+    "dictionary_id": "lit-extract-core",
+    "schema_version": "1.0.0",
+    "mappings": [
+      {
+        "column": "case.json/records::extraction.id",
+        "source_id": "case.json/records",
+        "header": "extraction.id",
+        "canonical_field": "record_id",
+        "component": null,
+        "confidence": 0.99,
+        "rule": "MAP-001 exact normalized alias match",
+        "evidence": {
+          "matched_alias": "extraction id",
+          "normalized_header": "extraction_id",
+          "header_unit_hint": null,
+          "profile_semantic_type": "identifier",
+          "type_evidence": {
+            "kind_counts": {
+              "string": 6
+            },
+            "uniqueness": 1.0,
+            "rule": "TYPE-002 >=90% unique, identifier-shaped tokens, no spaces"
+          }
+        }
+      },
+      {
+        "column": "case.json/records::extraction.doi",
+        "source_id": "case.json/records",
+        "header": "extraction.doi",
+        "canonical_field": "doi",
+        "component": null,
+        "confidence": 0.99,
+        "rule": "MAP-001 exact normalized alias match",
+        "evidence": {
+          "matched_alias": "extraction doi",
+          "normalized_header": "extraction_doi",
+          "header_unit_hint": null,
+          "profile_semantic_type": "identifier",
+          "type_evidence": {
+            "kind_counts": {
+              "numeric": 6
+            },
+            "uniqueness": 0.3333,
+            "rule": "TYPE-002b DOI-shaped values (10.<registrant>/<suffix>)"
+          }
+        }
+      },
+      {
+        "column": "case.json/records::material.name",
+        "source_id": "case.json/records",
+        "header": "material.name",
+        "canonical_field": "material",
+        "component": null,
+        "confidence": 0.99,
+        "rule": "MAP-001 exact normalized alias match",
+        "evidence": {
+          "matched_alias": "material name",
+          "normalized_header": "material_name",
+          "header_unit_hint": null,
+          "profile_semantic_type": "string",
+          "type_evidence": {
+            "kind_counts": {
+              "string": 6
+            },
+            "uniqueness": 0.3333,
+            "rule": "TYPE-001 fallback free text"
+          }
+        }
+      },
+      {
+        "column": "case.json/records::property",
+        "source_id": "case.json/records",
+        "header": "property",
+        "canonical_field": "property",
+        "component": null,
+        "confidence": 0.99,
+        "rule": "MAP-001 exact normalized alias match",
+        "evidence": {
+          "matched_alias": "property",
+          "normalized_header": "property",
+          "header_unit_hint": null,
+          "profile_semantic_type": "string",
+          "type_evidence": {
+            "kind_counts": {
+              "string": 6
+            },
+            "uniqueness": 0.3333,
+            "rule": "TYPE-001 fallback free text"
+          }
+        }
+      },
+      {
+        "column": "case.json/records::conditions.temperature",
+        "source_id": "case.json/records",
+        "header": "conditions.temperature",
+        "canonical_field": "temperature",
+        "component": null,
+        "confidence": 0.78,
+        "rule": "MAP-003 alias plus stop-word tokens",
+        "evidence": {
+          "matched_alias": "temperature",
+          "normalized_header": "conditions_temperature",
+          "header_unit_hint": null,
+          "profile_semantic_type": "numeric",
+          "type_evidence": {
+            "kind_counts": {
+              "numeric": 6
+            },
+            "uniqueness": 0.5,
+            "rule": "TYPE-003 >=80% of non-missing values parse as numbers or ranges"
+          }
+        }
+      },
+      {
+        "column": "case.json/records::conditions.pressure",
+        "source_id": "case.json/records",
+        "header": "conditions.pressure",
+        "canonical_field": "pressure",
+        "component": null,
+        "confidence": 0.78,
+        "rule": "MAP-003 alias plus stop-word tokens",
+        "evidence": {
+          "matched_alias": "pressure",
+          "normalized_header": "conditions_pressure",
+          "header_unit_hint": null,
+          "profile_semantic_type": "numeric",
+          "type_evidence": {
+            "kind_counts": {
+              "numeric": 6
+            },
+            "uniqueness": 0.5,
+            "rule": "TYPE-003 >=80% of non-missing values parse as numbers or ranges"
+          }
+        }
+      },
+      {
+        "column": "case.json/records::yield",
+        "source_id": "case.json/records",
+        "header": "yield",
+        "canonical_field": "yield",
+        "component": null,
+        "confidence": 0.99,
+        "rule": "MAP-001 exact normalized alias match",
+        "evidence": {
+          "matched_alias": "yield",
+          "normalized_header": "yield",
+          "header_unit_hint": null,
+          "profile_semantic_type": "numeric",
+          "type_evidence": {
+            "kind_counts": {
+              "range": 2,
+              "numeric": 2,
+              "missing": 1,
+              "string": 1
+            },
+            "uniqueness": 0.8,
+            "rule": "TYPE-003 >=80% of non-missing values parse as numbers or ranges"
+          }
+        }
+      },
+      {
+        "column": "case.json/records::notes",
+        "source_id": "case.json/records",
+        "header": "notes",
+        "canonical_field": "notes",
+        "component": null,
+        "confidence": 0.99,
+        "rule": "MAP-001 exact normalized alias match",
+        "evidence": {
+          "matched_alias": "notes",
+          "normalized_header": "notes",
+          "header_unit_hint": null,
+          "profile_semantic_type": "string",
+          "type_evidence": {
+            "kind_counts": {
+              "string": 6
+            },
+            "uniqueness": 1.0,
+            "rule": "TYPE-001 fallback free text"
+          }
+        }
+      },
+      {
+        "column": "case.json/records::Ea (eVee)",
+        "source_id": "case.json/records",
+        "header": "Ea (eVee)",
+        "canonical_field": "energy",
+        "component": null,
+        "confidence": 0.99,
+        "rule": "MAP-001 exact normalized alias match",
+        "evidence": {
+          "matched_alias": "ea",
+          "normalized_header": "ea",
+          "header_unit_hint": "eVee",
+          "profile_semantic_type": "numeric",
+          "type_evidence": {
+            "kind_counts": {
+              "missing": 5,
+              "numeric": 1
+            },
+            "uniqueness": 1.0,
+            "rule": "TYPE-003 >=80% of non-missing values parse as numbers or ranges"
+          }
+        }
+      },
+      {
+        "column": "case.json/material_csv::Material Name",
+        "source_id": "case.json/material_csv",
+        "header": "Material Name",
+        "canonical_field": "material",
+        "component": null,
+        "confidence": 0.99,
+        "rule": "MAP-001 exact normalized alias match",
+        "evidence": {
+          "matched_alias": "material name",
+          "normalized_header": "material_name",
+          "header_unit_hint": null,
+          "profile_semantic_type": "string",
+          "type_evidence": {
+            "kind_counts": {
+              "string": 6
+            },
+            "uniqueness": 0.5,
+            "rule": "TYPE-001 fallback free text"
+          }
+        }
+      },
+      {
+        "column": "case.json/material_csv::DOI",
+        "source_id": "case.json/material_csv",
+        "header": "DOI",
+        "canonical_field": "doi",
+        "component": null,
+        "confidence": 0.99,
+        "rule": "MAP-001 exact normalized alias match",
+        "evidence": {
+          "matched_alias": "doi",
+          "normalized_header": "doi",
+          "header_unit_hint": null,
+          "profile_semantic_type": "identifier",
+          "type_evidence": {
+            "kind_counts": {
+              "numeric": 6
+            },
+            "uniqueness": 0.1667,
+            "rule": "TYPE-002b DOI-shaped values (10.<registrant>/<suffix>)"
+          }
+        }
+      },
+      {
+        "column": "case.json/material_csv::Property",
+        "source_id": "case.json/material_csv",
+        "header": "Property",
+        "canonical_field": "property",
+        "component": null,
+        "confidence": 0.99,
+        "rule": "MAP-001 exact normalized alias match",
+        "evidence": {
+          "matched_alias": "property",
+          "normalized_header": "property",
+          "header_unit_hint": null,
+          "profile_semantic_type": "string",
+          "type_evidence": {
+            "kind_counts": {
+              "string": 6
+            },
+            "uniqueness": 0.5,
+            "rule": "TYPE-001 fallback free text"
+          }
+        }
+      },
+      {
+        "column": "case.json/material_csv::T / K",
+        "source_id": "case.json/material_csv",
+        "header": "T / K",
+        "canonical_field": "temperature",
+        "component": null,
+        "confidence": 0.995,
+        "rule": "MAP-001 exact normalized alias match + MAP-005 unit-hint disambiguation",
+        "evidence": {
+          "matched_alias": "t",
+          "normalized_header": "t",
+          "header_unit_hint": "k",
+          "profile_semantic_type": "numeric",
+          "type_evidence": {
+            "kind_counts": {
+              "numeric": 6
+            },
+            "uniqueness": 0.3333,
+            "rule": "TYPE-003 >=80% of non-missing values parse as numbers or ranges"
+          }
+        }
+      },
+      {
+        "column": "case.json/material_csv::P_MPa",
+        "source_id": "case.json/material_csv",
+        "header": "P_MPa",
+        "canonical_field": "pressure",
+        "component": null,
+        "confidence": 0.92,
+        "rule": "MAP-002 alias plus '_UNIT' suffix convention",
+        "evidence": {
+          "matched_alias": "p",
+          "normalized_header": "p_mpa",
+          "header_unit_hint": "mpa",
+          "profile_semantic_type": "numeric",
+          "type_evidence": {
+            "kind_counts": {
+              "numeric": 5,
+              "missing": 1
+            },
+            "uniqueness": 0.4,
+            "rule": "TYPE-003 >=80% of non-missing values parse as numbers or ranges"
+          }
+        }
+      },
+      {
+        "column": "case.json/material_csv::Yield_min (%)",
+        "source_id": "case.json/material_csv",
+        "header": "Yield_min (%)",
+        "canonical_field": "yield",
+        "component": "low",
+        "confidence": 0.99,
+        "rule": "MAP-004 component (min/low/max/high) convention on aliased header",
+        "evidence": {
+          "matched_alias": "yield",
+          "normalized_header": "yield",
+          "header_unit_hint": "%",
+          "profile_semantic_type": "numeric",
+          "type_evidence": {
+            "kind_counts": {
+              "numeric": 5,
+              "missing": 1
+            },
+            "uniqueness": 0.8,
+            "rule": "TYPE-003 >=80% of non-missing values parse as numbers or ranges"
+          }
+        }
+      },
+      {
+        "column": "case.json/material_csv::Yield_max (%)",
+        "source_id": "case.json/material_csv",
+        "header": "Yield_max (%)",
+        "canonical_field": "yield",
+        "component": "high",
+        "confidence": 0.99,
+        "rule": "MAP-004 component (min/low/max/high) convention on aliased header",
+        "evidence": {
+          "matched_alias": "yield",
+          "normalized_header": "yield",
+          "header_unit_hint": "%",
+          "profile_semantic_type": "numeric",
+          "type_evidence": {
+            "kind_counts": {
+              "numeric": 5,
+              "missing": 1
+            },
+            "uniqueness": 0.8,
+            "rule": "TYPE-003 >=80% of non-missing values parse as numbers or ranges"
+          }
+        }
+      },
+      {
+        "column": "case.json/material_csv::Selectivity",
+        "source_id": "case.json/material_csv",
+        "header": "Selectivity",
+        "canonical_field": "selectivity",
+        "component": null,
+        "confidence": 0.99,
+        "rule": "MAP-001 exact normalized alias match",
+        "evidence": {
+          "matched_alias": "selectivity",
+          "normalized_header": "selectivity",
+          "header_unit_hint": null,
+          "profile_semantic_type": "numeric",
+          "type_evidence": {
+            "kind_counts": {
+              "numeric": 5,
+              "missing": 1
+            },
+            "uniqueness": 0.6,
+            "rule": "TYPE-003 >=80% of non-missing values parse as numbers or ranges"
+          }
+        }
+      },
+      {
+        "column": "case.json/material_csv::Notes",
+        "source_id": "case.json/material_csv",
+        "header": "Notes",
+        "canonical_field": "notes",
+        "component": null,
+        "confidence": 0.99,
+        "rule": "MAP-001 exact normalized alias match",
+        "evidence": {
+          "matched_alias": "notes",
+          "normalized_header": "notes",
+          "header_unit_hint": null,
+          "profile_semantic_type": "string",
+          "type_evidence": {
+            "kind_counts": {
+              "string": 4,
+              "missing": 2
+            },
+            "uniqueness": 0.75,
+            "rule": "TYPE-001 fallback free text"
+          }
+        }
+      },
+      {
+        "column": "case.json:material-batch-c.csv::catalyst name",
+        "source_id": "case.json:material-batch-c.csv",
+        "header": "catalyst name",
+        "canonical_field": "material",
+        "component": null,
+        "confidence": 0.99,
+        "rule": "MAP-001 exact normalized alias match",
+        "evidence": {
+          "matched_alias": "catalyst name",
+          "normalized_header": "catalyst_name",
+          "header_unit_hint": null,
+          "profile_semantic_type": "string",
+          "type_evidence": {
+            "kind_counts": {
+              "string": 4
+            },
+            "uniqueness": 0.5,
+            "rule": "TYPE-001 fallback free text"
+          }
+        }
+      },
+      {
+        "column": "case.json:material-batch-c.csv::文献DOI",
+        "source_id": "case.json:material-batch-c.csv",
+        "header": "文献DOI",
+        "canonical_field": "doi",
+        "component": null,
+        "confidence": 0.99,
+        "rule": "MAP-001 exact normalized alias match",
+        "evidence": {
+          "matched_alias": "文献doi",
+          "normalized_header": "文献doi",
+          "header_unit_hint": null,
+          "profile_semantic_type": "identifier",
+          "type_evidence": {
+            "kind_counts": {
+              "numeric": 4
+            },
+            "uniqueness": 0.25,
+            "rule": "TYPE-002b DOI-shaped values (10.<registrant>/<suffix>)"
+          }
+        }
+      },
+      {
+        "column": "case.json:material-batch-c.csv::指标",
+        "source_id": "case.json:material-batch-c.csv",
+        "header": "指标",
+        "canonical_field": "property",
+        "component": null,
+        "confidence": 0.99,
+        "rule": "MAP-001 exact normalized alias match",
+        "evidence": {
+          "matched_alias": "指标",
+          "normalized_header": "指标",
+          "header_unit_hint": null,
+          "profile_semantic_type": "string",
+          "type_evidence": {
+            "kind_counts": {
+              "string": 4
+            },
+            "uniqueness": 0.25,
+            "rule": "TYPE-001 fallback free text"
+          }
+        }
+      },
+      {
+        "column": "case.json:material-batch-c.csv::温度(摄氏度)",
+        "source_id": "case.json:material-batch-c.csv",
+        "header": "温度(摄氏度)",
+        "canonical_field": "temperature",
+        "component": null,
+        "confidence": 0.99,
+        "rule": "MAP-001 exact normalized alias match",
+        "evidence": {
+          "matched_alias": "温度",
+          "normalized_header": "温度",
+          "header_unit_hint": "摄氏度",
+          "profile_semantic_type": "numeric",
+          "type_evidence": {
+            "kind_counts": {
+              "numeric": 4
+            },
+            "uniqueness": 0.5,
+            "rule": "TYPE-003 >=80% of non-missing values parse as numbers or ranges"
+          }
+        }
+      },
+      {
+        "column": "case.json:material-batch-c.csv::压力",
+        "source_id": "case.json:material-batch-c.csv",
+        "header": "压力",
+        "canonical_field": "pressure",
+        "component": null,
+        "confidence": 0.99,
+        "rule": "MAP-001 exact normalized alias match",
+        "evidence": {
+          "matched_alias": "压力",
+          "normalized_header": "压力",
+          "header_unit_hint": null,
+          "profile_semantic_type": "numeric",
+          "type_evidence": {
+            "kind_counts": {
+              "numeric": 4
+            },
+            "uniqueness": 0.5,
+            "rule": "TYPE-003 >=80% of non-missing values parse as numbers or ranges"
+          }
+        }
+      },
+      {
+        "column": "case.json:material-batch-c.csv::收率(%)",
+        "source_id": "case.json:material-batch-c.csv",
+        "header": "收率(%)",
+        "canonical_field": "yield",
+        "component": null,
+        "confidence": 0.99,
+        "rule": "MAP-001 exact normalized alias match",
+        "evidence": {
+          "matched_alias": "收率",
+          "normalized_header": "收率",
+          "header_unit_hint": "%",
+          "profile_semantic_type": "numeric",
+          "type_evidence": {
+            "kind_counts": {
+              "numeric": 4
+            },
+            "uniqueness": 0.75,
+            "rule": "TYPE-003 >=80% of non-missing values parse as numbers or ranges"
+          }
+        }
+      },
+      {
+        "column": "case.json:material-batch-c.csv::备注",
+        "source_id": "case.json:material-batch-c.csv",
+        "header": "备注",
+        "canonical_field": "notes",
+        "component": null,
+        "confidence": 0.99,
+        "rule": "MAP-001 exact normalized alias match",
+        "evidence": {
+          "matched_alias": "备注",
+          "normalized_header": "备注",
+          "header_unit_hint": null,
+          "profile_semantic_type": "string",
+          "type_evidence": {
+            "kind_counts": {
+              "string": 4
+            },
+            "uniqueness": 1.0,
+            "rule": "TYPE-001 fallback free text"
+          }
+        }
+      }
+    ],
+    "unmapped_columns": [
+      {
+        "column": "case.json/records::Instrument Serial",
+        "source_id": "case.json/records",
+        "header": "Instrument Serial",
+        "reason": "no_alias_candidate",
+        "semantic_type": "identifier",
+        "samples": [
+          "SN-8891"
+        ],
+        "type_evidence": {
+          "kind_counts": {
+            "missing": 5,
+            "string": 1
+          },
+          "uniqueness": 1.0,
+          "rule": "TYPE-002 >=90% unique, identifier-shaped tokens, no spaces"
+        }
+      },
+      {
+        "column": "case.json/material_csv::Mystery Column",
+        "source_id": "case.json/material_csv",
+        "header": "Mystery Column",
+        "reason": "no_alias_candidate",
+        "semantic_type": "identifier",
+        "samples": [
+          "zz1",
+          "zz2",
+          "zz3",
+          "zz4",
+          "zz5"
+        ],
+        "type_evidence": {
+          "kind_counts": {
+            "string": 6
+          },
+          "uniqueness": 1.0,
+          "rule": "TYPE-002 >=90% unique, identifier-shaped tokens, no spaces"
+        }
+      },
+      {
+        "column": "case.json:material-batch-c.csv::weird_col",
+        "source_id": "case.json:material-batch-c.csv",
+        "header": "weird_col",
+        "reason": "no_alias_candidate",
+        "semantic_type": "identifier",
+        "samples": [
+          "c1",
+          "c2",
+          "c3",
+          "c4"
+        ],
+        "type_evidence": {
+          "kind_counts": {
+            "string": 4
+          },
+          "uniqueness": 1.0,
+          "rule": "TYPE-002 >=90% unique, identifier-shaped tokens, no spaces"
+        }
+      }
+    ],
+    "column_profiles": {
+      "case.json/records::extraction.id": {
+        "source_id": "case.json/records",
+        "header": "extraction.id",
+        "samples": [
+          "A1",
+          "A1-dup",
+          "A1-conflict",
+          "A2",
+          "A3"
+        ],
+        "non_missing": 6,
+        "semantic_type": "identifier",
+        "type_evidence": {
+          "kind_counts": {
+            "string": 6
+          },
+          "uniqueness": 1.0,
+          "rule": "TYPE-002 >=90% unique, identifier-shaped tokens, no spaces"
+        }
+      },
+      "case.json/records::extraction.doi": {
+        "source_id": "case.json/records",
+        "header": "extraction.doi",
+        "samples": [
+          "10.1234/syn.001",
+          "10.1234/syn.001",
+          "10.1234/syn.001",
+          "10.1234/syn.001",
+          "10.1234/syn.001"
+        ],
+        "non_missing": 6,
+        "semantic_type": "identifier",
+        "type_evidence": {
+          "kind_counts": {
+            "numeric": 6
+          },
+          "uniqueness": 0.3333,
+          "rule": "TYPE-002b DOI-shaped values (10.<registrant>/<suffix>)"
+        }
+      },
+      "case.json/records::material.name": {
+        "source_id": "case.json/records",
+        "header": "material.name",
+        "samples": [
+          "Pt/Al2O3",
+          "Pt/Al2O3",
+          "Pt/Al2O3",
+          "Pt/Al2O3",
+          "Pt/Al2O3"
+        ],
+        "non_missing": 6,
+        "semantic_type": "string",
+        "type_evidence": {
+          "kind_counts": {
+            "string": 6
+          },
+          "uniqueness": 0.3333,
+          "rule": "TYPE-001 fallback free text"
+        }
+      },
+      "case.json/records::property": {
+        "source_id": "case.json/records",
+        "header": "property",
+        "samples": [
+          "CO oxidation yield",
+          "CO oxidation yield",
+          "CO oxidation yield",
+          "CO oxidation yield",
+          "activation energy"
+        ],
+        "non_missing": 6,
+        "semantic_type": "string",
+        "type_evidence": {
+          "kind_counts": {
+            "string": 6
+          },
+          "uniqueness": 0.3333,
+          "rule": "TYPE-001 fallback free text"
+        }
+      },
+      "case.json/records::conditions.temperature": {
+        "source_id": "case.json/records",
+        "header": "conditions.temperature",
+        "samples": [
+          "300 °C",
+          "300 °C",
+          "300 °C",
+          "573 K",
+          "573 K"
+        ],
+        "non_missing": 6,
+        "semantic_type": "numeric",
+        "type_evidence": {
+          "kind_counts": {
+            "numeric": 6
+          },
+          "uniqueness": 0.5,
+          "rule": "TYPE-003 >=80% of non-missing values parse as numbers or ranges"
+        }
+      },
+      "case.json/records::conditions.pressure": {
+        "source_id": "case.json/records",
+        "header": "conditions.pressure",
+        "samples": [
+          "1 bar",
+          "1 bar",
+          "1 bar",
+          "0.1 MPa",
+          "0.1 MPa"
+        ],
+        "non_missing": 6,
+        "semantic_type": "numeric",
+        "type_evidence": {
+          "kind_counts": {
+            "numeric": 6
+          },
+          "uniqueness": 0.5,
+          "rule": "TYPE-003 >=80% of non-missing values parse as numbers or ranges"
+        }
+      },
+      "case.json/records::yield": {
+        "source_id": "case.json/records",
+        "header": "yield",
+        "samples": [
+          "72-80 %",
+          "72-80 %",
+          "65 %",
+          "high",
+          "145 %"
+        ],
+        "non_missing": 5,
+        "semantic_type": "numeric",
+        "type_evidence": {
+          "kind_counts": {
+            "range": 2,
+            "numeric": 2,
+            "missing": 1,
+            "string": 1
+          },
+          "uniqueness": 0.8,
+          "rule": "TYPE-003 >=80% of non-missing values parse as numbers or ranges"
+        }
+      },
+      "case.json/records::notes": {
+        "source_id": "case.json/records",
+        "header": "notes",
+        "samples": [
+          "Table 2",
+          "Table 2 (second extraction pass)",
+          "Table 2 (conflicting third pass - must stay unmerged)",
+          "yield not reported",
+          "unknown unit eVee invented for the demo; yield value is unparseable"
+        ],
+        "non_missing": 6,
+        "semantic_type": "string",
+        "type_evidence": {
+          "kind_counts": {
+            "string": 6
+          },
+          "uniqueness": 1.0,
+          "rule": "TYPE-001 fallback free text"
+        }
+      },
+      "case.json/records::Ea (eVee)": {
+        "source_id": "case.json/records",
+        "header": "Ea (eVee)",
+        "samples": [
+          "1.2"
+        ],
+        "non_missing": 1,
+        "semantic_type": "numeric",
+        "type_evidence": {
+          "kind_counts": {
+            "missing": 5,
+            "numeric": 1
+          },
+          "uniqueness": 1.0,
+          "rule": "TYPE-003 >=80% of non-missing values parse as numbers or ranges"
+        }
+      },
+      "case.json/records::Instrument Serial": {
+        "source_id": "case.json/records",
+        "header": "Instrument Serial",
+        "samples": [
+          "SN-8891"
+        ],
+        "non_missing": 1,
+        "semantic_type": "identifier",
+        "type_evidence": {
+          "kind_counts": {
+            "missing": 5,
+            "string": 1
+          },
+          "uniqueness": 1.0,
+          "rule": "TYPE-002 >=90% unique, identifier-shaped tokens, no spaces"
+        }
+      },
+      "case.json/material_csv::Material Name": {
+        "source_id": "case.json/material_csv",
+        "header": "Material Name",
+        "samples": [
+          "Cu/ZnO",
+          "Cu/ZnO",
+          "Cu/ZnO",
+          "Fe-Co",
+          "Fe-Co"
+        ],
+        "non_missing": 6,
+        "semantic_type": "string",
+        "type_evidence": {
+          "kind_counts": {
+            "string": 6
+          },
+          "uniqueness": 0.5,
+          "rule": "TYPE-001 fallback free text"
+        }
+      },
+      "case.json/material_csv::DOI": {
+        "source_id": "case.json/material_csv",
+        "header": "DOI",
+        "samples": [
+          "10.1234/syn.002",
+          "10.1234/syn.002",
+          "10.1234/syn.002",
+          "10.1234/syn.002",
+          "10.1234/syn.002"
+        ],
+        "non_missing": 6,
+        "semantic_type": "identifier",
+        "type_evidence": {
+          "kind_counts": {
+            "numeric": 6
+          },
+          "uniqueness": 0.1667,
+          "rule": "TYPE-002b DOI-shaped values (10.<registrant>/<suffix>)"
+        }
+      },
+      "case.json/material_csv::Property": {
+        "source_id": "case.json/material_csv",
+        "header": "Property",
+        "samples": [
+          "methanol yield",
+          "methanol yield",
+          "methanol yield",
+          "methanol selectivity",
+          "methanol selectivity"
+        ],
+        "non_missing": 6,
+        "semantic_type": "string",
+        "type_evidence": {
+          "kind_counts": {
+            "string": 6
+          },
+          "uniqueness": 0.5,
+          "rule": "TYPE-001 fallback free text"
+        }
+      },
+      "case.json/material_csv::T / K": {
+        "source_id": "case.json/material_csv",
+        "header": "T / K",
+        "samples": [
+          "523",
+          "523",
+          "523",
+          "523",
+          "523"
+        ],
+        "non_missing": 6,
+        "semantic_type": "numeric",
+        "type_evidence": {
+          "kind_counts": {
+            "numeric": 6
+          },
+          "uniqueness": 0.3333,
+          "rule": "TYPE-003 >=80% of non-missing values parse as numbers or ranges"
+        }
+      },
+      "case.json/material_csv::P_MPa": {
+        "source_id": "case.json/material_csv",
+        "header": "P_MPa",
+        "samples": [
+          "3.0",
+          "3.0",
+          "3.0",
+          "3.0",
+          "2.0"
+        ],
+        "non_missing": 5,
+        "semantic_type": "numeric",
+        "type_evidence": {
+          "kind_counts": {
+            "numeric": 5,
+            "missing": 1
+          },
+          "uniqueness": 0.4,
+          "rule": "TYPE-003 >=80% of non-missing values parse as numbers or ranges"
+        }
+      },
+      "case.json/material_csv::Yield_min (%)": {
+        "source_id": "case.json/material_csv",
+        "header": "Yield_min (%)",
+        "samples": [
+          "55",
+          "55",
+          "40",
+          "70",
+          "80"
+        ],
+        "non_missing": 5,
+        "semantic_type": "numeric",
+        "type_evidence": {
+          "kind_counts": {
+            "numeric": 5,
+            "missing": 1
+          },
+          "uniqueness": 0.8,
+          "rule": "TYPE-003 >=80% of non-missing values parse as numbers or ranges"
+        }
+      },
+      "case.json/material_csv::Yield_max (%)": {
+        "source_id": "case.json/material_csv",
+        "header": "Yield_max (%)",
+        "samples": [
+          "61",
+          "61",
+          "48",
+          "75",
+          "70"
+        ],
+        "non_missing": 5,
+        "semantic_type": "numeric",
+        "type_evidence": {
+          "kind_counts": {
+            "numeric": 5,
+            "missing": 1
+          },
+          "uniqueness": 0.8,
+          "rule": "TYPE-003 >=80% of non-missing values parse as numbers or ranges"
+        }
+      },
+      "case.json/material_csv::Selectivity": {
+        "source_id": "case.json/material_csv",
+        "header": "Selectivity",
+        "samples": [
+          "88 %",
+          "88 %",
+          "88 %",
+          "91 %",
+          "50 %"
+        ],
+        "non_missing": 5,
+        "semantic_type": "numeric",
+        "type_evidence": {
+          "kind_counts": {
+            "numeric": 5,
+            "missing": 1
+          },
+          "uniqueness": 0.6,
+          "rule": "TYPE-003 >=80% of non-missing values parse as numbers or ranges"
+        }
+      },
+      "case.json/material_csv::Notes": {
+        "source_id": "case.json/material_csv",
+        "header": "Notes",
+        "samples": [
+          "Table 1",
+          "Table 1",
+          "Table 1 conflicting re-extraction",
+          "inverted range demo"
+        ],
+        "non_missing": 4,
+        "semantic_type": "string",
+        "type_evidence": {
+          "kind_counts": {
+            "string": 4,
+            "missing": 2
+          },
+          "uniqueness": 0.75,
+          "rule": "TYPE-001 fallback free text"
+        }
+      },
+      "case.json/material_csv::Mystery Column": {
+        "source_id": "case.json/material_csv",
+        "header": "Mystery Column",
+        "samples": [
+          "zz1",
+          "zz2",
+          "zz3",
+          "zz4",
+          "zz5"
+        ],
+        "non_missing": 6,
+        "semantic_type": "identifier",
+        "type_evidence": {
+          "kind_counts": {
+            "string": 6
+          },
+          "uniqueness": 1.0,
+          "rule": "TYPE-002 >=90% unique, identifier-shaped tokens, no spaces"
+        }
+      },
+      "case.json:material-batch-c.csv::catalyst name": {
+        "source_id": "case.json:material-batch-c.csv",
+        "header": "catalyst name",
+        "samples": [
+          "Ni/SiO2",
+          "Ni/SiO2",
+          "Ni/SiO2",
+          "Co3O4"
+        ],
+        "non_missing": 4,
+        "semantic_type": "string",
+        "type_evidence": {
+          "kind_counts": {
+            "string": 4
+          },
+          "uniqueness": 0.5,
+          "rule": "TYPE-001 fallback free text"
+        }
+      },
+      "case.json:material-batch-c.csv::文献DOI": {
+        "source_id": "case.json:material-batch-c.csv",
+        "header": "文献DOI",
+        "samples": [
+          "10.1234/syn.003",
+          "10.1234/syn.003",
+          "10.1234/syn.003",
+          "10.1234/syn.003"
+        ],
+        "non_missing": 4,
+        "semantic_type": "identifier",
+        "type_evidence": {
+          "kind_counts": {
+            "numeric": 4
+          },
+          "uniqueness": 0.25,
+          "rule": "TYPE-002b DOI-shaped values (10.<registrant>/<suffix>)"
+        }
+      },
+      "case.json:material-batch-c.csv::指标": {
+        "source_id": "case.json:material-batch-c.csv",
+        "header": "指标",
+        "samples": [
+          "methane conversion",
+          "methane conversion",
+          "methane conversion",
+          "methane conversion"
+        ],
+        "non_missing": 4,
+        "semantic_type": "string",
+        "type_evidence": {
+          "kind_counts": {
+            "string": 4
+          },
+          "uniqueness": 0.25,
+          "rule": "TYPE-001 fallback free text"
+        }
+      },
+      "case.json:material-batch-c.csv::温度(摄氏度)": {
+        "source_id": "case.json:material-batch-c.csv",
+        "header": "温度(摄氏度)",
+        "samples": [
+          "350",
+          "350",
+          "350",
+          "320"
+        ],
+        "non_missing": 4,
+        "semantic_type": "numeric",
+        "type_evidence": {
+          "kind_counts": {
+            "numeric": 4
+          },
+          "uniqueness": 0.5,
+          "rule": "TYPE-003 >=80% of non-missing values parse as numbers or ranges"
+        }
+      },
+      "case.json:material-batch-c.csv::压力": {
+        "source_id": "case.json:material-batch-c.csv",
+        "header": "压力",
+        "samples": [
+          "2.5 bar",
+          "2.5 bar",
+          "2.5 bar",
+          "1.0 bar"
+        ],
+        "non_missing": 4,
+        "semantic_type": "numeric",
+        "type_evidence": {
+          "kind_counts": {
+            "numeric": 4
+          },
+          "uniqueness": 0.5,
+          "rule": "TYPE-003 >=80% of non-missing values parse as numbers or ranges"
+        }
+      },
+      "case.json:material-batch-c.csv::收率(%)": {
+        "source_id": "case.json:material-batch-c.csv",
+        "header": "收率(%)",
+        "samples": [
+          "66",
+          "66",
+          "59",
+          "88"
+        ],
+        "non_missing": 4,
+        "semantic_type": "numeric",
+        "type_evidence": {
+          "kind_counts": {
+            "numeric": 4
+          },
+          "uniqueness": 0.75,
+          "rule": "TYPE-003 >=80% of non-missing values parse as numbers or ranges"
+        }
+      },
+      "case.json:material-batch-c.csv::备注": {
+        "source_id": "case.json:material-batch-c.csv",
+        "header": "备注",
+        "samples": [
+          "表3",
+          "表3 二次抽取",
+          "表3 冲突再抽取",
+          "表4"
+        ],
+        "non_missing": 4,
+        "semantic_type": "string",
+        "type_evidence": {
+          "kind_counts": {
+            "string": 4
+          },
+          "uniqueness": 1.0,
+          "rule": "TYPE-001 fallback free text"
+        }
+      },
+      "case.json:material-batch-c.csv::weird_col": {
+        "source_id": "case.json:material-batch-c.csv",
+        "header": "weird_col",
+        "samples": [
+          "c1",
+          "c2",
+          "c3",
+          "c4"
+        ],
+        "non_missing": 4,
+        "semantic_type": "identifier",
+        "type_evidence": {
+          "kind_counts": {
+            "string": 4
+          },
+          "uniqueness": 1.0,
+          "rule": "TYPE-002 >=90% unique, identifier-shaped tokens, no spaces"
+        }
+      }
+    }
+  },
+  "adjudication_workbook": null,
+  "unresolved_contract_fields": [
+    {
+      "field": "adjudication_workbook",
+      "expected_type": "string",
+      "reason": "unknown_contract_field"
+    }
+  ]
+}

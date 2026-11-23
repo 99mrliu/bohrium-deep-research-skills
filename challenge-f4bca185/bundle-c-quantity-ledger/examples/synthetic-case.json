@@ -1,0 +1,31 @@
+{
+  "case_id": "synthetic-quantity-001",
+  "note": "SYNTHETIC example input for the quantity-ledger skill. Every record is fabricated to exercise one parser/conversion/review path. It is NOT real literature data and NOT a formal test case.",
+  "output_contract": {
+    "cleaned_records": "list: standardized per-record table",
+    "anomalies": "list: anomaly report",
+    "review_items": "list: items needing human confirmation",
+    "conversion_ledger": "list: per-conversion rule trace",
+    "bibliography_of_papers": "string: formatted bibliography of all source papers"
+  },
+  "sources": [
+    {"source_id": "paperA", "path": "synthetic-extra.csv"}
+  ],
+  "records": [
+    {"record_id": "s01", "material": "GaAs", "property": "band gap", "value": "1.5–2.5", "unit": "eV", "source_id": "paperA", "page": "4", "table": "1"},
+    {"record_id": "s02", "material": "SiO2", "property": "density", "value": "0.98 ± 0.02", "unit": "g/cm^3", "source_id": "paperA", "page": "7", "table": "2"},
+    {"record_id": "s03", "material": "NaCl(aq)", "property": "concentration", "value": "3.2×10⁻⁴", "unit": "mol L−1", "source_id": "paperA", "page": "9"},
+    {"record_id": "s04", "material": "Pb", "property": "concentration", "value": "1.2 mg/L", "source_id": "paperA", "page": "10"},
+    {"record_id": "s05", "material": "CaCO3", "property": "decomposition_temperature", "value": "350", "unit": "°C", "source_id": "paperA", "page": "11"},
+    {"record_id": "s06", "material": "CO2", "property": "mole_fraction", "value": "120", "unit": "ppm", "source_id": "paperA", "page": "12"},
+    {"record_id": "s07", "material": "Fe", "property": "grain_size", "value": "12.3.4", "unit": "nm", "source_id": "paperA", "page": "13"},
+    {"record_id": "s08", "material": "X", "property": "yield", "value": "5.2", "unit": "quatloo/mol", "source_id": "paperA", "page": "14"},
+    {"record_id": "s09", "material": "H2", "property": "activation energy", "value": "", "unit": "kJ mol−1", "source_id": "paperA", "page": "15"},
+    {"record_id": "s10", "material": "SiO2", "property": "density", "value": "0.98 ± 0.02", "unit": "g/cm^3", "source_id": "paperA", "page": "7", "table": "2"},
+    {"record_id": "s11", "material": "steel", "property": "yield_strength", "value": "1,75", "unit": "kPa", "source_id": "paperA", "page": "16"},
+    {"record_id": "s12", "material": "Cu", "property": "thickness", "value": "1,234", "unit": "nm", "source_id": "paperA", "page": "17"},
+    {"record_id": "s13", "material": "air", "property": "pressure", "value": "760", "unit": "Torr", "source_id": "paperA", "page": "18"},
+    {"record_id": "s14", "material": "cryostat", "property": "operating_temperature", "value": "−5–−2", "unit": "°C", "source_id": "paperA", "page": "19"},
+    {"record_id": "s15", "material": "Pt", "property": "loading", "value": "−1 234.5", "unit": "mg", "source_id": "paperA", "page": "20"}
+  ]
+}

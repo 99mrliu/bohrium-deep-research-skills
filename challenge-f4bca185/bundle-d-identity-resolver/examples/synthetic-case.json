@@ -1,0 +1,54 @@
+{
+  "case_id": "synthetic-identity-001",
+  "synthetic": true,
+  "description": "SYNTHETIC demonstration input (not real literature data). Crafted to exercise: alias canonicalization (TiO2 / titanium dioxide / titania), phase identity (rutile vs anatase vs brookite), doping identity (N-doped TiO2), an exact repeated extraction row, an independent repeated experiment in one study, a cross-source corroboration that must NOT merge, an identity conflict that must NOT be averaged, unit conversion enabling duplicate detection, context conversion (25 degC = 298.15 K), unknown/missing units, missing values, range values, out-of-range flags, hydrate vs anhydrous salts that must NOT merge, and unmapped columns.",
+  "output_contract": {
+    "cleaned_table": "dict",
+    "duplicate_clusters": "list",
+    "review_summary": "list",
+    "summary": "string",
+    "custom_unmapped_note": "string"
+  },
+  "studies": [
+    {
+      "source": {"doi": "10.0000/synth.a", "name": "Synthetic Study A"},
+      "extractor_version": "v1",
+      "records": [
+        {"material": "TiO2", "phase": "rutile", "metric": "band gap", "value": "3.0", "unit": "eV", "locator": "Table 1 row 1", "experiment": "run-1"},
+        {"material": "titanium dioxide (rutile)", "metric": "bandgap", "value": "3.0", "unit": "eV", "locator": "Table 1 row 1", "experiment": "run-1"},
+        {"material": "TiO2", "phase": "rutile", "metric": "band gap", "value": "3.0", "unit": "eV", "locator": "Table 1 row 2", "experiment": "run-2"},
+        {"material": "TiO2", "phase": "anatase", "metric": "band gap", "value": "3.2", "unit": "eV", "locator": "Table 2 row 1", "experiment": "run-1"},
+        {"material": "N-doped TiO2", "phase": "rutile", "metric": "band gap", "value": "2.9", "unit": "eV", "locator": "Table 2 row 2", "experiment": "run-1"},
+        {"material": "TiO2", "phase": "rutile", "metric": "band gap", "value": "3.05", "unit": "eV", "locator": "Table 1 row 1", "experiment": "run-1"},
+        {"material": "titania", "phase": "rutile", "metric": "band gap", "value": "3000", "unit": "meV", "locator": "Table 1 row 1", "experiment": "run-1"},
+        {"material": "TiO2", "phase": "brookite", "metric": "band gap", "value": "2.9", "unit": "", "locator": "Table 2 row 3", "experiment": "run-1"},
+        {"material": "ZnO", "phase": "wurtzite", "metric": "band gap", "value": "not reported", "unit": "", "locator": "text p.4", "experiment": "run-1"},
+        {"material": "TiO2", "phase": "rutile", "metric": "band gap", "value": "3.0", "unit": "eV", "temperature": "300 K", "locator": "Table 3 row 1", "experiment": "run-3"},
+        {"material": "TiO2", "phase": "rutile", "metric": "band gap", "value": "3.0", "unit": "eV", "temperature": "350 K", "locator": "Table 3 row 2", "experiment": "run-4"},
+        {"material": "TiO2", "phase": "anatase", "metric": "band gap", "value": "3.2", "unit": "eV", "temperature": "25 °C", "locator": "Table 4 row 1", "experiment": "run-5"},
+        {"material": "TiO2", "phase": "anatase", "metric": "band gap", "value": "3.2", "unit": "eV", "temperature": "298.15 K", "locator": "Table 4 row 1", "experiment": "run-5"}
+      ]
+    },
+    {
+      "source": {"doi": "10.0000/synth.b", "name": "Synthetic Study B"},
+      "records": [
+        {"material": "titanium dioxide", "phase": "rutile", "metric": "band gap", "value": "3.0", "unit": "eV", "locator": "Table 1 row 1"},
+        {"material": "TiO2", "phase": "anatase", "metric": "band gap", "value": "3.2", "unit": "Eg units", "locator": "Table 2 row 1"},
+        {"material": "CdS", "metric": "band gap", "value": "2.3-2.5", "unit": "eV", "locator": "Table 3 row 1"},
+        {"material": "Si", "metric": "band gap", "value": "25", "unit": "eV", "locator": "Table 4 row 1"}
+      ]
+    },
+    {
+      "source": {"doi": "10.0000/synth.c", "name": "Synthetic Study C"},
+      "tables": [
+        {
+          "columns": ["material", "metric", "value", "unit", "locator"],
+          "rows": [
+            ["Na2SO4", "particle size", "45", "nm", "Table 1 row 1"],
+            ["Na2SO4·10H2O", "particle size", "48", "nm", "Table 1 row 2"]
+          ]
+        }
+      ]
+    }
+  ]
+}

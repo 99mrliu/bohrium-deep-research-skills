@@ -1,0 +1,6 @@
+id,record_id,coordinates,type,raw,detail
+AN0001,s07,examples/synthetic-case.json#$.records[6],malformed_number,12.3.4,cannot parse numeric token '12.3.4'
+AN0002,s08,examples/synthetic-case.json#$.records[7],unknown_unit,quatloo/mol,unknown unit symbol 'quatloo'
+AN0003,s09,examples/synthetic-case.json#$.records[8],missing_value,,"no value supplied; left empty, never imputed"
+AN0004,s12,examples/synthetic-case.json#$.records[11],ambiguous_decimal_comma,"1,234","'1,234': single comma followed by exactly three digits"
+AN0005,R0017,examples/synthetic-extra.csv#row3,missing_value,,"no value supplied; left empty, never imputed"

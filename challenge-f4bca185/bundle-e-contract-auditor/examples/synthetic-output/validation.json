@@ -1,0 +1,114 @@
+{
+  "case_id": "synthetic-contract-auditor-v1",
+  "checks": [
+    {
+      "check_id": "RESULT_JSON",
+      "code": "PASS",
+      "details": {},
+      "message": "result.json is strict finite JSON",
+      "severity": "info",
+      "status": "pass"
+    },
+    {
+      "check_id": "INPUT_CASE",
+      "code": "PASS",
+      "details": {
+        "input_rows": 8
+      },
+      "message": "case re-ingested independently",
+      "severity": "info",
+      "status": "pass"
+    },
+    {
+      "check_id": "OUTPUT_CONTRACT",
+      "code": "PASS",
+      "details": {
+        "field_count": 11
+      },
+      "message": "all core and declared contract fields are present",
+      "severity": "info",
+      "status": "pass"
+    },
+    {
+      "check_id": "UNRESOLVED_FIELDS",
+      "code": "PASS",
+      "details": {},
+      "message": "all null extension fields are explicitly unresolved",
+      "severity": "info",
+      "status": "pass"
+    },
+    {
+      "check_id": "MANIFEST_SCHEMA",
+      "code": "PASS",
+      "details": {
+        "files": 7
+      },
+      "message": "manifest schema and relative paths are valid",
+      "severity": "info",
+      "status": "pass"
+    },
+    {
+      "check_id": "ARTIFACT_CHECKSUM",
+      "code": "PASS",
+      "details": {},
+      "message": "all manifest payload checksums match",
+      "severity": "info",
+      "status": "pass"
+    },
+    {
+      "check_id": "CLEANED_CONTENT",
+      "code": "PASS",
+      "details": {},
+      "message": "every retained output cell matches a fresh source rebuild",
+      "severity": "info",
+      "status": "pass"
+    },
+    {
+      "check_id": "COVERAGE",
+      "code": "PASS",
+      "details": {},
+      "message": "coverage reconciles kept/flagged/deduplicated/rejected to every input row",
+      "severity": "info",
+      "status": "pass"
+    },
+    {
+      "check_id": "ANOMALY_RECONCILIATION",
+      "code": "PASS",
+      "details": {},
+      "message": "reported anomaly set reconciles with fresh source checks",
+      "severity": "info",
+      "status": "pass"
+    },
+    {
+      "check_id": "CHANGE_LOG",
+      "code": "PASS",
+      "details": {
+        "records": 53
+      },
+      "message": "per-cell change log and raw conversion traces match source",
+      "severity": "info",
+      "status": "pass"
+    },
+    {
+      "check_id": "STATUS",
+      "code": "PASS",
+      "details": {
+        "status": "partial"
+      },
+      "message": "status is consistent with severity findings",
+      "severity": "info",
+      "status": "pass"
+    }
+  ],
+  "exit_code": 0,
+  "schema_version": "1.0.0",
+  "scope": "fresh read of case, task, result, cleaned tables, anomaly log, change log, checksums and manifest; no run-stage memory is trusted",
+  "status": "pass",
+  "summary": {
+    "blocking": 0,
+    "error": 0,
+    "info": 11,
+    "warning": 0
+  },
+  "verifier": "independent-two-stage-v1"
+}

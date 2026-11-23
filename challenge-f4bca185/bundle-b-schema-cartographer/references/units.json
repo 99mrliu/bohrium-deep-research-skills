@@ -1,0 +1,64 @@
+{
+  "units_id": "lit-extract-units",
+  "version": "1.0.0",
+  "description": "Editable unit table. factor/offset implement target = value * factor + offset, with formula recorded in every change-log entry. Add new aliases or dimensions here; unknown units are never guessed and always go to the unresolved schema and review queue.",
+  "dimensions": {
+    "temperature": {
+      "target": "K",
+      "units": {
+        "K": { "factor": 1.0, "offset": 0.0, "formula": "K = K * 1", "aliases": ["k", "kelvin", "开尔文"] },
+        "degC": { "factor": 1.0, "offset": 273.15, "formula": "K = degC * 1 + 273.15", "aliases": ["c", "degc", "deg c", "\u00b0c", "\u2103", "celsius", "degree celsius", "摄氏度"] },
+        "degF": { "factor": 0.5555555555555556, "offset": 255.3722222222222, "formula": "K = (degF - 32) * 5/9 + 273.15", "aliases": ["f", "degf", "\u00b0f", "fahrenheit", "华氏度"] }
+      }
+    },
+    "pressure": {
+      "target": "MPa",
+      "units": {
+        "MPa": { "factor": 1.0, "offset": 0.0, "formula": "MPa = MPa * 1", "aliases": ["mpa", "兆帕"] },
+        "kPa": { "factor": 0.001, "offset": 0.0, "formula": "MPa = kPa * 0.001", "aliases": ["kpa", "千帕"] },
+        "Pa": { "factor": 1e-06, "offset": 0.0, "formula": "MPa = Pa * 1e-06", "aliases": ["pa", "帕", "帕斯卡"] },
+        "bar": { "factor": 0.1, "offset": 0.0, "formula": "MPa = bar * 0.1", "aliases": ["bar", "巴"] },
+        "mbar": { "factor": 0.0001, "offset": 0.0, "formula": "MPa = mbar * 0.0001", "aliases": ["mbar", "毫巴"] },
+        "atm": { "factor": 0.101325, "offset": 0.0, "formula": "MPa = atm * 0.101325", "aliases": ["atm", "标准大气压"] },
+        "psi": { "factor": 0.006894757, "offset": 0.0, "formula": "MPa = psi * 0.006894757", "aliases": ["psi", "磅/平方英寸"] },
+        "Torr": { "factor": 0.000133322368, "offset": 0.0, "formula": "MPa = Torr * 0.000133322368", "aliases": ["torr", "mmhg", "托"] }
+      }
+    },
+    "time": {
+      "target": "h",
+      "units": {
+        "h": { "factor": 1.0, "offset": 0.0, "formula": "h = h * 1", "aliases": ["h", "hr", "hrs", "hour", "hours", "小时"] },
+        "min": { "factor": 0.016666666666666666, "offset": 0.0, "formula": "h = min / 60", "aliases": ["min", "mins", "minute", "minutes", "分钟"] },
+        "s": { "factor": 0.0002777777777777778, "offset": 0.0, "formula": "h = s / 3600", "aliases": ["s", "sec", "secs", "second", "seconds", "秒"] },
+        "d": { "factor": 24.0, "offset": 0.0, "formula": "h = d * 24", "aliases": ["d", "day", "days", "天", "日"] }
+      }
+    },
+    "energy": {
+      "target": "kJ/mol",
+      "units": {
+        "kJ/mol": { "factor": 1.0, "offset": 0.0, "formula": "kJ/mol = kJ/mol * 1", "aliases": ["kj/mol", "kj mol-1", "kj mol^-1", "kj/mol", "千焦/摩尔"] },
+        "J/mol": { "factor": 0.001, "offset": 0.0, "formula": "kJ/mol = J/mol * 0.001", "aliases": ["j/mol", "j mol-1", "焦/摩尔"] },
+        "kcal/mol": { "factor": 4.184, "offset": 0.0, "formula": "kJ/mol = kcal/mol * 4.184", "aliases": ["kcal/mol", "kcal mol-1", "千卡/摩尔"] },
+        "eV": { "factor": 96.485, "offset": 0.0, "formula": "kJ/mol = eV * 96.485 (per-particle eV to per-mole kJ, N_A * e / 1000)", "aliases": ["ev", "电子伏特"] },
+        "meV": { "factor": 0.096485, "offset": 0.0, "formula": "kJ/mol = meV * 0.096485", "aliases": ["mev", "毫电子伏特"] }
+      }
+    },
+    "length": {
+      "target": "nm",
+      "units": {
+        "nm": { "factor": 1.0, "offset": 0.0, "formula": "nm = nm * 1", "aliases": ["nm", "nanometer", "nanometre", "纳米"] },
+        "um": { "factor": 1000.0, "offset": 0.0, "formula": "nm = um * 1000", "aliases": ["um", "\u00b5m", "\u03bcm", "micron", "micrometer", "微米"] },
+        "angstrom": { "factor": 0.1, "offset": 0.0, "formula": "nm = angstrom * 0.1", "aliases": ["a", "angstrom", "\u00c5", "埃"] },
+        "mm": { "factor": 1000000.0, "offset": 0.0, "formula": "nm = mm * 1e6", "aliases": ["mm", "毫米"] },
+        "m": { "factor": 1000000000.0, "offset": 0.0, "formula": "nm = m * 1e9", "aliases": ["m", "meter", "米"] }
+      }
+    },
+    "percent": {
+      "target": "%",
+      "units": {
+        "%": { "factor": 1.0, "offset": 0.0, "formula": "% = % * 1", "aliases": ["%", "percent", "percentage", "pct", "百分比"] },
+        "fraction": { "factor": 100.0, "offset": 0.0, "formula": "% = fraction * 100 (only when the source column is explicitly labelled fraction/ratio)", "aliases": ["fraction", "ratio", "分数值", "小数"] }
+      }
+    }
+  }
+}

@@ -1,0 +1,73 @@
+{
+  "case_id": "synthetic-demo-0001",
+  "case_label": "SYNTHETIC EXAMPLE ONLY - invented demonstration data, NOT an official case and NOT real literature data",
+  "description": "Synthetic dirty input exercising: multiple header conventions (JSON nested keys, English/Chinese CSV headers, unit suffixes), split min/max columns, missing values, unknown columns, an unknown unit, unparseable values, out-of-range values, exact duplicate extractions and same-context conflicting values that must NOT be merged.",
+  "output_contract": {
+    "fields": {
+      "case_id": "string",
+      "status": "string",
+      "cleaned_records": "list",
+      "sources": "list",
+      "uncertainty": "list",
+      "change_records": "list",
+      "review_queue": "dict",
+      "mapping_report": "dict",
+      "artifacts": "dict",
+      "adjudication_workbook": "string"
+    }
+  },
+  "records": [
+    {
+      "extraction": { "id": "A1", "doi": "10.1234/syn.001" },
+      "material": { "name": "Pt/Al2O3" },
+      "property": "CO oxidation yield",
+      "conditions": { "temperature": "300 °C", "pressure": "1 bar" },
+      "yield": "72-80 %",
+      "notes": "Table 2"
+    },
+    {
+      "extraction": { "id": "A1-dup", "doi": "10.1234/syn.001" },
+      "material": { "name": "Pt/Al2O3" },
+      "property": "CO oxidation yield",
+      "conditions": { "temperature": "300 °C", "pressure": "1 bar" },
+      "yield": "72-80 %",
+      "notes": "Table 2 (second extraction pass)"
+    },
+    {
+      "extraction": { "id": "A1-conflict", "doi": "10.1234/syn.001" },
+      "material": { "name": "Pt/Al2O3" },
+      "property": "CO oxidation yield",
+      "conditions": { "temperature": "300 °C", "pressure": "1 bar" },
+      "yield": "65 %",
+      "notes": "Table 2 (conflicting third pass - must stay unmerged)"
+    },
+    {
+      "extraction": { "id": "A2", "doi": "10.1234/syn.001" },
+      "material": { "name": "Pt/Al2O3" },
+      "property": "CO oxidation yield",
+      "conditions": { "temperature": "573 K", "pressure": "0.1 MPa" },
+      "yield": null,
+      "notes": "yield not reported"
+    },
+    {
+      "extraction": { "id": "A3", "doi": "10.1234/syn.001" },
+      "material": { "name": "Pt/Al2O3" },
+      "property": "activation energy",
+      "conditions": { "temperature": "573 K", "pressure": "0.1 MPa" },
+      "Ea (eVee)": "1.2",
+      "yield": "high",
+      "Instrument Serial": "SN-8891",
+      "notes": "unknown unit eVee invented for the demo; yield value is unparseable"
+    },
+    {
+      "extraction": { "id": "A4", "doi": "10.1234/syn.004" },
+      "material": { "name": "Au/TiO2" },
+      "property": "CO oxidation yield",
+      "conditions": { "temperature": "280 °C", "pressure": "1.5 bar" },
+      "yield": "145 %",
+      "notes": "implausible percent kept for anomaly review"
+    }
+  ],
+  "material_csv": "Material Name,DOI,Property,T / K,P_MPa,Yield_min (%),Yield_max (%),Selectivity,Notes,Mystery Column\nCu/ZnO,10.1234/syn.002,methanol yield,523,3.0,55,61,88 %,Table 1,zz1\nCu/ZnO,10.1234/syn.002,methanol yield,523,3.0,55,61,88 %,Table 1,zz2\nCu/ZnO,10.1234/syn.002,methanol yield,523,3.0,40,48,88 %,Table 1 conflicting re-extraction,zz3\nFe-Co,10.1234/syn.002,methanol selectivity,523,3.0,,,91 %,N/A,zz4\nFe-Co,10.1234/syn.002,methanol selectivity,523,,70,75,50 %,,zz5\nNi-MgO,10.1234/syn.002,methane conversion,498,2.0,80,70,,inverted range demo,zz6\n",
+  "material_file": "material-batch-c.csv"
+}

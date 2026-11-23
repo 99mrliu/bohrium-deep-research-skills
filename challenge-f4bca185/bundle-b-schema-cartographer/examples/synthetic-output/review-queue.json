@@ -1,0 +1,311 @@
+{
+  "missing": [
+    {
+      "change_id": "CH-000034",
+      "rule": "MISS-001",
+      "scope": "cell",
+      "row_id": "R000001",
+      "field": "energy",
+      "source_column": "case.json/records::Ea (eVee)",
+      "old_value": null,
+      "new_value": null,
+      "evidence": {
+        "reason": "column absent in this row (sparse union of per-source columns); retained as null"
+      }
+    },
+    {
+      "change_id": "CH-000043",
+      "rule": "MISS-001",
+      "scope": "cell",
+      "row_id": "R000002",
+      "field": "energy",
+      "source_column": "case.json/records::Ea (eVee)",
+      "old_value": null,
+      "new_value": null,
+      "evidence": {
+        "reason": "column absent in this row (sparse union of per-source columns); retained as null"
+      }
+    },
+    {
+      "change_id": "CH-000051",
+      "rule": "MISS-001",
+      "scope": "cell",
+      "row_id": "R000003",
+      "field": "energy",
+      "source_column": "case.json/records::Ea (eVee)",
+      "old_value": null,
+      "new_value": null,
+      "evidence": {
+        "reason": "column absent in this row (sparse union of per-source columns); retained as null"
+      }
+    },
+    {
+      "change_id": "CH-000056",
+      "rule": "MISS-001",
+      "scope": "cell",
+      "row_id": "R000004",
+      "field": "yield",
+      "source_column": "case.json/records::yield",
+      "old_value": null,
+      "new_value": null,
+      "evidence": {
+        "reason": "explicit missing token/null in source cell; retained as null, nothing imputed"
+      }
+    },
+    {
+      "change_id": "CH-000058",
+      "rule": "MISS-001",
+      "scope": "cell",
+      "row_id": "R000004",
+      "field": "energy",
+      "source_column": "case.json/records::Ea (eVee)",
+      "old_value": null,
+      "new_value": null,
+      "evidence": {
+        "reason": "column absent in this row (sparse union of per-source columns); retained as null"
+      }
+    },
+    {
+      "change_id": "CH-000071",
+      "rule": "MISS-001",
+      "scope": "cell",
+      "row_id": "R000006",
+      "field": "energy",
+      "source_column": "case.json/records::Ea (eVee)",
+      "old_value": null,
+      "new_value": null,
+      "evidence": {
+        "reason": "column absent in this row (sparse union of per-source columns); retained as null"
+      }
+    },
+    {
+      "change_id": "CH-000087",
+      "rule": "MISS-001",
+      "scope": "cell",
+      "row_id": "R000010",
+      "field": "yield",
+      "source_column": "case.json/material_csv::Yield_min (%)",
+      "old_value": "",
+      "new_value": null,
+      "evidence": {
+        "reason": "explicit missing token/null in source cell; retained as null, nothing imputed"
+      }
+    },
+    {
+      "change_id": "CH-000088",
+      "rule": "MISS-001",
+      "scope": "cell",
+      "row_id": "R000010",
+      "field": "yield",
+      "source_column": "case.json/material_csv::Yield_max (%)",
+      "old_value": "",
+      "new_value": null,
+      "evidence": {
+        "reason": "explicit missing token/null in source cell; retained as null, nothing imputed"
+      }
+    },
+    {
+      "change_id": "CH-000089",
+      "rule": "MISS-001",
+      "scope": "cell",
+      "row_id": "R000010",
+      "field": "notes",
+      "source_column": "case.json/material_csv::Notes",
+      "old_value": "N/A",
+      "new_value": null,
+      "evidence": {
+        "reason": "explicit missing token/null in source cell; retained as null, nothing imputed"
+      }
+    },
+    {
+      "change_id": "CH-000093",
+      "rule": "MISS-001",
+      "scope": "cell",
+      "row_id": "R000011",
+      "field": "pressure",
+      "source_column": "case.json/material_csv::P_MPa",
+      "old_value": "",
+      "new_value": null,
+      "evidence": {
+        "reason": "explicit missing token/null in source cell; retained as null, nothing imputed"
+      }
+    },
+    {
+      "change_id": "CH-000094",
+      "rule": "MISS-001",
+      "scope": "cell",
+      "row_id": "R000011",
+      "field": "notes",
+      "source_column": "case.json/material_csv::Notes",
+      "old_value": "",
+      "new_value": null,
+      "evidence": {
+        "reason": "explicit missing token/null in source cell; retained as null, nothing imputed"
+      }
+    },
+    {
+      "change_id": "CH-000098",
+      "rule": "MISS-001",
+      "scope": "cell",
+      "row_id": "R000012",
+      "field": "selectivity",
+      "source_column": "case.json/material_csv::Selectivity",
+      "old_value": "",
+      "new_value": null,
+      "evidence": {
+        "reason": "explicit missing token/null in source cell; retained as null, nothing imputed"
+      }
+    }
+  ],
+  "anomalies": [
+    {
+      "rule": "ANOM-PARSE",
+      "row_id": "R000005",
+      "field": "yield",
+      "column": "case.json/records::yield",
+      "raw": "high",
+      "message": "Numeric field value could not be parsed; kept raw, normalized value left null."
+    },
+    {
+      "rule": "UNIT-UNKNOWN",
+      "row_id": "R000005",
+      "field": "energy",
+      "column": "case.json/records::Ea (eVee)",
+      "raw": "1.2",
+      "unit": "eVee",
+      "message": "Unknown unit: raw parsed numbers kept in raw fields, normalized values left null."
+    },
+    {
+      "rule": "ANOM-OUT-OF-RANGE",
+      "row_id": "R000006",
+      "field": "yield",
+      "column": "case.json/records::yield",
+      "value": 145.0,
+      "unit": "%",
+      "expected": {
+        "unit": "%",
+        "min": 0.0,
+        "max": 100.0
+      },
+      "message": "Value outside dictionary plausible_range; kept, not clipped."
+    },
+    {
+      "rule": "ANOM-RANGE-ORDER",
+      "row_id": "R000012",
+      "field": "yield",
+      "column": "case.json/material_csv::Yield_max (%)",
+      "raw": "70",
+      "message": "Composed range has low > high after combining split columns; endpoints kept as extracted."
+    }
+  ],
+  "reviews": [
+    {
+      "review_id": "RV-00001",
+      "rule": "DUP-CONFLICT",
+      "severity": "high",
+      "kind": "duplicate_context_conflicting_values",
+      "message": "Rows ['R000001', 'R000002', 'R000003'] share the same context key 'doi=10.1234/syn.001|title=|locator=|material=pt/al2o3|property=co oxidation yield|temperature=573.15|pressure=0.1|reaction_time=' but disagree on measured values. Kept as separate rows; requires human scientific adjudication, not unit arithmetic.",
+      "evidence": {
+        "duplicate_group": "DG-0001",
+        "measure_groups": {
+          "yield=None/72.0/80.0/%": [
+            "R000001",
+            "R000002"
+          ],
+          "yield=65.0/None/None/%": [
+            "R000003"
+          ]
+        }
+      }
+    },
+    {
+      "review_id": "RV-00002",
+      "rule": "DUP-EXACT",
+      "severity": "medium",
+      "kind": "exact_duplicate_candidates",
+      "message": "Rows [['R000001', 'R000002']] agree on every context and measured value within group DG-0001; flagged as duplicate-extraction candidates. Nothing dropped automatically.",
+      "evidence": {
+        "duplicate_group": "DG-0001",
+        "context_key": "doi=10.1234/syn.001|title=|locator=|material=pt/al2o3|property=co oxidation yield|temperature=573.15|pressure=0.1|reaction_time=",
+        "exact_duplicate_subgroups": [
+          [
+            "R000001",
+            "R000002"
+          ]
+        ]
+      }
+    },
+    {
+      "review_id": "RV-00003",
+      "rule": "DUP-CONFLICT",
+      "severity": "high",
+      "kind": "duplicate_context_conflicting_values",
+      "message": "Rows ['R000007', 'R000008', 'R000009'] share the same context key 'doi=10.1234/syn.002|title=|locator=|material=cu/zno|property=methanol yield|temperature=523.0|pressure=3.0|reaction_time=' but disagree on measured values. Kept as separate rows; requires human scientific adjudication, not unit arithmetic.",
+      "evidence": {
+        "duplicate_group": "DG-0002",
+        "measure_groups": {
+          "yield=None/55.0/61.0/%;selectivity=88.0/None/None/%": [
+            "R000007",
+            "R000008"
+          ],
+          "yield=None/40.0/48.0/%;selectivity=88.0/None/None/%": [
+            "R000009"
+          ]
+        }
+      }
+    },
+    {
+      "review_id": "RV-00004",
+      "rule": "DUP-EXACT",
+      "severity": "medium",
+      "kind": "exact_duplicate_candidates",
+      "message": "Rows [['R000007', 'R000008']] agree on every context and measured value within group DG-0002; flagged as duplicate-extraction candidates. Nothing dropped automatically.",
+      "evidence": {
+        "duplicate_group": "DG-0002",
+        "context_key": "doi=10.1234/syn.002|title=|locator=|material=cu/zno|property=methanol yield|temperature=523.0|pressure=3.0|reaction_time=",
+        "exact_duplicate_subgroups": [
+          [
+            "R000007",
+            "R000008"
+          ]
+        ]
+      }
+    },
+    {
+      "review_id": "RV-00005",
+      "rule": "DUP-CONFLICT",
+      "severity": "high",
+      "kind": "duplicate_context_conflicting_values",
+      "message": "Rows ['R000013', 'R000014', 'R000015'] share the same context key 'doi=10.1234/syn.003|title=|locator=|material=ni/sio2|property=methane conversion|temperature=623.15|pressure=0.25|reaction_time=' but disagree on measured values. Kept as separate rows; requires human scientific adjudication, not unit arithmetic.",
+      "evidence": {
+        "duplicate_group": "DG-0003",
+        "measure_groups": {
+          "yield=66.0/None/None/%": [
+            "R000013",
+            "R000014"
+          ],
+          "yield=59.0/None/None/%": [
+            "R000015"
+          ]
+        }
+      }
+    },
+    {
+      "review_id": "RV-00006",
+      "rule": "DUP-EXACT",
+      "severity": "medium",
+      "kind": "exact_duplicate_candidates",
+      "message": "Rows [['R000013', 'R000014']] agree on every context and measured value within group DG-0003; flagged as duplicate-extraction candidates. Nothing dropped automatically.",
+      "evidence": {
+        "duplicate_group": "DG-0003",
+        "context_key": "doi=10.1234/syn.003|title=|locator=|material=ni/sio2|property=methane conversion|temperature=623.15|pressure=0.25|reaction_time=",
+        "exact_duplicate_subgroups": [
+          [
+            "R000013",
+            "R000014"
+          ]
+        ]
+      }
+    }
+  ]
+}

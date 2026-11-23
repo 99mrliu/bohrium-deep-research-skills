@@ -1,0 +1,510 @@
+{
+  "candidate_state_counts": {
+    "conflict": 3,
+    "exact_duplicate": 2,
+    "likely_duplicate": 2,
+    "not_duplicate": 8
+  },
+  "candidates": [
+    {
+      "evidence": {
+        "full_fingerprint_equal": false,
+        "same_context": true,
+        "same_experiment_label": true,
+        "same_locator": true,
+        "same_metric": true,
+        "same_sample": true,
+        "same_source": true,
+        "value_relation": "different"
+      },
+      "pair": [
+        "r0001",
+        "r0006"
+      ],
+      "reason": "same identity but different measured values (value_different); both retained, never averaged",
+      "rule": "D-003",
+      "score": 12,
+      "state": "conflict"
+    },
+    {
+      "evidence": {
+        "full_fingerprint_equal": false,
+        "same_context": true,
+        "same_experiment_label": true,
+        "same_locator": true,
+        "same_metric": true,
+        "same_sample": true,
+        "same_source": true,
+        "value_relation": "different"
+      },
+      "pair": [
+        "r0002",
+        "r0006"
+      ],
+      "reason": "same identity but different measured values (value_different); both retained, never averaged",
+      "rule": "D-003",
+      "score": 12,
+      "state": "conflict"
+    },
+    {
+      "evidence": {
+        "full_fingerprint_equal": false,
+        "same_context": true,
+        "same_experiment_label": true,
+        "same_locator": true,
+        "same_metric": true,
+        "same_sample": true,
+        "same_source": true,
+        "value_relation": "different"
+      },
+      "pair": [
+        "r0006",
+        "r0007"
+      ],
+      "reason": "same identity but different measured values (value_different); both retained, never averaged",
+      "rule": "D-003",
+      "score": 12,
+      "state": "conflict"
+    },
+    {
+      "evidence": {
+        "full_fingerprint_equal": true,
+        "same_context": true,
+        "same_experiment_label": true,
+        "same_locator": true,
+        "same_metric": true,
+        "same_sample": true,
+        "same_source": true,
+        "value_relation": "equal"
+      },
+      "pair": [
+        "r0001",
+        "r0002"
+      ],
+      "reason": "identical normalized row (repeated extraction)",
+      "rule": "D-001",
+      "score": 18,
+      "state": "exact_duplicate"
+    },
+    {
+      "evidence": {
+        "full_fingerprint_equal": true,
+        "same_context": true,
+        "same_experiment_label": true,
+        "same_locator": true,
+        "same_metric": true,
+        "same_sample": true,
+        "same_source": true,
+        "value_relation": "equal"
+      },
+      "pair": [
+        "r0012",
+        "r0013"
+      ],
+      "reason": "identical normalized row (repeated extraction)",
+      "rule": "D-001",
+      "score": 18,
+      "state": "exact_duplicate"
+    },
+    {
+      "evidence": {
+        "full_fingerprint_equal": false,
+        "same_context": true,
+        "same_experiment_label": true,
+        "same_locator": true,
+        "same_metric": true,
+        "same_sample": true,
+        "same_source": true,
+        "value_relation": "equal"
+      },
+      "pair": [
+        "r0001",
+        "r0007"
+      ],
+      "reason": "same identity and equal value (value_equal_after_conversion), only surface differences",
+      "rule": "D-002",
+      "score": 16,
+      "state": "likely_duplicate"
+    },
+    {
+      "evidence": {
+        "full_fingerprint_equal": false,
+        "same_context": true,
+        "same_experiment_label": true,
+        "same_locator": true,
+        "same_metric": true,
+        "same_sample": true,
+        "same_source": true,
+        "value_relation": "equal"
+      },
+      "pair": [
+        "r0002",
+        "r0007"
+      ],
+      "reason": "same identity and equal value (value_equal_after_conversion), only surface differences",
+      "rule": "D-002",
+      "score": 16,
+      "state": "likely_duplicate"
+    },
+    {
+      "evidence": {
+        "full_fingerprint_equal": false,
+        "same_context": true,
+        "same_experiment_label": false,
+        "same_locator": false,
+        "same_metric": true,
+        "same_sample": true,
+        "same_source": true,
+        "value_relation": "equal"
+      },
+      "pair": [
+        "r0001",
+        "r0003"
+      ],
+      "reason": "distinct experiment labels within one study = independent replicate; values relation: equal",
+      "rule": "D-005",
+      "score": 14,
+      "state": "not_duplicate"
+    },
+    {
+      "evidence": {
+        "full_fingerprint_equal": false,
+        "same_context": true,
+        "same_experiment_label": false,
+        "same_locator": true,
+        "same_metric": true,
+        "same_sample": true,
+        "same_source": false,
+        "value_relation": "equal"
+      },
+      "pair": [
+        "r0001",
+        "r0014"
+      ],
+      "reason": "different sources are never merged",
+      "rule": "D-006",
+      "score": 12,
+      "state": "not_duplicate"
+    },
+    {
+      "evidence": {
+        "full_fingerprint_equal": false,
+        "same_context": true,
+        "same_experiment_label": false,
+        "same_locator": false,
+        "same_metric": true,
+        "same_sample": true,
+        "same_source": true,
+        "value_relation": "equal"
+      },
+      "pair": [
+        "r0002",
+        "r0003"
+      ],
+      "reason": "distinct experiment labels within one study = independent replicate; values relation: equal",
+      "rule": "D-005",
+      "score": 14,
+      "state": "not_duplicate"
+    },
+    {
+      "evidence": {
+        "full_fingerprint_equal": false,
+        "same_context": true,
+        "same_experiment_label": false,
+        "same_locator": true,
+        "same_metric": true,
+        "same_sample": true,
+        "same_source": false,
+        "value_relation": "equal"
+      },
+      "pair": [
+        "r0002",
+        "r0014"
+      ],
+      "reason": "different sources are never merged",
+      "rule": "D-006",
+      "score": 12,
+      "state": "not_duplicate"
+    },
+    {
+      "evidence": {
+        "full_fingerprint_equal": false,
+        "same_context": true,
+        "same_experiment_label": false,
+        "same_locator": false,
+        "same_metric": true,
+        "same_sample": true,
+        "same_source": true,
+        "value_relation": "different"
+      },
+      "pair": [
+        "r0003",
+        "r0006"
+      ],
+      "reason": "distinct experiment labels within one study = independent replicate; values relation: different",
+      "rule": "D-005",
+      "score": 10,
+      "state": "not_duplicate"
+    },
+    {
+      "evidence": {
+        "full_fingerprint_equal": false,
+        "same_context": true,
+        "same_experiment_label": false,
+        "same_locator": false,
+        "same_metric": true,
+        "same_sample": true,
+        "same_source": true,
+        "value_relation": "equal"
+      },
+      "pair": [
+        "r0003",
+        "r0007"
+      ],
+      "reason": "distinct experiment labels within one study = independent replicate; values relation: equal",
+      "rule": "D-005",
+      "score": 14,
+      "state": "not_duplicate"
+    },
+    {
+      "evidence": {
+        "full_fingerprint_equal": false,
+        "same_context": true,
+        "same_experiment_label": false,
+        "same_locator": false,
+        "same_metric": true,
+        "same_sample": true,
+        "same_source": false,
+        "value_relation": "equal"
+      },
+      "pair": [
+        "r0003",
+        "r0014"
+      ],
+      "reason": "different sources are never merged",
+      "rule": "D-006",
+      "score": 11,
+      "state": "not_duplicate"
+    },
+    {
+      "evidence": {
+        "full_fingerprint_equal": false,
+        "same_context": true,
+        "same_experiment_label": false,
+        "same_locator": true,
+        "same_metric": true,
+        "same_sample": true,
+        "same_source": false,
+        "value_relation": "equal"
+      },
+      "pair": [
+        "r0007",
+        "r0014"
+      ],
+      "reason": "different sources are never merged",
+      "rule": "D-006",
+      "score": 12,
+      "state": "not_duplicate"
+    }
+  ],
+  "case_id": "synthetic-identity-001",
+  "clusters": [
+    {
+      "cluster_id": "cl-0001",
+      "experiment_id": "exp-0001",
+      "member_record_ids": [
+        "r0001",
+        "r0002",
+        "r0007"
+      ],
+      "merge_rule": "D-001/D-002",
+      "metric": "band_gap",
+      "representative_record_id": "r0001",
+      "sample_key": "m=TiO2|p=rutile|d=-|c=-|f=-",
+      "source": "10.0000/synth.a"
+    },
+    {
+      "cluster_id": "cl-0002",
+      "experiment_id": "exp-0002",
+      "member_record_ids": [
+        "r0003"
+      ],
+      "merge_rule": "singleton",
+      "metric": "band_gap",
+      "representative_record_id": "r0003",
+      "sample_key": "m=TiO2|p=rutile|d=-|c=-|f=-",
+      "source": "10.0000/synth.a"
+    },
+    {
+      "cluster_id": "cl-0003",
+      "experiment_id": "exp-0003",
+      "member_record_ids": [
+        "r0004"
+      ],
+      "merge_rule": "singleton",
+      "metric": "band_gap",
+      "representative_record_id": "r0004",
+      "sample_key": "m=TiO2|p=anatase|d=-|c=-|f=-",
+      "source": "10.0000/synth.a"
+    },
+    {
+      "cluster_id": "cl-0004",
+      "experiment_id": "exp-0004",
+      "member_record_ids": [
+        "r0005"
+      ],
+      "merge_rule": "singleton",
+      "metric": "band_gap",
+      "representative_record_id": "r0005",
+      "sample_key": "m=TiO2|p=rutile|d=n|c=-|f=-",
+      "source": "10.0000/synth.a"
+    },
+    {
+      "cluster_id": "cl-0005",
+      "experiment_id": "exp-0005",
+      "member_record_ids": [
+        "r0006"
+      ],
+      "merge_rule": "singleton",
+      "metric": "band_gap",
+      "representative_record_id": "r0006",
+      "sample_key": "m=TiO2|p=rutile|d=-|c=-|f=-",
+      "source": "10.0000/synth.a"
+    },
+    {
+      "cluster_id": "cl-0006",
+      "experiment_id": "exp-0006",
+      "member_record_ids": [
+        "r0008"
+      ],
+      "merge_rule": "singleton",
+      "metric": "band_gap",
+      "representative_record_id": "r0008",
+      "sample_key": "m=TiO2|p=brookite|d=-|c=-|f=-",
+      "source": "10.0000/synth.a"
+    },
+    {
+      "cluster_id": "cl-0007",
+      "experiment_id": "exp-0007",
+      "member_record_ids": [
+        "r0009"
+      ],
+      "merge_rule": "singleton",
+      "metric": "band_gap",
+      "representative_record_id": "r0009",
+      "sample_key": "m=ZnO|p=wurtzite|d=-|c=-|f=-",
+      "source": "10.0000/synth.a"
+    },
+    {
+      "cluster_id": "cl-0008",
+      "experiment_id": "exp-0008",
+      "member_record_ids": [
+        "r0010"
+      ],
+      "merge_rule": "singleton",
+      "metric": "band_gap",
+      "representative_record_id": "r0010",
+      "sample_key": "m=TiO2|p=rutile|d=-|c=-|f=-",
+      "source": "10.0000/synth.a"
+    },
+    {
+      "cluster_id": "cl-0009",
+      "experiment_id": "exp-0009",
+      "member_record_ids": [
+        "r0011"
+      ],
+      "merge_rule": "singleton",
+      "metric": "band_gap",
+      "representative_record_id": "r0011",
+      "sample_key": "m=TiO2|p=rutile|d=-|c=-|f=-",
+      "source": "10.0000/synth.a"
+    },
+    {
+      "cluster_id": "cl-0010",
+      "experiment_id": "exp-0010",
+      "member_record_ids": [
+        "r0012",
+        "r0013"
+      ],
+      "merge_rule": "D-001/D-002",
+      "metric": "band_gap",
+      "representative_record_id": "r0012",
+      "sample_key": "m=TiO2|p=anatase|d=-|c=-|f=-",
+      "source": "10.0000/synth.a"
+    },
+    {
+      "cluster_id": "cl-0011",
+      "experiment_id": "exp-0011",
+      "member_record_ids": [
+        "r0014"
+      ],
+      "merge_rule": "singleton",
+      "metric": "band_gap",
+      "representative_record_id": "r0014",
+      "sample_key": "m=TiO2|p=rutile|d=-|c=-|f=-",
+      "source": "10.0000/synth.b"
+    },
+    {
+      "cluster_id": "cl-0012",
+      "experiment_id": "exp-0012",
+      "member_record_ids": [
+        "r0015"
+      ],
+      "merge_rule": "singleton",
+      "metric": "band_gap",
+      "representative_record_id": "r0015",
+      "sample_key": "m=TiO2|p=anatase|d=-|c=-|f=-",
+      "source": "10.0000/synth.b"
+    },
+    {
+      "cluster_id": "cl-0013",
+      "experiment_id": "exp-0013",
+      "member_record_ids": [
+        "r0016"
+      ],
+      "merge_rule": "singleton",
+      "metric": "band_gap",
+      "representative_record_id": "r0016",
+      "sample_key": "m=CdS|p=-|d=-|c=-|f=-",
+      "source": "10.0000/synth.b"
+    },
+    {
+      "cluster_id": "cl-0014",
+      "experiment_id": "exp-0014",
+      "member_record_ids": [
+        "r0017"
+      ],
+      "merge_rule": "singleton",
+      "metric": "band_gap",
+      "representative_record_id": "r0017",
+      "sample_key": "m=Si|p=-|d=-|c=-|f=-",
+      "source": "10.0000/synth.b"
+    },
+    {
+      "cluster_id": "cl-0015",
+      "experiment_id": "exp-0015",
+      "member_record_ids": [
+        "r0018"
+      ],
+      "merge_rule": "singleton",
+      "metric": "particle_size",
+      "representative_record_id": "r0018",
+      "sample_key": "m=na2so4|p=-|d=-|c=-|f=-",
+      "source": "10.0000/synth.c"
+    },
+    {
+      "cluster_id": "cl-0016",
+      "experiment_id": "exp-0016",
+      "member_record_ids": [
+        "r0019"
+      ],
+      "merge_rule": "singleton",
+      "metric": "particle_size",
+      "representative_record_id": "r0019",
+      "sample_key": "m=na2so4.10h2o|p=-|d=-|c=-|f=-",
+      "source": "10.0000/synth.c"
+    }
+  ],
+  "method": "deterministic blocking + pairwise evidence adjudication; only exact_duplicate and likely_duplicate pairs are merged; conflict/review/not_duplicate rows are never merged and conflicting values are never averaged",
+  "synthetic_input": true
+}

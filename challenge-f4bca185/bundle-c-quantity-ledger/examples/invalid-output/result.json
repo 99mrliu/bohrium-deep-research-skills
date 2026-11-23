@@ -1,0 +1,24 @@
+{
+  "artifacts": {
+    "result_json": "result.json"
+  },
+  "case_id": null,
+  "change_records": [],
+  "errors": [
+    "case JSON malformed: Expecting property name enclosed in double quotes: line 1 column 69 (char 68)"
+  ],
+  "skill": "bundle-c-quantity-ledger",
+  "skill_version": "1.0.0",
+  "sources": [
+    {
+      "format": "json",
+      "path": "examples/invalid/broken-case.json",
+      "records": 0,
+      "sha256": "3f43b6296848744a07797018388d55f53839fe872188977ba35b09a621024124"
+    }
+  ],
+  "status": "input_error",
+  "summary": {},
+  "uncertainty": [],
+  "unresolved": []
+}

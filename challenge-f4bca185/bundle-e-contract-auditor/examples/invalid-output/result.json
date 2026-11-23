@@ -1,0 +1,91 @@
+{
+  "artifacts": {
+    "anomalies": "anomalies.csv",
+    "audit": "audit.md",
+    "change_records": "changes.jsonl",
+    "checksums": "checksums.sha256",
+    "cleaned_csv": "cleaned.csv",
+    "cleaned_json": "cleaned.json",
+    "manifest": "manifest.json",
+    "result": "result.json",
+    "review_queue": "review_queue.csv",
+    "validation": "validation.json"
+  },
+  "case_id": null,
+  "change_records": [],
+  "coverage": {
+    "counts": {
+      "deduplicated": 0,
+      "flagged": 0,
+      "kept": 0,
+      "rejected": 0,
+      "total": 0
+    },
+    "rows": []
+  },
+  "result": {
+    "cleaned_data": "cleaned.json",
+    "cleaned_table": "cleaned.csv",
+    "headers": [
+      "input_row_id",
+      "source_pointer",
+      "row_status",
+      "record_id",
+      "source_id",
+      "substance",
+      "property",
+      "value",
+      "unit",
+      "value_min",
+      "value_max",
+      "raw_value",
+      "raw_unit",
+      "conversion_rule",
+      "conversion_formula",
+      "conversion_factor",
+      "conversion_offset",
+      "conversion_change_id",
+      "source_decimal_places",
+      "source_record_sha256",
+      "page",
+      "paragraph",
+      "table",
+      "figure",
+      "conditions",
+      "context"
+    ],
+    "review_items": 1,
+    "row_count": 0,
+    "summary": "cleaned 0 of 0 input rows; kept=0, flagged=0, deduplicated=0, rejected=0; open review items=1"
+  },
+  "schema_version": "1.0.0",
+  "sources": [
+    {
+      "path": "case.json",
+      "role": "case and embedded extraction records",
+      "rows": 0,
+      "sha256": "ce252c267f2f223934cc3186ac0c3aa8ad4c5235d27e677736e8b179616bed47",
+      "source_id": "case"
+    },
+    {
+      "path": "task.md",
+      "role": "task instructions and output contract hints",
+      "rows": null,
+      "sha256": "50b3c4501b54cb1e553b4bd4eaac08f3000bc3a4e70ec1a2b3508359db36f72a",
+      "source_id": "task"
+    }
+  ],
+  "status": "input_error",
+  "uncertainty": [
+    {
+      "anomaly_id": "A000001",
+      "code": "INPUT_CASE_INVALID",
+      "field": null,
+      "input_row_id": null,
+      "message": "Expecting property name enclosed in double quotes: line 6 column 3 (char 122)",
+      "severity": "blocking",
+      "source_pointer": null
+    }
+  ],
+  "unresolved_fields": []
+}

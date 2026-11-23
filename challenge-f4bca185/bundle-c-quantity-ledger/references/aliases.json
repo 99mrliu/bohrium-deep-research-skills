@@ -1,0 +1,34 @@
+{
+  "version": "1.0.0",
+  "description": "Conservative schema alias table. Keys are canonical field names; values are accepted raw column labels (case/space/punctuation-insensitive). Unmapped columns are preserved under 'extra'. Two different columns mapping to one canonical field with different values produce an alias_conflict review item instead of a silent merge.",
+  "field_aliases": {
+    "record_id": ["record_id", "id", "row_id", "record"],
+    "material": ["material", "material_name", "compound", "compound_name", "chemical", "chemical_name", "substance", "sample", "sample_name", "system"],
+    "metric": ["metric", "property", "property_name", "parameter", "quantity", "indicator", "observable", "target_property"],
+    "value": ["value", "val", "result", "measurement", "measured_value", "extracted_value", "numeric_value", "reading"],
+    "unit": ["unit", "units", "uom", "unit_of_measure"],
+    "value_low": ["value_low", "low", "min_value", "lower", "lower_bound", "range_low"],
+    "value_high": ["value_high", "high", "max_value", "upper", "upper_bound", "range_high"],
+    "source_id": ["source_id", "source", "paper", "paper_id", "document", "doc_id", "extraction_source"],
+    "page": ["page", "page_number", "pageno", "page_no"],
+    "table": ["table", "table_id", "table_number"],
+    "figure": ["figure", "fig", "figure_id", "fig_no"],
+    "paragraph": ["paragraph", "para", "section"],
+    "doi": ["doi"],
+    "temperature": ["temperature", "temp", "reaction_temperature"],
+    "pressure": ["pressure", "applied_pressure"],
+    "ph": ["ph", "p_h"],
+    "solvent": ["solvent", "solvents"],
+    "method": ["method", "method_name", "technique", "experiment_method"],
+    "notes": ["notes", "note", "comment", "comments", "remark", "remarks"]
+  },
+  "metric_synonyms": {
+    "band_gap": ["band gap", "bandgap", "eg", "e_g", "optical band gap"],
+    "activation_energy": ["activation energy", "ea", "e_a"],
+    "curie_temperature": ["curie temperature", "curie temp", "tc"],
+    "density": ["density", "mass density", "rho"],
+    "concentration": ["concentration", "conc"],
+    "heat_capacity": ["heat capacity", "cp", "c_p", "molar heat capacity"]
+  },
+  "normalization": "norm_key: lowercase, strip all non [a-z0-9]; metric synonyms then map the normalized metric label to a canonical metric name. Unknown metric labels are kept verbatim (never invented)."
+}

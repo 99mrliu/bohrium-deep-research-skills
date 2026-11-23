@@ -1,0 +1,132 @@
+{
+  "dictionary_id": "lit-extract-core",
+  "schema_version": "1.0.0",
+  "description": "Editable canonical field dictionary for heterogeneous literature-extraction records. Add aliases, fields, context keys or plausible ranges here; no code change is needed. Versions: bump schema_version when canonical fields change and record the migration in references/types-and-migration.md.",
+  "missing_tokens": ["", "na", "n/a", "n.a.", "null", "none", "nan", "-", "--", "—", "not reported", "not_reported", "unreported", "unknown", "nr", "n.r.", "未报告", "未给出", "缺失", "无"],
+  "stop_header_tokens": ["value", "val", "data", "mean", "avg", "average", "of", "the", "at", "in", "measured", "result", "conditions", "condition", "结果", "数值", "条件"],
+  "fields": [
+    {
+      "name": "record_id",
+      "label": "Extraction record identifier",
+      "semantic_type": "identifier",
+      "aliases": ["record id", "record_id", "row id", "row_id", "extraction id", "entry id", "id", "记录编号", "条目编号", "编号"],
+      "context_key": false,
+      "description": "Identifier assigned by the extractor to a single row. Never auto-generated from row content."
+    },
+    {
+      "name": "doi",
+      "label": "Source document DOI",
+      "semantic_type": "identifier",
+      "aliases": ["doi", "document doi", "paper doi", "source doi", "extraction doi", "文献doi", "文献 doi", "doi号"],
+      "context_key": true,
+      "description": "Digital object identifier of the source paper; part of the duplicate context key."
+    },
+    {
+      "name": "title",
+      "label": "Source document title",
+      "semantic_type": "string",
+      "aliases": ["title", "paper title", "paper", "document title", "source title", "文献标题", "标题", "文章标题"],
+      "context_key": true,
+      "description": "Source paper title; used as context only, never merged across different DOIs."
+    },
+    {
+      "name": "locator",
+      "label": "Evidence locator inside the source document",
+      "semantic_type": "string",
+      "aliases": ["locator", "page", "pages", "page number", "page/table", "page_table", "table", "table id", "figure", "fig", "source location", "evidence locator", "页码", "表格", "表号", "图号", "出处", "位置"],
+      "context_key": true,
+      "description": "Page/table/figure pointer for manual verification."
+    },
+    {
+      "name": "material",
+      "label": "Material / catalyst / sample name",
+      "semantic_type": "string",
+      "aliases": ["material", "material name", "catalyst", "catalyst name", "sample", "sample name", "compound", "substance", "system", "材料", "材料名称", "催化剂", "样品", "样品名称", "物质"],
+      "context_key": true,
+      "description": "Named entity the measurement belongs to. Different names are never silently unified."
+    },
+    {
+      "name": "property",
+      "label": "Measured property / metric name",
+      "semantic_type": "string",
+      "aliases": ["property", "property name", "metric", "metric name", "indicator", "measurement", "quantity", "指标", "指标名称", "性能", "性能指标", "物理量"],
+      "context_key": true,
+      "description": "Free-text metric label used when the extraction table is in long format."
+    },
+    {
+      "name": "temperature",
+      "label": "Reaction / measurement temperature",
+      "semantic_type": "numeric",
+      "dimension": "temperature",
+      "aliases": ["temperature", "temp", "t", "reaction temperature", "reaction temp", "temperature of reaction", "温度", "反应温度", "测试温度"],
+      "context_key": true,
+      "plausible_range": { "unit": "K", "min": 0.0, "max": 2500.0 },
+      "description": "Temperatures are normalized to K only when an explicit unit is present; no silent \u00b0C/K assumption."
+    },
+    {
+      "name": "pressure",
+      "label": "Reaction / measurement pressure",
+      "semantic_type": "numeric",
+      "dimension": "pressure",
+      "aliases": ["pressure", "p", "reaction pressure", "total pressure", "压力", "反应压力", "总压"],
+      "context_key": true,
+      "description": "Normalized to MPa when the unit is known."
+    },
+    {
+      "name": "reaction_time",
+      "label": "Reaction / residence time",
+      "semantic_type": "numeric",
+      "dimension": "time",
+      "aliases": ["time", "reaction time", "residence time", "duration", "t (h)", "时间", "反应时间", "停留时间"],
+      "context_key": true,
+      "description": "Normalized to hours when the unit is known."
+    },
+    {
+      "name": "yield",
+      "label": "Product yield",
+      "semantic_type": "numeric",
+      "dimension": "percent",
+      "aliases": ["yield", "product yield", "isolated yield", "yield of product", "产率", "收率", "产物收率"],
+      "context_key": false,
+      "plausible_range": { "unit": "%", "min": 0.0, "max": 100.0 },
+      "description": "Percent quantity; ranges are kept as low/high endpoints, no midpoint is invented."
+    },
+    {
+      "name": "selectivity",
+      "label": "Selectivity",
+      "semantic_type": "numeric",
+      "dimension": "percent",
+      "aliases": ["selectivity", "product selectivity", "选择性", "产物选择性"],
+      "context_key": false,
+      "plausible_range": { "unit": "%", "min": 0.0, "max": 100.0 },
+      "description": "Percent quantity."
+    },
+    {
+      "name": "conversion",
+      "label": "Reactant conversion",
+      "semantic_type": "numeric",
+      "dimension": "percent",
+      "aliases": ["conversion", "reactant conversion", "x", "转化率", "反应物转化率"],
+      "context_key": false,
+      "plausible_range": { "unit": "%", "min": 0.0, "max": 100.0 },
+      "description": "Percent quantity."
+    },
+    {
+      "name": "energy",
+      "label": "Energy quantity (barrier, activation energy)",
+      "semantic_type": "numeric",
+      "dimension": "energy",
+      "aliases": ["energy", "activation energy", "ea", "e_a", "barrier", "energy barrier", "gibbs energy", "能量", "活化能", "能垒", "势垒"],
+      "context_key": false,
+      "description": "Normalized to kJ/mol; eV is converted with the documented per-particle to per-mole factor 96.485."
+    },
+    {
+      "name": "notes",
+      "label": "Free-text extraction notes",
+      "semantic_type": "string",
+      "aliases": ["notes", "note", "comment", "comments", "remarks", "remark", "备注", "注释", "说明"],
+      "context_key": false,
+      "description": "Free text kept verbatim."
+    }
+  ]
+}

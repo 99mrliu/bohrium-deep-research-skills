@@ -1,0 +1,7 @@
+id,record_id,coordinates,reason,raw,detail,suggested_action
+RV0001,s07,examples/synthetic-case.json#$.records[6],malformed_number,12.3.4,cannot parse numeric token '12.3.4',fix the literal in the extraction; value left unstandardized
+RV0002,s08,examples/synthetic-case.json#$.records[7],unknown_unit,quatloo/mol,unknown unit symbol 'quatloo',add a documented rule to references/units.json or correct the unit
+RV0003,s09,examples/synthetic-case.json#$.records[8],missing_value,,"no value supplied; left empty, never imputed",supply value from source
+RV0004,s12,examples/synthetic-case.json#$.records[11],ambiguous_decimal_comma,"1,234","'1,234': single comma followed by exactly three digits",fix the literal in the extraction; value left unstandardized
+RV0005,R0017,examples/synthetic-extra.csv#row3,missing_value,,"no value supplied; left empty, never imputed",supply value from source
+RV0006,s02,examples/synthetic-case.json#$.records[1],duplicate_group,DUP001,"2 records share the conservative duplicate key: examples/synthetic-case.json#$.records[1], examples/synthetic-case.json#$.records[9]",confirm whether repeated extraction (drop extras) or repeated experiment (keep)

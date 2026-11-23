@@ -1,0 +1,101 @@
+{
+  "case_id": "synthetic-contract-auditor-v1",
+  "synthetic": true,
+  "notice": "SYNTHETIC EXAMPLE ONLY: organizer-style extraction defects, not real experimental measurements.",
+  "output_contract": {
+    "properties": {
+      "case_id": {"type": "string"},
+      "result": {"type": "object"},
+      "status": {"type": "string"},
+      "sources": {"type": "array"},
+      "uncertainty": {"type": "array"},
+      "change_records": {"type": "array"},
+      "coverage": {"type": "object"},
+      "artifacts": {"type": "object"},
+      "quality_grade": {"type": ["string", "null"]},
+      "future_extension": {"type": ["object", "null"]}
+    },
+    "required": ["case_id", "result", "status", "sources", "uncertainty", "change_records", "coverage", "artifacts", "quality_grade", "future_extension"]
+  },
+  "target_units": {
+    "temperature": "K",
+    "pressure": "Pa",
+    "length": "m"
+  },
+  "datasets": [
+    {
+      "name": "embedded-json-records",
+      "synthetic": true,
+      "records": [
+        {
+          "extraction_id": "EXT-001",
+          "source_id": "SYNTH-JSON-001",
+          "material_name": "Alpha",
+          "property": "temperature",
+          "value": "25",
+          "unit": "C",
+          "page": 3,
+          "table": "T1",
+          "condition": "baseline",
+          "experiment_id": "EXP-A"
+        },
+        {
+          "extraction_id": "EXT-002",
+          "source_id": "SYNTH-JSON-001",
+          "material_name": "Alpha",
+          "property": "pressure",
+          "value": "12..5",
+          "unit": "kPa",
+          "page": 3,
+          "table": "T2",
+          "condition": "baseline",
+          "experiment_id": "EXP-B"
+        },
+        {
+          "extraction_id": "EXT-003",
+          "source_id": "SYNTH-JSON-001",
+          "material_name": "Gamma",
+          "property": "length",
+          "value": "2.2",
+          "unit": "furlong",
+          "page": 4,
+          "table": "T3",
+          "condition": "baseline",
+          "experiment_id": "EXP-C"
+        },
+        {
+          "extraction_id": "EXT-001",
+          "source_id": "SYNTH-JSON-001",
+          "material_name": "Alpha",
+          "property": "temperature",
+          "value": "25",
+          "unit": "C",
+          "page": 3,
+          "table": "T1",
+          "condition": "baseline",
+          "experiment_id": "EXP-A"
+        },
+        {
+          "extraction_id": "EXT-004",
+          "source_id": "SYNTH-JSON-001",
+          "material_name": "Delta",
+          "property": "pressure",
+          "value": "N/A",
+          "unit": "kPa",
+          "page": 5,
+          "table": "T4",
+          "condition": "baseline",
+          "experiment_id": "EXP-D"
+        }
+      ]
+    }
+  ],
+  "files": [
+    {
+      "path": "records.csv",
+      "format": "csv",
+      "synthetic": true,
+      "role": "additional extraction rows with organizer-style column-name differences"
+    }
+  ]
+}

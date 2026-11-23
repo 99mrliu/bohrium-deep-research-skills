@@ -1,0 +1,9 @@
+anomaly_id,severity,code,input_row_id,source_pointer,field,rule_id,message,details,affected_rows
+A000001,error,MALFORMED_NUMBER,R000002,case.json#datasets/0/records/1,value,V004,numeric value could not be parsed; original text is retained only in raw_value,"{""raw_value"":""12..5""}",
+A000002,error,UNKNOWN_UNIT,R000003,case.json#datasets/0/records/2,unit,U003,unit is not in the deterministic registry; normalized value remains null,"{""raw_value"":""furlong""}",
+A000003,info,EXACT_DUPLICATE_REMOVED,R000004,case.json#datasets/0/records/3,record_id,D001,duplicate extraction removed by record_id plus full-context identity key,"{""kept_row"":""R000001""}",
+A000004,warning,MISSING_VALUE,R000005,case.json#datasets/0/records/4,value,V001,numeric value is missing and remains null,"{""raw_value"":null}",
+A000005,error,UNMAPPED_COLUMN,R000006,records.csv#rows/0,Lab Note,S004,column has no deterministic mapping and was retained with an unmapped__ prefix,"{""raw_value"":""standard-valid""}",
+A000006,error,DUPLICATE_ID_CONFLICT,R000007,records.csv#rows/1,record_id,D002,same record_id has different scientific/context values; rows were kept separate and never merged,"{""record_id"":""EXT-006""}","[""R000007"",""R000008""]"
+A000007,error,UNMAPPED_COLUMN,R000007,records.csv#rows/1,Lab Note,S004,column has no deterministic mapping and was retained with an unmapped__ prefix,"{""raw_value"":""conflict-a""}",
+A000008,error,UNMAPPED_COLUMN,R000008,records.csv#rows/2,Lab Note,S004,column has no deterministic mapping and was retained with an unmapped__ prefix,"{""raw_value"":""conflict-b""}",

@@ -1,0 +1,45 @@
+{
+  "case_id": "SYNTH-LINEAGE-001",
+  "synthetic": true,
+  "notice": "SYNTHETIC EXAMPLE ONLY: generated dirty extraction records for regression testing; not an official answer and not real experimental data.",
+  "materials": [
+    {
+      "path": "dirty_records.csv",
+      "role": "primary extraction table",
+      "synthetic": true
+    }
+  ],
+  "embedded_material": {
+    "description": "Synthetic nested JSON table used to test JSON discovery and header default units.",
+    "records": [
+      {
+        "Substance": "Hydrogel X",
+        "Metric": "swelling energy",
+        "Value_kJ": "0.05",
+        "DOI": "10.0000/synthetic-json",
+        "Experiment ID": "SYN-J1"
+      },
+      {
+        "Substance": "Hydrogel X",
+        "Metric": "swelling energy",
+        "Value_kJ": "50 J",
+        "DOI": "10.0000/synthetic-json",
+        "Experiment ID": "SYN-J1"
+      }
+    ]
+  },
+  "output_contract": {
+    "case_id": "string",
+    "status": "string",
+    "cleaned_rows": "array",
+    "cleaned_csv": "path",
+    "sources": "array",
+    "uncertainty": "array",
+    "change_records": "array",
+    "artifacts": "object",
+    "anomalies": "array",
+    "review_queue": "object",
+    "audit_report": "path",
+    "custom_extension": "unknown semantic"
+  }
+}

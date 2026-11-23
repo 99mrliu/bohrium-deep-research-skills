@@ -1,0 +1,723 @@
+{
+  "artifacts": {
+    "audit": "audit.md",
+    "change_log": "change_log.json",
+    "cleaned_records_csv": "cleaned_records.csv",
+    "cleaned_records_json": "cleaned_records.json",
+    "duplicate_report": "duplicate_report.json",
+    "review_queue": "review_queue.json"
+  },
+  "case_id": "synthetic-identity-001",
+  "change_records": [
+    {
+      "after": "cl-0001",
+      "before": null,
+      "change_id": "ch0001",
+      "detail": "chosen as cluster representative (most complete row, then smallest record id); values never mixed across members",
+      "field": "cluster",
+      "record_id": "r0001",
+      "rule_id": "D-008"
+    },
+    {
+      "after": "kept_separate",
+      "before": null,
+      "change_id": "ch0002",
+      "detail": "conflict with r0006: same identity but different measured values (value_different); both retained, never averaged",
+      "field": "cluster",
+      "record_id": "r0001",
+      "rule_id": "D-009"
+    },
+    {
+      "after": "band_gap",
+      "before": "band gap",
+      "change_id": "ch0003",
+      "detail": "metric alias canonicalization",
+      "field": "metric",
+      "record_id": "r0001",
+      "rule_id": "N-003"
+    },
+    {
+      "after": "cl-0001",
+      "before": null,
+      "change_id": "ch0004",
+      "detail": "merged as duplicate of cluster representative; original row retained in members[] lineage",
+      "field": "cluster",
+      "record_id": "r0002",
+      "rule_id": "D-001/D-002"
+    },
+    {
+      "after": "kept_separate",
+      "before": null,
+      "change_id": "ch0005",
+      "detail": "conflict with r0006: same identity but different measured values (value_different); both retained, never averaged",
+      "field": "cluster",
+      "record_id": "r0002",
+      "rule_id": "D-009"
+    },
+    {
+      "after": "TiO2",
+      "before": "titanium dioxide (rutile)",
+      "change_id": "ch0006",
+      "detail": "exact full-string lexicon alias",
+      "field": "material",
+      "record_id": "r0002",
+      "rule_id": "N-003"
+    },
+    {
+      "after": "band_gap",
+      "before": "bandgap",
+      "change_id": "ch0007",
+      "detail": "metric alias canonicalization",
+      "field": "metric",
+      "record_id": "r0002",
+      "rule_id": "N-003"
+    },
+    {
+      "after": "TiO2",
+      "before": "titanium dioxide (rutile)",
+      "change_id": "ch0008",
+      "detail": "phase 'rutile' split out of material string",
+      "field": "material",
+      "record_id": "r0002",
+      "rule_id": "N-004"
+    },
+    {
+      "after": "band_gap",
+      "before": "band gap",
+      "change_id": "ch0009",
+      "detail": "metric alias canonicalization",
+      "field": "metric",
+      "record_id": "r0003",
+      "rule_id": "N-003"
+    },
+    {
+      "after": "band_gap",
+      "before": "band gap",
+      "change_id": "ch0010",
+      "detail": "metric alias canonicalization",
+      "field": "metric",
+      "record_id": "r0004",
+      "rule_id": "N-003"
+    },
+    {
+      "after": "TiO2",
+      "before": "N-doped TiO2",
+      "change_id": "ch0011",
+      "detail": "exact full-string lexicon alias",
+      "field": "material",
+      "record_id": "r0005",
+      "rule_id": "N-003"
+    },
+    {
+      "after": "band_gap",
+      "before": "band gap",
+      "change_id": "ch0012",
+      "detail": "metric alias canonicalization",
+      "field": "metric",
+      "record_id": "r0005",
+      "rule_id": "N-003"
+    },
+    {
+      "after": "TiO2",
+      "before": "N-doped TiO2",
+      "change_id": "ch0013",
+      "detail": "dopant 'n' split out of material string; dopant remains part of sample identity",
+      "field": "material",
+      "record_id": "r0005",
+      "rule_id": "N-005"
+    },
+    {
+      "after": "kept_separate",
+      "before": null,
+      "change_id": "ch0014",
+      "detail": "conflict with r0001: same identity but different measured values (value_different); both retained, never averaged",
+      "field": "cluster",
+      "record_id": "r0006",
+      "rule_id": "D-009"
+    },
+    {
+      "after": "kept_separate",
+      "before": null,
+      "change_id": "ch0015",
+      "detail": "conflict with r0002: same identity but different measured values (value_different); both retained, never averaged",
+      "field": "cluster",
+      "record_id": "r0006",
+      "rule_id": "D-009"
+    },
+    {
+      "after": "kept_separate",
+      "before": null,
+      "change_id": "ch0016",
+      "detail": "conflict with r0007: same identity but different measured values (value_different); both retained, never averaged",
+      "field": "cluster",
+      "record_id": "r0006",
+      "rule_id": "D-009"
+    },
+    {
+      "after": "band_gap",
+      "before": "band gap",
+      "change_id": "ch0017",
+      "detail": "metric alias canonicalization",
+      "field": "metric",
+      "record_id": "r0006",
+      "rule_id": "N-003"
+    },
+    {
+      "after": "cl-0001",
+      "before": null,
+      "change_id": "ch0018",
+      "detail": "merged as duplicate of cluster representative; original row retained in members[] lineage",
+      "field": "cluster",
+      "record_id": "r0007",
+      "rule_id": "D-001/D-002"
+    },
+    {
+      "after": "kept_separate",
+      "before": null,
+      "change_id": "ch0019",
+      "detail": "conflict with r0006: same identity but different measured values (value_different); both retained, never averaged",
+      "field": "cluster",
+      "record_id": "r0007",
+      "rule_id": "D-009"
+    },
+    {
+      "after": "TiO2",
+      "before": "titania",
+      "change_id": "ch0020",
+      "detail": "exact full-string lexicon alias",
+      "field": "material",
+      "record_id": "r0007",
+      "rule_id": "N-003"
+    },
+    {
+      "after": "band_gap",
+      "before": "band gap",
+      "change_id": "ch0021",
+      "detail": "metric alias canonicalization",
+      "field": "metric",
+      "record_id": "r0007",
+      "rule_id": "N-003"
+    },
+    {
+      "after": "3.0 eV",
+      "before": "3000.0 meV",
+      "change_id": "ch0022",
+      "detail": "converted with formula: value = raw value * 0.001 + 0; original value retained in value_raw",
+      "field": "value",
+      "record_id": "r0007",
+      "rule_id": "U-002"
+    },
+    {
+      "after": "band_gap",
+      "before": "band gap",
+      "change_id": "ch0023",
+      "detail": "metric alias canonicalization",
+      "field": "metric",
+      "record_id": "r0008",
+      "rule_id": "N-003"
+    },
+    {
+      "after": "band_gap",
+      "before": "band gap",
+      "change_id": "ch0024",
+      "detail": "metric alias canonicalization",
+      "field": "metric",
+      "record_id": "r0009",
+      "rule_id": "N-003"
+    },
+    {
+      "after": null,
+      "before": "not reported",
+      "change_id": "ch0025",
+      "detail": "explicit missing token normalized to null (stays null)",
+      "field": "value",
+      "record_id": "r0009",
+      "rule_id": "V-003"
+    },
+    {
+      "after": "band_gap",
+      "before": "band gap",
+      "change_id": "ch0026",
+      "detail": "metric alias canonicalization",
+      "field": "metric",
+      "record_id": "r0010",
+      "rule_id": "N-003"
+    },
+    {
+      "after": "band_gap",
+      "before": "band gap",
+      "change_id": "ch0027",
+      "detail": "metric alias canonicalization",
+      "field": "metric",
+      "record_id": "r0011",
+      "rule_id": "N-003"
+    },
+    {
+      "after": "cl-0010",
+      "before": null,
+      "change_id": "ch0028",
+      "detail": "chosen as cluster representative (most complete row, then smallest record id); values never mixed across members",
+      "field": "cluster",
+      "record_id": "r0012",
+      "rule_id": "D-008"
+    },
+    {
+      "after": "band_gap",
+      "before": "band gap",
+      "change_id": "ch0029",
+      "detail": "metric alias canonicalization",
+      "field": "metric",
+      "record_id": "r0012",
+      "rule_id": "N-003"
+    },
+    {
+      "after": "298.15 K",
+      "before": "25.0 °C",
+      "change_id": "ch0030",
+      "detail": "context normalized: value * 1 + 273.15",
+      "field": "temperature",
+      "record_id": "r0012",
+      "rule_id": "U-002"
+    },
+    {
+      "after": "cl-0010",
+      "before": null,
+      "change_id": "ch0031",
+      "detail": "merged as duplicate of cluster representative; original row retained in members[] lineage",
+      "field": "cluster",
+      "record_id": "r0013",
+      "rule_id": "D-001/D-002"
+    },
+    {
+      "after": "band_gap",
+      "before": "band gap",
+      "change_id": "ch0032",
+      "detail": "metric alias canonicalization",
+      "field": "metric",
+      "record_id": "r0013",
+      "rule_id": "N-003"
+    },
+    {
+      "after": "TiO2",
+      "before": "titanium dioxide",
+      "change_id": "ch0033",
+      "detail": "exact full-string lexicon alias",
+      "field": "material",
+      "record_id": "r0014",
+      "rule_id": "N-003"
+    },
+    {
+      "after": "band_gap",
+      "before": "band gap",
+      "change_id": "ch0034",
+      "detail": "metric alias canonicalization",
+      "field": "metric",
+      "record_id": "r0014",
+      "rule_id": "N-003"
+    },
+    {
+      "after": "band_gap",
+      "before": "band gap",
+      "change_id": "ch0035",
+      "detail": "metric alias canonicalization",
+      "field": "metric",
+      "record_id": "r0015",
+      "rule_id": "N-003"
+    },
+    {
+      "after": "band_gap",
+      "before": "band gap",
+      "change_id": "ch0036",
+      "detail": "metric alias canonicalization",
+      "field": "metric",
+      "record_id": "r0016",
+      "rule_id": "N-003"
+    },
+    {
+      "after": "[2.3, 2.5]",
+      "before": "2.3-2.5",
+      "change_id": "ch0037",
+      "detail": "range parsed; kept as interval, no midpoint is fabricated",
+      "field": "value",
+      "record_id": "r0016",
+      "rule_id": "V-002"
+    },
+    {
+      "after": "band_gap",
+      "before": "band gap",
+      "change_id": "ch0038",
+      "detail": "metric alias canonicalization",
+      "field": "metric",
+      "record_id": "r0017",
+      "rule_id": "N-003"
+    },
+    {
+      "after": "particle_size",
+      "before": "particle size",
+      "change_id": "ch0039",
+      "detail": "metric alias canonicalization",
+      "field": "metric",
+      "record_id": "r0018",
+      "rule_id": "N-003"
+    },
+    {
+      "after": "particle_size",
+      "before": "particle size",
+      "change_id": "ch0040",
+      "detail": "metric alias canonicalization",
+      "field": "metric",
+      "record_id": "r0019",
+      "rule_id": "N-003"
+    }
+  ],
+  "cleaned_table": {
+    "columns": [
+      "cluster_id",
+      "experiment_id",
+      "experiment_label",
+      "record_id",
+      "member_count",
+      "member_record_ids",
+      "material",
+      "material_display",
+      "phase",
+      "dopant",
+      "composition",
+      "morphology",
+      "sample_key",
+      "metric",
+      "value_raw",
+      "value_kind",
+      "value",
+      "value_min",
+      "value_max",
+      "unit",
+      "value_normalized",
+      "unit_normalized",
+      "conversion_formula",
+      "context_key",
+      "source",
+      "locator",
+      "conflict_cluster_ids",
+      "review_flags"
+    ],
+    "json": "cleaned_records.json",
+    "path": "cleaned_records.csv",
+    "row_count": 16
+  },
+  "counts": {
+    "anomalies": 8,
+    "candidate_states": {
+      "conflict": 3,
+      "exact_duplicate": 2,
+      "likely_duplicate": 2,
+      "not_duplicate": 8
+    },
+    "changes": 40,
+    "conflict_pairs": 3,
+    "input_records": 19,
+    "merged_rows": 3,
+    "output_rows": 16,
+    "review_items": 7
+  },
+  "custom_unmapped_note": null,
+  "duplicate_clusters": [
+    {
+      "cluster_id": "cl-0001",
+      "member_record_ids": [
+        "r0001",
+        "r0002",
+        "r0007"
+      ],
+      "representative_record_id": "r0001",
+      "size": 3
+    },
+    {
+      "cluster_id": "cl-0002",
+      "member_record_ids": [
+        "r0003"
+      ],
+      "representative_record_id": "r0003",
+      "size": 1
+    },
+    {
+      "cluster_id": "cl-0003",
+      "member_record_ids": [
+        "r0004"
+      ],
+      "representative_record_id": "r0004",
+      "size": 1
+    },
+    {
+      "cluster_id": "cl-0004",
+      "member_record_ids": [
+        "r0005"
+      ],
+      "representative_record_id": "r0005",
+      "size": 1
+    },
+    {
+      "cluster_id": "cl-0005",
+      "member_record_ids": [
+        "r0006"
+      ],
+      "representative_record_id": "r0006",
+      "size": 1
+    },
+    {
+      "cluster_id": "cl-0006",
+      "member_record_ids": [
+        "r0008"
+      ],
+      "representative_record_id": "r0008",
+      "size": 1
+    },
+    {
+      "cluster_id": "cl-0007",
+      "member_record_ids": [
+        "r0009"
+      ],
+      "representative_record_id": "r0009",
+      "size": 1
+    },
+    {
+      "cluster_id": "cl-0008",
+      "member_record_ids": [
+        "r0010"
+      ],
+      "representative_record_id": "r0010",
+      "size": 1
+    },
+    {
+      "cluster_id": "cl-0009",
+      "member_record_ids": [
+        "r0011"
+      ],
+      "representative_record_id": "r0011",
+      "size": 1
+    },
+    {
+      "cluster_id": "cl-0010",
+      "member_record_ids": [
+        "r0012",
+        "r0013"
+      ],
+      "representative_record_id": "r0012",
+      "size": 2
+    },
+    {
+      "cluster_id": "cl-0011",
+      "member_record_ids": [
+        "r0014"
+      ],
+      "representative_record_id": "r0014",
+      "size": 1
+    },
+    {
+      "cluster_id": "cl-0012",
+      "member_record_ids": [
+        "r0015"
+      ],
+      "representative_record_id": "r0015",
+      "size": 1
+    },
+    {
+      "cluster_id": "cl-0013",
+      "member_record_ids": [
+        "r0016"
+      ],
+      "representative_record_id": "r0016",
+      "size": 1
+    },
+    {
+      "cluster_id": "cl-0014",
+      "member_record_ids": [
+        "r0017"
+      ],
+      "representative_record_id": "r0017",
+      "size": 1
+    },
+    {
+      "cluster_id": "cl-0015",
+      "member_record_ids": [
+        "r0018"
+      ],
+      "representative_record_id": "r0018",
+      "size": 1
+    },
+    {
+      "cluster_id": "cl-0016",
+      "member_record_ids": [
+        "r0019"
+      ],
+      "representative_record_id": "r0019",
+      "size": 1
+    }
+  ],
+  "invariants": [
+    {
+      "detail": "0 violation(s)",
+      "name": "no_cross_source_merge",
+      "passed": true
+    },
+    {
+      "detail": "0 violation(s)",
+      "name": "no_cross_context_merge",
+      "passed": true
+    },
+    {
+      "detail": "0 violation(s)",
+      "name": "conflict_never_merged",
+      "passed": true
+    },
+    {
+      "detail": "0 violation(s)",
+      "name": "representative_is_member_row",
+      "passed": true
+    },
+    {
+      "detail": "0 violation(s)",
+      "name": "member_rows_retained",
+      "passed": true
+    }
+  ],
+  "lexicon": {
+    "path": "references/synonyms.json",
+    "version": "1.0.0"
+  },
+  "output_contract": {
+    "cleaned_table": "dict",
+    "custom_unmapped_note": "string",
+    "duplicate_clusters": "list",
+    "review_summary": "list",
+    "summary": "string"
+  },
+  "review_summary": [
+    {
+      "detail": "same identity but different measured values (value_different); both retained, never averaged",
+      "id": "q0001",
+      "kind": "conflict",
+      "rule": "D-003"
+    },
+    {
+      "detail": "same identity but different measured values (value_different); both retained, never averaged",
+      "id": "q0002",
+      "kind": "conflict",
+      "rule": "D-003"
+    },
+    {
+      "detail": "same identity but different measured values (value_different); both retained, never averaged",
+      "id": "q0003",
+      "kind": "conflict",
+      "rule": "D-003"
+    },
+    {
+      "detail": "value present but unit missing; normalized value stays null",
+      "id": "q0004",
+      "kind": "missing_unit",
+      "rule": "U-004"
+    },
+    {
+      "detail": "missing value token 'not reported' normalized to null",
+      "id": "q0005",
+      "kind": "missing_value",
+      "rule": "V-003"
+    },
+    {
+      "detail": "unit 'Eg units' not in unit table; no conversion attempted, value compared raw only",
+      "id": "q0006",
+      "kind": "unknown_unit",
+      "rule": "U-003"
+    },
+    {
+      "detail": "normalized value 25.0 eV outside plausible range [0.0, 15.0]; value kept unchanged, flagged for review",
+      "id": "q0007",
+      "kind": "out_of_plausible_range",
+      "rule": "A-001"
+    }
+  ],
+  "sources": [
+    {
+      "locators": [
+        "Table 1 row 1",
+        "Table 1 row 1",
+        "Table 1 row 2",
+        "Table 2 row 1",
+        "Table 2 row 2",
+        "Table 1 row 1",
+        "Table 1 row 1",
+        "Table 2 row 3",
+        "text p.4",
+        "Table 3 row 1",
+        "Table 3 row 2",
+        "Table 4 row 1",
+        "Table 4 row 1"
+      ],
+      "record_count": 13,
+      "source_key": "source:10.0000/synth.a",
+      "source_label": "10.0000/synth.a"
+    },
+    {
+      "locators": [
+        "Table 1 row 1",
+        "Table 2 row 1",
+        "Table 3 row 1",
+        "Table 4 row 1"
+      ],
+      "record_count": 4,
+      "source_key": "source:10.0000/synth.b",
+      "source_label": "10.0000/synth.b"
+    },
+    {
+      "locators": [
+        "Table 1 row 1",
+        "Table 1 row 2"
+      ],
+      "record_count": 2,
+      "source_key": "source:10.0000/synth.c",
+      "source_label": "10.0000/synth.c"
+    }
+  ],
+  "status": "success",
+  "summary": "cleaned 19 record(s) into 16 row(s); merged 3 duplicate row(s) by explainable keys; kept 3 conflict pair(s) separate (never averaged); 7 item(s) queued for human review; missing values/units left null.",
+  "synthetic_input": true,
+  "task_file": {
+    "found": true,
+    "path": "synthetic-task.md",
+    "title": "Synthetic task (DEMONSTRATION ONLY, not an official case)"
+  },
+  "uncertainty": [
+    "7 item(s) require human adjudication (see review_queue.json)",
+    "missing value token 'not reported' normalized to null",
+    "normalized value 25.0 eV outside plausible range [0.0, 15.0]; value kept unchanged, flagged for review",
+    "unit 'Eg units' not in unit table; no conversion attempted, value compared raw only",
+    "value present but unit missing; normalized value stays null"
+  ],
+  "unresolved": [
+    {
+      "item": "output_contract.custom_unmapped_note",
+      "location": "result.json",
+      "reason": "no unambiguous semantic mapping from this field name to a computed artifact; left null rather than fabricated"
+    },
+    {
+      "item": "missing_unit:r0008",
+      "location": "review_queue.json",
+      "reason": "value present but unit missing; normalized value stays null"
+    },
+    {
+      "item": "missing_value:r0009",
+      "location": "review_queue.json",
+      "reason": "missing value token 'not reported' normalized to null"
+    },
+    {
+      "item": "unknown_unit:r0015",
+      "location": "review_queue.json",
+      "reason": "unit 'Eg units' not in unit table; no conversion attempted, value compared raw only"
+    },
+    {
+      "item": "out_of_plausible_range:r0017",
+      "location": "review_queue.json",
+      "reason": "normalized value 25.0 eV outside plausible range [0.0, 15.0]; value kept unchanged, flagged for review"
+    }
+  ]
+}
