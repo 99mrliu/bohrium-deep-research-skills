@@ -1,0 +1,6 @@
+{
+  "cement": {"type": "float", "unit": "kg/m3", "description": "水泥用量"},
+  "water": {"type": "float", "unit": "kg/m3", "description": "用水量"},
+  "age": {"type": "int", "unit": "day", "description": "龄期"},
+  "strength": {"type": "float", "unit": "MPa", "description": "抗压强度"}
+}

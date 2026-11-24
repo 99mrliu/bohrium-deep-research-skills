@@ -1,0 +1,5 @@
+{
+  "coerce": {"strength": "float", "cement": "float"},
+  "missing": {"policy": "report_only", "columns": ["strength", "cement"]},
+  "dedup": {"policy": "drop_exact"}
+}

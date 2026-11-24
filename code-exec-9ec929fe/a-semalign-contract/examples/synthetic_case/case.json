@@ -1,0 +1,15 @@
+{
+  "case_id": "synthetic-demo-semalign-001",
+  "note": "SYNTHETIC EXAMPLE - 人工合成的接口演示案例，非正式测试案例，数值无领域意义",
+  "output_contract": {
+    "fields": [
+      "cleaned_table",
+      "summary_statistics",
+      "row_reconciliation",
+      "figures",
+      "anomalies",
+      "provenance"
+    ]
+  },
+  "datasets": ["measurements.csv", "data_dictionary.json"]
+}

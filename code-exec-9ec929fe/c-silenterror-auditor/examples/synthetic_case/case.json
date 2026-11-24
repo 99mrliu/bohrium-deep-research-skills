@@ -1,0 +1,6 @@
+{
+  "case_id": "synthetic-demo-secaudit-001",
+  "note": "SYNTHETIC EXAMPLE - 人工合成、埋有四类陷阱的演示案例，非正式测试案例",
+  "output_contract": {"fields": ["cleaned_table", "summary_statistics", "anomalies", "provenance"]},
+  "datasets": ["readings.csv", "lab.db"]
+}

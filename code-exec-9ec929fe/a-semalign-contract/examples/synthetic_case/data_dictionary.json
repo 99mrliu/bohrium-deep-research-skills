@@ -1,0 +1,6 @@
+{
+  "sample_id": {"type": "string", "description": "样品编号，唯一标识"},
+  "batch": {"type": "string", "description": "批次号"},
+  "value": {"type": "float", "unit": "a.u.", "description": "合成测量值"},
+  "temperature": {"type": "float", "unit": "degC", "description": "测量温度"}
+}

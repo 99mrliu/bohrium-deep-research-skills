@@ -1,0 +1,7 @@
+[
+  {"id": "rows_used", "kind": "row_count", "source": "CASEDIR/readings.csv", "value": 10,
+   "_comment": "naive 管道数错了行数（把表头也算进去）"},
+  {"id": "mean_reading", "kind": "mean", "source": "CASEDIR/readings.csv",
+   "column": "reading", "value": -102.11, "tolerance": 0.01,
+   "_comment": "naive 管道把 NA 当 0、保留 -999 哨兵与重复行算出的错误均值"}
+]

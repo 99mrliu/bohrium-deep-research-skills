@@ -1,0 +1,6 @@
+{
+  "case_id": "synthetic-demo-runcap-001",
+  "note": "SYNTHETIC EXAMPLE - 人工合成的接口演示案例，非正式测试案例",
+  "output_contract": {"fields": ["cleaned_table", "summary_statistics", "query_results", "anomalies", "provenance"]},
+  "datasets": ["signals.csv", "lab.db"]
+}

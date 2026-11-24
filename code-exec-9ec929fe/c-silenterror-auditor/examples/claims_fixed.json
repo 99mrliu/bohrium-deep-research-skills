@@ -1,0 +1,16 @@
+[
+  {"id": "rows_raw", "kind": "row_count", "source": "CASEDIR/readings.csv", "value": 9},
+  {"id": "miss_reading", "kind": "n_missing", "source": "CASEDIR/readings.csv",
+   "column": "reading", "value": 1},
+  {"id": "rows_clean", "kind": "row_count", "source": "WORKDIR/clean.csv", "value": 6},
+  {"id": "mean_reading", "kind": "mean", "source": "WORKDIR/clean.csv",
+   "column": "reading", "value": 11.3333, "tolerance": 0.001},
+  {"id": "std_reading", "kind": "std", "source": "WORKDIR/clean.csv",
+   "column": "reading", "value": 1.0801, "tolerance": 0.001},
+  {"id": "min_reading", "kind": "min", "source": "WORKDIR/clean.csv",
+   "column": "reading", "value": 10.0},
+  {"id": "max_reading", "kind": "max", "source": "WORKDIR/clean.csv",
+   "column": "reading", "value": 13.0},
+  {"id": "db_rows", "kind": "sql_scalar", "db": "CASEDIR/lab.db",
+   "query": "SELECT COUNT(*) FROM measurements", "value": 9}
+]

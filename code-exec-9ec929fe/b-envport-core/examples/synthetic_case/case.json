@@ -1,0 +1,16 @@
+{
+  "case_id": "synthetic-demo-envport-001",
+  "note": "SYNTHETIC EXAMPLE - 人工合成的接口演示案例，非正式测试案例，数值无领域意义",
+  "output_contract": {
+    "fields": [
+      "cleaned_table",
+      "summary_statistics",
+      "group_comparison",
+      "query_results",
+      "figures",
+      "anomalies",
+      "provenance"
+    ]
+  },
+  "datasets": ["mix_data.csv", "lab.db"]
+}
