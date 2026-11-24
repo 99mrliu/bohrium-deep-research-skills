@@ -1,0 +1,14 @@
+{
+  "case_id": "SYNTH-DEMO-001",
+  "research_summary": "图检索筛选在两基准上 WSS@95%R 优于关键词基线（合成示例）。",
+  "feasibility_conclusion": "有条件可行：需单卡16GB复现索引。",
+  "uncertainty": [
+    "不均衡语料下的表现无材料支持，结论不外推",
+    "本评估覆盖边界=输入文献集（合成示例）"
+  ],
+  "status": "success",
+  "provenance": {
+    "generated_by": "contract_scaffold.py",
+    "note": "骨架；契约字段待回填"
+  }
+}

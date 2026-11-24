@@ -1,0 +1,35 @@
+{
+  "proposal": "（合成示例）基于图检索的系统综述自动筛选与新颖性评估平台",
+  "search_boundary": "本判断覆盖 /input 文献集 3 篇虚构文献（合成示例，2023–2025），无联网检索通道",
+  "violations": [],
+  "verdicts": {
+    "C1": {
+      "text": "提出图检索增强的综述筛选流程",
+      "type": "method",
+      "type_zh": "方法创新",
+      "verdict": "covered",
+      "basis": "被 W1 覆盖"
+    },
+    "C2": {
+      "text": "首次将主动学习引入题摘筛选",
+      "type": "method",
+      "type_zh": "方法创新",
+      "verdict": "covered",
+      "basis": "被 W2 覆盖"
+    },
+    "C3": {
+      "text": "构建创新陈述类型标注体系并用于提案评估",
+      "type": "data",
+      "type_zh": "数据创新",
+      "verdict": "partial",
+      "basis": "被 W3 部分覆盖"
+    },
+    "C4": {
+      "text": "证明自动化筛选在不均衡语料上稳定优于人工基线",
+      "type": "conclusion",
+      "type_zh": "结论修正",
+      "verdict": "uncovered",
+      "basis": "对账范围内未见覆盖（边界见备忘录）"
+    }
+  }
+}

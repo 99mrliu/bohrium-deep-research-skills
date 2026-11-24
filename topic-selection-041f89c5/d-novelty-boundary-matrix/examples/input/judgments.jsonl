@@ -1,0 +1,6 @@
+{"claim_id": "C1", "work_id": "W1", "relation": "covers", "evidence_anchor": "paper1.txt#Abstract", "note": "W1 已实现图检索增强筛选并报告 WSS"}
+{"claim_id": "C1", "work_id": "W2", "relation": "none", "note": "W2 为主动学习路线，机制不同"}
+{"claim_id": "C2", "work_id": "W2", "relation": "covers", "evidence_anchor": "paper2.txt#Abstract", "note": "主动学习用于筛选已有报道与复现"}
+{"claim_id": "C3", "work_id": "W3", "relation": "partial", "evidence_anchor": "paper3.txt#Abstract", "note": "W3 已有四类创新标注数据集，但未用于提案评估场景"}
+{"claim_id": "C4", "work_id": "W2", "relation": "none", "note": "W2 报告了相反证据：不均衡语料上主动学习失效"}
+{"claim_id": "C4", "work_id": "W1", "relation": "none"}

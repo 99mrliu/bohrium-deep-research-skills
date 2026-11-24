@@ -1,0 +1,5 @@
+{"id": "E1", "claim": "图检索筛选流程在 95% 召回下 WSS 达 0.61，优于关键词基线的 0.44", "source_file": "paper1.txt", "quote": "the proposed pipeline achieved a Work Saved over Sampling of 0.61 at 95% recall, compared with 0.44 for a keyword-only baseline", "locator": "Abstract", "check_fields": {"year": "2024"}}
+{"id": "E2", "claim": "paper1 的评测只覆盖计算机与医学综述主题", "source_file": "paper1.txt", "quote": "The evaluation covers only computer science and medical review topics.", "locator": "Abstract"}
+{"id": "E3", "claim": "主动学习在全部数据集上都降低了标注成本（错误转述示例）", "source_file": "paper2.txt", "quote": "active learning always reduced the labeling cost on every dataset", "locator": "Abstract"}
+{"id": "E4", "claim": "在高度不均衡语料上主动策略反而比随机采样消耗更多标注", "source_file": "paper2.txt", "quote": "the active strategy required more labels than random sampling", "locator": "Abstract"}
+{"id": "E5", "claim": "paper3 数据集含 412 条专家标注的创新陈述", "source_file": "paper3.txt", "quote": "a small expert-annotated dataset of 412 novelty claims", "locator": "Abstract", "check_fields": {"title": "A Dataset for Novelty Claim Annotation in Grant Proposal"}}

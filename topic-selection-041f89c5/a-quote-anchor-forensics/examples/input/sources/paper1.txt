@@ -1,0 +1,16 @@
+（合成示例材料，虚构文献，仅供演示核验流程）
+
+Title: Graph Retrieval-Augmented Screening for Systematic Review: A Controlled Study
+Authors: A. Example, B. Sample
+Year: 2024
+
+Abstract
+We study whether a graph-based retrieval stage improves title/abstract
+screening for systematic reviews. On two public benchmark datasets, the
+proposed pipeline achieved a Work Saved over Sampling of 0.61 at 95%
+recall, compared with 0.44 for a keyword-only baseline. The evaluation
+covers only computer science and medical review topics.
+
+Section 2.1 Setup
+All experiments were run on a single consumer GPU with 16 GB memory.
+Screening decisions were audited by two independent annotators.

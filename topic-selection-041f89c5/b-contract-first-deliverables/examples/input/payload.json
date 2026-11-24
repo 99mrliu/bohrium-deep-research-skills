@@ -1,0 +1,44 @@
+{
+  "title": "（合成示例）图检索筛选加速提案评估报告",
+  "case_id": "SYNTH-DEMO-001",
+  "question": {
+    "statement": "在系统综述题摘筛选场景下，图检索增强流程相比关键词基线是否在 95% 召回约束下降低人工筛选量，可通过 WSS@95%R 对比检验。",
+    "object": "系统综述题摘筛选",
+    "variables": "自变量=检索策略；因变量=WSS@95%R；混杂=语料不均衡度",
+    "baseline": "关键词检索基线",
+    "falsifiable_if": "图检索流程的 WSS@95%R 不显著高于关键词基线"
+  },
+  "prior_work": [
+    {"id": "W1", "task": "题摘筛选", "method": "图检索增强", "data": "两个公开基准",
+     "metric": "WSS@95%R", "result": "0.61 vs 0.44",
+     "comparability": "可比（同任务同指标）"},
+    {"id": "W2", "task": "题摘筛选", "method": "主动学习", "data": "三个语料",
+     "metric": "标注量", "result": "均衡语料有效，高度不均衡语料失效",
+     "comparability": "部分可比（指标不同，结论提示风险）"}
+  ],
+  "novelty_claims": [
+    {"id": "C1", "claim": "首次将图检索用于综述筛选", "type": "method",
+     "verdict": "covered",
+     "basis": "W1 已覆盖该用法（合成示例证据 E1）"},
+    {"id": "C2", "claim": "在不均衡语料上保持稳健", "type": "conclusion",
+     "verdict": "indeterminate",
+     "basis": "现有材料未报道不均衡语料下的图检索表现；判断限于输入文献集"}
+  ],
+  "feasibility": {
+    "verdict": "有条件可行",
+    "conditions": ["需在单卡 16GB 显存内复现 W1 的检索索引"],
+    "premises": [
+      {"item": "数据可得性：两个公开基准", "backing": "source", "ref": "W1 摘要"},
+      {"item": "算力：单卡 16GB", "backing": "source", "ref": "W1 sec 2.1"},
+      {"item": "标注人力：双人复核", "backing": "assumption", "ref": "任务书未给人员配置，按常规假设"}
+    ]
+  },
+  "uncertainty": ["不均衡语料下的表现无材料支持，结论不外推",
+                  "本评估覆盖边界=输入文献集（合成示例）"],
+  "evidence_matrix": [
+    {"ref": "E1", "source": "paper1.txt", "field": "结果",
+     "value": "WSS 0.61 vs 0.44", "locator": "Abstract"},
+    {"ref": "E2", "source": "paper2.txt", "field": "反例",
+     "value": "不均衡语料上主动学习失效", "locator": "Abstract"}
+  ]
+}

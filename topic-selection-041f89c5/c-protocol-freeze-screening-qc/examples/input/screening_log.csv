@@ -1,0 +1,9 @@
+record_id,title,decision,criterion_ids,reason,decided_at,note
+R1,Graph Retrieval-Augmented Screening,include,I1;I2,报告 WSS@95%R 实验,2026-11-24,
+R2,Active Learning Cuts Screening Cost Sometimes,include,I1;I2,报告三语料标注量实验,2026-11-24,
+R3,Why Automation Will Change Reviews Forever,exclude,E1,观点性评论无实验,2026-11-24,
+R4,Deep Learning for Diabetic Retinopathy,exclude,E2,医学影像场景不可迁移,2026-11-24,
+R5,Screening Tools Survey,hold,,,2026-11-24,
+R6,Graph Screening (extended abstract),exclude,,重复报告但信息更少,2026-11-24,
+R7,Old Screening Study,exclude,E9,记录时间早于时间窗,2026-11-20,
+R8,A Dataset for Novelty Claim Annotation,exclude,E2,创新标注数据集非筛选方法,2026-11-24,

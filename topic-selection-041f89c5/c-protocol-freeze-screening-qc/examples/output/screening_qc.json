@@ -1,0 +1,22 @@
+{
+  "passed": false,
+  "violations": [
+    "R5: hold 缺 note（R5）",
+    "R6: exclude 未引用 E 类标准（R2）",
+    "R7: 引用了协议中不存在的标准 E9（R4）",
+    "R7: 决策时间 2026-11-20 早于协议冻结 2026-11-24T10:00:00+08:00（R6）"
+  ],
+  "warnings": [],
+  "freeze_time": "2026-11-24T10:00:00+08:00",
+  "prisma": {
+    "candidates": 8,
+    "included": 2,
+    "excluded": 5,
+    "on_hold": 1,
+    "excluded_by_criterion": {
+      "E1": 1,
+      "E2": 2,
+      "E9": 1
+    }
+  }
+}

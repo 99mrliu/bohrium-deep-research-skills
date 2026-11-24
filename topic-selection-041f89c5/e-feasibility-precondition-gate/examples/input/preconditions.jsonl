@@ -1,0 +1,8 @@
+{"id": "P1", "category": "data", "statement": "两个公开筛选基准数据集可直接获取", "status": "ok", "backing": "source", "evidence_ref": "paper1.txt#Abstract", "note": ""}
+{"id": "P2", "category": "data", "statement": "创新陈述标注数据 412 条，可用于评估但规模偏小", "status": "ok", "backing": "source", "evidence_ref": "paper3.txt#Abstract", "note": "规模是风险，登记在册"}
+{"id": "P3", "category": "compute", "statement": "单卡 16GB 显存足以复现检索索引", "status": "ok", "backing": "source", "evidence_ref": "paper1.txt#sec2.1", "note": ""}
+{"id": "P4", "category": "compute", "statement": "全量提案语料的嵌入索引构建不超过 48 小时", "status": "unknown", "backing": "assumption", "note": "按 paper1 单卡吞吐外推，语料规模未知；不成立则时间窗失守"}
+{"id": "P5", "category": "experiment", "statement": "双人独立标注复核筛选结果", "status": "ok", "backing": "assumption", "note": "任务书未给人员配置，按常规两人配置假设"}
+{"id": "P6", "category": "time", "statement": "3 个月内完成基线复现与对照实验", "status": "unknown", "backing": "assumption", "note": "无同类项目工期来源；按复现类项目经验估计"}
+{"id": "P7", "category": "personnel", "statement": "团队具备图检索系统开发经验", "status": "unknown", "backing": "assumption", "note": "任务书未说明团队构成"}
+{"id": "P8", "category": "experiment", "statement": "高度不均衡语料上方法仍保持优势", "status": "blocked", "backing": "source", "evidence_ref": "paper2.txt#Abstract", "note": "paper2 报告相反证据：不均衡语料上主动策略失效；提案须先回应此前提"}

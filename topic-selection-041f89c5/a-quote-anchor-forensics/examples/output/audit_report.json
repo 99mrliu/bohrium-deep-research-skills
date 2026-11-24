@@ -1,0 +1,48 @@
+{
+  "summary": {
+    "total": 5,
+    "PASS": 4,
+    "FAIL": 1,
+    "ERROR": 0,
+    "all_passed": false
+  },
+  "results": [
+    {
+      "id": "E1",
+      "verdict": "PASS",
+      "source_file": "paper1.txt",
+      "char_offset": 298,
+      "problems": []
+    },
+    {
+      "id": "E2",
+      "verdict": "PASS",
+      "source_file": "paper1.txt",
+      "char_offset": 427,
+      "problems": []
+    },
+    {
+      "id": "E3",
+      "verdict": "FAIL",
+      "source_file": "paper2.txt",
+      "char_offset": null,
+      "problems": [
+        "quote 在来源全文中找不到逐字匹配（归一化后）"
+      ]
+    },
+    {
+      "id": "E4",
+      "verdict": "PASS",
+      "source_file": "paper2.txt",
+      "char_offset": 357,
+      "problems": []
+    },
+    {
+      "id": "E5",
+      "verdict": "PASS",
+      "source_file": "paper3.txt",
+      "char_offset": 155,
+      "problems": []
+    }
+  ]
+}

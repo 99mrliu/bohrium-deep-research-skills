@@ -1,0 +1,13 @@
+{
+  "verdict": "conditional",
+  "violations": [
+    "P1: backing=source 但 evidence_ref 为空（Y1）",
+    "P1: id 重复（Y4）",
+    "P1: backing=assumption 但缺假设理由 note（Y2）"
+  ],
+  "n_premises": 2,
+  "blockers": [],
+  "conditions": [
+    "P1"
+  ]
+}
