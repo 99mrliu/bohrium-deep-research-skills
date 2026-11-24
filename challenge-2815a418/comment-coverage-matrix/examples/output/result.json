@@ -1,0 +1,49 @@
+{
+  "case_id": "SYNTH-EXAMPLE-ONLY-003",
+  "status": "partial",
+  "skill": "comment-coverage-matrix",
+  "generated_at": "2026-11-24T13:22:57+00:00",
+  "sources": [
+    "examples/case/materials/manuscript-baseline.md",
+    "examples/case/materials/reviewer-comments.md"
+  ],
+  "uncertainty": "合成示例，非正式案例结果；R2 外部验证实验在本演练中无法真实补做（基线为摘要、无原始数据），已以局限性声明+证据清单替代说明；status=partial 以示界限。",
+  "revised_manuscript": "/Users/liuhengshen/Desktop/bhr_product/3rd/4/challenge-2815a418/bundles/comment-coverage-matrix/examples/output/revised-manuscript.md",
+  "response_letter": "/Users/liuhengshen/Desktop/bhr_product/3rd/4/challenge-2815a418/bundles/comment-coverage-matrix/examples/output/response-letter.md",
+  "change_locations": "/Users/liuhengshen/Desktop/bhr_product/3rd/4/challenge-2815a418/bundles/comment-coverage-matrix/examples/output/changes.json",
+  "evidence_checklist": "/Users/liuhengshen/Desktop/bhr_product/3rd/4/challenge-2815a418/bundles/comment-coverage-matrix/examples/output/evidence-checklist.md",
+  "missing_fields": [],
+  "change_records": [
+    {
+      "chg_id": "CHG-01",
+      "sub_ids": [
+        "R1.1"
+      ],
+      "section": "2 方法",
+      "paragraph": 5,
+      "action": "replace",
+      "status": "applied"
+    },
+    {
+      "chg_id": "CHG-02",
+      "sub_ids": [
+        "R1.2"
+      ],
+      "section": "2 方法",
+      "paragraph": 5,
+      "action": "insert_after",
+      "status": "applied"
+    },
+    {
+      "chg_id": "CHG-03",
+      "sub_ids": [
+        "R2.1",
+        "R3.1"
+      ],
+      "section": "4 结论",
+      "paragraph": 9,
+      "action": "replace",
+      "status": "applied"
+    }
+  ]
+}

@@ -1,0 +1,86 @@
+{
+  "case_id": "SYNTH-EXAMPLE-ONLY-003",
+  "round": 1,
+  "language": "zh",
+  "note": "合成示例（非正式案例结果）：已由 Agent 核对并裁决完毕的示例覆盖矩阵。",
+  "comments": [
+    {
+      "comment_id": "R1",
+      "raw_text": "文中主成分数设为 5 但未说明选择依据，请补充说明；同时建议增加不同预处理方法的对比分析，以验证 SNV 选择的合理性。",
+      "subrequirements": [
+        {
+          "sub_id": "R1.1",
+          "raw_text": "文中主成分数设为 5 但未说明选择依据，请补充说明；",
+          "type": "方法",
+          "severity": "major",
+          "action": "澄清解释",
+          "relation": "并列",
+          "depends_on": [],
+          "decision": "采纳",
+          "decision_reason": "参数选择依据确未在基线中说明，属可执行且必要的澄清。",
+          "response_summary": "已在修订稿第 2 节补充主成分数的选择依据（留一交叉验证下 RMSE 最小化原则），见 CHG-01。",
+          "evidence": {"status": "", "source": "", "alternative_explanation": ""},
+          "locations": [{"chg_id": "CHG-01", "section": "2 方法"}],
+          "no_change_explanation": ""
+        },
+        {
+          "sub_id": "R1.2",
+          "raw_text": "同时建议增加不同预处理方法的对比分析，以验证 SNV 选择的合理性。",
+          "type": "方法",
+          "severity": "major",
+          "action": "重做分析",
+          "relation": "并列",
+          "depends_on": [],
+          "decision": "采纳",
+          "decision_reason": "预处理合理性需对比证据支撑；可在基线已有建模设定内完成对比重分析，不需新数据。",
+          "response_summary": "已在修订稿第 2 节补入原始光谱、一阶导数与 SNV 三种预处理的对比分析结果，SNV 对应 RMSE 最低（0.42%），故维持 SNV 选择，见 CHG-02。",
+          "evidence": {"status": "到位", "source": "对基线已有建模设定的对比重分析，结果已写入修订稿第 2 节（CHG-02）", "alternative_explanation": ""},
+          "locations": [{"chg_id": "CHG-02", "section": "2 方法"}],
+          "no_change_explanation": ""
+        }
+      ]
+    },
+    {
+      "comment_id": "R2",
+      "raw_text": "建议补充一组独立的外部验证实验（例如采集不同产地的茶叶样本），以检验模型的泛化能力。",
+      "subrequirements": [
+        {
+          "sub_id": "R2.1",
+          "raw_text": "建议补充一组独立的外部验证实验（例如采集不同产地的茶叶样本），以检验模型的泛化能力。",
+          "type": "数据",
+          "severity": "major",
+          "action": "补实验",
+          "relation": "并列",
+          "depends_on": [],
+          "decision": "部分采纳",
+          "decision_reason": "外部验证确有必要，但本演练仅提供组织方基线摘要，无原始数据与实验条件，无法真实补做新实验；文本层面的局限声明可以落实。",
+          "response_summary": "本演练无法真实补做外部验证实验（基线为摘要、无原始数据与实验条件），已在修订稿第 4 节补充局限性声明，明确指出模型缺乏多产地样本的独立外部验证（CHG-03），并在证据清单中标注为无法补做及替代说明。",
+          "evidence": {"status": "无法补做", "source": "", "alternative_explanation": "基线为组织方摘要、无原始数据与实验条件，无法真实补做；已在修订稿第 4 节以局限性声明明确该缺口（CHG-03），后续真实返修中应补采多产地样本完成外部验证。"},
+          "locations": [{"chg_id": "CHG-03", "section": "4 结论"}],
+          "no_change_explanation": ""
+        }
+      ]
+    },
+    {
+      "comment_id": "R3",
+      "raw_text": "结论部分仅一句话，建议扩充对方法局限性的讨论。",
+      "subrequirements": [
+        {
+          "sub_id": "R3.1",
+          "raw_text": "结论部分仅一句话，建议扩充对方法局限性的讨论。",
+          "type": "写作",
+          "severity": "minor",
+          "action": "修改文本",
+          "relation": "并列",
+          "depends_on": [],
+          "decision": "采纳",
+          "decision_reason": "结论确过简，扩充局限性讨论可完全通过修改文本完成。",
+          "response_summary": "已将第 4 节结论由一句话扩充为含两条局限性讨论的段落（外部验证缺口与线性模型限制），见 CHG-03。",
+          "evidence": {"status": "", "source": "", "alternative_explanation": ""},
+          "locations": [{"chg_id": "CHG-03", "section": "4 结论"}],
+          "no_change_explanation": ""
+        }
+      ]
+    }
+  ]
+}

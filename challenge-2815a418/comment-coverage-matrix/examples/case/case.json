@@ -1,0 +1,14 @@
+{
+  "case_id": "SYNTH-EXAMPLE-ONLY-003",
+  "note": "合成示例，非正式案例结果；仅用于演示 comment-coverage-matrix 的调用流程。",
+  "materials": {
+    "manuscript_baseline": "materials/manuscript-baseline.md",
+    "reviewer_comments": "materials/reviewer-comments.md"
+  },
+  "output_contract": {
+    "revised_manuscript": "可编辑的修订稿（Markdown，改动带 CHG 标记）",
+    "response_letter": "逐条回复信草案（每个子要求编号必然出现）",
+    "change_locations": "修改定位记录（CHG -> 子要求/章节/段序）",
+    "evidence_checklist": "未到位证据清单（补做类子要求的状态与替代说明）"
+  }
+}

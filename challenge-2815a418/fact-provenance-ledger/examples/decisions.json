@@ -1,0 +1,30 @@
+{
+  "case_id": "SYNTH-EXAMPLE-ONLY-001",
+  "_note": "合成示例，非正式案例结果。decisions.json 是 Agent 唯一需要手写的判断文件。",
+  "decisions": [
+    {
+      "sub_request": "R1.1",
+      "summary": "明确区分本研究实测值与文献 [3] 引用值",
+      "action": "edit",
+      "evidence_status": "supported",
+      "reason": "基线结果段把本研究 1.5×10^-3 mS cm-1 与文献 [3] 的 2.0×10^-4 mS cm-1 混写，可在台账事实（F 编号见 facts.jsonl）支撑下改写为明确区分主体的表述。",
+      "ledger_refs": ["1.5×10^-3", "2.0×10^-4"]
+    },
+    {
+      "sub_request": "R1.2",
+      "summary": "补充说明极化电压 92–95 mV 的测试温度条件",
+      "action": "edit",
+      "evidence_status": "absent",
+      "reason": "基线摘要未载明对称电池测试温度（'室温'仅用于电导率），不能编造温度值；在相应位置插入诚实标注，待原作者补充实测条件。",
+      "ledger_refs": ["92–95"]
+    },
+    {
+      "sub_request": "R2.1",
+      "summary": "补做 60 °C 下 500 周长循环实验并给出容量保持率",
+      "action": "respond_only",
+      "evidence_status": "infeasible",
+      "reason": "本环境无法补做真实实验，绝不伪造数据；回复信中如实说明限制并给出后续计划，列入未到位证据清单。",
+      "ledger_refs": []
+    }
+  ]
+}

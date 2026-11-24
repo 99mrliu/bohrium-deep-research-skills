@@ -1,0 +1,108 @@
+{
+  "case_id": "SYNTH-EXAMPLE-ONLY-003",
+  "round": 1,
+  "language": "zh",
+  "generated_by": "decompose.py",
+  "generated_at": "2026-11-24T13:22:55+00:00",
+  "skeleton_warning": "本矩阵为自动骨架：子要求只多不少（防漏）。Agent 必须核对：合并误拆、补拆漏拆、逐子要求裁决后再进入后续步骤。",
+  "comments": [
+    {
+      "comment_id": "R1",
+      "raw_text": "（主要意见，方法）：文中主成分数设为 5 但未说明选择依据，请补充说明；同时建议增加不同预处理方法的对比分析，以验证 SNV 选择的合理性。",
+      "subrequirements": [
+        {
+          "sub_id": "R1.1",
+          "raw_text": "（主要意见，方法）：文中主成分数设为 5 但未说明选择依据，请补充说明；",
+          "type": "方法",
+          "severity": "minor",
+          "action": "澄清解释",
+          "relation": "并列",
+          "depends_on": [],
+          "decision": "待定",
+          "decision_reason": "",
+          "response_summary": "",
+          "evidence": {
+            "status": "",
+            "source": "",
+            "alternative_explanation": ""
+          },
+          "locations": [],
+          "no_change_explanation": "",
+          "_note": "骨架预填：type/severity/action 为脚本猜测，decision 待 Agent 裁决；误拆请合并，漏拆请补拆。"
+        },
+        {
+          "sub_id": "R1.2",
+          "raw_text": "同时建议增加不同预处理方法的对比分析，以验证 SNV 选择的合理性。",
+          "type": "方法",
+          "severity": "major",
+          "action": "重做分析",
+          "relation": "并列",
+          "depends_on": [],
+          "decision": "待定",
+          "decision_reason": "",
+          "response_summary": "",
+          "evidence": {
+            "status": "",
+            "source": "",
+            "alternative_explanation": ""
+          },
+          "locations": [],
+          "no_change_explanation": "",
+          "_note": "骨架预填：type/severity/action 为脚本猜测，decision 待 Agent 裁决；误拆请合并，漏拆请补拆。"
+        }
+      ]
+    },
+    {
+      "comment_id": "R2",
+      "raw_text": "（主要意见，数据）：建议补充一组独立的外部验证实验（例如采集不同产地的茶叶样本），以检验模型的泛化能力。",
+      "subrequirements": [
+        {
+          "sub_id": "R2.1",
+          "raw_text": "（主要意见，数据）：建议补充一组独立的外部验证实验（例如采集不同产地的茶叶样本），以检验模型的泛化能力。",
+          "type": "数据",
+          "severity": "major",
+          "action": "补实验",
+          "relation": "并列",
+          "depends_on": [],
+          "decision": "待定",
+          "decision_reason": "",
+          "response_summary": "",
+          "evidence": {
+            "status": "",
+            "source": "",
+            "alternative_explanation": ""
+          },
+          "locations": [],
+          "no_change_explanation": "",
+          "_note": "骨架预填：type/severity/action 为脚本猜测，decision 待 Agent 裁决；误拆请合并，漏拆请补拆。"
+        }
+      ]
+    },
+    {
+      "comment_id": "R3",
+      "raw_text": "（次要意见，写作）：结论部分仅一句话，建议扩充对方法局限性的讨论。",
+      "subrequirements": [
+        {
+          "sub_id": "R3.1",
+          "raw_text": "（次要意见，写作）：结论部分仅一句话，建议扩充对方法局限性的讨论。",
+          "type": "方法",
+          "severity": "minor",
+          "action": "修改文本",
+          "relation": "并列",
+          "depends_on": [],
+          "decision": "待定",
+          "decision_reason": "",
+          "response_summary": "",
+          "evidence": {
+            "status": "",
+            "source": "",
+            "alternative_explanation": ""
+          },
+          "locations": [],
+          "no_change_explanation": "",
+          "_note": "骨架预填：type/severity/action 为脚本猜测，decision 待 Agent 裁决；误拆请合并，漏拆请补拆。"
+        }
+      ]
+    }
+  ]
+}

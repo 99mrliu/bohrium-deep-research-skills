@@ -1,0 +1,49 @@
+{
+  "case_id": "SYNTH-EXAMPLE-ONLY-005",
+  "generated_at": "2026-11-24T13:30:34.411210+00:00",
+  "locations": [
+    {
+      "chg_id": "CHG-01",
+      "action": "replace",
+      "status": "applied",
+      "fail_reason": null,
+      "section": "2 方法",
+      "line": 15,
+      "anchor_excerpt": "蒸馏过程采用标准温度系数。",
+      "linked_rids": [
+        "R1.1"
+      ],
+      "evidence_ids": []
+    },
+    {
+      "chg_id": "CHG-02",
+      "action": "insert_after",
+      "status": "applied",
+      "fail_reason": null,
+      "section": "3 实验与结果",
+      "line": 19,
+      "anchor_excerpt": "表 1 给出了主要结果。",
+      "linked_rids": [
+        "R1.2"
+      ],
+      "evidence_ids": [
+        "EV-01"
+      ]
+    },
+    {
+      "chg_id": "CHG-03",
+      "action": "insert_after",
+      "status": "applied",
+      "fail_reason": null,
+      "section": "4 结论",
+      "line": 23,
+      "anchor_excerpt": "后续工作将探索更细粒度的中间层知识迁移方案。",
+      "linked_rids": [
+        "R2.1"
+      ],
+      "evidence_ids": [
+        "EV-02"
+      ]
+    }
+  ]
+}

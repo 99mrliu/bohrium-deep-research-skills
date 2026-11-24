@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="zh"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>审查包 review_pack — SYNTH-EXAMPLE-ONLY-005</title>
+<style>
+:root{--ok:#1a7f37;--warn:#9a6700;--bad:#cf222e;--muted:#57606a;--line:#d0d7de;--bg:#f6f8fa}
+*{box-sizing:border-box}
+body{font-family:-apple-system,"PingFang SC","Hiragino Sans GB","Noto Sans CJK SC","Microsoft YaHei",sans-serif;
+ margin:0;background:var(--bg);color:#1f2328;line-height:1.65}
+.wrap{max-width:980px;margin:0 auto;padding:28px 20px 80px}
+h1{font-size:22px;border-bottom:2px solid var(--line);padding-bottom:8px}
+h2{font-size:17px;margin-top:36px;border-left:4px solid #0969da;padding-left:10px}
+.meta{color:var(--muted);font-size:13px}
+.badge{display:inline-block;padding:2px 10px;border-radius:12px;font-size:12px;font-weight:600;margin:2px 4px 2px 0;border:1px solid}
+.badge.ok{color:var(--ok);border-color:var(--ok);background:#dafbe1}
+.badge.warn{color:var(--warn);border-color:var(--warn);background:#fff8c5}
+.badge.bad{color:var(--bad);border-color:var(--bad);background:#ffebe9}
+.badge.muted{color:var(--muted);border-color:var(--muted);background:#eaeef2}
+table{border-collapse:collapse;width:100%;font-size:13px;background:#fff;margin:10px 0}
+th,td{border:1px solid var(--line);padding:6px 10px;text-align:left;vertical-align:top}
+th{background:#f0f3f6}
+.card{background:#fff;border:1px solid var(--line);border-radius:8px;padding:14px 18px;margin:14px 0}
+.card h3{margin:0 0 6px;font-size:15px}
+.card .loc{font-size:12px;color:var(--muted)}
+.diff{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-top:10px}
+.diff .col{border:1px solid var(--line);border-radius:6px;padding:8px 10px;font-size:13px;white-space:pre-wrap;word-break:break-all}
+.diff .before{background:#ffebe9}
+.diff .after{background:#dafbe1}
+.diff .tag{font-size:11px;font-weight:700;color:var(--muted)}
+a{color:#0969da;text-decoration:none}
+a:hover{text-decoration:underline}
+ul.unc{background:#fff8c5;border:1px solid #d4a72c;border-radius:8px;padding:10px 14px 10px 32px}
+.notice{background:#ddf4ff;border:1px solid #54aeff;border-radius:8px;padding:10px 14px;font-size:13px;margin:12px 0}
+</style></head><body><div class="wrap">
+<h1>审稿修改审查包 review_pack</h1>
+<p class="meta">案例：<b>SYNTH-EXAMPLE-ONLY-005</b> ｜ 稿件：基于注意力蒸馏的轻量化文本分类方法研究（虚构示例稿） ｜ 生成时间：2026-11-24T13:30:36.274434+00:00<br>
+本页为自包含审查文件（无外部资源）。声明：基于组织方给出的<b>意见摘要</b>修订，不代表审稿人原文逐字要求；未补做任何真实实验；不代表编辑部已接收。</p>
+<p>
+<span class="badge ok">落稿 applied：3/3</span>
+<span class="badge ok">接受 1</span>
+<span class="badge warn">部分接受 1</span>
+<span class="badge bad">无法完成 1</span>
+<span class="badge warn">证据待补 1</span>
+<span class="badge bad">证据无法提供 1</span>
+</p>
+<h2>覆盖矩阵（子要求 × 裁决 × 证据状态 × 定位）</h2>
+<table><tr><th>子要求</th><th>意见要点</th><th>裁决</th><th>关联修改（点击跳转）</th><th>证据状态</th></tr>
+<tr><td><b>R1.1</b></td><td>方法部分未说明蒸馏温度系数 τ 的具体取值及选择依据。</td><td><span class="badge ok">接受</span></td><td><a href="#chg-CHG-01">CHG-01</a></td><td>—</td></tr>
+<tr><td><b>R1.2</b></td><td>缺少与常见基线模型（如 TextCNN、BERT-base）的对比数据。</td><td><span class="badge warn">部分接受</span></td><td><a href="#chg-CHG-02">CHG-02</a></td><td><span class="badge warn">EV-01 待补</span></td></tr>
+<tr><td><b>R2.1</b></td><td>建议补充在十亿参数级教师模型上的蒸馏实验。</td><td><span class="badge bad">无法完成</span></td><td><a href="#chg-CHG-03">CHG-03</a></td><td><span class="badge bad">EV-02 无法提供</span></td></tr>
+</table>
+<h2>改动卡片（before / after 对照）</h2>
+<div class="card" id="chg-CHG-01">
+<h3>CHG-01 ｜ 替换 ｜ <span class="badge ok">已落实</span></h3>
+<div class="loc">定位：2 方法 第15行 ｜ 子要求：R1.1 ｜ 证据：—</div>
+<div class="loc">修改理由：回应 R1.1：补充蒸馏温度系数 τ 的取值与选择依据。</div>
+<div class="diff"><div class="col before"><span class="tag">BEFORE（修改前）</span><br>蒸馏过程采用标准温度系数。</div><div class="col after"><span class="tag">AFTER（修改后）</span><br>蒸馏过程采用温度系数 τ=4，该取值依据验证集上的网格搜索（τ∈{1, 2, 4, 8}）确定，τ=4 时学生模型在验证集上的分类精度最高。</div></div>
+</div>
+<div class="card" id="chg-CHG-02">
+<h3>CHG-02 ｜ 后插 ｜ <span class="badge ok">已落实</span></h3>
+<div class="loc">定位：3 实验与结果 第19行 ｜ 子要求：R1.2 ｜ 证据：EV-01</div>
+<div class="loc">修改理由：回应 R1.2：补入对比实验的说明与诚实占位；数据未真实补跑，不得编造数字。</div>
+<div class="diff"><div class="col before"><span class="tag">BEFORE（修改前）</span><br>（新增，无原文）</div><div class="col after"><span class="tag">AFTER（修改后）</span><br> 应审稿要求，本节将补充与 TextCNN 及 BERT-base 基线模型的对比结果（精度与推理速度）。【待补数据 EV-01】</div></div>
+</div>
+<div class="card" id="chg-CHG-03">
+<h3>CHG-03 ｜ 后插 ｜ <span class="badge ok">已落实</span></h3>
+<div class="loc">定位：4 结论 第23行 ｜ 子要求：R2.1 ｜ 证据：EV-02</div>
+<div class="loc">修改理由：回应 R2.1：实验无法补做，以如实补充局限性说明的方式回应。</div>
+<div class="diff"><div class="col before"><span class="tag">BEFORE（修改前）</span><br>（新增，无原文）</div><div class="col after"><span class="tag">AFTER（修改后）</span><br> 此外，受算力条件限制，本文未能在十亿参数级教师模型上开展蒸馏实验，该大规模验证一并列入后续工作。</div></div>
+</div>
+<h2>证据清单（未到位证据如实标注）</h2>
+<table><tr><th>EV 编号</th><th>描述</th><th>状态</th><th>关联子要求</th><th>关联修改</th><th>备注</th></tr>
+<tr><td><b>EV-01</b></td><td>与 TextCNN、BERT-base 基线模型的对比实验数据（精度/速度）</td><td><span class="badge warn">待补</span></td><td>R1.2</td><td><a href="#chg-CHG-02">CHG-02</a></td><td>数据文件尚未真实补跑；正文仅以【待补数据 EV-01】占位，提交前须替换为真实数据。</td></tr>
+<tr><td><b>EV-02</b></td><td>十亿参数级教师模型上的蒸馏实验结果</td><td><span class="badge bad">无法提供</span></td><td>R2.1</td><td><a href="#chg-CHG-03">CHG-03</a></td><td>算力条件不足，无法补做；已在结论中以局限性说明如实回应（CHG-03）。</td></tr>
+</table>
+<h2>不确定性</h2>
+<ul class="unc">
+<li>R1.2 所需对比数据未真实补跑，正文为【待补数据 EV-01】占位，交付状态只能记 partial。</li>
+<li>回复基于意见摘要而非审稿人逐字原文，正式提交前须对照原文复核表述。</li>
+<li>信头信息（稿件编号、通讯作者、日期、责任编辑）为占位，待补全。</li>
+</ul>
+<p class="meta">生成工具：editorial-delivery-forge / html_pack.py ｜ 产物与 revised-manuscript.md、response-letter.md、change-locations.json、evidence-checklist.json 同源生成，编号一致。</p>
+</div></body></html>

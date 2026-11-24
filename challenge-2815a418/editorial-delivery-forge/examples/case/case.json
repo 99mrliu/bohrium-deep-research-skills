@@ -1,0 +1,15 @@
+{
+  "case_id": "SYNTH-EXAMPLE-ONLY-005",
+  "note": "合成示例，非正式案例结果。仅供演示 editorial-delivery-forge 流水线。",
+  "task": "依据 materials/reviewer-comments.md 中的意见摘要修订 materials/manuscript-baseline.md，交付修订稿、回复信草案、修改定位表与证据清单。",
+  "materials": {
+    "baseline": "materials/manuscript-baseline.md",
+    "reviewer_comments": "materials/reviewer-comments.md"
+  },
+  "output_contract": {
+    "revised_manuscript": "带 CHG 修改标记与修改摘要表的修订稿（markdown）",
+    "response_letter": "结构化回复信草案（markdown：信头占位/总述/逐条/收口表）",
+    "change_locations": "修改定位表（JSON：CHG -> 章节/行号/关联子要求）",
+    "evidence_checklist": "证据清单（JSON：EV -> 状态，未到位证据如实标注）"
+  }
+}

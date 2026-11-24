@@ -1,0 +1,43 @@
+{
+  "changes": [
+    {
+      "chg_id": "CHG-01",
+      "sub_ids": [
+        "R1.1"
+      ],
+      "section": "2 方法",
+      "paragraph": 5,
+      "action": "replace",
+      "note": "补充主成分数选择依据",
+      "anchor_preview": "主成分数设为 5。",
+      "status": "applied"
+    },
+    {
+      "chg_id": "CHG-02",
+      "sub_ids": [
+        "R1.2"
+      ],
+      "section": "2 方法",
+      "paragraph": 5,
+      "action": "insert_after",
+      "note": "补入预处理对比分析结果",
+      "anchor_preview": "光谱经标准正态变量变换（SNV）预处理后输入模型。",
+      "status": "applied"
+    },
+    {
+      "chg_id": "CHG-03",
+      "sub_ids": [
+        "R2.1",
+        "R3.1"
+      ],
+      "section": "4 结论",
+      "paragraph": 9,
+      "action": "replace",
+      "note": "扩充结论并加入局限性声明（含外部验证缺口）",
+      "anchor_preview": "所提方法可用于茶叶含水率的快速无损检测。",
+      "status": "applied"
+    }
+  ],
+  "generated_by": "apply_edits.py",
+  "generated_at": "2026-11-24T13:22:56+00:00"
+}

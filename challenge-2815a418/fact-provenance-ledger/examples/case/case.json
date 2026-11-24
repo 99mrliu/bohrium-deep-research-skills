@@ -1,0 +1,10 @@
+{
+  "case_id": "SYNTH-EXAMPLE-ONLY-001",
+  "note": "合成示例，非正式案例结果。仅用于演示 fact-provenance-ledger 的 quick path。",
+  "output_contract": {
+    "revised_manuscript": "带 CHG 标记的可编辑修订稿（markdown）",
+    "response_letter": "逐条回应意见的回复信草案（markdown）",
+    "change_locations": "修改定位清单（JSON，含 change_id/位置/状态）",
+    "evidence_checklist": "未到位证据清单（JSON，含 absent/infeasible 项）"
+  }
+}

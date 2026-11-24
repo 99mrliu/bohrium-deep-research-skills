@@ -1,0 +1,94 @@
+{
+  "result": "PASS",
+  "total_checks": 14,
+  "failed": 0,
+  "subrequirements": 4,
+  "changes": 3,
+  "checks": [
+    {
+      "check": "a",
+      "item": "R1.1",
+      "ok": true,
+      "detail": "块内容 189 字符（要求 ≥30）"
+    },
+    {
+      "check": "a",
+      "item": "R1.2",
+      "ok": true,
+      "detail": "块内容 340 字符（要求 ≥30）"
+    },
+    {
+      "check": "a",
+      "item": "R2.1",
+      "ok": true,
+      "detail": "块内容 435 字符（要求 ≥30）"
+    },
+    {
+      "check": "a",
+      "item": "R3.1",
+      "ok": true,
+      "detail": "块内容 187 字符（要求 ≥30）"
+    },
+    {
+      "check": "b",
+      "item": "CHG-01",
+      "ok": true,
+      "detail": "归属 ['R1.1']"
+    },
+    {
+      "check": "b",
+      "item": "CHG-02",
+      "ok": true,
+      "detail": "归属 ['R1.2']"
+    },
+    {
+      "check": "b",
+      "item": "CHG-03",
+      "ok": true,
+      "detail": "归属 ['R2.1', 'R3.1']"
+    },
+    {
+      "check": "c",
+      "item": "R3.1",
+      "ok": true,
+      "detail": "关联 CHG: ['CHG-03']"
+    },
+    {
+      "check": "d",
+      "item": "R1.1",
+      "ok": true,
+      "detail": "块内裁决表述与矩阵（采纳）一致"
+    },
+    {
+      "check": "d",
+      "item": "R1.2",
+      "ok": true,
+      "detail": "块内裁决表述与矩阵（采纳）一致"
+    },
+    {
+      "check": "d",
+      "item": "R2.1",
+      "ok": true,
+      "detail": "块内裁决表述与矩阵（部分采纳）一致"
+    },
+    {
+      "check": "d",
+      "item": "R3.1",
+      "ok": true,
+      "detail": "块内裁决表述与矩阵（采纳）一致"
+    },
+    {
+      "check": "e",
+      "item": "R1.2",
+      "ok": true,
+      "detail": "证据清单已覆盖（状态 到位）"
+    },
+    {
+      "check": "e",
+      "item": "R2.1",
+      "ok": true,
+      "detail": "证据清单已覆盖（状态 无法补做）"
+    }
+  ],
+  "generated_at": "2026-11-24T13:22:57+00:00"
+}

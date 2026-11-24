@@ -1,0 +1,59 @@
+{
+  "anchors": [
+    {
+      "anchor_id": "L001",
+      "kind": "heading",
+      "preview": "# 基于两阶段流程的 Z 场景快速对齐方法（基线稿，合成示例）"
+    },
+    {
+      "anchor_id": "L003",
+      "kind": "heading",
+      "preview": "## 摘要"
+    },
+    {
+      "anchor_id": "L004",
+      "kind": "para",
+      "preview": "本文提出一种用于 Z 场景的快速对齐方法。实验表明，本方法在全部数据集上均优于现有方法，准确率达到 95%。本方法不需要"
+    },
+    {
+      "anchor_id": "L006",
+      "kind": "heading",
+      "preview": "## 1 引言"
+    },
+    {
+      "anchor_id": "L007",
+      "kind": "para",
+      "preview": "Z 场景的对齐问题长期存在，现有方法依赖大量人工标注，部署成本高。"
+    },
+    {
+      "anchor_id": "L009",
+      "kind": "heading",
+      "preview": "## 2 方法"
+    },
+    {
+      "anchor_id": "L010",
+      "kind": "para",
+      "preview": "我们采用两阶段流程：先进行无标注预对齐，再以轻量规则校正。"
+    },
+    {
+      "anchor_id": "L012",
+      "kind": "heading",
+      "preview": "## 3 实验"
+    },
+    {
+      "anchor_id": "L013",
+      "kind": "para",
+      "preview": "我们在数据集 D1 与 D2 上进行评估，主结果见表 1。在 D1 与 D2 上，本方法准确率为 95%。"
+    },
+    {
+      "anchor_id": "L015",
+      "kind": "heading",
+      "preview": "## 4 结论"
+    },
+    {
+      "anchor_id": "L016",
+      "kind": "para",
+      "preview": "本方法在所有场景下均有效。"
+    }
+  ]
+}

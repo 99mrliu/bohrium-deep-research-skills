@@ -1,0 +1,14 @@
+{
+  "case_id": "SYNTH-EXAMPLE-ONLY-002",
+  "note": "合成示例，非正式案例结果；仅用于演示 anchor-edit-engine 的端到端流程。",
+  "materials": {
+    "baseline": "materials/manuscript-baseline.md",
+    "reviewer_comments": "materials/reviewer-comments.md"
+  },
+  "output_contract": {
+    "revised_manuscript": "可编辑修订稿（Markdown，含 CHG 标记）",
+    "response_letter": "审稿回复信草案（逐条回复，含规范定位行）",
+    "change_locations": "修改定位登记（changes.json：章节+段序+锚点 quote）",
+    "evidence_checklist": "未到位证据清单（Markdown）"
+  }
+}

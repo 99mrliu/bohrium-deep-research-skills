@@ -1,0 +1,31 @@
+{
+  "case_id": "SYNTH-EXAMPLE-ONLY-004",
+  "status": "partial",
+  "status_note": "诚实部分完成：存在无法补做/警告/失败项，见 uncertainty",
+  "sources": [
+    "materials/manuscript-baseline.md",
+    "materials/reviewer-comments.md"
+  ],
+  "uncertainty": [
+    "2.1 无法补做：无法获得数据集 D3 的授权，运行期内无法补做该对照实验；在修订稿与回复信中如实披露。"
+  ],
+  "change_records": [
+    {
+      "chg_id": "CHG-001",
+      "req_id": "1.1",
+      "anchor_quote": "准确率达到 95%。本方法不需要额外标注，具有广泛的适用性。",
+      "status": "applied"
+    },
+    {
+      "chg_id": "CHG-002",
+      "req_id": "1.2",
+      "anchor_quote": "本方法在所有场景下均有效。",
+      "status": "applied"
+    }
+  ],
+  "revised_manuscript": "revised-manuscript.md",
+  "response_letter": "response-letter.md",
+  "change_locations": "change-locations.json",
+  "evidence_checklist": "evidence-checklist.json",
+  "finalized_at": "2026-11-24T21:29:37"
+}

@@ -1,0 +1,60 @@
+{
+  "case_id": "SYNTH-EXAMPLE-ONLY-005",
+  "_note": "合成示例，非正式案例结果。示范 decisions.json 填写格式（真实运行时由 Agent 阅读材料后生成，放入 /app/work/）。",
+  "manuscript_title": "基于注意力蒸馏的轻量化文本分类方法研究（虚构示例稿）",
+  "manuscript_id": "",
+  "corresponding_author": "",
+  "editor_name": "",
+  "date": "",
+  "reviewer_decisions": [
+    {
+      "rid": "R1.1",
+      "comment_id": "R1",
+      "reviewer": "审稿人 1",
+      "comment_summary": "总体认可方法的简洁性，但认为实验与方法描述需要补充。",
+      "summary": "方法部分未说明蒸馏温度系数 τ 的具体取值及选择依据。",
+      "decision": "accept",
+      "rationale": "意见合理，可在方法部分直接补充取值与网格搜索依据。",
+      "response_text": "感谢指出。已在第 2 节补充蒸馏温度系数 τ=4 及其在验证集上网格搜索（τ∈{1, 2, 4, 8}）的选择依据（见 CHG-01）。"
+    },
+    {
+      "rid": "R1.2",
+      "comment_id": "R1",
+      "reviewer": "审稿人 1",
+      "comment_summary": "总体认可方法的简洁性，但认为实验与方法描述需要补充。",
+      "summary": "缺少与常见基线模型（如 TextCNN、BERT-base）的对比数据。",
+      "decision": "partial",
+      "rationale": "方向认可，但本代理不能冒称真实补做了对比实验；先在正文以诚实占位标注，数据文件待真实补跑后替换。",
+      "response_text": "感谢建议。已在第 3 节加入补充对比实验的说明与占位标记【待补数据 EV-01】（见 CHG-02）；对比数据文件尚未真实补跑，到位前本占位不得移除。"
+    },
+    {
+      "rid": "R2.1",
+      "comment_id": "R2",
+      "reviewer": "审稿人 2",
+      "comment_summary": "建议验证方法在更大规模教师模型下的有效性。",
+      "summary": "建议补充在十亿参数级教师模型上的蒸馏实验。",
+      "decision": "unable",
+      "rationale": "当前算力条件无法支撑十亿参数级教师模型的蒸馏实验，且不得编造实验结果；以在结论中如实补充局限性说明回应。",
+      "response_text": "感谢建议。因算力条件限制无法完成该实验（EV-02 记为无法提供），已在第 4 节如实补充该局限性说明并将其列入后续工作（见 CHG-03）。"
+    }
+  ],
+  "evidence": [
+    {
+      "eid": "EV-01",
+      "description": "与 TextCNN、BERT-base 基线模型的对比实验数据（精度/速度）",
+      "status": "pending",
+      "note": "数据文件尚未真实补跑；正文仅以【待补数据 EV-01】占位，提交前须替换为真实数据。"
+    },
+    {
+      "eid": "EV-02",
+      "description": "十亿参数级教师模型上的蒸馏实验结果",
+      "status": "impossible",
+      "note": "算力条件不足，无法补做；已在结论中以局限性说明如实回应（CHG-03）。"
+    }
+  ],
+  "uncertainties": [
+    "R1.2 所需对比数据未真实补跑，正文为【待补数据 EV-01】占位，交付状态只能记 partial。",
+    "回复基于意见摘要而非审稿人逐字原文，正式提交前须对照原文复核表述。",
+    "信头信息（稿件编号、通讯作者、日期、责任编辑）为占位，待补全。"
+  ]
+}

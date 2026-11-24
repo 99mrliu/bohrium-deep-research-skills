@@ -1,0 +1,47 @@
+{
+  "overall": "pass",
+  "checks": [
+    {
+      "name": "artifacts_present",
+      "status": "pass",
+      "details": "全部存在"
+    },
+    {
+      "name": "coverage_子要求逐条覆盖",
+      "status": "pass",
+      "details": "3 条子要求均在回复信中出现"
+    },
+    {
+      "name": "anchor_逐字命中",
+      "status": "pass",
+      "details": "全部锚点逐字唯一命中基线"
+    },
+    {
+      "name": "revised_确有改动且对齐",
+      "status": "pass",
+      "details": "修订稿与 changes.json 对齐"
+    },
+    {
+      "name": "chg_三方一致",
+      "status": "pass",
+      "details": "revised=['CHG-001', 'CHG-002'] changes=['CHG-001', 'CHG-002'] letter=['CHG-001', 'CHG-002']"
+    },
+    {
+      "name": "evidence_状态合法",
+      "status": "pass",
+      "details": "证据状态全部合法"
+    },
+    {
+      "name": "tone_禁用语气",
+      "status": "pass",
+      "details": "未命中红线表述"
+    },
+    {
+      "name": "numbers_材料外数字",
+      "status": "pass",
+      "details": "无材料外数字"
+    }
+  ],
+  "warnings": [],
+  "ts": "2026-11-24T21:29:37"
+}

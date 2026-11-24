@@ -1,0 +1,55 @@
+{
+  "case_id": "SYNTH-EXAMPLE-ONLY-001",
+  "status": "partial",
+  "artifacts": {
+    "revised_manuscript": "/Users/liuhengshen/Desktop/bhr_product/3rd/4/challenge-2815a418/bundles/fact-provenance-ledger/examples/output/revised-manuscript.md",
+    "response_letter": "/Users/liuhengshen/Desktop/bhr_product/3rd/4/challenge-2815a418/bundles/fact-provenance-ledger/examples/output/response-letter.md",
+    "change_locations": "/Users/liuhengshen/Desktop/bhr_product/3rd/4/challenge-2815a418/bundles/fact-provenance-ledger/examples/output/change-locations.json",
+    "evidence_checklist": "/Users/liuhengshen/Desktop/bhr_product/3rd/4/challenge-2815a418/bundles/fact-provenance-ledger/examples/output/evidence-checklist.json"
+  },
+  "sources": [
+    "/Users/liuhengshen/Desktop/bhr_product/3rd/4/challenge-2815a418/bundles/fact-provenance-ledger/examples/case/materials/manuscript-baseline.md",
+    "/Users/liuhengshen/Desktop/bhr_product/3rd/4/challenge-2815a418/bundles/fact-provenance-ledger/examples/case/materials/reviewer-comments.md",
+    "/Users/liuhengshen/Desktop/bhr_product/3rd/4/challenge-2815a418/bundles/fact-provenance-ledger/examples/work/facts.jsonl",
+    "/Users/liuhengshen/Desktop/bhr_product/3rd/4/challenge-2815a418/bundles/fact-provenance-ledger/examples/output/ground_report.json"
+  ],
+  "uncertainty": [
+    "存在 infeasible 子要求（需真实补实验），本环境无法完成",
+    "存在 infeasible 子要求（需真实补实验），本环境无法完成"
+  ],
+  "change_records": [
+    {
+      "change_id": "CHG-02",
+      "sub_request": "R1.2",
+      "action": "insert_after",
+      "location": "revised-manuscript.md offset=162",
+      "status": "applied"
+    },
+    {
+      "change_id": "CHG-01",
+      "sub_request": "R1.1",
+      "action": "replace",
+      "location": "revised-manuscript.md offset=204",
+      "status": "applied"
+    },
+    {
+      "change_id": "CHG-02",
+      "sub_request": "R1.2",
+      "action": "insert_after",
+      "location": "revised-manuscript.md offset=162",
+      "status": "applied"
+    },
+    {
+      "change_id": "CHG-01",
+      "sub_request": "R1.1",
+      "action": "replace",
+      "location": "revised-manuscript.md offset=204",
+      "status": "applied"
+    }
+  ],
+  "notes": [
+    "boot: partial result placeholder（机械阶段未完成，后续更新）",
+    "boot: partial result placeholder（机械阶段未完成，后续更新）"
+  ],
+  "disclaimer": "本结果为基线摘要上的修订草案：意见按 reviewer-comments.md 摘要转述（非逐字审稿原文）；未补做任何真实实验；不代表原作者已改稿或编辑部已接收。"
+}

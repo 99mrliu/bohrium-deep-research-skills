@@ -1,0 +1,32 @@
+{
+  "pass": true,
+  "checks": {
+    "a_chg_exists": {
+      "pass": true,
+      "detail": []
+    },
+    "b_markers_in_revised": {
+      "pass": true,
+      "detail": []
+    },
+    "c_location_fields": {
+      "pass": true,
+      "detail": []
+    },
+    "d_no_orphan_changes": {
+      "pass": true,
+      "detail": []
+    },
+    "e_subrequests_covered": {
+      "pass": true,
+      "detail": []
+    }
+  },
+  "stats": {
+    "changes_total": 3,
+    "chg_cited_in_letter": 3,
+    "location_lines": 3,
+    "subrequests_expected": 3
+  },
+  "errors": []
+}

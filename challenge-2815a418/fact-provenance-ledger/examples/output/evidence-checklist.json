@@ -1,0 +1,17 @@
+{
+  "evidence_checklist": [
+    {
+      "sub_request": "R1.2",
+      "evidence_status": "absent",
+      "summary": "补充说明极化电压 92–95 mV 的测试温度条件",
+      "reason": "基线摘要未载明对称电池测试温度（'室温'仅用于电导率），不能编造温度值；在相应位置插入诚实标注，待原作者补充实测条件。"
+    },
+    {
+      "sub_request": "R2.1",
+      "evidence_status": "infeasible",
+      "summary": "补做 60 °C 下 500 周长循环实验并给出容量保持率",
+      "reason": "本环境无法补做真实实验，绝不伪造数据；回复信中如实说明限制并给出后续计划，列入未到位证据清单。"
+    }
+  ],
+  "note": "absent=材料中找不到；infeasible=本环境无法补做"
+}

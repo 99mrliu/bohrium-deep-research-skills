@@ -1,0 +1,37 @@
+{
+  "case_id": "SYNTH-EXAMPLE-ONLY-005",
+  "generated_at": "2026-11-24T13:30:34.411210+00:00",
+  "summary": {
+    "provided": 0,
+    "pending": 1,
+    "impossible": 1
+  },
+  "evidence": [
+    {
+      "eid": "EV-01",
+      "description": "与 TextCNN、BERT-base 基线模型的对比实验数据（精度/速度）",
+      "status": "pending",
+      "status_label": "待补（未到位）",
+      "note": "数据文件尚未真实补跑；正文仅以【待补数据 EV-01】占位，提交前须替换为真实数据。",
+      "linked_rids": [
+        "R1.2"
+      ],
+      "linked_chgs": [
+        "CHG-02"
+      ]
+    },
+    {
+      "eid": "EV-02",
+      "description": "十亿参数级教师模型上的蒸馏实验结果",
+      "status": "impossible",
+      "status_label": "无法提供",
+      "note": "算力条件不足，无法补做；已在结论中以局限性说明如实回应（CHG-03）。",
+      "linked_rids": [
+        "R2.1"
+      ],
+      "linked_chgs": [
+        "CHG-03"
+      ]
+    }
+  ]
+}

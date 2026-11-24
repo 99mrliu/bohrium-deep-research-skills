@@ -1,0 +1,51 @@
+2026-11-24T21:29:36 [DONE] orient
+2026-11-24T21:29:36 [DONE] materials
+2026-11-24T21:29:36 [DONE] anchors
+2026-11-24T21:29:36 GATE-STOP decisions（判断门未满足，脚本停下等待 Agent 判断）
+2026-11-24T21:29:37 判断门已确认（mark），继续后续阶段
+2026-11-24T21:29:37 [SKIP] orient（指纹一致，幂等跳过）
+2026-11-24T21:29:37 [SKIP] materials（指纹一致，幂等跳过）
+2026-11-24T21:29:37 [SKIP] anchors（指纹一致，幂等跳过）
+2026-11-24T21:29:37 [DONE] decisions
+2026-11-24T21:29:37 [DONE] apply
+2026-11-24T21:29:37 [DONE] letter
+2026-11-24T21:29:37   qc| [PASS] artifacts_present — 全部存在
+2026-11-24T21:29:37   qc| [PASS] coverage_子要求逐条覆盖 — 3 条子要求均在回复信中出现
+2026-11-24T21:29:37   qc| [PASS] anchor_逐字命中 — 全部锚点逐字唯一命中基线
+2026-11-24T21:29:37   qc| [PASS] revised_确有改动且对齐 — 修订稿与 changes.json 对齐
+2026-11-24T21:29:37   qc| [PASS] chg_三方一致 — revised=['CHG-001', 'CHG-002'] changes=['CHG-001', 'CHG-002'] letter=['CHG-001', 'CHG-002']
+2026-11-24T21:29:37   qc| [PASS] evidence_状态合法 — 证据状态全部合法
+2026-11-24T21:29:37   qc| [PASS] tone_禁用语气 — 未命中红线表述
+2026-11-24T21:29:37   qc| [PASS] numbers_材料外数字 — 无材料外数字
+2026-11-24T21:29:37   qc| QC-OVERALL: PASS
+2026-11-24T21:29:37 [DONE] qc
+2026-11-24T21:29:37   fz| == 交付摘要 ==
+2026-11-24T21:29:37   fz| case_id: SYNTH-EXAMPLE-ONLY-004
+2026-11-24T21:29:37   fz| status: partial
+2026-11-24T21:29:37   fz| qc: pass
+2026-11-24T21:29:37   fz| 无法补做: 1 项；uncertainty: 1 条
+2026-11-24T21:29:37   fz|   revised_manuscript -> revised-manuscript.md
+2026-11-24T21:29:37   fz|   response_letter -> response-letter.md
+2026-11-24T21:29:37   fz|   change_locations -> change-locations.json
+2026-11-24T21:29:37   fz|   evidence_checklist -> evidence-checklist.json
+2026-11-24T21:29:37   fz| FINALIZE-OK
+2026-11-24T21:29:37 [DONE] finalize
+2026-11-24T21:29:37 [END] 全部阶段完成；预算记账：请在 run.log 追加 BUDGET spent=N remain=M
+2026-11-24T21:29:38 [SKIP] orient（指纹一致，幂等跳过）
+2026-11-24T21:29:38 [SKIP] materials（指纹一致，幂等跳过）
+2026-11-24T21:29:38 [SKIP] anchors（指纹一致，幂等跳过）
+2026-11-24T21:29:38 [SKIP] decisions（指纹一致，幂等跳过）
+2026-11-24T21:29:38 [SKIP] apply（指纹一致，幂等跳过）
+2026-11-24T21:29:38 [SKIP] letter（指纹一致，幂等跳过）
+2026-11-24T21:29:38 [SKIP] qc（指纹一致，幂等跳过）
+2026-11-24T21:29:38 [SKIP] finalize（指纹一致，幂等跳过）
+2026-11-24T21:29:38 [END] 全部阶段完成；预算记账：请在 run.log 追加 BUDGET spent=N remain=M
+2026-11-24T21:29:38 [SKIP] orient（指纹一致，幂等跳过）
+2026-11-24T21:29:38 [SKIP] materials（指纹一致，幂等跳过）
+2026-11-24T21:29:38 [SKIP] anchors（指纹一致，幂等跳过）
+2026-11-24T21:29:38 [SKIP] decisions（指纹一致，幂等跳过）
+2026-11-24T21:29:38 [SKIP] apply（指纹一致，幂等跳过）
+2026-11-24T21:29:38 [SKIP] letter（指纹一致，幂等跳过）
+2026-11-24T21:29:38 [SKIP] qc（指纹一致，幂等跳过）
+2026-11-24T21:29:38 [SKIP] finalize（指纹一致，幂等跳过）
+2026-11-24T21:29:38 [END] 全部阶段完成；预算记账：请在 run.log 追加 BUDGET spent=N remain=M
