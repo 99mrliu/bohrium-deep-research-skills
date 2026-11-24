@@ -1,0 +1,11 @@
+================================================================
+STEP: workorder_compile：合成订单编译为 talk_spec.json
+CMD : python3 /Users/liuhengshen/Desktop/bhr_product/challenge-20870c35-five/bundles/bundle-e-audience-compiler/scripts/workorder_compile.py --case /Users/liuhengshen/Desktop/bhr_product/challenge-20870c35-five/bundles/bundle-e-audience-compiler/examples/case.json --task /Users/liuhengshen/Desktop/bhr_product/challenge-20870c35-five/bundles/bundle-e-audience-compiler/examples/task.md --output /Users/liuhengshen/Desktop/bhr_product/challenge-20870c35-five/bundles/bundle-e-audience-compiler/examples/output_demo/talk_spec.json
+TALK SPEC COMPILED -> /Users/liuhengshen/Desktop/bhr_product/challenge-20870c35-five/bundles/bundle-e-audience-compiler/examples/output_demo/talk_spec.json
+  audience=mixed (extracted)  venue=review (extracted)  language=en (extracted)
+  duration=12 min (extracted)  slides=10-10 (extracted)  per_slide=72.0s  band=[612, 828]s
+  background_ratio_band=[0.15, 0.30]  conclusion_rule=conclusion_first
+[ASSUMPTION] audience: 结构化值 'mixed' 与文本值 'specialist' 冲突，以结构化为准。
+EXIT: 0 (expected 0)
+RESULT: OK
+

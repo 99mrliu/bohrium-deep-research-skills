@@ -1,0 +1,71 @@
+{
+  "_note": "SYNTHETIC EXAMPLE — 合成合规题库（期望 qa_gate.py exit 0）；数字口径与 claims.json 的 anchor 逐字一致。",
+  "case_id": "SYN-QA-001",
+  "questions": [
+    {
+      "id": "Q-01",
+      "category": "mechanism",
+      "question": "两点标定为什么能把毛细响应线性化，而不只是平移了零点？",
+      "claim_ids": ["C-02"],
+      "objection_ref": "OB-1",
+      "primary_slide": "S-04",
+      "backup_slides": ["S-B1"],
+      "answer_points": [
+        "差压读数在 0.42 mL/min 基准点定标后，再于工作点复核斜率，因此校准的是整条响应曲线而非单点偏移。",
+        "标定曲线与残差见 Figure 1；若被追问细节，切到备用页 S-B1 逐点展示残差。"
+      ]
+    },
+    {
+      "id": "Q-02",
+      "category": "data",
+      "question": "n=48 的样本量对 12.7% 的误差上界来说够吗？",
+      "claim_ids": ["C-01"],
+      "objection_ref": "OB-3",
+      "primary_slide": "S-06",
+      "backup_slides": ["S-B2"],
+      "answer_points": [
+        "12.7% 是相对误差上界，来自 n=48 次平行台架试验，逐条数据见 Table 2。",
+        "样本量限制已在局限页声明；统计功效分析放在备用页 S-B2。"
+      ]
+    },
+    {
+      "id": "Q-03",
+      "category": "comparison",
+      "question": "商用机也有自校准功能，关掉之后对比还公平吗？",
+      "claim_ids": ["C-03"],
+      "objection_ref": "OB-2",
+      "primary_slide": "S-07",
+      "backup_slides": ["S-B3"],
+      "answer_points": [
+        "成本对比是 38 USD 对 210 USD；对比时双方都关闭了自校准，以保持工况一致。",
+        "噪声底相差在 0.3 mV 以内，测量协议见备用页 S-B3。"
+      ]
+    },
+    {
+      "id": "Q-04",
+      "category": "limitation",
+      "question": "结论的适用范围是什么？换溶剂或变温会怎样？",
+      "claim_ids": ["C-05"],
+      "objection_ref": "",
+      "primary_slide": "S-08",
+      "backup_slides": [],
+      "answer_points": [
+        "目前结论仅适用于 25 °C 的水相样品，有机溶剂与温度循环均未测试。",
+        "这是适用范围声明而非失败；扩展工况已列入下一步工作（见 S-10）。"
+      ]
+    },
+    {
+      "id": "Q-05",
+      "category": "data",
+      "question": "72 h 稳定性结果可靠吗？",
+      "claim_ids": ["C-04"],
+      "objection_ref": "",
+      "primary_slide": "S-06",
+      "backup_slides": ["S-B2"],
+      "answer_points": [
+        "72 h 连续运行内标定保持目前只是初步结果，样本仅三台设备。",
+        "我们把它标注为 preliminary；正式结论需要补做湿度循环与更多样机。"
+      ]
+    }
+  ]
+}

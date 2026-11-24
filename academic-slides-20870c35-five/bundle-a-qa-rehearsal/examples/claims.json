@@ -1,0 +1,56 @@
+{
+  "_note": "SYNTHETIC EXAMPLE — 合成 claim card 集合，非真实研究结论；anchor 数字逐字摘自 materials/synthetic_paper.txt。",
+  "case_id": "SYN-QA-001",
+  "claims": [
+    {
+      "id": "C-01",
+      "statement": "整机相对参考台的相对误差为 12.7%，来自 n=48 次平行台架试验。",
+      "kind": "result",
+      "strength": "established",
+      "locator": {"file": "materials/synthetic_paper.txt", "section": "3. Results", "exhibit": "Table 2"},
+      "anchor": ["12.7%", "n=48"],
+      "limitations": [],
+      "slide": "S-06"
+    },
+    {
+      "id": "C-02",
+      "statement": "差压读数通过两点标定把毛细响应线性化：基准点固定在 0.42 mL/min，再在工作点复核斜率。",
+      "kind": "method",
+      "strength": "established",
+      "locator": {"file": "materials/synthetic_paper.txt", "section": "2.1 Sensing principle", "exhibit": "Figure 1"},
+      "anchor": ["0.42 mL/min"],
+      "limitations": [],
+      "slide": "S-04"
+    },
+    {
+      "id": "C-03",
+      "statement": "单台成本 38 USD，对照商用机 210 USD；双方关闭自校准后噪声底相差在 0.3 mV 以内。",
+      "kind": "comparison",
+      "strength": "established",
+      "locator": {"file": "materials/synthetic_paper.txt", "section": "3. Results", "exhibit": null},
+      "anchor": ["38 USD", "210 USD", "0.3 mV"],
+      "limitations": [],
+      "slide": "S-07"
+    },
+    {
+      "id": "C-04",
+      "statement": "初步浸泡试验提示读数在 72 h 连续运行内保持标定。",
+      "kind": "result",
+      "strength": "preliminary",
+      "locator": {"file": "materials/synthetic_paper.txt", "section": "3. Results", "exhibit": null},
+      "anchor": ["72 h"],
+      "limitations": ["仅三台设备参与浸泡试验", "尚未做湿度循环"],
+      "slide": "S-06"
+    },
+    {
+      "id": "C-05",
+      "statement": "结论仅适用于 25 °C 的水相样品。",
+      "kind": "limitation",
+      "strength": "contextual",
+      "locator": {"file": "materials/synthetic_paper.txt", "section": "4. Limitations", "exhibit": null},
+      "anchor": ["25 °C"],
+      "limitations": ["有机溶剂未测试", "温度循环未测试"],
+      "slide": "S-08"
+    }
+  ]
+}

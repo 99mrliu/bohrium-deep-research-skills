@@ -1,0 +1,18 @@
+{
+  "case_id": "SYNTHETIC-EXAMPLE-case-d-001",
+  "_comment": "SYNTHETIC EXAMPLE - 模拟平台 /input/case.json 的结构，仅用于示例演示，不是正式测试案例。",
+  "title": "Synthetic slide task: welded perovskite + recycled composites progress review",
+  "audience": "synthetic review committee (mixed materials background)",
+  "duration_min": 10,
+  "slide_count": 8,
+  "language": "en",
+  "venue": "review",
+  "materials_dir": "examples/materials",
+  "output_contract": {
+    "mainline": "central_question / approach / results (each with strength + locator) / limitations",
+    "editable_deck": "editable slide file built in the provided template",
+    "page_evidence_map": "per-page claims welded to verbatim anchors with full locators",
+    "speaker_notes": "per-slide narration notes consistent with page claims",
+    "render_preview": "real rendered PDF/PNG previews of the deck"
+  }
+}

@@ -1,0 +1,19 @@
+{
+  "_note": "SYNTHETIC EXAMPLE — 合成页级 storyboard，非真实 deck；S-B* 为备用页（backup:true），不计入正片页数。",
+  "case_id": "SYN-QA-001",
+  "slides": [
+    {"id": "S-01", "message": "微升级流量计量在教学与野外场景仍然又贵又难。", "role": "hook", "time_s": 60, "backup": false, "exhibits": []},
+    {"id": "S-02", "message": "现有商用方案准确但单价过高，低成本方案精度不可信。", "role": "problem", "time_s": 70, "backup": false, "exhibits": []},
+    {"id": "S-03", "message": "缺的是一个带可信标定的低成本毛细流量传感器。", "role": "gap", "time_s": 60, "backup": false, "exhibits": []},
+    {"id": "S-04", "message": "CapFlow-3 用差压读数加两点标定线性化毛细响应。", "role": "approach", "time_s": 90, "backup": false, "exhibits": [{"file": "materials/synthetic_paper.txt", "exhibit": "Figure 1"}]},
+    {"id": "S-05", "message": "台架协议：n=48 次平行试验，25 °C 水相样品。", "role": "method", "time_s": 80, "backup": false, "exhibits": []},
+    {"id": "S-06", "message": "相对误差 12.7%，初步结果显示 72 h 内标定保持。", "role": "result", "time_s": 110, "backup": false, "exhibits": [{"file": "materials/synthetic_paper.txt", "exhibit": "Table 2"}]},
+    {"id": "S-07", "message": "成本 38 USD 对 210 USD，噪声底与商用机相当。", "role": "comparison", "time_s": 90, "backup": false, "exhibits": []},
+    {"id": "S-08", "message": "适用范围目前限于 25 °C 水相样品。", "role": "limitation", "time_s": 70, "backup": false, "exhibits": []},
+    {"id": "S-09", "message": "结论：低成本方案在受控条件下达到可用精度。", "role": "conclusion", "time_s": 50, "backup": false, "exhibits": []},
+    {"id": "S-10", "message": "下一步：湿度循环、有机溶剂与工程化样机。", "role": "outlook", "time_s": 40, "backup": false, "exhibits": []},
+    {"id": "S-B1", "message": "备用：两点标定曲线与残差细节。", "role": "backup", "time_s": 0, "backup": true, "exhibits": [{"file": "materials/synthetic_paper.txt", "exhibit": "Figure 1"}]},
+    {"id": "S-B2", "message": "备用：n=48 逐条试验数据与统计功效分析。", "role": "backup", "time_s": 0, "backup": true, "exhibits": [{"file": "materials/synthetic_paper.txt", "exhibit": "Table 2"}]},
+    {"id": "S-B3", "message": "备用：对照协议（双方关闭自校准的噪声底测量）。", "role": "backup", "time_s": 0, "backup": true, "exhibits": []}
+  ]
+}

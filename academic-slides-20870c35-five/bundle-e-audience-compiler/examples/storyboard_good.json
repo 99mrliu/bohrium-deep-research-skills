@@ -1,0 +1,137 @@
+{
+  "label": "SYNTHETIC EXAMPLE — 合成 storyboard（合规版），非真实案例产物",
+  "synthetic": true,
+  "slides": [
+    {
+      "id": "S01",
+      "role": "hook",
+      "message": "One in three candidate electrolyte solvents fails before cycle fifty, and we can now rule most of them out before a single experiment.",
+      "notes": "Good morning, and thank you for the twelve minutes. I will start with the number that motivates everything in this pitch. When our collaborators screen candidate electrolyte solvents the old way, roughly one in three candidates fails before cycle fifty, after weeks of synthesis and testing. That failure rate is the tax every battery program pays, and it is why screening, not synthesis, is the bottleneck. In this talk I will show you SOLV-GNN, a graph neural network that predicts early-cycle failure directly from molecular structure, and I will show you the evidence that it removes most of those doomed candidates before anyone opens a glovebox. I will give you the conclusion early, then the method, then the numbers, and I will be explicit about where the evidence is still thin. All data in this synthetic example are fabricated for demonstration. Every slide that follows exists to defend that promise with numbers you can check against the paper.",
+      "transition": "So let me first make the bottleneck concrete.",
+      "backup": false
+    },
+    {
+      "id": "S02",
+      "role": "problem",
+      "message": "Screening is the bottleneck: a single solvent candidate costs about three weeks and two thousand dollars to test, and most of that spend is wasted on failures.",
+      "notes": "Here is the problem in operational terms. One candidate solvent costs roughly three weeks of bench time and about two thousand dollars in materials and instrument hours to evaluate through fifty cycles. A typical program evaluates forty candidates a year, and if a third of them fail early, that is over a quarter of a million dollars and four person-months spent confirming failures. The literature offers heuristics, donor numbers and dielectric constants, but those heuristics miss the interactions that actually drive early failure, such as SEI instability at realistic salt concentrations. What the field lacks is not another heuristic but a cheap, fast filter that ranks candidates before the bench. That is the gap this project attacks, and it is the gap your funding would close at scale. No heuristic currently on the table changes that arithmetic, which is why a learned filter is worth your attention.",
+      "transition": "Our answer is to learn the filter from data rather than from rules.",
+      "backup": false
+    },
+    {
+      "id": "S03",
+      "role": "approach",
+      "message": "SOLV-GNN learns early-cycle failure directly from molecular graphs, so screening becomes a ranking problem that costs milliseconds per candidate.",
+      "notes": "Our approach reframes screening as a ranking problem. Instead of predicting a continuous property and thresholding it, SOLV-GNN takes the molecular graph of a solvent, with atoms as nodes and bonds as edges, and directly predicts the probability of surviving fifty cycles in a standard cell configuration. Training uses our curated set of two hundred and ninety historical candidates with known outcomes, augmented by physics-inspired descriptors for solvation energy. Inference is milliseconds per molecule, so a library of ten thousand candidate solvents can be ranked on a laptop in under a minute. The important point for this committee is what the approach buys: the bench budget is spent only on the top of the ranking, where the model is confident, instead of being spread uniformly over mostly doomed candidates. Critically, the ranking is calibrated, so the score means the same thing across candidate families.",
+      "transition": "Let me show you the headline result before the details.",
+      "backup": false
+    },
+    {
+      "id": "S04",
+      "role": "result",
+      "message": "In held-out validation, SOLV-GNN flags 92 percent of early failures while keeping 85 percent of the survivors, cutting bench cost per confirmed hit by half.",
+      "notes": "Here is the headline, and it is the one slide I want you to remember. On a strictly held-out test set of sixty candidates that the model never saw during training, SOLV-GNN flags ninety-two percent of the solvents that actually failed before cycle fifty, while incorrectly rejecting only fifteen percent of the solvents that would have survived. Translating that into program terms: the bench cost per confirmed surviving candidate drops by roughly a factor of two, because almost none of the budget is spent on failures and very few good candidates are thrown away. Figure two of the paper shows the full operating curve, not a cherry-picked threshold, and the quoted point is the threshold we propose for production use. I will show the per-class breakdown later, but the economic conclusion is already visible here. Every number on this slide was frozen before the test fold was opened.",
+      "transition": "Which brings me to the conclusion this evidence supports.",
+      "exhibits": [
+        {
+          "file": "paper.pdf",
+          "page": 5,
+          "exhibit": "Figure 2"
+        }
+      ],
+      "backup": false
+    },
+    {
+      "id": "S05",
+      "role": "conclusion",
+      "message": "The evidence supports funding: learned screening can halve the cost of electrolyte discovery, and the remaining risk is calibration, not concept.",
+      "notes": "So here is my conclusion, deliberately placed before the technical detail. The concept works: learned graph-based screening can remove most early failures at negligible computational cost, and the economics of discovery change by about a factor of two. The method is novel in that it learns failure directly rather than approximating it through bulk properties, and the preliminary evidence is strong enough to justify the proposed scale-up. I want to be equally clear about what the evidence does not yet show: the model is calibrated on one cell chemistry and one temperature, and generalization to new chemistries is a risk we have quantified only partially. That is a calibration problem, not a concept problem, and the proposed work plan is built exactly around closing it. The rest of the talk shows you how the model works and where it still breaks. If the committee remembers one sentence from today, it should be that one.",
+      "transition": "Now the method, in just enough depth to judge it.",
+      "backup": false
+    },
+    {
+      "id": "S06",
+      "role": "method",
+      "message": "The model is a three-layer message-passing network with solvation-energy descriptors, trained with class-balanced loss and a frozen chemistry-specific calibration head.",
+      "notes": "Method, at the depth needed to judge it. SOLV-GNN is a three-layer message-passing network: each atom aggregates features from its neighbors over three rounds, which captures functional groups and local bonding motifs without hand-crafted rules. We concatenate two physics descriptors, solvation free energy and donor number, at the graph-pooling stage, because they encode effects the graph alone learns only slowly. Training uses a class-balanced cross-entropy loss, since failures are the minority class, and a small calibration head that is retrained frozen when the cell chemistry changes. Everything is validated with scaffold-split cross-validation, so molecules in the test folds share no carbon skeleton with training molecules; this is the conservative split that avoids the optimistic numbers common in this literature. Hyperparameters and ablations are in the paper, section three, and a backup slide carries the architecture diagram. The training pipeline is fully scripted and reproducible from the released configuration files.",
+      "transition": "Does that rigor hold up per class? Here is the breakdown.",
+      "backup": false
+    },
+    {
+      "id": "S07",
+      "role": "result",
+      "message": "Per-class analysis shows the model is strongest exactly where heuristics fail: carbonate blends with high salt concentration, at 0.94 recall.",
+      "notes": "This slide breaks the headline number down by solvent family, because an aggregate can hide a weak class. The model performs best precisely where the classical heuristics perform worst: carbonate blends at high salt concentration, where recall reaches zero point nine four. For ether-based solvents recall is lower, zero point eight one, and I will come back to that in the limitations. Figure three of the paper shows the confusion matrices per family, and the pattern is consistent across the five cross-validation folds, so this is not a single lucky split. Two observations matter for the committee. First, the errors are asymmetric in the safe direction: the model is more likely to over-reject than to pass a failure. Second, performance correlates with training-set coverage per family, which tells us exactly what additional data the proposed work should buy first. That asymmetry is a deliberate design choice encoded in the training loss.",
+      "transition": "How does this compare against the incumbent baselines?",
+      "exhibits": [
+        {
+          "file": "paper.pdf",
+          "page": 6,
+          "exhibit": "Figure 3"
+        }
+      ],
+      "backup": false
+    },
+    {
+      "id": "S08",
+      "role": "comparison",
+      "message": "Against the two incumbent baselines, heuristic scoring and a descriptor-only classifier, SOLV-GNN lifts failure recall by at least 18 points at equal precision.",
+      "notes": "Comparison against what programs actually use today. The first baseline is the standard heuristic score, a weighted combination of donor number and dielectric constant; the second is a descriptor-only random forest trained on the same data, which isolates the contribution of the graph representation. At matched precision of zero point eight, the heuristic reaches zero point five eight failure recall, the descriptor forest reaches zero point seven four, and SOLV-GNN reaches zero point nine two. That is an eighteen-point lift over the stronger baseline, and it comes specifically from the graph representation, as the ablation in table two of the paper confirms. I should note the honest caveat: both baselines were tuned by us, and although we followed published settings, a specialist team might squeeze a few more points from the forest. The margin, however, is large enough that this caveat does not change the ordering. We also ran a paired bootstrap, and the intervals exclude equality comfortably.",
+      "transition": "Now the part I will not hide: where the model still fails.",
+      "exhibits": [
+        {
+          "file": "paper.pdf",
+          "page": 7,
+          "exhibit": "Table 2"
+        }
+      ],
+      "backup": false
+    },
+    {
+      "id": "S09",
+      "role": "limitation",
+      "message": "Three limits bound the claim: one cell chemistry, one temperature, and ether solvents where coverage is thin and recall drops to 0.81.",
+      "notes": "Let me state the limitations as precisely as the results. First, all training and test data come from one cell chemistry, lithium metal with a standard cathode, at one temperature, twenty-five degrees; we have no evidence yet about other chemistries or cold operation. Second, ether-based solvents are under-represented in the training set, and recall there drops to zero point eight one, so the model should not be trusted for ether-heavy libraries without the additional data we propose to collect. Third, the model predicts early-cycle failure only; it says nothing about long-term degradation beyond cycle fifty, which remains an experimental question. None of these limits contradicts the conclusion, because the conclusion is about the economics of screening within the validated regime. But they define the boundary of the claim, and the work plan maps one-to-one onto these three gaps. I would rather show you this boundary plainly than have you discover it in review.",
+      "transition": "That boundary defines the proposed work.",
+      "backup": false
+    },
+    {
+      "id": "S10",
+      "role": "outlook",
+      "message": "The requested funding buys calibration across three chemistries and a prospective trial, turning a validated screen into a field standard.",
+      "notes": "I will close with what your decision buys. The requested budget funds three things, in order of risk reduction. First, a calibration study across three cell chemistries and two temperatures, which directly attacks the generalization limit I just showed you. Second, a prospective trial: two hundred new candidates ranked blind, tested by our collaborators without seeing the model scores, which converts retrospective evidence into prospective evidence. Third, release of the ranked library and the training protocol, so the community can audit and extend the screen. If the prospective trial reproduces even two-thirds of the retrospective advantage, screening cost per hit still drops by a third, which is the conservative floor of this proposal. Thank you; I welcome the committee's questions, and I have backup slides on architecture and data curation. Each work package has a measurable milestone tied to the prospective trial timeline.",
+      "transition": null,
+      "backup": false
+    },
+    {
+      "id": "B01",
+      "role": "backup",
+      "message": "Backup: the architecture diagram shows three message-passing layers feeding a pooled graph embedding and the calibration head.",
+      "notes": "Backup slide for architecture questions. Walk the committee through the diagram only if asked: node features, three message-passing rounds, pooling, descriptor concatenation, calibration head.",
+      "transition": null,
+      "exhibits": [
+        {
+          "file": "paper.pdf",
+          "page": 8,
+          "exhibit": "Figure S1"
+        }
+      ],
+      "backup": true
+    },
+    {
+      "id": "B02",
+      "role": "backup",
+      "message": "Backup: the curation table lists the 290 training candidates by family, source, and label provenance.",
+      "notes": "Backup slide for data questions. Use only if the committee probes training-set provenance; point to the per-family counts and the exclusion criteria in the curation table.",
+      "transition": null,
+      "exhibits": [
+        {
+          "file": "paper.pdf",
+          "page": 9,
+          "exhibit": "Table S1"
+        }
+      ],
+      "backup": true
+    }
+  ]
+}

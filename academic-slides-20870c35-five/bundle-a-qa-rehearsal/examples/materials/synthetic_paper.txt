@@ -1,0 +1,50 @@
+SYNTHETIC EXAMPLE — 合成示例材料，非真实论文，仅用于演示 slide-qa-rehearsal 流程与门控。
+================================================================================
+
+CapFlow-3: A Low-Cost Differential-Pressure Capillary Flow Sensor
+（合成论文，任何机构、数据与数字均为虚构）
+
+Abstract
+--------
+We present CapFlow-3, a low-cost capillary flow sensor built around a
+differential-pressure readout. Across n=48 bench trials the device achieves
+12.7% relative error against the reference rig. Preliminary soak tests suggest
+the readout remains stable over 72 h of continuous operation.
+
+1. Introduction
+---------------
+Affordable flow metering in the microlitre regime remains a bottleneck for
+teaching laboratories and field deployments. Commercial units are accurate
+but expensive. (合成正文，从略。)
+
+2. Methods
+----------
+2.1 Sensing principle. The differential-pressure readout linearizes the
+capillary response via a two-point calibration: a baseline point is fixed at
+0.42 mL/min, and the slope is re-checked at the operating point. The
+calibration curve and residuals are shown in Figure 1.
+
+2.2 Bench protocol. We ran n=48 parallel trials against the reference rig at
+a controlled temperature of 25 °C with aqueous samples only.
+
+3. Results
+----------
+Across the n=48 trials the relative error against the reference bench is
+12.7% (see Table 2 for the per-trial data). Unit cost is 38 USD per device,
+compared with 210 USD for the commercial unit; with self-calibration disabled
+on both sides, the measured noise floors match within 0.3 mV.
+
+Preliminary tests with three devices suggest the readout holds its
+calibration over 72 h of continuous operation; no humidity cycling has been
+performed yet.
+
+4. Limitations
+--------------
+Findings are limited to aqueous samples at 25 °C. Organic solvents and
+temperature cycling are untested. The 72 h stability result is preliminary
+and based on only three devices.
+
+Figure 1. Two-point calibration curve and residuals.（合成图，从略）
+Table 2. Per-trial relative error for the n=48 bench trials.（合成表，从略）
+
+(End of SYNTHETIC EXAMPLE material.)

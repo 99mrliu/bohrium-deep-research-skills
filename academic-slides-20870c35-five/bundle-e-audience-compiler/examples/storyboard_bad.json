@@ -1,0 +1,108 @@
+{
+  "label": "SYNTHETIC EXAMPLE — 合成 storyboard（埋雷版），非真实案例产物；刻意违反 S1/S3/S4/S5/S6 各一条",
+  "synthetic": true,
+  "slides": [
+    {
+      "id": "S01",
+      "role": "hook",
+      "message": "Battery research has a long history, and understanding that history matters before we discuss any screening method.",
+      "notes": "Let me begin with a long historical introduction to battery research, because context matters. Volta built the first pile in eighteen hundred, and for two centuries electrochemistry advanced mostly through patient experimentation. The lead acid battery powered early automobiles, the nickel cadmium cell powered the first portable tools, and the lithium ion cell, commercialized in nineteen ninety one, reshaped consumer electronics and later transport. Each of these transitions took decades, and each was driven by empirical discovery rather than by predictive design. Goodenough, Whittingham, and Yoshino shared the Nobel prize for the lithium ion work, and their story is instructive because it shows how accidental many materials discoveries have been. I want to walk through several more historical episodes in detail before we get to anything about the present project, because I believe a committee should appreciate the full sweep of the field first, even if that takes a while. Bear with me; the modern context comes later.",
+      "transition": "More context follows.",
+      "backup": false
+    },
+    {
+      "id": "S02",
+      "role": "problem",
+      "message": "Electrolytes are complicated mixtures whose behavior depends on many interacting factors.",
+      "notes": "Let me explain electrolytes from first principles, at some length. An electrolyte is not a single chemical but a mixture: a solvent or blend of solvents, a lithium salt, and often several additives, each present for a distinct reason. The solvent must dissolve the salt, wet the separator, remain stable against both electrodes, and tolerate the operating temperature range. The salt must dissociate enough to carry current but not so aggressively that it corrodes the current collector. Additives sacrificially decompose to form the solid electrolyte interphase, and that interphase, only nanometers thick, largely determines whether a cell survives its early cycles. Every one of these requirements interacts with every other one, which is why formulation has remained an empirical art for decades. I could spend the entire talk on interphase chemistry alone, and in an earlier draft of this presentation I did exactly that. Today I will still give it a good ten slides' worth of attention before moving on to anything computational.",
+      "transition": "And there is further background to cover.",
+      "backup": false
+    },
+    {
+      "id": "S03",
+      "role": "gap",
+      "message": "The literature on solvation structure is large, contradictory, and mostly orthogonal to early-cycle failure prediction.",
+      "notes": "Before anything else, let me review the solvation literature in depth. Raman spectroscopy studies from the nineteen eighties established the contact ion pair picture, but later neutron scattering work complicated it, and modern molecular dynamics has produced at least three competing schools of thought about the solvation shell. There is the aggregate-dominated picture, the solvent-separated picture, and the locally concentrated picture, and the debate between them is genuinely unresolved. I will summarize the main papers from each school, because a committee that has not read this literature cannot fully appreciate the modeling choices that eventually appear in our work. This review alone could fill a seminar, and in the interest of completeness I intend to give it the space it deserves. The practical consequence, which I will reach eventually, is that none of these pictures directly predicts whether a candidate solvent survives fifty cycles in a real cell, and that disconnect is one motivation for data-driven screening.",
+      "transition": "Still more orientation is needed.",
+      "backup": false
+    },
+    {
+      "id": "S04",
+      "role": "hook",
+      "message": "Machine learning itself also has a rich history that deserves retelling before we use it.",
+      "notes": "Since machine learning appears later in this talk, let me also retell its history. Perceptrons date to nineteen fifty eight, and the first AI winter followed Minsky's critique. Backpropagation was popularized in nineteen eighty six, support vector machines dominated the nineties, and the deep learning revival began around twenty twelve with image classification breakthroughs. Graph neural networks are younger still, with the message-passing formalism consolidated around twenty seventeen, and their application to chemistry has grown explosively since. Each of these episodes shaped how practitioners think about representation learning, and each contains lessons about overfitting and evaluation rigor that remain relevant. I want to make sure everyone in the room shares this vocabulary, including the difference between message passing and attention, before I show a single equation from our own model. This may feel slow, but a shared foundation prevents confusion later, and I have budgeted my time accordingly, or at least I believe I have.",
+      "transition": "One more foundational topic.",
+      "backup": false
+    },
+    {
+      "id": "S05",
+      "role": "gap",
+      "message": "Existing screening heuristics rest on bulk properties whose connection to interphase chemistry is indirect.",
+      "notes": "Let me also cover, in full, why the classical heuristics fail. The donor number measures basicity, the dielectric constant measures bulk polarity, and the viscosity affects transport, and screening rules built from these quantities go back to the nineteen seventies. They were never designed to predict interphase stability, which is an interfacial, kinetic, and concentration-dependent phenomenon. Empirically, their correlation with early-cycle survival is weak: across the two hundred and ninety candidates in our dataset, the best heuristic combination explains less than a third of the variance in outcomes. I want to walk through several specific counterexamples, solvents that score beautifully on every heuristic and fail by cycle twenty, and others that score poorly and survive for years, because these counterexamples are the clearest way to see why a learned filter is needed, and I will cite the key references verbally as I go through them. Each counterexample has its own chemistry story, and I will tell three of them properly before we move on, since each illustrates a different failure mode of rule-based thinking.",
+      "transition": "One final piece of background.",
+      "backup": false
+    },
+    {
+      "id": "S06",
+      "role": "problem",
+      "message": "Programs waste enormous budget confirming failures, and this framing of the cost problem deserves its own full slide.",
+      "notes": "I already touched on cost, but the cost problem deserves a fuller treatment before any solution is discussed. A single candidate costs about three weeks and two thousand dollars to evaluate through fifty cycles. Multiply that by the forty candidates a typical program tests per year, and by the roughly one-third early failure rate, and you arrive at more than a quarter of a million dollars and four person-months per year spent confirming failures. That figure deserves a slide of its own, and it deserves to be dwelt on, because until a committee feels the weight of that waste, no computational method will seem worth the risk. I will therefore spend extra time breaking the cost down line by line: synthesis hours, cell assembly, cycler time, electrolyte preparation, and the opportunity cost of cycler channels occupied by doomed candidates. Only after this full accounting, which consumes this slide and much of the next, will I turn to what we actually did about it.",
+      "transition": "Finally, the approach.",
+      "backup": false
+    },
+    {
+      "id": "S07",
+      "role": "approach",
+      "message": "SOLV-GNN learns early-cycle failure from molecular graphs, turning screening into a ranking problem.",
+      "notes": "Now, at last, the approach. SOLV-GNN treats each solvent as a molecular graph, atoms as nodes and bonds as edges, and learns to predict the probability of surviving fifty cycles directly from that structure. This reframes screening as a ranking problem: instead of predicting a bulk property and thresholding it with a fragile heuristic, the model scores candidates on the outcome that actually matters. Training uses two hundred and ninety historically evaluated candidates with known outcomes, plus two physics descriptors appended at the pooling stage. Inference costs milliseconds per molecule, so a library of ten thousand candidates ranks in under a minute on a laptop. The economic consequence is the heart of the pitch: bench budget flows only to the top of the ranking, where the model is confident, instead of being spread across mostly doomed candidates. I realize this slide arrives later in the deck than a committee might wish, and I apologize for the six slides of groundwork, but the approach should now be easy to appreciate in context.",
+      "transition": "A word on the method.",
+      "backup": false
+    },
+    {
+      "id": "S08",
+      "role": "method",
+      "message": "The model is a three-layer message-passing network with physics descriptors, trained with class-balanced loss under scaffold-split validation.",
+      "notes": "The method, briefly, since time is running short. SOLV-GNN applies three rounds of message passing: each atom aggregates features from its neighbors, which lets the network discover functional groups and local bonding motifs without hand-crafted rules. After pooling, we concatenate two physics descriptors, solvation free energy and donor number, because they encode effects that the graph learns only slowly from two hundred and ninety examples. Training minimizes a class-balanced cross-entropy loss, since failures are the minority class, and a small calibration head adapts the model when the cell chemistry changes. All validation uses scaffold splits, so test molecules share no carbon skeleton with training molecules; this is the conservative protocol that avoids the optimistic leakage numbers common in this literature. Hyperparameters were selected on a separate validation fold, and the ablations appear in the paper. I had planned a full architecture walkthrough here, but given how much time the background sections consumed, I will compress the remaining technical detail and move directly to the results.",
+      "transition": "Results next.",
+      "backup": false
+    },
+    {
+      "id": "S09",
+      "role": "result",
+      "message": "On the held-out set the model flags 92 percent of early failures at 15 percent false rejection.",
+      "notes": "The headline result. On the strictly held-out test set of sixty candidates, SOLV-GNN flags ninety-two percent of the solvents that actually failed before cycle fifty, while falsely rejecting fifteen percent of the survivors. The operating point was fixed before the test fold was touched, and the full curve appears in figure two of the paper, which this slide reproduces. In program terms, bench cost per confirmed surviving candidate drops by about half, because almost no budget is wasted on failures and few good candidates are discarded. I will not dwell on this slide as long as it deserves, because the background sections ran long, but the committee should register that the effect size is large, the split is conservative, and the threshold choice is principled rather than tuned to flatter the metric. The per-family breakdown, which shows where the model is strongest and weakest, follows on the next slide, and the comparison against incumbent baselines comes after that.",
+      "transition": "A per-family breakdown follows.",
+      "exhibits": [
+        {"file": "paper.pdf", "page": 5, "exhibit": "Figure 2"}
+      ],
+      "backup": false
+    },
+    {
+      "id": "S10",
+      "role": "result",
+      "message": "Per-family recall peaks at 0.94 for carbonate blends and dips to 0.81 for ethers.",
+      "notes": "The per-family breakdown. Carbonate blends at high salt concentration, the regime where heuristics fail most badly, show the strongest model performance at zero point nine four recall. Ether-based solvents are weaker at zero point eight one, consistent with their thin representation in the training set. The errors are asymmetric in the safe direction: the model over-rejects rather than passing failures, which is the direction a screening tool should err. Across the five cross-validation folds the pattern is stable, so it is not a lucky split artifact, and the correlation between family coverage and family performance tells us exactly which additional data would improve the model fastest. I had a figure for this breakdown, but in assembling the deck late at night I did not bind it to the slide, so I will describe the numbers verbally and trust the committee to take them on faith for now. The comparison to baselines is next, and then, at long last, my conclusion.",
+      "transition": "The baseline comparison.",
+      "backup": false
+    },
+    {
+      "id": "S11",
+      "role": "comparison",
+      "message": "At matched precision, SOLV-GNN beats the heuristic by 34 recall points and the descriptor forest by 18.",
+      "notes": "Against the two incumbent baselines, the picture is decisive. At matched precision of zero point eight, the classical heuristic score reaches zero point five eight failure recall, a descriptor-only random forest trained on the same data reaches zero point seven four, and SOLV-GNN reaches zero point nine two. The lift over the stronger baseline is eighteen points, and the ablation in table two of the paper, reproduced on this slide, shows the gain comes from the graph representation rather than from the physics descriptors alone. One honest caveat: we tuned both baselines ourselves following published settings, and a dedicated specialist team might recover a few points for the forest, but the margin is wide enough that the ordering would not change. I wish I had time to discuss the statistical significance testing in more depth, including the paired bootstrap intervals, but the earlier sections consumed that budget, so I will simply assert that the intervals exclude equality comfortably and move to my conclusion at last.",
+      "transition": "My conclusion, finally.",
+      "exhibits": [
+        {"file": "paper.pdf", "page": 7, "exhibit": "Table 2"}
+      ],
+      "backup": false
+    },
+    {
+      "id": "S12",
+      "role": "conclusion",
+      "message": "Learned screening can halve the cost of electrolyte discovery, and the remaining risk is calibration rather than concept.",
+      "notes": "And so, on the final slide, I reach my conclusion, which a better-organized talk would have given you ten minutes ago. The concept works: learned graph-based screening removes most early failures at negligible cost, and the economics of discovery improve by about a factor of two within the validated regime. The remaining risks are calibration across chemistries, thin coverage of ether solvents, and the absence of long-term degradation predictions, and the proposed work plan addresses each of these directly. I realize, in hindsight, that this conclusion is the single most important sentence of the entire pitch, and that burying it after twelve slides of background and history was a structural error, but there is no time left to reorganize. The committee has now heard everything, in roughly the order a paper would present it, which I believed was the natural order for a talk as well. If I could begin again, I would state the ask, the evidence, and the boundary in the first three minutes and let the details defend themselves afterward. Thank you for your patience; I will take questions in whatever time remains, which I suspect is very little.",
+      "transition": null,
+      "backup": false
+    }
+  ]
+}

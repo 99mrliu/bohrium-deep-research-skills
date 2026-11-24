@@ -1,0 +1,23 @@
+{
+  "case_id": "SYNTH-SLIDES-C-001",
+  "note": "SYNTHETIC EXAMPLE / 合成示例：仅用于演示 deck-runbook-governor 的治理流程，全部内容虚构，不对应任何真实论文或案例",
+  "work_order": {
+    "audience": "合成评审委员会（虚构，跨学科背景）",
+    "duration_min": 12,
+    "slide_count": 10,
+    "mode": "template",
+    "template": "materials/synthetic_template.pptx",
+    "starting_deck": null,
+    "export_formats": ["pdf", "png"]
+  },
+  "output_contract": {
+    "editable_deck": "可编辑演示文件相对路径（相对 /app/output），含讲稿备注",
+    "export_preview": "真实渲染的导出预览相对路径（PDF/PNG，相对 /app/output，可为路径数组）",
+    "content_map": "页级证据映射文件相对路径（每页 message → 论文/材料定位）",
+    "compliance_checks": {
+      "template_conformance": "模板合规自查结论（母版/版式/字体）",
+      "render_checks": "导出渲染自查结论（页数/空白页/溢出）"
+    },
+    "exceptions": "异常与降级记录数组（模板缺失/图片缺失/soffice 缺席/超时等）"
+  }
+}

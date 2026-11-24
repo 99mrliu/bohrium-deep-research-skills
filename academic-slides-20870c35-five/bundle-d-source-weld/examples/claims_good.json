@@ -1,0 +1,59 @@
+{
+  "_comment": "SYNTHETIC EXAMPLE - 全部 claim 的锚点均可逐字焊回合成材料；c5 的锚点横跨 PDF 断词行（contin-/uous）与换行，c6 的锚点横跨 PDF 换行。",
+  "claims": [
+    {
+      "claim_id": "c1",
+      "slide_text": "The welded perovskite module retained 91% of initial efficiency after 1000 hours at 85 degrees C damp-heat aging.",
+      "strength": "established",
+      "locator": {"file": "synthetic_paper_alpha", "pdf_page": 1,
+                  "printed_page": 1, "section": "Abstract",
+                  "exhibit": "Figure 1"},
+      "anchor": "retained 91 percent of its initial efficiency after 1000 hours of damp-heat exposure at 85 degrees Celsius"
+    },
+    {
+      "claim_id": "c2",
+      "slide_text": "Ellipsometry suggests a bandgap near 1.68 eV for the welded triple-cation film (preliminary).",
+      "strength": "preliminary",
+      "locator": {"file": "synthetic_paper_alpha", "pdf_page": 2,
+                  "printed_page": 2, "section": "3. Results",
+                  "exhibit": null},
+      "anchor": "a bandgap of 1.68 eV was measured for the triple-cation film"
+    },
+    {
+      "claim_id": "c3",
+      "slide_text": "Recycled carbon-fiber laminates reached a mean tensile strength of 612 MPa.",
+      "strength": "established",
+      "locator": {"file": "synthetic_paper_beta", "pdf_page": 1,
+                  "printed_page": 1, "section": "Abstract",
+                  "exhibit": "Table 2"},
+      "anchor": "the recycled laminates reached a mean tensile strength of 612 MPa"
+    },
+    {
+      "claim_id": "c4",
+      "slide_text": "Context: porosity stayed below 12% in all recycled panels.",
+      "strength": "contextual",
+      "locator": {"file": "synthetic_paper_beta", "pdf_page": 2,
+                  "printed_page": 2, "section": "3. Results",
+                  "exhibit": "Figure 1"},
+      "anchor": "porosity remained below 12 percent in all recycled panels"
+    },
+    {
+      "claim_id": "c5",
+      "slide_text": "The synthetic pouch cell delivered 178 Wh/kg during 0.5 C cycling at 60 degrees C.",
+      "strength": "established",
+      "locator": {"file": "synthetic_note_gamma", "pdf_page": 1,
+                  "printed_page": 1, "section": null,
+                  "exhibit": "Figure 1"},
+      "anchor": "178 Wh/kg under continuous 0.5 C cycling at 60 degrees Celsius"
+    },
+    {
+      "claim_id": "c6",
+      "slide_text": "Early data indicate about 3.2 mS/cm ionic conductivity at room temperature (preliminary).",
+      "strength": "preliminary",
+      "locator": {"file": "synthetic_note_gamma", "pdf_page": 1,
+                  "printed_page": 1, "section": null,
+                  "exhibit": null},
+      "anchor": "electrolyte showed an ionic conductivity of 3.2 mS/cm at room temperature"
+    }
+  ]
+}

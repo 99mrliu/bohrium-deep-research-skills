@@ -1,0 +1,6 @@
+G1: 类别覆盖缺失，limitation 类追问为 0 题（四类均须 ≥1）
+G2: Q-02 的 primary_slide 'S-99' 不存在于 deck_plan
+G3: Q-02 回答中的数字 '12.5%' 与所链 C-01 的 anchor '12.7%' 单位相同但数值冲突
+G4: Q-05 所链 C-04 强度为 'preliminary'，回答却含过强词 'proves'
+G5: objection 'OB-2' 未被任何题目的 objection_ref 覆盖
+GATE: FAIL (5 violations across G1-G5)

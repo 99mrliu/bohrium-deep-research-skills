@@ -1,0 +1,474 @@
+{
+  "index_version": 1,
+  "materials_dir": "/Users/liuhengshen/Desktop/bhr_product/challenge-20870c35-five/bundles/bundle-d-source-weld/examples/materials",
+  "doc_count": 3,
+  "parse_ok": 3,
+  "docs": [
+    {
+      "doc_id": "synthetic_note_gamma",
+      "source_file": "synthetic_note_gamma.pdf",
+      "sha256": "56ff99837939c286bca94312e0259c9c0b306e3d488b9fa32806edc9d7532be0",
+      "kind": "pdf",
+      "parse_status": "ok",
+      "parse_method": "pdftotext-layout",
+      "page_count": 1,
+      "pages": [
+        {
+          "page": 1,
+          "char_start": 0,
+          "char_end": 768,
+          "chars": 768,
+          "text": "SYNTHETIC EXAMPLE - NOT REAL RESEARCH\nComposite Gel Electrolyte for Pouch Cells: A Synthetic One-Page Note\n\nRuth Almeida and Chen Watanabe\nSynthetic Energy Notes, 2024\nDOI: 10.52810/sen.2024.0233\n\nThis single-page synthetic note demonstrates that the source indexer\nextracts real page structure, captions, and numbers from a PDF via\npdftotext.\n\nIn the fictional cycling test, the prototype pouch cell reached\n178 Wh/kg under contin-\nuous 0.5 C cycling at 60 degrees Celsius, while the composite\nelectrolyte showed an ionic conductivity of 3.2 mS/cm at room\ntemperature.\n\nFigure 1. Nyquist plot of the synthetic pouch cell before and after\ncycling.\n\nThe fictional authors caution that all values on this page are\nsynthetic example data with no real experimental basis.\n"
+        }
+      ],
+      "captions": [
+        {
+          "doc_id": "synthetic_note_gamma",
+          "label": "Figure 1",
+          "page": 1,
+          "text": "Nyquist plot of the synthetic pouch cell before and after cycling."
+        }
+      ],
+      "sections": [],
+      "numbers": [
+        {
+          "doc_id": "synthetic_note_gamma",
+          "value": "2024",
+          "unit": "DOI",
+          "page": 1,
+          "context": "anabe Synthetic Energy Notes, 2024 DOI: 10.52810/sen.2024.0233"
+        },
+        {
+          "doc_id": "synthetic_note_gamma",
+          "value": "10.52810",
+          "unit": null,
+          "page": 1,
+          "context": "hetic Energy Notes, 2024 DOI: 10.52810/sen.2024.0233 This single-pa"
+        },
+        {
+          "doc_id": "synthetic_note_gamma",
+          "value": "178",
+          "unit": "Wh/kg",
+          "page": 1,
+          "context": "prototype pouch cell reached 178 Wh/kg under contin- uous 0.5"
+        },
+        {
+          "doc_id": "synthetic_note_gamma",
+          "value": "0.5",
+          "unit": "C",
+          "page": 1,
+          "context": "178 Wh/kg under contin- uous 0.5 C cycling at 60 degrees Celsi"
+        },
+        {
+          "doc_id": "synthetic_note_gamma",
+          "value": "60",
+          "unit": "degrees",
+          "page": 1,
+          "context": "contin- uous 0.5 C cycling at 60 degrees Celsius, while the co"
+        },
+        {
+          "doc_id": "synthetic_note_gamma",
+          "value": "3.2",
+          "unit": "mS/cm",
+          "page": 1,
+          "context": "owed an ionic conductivity of 3.2 mS/cm at room temperature. F"
+        }
+      ]
+    },
+    {
+      "doc_id": "synthetic_paper_alpha",
+      "source_file": "synthetic_paper_alpha.txt",
+      "sha256": "6fd54078ce11fc11a33fb350af14cfbf7c7bb634e304d2674e32d774bde48e51",
+      "kind": "text",
+      "parse_status": "ok",
+      "parse_method": "direct-read",
+      "page_count": 3,
+      "pages": [
+        {
+          "page": 1,
+          "char_start": 0,
+          "char_end": 1086,
+          "chars": 1086,
+          "text": "SYNTHETIC EXAMPLE - NOT REAL RESEARCH\nDamp-Heat Stable Perovskite Modules via Interfacial Welding: A Synthetic Demonstration Study\n\nAiko Tanabe, Priya Raman, and Jonas Weber\nJournal of Synthetic Photovoltaics Letters, 2024\nDOI: 10.52810/jspl.2024.0311\n\nAbstract\n\nPerovskite solar modules degrade rapidly under damp-heat stress. In this synthetic demonstration study we report an interfacial welding layer, designated WeldLayer-3, that improves module durability: encapsulated minimodules reached a power conversion efficiency of 23.4 percent and retained 91 percent of its initial efficiency after 1000 hours of damp-heat exposure at 85 degrees Celsius and 85 percent relative humidity. All contents of this document are synthetic and created solely to demonstrate the source-weld-verifier skill pipeline.\n\n1. Introduction\n\nPerovskite photovoltaics combine high efficiency with low-cost processing, but their sensitivity to heat and moisture blocks deployment. Interface engineering is widely regarded as the key lever, and this synthetic study explores one fictional welding approach.\n"
+        },
+        {
+          "page": 2,
+          "char_start": 1087,
+          "char_end": 2044,
+          "chars": 957,
+          "text": "\n2. Methods\n\nWeldLayer-3 was deposited by blade coating from a 40 milligram per milliliter precursor solution and annealed for 5 minutes at 100 degrees Celsius. Minimodules with an active area of 25 cm2 were encapsulated and aged in a damp-heat chamber. All procedures described here are fictional and no real experiments were performed.\n\n3. Results\n\nSpectroscopic ellipsometry showed that a bandgap of 1.68 eV was measured for the triple-cation film after welding, unchanged from the unwelded control. The champion minimodule reached a power conversion efficiency of 23.4 percent under one sun. After 1000 hours of damp-heat exposure at 85 degrees Celsius, the welded modules retained 91 percent of their initial efficiency, whereas unwelded controls retained only 54 percent.\n\nFigure 1. Current-voltage curves of the synthetic champion minimodule before and after damp-heat aging.\n\nTable 1. Synthetic device parameters for welded and control minimodules.\n"
+        },
+        {
+          "page": 3,
+          "char_start": 2045,
+          "char_end": 2895,
+          "chars": 850,
+          "text": "\n4. Discussion\n\nThe welding layer appears to suppress interfacial void formation during aging, although the synthetic values in this demonstration are not comparable to real literature and exist only to exercise verbatim anchoring and number auditing.\n\nFigure 2. Cross-sectional schematic of the synthetic welded interface before aging.\n\n5. Conclusion\n\nWeldLayer-3 illustrates how an interfacial welding layer can in principle improve damp-heat stability, although the present study is entirely synthetic and draws no real scientific conclusion.\n\nReferences\n\n[1] Tanabe, A. and Raman, P. Interface welding for perovskites: a synthetic review. Journal of Synthetic Photovoltaics Letters, 2023. DOI: 10.52810/jspl.2023.0097\n[2] Weber, J. Damp-heat aging protocols: fictional perspectives. Synthetic Reliability Notes, 2022. DOI: 10.52810/srn.2022.0044\n"
+        }
+      ],
+      "captions": [
+        {
+          "doc_id": "synthetic_paper_alpha",
+          "label": "Figure 1",
+          "page": 2,
+          "text": "Current-voltage curves of the synthetic champion minimodule before and after damp-heat aging."
+        },
+        {
+          "doc_id": "synthetic_paper_alpha",
+          "label": "Table 1",
+          "page": 2,
+          "text": "Synthetic device parameters for welded and control minimodules."
+        },
+        {
+          "doc_id": "synthetic_paper_alpha",
+          "label": "Figure 2",
+          "page": 3,
+          "text": "Cross-sectional schematic of the synthetic welded interface before aging."
+        }
+      ],
+      "sections": [
+        {
+          "doc_id": "synthetic_paper_alpha",
+          "page": 1,
+          "heading": "Abstract"
+        },
+        {
+          "doc_id": "synthetic_paper_alpha",
+          "page": 1,
+          "heading": "1. Introduction"
+        },
+        {
+          "doc_id": "synthetic_paper_alpha",
+          "page": 2,
+          "heading": "2. Methods"
+        },
+        {
+          "doc_id": "synthetic_paper_alpha",
+          "page": 2,
+          "heading": "3. Results"
+        },
+        {
+          "doc_id": "synthetic_paper_alpha",
+          "page": 3,
+          "heading": "4. Discussion"
+        },
+        {
+          "doc_id": "synthetic_paper_alpha",
+          "page": 3,
+          "heading": "5. Conclusion"
+        },
+        {
+          "doc_id": "synthetic_paper_alpha",
+          "page": 3,
+          "heading": "References"
+        }
+      ],
+      "numbers": [
+        {
+          "doc_id": "synthetic_paper_alpha",
+          "value": "2024",
+          "unit": "DOI",
+          "page": 1,
+          "context": "thetic Photovoltaics Letters, 2024 DOI: 10.52810/jspl.2024.0311"
+        },
+        {
+          "doc_id": "synthetic_paper_alpha",
+          "value": "10.52810",
+          "unit": null,
+          "page": 1,
+          "context": "tovoltaics Letters, 2024 DOI: 10.52810/jspl.2024.0311 Abstract Per"
+        },
+        {
+          "doc_id": "synthetic_paper_alpha",
+          "value": "23.4",
+          "unit": "percent",
+          "page": 1,
+          "context": "ower conversion efficiency of 23.4 percent and retained 91 perce"
+        },
+        {
+          "doc_id": "synthetic_paper_alpha",
+          "value": "91",
+          "unit": "percent",
+          "page": 1,
+          "context": "of 23.4 percent and retained 91 percent of its initial effici"
+        },
+        {
+          "doc_id": "synthetic_paper_alpha",
+          "value": "1000",
+          "unit": "hours",
+          "page": 1,
+          "context": "its initial efficiency after 1000 hours of damp-heat exposure a"
+        },
+        {
+          "doc_id": "synthetic_paper_alpha",
+          "value": "85",
+          "unit": "degrees",
+          "page": 1,
+          "context": "ours of damp-heat exposure at 85 degrees Celsius and 85 percen"
+        },
+        {
+          "doc_id": "synthetic_paper_alpha",
+          "value": "85",
+          "unit": "percent",
+          "page": 1,
+          "context": "ure at 85 degrees Celsius and 85 percent relative humidity. Al"
+        },
+        {
+          "doc_id": "synthetic_paper_alpha",
+          "value": "40",
+          "unit": "milligram",
+          "page": 2,
+          "context": "sited by blade coating from a 40 milligram per milliliter prec"
+        },
+        {
+          "doc_id": "synthetic_paper_alpha",
+          "value": "5",
+          "unit": "minutes",
+          "page": 2,
+          "context": "sor solution and annealed for 5 minutes at 100 degrees Celsiu"
+        },
+        {
+          "doc_id": "synthetic_paper_alpha",
+          "value": "100",
+          "unit": "degrees",
+          "page": 2,
+          "context": "and annealed for 5 minutes at 100 degrees Celsius. Minimodules"
+        },
+        {
+          "doc_id": "synthetic_paper_alpha",
+          "value": "25",
+          "unit": "cm2",
+          "page": 2,
+          "context": "odules with an active area of 25 cm2 were encapsulated and age"
+        },
+        {
+          "doc_id": "synthetic_paper_alpha",
+          "value": "1.68",
+          "unit": "eV",
+          "page": 2,
+          "context": "etry showed that a bandgap of 1.68 eV was measured for the tripl"
+        },
+        {
+          "doc_id": "synthetic_paper_alpha",
+          "value": "23.4",
+          "unit": "percent",
+          "page": 2,
+          "context": "ower conversion efficiency of 23.4 percent under one sun. After"
+        },
+        {
+          "doc_id": "synthetic_paper_alpha",
+          "value": "1000",
+          "unit": "hours",
+          "page": 2,
+          "context": "percent under one sun. After 1000 hours of damp-heat exposure a"
+        },
+        {
+          "doc_id": "synthetic_paper_alpha",
+          "value": "85",
+          "unit": "degrees",
+          "page": 2,
+          "context": "ours of damp-heat exposure at 85 degrees Celsius, the welded m"
+        },
+        {
+          "doc_id": "synthetic_paper_alpha",
+          "value": "91",
+          "unit": "percent",
+          "page": 2,
+          "context": ", the welded modules retained 91 percent of their initial effi"
+        },
+        {
+          "doc_id": "synthetic_paper_alpha",
+          "value": "54",
+          "unit": "percent",
+          "page": 2,
+          "context": "welded controls retained only 54 percent. Figure 1. Current-v"
+        },
+        {
+          "doc_id": "synthetic_paper_alpha",
+          "value": "1",
+          "unit": null,
+          "page": 3,
+          "context": "fic conclusion. References [1] Tanabe, A. and Raman, P. Int"
+        },
+        {
+          "doc_id": "synthetic_paper_alpha",
+          "value": "10.52810",
+          "unit": null,
+          "page": 3,
+          "context": "ovoltaics Letters, 2023. DOI: 10.52810/jspl.2023.0097 [2] Weber, J."
+        },
+        {
+          "doc_id": "synthetic_paper_alpha",
+          "value": "2",
+          "unit": null,
+          "page": 3,
+          "context": "DOI: 10.52810/jspl.2023.0097 [2] Weber, J. Damp-heat aging pr"
+        },
+        {
+          "doc_id": "synthetic_paper_alpha",
+          "value": "10.52810",
+          "unit": null,
+          "page": 3,
+          "context": "Reliability Notes, 2022. DOI: 10.52810/srn.2022.0044"
+        }
+      ]
+    },
+    {
+      "doc_id": "synthetic_paper_beta",
+      "source_file": "synthetic_paper_beta.txt",
+      "sha256": "5fe24708bdd699aefa1736a41c0e64985ab2db3badd9b487cfda567db665b9fc",
+      "kind": "text",
+      "parse_status": "ok",
+      "parse_method": "direct-read",
+      "page_count": 2,
+      "pages": [
+        {
+          "page": 1,
+          "char_start": 0,
+          "char_end": 965,
+          "chars": 965,
+          "text": "SYNTHETIC EXAMPLE - NOT REAL RESEARCH\nRecycled Carbon-Fiber Laminates for Secondary Structures: A Synthetic Demonstration Study\n\nLucia Moretti and Kwame Asante\nSynthetic Composites Communications, 2024\nDOI: 10.52810/scc.2024.0178\n\nAbstract\n\nRecycled carbon fiber is often dismissed for load-bearing parts. In this synthetic demonstration study we show that careful realignment of reclaimed fibers yields laminates that, in our fictional tests, the recycled laminates reached a mean tensile strength of 612 MPa, about 78 percent of a virgin-fiber reference laminate. All contents of this document are synthetic and created solely to demonstrate the source-weld-verifier skill pipeline.\n\n1. Introduction\n\nAerospace and wind-energy sectors generate large volumes of uncured prepreg offcuts and end-of-life composite waste. Reclaiming the fiber while preserving mechanical performance is an open problem, and this synthetic study reports one fictional alignment route.\n"
+        },
+        {
+          "page": 2,
+          "char_start": 966,
+          "char_end": 2115,
+          "chars": 1149,
+          "text": "\n2. Methods\n\nReclaimed fibers were realigned by a fictional hydrodynamic process and consolidated into eight-ply laminates by compression molding at 180 degrees Celsius for 90 minutes. Tensile tests followed a synthetic in-house protocol. All procedures described here are fictional and no real experiments were performed.\n\n3. Results\n\nThe realigned laminates reached a mean tensile strength of 612 MPa with a modulus of 58 GPa. Despite the alignment step, porosity remained below 12 percent in all recycled panels, compared with 3 percent in the virgin reference. Fractography indicated fiber pull-out as the dominant failure mode.\n\nFigure 1. Synthetic stress-strain curves for recycled and virgin laminates.\n\nTable 2. Synthetic mechanical properties of recycled versus virgin laminates.\n\n4. Conclusion\n\nRealignment of reclaimed fibers can in principle recover a useful fraction of virgin-laminate performance, although the present study is entirely synthetic and draws no real scientific conclusion.\n\nReferences\n\n[1] Moretti, L. Fiber realignment methods: a synthetic review. Synthetic Composites Communications, 2023. DOI: 10.52810/scc.2023.0061\n"
+        }
+      ],
+      "captions": [
+        {
+          "doc_id": "synthetic_paper_beta",
+          "label": "Figure 1",
+          "page": 2,
+          "text": "Synthetic stress-strain curves for recycled and virgin laminates."
+        },
+        {
+          "doc_id": "synthetic_paper_beta",
+          "label": "Table 2",
+          "page": 2,
+          "text": "Synthetic mechanical properties of recycled versus virgin laminates."
+        }
+      ],
+      "sections": [
+        {
+          "doc_id": "synthetic_paper_beta",
+          "page": 1,
+          "heading": "Abstract"
+        },
+        {
+          "doc_id": "synthetic_paper_beta",
+          "page": 1,
+          "heading": "1. Introduction"
+        },
+        {
+          "doc_id": "synthetic_paper_beta",
+          "page": 2,
+          "heading": "2. Methods"
+        },
+        {
+          "doc_id": "synthetic_paper_beta",
+          "page": 2,
+          "heading": "3. Results"
+        },
+        {
+          "doc_id": "synthetic_paper_beta",
+          "page": 2,
+          "heading": "4. Conclusion"
+        },
+        {
+          "doc_id": "synthetic_paper_beta",
+          "page": 2,
+          "heading": "References"
+        }
+      ],
+      "numbers": [
+        {
+          "doc_id": "synthetic_paper_beta",
+          "value": "2024",
+          "unit": "DOI",
+          "page": 1,
+          "context": "ic Composites Communications, 2024 DOI: 10.52810/scc.2024.0178"
+        },
+        {
+          "doc_id": "synthetic_paper_beta",
+          "value": "10.52810",
+          "unit": null,
+          "page": 1,
+          "context": "tes Communications, 2024 DOI: 10.52810/scc.2024.0178 Abstract Recy"
+        },
+        {
+          "doc_id": "synthetic_paper_beta",
+          "value": "612",
+          "unit": "MPa",
+          "page": 1,
+          "context": "ed a mean tensile strength of 612 MPa, about 78 percent of a vi"
+        },
+        {
+          "doc_id": "synthetic_paper_beta",
+          "value": "78",
+          "unit": "percent",
+          "page": 1,
+          "context": "le strength of 612 MPa, about 78 percent of a virgin-fiber ref"
+        },
+        {
+          "doc_id": "synthetic_paper_beta",
+          "value": "180",
+          "unit": "degrees",
+          "page": 2,
+          "context": "tes by compression molding at 180 degrees Celsius for 90 minute"
+        },
+        {
+          "doc_id": "synthetic_paper_beta",
+          "value": "90",
+          "unit": "minutes",
+          "page": 2,
+          "context": "ng at 180 degrees Celsius for 90 minutes. Tensile tests follow"
+        },
+        {
+          "doc_id": "synthetic_paper_beta",
+          "value": "612",
+          "unit": "MPa",
+          "page": 2,
+          "context": "ed a mean tensile strength of 612 MPa with a modulus of 58 GPa."
+        },
+        {
+          "doc_id": "synthetic_paper_beta",
+          "value": "58",
+          "unit": "GPa",
+          "page": 2,
+          "context": "of 612 MPa with a modulus of 58 GPa. Despite the alignment st"
+        },
+        {
+          "doc_id": "synthetic_paper_beta",
+          "value": "12",
+          "unit": "percent",
+          "page": 2,
+          "context": "step, porosity remained below 12 percent in all recycled panel"
+        },
+        {
+          "doc_id": "synthetic_paper_beta",
+          "value": "3",
+          "unit": "percent",
+          "page": 2,
+          "context": "ecycled panels, compared with 3 percent in the virgin referen"
+        },
+        {
+          "doc_id": "synthetic_paper_beta",
+          "value": "1",
+          "unit": null,
+          "page": 2,
+          "context": "fic conclusion. References [1] Moretti, L. Fiber realignmen"
+        },
+        {
+          "doc_id": "synthetic_paper_beta",
+          "value": "10.52810",
+          "unit": null,
+          "page": 2,
+          "context": "es Communications, 2023. DOI: 10.52810/scc.2023.0061"
+        }
+      ]
+    }
+  ]
+}

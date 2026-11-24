@@ -1,0 +1,22 @@
+{
+  "_notice": "SYNTHETIC EXAMPLE / 合成示例：本文件是为演示而编造的最小 case.json，不代表任何正式测试案例。",
+  "case_id": "SYNTH-B-0001",
+  "topic": "Drift-compensated low-cost humidity sensor array (synthetic)",
+  "audience": "group_meeting",
+  "duration_min": 8,
+  "slide_count": 4,
+  "language": "en",
+  "materials": [
+    "materials/synthetic_paper.txt"
+  ],
+  "template_pptx": null,
+  "starting_deck": null,
+  "export_formats": ["pptx", "pdf"],
+  "output_contract": {
+    "editable_deck": "可编辑演示文件（pptx），含页级主张与讲稿备注",
+    "evidence_map": "页级证据映射：每页内容对应材料定位（file/page/section/exhibit）",
+    "render_records": "渲染与版本记录：导出 PDF、逐页 PNG 预览、render_report.json",
+    "speaker_notes": "逐页讲稿备注",
+    "limitations_log": "限制与不确定性记录"
+  }
+}

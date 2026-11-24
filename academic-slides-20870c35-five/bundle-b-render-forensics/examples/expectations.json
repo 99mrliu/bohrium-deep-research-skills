@@ -1,0 +1,14 @@
+{
+  "_notice": "SYNTHETIC EXAMPLE / 合成示例：good.pdf（4 页，第 3 页为图页）的渲染期望值。bad.pdf 的期望值由 run_example.sh 在演示时派生（page_count 故意保持 4 以触发 R1，expected_figure_pages 指向第 5 页以触发 R5）。",
+  "page_count": 4,
+  "footer_zone_fraction": 0.08,
+  "min_text_height_pt": 10.0,
+  "expected_figure_pages": [3],
+  "blank_ink_threshold": 0.001,
+  "figure_ink_threshold": 0.02,
+  "content_margin_fraction": 0.05,
+  "ink_pixel_threshold": 240,
+  "render_dpi": 72,
+  "eps_pt": 0.5,
+  "min_words_for_height_check": 3
+}

@@ -1,0 +1,17 @@
+{
+  "case_id": "SYNTHETIC-EXAMPLE-E01",
+  "synthetic": true,
+  "label": "SYNTHETIC EXAMPLE — 合成示例，非真实案例，仅用于演示 workorder_compile 与 storyboard_gate 的输入格式",
+  "audience": "mixed review committee (评审委员会)",
+  "venue": "review",
+  "duration_min": 12,
+  "slide_count": 10,
+  "language": "en",
+  "goal": "Convince the review committee that the proposed solvent-screening method is novel and that the preliminary evidence is strong enough to fund.",
+  "materials": [
+    {"file": "paper.pdf", "kind": "full text", "note": "SYNTHETIC EXAMPLE placeholder — 演示中不实际读取"}
+  ],
+  "output_contract": {
+    "required_fields": ["talk_summary", "slide_deck", "evidence_map", "speaker_notes", "render_report"]
+  }
+}

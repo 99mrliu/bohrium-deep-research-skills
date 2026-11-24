@@ -1,0 +1,20 @@
+{
+  "_note": "SYNTHETIC EXAMPLE — 合成示例案例，非平台正式案例；仅用于演示 Phase 0 契约 intake 的字段形态。",
+  "case_id": "SYN-QA-001",
+  "title": "CapFlow-3 低成本毛细流量传感器组会汇报",
+  "materials": ["materials/synthetic_paper.txt"],
+  "template": null,
+  "starting_deck": null,
+  "audience": "系内评审委员会（熟悉微流控但不了解本项目细节）",
+  "duration_min": 12,
+  "slide_count": 10,
+  "language": "zh",
+  "mode": "review",
+  "output_contract": {
+    "deck_file": "可编辑演示文件（PPTX 或等价 OOXML）",
+    "evidence_map": "页级证据映射（每页内容到材料 locator）",
+    "render_previews": "真实渲染的 PDF/PNG 预览",
+    "qa_bank": "问答预演题库（过 qa_gate.py G1-G5）",
+    "speaker_notes": "逐页讲稿备注"
+  }
+}

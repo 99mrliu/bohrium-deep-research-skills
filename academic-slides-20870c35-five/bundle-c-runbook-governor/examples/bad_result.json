@@ -1,0 +1,19 @@
+{
+  "note": "SYNTHETIC EXAMPLE / 合成示例：埋雷变例，预期恰好触发 D2 / D3 / D4 各一条（不触发 D1/D5/D6）",
+  "case_id": "SYNTH-SLIDES-C-001",
+  "status": "completed",
+  "editable_deck": "deck/editable_deck.pptx",
+  "export_preview": ["preview/export_preview_missing.pdf"],
+  "content_map": "content_map.json",
+  "compliance_checks": {
+    "template_conformance": "合成：自查通过",
+    "render_checks": "合成：页数一致"
+  },
+  "exceptions": "PENDING",
+  "sources": [],
+  "uncertainty": ["合成示例：埋雷变例"],
+  "limitations": [],
+  "change_log": [
+    {"file": "deck/editable_deck.pptx", "what": "初版合成 deck", "why": "Phase 3 构建", "rollback": "checkpoint p3-deck"}
+  ]
+}

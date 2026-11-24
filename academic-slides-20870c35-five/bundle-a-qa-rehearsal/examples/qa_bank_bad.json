@@ -1,0 +1,58 @@
+{
+  "_note": "SYNTHETIC EXAMPLE — 合成埋雷题库（期望 qa_gate.py exit 1 并精确报码）。 planted violations: G1 缺 limitation 类（删除了 Q-04）；G2 Q-02 的 primary_slide=S-99 不存在；G3 Q-02 回答写成 12.5%，与 anchor 12.7% 冲突；G4 Q-05 对 preliminary claim C-04 使用 proves；G5 Q-03 去掉 objection_ref，导致 OB-2 无人覆盖。",
+  "case_id": "SYN-QA-001",
+  "questions": [
+    {
+      "id": "Q-01",
+      "category": "mechanism",
+      "question": "两点标定为什么能把毛细响应线性化，而不只是平移了零点？",
+      "claim_ids": ["C-02"],
+      "objection_ref": "OB-1",
+      "primary_slide": "S-04",
+      "backup_slides": ["S-B1"],
+      "answer_points": [
+        "差压读数在 0.42 mL/min 基准点定标后，再于工作点复核斜率，因此校准的是整条响应曲线而非单点偏移。",
+        "标定曲线与残差见 Figure 1；若被追问细节，切到备用页 S-B1 逐点展示残差。"
+      ]
+    },
+    {
+      "id": "Q-02",
+      "category": "data",
+      "question": "n=48 的样本量对误差上界来说够吗？",
+      "claim_ids": ["C-01"],
+      "objection_ref": "OB-3",
+      "primary_slide": "S-99",
+      "backup_slides": ["S-B2"],
+      "answer_points": [
+        "12.5% 是相对误差上界，来自 n=48 次平行台架试验，逐条数据见 Table 2。",
+        "样本量限制已在局限页声明；统计功效分析放在备用页 S-B2。"
+      ]
+    },
+    {
+      "id": "Q-03",
+      "category": "comparison",
+      "question": "商用机也有自校准功能，关掉之后对比还公平吗？",
+      "claim_ids": ["C-03"],
+      "objection_ref": "",
+      "primary_slide": "S-07",
+      "backup_slides": ["S-B3"],
+      "answer_points": [
+        "成本对比是 38 USD 对 210 USD；对比时双方都关闭了自校准，以保持工况一致。",
+        "噪声底相差在 0.3 mV 以内，测量协议见备用页 S-B3。"
+      ]
+    },
+    {
+      "id": "Q-05",
+      "category": "data",
+      "question": "72 h 稳定性结果可靠吗？",
+      "claim_ids": ["C-04"],
+      "objection_ref": "",
+      "primary_slide": "S-06",
+      "backup_slides": ["S-B2"],
+      "answer_points": [
+        "72 h 数据 proves 设备可以长期稳定运行。",
+        "样本仅三台设备，湿度循环尚未开展。"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,53 @@
+{
+  "claims_file": "/Users/liuhengshen/Desktop/bhr_product/challenge-20870c35-five/bundles/bundle-d-source-weld/examples/claims_bad.json",
+  "index_file": "/Users/liuhengshen/Desktop/bhr_product/challenge-20870c35-five/bundles/bundle-d-source-weld/examples/output_demo/work/source_index.json",
+  "lexicon_file": "/Users/liuhengshen/Desktop/bhr_product/challenge-20870c35-five/bundles/bundle-d-source-weld/references/strength-lexicon.md",
+  "total": 5,
+  "linkage_rate": 0.0,
+  "states": {
+    "verified": 0,
+    "page_mismatch": 1,
+    "not_verbatim": 1,
+    "doc_missing": 1,
+    "quote_empty": 0,
+    "number_not_in_source": 1,
+    "strength_overclaim": 1
+  },
+  "results": [
+    {
+      "claim_id": "b1",
+      "state": "not_verbatim",
+      "found_page": null,
+      "detail": "归一化后全文档未命中（疑似凭记忆改写或臆造）",
+      "extra_violations": []
+    },
+    {
+      "claim_id": "b2",
+      "state": "page_mismatch",
+      "found_page": 2,
+      "detail": "引文实际位于第 2 页，声明页为 3",
+      "extra_violations": []
+    },
+    {
+      "claim_id": "b3",
+      "state": "number_not_in_source",
+      "found_page": 2,
+      "detail": "slide_text 数字未在源数字注册表出现: 98.6",
+      "extra_violations": []
+    },
+    {
+      "claim_id": "b4",
+      "state": "strength_overclaim",
+      "found_page": 1,
+      "detail": "strength=preliminary 的 slide_text 含过强词: proves",
+      "extra_violations": []
+    },
+    {
+      "claim_id": "b5",
+      "state": "doc_missing",
+      "found_page": null,
+      "detail": "locator.file 'synthetic_paper_delta' 不在源索引中",
+      "extra_violations": []
+    }
+  ]
+}

@@ -1,0 +1,50 @@
+{
+  "_comment": "SYNTHETIC EXAMPLE - 埋雷集：每条 claim 恰好触发一个设计好的违例码。b1=not_verbatim（initial 被改成 final），b2=page_mismatch（引文在第 2 页却声明第 3 页），b3=number_not_in_source（98.6 源中不存在），b4=strength_overclaim（preliminary 配 proves），b5=doc_missing（synthetic_paper_delta 不在索引中）。",
+  "claims": [
+    {
+      "claim_id": "b1",
+      "slide_text": "The welded perovskite module retained 91% of initial efficiency after 1000 hours at 85 degrees C damp-heat aging.",
+      "strength": "established",
+      "locator": {"file": "synthetic_paper_alpha", "pdf_page": 1,
+                  "printed_page": 1, "section": "Abstract",
+                  "exhibit": "Figure 1"},
+      "anchor": "retained 91 percent of its final efficiency after 1000 hours of damp-heat exposure at 85 degrees Celsius"
+    },
+    {
+      "claim_id": "b2",
+      "slide_text": "Bandgap near 1.68 eV after welding.",
+      "strength": "established",
+      "locator": {"file": "synthetic_paper_alpha", "pdf_page": 3,
+                  "printed_page": 3, "section": "4. Discussion",
+                  "exhibit": null},
+      "anchor": "a bandgap of 1.68 eV was measured for the triple-cation film"
+    },
+    {
+      "claim_id": "b3",
+      "slide_text": "Porosity stayed below 12%, and recycled panels reached 98.6% of virgin density.",
+      "strength": "established",
+      "locator": {"file": "synthetic_paper_beta", "pdf_page": 2,
+                  "printed_page": 2, "section": "3. Results",
+                  "exhibit": "Table 2"},
+      "anchor": "porosity remained below 12 percent in all recycled panels"
+    },
+    {
+      "claim_id": "b4",
+      "slide_text": "This proves the composite electrolyte reaches 3.2 mS/cm at room temperature.",
+      "strength": "preliminary",
+      "locator": {"file": "synthetic_note_gamma", "pdf_page": 1,
+                  "printed_page": 1, "section": null,
+                  "exhibit": null},
+      "anchor": "electrolyte showed an ionic conductivity of 3.2 mS/cm at room temperature"
+    },
+    {
+      "claim_id": "b5",
+      "slide_text": "Delta doc claim with no numbers at all.",
+      "strength": "established",
+      "locator": {"file": "synthetic_paper_delta", "pdf_page": 1,
+                  "printed_page": 1, "section": "Abstract",
+                  "exhibit": null},
+      "anchor": "a sentence from a document that was never provided"
+    }
+  ]
+}

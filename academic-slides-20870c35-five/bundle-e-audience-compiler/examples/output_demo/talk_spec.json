@@ -1,0 +1,75 @@
+{
+  "schema": "talk_spec/1.0",
+  "synthetic_example": true,
+  "inputs": {
+    "case_json": "/Users/liuhengshen/Desktop/bhr_product/challenge-20870c35-five/bundles/bundle-e-audience-compiler/examples/case.json",
+    "task_md": "/Users/liuhengshen/Desktop/bhr_product/challenge-20870c35-five/bundles/bundle-e-audience-compiler/examples/task.md"
+  },
+  "work_order": {
+    "audience": {
+      "value": "mixed",
+      "status": "extracted",
+      "source": "case.json:$.audience"
+    },
+    "duration_min": {
+      "value": 12,
+      "status": "extracted",
+      "source": "case.json:$.duration_min"
+    },
+    "slide_count": {
+      "min": 10,
+      "max": 10,
+      "status": "extracted",
+      "source": "case.json:$.slide_count"
+    },
+    "venue": {
+      "value": "review",
+      "status": "extracted",
+      "source": "case.json:$.venue"
+    },
+    "language": {
+      "value": "en",
+      "status": "extracted",
+      "source": "case.json:$.language"
+    },
+    "goal": {
+      "value": "Convince the review committee that the proposed solvent-screening method is novel and that the preliminary evidence is strong enough to fund.",
+      "status": "extracted",
+      "source": "case.json:$.goal"
+    }
+  },
+  "to_fill": [],
+  "assumptions": [
+    {
+      "field": "audience",
+      "assumed": "mixed",
+      "reason": "结构化值 'mixed' 与文本值 'specialist' 冲突，以结构化为准。"
+    }
+  ],
+  "derived": {
+    "audience_band": {
+      "background_ratio_min": 0.15,
+      "background_ratio_max": 0.3,
+      "basis": "audience=mixed（带值依据 references/audience-levers.md §2）"
+    },
+    "conclusion_position": {
+      "venue": "review",
+      "rule": "conclusion_first",
+      "detail": "结论先行：首个 conclusion 角色页的 0 基序号须 ≤ ceil(n_main/3)，即结论头条落在前约 1/3 内（含一页容差）。",
+      "first_conclusion_index_max_formula": "ceil(n_main/3)"
+    },
+    "time_model": {
+      "wpm": 130,
+      "cjk_cpm": 240,
+      "min_seconds_per_slide": 20,
+      "basis": "语速默认值 wpm=130 / cjk_cpm=240（--wpm/--cjk-cpm 可覆盖）；依据 references/audience-levers.md §3"
+    },
+    "duration_seconds": 720,
+    "slide_count_nominal": 10,
+    "per_slide_seconds": 72.0,
+    "total_time_band_seconds": [
+      612.0,
+      828.0
+    ]
+  }
+}

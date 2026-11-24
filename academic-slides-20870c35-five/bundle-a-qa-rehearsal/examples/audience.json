@@ -1,0 +1,28 @@
+{
+  "_note": "SYNTHETIC EXAMPLE — 合成听众画像，非真实评审意见；objections 供 qa_seed.py 播种与 qa_gate.py G5 核验。",
+  "audience": {
+    "role": "系内评审委员会",
+    "decision_goal": "判断该项目是否值得进入下一轮经费支持与工程化投入",
+    "prior_knowledge": "熟悉微流控与传感器常识，不了解 CapFlow-3 的具体设计",
+    "objections": [
+      {
+        "id": "OB-1",
+        "category": "mechanism",
+        "text": "两点标定为什么能把毛细响应线性化，而不只是平移了零点？",
+        "likely_claim_ids": ["C-02"]
+      },
+      {
+        "id": "OB-2",
+        "category": "comparison",
+        "text": "商用机也有自校准功能，关掉之后对比还公平吗？",
+        "likely_claim_ids": ["C-03"]
+      },
+      {
+        "id": "OB-3",
+        "category": "data",
+        "text": "n=48 的样本量对 12.7% 的误差上界来说够吗？",
+        "likely_claim_ids": ["C-01"]
+      }
+    ]
+  }
+}

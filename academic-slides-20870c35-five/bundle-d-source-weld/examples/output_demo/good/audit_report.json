@@ -1,0 +1,60 @@
+{
+  "claims_file": "/Users/liuhengshen/Desktop/bhr_product/challenge-20870c35-five/bundles/bundle-d-source-weld/examples/claims_good.json",
+  "index_file": "/Users/liuhengshen/Desktop/bhr_product/challenge-20870c35-five/bundles/bundle-d-source-weld/examples/output_demo/work/source_index.json",
+  "lexicon_file": "/Users/liuhengshen/Desktop/bhr_product/challenge-20870c35-five/bundles/bundle-d-source-weld/references/strength-lexicon.md",
+  "total": 6,
+  "linkage_rate": 1.0,
+  "states": {
+    "verified": 6,
+    "page_mismatch": 0,
+    "not_verbatim": 0,
+    "doc_missing": 0,
+    "quote_empty": 0,
+    "number_not_in_source": 0,
+    "strength_overclaim": 0
+  },
+  "results": [
+    {
+      "claim_id": "c1",
+      "state": "verified",
+      "found_page": 1,
+      "detail": "页内逐字命中，数字与措辞均合规",
+      "extra_violations": []
+    },
+    {
+      "claim_id": "c2",
+      "state": "verified",
+      "found_page": 2,
+      "detail": "页内逐字命中，数字与措辞均合规",
+      "extra_violations": []
+    },
+    {
+      "claim_id": "c3",
+      "state": "verified",
+      "found_page": 1,
+      "detail": "页内逐字命中，数字与措辞均合规",
+      "extra_violations": []
+    },
+    {
+      "claim_id": "c4",
+      "state": "verified",
+      "found_page": 2,
+      "detail": "页内逐字命中，数字与措辞均合规",
+      "extra_violations": []
+    },
+    {
+      "claim_id": "c5",
+      "state": "verified",
+      "found_page": 1,
+      "detail": "页内逐字命中，数字与措辞均合规",
+      "extra_violations": []
+    },
+    {
+      "claim_id": "c6",
+      "state": "verified",
+      "found_page": 1,
+      "detail": "页内逐字命中，数字与措辞均合规",
+      "extra_violations": []
+    }
+  ]
+}

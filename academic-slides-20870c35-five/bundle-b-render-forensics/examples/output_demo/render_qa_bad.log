@@ -1,0 +1,12 @@
+R1: FAIL (期望 4 页，实际 5 页)
+R2: FAIL (发现 1 个空白页)
+R3: FAIL (发现 1 处文字越界/页脚侵入)
+R4: FAIL (发现 1 页文字过小)
+R5: FAIL (发现 1 个图页异常)
+R1: 页数不一致：期望 4 页，实际导出 5 页
+R2: 第 2 页为空白页：无文本且整页墨水覆盖率 0.00000 < 阈值 0.00100
+R3: 第 3 页词 'OVERFLOW' 越界：bbox=(550.8,379.4,613.0,400.2) 超出页面矩形 (612x792)
+R4: 第 4 页文字过小：词框高度中位数 5.67pt < 阈值 10.00pt （18 个词）
+R5: 第 5 页应为图页但内容区墨水覆盖率 0.00292 < 阈值 0.02000（图可能丢失或被裁掉）
+render_report: /Users/liuhengshen/Desktop/bhr_product/challenge-20870c35-five/bundles/bundle-b-render-forensics/examples/output_demo/render_report_bad.json
+RENDER QA: FAIL (5 条违例)

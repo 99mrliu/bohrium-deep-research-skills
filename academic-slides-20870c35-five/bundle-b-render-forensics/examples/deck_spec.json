@@ -1,0 +1,45 @@
+{
+  "_notice": "SYNTHETIC EXAMPLE / 合成示例：演示 minipptx 的 4 页合成 deck。image 路径相对本文件所在目录，指向 make_fixtures.py 演示时生成的 PNG（演示结束即删除）。",
+  "deck_title": "Drift-Compensated Sensor Array (synthetic demo deck)",
+  "slide_size": {"cx": 9144000, "cy": 6858000},
+  "slides": [
+    {
+      "title": "Drift-Compensated Humidity Sensor Array",
+      "bullets": [
+        "Group meeting talk, 8 minutes (SYNTHETIC EXAMPLE)",
+        "Question: can a cheap 24-channel array stay within 1 %RH for 3 weeks?",
+        "Source: materials/synthetic_paper.txt, Section 1"
+      ],
+      "notes": "Open with the deployment pain: cheap polymer-film sensors drift. State the central question verbatim from Section 1 of the synthetic paper. 60 seconds."
+    },
+    {
+      "title": "Approach: periodic reference recalibration",
+      "bullets": [
+        "24 polymer-film channels multiplexed to one ADC",
+        "Per-channel baseline re-estimated every 6 hours",
+        "Two-point recalibration against one sealed reference cell"
+      ],
+      "notes": "Walk through Methods 2.1-2.2. Emphasize we avoid per-channel lab calibration. Evidence locator: synthetic_paper.txt Section 2. 120 seconds."
+    },
+    {
+      "title": "Result: median error 1.84 -> 0.77 %RH",
+      "bullets": [
+        "21-day run, 3 replicate arrays",
+        "Median absolute error: 1.84 %RH raw, 0.77 %RH compensated (-58%)",
+        "95th percentile: 3.9 -> 1.6 %RH",
+        "Locator: synthetic_paper.txt Section 3, Figure 1"
+      ],
+      "image": {"path": "output_demo/synthetic_figure.png", "caption": "Figure 1 (synthetic)"},
+      "notes": "Point at the curve: the gap between raw and compensated widens with time. Quote numbers exactly as in Section 3. 150 seconds."
+    },
+    {
+      "title": "Takeaways and limits",
+      "bullets": [
+        "Compensation halves error and meets the 1 %RH goal",
+        "Residual drift tracks temperature swings (r = 0.61)",
+        "Preliminary: single site, single season, 21 days only"
+      ],
+      "notes": "Close on strength discipline: results are preliminary (Section 4). Invite questions on transfer to condensing environments. 90 seconds."
+    }
+  ]
+}

@@ -1,0 +1,74 @@
+{
+  "case_id": "SYNTH-SLIDES-C-001",
+  "generated_by": "contract_init.py (deck-runbook-governor)",
+  "output_contract": {
+    "top_level_fields": [
+      "editable_deck",
+      "export_preview",
+      "content_map",
+      "compliance_checks",
+      "exceptions"
+    ],
+    "fields": [
+      {
+        "path": "editable_deck",
+        "declaration": "\"可编辑演示文件相对路径（相对 /app/output），含讲稿备注\""
+      },
+      {
+        "path": "export_preview",
+        "declaration": "\"真实渲染的导出预览相对路径（PDF/PNG，相对 /app/output，可为路径数组）\""
+      },
+      {
+        "path": "content_map",
+        "declaration": "\"页级证据映射文件相对路径（每页 message → 论文/材料定位）\""
+      },
+      {
+        "path": "compliance_checks.template_conformance",
+        "declaration": "\"模板合规自查结论（母版/版式/字体）\""
+      },
+      {
+        "path": "compliance_checks.render_checks",
+        "declaration": "\"导出渲染自查结论（页数/空白页/溢出）\""
+      },
+      {
+        "path": "exceptions",
+        "declaration": "\"异常与降级记录数组（模板缺失/图片缺失/soffice 缺席/超时等）\""
+      }
+    ]
+  },
+  "work_order": {
+    "audience": "合成评审委员会（虚构，跨学科背景）",
+    "duration_min": 12,
+    "slide_count": 10,
+    "mode": "template",
+    "template": "materials/synthetic_template.pptx",
+    "starting_deck": null,
+    "export_formats": [
+      "pdf",
+      "png"
+    ]
+  },
+  "work_order_missing": [
+    "starting_deck"
+  ],
+  "required_artifacts": [
+    "editable_deck",
+    "export_preview",
+    "content_map"
+  ],
+  "materials_dir": "/Users/liuhengshen/Desktop/bhr_product/challenge-20870c35-five/bundles/bundle-c-runbook-governor/examples/materials",
+  "materials": [
+    {
+      "path": "synthetic_paper.txt",
+      "sha256": "325d9babb4aa0dfcba56402dbb3fa32c9bbbb574bcc718bcdc3925c18d2846b4",
+      "bytes": 1050
+    }
+  ],
+  "reserved_key_collisions": [],
+  "notes": [
+    "fields[].path 为 output_contract 的点路径展开；declaration 为原始声明文本",
+    "required_artifacts 按字段名识别（editable_deck/export_preview/content_map），是 delivery_gate D3 的检查对象",
+    "work_order 缺失字段为 null 并列入 work_order_missing，禁止虚构默认值",
+    "本文件不含随机数与时间戳，重复运行字节一致"
+  ]
+}

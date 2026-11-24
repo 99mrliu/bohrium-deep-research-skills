@@ -1,0 +1,29 @@
+{
+  "note": "SYNTHETIC EXAMPLE / 合成示例：虚构的合规交付，仅演示 delivery_gate 放行路径",
+  "case_id": "SYNTH-SLIDES-C-001",
+  "status": "completed",
+  "editable_deck": "deck/editable_deck.pptx",
+  "export_preview": ["preview/export_preview.pdf"],
+  "content_map": "content_map.json",
+  "compliance_checks": {
+    "template_conformance": "合成：work_order.template 缺席，已降级为 stdlib OOXML 兜底并在 exceptions 记录；版式自查通过",
+    "render_checks": "合成：10 页、无空白页、无溢出（占位预览件，见 exceptions 中 soffice 说明）"
+  },
+  "exceptions": [
+    {"type": "missing_template", "detected_by": "work_order.template 路径不存在", "handling": "stdlib OOXML 兜底构建", "impact": "版式降级，不阻断"},
+    {"type": "missing_figures", "detected_by": "正文引用图 1 但材料中无图", "handling": "第 2 页留图占位并在备注注明", "impact": "非核心页，不降级状态"},
+    {"type": "soffice_absent", "detected_by": "command -v soffice 为空（合成设定）", "handling": "以文本占位预览件演示 D3 路径", "impact": "仅合成示例如此，真实运行时须如实记 uncertainty"}
+  ],
+  "sources": [
+    {"id": "S1", "title": "合成短文《潮汐储能的调度启发式》", "locator": "examples/materials/synthetic_paper.txt"}
+  ],
+  "uncertainty": [
+    "合成示例：deck/预览均为文本占位，真实运行时必须是真实 pptx 与真实渲染件",
+    "work_order.starting_deck 为 null：已假设从零构建并在 exceptions 记录模板降级"
+  ],
+  "limitations": [],
+  "change_log": [
+    {"file": "deck/editable_deck.pptx", "what": "初版 10 页合成 deck", "why": "Phase 3 模板内构建（兜底）", "rollback": "checkpoint p3-deck"},
+    {"file": "content_map.json", "what": "回填 4 页证据映射", "why": "页级 locator 与 Phase 1 主线对齐", "rollback": "checkpoint p3-deck"}
+  ]
+}

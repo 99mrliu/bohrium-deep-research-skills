@@ -1,0 +1,118 @@
+{
+  "pdf": "/Users/liuhengshen/Desktop/bhr_product/challenge-20870c35-five/bundles/bundle-b-render-forensics/examples/output_demo/bad.pdf",
+  "expectations_file": "/Users/liuhengshen/Desktop/bhr_product/challenge-20870c35-five/bundles/bundle-b-render-forensics/examples/output_demo/expectations_bad.json",
+  "expectations": {
+    "footer_zone_fraction": 0.08,
+    "min_text_height_pt": 10.0,
+    "expected_figure_pages": [
+      5
+    ],
+    "blank_ink_threshold": 0.001,
+    "figure_ink_threshold": 0.02,
+    "content_margin_fraction": 0.05,
+    "ink_pixel_threshold": 240,
+    "render_dpi": 72,
+    "eps_pt": 0.5,
+    "min_words_for_height_check": 3,
+    "_notice": "SYNTHETIC EXAMPLE: derived by run_example.sh for bad.pdf",
+    "page_count": 4
+  },
+  "page_count": 5,
+  "gates": {
+    "R1": {
+      "pass": false,
+      "detail": "期望 4 页，实际 5 页"
+    },
+    "R2": {
+      "pass": false,
+      "detail": "发现 1 个空白页"
+    },
+    "R3": {
+      "pass": false,
+      "detail": "发现 1 处文字越界/页脚侵入"
+    },
+    "R4": {
+      "pass": false,
+      "detail": "发现 1 页文字过小"
+    },
+    "R5": {
+      "pass": false,
+      "detail": "发现 1 个图页异常"
+    }
+  },
+  "pages": [
+    {
+      "page": 1,
+      "width_pt": 612.0,
+      "height_pt": 792.0,
+      "word_count": 12,
+      "median_word_height_pt": 22.694,
+      "ink_coverage": 0.007735,
+      "content_ink_coverage": 0.009893
+    },
+    {
+      "page": 2,
+      "width_pt": 612.0,
+      "height_pt": 792.0,
+      "word_count": 0,
+      "median_word_height_pt": null,
+      "ink_coverage": 0.0,
+      "content_ink_coverage": 0.0
+    },
+    {
+      "page": 3,
+      "width_pt": 612.0,
+      "height_pt": 792.0,
+      "word_count": 9,
+      "median_word_height_pt": 20.803,
+      "ink_coverage": 0.003526,
+      "content_ink_coverage": 0.004096
+    },
+    {
+      "page": 4,
+      "width_pt": 612.0,
+      "height_pt": 792.0,
+      "word_count": 18,
+      "median_word_height_pt": 5.674,
+      "ink_coverage": 0.000673,
+      "content_ink_coverage": 0.00086
+    },
+    {
+      "page": 5,
+      "width_pt": 612.0,
+      "height_pt": 792.0,
+      "word_count": 8,
+      "median_word_height_pt": 18.912,
+      "ink_coverage": 0.002286,
+      "content_ink_coverage": 0.002924
+    }
+  ],
+  "violations": [
+    {
+      "code": "R1",
+      "page": null,
+      "detail": "页数不一致：期望 4 页，实际导出 5 页"
+    },
+    {
+      "code": "R2",
+      "page": 2,
+      "detail": "第 2 页为空白页：无文本且整页墨水覆盖率 0.00000 < 阈值 0.00100"
+    },
+    {
+      "code": "R3",
+      "page": 3,
+      "detail": "第 3 页词 'OVERFLOW' 越界：bbox=(550.8,379.4,613.0,400.2) 超出页面矩形 (612x792)"
+    },
+    {
+      "code": "R4",
+      "page": 4,
+      "detail": "第 4 页文字过小：词框高度中位数 5.67pt < 阈值 10.00pt （18 个词）"
+    },
+    {
+      "code": "R5",
+      "page": 5,
+      "detail": "第 5 页应为图页但内容区墨水覆盖率 0.00292 < 阈值 0.02000（图可能丢失或被裁掉）"
+    }
+  ],
+  "status": "fail"
+}

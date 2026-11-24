@@ -1,0 +1,66 @@
+{
+  "budget_caps": {
+    "model_requests": 64,
+    "wall_seconds": 900,
+    "tokens_per_response": 16384
+  },
+  "phase0_note": "Phase 0（契约接管）由 contract_init.py 脚本完成，不消耗模型请求；模型只读本脚本产物，不手写契约字段名。",
+  "phase_quota": [
+    {
+      "phase": "p1_source_index",
+      "quota_requests": 12,
+      "reserve_requests": 2,
+      "quota_seconds": 180,
+      "reserve_seconds": 20,
+      "note": "pdftotext/pdftoppm 索引与主线提取；每页文本先落盘再判断"
+    },
+    {
+      "phase": "p2_storyboard",
+      "quota_requests": 8,
+      "reserve_requests": 1,
+      "quota_seconds": 110,
+      "reserve_seconds": 10,
+      "note": "听众建模 + 页级 storyboard，一次响应成型"
+    },
+    {
+      "phase": "p3_deck_build",
+      "quota_requests": 13,
+      "reserve_requests": 2,
+      "quota_seconds": 200,
+      "reserve_seconds": 20,
+      "note": "模板内建 deck + 讲稿备注；每页保留证据定位"
+    },
+    {
+      "phase": "p4_render_qa",
+      "quota_requests": 10,
+      "reserve_requests": 2,
+      "quota_seconds": 150,
+      "reserve_seconds": 20,
+      "note": "soffice 导出 + PNG 预览 + 至多两轮修复回路"
+    },
+    {
+      "phase": "p5_delivery",
+      "quota_requests": 12,
+      "reserve_requests": 2,
+      "quota_seconds": 170,
+      "reserve_seconds": 20,
+      "note": "回填 result.json + delivery_gate 门控与修复；先存快照再改"
+    }
+  ],
+  "totals": {
+    "quota_requests": 55,
+    "reserve_requests": 9,
+    "requests": 64,
+    "quota_seconds": 810,
+    "reserve_seconds": 90,
+    "seconds": 900
+  },
+  "usage": [],
+  "usage_format": {
+    "phase": "阶段名（p1..p5）",
+    "requests": "本阶段累计消耗请求数",
+    "seconds": "本阶段累计消耗秒数",
+    "note": "可选备注（如降级决定）"
+  },
+  "note": "每阶段结束向 usage 追加一条；配额将尽时按 references/budget-protocol.md 降级，最终以诚实 partial 兜底"
+}

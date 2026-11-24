@@ -1,0 +1,10 @@
+{
+  "note": "SYNTHETIC EXAMPLE / 合成示例：虚构页级证据映射，仅演示治理流程",
+  "case_id": "SYNTH-SLIDES-C-001",
+  "slides": [
+    {"slide": 1, "message": "潮汐出力间歇导致高弃电率", "locator": {"file": "materials/synthetic_paper.txt", "section": "第 1 节"}},
+    {"slide": 2, "message": "TH-2：两阶段滚动时域启发式", "locator": {"file": "materials/synthetic_paper.txt", "section": "第 2 节", "exhibit": "图 1（源图缺失，占位）"}},
+    {"slide": 6, "message": "弃电率 12.7% → 8.4%（±0.6%，n=30，潮差 4.2 m 仿真）", "locator": {"file": "materials/synthetic_paper.txt", "section": "第 3 节", "exhibit": "表 1"}},
+    {"slide": 9, "message": "结论强度 preliminary：仅仿真、单一潮差", "locator": {"file": "materials/synthetic_paper.txt", "section": "第 4 节"}}
+  ]
+}

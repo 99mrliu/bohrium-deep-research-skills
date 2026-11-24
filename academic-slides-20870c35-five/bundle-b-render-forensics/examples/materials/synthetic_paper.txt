@@ -1,0 +1,38 @@
+SYNTHETIC EXAMPLE / 合成示例 —— 本"论文"完全为演示编造，数字无任何现实依据。
+
+Title: Drift Compensation for a Low-Cost Humidity Sensor Array
+Authors: A. Researcher, B. Collaborator (synthetic personas)
+
+Abstract
+Low-cost polymer-film humidity sensors drift over multi-week deployments.
+We built a 24-channel array and a two-point recalibration scheme that
+estimates per-channel baseline drift every 6 hours against a single
+reference cell. In a 21-day continuous run with 3 replicate arrays,
+median absolute error dropped from 1.84 %RH (raw) to 0.77 %RH
+(compensated), a 58% reduction.
+
+1. Introduction
+Humidity monitoring in storage and greenhouse settings needs many cheap
+sensors, but polymer-film elements drift. Central question: can periodic
+reference-based recalibration keep a cheap array within 1 %RH over three
+weeks without per-channel lab calibration?
+
+2. Methods
+2.1 Hardware. 24 polymer-film channels multiplexed to one ADC; one
+sealed reference cell held at fixed humidity.
+2.2 Drift model. Per-channel baseline estimated every 6 hours as the
+median residual against the reference; two-point recalibration applied
+between estimates.
+2.3 Evaluation. 21-day continuous run, 3 replicate arrays, ambient
+temperature cycling 18-31 C.
+
+3. Results
+Figure 1 (exhibit: error-over-time curve). Median absolute error fell
+from 1.84 %RH (raw) to 0.77 %RH (compensated); 95th percentile fell
+from 3.9 to 1.6 %RH. Residual drift correlates with temperature swings
+(Pearson r = 0.61).
+
+4. Limitations
+Single site, single season, 21 days only; the reference cell itself
+ages; results are preliminary and may not transfer to condensing
+environments.

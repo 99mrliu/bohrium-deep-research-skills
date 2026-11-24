@@ -1,0 +1,141 @@
+{
+  "_note": "由 qa_seed.py 自动播种的题库骨架；answer_points 为三段式占位，须按 references/qa-taxonomy.md 扩写、补备用页后用 qa_gate.py 过 G1-G5。",
+  "questions": [
+    {
+      "id": "SEED-Q-01",
+      "category": "limitation",
+      "question": "局限追问：仅三台设备参与浸泡试验。这一限制对结论的适用范围意味着什么？",
+      "claim_ids": [
+        "C-04"
+      ],
+      "objection_ref": "",
+      "primary_slide": "S-06",
+      "backup_slides": [],
+      "answer_points": [
+        "【重述主张】待扩写：用一句话重申被追问的结论，不得超出 claim 原文。",
+        "【证据定位】待扩写：逐字引用该 claim 的 anchor 数字（含单位）与 locator。",
+        "【边界声明】待扩写：声明适用范围与证据强度，弱证据不得用强措辞。"
+      ],
+      "status": "seed"
+    },
+    {
+      "id": "SEED-Q-02",
+      "category": "limitation",
+      "question": "局限追问：尚未做湿度循环。这一限制对结论的适用范围意味着什么？",
+      "claim_ids": [
+        "C-04"
+      ],
+      "objection_ref": "",
+      "primary_slide": "S-06",
+      "backup_slides": [],
+      "answer_points": [
+        "【重述主张】待扩写：用一句话重申被追问的结论，不得超出 claim 原文。",
+        "【证据定位】待扩写：逐字引用该 claim 的 anchor 数字（含单位）与 locator。",
+        "【边界声明】待扩写：声明适用范围与证据强度，弱证据不得用强措辞。"
+      ],
+      "status": "seed"
+    },
+    {
+      "id": "SEED-Q-03",
+      "category": "limitation",
+      "question": "局限追问：有机溶剂未测试。这一限制对结论的适用范围意味着什么？",
+      "claim_ids": [
+        "C-05"
+      ],
+      "objection_ref": "",
+      "primary_slide": "S-08",
+      "backup_slides": [],
+      "answer_points": [
+        "【重述主张】待扩写：用一句话重申被追问的结论，不得超出 claim 原文。",
+        "【证据定位】待扩写：逐字引用该 claim 的 anchor 数字（含单位）与 locator。",
+        "【边界声明】待扩写：声明适用范围与证据强度，弱证据不得用强措辞。"
+      ],
+      "status": "seed"
+    },
+    {
+      "id": "SEED-Q-04",
+      "category": "limitation",
+      "question": "局限追问：温度循环未测试。这一限制对结论的适用范围意味着什么？",
+      "claim_ids": [
+        "C-05"
+      ],
+      "objection_ref": "",
+      "primary_slide": "S-08",
+      "backup_slides": [],
+      "answer_points": [
+        "【重述主张】待扩写：用一句话重申被追问的结论，不得超出 claim 原文。",
+        "【证据定位】待扩写：逐字引用该 claim 的 anchor 数字（含单位）与 locator。",
+        "【边界声明】待扩写：声明适用范围与证据强度，弱证据不得用强措辞。"
+      ],
+      "status": "seed"
+    },
+    {
+      "id": "SEED-Q-05",
+      "category": "data",
+      "question": "数据稳健性追问：初步浸泡试验提示读数在 72 h 连续运行内保持标定。。该结论标注为 preliminary，样本量与可重复性是否足以支撑？",
+      "claim_ids": [
+        "C-04"
+      ],
+      "objection_ref": "",
+      "primary_slide": "S-06",
+      "backup_slides": [],
+      "answer_points": [
+        "【重述主张】待扩写：用一句话重申被追问的结论，不得超出 claim 原文。",
+        "【证据定位】待扩写：逐字引用该 claim 的 anchor 数字（含单位）与 locator。",
+        "【边界声明】待扩写：声明适用范围与证据强度，弱证据不得用强措辞。"
+      ],
+      "status": "seed"
+    },
+    {
+      "id": "SEED-Q-06",
+      "category": "mechanism",
+      "question": "两点标定为什么能把毛细响应线性化，而不只是平移了零点？",
+      "claim_ids": [
+        "C-02"
+      ],
+      "objection_ref": "OB-1",
+      "primary_slide": "S-04",
+      "backup_slides": [],
+      "answer_points": [
+        "【重述主张】待扩写：用一句话重申被追问的结论，不得超出 claim 原文。",
+        "【证据定位】待扩写：逐字引用该 claim 的 anchor 数字（含单位）与 locator。",
+        "【边界声明】待扩写：声明适用范围与证据强度，弱证据不得用强措辞。"
+      ],
+      "status": "seed"
+    },
+    {
+      "id": "SEED-Q-07",
+      "category": "comparison",
+      "question": "商用机也有自校准功能，关掉之后对比还公平吗？",
+      "claim_ids": [
+        "C-03"
+      ],
+      "objection_ref": "OB-2",
+      "primary_slide": "S-07",
+      "backup_slides": [],
+      "answer_points": [
+        "【重述主张】待扩写：用一句话重申被追问的结论，不得超出 claim 原文。",
+        "【证据定位】待扩写：逐字引用该 claim 的 anchor 数字（含单位）与 locator。",
+        "【边界声明】待扩写：声明适用范围与证据强度，弱证据不得用强措辞。"
+      ],
+      "status": "seed"
+    },
+    {
+      "id": "SEED-Q-08",
+      "category": "data",
+      "question": "n=48 的样本量对 12.7% 的误差上界来说够吗？",
+      "claim_ids": [
+        "C-01"
+      ],
+      "objection_ref": "OB-3",
+      "primary_slide": "S-06",
+      "backup_slides": [],
+      "answer_points": [
+        "【重述主张】待扩写：用一句话重申被追问的结论，不得超出 claim 原文。",
+        "【证据定位】待扩写：逐字引用该 claim 的 anchor 数字（含单位）与 locator。",
+        "【边界声明】待扩写：声明适用范围与证据强度，弱证据不得用强措辞。"
+      ],
+      "status": "seed"
+    }
+  ]
+}

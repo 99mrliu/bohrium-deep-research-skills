@@ -1,0 +1,13 @@
+{
+  "case_id": null,
+  "status": "blocked",
+  "sources": [],
+  "uncertainty": [
+    "契约接管失败：case.json 读取或解析失败：Expecting property name enclosed in double quotes: line 1 column 30 (char 29)"
+  ],
+  "limitations": [
+    "case.json 不可用，六个阶段均未执行；修复输入后重跑 contract_init.py"
+  ],
+  "change_log": [],
+  "blocked_reason": "case.json 读取或解析失败：Expecting property name enclosed in double quotes: line 1 column 30 (char 29)"
+}
