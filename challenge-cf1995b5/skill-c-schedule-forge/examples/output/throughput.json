@@ -1,0 +1,340 @@
+{
+  "status": "complete",
+  "case_id": "MOCK-GARP-001",
+  "deadline_days": 30.0,
+  "budget_cap": 20000,
+  "contract_disclaimer": "组织方前瞻合同：价格与预约信息为计划性约定，不是实际供应商报价或已确认排期。",
+  "merge_notes": [
+    "从 equipment_domain_note 解析出补充设备 EQ-HP（精密加热台），已并入设备表。"
+  ],
+  "capacity_table": [
+    {
+      "equipment": "EQ-GB",
+      "name": "充氮手套箱",
+      "price_per_hour": 80,
+      "slots_per_week": 3,
+      "slot_hours": 4,
+      "window_days": 30,
+      "weekly_hours": 12.0,
+      "window_weeks": 4,
+      "window_hours": 48.0,
+      "source": "resource_contract.equipment",
+      "formula": "3 slots/周 × 4 h = 12.0 h/周；window 30 天 = 4 完整周 → 48.0 h"
+    },
+    {
+      "equipment": "EQ-HP",
+      "name": "精密加热台",
+      "price_per_hour": 40,
+      "slots_per_week": 7,
+      "slot_hours": 2,
+      "window_days": 30,
+      "weekly_hours": 14.0,
+      "window_weeks": 4,
+      "window_hours": 56.0,
+      "source": "equipment_domain_note(内嵌JSON片段)",
+      "formula": "7 slots/周 × 2 h = 14.0 h/周；window 30 天 = 4 完整周 → 56.0 h"
+    },
+    {
+      "equipment": "EQ-XRD",
+      "name": "X 射线衍射仪",
+      "price_per_hour": 120,
+      "slots_per_week": 5,
+      "slot_hours": 2,
+      "window_days": 30,
+      "weekly_hours": 10.0,
+      "window_weeks": 4,
+      "window_hours": 40.0,
+      "source": "resource_contract.equipment",
+      "formula": "5 slots/周 × 2 h = 10.0 h/周；window 30 天 = 4 完整周 → 40.0 h"
+    }
+  ],
+  "candidate_assessments": [
+    {
+      "version": "v1",
+      "author": "组织方候选A",
+      "est_days": 28,
+      "demand_hours_by_equipment": {
+        "EQ-GB": 40.0,
+        "EQ-HP": 20.0,
+        "EQ-XRD": 15.0
+      },
+      "equipment_rows": [
+        {
+          "equipment": "EQ-GB",
+          "name": "充氮手套箱",
+          "known": true,
+          "demand_hours": 40.0,
+          "weekly_hours": 12.0,
+          "window_days": 30.0,
+          "window_hours": 48.0,
+          "weeks_needed": 4,
+          "days_needed": 28,
+          "fits_window": true,
+          "formula": "需求 40.0h ÷ 每周 12.0h（3 slots/周 × 4.0h/slot） = 4 周 = 28 天",
+          "source": "resource_contract.equipment"
+        },
+        {
+          "equipment": "EQ-HP",
+          "name": "精密加热台",
+          "known": true,
+          "demand_hours": 20.0,
+          "weekly_hours": 14.0,
+          "window_days": 30.0,
+          "window_hours": 56.0,
+          "weeks_needed": 2,
+          "days_needed": 14,
+          "fits_window": true,
+          "formula": "需求 20.0h ÷ 每周 14.0h（7 slots/周 × 2.0h/slot） = 2 周 = 14 天",
+          "source": "equipment_domain_note(内嵌JSON片段)"
+        },
+        {
+          "equipment": "EQ-XRD",
+          "name": "X 射线衍射仪",
+          "known": true,
+          "demand_hours": 15.0,
+          "weekly_hours": 10.0,
+          "window_days": 30.0,
+          "window_hours": 40.0,
+          "weeks_needed": 2,
+          "days_needed": 14,
+          "fits_window": true,
+          "formula": "需求 15.0h ÷ 每周 10.0h（5 slots/周 × 2.0h/slot） = 2 周 = 14 天",
+          "source": "resource_contract.equipment"
+        }
+      ],
+      "bottleneck": {
+        "equipment": "EQ-GB",
+        "name": "充氮手套箱",
+        "known": true,
+        "demand_hours": 40.0,
+        "weekly_hours": 12.0,
+        "window_days": 30.0,
+        "window_hours": 48.0,
+        "weeks_needed": 4,
+        "days_needed": 28,
+        "fits_window": true,
+        "formula": "需求 40.0h ÷ 每周 12.0h（3 slots/周 × 4.0h/slot） = 4 周 = 28 天",
+        "source": "resource_contract.equipment"
+      },
+      "deadline_days": 30.0,
+      "overrun_days": 0,
+      "feasible_by_throughput": true,
+      "est_days_verdict": "est_days 不低于瓶颈下界且未超 deadline（但仍需 schedule 做全资源联检）",
+      "arithmetic_problems": [
+        "「XRD」subtotal 算术错误：120.0×15.0=1800.0 ≠ 声明 1500.0",
+        "total_cost 算术错误：Σsubtotal=8000.0 ≠ 声明 total_cost=7330.0"
+      ],
+      "assumptions": [
+        "cost_item「手套箱」按 unit_price=80.0 匹配到设备 EQ-GB，quantity=40.0 视为机时小时数（假设）。",
+        "cost_item「加热台」按 unit_price=40.0 匹配到设备 EQ-HP，quantity=20.0 视为机时小时数（假设）。",
+        "cost_item「XRD」按 unit_price=120.0 匹配到设备 EQ-XRD，quantity=15.0 视为机时小时数（假设）。"
+      ],
+      "unmatched_cost_items": [
+        "MAI"
+      ]
+    },
+    {
+      "version": "v2",
+      "author": "组织方候选B",
+      "est_days": 21,
+      "demand_hours_by_equipment": {
+        "EQ-GB": 96.0,
+        "EQ-XRD": 20.0
+      },
+      "equipment_rows": [
+        {
+          "equipment": "EQ-GB",
+          "name": "充氮手套箱",
+          "known": true,
+          "demand_hours": 96.0,
+          "weekly_hours": 12.0,
+          "window_days": 30.0,
+          "window_hours": 48.0,
+          "weeks_needed": 8,
+          "days_needed": 56,
+          "fits_window": false,
+          "formula": "需求 96.0h ÷ 每周 12.0h（3 slots/周 × 4.0h/slot） = 8 周 = 56 天",
+          "source": "resource_contract.equipment"
+        },
+        {
+          "equipment": "EQ-XRD",
+          "name": "X 射线衍射仪",
+          "known": true,
+          "demand_hours": 20.0,
+          "weekly_hours": 10.0,
+          "window_days": 30.0,
+          "window_hours": 40.0,
+          "weeks_needed": 2,
+          "days_needed": 14,
+          "fits_window": true,
+          "formula": "需求 20.0h ÷ 每周 10.0h（5 slots/周 × 2.0h/slot） = 2 周 = 14 天",
+          "source": "resource_contract.equipment"
+        }
+      ],
+      "bottleneck": {
+        "equipment": "EQ-GB",
+        "name": "充氮手套箱",
+        "known": true,
+        "demand_hours": 96.0,
+        "weekly_hours": 12.0,
+        "window_days": 30.0,
+        "window_hours": 48.0,
+        "weeks_needed": 8,
+        "days_needed": 56,
+        "fits_window": false,
+        "formula": "需求 96.0h ÷ 每周 12.0h（3 slots/周 × 4.0h/slot） = 8 周 = 56 天",
+        "source": "resource_contract.equipment"
+      },
+      "deadline_days": 30.0,
+      "overrun_days": 26.0,
+      "feasible_by_throughput": false,
+      "est_days_verdict": "est_days 低于瓶颈机时所需天数，不可信",
+      "arithmetic_problems": [],
+      "assumptions": [
+        "cost_item「手套箱」按 unit_price=80.0 匹配到设备 EQ-GB，quantity=96.0 视为机时小时数（假设）。",
+        "cost_item「XRD」按 unit_price=120.0 匹配到设备 EQ-XRD，quantity=20.0 视为机时小时数（假设）。"
+      ],
+      "unmatched_cost_items": [
+        "MAI"
+      ]
+    },
+    {
+      "version": "v3",
+      "author": "组织方候选C",
+      "est_days": 35,
+      "demand_hours_by_equipment": {
+        "EQ-GB": 60.0,
+        "EQ-XRD": 25.0
+      },
+      "equipment_rows": [
+        {
+          "equipment": "EQ-GB",
+          "name": "充氮手套箱",
+          "known": true,
+          "demand_hours": 60.0,
+          "weekly_hours": 12.0,
+          "window_days": 30.0,
+          "window_hours": 48.0,
+          "weeks_needed": 5,
+          "days_needed": 35,
+          "fits_window": false,
+          "formula": "需求 60.0h ÷ 每周 12.0h（3 slots/周 × 4.0h/slot） = 5 周 = 35 天",
+          "source": "resource_contract.equipment"
+        },
+        {
+          "equipment": "EQ-XRD",
+          "name": "X 射线衍射仪",
+          "known": true,
+          "demand_hours": 25.0,
+          "weekly_hours": 10.0,
+          "window_days": 30.0,
+          "window_hours": 40.0,
+          "weeks_needed": 3,
+          "days_needed": 21,
+          "fits_window": true,
+          "formula": "需求 25.0h ÷ 每周 10.0h（5 slots/周 × 2.0h/slot） = 3 周 = 21 天",
+          "source": "resource_contract.equipment"
+        }
+      ],
+      "bottleneck": {
+        "equipment": "EQ-GB",
+        "name": "充氮手套箱",
+        "known": true,
+        "demand_hours": 60.0,
+        "weekly_hours": 12.0,
+        "window_days": 30.0,
+        "window_hours": 48.0,
+        "weeks_needed": 5,
+        "days_needed": 35,
+        "fits_window": false,
+        "formula": "需求 60.0h ÷ 每周 12.0h（3 slots/周 × 4.0h/slot） = 5 周 = 35 天",
+        "source": "resource_contract.equipment"
+      },
+      "deadline_days": 30.0,
+      "overrun_days": 5.0,
+      "feasible_by_throughput": false,
+      "est_days_verdict": "est_days 超过 deadline",
+      "arithmetic_problems": [],
+      "assumptions": [
+        "cost_item「手套箱」按 unit_price=80.0 匹配到设备 EQ-GB，quantity=60.0 视为机时小时数（假设）。",
+        "cost_item「XRD」按 unit_price=120.0 匹配到设备 EQ-XRD，quantity=25.0 视为机时小时数（假设）。"
+      ],
+      "unmatched_cost_items": [
+        "UV臭氧清洗机",
+        "PbI2"
+      ]
+    }
+  ],
+  "user_plan_assessment": {
+    "version": "rev1",
+    "source_file": "/Users/liuhengshen/Desktop/bhr_product/3rd/4/submit/skills-cf1995b5/skill-c-schedule-forge/examples/plan_revised.json",
+    "demand_hours_by_equipment": {
+      "EQ-GB": 56.0,
+      "EQ-HP": 16.0,
+      "EQ-XRD": 10.0
+    },
+    "equipment_rows": [
+      {
+        "equipment": "EQ-GB",
+        "name": "充氮手套箱",
+        "known": true,
+        "demand_hours": 56.0,
+        "weekly_hours": 12.0,
+        "window_days": 30.0,
+        "window_hours": 48.0,
+        "weeks_needed": 5,
+        "days_needed": 35,
+        "fits_window": false,
+        "formula": "需求 56.0h ÷ 每周 12.0h（3 slots/周 × 4.0h/slot） = 5 周 = 35 天",
+        "source": "resource_contract.equipment"
+      },
+      {
+        "equipment": "EQ-HP",
+        "name": "精密加热台",
+        "known": true,
+        "demand_hours": 16.0,
+        "weekly_hours": 14.0,
+        "window_days": 30.0,
+        "window_hours": 56.0,
+        "weeks_needed": 2,
+        "days_needed": 14,
+        "fits_window": true,
+        "formula": "需求 16.0h ÷ 每周 14.0h（7 slots/周 × 2.0h/slot） = 2 周 = 14 天",
+        "source": "equipment_domain_note(内嵌JSON片段)"
+      },
+      {
+        "equipment": "EQ-XRD",
+        "name": "X 射线衍射仪",
+        "known": true,
+        "demand_hours": 10.0,
+        "weekly_hours": 10.0,
+        "window_days": 30.0,
+        "window_hours": 40.0,
+        "weeks_needed": 1,
+        "days_needed": 7,
+        "fits_window": true,
+        "formula": "需求 10.0h ÷ 每周 10.0h（5 slots/周 × 2.0h/slot） = 1 周 = 7 天",
+        "source": "resource_contract.equipment"
+      }
+    ],
+    "bottleneck": {
+      "equipment": "EQ-GB",
+      "name": "充氮手套箱",
+      "known": true,
+      "demand_hours": 56.0,
+      "weekly_hours": 12.0,
+      "window_days": 30.0,
+      "window_hours": 48.0,
+      "weeks_needed": 5,
+      "days_needed": 35,
+      "fits_window": false,
+      "formula": "需求 56.0h ÷ 每周 12.0h（3 slots/周 × 4.0h/slot） = 5 周 = 35 天",
+      "source": "resource_contract.equipment"
+    },
+    "deadline_days": 30.0,
+    "overrun_days": 5.0,
+    "feasible_by_throughput": false,
+    "step_errors": []
+  },
+  "method_note": "吞吐核算只按各设备独立判断（机时需求 ÷ 每周可用机时），是必要非充分条件；先后/并行关系的充分判定见 schedule 子命令。"
+}

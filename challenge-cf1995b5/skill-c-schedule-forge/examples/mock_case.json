@@ -1,0 +1,79 @@
+{
+  "case_id": "MOCK-GARP-001",
+  "note": "合成示意案例：钙钛矿薄膜退火工艺优化。全部价格、预约与候选方案均为组织方构造的前瞻约定，用于演示 exp-schedule-forge 的排期可行性核算，不对应真实供应商报价或已确认排期。",
+  "title": "MAPbI3 钙钛矿薄膜退火工艺窗口优化",
+  "task": "在 30 天、2 万元预算内完成退火温度-旋涂转速矩阵实验并交付表征数据",
+  "research_goal": "确定退火温度与旋涂转速对 MAPbI3 薄膜结晶质量的影响窗口",
+  "source": {
+    "paper_pdf": "mock_paper.pdf",
+    "citation": "Mock et al., 合成示意引用",
+    "key_claim": "退火温度 80-150C 区间显著影响晶粒尺寸"
+  },
+  "resource_contract": {
+    "disclaimer": "组织方前瞻合同：价格与预约信息为计划性约定，不是实际供应商报价或已确认排期。",
+    "currency": "CNY",
+    "budget_cap": 20000,
+    "deadline_days": 30,
+    "equipment": [
+      {"id": "EQ-GB", "name": "充氮手套箱", "model": "MB-200B", "spec": "H2O/O2<1ppm",
+       "price_per_hour": 80,
+       "booking": {"window_days": 30, "slots_per_week": 3, "slot_hours": 4}},
+      {"id": "EQ-XRD", "name": "X 射线衍射仪", "model": "D8-Advance", "spec": "Cu Kα",
+       "price_per_hour": 120,
+       "booking": {"window_days": 30, "slots_per_week": 5, "slot_hours": 2}}
+    ],
+    "reagents": [
+      {"id": "RE-MAI", "name": "MAI", "spec": "≥99.99%", "unit_price": 250, "unit": "g", "pack_size": 5},
+      {"id": "RE-PBI2", "name": "PbI2", "spec": "≥99.99%", "unit_price": 180, "unit": "g", "pack_size": 5},
+      {"id": "RE-CB", "name": "氯苯", "spec": "无水级", "unit_price": 90, "unit": "mL", "pack_size": 500}
+    ]
+  },
+  "parameter_domains": {
+    "anneal_temperature_C": {"type": "range", "min": 80, "max": 150, "step": 5, "basis": "设备手册+预实验", "source": "case:parameter_domains"},
+    "spin_coating_rpm": {"type": "enum", "values": [2000, 3000, 4000, 6000], "basis": "组织方有限参数域", "source": "case:parameter_domains"}
+  },
+  "equipment_domain_note": "除 equipment 列表外，实验室另有一台加热台可预约，信息如下片段（需解析对账并入设备表）：{\"id\": \"EQ-HP\", \"name\": \"精密加热台\", \"model\": \"HP-300\", \"spec\": \"室温~300C, ±1C\", \"price_per_hour\": 40, \"booking\": {\"window_days\": 30, \"slots_per_week\": 7, \"slot_hours\": 2}}。注意该设备不在 resource_contract.equipment 数组中。",
+  "candidate_plans": [
+    {
+      "version": "v1", "author": "组织方候选A",
+      "summary": "单变量温度扫描，5 温度点 × 1 转速",
+      "parameters": {"spin_coating_rpm": 4000, "anneal_temperature_C": [80, 95, 110, 125, 140]},
+      "cost_items": [
+        {"item": "手套箱", "unit_price": 80, "quantity": 40, "subtotal": 3200},
+        {"item": "加热台", "unit_price": 40, "quantity": 20, "subtotal": 800},
+        {"item": "XRD", "unit_price": 120, "quantity": 15, "subtotal": 1500},
+        {"item": "MAI", "unit_price": 250, "quantity": 10, "subtotal": 2500}
+      ],
+      "total_cost": 7330,
+      "est_days": 28
+    },
+    {
+      "version": "v2", "author": "组织方候选B",
+      "summary": "全矩阵 5 温度 × 4 转速，n=3 重复，手套箱内完成全部操作",
+      "parameters": {"spin_coating_rpm": [2000, 3000, 4000, 6000], "anneal_temperature_C": [80, 95, 110, 125, 140]},
+      "cost_items": [
+        {"item": "手套箱", "unit_price": 80, "quantity": 96, "subtotal": 7680},
+        {"item": "XRD", "unit_price": 120, "quantity": 20, "subtotal": 2400},
+        {"item": "MAI", "unit_price": 250, "quantity": 15, "subtotal": 3750}
+      ],
+      "total_cost": 13830,
+      "est_days": 21
+    },
+    {
+      "version": "v3", "author": "组织方候选C",
+      "summary": "大样本筛选 + UV 臭氧预处理（设备表外设备）",
+      "parameters": {"spin_coating_rpm": 4000, "anneal_temperature_C": [80, 100, 120, 140, 150]},
+      "cost_items": [
+        {"item": "手套箱", "unit_price": 80, "quantity": 60, "subtotal": 4800},
+        {"item": "UV臭氧清洗机", "equipment": "EQ-UV", "unit_price": 50, "quantity": 6, "subtotal": 300},
+        {"item": "XRD", "unit_price": 120, "quantity": 25, "subtotal": 3000},
+        {"item": "PbI2", "unit_price": 180, "quantity": 20, "subtotal": 3600}
+      ],
+      "total_cost": 11700,
+      "est_days": 35
+    }
+  ],
+  "output_contract": {
+    "required_fields": ["case_id", "revised_plan", "candidate_assessment", "validation", "status", "uncertainty", "sources", "change_log", "confirmation_items"]
+  }
+}

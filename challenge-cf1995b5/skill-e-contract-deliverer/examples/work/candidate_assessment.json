@@ -1,0 +1,11 @@
+[
+  {"version": "v1", "verdict": "部分采纳",
+   "findings": ["成本算术错误：subtotal 之和 3200+1250+900=5350 != total_cost 7330（candidate_plans[0]）",
+                "参数全部在域内；est_days=28 ≤ deadline 30，吞吐可行（10 档 × 4h = 40h 对 40h 用量）"]},
+  {"version": "v2", "verdict": "否决",
+   "findings": ["est_days=45 超 deadline_days=30；16 组合需 64h=16 档，3 档/周需约 6 周，超 window_days=30 的预约吞吐（candidate_plans[1]）",
+                "成本算术正确（5120+2500+1800=9420）"]},
+  {"version": "v3", "verdict": "否决",
+   "findings": ["anneal_temperature_C=165 越出 parameter_domains 上限 150（candidate_plans[2]）",
+                "依赖内嵌设备 EQ-HP，可用性未确认"]}
+]

@@ -1,0 +1,237 @@
+{
+  "note": "合成示例输出，非正式测评结果",
+  "case_id": "MOCK-RISK-FMEA-001",
+  "assumptions_and_variables": [
+    "自变量：退火温度（case:parameter_domains.anneal_temperature_C，80-150°C step5）、旋涂转速（enum 2000/3000/4000/6000）",
+    "因变量：XRD 主峰强度与 PbI2 残留峰强比、UV-Vis 吸收边、批间 RSD（验收阈值 ≤15%，case:research_goal）",
+    "假设：手套箱 H2O<1ppm 全程维持（前瞻合同 spec，待设备可用性确认）；环境温湿度未受控，作为重复性排查变量记录"
+  ],
+  "controls": [
+    "空白对照：ST-01 每批配制同做空白溶剂对照（FM-CONTAM 判据确认）",
+    "标准样对照：ST-04/ST-05 前置标准样校验仪器（FM-NOSIGNAL 设计要求）",
+    "重复对照：ST-06 最优温度点独立 3 批，RSD≤15% 验收"
+  ],
+  "equipment_materials": {
+    "contract_disclaimer": "组织方前瞻合同：价格与预约信息为计划性约定，不是实际供应商报价或已确认排期。",
+    "equipment": [
+      "EQ-GB",
+      "EQ-SC",
+      "EQ-XRD",
+      "EQ-HP(equipment_domain_note 内嵌，已解析对账)"
+    ],
+    "reagents": [
+      "RE-MAI",
+      "RE-PBI2",
+      "RE-DMF"
+    ],
+    "note": "价格与排期为前瞻约定，实际报价/预约状态见 confirmation_items 设备可用性类"
+  },
+  "schedule_budget": {
+    "budget_cap": 20000,
+    "currency": "CNY",
+    "deadline_days": 30,
+    "v1_cost_correction": "候选 v1 total_cost=7330 与明细合计 5200 不符（见 candidate_assessment），修订方案以明细重算并预留 1 次重做余量",
+    "booking_check": "EQ-XRD slots_per_week=2×30天窗口≈8 slot，已错峰安排并写入确认项"
+  },
+  "parameter_ranges": {
+    "anneal_temperature_C": {
+      "type": "range",
+      "min": 80,
+      "max": 150,
+      "step": 5,
+      "basis": "设备手册+预实验",
+      "source": "case:parameter_domains.anneal_temperature_C"
+    },
+    "spin_coating_rpm": {
+      "type": "enum",
+      "values": [
+        2000,
+        3000,
+        4000,
+        6000
+      ],
+      "basis": "组织方有限参数域",
+      "source": "case:parameter_domains.spin_coating_rpm"
+    }
+  },
+  "steps": [
+    {
+      "id": "ST-01",
+      "name": "手套箱内配制 MAPbI3 前驱体溶液",
+      "risk_refs": [
+        "FM-CONTAM",
+        "FM-SAMPLE",
+        "FM-REAGENT",
+        "FM-SAFETY"
+      ],
+      "orphan": false
+    },
+    {
+      "id": "ST-02",
+      "name": "旋涂成膜",
+      "risk_refs": [
+        "FM-CONTAM",
+        "FM-DRIFT",
+        "FM-REPRO",
+        "FM-SAMPLE",
+        "FM-EQBUSY"
+      ],
+      "orphan": false
+    },
+    {
+      "id": "ST-03",
+      "name": "加热台退火结晶",
+      "risk_refs": [
+        "FM-DRIFT",
+        "FM-REPRO",
+        "FM-EQBUSY",
+        "FM-SAFETY"
+      ],
+      "orphan": false
+    },
+    {
+      "id": "ST-04",
+      "name": "XRD 物相表征",
+      "risk_refs": [
+        "FM-DRIFT",
+        "FM-NOSIGNAL",
+        "FM-SAMPLE",
+        "FM-EQBUSY"
+      ],
+      "orphan": false
+    },
+    {
+      "id": "ST-05",
+      "name": "紫外-可见吸收光谱测量",
+      "risk_refs": [
+        "FM-DRIFT",
+        "FM-NOSIGNAL",
+        "FM-DATA",
+        "FM-EQBUSY"
+      ],
+      "orphan": false
+    },
+    {
+      "id": "ST-06",
+      "name": "三批次重复性验证",
+      "risk_refs": [
+        "FM-REPRO",
+        "FM-SAMPLE",
+        "FM-DATA"
+      ],
+      "orphan": false
+    },
+    {
+      "id": "ST-07",
+      "name": "数据汇总与归档",
+      "risk_refs": [
+        "FM-REPRO",
+        "FM-DATA"
+      ],
+      "orphan": false
+    }
+  ],
+  "risk_section_source": "examples/output/risk_map.json 经 risk_fmea.py render 机械生成，禁止手写替代",
+  "high_rpn_design_changes": [
+    {
+      "trigger": "FM-CONTAM 污染 @ ST-01 (RPN 36)",
+      "design_change": "关键配制步骤加空白对照与洁净度预检；污染敏感步骤预留 1 次重做的试剂与时间余量"
+    },
+    {
+      "trigger": "FM-SAFETY 安全事故 @ ST-01 (RPN 10)",
+      "design_change": "涉危险化学品/高温/高压步骤强制写 PPE 与应急处置卡；安全确认项永远是 confirmation_items 第一类"
+    },
+    {
+      "trigger": "FM-CONTAM 污染 @ ST-02 (RPN 36)",
+      "design_change": "关键配制步骤加空白对照与洁净度预检；污染敏感步骤预留 1 次重做的试剂与时间余量"
+    },
+    {
+      "trigger": "FM-DRIFT 参数漂移 @ ST-02 (RPN 36)",
+      "design_change": "温控/转速敏感步骤前置校准确认点；漂移敏感批次保留同期标准样作为事后对账依据"
+    },
+    {
+      "trigger": "FM-REPRO 重复性差 @ ST-02 (RPN 36)",
+      "design_change": "关键步骤加预实验（小规模单变量矩阵）并预设可接受 RSD 阈值；方案必须含 ≥3 次独立重复"
+    },
+    {
+      "trigger": "FM-DRIFT 参数漂移 @ ST-03 (RPN 48)",
+      "design_change": "温控/转速敏感步骤前置校准确认点；漂移敏感批次保留同期标准样作为事后对账依据"
+    },
+    {
+      "trigger": "FM-REPRO 重复性差 @ ST-03 (RPN 36)",
+      "design_change": "关键步骤加预实验（小规模单变量矩阵）并预设可接受 RSD 阈值；方案必须含 ≥3 次独立重复"
+    },
+    {
+      "trigger": "FM-SAFETY 安全事故 @ ST-03 (RPN 10)",
+      "design_change": "涉危险化学品/高温/高压步骤强制写 PPE 与应急处置卡；安全确认项永远是 confirmation_items 第一类"
+    },
+    {
+      "trigger": "FM-DRIFT 参数漂移 @ ST-04 (RPN 36)",
+      "design_change": "温控/转速敏感步骤前置校准确认点；漂移敏感批次保留同期标准样作为事后对账依据"
+    },
+    {
+      "trigger": "FM-NOSIGNAL 无信号/无响应 @ ST-04 (RPN 24)",
+      "design_change": "表征/测量步骤前置标准样校验环节；每个表征步骤指定一个可判读的成功判据"
+    },
+    {
+      "trigger": "FM-DRIFT 参数漂移 @ ST-05 (RPN 36)",
+      "design_change": "温控/转速敏感步骤前置校准确认点；漂移敏感批次保留同期标准样作为事后对账依据"
+    },
+    {
+      "trigger": "FM-NOSIGNAL 无信号/无响应 @ ST-05 (RPN 24)",
+      "design_change": "表征/测量步骤前置标准样校验环节；每个表征步骤指定一个可判读的成功判据"
+    },
+    {
+      "trigger": "FM-REPRO 重复性差 @ ST-06 (RPN 36)",
+      "design_change": "关键步骤加预实验（小规模单变量矩阵）并预设可接受 RSD 阈值；方案必须含 ≥3 次独立重复"
+    },
+    {
+      "trigger": "FM-REPRO 重复性差 @ ST-07 (RPN 36)",
+      "design_change": "关键步骤加预实验（小规模单变量矩阵）并预设可接受 RSD 阈值；方案必须含 ≥3 次独立重复"
+    }
+  ],
+  "confirmation_items": [
+    {
+      "category": "安全",
+      "item": "DMF（有毒）与 PbI2（重金属）的 MSDS 已核对，PPE 与重金属废液处置渠道已确认",
+      "why": "涉及危化品与重金属，机构规章须人工核对",
+      "blocking": true,
+      "status": "pending"
+    },
+    {
+      "category": "伦理",
+      "item": "本方案不涉及人体/动物实验与个人信息，已自查确认无伦理敏感对象",
+      "why": "显式自查声明，供审计追溯",
+      "blocking": false,
+      "status": "pending"
+    },
+    {
+      "category": "设备可用性",
+      "item": "EQ-GB/EQ-SC/EQ-XRD/EQ-HP 的预约状态已查预约系统；EQ-HP 为 equipment_domain_note 内嵌设备，其可用性与计价须单独确认（前瞻合同，非已确认排期）",
+      "why": "组织方合同为计划性约定，预约状态无法自主证实",
+      "blocking": true,
+      "status": "pending"
+    },
+    {
+      "category": "设备可用性",
+      "item": "EQ-HP 加热台校准有效期覆盖实验窗口（允差 ±2°C），且高 RPN 项 FM-DRIFT@ST-03 的校准确认点已排入首槽",
+      "why": "漂移史未知，校准记录须人工查验",
+      "blocking": true,
+      "status": "pending"
+    },
+    {
+      "category": "专家确认",
+      "item": "MAI/PbI2 双供应商备选渠道已经导师批准并可下单（应对 FM-REAGENT@ST-01 的设计修改）",
+      "why": "双供应商策略涉及采购权限与预算调整",
+      "blocking": true,
+      "status": "pending"
+    },
+    {
+      "category": "专家确认",
+      "item": "修订方案将 v1 越域退火温度 160°C 收敛至域上限 150°C，该改动已经专家过目",
+      "why": "有限参数域为硬约束，域边界改动须专家批准",
+      "blocking": true,
+      "status": "pending"
+    }
+  ]
+}

@@ -1,0 +1,24 @@
+{
+  "version": "rev1",
+  "note": "合成示例：对候选 v2 的首次修订步骤表（未修复排期，预期超期）。",
+  "est_days": 30,
+  "steps": [
+    {"id": "S1", "name": "前驱液配制", "equipment": "EQ-GB", "equip_hours": 4,
+     "samples": 1, "depends_on": [],
+     "reagents": [{"id": "RE-MAI", "quantity": 10}, {"id": "RE-PBI2", "quantity": 10}]},
+    {"id": "S2", "name": "旋涂制膜", "equipment": "EQ-GB", "equip_hours": 16,
+     "samples": 8, "per_sample_hours": 2, "batch_capacity": 4, "parallel": false,
+     "depends_on": ["S1"],
+     "reagents": [{"id": "RE-CB", "quantity": 400}]},
+    {"id": "S3", "name": "退火", "equipment": "EQ-HP", "equip_hours": 16,
+     "samples": 8, "per_sample_hours": 2, "batch_capacity": 4, "parallel": false,
+     "depends_on": ["S2"]},
+    {"id": "S4", "name": "XRD初筛", "equipment": "EQ-XRD", "equip_hours": 5,
+     "samples": 4, "batch_group": "xrd-1", "depends_on": ["S3"]},
+    {"id": "S5", "name": "XRD复核", "equipment": "EQ-XRD", "equip_hours": 5,
+     "samples": 4, "batch_group": "xrd-1", "depends_on": ["S3"]},
+    {"id": "S6", "name": "稳定性复测", "equipment": "EQ-GB", "equip_hours": 36,
+     "samples": 8, "replicates": 3, "depends_on": ["S4", "S5"],
+     "alt_equipment": ["EQ-HP"]}
+  ]
+}

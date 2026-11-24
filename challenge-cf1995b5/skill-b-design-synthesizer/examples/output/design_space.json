@@ -1,0 +1,1859 @@
+{
+  "status": "ok",
+  "case_id": "MOCK-DESIGN-001",
+  "factors": {
+    "anneal_temperature_C": {
+      "n_levels": 15,
+      "levels": [
+        80,
+        85,
+        90,
+        95,
+        100,
+        105,
+        110,
+        115,
+        120,
+        125,
+        130,
+        135,
+        140,
+        145,
+        150
+      ],
+      "basis": "设备手册+预实验",
+      "source": "case:mock"
+    },
+    "anneal_time_min": {
+      "n_levels": 6,
+      "levels": [
+        10,
+        20,
+        30,
+        40,
+        50,
+        60
+      ],
+      "basis": "文献常见窗口",
+      "source": "case:mock"
+    },
+    "spin_coating_rpm": {
+      "n_levels": 4,
+      "levels": [
+        2000,
+        3000,
+        4000,
+        6000
+      ],
+      "basis": "组织方有限参数域",
+      "source": "case:mock"
+    }
+  },
+  "total_combinations": 360,
+  "combinations_returned": 360,
+  "combinations_truncated": false,
+  "combinations": [
+    {
+      "anneal_temperature_C": 80,
+      "anneal_time_min": 10,
+      "spin_coating_rpm": 2000
+    },
+    {
+      "anneal_temperature_C": 80,
+      "anneal_time_min": 10,
+      "spin_coating_rpm": 3000
+    },
+    {
+      "anneal_temperature_C": 80,
+      "anneal_time_min": 10,
+      "spin_coating_rpm": 4000
+    },
+    {
+      "anneal_temperature_C": 80,
+      "anneal_time_min": 10,
+      "spin_coating_rpm": 6000
+    },
+    {
+      "anneal_temperature_C": 80,
+      "anneal_time_min": 20,
+      "spin_coating_rpm": 2000
+    },
+    {
+      "anneal_temperature_C": 80,
+      "anneal_time_min": 20,
+      "spin_coating_rpm": 3000
+    },
+    {
+      "anneal_temperature_C": 80,
+      "anneal_time_min": 20,
+      "spin_coating_rpm": 4000
+    },
+    {
+      "anneal_temperature_C": 80,
+      "anneal_time_min": 20,
+      "spin_coating_rpm": 6000
+    },
+    {
+      "anneal_temperature_C": 80,
+      "anneal_time_min": 30,
+      "spin_coating_rpm": 2000
+    },
+    {
+      "anneal_temperature_C": 80,
+      "anneal_time_min": 30,
+      "spin_coating_rpm": 3000
+    },
+    {
+      "anneal_temperature_C": 80,
+      "anneal_time_min": 30,
+      "spin_coating_rpm": 4000
+    },
+    {
+      "anneal_temperature_C": 80,
+      "anneal_time_min": 30,
+      "spin_coating_rpm": 6000
+    },
+    {
+      "anneal_temperature_C": 80,
+      "anneal_time_min": 40,
+      "spin_coating_rpm": 2000
+    },
+    {
+      "anneal_temperature_C": 80,
+      "anneal_time_min": 40,
+      "spin_coating_rpm": 3000
+    },
+    {
+      "anneal_temperature_C": 80,
+      "anneal_time_min": 40,
+      "spin_coating_rpm": 4000
+    },
+    {
+      "anneal_temperature_C": 80,
+      "anneal_time_min": 40,
+      "spin_coating_rpm": 6000
+    },
+    {
+      "anneal_temperature_C": 80,
+      "anneal_time_min": 50,
+      "spin_coating_rpm": 2000
+    },
+    {
+      "anneal_temperature_C": 80,
+      "anneal_time_min": 50,
+      "spin_coating_rpm": 3000
+    },
+    {
+      "anneal_temperature_C": 80,
+      "anneal_time_min": 50,
+      "spin_coating_rpm": 4000
+    },
+    {
+      "anneal_temperature_C": 80,
+      "anneal_time_min": 50,
+      "spin_coating_rpm": 6000
+    },
+    {
+      "anneal_temperature_C": 80,
+      "anneal_time_min": 60,
+      "spin_coating_rpm": 2000
+    },
+    {
+      "anneal_temperature_C": 80,
+      "anneal_time_min": 60,
+      "spin_coating_rpm": 3000
+    },
+    {
+      "anneal_temperature_C": 80,
+      "anneal_time_min": 60,
+      "spin_coating_rpm": 4000
+    },
+    {
+      "anneal_temperature_C": 80,
+      "anneal_time_min": 60,
+      "spin_coating_rpm": 6000
+    },
+    {
+      "anneal_temperature_C": 85,
+      "anneal_time_min": 10,
+      "spin_coating_rpm": 2000
+    },
+    {
+      "anneal_temperature_C": 85,
+      "anneal_time_min": 10,
+      "spin_coating_rpm": 3000
+    },
+    {
+      "anneal_temperature_C": 85,
+      "anneal_time_min": 10,
+      "spin_coating_rpm": 4000
+    },
+    {
+      "anneal_temperature_C": 85,
+      "anneal_time_min": 10,
+      "spin_coating_rpm": 6000
+    },
+    {
+      "anneal_temperature_C": 85,
+      "anneal_time_min": 20,
+      "spin_coating_rpm": 2000
+    },
+    {
+      "anneal_temperature_C": 85,
+      "anneal_time_min": 20,
+      "spin_coating_rpm": 3000
+    },
+    {
+      "anneal_temperature_C": 85,
+      "anneal_time_min": 20,
+      "spin_coating_rpm": 4000
+    },
+    {
+      "anneal_temperature_C": 85,
+      "anneal_time_min": 20,
+      "spin_coating_rpm": 6000
+    },
+    {
+      "anneal_temperature_C": 85,
+      "anneal_time_min": 30,
+      "spin_coating_rpm": 2000
+    },
+    {
+      "anneal_temperature_C": 85,
+      "anneal_time_min": 30,
+      "spin_coating_rpm": 3000
+    },
+    {
+      "anneal_temperature_C": 85,
+      "anneal_time_min": 30,
+      "spin_coating_rpm": 4000
+    },
+    {
+      "anneal_temperature_C": 85,
+      "anneal_time_min": 30,
+      "spin_coating_rpm": 6000
+    },
+    {
+      "anneal_temperature_C": 85,
+      "anneal_time_min": 40,
+      "spin_coating_rpm": 2000
+    },
+    {
+      "anneal_temperature_C": 85,
+      "anneal_time_min": 40,
+      "spin_coating_rpm": 3000
+    },
+    {
+      "anneal_temperature_C": 85,
+      "anneal_time_min": 40,
+      "spin_coating_rpm": 4000
+    },
+    {
+      "anneal_temperature_C": 85,
+      "anneal_time_min": 40,
+      "spin_coating_rpm": 6000
+    },
+    {
+      "anneal_temperature_C": 85,
+      "anneal_time_min": 50,
+      "spin_coating_rpm": 2000
+    },
+    {
+      "anneal_temperature_C": 85,
+      "anneal_time_min": 50,
+      "spin_coating_rpm": 3000
+    },
+    {
+      "anneal_temperature_C": 85,
+      "anneal_time_min": 50,
+      "spin_coating_rpm": 4000
+    },
+    {
+      "anneal_temperature_C": 85,
+      "anneal_time_min": 50,
+      "spin_coating_rpm": 6000
+    },
+    {
+      "anneal_temperature_C": 85,
+      "anneal_time_min": 60,
+      "spin_coating_rpm": 2000
+    },
+    {
+      "anneal_temperature_C": 85,
+      "anneal_time_min": 60,
+      "spin_coating_rpm": 3000
+    },
+    {
+      "anneal_temperature_C": 85,
+      "anneal_time_min": 60,
+      "spin_coating_rpm": 4000
+    },
+    {
+      "anneal_temperature_C": 85,
+      "anneal_time_min": 60,
+      "spin_coating_rpm": 6000
+    },
+    {
+      "anneal_temperature_C": 90,
+      "anneal_time_min": 10,
+      "spin_coating_rpm": 2000
+    },
+    {
+      "anneal_temperature_C": 90,
+      "anneal_time_min": 10,
+      "spin_coating_rpm": 3000
+    },
+    {
+      "anneal_temperature_C": 90,
+      "anneal_time_min": 10,
+      "spin_coating_rpm": 4000
+    },
+    {
+      "anneal_temperature_C": 90,
+      "anneal_time_min": 10,
+      "spin_coating_rpm": 6000
+    },
+    {
+      "anneal_temperature_C": 90,
+      "anneal_time_min": 20,
+      "spin_coating_rpm": 2000
+    },
+    {
+      "anneal_temperature_C": 90,
+      "anneal_time_min": 20,
+      "spin_coating_rpm": 3000
+    },
+    {
+      "anneal_temperature_C": 90,
+      "anneal_time_min": 20,
+      "spin_coating_rpm": 4000
+    },
+    {
+      "anneal_temperature_C": 90,
+      "anneal_time_min": 20,
+      "spin_coating_rpm": 6000
+    },
+    {
+      "anneal_temperature_C": 90,
+      "anneal_time_min": 30,
+      "spin_coating_rpm": 2000
+    },
+    {
+      "anneal_temperature_C": 90,
+      "anneal_time_min": 30,
+      "spin_coating_rpm": 3000
+    },
+    {
+      "anneal_temperature_C": 90,
+      "anneal_time_min": 30,
+      "spin_coating_rpm": 4000
+    },
+    {
+      "anneal_temperature_C": 90,
+      "anneal_time_min": 30,
+      "spin_coating_rpm": 6000
+    },
+    {
+      "anneal_temperature_C": 90,
+      "anneal_time_min": 40,
+      "spin_coating_rpm": 2000
+    },
+    {
+      "anneal_temperature_C": 90,
+      "anneal_time_min": 40,
+      "spin_coating_rpm": 3000
+    },
+    {
+      "anneal_temperature_C": 90,
+      "anneal_time_min": 40,
+      "spin_coating_rpm": 4000
+    },
+    {
+      "anneal_temperature_C": 90,
+      "anneal_time_min": 40,
+      "spin_coating_rpm": 6000
+    },
+    {
+      "anneal_temperature_C": 90,
+      "anneal_time_min": 50,
+      "spin_coating_rpm": 2000
+    },
+    {
+      "anneal_temperature_C": 90,
+      "anneal_time_min": 50,
+      "spin_coating_rpm": 3000
+    },
+    {
+      "anneal_temperature_C": 90,
+      "anneal_time_min": 50,
+      "spin_coating_rpm": 4000
+    },
+    {
+      "anneal_temperature_C": 90,
+      "anneal_time_min": 50,
+      "spin_coating_rpm": 6000
+    },
+    {
+      "anneal_temperature_C": 90,
+      "anneal_time_min": 60,
+      "spin_coating_rpm": 2000
+    },
+    {
+      "anneal_temperature_C": 90,
+      "anneal_time_min": 60,
+      "spin_coating_rpm": 3000
+    },
+    {
+      "anneal_temperature_C": 90,
+      "anneal_time_min": 60,
+      "spin_coating_rpm": 4000
+    },
+    {
+      "anneal_temperature_C": 90,
+      "anneal_time_min": 60,
+      "spin_coating_rpm": 6000
+    },
+    {
+      "anneal_temperature_C": 95,
+      "anneal_time_min": 10,
+      "spin_coating_rpm": 2000
+    },
+    {
+      "anneal_temperature_C": 95,
+      "anneal_time_min": 10,
+      "spin_coating_rpm": 3000
+    },
+    {
+      "anneal_temperature_C": 95,
+      "anneal_time_min": 10,
+      "spin_coating_rpm": 4000
+    },
+    {
+      "anneal_temperature_C": 95,
+      "anneal_time_min": 10,
+      "spin_coating_rpm": 6000
+    },
+    {
+      "anneal_temperature_C": 95,
+      "anneal_time_min": 20,
+      "spin_coating_rpm": 2000
+    },
+    {
+      "anneal_temperature_C": 95,
+      "anneal_time_min": 20,
+      "spin_coating_rpm": 3000
+    },
+    {
+      "anneal_temperature_C": 95,
+      "anneal_time_min": 20,
+      "spin_coating_rpm": 4000
+    },
+    {
+      "anneal_temperature_C": 95,
+      "anneal_time_min": 20,
+      "spin_coating_rpm": 6000
+    },
+    {
+      "anneal_temperature_C": 95,
+      "anneal_time_min": 30,
+      "spin_coating_rpm": 2000
+    },
+    {
+      "anneal_temperature_C": 95,
+      "anneal_time_min": 30,
+      "spin_coating_rpm": 3000
+    },
+    {
+      "anneal_temperature_C": 95,
+      "anneal_time_min": 30,
+      "spin_coating_rpm": 4000
+    },
+    {
+      "anneal_temperature_C": 95,
+      "anneal_time_min": 30,
+      "spin_coating_rpm": 6000
+    },
+    {
+      "anneal_temperature_C": 95,
+      "anneal_time_min": 40,
+      "spin_coating_rpm": 2000
+    },
+    {
+      "anneal_temperature_C": 95,
+      "anneal_time_min": 40,
+      "spin_coating_rpm": 3000
+    },
+    {
+      "anneal_temperature_C": 95,
+      "anneal_time_min": 40,
+      "spin_coating_rpm": 4000
+    },
+    {
+      "anneal_temperature_C": 95,
+      "anneal_time_min": 40,
+      "spin_coating_rpm": 6000
+    },
+    {
+      "anneal_temperature_C": 95,
+      "anneal_time_min": 50,
+      "spin_coating_rpm": 2000
+    },
+    {
+      "anneal_temperature_C": 95,
+      "anneal_time_min": 50,
+      "spin_coating_rpm": 3000
+    },
+    {
+      "anneal_temperature_C": 95,
+      "anneal_time_min": 50,
+      "spin_coating_rpm": 4000
+    },
+    {
+      "anneal_temperature_C": 95,
+      "anneal_time_min": 50,
+      "spin_coating_rpm": 6000
+    },
+    {
+      "anneal_temperature_C": 95,
+      "anneal_time_min": 60,
+      "spin_coating_rpm": 2000
+    },
+    {
+      "anneal_temperature_C": 95,
+      "anneal_time_min": 60,
+      "spin_coating_rpm": 3000
+    },
+    {
+      "anneal_temperature_C": 95,
+      "anneal_time_min": 60,
+      "spin_coating_rpm": 4000
+    },
+    {
+      "anneal_temperature_C": 95,
+      "anneal_time_min": 60,
+      "spin_coating_rpm": 6000
+    },
+    {
+      "anneal_temperature_C": 100,
+      "anneal_time_min": 10,
+      "spin_coating_rpm": 2000
+    },
+    {
+      "anneal_temperature_C": 100,
+      "anneal_time_min": 10,
+      "spin_coating_rpm": 3000
+    },
+    {
+      "anneal_temperature_C": 100,
+      "anneal_time_min": 10,
+      "spin_coating_rpm": 4000
+    },
+    {
+      "anneal_temperature_C": 100,
+      "anneal_time_min": 10,
+      "spin_coating_rpm": 6000
+    },
+    {
+      "anneal_temperature_C": 100,
+      "anneal_time_min": 20,
+      "spin_coating_rpm": 2000
+    },
+    {
+      "anneal_temperature_C": 100,
+      "anneal_time_min": 20,
+      "spin_coating_rpm": 3000
+    },
+    {
+      "anneal_temperature_C": 100,
+      "anneal_time_min": 20,
+      "spin_coating_rpm": 4000
+    },
+    {
+      "anneal_temperature_C": 100,
+      "anneal_time_min": 20,
+      "spin_coating_rpm": 6000
+    },
+    {
+      "anneal_temperature_C": 100,
+      "anneal_time_min": 30,
+      "spin_coating_rpm": 2000
+    },
+    {
+      "anneal_temperature_C": 100,
+      "anneal_time_min": 30,
+      "spin_coating_rpm": 3000
+    },
+    {
+      "anneal_temperature_C": 100,
+      "anneal_time_min": 30,
+      "spin_coating_rpm": 4000
+    },
+    {
+      "anneal_temperature_C": 100,
+      "anneal_time_min": 30,
+      "spin_coating_rpm": 6000
+    },
+    {
+      "anneal_temperature_C": 100,
+      "anneal_time_min": 40,
+      "spin_coating_rpm": 2000
+    },
+    {
+      "anneal_temperature_C": 100,
+      "anneal_time_min": 40,
+      "spin_coating_rpm": 3000
+    },
+    {
+      "anneal_temperature_C": 100,
+      "anneal_time_min": 40,
+      "spin_coating_rpm": 4000
+    },
+    {
+      "anneal_temperature_C": 100,
+      "anneal_time_min": 40,
+      "spin_coating_rpm": 6000
+    },
+    {
+      "anneal_temperature_C": 100,
+      "anneal_time_min": 50,
+      "spin_coating_rpm": 2000
+    },
+    {
+      "anneal_temperature_C": 100,
+      "anneal_time_min": 50,
+      "spin_coating_rpm": 3000
+    },
+    {
+      "anneal_temperature_C": 100,
+      "anneal_time_min": 50,
+      "spin_coating_rpm": 4000
+    },
+    {
+      "anneal_temperature_C": 100,
+      "anneal_time_min": 50,
+      "spin_coating_rpm": 6000
+    },
+    {
+      "anneal_temperature_C": 100,
+      "anneal_time_min": 60,
+      "spin_coating_rpm": 2000
+    },
+    {
+      "anneal_temperature_C": 100,
+      "anneal_time_min": 60,
+      "spin_coating_rpm": 3000
+    },
+    {
+      "anneal_temperature_C": 100,
+      "anneal_time_min": 60,
+      "spin_coating_rpm": 4000
+    },
+    {
+      "anneal_temperature_C": 100,
+      "anneal_time_min": 60,
+      "spin_coating_rpm": 6000
+    },
+    {
+      "anneal_temperature_C": 105,
+      "anneal_time_min": 10,
+      "spin_coating_rpm": 2000
+    },
+    {
+      "anneal_temperature_C": 105,
+      "anneal_time_min": 10,
+      "spin_coating_rpm": 3000
+    },
+    {
+      "anneal_temperature_C": 105,
+      "anneal_time_min": 10,
+      "spin_coating_rpm": 4000
+    },
+    {
+      "anneal_temperature_C": 105,
+      "anneal_time_min": 10,
+      "spin_coating_rpm": 6000
+    },
+    {
+      "anneal_temperature_C": 105,
+      "anneal_time_min": 20,
+      "spin_coating_rpm": 2000
+    },
+    {
+      "anneal_temperature_C": 105,
+      "anneal_time_min": 20,
+      "spin_coating_rpm": 3000
+    },
+    {
+      "anneal_temperature_C": 105,
+      "anneal_time_min": 20,
+      "spin_coating_rpm": 4000
+    },
+    {
+      "anneal_temperature_C": 105,
+      "anneal_time_min": 20,
+      "spin_coating_rpm": 6000
+    },
+    {
+      "anneal_temperature_C": 105,
+      "anneal_time_min": 30,
+      "spin_coating_rpm": 2000
+    },
+    {
+      "anneal_temperature_C": 105,
+      "anneal_time_min": 30,
+      "spin_coating_rpm": 3000
+    },
+    {
+      "anneal_temperature_C": 105,
+      "anneal_time_min": 30,
+      "spin_coating_rpm": 4000
+    },
+    {
+      "anneal_temperature_C": 105,
+      "anneal_time_min": 30,
+      "spin_coating_rpm": 6000
+    },
+    {
+      "anneal_temperature_C": 105,
+      "anneal_time_min": 40,
+      "spin_coating_rpm": 2000
+    },
+    {
+      "anneal_temperature_C": 105,
+      "anneal_time_min": 40,
+      "spin_coating_rpm": 3000
+    },
+    {
+      "anneal_temperature_C": 105,
+      "anneal_time_min": 40,
+      "spin_coating_rpm": 4000
+    },
+    {
+      "anneal_temperature_C": 105,
+      "anneal_time_min": 40,
+      "spin_coating_rpm": 6000
+    },
+    {
+      "anneal_temperature_C": 105,
+      "anneal_time_min": 50,
+      "spin_coating_rpm": 2000
+    },
+    {
+      "anneal_temperature_C": 105,
+      "anneal_time_min": 50,
+      "spin_coating_rpm": 3000
+    },
+    {
+      "anneal_temperature_C": 105,
+      "anneal_time_min": 50,
+      "spin_coating_rpm": 4000
+    },
+    {
+      "anneal_temperature_C": 105,
+      "anneal_time_min": 50,
+      "spin_coating_rpm": 6000
+    },
+    {
+      "anneal_temperature_C": 105,
+      "anneal_time_min": 60,
+      "spin_coating_rpm": 2000
+    },
+    {
+      "anneal_temperature_C": 105,
+      "anneal_time_min": 60,
+      "spin_coating_rpm": 3000
+    },
+    {
+      "anneal_temperature_C": 105,
+      "anneal_time_min": 60,
+      "spin_coating_rpm": 4000
+    },
+    {
+      "anneal_temperature_C": 105,
+      "anneal_time_min": 60,
+      "spin_coating_rpm": 6000
+    },
+    {
+      "anneal_temperature_C": 110,
+      "anneal_time_min": 10,
+      "spin_coating_rpm": 2000
+    },
+    {
+      "anneal_temperature_C": 110,
+      "anneal_time_min": 10,
+      "spin_coating_rpm": 3000
+    },
+    {
+      "anneal_temperature_C": 110,
+      "anneal_time_min": 10,
+      "spin_coating_rpm": 4000
+    },
+    {
+      "anneal_temperature_C": 110,
+      "anneal_time_min": 10,
+      "spin_coating_rpm": 6000
+    },
+    {
+      "anneal_temperature_C": 110,
+      "anneal_time_min": 20,
+      "spin_coating_rpm": 2000
+    },
+    {
+      "anneal_temperature_C": 110,
+      "anneal_time_min": 20,
+      "spin_coating_rpm": 3000
+    },
+    {
+      "anneal_temperature_C": 110,
+      "anneal_time_min": 20,
+      "spin_coating_rpm": 4000
+    },
+    {
+      "anneal_temperature_C": 110,
+      "anneal_time_min": 20,
+      "spin_coating_rpm": 6000
+    },
+    {
+      "anneal_temperature_C": 110,
+      "anneal_time_min": 30,
+      "spin_coating_rpm": 2000
+    },
+    {
+      "anneal_temperature_C": 110,
+      "anneal_time_min": 30,
+      "spin_coating_rpm": 3000
+    },
+    {
+      "anneal_temperature_C": 110,
+      "anneal_time_min": 30,
+      "spin_coating_rpm": 4000
+    },
+    {
+      "anneal_temperature_C": 110,
+      "anneal_time_min": 30,
+      "spin_coating_rpm": 6000
+    },
+    {
+      "anneal_temperature_C": 110,
+      "anneal_time_min": 40,
+      "spin_coating_rpm": 2000
+    },
+    {
+      "anneal_temperature_C": 110,
+      "anneal_time_min": 40,
+      "spin_coating_rpm": 3000
+    },
+    {
+      "anneal_temperature_C": 110,
+      "anneal_time_min": 40,
+      "spin_coating_rpm": 4000
+    },
+    {
+      "anneal_temperature_C": 110,
+      "anneal_time_min": 40,
+      "spin_coating_rpm": 6000
+    },
+    {
+      "anneal_temperature_C": 110,
+      "anneal_time_min": 50,
+      "spin_coating_rpm": 2000
+    },
+    {
+      "anneal_temperature_C": 110,
+      "anneal_time_min": 50,
+      "spin_coating_rpm": 3000
+    },
+    {
+      "anneal_temperature_C": 110,
+      "anneal_time_min": 50,
+      "spin_coating_rpm": 4000
+    },
+    {
+      "anneal_temperature_C": 110,
+      "anneal_time_min": 50,
+      "spin_coating_rpm": 6000
+    },
+    {
+      "anneal_temperature_C": 110,
+      "anneal_time_min": 60,
+      "spin_coating_rpm": 2000
+    },
+    {
+      "anneal_temperature_C": 110,
+      "anneal_time_min": 60,
+      "spin_coating_rpm": 3000
+    },
+    {
+      "anneal_temperature_C": 110,
+      "anneal_time_min": 60,
+      "spin_coating_rpm": 4000
+    },
+    {
+      "anneal_temperature_C": 110,
+      "anneal_time_min": 60,
+      "spin_coating_rpm": 6000
+    },
+    {
+      "anneal_temperature_C": 115,
+      "anneal_time_min": 10,
+      "spin_coating_rpm": 2000
+    },
+    {
+      "anneal_temperature_C": 115,
+      "anneal_time_min": 10,
+      "spin_coating_rpm": 3000
+    },
+    {
+      "anneal_temperature_C": 115,
+      "anneal_time_min": 10,
+      "spin_coating_rpm": 4000
+    },
+    {
+      "anneal_temperature_C": 115,
+      "anneal_time_min": 10,
+      "spin_coating_rpm": 6000
+    },
+    {
+      "anneal_temperature_C": 115,
+      "anneal_time_min": 20,
+      "spin_coating_rpm": 2000
+    },
+    {
+      "anneal_temperature_C": 115,
+      "anneal_time_min": 20,
+      "spin_coating_rpm": 3000
+    },
+    {
+      "anneal_temperature_C": 115,
+      "anneal_time_min": 20,
+      "spin_coating_rpm": 4000
+    },
+    {
+      "anneal_temperature_C": 115,
+      "anneal_time_min": 20,
+      "spin_coating_rpm": 6000
+    },
+    {
+      "anneal_temperature_C": 115,
+      "anneal_time_min": 30,
+      "spin_coating_rpm": 2000
+    },
+    {
+      "anneal_temperature_C": 115,
+      "anneal_time_min": 30,
+      "spin_coating_rpm": 3000
+    },
+    {
+      "anneal_temperature_C": 115,
+      "anneal_time_min": 30,
+      "spin_coating_rpm": 4000
+    },
+    {
+      "anneal_temperature_C": 115,
+      "anneal_time_min": 30,
+      "spin_coating_rpm": 6000
+    },
+    {
+      "anneal_temperature_C": 115,
+      "anneal_time_min": 40,
+      "spin_coating_rpm": 2000
+    },
+    {
+      "anneal_temperature_C": 115,
+      "anneal_time_min": 40,
+      "spin_coating_rpm": 3000
+    },
+    {
+      "anneal_temperature_C": 115,
+      "anneal_time_min": 40,
+      "spin_coating_rpm": 4000
+    },
+    {
+      "anneal_temperature_C": 115,
+      "anneal_time_min": 40,
+      "spin_coating_rpm": 6000
+    },
+    {
+      "anneal_temperature_C": 115,
+      "anneal_time_min": 50,
+      "spin_coating_rpm": 2000
+    },
+    {
+      "anneal_temperature_C": 115,
+      "anneal_time_min": 50,
+      "spin_coating_rpm": 3000
+    },
+    {
+      "anneal_temperature_C": 115,
+      "anneal_time_min": 50,
+      "spin_coating_rpm": 4000
+    },
+    {
+      "anneal_temperature_C": 115,
+      "anneal_time_min": 50,
+      "spin_coating_rpm": 6000
+    },
+    {
+      "anneal_temperature_C": 115,
+      "anneal_time_min": 60,
+      "spin_coating_rpm": 2000
+    },
+    {
+      "anneal_temperature_C": 115,
+      "anneal_time_min": 60,
+      "spin_coating_rpm": 3000
+    },
+    {
+      "anneal_temperature_C": 115,
+      "anneal_time_min": 60,
+      "spin_coating_rpm": 4000
+    },
+    {
+      "anneal_temperature_C": 115,
+      "anneal_time_min": 60,
+      "spin_coating_rpm": 6000
+    },
+    {
+      "anneal_temperature_C": 120,
+      "anneal_time_min": 10,
+      "spin_coating_rpm": 2000
+    },
+    {
+      "anneal_temperature_C": 120,
+      "anneal_time_min": 10,
+      "spin_coating_rpm": 3000
+    },
+    {
+      "anneal_temperature_C": 120,
+      "anneal_time_min": 10,
+      "spin_coating_rpm": 4000
+    },
+    {
+      "anneal_temperature_C": 120,
+      "anneal_time_min": 10,
+      "spin_coating_rpm": 6000
+    },
+    {
+      "anneal_temperature_C": 120,
+      "anneal_time_min": 20,
+      "spin_coating_rpm": 2000
+    },
+    {
+      "anneal_temperature_C": 120,
+      "anneal_time_min": 20,
+      "spin_coating_rpm": 3000
+    },
+    {
+      "anneal_temperature_C": 120,
+      "anneal_time_min": 20,
+      "spin_coating_rpm": 4000
+    },
+    {
+      "anneal_temperature_C": 120,
+      "anneal_time_min": 20,
+      "spin_coating_rpm": 6000
+    },
+    {
+      "anneal_temperature_C": 120,
+      "anneal_time_min": 30,
+      "spin_coating_rpm": 2000
+    },
+    {
+      "anneal_temperature_C": 120,
+      "anneal_time_min": 30,
+      "spin_coating_rpm": 3000
+    },
+    {
+      "anneal_temperature_C": 120,
+      "anneal_time_min": 30,
+      "spin_coating_rpm": 4000
+    },
+    {
+      "anneal_temperature_C": 120,
+      "anneal_time_min": 30,
+      "spin_coating_rpm": 6000
+    },
+    {
+      "anneal_temperature_C": 120,
+      "anneal_time_min": 40,
+      "spin_coating_rpm": 2000
+    },
+    {
+      "anneal_temperature_C": 120,
+      "anneal_time_min": 40,
+      "spin_coating_rpm": 3000
+    },
+    {
+      "anneal_temperature_C": 120,
+      "anneal_time_min": 40,
+      "spin_coating_rpm": 4000
+    },
+    {
+      "anneal_temperature_C": 120,
+      "anneal_time_min": 40,
+      "spin_coating_rpm": 6000
+    },
+    {
+      "anneal_temperature_C": 120,
+      "anneal_time_min": 50,
+      "spin_coating_rpm": 2000
+    },
+    {
+      "anneal_temperature_C": 120,
+      "anneal_time_min": 50,
+      "spin_coating_rpm": 3000
+    },
+    {
+      "anneal_temperature_C": 120,
+      "anneal_time_min": 50,
+      "spin_coating_rpm": 4000
+    },
+    {
+      "anneal_temperature_C": 120,
+      "anneal_time_min": 50,
+      "spin_coating_rpm": 6000
+    },
+    {
+      "anneal_temperature_C": 120,
+      "anneal_time_min": 60,
+      "spin_coating_rpm": 2000
+    },
+    {
+      "anneal_temperature_C": 120,
+      "anneal_time_min": 60,
+      "spin_coating_rpm": 3000
+    },
+    {
+      "anneal_temperature_C": 120,
+      "anneal_time_min": 60,
+      "spin_coating_rpm": 4000
+    },
+    {
+      "anneal_temperature_C": 120,
+      "anneal_time_min": 60,
+      "spin_coating_rpm": 6000
+    },
+    {
+      "anneal_temperature_C": 125,
+      "anneal_time_min": 10,
+      "spin_coating_rpm": 2000
+    },
+    {
+      "anneal_temperature_C": 125,
+      "anneal_time_min": 10,
+      "spin_coating_rpm": 3000
+    },
+    {
+      "anneal_temperature_C": 125,
+      "anneal_time_min": 10,
+      "spin_coating_rpm": 4000
+    },
+    {
+      "anneal_temperature_C": 125,
+      "anneal_time_min": 10,
+      "spin_coating_rpm": 6000
+    },
+    {
+      "anneal_temperature_C": 125,
+      "anneal_time_min": 20,
+      "spin_coating_rpm": 2000
+    },
+    {
+      "anneal_temperature_C": 125,
+      "anneal_time_min": 20,
+      "spin_coating_rpm": 3000
+    },
+    {
+      "anneal_temperature_C": 125,
+      "anneal_time_min": 20,
+      "spin_coating_rpm": 4000
+    },
+    {
+      "anneal_temperature_C": 125,
+      "anneal_time_min": 20,
+      "spin_coating_rpm": 6000
+    },
+    {
+      "anneal_temperature_C": 125,
+      "anneal_time_min": 30,
+      "spin_coating_rpm": 2000
+    },
+    {
+      "anneal_temperature_C": 125,
+      "anneal_time_min": 30,
+      "spin_coating_rpm": 3000
+    },
+    {
+      "anneal_temperature_C": 125,
+      "anneal_time_min": 30,
+      "spin_coating_rpm": 4000
+    },
+    {
+      "anneal_temperature_C": 125,
+      "anneal_time_min": 30,
+      "spin_coating_rpm": 6000
+    },
+    {
+      "anneal_temperature_C": 125,
+      "anneal_time_min": 40,
+      "spin_coating_rpm": 2000
+    },
+    {
+      "anneal_temperature_C": 125,
+      "anneal_time_min": 40,
+      "spin_coating_rpm": 3000
+    },
+    {
+      "anneal_temperature_C": 125,
+      "anneal_time_min": 40,
+      "spin_coating_rpm": 4000
+    },
+    {
+      "anneal_temperature_C": 125,
+      "anneal_time_min": 40,
+      "spin_coating_rpm": 6000
+    },
+    {
+      "anneal_temperature_C": 125,
+      "anneal_time_min": 50,
+      "spin_coating_rpm": 2000
+    },
+    {
+      "anneal_temperature_C": 125,
+      "anneal_time_min": 50,
+      "spin_coating_rpm": 3000
+    },
+    {
+      "anneal_temperature_C": 125,
+      "anneal_time_min": 50,
+      "spin_coating_rpm": 4000
+    },
+    {
+      "anneal_temperature_C": 125,
+      "anneal_time_min": 50,
+      "spin_coating_rpm": 6000
+    },
+    {
+      "anneal_temperature_C": 125,
+      "anneal_time_min": 60,
+      "spin_coating_rpm": 2000
+    },
+    {
+      "anneal_temperature_C": 125,
+      "anneal_time_min": 60,
+      "spin_coating_rpm": 3000
+    },
+    {
+      "anneal_temperature_C": 125,
+      "anneal_time_min": 60,
+      "spin_coating_rpm": 4000
+    },
+    {
+      "anneal_temperature_C": 125,
+      "anneal_time_min": 60,
+      "spin_coating_rpm": 6000
+    },
+    {
+      "anneal_temperature_C": 130,
+      "anneal_time_min": 10,
+      "spin_coating_rpm": 2000
+    },
+    {
+      "anneal_temperature_C": 130,
+      "anneal_time_min": 10,
+      "spin_coating_rpm": 3000
+    },
+    {
+      "anneal_temperature_C": 130,
+      "anneal_time_min": 10,
+      "spin_coating_rpm": 4000
+    },
+    {
+      "anneal_temperature_C": 130,
+      "anneal_time_min": 10,
+      "spin_coating_rpm": 6000
+    },
+    {
+      "anneal_temperature_C": 130,
+      "anneal_time_min": 20,
+      "spin_coating_rpm": 2000
+    },
+    {
+      "anneal_temperature_C": 130,
+      "anneal_time_min": 20,
+      "spin_coating_rpm": 3000
+    },
+    {
+      "anneal_temperature_C": 130,
+      "anneal_time_min": 20,
+      "spin_coating_rpm": 4000
+    },
+    {
+      "anneal_temperature_C": 130,
+      "anneal_time_min": 20,
+      "spin_coating_rpm": 6000
+    },
+    {
+      "anneal_temperature_C": 130,
+      "anneal_time_min": 30,
+      "spin_coating_rpm": 2000
+    },
+    {
+      "anneal_temperature_C": 130,
+      "anneal_time_min": 30,
+      "spin_coating_rpm": 3000
+    },
+    {
+      "anneal_temperature_C": 130,
+      "anneal_time_min": 30,
+      "spin_coating_rpm": 4000
+    },
+    {
+      "anneal_temperature_C": 130,
+      "anneal_time_min": 30,
+      "spin_coating_rpm": 6000
+    },
+    {
+      "anneal_temperature_C": 130,
+      "anneal_time_min": 40,
+      "spin_coating_rpm": 2000
+    },
+    {
+      "anneal_temperature_C": 130,
+      "anneal_time_min": 40,
+      "spin_coating_rpm": 3000
+    },
+    {
+      "anneal_temperature_C": 130,
+      "anneal_time_min": 40,
+      "spin_coating_rpm": 4000
+    },
+    {
+      "anneal_temperature_C": 130,
+      "anneal_time_min": 40,
+      "spin_coating_rpm": 6000
+    },
+    {
+      "anneal_temperature_C": 130,
+      "anneal_time_min": 50,
+      "spin_coating_rpm": 2000
+    },
+    {
+      "anneal_temperature_C": 130,
+      "anneal_time_min": 50,
+      "spin_coating_rpm": 3000
+    },
+    {
+      "anneal_temperature_C": 130,
+      "anneal_time_min": 50,
+      "spin_coating_rpm": 4000
+    },
+    {
+      "anneal_temperature_C": 130,
+      "anneal_time_min": 50,
+      "spin_coating_rpm": 6000
+    },
+    {
+      "anneal_temperature_C": 130,
+      "anneal_time_min": 60,
+      "spin_coating_rpm": 2000
+    },
+    {
+      "anneal_temperature_C": 130,
+      "anneal_time_min": 60,
+      "spin_coating_rpm": 3000
+    },
+    {
+      "anneal_temperature_C": 130,
+      "anneal_time_min": 60,
+      "spin_coating_rpm": 4000
+    },
+    {
+      "anneal_temperature_C": 130,
+      "anneal_time_min": 60,
+      "spin_coating_rpm": 6000
+    },
+    {
+      "anneal_temperature_C": 135,
+      "anneal_time_min": 10,
+      "spin_coating_rpm": 2000
+    },
+    {
+      "anneal_temperature_C": 135,
+      "anneal_time_min": 10,
+      "spin_coating_rpm": 3000
+    },
+    {
+      "anneal_temperature_C": 135,
+      "anneal_time_min": 10,
+      "spin_coating_rpm": 4000
+    },
+    {
+      "anneal_temperature_C": 135,
+      "anneal_time_min": 10,
+      "spin_coating_rpm": 6000
+    },
+    {
+      "anneal_temperature_C": 135,
+      "anneal_time_min": 20,
+      "spin_coating_rpm": 2000
+    },
+    {
+      "anneal_temperature_C": 135,
+      "anneal_time_min": 20,
+      "spin_coating_rpm": 3000
+    },
+    {
+      "anneal_temperature_C": 135,
+      "anneal_time_min": 20,
+      "spin_coating_rpm": 4000
+    },
+    {
+      "anneal_temperature_C": 135,
+      "anneal_time_min": 20,
+      "spin_coating_rpm": 6000
+    },
+    {
+      "anneal_temperature_C": 135,
+      "anneal_time_min": 30,
+      "spin_coating_rpm": 2000
+    },
+    {
+      "anneal_temperature_C": 135,
+      "anneal_time_min": 30,
+      "spin_coating_rpm": 3000
+    },
+    {
+      "anneal_temperature_C": 135,
+      "anneal_time_min": 30,
+      "spin_coating_rpm": 4000
+    },
+    {
+      "anneal_temperature_C": 135,
+      "anneal_time_min": 30,
+      "spin_coating_rpm": 6000
+    },
+    {
+      "anneal_temperature_C": 135,
+      "anneal_time_min": 40,
+      "spin_coating_rpm": 2000
+    },
+    {
+      "anneal_temperature_C": 135,
+      "anneal_time_min": 40,
+      "spin_coating_rpm": 3000
+    },
+    {
+      "anneal_temperature_C": 135,
+      "anneal_time_min": 40,
+      "spin_coating_rpm": 4000
+    },
+    {
+      "anneal_temperature_C": 135,
+      "anneal_time_min": 40,
+      "spin_coating_rpm": 6000
+    },
+    {
+      "anneal_temperature_C": 135,
+      "anneal_time_min": 50,
+      "spin_coating_rpm": 2000
+    },
+    {
+      "anneal_temperature_C": 135,
+      "anneal_time_min": 50,
+      "spin_coating_rpm": 3000
+    },
+    {
+      "anneal_temperature_C": 135,
+      "anneal_time_min": 50,
+      "spin_coating_rpm": 4000
+    },
+    {
+      "anneal_temperature_C": 135,
+      "anneal_time_min": 50,
+      "spin_coating_rpm": 6000
+    },
+    {
+      "anneal_temperature_C": 135,
+      "anneal_time_min": 60,
+      "spin_coating_rpm": 2000
+    },
+    {
+      "anneal_temperature_C": 135,
+      "anneal_time_min": 60,
+      "spin_coating_rpm": 3000
+    },
+    {
+      "anneal_temperature_C": 135,
+      "anneal_time_min": 60,
+      "spin_coating_rpm": 4000
+    },
+    {
+      "anneal_temperature_C": 135,
+      "anneal_time_min": 60,
+      "spin_coating_rpm": 6000
+    },
+    {
+      "anneal_temperature_C": 140,
+      "anneal_time_min": 10,
+      "spin_coating_rpm": 2000
+    },
+    {
+      "anneal_temperature_C": 140,
+      "anneal_time_min": 10,
+      "spin_coating_rpm": 3000
+    },
+    {
+      "anneal_temperature_C": 140,
+      "anneal_time_min": 10,
+      "spin_coating_rpm": 4000
+    },
+    {
+      "anneal_temperature_C": 140,
+      "anneal_time_min": 10,
+      "spin_coating_rpm": 6000
+    },
+    {
+      "anneal_temperature_C": 140,
+      "anneal_time_min": 20,
+      "spin_coating_rpm": 2000
+    },
+    {
+      "anneal_temperature_C": 140,
+      "anneal_time_min": 20,
+      "spin_coating_rpm": 3000
+    },
+    {
+      "anneal_temperature_C": 140,
+      "anneal_time_min": 20,
+      "spin_coating_rpm": 4000
+    },
+    {
+      "anneal_temperature_C": 140,
+      "anneal_time_min": 20,
+      "spin_coating_rpm": 6000
+    },
+    {
+      "anneal_temperature_C": 140,
+      "anneal_time_min": 30,
+      "spin_coating_rpm": 2000
+    },
+    {
+      "anneal_temperature_C": 140,
+      "anneal_time_min": 30,
+      "spin_coating_rpm": 3000
+    },
+    {
+      "anneal_temperature_C": 140,
+      "anneal_time_min": 30,
+      "spin_coating_rpm": 4000
+    },
+    {
+      "anneal_temperature_C": 140,
+      "anneal_time_min": 30,
+      "spin_coating_rpm": 6000
+    },
+    {
+      "anneal_temperature_C": 140,
+      "anneal_time_min": 40,
+      "spin_coating_rpm": 2000
+    },
+    {
+      "anneal_temperature_C": 140,
+      "anneal_time_min": 40,
+      "spin_coating_rpm": 3000
+    },
+    {
+      "anneal_temperature_C": 140,
+      "anneal_time_min": 40,
+      "spin_coating_rpm": 4000
+    },
+    {
+      "anneal_temperature_C": 140,
+      "anneal_time_min": 40,
+      "spin_coating_rpm": 6000
+    },
+    {
+      "anneal_temperature_C": 140,
+      "anneal_time_min": 50,
+      "spin_coating_rpm": 2000
+    },
+    {
+      "anneal_temperature_C": 140,
+      "anneal_time_min": 50,
+      "spin_coating_rpm": 3000
+    },
+    {
+      "anneal_temperature_C": 140,
+      "anneal_time_min": 50,
+      "spin_coating_rpm": 4000
+    },
+    {
+      "anneal_temperature_C": 140,
+      "anneal_time_min": 50,
+      "spin_coating_rpm": 6000
+    },
+    {
+      "anneal_temperature_C": 140,
+      "anneal_time_min": 60,
+      "spin_coating_rpm": 2000
+    },
+    {
+      "anneal_temperature_C": 140,
+      "anneal_time_min": 60,
+      "spin_coating_rpm": 3000
+    },
+    {
+      "anneal_temperature_C": 140,
+      "anneal_time_min": 60,
+      "spin_coating_rpm": 4000
+    },
+    {
+      "anneal_temperature_C": 140,
+      "anneal_time_min": 60,
+      "spin_coating_rpm": 6000
+    },
+    {
+      "anneal_temperature_C": 145,
+      "anneal_time_min": 10,
+      "spin_coating_rpm": 2000
+    },
+    {
+      "anneal_temperature_C": 145,
+      "anneal_time_min": 10,
+      "spin_coating_rpm": 3000
+    },
+    {
+      "anneal_temperature_C": 145,
+      "anneal_time_min": 10,
+      "spin_coating_rpm": 4000
+    },
+    {
+      "anneal_temperature_C": 145,
+      "anneal_time_min": 10,
+      "spin_coating_rpm": 6000
+    },
+    {
+      "anneal_temperature_C": 145,
+      "anneal_time_min": 20,
+      "spin_coating_rpm": 2000
+    },
+    {
+      "anneal_temperature_C": 145,
+      "anneal_time_min": 20,
+      "spin_coating_rpm": 3000
+    },
+    {
+      "anneal_temperature_C": 145,
+      "anneal_time_min": 20,
+      "spin_coating_rpm": 4000
+    },
+    {
+      "anneal_temperature_C": 145,
+      "anneal_time_min": 20,
+      "spin_coating_rpm": 6000
+    },
+    {
+      "anneal_temperature_C": 145,
+      "anneal_time_min": 30,
+      "spin_coating_rpm": 2000
+    },
+    {
+      "anneal_temperature_C": 145,
+      "anneal_time_min": 30,
+      "spin_coating_rpm": 3000
+    },
+    {
+      "anneal_temperature_C": 145,
+      "anneal_time_min": 30,
+      "spin_coating_rpm": 4000
+    },
+    {
+      "anneal_temperature_C": 145,
+      "anneal_time_min": 30,
+      "spin_coating_rpm": 6000
+    },
+    {
+      "anneal_temperature_C": 145,
+      "anneal_time_min": 40,
+      "spin_coating_rpm": 2000
+    },
+    {
+      "anneal_temperature_C": 145,
+      "anneal_time_min": 40,
+      "spin_coating_rpm": 3000
+    },
+    {
+      "anneal_temperature_C": 145,
+      "anneal_time_min": 40,
+      "spin_coating_rpm": 4000
+    },
+    {
+      "anneal_temperature_C": 145,
+      "anneal_time_min": 40,
+      "spin_coating_rpm": 6000
+    },
+    {
+      "anneal_temperature_C": 145,
+      "anneal_time_min": 50,
+      "spin_coating_rpm": 2000
+    },
+    {
+      "anneal_temperature_C": 145,
+      "anneal_time_min": 50,
+      "spin_coating_rpm": 3000
+    },
+    {
+      "anneal_temperature_C": 145,
+      "anneal_time_min": 50,
+      "spin_coating_rpm": 4000
+    },
+    {
+      "anneal_temperature_C": 145,
+      "anneal_time_min": 50,
+      "spin_coating_rpm": 6000
+    },
+    {
+      "anneal_temperature_C": 145,
+      "anneal_time_min": 60,
+      "spin_coating_rpm": 2000
+    },
+    {
+      "anneal_temperature_C": 145,
+      "anneal_time_min": 60,
+      "spin_coating_rpm": 3000
+    },
+    {
+      "anneal_temperature_C": 145,
+      "anneal_time_min": 60,
+      "spin_coating_rpm": 4000
+    },
+    {
+      "anneal_temperature_C": 145,
+      "anneal_time_min": 60,
+      "spin_coating_rpm": 6000
+    },
+    {
+      "anneal_temperature_C": 150,
+      "anneal_time_min": 10,
+      "spin_coating_rpm": 2000
+    },
+    {
+      "anneal_temperature_C": 150,
+      "anneal_time_min": 10,
+      "spin_coating_rpm": 3000
+    },
+    {
+      "anneal_temperature_C": 150,
+      "anneal_time_min": 10,
+      "spin_coating_rpm": 4000
+    },
+    {
+      "anneal_temperature_C": 150,
+      "anneal_time_min": 10,
+      "spin_coating_rpm": 6000
+    },
+    {
+      "anneal_temperature_C": 150,
+      "anneal_time_min": 20,
+      "spin_coating_rpm": 2000
+    },
+    {
+      "anneal_temperature_C": 150,
+      "anneal_time_min": 20,
+      "spin_coating_rpm": 3000
+    },
+    {
+      "anneal_temperature_C": 150,
+      "anneal_time_min": 20,
+      "spin_coating_rpm": 4000
+    },
+    {
+      "anneal_temperature_C": 150,
+      "anneal_time_min": 20,
+      "spin_coating_rpm": 6000
+    },
+    {
+      "anneal_temperature_C": 150,
+      "anneal_time_min": 30,
+      "spin_coating_rpm": 2000
+    },
+    {
+      "anneal_temperature_C": 150,
+      "anneal_time_min": 30,
+      "spin_coating_rpm": 3000
+    },
+    {
+      "anneal_temperature_C": 150,
+      "anneal_time_min": 30,
+      "spin_coating_rpm": 4000
+    },
+    {
+      "anneal_temperature_C": 150,
+      "anneal_time_min": 30,
+      "spin_coating_rpm": 6000
+    },
+    {
+      "anneal_temperature_C": 150,
+      "anneal_time_min": 40,
+      "spin_coating_rpm": 2000
+    },
+    {
+      "anneal_temperature_C": 150,
+      "anneal_time_min": 40,
+      "spin_coating_rpm": 3000
+    },
+    {
+      "anneal_temperature_C": 150,
+      "anneal_time_min": 40,
+      "spin_coating_rpm": 4000
+    },
+    {
+      "anneal_temperature_C": 150,
+      "anneal_time_min": 40,
+      "spin_coating_rpm": 6000
+    },
+    {
+      "anneal_temperature_C": 150,
+      "anneal_time_min": 50,
+      "spin_coating_rpm": 2000
+    },
+    {
+      "anneal_temperature_C": 150,
+      "anneal_time_min": 50,
+      "spin_coating_rpm": 3000
+    },
+    {
+      "anneal_temperature_C": 150,
+      "anneal_time_min": 50,
+      "spin_coating_rpm": 4000
+    },
+    {
+      "anneal_temperature_C": 150,
+      "anneal_time_min": 50,
+      "spin_coating_rpm": 6000
+    },
+    {
+      "anneal_temperature_C": 150,
+      "anneal_time_min": 60,
+      "spin_coating_rpm": 2000
+    },
+    {
+      "anneal_temperature_C": 150,
+      "anneal_time_min": 60,
+      "spin_coating_rpm": 3000
+    },
+    {
+      "anneal_temperature_C": 150,
+      "anneal_time_min": 60,
+      "spin_coating_rpm": 4000
+    },
+    {
+      "anneal_temperature_C": 150,
+      "anneal_time_min": 60,
+      "spin_coating_rpm": 6000
+    }
+  ],
+  "notes": [],
+  "_notice": "合成示例输出，非正式测评结果"
+}

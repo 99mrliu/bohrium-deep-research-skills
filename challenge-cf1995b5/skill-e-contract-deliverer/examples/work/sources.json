@@ -1,0 +1,8 @@
+[
+  {"value": "手套箱 80 CNY/h", "source": "resource_contract.equipment[0].price_per_hour（前瞻合同，非已确认报价）"},
+  {"value": "MAI 250 CNY/g、PbI2 180 CNY/g", "source": "resource_contract.reagents（前瞻合同）"},
+  {"value": "加热台 40 CNY/h", "source": "equipment_domain_note 内嵌 JSON（可用性待确认）"},
+  {"value": "温度域 80-150 step5、转速枚举、时间域 5-60", "source": "parameter_domains"},
+  {"value": "100-120°C 敏感区间", "source": "source.key_claim（合成示例论断，未经本方案验证）"},
+  {"value": "6 次实验设计", "source": "假设（3 温度 × 2 重复）"}
+]

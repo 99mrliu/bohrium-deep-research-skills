@@ -1,0 +1,1212 @@
+{
+  "_notice": "合成示例输出，非正式测评结果",
+  "case_id": "MOCK-PEROV-ANNEAL-001",
+  "generated_by": "scripts/case_reconcile.py extract",
+  "fact_count": 138,
+  "partial": false,
+  "errors": [],
+  "facts": [
+    {
+      "id": "F001",
+      "value": "MOCK-PEROV-ANNEAL-001",
+      "unit": null,
+      "jsonpath": "case_id",
+      "source_class": "case_meta",
+      "note": ""
+    },
+    {
+      "id": "F002",
+      "value": "MAPbI3 钙钛矿薄膜退火工艺优化",
+      "unit": null,
+      "jsonpath": "title",
+      "source_class": "case_meta",
+      "note": ""
+    },
+    {
+      "id": "F003",
+      "value": "在给定预算与周期内，从 3 个候选方案中修订出一个可执行的旋涂/退火工艺方案并给出验证设计。",
+      "unit": null,
+      "jsonpath": "task",
+      "source_class": "case_meta",
+      "note": ""
+    },
+    {
+      "id": "F004",
+      "value": "优化 MAPbI3 perovskite 薄膜的 anneal 退火温度与 spin coating 旋涂转速组合，目标 PCE >= 19%，薄膜均匀无针孔。",
+      "unit": null,
+      "jsonpath": "research_goal",
+      "source_class": "case_meta",
+      "note": ""
+    },
+    {
+      "id": "F005",
+      "value": "合成示意案例：为 exp-source-reconciler 示例手工构造，用于演示 extract/reconcile 对账，非真实测评数据。",
+      "unit": null,
+      "jsonpath": "note",
+      "source_class": "case_meta",
+      "note": ""
+    },
+    {
+      "id": "F006",
+      "value": "mock_paper.pdf",
+      "unit": null,
+      "jsonpath": "source.paper_pdf",
+      "source_class": "literature",
+      "note": ""
+    },
+    {
+      "id": "F007",
+      "value": "Mock, A. et al., J. Synth. Perov., 2024（合成引用，非真实文献）",
+      "unit": null,
+      "jsonpath": "source.citation",
+      "source_class": "literature",
+      "note": ""
+    },
+    {
+      "id": "F008",
+      "value": "110 C 退火 10 min 的 MAPbI3 薄膜获得 20.1% PCE（合成文献数据，仅作示例）。",
+      "unit": null,
+      "jsonpath": "source.key_claim",
+      "source_class": "literature",
+      "note": ""
+    },
+    {
+      "id": "F009",
+      "value": "组织方前瞻合同：价格与预约信息为计划性约定，不是实际供应商报价或已确认排期。",
+      "unit": null,
+      "jsonpath": "resource_contract.disclaimer",
+      "source_class": "contract",
+      "note": ""
+    },
+    {
+      "id": "F010",
+      "value": "CNY",
+      "unit": null,
+      "jsonpath": "resource_contract.currency",
+      "source_class": "contract",
+      "note": ""
+    },
+    {
+      "id": "F011",
+      "value": 20000,
+      "unit": "CNY",
+      "jsonpath": "resource_contract.budget_cap",
+      "source_class": "contract",
+      "note": "预算上限（前瞻约定）"
+    },
+    {
+      "id": "F012",
+      "value": 30,
+      "unit": "day",
+      "jsonpath": "resource_contract.deadline_days",
+      "source_class": "contract",
+      "note": "周期上限"
+    },
+    {
+      "id": "F013",
+      "value": "EQ-GB",
+      "unit": null,
+      "jsonpath": "resource_contract.equipment[0].id",
+      "source_class": "contract",
+      "note": ""
+    },
+    {
+      "id": "F014",
+      "value": "充氮手套箱",
+      "unit": null,
+      "jsonpath": "resource_contract.equipment[0].name",
+      "source_class": "contract",
+      "note": ""
+    },
+    {
+      "id": "F015",
+      "value": "MockBox-2",
+      "unit": null,
+      "jsonpath": "resource_contract.equipment[0].model",
+      "source_class": "contract",
+      "note": ""
+    },
+    {
+      "id": "F016",
+      "value": "H2O/O2 < 1 ppm",
+      "unit": null,
+      "jsonpath": "resource_contract.equipment[0].spec",
+      "source_class": "contract",
+      "note": ""
+    },
+    {
+      "id": "F017",
+      "value": 80,
+      "unit": "CNY/h",
+      "jsonpath": "resource_contract.equipment[0].price_per_hour",
+      "source_class": "contract",
+      "note": "前瞻约定价，非已确认报价"
+    },
+    {
+      "id": "F018",
+      "value": 30,
+      "unit": "day",
+      "jsonpath": "resource_contract.equipment[0].booking.window_days",
+      "source_class": "contract",
+      "note": "预约吞吐参数（计划性约定）"
+    },
+    {
+      "id": "F019",
+      "value": 3,
+      "unit": "slot/week",
+      "jsonpath": "resource_contract.equipment[0].booking.slots_per_week",
+      "source_class": "contract",
+      "note": "预约吞吐参数（计划性约定）"
+    },
+    {
+      "id": "F020",
+      "value": 4,
+      "unit": "h",
+      "jsonpath": "resource_contract.equipment[0].booking.slot_hours",
+      "source_class": "contract",
+      "note": "预约吞吐参数（计划性约定）"
+    },
+    {
+      "id": "F021",
+      "value": "EQ-SC",
+      "unit": null,
+      "jsonpath": "resource_contract.equipment[1].id",
+      "source_class": "contract",
+      "note": ""
+    },
+    {
+      "id": "F022",
+      "value": "匀胶机",
+      "unit": null,
+      "jsonpath": "resource_contract.equipment[1].name",
+      "source_class": "contract",
+      "note": ""
+    },
+    {
+      "id": "F023",
+      "value": "MockSpin-8",
+      "unit": null,
+      "jsonpath": "resource_contract.equipment[1].model",
+      "source_class": "contract",
+      "note": ""
+    },
+    {
+      "id": "F024",
+      "value": "500-8000 rpm",
+      "unit": null,
+      "jsonpath": "resource_contract.equipment[1].spec",
+      "source_class": "contract",
+      "note": ""
+    },
+    {
+      "id": "F025",
+      "value": 20,
+      "unit": "CNY/h",
+      "jsonpath": "resource_contract.equipment[1].price_per_hour",
+      "source_class": "contract",
+      "note": "前瞻约定价，非已确认报价"
+    },
+    {
+      "id": "F026",
+      "value": 30,
+      "unit": "day",
+      "jsonpath": "resource_contract.equipment[1].booking.window_days",
+      "source_class": "contract",
+      "note": "预约吞吐参数（计划性约定）"
+    },
+    {
+      "id": "F027",
+      "value": 5,
+      "unit": "slot/week",
+      "jsonpath": "resource_contract.equipment[1].booking.slots_per_week",
+      "source_class": "contract",
+      "note": "预约吞吐参数（计划性约定）"
+    },
+    {
+      "id": "F028",
+      "value": 2,
+      "unit": "h",
+      "jsonpath": "resource_contract.equipment[1].booking.slot_hours",
+      "source_class": "contract",
+      "note": "预约吞吐参数（计划性约定）"
+    },
+    {
+      "id": "F029",
+      "value": "RE-MAI",
+      "unit": null,
+      "jsonpath": "resource_contract.reagents[0].id",
+      "source_class": "contract",
+      "note": ""
+    },
+    {
+      "id": "F030",
+      "value": "MAI",
+      "unit": null,
+      "jsonpath": "resource_contract.reagents[0].name",
+      "source_class": "contract",
+      "note": ""
+    },
+    {
+      "id": "F031",
+      "value": ">=99.99%",
+      "unit": null,
+      "jsonpath": "resource_contract.reagents[0].spec",
+      "source_class": "contract",
+      "note": ""
+    },
+    {
+      "id": "F032",
+      "value": "g",
+      "unit": null,
+      "jsonpath": "resource_contract.reagents[0].unit",
+      "source_class": "contract",
+      "note": ""
+    },
+    {
+      "id": "F033",
+      "value": 5,
+      "unit": null,
+      "jsonpath": "resource_contract.reagents[0].pack_size",
+      "source_class": "contract",
+      "note": ""
+    },
+    {
+      "id": "F034",
+      "value": 250,
+      "unit": "CNY/g",
+      "jsonpath": "resource_contract.reagents[0].unit_price",
+      "source_class": "contract",
+      "note": "前瞻约定价，非已确认报价"
+    },
+    {
+      "id": "F035",
+      "value": "RE-PBI2",
+      "unit": null,
+      "jsonpath": "resource_contract.reagents[1].id",
+      "source_class": "contract",
+      "note": ""
+    },
+    {
+      "id": "F036",
+      "value": "PbI2",
+      "unit": null,
+      "jsonpath": "resource_contract.reagents[1].name",
+      "source_class": "contract",
+      "note": ""
+    },
+    {
+      "id": "F037",
+      "value": ">=99.99%",
+      "unit": null,
+      "jsonpath": "resource_contract.reagents[1].spec",
+      "source_class": "contract",
+      "note": ""
+    },
+    {
+      "id": "F038",
+      "value": "g",
+      "unit": null,
+      "jsonpath": "resource_contract.reagents[1].unit",
+      "source_class": "contract",
+      "note": ""
+    },
+    {
+      "id": "F039",
+      "value": 10,
+      "unit": null,
+      "jsonpath": "resource_contract.reagents[1].pack_size",
+      "source_class": "contract",
+      "note": ""
+    },
+    {
+      "id": "F040",
+      "value": 180,
+      "unit": "CNY/g",
+      "jsonpath": "resource_contract.reagents[1].unit_price",
+      "source_class": "contract",
+      "note": "前瞻约定价，非已确认报价"
+    },
+    {
+      "id": "F041",
+      "value": "RE-DMF",
+      "unit": null,
+      "jsonpath": "resource_contract.reagents[2].id",
+      "source_class": "contract",
+      "note": ""
+    },
+    {
+      "id": "F042",
+      "value": "DMF",
+      "unit": null,
+      "jsonpath": "resource_contract.reagents[2].name",
+      "source_class": "contract",
+      "note": ""
+    },
+    {
+      "id": "F043",
+      "value": "无水级",
+      "unit": null,
+      "jsonpath": "resource_contract.reagents[2].spec",
+      "source_class": "contract",
+      "note": ""
+    },
+    {
+      "id": "F044",
+      "value": "bottle",
+      "unit": null,
+      "jsonpath": "resource_contract.reagents[2].unit",
+      "source_class": "contract",
+      "note": ""
+    },
+    {
+      "id": "F045",
+      "value": 1,
+      "unit": null,
+      "jsonpath": "resource_contract.reagents[2].pack_size",
+      "source_class": "contract",
+      "note": ""
+    },
+    {
+      "id": "F046",
+      "value": 120,
+      "unit": "CNY/bottle",
+      "jsonpath": "resource_contract.reagents[2].unit_price",
+      "source_class": "contract",
+      "note": "前瞻约定价，非已确认报价"
+    },
+    {
+      "id": "F047",
+      "value": {
+        "min": 80,
+        "max": 150,
+        "step": 5
+      },
+      "unit": "C",
+      "jsonpath": "parameter_domains.anneal_temperature_C",
+      "source_class": "parameter_domain",
+      "note": "区间域"
+    },
+    {
+      "id": "F048",
+      "value": "设备手册+预实验",
+      "unit": null,
+      "jsonpath": "parameter_domains.anneal_temperature_C.basis",
+      "source_class": "parameter_domain",
+      "note": "参数域依据类别"
+    },
+    {
+      "id": "F049",
+      "value": "case:resource_contract.equipment",
+      "unit": null,
+      "jsonpath": "parameter_domains.anneal_temperature_C.source",
+      "source_class": "parameter_domain",
+      "note": "参数域依据定位路径"
+    },
+    {
+      "id": "F050",
+      "value": [
+        2000,
+        3000,
+        4000,
+        6000
+      ],
+      "unit": "rpm",
+      "jsonpath": "parameter_domains.spin_coating_rpm.values",
+      "source_class": "parameter_domain",
+      "note": "枚举域"
+    },
+    {
+      "id": "F051",
+      "value": "组织方有限参数域",
+      "unit": null,
+      "jsonpath": "parameter_domains.spin_coating_rpm.basis",
+      "source_class": "parameter_domain",
+      "note": "参数域依据类别"
+    },
+    {
+      "id": "F052",
+      "value": "case:parameter_domains.spin_coating_rpm",
+      "unit": null,
+      "jsonpath": "parameter_domains.spin_coating_rpm.source",
+      "source_class": "parameter_domain",
+      "note": "参数域依据定位路径"
+    },
+    {
+      "id": "F053",
+      "value": {
+        "min": 5,
+        "max": 30,
+        "step": 5
+      },
+      "unit": "min",
+      "jsonpath": "parameter_domains.anneal_time_min",
+      "source_class": "parameter_domain",
+      "note": "区间域"
+    },
+    {
+      "id": "F054",
+      "value": "文献",
+      "unit": null,
+      "jsonpath": "parameter_domains.anneal_time_min.basis",
+      "source_class": "parameter_domain",
+      "note": "参数域依据类别"
+    },
+    {
+      "id": "F055",
+      "value": "case:source.paper_pdf",
+      "unit": null,
+      "jsonpath": "parameter_domains.anneal_time_min.source",
+      "source_class": "parameter_domain",
+      "note": "参数域依据定位路径"
+    },
+    {
+      "id": "F056",
+      "value": {
+        "min": 0,
+        "max": 2,
+        "step": 0.5
+      },
+      "unit": "slm",
+      "jsonpath": "parameter_domains.n2_flow_rate_slm",
+      "source_class": "parameter_domain",
+      "note": "区间域"
+    },
+    {
+      "id": "F057",
+      "value": "预实验报告",
+      "unit": null,
+      "jsonpath": "parameter_domains.n2_flow_rate_slm.basis",
+      "source_class": "parameter_domain",
+      "note": "参数域依据类别"
+    },
+    {
+      "id": "F058",
+      "value": "case:pre_experiment.report",
+      "unit": null,
+      "jsonpath": "parameter_domains.n2_flow_rate_slm.source",
+      "source_class": "parameter_domain",
+      "note": "参数域依据定位路径"
+    },
+    {
+      "id": "F059",
+      "value": "补充说明：除 equipment 列表外，本次还可预约一台精密加热台，信息如下片段：{\"id\":\"EQ-HP\",\"name\":\"精密加热台\",\"model\":\"MockHot-300\",\"spec\":\"室温-300 C, +/-1 C\",\"price_per_hour\":30,\"booking\":{\"window_days\":30,\"slots_per_week\":7,\"slot_hours\":8}}，请以该片段为准纳入设备对账。",
+      "unit": null,
+      "jsonpath": "equipment_domain_note",
+      "source_class": "contract",
+      "note": "自由文本，可能内嵌补充设备片段"
+    },
+    {
+      "id": "F060",
+      "value": "EQ-HP",
+      "unit": null,
+      "jsonpath": "equipment_domain_note~embedded[0].id",
+      "source_class": "text_embedded",
+      "note": "文本内嵌补充"
+    },
+    {
+      "id": "F061",
+      "value": "精密加热台",
+      "unit": null,
+      "jsonpath": "equipment_domain_note~embedded[0].name",
+      "source_class": "text_embedded",
+      "note": "文本内嵌补充"
+    },
+    {
+      "id": "F062",
+      "value": "MockHot-300",
+      "unit": null,
+      "jsonpath": "equipment_domain_note~embedded[0].model",
+      "source_class": "text_embedded",
+      "note": "文本内嵌补充"
+    },
+    {
+      "id": "F063",
+      "value": "室温-300 C, +/-1 C",
+      "unit": null,
+      "jsonpath": "equipment_domain_note~embedded[0].spec",
+      "source_class": "text_embedded",
+      "note": "文本内嵌补充"
+    },
+    {
+      "id": "F064",
+      "value": 30,
+      "unit": "CNY/h",
+      "jsonpath": "equipment_domain_note~embedded[0].price_per_hour",
+      "source_class": "text_embedded",
+      "note": "文本内嵌补充"
+    },
+    {
+      "id": "F065",
+      "value": {
+        "window_days": 30,
+        "slots_per_week": 7,
+        "slot_hours": 8
+      },
+      "unit": null,
+      "jsonpath": "equipment_domain_note~embedded[0].booking",
+      "source_class": "text_embedded",
+      "note": "文本内嵌补充"
+    },
+    {
+      "id": "F066",
+      "value": "五温度梯度退火筛选，使用 EQ-GB 手套箱与匀胶机。",
+      "unit": null,
+      "jsonpath": "candidate_plans[0].summary",
+      "source_class": "candidate_claim",
+      "note": "版本 v1"
+    },
+    {
+      "id": "F067",
+      "value": 4000,
+      "unit": null,
+      "jsonpath": "candidate_plans[0].parameters.spin_coating_rpm",
+      "source_class": "candidate_claim",
+      "note": "候选 v1 宣称参数"
+    },
+    {
+      "id": "F068",
+      "value": [
+        80,
+        95,
+        110,
+        125,
+        140
+      ],
+      "unit": null,
+      "jsonpath": "candidate_plans[0].parameters.anneal_temperature_C",
+      "source_class": "candidate_claim",
+      "note": "候选 v1 宣称参数"
+    },
+    {
+      "id": "F069",
+      "value": [
+        10
+      ],
+      "unit": null,
+      "jsonpath": "candidate_plans[0].parameters.anneal_time_min",
+      "source_class": "candidate_claim",
+      "note": "候选 v1 宣称参数"
+    },
+    {
+      "id": "F070",
+      "value": "手套箱",
+      "unit": null,
+      "jsonpath": "candidate_plans[0].cost_items[0].item",
+      "source_class": "candidate_claim",
+      "note": "候选 v1 成本行"
+    },
+    {
+      "id": "F071",
+      "value": 80,
+      "unit": "CNY",
+      "jsonpath": "candidate_plans[0].cost_items[0].unit_price",
+      "source_class": "candidate_claim",
+      "note": "候选 v1 成本行"
+    },
+    {
+      "id": "F072",
+      "value": 40,
+      "unit": null,
+      "jsonpath": "candidate_plans[0].cost_items[0].quantity",
+      "source_class": "candidate_claim",
+      "note": "候选 v1 成本行"
+    },
+    {
+      "id": "F073",
+      "value": 3200,
+      "unit": "CNY",
+      "jsonpath": "candidate_plans[0].cost_items[0].subtotal",
+      "source_class": "candidate_claim",
+      "note": "候选 v1 成本行"
+    },
+    {
+      "id": "F074",
+      "value": "匀胶机",
+      "unit": null,
+      "jsonpath": "candidate_plans[0].cost_items[1].item",
+      "source_class": "candidate_claim",
+      "note": "候选 v1 成本行"
+    },
+    {
+      "id": "F075",
+      "value": 20,
+      "unit": "CNY",
+      "jsonpath": "candidate_plans[0].cost_items[1].unit_price",
+      "source_class": "candidate_claim",
+      "note": "候选 v1 成本行"
+    },
+    {
+      "id": "F076",
+      "value": 16,
+      "unit": null,
+      "jsonpath": "candidate_plans[0].cost_items[1].quantity",
+      "source_class": "candidate_claim",
+      "note": "候选 v1 成本行"
+    },
+    {
+      "id": "F077",
+      "value": 320,
+      "unit": "CNY",
+      "jsonpath": "candidate_plans[0].cost_items[1].subtotal",
+      "source_class": "candidate_claim",
+      "note": "候选 v1 成本行"
+    },
+    {
+      "id": "F078",
+      "value": "MAI",
+      "unit": null,
+      "jsonpath": "candidate_plans[0].cost_items[2].item",
+      "source_class": "candidate_claim",
+      "note": "候选 v1 成本行"
+    },
+    {
+      "id": "F079",
+      "value": 250,
+      "unit": "CNY",
+      "jsonpath": "candidate_plans[0].cost_items[2].unit_price",
+      "source_class": "candidate_claim",
+      "note": "候选 v1 成本行"
+    },
+    {
+      "id": "F080",
+      "value": 4,
+      "unit": null,
+      "jsonpath": "candidate_plans[0].cost_items[2].quantity",
+      "source_class": "candidate_claim",
+      "note": "候选 v1 成本行"
+    },
+    {
+      "id": "F081",
+      "value": 1000,
+      "unit": "CNY",
+      "jsonpath": "candidate_plans[0].cost_items[2].subtotal",
+      "source_class": "candidate_claim",
+      "note": "候选 v1 成本行"
+    },
+    {
+      "id": "F082",
+      "value": "PbI2",
+      "unit": null,
+      "jsonpath": "candidate_plans[0].cost_items[3].item",
+      "source_class": "candidate_claim",
+      "note": "候选 v1 成本行"
+    },
+    {
+      "id": "F083",
+      "value": 180,
+      "unit": "CNY",
+      "jsonpath": "candidate_plans[0].cost_items[3].unit_price",
+      "source_class": "candidate_claim",
+      "note": "候选 v1 成本行"
+    },
+    {
+      "id": "F084",
+      "value": 5,
+      "unit": null,
+      "jsonpath": "candidate_plans[0].cost_items[3].quantity",
+      "source_class": "candidate_claim",
+      "note": "候选 v1 成本行"
+    },
+    {
+      "id": "F085",
+      "value": 900,
+      "unit": "CNY",
+      "jsonpath": "candidate_plans[0].cost_items[3].subtotal",
+      "source_class": "candidate_claim",
+      "note": "候选 v1 成本行"
+    },
+    {
+      "id": "F086",
+      "value": "DMF",
+      "unit": null,
+      "jsonpath": "candidate_plans[0].cost_items[4].item",
+      "source_class": "candidate_claim",
+      "note": "候选 v1 成本行"
+    },
+    {
+      "id": "F087",
+      "value": 120,
+      "unit": "CNY",
+      "jsonpath": "candidate_plans[0].cost_items[4].unit_price",
+      "source_class": "candidate_claim",
+      "note": "候选 v1 成本行"
+    },
+    {
+      "id": "F088",
+      "value": 2,
+      "unit": null,
+      "jsonpath": "candidate_plans[0].cost_items[4].quantity",
+      "source_class": "candidate_claim",
+      "note": "候选 v1 成本行"
+    },
+    {
+      "id": "F089",
+      "value": 240,
+      "unit": "CNY",
+      "jsonpath": "candidate_plans[0].cost_items[4].subtotal",
+      "source_class": "candidate_claim",
+      "note": "候选 v1 成本行"
+    },
+    {
+      "id": "F090",
+      "value": 5760,
+      "unit": "CNY",
+      "jsonpath": "candidate_plans[0].total_cost",
+      "source_class": "candidate_claim",
+      "note": "候选 v1 宣称总价"
+    },
+    {
+      "id": "F091",
+      "value": 26,
+      "unit": "day",
+      "jsonpath": "candidate_plans[0].est_days",
+      "source_class": "candidate_claim",
+      "note": "候选 v1 宣称周期"
+    },
+    {
+      "id": "F092",
+      "value": "高速旋涂加电子传输层，使用 EQ-GB 与 EQ-HP。",
+      "unit": null,
+      "jsonpath": "candidate_plans[1].summary",
+      "source_class": "candidate_claim",
+      "note": "版本 v2"
+    },
+    {
+      "id": "F093",
+      "value": 5000,
+      "unit": null,
+      "jsonpath": "candidate_plans[1].parameters.spin_coating_rpm",
+      "source_class": "candidate_claim",
+      "note": "候选 v2 宣称参数"
+    },
+    {
+      "id": "F094",
+      "value": [
+        100,
+        110,
+        120
+      ],
+      "unit": null,
+      "jsonpath": "candidate_plans[1].parameters.anneal_temperature_C",
+      "source_class": "candidate_claim",
+      "note": "候选 v2 宣称参数"
+    },
+    {
+      "id": "F095",
+      "value": [
+        10,
+        20
+      ],
+      "unit": null,
+      "jsonpath": "candidate_plans[1].parameters.anneal_time_min",
+      "source_class": "candidate_claim",
+      "note": "候选 v2 宣称参数"
+    },
+    {
+      "id": "F096",
+      "value": "手套箱",
+      "unit": null,
+      "jsonpath": "candidate_plans[1].cost_items[0].item",
+      "source_class": "candidate_claim",
+      "note": "候选 v2 成本行"
+    },
+    {
+      "id": "F097",
+      "value": 80,
+      "unit": "CNY",
+      "jsonpath": "candidate_plans[1].cost_items[0].unit_price",
+      "source_class": "candidate_claim",
+      "note": "候选 v2 成本行"
+    },
+    {
+      "id": "F098",
+      "value": 30,
+      "unit": null,
+      "jsonpath": "candidate_plans[1].cost_items[0].quantity",
+      "source_class": "candidate_claim",
+      "note": "候选 v2 成本行"
+    },
+    {
+      "id": "F099",
+      "value": 2400,
+      "unit": "CNY",
+      "jsonpath": "candidate_plans[1].cost_items[0].subtotal",
+      "source_class": "candidate_claim",
+      "note": "候选 v2 成本行"
+    },
+    {
+      "id": "F100",
+      "value": "加热台",
+      "unit": null,
+      "jsonpath": "candidate_plans[1].cost_items[1].item",
+      "source_class": "candidate_claim",
+      "note": "候选 v2 成本行"
+    },
+    {
+      "id": "F101",
+      "value": 30,
+      "unit": "CNY",
+      "jsonpath": "candidate_plans[1].cost_items[1].unit_price",
+      "source_class": "candidate_claim",
+      "note": "候选 v2 成本行"
+    },
+    {
+      "id": "F102",
+      "value": 20,
+      "unit": null,
+      "jsonpath": "candidate_plans[1].cost_items[1].quantity",
+      "source_class": "candidate_claim",
+      "note": "候选 v2 成本行"
+    },
+    {
+      "id": "F103",
+      "value": 600,
+      "unit": "CNY",
+      "jsonpath": "candidate_plans[1].cost_items[1].subtotal",
+      "source_class": "candidate_claim",
+      "note": "候选 v2 成本行"
+    },
+    {
+      "id": "F104",
+      "value": "PCBM",
+      "unit": null,
+      "jsonpath": "candidate_plans[1].cost_items[2].item",
+      "source_class": "candidate_claim",
+      "note": "候选 v2 成本行"
+    },
+    {
+      "id": "F105",
+      "value": 400,
+      "unit": "CNY",
+      "jsonpath": "candidate_plans[1].cost_items[2].unit_price",
+      "source_class": "candidate_claim",
+      "note": "候选 v2 成本行"
+    },
+    {
+      "id": "F106",
+      "value": 2,
+      "unit": null,
+      "jsonpath": "candidate_plans[1].cost_items[2].quantity",
+      "source_class": "candidate_claim",
+      "note": "候选 v2 成本行"
+    },
+    {
+      "id": "F107",
+      "value": 800,
+      "unit": "CNY",
+      "jsonpath": "candidate_plans[1].cost_items[2].subtotal",
+      "source_class": "candidate_claim",
+      "note": "候选 v2 成本行"
+    },
+    {
+      "id": "F108",
+      "value": 3800,
+      "unit": "CNY",
+      "jsonpath": "candidate_plans[1].total_cost",
+      "source_class": "candidate_claim",
+      "note": "候选 v2 宣称总价"
+    },
+    {
+      "id": "F109",
+      "value": 35,
+      "unit": "day",
+      "jsonpath": "candidate_plans[1].est_days",
+      "source_class": "candidate_claim",
+      "note": "候选 v2 宣称周期"
+    },
+    {
+      "id": "F110",
+      "value": "围绕文献最优温度细扫，使用 EQ-GB、EQ-HP 与氮气吹扫。",
+      "unit": null,
+      "jsonpath": "candidate_plans[2].summary",
+      "source_class": "candidate_claim",
+      "note": "版本 v3"
+    },
+    {
+      "id": "F111",
+      "value": 3000,
+      "unit": null,
+      "jsonpath": "candidate_plans[2].parameters.spin_coating_rpm",
+      "source_class": "candidate_claim",
+      "note": "候选 v3 宣称参数"
+    },
+    {
+      "id": "F112",
+      "value": [
+        105,
+        110,
+        115
+      ],
+      "unit": null,
+      "jsonpath": "candidate_plans[2].parameters.anneal_temperature_C",
+      "source_class": "candidate_claim",
+      "note": "候选 v3 宣称参数"
+    },
+    {
+      "id": "F113",
+      "value": [
+        10
+      ],
+      "unit": null,
+      "jsonpath": "candidate_plans[2].parameters.anneal_time_min",
+      "source_class": "candidate_claim",
+      "note": "候选 v3 宣称参数"
+    },
+    {
+      "id": "F114",
+      "value": [
+        1.0
+      ],
+      "unit": null,
+      "jsonpath": "candidate_plans[2].parameters.n2_flow_rate_slm",
+      "source_class": "candidate_claim",
+      "note": "候选 v3 宣称参数"
+    },
+    {
+      "id": "F115",
+      "value": 12,
+      "unit": null,
+      "jsonpath": "candidate_plans[2].parameters.antisolvent_drip_s",
+      "source_class": "candidate_claim",
+      "note": "候选 v3 宣称参数"
+    },
+    {
+      "id": "F116",
+      "value": "手套箱",
+      "unit": null,
+      "jsonpath": "candidate_plans[2].cost_items[0].item",
+      "source_class": "candidate_claim",
+      "note": "候选 v3 成本行"
+    },
+    {
+      "id": "F117",
+      "value": 80,
+      "unit": "CNY",
+      "jsonpath": "candidate_plans[2].cost_items[0].unit_price",
+      "source_class": "candidate_claim",
+      "note": "候选 v3 成本行"
+    },
+    {
+      "id": "F118",
+      "value": 24,
+      "unit": null,
+      "jsonpath": "candidate_plans[2].cost_items[0].quantity",
+      "source_class": "candidate_claim",
+      "note": "候选 v3 成本行"
+    },
+    {
+      "id": "F119",
+      "value": 1920,
+      "unit": "CNY",
+      "jsonpath": "candidate_plans[2].cost_items[0].subtotal",
+      "source_class": "candidate_claim",
+      "note": "候选 v3 成本行"
+    },
+    {
+      "id": "F120",
+      "value": "加热台",
+      "unit": null,
+      "jsonpath": "candidate_plans[2].cost_items[1].item",
+      "source_class": "candidate_claim",
+      "note": "候选 v3 成本行"
+    },
+    {
+      "id": "F121",
+      "value": 30,
+      "unit": "CNY",
+      "jsonpath": "candidate_plans[2].cost_items[1].unit_price",
+      "source_class": "candidate_claim",
+      "note": "候选 v3 成本行"
+    },
+    {
+      "id": "F122",
+      "value": 12,
+      "unit": null,
+      "jsonpath": "candidate_plans[2].cost_items[1].quantity",
+      "source_class": "candidate_claim",
+      "note": "候选 v3 成本行"
+    },
+    {
+      "id": "F123",
+      "value": 360,
+      "unit": "CNY",
+      "jsonpath": "candidate_plans[2].cost_items[1].subtotal",
+      "source_class": "candidate_claim",
+      "note": "候选 v3 成本行"
+    },
+    {
+      "id": "F124",
+      "value": "MAI",
+      "unit": null,
+      "jsonpath": "candidate_plans[2].cost_items[2].item",
+      "source_class": "candidate_claim",
+      "note": "候选 v3 成本行"
+    },
+    {
+      "id": "F125",
+      "value": 250,
+      "unit": "CNY",
+      "jsonpath": "candidate_plans[2].cost_items[2].unit_price",
+      "source_class": "candidate_claim",
+      "note": "候选 v3 成本行"
+    },
+    {
+      "id": "F126",
+      "value": 2,
+      "unit": null,
+      "jsonpath": "candidate_plans[2].cost_items[2].quantity",
+      "source_class": "candidate_claim",
+      "note": "候选 v3 成本行"
+    },
+    {
+      "id": "F127",
+      "value": 500,
+      "unit": "CNY",
+      "jsonpath": "candidate_plans[2].cost_items[2].subtotal",
+      "source_class": "candidate_claim",
+      "note": "候选 v3 成本行"
+    },
+    {
+      "id": "F128",
+      "value": "PbI2",
+      "unit": null,
+      "jsonpath": "candidate_plans[2].cost_items[3].item",
+      "source_class": "candidate_claim",
+      "note": "候选 v3 成本行"
+    },
+    {
+      "id": "F129",
+      "value": 180,
+      "unit": "CNY",
+      "jsonpath": "candidate_plans[2].cost_items[3].unit_price",
+      "source_class": "candidate_claim",
+      "note": "候选 v3 成本行"
+    },
+    {
+      "id": "F130",
+      "value": 2,
+      "unit": null,
+      "jsonpath": "candidate_plans[2].cost_items[3].quantity",
+      "source_class": "candidate_claim",
+      "note": "候选 v3 成本行"
+    },
+    {
+      "id": "F131",
+      "value": 360,
+      "unit": "CNY",
+      "jsonpath": "candidate_plans[2].cost_items[3].subtotal",
+      "source_class": "candidate_claim",
+      "note": "候选 v3 成本行"
+    },
+    {
+      "id": "F132",
+      "value": "DMF",
+      "unit": null,
+      "jsonpath": "candidate_plans[2].cost_items[4].item",
+      "source_class": "candidate_claim",
+      "note": "候选 v3 成本行"
+    },
+    {
+      "id": "F133",
+      "value": 120,
+      "unit": "CNY",
+      "jsonpath": "candidate_plans[2].cost_items[4].unit_price",
+      "source_class": "candidate_claim",
+      "note": "候选 v3 成本行"
+    },
+    {
+      "id": "F134",
+      "value": 1,
+      "unit": null,
+      "jsonpath": "candidate_plans[2].cost_items[4].quantity",
+      "source_class": "candidate_claim",
+      "note": "候选 v3 成本行"
+    },
+    {
+      "id": "F135",
+      "value": 120,
+      "unit": "CNY",
+      "jsonpath": "candidate_plans[2].cost_items[4].subtotal",
+      "source_class": "candidate_claim",
+      "note": "候选 v3 成本行"
+    },
+    {
+      "id": "F136",
+      "value": 3260,
+      "unit": "CNY",
+      "jsonpath": "candidate_plans[2].total_cost",
+      "source_class": "candidate_claim",
+      "note": "候选 v3 宣称总价"
+    },
+    {
+      "id": "F137",
+      "value": 21,
+      "unit": "day",
+      "jsonpath": "candidate_plans[2].est_days",
+      "source_class": "candidate_claim",
+      "note": "候选 v3 宣称周期"
+    },
+    {
+      "id": "F138",
+      "value": [
+        "case_id",
+        "revised_plan",
+        "candidate_assessment",
+        "validation",
+        "status",
+        "uncertainty",
+        "sources",
+        "change_log",
+        "confirmation_items"
+      ],
+      "unit": null,
+      "jsonpath": "output_contract.required_fields",
+      "source_class": "case_meta",
+      "note": "result.json 必含字段"
+    }
+  ],
+  "equipment_table": [
+    {
+      "id": "EQ-GB",
+      "name": "充氮手套箱",
+      "model": "MockBox-2",
+      "spec": "H2O/O2 < 1 ppm",
+      "price_per_hour": 80,
+      "booking": {
+        "window_days": 30,
+        "slots_per_week": 3,
+        "slot_hours": 4
+      },
+      "origin": "contract",
+      "jsonpath": "resource_contract.equipment[0]"
+    },
+    {
+      "id": "EQ-SC",
+      "name": "匀胶机",
+      "model": "MockSpin-8",
+      "spec": "500-8000 rpm",
+      "price_per_hour": 20,
+      "booking": {
+        "window_days": 30,
+        "slots_per_week": 5,
+        "slot_hours": 2
+      },
+      "origin": "contract",
+      "jsonpath": "resource_contract.equipment[1]"
+    },
+    {
+      "id": "EQ-HP",
+      "name": "精密加热台",
+      "model": "MockHot-300",
+      "spec": "室温-300 C, +/-1 C",
+      "price_per_hour": 30,
+      "booking": {
+        "window_days": 30,
+        "slots_per_week": 7,
+        "slot_hours": 8
+      },
+      "origin": "text_embedded",
+      "jsonpath": "equipment_domain_note~embedded[0]"
+    }
+  ]
+}

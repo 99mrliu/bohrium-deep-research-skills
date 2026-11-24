@@ -1,0 +1,64 @@
+{
+  "case_id": "MOCK-PEROV-ANNEAL-001",
+  "note": "合成示意案例：数据为演示 skill 工作流而构造，非真实实验依据。",
+  "title": "MAPbI3 钙钛矿薄膜退火工艺优化",
+  "task": "在给定资源合同与有限参数域下，评估 3 个候选退火方案并交付修订后的完整实验方案。",
+  "research_goal": "在 30 天与 20000 CNY 预算内确定退火温度/时间窗口，使 MAPbI3 薄膜覆盖率与 PL 强度最大化。",
+  "source": {
+    "paper_pdf": "mock_paper.pdf",
+    "citation": "Mock et al., 合成示例引用, 2024",
+    "key_claim": "两步旋涂 + 100-120°C 退火 10 min 可获得致密 MAPbI3 薄膜（合成示例论断）"
+  },
+  "resource_contract": {
+    "disclaimer": "组织方前瞻合同：价格与预约信息为计划性约定，不是实际供应商报价或已确认排期。",
+    "currency": "CNY",
+    "budget_cap": 20000,
+    "deadline_days": 30,
+    "equipment": [
+      {"id": "EQ-GB", "name": "充氮手套箱", "model": "Mock-GB-2", "spec": "水氧<1ppm",
+       "price_per_hour": 80,
+       "booking": {"window_days": 30, "slots_per_week": 3, "slot_hours": 4}}
+    ],
+    "reagents": [
+      {"id": "RE-MAI", "name": "MAI", "spec": "≥99.99%", "unit_price": 250, "unit": "g", "pack_size": 5},
+      {"id": "RE-PBI2", "name": "PbI2", "spec": "≥99.99%", "unit_price": 180, "unit": "g", "pack_size": 5}
+    ]
+  },
+  "parameter_domains": {
+    "anneal_temperature_C": {"type": "range", "min": 80, "max": 150, "step": 5,
+                             "basis": "设备手册+预实验", "source": "case:parameter_domains.anneal_temperature_C"},
+    "spin_coating_rpm": {"type": "enum", "values": [2000, 3000, 4000, 6000],
+                         "basis": "组织方有限参数域", "source": "case:parameter_domains.spin_coating_rpm"},
+    "anneal_time_min": {"type": "range", "min": 5, "max": 60, "step": 5,
+                        "basis": "组织方有限参数域", "source": "case:parameter_domains.anneal_time_min"}
+  },
+  "equipment_domain_note": "补充设备（文本内嵌，需解析对账）：{\"id\":\"EQ-HP\",\"name\":\"精密加热台\",\"model\":\"Mock-HP-100\",\"spec\":\"室温~300°C ±1°C\",\"price_per_hour\":40,\"booking\":{\"window_days\":30,\"slots_per_week\":5,\"slot_hours\":8}} —— 该设备不在 resource_contract.equipment 列表中，使用时须在 confirmation_items 中确认其可用性。",
+  "candidate_plans": [
+    {"version": "v1", "author": "组织方候选", "summary": "单点 125°C 退火 10 min，5 个温度重复验证",
+     "parameters": {"spin_coating_rpm": 4000, "anneal_temperature_C": [80, 95, 110, 125, 140], "anneal_time_min": 10},
+     "cost_items": [
+       {"item": "手套箱", "unit_price": 80, "quantity": 40, "subtotal": 3200},
+       {"item": "MAI", "unit_price": 250, "quantity": 5, "subtotal": 1250},
+       {"item": "PbI2", "unit_price": 180, "quantity": 5, "subtotal": 900}
+     ],
+     "total_cost": 7330, "est_days": 28},
+    {"version": "v2", "author": "组织方候选", "summary": "高密度扫描 16 个温度×时间组合",
+     "parameters": {"spin_coating_rpm": 3000, "anneal_temperature_C": [80, 90, 100, 110, 120, 130, 140, 150], "anneal_time_min": [10, 30]},
+     "cost_items": [
+       {"item": "手套箱", "unit_price": 80, "quantity": 64, "subtotal": 5120},
+       {"item": "MAI", "unit_price": 250, "quantity": 10, "subtotal": 2500},
+       {"item": "PbI2", "unit_price": 180, "quantity": 10, "subtotal": 1800}
+     ],
+     "total_cost": 9420, "est_days": 45},
+    {"version": "v3", "author": "组织方候选", "summary": "高温快速结晶 165°C × 5 min",
+     "parameters": {"spin_coating_rpm": 6000, "anneal_temperature_C": 165, "anneal_time_min": 5},
+     "cost_items": [
+       {"item": "手套箱", "unit_price": 80, "quantity": 8, "subtotal": 640},
+       {"item": "加热台", "unit_price": 40, "quantity": 8, "subtotal": 320},
+       {"item": "MAI", "unit_price": 250, "quantity": 5, "subtotal": 1250},
+       {"item": "PbI2", "unit_price": 180, "quantity": 5, "subtotal": 900}
+     ],
+     "total_cost": 3110, "est_days": 10}
+  ],
+  "output_contract": {"required_fields": ["case_id", "revised_plan", "candidate_assessment", "validation", "status", "uncertainty", "sources", "change_log", "confirmation_items"]}
+}

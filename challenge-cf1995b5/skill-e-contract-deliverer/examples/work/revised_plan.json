@@ -1,0 +1,10 @@
+{
+  "hypothesis": "退火温度在 100-120°C 域内存在结晶质量峰值（source.key_claim，合成示例论断）",
+  "variables": {"independent": ["anneal_temperature_C"], "dependent": ["薄膜覆盖率", "PL 强度"], "controlled": ["spin_coating_rpm=4000", "anneal_time_min=10"]},
+  "controls": ["未退火对照", "125°C 单点参照（candidate v1）"],
+  "equipment_materials": ["EQ-GB 充氮手套箱", "EQ-HP 精密加热台（内嵌设备，待确认）", "MAI/PbI2 各 1 包（5g）"],
+  "schedule": {"est_days": 14, "basis": "6 次×4h，3 档/周，window_days=30 内"},
+  "parameters": {"anneal_temperature_C": [100, 110, 120], "spin_coating_rpm": 4000, "anneal_time_min": 10},
+  "cost": {"total_cost": 4550, "basis": "plan.json cost_items 重算，预算 cap 20000 内"},
+  "risks": ["预约冲突顺延", "EQ-HP 可用性待确认", "湿气侵入中止阈值"]
+}

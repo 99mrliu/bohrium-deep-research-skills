@@ -1,0 +1,6 @@
+[
+  {"check": "成本算术", "method": "sum(unit_price*quantity) 复算", "data": "80*24+40*12+250*5+180*5=4550", "conclusion": "plan.json total_cost=4550 一致；candidate v1 的 7330 系算术错误（应为 5350）"},
+  {"check": "参数域", "method": "逐项对 parameter_domains", "data": "100/110/120 ∈ [80,150] step5；4000 ∈ enum；10 ∈ [5,60]", "conclusion": "修订方案全部合规"},
+  {"check": "时间可行性", "method": "预约吞吐对账", "data": "6 档 × 4h = 24h；3 档/周 → 2 周", "conclusion": "est_days=14 ≤ 30 可行"},
+  {"check": "机械复核", "method": "contract_deliver.py validate", "data": "validation_report.json", "conclusion": "以脚本输出为准"}
+]

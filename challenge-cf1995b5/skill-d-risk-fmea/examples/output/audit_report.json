@@ -1,0 +1,25 @@
+{
+  "status": "complete",
+  "note": "合成示例输出，非正式测评结果",
+  "generated_by": "risk_fmea.py audit",
+  "verdict": "PASS",
+  "coverage": {
+    "step_coverage": 1.0,
+    "covered_steps": 7,
+    "total_steps": 7,
+    "fm_element_completeness": 1.0,
+    "complete_failure_modes": 26,
+    "total_failure_modes": 26,
+    "confirmation_category_coverage": 1.0,
+    "confirmation_categories_present": [
+      "专家确认",
+      "伦理",
+      "安全",
+      "设备可用性"
+    ],
+    "confirmation_categories_missing": [],
+    "overall_complete": true
+  },
+  "gaps": [],
+  "iteration_hint": ""
+}

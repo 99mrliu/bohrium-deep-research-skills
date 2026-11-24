@@ -1,0 +1,56 @@
+{
+  "status": "complete",
+  "bottleneck_equipment": "EQ-GB",
+  "bottleneck_days": 35,
+  "deadline_days": 30,
+  "overrun_days": 5,
+  "options": [
+    {
+      "type": "改用可替代设备",
+      "target": "S6",
+      "detail": "步骤 S6 从 EQ-GB 移至 EQ-HP（精密加热台，每周 14.0h）",
+      "saved_hours": 36.0,
+      "saved_days_on_device": 21,
+      "formula": "瓶颈设备释放 36.0h ÷ 12.0h/周 × 7 ≈ 21 天（需替代设备当周有空闲 slot 才生效）",
+      "cost": "机时单价差 -40 元/h；结果口径可能与原设备有系统差异，需在方案中注明"
+    },
+    {
+      "type": "提高并行批次",
+      "target": "S2",
+      "detail": "步骤 S2（8 样本，batch_capacity=4）由逐样串行 16.0h 改为批处理 4.0h",
+      "saved_hours": 12.0,
+      "saved_days_on_device": 7,
+      "formula": "8×2.0h − ceil(8/4)×2.0h = 12.0h；÷ 12.0h/周 × 7 ≈ 7 天",
+      "cost": "批内均一性风险上升；需确认设备批量夹具/载台可用（confirmation_items）"
+    },
+    {
+      "type": "削减重复次数",
+      "target": "S6",
+      "detail": "步骤 S6 重复 3 次 → 2 次",
+      "saved_hours": 12.0,
+      "saved_days_on_device": 7,
+      "formula": "36.0h ÷ 3 = 12.0h/次；÷ 12.0h/周 × 7 ≈ 7 天",
+      "cost": "统计功效下降：n=2 无法稳健估计方差，建议保留 n≥3 或改用分批重复"
+    },
+    {
+      "type": "提高并行批次",
+      "target": "S3",
+      "detail": "步骤 S3（8 样本，batch_capacity=4）由逐样串行 16.0h 改为批处理 4.0h",
+      "saved_hours": 12.0,
+      "saved_days_on_device": 6,
+      "formula": "8×2.0h − ceil(8/4)×2.0h = 12.0h；÷ 14.0h/周 × 7 ≈ 6 天",
+      "cost": "批内均一性风险上升；需确认设备批量夹具/载台可用（confirmation_items）"
+    },
+    {
+      "type": "合并表征批次",
+      "target": "EQ-XRD/xrd-1",
+      "detail": "2 个同设备步骤（S4, S5）合并为一次上机：6 slot → 5 slot",
+      "saved_hours": 2.0,
+      "saved_days_on_device": 1,
+      "formula": "(单独 6 slot − 合并 5 slot) × 2.0h = 2.0h；÷ 10.0h/周 × 7 ≈ 1 天",
+      "cost": "样本需等同批齐样，表征时效性下降；跨条件同炉/同批需防交叉污染"
+    }
+  ],
+  "step_errors": [],
+  "note": "saved_days_on_device 是该设备上释放的折算天数；只有作用于瓶颈设备且不在并行掩蔽下的选项才等额缩短总工期，采纳后必须用 schedule 重排验证。"
+}

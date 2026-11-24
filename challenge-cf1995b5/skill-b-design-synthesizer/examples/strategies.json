@@ -1,0 +1,32 @@
+[
+  {
+    "name": "S1_full_factorial_3lvl_r1",
+    "type": "full_factorial",
+    "levels_per_factor": 3,
+    "replicates": 1,
+    "rationale": "3 水平全因子（27 条件）无重复：用于检验规模上限与 replicates 约束的拦截行为"
+  },
+  {
+    "name": "S2_orthogonal_3lvl_r4",
+    "type": "orthogonal",
+    "levels_per_factor": 3,
+    "replicates": 4,
+    "rationale": "循环拉丁方主效应计划：3 条件 × 4 重复，极省成本但几乎不估交互"
+  },
+  {
+    "name": "S3_fractional_temp_x_rpm_r2",
+    "type": "full_factorial",
+    "factors": ["anneal_temperature_C", "spin_coating_rpm"],
+    "fixed": {"anneal_time_min": 30},
+    "levels_per_factor": 3,
+    "replicates": 2,
+    "rationale": "温度×转速 3×3 部分因子（时间固定 30 min），2 次重复，可估关键交互"
+  },
+  {
+    "name": "S4_ofat_chain_r3",
+    "type": "ofat_scan",
+    "levels_per_factor": 3,
+    "replicates": 3,
+    "rationale": "单因素链式扫描：共享基线，7 条件 × 3 重复，成本低但不能估交互"
+  }
+]

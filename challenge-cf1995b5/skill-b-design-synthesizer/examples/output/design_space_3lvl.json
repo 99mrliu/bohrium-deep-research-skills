@@ -1,0 +1,178 @@
+{
+  "status": "ok",
+  "case_id": "MOCK-DESIGN-001",
+  "factors": {
+    "anneal_temperature_C": {
+      "n_levels": 3,
+      "levels": [
+        80,
+        115,
+        150
+      ],
+      "basis": "设备手册+预实验",
+      "source": "case:mock"
+    },
+    "anneal_time_min": {
+      "n_levels": 3,
+      "levels": [
+        10,
+        30,
+        60
+      ],
+      "basis": "文献常见窗口",
+      "source": "case:mock"
+    },
+    "spin_coating_rpm": {
+      "n_levels": 3,
+      "levels": [
+        2000,
+        3000,
+        6000
+      ],
+      "basis": "组织方有限参数域",
+      "source": "case:mock"
+    }
+  },
+  "total_combinations": 27,
+  "combinations_returned": 27,
+  "combinations_truncated": false,
+  "combinations": [
+    {
+      "anneal_temperature_C": 80,
+      "anneal_time_min": 10,
+      "spin_coating_rpm": 2000
+    },
+    {
+      "anneal_temperature_C": 80,
+      "anneal_time_min": 10,
+      "spin_coating_rpm": 3000
+    },
+    {
+      "anneal_temperature_C": 80,
+      "anneal_time_min": 10,
+      "spin_coating_rpm": 6000
+    },
+    {
+      "anneal_temperature_C": 80,
+      "anneal_time_min": 30,
+      "spin_coating_rpm": 2000
+    },
+    {
+      "anneal_temperature_C": 80,
+      "anneal_time_min": 30,
+      "spin_coating_rpm": 3000
+    },
+    {
+      "anneal_temperature_C": 80,
+      "anneal_time_min": 30,
+      "spin_coating_rpm": 6000
+    },
+    {
+      "anneal_temperature_C": 80,
+      "anneal_time_min": 60,
+      "spin_coating_rpm": 2000
+    },
+    {
+      "anneal_temperature_C": 80,
+      "anneal_time_min": 60,
+      "spin_coating_rpm": 3000
+    },
+    {
+      "anneal_temperature_C": 80,
+      "anneal_time_min": 60,
+      "spin_coating_rpm": 6000
+    },
+    {
+      "anneal_temperature_C": 115,
+      "anneal_time_min": 10,
+      "spin_coating_rpm": 2000
+    },
+    {
+      "anneal_temperature_C": 115,
+      "anneal_time_min": 10,
+      "spin_coating_rpm": 3000
+    },
+    {
+      "anneal_temperature_C": 115,
+      "anneal_time_min": 10,
+      "spin_coating_rpm": 6000
+    },
+    {
+      "anneal_temperature_C": 115,
+      "anneal_time_min": 30,
+      "spin_coating_rpm": 2000
+    },
+    {
+      "anneal_temperature_C": 115,
+      "anneal_time_min": 30,
+      "spin_coating_rpm": 3000
+    },
+    {
+      "anneal_temperature_C": 115,
+      "anneal_time_min": 30,
+      "spin_coating_rpm": 6000
+    },
+    {
+      "anneal_temperature_C": 115,
+      "anneal_time_min": 60,
+      "spin_coating_rpm": 2000
+    },
+    {
+      "anneal_temperature_C": 115,
+      "anneal_time_min": 60,
+      "spin_coating_rpm": 3000
+    },
+    {
+      "anneal_temperature_C": 115,
+      "anneal_time_min": 60,
+      "spin_coating_rpm": 6000
+    },
+    {
+      "anneal_temperature_C": 150,
+      "anneal_time_min": 10,
+      "spin_coating_rpm": 2000
+    },
+    {
+      "anneal_temperature_C": 150,
+      "anneal_time_min": 10,
+      "spin_coating_rpm": 3000
+    },
+    {
+      "anneal_temperature_C": 150,
+      "anneal_time_min": 10,
+      "spin_coating_rpm": 6000
+    },
+    {
+      "anneal_temperature_C": 150,
+      "anneal_time_min": 30,
+      "spin_coating_rpm": 2000
+    },
+    {
+      "anneal_temperature_C": 150,
+      "anneal_time_min": 30,
+      "spin_coating_rpm": 3000
+    },
+    {
+      "anneal_temperature_C": 150,
+      "anneal_time_min": 30,
+      "spin_coating_rpm": 6000
+    },
+    {
+      "anneal_temperature_C": 150,
+      "anneal_time_min": 60,
+      "spin_coating_rpm": 2000
+    },
+    {
+      "anneal_temperature_C": 150,
+      "anneal_time_min": 60,
+      "spin_coating_rpm": 3000
+    },
+    {
+      "anneal_temperature_C": 150,
+      "anneal_time_min": 60,
+      "spin_coating_rpm": 6000
+    }
+  ],
+  "notes": [],
+  "_notice": "合成示例输出，非正式测评结果"
+}

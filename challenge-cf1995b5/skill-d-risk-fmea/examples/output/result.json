@@ -1,0 +1,205 @@
+{
+  "note": "合成示例输出，非正式测评结果",
+  "case_id": "MOCK-RISK-FMEA-001",
+  "revised_plan": {
+    "summary": "v1 基础上：160°C 越域温度收敛至 150°C；成本按明细重算；按高 RPN 失效模式反向加入预实验/标准样校验/双供应商/错峰排期；风险章节由 risk_map.json 机械生成。",
+    "parameters": {
+      "spin_coating_rpm": 4000,
+      "anneal_temperature_C": [
+        80,
+        95,
+        110,
+        125,
+        150
+      ]
+    },
+    "design_changes": [
+      {
+        "trigger": "FM-CONTAM 污染 @ ST-01 (RPN 36)",
+        "design_change": "关键配制步骤加空白对照与洁净度预检；污染敏感步骤预留 1 次重做的试剂与时间余量"
+      },
+      {
+        "trigger": "FM-SAFETY 安全事故 @ ST-01 (RPN 10)",
+        "design_change": "涉危险化学品/高温/高压步骤强制写 PPE 与应急处置卡；安全确认项永远是 confirmation_items 第一类"
+      },
+      {
+        "trigger": "FM-CONTAM 污染 @ ST-02 (RPN 36)",
+        "design_change": "关键配制步骤加空白对照与洁净度预检；污染敏感步骤预留 1 次重做的试剂与时间余量"
+      },
+      {
+        "trigger": "FM-DRIFT 参数漂移 @ ST-02 (RPN 36)",
+        "design_change": "温控/转速敏感步骤前置校准确认点；漂移敏感批次保留同期标准样作为事后对账依据"
+      },
+      {
+        "trigger": "FM-REPRO 重复性差 @ ST-02 (RPN 36)",
+        "design_change": "关键步骤加预实验（小规模单变量矩阵）并预设可接受 RSD 阈值；方案必须含 ≥3 次独立重复"
+      },
+      {
+        "trigger": "FM-DRIFT 参数漂移 @ ST-03 (RPN 48)",
+        "design_change": "温控/转速敏感步骤前置校准确认点；漂移敏感批次保留同期标准样作为事后对账依据"
+      },
+      {
+        "trigger": "FM-REPRO 重复性差 @ ST-03 (RPN 36)",
+        "design_change": "关键步骤加预实验（小规模单变量矩阵）并预设可接受 RSD 阈值；方案必须含 ≥3 次独立重复"
+      },
+      {
+        "trigger": "FM-SAFETY 安全事故 @ ST-03 (RPN 10)",
+        "design_change": "涉危险化学品/高温/高压步骤强制写 PPE 与应急处置卡；安全确认项永远是 confirmation_items 第一类"
+      },
+      {
+        "trigger": "FM-DRIFT 参数漂移 @ ST-04 (RPN 36)",
+        "design_change": "温控/转速敏感步骤前置校准确认点；漂移敏感批次保留同期标准样作为事后对账依据"
+      },
+      {
+        "trigger": "FM-NOSIGNAL 无信号/无响应 @ ST-04 (RPN 24)",
+        "design_change": "表征/测量步骤前置标准样校验环节；每个表征步骤指定一个可判读的成功判据"
+      },
+      {
+        "trigger": "FM-DRIFT 参数漂移 @ ST-05 (RPN 36)",
+        "design_change": "温控/转速敏感步骤前置校准确认点；漂移敏感批次保留同期标准样作为事后对账依据"
+      },
+      {
+        "trigger": "FM-NOSIGNAL 无信号/无响应 @ ST-05 (RPN 24)",
+        "design_change": "表征/测量步骤前置标准样校验环节；每个表征步骤指定一个可判读的成功判据"
+      },
+      {
+        "trigger": "FM-REPRO 重复性差 @ ST-06 (RPN 36)",
+        "design_change": "关键步骤加预实验（小规模单变量矩阵）并预设可接受 RSD 阈值；方案必须含 ≥3 次独立重复"
+      },
+      {
+        "trigger": "FM-REPRO 重复性差 @ ST-07 (RPN 36)",
+        "design_change": "关键步骤加预实验（小规模单变量矩阵）并预设可接受 RSD 阈值；方案必须含 ≥3 次独立重复"
+      }
+    ]
+  },
+  "candidate_assessment": [
+    {
+      "version": "v1",
+      "type": "COST-ARITHMETIC",
+      "detail": "total_cost=7330 与 cost_items 合计 5200 不符"
+    },
+    {
+      "version": "v1",
+      "type": "PARAM-OUT-OF-DOMAIN",
+      "detail": "anneal_temperature_C 取值 [160] 越出有限域 [80,150] step 5"
+    },
+    {
+      "version": "v1",
+      "type": "SCHEDULE-INFEASIBLE",
+      "detail": "est_days=40 超过 deadline_days=30"
+    },
+    {
+      "version": "case",
+      "type": "EQUIPMENT-EMBEDDED-NOT-LISTED",
+      "detail": "EQ-HP (加热台) 仅出现在 equipment_domain_note，可用性与计价须单独确认"
+    }
+  ],
+  "validation": {
+    "audit_verdict": "PASS",
+    "coverage": {
+      "step_coverage": 1.0,
+      "covered_steps": 7,
+      "total_steps": 7,
+      "fm_element_completeness": 1.0,
+      "complete_failure_modes": 26,
+      "total_failure_modes": 26,
+      "confirmation_category_coverage": 1.0,
+      "confirmation_categories_present": [
+        "专家确认",
+        "伦理",
+        "安全",
+        "设备可用性"
+      ],
+      "confirmation_categories_missing": [],
+      "overall_complete": true
+    },
+    "max_rpn_item": {
+      "step_id": "ST-03",
+      "failure_mode_id": "FM-DRIFT",
+      "name": "参数漂移",
+      "rpn": 48,
+      "severity": 3,
+      "occurrence": 4,
+      "detection": 4
+    },
+    "scripts": [
+      "risk_fmea.py map",
+      "risk_fmea.py audit",
+      "risk_fmea.py decision_tree",
+      "risk_fmea.py render"
+    ]
+  },
+  "status": "complete",
+  "uncertainty": [
+    "组织方合同为前瞻约定：价格/排期未确认，见 confirmation_items 设备可用性类",
+    "EQ-HP 漂移史未知，FM-DRIFT 发生度评分为谨慎上调（plan_steps.json ST-03 overrides.reason）"
+  ],
+  "sources": [
+    "case:resource_contract / parameter_domains / equipment_domain_note / candidate_plans",
+    "references/failure_mode_library.md（失效模式基准评分与四要素模板）",
+    "references/confirmation_checklist.md（四类确认项模板）"
+  ],
+  "change_log": [
+    "v1→v2: anneal_temperature_C 160→150（越出有限域上限）",
+    "v1→v2: total_cost 7330→按明细重算（算术不符，见 candidate_assessment）",
+    "v1→v2: 新增 7 步失效模式映射（26 条）与高 RPN 设计修改 14 项"
+  ],
+  "confirmation_items": [
+    {
+      "category": "安全",
+      "item": "DMF（有毒）与 PbI2（重金属）的 MSDS 已核对，PPE 与重金属废液处置渠道已确认",
+      "why": "涉及危化品与重金属，机构规章须人工核对",
+      "blocking": true,
+      "status": "pending"
+    },
+    {
+      "category": "伦理",
+      "item": "本方案不涉及人体/动物实验与个人信息，已自查确认无伦理敏感对象",
+      "why": "显式自查声明，供审计追溯",
+      "blocking": false,
+      "status": "pending"
+    },
+    {
+      "category": "设备可用性",
+      "item": "EQ-GB/EQ-SC/EQ-XRD/EQ-HP 的预约状态已查预约系统；EQ-HP 为 equipment_domain_note 内嵌设备，其可用性与计价须单独确认（前瞻合同，非已确认排期）",
+      "why": "组织方合同为计划性约定，预约状态无法自主证实",
+      "blocking": true,
+      "status": "pending"
+    },
+    {
+      "category": "设备可用性",
+      "item": "EQ-HP 加热台校准有效期覆盖实验窗口（允差 ±2°C），且高 RPN 项 FM-DRIFT@ST-03 的校准确认点已排入首槽",
+      "why": "漂移史未知，校准记录须人工查验",
+      "blocking": true,
+      "status": "pending"
+    },
+    {
+      "category": "专家确认",
+      "item": "MAI/PbI2 双供应商备选渠道已经导师批准并可下单（应对 FM-REAGENT@ST-01 的设计修改）",
+      "why": "双供应商策略涉及采购权限与预算调整",
+      "blocking": true,
+      "status": "pending"
+    },
+    {
+      "category": "专家确认",
+      "item": "修订方案将 v1 越域退火温度 160°C 收敛至域上限 150°C，该改动已经专家过目",
+      "why": "有限参数域为硬约束，域边界改动须专家批准",
+      "blocking": true,
+      "status": "pending"
+    }
+  ],
+  "required_fields_check": {
+    "required": [
+      "case_id",
+      "revised_plan",
+      "candidate_assessment",
+      "validation",
+      "status",
+      "uncertainty",
+      "sources",
+      "change_log",
+      "confirmation_items"
+    ],
+    "missing": []
+  }
+}

@@ -1,0 +1,51 @@
+{
+  "case_id": "MOCK-RISK-FMEA-001",
+  "note": "合成示意案例：仅用于 exp-risk-fmea 示例运行，非真实科研任务。",
+  "title": "钙钛矿 MAPbI3 薄膜旋涂-退火合成与物相确认",
+  "task": "在 30 天、预算 20000 CNY 内完成 MAPbI3 薄膜制备、退火结晶与 XRD 物相确认，交付覆盖六要素的可执行完整方案。",
+  "research_goal": "获得结晶质量可复现（RSD<=15%）的 MAPbI3 薄膜，工艺参数限于组织方有限参数域。",
+  "source": {
+    "paper_pdf": "mock_paper.pdf",
+    "citation": "Mock, A. et al. (2024). Annealing window of MAPbI3 thin films. J. Mock Mater.（合成引用，非真实文献）",
+    "key_claim": "退火温度窗口显著影响 MAPbI3 结晶度与 PbI2 残留相。"
+  },
+  "resource_contract": {
+    "disclaimer": "组织方前瞻合同：价格与预约信息为计划性约定，不是实际供应商报价或已确认排期。",
+    "currency": "CNY",
+    "budget_cap": 20000,
+    "deadline_days": 30,
+    "equipment": [
+      {"id": "EQ-GB", "name": "充氮手套箱", "model": "MB-Lab200", "spec": "H2O<1ppm, O2<1ppm", "price_per_hour": 80,
+       "booking": {"window_days": 30, "slots_per_week": 3, "slot_hours": 4}},
+      {"id": "EQ-SC", "name": "旋涂仪", "model": "SC-200", "spec": "500-6000rpm, ±50rpm", "price_per_hour": 40,
+       "booking": {"window_days": 30, "slots_per_week": 4, "slot_hours": 2}},
+      {"id": "EQ-XRD", "name": "X 射线衍射仪", "model": "XRD-6000", "spec": "Cu Kα, 2θ 10-60°", "price_per_hour": 150,
+       "booking": {"window_days": 30, "slots_per_week": 2, "slot_hours": 2}}
+    ],
+    "reagents": [
+      {"id": "RE-MAI", "name": "MAI", "spec": "≥99.99%", "unit_price": 250, "unit": "g", "pack_size": 5},
+      {"id": "RE-PBI2", "name": "PbI2", "spec": "≥99.99%", "unit_price": 180, "unit": "g", "pack_size": 5},
+      {"id": "RE-DMF", "name": "DMF", "spec": "无水 ≥99.8%", "unit_price": 60, "unit": "500mL", "pack_size": 1}
+    ]
+  },
+  "parameter_domains": {
+    "anneal_temperature_C": {"type": "range", "min": 80, "max": 150, "step": 5, "basis": "设备手册+预实验", "source": "case:parameter_domains.anneal_temperature_C"},
+    "spin_coating_rpm": {"type": "enum", "values": [2000, 3000, 4000, 6000], "basis": "组织方有限参数域", "source": "case:parameter_domains.spin_coating_rpm"}
+  },
+  "equipment_domain_note": "补充设备（文本内嵌，需解析对账，不在 equipment 列表中）：{\"id\":\"EQ-HP\",\"name\":\"加热台\",\"model\":\"HP-150\",\"spec\":\"室温~200°C, 温控允差 ±2°C\",\"price_per_hour\":20,\"booking\":{\"window_days\":30,\"slots_per_week\":5,\"slot_hours\":3}}",
+  "candidate_plans": [
+    {"version": "v1", "author": "组织方",
+     "summary": "基准方案：4000rpm 旋涂，5 温度点退火矩阵（80/95/110/125/160°C），手套箱内操作。",
+     "parameters": {"spin_coating_rpm": 4000, "anneal_temperature_C": [80, 95, 110, 125, 160]},
+     "cost_items": [
+       {"item": "手套箱", "unit_price": 80, "quantity": 40, "subtotal": 3200},
+       {"item": "XRD", "unit_price": 150, "quantity": 10, "subtotal": 1500},
+       {"item": "MAI", "unit_price": 250, "quantity": 2, "subtotal": 500}
+     ],
+     "total_cost": 7330,
+     "est_days": 40}
+  ],
+  "output_contract": {
+    "required_fields": ["case_id", "revised_plan", "candidate_assessment", "validation", "status", "uncertainty", "sources", "change_log", "confirmation_items"]
+  }
+}

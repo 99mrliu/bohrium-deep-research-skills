@@ -1,0 +1,431 @@
+{
+  "status": "ok",
+  "case_id": "MOCK-DESIGN-001",
+  "ranking_rule": "1) 仅 feasible.overall=True 可入选（域合法 ∧ 预算内 ∧ 截止内 ∧ replicates 达标）；2) info_score 降序（权重: {'conditions': 10, 'pairs': 5, 'levels': 2, 'replicates': 1}）；3) 核算总成本升序；4) est_days 升序；5) id 字典序",
+  "recommended": {
+    "id": "strategy_S3_fractional_temp_x_rpm_r2",
+    "source": "strategy",
+    "summary": "温度×转速 3×3 部分因子（时间固定 30 min），2 次重复，可估关键交互",
+    "replicates": 2,
+    "assumptions": [],
+    "reject_reasons": [],
+    "consistency_warnings": [],
+    "n_conditions": 9,
+    "n_samples": 18,
+    "points_preview": [
+      {
+        "anneal_temperature_C": 80,
+        "anneal_time_min": 30,
+        "spin_coating_rpm": 2000
+      },
+      {
+        "anneal_temperature_C": 80,
+        "anneal_time_min": 30,
+        "spin_coating_rpm": 3000
+      },
+      {
+        "anneal_temperature_C": 80,
+        "anneal_time_min": 30,
+        "spin_coating_rpm": 6000
+      },
+      {
+        "anneal_temperature_C": 115,
+        "anneal_time_min": 30,
+        "spin_coating_rpm": 2000
+      },
+      {
+        "anneal_temperature_C": 115,
+        "anneal_time_min": 30,
+        "spin_coating_rpm": 3000
+      },
+      {
+        "anneal_temperature_C": 115,
+        "anneal_time_min": 30,
+        "spin_coating_rpm": 6000
+      },
+      {
+        "anneal_temperature_C": 150,
+        "anneal_time_min": 30,
+        "spin_coating_rpm": 2000
+      },
+      {
+        "anneal_temperature_C": 150,
+        "anneal_time_min": 30,
+        "spin_coating_rpm": 3000
+      },
+      {
+        "anneal_temperature_C": 150,
+        "anneal_time_min": 30,
+        "spin_coating_rpm": 6000
+      }
+    ],
+    "points_truncated": false,
+    "equipment_usage": {
+      "EQ-GB": {
+        "hours": 9,
+        "weekly_capacity_hours": 12,
+        "weeks_needed": 1,
+        "name": "充氮手套箱",
+        "model": "GB-N2-1200",
+        "equipment_source": "resource_contract.equipment"
+      },
+      "EQ-HP": {
+        "hours": 18,
+        "weekly_capacity_hours": 10,
+        "weeks_needed": 2,
+        "name": "精密加热台",
+        "model": "HP-300",
+        "equipment_source": "equipment_domain_note(内嵌解析)"
+      }
+    },
+    "est_days": 14,
+    "cost_breakdown": {
+      "equipment": {
+        "EQ-GB": {
+          "hours": 9,
+          "price_per_hour": 80,
+          "cost": 720
+        },
+        "EQ-HP": {
+          "hours": 18,
+          "price_per_hour": 30,
+          "cost": 540
+        }
+      },
+      "reagents": {
+        "RE-DMF": {
+          "quantity_needed": 270,
+          "unit": "mL",
+          "pack_size": 500,
+          "packs_purchased": 1,
+          "unit_price": "0.24",
+          "cost": 120,
+          "name": "DMF 无水溶剂"
+        },
+        "RE-MAI": {
+          "quantity_needed": "7.2",
+          "unit": "g",
+          "pack_size": 5,
+          "packs_purchased": 2,
+          "unit_price": 250,
+          "cost": 2500,
+          "name": "MAI（甲胺碘）"
+        },
+        "RE-PbI2": {
+          "quantity_needed": "12.6",
+          "unit": "g",
+          "pack_size": 10,
+          "packs_purchased": 2,
+          "unit_price": 180,
+          "cost": 3600,
+          "name": "PbI2"
+        }
+      },
+      "equipment_cost": 1260,
+      "reagent_cost": 6220,
+      "total_cost": 7480,
+      "currency": "CNY"
+    },
+    "feasible": {
+      "in_domain": true,
+      "within_budget": true,
+      "within_deadline": true,
+      "replicates_ok": true,
+      "overall": true
+    },
+    "info_components": {
+      "n_conditions": 9,
+      "covarying_pairs": 1,
+      "levels_sum": 7,
+      "replicates_capped": 2
+    },
+    "info_score": 111
+  },
+  "alternates": [
+    {
+      "id": "strategy_S4_ofat_chain_r3",
+      "source": "strategy",
+      "summary": "单因素链式扫描：共享基线，7 条件 × 3 重复，成本低但不能估交互",
+      "replicates": 3,
+      "assumptions": [
+        "OFAT 基线: {'anneal_temperature_C': 115, 'anneal_time_min': 30, 'spin_coating_rpm': 3000}"
+      ],
+      "reject_reasons": [],
+      "consistency_warnings": [],
+      "n_conditions": 7,
+      "n_samples": 21,
+      "points_preview": [
+        {
+          "anneal_temperature_C": 80,
+          "anneal_time_min": 30,
+          "spin_coating_rpm": 3000
+        },
+        {
+          "anneal_temperature_C": 115,
+          "anneal_time_min": 30,
+          "spin_coating_rpm": 3000
+        },
+        {
+          "anneal_temperature_C": 150,
+          "anneal_time_min": 30,
+          "spin_coating_rpm": 3000
+        },
+        {
+          "anneal_temperature_C": 115,
+          "anneal_time_min": 10,
+          "spin_coating_rpm": 3000
+        },
+        {
+          "anneal_temperature_C": 115,
+          "anneal_time_min": 60,
+          "spin_coating_rpm": 3000
+        },
+        {
+          "anneal_temperature_C": 115,
+          "anneal_time_min": 30,
+          "spin_coating_rpm": 2000
+        },
+        {
+          "anneal_temperature_C": 115,
+          "anneal_time_min": 30,
+          "spin_coating_rpm": 6000
+        }
+      ],
+      "points_truncated": false,
+      "equipment_usage": {
+        "EQ-GB": {
+          "hours": "10.5",
+          "weekly_capacity_hours": 12,
+          "weeks_needed": 1,
+          "name": "充氮手套箱",
+          "model": "GB-N2-1200",
+          "equipment_source": "resource_contract.equipment"
+        },
+        "EQ-HP": {
+          "hours": 21,
+          "weekly_capacity_hours": 10,
+          "weeks_needed": 3,
+          "name": "精密加热台",
+          "model": "HP-300",
+          "equipment_source": "equipment_domain_note(内嵌解析)"
+        }
+      },
+      "est_days": 21,
+      "cost_breakdown": {
+        "equipment": {
+          "EQ-GB": {
+            "hours": "10.5",
+            "price_per_hour": 80,
+            "cost": 840
+          },
+          "EQ-HP": {
+            "hours": 21,
+            "price_per_hour": 30,
+            "cost": 630
+          }
+        },
+        "reagents": {
+          "RE-DMF": {
+            "quantity_needed": 315,
+            "unit": "mL",
+            "pack_size": 500,
+            "packs_purchased": 1,
+            "unit_price": "0.24",
+            "cost": 120,
+            "name": "DMF 无水溶剂"
+          },
+          "RE-MAI": {
+            "quantity_needed": "8.4",
+            "unit": "g",
+            "pack_size": 5,
+            "packs_purchased": 2,
+            "unit_price": 250,
+            "cost": 2500,
+            "name": "MAI（甲胺碘）"
+          },
+          "RE-PbI2": {
+            "quantity_needed": "14.7",
+            "unit": "g",
+            "pack_size": 10,
+            "packs_purchased": 2,
+            "unit_price": 180,
+            "cost": 3600,
+            "name": "PbI2"
+          }
+        },
+        "equipment_cost": 1470,
+        "reagent_cost": 6220,
+        "total_cost": 7690,
+        "currency": "CNY"
+      },
+      "feasible": {
+        "in_domain": true,
+        "within_budget": true,
+        "within_deadline": true,
+        "replicates_ok": true,
+        "overall": true
+      },
+      "info_components": {
+        "n_conditions": 7,
+        "covarying_pairs": 3,
+        "levels_sum": 9,
+        "replicates_capped": 3
+      },
+      "info_score": 106
+    },
+    {
+      "id": "candidate_v1",
+      "source": "candidate_plan",
+      "summary": "保守五点温度扫描：转速固定 4000 rpm、退火 30 min，3 次重复（共 15 样品）",
+      "replicates": 3,
+      "assumptions": [],
+      "reject_reasons": [],
+      "consistency_warnings": [
+        "declared_vs_computed_cost: 自报 2030，脚本核算 7270.00，差 5240.00"
+      ],
+      "n_conditions": 5,
+      "n_samples": 15,
+      "points_preview": [
+        {
+          "anneal_temperature_C": 80,
+          "anneal_time_min": 30,
+          "spin_coating_rpm": 4000
+        },
+        {
+          "anneal_temperature_C": 95,
+          "anneal_time_min": 30,
+          "spin_coating_rpm": 4000
+        },
+        {
+          "anneal_temperature_C": 110,
+          "anneal_time_min": 30,
+          "spin_coating_rpm": 4000
+        },
+        {
+          "anneal_temperature_C": 125,
+          "anneal_time_min": 30,
+          "spin_coating_rpm": 4000
+        },
+        {
+          "anneal_temperature_C": 140,
+          "anneal_time_min": 30,
+          "spin_coating_rpm": 4000
+        }
+      ],
+      "points_truncated": false,
+      "equipment_usage": {
+        "EQ-GB": {
+          "hours": "7.5",
+          "weekly_capacity_hours": 12,
+          "weeks_needed": 1,
+          "name": "充氮手套箱",
+          "model": "GB-N2-1200",
+          "equipment_source": "resource_contract.equipment"
+        },
+        "EQ-HP": {
+          "hours": 15,
+          "weekly_capacity_hours": 10,
+          "weeks_needed": 2,
+          "name": "精密加热台",
+          "model": "HP-300",
+          "equipment_source": "equipment_domain_note(内嵌解析)"
+        }
+      },
+      "est_days": 14,
+      "cost_breakdown": {
+        "equipment": {
+          "EQ-GB": {
+            "hours": "7.5",
+            "price_per_hour": 80,
+            "cost": 600
+          },
+          "EQ-HP": {
+            "hours": 15,
+            "price_per_hour": 30,
+            "cost": 450
+          }
+        },
+        "reagents": {
+          "RE-DMF": {
+            "quantity_needed": 225,
+            "unit": "mL",
+            "pack_size": 500,
+            "packs_purchased": 1,
+            "unit_price": "0.24",
+            "cost": 120,
+            "name": "DMF 无水溶剂"
+          },
+          "RE-MAI": {
+            "quantity_needed": 6,
+            "unit": "g",
+            "pack_size": 5,
+            "packs_purchased": 2,
+            "unit_price": 250,
+            "cost": 2500,
+            "name": "MAI（甲胺碘）"
+          },
+          "RE-PbI2": {
+            "quantity_needed": "10.5",
+            "unit": "g",
+            "pack_size": 10,
+            "packs_purchased": 2,
+            "unit_price": 180,
+            "cost": 3600,
+            "name": "PbI2"
+          }
+        },
+        "equipment_cost": 1050,
+        "reagent_cost": 6220,
+        "total_cost": 7270,
+        "currency": "CNY"
+      },
+      "feasible": {
+        "in_domain": true,
+        "within_budget": true,
+        "within_deadline": true,
+        "replicates_ok": true,
+        "overall": true
+      },
+      "declared": {
+        "total_cost": 2030,
+        "est_days": 14,
+        "cost_items_sum": 2030
+      },
+      "info_components": {
+        "n_conditions": 5,
+        "covarying_pairs": 0,
+        "levels_sum": 7,
+        "replicates_capped": 3
+      },
+      "info_score": 67
+    }
+  ],
+  "other_feasible_ids": [
+    "candidate_v3",
+    "strategy_S2_orthogonal_3lvl_r4"
+  ],
+  "rejected": [
+    {
+      "id": "candidate_v2",
+      "source": "candidate_plan",
+      "reject_reasons": [
+        "within_budget=False: 核算总成本 145350.00 CNY > budget_cap 20000",
+        "within_deadline=False: 关键设备决定 est_days=336 > deadline_days 30"
+      ],
+      "consistency_warnings": [
+        "declared_total_mismatch: total_cost=9500 与 cost_items 合计=8900 不符",
+        "declared_vs_computed_cost: 自报 9500，脚本核算 145350.00，差 135850.00",
+        "declared_vs_computed_days: 自报 est_days=25，脚本核算 336"
+      ]
+    },
+    {
+      "id": "strategy_S1_full_factorial_3lvl_r1",
+      "source": "strategy",
+      "reject_reasons": [
+        "replicates_ok=False: replicates=1 < min_replicates=2（无法估计实验误差）"
+      ],
+      "consistency_warnings": []
+    }
+  ],
+  "_notice": "合成示例输出，非正式测评结果"
+}

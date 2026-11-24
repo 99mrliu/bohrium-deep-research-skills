@@ -1,0 +1,79 @@
+{
+  "_example_note": "合成示例输出，非正式测评结果",
+  "assumptions_variables": [
+    "假设：MAPbI3 结晶质量对退火温度敏感区间在 100-120°C（source.key_claim，合成示例论断）",
+    "自变量：anneal_temperature_C（域内 100/110/120）；因变量：薄膜覆盖率、PL 强度",
+    "控制变量：spin_coating_rpm=4000、anneal_time_min=10 固定"
+  ],
+  "controls": [
+    "未退火对照（同批旋涂后直接表征）",
+    "candidate v1 的 125°C 单点作为域内参照"
+  ],
+  "equipment_materials": [
+    {
+      "id": "EQ-GB",
+      "name": "充氮手套箱",
+      "source": "resource_contract.equipment[0]"
+    },
+    {
+      "id": "EQ-HP",
+      "name": "精密加热台",
+      "source": "equipment_domain_note（内嵌，可用性待确认）"
+    },
+    {
+      "id": "RE-MAI",
+      "name": "MAI ≥99.99%",
+      "source": "resource_contract.reagents[0]"
+    },
+    {
+      "id": "RE-PBI2",
+      "name": "PbI2 ≥99.99%",
+      "source": "resource_contract.reagents[1]"
+    }
+  ],
+  "schedule": {
+    "est_days": 14,
+    "basis": "6 次实验 × 4h/次；手套箱 3 档/周 → 2 周，window_days=30 内可行"
+  },
+  "parameters": {
+    "anneal_temperature_C": [
+      100,
+      110,
+      120
+    ],
+    "spin_coating_rpm": 4000,
+    "anneal_time_min": 10
+  },
+  "cost_items": [
+    {
+      "item": "手套箱",
+      "unit_price": 80,
+      "quantity": 24,
+      "subtotal": 1920
+    },
+    {
+      "item": "加热台",
+      "unit_price": 40,
+      "quantity": 12,
+      "subtotal": 480
+    },
+    {
+      "item": "MAI",
+      "unit_price": 250,
+      "quantity": 5,
+      "subtotal": 1250
+    },
+    {
+      "item": "PbI2",
+      "unit_price": 180,
+      "quantity": 5,
+      "subtotal": 900
+    }
+  ],
+  "total_cost": 4550,
+  "risks": [
+    "手套箱预约冲突 → 提前 7 天锁档，冲突时顺延并在 change_log 记录",
+    "EQ-HP 为内嵌设备、可用性未确认 → 已列入 confirmation_items，确认前不排产",
+    "湿气侵入 → 手套箱水氧 <1ppm 监控，超阈中止当次实验"
+  ]
+}

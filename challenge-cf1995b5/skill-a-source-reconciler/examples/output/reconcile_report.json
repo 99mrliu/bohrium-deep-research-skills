@@ -1,0 +1,595 @@
+{
+  "_notice": "合成示例输出，非正式测评结果",
+  "case_id": "MOCK-PEROV-ANNEAL-001",
+  "generated_by": "scripts/case_reconcile.py reconcile",
+  "check_count": 72,
+  "summary": {
+    "PASS": 64,
+    "FAIL": 4,
+    "WARN": 4
+  },
+  "revision_targets": [
+    "A-total@v1",
+    "B-param@v2",
+    "C-ref@v2",
+    "D-deadline@v2"
+  ],
+  "checks": [
+    {
+      "check_id": "A-row",
+      "category": "cost_arithmetic",
+      "status": "PASS",
+      "candidate_version": "v1",
+      "description": "成本行 unit_price×quantity == subtotal",
+      "evidence": "candidate_plans[0].cost_items[0]: 80×40=3200 == subtotal 3200"
+    },
+    {
+      "check_id": "A-row",
+      "category": "cost_arithmetic",
+      "status": "PASS",
+      "candidate_version": "v1",
+      "description": "成本行 unit_price×quantity == subtotal",
+      "evidence": "candidate_plans[0].cost_items[1]: 20×16=320 == subtotal 320"
+    },
+    {
+      "check_id": "A-row",
+      "category": "cost_arithmetic",
+      "status": "PASS",
+      "candidate_version": "v1",
+      "description": "成本行 unit_price×quantity == subtotal",
+      "evidence": "candidate_plans[0].cost_items[2]: 250×4=1000 == subtotal 1000"
+    },
+    {
+      "check_id": "A-row",
+      "category": "cost_arithmetic",
+      "status": "PASS",
+      "candidate_version": "v1",
+      "description": "成本行 unit_price×quantity == subtotal",
+      "evidence": "candidate_plans[0].cost_items[3]: 180×5=900 == subtotal 900"
+    },
+    {
+      "check_id": "A-row",
+      "category": "cost_arithmetic",
+      "status": "PASS",
+      "candidate_version": "v1",
+      "description": "成本行 unit_price×quantity == subtotal",
+      "evidence": "candidate_plans[0].cost_items[4]: 120×2=240 == subtotal 240"
+    },
+    {
+      "check_id": "A-total",
+      "category": "cost_arithmetic",
+      "status": "FAIL",
+      "candidate_version": "v1",
+      "description": "total_cost 与各行之和不符",
+      "evidence": "candidate_plans[0].total_cost: 3200+320+1000+900+240 = 5660 ≠ 宣称 total_cost 5760（差额 100 CNY）"
+    },
+    {
+      "check_id": "A-row",
+      "category": "cost_arithmetic",
+      "status": "PASS",
+      "candidate_version": "v2",
+      "description": "成本行 unit_price×quantity == subtotal",
+      "evidence": "candidate_plans[1].cost_items[0]: 80×30=2400 == subtotal 2400"
+    },
+    {
+      "check_id": "A-row",
+      "category": "cost_arithmetic",
+      "status": "PASS",
+      "candidate_version": "v2",
+      "description": "成本行 unit_price×quantity == subtotal",
+      "evidence": "candidate_plans[1].cost_items[1]: 30×20=600 == subtotal 600"
+    },
+    {
+      "check_id": "A-row",
+      "category": "cost_arithmetic",
+      "status": "PASS",
+      "candidate_version": "v2",
+      "description": "成本行 unit_price×quantity == subtotal",
+      "evidence": "candidate_plans[1].cost_items[2]: 400×2=800 == subtotal 800"
+    },
+    {
+      "check_id": "A-total",
+      "category": "cost_arithmetic",
+      "status": "PASS",
+      "candidate_version": "v2",
+      "description": "各行 subtotal 之和 == total_cost",
+      "evidence": "candidate_plans[1].total_cost: 2400+600+800 = 3800 == total_cost 3800"
+    },
+    {
+      "check_id": "A-row",
+      "category": "cost_arithmetic",
+      "status": "PASS",
+      "candidate_version": "v3",
+      "description": "成本行 unit_price×quantity == subtotal",
+      "evidence": "candidate_plans[2].cost_items[0]: 80×24=1920 == subtotal 1920"
+    },
+    {
+      "check_id": "A-row",
+      "category": "cost_arithmetic",
+      "status": "PASS",
+      "candidate_version": "v3",
+      "description": "成本行 unit_price×quantity == subtotal",
+      "evidence": "candidate_plans[2].cost_items[1]: 30×12=360 == subtotal 360"
+    },
+    {
+      "check_id": "A-row",
+      "category": "cost_arithmetic",
+      "status": "PASS",
+      "candidate_version": "v3",
+      "description": "成本行 unit_price×quantity == subtotal",
+      "evidence": "candidate_plans[2].cost_items[2]: 250×2=500 == subtotal 500"
+    },
+    {
+      "check_id": "A-row",
+      "category": "cost_arithmetic",
+      "status": "PASS",
+      "candidate_version": "v3",
+      "description": "成本行 unit_price×quantity == subtotal",
+      "evidence": "candidate_plans[2].cost_items[3]: 180×2=360 == subtotal 360"
+    },
+    {
+      "check_id": "A-row",
+      "category": "cost_arithmetic",
+      "status": "PASS",
+      "candidate_version": "v3",
+      "description": "成本行 unit_price×quantity == subtotal",
+      "evidence": "candidate_plans[2].cost_items[4]: 120×1=120 == subtotal 120"
+    },
+    {
+      "check_id": "A-total",
+      "category": "cost_arithmetic",
+      "status": "PASS",
+      "candidate_version": "v3",
+      "description": "各行 subtotal 之和 == total_cost",
+      "evidence": "candidate_plans[2].total_cost: 1920+360+500+360+120 = 3260 == total_cost 3260"
+    },
+    {
+      "check_id": "B-param",
+      "category": "parameter_domain",
+      "status": "PASS",
+      "candidate_version": "v1",
+      "description": "参数值落在枚举域内",
+      "evidence": "candidate_plans[0].parameters.spin_coating_rpm=4000 ∈ [2000, 3000, 4000, 6000] rpm"
+    },
+    {
+      "check_id": "B-param",
+      "category": "parameter_domain",
+      "status": "PASS",
+      "candidate_version": "v1",
+      "description": "参数值落在区间域内",
+      "evidence": "candidate_plans[0].parameters.anneal_temperature_C=80 ∈ [80, 150] step=5 C"
+    },
+    {
+      "check_id": "B-param",
+      "category": "parameter_domain",
+      "status": "PASS",
+      "candidate_version": "v1",
+      "description": "参数值落在区间域内",
+      "evidence": "candidate_plans[0].parameters.anneal_temperature_C=95 ∈ [80, 150] step=5 C"
+    },
+    {
+      "check_id": "B-param",
+      "category": "parameter_domain",
+      "status": "PASS",
+      "candidate_version": "v1",
+      "description": "参数值落在区间域内",
+      "evidence": "candidate_plans[0].parameters.anneal_temperature_C=110 ∈ [80, 150] step=5 C"
+    },
+    {
+      "check_id": "B-param",
+      "category": "parameter_domain",
+      "status": "PASS",
+      "candidate_version": "v1",
+      "description": "参数值落在区间域内",
+      "evidence": "candidate_plans[0].parameters.anneal_temperature_C=125 ∈ [80, 150] step=5 C"
+    },
+    {
+      "check_id": "B-param",
+      "category": "parameter_domain",
+      "status": "PASS",
+      "candidate_version": "v1",
+      "description": "参数值落在区间域内",
+      "evidence": "candidate_plans[0].parameters.anneal_temperature_C=140 ∈ [80, 150] step=5 C"
+    },
+    {
+      "check_id": "B-param",
+      "category": "parameter_domain",
+      "status": "PASS",
+      "candidate_version": "v1",
+      "description": "参数值落在区间域内",
+      "evidence": "candidate_plans[0].parameters.anneal_time_min=10 ∈ [5, 30] step=5 min"
+    },
+    {
+      "check_id": "B-param",
+      "category": "parameter_domain",
+      "status": "FAIL",
+      "candidate_version": "v2",
+      "description": "参数值越出枚举域",
+      "evidence": "candidate_plans[1].parameters.spin_coating_rpm=5000 ∉ 枚举域 [2000, 3000, 4000, 6000] rpm（越域）"
+    },
+    {
+      "check_id": "B-param",
+      "category": "parameter_domain",
+      "status": "PASS",
+      "candidate_version": "v2",
+      "description": "参数值落在区间域内",
+      "evidence": "candidate_plans[1].parameters.anneal_temperature_C=100 ∈ [80, 150] step=5 C"
+    },
+    {
+      "check_id": "B-param",
+      "category": "parameter_domain",
+      "status": "PASS",
+      "candidate_version": "v2",
+      "description": "参数值落在区间域内",
+      "evidence": "candidate_plans[1].parameters.anneal_temperature_C=110 ∈ [80, 150] step=5 C"
+    },
+    {
+      "check_id": "B-param",
+      "category": "parameter_domain",
+      "status": "PASS",
+      "candidate_version": "v2",
+      "description": "参数值落在区间域内",
+      "evidence": "candidate_plans[1].parameters.anneal_temperature_C=120 ∈ [80, 150] step=5 C"
+    },
+    {
+      "check_id": "B-param",
+      "category": "parameter_domain",
+      "status": "PASS",
+      "candidate_version": "v2",
+      "description": "参数值落在区间域内",
+      "evidence": "candidate_plans[1].parameters.anneal_time_min=10 ∈ [5, 30] step=5 min"
+    },
+    {
+      "check_id": "B-param",
+      "category": "parameter_domain",
+      "status": "PASS",
+      "candidate_version": "v2",
+      "description": "参数值落在区间域内",
+      "evidence": "candidate_plans[1].parameters.anneal_time_min=20 ∈ [5, 30] step=5 min"
+    },
+    {
+      "check_id": "B-param",
+      "category": "parameter_domain",
+      "status": "PASS",
+      "candidate_version": "v3",
+      "description": "参数值落在枚举域内",
+      "evidence": "candidate_plans[2].parameters.spin_coating_rpm=3000 ∈ [2000, 3000, 4000, 6000] rpm"
+    },
+    {
+      "check_id": "B-param",
+      "category": "parameter_domain",
+      "status": "PASS",
+      "candidate_version": "v3",
+      "description": "参数值落在区间域内",
+      "evidence": "candidate_plans[2].parameters.anneal_temperature_C=105 ∈ [80, 150] step=5 C"
+    },
+    {
+      "check_id": "B-param",
+      "category": "parameter_domain",
+      "status": "PASS",
+      "candidate_version": "v3",
+      "description": "参数值落在区间域内",
+      "evidence": "candidate_plans[2].parameters.anneal_temperature_C=110 ∈ [80, 150] step=5 C"
+    },
+    {
+      "check_id": "B-param",
+      "category": "parameter_domain",
+      "status": "PASS",
+      "candidate_version": "v3",
+      "description": "参数值落在区间域内",
+      "evidence": "candidate_plans[2].parameters.anneal_temperature_C=115 ∈ [80, 150] step=5 C"
+    },
+    {
+      "check_id": "B-param",
+      "category": "parameter_domain",
+      "status": "PASS",
+      "candidate_version": "v3",
+      "description": "参数值落在区间域内",
+      "evidence": "candidate_plans[2].parameters.anneal_time_min=10 ∈ [5, 30] step=5 min"
+    },
+    {
+      "check_id": "B-param",
+      "category": "parameter_domain",
+      "status": "PASS",
+      "candidate_version": "v3",
+      "description": "参数值落在区间域内",
+      "evidence": "candidate_plans[2].parameters.n2_flow_rate_slm=1 ∈ [0, 2] step=0.5 slm"
+    },
+    {
+      "check_id": "B-param",
+      "category": "parameter_domain",
+      "status": "WARN",
+      "candidate_version": "v3",
+      "description": "候选使用了 parameter_domains 中未登记的参数",
+      "evidence": "candidate_plans[2].parameters.antisolvent_drip_s=12：无对应有限参数域，需人工确认其合法性与依据"
+    },
+    {
+      "check_id": "C-ref",
+      "category": "contract_coverage",
+      "status": "PASS",
+      "candidate_version": "v1",
+      "description": "成本行引用的设备/试剂在合同内",
+      "evidence": "candidate_plans[0].cost_items[0].item='手套箱' 匹配 充氮手套箱（id=EQ-GB, origin=contract）"
+    },
+    {
+      "check_id": "C-ref",
+      "category": "contract_coverage",
+      "status": "PASS",
+      "candidate_version": "v1",
+      "description": "成本行引用的设备/试剂在合同内",
+      "evidence": "candidate_plans[0].cost_items[1].item='匀胶机' 匹配 匀胶机（id=EQ-SC, origin=contract）"
+    },
+    {
+      "check_id": "C-ref",
+      "category": "contract_coverage",
+      "status": "PASS",
+      "candidate_version": "v1",
+      "description": "成本行引用的设备/试剂在合同内",
+      "evidence": "candidate_plans[0].cost_items[2].item='MAI' 匹配 MAI（id=RE-MAI, origin=contract）"
+    },
+    {
+      "check_id": "C-ref",
+      "category": "contract_coverage",
+      "status": "PASS",
+      "candidate_version": "v1",
+      "description": "成本行引用的设备/试剂在合同内",
+      "evidence": "candidate_plans[0].cost_items[3].item='PbI2' 匹配 PbI2（id=RE-PBI2, origin=contract）"
+    },
+    {
+      "check_id": "C-ref",
+      "category": "contract_coverage",
+      "status": "PASS",
+      "candidate_version": "v1",
+      "description": "成本行引用的设备/试剂在合同内",
+      "evidence": "candidate_plans[0].cost_items[4].item='DMF' 匹配 DMF（id=RE-DMF, origin=contract）"
+    },
+    {
+      "check_id": "C-ref",
+      "category": "contract_coverage",
+      "status": "PASS",
+      "candidate_version": "v1",
+      "description": "summary 中引用的 id 在合同内",
+      "evidence": "candidate_plans[0].summary 中 'EQ-GB' 匹配 充氮手套箱"
+    },
+    {
+      "check_id": "C-ref",
+      "category": "contract_coverage",
+      "status": "PASS",
+      "candidate_version": "v2",
+      "description": "成本行引用的设备/试剂在合同内",
+      "evidence": "candidate_plans[1].cost_items[0].item='手套箱' 匹配 充氮手套箱（id=EQ-GB, origin=contract）"
+    },
+    {
+      "check_id": "C-ref",
+      "category": "contract_coverage",
+      "status": "PASS",
+      "candidate_version": "v2",
+      "description": "成本行引用的设备/试剂在合同内（来源：文本内嵌补充）",
+      "evidence": "candidate_plans[1].cost_items[1].item='加热台' 匹配 精密加热台（id=EQ-HP, origin=text_embedded）"
+    },
+    {
+      "check_id": "C-ref",
+      "category": "contract_coverage",
+      "status": "FAIL",
+      "candidate_version": "v2",
+      "description": "成本行引用的设备/试剂不在合同（含文本内嵌补充）内",
+      "evidence": "candidate_plans[1].cost_items[2].item='PCBM' 无法匹配任何已知设备/试剂 id 或名称"
+    },
+    {
+      "check_id": "C-ref",
+      "category": "contract_coverage",
+      "status": "PASS",
+      "candidate_version": "v2",
+      "description": "summary 中引用的 id 在合同内",
+      "evidence": "candidate_plans[1].summary 中 'EQ-GB' 匹配 充氮手套箱"
+    },
+    {
+      "check_id": "C-ref",
+      "category": "contract_coverage",
+      "status": "PASS",
+      "candidate_version": "v2",
+      "description": "summary 中引用的 id 在合同内",
+      "evidence": "candidate_plans[1].summary 中 'EQ-HP' 匹配 精密加热台"
+    },
+    {
+      "check_id": "C-ref",
+      "category": "contract_coverage",
+      "status": "PASS",
+      "candidate_version": "v3",
+      "description": "成本行引用的设备/试剂在合同内",
+      "evidence": "candidate_plans[2].cost_items[0].item='手套箱' 匹配 充氮手套箱（id=EQ-GB, origin=contract）"
+    },
+    {
+      "check_id": "C-ref",
+      "category": "contract_coverage",
+      "status": "PASS",
+      "candidate_version": "v3",
+      "description": "成本行引用的设备/试剂在合同内（来源：文本内嵌补充）",
+      "evidence": "candidate_plans[2].cost_items[1].item='加热台' 匹配 精密加热台（id=EQ-HP, origin=text_embedded）"
+    },
+    {
+      "check_id": "C-ref",
+      "category": "contract_coverage",
+      "status": "PASS",
+      "candidate_version": "v3",
+      "description": "成本行引用的设备/试剂在合同内",
+      "evidence": "candidate_plans[2].cost_items[2].item='MAI' 匹配 MAI（id=RE-MAI, origin=contract）"
+    },
+    {
+      "check_id": "C-ref",
+      "category": "contract_coverage",
+      "status": "PASS",
+      "candidate_version": "v3",
+      "description": "成本行引用的设备/试剂在合同内",
+      "evidence": "candidate_plans[2].cost_items[3].item='PbI2' 匹配 PbI2（id=RE-PBI2, origin=contract）"
+    },
+    {
+      "check_id": "C-ref",
+      "category": "contract_coverage",
+      "status": "PASS",
+      "candidate_version": "v3",
+      "description": "成本行引用的设备/试剂在合同内",
+      "evidence": "candidate_plans[2].cost_items[4].item='DMF' 匹配 DMF（id=RE-DMF, origin=contract）"
+    },
+    {
+      "check_id": "C-ref",
+      "category": "contract_coverage",
+      "status": "PASS",
+      "candidate_version": "v3",
+      "description": "summary 中引用的 id 在合同内",
+      "evidence": "candidate_plans[2].summary 中 'EQ-GB' 匹配 充氮手套箱"
+    },
+    {
+      "check_id": "C-ref",
+      "category": "contract_coverage",
+      "status": "PASS",
+      "candidate_version": "v3",
+      "description": "summary 中引用的 id 在合同内",
+      "evidence": "candidate_plans[2].summary 中 'EQ-HP' 匹配 精密加热台"
+    },
+    {
+      "check_id": "D-budget",
+      "category": "budget_deadline",
+      "status": "PASS",
+      "candidate_version": "v1",
+      "description": "total_cost 未超预算上限",
+      "evidence": "total_cost 5760 <= budget_cap 20000 CNY（余量 14240）"
+    },
+    {
+      "check_id": "D-deadline",
+      "category": "budget_deadline",
+      "status": "PASS",
+      "candidate_version": "v1",
+      "description": "est_days 未超周期上限",
+      "evidence": "est_days 26 <= deadline_days 30（余量 4 天）"
+    },
+    {
+      "check_id": "D-booking",
+      "category": "budget_deadline",
+      "status": "PASS",
+      "candidate_version": "v1",
+      "description": "设备机时需求在预约吞吐能力内",
+      "evidence": "手套箱 需 40 h；充氮手套箱 窗口 30 天可约 3 slot/周×4 h ≈ 51.4 h"
+    },
+    {
+      "check_id": "D-booking",
+      "category": "budget_deadline",
+      "status": "PASS",
+      "candidate_version": "v1",
+      "description": "设备机时需求在预约吞吐能力内",
+      "evidence": "匀胶机 需 16 h；匀胶机 窗口 30 天可约 5 slot/周×2 h ≈ 42.9 h"
+    },
+    {
+      "check_id": "D-budget",
+      "category": "budget_deadline",
+      "status": "PASS",
+      "candidate_version": "v2",
+      "description": "total_cost 未超预算上限",
+      "evidence": "total_cost 3800 <= budget_cap 20000 CNY（余量 16200）"
+    },
+    {
+      "check_id": "D-deadline",
+      "category": "budget_deadline",
+      "status": "FAIL",
+      "candidate_version": "v2",
+      "description": "est_days 超出周期上限",
+      "evidence": "est_days 35 > deadline_days 30（超出 5 天）"
+    },
+    {
+      "check_id": "D-booking",
+      "category": "budget_deadline",
+      "status": "PASS",
+      "candidate_version": "v2",
+      "description": "设备机时需求在预约吞吐能力内",
+      "evidence": "手套箱 需 30 h；充氮手套箱 窗口 30 天可约 3 slot/周×4 h ≈ 51.4 h"
+    },
+    {
+      "check_id": "D-booking",
+      "category": "budget_deadline",
+      "status": "WARN",
+      "candidate_version": "v2",
+      "description": "est_days 超出设备预约窗口",
+      "evidence": "est_days 35 > 充氮手套箱 booking.window_days 30，排期可行性存疑"
+    },
+    {
+      "check_id": "D-booking",
+      "category": "budget_deadline",
+      "status": "PASS",
+      "candidate_version": "v2",
+      "description": "设备机时需求在预约吞吐能力内",
+      "evidence": "加热台 需 20 h；精密加热台 窗口 30 天可约 7 slot/周×8 h ≈ 240.0 h"
+    },
+    {
+      "check_id": "D-booking",
+      "category": "budget_deadline",
+      "status": "WARN",
+      "candidate_version": "v2",
+      "description": "est_days 超出设备预约窗口",
+      "evidence": "est_days 35 > 精密加热台 booking.window_days 30，排期可行性存疑"
+    },
+    {
+      "check_id": "D-budget",
+      "category": "budget_deadline",
+      "status": "PASS",
+      "candidate_version": "v3",
+      "description": "total_cost 未超预算上限",
+      "evidence": "total_cost 3260 <= budget_cap 20000 CNY（余量 16740）"
+    },
+    {
+      "check_id": "D-deadline",
+      "category": "budget_deadline",
+      "status": "PASS",
+      "candidate_version": "v3",
+      "description": "est_days 未超周期上限",
+      "evidence": "est_days 21 <= deadline_days 30（余量 9 天）"
+    },
+    {
+      "check_id": "D-booking",
+      "category": "budget_deadline",
+      "status": "PASS",
+      "candidate_version": "v3",
+      "description": "设备机时需求在预约吞吐能力内",
+      "evidence": "手套箱 需 24 h；充氮手套箱 窗口 30 天可约 3 slot/周×4 h ≈ 51.4 h"
+    },
+    {
+      "check_id": "D-booking",
+      "category": "budget_deadline",
+      "status": "PASS",
+      "candidate_version": "v3",
+      "description": "设备机时需求在预约吞吐能力内",
+      "evidence": "加热台 需 12 h；精密加热台 窗口 30 天可约 7 slot/周×8 h ≈ 240.0 h"
+    },
+    {
+      "check_id": "E-basis",
+      "category": "domain_basis",
+      "status": "PASS",
+      "candidate_version": null,
+      "description": "参数域 source 可在 case 内定位",
+      "evidence": "parameter_domains.anneal_temperature_C: basis='设备手册+预实验', source=case:resource_contract.equipment → 已定位"
+    },
+    {
+      "check_id": "E-basis",
+      "category": "domain_basis",
+      "status": "PASS",
+      "candidate_version": null,
+      "description": "参数域 source 可在 case 内定位",
+      "evidence": "parameter_domains.spin_coating_rpm: basis='组织方有限参数域', source=case:parameter_domains.spin_coating_rpm → 已定位"
+    },
+    {
+      "check_id": "E-basis",
+      "category": "domain_basis",
+      "status": "PASS",
+      "candidate_version": null,
+      "description": "参数域 source 可在 case 内定位",
+      "evidence": "parameter_domains.anneal_time_min: basis='文献', source=case:source.paper_pdf → 已定位"
+    },
+    {
+      "check_id": "E-basis",
+      "category": "domain_basis",
+      "status": "WARN",
+      "candidate_version": null,
+      "description": "参数域 source 无法在 case 内定位",
+      "evidence": "parameter_domains.n2_flow_rate_slm: basis='预实验报告', source=case:pre_experiment.report → 解析失败（键 'pre_experiment' 不存在）；该依据需人工确认或补充材料"
+    }
+  ]
+}

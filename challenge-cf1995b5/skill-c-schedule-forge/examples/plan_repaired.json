@@ -1,0 +1,21 @@
+{
+  "version": "rev2",
+  "note": "合成示例：采纳 repair 建议后的步骤表——S2 改批处理(16h→4h)、S4+S5 合并为一次 XRD 批次(10h)、S6 重复 3→2(36h→24h)。",
+  "est_days": 28,
+  "steps": [
+    {"id": "S1", "name": "前驱液配制", "equipment": "EQ-GB", "equip_hours": 4,
+     "samples": 1, "depends_on": [],
+     "reagents": [{"id": "RE-MAI", "quantity": 10}, {"id": "RE-PBI2", "quantity": 10}]},
+    {"id": "S2", "name": "旋涂制膜(批处理)", "equipment": "EQ-GB", "equip_hours": 4,
+     "samples": 8, "per_sample_hours": 2, "batch_capacity": 4, "parallel": true,
+     "depends_on": ["S1"],
+     "reagents": [{"id": "RE-CB", "quantity": 400}]},
+    {"id": "S3", "name": "退火(批处理)", "equipment": "EQ-HP", "equip_hours": 4,
+     "samples": 8, "per_sample_hours": 2, "batch_capacity": 4, "parallel": true,
+     "depends_on": ["S2"]},
+    {"id": "S4", "name": "XRD合并批次", "equipment": "EQ-XRD", "equip_hours": 10,
+     "samples": 8, "batch_group": "xrd-1", "depends_on": ["S3"]},
+    {"id": "S6", "name": "稳定性复测(n=2)", "equipment": "EQ-GB", "equip_hours": 24,
+     "samples": 8, "replicates": 2, "depends_on": ["S4"]}
+  ]
+}

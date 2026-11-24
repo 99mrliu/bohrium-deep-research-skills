@@ -1,0 +1,11 @@
+{
+  "note": "合成示意确认项清单：按 references/confirmation_checklist.md 覆盖四类。",
+  "confirmation_items": [
+    {"category": "安全", "item": "DMF（有毒）与 PbI2（重金属）的 MSDS 已核对，PPE 与重金属废液处置渠道已确认", "why": "涉及危化品与重金属，机构规章须人工核对", "blocking": true, "status": "pending"},
+    {"category": "伦理", "item": "本方案不涉及人体/动物实验与个人信息，已自查确认无伦理敏感对象", "why": "显式自查声明，供审计追溯", "blocking": false, "status": "pending"},
+    {"category": "设备可用性", "item": "EQ-GB/EQ-SC/EQ-XRD/EQ-HP 的预约状态已查预约系统；EQ-HP 为 equipment_domain_note 内嵌设备，其可用性与计价须单独确认（前瞻合同，非已确认排期）", "why": "组织方合同为计划性约定，预约状态无法自主证实", "blocking": true, "status": "pending"},
+    {"category": "设备可用性", "item": "EQ-HP 加热台校准有效期覆盖实验窗口（允差 ±2°C），且高 RPN 项 FM-DRIFT@ST-03 的校准确认点已排入首槽", "why": "漂移史未知，校准记录须人工查验", "blocking": true, "status": "pending"},
+    {"category": "专家确认", "item": "MAI/PbI2 双供应商备选渠道已经导师批准并可下单（应对 FM-REAGENT@ST-01 的设计修改）", "why": "双供应商策略涉及采购权限与预算调整", "blocking": true, "status": "pending"},
+    {"category": "专家确认", "item": "修订方案将 v1 越域退火温度 160°C 收敛至域上限 150°C，该改动已经专家过目", "why": "有限参数域为硬约束，域边界改动须专家批准", "blocking": true, "status": "pending"}
+  ]
+}

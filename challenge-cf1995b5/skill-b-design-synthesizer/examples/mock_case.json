@@ -1,0 +1,94 @@
+{
+  "case_id": "MOCK-DESIGN-001",
+  "note": "合成示意案例：钙钛矿薄膜退火工艺优化。所有价格、预约与消耗数字均为虚构的前瞻约定，仅用于演示 exp-design-synthesizer 的枚举-核算-选优流程，不对应任何真实供应商报价。",
+  "title": "MAPbI3 钙钛矿薄膜退火工艺窗口优化",
+  "task": "在有限参数域内选择一套合法、可行、信息度尽量高的实验设计，优化 MAPbI3 钙钛矿薄膜的退火工艺（目标：稳态 PCE 与重复性），并对 3 个版本化候选方案做量化体检。",
+  "research_goal": "确定退火温度、旋涂转速、退火时间对器件 PCE 的影响主效应与关键交互，给出预算 20000 CNY、30 天内可完成的推荐设计。",
+  "source": {
+    "paper_pdf": "mock_paper.pdf",
+    "citation": "Mock et al., Synthetic Perovskite Annealing Study (2026, 虚构)",
+    "key_claim": "退火温度在 100-130°C 区间对 PCE 影响最显著，且与旋涂转速存在交互。"
+  },
+  "resource_contract": {
+    "disclaimer": "组织方前瞻合同：价格与预约信息为计划性约定，不是实际供应商报价或已确认排期。",
+    "currency": "CNY",
+    "budget_cap": 20000,
+    "deadline_days": 30,
+    "equipment": [
+      {
+        "id": "EQ-GB",
+        "name": "充氮手套箱",
+        "model": "GB-N2-1200",
+        "spec": "H2O/O2 < 1 ppm，内置旋涂仪",
+        "price_per_hour": 80,
+        "booking": {"window_days": 30, "slots_per_week": 3, "slot_hours": 4}
+      }
+    ],
+    "reagents": [
+      {"id": "RE-MAI", "name": "MAI（甲胺碘）", "spec": "≥99.99%", "unit_price": 250, "unit": "g", "pack_size": 5},
+      {"id": "RE-PbI2", "name": "PbI2", "spec": "≥99.999%", "unit_price": 180, "unit": "g", "pack_size": 10},
+      {"id": "RE-DMF", "name": "DMF 无水溶剂", "spec": "≥99.8%", "unit_price": 0.24, "unit": "mL", "pack_size": 500}
+    ]
+  },
+  "equipment_domain_note": "补充设备（文本内嵌，需解析对账）：\n```json\n{\"equipment\": [{\"id\": \"EQ-HP\", \"name\": \"精密加热台\", \"model\": \"HP-300\", \"spec\": \"室温-300°C，±1°C\", \"price_per_hour\": 30, \"booking\": {\"window_days\": 30, \"slots_per_week\": 5, \"slot_hours\": 2}}]}\n```\n该设备未列入 resource_contract.equipment，核算时必须合并；EQ-HP 每周吞吐为 5×2=10 机时。",
+  "experiment_model": {
+    "note": "组织方给定的单样本消耗模型（前瞻约定）：每片样品的手套箱机时含旋涂与封装，加热台机时含升降温占用。",
+    "per_sample": {
+      "equipment_hours": {"EQ-GB": 0.5, "EQ-HP": 1.0},
+      "reagent_use": {"RE-MAI": 0.4, "RE-PbI2": 0.7, "RE-DMF": 15}
+    }
+  },
+  "parameter_domains": {
+    "anneal_temperature_C": {"type": "range", "min": 80, "max": 150, "step": 5, "basis": "设备手册+预实验", "source": "case:mock"},
+    "spin_coating_rpm": {"type": "enum", "values": [2000, 3000, 4000, 6000], "basis": "组织方有限参数域", "source": "case:mock"},
+    "anneal_time_min": {"type": "range", "min": 10, "max": 60, "step": 10, "basis": "文献常见窗口", "source": "case:mock"}
+  },
+  "candidate_plans": [
+    {
+      "version": "v1",
+      "author": "学生A",
+      "summary": "保守五点温度扫描：转速固定 4000 rpm、退火 30 min，3 次重复（共 15 样品）",
+      "parameters": {"spin_coating_rpm": 4000, "anneal_temperature_C": [80, 95, 110, 125, 140], "anneal_time_min": 30, "replicates": 3},
+      "cost_items": [
+        {"item": "手套箱机时", "unit_price": 80, "quantity": 7.5, "subtotal": 600},
+        {"item": "加热台机时", "unit_price": 30, "quantity": 15, "subtotal": 450},
+        {"item": "MAI 10g", "unit_price": 250, "quantity": 2, "subtotal": 500},
+        {"item": "PbI2 20g", "unit_price": 180, "quantity": 2, "subtotal": 360},
+        {"item": "DMF 500mL", "unit_price": 120, "quantity": 1, "subtotal": 120}
+      ],
+      "total_cost": 2030,
+      "est_days": 14
+    },
+    {
+      "version": "v2",
+      "author": "学生B",
+      "summary": "全因子大扫描：8 温度 × 4 转速 × 3 时间 = 96 条件，5 次重复（共 480 样品），自称又快又省",
+      "parameters": {"spin_coating_rpm": [2000, 3000, 4000, 6000], "anneal_temperature_C": [80, 90, 100, 110, 120, 130, 140, 150], "anneal_time_min": [10, 30, 60], "replicates": 5},
+      "cost_items": [
+        {"item": "手套箱机时", "unit_price": 80, "quantity": 40, "subtotal": 3200},
+        {"item": "加热台机时", "unit_price": 30, "quantity": 60, "subtotal": 1800},
+        {"item": "试剂打包估算", "unit_price": 1300, "quantity": 3, "subtotal": 3900}
+      ],
+      "total_cost": 9500,
+      "est_days": 25
+    },
+    {
+      "version": "v3",
+      "author": "学生C",
+      "summary": "单因素转速扫描：温度固定 110°C、退火 30 min，2 次重复（共 8 样品）",
+      "parameters": {"spin_coating_rpm": [2000, 3000, 4000, 6000], "anneal_temperature_C": 110, "anneal_time_min": 30, "replicates": 2},
+      "cost_items": [
+        {"item": "手套箱机时", "unit_price": 80, "quantity": 4, "subtotal": 320},
+        {"item": "加热台机时", "unit_price": 30, "quantity": 8, "subtotal": 240},
+        {"item": "MAI 5g", "unit_price": 250, "quantity": 1, "subtotal": 250},
+        {"item": "PbI2 10g", "unit_price": 180, "quantity": 1, "subtotal": 180},
+        {"item": "DMF 500mL", "unit_price": 120, "quantity": 1, "subtotal": 120}
+      ],
+      "total_cost": 1110,
+      "est_days": 7
+    }
+  ],
+  "output_contract": {
+    "required_fields": ["case_id", "revised_plan", "candidate_assessment", "validation", "status", "uncertainty", "sources", "change_log", "confirmation_items"]
+  }
+}

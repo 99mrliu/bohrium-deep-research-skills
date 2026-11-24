@@ -1,0 +1,158 @@
+{
+  "_example_note": "合成示例输出，非正式测评结果",
+  "case_id": "MOCK-PEROV-ANNEAL-001",
+  "status": "complete",
+  "revised_plan": {
+    "hypothesis": "退火温度在 100-120°C 域内存在结晶质量峰值（source.key_claim，合成示例论断）",
+    "variables": {
+      "independent": [
+        "anneal_temperature_C"
+      ],
+      "dependent": [
+        "薄膜覆盖率",
+        "PL 强度"
+      ],
+      "controlled": [
+        "spin_coating_rpm=4000",
+        "anneal_time_min=10"
+      ]
+    },
+    "controls": [
+      "未退火对照",
+      "125°C 单点参照（candidate v1）"
+    ],
+    "equipment_materials": [
+      "EQ-GB 充氮手套箱",
+      "EQ-HP 精密加热台（内嵌设备，待确认）",
+      "MAI/PbI2 各 1 包（5g）"
+    ],
+    "schedule": {
+      "est_days": 14,
+      "basis": "6 次×4h，3 档/周，window_days=30 内"
+    },
+    "parameters": {
+      "anneal_temperature_C": [
+        100,
+        110,
+        120
+      ],
+      "spin_coating_rpm": 4000,
+      "anneal_time_min": 10
+    },
+    "cost": {
+      "total_cost": 4550,
+      "basis": "plan.json cost_items 重算，预算 cap 20000 内"
+    },
+    "risks": [
+      "预约冲突顺延",
+      "EQ-HP 可用性待确认",
+      "湿气侵入中止阈值"
+    ]
+  },
+  "candidate_assessment": [
+    {
+      "version": "v1",
+      "verdict": "部分采纳",
+      "findings": [
+        "成本算术错误：subtotal 之和 3200+1250+900=5350 != total_cost 7330（candidate_plans[0]）",
+        "参数全部在域内；est_days=28 ≤ deadline 30，吞吐可行（10 档 × 4h = 40h 对 40h 用量）"
+      ]
+    },
+    {
+      "version": "v2",
+      "verdict": "否决",
+      "findings": [
+        "est_days=45 超 deadline_days=30；16 组合需 64h=16 档，3 档/周需约 6 周，超 window_days=30 的预约吞吐（candidate_plans[1]）",
+        "成本算术正确（5120+2500+1800=9420）"
+      ]
+    },
+    {
+      "version": "v3",
+      "verdict": "否决",
+      "findings": [
+        "anneal_temperature_C=165 越出 parameter_domains 上限 150（candidate_plans[2]）",
+        "依赖内嵌设备 EQ-HP，可用性未确认"
+      ]
+    }
+  ],
+  "validation": [
+    {
+      "check": "成本算术",
+      "method": "sum(unit_price*quantity) 复算",
+      "data": "80*24+40*12+250*5+180*5=4550",
+      "conclusion": "plan.json total_cost=4550 一致；candidate v1 的 7330 系算术错误（应为 5350）"
+    },
+    {
+      "check": "参数域",
+      "method": "逐项对 parameter_domains",
+      "data": "100/110/120 ∈ [80,150] step5；4000 ∈ enum；10 ∈ [5,60]",
+      "conclusion": "修订方案全部合规"
+    },
+    {
+      "check": "时间可行性",
+      "method": "预约吞吐对账",
+      "data": "6 档 × 4h = 24h；3 档/周 → 2 周",
+      "conclusion": "est_days=14 ≤ 30 可行"
+    },
+    {
+      "check": "机械复核",
+      "method": "contract_deliver.py validate",
+      "data": "validation_report.json",
+      "conclusion": "以脚本输出为准"
+    }
+  ],
+  "uncertainty": [
+    "source.key_claim 为合成示例论断，100-120°C 峰值假设未经本方案验证",
+    "EQ-HP 加热台为 equipment_domain_note 内嵌设备，可用性与前瞻价格均未确认",
+    "est_days=14 按 3 档/周满排估计，实际排期可能顺延",
+    "未生成 PDF 预览：运行环境未检测到 pandoc 或 libreoffice/soffice；plan.md 为最终人读件，内容不因此缺失。"
+  ],
+  "sources": [
+    {
+      "value": "手套箱 80 CNY/h",
+      "source": "resource_contract.equipment[0].price_per_hour（前瞻合同，非已确认报价）"
+    },
+    {
+      "value": "MAI 250 CNY/g、PbI2 180 CNY/g",
+      "source": "resource_contract.reagents（前瞻合同）"
+    },
+    {
+      "value": "加热台 40 CNY/h",
+      "source": "equipment_domain_note 内嵌 JSON（可用性待确认）"
+    },
+    {
+      "value": "温度域 80-150 step5、转速枚举、时间域 5-60",
+      "source": "parameter_domains"
+    },
+    {
+      "value": "100-120°C 敏感区间",
+      "source": "source.key_claim（合成示例论断，未经本方案验证）"
+    },
+    {
+      "value": "6 次实验设计",
+      "source": "假设（3 温度 × 2 重复）"
+    }
+  ],
+  "change_log": [
+    "起草：以 candidate v1 为底，纠正其 total_cost 算术错误（7330→5350 的量级来源），温度收窄至 100-120°C 域内三点",
+    "fill: 字段 change_log 写入并标记为 final",
+    "fill: 字段 confirmation_items 写入并标记为 draft",
+    "fill: 字段 confirmation_items 写入并标记为 final"
+  ],
+  "confirmation_items": [
+    "EQ-HP 精密加热台（equipment_domain_note 内嵌设备）是否在合同内可用？确认前不排产",
+    "resource_contract 全部价格与预约信息为组织方前瞻约定，需委托方书面确认后方可作为执行依据",
+    "MAI/PbI2 各 1 包（5g）是否覆盖 6 次实验用量？不足需追加采购（预算内）"
+  ],
+  "fields_status": {
+    "case_id": "final",
+    "status": "final",
+    "revised_plan": "final",
+    "candidate_assessment": "final",
+    "validation": "final",
+    "uncertainty": "final",
+    "sources": "final",
+    "change_log": "final",
+    "confirmation_items": "final"
+  }
+}

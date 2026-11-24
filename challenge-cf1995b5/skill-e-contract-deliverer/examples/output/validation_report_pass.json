@@ -1,0 +1,57 @@
+{
+  "_example_note": "合成示例输出，非正式测评结果",
+  "case_id": "MOCK-PEROV-ANNEAL-001",
+  "overall": "PASS",
+  "checks": [
+    {
+      "id": "required_fields",
+      "status": "PASS",
+      "detail": "全部 9 个 required 字段存在且非占位",
+      "fix": ""
+    },
+    {
+      "id": "case_id_match",
+      "status": "PASS",
+      "detail": "result.case_id='MOCK-PEROV-ANNEAL-001' 与 case.json 一致",
+      "fix": ""
+    },
+    {
+      "id": "fields_final",
+      "status": "PASS",
+      "detail": "全部 required 字段 fields_status=final",
+      "fix": ""
+    },
+    {
+      "id": "status_consistency",
+      "status": "PASS",
+      "detail": "status=partial 与 fields_status 自洽",
+      "fix": ""
+    },
+    {
+      "id": "cost_arithmetic",
+      "status": "PASS",
+      "detail": "cost_items 与 total_cost 算术可重算（4 项）",
+      "fix": ""
+    },
+    {
+      "id": "parameter_domains",
+      "status": "PASS",
+      "detail": "全部参数落在 parameter_domains 内",
+      "fix": ""
+    }
+  ],
+  "fields_status": {
+    "case_id": "final",
+    "status": "final",
+    "revised_plan": "final",
+    "candidate_assessment": "final",
+    "validation": "final",
+    "uncertainty": "final",
+    "sources": "final",
+    "change_log": "final",
+    "confirmation_items": "final"
+  },
+  "gaps": [],
+  "status_after_validate": "complete",
+  "generated_by": "contract_deliver.py validate"
+}

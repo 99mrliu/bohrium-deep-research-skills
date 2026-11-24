@@ -1,0 +1,163 @@
+{
+  "status": "complete",
+  "start_date": "2026-01-05",
+  "deadline_days": 30,
+  "total_days": 49,
+  "overrun_days": 19,
+  "schedule": [
+    {
+      "step_id": "S1",
+      "name": "前驱液配制",
+      "equipment": "EQ-GB",
+      "slots_needed": 1,
+      "start_week": 1,
+      "end_week": 1,
+      "start_date": "2026-01-05",
+      "end_date": "2026-01-11",
+      "week_span": "2026-01-05 ~ 2026-01-11",
+      "depends_on": [],
+      "equipment_cost": 320.0
+    },
+    {
+      "step_id": "S2",
+      "name": "旋涂制膜",
+      "equipment": "EQ-GB",
+      "slots_needed": 4,
+      "start_week": 1,
+      "end_week": 2,
+      "start_date": "2026-01-05",
+      "end_date": "2026-01-18",
+      "week_span": "2026-01-05 ~ 2026-01-18",
+      "depends_on": [
+        "S1"
+      ],
+      "equipment_cost": 1280.0
+    },
+    {
+      "step_id": "S3",
+      "name": "退火",
+      "equipment": "EQ-HP",
+      "slots_needed": 8,
+      "start_week": 2,
+      "end_week": 3,
+      "start_date": "2026-01-12",
+      "end_date": "2026-01-25",
+      "week_span": "2026-01-12 ~ 2026-01-25",
+      "depends_on": [
+        "S2"
+      ],
+      "equipment_cost": 640.0
+    },
+    {
+      "step_id": "S4",
+      "name": "XRD初筛",
+      "equipment": "EQ-XRD",
+      "slots_needed": 3,
+      "start_week": 3,
+      "end_week": 4,
+      "start_date": "2026-01-19",
+      "end_date": "2026-02-01",
+      "week_span": "2026-01-19 ~ 2026-02-01",
+      "depends_on": [
+        "S3"
+      ],
+      "equipment_cost": 720.0
+    },
+    {
+      "step_id": "S5",
+      "name": "XRD复核",
+      "equipment": "EQ-XRD",
+      "slots_needed": 3,
+      "start_week": 4,
+      "end_week": 4,
+      "start_date": "2026-01-26",
+      "end_date": "2026-02-01",
+      "week_span": "2026-01-26 ~ 2026-02-01",
+      "depends_on": [
+        "S3"
+      ],
+      "equipment_cost": 720.0
+    },
+    {
+      "step_id": "S6",
+      "name": "稳定性复测",
+      "equipment": "EQ-GB",
+      "slots_needed": 9,
+      "start_week": 5,
+      "end_week": 7,
+      "start_date": "2026-02-02",
+      "end_date": "2026-02-22",
+      "week_span": "2026-02-02 ~ 2026-02-22",
+      "depends_on": [
+        "S4",
+        "S5"
+      ],
+      "equipment_cost": 2880.0
+    }
+  ],
+  "weekly_usage": {
+    "1": {
+      "EQ-GB": {
+        "used_slots": 3,
+        "cap_slots": 3
+      }
+    },
+    "2": {
+      "EQ-GB": {
+        "used_slots": 2,
+        "cap_slots": 3
+      },
+      "EQ-HP": {
+        "used_slots": 7,
+        "cap_slots": 7
+      }
+    },
+    "3": {
+      "EQ-HP": {
+        "used_slots": 3,
+        "cap_slots": 7
+      },
+      "EQ-XRD": {
+        "used_slots": 5,
+        "cap_slots": 5
+      }
+    },
+    "4": {
+      "EQ-XRD": {
+        "used_slots": 4,
+        "cap_slots": 5
+      }
+    },
+    "5": {
+      "EQ-GB": {
+        "used_slots": 3,
+        "cap_slots": 3
+      }
+    },
+    "6": {
+      "EQ-GB": {
+        "used_slots": 3,
+        "cap_slots": 3
+      }
+    },
+    "7": {
+      "EQ-GB": {
+        "used_slots": 3,
+        "cap_slots": 3
+      }
+    }
+  },
+  "detections": {
+    "dependency_conflicts": [],
+    "slot_overflow": [
+      "设备 EQ-GB 被排至第 7 周（49 天），超出其预约窗口 30 天"
+    ],
+    "deadline_overrun_days": 19,
+    "double_booking": [],
+    "unknown_equipment": []
+  },
+  "merge_notes": [
+    "从 equipment_domain_note 解析出补充设备 EQ-HP（精密加热台），已并入设备表。"
+  ],
+  "warnings": []
+}

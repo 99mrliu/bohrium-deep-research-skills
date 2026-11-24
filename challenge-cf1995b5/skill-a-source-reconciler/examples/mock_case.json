@@ -1,0 +1,106 @@
+{
+  "case_id": "MOCK-PEROV-ANNEAL-001",
+  "note": "合成示意案例：为 exp-source-reconciler 示例手工构造，用于演示 extract/reconcile 对账，非真实测评数据。",
+  "title": "MAPbI3 钙钛矿薄膜退火工艺优化",
+  "task": "在给定预算与周期内，从 3 个候选方案中修订出一个可执行的旋涂/退火工艺方案并给出验证设计。",
+  "research_goal": "优化 MAPbI3 perovskite 薄膜的 anneal 退火温度与 spin coating 旋涂转速组合，目标 PCE >= 19%，薄膜均匀无针孔。",
+  "source": {
+    "paper_pdf": "mock_paper.pdf",
+    "citation": "Mock, A. et al., J. Synth. Perov., 2024（合成引用，非真实文献）",
+    "key_claim": "110 C 退火 10 min 的 MAPbI3 薄膜获得 20.1% PCE（合成文献数据，仅作示例）。"
+  },
+  "resource_contract": {
+    "disclaimer": "组织方前瞻合同：价格与预约信息为计划性约定，不是实际供应商报价或已确认排期。",
+    "currency": "CNY",
+    "budget_cap": 20000,
+    "deadline_days": 30,
+    "equipment": [
+      {
+        "id": "EQ-GB", "name": "充氮手套箱", "model": "MockBox-2",
+        "spec": "H2O/O2 < 1 ppm", "price_per_hour": 80,
+        "booking": {"window_days": 30, "slots_per_week": 3, "slot_hours": 4}
+      },
+      {
+        "id": "EQ-SC", "name": "匀胶机", "model": "MockSpin-8",
+        "spec": "500-8000 rpm", "price_per_hour": 20,
+        "booking": {"window_days": 30, "slots_per_week": 5, "slot_hours": 2}
+      }
+    ],
+    "reagents": [
+      {"id": "RE-MAI", "name": "MAI", "spec": ">=99.99%", "unit_price": 250, "unit": "g", "pack_size": 5},
+      {"id": "RE-PBI2", "name": "PbI2", "spec": ">=99.99%", "unit_price": 180, "unit": "g", "pack_size": 10},
+      {"id": "RE-DMF", "name": "DMF", "spec": "无水级", "unit_price": 120, "unit": "bottle", "pack_size": 1}
+    ]
+  },
+  "parameter_domains": {
+    "anneal_temperature_C": {"type": "range", "min": 80, "max": 150, "step": 5, "unit": "C",
+      "basis": "设备手册+预实验", "source": "case:resource_contract.equipment"},
+    "spin_coating_rpm": {"type": "enum", "values": [2000, 3000, 4000, 6000], "unit": "rpm",
+      "basis": "组织方有限参数域", "source": "case:parameter_domains.spin_coating_rpm"},
+    "anneal_time_min": {"type": "range", "min": 5, "max": 30, "step": 5, "unit": "min",
+      "basis": "文献", "source": "case:source.paper_pdf"},
+    "n2_flow_rate_slm": {"type": "range", "min": 0, "max": 2, "step": 0.5, "unit": "slm",
+      "basis": "预实验报告", "source": "case:pre_experiment.report"}
+  },
+  "equipment_domain_note": "补充说明：除 equipment 列表外，本次还可预约一台精密加热台，信息如下片段：{\"id\":\"EQ-HP\",\"name\":\"精密加热台\",\"model\":\"MockHot-300\",\"spec\":\"室温-300 C, +/-1 C\",\"price_per_hour\":30,\"booking\":{\"window_days\":30,\"slots_per_week\":7,\"slot_hours\":8}}，请以该片段为准纳入设备对账。",
+  "candidate_plans": [
+    {
+      "version": "v1", "author": "候选甲",
+      "summary": "五温度梯度退火筛选，使用 EQ-GB 手套箱与匀胶机。",
+      "parameters": {
+        "spin_coating_rpm": 4000,
+        "anneal_temperature_C": [80, 95, 110, 125, 140],
+        "anneal_time_min": [10]
+      },
+      "cost_items": [
+        {"item": "手套箱", "unit_price": 80, "quantity": 40, "subtotal": 3200},
+        {"item": "匀胶机", "unit_price": 20, "quantity": 16, "subtotal": 320},
+        {"item": "MAI", "unit_price": 250, "quantity": 4, "subtotal": 1000},
+        {"item": "PbI2", "unit_price": 180, "quantity": 5, "subtotal": 900},
+        {"item": "DMF", "unit_price": 120, "quantity": 2, "subtotal": 240}
+      ],
+      "total_cost": 5760,
+      "est_days": 26
+    },
+    {
+      "version": "v2", "author": "候选乙",
+      "summary": "高速旋涂加电子传输层，使用 EQ-GB 与 EQ-HP。",
+      "parameters": {
+        "spin_coating_rpm": 5000,
+        "anneal_temperature_C": [100, 110, 120],
+        "anneal_time_min": [10, 20]
+      },
+      "cost_items": [
+        {"item": "手套箱", "unit_price": 80, "quantity": 30, "subtotal": 2400},
+        {"item": "加热台", "unit_price": 30, "quantity": 20, "subtotal": 600},
+        {"item": "PCBM", "unit_price": 400, "quantity": 2, "subtotal": 800}
+      ],
+      "total_cost": 3800,
+      "est_days": 35
+    },
+    {
+      "version": "v3", "author": "候选丙",
+      "summary": "围绕文献最优温度细扫，使用 EQ-GB、EQ-HP 与氮气吹扫。",
+      "parameters": {
+        "spin_coating_rpm": 3000,
+        "anneal_temperature_C": [105, 110, 115],
+        "anneal_time_min": [10],
+        "n2_flow_rate_slm": [1.0],
+        "antisolvent_drip_s": 12
+      },
+      "cost_items": [
+        {"item": "手套箱", "unit_price": 80, "quantity": 24, "subtotal": 1920},
+        {"item": "加热台", "unit_price": 30, "quantity": 12, "subtotal": 360},
+        {"item": "MAI", "unit_price": 250, "quantity": 2, "subtotal": 500},
+        {"item": "PbI2", "unit_price": 180, "quantity": 2, "subtotal": 360},
+        {"item": "DMF", "unit_price": 120, "quantity": 1, "subtotal": 120}
+      ],
+      "total_cost": 3260,
+      "est_days": 21
+    }
+  ],
+  "output_contract": {
+    "required_fields": ["case_id", "revised_plan", "candidate_assessment", "validation",
+      "status", "uncertainty", "sources", "change_log", "confirmation_items"]
+  }
+}
