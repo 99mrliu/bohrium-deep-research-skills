@@ -1,0 +1,61 @@
+{
+  "_说明": [
+    "合成示例用的 Agent 已填写候选清单（非正式案例结果）。",
+    "5 条条目分别演示：2 条真实问题（数字不一致、数据可用性声明缺失）、",
+    "1 条 original_text 编造（演示降级 pending_review）、",
+    "1 条 severity 非法值 high（演示 rejected 并留痕）、",
+    "1 条把期刊惯例表述误判为缺陷的误报（演示豁免词表 recheck 提示）。"
+  ],
+  "findings": [
+    {
+      "facet": "事实核验",
+      "type": "事实错误",
+      "severity": "major",
+      "title": "摘要与正文样本量不一致",
+      "location": {"file": "manuscript.md", "section": "摘要", "anchor": "共纳入 312 名受试者"},
+      "original_text": "共纳入 312 名受试者",
+      "evidence": "摘要称共纳入 312 名受试者，而正文 2.1 节写最终纳入 318 名受试者，同一数值两处不一致，读者无法确定真实样本量。",
+      "suggestion": "核对原始记录后统一两处数字；若 312 为完成分析人数，应在摘要中区分'纳入'与'完成分析'。"
+    },
+    {
+      "facet": "学术规范",
+      "type": "报告不全",
+      "severity": "minor",
+      "title": "缺少数据可用性声明",
+      "location": {"file": "manuscript.md", "section": "文末", "anchor": "[2] 李某, 等. 久坐行为与睡眠健康的相关性研究. 中华健康管理杂志. 2022."},
+      "original_text": "[2] 李某, 等. 久坐行为与睡眠健康的相关性研究. 中华健康管理杂志. 2022.",
+      "evidence": "全文检索确认稿件至参考文献结束均无数据可用性声明（Data Availability Statement），多数期刊要求 RCT 提供。",
+      "suggestion": "在参考文献前补充数据可用性声明，说明数据获取途径或不可公开的原因。"
+    },
+    {
+      "facet": "方法设计",
+      "type": "方法缺陷",
+      "severity": "major",
+      "title": "双盲设计描述存疑",
+      "location": {"file": "manuscript.md", "section": "方法", "anchor": "双盲"},
+      "original_text": "本研究共纳入 500 名受试者并采用双盲设计",
+      "evidence": "（演示用条目：该 original_text 为编造，原文中不存在，用于演示锚点复验失败降级 pending_review。）",
+      "suggestion": "（演示用）"
+    },
+    {
+      "facet": "统计报告",
+      "type": "报告不全",
+      "severity": "high",
+      "title": "置信区间未报告",
+      "location": {"file": "manuscript.md", "section": "结果", "anchor": "p = 0.032"},
+      "original_text": "组间差异有统计学意义（p = 0.032）",
+      "evidence": "（演示用条目：severity 为非法值 high，用于演示枚举校验 rejected 并留痕。）",
+      "suggestion": "（演示用）"
+    },
+    {
+      "facet": "学术规范",
+      "type": "规范问题",
+      "severity": "minor",
+      "title": "以期刊惯例为由从简报告",
+      "location": {"file": "manuscript.md", "section": "2.2 干预方案", "anchor": "本研究按目标期刊惯例报告了主要结局指标。"},
+      "original_text": "本研究按目标期刊惯例报告了主要结局指标。",
+      "evidence": "（演示用误报：把'按目标期刊惯例'表述误判为规范问题，用于演示豁免词表 recheck 提示；按 false_positive_suppression.md，此类惯例声明不判缺陷，recheck 后应撤回。）",
+      "suggestion": "（演示用）"
+    }
+  ]
+}

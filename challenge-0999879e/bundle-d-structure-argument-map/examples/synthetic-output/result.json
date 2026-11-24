@@ -1,0 +1,147 @@
+{
+  "case_id": "synthetic-bundle-d-001",
+  "status": "completed",
+  "review_report": "# 论文质量审查报告（bundle-d：结构完整性与论证链制图）\n\n- case_id: `synthetic-bundle-d-001`\n- 稿件: `/tmp/bundle-d-e2e.9I3F00/input/manuscript.md`\n- SHA-256: `84cc58bdddc5321c6cfcb37e360b59d88d9e36ee9a6c065c29897783ac0657db`\n- 抽取方式: direct-read(.md)；状态: **completed**\n\n## 一、结构图\n\n### 1.1 标题层级树\n\n```\n- 城市夜间光暴露与居民睡眠质量的关系研究 (L1)\n  - 摘要 (L5)  [摘要]\n  - 1. 引言 (L9)  [引言]\n  - 2. 方法 (L13)  [方法]\n    - 2.1 研究设计 (L15)  [方法]\n    - 2.2 研究对象 (L19)\n    - 2.3 测量指标 (L23)\n    - 2.4 统计分析 (L27)\n  - 3. 结果 (L31)  [结果]\n    - 3.1 组间比较 (L33)\n    - 3.2 相关性分析 (L37)\n    - 3.3 年龄分层分析 (L41)\n  - 4. 结论 (L45)  [结论]\n  - 参考文献 (L49)  [参考文献]\n```\n\n### 1.2 要素齐备性矩阵\n\n| 标准角色 | 状态 | 命中标题 |\n|---|---|---|\n| 摘要(abstract) | present | 摘要 |\n| 引言(introduction) | present | 1. 引言 |\n| 方法(methods) | present | 2. 方法 |\n| 结果(results) | present | 3. 结果 |\n| 讨论(discussion) | absent | — |\n| 结论(conclusion) | present | 4. 结论 |\n| 参考文献(references) | present | 参考文献 |\n\n### 1.3 摘要 ↔ 结论要素对应矩阵（按关键词重叠配对）\n\n| 结论句 | 定位 | 最匹配摘要句 | 重叠度 |\n|---|---|---|---|\n| 本研究表明，夜间光暴露导致居民睡眠质量下降。 | conclusion#s1 | 结论：夜间光暴露水平与睡眠质量下降相关。 | 0.53 |\n| 高光暴露可使 PSQI 评分升高 44.4%，提示光污染治理应作为改善居民睡眠的公共卫生优先事项。 | conclusion#s2 | 背景：夜间人工光暴露被认为可能影响居民睡眠。 | 0.26 |\n\n### 1.4 引言问题 ↔ 结论回答配对\n\n| 引言问题 | 定位 | 最匹配结论句 | 重叠度 | 候选判定 |\n|---|---|---|---|---|\n| 本文旨在回答两个问题：（1）城市夜间光暴露水平是否与居民睡眠质量相关？ | introduction#s3 | 本研究表明，夜间光暴露导致居民睡眠质量下降。 | 0.47 | 已回应 |\n| （2）夜间光暴露与睡眠质量的关联是否因年龄段而异？ | introduction#s4 | 本研究表明，夜间光暴露导致居民睡眠质量下降。 | 0.35 | 疑似未回应 |\n\n## 二、论证链图\n\n| 环节 | 主张(Agent 登记) | 原文引用 | 定位 | 状态 |\n|---|---|---|---|---|\n| L1 研究问题 | 两个问题：(1) 夜间光暴露水平是否与居民睡眠质量相关；(2) 该关联是否因年龄 | 本文旨在回答两个问题：（1）城市夜间光暴露水平是否与居民睡眠质量相关？（2）夜间光暴露与睡眠质量的关联是否因年龄段而异？ | introduction#s3;introduction#s4 | confirmed |\n| L2 研究假设 | 隐含假设：夜间光暴露水平越高，居民睡眠质量越差（稿件未给出显式假设句，仅由背景与 | 已有研究提示光暴露可能干扰褪黑素分泌节律，但基于中国城市居民的实证证据仍然有限。 | introduction#s2 | confirmed |\n| L3 关键方法 | 横断面观察性调查；PSQI 评估睡眠；卫星夜间光强估计暴露；t 检验 + Pea | 本研究为横断面观察性调查，于 2024 年 3 月至 5 月在某市三个城区同步开展。 | methods#s2 | confirmed |\n| L4 核心结果 | 高光暴露组 PSQI 7.8±2.1 vs 低组 5.4±1.9（t=12.6， | 高光暴露组 PSQI 平均得分为 7.8±2.1 分，低光暴露组为 5.4±1.9 分，两组差异具有统计学意义（t=12 | results#s2 | confirmed |\n| L5 结论主张 | 主张因果（'导致'）并给出新数值 44.4%，且未回应引言问题(2) | 本研究表明，夜间光暴露导致居民睡眠质量下降。高光暴露可使 PSQI 评分升高 44.4%，提示光污染治理应作为改善居民睡 | conclusion#s1;conclusion#s2 | confirmed |\n| L6 外推边界 | 稿件结论节无任何适用范围/局限性声明（该环在稿件中缺失） | — | conclusion | broken |\n\n## 三、结构问题清单\n\n- **SR-001 [major/confirmed]** 标准小节缺失：讨论 — 要素齐备性矩阵中 讨论(discussion) 状态为 absent；稿件属于'结构看着像论文但关键部分缺位'（见 references/structure_rubric.md）。（证据: 已识别标题: 城市夜间光暴露与居民睡眠质量的关系研究 / 摘要 / 1. 引言 / 2. 方法 / 2.1 研究设计 / 2.2 研究对象 / 2.3 测量指标 @doc_map.headings）\n\n## 四、论证链问题清单\n\n- **AC-001 [major/confirmed]** 论证链缺环：外推边界\n  - 依据 A（conclusion）: \n  - 依据 B（extrapolation_boundary）: \n  - 说明: Agent 登记时确认该环在稿件中缺失（status=broken）。\n- **AC-002 [major/confirmed]** 论证链不一致：key_methods -> core_results\n  - 依据 A（key_methods）: \n  - 依据 B（core_results）: \n  - 说明: 结果 3.3 年龄分层分析（results#s5-s6）未在 2.4 统计分析（methods#s9）中预先声明，方法-结果链边不一致\n- **AC-003 [major/confirmed]** 因果/相关混淆（规则 C1）\n  - 依据 A（methods#s2）: 本研究为横断面观察性调查，于 2024 年 3 月至 5 月在某市三个城区同步开展。\n  - 依据 B（conclusion#s1）: 本研究表明，夜间光暴露导致居民睡眠质量下降。\n  - 说明: 机械候选经 Agent 核对: 核对两侧原文：方法节 methods#s2 明示'本研究为横断面观察性调查'，结论 conclusion#s1 写'夜间光暴露导致居民睡眠质量下降'，句中无'提示/可能'等缓和措辞，且该句为本文主张而非引述他人。观察性设计不能支撑因果表述，转正 major。。防误报说明: 若句中含'提示/可能'等推测措辞或方法实为随机对照/实验设计，应驳回；核对 methods 原\n- **AC-004 [major/confirmed]** 答非所问（引言问题未回应）（规则 Q1）\n  - 依据 A（introduction#s4）: （2）夜间光暴露与睡眠质量的关联是否因年龄段而异？\n  - 依据 B（conclusion#s1）: 本研究表明，夜间光暴露导致居民睡眠质量下降。\n  - 说明: 机械候选经 Agent 核对: 核对两侧原文：引言 introduction#s4 明确提出问题(2)'夜间光暴露与睡眠质量的关联是否因年龄段而异？'，结论节两句（conclusion#s1-s2）均未涉及年龄分层，也无同义改写；讨论节缺位，无处补救。转正 major。。防误报说明: 重叠度仅是词面信号；若结论以同义改写实质回答了该问题，或讨论节明确声明留待后续研究，可驳回或降级。\n- **AC-005 [major/confirmed]** 外推/无据结论（规则 X1）\n  - 依据 A（results）: 结果节全文未出现数值 '44.4'\n  - 依据 B（conclusion#s2）: 高光暴露可使 PSQI 评分升高 44.4%，提示光污染治理应作为改善居民睡眠的公共卫生优先事项。\n  - 说明: 机械候选经 Agent 核对: 核对两侧原文：结论 conclusion#s2 出现'44.4%'，结果节全文（results#s1-s6）无该数值；虽可由 7.8 与 5.4 换算得出，但稿件未说明任何换算口径，读者无从核验，按无据结论转正 major。。防误报说明: 若该数值是结果节数值的显式换算（如由均值差直接算百分比）且稿件已说明算法，可驳回；核对 results 原文。\n\n## 五、六分面覆盖\n\n| 分面 | 状态 | 说明 |\n|---|---|---|\n| 事实核验 | partially_checked | 已做跨节数值一致性核对（结论数值 vs 结果节）；外部事实与数据真伪未核 |\n| 引用支持 | partially_checked | 仅核对参考文献小节存在性与文中引文形式；未逐条验证文献真实性 |\n| 方法设计 | partially_checked | 已抽取设计类型关键词供因果判定；样本量/偏倚控制未深查 |\n| 统计报告 | checked_clean | 结果节已出现统计量报告（p/CI/±/r 等最低检查点） |\n| 论证链 | issues_found | 本 bundle 深查面：假设→方法→结果→结论逐环登记 + 机械候选扫描 |\n| 学术规范 | partially_checked | 未做查重/署名/伦理声明核查；仅确认声明性文字存在与否 |\n\n## 六、不确定性与限度\n\n- 无\n\n## 七、复核记录（change_log）\n\n- doc_map.py: 抽取 1209 字符, 标题 14 个, 角色矩阵完成\n- chain_lint.py: 候选 3 条, 处置 confirmed 3 / rejected 0 / 未处置 0\n",
+  "findings": [
+    {
+      "type": "missing_section",
+      "severity": "major",
+      "facet": "结构完整性(深查面)",
+      "title": "标准小节缺失：讨论",
+      "description": "要素齐备性矩阵中 讨论(discussion) 状态为 absent；稿件属于'结构看着像论文但关键部分缺位'（见 references/structure_rubric.md）。",
+      "evidence": {
+        "quote_a": "(全文无该小节标题)",
+        "locator_a": "discussion",
+        "quote_b": "已识别标题: 城市夜间光暴露与居民睡眠质量的关系研究 / 摘要 / 1. 引言 / 2. 方法 / 2.1 研究设计 / 2.2 研究对象 / 2.3 测量指标 / 2.4 统计分析 / 3. 结果 / 3.1 组间比较 / 3.2 相关性分析 / 3.3 年龄分层分析 / 4. 结论 / 参考文献",
+        "locator_b": "doc_map.headings"
+      },
+      "status": "confirmed",
+      "id": "SR-001"
+    },
+    {
+      "type": "broken_chain_link",
+      "severity": "major",
+      "facet": "论证链",
+      "title": "论证链缺环：外推边界",
+      "description": "Agent 登记时确认该环在稿件中缺失（status=broken）。",
+      "evidence": {
+        "quote_a": "",
+        "locator_a": "conclusion",
+        "quote_b": "",
+        "locator_b": "extrapolation_boundary"
+      },
+      "status": "confirmed",
+      "id": "AC-001"
+    },
+    {
+      "type": "broken_chain_pair",
+      "severity": "major",
+      "facet": "论证链",
+      "title": "论证链不一致：key_methods -> core_results",
+      "description": "结果 3.3 年龄分层分析（results#s5-s6）未在 2.4 统计分析（methods#s9）中预先声明，方法-结果链边不一致",
+      "evidence": {
+        "quote_a": "",
+        "locator_a": "key_methods",
+        "quote_b": "",
+        "locator_b": "core_results"
+      },
+      "status": "confirmed",
+      "id": "AC-002"
+    },
+    {
+      "type": "causal_confusion",
+      "severity": "major",
+      "facet": "论证链",
+      "title": "因果/相关混淆（规则 C1）",
+      "description": "机械候选经 Agent 核对: 核对两侧原文：方法节 methods#s2 明示'本研究为横断面观察性调查'，结论 conclusion#s1 写'夜间光暴露导致居民睡眠质量下降'，句中无'提示/可能'等缓和措辞，且该句为本文主张而非引述他人。观察性设计不能支撑因果表述，转正 major。。防误报说明: 若句中含'提示/可能'等推测措辞或方法实为随机对照/实验设计，应驳回；核对 methods 原文确认设计类型。",
+      "evidence": {
+        "quote_a": "本研究为横断面观察性调查，于 2024 年 3 月至 5 月在某市三个城区同步开展。",
+        "locator_a": "methods#s2",
+        "quote_b": "本研究表明，夜间光暴露导致居民睡眠质量下降。",
+        "locator_b": "conclusion#s1"
+      },
+      "status": "confirmed",
+      "candidate_origin": "CAND-001",
+      "id": "AC-003"
+    },
+    {
+      "type": "unanswered_question",
+      "severity": "major",
+      "facet": "论证链",
+      "title": "答非所问（引言问题未回应）（规则 Q1）",
+      "description": "机械候选经 Agent 核对: 核对两侧原文：引言 introduction#s4 明确提出问题(2)'夜间光暴露与睡眠质量的关联是否因年龄段而异？'，结论节两句（conclusion#s1-s2）均未涉及年龄分层，也无同义改写；讨论节缺位，无处补救。转正 major。。防误报说明: 重叠度仅是词面信号；若结论以同义改写实质回答了该问题，或讨论节明确声明留待后续研究，可驳回或降级。",
+      "evidence": {
+        "quote_a": "（2）夜间光暴露与睡眠质量的关联是否因年龄段而异？",
+        "locator_a": "introduction#s4",
+        "quote_b": "本研究表明，夜间光暴露导致居民睡眠质量下降。",
+        "locator_b": "conclusion#s1"
+      },
+      "status": "confirmed",
+      "candidate_origin": "CAND-002",
+      "id": "AC-004"
+    },
+    {
+      "type": "unsupported_conclusion",
+      "severity": "major",
+      "facet": "论证链",
+      "title": "外推/无据结论（规则 X1）",
+      "description": "机械候选经 Agent 核对: 核对两侧原文：结论 conclusion#s2 出现'44.4%'，结果节全文（results#s1-s6）无该数值；虽可由 7.8 与 5.4 换算得出，但稿件未说明任何换算口径，读者无从核验，按无据结论转正 major。。防误报说明: 若该数值是结果节数值的显式换算（如由均值差直接算百分比）且稿件已说明算法，可驳回；核对 results 原文。",
+      "evidence": {
+        "quote_a": "结果节全文未出现数值 '44.4'",
+        "locator_a": "results",
+        "quote_b": "高光暴露可使 PSQI 评分升高 44.4%，提示光污染治理应作为改善居民睡眠的公共卫生优先事项。",
+        "locator_b": "conclusion#s2",
+        "new_value": "44.4%"
+      },
+      "status": "confirmed",
+      "candidate_origin": "CAND-003",
+      "id": "AC-005"
+    }
+  ],
+  "sources": [
+    {
+      "file": "/tmp/bundle-d-e2e.9I3F00/input/manuscript.md",
+      "sha256": "84cc58bdddc5321c6cfcb37e360b59d88d9e36ee9a6c065c29897783ac0657db",
+      "extract_method": "direct-read(.md)",
+      "extract_error": null
+    }
+  ],
+  "uncertainty": [],
+  "change_log": [
+    "doc_map.py: 抽取 1209 字符, 标题 14 个, 角色矩阵完成",
+    "chain_lint.py: 候选 3 条, 处置 confirmed 3 / rejected 0 / 未处置 0"
+  ],
+  "manuscript_sha256": "84cc58bdddc5321c6cfcb37e360b59d88d9e36ee9a6c065c29897783ac0657db",
+  "facet_coverage": {
+    "事实核验": {
+      "status": "partially_checked",
+      "note": "已做跨节数值一致性核对（结论数值 vs 结果节）；外部事实与数据真伪未核"
+    },
+    "引用支持": {
+      "status": "partially_checked",
+      "note": "仅核对参考文献小节存在性与文中引文形式；未逐条验证文献真实性"
+    },
+    "方法设计": {
+      "status": "partially_checked",
+      "note": "已抽取设计类型关键词供因果判定；样本量/偏倚控制未深查"
+    },
+    "统计报告": {
+      "status": "checked_clean",
+      "note": "结果节已出现统计量报告（p/CI/±/r 等最低检查点）"
+    },
+    "论证链": {
+      "status": "issues_found",
+      "note": "本 bundle 深查面：假设→方法→结果→结论逐环登记 + 机械候选扫描"
+    },
+    "学术规范": {
+      "status": "partially_checked",
+      "note": "未做查重/署名/伦理声明核查；仅确认声明性文字存在与否"
+    }
+  },
+  "review_report_path": "/tmp/bundle-d-e2e.9I3F00/app/output/review_report.md",
+  "counts": {
+    "total": 6,
+    "confirmed": 6,
+    "pending_review": 0
+  }
+}

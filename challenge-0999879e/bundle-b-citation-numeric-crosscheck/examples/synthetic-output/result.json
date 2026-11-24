@@ -1,0 +1,198 @@
+{
+  "case_id": "synthetic-0999879e-b",
+  "status": "complete",
+  "review_report": "review_report.md",
+  "findings": [
+    {
+      "id": "NUM-001",
+      "facet": "事实核验",
+      "severity": "major",
+      "type": "numeric_inconsistency",
+      "title": "数值不一致：准确率 (%) 出现 91.8% / 94.2%",
+      "locations": [
+        {
+          "value": 91.8,
+          "raw": "91.8%",
+          "section": "3 结果",
+          "line": 26,
+          "source": "manuscript.md",
+          "quote": "在验证集上，模型最终准确率为 91.8%，差异具有统计显著性（p < 0.05）。"
+        },
+        {
+          "value": 91.8,
+          "raw": "91.8%",
+          "section": "4 结论",
+          "line": 31,
+          "source": "manuscript.md",
+          "quote": "本文方法在 n=128 的样本规模上验证了有效性，准确率为 91.8%。未来将扩大数据规模。"
+        },
+        {
+          "value": 94.2,
+          "raw": "94.2%",
+          "section": "摘要",
+          "line": 8,
+          "source": "manuscript.md",
+          "quote": "本文提出一种轻量注意力网络用于合成语音分类。在自建数据集上，模型准确率达到 94.2%，"
+        }
+      ],
+      "evidence": "同一量「准确率」在多处出现不一致取值：91.8% vs 94.2%",
+      "basis": "确定性跨小节数值比对（references/numeric_consistency.md）",
+      "status": "open"
+    },
+    {
+      "id": "NUM-002",
+      "facet": "事实核验",
+      "severity": "major",
+      "type": "numeric_inconsistency",
+      "title": "数值不一致：样本量 n (count) 出现 n=120 / n=128",
+      "locations": [
+        {
+          "value": 120.0,
+          "raw": "n=120",
+          "section": "2 方法",
+          "line": 21,
+          "source": "manuscript.md",
+          "quote": "实验共纳入 n=120 条语音样本，按 8:2 划分训练集与验证集。模型包含 4 个注意力块，"
+        },
+        {
+          "value": 128.0,
+          "raw": "n=128",
+          "section": "4 结论",
+          "line": 31,
+          "source": "manuscript.md",
+          "quote": "本文方法在 n=128 的样本规模上验证了有效性，准确率为 91.8%。未来将扩大数据规模。"
+        }
+      ],
+      "evidence": "同一量「样本量 n」在多处出现不一致取值：n=120 vs n=128",
+      "basis": "确定性跨小节数值比对（references/numeric_consistency.md）",
+      "status": "open"
+    },
+    {
+      "id": "CITE-001",
+      "facet": "引用支持",
+      "severity": "major",
+      "type": "dangling_citation",
+      "title": "悬空引用：正文引用了不存在的条目 [5]",
+      "locations": [
+        {
+          "line": 10,
+          "quote": "数据集上，模型准确率达到 94.2%， 总训练时间为 12.5 h。已有工作 [1] 表明注意力机制对时序建模有效，[2] 进一步验证了 轻量结构的可行性，而 [5] 提出的动态卷积为本方法提供了直接动机。  **关键词**：合成语音；注意力；轻量网络  ## 1 引言  合成语音检测是语音安全的重要问题。早期工作 [1]"
+        }
+      ],
+      "evidence": "正文第10行引用 [5]，但参考文献表无此条目",
+      "basis": "引文标记与参考文献表机械对照（cite_match）",
+      "status": "open"
+    },
+    {
+      "id": "CITE-002",
+      "facet": "引用支持",
+      "severity": "major",
+      "type": "dangling_citation",
+      "title": "悬空引用：正文引用了不存在的条目 [5]",
+      "locations": [
+        {
+          "line": 17,
+          "quote": "# 1 引言  合成语音检测是语音安全的重要问题。早期工作 [1] 使用深度残差结构取得进展， [4] 在相同数据集上报告了可比结果。本文沿用上述设置，并参考 [5] 的动机设计网络。  ## 2 方法  实验共纳入 n=120 条语音样本，按 8:2 划分训练集与验证集。模型包含 4 个注意力块， 隐藏维度 256。所有实"
+        }
+      ],
+      "evidence": "正文第17行引用 [5]，但参考文献表无此条目",
+      "basis": "引文标记与参考文献表机械对照（cite_match）",
+      "status": "open"
+    },
+    {
+      "id": "CITE-003",
+      "facet": "引用支持",
+      "severity": "major",
+      "type": "duplicate_entry",
+      "title": "重复著录：条目 [2, 4]",
+      "locations": [
+        {
+          "quote": "DOI 相同: 10.5678/icfa.2022.00078"
+        }
+      ],
+      "evidence": "DOI 相同: 10.5678/icfa.2022.00078",
+      "basis": "DOI/文本相似度机械判定（difflib ≥0.85 或 DOI 相同）",
+      "status": "open"
+    },
+    {
+      "id": "CITE-004",
+      "facet": "引用支持",
+      "severity": "minor",
+      "type": "uncited_entry",
+      "title": "参考文献 [3] 未被正文引用",
+      "locations": [],
+      "evidence": "正文引文标记集合不含 3",
+      "basis": "引文标记与参考文献表机械对照（cite_match）",
+      "status": "open"
+    }
+  ],
+  "sources": [
+    {
+      "file": "manuscript.md",
+      "sha256": "0df54be3e3d9a81be729a22d5425879f0c6c101af8efbecb37d8f4fb77039196",
+      "bytes": 2087
+    }
+  ],
+  "uncertainty": [],
+  "change_log": [
+    {
+      "seq": 1,
+      "action": "scan",
+      "detail": "numeric_scan + cite_match"
+    },
+    {
+      "seq": 2,
+      "action": "aggregate",
+      "detail": "build_result 汇总 6 findings / 3 pending_review"
+    }
+  ],
+  "facet_coverage": {
+    "事实核验": {
+      "status": "issues_found",
+      "note": "2 条候选数值不一致"
+    },
+    "引用支持": {
+      "status": "issues_found",
+      "note": "悬空 2 / 未引 1 / 重复 1"
+    },
+    "统计报告": {
+      "status": "partially_checked",
+      "note": "numeric_scan 顺带核对了样本量(n=)一致性；检验方法/效应量/CI 超出本 bundle 深查面"
+    },
+    "方法设计": {
+      "status": "partially_checked",
+      "note": "按 facet_coverage.md 最低检查点轮查；非本 bundle 深查面，未发现问题不等于无问题"
+    },
+    "论证链": {
+      "status": "partially_checked",
+      "note": "按 facet_coverage.md 最低检查点轮查；非本 bundle 深查面，未发现问题不等于无问题"
+    },
+    "学术规范": {
+      "status": "partially_checked",
+      "note": "按 facet_coverage.md 最低检查点轮查；非本 bundle 深查面，未发现问题不等于无问题"
+    }
+  },
+  "pending_review": [
+    {
+      "id": "SUP-001",
+      "facet": "引用支持",
+      "item": "论断↔被引主张支持判定：条目 [1]",
+      "reason": "被引文献全文/摘要不可见",
+      "action_needed": "获取被引文献全文/摘要后按 references/support_rubric.md 人工判定"
+    },
+    {
+      "id": "SUP-002",
+      "facet": "引用支持",
+      "item": "论断↔被引主张支持判定：条目 [2]",
+      "reason": "被引文献全文/摘要不可见",
+      "action_needed": "获取被引文献全文/摘要后按 references/support_rubric.md 人工判定"
+    },
+    {
+      "id": "SUP-003",
+      "facet": "引用支持",
+      "item": "论断↔被引主张支持判定：条目 [4]",
+      "reason": "被引文献全文/摘要不可见",
+      "action_needed": "获取被引文献全文/摘要后按 references/support_rubric.md 人工判定"
+    }
+  ]
+}

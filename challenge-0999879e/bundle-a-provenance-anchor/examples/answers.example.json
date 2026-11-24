@@ -1,0 +1,19 @@
+{
+  "status": "complete",
+  "summary": "合成稿件共检出 2 条实质问题：摘要与结果节甲醇产率数值不一致（92% vs 89%，major），参考文献 [3] 未被正文引用（minor）；另有 1 条 finding 原文锚定失败被自动降级为 pending_review。方法、论证链、学术规范三面轮查未发现新问题；稿件无统计数据，统计报告面登记 unable_to_check。",
+  "facet_status": {
+    "事实核验": {"status": "issues_found", "notes": "摘要 92% 与结果节 89% 不一致（f-001），已锚定"},
+    "引用支持": {"status": "issues_found", "notes": "文献 [3] 正文从未引用（f-002），已锚定"},
+    "方法设计": {"status": "checked_clean", "notes": "沉淀 pH、焙烧温度、原料气比等关键参数齐全；f-003 因引文不存在已降级，不计入本分面问题"},
+    "统计报告": {"status": "unable_to_check", "notes": "稿件未报告样本量/误差/显著性检验，无统计数据可查"},
+    "论证链": {"status": "checked_clean", "notes": "结论节两点主张均能在 3.1/3.2 找到对应证据句"},
+    "学术规范": {"status": "checked_clean", "notes": "章节结构完整，文献格式统一；查重不在本技能范围"}
+  },
+  "uncertainty": [
+    "合成示例：稿件为虚构文本，finding 仅用于演示流程",
+    "f-003 的 original_text 为故意植入的错误引用，演示降级机制"
+  ],
+  "change_log": [
+    "agent: 完成六分面轮查并撰写 findings_draft 与 answers"
+  ]
+}

@@ -1,0 +1,216 @@
+{
+  "case_id": "case-c-methods-001",
+  "status": "completed",
+  "review_report": "review_report.md 已生成：方法缺陷 2 条、报告不全 6 条、待复核 2 条（按类别分组，含原文定位）。",
+  "findings": [
+    {
+      "finding_id": "F-01",
+      "checklist_id": "C01",
+      "facet": "方法设计",
+      "issue_type": "design_flaw",
+      "severity": "critical",
+      "title": "对照设置",
+      "evidence_quote": "本研究结果表明，LZ-21 能够显著抑制 HepG2 细胞增殖并促进凋亡，证明 LZ-21\n是一种有效的候选抗肿瘤药物",
+      "location": {
+        "file": null,
+        "section": "结论",
+        "offset": 848,
+        "absent_note": null
+      },
+      "basis": "全文未见任何对照组描述（absent），却作出因果性结论「本研究结果表明，LZ-21 能够显著抑制 HepG2 细胞增殖并促进凋亡，证明 …」，无对照无法支撑因果推断（rubric: critical 方法缺陷）",
+      "disposition": "pending_review"
+    },
+    {
+      "finding_id": "F-02",
+      "checklist_id": "C06",
+      "facet": "统计报告",
+      "issue_type": "reporting_gap",
+      "severity": "major",
+      "title": "检验名称",
+      "evidence_quote": "结果：LZ-21 可显著影响上述指标（p<0.05）",
+      "location": {
+        "file": null,
+        "section": "摘要",
+        "offset": 196,
+        "absent_note": null
+      },
+      "basis": "报告了 p 值「结果：LZ-21 可显著影响上述指标（p<0.05）」却未给出任何检验名称，无法复现（rubric: major 报告不全）",
+      "disposition": "author_fix_reporting"
+    },
+    {
+      "finding_id": "F-03",
+      "checklist_id": "C07",
+      "facet": "统计报告",
+      "issue_type": "reporting_gap",
+      "severity": "major",
+      "title": "精确 p 值 vs 阈值",
+      "evidence_quote": "结果：LZ-21 可显著影响上述指标（p<0.05）",
+      "location": {
+        "file": null,
+        "section": "摘要",
+        "offset": 196,
+        "absent_note": null
+      },
+      "basis": "仅有阈值式 p 值「结果：LZ-21 可显著影响上述指标（p<0.05）」，无数值（rubric: major 报告不全）",
+      "disposition": "author_fix_reporting"
+    },
+    {
+      "finding_id": "F-04",
+      "checklist_id": "C09",
+      "facet": "统计报告",
+      "issue_type": "reporting_gap",
+      "severity": "major",
+      "title": "效应量",
+      "evidence_quote": null,
+      "location": {
+        "file": null,
+        "section": null,
+        "offset": null,
+        "absent_note": "全文无 effect size/Cohen's d/效应量 描述"
+      },
+      "basis": "做了推断统计但无效应量，无法判断实际意义（rubric: major 报告不全）",
+      "disposition": "author_fix_reporting"
+    },
+    {
+      "finding_id": "F-05",
+      "checklist_id": "C10",
+      "facet": "统计设计",
+      "issue_type": "design_flaw",
+      "severity": "major",
+      "title": "多重比较校正",
+      "evidence_quote": "同时检测以下 5 项指标：细胞活力、凋亡率、\n迁移能力（划痕实验）、侵袭能力（Transwell 实验）、ROS 水平",
+      "location": {
+        "file": null,
+        "section": "检测指标",
+        "offset": 460,
+        "absent_note": null
+      },
+      "basis": "对约 5 项指标逐一做显著性判断却无多重比较校正（Bonferroni/FDR），假阳性风险不可控（rubric: major 方法缺陷）",
+      "disposition": "pending_review"
+    },
+    {
+      "finding_id": "F-06",
+      "checklist_id": "C04",
+      "facet": "统计报告",
+      "issue_type": "reporting_gap",
+      "severity": "minor",
+      "title": "样本量与依据",
+      "evidence_quote": "采用随机数字表法将细胞分为低剂量组、中剂量组和高剂量组，分别加入 5、10、\n20 μmol/L 的 LZ-21，每组 n=30（孔），培养 48 h 后检测",
+      "location": {
+        "file": null,
+        "section": "分组与给药",
+        "offset": 393,
+        "absent_note": null
+      },
+      "basis": "报告了样本量「采用随机数字表法将细胞分为低剂量组、中剂量组和高剂量组，分别加入 5、10、 2」但未说明估算依据（rubric: minor 报告不全）",
+      "disposition": "author_fix_reporting"
+    },
+    {
+      "finding_id": "F-07",
+      "checklist_id": "C05",
+      "facet": "统计报告",
+      "issue_type": "reporting_gap",
+      "severity": "minor",
+      "title": "检验适用条件",
+      "evidence_quote": null,
+      "location": {
+        "file": null,
+        "section": null,
+        "offset": null,
+        "absent_note": "全文无正态性/方差齐性等适用条件描述"
+      },
+      "basis": "未说明检验适用条件（rubric: minor 报告不全）",
+      "disposition": "author_fix_reporting"
+    },
+    {
+      "finding_id": "F-08",
+      "checklist_id": "C08",
+      "facet": "统计报告",
+      "issue_type": "reporting_gap",
+      "severity": "minor",
+      "title": "置信区间",
+      "evidence_quote": null,
+      "location": {
+        "file": null,
+        "section": null,
+        "offset": null,
+        "absent_note": "全文无 95%CI/置信区间 描述"
+      },
+      "basis": "做了推断统计但无置信区间（rubric: minor 报告不全）",
+      "disposition": "author_fix_reporting"
+    }
+  ],
+  "sources": [
+    {
+      "file": "manuscript.md",
+      "sha256": "351c4fa648f479bffccc6365adf2e20529cd83471cde311b8f57a0c3e4c277a0"
+    },
+    {
+      "reference": "references/stats_reporting_checklist.md",
+      "role": "判定清单"
+    },
+    {
+      "reference": "references/methods_severity_rubric.md",
+      "role": "严重度 rubric"
+    }
+  ],
+  "uncertainty": [
+    "C02：体外细胞实验；文本未描述样本来源/抽样框，无法从正文判定抽样方式是否恰当",
+    "C12：文本未提及盲法；缺失声明不等于未实施，无法据此判定是否采用盲法",
+    "fail_design 为确定性规则初判，终审仍建议人工复核（disposition=pending_review）"
+  ],
+  "change_log": [
+    "stats_gate.py: 文本抽取 + 统计报告要素矩阵",
+    "gate_check.py run: 清单逐条判定并登记证据",
+    "gate_check.py validate: 登记完整性校验通过",
+    "build_result.py: 生成 result.json + review_report.md（原子写）"
+  ],
+  "stats_matrix": {
+    "sample_size": "found",
+    "test_name": "absent",
+    "p_value": "found",
+    "confidence_interval": "absent",
+    "effect_size": "absent",
+    "multiplicity": "absent",
+    "randomization": "found",
+    "blinding": "absent",
+    "control_group": "absent",
+    "replication": "found",
+    "exclusion_rule": "found",
+    "software": "found",
+    "error_bars": "found"
+  },
+  "checklist_summary": {
+    "total": 16,
+    "pass": 6,
+    "fail_design": 2,
+    "fail_reporting": 6,
+    "unable_to_check": 2
+  },
+  "facet_coverage": {
+    "事实核验": {
+      "status": "checked_clean",
+      "note": "未发现占位或待核实标记（最低检查点通过）"
+    },
+    "引用支持": {
+      "status": "checked_clean",
+      "note": "存在参考文献节，约 2 条条目（引文-主张对应深查不属本 bundle）"
+    },
+    "论证链": {
+      "status": "partially_checked",
+      "note": "结论节存在；结论-证据逐句对应的最小检查已完成登记，深查交由论证链分面"
+    },
+    "学术规范": {
+      "status": "checked_clean",
+      "note": "检出伦理/规范类声明（最低检查点通过）"
+    },
+    "方法设计": {
+      "status": "issues_found",
+      "note": "深查面：发现 2 条方法设计缺陷"
+    },
+    "统计报告": {
+      "status": "issues_found",
+      "note": "深查面：清单 8 条 fail（报告不全或方法缺陷）"
+    }
+  }
+}

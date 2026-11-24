@@ -1,0 +1,15 @@
+{
+  "case_id": "case-c-methods-001",
+  "title": "合成示例：LZ-21 对 HepG2 细胞的作用——方法设计与统计报告完备性审查",
+  "output_contract": [
+    "case_id",
+    "status",
+    "review_report",
+    "findings",
+    "sources",
+    "uncertainty",
+    "change_log"
+  ],
+  "materials": ["manuscript.md"],
+  "note": "本案例为合成示例输入，仅用于验证 bundle-c 审查流程；真实案例的 case.json schema 未知，脚本已做宽容处理。"
+}
