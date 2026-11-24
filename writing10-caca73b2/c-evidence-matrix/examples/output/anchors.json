@@ -1,0 +1,14 @@
+{
+  "own_data": [
+    {"id": "D01", "type": "figure", "source": "图 1：三种固化温度下拉伸强度曲线", "key_fact": "80 °C 组强度最高（512 MPa）"},
+    {"id": "D02", "type": "table", "source": "表 1：三组样品拉伸性能与孔隙率（均值±标准差，n=5）", "key_fact": "80 °C: 512±18 MPa；100 °C 孔隙率 3.8±0.6 %"},
+    {"id": "D03", "type": "stat", "source": "统计输出 A：单因素方差分析", "key_fact": "F(2,12)=18.7，p=0.0002；每组 n=5"},
+    {"id": "D04", "type": "stat", "source": "统计输出 B：固化温度—孔隙率线性回归", "key_fact": "R²=0.93，p=0.004，斜率 +0.065 %/°C"}
+  ],
+  "literature": [
+    {"id": "L01", "ref": "Zhang W, Li H. Curing temperature effects on tensile strength of epoxy composites. Journal of Composite Materials, 2019."},
+    {"id": "L02", "ref": "Kumar S, Patel R. Porosity evolution during thermal curing of fiber-reinforced polymers. Composites Science and Technology, 2021."},
+    {"id": "L03", "ref": "王强, 刘敏. 高温固化对环氧复合材料力学性能的促进作用. 复合材料学报, 2020."},
+    {"id": "L04", "ref": "ISO 527-4. Plastics — Determination of tensile properties — Part 4. International Organization for Standardization, 1997."}
+  ]
+}

@@ -1,0 +1,8 @@
+FINAL CHECK — examples/output/result.json
+  PASS: case_id 原样保留 (case='SYNTH-EXAMPLE-001', result='SYNTH-EXAMPLE-001')
+  PASS: 契约键全部存在 (5 键)
+  PASS: 契约键非空或有书面解释
+  PASS: status ∈ {partial, complete, failed} (当前: 'partial')
+  PASS: status=partial 且 limits/uncertainty 说明了缺口
+  PASS: deliverable 文件存在: examples/output/deliverable.md
+VERDICT: PASS

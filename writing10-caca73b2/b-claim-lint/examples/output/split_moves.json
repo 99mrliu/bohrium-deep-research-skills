@@ -1,0 +1,27 @@
+{
+  "tool": "section_split",
+  "source": "examples/input/draft_v0_sectionless.md",
+  "note": "启发式段落归类，供 change_log 引用；目标节须人工复核。",
+  "paragraphs": [
+    {
+      "paragraph": "P1",
+      "target": "结果",
+      "reason": "数值词 4 个、统计证据词 0 个、解释标记 0 个（结果分 4，讨论分 0）"
+    },
+    {
+      "paragraph": "P2",
+      "target": "讨论",
+      "reason": "数值词 2 个、统计证据词 0 个、解释标记 3 个（结果分 2，讨论分 6）"
+    },
+    {
+      "paragraph": "P3",
+      "target": "讨论",
+      "reason": "数值词 0 个、统计证据词 0 个、解释标记 2 个（结果分 0，讨论分 4）"
+    },
+    {
+      "paragraph": "P4",
+      "target": "待人工判断",
+      "reason": "数值词 0 个、统计证据词 0 个、解释标记 0 个（结果分 0，讨论分 0）"
+    }
+  ]
+}

@@ -1,0 +1,38 @@
+{
+  "case_id": "SYNTH-EXAMPLE-001",
+  "status": "complete",
+  "deliverable": "examples/output/discussion.md",
+  "preserved_facts": [
+    "图 1：80 °C 组拉伸强度最高，均值 512 MPa；60 °C 组 463 MPa；100 °C 组 401 MPa",
+    "表 1：80 °C 组 512±18 MPa / 31.7±1.1 GPa / 孔隙率 1.5±0.4 %；100 °C 组孔隙率 3.8±0.6 %（每组 n=5）",
+    "统计输出 A：单因素 ANOVA F(2,12)=18.7，p=0.0002",
+    "统计输出 B：固化温度—孔隙率线性回归 R²=0.93，斜率 +0.065 %/°C，p=0.004"
+  ],
+  "evidence_map": {
+    "matrix": "examples/output/evidence_matrix.md",
+    "coverage": "examples/output/coverage.json",
+    "cite_report": "examples/output/cite_report.md",
+    "claims": "examples/output/claims.json",
+    "anchors": "examples/output/anchors.json",
+    "summary": "6 条论断全部通过双审计（build_matrix PASS，cite_check PASS）；L01 未使用（INFO，如实报告）"
+  },
+  "change_log": [
+    "步骤0：读取 task.md 与 case.json，抄录 output_contract 5 键",
+    "步骤1：result_contract.py init 生成骨架",
+    "步骤2：盘点材料，登记锚点 D01–D04（自数据）与 L01–L04（文献）于 anchors.json",
+    "步骤3：建立 claims.json 论断台账（6 条论断：重述/一致/机制推测/不一致/背景/局限）",
+    "步骤4：按台账撰写 discussion.md，句内挂锚",
+    "步骤5：build_matrix.py 与 cite_check.py 双审计均 PASS（L01 未使用，如实记为 INFO，未强行引用）",
+    "步骤6：填写 result.json 并 result_contract.py check PASS"
+  ],
+  "limitations_note": "机制解释（C03）为推测性论断，未经断口显微观察验证；每组样本量 n=5，统计功效有限；L01 与本文结论相关性不足，未引用，未强行堆砌。",
+  "sources": [
+    "examples/input/task.md",
+    "examples/input/materials/own_results.md",
+    "examples/input/materials/references.txt"
+  ],
+  "uncertainty": [
+    "机制解释（C03）属推测，需后续实验验证",
+    "与 L03 不一致的原因分析基于材料差异推断，未做对照实验确认"
+  ]
+}

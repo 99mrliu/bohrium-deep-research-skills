@@ -1,0 +1,76 @@
+{
+  "case_id": "SYNTH-EXAMPLE-001",
+  "deliverable": "deliverable.md",
+  "preserved_facts": [
+    "8 h 硬度 98 HV (materials/notes.md)",
+    "24 h 峰值硬度 132 HV (materials/notes.md)",
+    "48 h 硬度降至 121 HV (materials/notes.md)",
+    "24 h 样品 TEM 可见细小弥散析出相 (materials/notes.md)"
+  ],
+  "evidence_map": [
+    {
+      "claim": "硬度随时效时间先升后降, 24 h 达峰",
+      "source": "materials/notes.md"
+    },
+    {
+      "claim": "峰时效样品存在细小弥散析出相",
+      "source": "materials/notes.md"
+    }
+  ],
+  "change_log": [
+    "init: 依据 case.json output_contract 建立 result.json 骨架 (5 键), status=partial。",
+    "checkpoint[s0_contract]: 契约与盘点完成: 材料 1 件可读, 无缺失引用。",
+    "checkpoint[s1_minimum]: 保底骨架 deliverable.md 已写入输出目录。",
+    "checkpoint[s2_enhance]: 结果节按事实表补全数值表述。",
+    "checkpoint[s3_discuss]: 讨论节补全机制解释与数据缺口声明。",
+    "checkpoint[s4_polish]: 按 advise L1 建议跳过润色阶段 (figures 已在 limits 说明缺失原因); 保底骨架定稿, status 维持 partial (图1 缺失, 数据缺口未闭合)。"
+  ],
+  "figures": [
+    "图1: 24 h 样品 TEM 照片 — 图片文件未随材料包提供, 仅在正文按事实表转述。"
+  ],
+  "status": "partial",
+  "sources": [
+    "examples/input/materials/notes.md",
+    "examples/input/task.md",
+    "examples/input/case.json"
+  ],
+  "uncertainty": [
+    "48 h 硬度下降归因为过时效属机制推断, 缺 48 h TEM 直接证据。"
+  ],
+  "limits": [
+    "缺失材料: 图1 TEM 图片文件未随包提供, 正文仅按事实表文字转述, 未读取图中任何数值。",
+    "数据缺口: 缺少 16 h 硬度点与 48 h TEM, 已在讨论第 2 节声明。"
+  ],
+  "stage_log": [
+    {
+      "stage": "init",
+      "ts": "2026-11-24T21:18:43+08:00",
+      "note": "契约骨架已建立; 在内容工作之前 result.json 即为可解析 JSON。"
+    },
+    {
+      "stage": "s0_contract",
+      "ts": "2026-11-24T21:19:04+08:00",
+      "note": "契约与盘点完成: 材料 1 件可读, 无缺失引用。"
+    },
+    {
+      "stage": "s1_minimum",
+      "ts": "2026-11-24T21:19:05+08:00",
+      "note": "保底骨架 deliverable.md 已写入输出目录。"
+    },
+    {
+      "stage": "s2_enhance",
+      "ts": "2026-11-24T21:19:05+08:00",
+      "note": "结果节按事实表补全数值表述。"
+    },
+    {
+      "stage": "s3_discuss",
+      "ts": "2026-11-24T21:19:06+08:00",
+      "note": "讨论节补全机制解释与数据缺口声明。"
+    },
+    {
+      "stage": "s4_polish",
+      "ts": "2026-11-24T21:19:19+08:00",
+      "note": "按 advise L1 建议跳过润色阶段 (figures 已在 limits 说明缺失原因); 保底骨架定稿, status 维持 partial (图1 缺失, 数据缺口未闭合)。"
+    }
+  ]
+}

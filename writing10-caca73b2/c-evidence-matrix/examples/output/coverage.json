@@ -1,0 +1,166 @@
+{
+  "claims_total": 6,
+  "claims_ok": 6,
+  "anchors_registered": [
+    "D01",
+    "D02",
+    "D03",
+    "D04",
+    "L01",
+    "L02",
+    "L03",
+    "L04"
+  ],
+  "anchors_used_in_claims": [
+    "D01",
+    "D02",
+    "D03",
+    "D04",
+    "L02",
+    "L03",
+    "L04"
+  ],
+  "anchors_cited_in_discussion": [
+    "D01",
+    "D02",
+    "D03",
+    "D04",
+    "L02",
+    "L03",
+    "L04"
+  ],
+  "unused_anchors": [
+    "L01"
+  ],
+  "errors": [],
+  "infos": [
+    "登记锚点 L01 未被任何论断使用"
+  ],
+  "claims": [
+    {
+      "id": "C01",
+      "text": "本研究中 80 °C 固化组的拉伸强度在三组中最高，且固化温度对拉伸强度的影响具有统计学显著性",
+      "anchors": [
+        "D01",
+        "D02",
+        "D03"
+      ],
+      "relations": {
+        "D01": "支持",
+        "D02": "支持",
+        "D03": "支持"
+      },
+      "strength": "直陈",
+      "located": true,
+      "inline_ok": true,
+      "relation_verbalized_ok": true,
+      "ok": true,
+      "window_sentences": [
+        3,
+        3
+      ]
+    },
+    {
+      "id": "C02",
+      "text": "孔隙率随固化温度升高而上升的趋势与 Kumar 等的报道一致",
+      "anchors": [
+        "D04",
+        "L02"
+      ],
+      "relations": {
+        "D04": "支持",
+        "L02": "一致"
+      },
+      "strength": "直陈",
+      "located": true,
+      "inline_ok": true,
+      "relation_verbalized_ok": true,
+      "ok": true,
+      "window_sentences": [
+        4,
+        4
+      ]
+    },
+    {
+      "id": "C03",
+      "text": "孔隙率升高可能通过增加应力集中削弱高温组的承载能力",
+      "anchors": [
+        "D04",
+        "L02"
+      ],
+      "relations": {
+        "D04": "支持",
+        "L02": "机制解释"
+      },
+      "strength": "推测",
+      "located": true,
+      "inline_ok": true,
+      "relation_verbalized_ok": true,
+      "ok": true,
+      "window_sentences": [
+        5,
+        5
+      ]
+    },
+    {
+      "id": "C04",
+      "text": "本研究 80 °C 最优的结论与 L03 报道的 100 °C 最优不一致",
+      "anchors": [
+        "D01",
+        "L03"
+      ],
+      "relations": {
+        "D01": "支持",
+        "L03": "不一致"
+      },
+      "strength": "直陈",
+      "located": true,
+      "inline_ok": true,
+      "relation_verbalized_ok": true,
+      "ok": true,
+      "window_sentences": [
+        6,
+        6
+      ]
+    },
+    {
+      "id": "C05",
+      "text": "拉伸测试遵循 L04 给出的标准试验条件，结果具备与同类研究比较的基础",
+      "anchors": [
+        "L04"
+      ],
+      "relations": {
+        "L04": "背景"
+      },
+      "strength": "直陈",
+      "located": true,
+      "inline_ok": true,
+      "relation_verbalized_ok": true,
+      "ok": true,
+      "window_sentences": [
+        10,
+        10
+      ]
+    },
+    {
+      "id": "C06",
+      "text": "本研究每组样本量仅为 5，统计功效有限，机制解释仍属初步推断",
+      "anchors": [
+        "D03"
+      ],
+      "relations": {
+        "D03": "支持"
+      },
+      "strength": "初步",
+      "located": true,
+      "inline_ok": true,
+      "relation_verbalized_ok": true,
+      "ok": true,
+      "window_sentences": [
+        11,
+        11
+      ]
+    }
+  ],
+  "verdict": "PASS"
+}

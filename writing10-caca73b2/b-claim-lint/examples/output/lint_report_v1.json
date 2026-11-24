@@ -1,0 +1,70 @@
+{
+  "tool": "claim_lint",
+  "version": "1.0.0",
+  "draft": "examples/output/draft_v1.md",
+  "verdict": "PASS",
+  "exit_code": 0,
+  "degraded_no_sections": false,
+  "counts": {
+    "error": 0,
+    "warn": 0,
+    "info": 0,
+    "waived": 1,
+    "total": 1
+  },
+  "per_rule": {
+    "R01": {
+      "total": 0,
+      "waived": 0
+    },
+    "R02": {
+      "total": 0,
+      "waived": 0
+    },
+    "R03": {
+      "total": 0,
+      "waived": 0
+    },
+    "R04": {
+      "total": 0,
+      "waived": 0
+    },
+    "R05": {
+      "total": 1,
+      "waived": 1
+    },
+    "R06": {
+      "total": 0,
+      "waived": 0
+    },
+    "R07": {
+      "total": 0,
+      "waived": 0
+    },
+    "R08": {
+      "total": 0,
+      "waived": 0
+    }
+  },
+  "waivers": [
+    {
+      "rule": "R05",
+      "reason": "该句为讨论段的概括性表述，对应效应量（约49%）与检验（p=0.006）已在结果段同句报告，此处不再重复数字"
+    }
+  ],
+  "violations": [
+    {
+      "rule": "R05",
+      "severity": "warn",
+      "name": "幅度夸大",
+      "line": 11,
+      "paragraph": 3,
+      "section": "discussion",
+      "excerpt": "处理组丙二醛含量（12.4 μmol/g）低于对照组，说明处理组膜脂过氧化程度较轻，与脯氨酸大幅积累所反映的渗透调节增强相吻合。",
+      "message": "幅度表述「大幅」未在同句给出效应量数字。",
+      "suggestion": "在同句补充效应量（如「升高约 49%」「提高 1.8 倍」），或改用中性表述。",
+      "waived": true,
+      "waiver_reason": "该句为讨论段的概括性表述，对应效应量（约49%）与检验（p=0.006）已在结果段同句报告，此处不再重复数字"
+    }
+  ]
+}

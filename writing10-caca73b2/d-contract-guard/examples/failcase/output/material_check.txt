@@ -1,0 +1,11 @@
+INVENTORY: examples/failcase/output/material_inventory.json (0 文件)
+SUMMARY  : examples/failcase/output/material_inventory.md
+PROBLEMS (3):
+  - 材料目录为空: examples/failcase/input/materials
+  - case.json 引用缺失: [materials] notes.md
+  - case.json 引用缺失: [materials] fig1.png
+
+请将以下行粘贴进 result.json 的 limits (JSON 数组元素):
+  "材料目录为空或不存在: 无任何可用输入材料, 内容工作无法进行。"
+  "缺失材料: notes.md (case.json 字段 materials 引用, 但材料目录中不存在)。"
+  "缺失材料: fig1.png (case.json 字段 materials 引用, 但材料目录中不存在)。"

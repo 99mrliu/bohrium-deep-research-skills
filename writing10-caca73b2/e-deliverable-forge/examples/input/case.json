@@ -1,0 +1,13 @@
+{
+  "case_id": "SYNTH-EXAMPLE-001",
+  "task": "将定稿的结果与讨论章节打包为可编辑交付物并生成渲染预览与交叉引用审计",
+  "materials": ["manuscript.md"],
+  "output_contract": {
+    "deliverable": "可编辑目标文稿(.docx; 失败时降级为 .md+.html)",
+    "preserved_facts": "渲染与打包环节原样保留的事实性陈述清单",
+    "evidence_map": "图表编号与证据来源的对应关系",
+    "change_log": "本环节对稿件所做的全部机械性修改记录",
+    "preview_files": "真实渲染的 SVG 预览页文件清单"
+  },
+  "note": "本案例为合成示例, 所有数据与结论均为虚构, 仅用于演示交付流程。"
+}

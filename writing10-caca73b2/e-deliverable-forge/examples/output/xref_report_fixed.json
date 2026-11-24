@@ -1,0 +1,31 @@
+{
+  "input": "examples/output/manuscript_fixed.md",
+  "status": "PASS",
+  "errors": [],
+  "warnings": [],
+  "errors_after_fix": null,
+  "floats": [
+    {
+      "kind": "figure",
+      "num": 1,
+      "caption": "Cat-A 在 250–400 °C 的 CO 转化率曲线(n=3, 误差棒为标准差; 空速 30000 h⁻¹)。",
+      "caption_line": 9,
+      "citations": 3
+    },
+    {
+      "kind": "table",
+      "num": 1,
+      "caption": "各样品比表面积、平均粒径与 300 °C 转化率汇总(n=3, 转化率误差为标准差)。",
+      "caption_line": 13,
+      "citations": 1
+    },
+    {
+      "kind": "figure",
+      "num": 2,
+      "caption": "Cat-A 与 Cat-C 的 Arrhenius 拟合(250–300 °C, 转化率 <15% 的微分区; R² > 0.99)。",
+      "caption_line": 23,
+      "citations": 3
+    }
+  ],
+  "moves": null
+}

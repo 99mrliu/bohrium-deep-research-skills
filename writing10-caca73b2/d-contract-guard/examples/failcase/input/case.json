@@ -1,0 +1,16 @@
+{
+  "case_id": "SYNTH-FAILCASE-001",
+  "title": "合成失败分支示例: 材料目录为空且引用文件缺失",
+  "output_contract": [
+    "deliverable",
+    "preserved_facts",
+    "evidence_map",
+    "change_log",
+    "figures"
+  ],
+  "materials": [
+    "notes.md",
+    "fig1.png"
+  ],
+  "task": "依据给定材料撰写结果与讨论章节 (材料实际缺失)。"
+}

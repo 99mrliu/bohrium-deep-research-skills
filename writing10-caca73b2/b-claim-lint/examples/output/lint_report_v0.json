@@ -1,0 +1,143 @@
+{
+  "tool": "claim_lint",
+  "version": "1.0.0",
+  "draft": "examples/input/draft_v0.md",
+  "verdict": "FAIL",
+  "exit_code": 1,
+  "degraded_no_sections": false,
+  "counts": {
+    "error": 3,
+    "warn": 4,
+    "info": 0,
+    "waived": 0,
+    "total": 7
+  },
+  "per_rule": {
+    "R01": {
+      "total": 1,
+      "waived": 0
+    },
+    "R02": {
+      "total": 1,
+      "waived": 0
+    },
+    "R03": {
+      "total": 2,
+      "waived": 0
+    },
+    "R04": {
+      "total": 1,
+      "waived": 0
+    },
+    "R05": {
+      "total": 1,
+      "waived": 0
+    },
+    "R06": {
+      "total": 0,
+      "waived": 0
+    },
+    "R07": {
+      "total": 1,
+      "waived": 0
+    },
+    "R08": {
+      "total": 0,
+      "waived": 0
+    }
+  },
+  "waivers": [],
+  "violations": [
+    {
+      "rule": "R02",
+      "severity": "error",
+      "name": "无检验显著",
+      "line": 7,
+      "paragraph": 2,
+      "section": "results",
+      "excerpt": "处理组株高为 47.8 cm，显著高于对照组的 42.3 cm（图1、表1）。",
+      "message": "「显著」表述缺少统计支撑：同句及同段均未发现 p 值、置信区间或检验统计量。",
+      "suggestion": "补入同句检验结果（如「t 检验 p=0.032」或 95% CI）；若无检验，将「显著」改为「较高/较低」等描述性表述。",
+      "waived": false,
+      "waiver_reason": ""
+    },
+    {
+      "rule": "R05",
+      "severity": "warn",
+      "name": "幅度夸大",
+      "line": 7,
+      "paragraph": 2,
+      "section": "results",
+      "excerpt": "处理组脯氨酸含量大幅升高，达到 52.9 μg/g，对照组为 35.4 μg/g。",
+      "message": "幅度表述「大幅」未在同句给出效应量数字。",
+      "suggestion": "在同句补充效应量（如「升高约 49%」「提高 1.8 倍」），或改用中性表述。",
+      "waived": false,
+      "waiver_reason": ""
+    },
+    {
+      "rule": "R03",
+      "severity": "warn",
+      "name": "结果段混入解释",
+      "line": 7,
+      "paragraph": 2,
+      "section": "results",
+      "excerpt": "这与既往研究一致，表明保水剂通过渗透调节机制缓解干旱伤害。",
+      "message": "结果段出现解释性表述「与既往研究一致」，结果段应只陈述观察事实。",
+      "suggestion": "将该句移至讨论段；结果段仅保留可观测数值与图表引用。",
+      "waived": false,
+      "waiver_reason": ""
+    },
+    {
+      "rule": "R03",
+      "severity": "warn",
+      "name": "结果段混入解释",
+      "line": 7,
+      "paragraph": 2,
+      "section": "results",
+      "excerpt": "处理组脯氨酸的积累可能是由于干旱诱导的渗透调节反应。",
+      "message": "结果段出现解释性表述「可能是由于」，结果段应只陈述观察事实。",
+      "suggestion": "将该句移至讨论段；结果段仅保留可观测数值与图表引用。",
+      "waived": false,
+      "waiver_reason": ""
+    },
+    {
+      "rule": "R01",
+      "severity": "error",
+      "name": "因果越界",
+      "line": 11,
+      "paragraph": 3,
+      "section": "discussion",
+      "excerpt": "上述结果证明保水剂 H-2 决定了玉米幼苗的抗旱性。",
+      "message": "疑似因果越界：全文无有效随机/干预设计标记，且本句无对冲语，却使用因果动词「证明」。",
+      "suggestion": "改写为相关/提示性表述，如「X 与 Y 相关」「结果提示 X 可能影响 Y」；若确有随机干预设计，请在方法或草稿中明示。",
+      "waived": false,
+      "waiver_reason": ""
+    },
+    {
+      "rule": "R04",
+      "severity": "error",
+      "name": "讨论段新数据",
+      "line": 11,
+      "paragraph": 3,
+      "section": "discussion",
+      "excerpt": "处理组丙二醛含量降至 12.4 μmol/g，说明膜脂过氧化程度减轻。",
+      "message": "讨论段出现结果段未报告的数据「12.4 μmol」，新数据须先在结果段报告。",
+      "suggestion": "先在结果段报告该数据及其来源，再在讨论段引用。",
+      "waived": false,
+      "waiver_reason": ""
+    },
+    {
+      "rule": "R07",
+      "severity": "warn",
+      "name": "局限缺失",
+      "line": 11,
+      "paragraph": 3,
+      "section": "discussion",
+      "excerpt": "上述结果证明保水剂 H-2 决定了玉米幼苗的抗旱性。",
+      "message": "存在讨论段，但全文未发现局限性表述（局限/不足/limitation）。",
+      "suggestion": "在讨论段末尾增设局限段落（样本量、设计缺陷、外推边界）。",
+      "waived": false,
+      "waiver_reason": ""
+    }
+  ]
+}

@@ -1,0 +1,554 @@
+{
+  "generated_by": "ingest_values.py (value-anchor-rd)",
+  "materials_dir": "/Users/liuhengshen/Desktop/bhr_product/writing10-v5-5dir/a-value-anchor/skill/examples/input/materials",
+  "entry_count": 27,
+  "entries": [
+    {
+      "id": "V01",
+      "kind": "stat",
+      "value": 1.85,
+      "unit": "mmol/L",
+      "error": {
+        "kind": "SD",
+        "value": 0.22
+      },
+      "stat": "mean_sd",
+      "source": {
+        "file": "figure_caption.txt",
+        "line": 1,
+        "row": null,
+        "col": null
+      },
+      "method": "regex",
+      "confidence": "high",
+      "note": "均值 ± 误差（误差类型: SD）: 1.85 ± 0.22"
+    },
+    {
+      "id": "V02",
+      "kind": "stat",
+      "value": 1.2,
+      "unit": "mmol/L",
+      "error": {
+        "kind": "SD",
+        "value": 0.15
+      },
+      "stat": "mean_sd",
+      "source": {
+        "file": "figure_caption.txt",
+        "line": 1,
+        "row": null,
+        "col": null
+      },
+      "method": "regex",
+      "confidence": "high",
+      "note": "均值 ± 误差（误差类型: SD）: 1.20 ± 0.15"
+    },
+    {
+      "id": "V03",
+      "kind": "stat",
+      "value": 4.3,
+      "unit": "mmol/L",
+      "error": {
+        "kind": "SD",
+        "value": 0.35
+      },
+      "stat": "mean_sd",
+      "source": {
+        "file": "figure_caption.txt",
+        "line": 1,
+        "row": null,
+        "col": null
+      },
+      "method": "regex",
+      "confidence": "high",
+      "note": "均值 ± 误差（误差类型: SD）: 4.30 ± 0.35"
+    },
+    {
+      "id": "V04",
+      "kind": "stat",
+      "value": 5.1,
+      "unit": "mmol/L",
+      "error": {
+        "kind": "SD",
+        "value": 0.4
+      },
+      "stat": "mean_sd",
+      "source": {
+        "file": "figure_caption.txt",
+        "line": 1,
+        "row": null,
+        "col": null
+      },
+      "method": "regex",
+      "confidence": "high",
+      "note": "均值 ± 误差（误差类型: SD）: 5.10 ± 0.40"
+    },
+    {
+      "id": "V05",
+      "kind": "stat",
+      "value": 10,
+      "unit": null,
+      "error": {
+        "kind": "none",
+        "value": null
+      },
+      "stat": "n",
+      "source": {
+        "file": "figure_caption.txt",
+        "line": 1,
+        "row": null,
+        "col": null
+      },
+      "method": "regex",
+      "confidence": "high",
+      "note": "样本量: n = 10"
+    },
+    {
+      "id": "V06",
+      "kind": "table_cell",
+      "value": 1.2,
+      "unit": null,
+      "error": {
+        "kind": "none",
+        "value": null
+      },
+      "stat": null,
+      "source": {
+        "file": "results_table.csv",
+        "line": null,
+        "row": 2,
+        "col": "mean"
+      },
+      "method": "table-parse",
+      "confidence": "high",
+      "note": ""
+    },
+    {
+      "id": "V07",
+      "kind": "table_cell",
+      "value": 0.15,
+      "unit": null,
+      "error": {
+        "kind": "none",
+        "value": null
+      },
+      "stat": "SD",
+      "source": {
+        "file": "results_table.csv",
+        "line": null,
+        "row": 2,
+        "col": "SD"
+      },
+      "method": "table-parse",
+      "confidence": "high",
+      "note": "该单元格本身为标准差列数值"
+    },
+    {
+      "id": "V08",
+      "kind": "table_cell",
+      "value": 10.0,
+      "unit": null,
+      "error": {
+        "kind": "none",
+        "value": null
+      },
+      "stat": null,
+      "source": {
+        "file": "results_table.csv",
+        "line": null,
+        "row": 2,
+        "col": "n"
+      },
+      "method": "table-parse",
+      "confidence": "high",
+      "note": ""
+    },
+    {
+      "id": "V09",
+      "kind": "table_cell",
+      "value": 1.85,
+      "unit": null,
+      "error": {
+        "kind": "none",
+        "value": null
+      },
+      "stat": null,
+      "source": {
+        "file": "results_table.csv",
+        "line": null,
+        "row": 3,
+        "col": "mean"
+      },
+      "method": "table-parse",
+      "confidence": "high",
+      "note": ""
+    },
+    {
+      "id": "V10",
+      "kind": "table_cell",
+      "value": 0.22,
+      "unit": null,
+      "error": {
+        "kind": "none",
+        "value": null
+      },
+      "stat": "SD",
+      "source": {
+        "file": "results_table.csv",
+        "line": null,
+        "row": 3,
+        "col": "SD"
+      },
+      "method": "table-parse",
+      "confidence": "high",
+      "note": "该单元格本身为标准差列数值"
+    },
+    {
+      "id": "V11",
+      "kind": "table_cell",
+      "value": 10.0,
+      "unit": null,
+      "error": {
+        "kind": "none",
+        "value": null
+      },
+      "stat": null,
+      "source": {
+        "file": "results_table.csv",
+        "line": null,
+        "row": 3,
+        "col": "n"
+      },
+      "method": "table-parse",
+      "confidence": "high",
+      "note": ""
+    },
+    {
+      "id": "V12",
+      "kind": "table_cell",
+      "value": 5.1,
+      "unit": null,
+      "error": {
+        "kind": "none",
+        "value": null
+      },
+      "stat": null,
+      "source": {
+        "file": "results_table.csv",
+        "line": null,
+        "row": 4,
+        "col": "mean"
+      },
+      "method": "table-parse",
+      "confidence": "high",
+      "note": ""
+    },
+    {
+      "id": "V13",
+      "kind": "table_cell",
+      "value": 0.4,
+      "unit": null,
+      "error": {
+        "kind": "none",
+        "value": null
+      },
+      "stat": "SD",
+      "source": {
+        "file": "results_table.csv",
+        "line": null,
+        "row": 4,
+        "col": "SD"
+      },
+      "method": "table-parse",
+      "confidence": "high",
+      "note": "该单元格本身为标准差列数值"
+    },
+    {
+      "id": "V14",
+      "kind": "table_cell",
+      "value": 10.0,
+      "unit": null,
+      "error": {
+        "kind": "none",
+        "value": null
+      },
+      "stat": null,
+      "source": {
+        "file": "results_table.csv",
+        "line": null,
+        "row": 4,
+        "col": "n"
+      },
+      "method": "table-parse",
+      "confidence": "high",
+      "note": ""
+    },
+    {
+      "id": "V15",
+      "kind": "table_cell",
+      "value": 4.3,
+      "unit": null,
+      "error": {
+        "kind": "none",
+        "value": null
+      },
+      "stat": null,
+      "source": {
+        "file": "results_table.csv",
+        "line": null,
+        "row": 5,
+        "col": "mean"
+      },
+      "method": "table-parse",
+      "confidence": "high",
+      "note": ""
+    },
+    {
+      "id": "V16",
+      "kind": "table_cell",
+      "value": 0.35,
+      "unit": null,
+      "error": {
+        "kind": "none",
+        "value": null
+      },
+      "stat": "SD",
+      "source": {
+        "file": "results_table.csv",
+        "line": null,
+        "row": 5,
+        "col": "SD"
+      },
+      "method": "table-parse",
+      "confidence": "high",
+      "note": "该单元格本身为标准差列数值"
+    },
+    {
+      "id": "V17",
+      "kind": "table_cell",
+      "value": 10.0,
+      "unit": null,
+      "error": {
+        "kind": "none",
+        "value": null
+      },
+      "stat": null,
+      "source": {
+        "file": "results_table.csv",
+        "line": null,
+        "row": 5,
+        "col": "n"
+      },
+      "method": "table-parse",
+      "confidence": "high",
+      "note": ""
+    },
+    {
+      "id": "V18",
+      "kind": "stat",
+      "value": [
+        0.48,
+        0.82
+      ],
+      "unit": null,
+      "error": {
+        "kind": "CI95",
+        "value": null
+      },
+      "stat": "CI95",
+      "source": {
+        "file": "stats_output.txt",
+        "line": 3,
+        "row": null,
+        "col": null
+      },
+      "method": "regex",
+      "confidence": "high",
+      "note": "95% 置信区间: 95% CI [0.48, 0.82]"
+    },
+    {
+      "id": "V19",
+      "kind": "stat",
+      "value": 7.95,
+      "unit": null,
+      "error": {
+        "kind": "none",
+        "value": null
+      },
+      "stat": "t",
+      "source": {
+        "file": "stats_output.txt",
+        "line": 3,
+        "row": null,
+        "col": null
+      },
+      "method": "regex",
+      "confidence": "high",
+      "note": "t(df=18): t(18) = 7.95"
+    },
+    {
+      "id": "V20",
+      "kind": "stat",
+      "value": 0.001,
+      "unit": null,
+      "error": {
+        "kind": "none",
+        "value": null
+      },
+      "stat": "p",
+      "source": {
+        "file": "stats_output.txt",
+        "line": 3,
+        "row": null,
+        "col": null
+      },
+      "method": "regex",
+      "confidence": "high",
+      "note": "p 值（比较符 <）: p < 0.001"
+    },
+    {
+      "id": "V21",
+      "kind": "stat",
+      "value": 0.65,
+      "unit": "mmol/L",
+      "error": {
+        "kind": "none",
+        "value": null
+      },
+      "stat": null,
+      "source": {
+        "file": "stats_output.txt",
+        "line": 3,
+        "row": null,
+        "col": null
+      },
+      "method": "regex",
+      "confidence": "high",
+      "note": "带单位数值: 0.65 mmol/L"
+    },
+    {
+      "id": "V22",
+      "kind": "stat",
+      "value": [
+        -1.15,
+        -0.45
+      ],
+      "unit": null,
+      "error": {
+        "kind": "CI95",
+        "value": null
+      },
+      "stat": "CI95",
+      "source": {
+        "file": "stats_output.txt",
+        "line": 4,
+        "row": null,
+        "col": null
+      },
+      "method": "regex",
+      "confidence": "high",
+      "note": "95% 置信区间: 95% CI [-1.15, -0.45]"
+    },
+    {
+      "id": "V23",
+      "kind": "stat",
+      "value": 4.77,
+      "unit": null,
+      "error": {
+        "kind": "none",
+        "value": null
+      },
+      "stat": "t",
+      "source": {
+        "file": "stats_output.txt",
+        "line": 4,
+        "row": null,
+        "col": null
+      },
+      "method": "regex",
+      "confidence": "high",
+      "note": "t(df=18): t(18) = 4.77"
+    },
+    {
+      "id": "V24",
+      "kind": "stat",
+      "value": 0.0002,
+      "unit": null,
+      "error": {
+        "kind": "none",
+        "value": null
+      },
+      "stat": "p",
+      "source": {
+        "file": "stats_output.txt",
+        "line": 4,
+        "row": null,
+        "col": null
+      },
+      "method": "regex",
+      "confidence": "high",
+      "note": "p 值（比较符 =）: p = 0.0002"
+    },
+    {
+      "id": "V25",
+      "kind": "stat",
+      "value": -0.8,
+      "unit": "mmol/L",
+      "error": {
+        "kind": "none",
+        "value": null
+      },
+      "stat": null,
+      "source": {
+        "file": "stats_output.txt",
+        "line": 4,
+        "row": null,
+        "col": null
+      },
+      "method": "regex",
+      "confidence": "high",
+      "note": "带单位数值: -0.80 mmol/L"
+    },
+    {
+      "id": "V26",
+      "kind": "stat",
+      "value": 10,
+      "unit": null,
+      "error": {
+        "kind": "none",
+        "value": null
+      },
+      "stat": "n",
+      "source": {
+        "file": "stats_output.txt",
+        "line": 5,
+        "row": null,
+        "col": null
+      },
+      "method": "regex",
+      "confidence": "high",
+      "note": "样本量: n = 10"
+    },
+    {
+      "id": "V27",
+      "kind": "stat",
+      "value": 0.05,
+      "unit": null,
+      "error": {
+        "kind": "none",
+        "value": null
+      },
+      "stat": "alpha",
+      "source": {
+        "file": "stats_output.txt",
+        "line": 5,
+        "row": null,
+        "col": null
+      },
+      "method": "regex",
+      "confidence": "high",
+      "note": "显著性水平: alpha = 0.05"
+    }
+  ],
+  "skipped": []
+}

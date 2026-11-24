@@ -1,0 +1,31 @@
+{
+  "case_id": "SYNTH-EXAMPLE-001",
+  "deliverable": "manuscript.docx (3353 bytes, sha256 0636c208098cb37b0e70c7903b01590a1585ea3013a1c576ed4f93a0d636bc78; 本地真实生成并通过自验: 33 段落/1 表格; 构建确定性: 同输入两次构建 sha256 一致; 因平台仅收 UTF-8 文本文件, 二进制未随 bundle 提交, 见 build_manifest.json; 同内容可读稿为 manuscript_fixed.md)",
+  "preserved_facts": [
+    "Cat-A 在 350 °C 时 CO 转化率达到 92.4% 的峰值, 400 °C 回落至 89.1%",
+    "Cat-A 比表面积 128 m²/g, Cat-B 74 m²/g, Cat-C 102 m²/g",
+    "Cat-A 表观活化能 68.2 kJ/mol, Cat-C 81.5 kJ/mol",
+    "所有误差棒为标准差(n=3)",
+    "动力学数据在转化率 <15% 的微分区采集"
+  ],
+  "evidence_map": [
+    {"float": "图1", "caption_line": 9, "cited_in_text": true, "source": "manuscript.md (合成数据)"},
+    {"float": "图2", "caption_line": 23, "cited_in_text": true, "source": "manuscript.md (合成数据); 由 --fix-renumber 自 图3 改写"},
+    {"float": "表1", "caption_line": 13, "cited_in_text": true, "source": "manuscript.md (合成数据); 修复时补入正文引用"}
+  ],
+  "change_log": [
+    {"step": "xref-fix-1", "type": "editorial", "detail": "manuscript_broken.md 中 表1 仅有题注、正文从未引用; 在结果节补入『汇总于**表1**』一处正文引用(不改任何数值)"},
+    {"step": "xref-fix-2", "type": "renumber", "detail": "xref_check.py --fix-renumber 将 图3 重编号为 图2(题注与 3 处正文引用一并改写), 映射记录见 moves.json"},
+    {"step": "package", "type": "render", "detail": "build_docx.py 生成 manuscript.docx 并自验通过; render_preview.py 生成 preview-1.svg; 两个环节均未改动科学内容"}
+  ],
+  "preview_files": ["preview-1.svg"],
+  "status": "success",
+  "sources": [
+    "examples/input/manuscript_broken.md (合成示例稿件)",
+    "examples/output/manuscript_fixed.md",
+    "examples/output/xref_report.md",
+    "examples/output/xref_report_fixed.md",
+    "examples/output/build_manifest.json"
+  ],
+  "uncertainty": "SVG 预览为排版近似(朴素 CJK 换行、等宽字体回退), 不代表出版级版面; manuscript.docx 未随 bundle 提交(平台限制), 其内容与 manuscript_fixed.md 一致, 可通过 scripts/build_docx.py 复现并核对 sha256。"
+}

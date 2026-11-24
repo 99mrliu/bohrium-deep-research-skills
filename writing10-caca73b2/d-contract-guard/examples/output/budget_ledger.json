@@ -1,0 +1,66 @@
+{
+  "total_requests": 64,
+  "total_seconds": 900,
+  "reserve_requests": 10,
+  "reserve_seconds": 120,
+  "stages": [
+    "s0_contract",
+    "s1_minimum",
+    "s2_enhance",
+    "s3_discuss",
+    "s4_polish"
+  ],
+  "plan": {
+    "s0_contract": {
+      "requests": 11,
+      "seconds": 156,
+      "tier": 0
+    },
+    "s1_minimum": {
+      "requests": 11,
+      "seconds": 156,
+      "tier": 0
+    },
+    "s2_enhance": {
+      "requests": 11,
+      "seconds": 156,
+      "tier": 2
+    },
+    "s3_discuss": {
+      "requests": 11,
+      "seconds": 156,
+      "tier": 2
+    },
+    "s4_polish": {
+      "requests": 10,
+      "seconds": 156,
+      "tier": 1
+    }
+  },
+  "usage": [
+    {
+      "stage": "s0_contract",
+      "requests": 8,
+      "seconds": 60,
+      "ts": "2026-11-24T21:19:04+08:00"
+    },
+    {
+      "stage": "s1_minimum",
+      "requests": 10,
+      "seconds": 120,
+      "ts": "2026-11-24T21:19:05+08:00"
+    },
+    {
+      "stage": "s2_enhance",
+      "requests": 14,
+      "seconds": 200,
+      "ts": "2026-11-24T21:19:06+08:00"
+    },
+    {
+      "stage": "s3_discuss",
+      "requests": 16,
+      "seconds": 260,
+      "ts": "2026-11-24T21:19:06+08:00"
+    }
+  ]
+}

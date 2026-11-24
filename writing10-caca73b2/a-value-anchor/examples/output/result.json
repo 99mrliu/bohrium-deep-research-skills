@@ -1,0 +1,44 @@
+{
+  "case_id": "SYNTH-EXAMPLE-001",
+  "deliverable": "examples/output/manuscript_draft.md —— 结果与讨论章节草稿（中文 Markdown，全部 25 个数字均带 [Vnn] 台账锚点，anchor_audit PASS）",
+  "preserved_facts": [
+    "处理组乳酸 1.85 ± 0.22 mmol/L；对照组乳酸 1.20 ± 0.15 mmol/L（mean ± SD）",
+    "处理组葡萄糖 4.30 ± 0.35 mmol/L；对照组葡萄糖 5.10 ± 0.40 mmol/L（mean ± SD）",
+    "每组 n = 10；误差为 SD，不得改写为 SEM 或 CI95",
+    "乳酸：t(18) = 7.95，p < 0.001，均值差 0.65 mmol/L，95% CI [0.48, 0.82]",
+    "葡萄糖：t(18) = 4.77，p = 0.0002，均值差 -0.80 mmol/L，95% CI [-1.15, -0.45]",
+    "检验为双侧，alpha = 0.05",
+    "全部数据为虚构合成数据，仅演示流程"
+  ],
+  "evidence_map": {
+    "处理组乳酸均值": "values.json:V01 / figure_caption.txt:L1 / results_table.csv:R3(mean)",
+    "对照组乳酸均值": "values.json:V02 / figure_caption.txt:L1 / results_table.csv:R2(mean)",
+    "处理组葡萄糖均值": "values.json:V03 / figure_caption.txt:L1 / results_table.csv:R5(mean)",
+    "对照组葡萄糖均值": "values.json:V04 / figure_caption.txt:L1 / results_table.csv:R4(mean)",
+    "样本量 n": "values.json:V05,V26 / figure_caption.txt:L1 / stats_output.txt:L5",
+    "乳酸 t/p/CI": "values.json:V19,V20,V18 / stats_output.txt:L3",
+    "葡萄糖 t/p/CI": "values.json:V23,V24,V22 / stats_output.txt:L4",
+    "均值差": "values.json:V21,V25 / stats_output.txt:L3-L4",
+    "显著性水平": "values.json:V27 / stats_output.txt:L5"
+  },
+  "change_log": [
+    "步骤0: 读取 case.json 与 task.md，抄下 output_contract 键（deliverable/preserved_facts/evidence_map/change_log/status）",
+    "步骤1: result_contract.py init 生成 result.json 骨架，case_id 原样保留",
+    "步骤2: ingest_values.py 扫描 materials/，生成 values.json（27 条）与 values_report.md，无 skipped",
+    "步骤4: 依据台账撰写 manuscript_draft.md，结果段只陈述观察，讨论段概括+推测标注+局限",
+    "步骤5: anchor_audit.py 审计 PASS（numbers=25, anchors=24, fail=0）；另做两次阴性测试（篡改 1.85→1.95、删除 [V19]）均正确判 FAIL，篡改文件未随包发布",
+    "人工确认项: INFO 提示 V08,V09,V11,V12,V14,V15,V17 未被正文引用，经核对为表格中与图注/统计输出重复的均值与 n 单元格，正文改引图注/统计条目，无需补充",
+    "未解决问题: 材料未提供正态性与方差齐性检验结果，t 检验前提未经核实，已在讨论局限段声明"
+  ],
+  "status": "complete",
+  "sources": [
+    "materials/results_table.csv",
+    "materials/stats_output.txt",
+    "materials/figure_caption.txt"
+  ],
+  "uncertainty": [
+    "本示例全部输入为虚构合成数据，结论不具备任何真实科学含义",
+    "正态性/方差齐性未检验，t 检验适用性存疑（材料未给出）"
+  ],
+  "created_by": "value-anchor-rd"
+}

@@ -1,0 +1,22 @@
+{
+  "generated_at": "2026-11-24T21:19:40+08:00",
+  "root": "/Users/liuhengshen/Desktop/bhr_product/writing10-v5-5dir/d-contract-guard/skill/examples/failcase/input/materials",
+  "case": "/Users/liuhengshen/Desktop/bhr_product/writing10-v5-5dir/d-contract-guard/skill/examples/failcase/input/case.json",
+  "file_count": 0,
+  "files": [],
+  "missing_referenced": [
+    {
+      "field": "materials",
+      "ref": "notes.md"
+    },
+    {
+      "field": "materials",
+      "ref": "fig1.png"
+    }
+  ],
+  "problems": [
+    "材料目录为空: examples/failcase/input/materials",
+    "case.json 引用缺失: [materials] notes.md",
+    "case.json 引用缺失: [materials] fig1.png"
+  ]
+}

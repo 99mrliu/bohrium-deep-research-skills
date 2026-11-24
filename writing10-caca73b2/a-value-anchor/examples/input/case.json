@@ -1,0 +1,12 @@
+{
+  "case_id": "SYNTH-EXAMPLE-001",
+  "note": "本 case 为合成示例，全部输入数据均为虚构，仅用于演示 value-anchor-rd 技能的接口与流程，不冒充任何正式案例结果。",
+  "output_contract": {
+    "deliverable": "可编辑的结果与讨论章节 Markdown 文稿（全部数字带 [Vnn] 锚点）",
+    "preserved_facts": "不可凭空改变的数字、条件、术语、来源清单",
+    "evidence_map": "关键论断到来源（文件:行/表:行列）的定位映射",
+    "change_log": "修改动作、原因、人工确认项、未解决问题",
+    "status": "partial | complete | failed（诚实状态）"
+  },
+  "materials_dir": "materials/"
+}
