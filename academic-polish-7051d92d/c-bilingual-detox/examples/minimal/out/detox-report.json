@@ -1,0 +1,311 @@
+{
+  "tool": "detox.py",
+  "version": "1.0.0",
+  "command": "lint",
+  "input_file": ".work/en-draft.txt",
+  "pattern_library_size": 45,
+  "sentence_count": 6,
+  "hit_count": 23,
+  "by_category": {
+    "literal-calque": 9,
+    "cliche": 6,
+    "redundant-nominalization": 2,
+    "connector-abuse": 1,
+    "vague-subject": 3,
+    "word-order": 2
+  },
+  "sentences": [
+    {
+      "id": "s0001",
+      "start": 0,
+      "end": 228,
+      "text": "With the increasingly strict emission standards of industrial exhaust gas, the development of highly efficient and stable low-temperature denitration catalysts has become a research hotspot in the field of air pollution control."
+    },
+    {
+      "id": "s0002",
+      "start": 229,
+      "end": 439,
+      "text": "This project intends to use nano titanium dioxide as the carrier, loading manganese-cerium composite oxide, to construct a low-temperature selective catalytic reduction (SCR) catalyst with core-shell structure."
+    },
+    {
+      "id": "s0003",
+      "start": 440,
+      "end": 651,
+      "text": "Through the combination of in-situ infrared spectroscopy and density functional theory calculation, the regulation mechanism of manganese-cerium interface synergy on NH3 adsorption activation will be elucidated."
+    },
+    {
+      "id": "s0004",
+      "start": 652,
+      "end": 835,
+      "text": "In the previous research, MnOx-CeO2/TiO2 catalyst has been prepared, and the NOx conversion rate has reached more than 92% in the temperature window of 150 to 250 degrees Celsius [1]."
+    },
+    {
+      "id": "s0005",
+      "start": 836,
+      "end": 1032,
+      "text": "The similar system reported in reference [2] (2020) is easy to be deactivated in sulfur-containing atmosphere, so this project intends to introduce yttrium doping to improve the sulfur resistance."
+    },
+    {
+      "id": "s0006",
+      "start": 1033,
+      "end": 1217,
+      "text": "The expected results will provide theoretical basis and technical support for diesel vehicle exhaust purification, and have important scientific significance and application prospects."
+    }
+  ],
+  "hits": [
+    {
+      "sentence_id": "s0001",
+      "start": 0,
+      "end": 21,
+      "matched": "With the increasingly",
+      "pattern_id": "LC02",
+      "pattern_name": "with-increasingly",
+      "category": "literal-calque",
+      "suggestion": "'随着日益……' calque. Front the real driver, e.g. 'Stricter emission standards have ...'.",
+      "sentence": "With the increasingly strict emission standards of industrial exhaust gas, the development of highly efficient and stable low-temperature denitration catalysts has become a research hotspot in the field of air pollution control."
+    },
+    {
+      "sentence_id": "s0001",
+      "start": 0,
+      "end": 74,
+      "matched": "With the increasingly strict emission standards of industrial exhaust gas,",
+      "pattern_id": "WO02",
+      "pattern_name": "long-preposed-adverbial",
+      "category": "word-order",
+      "suggestion": "Chinese stacks long adverbials before the subject; English wants the subject early. Front the subject, move the adverbial later or split.",
+      "sentence": "With the increasingly strict emission standards of industrial exhaust gas, the development of highly efficient and stable low-temperature denitration catalysts has become a research hotspot in the field of air pollution control."
+    },
+    {
+      "sentence_id": "s0001",
+      "start": 75,
+      "end": 93,
+      "matched": "the development of",
+      "pattern_id": "RN01",
+      "pattern_name": "the-nominalization-of",
+      "category": "redundant-nominalization",
+      "suggestion": "Nominalization where a verb exists ('the development of X' -> 'developing X' / 'X development' only if technical term). Prefer the verb.",
+      "sentence": "With the increasingly strict emission standards of industrial exhaust gas, the development of highly efficient and stable low-temperature denitration catalysts has become a research hotspot in the field of air pollution control."
+    },
+    {
+      "sentence_id": "s0001",
+      "start": 173,
+      "end": 189,
+      "matched": "research hotspot",
+      "pattern_id": "CL04",
+      "pattern_name": "research-hotspot",
+      "category": "cliche",
+      "suggestion": "'研究热点' boilerplate. Say why the problem matters now, not that it is popular.",
+      "sentence": "With the increasingly strict emission standards of industrial exhaust gas, the development of highly efficient and stable low-temperature denitration catalysts has become a research hotspot in the field of air pollution control."
+    },
+    {
+      "sentence_id": "s0001",
+      "start": 190,
+      "end": 205,
+      "matched": "in the field of",
+      "pattern_id": "CL06",
+      "pattern_name": "in-the-field-of",
+      "category": "cliche",
+      "suggestion": "'在……领域' padding. Usually deletable: 'a priority in air pollution control' not 'in the field of'.",
+      "sentence": "With the increasingly strict emission standards of industrial exhaust gas, the development of highly efficient and stable low-temperature denitration catalysts has become a research hotspot in the field of air pollution control."
+    },
+    {
+      "sentence_id": "s0002",
+      "start": 229,
+      "end": 252,
+      "matched": "This project intends to",
+      "pattern_id": "VS01",
+      "pattern_name": "this-project-intends",
+      "category": "vague-subject",
+      "suggestion": "Projects/papers cannot intend ('本项目拟'). Grant: 'We will / We aim to'. Paper: 'This study investigates X' (verb, not intention) or 'we'.",
+      "sentence": "This project intends to use nano titanium dioxide as the carrier, loading manganese-cerium composite oxide, to construct a low-temperature selective catalytic reduction (SCR) catalyst with core-shell structure."
+    },
+    {
+      "sentence_id": "s0002",
+      "start": 413,
+      "end": 438,
+      "matched": "with core-shell structure",
+      "pattern_id": "LC08",
+      "pattern_name": "with-x-structure",
+      "category": "literal-calque",
+      "suggestion": "'具有……结构' calque ('a catalyst with core-shell structure'). Use a compound modifier: 'a core-shell catalyst'.",
+      "sentence": "This project intends to use nano titanium dioxide as the carrier, loading manganese-cerium composite oxide, to construct a low-temperature selective catalytic reduction (SCR) catalyst with core-shell structure."
+    },
+    {
+      "sentence_id": "s0003",
+      "start": 440,
+      "end": 466,
+      "matched": "Through the combination of",
+      "pattern_id": "LC03",
+      "pattern_name": "through-the-combination-of",
+      "category": "literal-calque",
+      "suggestion": "'通过……相结合' calque. Use 'by combining A with B'.",
+      "sentence": "Through the combination of in-situ infrared spectroscopy and density functional theory calculation, the regulation mechanism of manganese-cerium interface synergy on NH3 adsorption activation will be elucidated."
+    },
+    {
+      "sentence_id": "s0003",
+      "start": 440,
+      "end": 539,
+      "matched": "Through the combination of in-situ infrared spectroscopy and density functional theory calculation,",
+      "pattern_id": "WO02",
+      "pattern_name": "long-preposed-adverbial",
+      "category": "word-order",
+      "suggestion": "Chinese stacks long adverbials before the subject; English wants the subject early. Front the subject, move the adverbial later or split.",
+      "sentence": "Through the combination of in-situ infrared spectroscopy and density functional theory calculation, the regulation mechanism of manganese-cerium interface synergy on NH3 adsorption activation will be elucidated."
+    },
+    {
+      "sentence_id": "s0003",
+      "start": 540,
+      "end": 567,
+      "matched": "the regulation mechanism of",
+      "pattern_id": "LC11",
+      "pattern_name": "the-mechanism-of",
+      "category": "literal-calque",
+      "suggestion": "'……的调控机制' nominal calque. Prefer a verb clause: 'how A regulates B'.",
+      "sentence": "Through the combination of in-situ infrared spectroscopy and density functional theory calculation, the regulation mechanism of manganese-cerium interface synergy on NH3 adsorption activation will be elucidated."
+    },
+    {
+      "sentence_id": "s0003",
+      "start": 632,
+      "end": 650,
+      "matched": "will be elucidated",
+      "pattern_id": "VS02",
+      "pattern_name": "will-be-elucidated",
+      "category": "vague-subject",
+      "suggestion": "Agent-less future passive hides who does the work ('将被阐明'). Grant: 'we will elucidate'; or reorder to make the phenomenon the subject.",
+      "sentence": "Through the combination of in-situ infrared spectroscopy and density functional theory calculation, the regulation mechanism of manganese-cerium interface synergy on NH3 adsorption activation will be elucidated."
+    },
+    {
+      "sentence_id": "s0004",
+      "start": 652,
+      "end": 676,
+      "matched": "In the previous research",
+      "pattern_id": "LC04",
+      "pattern_name": "in-the-previous-research",
+      "category": "literal-calque",
+      "suggestion": "'在前期研究中' calque. Use 'In preliminary work', 'Previously', or 'In our earlier study'.",
+      "sentence": "In the previous research, MnOx-CeO2/TiO2 catalyst has been prepared, and the NOx conversion rate has reached more than 92% in the temperature window of 150 to 250 degrees Celsius [1]."
+    },
+    {
+      "sentence_id": "s0004",
+      "start": 733,
+      "end": 748,
+      "matched": "conversion rate",
+      "pattern_id": "RN04",
+      "pattern_name": "x-rate",
+      "category": "redundant-nominalization",
+      "suggestion": "'转化率' nominalization. Often better as a verb: 'converted 92% of NOx' beats 'the NOx conversion rate reached 92%'.",
+      "sentence": "In the previous research, MnOx-CeO2/TiO2 catalyst has been prepared, and the NOx conversion rate has reached more than 92% in the temperature window of 150 to 250 degrees Celsius [1]."
+    },
+    {
+      "sentence_id": "s0004",
+      "start": 753,
+      "end": 770,
+      "matched": "reached more than",
+      "pattern_id": "LC06",
+      "pattern_name": "reached-more-than",
+      "category": "literal-calque",
+      "suggestion": "'达到……以上' calque. Use 'exceeded X'.",
+      "sentence": "In the previous research, MnOx-CeO2/TiO2 catalyst has been prepared, and the NOx conversion rate has reached more than 92% in the temperature window of 150 to 250 degrees Celsius [1]."
+    },
+    {
+      "sentence_id": "s0004",
+      "start": 782,
+      "end": 803,
+      "matched": "temperature window of",
+      "pattern_id": "LC07",
+      "pattern_name": "temperature-window-of",
+      "category": "literal-calque",
+      "suggestion": "'在……温度窗口内' calque. Use 'across 150-250 °C' or 'between 150 and 250 °C'.",
+      "sentence": "In the previous research, MnOx-CeO2/TiO2 catalyst has been prepared, and the NOx conversion rate has reached more than 92% in the temperature window of 150 to 250 degrees Celsius [1]."
+    },
+    {
+      "sentence_id": "s0004",
+      "start": 815,
+      "end": 830,
+      "matched": "degrees Celsius",
+      "pattern_id": "LC14",
+      "pattern_name": "degrees-celsius-spelled-out",
+      "category": "literal-calque",
+      "suggestion": "Word-by-word rendering of 摄氏度. Use the unit symbol: '250 °C'.",
+      "sentence": "In the previous research, MnOx-CeO2/TiO2 catalyst has been prepared, and the NOx conversion rate has reached more than 92% in the temperature window of 150 to 250 degrees Celsius [1]."
+    },
+    {
+      "sentence_id": "s0005",
+      "start": 888,
+      "end": 901,
+      "matched": "is easy to be",
+      "pattern_id": "LC05",
+      "pattern_name": "is-easy-to-be",
+      "category": "literal-calque",
+      "suggestion": "'易……' calque ('is easy to be deactivated'). Use 'deactivates readily', 'is prone to deactivation'.",
+      "sentence": "The similar system reported in reference [2] (2020) is easy to be deactivated in sulfur-containing atmosphere, so this project intends to introduce yttrium doping to improve the sulfur resistance."
+    },
+    {
+      "sentence_id": "s0005",
+      "start": 945,
+      "end": 954,
+      "matched": ", so this",
+      "pattern_id": "CA07",
+      "pattern_name": "comma-so",
+      "category": "connector-abuse",
+      "suggestion": "Chinese '所以' joins clauses freely; English prefers a full stop, a semicolon, or a 'because'-inversion. Split or restructure.",
+      "sentence": "The similar system reported in reference [2] (2020) is easy to be deactivated in sulfur-containing atmosphere, so this project intends to introduce yttrium doping to improve the sulfur resistance."
+    },
+    {
+      "sentence_id": "s0005",
+      "start": 950,
+      "end": 973,
+      "matched": "this project intends to",
+      "pattern_id": "VS01",
+      "pattern_name": "this-project-intends",
+      "category": "vague-subject",
+      "suggestion": "Projects/papers cannot intend ('本项目拟'). Grant: 'We will / We aim to'. Paper: 'This study investigates X' (verb, not intention) or 'we'.",
+      "sentence": "The similar system reported in reference [2] (2020) is easy to be deactivated in sulfur-containing atmosphere, so this project intends to introduce yttrium doping to improve the sulfur resistance."
+    },
+    {
+      "sentence_id": "s0006",
+      "start": 1059,
+      "end": 1084,
+      "matched": "provide theoretical basis",
+      "pattern_id": "CL07",
+      "pattern_name": "provide-theoretical-basis",
+      "category": "cliche",
+      "suggestion": "'提供理论依据与技术支撑' boilerplate. State the concrete deliverable instead.",
+      "sentence": "The expected results will provide theoretical basis and technical support for diesel vehicle exhaust purification, and have important scientific significance and application prospects."
+    },
+    {
+      "sentence_id": "s0006",
+      "start": 1152,
+      "end": 1190,
+      "matched": "have important scientific significance",
+      "pattern_id": "CL02",
+      "pattern_name": "has-important-significance",
+      "category": "cliche",
+      "suggestion": "'具有重要的科学意义' boilerplate. Show the significance instead: say who can now do what.",
+      "sentence": "The expected results will provide theoretical basis and technical support for diesel vehicle exhaust purification, and have important scientific significance and application prospects."
+    },
+    {
+      "sentence_id": "s0006",
+      "start": 1167,
+      "end": 1216,
+      "matched": "scientific significance and application prospects",
+      "pattern_id": "CL03",
+      "pattern_name": "significance-and-prospects",
+      "category": "cliche",
+      "suggestion": "'科学意义和应用前景' stacked boilerplate. Replace with one concrete expected consequence.",
+      "sentence": "The expected results will provide theoretical basis and technical support for diesel vehicle exhaust purification, and have important scientific significance and application prospects."
+    },
+    {
+      "sentence_id": "s0006",
+      "start": 1195,
+      "end": 1216,
+      "matched": "application prospects",
+      "pattern_id": "CL08",
+      "pattern_name": "application-prospects",
+      "category": "cliche",
+      "suggestion": "'应用前景' boilerplate. Replace with the actual use case and user.",
+      "sentence": "The expected results will provide theoretical basis and technical support for diesel vehicle exhaust purification, and have important scientific significance and application prospects."
+    }
+  ],
+  "caveat": "Pattern hits are heuristic flags for review, not proven errors; zero hits does not prove idiomatic English."
+}

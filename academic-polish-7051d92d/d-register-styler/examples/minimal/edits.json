@@ -1,0 +1,55 @@
+{
+  "source-zh-grant": [
+    {
+      "unit_id": "s0002",
+      "new_text": "团队建立了一套新型水热制备工艺，制备成本显著降低。",
+      "type": "register/colloquial-fix",
+      "reason": "‘搞/挺/特别’为口语表达（lint: gao/ting/tebie），基金申请书须用正式动词与量化程度表述。",
+      "review": {"decision": "approve", "reason": "复核：三个口语词去除后语义保持，限定强度未变，无受保护 token。"}
+    },
+    {
+      "unit_id": "s0003",
+      "new_text": "团队前期成果处于国内先进水平，相关方向研究积累较少，本项目拟开展系统性研究。",
+      "type": "register/depromote",
+      "reason": "‘国际领先/填补空白’为宣传化表述（lint: hype-zh），基金中亦需证据约束，此处无证据故降级。",
+      "review": {"decision": "approve", "reason": "复核：宣传语降级未引入新数据，未改变项目目标。"}
+    },
+    {
+      "unit_id": "s0004",
+      "new_text": "我们预计该工艺可显著缓解催化剂失活问题，并延长循环寿命。",
+      "type": "register/deabsolute",
+      "reason": "‘彻底解决/绝对不会’为无证据绝对化承诺（lint: absolute-zh）；注意：本修改削弱了限定强度，属语域纠偏，在此显式声明。",
+      "review": {"decision": "approve", "reason": "复核：强度变化已在 reason 中显式记录，方向为绝对→概率化，符合基金文体规范。"}
+    },
+    {
+      "unit_id": "s0001",
+      "new_text": "本项目拟解决工业催化剂活性低、寿命短的关键难题，具有重要工程应用价值。",
+      "type": "register/style-tweak",
+      "reason": "演示未复核回退：本条故意缺少有效复核记录，应被 apply-edits 回退（reverted-unreviewed）。",
+      "review": {"decision": "pending", "reason": ""}
+    }
+  ],
+  "source-en-abstract": [
+    {
+      "unit_id": "s0002",
+      "new_text": "It does not rely on centralized scheduling and has been shown to achieve improved throughput across diverse scenarios.",
+      "type": "register/colloquial-fix",
+      "reason": "Contractions (doesn't / it's), 'get improved' and 'a lot of' are colloquial in an English abstract (lint: contraction-nt, contraction-pron, get-pp, a-lot-of).",
+      "review": {"decision": "approve", "reason": "Reviewed: meaning preserved, no quantity or citation touched."}
+    },
+    {
+      "unit_id": "s0003",
+      "new_text": "The approach remains stable under heavy load.",
+      "type": "register/depromote+person-fix",
+      "reason": "First-person 'I really think', hype 'cutting-edge' and absolute 'never' violate abstract register (lint: first-person-I, really, hype-en, always-never).",
+      "review": {"decision": "approve", "reason": "Reviewed: subjective evaluation removed; the stability claim is kept without the absolute 'never'."}
+    },
+    {
+      "unit_id": "s0004",
+      "new_text": "Experiments on three public datasets show a latency reduction compared with the baselines in Figure 2 [7].",
+      "type": "register/style-tweak",
+      "reason": "演示受保护 token 回退：本条故意删除 '3' 与 '12.5%'，应被回退（reverted-protected-token）。",
+      "review": {"decision": "approve", "reason": "Reviewed, but intentionally drops protected tokens to demonstrate the guard."}
+    }
+  ]
+}

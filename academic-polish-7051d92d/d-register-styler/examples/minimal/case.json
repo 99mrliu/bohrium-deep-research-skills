@@ -1,0 +1,16 @@
+{
+  "case_id": "register-demo-001",
+  "synthetic": true,
+  "note": "合成示例 / synthetic demo case. Both source texts are fabricated to implant known register violations; no real manuscript is used.",
+  "inputs": {
+    "task": "task.md",
+    "texts": ["source-zh-grant.txt", "source-en-abstract.txt"]
+  },
+  "output_contract": {
+    "polished_text": "object",
+    "changes": "array",
+    "register_report": "object",
+    "status": "string",
+    "uncertainty": "string"
+  }
+}

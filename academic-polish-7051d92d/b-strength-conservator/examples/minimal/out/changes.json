@@ -1,0 +1,401 @@
+{
+  "applied": [
+    {
+      "applied_text": "Methods: Primary hepatocytes were isolated from wild-type and NLRP3-knockout mice.",
+      "attempted": "Methods: Primary hepatocytes were isolated from wild-type and NLRP3-knockout mice.",
+      "authorized_drift": false,
+      "batch": "grammar-fixes",
+      "drift": {
+        "drifts": [],
+        "verdict": "none"
+      },
+      "orig": "Methods: Primary hepatocytes was isolated from wild-type and NLRP3-knockout mice.",
+      "reason": "subject 'hepatocytes' is plural; 'was' -> 'were'",
+      "review": {
+        "decision": "accept",
+        "reason": "pure agreement fix; no hedging cue touched"
+      },
+      "seq": 1,
+      "similarity": 0.9375,
+      "token_change_rate": 0.0625,
+      "type": "agreement",
+      "unit": "u0003",
+      "warnings": []
+    },
+    {
+      "applied_text": "Cells were exposed to palmitic acid for 24 hours, and inflammasome activation was measured by immunoblotting.",
+      "attempted": "Cells were exposed to palmitic acid for 24 hours, and inflammasome activation was measured by immunoblotting.",
+      "authorized_drift": false,
+      "batch": "grammar-fixes",
+      "drift": {
+        "drifts": [],
+        "verdict": "none"
+      },
+      "orig": "Cells was exposed to palmitic acid for 24 hours, and inflammasome activation were measured by immunoblotting.",
+      "reason": "'Cells was' -> 'Cells were'; 'activation were' -> 'activation was'",
+      "review": {
+        "decision": "accept",
+        "reason": "two agreement fixes; sentence otherwise unchanged"
+      },
+      "seq": 2,
+      "similarity": 0.8889,
+      "token_change_rate": 0.1111,
+      "type": "agreement",
+      "unit": "u0004",
+      "warnings": []
+    },
+    {
+      "applied_text": "In vivo, NLRP3-deficient mice showed reduced liver fibrosis after eight weeks of high-fat feeding.",
+      "attempted": "In vivo, NLRP3-deficient mice showed reduced liver fibrosis after eight weeks of high-fat feeding.",
+      "authorized_drift": false,
+      "batch": "grammar-fixes",
+      "drift": {
+        "drifts": [],
+        "verdict": "none"
+      },
+      "orig": "In vivo, NLRP3-deficient mice shows reduced liver fibrosis after eight weeks of high-fat feeding.",
+      "reason": "'mice shows' -> 'mice showed' (past tense, plural subject)",
+      "review": {
+        "decision": "accept",
+        "reason": "tense fix only; 'in vivo' scope condition preserved"
+      },
+      "seq": 3,
+      "similarity": 0.95,
+      "token_change_rate": 0.05,
+      "type": "tense",
+      "unit": "u0006",
+      "warnings": []
+    },
+    {
+      "applied_text": "The treatment may improve insulin sensitivity in some animals, although the effect did not reach statistical significance.",
+      "attempted": "The treatment may improve insulin sensitivity in some animals, although the effect did not reach statistical significance.",
+      "authorized_drift": false,
+      "batch": "grammar-fixes",
+      "drift": {
+        "drifts": [],
+        "verdict": "none"
+      },
+      "orig": "The treatment may improves insulin sensitivity in some animals, although the effect did not reach statistical significance.",
+      "reason": "modal 'may' requires bare infinitive: 'improves' -> 'improve'",
+      "review": {
+        "decision": "accept",
+        "reason": "grammar fix; hedge 'may', quantifier 'some', negation and scope all preserved"
+      },
+      "seq": 4,
+      "similarity": 0.9474,
+      "token_change_rate": 0.0526,
+      "type": "grammar",
+      "unit": "u0007",
+      "warnings": []
+    },
+    {
+      "applied_text": "There are several pieces of evidence that oxidative stress amplifies inflammasome signaling in vitro.",
+      "attempted": "There are several pieces of evidence that oxidative stress amplifies inflammasome signaling in vitro.",
+      "authorized_drift": false,
+      "batch": "grammar-fixes",
+      "drift": {
+        "drifts": [],
+        "verdict": "none"
+      },
+      "orig": "There is several evidences that oxidative stress amplify inflammasome signaling in vitro.",
+      "reason": "'There is several evidences' -> 'There are several pieces of evidence'; 'stress amplify' -> 'stress amplifies'",
+      "review": {
+        "decision": "accept",
+        "reason": "countability and agreement fixes; quantifier 'several' and 'in vitro' preserved"
+      },
+      "seq": 5,
+      "similarity": 0.7143,
+      "token_change_rate": 0.2857,
+      "type": "grammar",
+      "unit": "u0009",
+      "warnings": []
+    },
+    {
+      "applied_text": "Our findings suggest that NLRP3 contributes to liver injury under these conditions.",
+      "attempted": "Our findings suggest that NLRP3 contributes to liver injury under these conditions.",
+      "authorized_drift": false,
+      "batch": "grammar-fixes",
+      "drift": {
+        "drifts": [],
+        "verdict": "none"
+      },
+      "orig": "Our findings suggests that NLRP3 contribute to liver injury under these conditions.",
+      "reason": "'findings suggests' -> 'findings suggest'; 'NLRP3 contribute' -> 'NLRP3 contributes'",
+      "review": {
+        "decision": "accept",
+        "reason": "agreement fixes; hedge 'suggest' and scope condition preserved"
+      },
+      "seq": 6,
+      "similarity": 0.8462,
+      "token_change_rate": 0.1538,
+      "type": "agreement",
+      "unit": "u0010",
+      "warnings": []
+    },
+    {
+      "applied_text": "These data may have implications for the design of future therapeutic strategies.",
+      "attempted": "These data may have implications for the design of future therapeutic strategies.",
+      "authorized_drift": false,
+      "batch": "grammar-fixes",
+      "drift": {
+        "drifts": [],
+        "verdict": "none"
+      },
+      "orig": "These data may has implications for the design of future therapeutic strategies.",
+      "reason": "modal 'may' requires bare infinitive: 'has' -> 'have'",
+      "review": {
+        "decision": "accept",
+        "reason": "grammar fix; hedge 'may' preserved"
+      },
+      "seq": 7,
+      "similarity": 0.9231,
+      "token_change_rate": 0.0769,
+      "type": "grammar",
+      "unit": "u0011",
+      "warnings": []
+    },
+    {
+      "applied_text": "Conclusion: Further studies are needed to confirm these observations in human samples.",
+      "attempted": "Conclusion: Further studies are needed to confirm these observations in human samples.",
+      "authorized_drift": false,
+      "batch": "grammar-fixes",
+      "drift": {
+        "drifts": [],
+        "verdict": "none"
+      },
+      "orig": "Conclusion: Further studies is needed to confirm these observations in human samples.",
+      "reason": "'studies is' -> 'studies are'",
+      "review": {
+        "decision": "accept",
+        "reason": "agreement fix; 'in human samples' scope preserved"
+      },
+      "seq": 8,
+      "similarity": 0.9286,
+      "token_change_rate": 0.0714,
+      "type": "agreement",
+      "unit": "u0012",
+      "warnings": []
+    },
+    {
+      "applied_text": "This work could open new directions for the design of future therapies.",
+      "attempted": "This work could open new directions for the design of future therapies.",
+      "authorized_drift": false,
+      "batch": "adversarial",
+      "drift": {
+        "drifts": [],
+        "verdict": "none"
+      },
+      "orig": "These data may have implications for the design of future therapeutic strategies.",
+      "reason": "recast the closing sentence for flow while keeping the hedged modality",
+      "review": {
+        "decision": "accept",
+        "reason": "keeps a level-0 hedge ('could'), no quantifier/negation/causality/scope change"
+      },
+      "seq": 5,
+      "similarity": 0.4615,
+      "token_change_rate": 0.5385,
+      "type": "clarity-restructure",
+      "unit": "u0011",
+      "warnings": [
+        "heavy_rewrite"
+      ]
+    },
+    {
+      "applied_text": "Our findings demonstrate that NLRP3 contributes to liver injury under these conditions.",
+      "attempted": "Our findings demonstrate that NLRP3 contributes to liver injury under these conditions.",
+      "authorized_drift": true,
+      "batch": "adversarial",
+      "drift": {
+        "drifts": [
+          {
+            "direction": "level-0-to-2",
+            "evidence": {
+              "orig": {
+                "suggest": 0
+              },
+              "rev": {
+                "demonstrate": 2
+              }
+            },
+            "kind": "strengthened"
+          }
+        ],
+        "verdict": "strengthened"
+      },
+      "orig": "Our findings suggest that NLRP3 contributes to liver injury under these conditions.",
+      "reason": "user asked to align claim strength with the confirmatory knockout data",
+      "review": {
+        "decision": "accept",
+        "reason": "strength change explicitly requested by the user"
+      },
+      "seq": 6,
+      "similarity": 0.9231,
+      "strength_change": {
+        "authorized_by": "user",
+        "explanation": "User instructed: align claim strength with the confirmatory knockout data (suggest -> demonstrate)."
+      },
+      "token_change_rate": 0.0769,
+      "type": "word-choice",
+      "unit": "u0010",
+      "warnings": []
+    }
+  ],
+  "rejected": [],
+  "reverted": [
+    {
+      "attempted": "The treatment improves insulin sensitivity in all animals, although the effect was significant.",
+      "batch": "adversarial",
+      "detail": "strength drift 'negation-changed' without authorization (strength_change.authorized_by task|user + explanation); edit reverted",
+      "drift": {
+        "drifts": [
+          {
+            "direction": "negation-set-changed",
+            "evidence": {
+              "orig": [
+                "not"
+              ],
+              "rev": []
+            },
+            "kind": "negation-changed"
+          },
+          {
+            "direction": "level-0-to-2",
+            "evidence": {
+              "orig": {
+                "may": 0
+              },
+              "rev": {}
+            },
+            "kind": "strengthened"
+          },
+          {
+            "direction": "quantifier-rank-2-to-5",
+            "evidence": {
+              "orig": {
+                "some": 2
+              },
+              "rev": {
+                "all": 5
+              }
+            },
+            "kind": "scope-broadened"
+          }
+        ],
+        "verdict": "negation-changed"
+      },
+      "gate": "strength-gate",
+      "orig": "The treatment may improve insulin sensitivity in some animals, although the effect did not reach statistical significance.",
+      "reason": "make the sentence read more fluently and confidently",
+      "review": {
+        "decision": "accept",
+        "reason": "reads better"
+      },
+      "seq": 1,
+      "type": "word-choice",
+      "unit": "u0007"
+    },
+    {
+      "attempted": "Biomarker Y causes disease severity.",
+      "batch": "adversarial",
+      "detail": "strength drift 'causality-changed' without authorization (strength_change.authorized_by task|user + explanation); edit reverted",
+      "drift": {
+        "drifts": [
+          {
+            "direction": "correlational-to-causal",
+            "evidence": {
+              "orig": {
+                "causal_hits": [],
+                "classes": [
+                  "correlational"
+                ],
+                "correlational_hits": [
+                  "is associated with",
+                  "associated with"
+                ]
+              },
+              "rev": {
+                "causal_hits": [
+                  "causes"
+                ],
+                "classes": [
+                  "causal"
+                ],
+                "correlational_hits": []
+              }
+            },
+            "kind": "causality-changed"
+          },
+          {
+            "direction": "scope-condition-removed",
+            "evidence": {
+              "orig": [
+                "in this cohort"
+              ],
+              "removed": [
+                "in this cohort"
+              ],
+              "rev": []
+            },
+            "kind": "scope-broadened"
+          }
+        ],
+        "verdict": "causality-changed"
+      },
+      "gate": "strength-gate",
+      "orig": "Biomarker Y is associated with disease severity in this cohort.",
+      "reason": "more direct phrasing",
+      "review": {
+        "decision": "accept",
+        "reason": "punchier"
+      },
+      "seq": 2,
+      "type": "word-choice",
+      "unit": "u0008"
+    },
+    {
+      "attempted": "There are several pieces of evidence that oxidative stress amplifies inflammasome signaling.",
+      "batch": "adversarial",
+      "detail": "strength drift 'scope-broadened' without authorization (strength_change.authorized_by task|user + explanation); edit reverted",
+      "drift": {
+        "drifts": [
+          {
+            "direction": "scope-condition-removed",
+            "evidence": {
+              "orig": [
+                "in vitro"
+              ],
+              "removed": [
+                "in vitro"
+              ],
+              "rev": []
+            },
+            "kind": "scope-broadened"
+          }
+        ],
+        "verdict": "scope-broadened"
+      },
+      "gate": "strength-gate",
+      "orig": "There are several pieces of evidence that oxidative stress amplifies inflammasome signaling in vitro.",
+      "reason": "shorter is cleaner",
+      "review": {
+        "decision": "accept",
+        "reason": "concise"
+      },
+      "seq": 3,
+      "type": "concision",
+      "unit": "u0009"
+    },
+    {
+      "attempted": "Inflammation plays a central role in the progression of metabolic liver disease, but the underlying mechanisms remain poorly understood.",
+      "batch": "adversarial",
+      "detail": "missing or incomplete review record (decision + reason required); edit reverted",
+      "gate": "review-gate",
+      "orig": "Background: Inflammation is thought to contribute to the progression of metabolic liver disease, but the underlying mechanisms remain poorly understood.",
+      "reason": "stronger opening",
+      "review": null,
+      "seq": 4,
+      "type": "register",
+      "unit": "u0001"
+    }
+  ]
+}

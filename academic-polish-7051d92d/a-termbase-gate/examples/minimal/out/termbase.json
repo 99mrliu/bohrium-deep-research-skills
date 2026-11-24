@@ -1,0 +1,79 @@
+{
+  "tool": "termbase.py lock",
+  "version": 1,
+  "entries": [
+    {
+      "canonical": "Li-ion battery",
+      "abbrev": "LIB",
+      "variants": [
+        "Li-ion batteries",
+        "Li-ion cell",
+        "Li-ion cells",
+        "Li-ion",
+        "LIBs"
+      ],
+      "banned": [
+        "Lithium-ion",
+        "Lithium-ion battery",
+        "Lithium-ion batteries",
+        "Lithium-ion cell",
+        "Lithium-ion cells"
+      ],
+      "first_use_policy": "define_at_first_use",
+      "origin": "glossary+confirmed",
+      "note": "Journal style mandates the hyphenated short form 'Li-ion'.",
+      "id": "t0001"
+    },
+    {
+      "canonical": "electrochemical impedance spectroscopy",
+      "abbrev": "EIS",
+      "variants": [],
+      "banned": [
+        "EIS spectroscopy",
+        "electrochemical impedance spectra"
+      ],
+      "first_use_policy": "define_at_first_use",
+      "origin": "glossary+confirmed",
+      "note": "Must be spelled out and parenthesized at first use.",
+      "id": "t0002"
+    },
+    {
+      "canonical": "solid electrolyte interphase",
+      "abbrev": "SEI",
+      "variants": [],
+      "banned": [
+        "solid-electrolyte interphase",
+        "solid electrolyte interface"
+      ],
+      "first_use_policy": "define_at_first_use",
+      "origin": "glossary+confirmed",
+      "note": "No hyphen between 'solid' and 'electrolyte'.",
+      "id": "t0003"
+    },
+    {
+      "canonical": "atomic layer deposition",
+      "abbrev": "ALD",
+      "variants": [],
+      "banned": [],
+      "first_use_policy": "define_at_first_use",
+      "origin": "glossary+confirmed",
+      "note": "",
+      "id": "t0004"
+    },
+    {
+      "canonical": "LiNi0.8Co0.1Mn0.1O2",
+      "abbrev": "NCM811",
+      "variants": [],
+      "banned": [],
+      "first_use_policy": "define_at_first_use",
+      "origin": "glossary+confirmed",
+      "note": "Cathode active material; formula is the canonical form.",
+      "id": "t0005"
+    }
+  ],
+  "conflicts": [],
+  "summary": {
+    "entry_count": 5,
+    "conflict_count": 0
+  }
+}

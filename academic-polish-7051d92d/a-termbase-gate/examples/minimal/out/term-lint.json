@@ -1,0 +1,64 @@
+{
+  "tool": "termbase.py lint",
+  "source": "out/polished.md",
+  "termbase": "out/termbase.json",
+  "findings": [
+    {
+      "id": "f0001",
+      "severity": "warning",
+      "type": "abbrev_defined_but_unused",
+      "term_id": "t0001",
+      "surface": "LIB",
+      "expected": "Li-ion battery",
+      "message": "abbreviation 'LIB' is defined but never used afterwards; consider dropping the abbreviation",
+      "locations": [
+        {
+          "line": 5,
+          "column": 19,
+          "section": "Introduction",
+          "context": "Li-ion batteries (LIBs) are widely used in portable electronics and electric vehicles. The capacity "
+        }
+      ]
+    },
+    {
+      "id": "f0002",
+      "severity": "warning",
+      "type": "abbrev_defined_but_unused",
+      "term_id": "t0005",
+      "surface": "NCM811",
+      "expected": "LiNi0.8Co0.1Mn0.1O2",
+      "message": "abbreviation 'NCM811' is defined but never used afterwards; consider dropping the abbreviation",
+      "locations": [
+        {
+          "line": 9,
+          "column": 60,
+          "section": "Methods",
+          "context": "Li-ion coin cells were assembled with LiNi0.8Co0.1Mn0.1O2 (NCM811) cathodes. Al2O3 coatings of 2 nm "
+        }
+      ]
+    },
+    {
+      "id": "f0003",
+      "severity": "warning",
+      "type": "abbrev_defined_but_unused",
+      "term_id": "t0004",
+      "surface": "ALD",
+      "expected": "atomic layer deposition",
+      "message": "abbreviation 'ALD' is defined but never used afterwards; consider dropping the abbreviation",
+      "locations": [
+        {
+          "line": 9,
+          "column": 144,
+          "section": "Methods",
+          "context": "Li-ion coin cells were assembled with LiNi0.8Co0.1Mn0.1O2 (NCM811) cathodes. Al2O3 coatings of 2 nm "
+        }
+      ]
+    }
+  ],
+  "summary": {
+    "errors": 0,
+    "warnings": 3,
+    "entries_checked": 5,
+    "gate": "PASS"
+  }
+}

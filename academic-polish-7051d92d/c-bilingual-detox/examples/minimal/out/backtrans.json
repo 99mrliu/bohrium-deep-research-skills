@@ -1,0 +1,65 @@
+{
+  "tool": "align.py",
+  "version": "1.0.0",
+  "command": "backtrans-template",
+  "alignment_file": "out/alignment.json",
+  "instructions": {
+    "who_fills": "The Agent (LLM), never this script. For each pair, translate en_text back into Chinese WITHOUT looking at zh_text, then compare.",
+    "equivalence_labels": {
+      "equivalent": "same facts, same strength; wording may differ",
+      "minor-difference": "meaning preserved but strength/detail shifted; record it in note",
+      "mismatch": "fact, number, negation or strength changed; pair must be fixed"
+    },
+    "after_filling": "Run: align.py backtrans-check --backtrans <this file> --out <json>"
+  },
+  "pairs": [
+    {
+      "pair_id": "p0001",
+      "zh_text": "随着工业废气排放标准日益严格，开发高效、稳定的低温脱硝催化剂已成为大气污染控制领域的研究热点。",
+      "en_text": "Stricter industrial emission standards have made efficient and stable low-temperature denitration catalysts a priority for air pollution control.",
+      "back_translation": "更严格的工业排放标准使高效、稳定的低温脱硝催化剂成为大气污染控制的优先方向。",
+      "equivalence": "equivalent",
+      "note": ""
+    },
+    {
+      "pair_id": "p0002",
+      "zh_text": "本项目拟以纳米二氧化钛为载体，负载锰铈复合氧化物，构建具有核壳结构的低温选择性催化还原（SCR）催化剂。",
+      "en_text": "We will load manganese-cerium mixed oxide onto nanoscale titania to construct a core-shell catalyst for low-temperature selective catalytic reduction (SCR).",
+      "back_translation": "我们将锰铈复合氧化物负载于纳米二氧化钛上，构建用于低温选择性催化还原（SCR）的核壳催化剂。",
+      "equivalence": "equivalent",
+      "note": ""
+    },
+    {
+      "pair_id": "p0003",
+      "zh_text": "通过原位红外光谱与密度泛函理论计算相结合，阐明锰铈界面协同作用对NH3吸附活化的调控机制。",
+      "en_text": "We will combine in situ infrared spectroscopy with density functional theory calculations to clarify how manganese-cerium interfacial synergy regulates NH3 adsorption and activation.",
+      "back_translation": "我们将结合原位红外光谱与密度泛函理论计算，阐明锰铈界面协同作用如何调控NH3的吸附与活化。",
+      "equivalence": "equivalent",
+      "note": ""
+    },
+    {
+      "pair_id": "p0004",
+      "zh_text": "前期研究已制备出MnOx-CeO2/TiO2催化剂，在150至250摄氏度窗口内NOx转化率达到92%以上[1]。",
+      "en_text": "In preliminary work, our MnOx-CeO2/TiO2 catalyst converted more than 92% of NOx across the 150-250 °C window [1].",
+      "back_translation": "在前期工作中，我们的MnOx-CeO2/TiO2催化剂在150-250 °C窗口内实现了超过92%的NOx转化[1]。",
+      "equivalence": "equivalent",
+      "note": ""
+    },
+    {
+      "pair_id": "p0005",
+      "zh_text": "文献[2]（2020年）报道的同类体系在含硫气氛中易失活，本项目拟引入钇掺杂以提升抗硫性能。",
+      "en_text": "The analogous system reported in reference [2] (2020) deactivates readily in sulfur-containing atmospheres; we will therefore introduce yttrium doping to improve sulfur resistance.",
+      "back_translation": "文献[2]（2020）报道的类似体系在含硫气氛中容易失活；因此我们将引入钇掺杂以提高抗硫性能。",
+      "equivalence": "equivalent",
+      "note": ""
+    },
+    {
+      "pair_id": "p0006",
+      "zh_text": "预期成果将为柴油车尾气净化提供理论依据与技术支撑，具有重要的科学意义和应用前景。",
+      "en_text": "The expected outcomes will inform diesel vehicle exhaust purification and offer both mechanistic insight and application value.",
+      "back_translation": "预期成果将为柴油车尾气净化提供参考，兼具机理认识与应用价值。",
+      "equivalence": "minor-difference",
+      "note": "原文套话'理论依据与技术支撑/重要的科学意义和应用前景'被有意弱化为'机理认识与应用价值'，限定强度略降；需作者确认可接受。"
+    }
+  ]
+}

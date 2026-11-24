@@ -1,0 +1,71 @@
+{
+  "tool": "align.py",
+  "version": "1.0.0",
+  "command": "coverage",
+  "alignment_file": "out/alignment.json",
+  "checks": [
+    "numbers",
+    "units",
+    "years",
+    "latin_proper_nouns",
+    "citations"
+  ],
+  "pairs": [
+    {
+      "pair_id": "p0001",
+      "zh_id": "s0001",
+      "en_id": "s0001",
+      "status": "pass",
+      "mismatches": {},
+      "unverified": []
+    },
+    {
+      "pair_id": "p0002",
+      "zh_id": "s0002",
+      "en_id": "s0002",
+      "status": "pass",
+      "mismatches": {},
+      "unverified": []
+    },
+    {
+      "pair_id": "p0003",
+      "zh_id": "s0003",
+      "en_id": "s0003",
+      "status": "pass",
+      "mismatches": {},
+      "unverified": []
+    },
+    {
+      "pair_id": "p0004",
+      "zh_id": "s0004",
+      "en_id": "s0004",
+      "status": "pass",
+      "mismatches": {},
+      "unverified": []
+    },
+    {
+      "pair_id": "p0005",
+      "zh_id": "s0005",
+      "en_id": "s0005",
+      "status": "pass",
+      "mismatches": {},
+      "unverified": []
+    },
+    {
+      "pair_id": "p0006",
+      "zh_id": "s0006",
+      "en_id": "s0006",
+      "status": "pass",
+      "mismatches": {},
+      "unverified": []
+    }
+  ],
+  "summary": {
+    "pair_count": 6,
+    "passed": 6,
+    "failed": 0,
+    "all_conserved": true,
+    "gate_rule": "If all_conserved is false, the failed pairs must be fixed or explicitly justified, and the overall task status MUST NOT be reported as success."
+  },
+  "caveat": "Surface conservation only: proves no number/unit/year/name/citation was dropped or added. Does NOT prove faithful meaning or idiomatic English."
+}

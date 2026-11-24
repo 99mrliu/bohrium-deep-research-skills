@@ -1,0 +1,287 @@
+{
+  "entries": [
+    {
+      "authorized_drift": false,
+      "batch": "adversarial",
+      "drifts": [],
+      "gate": "review-gate",
+      "orig": "Background: Inflammation is thought to contribute to the progression of metabolic liver disease, but the underlying mechanisms remain poorly understood.",
+      "rev": "Inflammation plays a central role in the progression of metabolic liver disease, but the underlying mechanisms remain poorly understood.",
+      "status": "reverted",
+      "strength_change": null,
+      "unit": "u0001",
+      "verdict": null
+    },
+    {
+      "authorized_drift": false,
+      "batch": "grammar-fixes",
+      "drifts": [],
+      "gate": null,
+      "orig": "Methods: Primary hepatocytes was isolated from wild-type and NLRP3-knockout mice.",
+      "rev": "Methods: Primary hepatocytes were isolated from wild-type and NLRP3-knockout mice.",
+      "status": "applied",
+      "strength_change": null,
+      "unit": "u0003",
+      "verdict": "none"
+    },
+    {
+      "authorized_drift": false,
+      "batch": "grammar-fixes",
+      "drifts": [],
+      "gate": null,
+      "orig": "Cells was exposed to palmitic acid for 24 hours, and inflammasome activation were measured by immunoblotting.",
+      "rev": "Cells were exposed to palmitic acid for 24 hours, and inflammasome activation was measured by immunoblotting.",
+      "status": "applied",
+      "strength_change": null,
+      "unit": "u0004",
+      "verdict": "none"
+    },
+    {
+      "authorized_drift": false,
+      "batch": "grammar-fixes",
+      "drifts": [],
+      "gate": null,
+      "orig": "In vivo, NLRP3-deficient mice shows reduced liver fibrosis after eight weeks of high-fat feeding.",
+      "rev": "In vivo, NLRP3-deficient mice showed reduced liver fibrosis after eight weeks of high-fat feeding.",
+      "status": "applied",
+      "strength_change": null,
+      "unit": "u0006",
+      "verdict": "none"
+    },
+    {
+      "authorized_drift": false,
+      "batch": "adversarial",
+      "drifts": [
+        {
+          "direction": "negation-set-changed",
+          "evidence": {
+            "orig": [
+              "not"
+            ],
+            "rev": []
+          },
+          "kind": "negation-changed"
+        },
+        {
+          "direction": "level-0-to-2",
+          "evidence": {
+            "orig": {
+              "may": 0
+            },
+            "rev": {}
+          },
+          "kind": "strengthened"
+        },
+        {
+          "direction": "quantifier-rank-2-to-5",
+          "evidence": {
+            "orig": {
+              "some": 2
+            },
+            "rev": {
+              "all": 5
+            }
+          },
+          "kind": "scope-broadened"
+        }
+      ],
+      "gate": "strength-gate",
+      "orig": "The treatment may improve insulin sensitivity in some animals, although the effect did not reach statistical significance.",
+      "rev": "The treatment improves insulin sensitivity in all animals, although the effect was significant.",
+      "status": "reverted",
+      "strength_change": null,
+      "unit": "u0007",
+      "verdict": "negation-changed"
+    },
+    {
+      "authorized_drift": false,
+      "batch": "grammar-fixes",
+      "drifts": [],
+      "gate": null,
+      "orig": "The treatment may improves insulin sensitivity in some animals, although the effect did not reach statistical significance.",
+      "rev": "The treatment may improve insulin sensitivity in some animals, although the effect did not reach statistical significance.",
+      "status": "applied",
+      "strength_change": null,
+      "unit": "u0007",
+      "verdict": "none"
+    },
+    {
+      "authorized_drift": false,
+      "batch": "adversarial",
+      "drifts": [
+        {
+          "direction": "correlational-to-causal",
+          "evidence": {
+            "orig": {
+              "causal_hits": [],
+              "classes": [
+                "correlational"
+              ],
+              "correlational_hits": [
+                "is associated with",
+                "associated with"
+              ]
+            },
+            "rev": {
+              "causal_hits": [
+                "causes"
+              ],
+              "classes": [
+                "causal"
+              ],
+              "correlational_hits": []
+            }
+          },
+          "kind": "causality-changed"
+        },
+        {
+          "direction": "scope-condition-removed",
+          "evidence": {
+            "orig": [
+              "in this cohort"
+            ],
+            "removed": [
+              "in this cohort"
+            ],
+            "rev": []
+          },
+          "kind": "scope-broadened"
+        }
+      ],
+      "gate": "strength-gate",
+      "orig": "Biomarker Y is associated with disease severity in this cohort.",
+      "rev": "Biomarker Y causes disease severity.",
+      "status": "reverted",
+      "strength_change": null,
+      "unit": "u0008",
+      "verdict": "causality-changed"
+    },
+    {
+      "authorized_drift": false,
+      "batch": "adversarial",
+      "drifts": [
+        {
+          "direction": "scope-condition-removed",
+          "evidence": {
+            "orig": [
+              "in vitro"
+            ],
+            "removed": [
+              "in vitro"
+            ],
+            "rev": []
+          },
+          "kind": "scope-broadened"
+        }
+      ],
+      "gate": "strength-gate",
+      "orig": "There are several pieces of evidence that oxidative stress amplifies inflammasome signaling in vitro.",
+      "rev": "There are several pieces of evidence that oxidative stress amplifies inflammasome signaling.",
+      "status": "reverted",
+      "strength_change": null,
+      "unit": "u0009",
+      "verdict": "scope-broadened"
+    },
+    {
+      "authorized_drift": false,
+      "batch": "grammar-fixes",
+      "drifts": [],
+      "gate": null,
+      "orig": "There is several evidences that oxidative stress amplify inflammasome signaling in vitro.",
+      "rev": "There are several pieces of evidence that oxidative stress amplifies inflammasome signaling in vitro.",
+      "status": "applied",
+      "strength_change": null,
+      "unit": "u0009",
+      "verdict": "none"
+    },
+    {
+      "authorized_drift": true,
+      "batch": "adversarial",
+      "drifts": [
+        {
+          "direction": "level-0-to-2",
+          "evidence": {
+            "orig": {
+              "suggest": 0
+            },
+            "rev": {
+              "demonstrate": 2
+            }
+          },
+          "kind": "strengthened"
+        }
+      ],
+      "gate": null,
+      "orig": "Our findings suggest that NLRP3 contributes to liver injury under these conditions.",
+      "rev": "Our findings demonstrate that NLRP3 contributes to liver injury under these conditions.",
+      "status": "applied",
+      "strength_change": {
+        "authorized_by": "user",
+        "explanation": "User instructed: align claim strength with the confirmatory knockout data (suggest -> demonstrate)."
+      },
+      "unit": "u0010",
+      "verdict": "strengthened"
+    },
+    {
+      "authorized_drift": false,
+      "batch": "grammar-fixes",
+      "drifts": [],
+      "gate": null,
+      "orig": "Our findings suggests that NLRP3 contribute to liver injury under these conditions.",
+      "rev": "Our findings suggest that NLRP3 contributes to liver injury under these conditions.",
+      "status": "applied",
+      "strength_change": null,
+      "unit": "u0010",
+      "verdict": "none"
+    },
+    {
+      "authorized_drift": false,
+      "batch": "adversarial",
+      "drifts": [],
+      "gate": null,
+      "orig": "These data may have implications for the design of future therapeutic strategies.",
+      "rev": "This work could open new directions for the design of future therapies.",
+      "status": "applied",
+      "strength_change": null,
+      "unit": "u0011",
+      "verdict": "none"
+    },
+    {
+      "authorized_drift": false,
+      "batch": "grammar-fixes",
+      "drifts": [],
+      "gate": null,
+      "orig": "These data may has implications for the design of future therapeutic strategies.",
+      "rev": "These data may have implications for the design of future therapeutic strategies.",
+      "status": "applied",
+      "strength_change": null,
+      "unit": "u0011",
+      "verdict": "none"
+    },
+    {
+      "authorized_drift": false,
+      "batch": "grammar-fixes",
+      "drifts": [],
+      "gate": null,
+      "orig": "Conclusion: Further studies is needed to confirm these observations in human samples.",
+      "rev": "Conclusion: Further studies are needed to confirm these observations in human samples.",
+      "status": "applied",
+      "strength_change": null,
+      "unit": "u0012",
+      "verdict": "none"
+    }
+  ],
+  "summary": {
+    "authorized_drifts": 1,
+    "n_edits_audited": 14,
+    "verdict_counts": {
+      "causality-changed": 1,
+      "negation-changed": 1,
+      "none": 9,
+      "review-gate": 1,
+      "scope-broadened": 1,
+      "strengthened": 1
+    }
+  },
+  "tool": "strength.py (heuristic cue lexicons; a 'none' verdict does not prove semantic equivalence)"
+}

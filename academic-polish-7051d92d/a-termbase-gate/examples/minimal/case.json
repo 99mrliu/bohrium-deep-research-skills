@@ -1,0 +1,65 @@
+{
+  "case_id": "synthetic-minimal-termbase-001",
+  "synthetic": true,
+  "title": "Synthetic minimal example: interface engineering of Li-ion battery cathodes",
+  "note": "Synthetic example / 合成示例, not a formal evaluation case.",
+  "materials": {
+    "source_file": "source.md",
+    "style_notes": "Short-communication register for an electrochemistry journal; keep sentences concise and terminology uniform.",
+    "glossary": {
+      "entries": [
+        {
+          "canonical": "Li-ion battery",
+          "abbrev": "LIB",
+          "variants": ["Li-ion batteries", "Li-ion cell", "Li-ion cells", "Li-ion", "LIBs"],
+          "banned": ["Lithium-ion", "Lithium-ion battery", "Lithium-ion batteries", "Lithium-ion cell", "Lithium-ion cells"],
+          "first_use_policy": "define_at_first_use",
+          "note": "Journal style mandates the hyphenated short form 'Li-ion'."
+        },
+        {
+          "canonical": "electrochemical impedance spectroscopy",
+          "abbrev": "EIS",
+          "variants": [],
+          "banned": ["EIS spectroscopy", "electrochemical impedance spectra"],
+          "first_use_policy": "define_at_first_use",
+          "note": "Must be spelled out and parenthesized at first use."
+        },
+        {
+          "canonical": "solid electrolyte interphase",
+          "abbrev": "SEI",
+          "variants": [],
+          "banned": ["solid-electrolyte interphase", "solid electrolyte interface"],
+          "first_use_policy": "define_at_first_use",
+          "note": "No hyphen between 'solid' and 'electrolyte'."
+        },
+        {
+          "canonical": "atomic layer deposition",
+          "abbrev": "ALD",
+          "variants": [],
+          "banned": [],
+          "first_use_policy": "define_at_first_use",
+          "note": ""
+        },
+        {
+          "canonical": "LiNi0.8Co0.1Mn0.1O2",
+          "abbrev": "NCM811",
+          "variants": [],
+          "banned": [],
+          "first_use_policy": "define_at_first_use",
+          "note": "Cathode active material; formula is the canonical form."
+        }
+      ]
+    }
+  },
+  "output_contract": {
+    "polished_text": "string",
+    "changes": "array",
+    "glossary": "object",
+    "consistency_report": {
+      "report_markdown": "string",
+      "finding_count": "integer"
+    },
+    "status": "string",
+    "uncertainty": "string"
+  }
+}

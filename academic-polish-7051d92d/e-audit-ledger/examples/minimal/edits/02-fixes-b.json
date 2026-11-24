@@ -1,0 +1,53 @@
+{
+  "batch": "02-fixes-b",
+  "edits": [
+    {
+      "sid": "s0005",
+      "original": "We did a bunch of tests to check whether the treatment worked.",
+      "revised": "We performed a series of assays to determine whether the treatment was effective.",
+      "types": ["register"],
+      "reason": "'did a bunch of tests' and 'worked' are colloquial; they are replaced with formal academic equivalents.",
+      "basis": "Academic register guideline: avoid colloquial quantifiers ('a bunch of') and vague verbs ('worked')."
+    },
+    {
+      "sid": "s0006",
+      "original": "These results prove that the new protocol is perfect for all cell types.",
+      "revised": "These results suggest that the new protocol is effective for the cell types tested.",
+      "types": ["hedging"],
+      "reason": "'prove' and 'perfect for all cell types' claim more than the data support; the claim is hedged to match the evidence scope.",
+      "basis": "Hedging guideline: claim strength must match the strength and scope of the evidence."
+    },
+    {
+      "sid": "s0007",
+      "original": "Due to the fact that the signal was weak at this point in time, the exposure time was increased to 30 s.",
+      "revised": "Because the signal was weak, the exposure time was increased to 30 s.",
+      "types": ["conciseness"],
+      "reason": "'Due to the fact that' and 'at this point in time' are redundant wordy phrases replaced by concise equivalents without meaning change.",
+      "basis": "Conciseness rule: replace multi-word connectives with single-word equivalents when meaning is unchanged."
+    },
+    {
+      "sid": "s0008",
+      "original": "The samples were heated to 95 °C for 10 min then cooled on ice.",
+      "revised": "The samples were heated to 95 °C for 10 min, then cooled on ice.",
+      "types": ["punctuation"],
+      "reason": "A comma is required before 'then' when it links two sequential actions in one sentence.",
+      "basis": "Comma rule: use a comma before the conjunctive adverb 'then' joining sequential clauses."
+    },
+    {
+      "sid": "s0009",
+      "original": "Statistical significance was set at p < 0.05, and representative images are shown in Fig. 2.",
+      "revised": "Statistical significance was set at p < 0.05, with representative images in Fig. 2.",
+      "types": ["other"],
+      "reason": "improve fluency",
+      "basis": "none given"
+    },
+    {
+      "sid": "s0009",
+      "original": "Statistical significance was set at p < 0.05, and representative images are shown in Fig. 2.",
+      "revised": "Statistical significance was set at p < 0.05; representative images are shown in Fig. 2.",
+      "types": ["punctuation"],
+      "reason": "A semicolon tightens the link between two closely related independent clauses here.",
+      "basis": "Semicolon rule: a semicolon may join two closely related independent clauses without a conjunction."
+    }
+  ]
+}

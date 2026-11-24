@@ -1,0 +1,35 @@
+{
+  "case_id": "C2E-MIN-001",
+  "title": "Minimal synthetic bilingual detox case: nano-catalysis grant excerpt (zh -> en)",
+  "synthetic": true,
+  "genre": "grant_proposal_zh_to_en",
+  "materials": {
+    "zh_source": {
+      "filename": "zh-source.txt",
+      "encoding": "utf-8",
+      "note": "Synthetic Chinese grant-proposal paragraph (low-temperature SCR denitration catalysis).",
+      "text": "随着工业废气排放标准日益严格，开发高效、稳定的低温脱硝催化剂已成为大气污染控制领域的研究热点。本项目拟以纳米二氧化钛为载体，负载锰铈复合氧化物，构建具有核壳结构的低温选择性催化还原（SCR）催化剂。通过原位红外光谱与密度泛函理论计算相结合，阐明锰铈界面协同作用对NH3吸附活化的调控机制。前期研究已制备出MnOx-CeO2/TiO2催化剂，在150至250摄氏度窗口内NOx转化率达到92%以上[1]。文献[2]（2020年）报道的同类体系在含硫气氛中易失活，本项目拟引入钇掺杂以提升抗硫性能。预期成果将为柴油车尾气净化提供理论依据与技术支撑，具有重要的科学意义和应用前景。"
+    },
+    "en_draft": {
+      "filename": "en-draft.txt",
+      "encoding": "utf-8",
+      "note": "Synthetic, deliberately Chinglish English draft translation of zh_source, to be detoxed.",
+      "text": "With the increasingly strict emission standards of industrial exhaust gas, the development of highly efficient and stable low-temperature denitration catalysts has become a research hotspot in the field of air pollution control. This project intends to use nano titanium dioxide as the carrier, loading manganese-cerium composite oxide, to construct a low-temperature selective catalytic reduction (SCR) catalyst with core-shell structure. Through the combination of in-situ infrared spectroscopy and density functional theory calculation, the regulation mechanism of manganese-cerium interface synergy on NH3 adsorption activation will be elucidated. In the previous research, MnOx-CeO2/TiO2 catalyst has been prepared, and the NOx conversion rate has reached more than 92% in the temperature window of 150 to 250 degrees Celsius [1]. The similar system reported in reference [2] (2020) is easy to be deactivated in sulfur-containing atmosphere, so this project intends to introduce yttrium doping to improve the sulfur resistance. The expected results will provide theoretical basis and technical support for diesel vehicle exhaust purification, and have important scientific significance and application prospects."
+    }
+  },
+  "task": "Detox the Chinglish English draft against the Chinese source: rewrite into idiomatic grant English, align zh/en sentences, verify cross-language conservation (numbers/units/years/names/citations), run back-translation QA, and deliver polished English + alignment table + detox report + result.json per output_contract.",
+  "output_contract": {
+    "case_id": "string",
+    "translated_text": "string",
+    "polished_text": "string",
+    "alignment": "array",
+    "detox_report": "object",
+    "coverage": "object",
+    "backtranslation_check": "object",
+    "exports": "array",
+    "status": "string",
+    "sources": "array",
+    "uncertainty": "array",
+    "notes": "string"
+  }
+}

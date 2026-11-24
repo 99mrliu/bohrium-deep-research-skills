@@ -1,0 +1,40 @@
+{
+  "audit_version": "1.0",
+  "docs": [
+    {
+      "doc_id": "source-zh-grant",
+      "source_sha256": "fb1aa40c496a701bba06c7e86a7f81b85822a345c7290dbb736879928e719c27",
+      "units": 4,
+      "edits_submitted": 4,
+      "applied": 3,
+      "reverted": [
+        {
+          "unit_id": "s0001",
+          "status": "reverted-unreviewed",
+          "detail": "review gate: every edit needs decision=approve plus a non-empty review.reason; unreviewed edits are reverted"
+        }
+      ],
+      "review_gate": "enforced: every applied edit carries decision=approve and a non-empty review reason",
+      "protected_token_gate": "enforced: edits losing a number, citation or figure/table pointer were reverted",
+      "polished_sha256": "75d5df4e4194f8795f6da3d88e9d24e5a2581a8a07a86541c541c8345793bd27"
+    },
+    {
+      "doc_id": "source-en-abstract",
+      "source_sha256": "793398154b9915502d688114044ece169be4e5be6f4df3455abb14cff3d3a612",
+      "units": 4,
+      "edits_submitted": 3,
+      "applied": 2,
+      "reverted": [
+        {
+          "unit_id": "s0004",
+          "status": "reverted-protected-token",
+          "detail": "protected tokens lost: 12.5%, 3"
+        }
+      ],
+      "review_gate": "enforced: every applied edit carries decision=approve and a non-empty review reason",
+      "protected_token_gate": "enforced: edits losing a number, citation or figure/table pointer were reverted",
+      "polished_sha256": "d302f2d903bb74d779150c50e75aa573ceb98a857347edb83fd998709ea71d9c"
+    }
+  ],
+  "determinism": "no timestamps or random values; re-running the pipeline on identical inputs yields byte-identical outputs"
+}

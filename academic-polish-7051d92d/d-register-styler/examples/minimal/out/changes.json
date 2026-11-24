@@ -1,0 +1,84 @@
+{
+  "docs": [
+    {
+      "doc_id": "source-zh-grant",
+      "applied": [
+        {
+          "unit_id": "s0002",
+          "type": "register/colloquial-fix",
+          "reason": "‘搞/挺/特别’为口语表达（lint: gao/ting/tebie），基金申请书须用正式动词与量化程度表述。",
+          "before": "我们搞了一套新型水热制备工艺，效果挺好，特别省钱。",
+          "after": "团队建立了一套新型水热制备工艺，制备成本显著降低。",
+          "review_decision": "approve",
+          "review_reason": "复核：三个口语词去除后语义保持，限定强度未变，无受保护 token。",
+          "status": "applied"
+        },
+        {
+          "unit_id": "s0003",
+          "type": "register/depromote",
+          "reason": "‘国际领先/填补空白’为宣传化表述（lint: hype-zh），基金中亦需证据约束，此处无证据故降级。",
+          "before": "团队前期成果已达到国际领先水平，该方向在国内尚属空白，本项目将填补空白。",
+          "after": "团队前期成果处于国内先进水平，相关方向研究积累较少，本项目拟开展系统性研究。",
+          "review_decision": "approve",
+          "review_reason": "复核：宣传语降级未引入新数据，未改变项目目标。",
+          "status": "applied"
+        },
+        {
+          "unit_id": "s0004",
+          "type": "register/deabsolute",
+          "reason": "‘彻底解决/绝对不会’为无证据绝对化承诺（lint: absolute-zh）；注意：本修改削弱了限定强度，属语域纠偏，在此显式声明。",
+          "before": "我们预计该工艺能彻底解决催化剂失活问题，催化性能绝对不会衰减。",
+          "after": "我们预计该工艺可显著缓解催化剂失活问题，并延长循环寿命。",
+          "review_decision": "approve",
+          "review_reason": "复核：强度变化已在 reason 中显式记录，方向为绝对→概率化，符合基金文体规范。",
+          "status": "applied"
+        }
+      ],
+      "reverted": [
+        {
+          "unit_id": "s0001",
+          "type": "register/style-tweak",
+          "reason": "演示未复核回退：本条故意缺少有效复核记录，应被 apply-edits 回退（reverted-unreviewed）。",
+          "status": "reverted-unreviewed",
+          "detail": "review gate: every edit needs decision=approve plus a non-empty review.reason; unreviewed edits are reverted"
+        }
+      ]
+    },
+    {
+      "doc_id": "source-en-abstract",
+      "applied": [
+        {
+          "unit_id": "s0002",
+          "type": "register/colloquial-fix",
+          "reason": "Contractions (doesn't / it's), 'get improved' and 'a lot of' are colloquial in an English abstract (lint: contraction-nt, contraction-pron, get-pp, a-lot-of).",
+          "before": "It doesn't rely on centralized scheduling, and it's been shown to get improved throughput in a lot of scenarios.",
+          "after": "It does not rely on centralized scheduling and has been shown to achieve improved throughput across diverse scenarios.",
+          "review_decision": "approve",
+          "review_reason": "Reviewed: meaning preserved, no quantity or citation touched.",
+          "status": "applied"
+        },
+        {
+          "unit_id": "s0003",
+          "type": "register/depromote+person-fix",
+          "reason": "First-person 'I really think', hype 'cutting-edge' and absolute 'never' violate abstract register (lint: first-person-I, really, hype-en, always-never).",
+          "before": "I really think the approach is cutting-edge and will never degrade under heavy load.",
+          "after": "The approach remains stable under heavy load.",
+          "review_decision": "approve",
+          "review_reason": "Reviewed: subjective evaluation removed; the stability claim is kept without the absolute 'never'.",
+          "status": "applied"
+        }
+      ],
+      "reverted": [
+        {
+          "unit_id": "s0004",
+          "type": "register/style-tweak",
+          "reason": "演示受保护 token 回退：本条故意删除 '3' 与 '12.5%'，应被回退（reverted-protected-token）。",
+          "status": "reverted-protected-token",
+          "detail": "protected tokens lost: 12.5%, 3"
+        }
+      ]
+    }
+  ],
+  "total_applied": 5,
+  "total_reverted": 2
+}

@@ -1,0 +1,167 @@
+{
+  "tool": "pipeline.py export",
+  "label": "Synthetic example output / 合成示例产物, not a formal case result",
+  "changes": [
+    {
+      "edit_id": "e0001",
+      "unit": "u0001",
+      "type": "terminology_unification",
+      "reason": "Title uses 'Li-Ion' with wrong capitalization; glossary canonical form is 'Li-ion'.",
+      "review": {
+        "decision": "approve",
+        "reason": "Matches glossary canonical casing; no meaning change."
+      },
+      "status": "applied",
+      "guard": "passed",
+      "original": "# Interface Engineering of Li-Ion Battery Cathodes via Al2O3 Coatings",
+      "new_text": "# Interface Engineering of Li-ion Battery Cathodes via Al2O3 Coatings"
+    },
+    {
+      "edit_id": "e0002",
+      "unit": "u0003",
+      "type": "terminology_unification",
+      "reason": "'Lithium-ion' is a banned variant; canonical short form 'Li-ion' must be used, keeping the (LIBs) definition.",
+      "review": {
+        "decision": "approve",
+        "reason": "Fixes banned variant and preserves the first-use abbreviation definition."
+      },
+      "status": "applied",
+      "guard": "passed",
+      "original": "Lithium-ion batteries (LIBs) are widely used in portable electronics and electric vehicles.",
+      "new_text": "Li-ion batteries (LIBs) are widely used in portable electronics and electric vehicles."
+    },
+    {
+      "edit_id": "e0003",
+      "unit": "u0005",
+      "type": "abbreviation_first_use",
+      "reason": "EIS was used here before being defined in Methods; move the definition to first use and fix 'li-ion' casing in the same sentence.",
+      "review": {
+        "decision": "approve",
+        "reason": "Satisfies define_at_first_use for EIS and unifies Li-ion casing; no data touched."
+      },
+      "status": "applied",
+      "guard": "passed",
+      "original": "EIS has become a standard tool for probing interfacial resistance in li-ion cells.",
+      "new_text": "Electrochemical impedance spectroscopy (EIS) has become a standard tool for probing interfacial resistance in Li-ion cells."
+    },
+    {
+      "edit_id": "e0004",
+      "unit": "u0008",
+      "type": "terminology_unification",
+      "reason": "'Li ion' misses the hyphen required by the glossary canonical form 'Li-ion'.",
+      "review": {
+        "decision": "approve",
+        "reason": "Hyphenation fix only; formula and abbreviation untouched."
+      },
+      "status": "applied",
+      "guard": "passed",
+      "original": "Li ion coin cells were assembled with LiNi0.8Co0.1Mn0.1O2 (NCM811) cathodes.",
+      "new_text": "Li-ion coin cells were assembled with LiNi0.8Co0.1Mn0.1O2 (NCM811) cathodes."
+    },
+    {
+      "edit_id": "e0005",
+      "unit": "u0009",
+      "type": "concision",
+      "reason": "Streamline the sentence.",
+      "review": {
+        "decision": "approve",
+        "reason": "Looks stylistically fine."
+      },
+      "status": "reverted",
+      "guard": "protected_token_lost",
+      "original": "Al2O3 coatings of 2 nm were deposited by atomic layer deposition (ALD).",
+      "new_text": "Al2O3 coatings were deposited by atomic layer deposition (ALD).",
+      "lost_tokens": [
+        "number:2",
+        "number_unit:2 nm"
+      ]
+    },
+    {
+      "edit_id": "e0006",
+      "unit": "u0011",
+      "type": "abbreviation_first_use",
+      "reason": "The full name is now defined at first use in the Introduction, so the abbreviation is used here; 'data were collected' also fixes the original collocation 'spectroscopy was collected'.",
+      "review": {
+        "decision": "approve",
+        "reason": "Keeps every number and unit (100 kHz, 10 mHz, 5 mV) unchanged."
+      },
+      "status": "applied",
+      "guard": "passed",
+      "original": "Electrochemical impedance spectroscopy (EIS) was collected from 100 kHz to 10 mHz with a perturbation amplitude of 5 mV.",
+      "new_text": "EIS data were collected from 100 kHz to 10 mHz with a perturbation amplitude of 5 mV."
+    },
+    {
+      "edit_id": "e0007",
+      "unit": "u0014",
+      "type": "terminology_unification",
+      "reason": "'solid-electrolyte interphase' is a banned hyphenation of the SEI full name.",
+      "review": {
+        "decision": "approve",
+        "reason": "Removes banned variant; canonical form restored."
+      },
+      "status": "applied",
+      "guard": "passed",
+      "original": "The solid-electrolyte interphase on coated anodes was thinner and more uniform.",
+      "new_text": "The solid electrolyte interphase on coated anodes was thinner and more uniform."
+    },
+    {
+      "edit_id": "e0008",
+      "unit": "u0015",
+      "type": "terminology_unification",
+      "reason": "'Lithium-ion' is a banned variant; use 'Li-ion'.",
+      "review": {
+        "decision": "approve",
+        "reason": "Value 4.5e-10 cm2 s-1 preserved exactly."
+      },
+      "status": "applied",
+      "guard": "passed",
+      "original": "Lithium-ion diffusion coefficients extracted from GITT reached 4.5e-10 cm2 s-1.",
+      "new_text": "Li-ion diffusion coefficients extracted from GITT reached 4.5e-10 cm2 s-1."
+    },
+    {
+      "edit_id": "e0009",
+      "unit": "u0016",
+      "type": "terminology_unification",
+      "reason": "'Li-ion and Lithium-ion cells' mixes a canonical form with a banned variant in one sentence; the redundancy is removed.",
+      "review": {
+        "decision": "approve",
+        "reason": "Figure pointer 'Fig. 2' and citation [3] are preserved."
+      },
+      "status": "applied",
+      "guard": "passed",
+      "original": "Fig. 2 summarizes the rate capability of Li-ion and Lithium-ion cells [3].",
+      "new_text": "Fig. 2 summarizes the rate capability of Li-ion cells [3]."
+    },
+    {
+      "edit_id": "e0010",
+      "unit": "u0018",
+      "type": "style",
+      "reason": "Add emphasis.",
+      "review": null,
+      "status": "reverted",
+      "guard": "missing_or_negative_review",
+      "original": "Al2O3 coatings stabilize the Li-ion cathode interface and suppress SEI growth.",
+      "new_text": "Al2O3 coatings stabilize the Li-ion cathode interface and effectively suppress SEI growth."
+    },
+    {
+      "edit_id": "e0011",
+      "unit": "u0019",
+      "type": "terminology_unification",
+      "reason": "'lithium ion batteries' is the banned long form in lowercase without hyphen; use 'Li-ion batteries'.",
+      "review": {
+        "decision": "approve",
+        "reason": "Unifies the closing sentence with the glossary; no meaning change."
+      },
+      "status": "applied",
+      "guard": "passed",
+      "original": "These findings demonstrate a scalable route to durable high-voltage lithium ion batteries.",
+      "new_text": "These findings demonstrate a scalable route to durable high-voltage Li-ion batteries."
+    }
+  ],
+  "summary": {
+    "edits_submitted": 11,
+    "applied": 9,
+    "reverted": 2,
+    "noop": 0
+  }
+}

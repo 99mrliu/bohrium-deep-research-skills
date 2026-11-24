@@ -1,0 +1,317 @@
+{
+  "case_id": "register-demo-001",
+  "status": "success",
+  "sources": [
+    "task.md",
+    "source-zh-grant.txt",
+    "source-en-abstract.txt"
+  ],
+  "uncertainty": "Synthetic example. Register lint is heuristic: hits were adjudicated per references/register-taxonomy.md; the scorecard proves violations did not increase, not that the prose is optimal.",
+  "notes": "合成示例 / synthetic. Two deliberate reverts demonstrate the gates: one unreviewed edit (zh s0001), one edit losing protected tokens (en s0004).",
+  "polished_text": {
+    "source-zh-grant": "本项目拟解决工业催化剂活性低、寿命短的关键难题，具有重要的工程应用价值。团队建立了一套新型水热制备工艺，制备成本显著降低。团队前期成果处于国内先进水平，相关方向研究积累较少，本项目拟开展系统性研究。我们预计该工艺可显著缓解催化剂失活问题，并延长循环寿命。",
+    "source-en-abstract": "This paper presents a novel framework for distributed stream processing. It does not rely on centralized scheduling and has been shown to achieve improved throughput across diverse scenarios. The approach remains stable under heavy load. Experiments on 3 public datasets show a 12.5% latency reduction compared with the baselines in Figure 2 [7]."
+  },
+  "changes": [
+    {
+      "doc": "source-zh-grant",
+      "unit_id": "s0002",
+      "type": "register/colloquial-fix",
+      "reason": "‘搞/挺/特别’为口语表达（lint: gao/ting/tebie），基金申请书须用正式动词与量化程度表述。",
+      "before": "我们搞了一套新型水热制备工艺，效果挺好，特别省钱。",
+      "after": "团队建立了一套新型水热制备工艺，制备成本显著降低。",
+      "review_decision": "approve",
+      "review_reason": "复核：三个口语词去除后语义保持，限定强度未变，无受保护 token。",
+      "status": "applied"
+    },
+    {
+      "doc": "source-zh-grant",
+      "unit_id": "s0003",
+      "type": "register/depromote",
+      "reason": "‘国际领先/填补空白’为宣传化表述（lint: hype-zh），基金中亦需证据约束，此处无证据故降级。",
+      "before": "团队前期成果已达到国际领先水平，该方向在国内尚属空白，本项目将填补空白。",
+      "after": "团队前期成果处于国内先进水平，相关方向研究积累较少，本项目拟开展系统性研究。",
+      "review_decision": "approve",
+      "review_reason": "复核：宣传语降级未引入新数据，未改变项目目标。",
+      "status": "applied"
+    },
+    {
+      "doc": "source-zh-grant",
+      "unit_id": "s0004",
+      "type": "register/deabsolute",
+      "reason": "‘彻底解决/绝对不会’为无证据绝对化承诺（lint: absolute-zh）；注意：本修改削弱了限定强度，属语域纠偏，在此显式声明。",
+      "before": "我们预计该工艺能彻底解决催化剂失活问题，催化性能绝对不会衰减。",
+      "after": "我们预计该工艺可显著缓解催化剂失活问题，并延长循环寿命。",
+      "review_decision": "approve",
+      "review_reason": "复核：强度变化已在 reason 中显式记录，方向为绝对→概率化，符合基金文体规范。",
+      "status": "applied"
+    },
+    {
+      "doc": "source-zh-grant",
+      "unit_id": "s0001",
+      "type": "register/style-tweak",
+      "reason": "演示未复核回退：本条故意缺少有效复核记录，应被 apply-edits 回退（reverted-unreviewed）。",
+      "status": "reverted-unreviewed",
+      "detail": "review gate: every edit needs decision=approve plus a non-empty review.reason; unreviewed edits are reverted"
+    },
+    {
+      "doc": "source-en-abstract",
+      "unit_id": "s0002",
+      "type": "register/colloquial-fix",
+      "reason": "Contractions (doesn't / it's), 'get improved' and 'a lot of' are colloquial in an English abstract (lint: contraction-nt, contraction-pron, get-pp, a-lot-of).",
+      "before": "It doesn't rely on centralized scheduling, and it's been shown to get improved throughput in a lot of scenarios.",
+      "after": "It does not rely on centralized scheduling and has been shown to achieve improved throughput across diverse scenarios.",
+      "review_decision": "approve",
+      "review_reason": "Reviewed: meaning preserved, no quantity or citation touched.",
+      "status": "applied"
+    },
+    {
+      "doc": "source-en-abstract",
+      "unit_id": "s0003",
+      "type": "register/depromote+person-fix",
+      "reason": "First-person 'I really think', hype 'cutting-edge' and absolute 'never' violate abstract register (lint: first-person-I, really, hype-en, always-never).",
+      "before": "I really think the approach is cutting-edge and will never degrade under heavy load.",
+      "after": "The approach remains stable under heavy load.",
+      "review_decision": "approve",
+      "review_reason": "Reviewed: subjective evaluation removed; the stability claim is kept without the absolute 'never'.",
+      "status": "applied"
+    },
+    {
+      "doc": "source-en-abstract",
+      "unit_id": "s0004",
+      "type": "register/style-tweak",
+      "reason": "演示受保护 token 回退：本条故意删除 '3' 与 '12.5%'，应被回退（reverted-protected-token）。",
+      "status": "reverted-protected-token",
+      "detail": "protected tokens lost: 12.5%, 3"
+    }
+  ],
+  "register_report": {
+    "source-zh-grant": {
+      "genre_detected": "grant-proposal",
+      "genre_evidence": "task declaration",
+      "before": {
+        "counts": {
+          "colloquial": 3,
+          "promotional": 0,
+          "absolute": 2,
+          "person": 0
+        },
+        "warnings": 2,
+        "total_violations": 5,
+        "violations": [
+          {
+            "category": "colloquial",
+            "rule": "gao",
+            "severity": "violation",
+            "line": 1,
+            "offset": 38,
+            "matched": "搞",
+            "snippet": "命短的关键难题，具有重要的工程应用价值。我们搞了一套新型水热制备工艺，效果挺好，特别省钱。",
+            "suggestion": "口语词；改为正式动词：建立/开展/制备/提出。",
+            "genre_norm": "Academic register requires formal verbs and quantified degree adverbs."
+          },
+          {
+            "category": "colloquial",
+            "rule": "ting",
+            "severity": "violation",
+            "line": 1,
+            "offset": 53,
+            "matched": "挺",
+            "snippet": "应用价值。我们搞了一套新型水热制备工艺，效果挺好，特别省钱。团队前期成果已达到国际领先水平",
+            "suggestion": "口语程度词；改为‘较/相当/十分’或量化表述。",
+            "genre_norm": "Academic register requires formal verbs and quantified degree adverbs."
+          },
+          {
+            "category": "colloquial",
+            "rule": "tebie",
+            "severity": "violation",
+            "line": 1,
+            "offset": 56,
+            "matched": "特别",
+            "snippet": "值。我们搞了一套新型水热制备工艺，效果挺好，特别省钱。团队前期成果已达到国际领先水平，该方向",
+            "suggestion": "口语程度词；改为‘尤其/十分/显著’或删除。",
+            "genre_norm": "Academic register requires formal verbs and quantified degree adverbs."
+          },
+          {
+            "category": "promotional",
+            "rule": "hype-zh",
+            "severity": "warning",
+            "line": 1,
+            "offset": 70,
+            "matched": "国际领先",
+            "snippet": "工艺，效果挺好，特别省钱。团队前期成果已达到国际领先水平，该方向在国内尚属空白，本项目将填补空白",
+            "suggestion": "删除宣传语，或补充可验证证据（指标、对比、文献）。",
+            "genre_norm": "Hype words need verifiable evidence (metric/benchmark/citation) or removal."
+          },
+          {
+            "category": "promotional",
+            "rule": "hype-zh",
+            "severity": "warning",
+            "line": 1,
+            "offset": 92,
+            "matched": "填补空白",
+            "snippet": "国际领先水平，该方向在国内尚属空白，本项目将填补空白。我们预计该工艺能彻底解决催化剂失活问题，催",
+            "suggestion": "删除宣传语，或补充可验证证据（指标、对比、文献）。",
+            "genre_norm": "Hype words need verifiable evidence (metric/benchmark/citation) or removal."
+          },
+          {
+            "category": "absolute",
+            "rule": "absolute-zh",
+            "severity": "violation",
+            "line": 1,
+            "offset": 105,
+            "matched": "彻底解决",
+            "snippet": "尚属空白，本项目将填补空白。我们预计该工艺能彻底解决催化剂失活问题，催化性能绝对不会衰减。",
+            "suggestion": "无证据时改为有限定表述：‘显著缓解/有望/在……条件下’。",
+            "genre_norm": "Unbounded claims must be qualified to what the evidence supports."
+          },
+          {
+            "category": "absolute",
+            "rule": "absolute-zh",
+            "severity": "violation",
+            "line": 1,
+            "offset": 121,
+            "matched": "绝对不会",
+            "snippet": "预计该工艺能彻底解决催化剂失活问题，催化性能绝对不会衰减。",
+            "suggestion": "无证据时改为有限定表述：‘显著缓解/有望/在……条件下’。",
+            "genre_norm": "Unbounded claims must be qualified to what the evidence supports."
+          }
+        ]
+      },
+      "after": {
+        "counts": {
+          "colloquial": 0,
+          "promotional": 0,
+          "absolute": 0,
+          "person": 0
+        },
+        "warnings": 0,
+        "total_violations": 0,
+        "violations": []
+      },
+      "scorecard": {
+        "delta_total": -5,
+        "gate": "pass"
+      }
+    },
+    "source-en-abstract": {
+      "genre_detected": "en-abstract",
+      "genre_evidence": "task declaration",
+      "before": {
+        "counts": {
+          "colloquial": 5,
+          "promotional": 1,
+          "absolute": 1,
+          "person": 1
+        },
+        "warnings": 0,
+        "total_violations": 8,
+        "violations": [
+          {
+            "category": "colloquial",
+            "rule": "contraction-nt",
+            "severity": "violation",
+            "line": 1,
+            "offset": 76,
+            "matched": "doesn't",
+            "snippet": "stream processing. It doesn't rely on centralized s",
+            "suggestion": "Expand the contraction (e.g. 'do not', 'does not').",
+            "genre_norm": "Academic register requires formal verbs and quantified degree adverbs."
+          },
+          {
+            "category": "colloquial",
+            "rule": "contraction-pron",
+            "severity": "violation",
+            "line": 1,
+            "offset": 120,
+            "matched": "it's",
+            "snippet": "lized scheduling, and it's been shown to get imp",
+            "suggestion": "Expand the contraction (e.g. 'it is', 'we have').",
+            "genre_norm": "Academic register requires formal verbs and quantified degree adverbs."
+          },
+          {
+            "category": "colloquial",
+            "rule": "get-pp",
+            "severity": "violation",
+            "line": 1,
+            "offset": 139,
+            "matched": "get improved",
+            "snippet": "nd it's been shown to get improved throughput in a lot o",
+            "suggestion": "Use a precise verb ('obtain', 'become', 'be + participle').",
+            "genre_norm": "Academic register requires formal verbs and quantified degree adverbs."
+          },
+          {
+            "category": "colloquial",
+            "rule": "a-lot-of",
+            "severity": "violation",
+            "line": 1,
+            "offset": 166,
+            "matched": "a lot of",
+            "snippet": "mproved throughput in a lot of scenarios. I really t",
+            "suggestion": "Use 'many', 'numerous' or a quantified statement.",
+            "genre_norm": "Academic register requires formal verbs and quantified degree adverbs."
+          },
+          {
+            "category": "person",
+            "rule": "first-person-I",
+            "severity": "violation",
+            "line": 1,
+            "offset": 186,
+            "matched": "I",
+            "snippet": "n a lot of scenarios. I really think the appr",
+            "suggestion": "Abstracts use 'we' or 'this paper/study'; avoid 'I'.",
+            "genre_norm": "Person/address forms must match the genre convention."
+          },
+          {
+            "category": "colloquial",
+            "rule": "really",
+            "severity": "violation",
+            "line": 1,
+            "offset": 188,
+            "matched": "really",
+            "snippet": "a lot of scenarios. I really think the approach is",
+            "suggestion": "Remove the intensifier; state the fact.",
+            "genre_norm": "Academic register requires formal verbs and quantified degree adverbs."
+          },
+          {
+            "category": "promotional",
+            "rule": "hype-en",
+            "severity": "violation",
+            "line": 1,
+            "offset": 217,
+            "matched": "cutting-edge",
+            "snippet": "think the approach is cutting-edge and will never degrad",
+            "suggestion": "Remove the hype or attach verifiable evidence (metric, benchmark, citation).",
+            "genre_norm": "Hype words need verifiable evidence (metric/benchmark/citation) or removal."
+          },
+          {
+            "category": "absolute",
+            "rule": "always-never",
+            "severity": "violation",
+            "line": 1,
+            "offset": 239,
+            "matched": "never",
+            "snippet": "cutting-edge and will never degrade under heavy l",
+            "suggestion": "Qualify the claim or provide a proof/measurement.",
+            "genre_norm": "Unbounded claims must be qualified to what the evidence supports."
+          }
+        ]
+      },
+      "after": {
+        "counts": {
+          "colloquial": 0,
+          "promotional": 0,
+          "absolute": 0,
+          "person": 0
+        },
+        "warnings": 0,
+        "total_violations": 0,
+        "violations": []
+      },
+      "scorecard": {
+        "delta_total": -8,
+        "gate": "pass"
+      }
+    }
+  }
+}

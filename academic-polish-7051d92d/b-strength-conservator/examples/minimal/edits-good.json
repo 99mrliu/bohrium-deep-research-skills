@@ -1,0 +1,61 @@
+{
+  "batch": "grammar-fixes",
+  "edits": [
+    {
+      "unit": "u0003",
+      "revised": "Methods: Primary hepatocytes were isolated from wild-type and NLRP3-knockout mice.",
+      "type": "agreement",
+      "reason": "subject 'hepatocytes' is plural; 'was' -> 'were'",
+      "review": {"decision": "accept", "reason": "pure agreement fix; no hedging cue touched"}
+    },
+    {
+      "unit": "u0004",
+      "revised": "Cells were exposed to palmitic acid for 24 hours, and inflammasome activation was measured by immunoblotting.",
+      "type": "agreement",
+      "reason": "'Cells was' -> 'Cells were'; 'activation were' -> 'activation was'",
+      "review": {"decision": "accept", "reason": "two agreement fixes; sentence otherwise unchanged"}
+    },
+    {
+      "unit": "u0006",
+      "revised": "In vivo, NLRP3-deficient mice showed reduced liver fibrosis after eight weeks of high-fat feeding.",
+      "type": "tense",
+      "reason": "'mice shows' -> 'mice showed' (past tense, plural subject)",
+      "review": {"decision": "accept", "reason": "tense fix only; 'in vivo' scope condition preserved"}
+    },
+    {
+      "unit": "u0007",
+      "revised": "The treatment may improve insulin sensitivity in some animals, although the effect did not reach statistical significance.",
+      "type": "grammar",
+      "reason": "modal 'may' requires bare infinitive: 'improves' -> 'improve'",
+      "review": {"decision": "accept", "reason": "grammar fix; hedge 'may', quantifier 'some', negation and scope all preserved"}
+    },
+    {
+      "unit": "u0009",
+      "revised": "There are several pieces of evidence that oxidative stress amplifies inflammasome signaling in vitro.",
+      "type": "grammar",
+      "reason": "'There is several evidences' -> 'There are several pieces of evidence'; 'stress amplify' -> 'stress amplifies'",
+      "review": {"decision": "accept", "reason": "countability and agreement fixes; quantifier 'several' and 'in vitro' preserved"}
+    },
+    {
+      "unit": "u0010",
+      "revised": "Our findings suggest that NLRP3 contributes to liver injury under these conditions.",
+      "type": "agreement",
+      "reason": "'findings suggests' -> 'findings suggest'; 'NLRP3 contribute' -> 'NLRP3 contributes'",
+      "review": {"decision": "accept", "reason": "agreement fixes; hedge 'suggest' and scope condition preserved"}
+    },
+    {
+      "unit": "u0011",
+      "revised": "These data may have implications for the design of future therapeutic strategies.",
+      "type": "grammar",
+      "reason": "modal 'may' requires bare infinitive: 'has' -> 'have'",
+      "review": {"decision": "accept", "reason": "grammar fix; hedge 'may' preserved"}
+    },
+    {
+      "unit": "u0012",
+      "revised": "Conclusion: Further studies are needed to confirm these observations in human samples.",
+      "type": "agreement",
+      "reason": "'studies is' -> 'studies are'",
+      "review": {"decision": "accept", "reason": "agreement fix; 'in human samples' scope preserved"}
+    }
+  ]
+}

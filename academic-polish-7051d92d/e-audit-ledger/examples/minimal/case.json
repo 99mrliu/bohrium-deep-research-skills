@@ -1,0 +1,46 @@
+{
+  "case_id": "MINIMAL-AUDIT-001",
+  "synthetic": true,
+  "note": "Synthetic example / 合成示例: invented methods paragraph with 8 planted defects. Not real data.",
+  "source_text": "Cell cultures was maintained at 37 °C in a humidified incubator with 5% CO2 [12]. The medium is replaced every 48 h and cells were passaged at 80% confluence. The absorbance was measured at wavelength of 450 nm using a microplate reader. Using ImageJ software, the images were analyzed to quantify colony formation. We did a bunch of tests to check whether the treatment worked. These results prove that the new protocol is perfect for all cell types. Due to the fact that the signal was weak at this point in time, the exposure time was increased to 30 s. The samples were heated to 95 °C for 10 min then cooled on ice. Statistical significance was set at p < 0.05, and representative images are shown in Fig. 2.",
+  "output_contract": {
+    "fields": {
+      "polished_text": {
+        "type": "string",
+        "required": true,
+        "aliases": ["polished", "final_text", "revised_text"],
+        "description": "The full polished text, complete and in original order."
+      },
+      "changes": {
+        "type": "array",
+        "required": true,
+        "aliases": ["change_list", "edits", "modifications"],
+        "description": "Per-sentence change ledger entries (sid, types, original, revised, reason, basis, status)."
+      },
+      "review_html": {
+        "type": "string",
+        "required": true,
+        "aliases": ["review_page", "audit_html"],
+        "description": "Self-contained single-file HTML review page (inline CSS, no external dependencies)."
+      },
+      "change_log": {
+        "type": "string",
+        "required": true,
+        "aliases": ["changelog", "change_log_md"],
+        "description": "Human-readable markdown change log."
+      },
+      "status": {
+        "type": "string",
+        "required": true,
+        "aliases": ["state"],
+        "description": "success | partial | blocked."
+      },
+      "uncertainty": {
+        "type": ["string", "null"],
+        "required": true,
+        "aliases": ["uncertainties", "residual_uncertainty"],
+        "description": "Residual uncertainty statement, or null if none."
+      }
+    }
+  }
+}

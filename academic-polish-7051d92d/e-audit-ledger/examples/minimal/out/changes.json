@@ -1,0 +1,229 @@
+{
+  "batches": [
+    {
+      "accepted": 4,
+      "errors": [],
+      "file": "01-fixes-a.json",
+      "received": 4,
+      "rejected": 0,
+      "status": "ok"
+    },
+    {
+      "accepted": 5,
+      "errors": [],
+      "file": "02-fixes-b.json",
+      "received": 6,
+      "rejected": 1,
+      "status": "ok"
+    }
+  ],
+  "case_id": "MINIMAL-AUDIT-001",
+  "entries": [
+    {
+      "basis": "Subject-verb agreement rule: a plural subject takes a plural verb form.",
+      "batch": "01-fixes-a.json",
+      "detail": "reviewed and applied",
+      "edit_id": "s0001-231f695b64",
+      "original": "Cell cultures was maintained at 37 °C in a humidified incubator with 5% CO2 [12].",
+      "reason": "Subject 'cultures' is plural, so the verb must be 'were', not 'was'.",
+      "review": {
+        "decision": "accept",
+        "reason": "Re-read against the frozen sentence: the fix is correct, minimal, and every protected token is preserved."
+      },
+      "revised": "Cell cultures were maintained at 37 °C in a humidified incubator with 5% CO2 [12].",
+      "sid": "s0001",
+      "status": "applied",
+      "types": [
+        "agreement",
+        "grammar"
+      ]
+    },
+    {
+      "basis": "Methods-section tense convention: completed experimental steps in past tense.",
+      "batch": "01-fixes-a.json",
+      "detail": "reviewed and applied",
+      "edit_id": "s0002-28882b6691",
+      "original": "The medium is replaced every 48 h and cells were passaged at 80% confluence.",
+      "reason": "Methods describe completed procedures; present 'is' is shifted to past 'was' for tense consistency with the rest of the sentence.",
+      "review": {
+        "decision": "accept",
+        "reason": "Re-read against the frozen sentence: the fix is correct, minimal, and every protected token is preserved."
+      },
+      "revised": "The medium was replaced every 48 h and cells were passaged at 80% confluence.",
+      "sid": "s0002",
+      "status": "applied",
+      "types": [
+        "tense-voice"
+      ]
+    },
+    {
+      "basis": "Article usage rule: singular countable nouns take an article when not pluralized or possessive.",
+      "batch": "01-fixes-a.json",
+      "detail": "reviewed and applied",
+      "edit_id": "s0003-0fc4103c89",
+      "original": "The absorbance was measured at wavelength of 450 nm using a microplate reader.",
+      "reason": "The singular countable noun 'wavelength' requires the indefinite article 'a' in this context.",
+      "review": {
+        "decision": "accept",
+        "reason": "Re-read against the frozen sentence: the fix is correct, minimal, and every protected token is preserved."
+      },
+      "revised": "The absorbance was measured at a wavelength of 450 nm using a microplate reader.",
+      "sid": "s0003",
+      "status": "applied",
+      "types": [
+        "article-preposition"
+      ]
+    },
+    {
+      "basis": "Dangling-modifier rule: an introductory participial phrase must modify the subject that follows it.",
+      "batch": "01-fixes-a.json",
+      "detail": "reviewed and applied",
+      "edit_id": "s0004-384feef5ca",
+      "original": "Using ImageJ software, the images were analyzed to quantify colony formation.",
+      "reason": "The introductory phrase 'Using ImageJ software' dangles: its implied agent cannot be 'the images'. Naming the agent 'we' resolves it.",
+      "review": {
+        "decision": "accept",
+        "reason": "Re-read against the frozen sentence: the fix is correct, minimal, and every protected token is preserved."
+      },
+      "revised": "Using ImageJ software, we analyzed the images to quantify colony formation.",
+      "sid": "s0004",
+      "status": "applied",
+      "types": [
+        "syntax"
+      ]
+    },
+    {
+      "basis": "Academic register guideline: avoid colloquial quantifiers ('a bunch of') and vague verbs ('worked').",
+      "batch": "02-fixes-b.json",
+      "detail": "reviewed and applied",
+      "edit_id": "s0005-efe4e117e4",
+      "original": "We did a bunch of tests to check whether the treatment worked.",
+      "reason": "'did a bunch of tests' and 'worked' are colloquial; they are replaced with formal academic equivalents.",
+      "review": {
+        "decision": "accept",
+        "reason": "Re-read against the frozen sentence: the fix is correct, minimal, and every protected token is preserved."
+      },
+      "revised": "We performed a series of assays to determine whether the treatment was effective.",
+      "sid": "s0005",
+      "status": "applied",
+      "types": [
+        "register"
+      ]
+    },
+    {
+      "basis": "Hedging guideline: claim strength must match the strength and scope of the evidence.",
+      "batch": "02-fixes-b.json",
+      "detail": "reviewed and applied",
+      "edit_id": "s0006-1f403ed517",
+      "original": "These results prove that the new protocol is perfect for all cell types.",
+      "reason": "'prove' and 'perfect for all cell types' claim more than the data support; the claim is hedged to match the evidence scope.",
+      "review": {
+        "decision": "accept",
+        "reason": "Re-read against the frozen sentence: the fix is correct, minimal, and every protected token is preserved."
+      },
+      "revised": "These results suggest that the new protocol is effective for the cell types tested.",
+      "sid": "s0006",
+      "status": "applied",
+      "types": [
+        "hedging"
+      ]
+    },
+    {
+      "basis": "Conciseness rule: replace multi-word connectives with single-word equivalents when meaning is unchanged.",
+      "batch": "02-fixes-b.json",
+      "detail": "reviewed and applied",
+      "edit_id": "s0007-09577214fc",
+      "original": "Due to the fact that the signal was weak at this point in time, the exposure time was increased to 30 s.",
+      "reason": "'Due to the fact that' and 'at this point in time' are redundant wordy phrases replaced by concise equivalents without meaning change.",
+      "review": {
+        "decision": "accept",
+        "reason": "Re-read against the frozen sentence: the fix is correct, minimal, and every protected token is preserved."
+      },
+      "revised": "Because the signal was weak, the exposure time was increased to 30 s.",
+      "sid": "s0007",
+      "status": "applied",
+      "types": [
+        "conciseness"
+      ]
+    },
+    {
+      "basis": "Comma rule: use a comma before the conjunctive adverb 'then' joining sequential clauses.",
+      "batch": "02-fixes-b.json",
+      "detail": "reviewed and applied",
+      "edit_id": "s0008-ac40e819ee",
+      "original": "The samples were heated to 95 °C for 10 min then cooled on ice.",
+      "reason": "A comma is required before 'then' when it links two sequential actions in one sentence.",
+      "review": {
+        "decision": "accept",
+        "reason": "Re-read against the frozen sentence: the fix is correct, minimal, and every protected token is preserved."
+      },
+      "revised": "The samples were heated to 95 °C for 10 min, then cooled on ice.",
+      "sid": "s0008",
+      "status": "applied",
+      "types": [
+        "punctuation"
+      ]
+    },
+    {
+      "basis": "none given",
+      "batch": "02-fixes-b.json",
+      "detail": "vacuous reason blacklisted: 'improve fluency'",
+      "edit_id": "rejected-02-fixes-b.json-4",
+      "original": "Statistical significance was set at p < 0.05, and representative images are shown in Fig. 2.",
+      "reason": "improve fluency",
+      "review": null,
+      "revised": "Statistical significance was set at p < 0.05, with representative images in Fig. 2.",
+      "sid": "s0009",
+      "status": "rejected_intake",
+      "types": [
+        "other"
+      ]
+    },
+    {
+      "basis": "Semicolon rule: a semicolon may join two closely related independent clauses without a conjunction.",
+      "batch": "02-fixes-b.json",
+      "detail": "no review record for this edit; mandatory review gate rolls it back",
+      "edit_id": "s0009-acc3cfd44c",
+      "original": "Statistical significance was set at p < 0.05, and representative images are shown in Fig. 2.",
+      "reason": "A semicolon tightens the link between two closely related independent clauses here.",
+      "review": null,
+      "revised": "Statistical significance was set at p < 0.05; representative images are shown in Fig. 2.",
+      "sid": "s0009",
+      "status": "rolled_back_unreviewed",
+      "types": [
+        "punctuation"
+      ]
+    }
+  ],
+  "gates": {
+    "C01_sentence_integrity": {
+      "detail": "9 frozen sentences, order preserved, refill verified",
+      "status": "pass"
+    },
+    "C02_anchor_and_schema": {
+      "detail": "every applied edit's 'original' equals its frozen sentence",
+      "status": "pass"
+    },
+    "C03_protected_tokens": {
+      "detail": "9 protected tokens verified across 8 applied edits",
+      "status": "pass"
+    },
+    "C04_mandatory_review": {
+      "detail": "every applied edit carries an accept review; unreviewed edits were rolled back",
+      "status": "pass"
+    },
+    "C07_reason_quality": {
+      "detail": "all applied edits have concrete reasons (>= 12 chars, blacklist-screened)",
+      "status": "pass"
+    }
+  },
+  "summary": {
+    "accepted": 9,
+    "applied": 8,
+    "received": 10,
+    "rejected": 1,
+    "rolled_back": 1,
+    "sentences": 9
+  },
+  "synthetic_example": true
+}

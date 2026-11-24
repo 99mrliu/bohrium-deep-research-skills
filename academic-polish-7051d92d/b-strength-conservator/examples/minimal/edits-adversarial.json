@@ -1,0 +1,53 @@
+{
+  "batch": "adversarial",
+  "edits": [
+    {
+      "unit": "u0007",
+      "revised": "The treatment improves insulin sensitivity in all animals, although the effect was significant.",
+      "type": "word-choice",
+      "reason": "make the sentence read more fluently and confidently",
+      "review": {"decision": "accept", "reason": "reads better"},
+      "_comment": "ADVERSARIAL: may->improves (strengthened), some->all (scope-broadened), drops 'not' (negation-changed). Expected: strength-gate reverts."
+    },
+    {
+      "unit": "u0008",
+      "revised": "Biomarker Y causes disease severity.",
+      "type": "word-choice",
+      "reason": "more direct phrasing",
+      "review": {"decision": "accept", "reason": "punchier"},
+      "_comment": "ADVERSARIAL: 'is associated with' -> 'causes' (causality-changed), drops 'in this cohort' (scope-broadened). Expected: strength-gate reverts."
+    },
+    {
+      "unit": "u0009",
+      "revised": "There are several pieces of evidence that oxidative stress amplifies inflammasome signaling.",
+      "type": "concision",
+      "reason": "shorter is cleaner",
+      "review": {"decision": "accept", "reason": "concise"},
+      "_comment": "ADVERSARIAL: drops 'in vitro' (scope-broadened: an in-vitro-only claim becomes generic). Expected: strength-gate reverts."
+    },
+    {
+      "unit": "u0001",
+      "revised": "Inflammation plays a central role in the progression of metabolic liver disease, but the underlying mechanisms remain poorly understood.",
+      "type": "register",
+      "reason": "stronger opening",
+      "_comment": "ADVERSARIAL: no review record at all. Expected: review-gate reverts before any strength check."
+    },
+    {
+      "unit": "u0011",
+      "revised": "This work could open new directions for the design of future therapies.",
+      "type": "clarity-restructure",
+      "reason": "recast the closing sentence for flow while keeping the hedged modality",
+      "review": {"decision": "accept", "reason": "keeps a level-0 hedge ('could'), no quantifier/negation/causality/scope change"},
+      "_comment": "LEGAL but heavy: similarity below threshold. Expected: applied WITH heavy_rewrite warning."
+    },
+    {
+      "unit": "u0010",
+      "revised": "Our findings demonstrate that NLRP3 contributes to liver injury under these conditions.",
+      "type": "word-choice",
+      "reason": "user asked to align claim strength with the confirmatory knockout data",
+      "review": {"decision": "accept", "reason": "strength change explicitly requested by the user"},
+      "strength_change": {"authorized_by": "user", "explanation": "User instructed: align claim strength with the confirmatory knockout data (suggest -> demonstrate)."},
+      "_comment": "AUTHORIZED DRIFT: strengthened 0->2 with valid authorization. Expected: applied, recorded as authorized_drift."
+    }
+  ]
+}

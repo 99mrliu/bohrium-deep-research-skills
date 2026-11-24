@@ -1,0 +1,15 @@
+{
+  "tool": "pipeline.py export",
+  "label": "Synthetic example output / 合成示例产物, not a formal case result",
+  "source_sha256": "165c7c77fa4335a005acc5d8d778b009849d690f95bfa05ffeabf310d95cfd3d",
+  "polished_sha256": "471a7624b04e63c31fa2e53b5f28ba944a0eae6f6a684f0aa5688dfeb0c69eac",
+  "units_total": 19,
+  "units_modified": 9,
+  "edits_submitted": 11,
+  "edits_applied": 9,
+  "edits_reverted": 2,
+  "reverted_missing_review": 1,
+  "reverted_protected_token_lost": 1,
+  "protected_tokens_checked": 22,
+  "review_coverage": "edits without an approve+reason review record are always reverted; see changes.json"
+}

@@ -1,0 +1,17 @@
+{
+  "case_id": "synthetic-minimal-001",
+  "synthetic": true,
+  "title": "SYNTHETIC minimal example: NLRP3 abstract polish with strength conservation",
+  "note": "合成示例 / synthetic example. All content is fabricated for demonstration only.",
+  "materials": ["source.md", "task.md"],
+  "output_contract": {
+    "polished_text": "string",
+    "changes": "object",
+    "strength_audit": "object",
+    "conservation_summary": "string",
+    "status": "string",
+    "sources": "array",
+    "uncertainty": "array",
+    "notes": "string"
+  }
+}

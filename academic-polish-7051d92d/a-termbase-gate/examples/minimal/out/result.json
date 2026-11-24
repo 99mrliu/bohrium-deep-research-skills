@@ -1,0 +1,255 @@
+{
+  "case_id": "synthetic-minimal-termbase-001",
+  "polished_text": "# Interface Engineering of Li-ion Battery Cathodes via Al2O3 Coatings\n\n## Introduction\n\nLi-ion batteries (LIBs) are widely used in portable electronics and electric vehicles. The capacity fading of Li-ion cells at high voltage remains a major obstacle. Electrochemical impedance spectroscopy (EIS) has become a standard tool for probing interfacial resistance in Li-ion cells. The solid electrolyte interphase (SEI) formed on the anode strongly affects cycling stability.\n\n## Methods\n\nLi-ion coin cells were assembled with LiNi0.8Co0.1Mn0.1O2 (NCM811) cathodes. Al2O3 coatings of 2 nm were deposited by atomic layer deposition (ALD). Cells were cycled at 1C between 2.8 V and 4.4 V. EIS data were collected from 100 kHz to 10 mHz with a perturbation amplitude of 5 mV.\n\n## Results\n\nEIS measurements showed that the interfacial resistance of coated cells decreased by 32% after 200 cycles. The solid electrolyte interphase on coated anodes was thinner and more uniform. Li-ion diffusion coefficients extracted from GITT reached 4.5e-10 cm2 s-1. Fig. 2 summarizes the rate capability of Li-ion cells [3].\n\n## Conclusion\n\nAl2O3 coatings stabilize the Li-ion cathode interface and suppress SEI growth. These findings demonstrate a scalable route to durable high-voltage Li-ion batteries.\n",
+  "changes": [
+    {
+      "edit_id": "e0001",
+      "unit": "u0001",
+      "type": "terminology_unification",
+      "reason": "Title uses 'Li-Ion' with wrong capitalization; glossary canonical form is 'Li-ion'.",
+      "review": {
+        "decision": "approve",
+        "reason": "Matches glossary canonical casing; no meaning change."
+      },
+      "status": "applied",
+      "guard": "passed",
+      "original": "# Interface Engineering of Li-Ion Battery Cathodes via Al2O3 Coatings",
+      "new_text": "# Interface Engineering of Li-ion Battery Cathodes via Al2O3 Coatings"
+    },
+    {
+      "edit_id": "e0002",
+      "unit": "u0003",
+      "type": "terminology_unification",
+      "reason": "'Lithium-ion' is a banned variant; canonical short form 'Li-ion' must be used, keeping the (LIBs) definition.",
+      "review": {
+        "decision": "approve",
+        "reason": "Fixes banned variant and preserves the first-use abbreviation definition."
+      },
+      "status": "applied",
+      "guard": "passed",
+      "original": "Lithium-ion batteries (LIBs) are widely used in portable electronics and electric vehicles.",
+      "new_text": "Li-ion batteries (LIBs) are widely used in portable electronics and electric vehicles."
+    },
+    {
+      "edit_id": "e0003",
+      "unit": "u0005",
+      "type": "abbreviation_first_use",
+      "reason": "EIS was used here before being defined in Methods; move the definition to first use and fix 'li-ion' casing in the same sentence.",
+      "review": {
+        "decision": "approve",
+        "reason": "Satisfies define_at_first_use for EIS and unifies Li-ion casing; no data touched."
+      },
+      "status": "applied",
+      "guard": "passed",
+      "original": "EIS has become a standard tool for probing interfacial resistance in li-ion cells.",
+      "new_text": "Electrochemical impedance spectroscopy (EIS) has become a standard tool for probing interfacial resistance in Li-ion cells."
+    },
+    {
+      "edit_id": "e0004",
+      "unit": "u0008",
+      "type": "terminology_unification",
+      "reason": "'Li ion' misses the hyphen required by the glossary canonical form 'Li-ion'.",
+      "review": {
+        "decision": "approve",
+        "reason": "Hyphenation fix only; formula and abbreviation untouched."
+      },
+      "status": "applied",
+      "guard": "passed",
+      "original": "Li ion coin cells were assembled with LiNi0.8Co0.1Mn0.1O2 (NCM811) cathodes.",
+      "new_text": "Li-ion coin cells were assembled with LiNi0.8Co0.1Mn0.1O2 (NCM811) cathodes."
+    },
+    {
+      "edit_id": "e0005",
+      "unit": "u0009",
+      "type": "concision",
+      "reason": "Streamline the sentence.",
+      "review": {
+        "decision": "approve",
+        "reason": "Looks stylistically fine."
+      },
+      "status": "reverted",
+      "guard": "protected_token_lost",
+      "original": "Al2O3 coatings of 2 nm were deposited by atomic layer deposition (ALD).",
+      "new_text": "Al2O3 coatings were deposited by atomic layer deposition (ALD).",
+      "lost_tokens": [
+        "number:2",
+        "number_unit:2 nm"
+      ]
+    },
+    {
+      "edit_id": "e0006",
+      "unit": "u0011",
+      "type": "abbreviation_first_use",
+      "reason": "The full name is now defined at first use in the Introduction, so the abbreviation is used here; 'data were collected' also fixes the original collocation 'spectroscopy was collected'.",
+      "review": {
+        "decision": "approve",
+        "reason": "Keeps every number and unit (100 kHz, 10 mHz, 5 mV) unchanged."
+      },
+      "status": "applied",
+      "guard": "passed",
+      "original": "Electrochemical impedance spectroscopy (EIS) was collected from 100 kHz to 10 mHz with a perturbation amplitude of 5 mV.",
+      "new_text": "EIS data were collected from 100 kHz to 10 mHz with a perturbation amplitude of 5 mV."
+    },
+    {
+      "edit_id": "e0007",
+      "unit": "u0014",
+      "type": "terminology_unification",
+      "reason": "'solid-electrolyte interphase' is a banned hyphenation of the SEI full name.",
+      "review": {
+        "decision": "approve",
+        "reason": "Removes banned variant; canonical form restored."
+      },
+      "status": "applied",
+      "guard": "passed",
+      "original": "The solid-electrolyte interphase on coated anodes was thinner and more uniform.",
+      "new_text": "The solid electrolyte interphase on coated anodes was thinner and more uniform."
+    },
+    {
+      "edit_id": "e0008",
+      "unit": "u0015",
+      "type": "terminology_unification",
+      "reason": "'Lithium-ion' is a banned variant; use 'Li-ion'.",
+      "review": {
+        "decision": "approve",
+        "reason": "Value 4.5e-10 cm2 s-1 preserved exactly."
+      },
+      "status": "applied",
+      "guard": "passed",
+      "original": "Lithium-ion diffusion coefficients extracted from GITT reached 4.5e-10 cm2 s-1.",
+      "new_text": "Li-ion diffusion coefficients extracted from GITT reached 4.5e-10 cm2 s-1."
+    },
+    {
+      "edit_id": "e0009",
+      "unit": "u0016",
+      "type": "terminology_unification",
+      "reason": "'Li-ion and Lithium-ion cells' mixes a canonical form with a banned variant in one sentence; the redundancy is removed.",
+      "review": {
+        "decision": "approve",
+        "reason": "Figure pointer 'Fig. 2' and citation [3] are preserved."
+      },
+      "status": "applied",
+      "guard": "passed",
+      "original": "Fig. 2 summarizes the rate capability of Li-ion and Lithium-ion cells [3].",
+      "new_text": "Fig. 2 summarizes the rate capability of Li-ion cells [3]."
+    },
+    {
+      "edit_id": "e0010",
+      "unit": "u0018",
+      "type": "style",
+      "reason": "Add emphasis.",
+      "review": null,
+      "status": "reverted",
+      "guard": "missing_or_negative_review",
+      "original": "Al2O3 coatings stabilize the Li-ion cathode interface and suppress SEI growth.",
+      "new_text": "Al2O3 coatings stabilize the Li-ion cathode interface and effectively suppress SEI growth."
+    },
+    {
+      "edit_id": "e0011",
+      "unit": "u0019",
+      "type": "terminology_unification",
+      "reason": "'lithium ion batteries' is the banned long form in lowercase without hyphen; use 'Li-ion batteries'.",
+      "review": {
+        "decision": "approve",
+        "reason": "Unifies the closing sentence with the glossary; no meaning change."
+      },
+      "status": "applied",
+      "guard": "passed",
+      "original": "These findings demonstrate a scalable route to durable high-voltage lithium ion batteries.",
+      "new_text": "These findings demonstrate a scalable route to durable high-voltage Li-ion batteries."
+    }
+  ],
+  "glossary": {
+    "tool": "termbase.py lock",
+    "version": 1,
+    "entries": [
+      {
+        "canonical": "Li-ion battery",
+        "abbrev": "LIB",
+        "variants": [
+          "Li-ion batteries",
+          "Li-ion cell",
+          "Li-ion cells",
+          "Li-ion",
+          "LIBs"
+        ],
+        "banned": [
+          "Lithium-ion",
+          "Lithium-ion battery",
+          "Lithium-ion batteries",
+          "Lithium-ion cell",
+          "Lithium-ion cells"
+        ],
+        "first_use_policy": "define_at_first_use",
+        "origin": "glossary+confirmed",
+        "note": "Journal style mandates the hyphenated short form 'Li-ion'.",
+        "id": "t0001"
+      },
+      {
+        "canonical": "electrochemical impedance spectroscopy",
+        "abbrev": "EIS",
+        "variants": [],
+        "banned": [
+          "EIS spectroscopy",
+          "electrochemical impedance spectra"
+        ],
+        "first_use_policy": "define_at_first_use",
+        "origin": "glossary+confirmed",
+        "note": "Must be spelled out and parenthesized at first use.",
+        "id": "t0002"
+      },
+      {
+        "canonical": "solid electrolyte interphase",
+        "abbrev": "SEI",
+        "variants": [],
+        "banned": [
+          "solid-electrolyte interphase",
+          "solid electrolyte interface"
+        ],
+        "first_use_policy": "define_at_first_use",
+        "origin": "glossary+confirmed",
+        "note": "No hyphen between 'solid' and 'electrolyte'.",
+        "id": "t0003"
+      },
+      {
+        "canonical": "atomic layer deposition",
+        "abbrev": "ALD",
+        "variants": [],
+        "banned": [],
+        "first_use_policy": "define_at_first_use",
+        "origin": "glossary+confirmed",
+        "note": "",
+        "id": "t0004"
+      },
+      {
+        "canonical": "LiNi0.8Co0.1Mn0.1O2",
+        "abbrev": "NCM811",
+        "variants": [],
+        "banned": [],
+        "first_use_policy": "define_at_first_use",
+        "origin": "glossary+confirmed",
+        "note": "Cathode active material; formula is the canonical form.",
+        "id": "t0005"
+      }
+    ],
+    "conflicts": [],
+    "summary": {
+      "entry_count": 5,
+      "conflict_count": 0
+    }
+  },
+  "consistency_report": {
+    "report_markdown": "# Terminology Governance Report\n\n> Synthetic example output / 合成示例产物, not a formal case result\n\n- Source SHA-256: `165c7c77fa4335a005acc5d8d778b009849d690f95bfa05ffeabf310d95cfd3d`\n- Polished SHA-256: `471a7624b04e63c31fa2e53b5f28ba944a0eae6f6a684f0aa5688dfeb0c69eac`\n- Termbase entries: 5 | Conflicts: 0\n- Full-text lint: **0 errors, 3 warnings — gate PASS**\n\n## Locked termbase\n\n| id | canonical | abbrev | variants | banned | first-use policy | origin |\n|---|---|---|---|---|---|---|\n| t0001 | Li-ion battery | LIB | Li-ion batteries, Li-ion cell, Li-ion cells, Li-ion, LIBs | Lithium-ion, Lithium-ion battery, Lithium-ion batteries, Lithium-ion cell, Lithium-ion cells | define_at_first_use | glossary+confirmed |\n| t0002 | electrochemical impedance spectroscopy | EIS | — | EIS spectroscopy, electrochemical impedance spectra | define_at_first_use | glossary+confirmed |\n| t0003 | solid electrolyte interphase | SEI | — | solid-electrolyte interphase, solid electrolyte interface | define_at_first_use | glossary+confirmed |\n| t0004 | atomic layer deposition | ALD | — | — | define_at_first_use | glossary+confirmed |\n| t0005 | LiNi0.8Co0.1Mn0.1O2 | NCM811 | — | — | define_at_first_use | glossary+confirmed |\n\n## Conflicts\n\nNone. The locked termbase is internally consistent.\n\n## Full-text lint findings\n\n| id | severity | type | term | surface | location | message |\n|---|---|---|---|---|---|---|\n| f0001 | warning | abbrev_defined_but_unused | t0001 | LIB | Introduction L5 | abbreviation 'LIB' is defined but never used afterwards; consider dropping the abbreviation |\n| f0002 | warning | abbrev_defined_but_unused | t0005 | NCM811 | Methods L9 | abbreviation 'NCM811' is defined but never used afterwards; consider dropping the abbreviation |\n| f0003 | warning | abbrev_defined_but_unused | t0004 | ALD | Methods L9 | abbreviation 'ALD' is defined but never used afterwards; consider dropping the abbreviation |\n\n## Notes and boundaries\n\n- The gate is mechanical: it proves the absence of *registered* defects, not the absence of all terminology problems. Terms absent from the termbase are not checked.\n- Candidate extraction and matching are heuristic (see references/glossary-governance.md); borderline matches need human confirmation.\n- Findings above are byte-position deterministic; re-running on identical input reproduces them exactly.\n",
+    "finding_count": 3
+  },
+  "status": "success",
+  "uncertainty": "GITT was left unchanged: its expansion is not given in the draft and the term is not in the locked termbase. Chemical formulas (Al2O3, NCM811 formula) are outside termbase matching scope. All edits were verified by the mechanical gates; stylistic quality still needs a human read.",
+  "sources": [
+    "source.md (case material: source_file)",
+    "case.json materials.glossary (case-provided term glossary)"
+  ],
+  "notes": [
+    "uncertainty: uncertainty must be written by the agent, not fabricated",
+    "synthetic example / 合成示例, not a formal case result",
+    "uncertainty: written by the agent during this run"
+  ]
+}
