@@ -1,0 +1,20 @@
+{
+  "changes": [
+    {
+      "id": "chg1",
+      "type": "modified",
+      "old": "Quality-weighted consensus across template structures for low-identity targets remains unestablished.",
+      "new": "Quality-weighted consensus across template structures for low-identity targets remains unestablished, and the present work tests whether per-template local quality weighting closes it.",
+      "location": "sentence block 9->9",
+      "rationale": "gap sentence now states the tested remedy; heading renamed to reflect joint gap+present-work move"
+    }
+  ],
+  "summary": {
+    "total": 1,
+    "added": 0,
+    "modified": 1,
+    "deleted": 0,
+    "missing_rationale": 0
+  },
+  "note": "sentence-level diff; verify each record keeps scientific intent unchanged"
+}

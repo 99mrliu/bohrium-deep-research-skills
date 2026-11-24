@@ -1,0 +1,190 @@
+{
+  "case_id": "synthetic-intro-demo-0001",
+  "parsed_from": "/Users/liuhengshen/Desktop/bhr_product/writing08-5dir/bundles/run-contract-pipeline/examples/synthetic-case/case.json",
+  "parsed_at": "2026-11-24T11:24:19.708745+00:00",
+  "max_depth": 3,
+  "fields": {
+    "case_id": {
+      "raw": "str, copied from input",
+      "type": "str",
+      "placeholder": ""
+    },
+    "target_artifact": {
+      "raw": "object: path, format, sections[], word_counts{}",
+      "type": "object",
+      "placeholder": {
+        "path": "",
+        "format": "",
+        "sections": [],
+        "word_counts": {}
+      },
+      "subfields": {
+        "path": {
+          "raw": "path",
+          "type": "str",
+          "placeholder": ""
+        },
+        "format": {
+          "raw": "format",
+          "type": "str",
+          "placeholder": ""
+        },
+        "sections": {
+          "raw": "sections[]",
+          "type": "array",
+          "placeholder": [],
+          "item_skeleton": null
+        },
+        "word_counts": {
+          "raw": "word_counts{}",
+          "type": "object",
+          "placeholder": {},
+          "subfields": null
+        }
+      }
+    },
+    "facts_and_sources": {
+      "raw": "array of claim objects (id, section, text, type, refs[], quote, source_span, stance, confidence)",
+      "type": "array",
+      "item_kind": "claim",
+      "placeholder": [],
+      "item_skeleton": {
+        "id": "",
+        "section": "",
+        "text": "",
+        "type": "",
+        "refs": [],
+        "quote": "",
+        "source_span": "",
+        "stance": "",
+        "confidence": ""
+      },
+      "subfields": {
+        "id": {
+          "raw": "id",
+          "type": "str",
+          "placeholder": ""
+        },
+        "section": {
+          "raw": "section",
+          "type": "str",
+          "placeholder": ""
+        },
+        "text": {
+          "raw": "text",
+          "type": "str",
+          "placeholder": ""
+        },
+        "type": {
+          "raw": "type",
+          "type": "str",
+          "placeholder": ""
+        },
+        "refs": {
+          "raw": "refs[]",
+          "type": "array",
+          "placeholder": [],
+          "item_skeleton": null
+        },
+        "quote": {
+          "raw": "quote",
+          "type": "str",
+          "placeholder": ""
+        },
+        "source_span": {
+          "raw": "source_span",
+          "type": "str",
+          "placeholder": ""
+        },
+        "stance": {
+          "raw": "stance",
+          "type": "str",
+          "placeholder": ""
+        },
+        "confidence": {
+          "raw": "confidence",
+          "type": "str",
+          "placeholder": ""
+        }
+      }
+    },
+    "version_and_boundary": {
+      "raw": "object: changes[], open_items[], material_gaps[], status",
+      "type": "object",
+      "placeholder": {
+        "changes": [],
+        "open_items": [],
+        "material_gaps": [],
+        "status": ""
+      },
+      "subfields": {
+        "changes": {
+          "raw": "changes[]",
+          "type": "array",
+          "placeholder": [],
+          "item_skeleton": null
+        },
+        "open_items": {
+          "raw": "open_items[]",
+          "type": "array",
+          "placeholder": [],
+          "item_skeleton": null
+        },
+        "material_gaps": {
+          "raw": "material_gaps[]",
+          "type": "array",
+          "placeholder": [],
+          "item_skeleton": null
+        },
+        "status": {
+          "raw": "status",
+          "type": "str",
+          "placeholder": ""
+        }
+      }
+    },
+    "verification": {
+      "raw": "object: checks[], pass/fail/not_verifiable counts, artifact of the skill's verify script",
+      "type": "object",
+      "placeholder": {
+        "checks": [],
+        "pass/fail/not_verifiable counts": null,
+        "artifact of the skill's verify script": null
+      },
+      "subfields": {
+        "checks": {
+          "raw": "checks[]",
+          "type": "array",
+          "placeholder": [],
+          "item_skeleton": null
+        },
+        "pass/fail/not_verifiable counts": {
+          "raw": "pass/fail/not_verifiable counts",
+          "type": "unknown",
+          "placeholder": null,
+          "notes": [
+            "needs_manual_review: subfield token is not a clean identifier; treat as descriptive prose, verify by hand"
+          ]
+        },
+        "artifact of the skill's verify script": {
+          "raw": "artifact of the skill's verify script",
+          "type": "unknown",
+          "placeholder": null,
+          "notes": [
+            "needs_manual_review: subfield token is not a clean identifier; treat as descriptive prose, verify by hand"
+          ]
+        }
+      }
+    },
+    "status": {
+      "raw": "enum: complete | partial | blocked",
+      "type": "enum",
+      "allowed": [
+        "complete",
+        "partial",
+        "blocked"
+      ],
+      "placeholder": "complete"
+    }
+  }
+}

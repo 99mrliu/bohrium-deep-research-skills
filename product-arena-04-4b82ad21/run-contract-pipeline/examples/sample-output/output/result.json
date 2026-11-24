@@ -1,0 +1,265 @@
+{
+  "case_id": "synthetic-intro-demo-0001",
+  "target_artifact": {
+    "path": "/Users/liuhengshen/Desktop/bhr_product/writing08-5dir/bundles/run-contract-pipeline/examples/synthetic-case/filled/introduction.md",
+    "format": "markdown",
+    "sections": [
+      "Introduction — PermaLig (SYNTHETIC EXAMPLE — invented content, interface demo only)",
+      "Background",
+      "Related work",
+      "Research gap",
+      "Contributions"
+    ],
+    "word_counts": {
+      "Introduction — PermaLig (SYNTHETIC EXAMPLE — invented content, interface demo only)": 25,
+      "Background": 63,
+      "Related work": 164,
+      "Research gap": 35,
+      "Contributions": 75,
+      "total": 377
+    }
+  },
+  "facts_and_sources": [
+    {
+      "id": "c1",
+      "section": "related_work",
+      "text": "TemplateTransfer's top-1 precision drops from 0.55 above 40% template identity to 0.41 below 30% identity.",
+      "type": "prior_work_result",
+      "refs": [
+        1
+      ],
+      "quote": "it reaches 0.55 top-1 pocket precision when template identity exceeds 40%, but precision drops to 0.41 for targets below 30% identity",
+      "source_span": "material/references.json#synth01.abstract",
+      "stance": "supports",
+      "confidence": "high"
+    },
+    {
+      "id": "c2",
+      "section": "related_work",
+      "text": "MultiTempl's pooling raises recall by 0.15 over single-template transfer, but precision on low-identity targets stays flat because low-quality templates vote with equal weight.",
+      "type": "prior_work_result",
+      "refs": [
+        5
+      ],
+      "quote": "Pooling raises recall by 0.15 over single-template transfer, but precision on low-identity targets stays flat because low-quality templates vote with equal weight.",
+      "source_span": "material/references.json#synth03.abstract",
+      "stance": "supports",
+      "confidence": "high"
+    },
+    {
+      "id": "c3",
+      "section": "related_work",
+      "text": "ConsenSite's unweighted consensus across homologous structures gains 0.07 precision but requires multiple experimental structures of the target itself and was not evaluated on template-based transfer.",
+      "type": "prior_work_result",
+      "refs": [
+        6
+      ],
+      "quote": "It improves precision by 0.07 over single-structure scoring, but requires multiple experimental structures of the target itself",
+      "source_span": "material/references.json#synth05.abstract",
+      "stance": "supports",
+      "confidence": "high"
+    },
+    {
+      "id": "c4",
+      "section": "contributions",
+      "text": "On the hard subset of SynBench-60, PermaLig reaches 0.61 top-1 pocket precision versus 0.48 for the best single-template baseline (SYNTHETIC number).",
+      "type": "present_work_result",
+      "refs": [],
+      "quote": "PermaLig reaches 0.61 top-1 pocket precision versus 0.48 for the best single-template baseline (Fig 2, invented numbers for demo)",
+      "source_span": "material/manuscript-facts.md#Contribution 2",
+      "stance": "supports",
+      "confidence": "high"
+    }
+  ],
+  "version_and_boundary": {
+    "changes": [],
+    "open_items": [],
+    "material_gaps": [],
+    "status": "complete"
+  },
+  "verification": {
+    "case_id": "synthetic-intro-demo-0001",
+    "generated_at": "2026-11-24T11:24:21.176090+00:00",
+    "result_checked": "/Users/liuhengshen/Desktop/bhr_product/writing08-5dir/bundles/run-contract-pipeline/examples/sample-output/output/result.json",
+    "draft_checked": "/Users/liuhengshen/Desktop/bhr_product/writing08-5dir/bundles/run-contract-pipeline/examples/synthetic-case/filled/introduction.md",
+    "checks": [
+      {
+        "check": "contract:case_id",
+        "status": "pass",
+        "evidence": "type str ok"
+      },
+      {
+        "check": "contract:target_artifact",
+        "status": "pass",
+        "evidence": "type object ok"
+      },
+      {
+        "check": "contract:target_artifact.path",
+        "status": "pass",
+        "evidence": "type str ok"
+      },
+      {
+        "check": "contract:target_artifact.format",
+        "status": "pass",
+        "evidence": "type str ok"
+      },
+      {
+        "check": "contract:target_artifact.sections",
+        "status": "pass",
+        "evidence": "type array ok"
+      },
+      {
+        "check": "contract:target_artifact.word_counts",
+        "status": "pass",
+        "evidence": "type object ok"
+      },
+      {
+        "check": "contract:facts_and_sources",
+        "status": "pass",
+        "evidence": "type array ok"
+      },
+      {
+        "check": "contract:facts_and_sources:item[0]",
+        "status": "pass",
+        "evidence": "all 9 item subfields present with right types"
+      },
+      {
+        "check": "contract:facts_and_sources:item[1]",
+        "status": "pass",
+        "evidence": "all 9 item subfields present with right types"
+      },
+      {
+        "check": "contract:facts_and_sources:item[2]",
+        "status": "pass",
+        "evidence": "all 9 item subfields present with right types"
+      },
+      {
+        "check": "contract:facts_and_sources:item[3]",
+        "status": "pass",
+        "evidence": "all 9 item subfields present with right types"
+      },
+      {
+        "check": "contract:version_and_boundary",
+        "status": "pass",
+        "evidence": "type object ok"
+      },
+      {
+        "check": "contract:version_and_boundary.changes",
+        "status": "pass",
+        "evidence": "type array ok"
+      },
+      {
+        "check": "contract:version_and_boundary.open_items",
+        "status": "pass",
+        "evidence": "type array ok"
+      },
+      {
+        "check": "contract:version_and_boundary.material_gaps",
+        "status": "pass",
+        "evidence": "type array ok"
+      },
+      {
+        "check": "contract:version_and_boundary.status",
+        "status": "pass",
+        "evidence": "type str ok"
+      },
+      {
+        "check": "contract:verification",
+        "status": "pass",
+        "evidence": "type object ok"
+      },
+      {
+        "check": "contract:verification.checks",
+        "status": "pass",
+        "evidence": "type array ok"
+      },
+      {
+        "check": "contract:verification.pass/fail/not_verifiable counts",
+        "status": "not_verifiable",
+        "evidence": "descriptor needs manual review: 'pass/fail/not_verifiable counts'"
+      },
+      {
+        "check": "contract:verification.artifact of the skill's verify script",
+        "status": "not_verifiable",
+        "evidence": "descriptor needs manual review: \"artifact of the skill's verify script\""
+      },
+      {
+        "check": "contract:status",
+        "status": "pass",
+        "evidence": "type enum ok"
+      },
+      {
+        "check": "contract:case_id_matches_input",
+        "status": "pass",
+        "evidence": "case_id 'synthetic-intro-demo-0001' copied verbatim"
+      },
+      {
+        "check": "contract:status_consistency",
+        "status": "pass",
+        "evidence": "status=complete and all top-level fields populated"
+      },
+      {
+        "check": "draft:file_present",
+        "status": "pass",
+        "evidence": "draft found: /Users/liuhengshen/Desktop/bhr_product/writing08-5dir/bundles/run-contract-pipeline/examples/synthetic-case/filled/introduction.md"
+      },
+      {
+        "check": "constraint:max_words_introduction",
+        "status": "pass",
+        "evidence": "total words 377 vs limit 400"
+      },
+      {
+        "check": "constraint:max_words_related_work",
+        "status": "pass",
+        "evidence": "related-work words 164 (sections ['Related work']) vs limit 260"
+      },
+      {
+        "check": "constraint:min_distinct_citations",
+        "status": "pass",
+        "evidence": "distinct [n] citations 6 [1, 2, 3, 4, 5, 6] vs minimum 4"
+      },
+      {
+        "check": "constraint:sections_required:background",
+        "status": "pass",
+        "evidence": "part 'background' signalled by keyword(s): ['background', 'introduction']"
+      },
+      {
+        "check": "constraint:sections_required:related_work",
+        "status": "pass",
+        "evidence": "part 'related_work' signalled by keyword(s): ['related work']"
+      },
+      {
+        "check": "constraint:sections_required:gap",
+        "status": "pass",
+        "evidence": "part 'gap' signalled by keyword(s): ['gap', 'remains']"
+      },
+      {
+        "check": "constraint:sections_required:contributions",
+        "status": "pass",
+        "evidence": "part 'contributions' signalled by keyword(s): ['contribution', 'contributions', 'we present']"
+      },
+      {
+        "check": "constraint:must_cover_topics:template-based binding-site prediction",
+        "status": "pass",
+        "evidence": "template-based binding-site prediction (exact phrase found)"
+      },
+      {
+        "check": "constraint:must_cover_topics:sequence-only binding-site prediction",
+        "status": "pass",
+        "evidence": "sequence-only binding-site prediction (exact phrase found)"
+      },
+      {
+        "check": "constraint:must_cover_topics:multi-structure consensus scoring",
+        "status": "pass",
+        "evidence": "multi-structure consensus scoring (exact phrase found)"
+      }
+    ],
+    "summary": {
+      "pass": 32,
+      "fail": 0,
+      "not_verifiable": 2
+    }
+  },
+  "status": "complete",
+  "limits": []
+}

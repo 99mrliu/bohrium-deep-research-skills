@@ -1,0 +1,85 @@
+[
+  {
+    "key": "synth01",
+    "number": 1,
+    "authors": [
+      "Novak, I.",
+      "Petersen, L."
+    ],
+    "year": 2021,
+    "title": "TemplateTransfer: ligand binding-site prediction by single-template pocket transplantation",
+    "journal": "J. Synth. Comput. Biol.",
+    "doi": "10.0000/synth.0001",
+    "abstract": "TemplateTransfer predicts ligand binding sites by transplanting pockets from the single highest-identity template structure. On an invented benchmark of 80 targets it reaches 0.55 top-1 pocket precision when template identity exceeds 40%, but precision drops to 0.41 for targets below 30% identity, because a single template often carries a partially mismatched pocket.",
+    "evidence_level": "abstract"
+  },
+  {
+    "key": "synth02",
+    "number": 2,
+    "authors": [
+      "Okafor, M.",
+      "Lindqvist, S.",
+      "Achebe, T."
+    ],
+    "year": 2022,
+    "title": "SeqPocket: sequence-only binding-site prediction with a residue-attention network",
+    "journal": "Synth. Bioinform. Lett.",
+    "doi": "10.0000/synth.0002",
+    "abstract": "SeqPocket predicts binding residues directly from sequence using a residue-attention network, requiring no structural template. It matches template-based methods on targets with no usable template but lags them by 0.10 top-1 precision on template-rich targets. The authors note it cannot localize pockets that lack sequence motifs.",
+    "evidence_level": "abstract"
+  },
+  {
+    "key": "synth03",
+    "number": 3,
+    "authors": [
+      "Vasquez, R."
+    ],
+    "year": 2023,
+    "title": "MultiTempl: naive pocket pooling from multiple templates",
+    "journal": "J. Synth. Comput. Biol.",
+    "doi": "10.0000/synth.0003",
+    "abstract": "MultiTempl pools predicted pockets from up to 8 template structures and ranks them by pocket frequency. Pooling raises recall by 0.15 over single-template transfer, but precision on low-identity targets stays flat because low-quality templates vote with equal weight.",
+    "evidence_level": "abstract"
+  },
+  {
+    "key": "synth04",
+    "number": 4,
+    "authors": [
+      "Haugen, P.",
+      "Weiss, D."
+    ],
+    "year": 2020,
+    "title": "GeoScore: geometry-based ranking of candidate binding pockets",
+    "journal": "Proc. Synth. Struct. Biol.",
+    "doi": "10.0000/synth.0004",
+    "abstract": "GeoScore ranks candidate pockets by geometric descriptors (depth, enclosure, hydrophobic patch area) without any template. It is fast and template-free, but the abstract reports no comparison against template-based predictors and no low-identity evaluation.",
+    "evidence_level": "abstract"
+  },
+  {
+    "key": "synth05",
+    "number": 5,
+    "authors": [
+      "Tanaka, Y.",
+      "Moreau, C."
+    ],
+    "year": 2024,
+    "title": "ConsenSite: consensus scoring of pockets across homologous structures",
+    "journal": "Synth. Bioinform. Lett.",
+    "doi": "10.0000/synth.0005",
+    "abstract": "ConsenSite scores candidate pockets by unweighted consensus across homologous experimental structures of the same protein. It improves precision by 0.07 over single-structure scoring, but requires multiple experimental structures of the target itself, which are unavailable for most prediction targets; it was not evaluated on template-based transfer.",
+    "evidence_level": "abstract"
+  },
+  {
+    "key": "synth06",
+    "number": 6,
+    "authors": [
+      "Karlsen, E."
+    ],
+    "year": 2019,
+    "title": "A survey of binding-site prediction methods",
+    "journal": "Synth. Rev. Comput. Biol.",
+    "doi": "10.0000/synth.0006",
+    "abstract": "This survey groups binding-site predictors into template-based, geometry-based and sequence-based families, and observes that low-identity template transfer remains the weakest setting across all template-based methods surveyed.",
+    "evidence_level": "abstract"
+  }
+]

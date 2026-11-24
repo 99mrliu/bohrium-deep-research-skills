@@ -1,0 +1,243 @@
+{
+  "summary": {
+    "json_entries": 6,
+    "md_entries": 6,
+    "matched": 6,
+    "disagreements": 0,
+    "status": "pass"
+  },
+  "entries": [
+    {
+      "key": "synth01",
+      "matched_via": "doi",
+      "json_position": 1,
+      "md_position": 1,
+      "fields": {
+        "authors": {
+          "status": "ok",
+          "json_value": "Novak, I., Petersen, L.",
+          "md_value": "Novak, I., Petersen, L."
+        },
+        "year": {
+          "status": "ok",
+          "json_value": 2021,
+          "md_value": 2021
+        },
+        "title": {
+          "status": "ok",
+          "json_value": "TemplateTransfer: ligand binding-site prediction by single-template pocket transplantation",
+          "md_value": "TemplateTransfer: ligand binding-site prediction by single-template pocket transplantation"
+        },
+        "journal": {
+          "status": "ok",
+          "json_value": "J. Synth. Comput. Biol.",
+          "md_value": "J. Synth. Comput. Biol"
+        },
+        "doi": {
+          "status": "ok",
+          "json_value": "10.0000/synth.0001",
+          "md_value": "10.0000/synth.0001"
+        },
+        "abstract": {
+          "status": "ok",
+          "json_value": "TemplateTransfer predicts ligand binding sites by transplanting pockets from the single highest-identity template structure. On an invented benchmark of 80 targets it reaches 0.55 top-1 pocket precision when template identity exceeds 40%, but precision drops to 0.41 for targets below 30% identity, because a single template often carries a partially mismatched pocket.",
+          "md_value": "TemplateTransfer predicts ligand binding sites by transplanting pockets from the single highest-identity template structure. On an invented benchmark of 80 targets it reaches 0.55 top-1 pocket precision when template identity exceeds 40%, but precision drops to 0.41 for targets below 30% identity, because a single template often carries a partially mismatched pocket."
+        }
+      }
+    },
+    {
+      "key": "synth02",
+      "matched_via": "doi",
+      "json_position": 2,
+      "md_position": 2,
+      "fields": {
+        "authors": {
+          "status": "ok",
+          "json_value": "Okafor, M., Lindqvist, S., Achebe, T.",
+          "md_value": "Okafor, M., Lindqvist, S., Achebe, T."
+        },
+        "year": {
+          "status": "ok",
+          "json_value": 2022,
+          "md_value": 2022
+        },
+        "title": {
+          "status": "ok",
+          "json_value": "SeqPocket: sequence-only binding-site prediction with a residue-attention network",
+          "md_value": "SeqPocket: sequence-only binding-site prediction with a residue-attention network"
+        },
+        "journal": {
+          "status": "ok",
+          "json_value": "Synth. Bioinform. Lett.",
+          "md_value": "Synth. Bioinform. Lett"
+        },
+        "doi": {
+          "status": "ok",
+          "json_value": "10.0000/synth.0002",
+          "md_value": "10.0000/synth.0002"
+        },
+        "abstract": {
+          "status": "ok",
+          "json_value": "SeqPocket predicts binding residues directly from sequence using a residue-attention network, requiring no structural template. It matches template-based methods on targets with no usable template but lags them by 0.10 top-1 precision on template-rich targets. The authors note it cannot localize pockets that lack sequence motifs.",
+          "md_value": "SeqPocket predicts binding residues directly from sequence using a residue-attention network, requiring no structural template. It matches template-based methods on targets with no usable template but lags them by 0.10 top-1 precision on template-rich targets. The authors note it cannot localize pockets that lack sequence motifs."
+        }
+      }
+    },
+    {
+      "key": "synth03",
+      "matched_via": "doi",
+      "json_position": 3,
+      "md_position": 3,
+      "fields": {
+        "authors": {
+          "status": "ok",
+          "json_value": "Vasquez, R.",
+          "md_value": "Vasquez, R."
+        },
+        "year": {
+          "status": "ok",
+          "json_value": 2023,
+          "md_value": 2023
+        },
+        "title": {
+          "status": "ok",
+          "json_value": "MultiTempl: naive pocket pooling from multiple templates",
+          "md_value": "MultiTempl: naive pocket pooling from multiple templates"
+        },
+        "journal": {
+          "status": "ok",
+          "json_value": "J. Synth. Comput. Biol.",
+          "md_value": "J. Synth. Comput. Biol"
+        },
+        "doi": {
+          "status": "ok",
+          "json_value": "10.0000/synth.0003",
+          "md_value": "10.0000/synth.0003"
+        },
+        "abstract": {
+          "status": "ok",
+          "json_value": "MultiTempl pools predicted pockets from up to 8 template structures and ranks them by pocket frequency. Pooling raises recall by 0.15 over single-template transfer, but precision on low-identity targets stays flat because low-quality templates vote with equal weight.",
+          "md_value": "MultiTempl pools predicted pockets from up to 8 template structures and ranks them by pocket frequency. Pooling raises recall by 0.15 over single-template transfer, but precision on low-identity targets stays flat because low-quality templates vote with equal weight."
+        }
+      }
+    },
+    {
+      "key": "synth04",
+      "matched_via": "doi",
+      "json_position": 4,
+      "md_position": 4,
+      "fields": {
+        "authors": {
+          "status": "ok",
+          "json_value": "Haugen, P., Weiss, D.",
+          "md_value": "Haugen, P., Weiss, D."
+        },
+        "year": {
+          "status": "ok",
+          "json_value": 2020,
+          "md_value": 2020
+        },
+        "title": {
+          "status": "ok",
+          "json_value": "GeoScore: geometry-based ranking of candidate binding pockets",
+          "md_value": "GeoScore: geometry-based ranking of candidate binding pockets"
+        },
+        "journal": {
+          "status": "ok",
+          "json_value": "Proc. Synth. Struct. Biol.",
+          "md_value": "Proc. Synth. Struct. Biol"
+        },
+        "doi": {
+          "status": "ok",
+          "json_value": "10.0000/synth.0004",
+          "md_value": "10.0000/synth.0004"
+        },
+        "abstract": {
+          "status": "ok",
+          "json_value": "GeoScore ranks candidate pockets by geometric descriptors (depth, enclosure, hydrophobic patch area) without any template. It is fast and template-free, but the abstract reports no comparison against template-based predictors and no low-identity evaluation.",
+          "md_value": "GeoScore ranks candidate pockets by geometric descriptors (depth, enclosure, hydrophobic patch area) without any template. It is fast and template-free, but the abstract reports no comparison against template-based predictors and no low-identity evaluation."
+        }
+      }
+    },
+    {
+      "key": "synth05",
+      "matched_via": "doi",
+      "json_position": 5,
+      "md_position": 5,
+      "fields": {
+        "authors": {
+          "status": "ok",
+          "json_value": "Tanaka, Y., Moreau, C.",
+          "md_value": "Tanaka, Y., Moreau, C."
+        },
+        "year": {
+          "status": "ok",
+          "json_value": 2024,
+          "md_value": 2024
+        },
+        "title": {
+          "status": "ok",
+          "json_value": "ConsenSite: consensus scoring of pockets across homologous structures",
+          "md_value": "ConsenSite: consensus scoring of pockets across homologous structures"
+        },
+        "journal": {
+          "status": "ok",
+          "json_value": "Synth. Bioinform. Lett.",
+          "md_value": "Synth. Bioinform. Lett"
+        },
+        "doi": {
+          "status": "ok",
+          "json_value": "10.0000/synth.0005",
+          "md_value": "10.0000/synth.0005"
+        },
+        "abstract": {
+          "status": "ok",
+          "json_value": "ConsenSite scores candidate pockets by unweighted consensus across homologous experimental structures of the same protein. It improves precision by 0.07 over single-structure scoring, but requires multiple experimental structures of the target itself, which are unavailable for most prediction targets; it was not evaluated on template-based transfer.",
+          "md_value": "ConsenSite scores candidate pockets by unweighted consensus across homologous experimental structures of the same protein. It improves precision by 0.07 over single-structure scoring, but requires multiple experimental structures of the target itself, which are unavailable for most prediction targets; it was not evaluated on template-based transfer."
+        }
+      }
+    },
+    {
+      "key": "synth06",
+      "matched_via": "doi",
+      "json_position": 6,
+      "md_position": 6,
+      "fields": {
+        "authors": {
+          "status": "ok",
+          "json_value": "Karlsen, E.",
+          "md_value": "Karlsen, E."
+        },
+        "year": {
+          "status": "ok",
+          "json_value": 2019,
+          "md_value": 2019
+        },
+        "title": {
+          "status": "ok",
+          "json_value": "A survey of binding-site prediction methods",
+          "md_value": "A survey of binding-site prediction methods"
+        },
+        "journal": {
+          "status": "ok",
+          "json_value": "Synth. Rev. Comput. Biol.",
+          "md_value": "Synth. Rev. Comput. Biol"
+        },
+        "doi": {
+          "status": "ok",
+          "json_value": "10.0000/synth.0006",
+          "md_value": "10.0000/synth.0006"
+        },
+        "abstract": {
+          "status": "ok",
+          "json_value": "This survey groups binding-site predictors into template-based, geometry-based and sequence-based families, and observes that low-identity template transfer remains the weakest setting across all template-based methods surveyed.",
+          "md_value": "This survey groups binding-site predictors into template-based, geometry-based and sequence-based families, and observes that low-identity template transfer remains the weakest setting across all template-based methods surveyed."
+        }
+      }
+    }
+  ],
+  "ordering_differences": [],
+  "extra_md_entries": [],
+  "json_entries_missing_in_md": [],
+  "policy": "Disagreements are reported, never silently fixed. Trivial punctuation/whitespace differences are tolerated."
+}

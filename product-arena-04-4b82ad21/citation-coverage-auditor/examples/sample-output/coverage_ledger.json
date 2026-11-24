@@ -1,0 +1,244 @@
+{
+  "case_id": "synthetic-intro-demo-0001",
+  "status": "pass",
+  "cited_refs": [
+    "synth01",
+    "synth02",
+    "synth03",
+    "synth04",
+    "synth05",
+    "synth06"
+  ],
+  "uncited_refs": [],
+  "distinct_citations": 6,
+  "min_distinct_citations": 4,
+  "min_distinct_ok": true,
+  "must_cover_topics": [
+    {
+      "topic": "template-based binding-site prediction",
+      "covered": true,
+      "covered_by": [
+        "synth01",
+        "synth02",
+        "synth06"
+      ],
+      "candidates": [
+        {
+          "key": "synth01",
+          "overlap": 4,
+          "shared": [
+            "binding",
+            "prediction",
+            "site",
+            "template"
+          ]
+        },
+        {
+          "key": "synth02",
+          "overlap": 4,
+          "shared": [
+            "binding",
+            "prediction",
+            "site",
+            "template"
+          ]
+        },
+        {
+          "key": "synth06",
+          "overlap": 4,
+          "shared": [
+            "binding",
+            "prediction",
+            "site",
+            "template"
+          ]
+        }
+      ],
+      "note": "lexical-overlap heuristic; confirm semantic relevance by reading"
+    },
+    {
+      "topic": "sequence-only binding-site prediction",
+      "covered": true,
+      "covered_by": [
+        "synth02",
+        "synth06",
+        "synth01"
+      ],
+      "candidates": [
+        {
+          "key": "synth02",
+          "overlap": 4,
+          "shared": [
+            "binding",
+            "prediction",
+            "sequence",
+            "site"
+          ]
+        },
+        {
+          "key": "synth06",
+          "overlap": 4,
+          "shared": [
+            "binding",
+            "prediction",
+            "sequence",
+            "site"
+          ]
+        },
+        {
+          "key": "synth01",
+          "overlap": 3,
+          "shared": [
+            "binding",
+            "prediction",
+            "site"
+          ]
+        }
+      ],
+      "note": "lexical-overlap heuristic; confirm semantic relevance by reading"
+    },
+    {
+      "topic": "multi-structure consensus scoring",
+      "covered": true,
+      "covered_by": [
+        "synth05",
+        "synth01",
+        "synth03"
+      ],
+      "candidates": [
+        {
+          "key": "synth05",
+          "overlap": 3,
+          "shared": [
+            "consensu",
+            "scoring",
+            "structure"
+          ]
+        },
+        {
+          "key": "synth01",
+          "overlap": 1,
+          "shared": [
+            "structure"
+          ]
+        },
+        {
+          "key": "synth03",
+          "overlap": 1,
+          "shared": [
+            "structure"
+          ]
+        }
+      ],
+      "note": "lexical-overlap heuristic; confirm semantic relevance by reading"
+    }
+  ],
+  "recency": {
+    "cited_year_histogram": {
+      "2019": 1,
+      "2020": 1,
+      "2021": 1,
+      "2022": 1,
+      "2023": 1,
+      "2024": 1
+    },
+    "newest_bibliography_year": 2024,
+    "most_recent_entries_ignored": []
+  },
+  "closest_work": {
+    "problem_statement": "predicting ligand binding sites on proteins whose best available template shares less than 30% sequence identity with the target.",
+    "ranking": [
+      {
+        "key": "synth01",
+        "overlap": 6,
+        "shared": [
+          "binding",
+          "identity",
+          "ligand",
+          "site",
+          "target",
+          "template"
+        ]
+      },
+      {
+        "key": "synth02",
+        "overlap": 5,
+        "shared": [
+          "binding",
+          "sequence",
+          "site",
+          "target",
+          "template"
+        ]
+      },
+      {
+        "key": "synth06",
+        "overlap": 5,
+        "shared": [
+          "binding",
+          "identity",
+          "sequence",
+          "site",
+          "template"
+        ]
+      },
+      {
+        "key": "synth03",
+        "overlap": 3,
+        "shared": [
+          "identity",
+          "target",
+          "template"
+        ]
+      },
+      {
+        "key": "synth04",
+        "overlap": 3,
+        "shared": [
+          "binding",
+          "identity",
+          "template"
+        ]
+      },
+      {
+        "key": "synth05",
+        "overlap": 3,
+        "shared": [
+          "protein",
+          "target",
+          "template"
+        ]
+      }
+    ],
+    "top2": [
+      {
+        "key": "synth01",
+        "overlap": 6,
+        "shared": [
+          "binding",
+          "identity",
+          "ligand",
+          "site",
+          "target",
+          "template"
+        ]
+      },
+      {
+        "key": "synth02",
+        "overlap": 5,
+        "shared": [
+          "binding",
+          "sequence",
+          "site",
+          "target",
+          "template"
+        ]
+      }
+    ],
+    "top2_uncited": [],
+    "note": "lexical-overlap heuristic over the problem statement; confirm the closest works by reading"
+  },
+  "decorative_citation_warnings": [],
+  "failures": [],
+  "warnings": []
+}

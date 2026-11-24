@@ -1,0 +1,96 @@
+{
+  "case_id": "synthetic-intro-demo-0001",
+  "task_type": "introduction_and_related_work",
+  "created_at": "2026-11-24T11:24:19.709004+00:00",
+  "milestones": [
+    {
+      "stage": "read",
+      "time_fraction": 0.15,
+      "budget_note": "fraction of the total wall-clock budget",
+      "goal": "Read case.json, task.md and all declared material; build the contract map."
+    },
+    {
+      "stage": "scaffold_evidence",
+      "time_fraction": 0.25,
+      "budget_note": "fraction of the total wall-clock budget",
+      "goal": "Skeleton result.json, evidence table, citation order, section outline."
+    },
+    {
+      "stage": "draft",
+      "time_fraction": 0.35,
+      "budget_note": "fraction of the total wall-clock budget",
+      "goal": "Write the manuscript draft; save editable partials early; checkpoint each milestone."
+    },
+    {
+      "stage": "audit_assemble",
+      "time_fraction": 0.25,
+      "budget_note": "fraction of the total wall-clock budget",
+      "goal": "Self-audit vs constraints, assemble result.json, run contract_check, deliver."
+    }
+  ],
+  "constraints": {
+    "max_words_introduction": 400,
+    "max_words_related_work": 260,
+    "citation_style": "vancouver-numbered",
+    "cite_only_from_bibliography": true,
+    "must_not_add_new_facts": true,
+    "min_distinct_citations": 4,
+    "sections_required": [
+      "background",
+      "related_work",
+      "gap",
+      "contributions"
+    ],
+    "must_cover_topics": [
+      "template-based binding-site prediction",
+      "sequence-only binding-site prediction",
+      "multi-structure consensus scoring"
+    ],
+    "available_anchors": [
+      "Fig 1",
+      "Fig 2"
+    ],
+    "language_of_output": "en"
+  },
+  "deliverables": [
+    "introduction",
+    "related_work",
+    "claim_citation_table",
+    "gap_chain",
+    "contribution_map",
+    "result_json"
+  ],
+  "output_contract_fields": [
+    "case_id",
+    "target_artifact",
+    "facts_and_sources",
+    "version_and_boundary",
+    "verification",
+    "status"
+  ],
+  "budget_policy": {
+    "reserve_final_fraction_for_assembly": 0.2,
+    "spend_model_requests_on": [
+      "reading sources",
+      "writing prose"
+    ],
+    "delegate_to_scripts": [
+      "word counts",
+      "citation counts",
+      "contract checks",
+      "result.json assembly",
+      "checkpoint snapshots"
+    ],
+    "do_not_rerun": "scripts that already passed on unchanged inputs"
+  },
+  "next_actions": [
+    "Read task.md in full, then every material file declared in case.material.",
+    "Review work/contract_map.json; resolve any needs_manual_review notes by hand.",
+    "Draft work/open_items.json (list or {changes, open_items, material_gaps}) and keep it updated.",
+    "Build an evidence table: one row per claim you may make, with its source quote.",
+    "Fix the citation order (first appearance) before drafting prose.",
+    "Write an editable partial draft EARLY; checkpoint after each milestone.",
+    "Audit the draft against constraints (word limits, citations, required parts, topics).",
+    "Run assemble_result.py, then contract_check.py; deliver only what the contract allows."
+  ]
+}

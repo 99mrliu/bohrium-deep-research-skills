@@ -1,0 +1,59 @@
+{
+  "_comment": "Keyword rules for build_matrix.py route classification. Each route maps to a list of case-insensitive regex patterns matched against reference title+abstract. A reference may match several routes; unmatched references go to 'unclassified'. These rules are HEURISTIC: the writer must verify every route assignment against the source text.",
+  "rules": {
+    "template-based-transfer": [
+      "transplant",
+      "template structures?",
+      "single-template",
+      "multi-template",
+      "multiple templates",
+      "homology model"
+    ],
+    "sequence-only": [
+      "sequence-only",
+      "from sequence",
+      "sequence-based",
+      "sequence motif",
+      "no structural template",
+      "no usable template",
+      "language model"
+    ],
+    "geometry-based": [
+      "geometric",
+      "geometry-based",
+      "geometry",
+      "surface descriptor",
+      "pocket shape"
+    ],
+    "consensus-scoring": [
+      "consensus",
+      "pools?",
+      "pooling",
+      "votes?",
+      "voting",
+      "ensemble"
+    ],
+    "survey": [
+      "survey",
+      "review of",
+      "a review",
+      "taxonomy"
+    ],
+    "deconvolution": [
+      "deconvolution",
+      "cell[- ]type proportions?",
+      "bulk expression"
+    ],
+    "reference-free": [
+      "reference-free",
+      "reference free",
+      "without a reference",
+      "unsupervised"
+    ],
+    "genome-wide-association": [
+      "genome-wide association",
+      "\\bgwas\\b",
+      "variant prioritization"
+    ]
+  }
+}

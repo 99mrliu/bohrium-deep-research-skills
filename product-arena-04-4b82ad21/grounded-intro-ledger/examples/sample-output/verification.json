@@ -1,0 +1,72 @@
+{
+  "artifact": "verify_grounding.py",
+  "checks": [
+    {
+      "id": "G1",
+      "name": "cited sentences have claim records",
+      "status": "pass",
+      "evidence": {
+        "uncovered": [],
+        "total_cited_sentences": 8
+      }
+    },
+    {
+      "id": "G2",
+      "name": "no orphan claim records",
+      "status": "pass",
+      "evidence": {
+        "orphans": []
+      }
+    },
+    {
+      "id": "G3",
+      "name": "all numbers traceable to quotes or fact base",
+      "status": "pass",
+      "evidence": {
+        "untraceable": []
+      }
+    },
+    {
+      "id": "G4",
+      "name": "citation numbers within bibliography range",
+      "status": "pass",
+      "evidence": {
+        "used": [
+          1,
+          2,
+          3,
+          4,
+          5,
+          6
+        ],
+        "bibliography_size": 6,
+        "undefined": []
+      }
+    },
+    {
+      "id": "G5",
+      "name": "contribution claims name an available anchor",
+      "status": "pass",
+      "evidence": {
+        "without_anchor": [],
+        "anchors": [
+          "Fig 1",
+          "Fig 2"
+        ]
+      }
+    },
+    {
+      "id": "G6",
+      "name": "material gaps surfaced for open_items",
+      "status": "pass",
+      "evidence": {
+        "material_gaps": []
+      }
+    }
+  ],
+  "summary": {
+    "pass": 6,
+    "fail": 0,
+    "not_verifiable": 0
+  }
+}

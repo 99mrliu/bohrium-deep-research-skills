@@ -1,0 +1,51 @@
+{
+  "case_id": "synthetic-intro-demo-0001",
+  "task_type": "introduction_and_related_work",
+  "language": "en",
+  "audience": "reviewers of a methods-oriented computational biology journal (SYNTHETIC EXAMPLE)",
+  "genre": "manuscript Introduction plus a Related Work passage inside it",
+  "material": {
+    "manuscript_facts": "material/manuscript-facts.md",
+    "bibliography": "material/references.json",
+    "bibliography_readable": "material/references.md"
+  },
+  "deliverables": [
+    "introduction",
+    "related_work",
+    "claim_citation_table",
+    "gap_chain",
+    "contribution_map",
+    "result_json"
+  ],
+  "constraints": {
+    "max_words_introduction": 400,
+    "max_words_related_work": 260,
+    "citation_style": "vancouver-numbered",
+    "cite_only_from_bibliography": true,
+    "must_not_add_new_facts": true,
+    "min_distinct_citations": 4,
+    "sections_required": ["background", "related_work", "gap", "contributions"],
+    "must_cover_topics": [
+      "template-based binding-site prediction",
+      "sequence-only binding-site prediction",
+      "multi-structure consensus scoring"
+    ],
+    "available_anchors": ["Fig 1", "Fig 2"],
+    "language_of_output": "en"
+  },
+  "output_contract": {
+    "case_id": "str, copied from input",
+    "target_artifact": "object: path, format, sections[], word_counts{}",
+    "facts_and_sources": "array of claim objects (id, section, text, type, refs[], quote, source_span, stance, confidence)",
+    "version_and_boundary": "object: changes[], open_items[], material_gaps[], status",
+    "verification": "object: checks[], pass/fail/not_verifiable counts, artifact of the skill's verify script",
+    "status": "enum: complete | partial | blocked"
+  },
+  "withheld_from_agent": [
+    "original Introduction of any real article (SYNTHETIC EXAMPLE: nothing real is withheld)"
+  ],
+  "provenance": {
+    "source": "SYNTHETIC EXAMPLE - all manuscript facts, references, authors, journals and DOIs in this case are invented for interface demonstration only",
+    "note": "Not one of the organisers' fixed cases; do not treat any content here as real scientific fact"
+  }
+}

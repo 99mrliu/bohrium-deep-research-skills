@@ -1,0 +1,183 @@
+{
+  "case_id": "synthetic-intro-demo-0001",
+  "generated_at": "2026-11-24T11:24:21.874042+00:00",
+  "result_checked": "/Users/liuhengshen/Desktop/bhr_product/writing08-5dir/bundles/run-contract-pipeline/examples/sample-output/output/result.json",
+  "draft_checked": "/Users/liuhengshen/Desktop/bhr_product/writing08-5dir/bundles/run-contract-pipeline/examples/synthetic-case/filled/introduction.md",
+  "checks": [
+    {
+      "check": "contract:case_id",
+      "status": "pass",
+      "evidence": "type str ok"
+    },
+    {
+      "check": "contract:target_artifact",
+      "status": "pass",
+      "evidence": "type object ok"
+    },
+    {
+      "check": "contract:target_artifact.path",
+      "status": "pass",
+      "evidence": "type str ok"
+    },
+    {
+      "check": "contract:target_artifact.format",
+      "status": "pass",
+      "evidence": "type str ok"
+    },
+    {
+      "check": "contract:target_artifact.sections",
+      "status": "pass",
+      "evidence": "type array ok"
+    },
+    {
+      "check": "contract:target_artifact.word_counts",
+      "status": "pass",
+      "evidence": "type object ok"
+    },
+    {
+      "check": "contract:facts_and_sources",
+      "status": "pass",
+      "evidence": "type array ok"
+    },
+    {
+      "check": "contract:facts_and_sources:item[0]",
+      "status": "pass",
+      "evidence": "all 9 item subfields present with right types"
+    },
+    {
+      "check": "contract:facts_and_sources:item[1]",
+      "status": "pass",
+      "evidence": "all 9 item subfields present with right types"
+    },
+    {
+      "check": "contract:facts_and_sources:item[2]",
+      "status": "pass",
+      "evidence": "all 9 item subfields present with right types"
+    },
+    {
+      "check": "contract:facts_and_sources:item[3]",
+      "status": "pass",
+      "evidence": "all 9 item subfields present with right types"
+    },
+    {
+      "check": "contract:version_and_boundary",
+      "status": "pass",
+      "evidence": "type object ok"
+    },
+    {
+      "check": "contract:version_and_boundary.changes",
+      "status": "pass",
+      "evidence": "type array ok"
+    },
+    {
+      "check": "contract:version_and_boundary.open_items",
+      "status": "pass",
+      "evidence": "type array ok"
+    },
+    {
+      "check": "contract:version_and_boundary.material_gaps",
+      "status": "pass",
+      "evidence": "type array ok"
+    },
+    {
+      "check": "contract:version_and_boundary.status",
+      "status": "pass",
+      "evidence": "type str ok"
+    },
+    {
+      "check": "contract:verification",
+      "status": "pass",
+      "evidence": "type object ok"
+    },
+    {
+      "check": "contract:verification.checks",
+      "status": "pass",
+      "evidence": "type array ok"
+    },
+    {
+      "check": "contract:verification.pass/fail/not_verifiable counts",
+      "status": "not_verifiable",
+      "evidence": "descriptor needs manual review: 'pass/fail/not_verifiable counts'"
+    },
+    {
+      "check": "contract:verification.artifact of the skill's verify script",
+      "status": "not_verifiable",
+      "evidence": "descriptor needs manual review: \"artifact of the skill's verify script\""
+    },
+    {
+      "check": "contract:status",
+      "status": "pass",
+      "evidence": "type enum ok"
+    },
+    {
+      "check": "contract:case_id_matches_input",
+      "status": "pass",
+      "evidence": "case_id 'synthetic-intro-demo-0001' copied verbatim"
+    },
+    {
+      "check": "contract:status_consistency",
+      "status": "pass",
+      "evidence": "status=complete and all top-level fields populated"
+    },
+    {
+      "check": "draft:file_present",
+      "status": "pass",
+      "evidence": "draft found: /Users/liuhengshen/Desktop/bhr_product/writing08-5dir/bundles/run-contract-pipeline/examples/synthetic-case/filled/introduction.md"
+    },
+    {
+      "check": "constraint:max_words_introduction",
+      "status": "pass",
+      "evidence": "total words 377 vs limit 400"
+    },
+    {
+      "check": "constraint:max_words_related_work",
+      "status": "pass",
+      "evidence": "related-work words 164 (sections ['Related work']) vs limit 260"
+    },
+    {
+      "check": "constraint:min_distinct_citations",
+      "status": "pass",
+      "evidence": "distinct [n] citations 6 [1, 2, 3, 4, 5, 6] vs minimum 4"
+    },
+    {
+      "check": "constraint:sections_required:background",
+      "status": "pass",
+      "evidence": "part 'background' signalled by keyword(s): ['background', 'introduction']"
+    },
+    {
+      "check": "constraint:sections_required:related_work",
+      "status": "pass",
+      "evidence": "part 'related_work' signalled by keyword(s): ['related work']"
+    },
+    {
+      "check": "constraint:sections_required:gap",
+      "status": "pass",
+      "evidence": "part 'gap' signalled by keyword(s): ['gap', 'remains']"
+    },
+    {
+      "check": "constraint:sections_required:contributions",
+      "status": "pass",
+      "evidence": "part 'contributions' signalled by keyword(s): ['contribution', 'contributions', 'we present']"
+    },
+    {
+      "check": "constraint:must_cover_topics:template-based binding-site prediction",
+      "status": "pass",
+      "evidence": "template-based binding-site prediction (exact phrase found)"
+    },
+    {
+      "check": "constraint:must_cover_topics:sequence-only binding-site prediction",
+      "status": "pass",
+      "evidence": "sequence-only binding-site prediction (exact phrase found)"
+    },
+    {
+      "check": "constraint:must_cover_topics:multi-structure consensus scoring",
+      "status": "pass",
+      "evidence": "multi-structure consensus scoring (exact phrase found)"
+    }
+  ],
+  "summary": {
+    "pass": 32,
+    "fail": 0,
+    "not_verifiable": 2
+  }
+}

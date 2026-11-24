@@ -1,0 +1,424 @@
+{
+  "case_id": "synthetic-intro-demo-0001",
+  "generated_by": "hand-filled by the writer on top of the build_matrix.py scaffold (SYNTHETIC EXAMPLE)",
+  "instructions": "Fill every cell with (a) your synthesis in 'text', (b) a verbatim quote copied from the reference's available title/abstract in 'quote', (c) a location label in 'location' (e.g. 'abstract', 'title'). Never attribute findings to title-only references. matrix_lint.py verifies quotes as whitespace-normalized substrings of the bibliography text. Set citation_number once the draft's Vancouver numbering is fixed; gap_check.py uses it.",
+  "axes": [
+    "problem_setting",
+    "inputs_required",
+    "scoring_or_integration_stage",
+    "evaluation_setting",
+    "stated_limitation",
+    "decisive_comparison"
+  ],
+  "routes": {
+    "template-based-transfer": [
+      "synth01",
+      "synth03"
+    ],
+    "sequence-only": [
+      "synth02",
+      "synth06"
+    ],
+    "consensus-scoring": [
+      "synth03",
+      "synth05"
+    ],
+    "geometry-based": [
+      "synth04",
+      "synth06"
+    ],
+    "survey": [
+      "synth06"
+    ]
+  },
+  "references": [
+    {
+      "key": "synth01",
+      "authors": [
+        "Novak, I.",
+        "Petersen, L."
+      ],
+      "year": 2021,
+      "title": "TemplateTransfer: ligand binding-site prediction by single-template pocket transplantation",
+      "routes": [
+        "template-based-transfer"
+      ],
+      "evidence_level": "abstract-available",
+      "closeness_score": 11,
+      "closeness_shared_terms": [
+        "benchmark",
+        "binding",
+        "identity",
+        "invented",
+        "ligand",
+        "pocket",
+        "site",
+        "structure",
+        "target",
+        "template",
+        "top"
+      ],
+      "closest_alternative_candidate": true,
+      "citation_number": 2,
+      "available_text": {
+        "title": "TemplateTransfer: ligand binding-site prediction by single-template pocket transplantation",
+        "abstract": "TemplateTransfer predicts ligand binding sites by transplanting pockets from the single highest-identity template structure. On an invented benchmark of 80 targets it reaches 0.55 top-1 pocket precision when template identity exceeds 40%, but precision drops to 0.41 for targets below 30% identity, because a single template often carries a partially mismatched pocket."
+      },
+      "cells": {
+        "problem_setting": {
+          "text": "Ligand binding-site prediction by transferring the pocket of a single template.",
+          "quote": "predicts ligand binding sites by transplanting pockets from the single highest-identity template structure",
+          "location": "abstract"
+        },
+        "inputs_required": {
+          "text": "One template structure per target (the single highest-identity template).",
+          "quote": "the single highest-identity template structure",
+          "location": "abstract"
+        },
+        "scoring_or_integration_stage": {
+          "text": "No scoring or integration stage: the single template's pocket is transplanted directly.",
+          "quote": "transplanting pockets from the single highest-identity template structure",
+          "location": "abstract"
+        },
+        "evaluation_setting": {
+          "text": "Invented benchmark of 80 targets, precision reported by template-identity band.",
+          "quote": "On an invented benchmark of 80 targets it reaches 0.55 top-1 pocket precision when template identity exceeds 40%",
+          "location": "abstract"
+        },
+        "stated_limitation": {
+          "text": "Precision collapses below 30% identity because one template often carries a mismatched pocket.",
+          "quote": "precision drops to 0.41 for targets below 30% identity, because a single template often carries a partially mismatched pocket",
+          "location": "abstract"
+        },
+        "decisive_comparison": {
+          "text": "On the same low-identity prediction task as the present work, single-template transfer loses precision exactly where improvement is needed, so per-template quality weighting of several templates targets this route's weakest setting.",
+          "quote": "precision drops to 0.41 for targets below 30% identity",
+          "location": "abstract"
+        }
+      },
+      "closeness_rank": 2
+    },
+    {
+      "key": "synth02",
+      "authors": [
+        "Okafor, M.",
+        "Lindqvist, S.",
+        "Achebe, T."
+      ],
+      "year": 2022,
+      "title": "SeqPocket: sequence-only binding-site prediction with a residue-attention network",
+      "routes": [
+        "sequence-only"
+      ],
+      "evidence_level": "abstract-available",
+      "closeness_score": 7,
+      "closeness_shared_terms": [
+        "binding",
+        "pocket",
+        "sequence",
+        "site",
+        "target",
+        "template",
+        "top"
+      ],
+      "closest_alternative_candidate": false,
+      "citation_number": 5,
+      "available_text": {
+        "title": "SeqPocket: sequence-only binding-site prediction with a residue-attention network",
+        "abstract": "SeqPocket predicts binding residues directly from sequence using a residue-attention network, requiring no structural template. It matches template-based methods on targets with no usable template but lags them by 0.10 top-1 precision on template-rich targets. The authors note it cannot localize pockets that lack sequence motifs."
+      },
+      "cells": {
+        "problem_setting": {
+          "text": "Binding-residue prediction directly from sequence.",
+          "quote": "predicts binding residues directly from sequence using a residue-attention network",
+          "location": "abstract"
+        },
+        "inputs_required": {
+          "text": "Sequence only; no structural template required.",
+          "quote": "requiring no structural template",
+          "location": "abstract"
+        },
+        "scoring_or_integration_stage": {
+          "text": "Residue-attention network producing residue-level predictions; no pocket scoring stage.",
+          "quote": "residue-attention network",
+          "location": "abstract"
+        },
+        "evaluation_setting": {
+          "text": "Compared with template-based methods on template-free and template-rich targets.",
+          "quote": "matches template-based methods on targets with no usable template but lags them by 0.10 top-1 precision on template-rich targets",
+          "location": "abstract"
+        },
+        "stated_limitation": {
+          "text": "Cannot localize pockets that lack sequence motifs; lags template-based methods on template-rich targets.",
+          "quote": "it cannot localize pockets that lack sequence motifs",
+          "location": "abstract"
+        },
+        "decisive_comparison": {
+          "text": "Covers the no-template regime, where the present work does not compete, but on template-bearing targets it lags template-based methods by 0.10 top-1 precision, so it does not close the low-identity template gap.",
+          "quote": "lags them by 0.10 top-1 precision on template-rich targets",
+          "location": "abstract"
+        }
+      },
+      "closeness_rank": 5
+    },
+    {
+      "key": "synth03",
+      "authors": [
+        "Vasquez, R."
+      ],
+      "year": 2023,
+      "title": "MultiTempl: naive pocket pooling from multiple templates",
+      "routes": [
+        "template-based-transfer",
+        "consensus-scoring"
+      ],
+      "evidence_level": "abstract-available",
+      "closeness_score": 10,
+      "closeness_shared_terms": [
+        "identity",
+        "low",
+        "multiple",
+        "pocket",
+        "quality",
+        "structure",
+        "target",
+        "template",
+        "transfer",
+        "vote"
+      ],
+      "closest_alternative_candidate": false,
+      "citation_number": 3,
+      "available_text": {
+        "title": "MultiTempl: naive pocket pooling from multiple templates",
+        "abstract": "MultiTempl pools predicted pockets from up to 8 template structures and ranks them by pocket frequency. Pooling raises recall by 0.15 over single-template transfer, but precision on low-identity targets stays flat because low-quality templates vote with equal weight."
+      },
+      "cells": {
+        "problem_setting": {
+          "text": "Naive pocket pooling from multiple templates, ranked by pocket frequency.",
+          "quote": "pools predicted pockets from up to 8 template structures and ranks them by pocket frequency",
+          "location": "abstract"
+        },
+        "inputs_required": {
+          "text": "Up to 8 template structures per target.",
+          "quote": "up to 8 template structures",
+          "location": "abstract"
+        },
+        "scoring_or_integration_stage": {
+          "text": "Pocket-level pooling with frequency ranking; every template votes with equal weight.",
+          "quote": "ranks them by pocket frequency",
+          "location": "abstract"
+        },
+        "evaluation_setting": {
+          "text": "Compared against single-template transfer; recall and low-identity precision reported.",
+          "quote": "Pooling raises recall by 0.15 over single-template transfer",
+          "location": "abstract"
+        },
+        "stated_limitation": {
+          "text": "Precision on low-identity targets stays flat because low-quality templates vote with equal weight.",
+          "quote": "precision on low-identity targets stays flat because low-quality templates vote with equal weight",
+          "location": "abstract"
+        },
+        "decisive_comparison": {
+          "text": "Same multi-template pooling idea as the present work, but frequency ranking gives low-quality templates equal votes; under this manuscript's sub-30%-identity conditions that leaves precision flat, which is what LQS-weighted voting is designed to change.",
+          "quote": "low-quality templates vote with equal weight",
+          "location": "abstract"
+        }
+      },
+      "closeness_rank": 3
+    },
+    {
+      "key": "synth04",
+      "authors": [
+        "Haugen, P.",
+        "Weiss, D."
+      ],
+      "year": 2020,
+      "title": "GeoScore: geometry-based ranking of candidate binding pockets",
+      "routes": [
+        "geometry-based"
+      ],
+      "evidence_level": "abstract-available",
+      "closeness_score": 6,
+      "closeness_shared_terms": [
+        "binding",
+        "candidate",
+        "identity",
+        "low",
+        "pocket",
+        "template"
+      ],
+      "closest_alternative_candidate": false,
+      "citation_number": 6,
+      "available_text": {
+        "title": "GeoScore: geometry-based ranking of candidate binding pockets",
+        "abstract": "GeoScore ranks candidate pockets by geometric descriptors (depth, enclosure, hydrophobic patch area) without any template. It is fast and template-free, but the abstract reports no comparison against template-based predictors and no low-identity evaluation."
+      },
+      "cells": {
+        "problem_setting": {
+          "text": "Ranking candidate binding pockets by geometric descriptors.",
+          "quote": "ranks candidate pockets by geometric descriptors (depth, enclosure, hydrophobic patch area)",
+          "location": "abstract"
+        },
+        "inputs_required": {
+          "text": "Target structure only; no template.",
+          "quote": "without any template",
+          "location": "abstract"
+        },
+        "scoring_or_integration_stage": {
+          "text": "Geometric-descriptor scoring of candidate pockets (depth, enclosure, hydrophobic patch area).",
+          "quote": "geometric descriptors (depth, enclosure, hydrophobic patch area)",
+          "location": "abstract"
+        },
+        "evaluation_setting": {
+          "text": "No comparison against template-based predictors and no low-identity evaluation reported in the abstract.",
+          "quote": "the abstract reports no comparison against template-based predictors and no low-identity evaluation",
+          "location": "abstract"
+        },
+        "stated_limitation": {
+          "text": "Evidence gap: the abstract reports no comparison against template-based predictors and no low-identity evaluation.",
+          "quote": "no comparison against template-based predictors and no low-identity evaluation",
+          "location": "abstract"
+        },
+        "decisive_comparison": {
+          "text": "Template-free and fast, but with no reported comparison against template-based predictors it cannot be ranked in this manuscript's setting and is treated as orthogonal rather than as a counterexample to the gap.",
+          "quote": "no comparison against template-based predictors",
+          "location": "abstract"
+        }
+      },
+      "closeness_rank": 6
+    },
+    {
+      "key": "synth05",
+      "authors": [
+        "Tanaka, Y.",
+        "Moreau, C."
+      ],
+      "year": 2024,
+      "title": "ConsenSite: consensus scoring of pockets across homologous structures",
+      "routes": [
+        "consensus-scoring"
+      ],
+      "evidence_level": "abstract-available",
+      "closeness_score": 12,
+      "closeness_shared_terms": [
+        "candidate",
+        "consensus",
+        "improve",
+        "multiple",
+        "pocket",
+        "protein",
+        "score",
+        "scoring",
+        "structure",
+        "target",
+        "template",
+        "transfer"
+      ],
+      "closest_alternative_candidate": true,
+      "citation_number": 4,
+      "available_text": {
+        "title": "ConsenSite: consensus scoring of pockets across homologous structures",
+        "abstract": "ConsenSite scores candidate pockets by unweighted consensus across homologous experimental structures of the same protein. It improves precision by 0.07 over single-structure scoring, but requires multiple experimental structures of the target itself, which are unavailable for most prediction targets; it was not evaluated on template-based transfer."
+      },
+      "cells": {
+        "problem_setting": {
+          "text": "Consensus scoring of candidate pockets across homologous experimental structures of the same protein.",
+          "quote": "scores candidate pockets by unweighted consensus across homologous experimental structures of the same protein",
+          "location": "abstract"
+        },
+        "inputs_required": {
+          "text": "Multiple experimental structures of the target itself.",
+          "quote": "requires multiple experimental structures of the target itself",
+          "location": "abstract"
+        },
+        "scoring_or_integration_stage": {
+          "text": "Unweighted consensus scoring across structures of the same protein.",
+          "quote": "unweighted consensus across homologous experimental structures",
+          "location": "abstract"
+        },
+        "evaluation_setting": {
+          "text": "Compared against single-structure scoring; not evaluated on template-based transfer.",
+          "quote": "improves precision by 0.07 over single-structure scoring",
+          "location": "abstract"
+        },
+        "stated_limitation": {
+          "text": "Needs multiple experimental structures of the target itself, unavailable for most prediction targets; not evaluated on template-based transfer.",
+          "quote": "requires multiple experimental structures of the target itself, which are unavailable for most prediction targets",
+          "location": "abstract"
+        },
+        "decisive_comparison": {
+          "text": "Nearest consensus alternative: it shows consensus scoring helps (+0.07 precision) but only when the target already has several experimental structures, so its capability does not reach the low-identity template-transfer setting this manuscript addresses.",
+          "quote": "it was not evaluated on template-based transfer",
+          "location": "abstract"
+        }
+      },
+      "closeness_rank": 1
+    },
+    {
+      "key": "synth06",
+      "authors": [
+        "Karlsen, E."
+      ],
+      "year": 2019,
+      "title": "A survey of binding-site prediction methods",
+      "routes": [
+        "sequence-only",
+        "geometry-based",
+        "survey"
+      ],
+      "evidence_level": "abstract-available",
+      "closeness_score": 8,
+      "closeness_shared_terms": [
+        "binding",
+        "identity",
+        "low",
+        "sequence",
+        "setting",
+        "site",
+        "template",
+        "transfer"
+      ],
+      "closest_alternative_candidate": false,
+      "citation_number": 1,
+      "available_text": {
+        "title": "A survey of binding-site prediction methods",
+        "abstract": "This survey groups binding-site predictors into template-based, geometry-based and sequence-based families, and observes that low-identity template transfer remains the weakest setting across all template-based methods surveyed."
+      },
+      "cells": {
+        "problem_setting": {
+          "text": "Field survey grouping binding-site predictors into families.",
+          "quote": "groups binding-site predictors into template-based, geometry-based and sequence-based families",
+          "location": "abstract"
+        },
+        "inputs_required": {
+          "text": "Not applicable (survey; no per-target inputs).",
+          "quote": "This survey groups binding-site predictors",
+          "location": "abstract"
+        },
+        "scoring_or_integration_stage": {
+          "text": "Not applicable (taxonomy across methods, no scoring stage).",
+          "quote": "groups binding-site predictors into template-based, geometry-based and sequence-based families",
+          "location": "abstract"
+        },
+        "evaluation_setting": {
+          "text": "Qualitative cross-family comparison of surveyed methods.",
+          "quote": "across all template-based methods surveyed",
+          "location": "abstract"
+        },
+        "stated_limitation": {
+          "text": "Field-level observation: low-identity template transfer remains the weakest setting across all template-based methods surveyed.",
+          "quote": "low-identity template transfer remains the weakest setting across all template-based methods surveyed",
+          "location": "abstract"
+        },
+        "decisive_comparison": {
+          "text": "Field-level evidence that the low-identity setting is the weakest across template-based methods, which positions this manuscript's hard subset (best template <30% identity) as the acknowledged weak point rather than a niche case.",
+          "quote": "low-identity template transfer remains the weakest setting across all template-based methods surveyed",
+          "location": "abstract"
+        }
+      },
+      "closeness_rank": 4
+    }
+  ],
+  "synthetic_example": true,
+  "writer_notes": "Citation numbers follow first appearance in filled/introduction.md (Vancouver). All quotes verified by matrix_lint.py against material/references.json."
+}

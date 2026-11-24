@@ -1,0 +1,57 @@
+[
+  {
+    "id": "c1",
+    "section": "related_work",
+    "type": "prior_work",
+    "text": "Template-based transfer is the dominant route: TemplateTransfer transplants pockets from the single highest-identity template and reaches 0.55 top-1 pocket precision above 40% template identity, but drops to 0.41 below 30% identity because a single template often carries a partially mismatched pocket.",
+    "refs": ["synth01"],
+    "quote": "On an invented benchmark of 80 targets it reaches 0.55 top-1 pocket precision when template identity exceeds 40%, but precision drops to 0.41 for targets below 30% identity",
+    "source_span": "material/references.json#synth01.abstract",
+    "stance": "reports",
+    "confidence": "high"
+  },
+  {
+    "id": "c2",
+    "section": "related_work",
+    "type": "prior_work",
+    "text": "SeqPocket removes the template requirement, predicting binding residues with a residue-attention network; it matches template-based methods on template-free targets but lags them by 0.10 top-1 precision on template-rich ones and cannot localize pockets without sequence motifs.",
+    "refs": ["synth02"],
+    "quote": "It matches template-based methods on targets with no usable template but lags them by 0.10 top-1 precision on template-rich targets. The authors note it cannot localize pockets that lack sequence motifs.",
+    "source_span": "material/references.json#synth02.abstract",
+    "stance": "reports",
+    "confidence": "high"
+  },
+  {
+    "id": "c3",
+    "section": "related_work",
+    "type": "prior_work",
+    "text": "MultiTempl pools pockets from up to 8 templates and ranks them by frequency, raising recall by 0.15 over single-template transfer, but low-identity precision stays flat because low-quality templates vote with equal weight.",
+    "refs": ["synth03"],
+    "quote": "Pooling raises recall by 0.15 over single-template transfer, but precision on low-identity targets stays flat because low-quality templates vote with equal weight.",
+    "source_span": "material/references.json#synth03.abstract",
+    "stance": "reports",
+    "confidence": "high"
+  },
+  {
+    "id": "c4",
+    "section": "related_work",
+    "type": "prior_work",
+    "text": "GeoScore ranks pockets geometrically without any template, but reports no comparison against template-based predictors and no low-identity evaluation. ConsenSite scores pockets by unweighted consensus across homologous experimental structures, gaining 0.07 precision, but requires multiple structures of the target itself and was not evaluated on template transfer.",
+    "refs": ["synth04", "synth05"],
+    "quote": "the abstract reports no comparison against template-based predictors and no low-identity evaluation. | It improves precision by 0.07 over single-structure scoring, but requires multiple experimental structures of the target itself",
+    "source_span": "material/references.json#synth04.abstract + material/references.json#synth05.abstract",
+    "stance": "reports",
+    "confidence": "high"
+  },
+  {
+    "id": "c5",
+    "section": "related_work",
+    "type": "prior_work",
+    "text": "A survey groups these methods into template-based, geometry-based and sequence-based families and identifies low-identity template transfer as the weakest setting.",
+    "refs": ["synth06"],
+    "quote": "low-identity template transfer remains the weakest setting across all template-based methods surveyed",
+    "source_span": "material/references.json#synth06.abstract",
+    "stance": "reports",
+    "confidence": "high"
+  }
+]

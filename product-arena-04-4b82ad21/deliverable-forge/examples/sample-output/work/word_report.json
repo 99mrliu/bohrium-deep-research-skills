@@ -1,0 +1,40 @@
+{
+  "mode": "headings",
+  "parts": {
+    "background": {
+      "words": 45,
+      "located": true
+    },
+    "related_work": {
+      "words": 156,
+      "located": true
+    },
+    "gap": {
+      "words": 55,
+      "located": true
+    },
+    "contributions": {
+      "words": 67,
+      "located": true
+    }
+  },
+  "total_words": 331,
+  "checks": [
+    {
+      "check": "max_words_related_work",
+      "status": "pass",
+      "detail": "156 words vs limit 260"
+    },
+    {
+      "check": "max_words_introduction",
+      "status": "pass",
+      "detail": "331 words vs limit 400"
+    }
+  ],
+  "trim_candidates": {},
+  "summary": {
+    "pass": 2,
+    "fail": 0,
+    "not_verifiable": 0
+  }
+}

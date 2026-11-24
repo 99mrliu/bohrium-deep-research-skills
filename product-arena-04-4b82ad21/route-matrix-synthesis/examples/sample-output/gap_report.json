@@ -1,0 +1,140 @@
+{
+  "case_id": "synthetic-intro-demo-0001",
+  "draft": "/Users/liuhengshen/Desktop/bhr_product/writing08-5dir/bundles/route-matrix-synthesis/examples/synthetic-case/filled/introduction.md",
+  "matrix": "/Users/liuhengshen/Desktop/bhr_product/writing08-5dir/bundles/route-matrix-synthesis/examples/synthetic-case/filled/matrix.json",
+  "status": "pass",
+  "n_failures": 0,
+  "n_warnings": 0,
+  "failures": [],
+  "warnings": [],
+  "details": {
+    "gap_coverage": [
+      {
+        "sentence": "No provided method combines multiple template structures with quality-weighted consensus scoring for low-identity targets: TemplateTransfer depends on one template whose mismatches dominate below 30% identity [2], MultiTempl lets low-quality templates vote with equal weight so low-identity precision stays flat [3], and the strongest consensus alternative, ConsenSite, gains its 0.07 precision only from multiple experimental structures of the target itself, unavailable for most prediction targets [4].",
+        "best_match_ref": "synth03",
+        "overlap_tokens": 11
+      },
+      {
+        "sentence": "What remains open is consensus scoring across template structures, weighted by per-template local quality, and evaluated on targets whose best template is below 30% identity.",
+        "best_match_ref": "synth01",
+        "overlap_tokens": 4
+      }
+    ],
+    "counterexamples_acknowledged": [
+      {
+        "ref": "synth01",
+        "shared_tokens": [
+          "below",
+          "identity",
+          "low",
+          "one",
+          "precision",
+          "quality",
+          "scoring",
+          "structure",
+          "target",
+          "template"
+        ],
+        "distinctive_shared_tokens": [
+          "below",
+          "one",
+          "quality"
+        ]
+      },
+      {
+        "ref": "synth03",
+        "shared_tokens": [
+          "equal",
+          "flat",
+          "identity",
+          "low",
+          "multiple",
+          "precision",
+          "quality",
+          "structure",
+          "target",
+          "template",
+          "vote",
+          "weight",
+          "weighted"
+        ],
+        "distinctive_shared_tokens": [
+          "equal",
+          "flat",
+          "multiple",
+          "quality",
+          "vote",
+          "weight",
+          "weighted"
+        ]
+      },
+      {
+        "ref": "synth05",
+        "shared_tokens": [
+          "alternative",
+          "consensus",
+          "evaluated",
+          "experimental",
+          "identity",
+          "itself",
+          "low",
+          "multiple",
+          "precision",
+          "scoring",
+          "structure",
+          "target",
+          "template"
+        ],
+        "distinctive_shared_tokens": [
+          "alternative",
+          "consensus",
+          "evaluated",
+          "experimental",
+          "itself",
+          "multiple"
+        ]
+      }
+    ],
+    "counterexamples_unhandled": [],
+    "contribution_anchors": [
+      {
+        "bullet": "We introduce an LQS-weighted multi-template consensus scoring scheme where each candidate pocket is voted on by up to 5 templates (Fig 1).",
+        "anchors_found": [
+          "Fig 1"
+        ]
+      },
+      {
+        "bullet": "On the hard subset of SynBench-60 (template identity below 30%), PermaLig reaches 0.61 top-1 pocket precision versus 0.48 for the best single-template baseline (Fig 2).",
+        "anchors_found": [
+          "Fig 2"
+        ]
+      },
+      {
+        "bullet": "An ablation on the hard subset attributes +0.09 top-1 precision to consensus scoring over simple template ranking (Fig 2).",
+        "anchors_found": [
+          "Fig 2"
+        ]
+      }
+    ],
+    "citations": {
+      "used": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6
+      ],
+      "known": {
+        "1": "synth06",
+        "2": "synth01",
+        "3": "synth03",
+        "4": "synth05",
+        "5": "synth02",
+        "6": "synth04"
+      },
+      "unknown_cited": []
+    }
+  },
+  "summary": "gap sentences: 2, all covered by limitation quotes: yes | counterexamples acknowledged: 3 | contribution anchors present: yes | unknown citations: none"
+}
