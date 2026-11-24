@@ -1,0 +1,46 @@
+{
+  "budget_caps": {
+    "model_requests": 64,
+    "wall_seconds": 900
+  },
+  "stage_quota": [
+    {
+      "stage": "1_contract_init",
+      "quota_requests": 3,
+      "quota_seconds": 60,
+      "note": "先跑本脚本生成骨架，模型只读 contract.json，不手写契约字段"
+    },
+    {
+      "stage": "2_problem_decomposition",
+      "quota_requests": 8,
+      "quota_seconds": 120,
+      "note": "尽量一次响应完成拆解并回填 problem_decomposition"
+    },
+    {
+      "stage": "3_search_execution",
+      "quota_requests": 30,
+      "quota_seconds": 420,
+      "note": "检索主战场；每轮检索后立即回填 search_coverage 与 sources"
+    },
+    {
+      "stage": "4_evidence_synthesis",
+      "quota_requests": 16,
+      "quota_seconds": 220,
+      "note": "集中回填 evidence_linkage / conflict_evidence / synthesis / research_gaps"
+    },
+    {
+      "stage": "5_delivery_gate",
+      "quota_requests": 7,
+      "quota_seconds": 80,
+      "note": "先 checkpoint save 再修；contract_check 门控通过后交付"
+    }
+  ],
+  "usage": [],
+  "usage_format": {
+    "stage": "阶段名",
+    "requests": "本次消耗的请求数",
+    "seconds": "本次消耗的秒数",
+    "note": "可选备注"
+  },
+  "note": "usage 由 agent 在每阶段结束后自行追加一条；配额用尽前按 references/budget_protocol.md 降级"
+}

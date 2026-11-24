@@ -1,0 +1,83 @@
+{
+  "refs_file": "/Users/liuhengshen/Desktop/bhr_product/f8fb8bda-five/bundles/bundle-b-source-veritas/examples/references.json",
+  "corpus": "/Users/liuhengshen/Desktop/bhr_product/f8fb8bda-five/bundles/bundle-b-source-veritas/examples/output_demo/work/corpus",
+  "online": false,
+  "total": 5,
+  "summary": {
+    "verified": 3,
+    "material_phantom": 1,
+    "suspected_fabricated": 1
+  },
+  "results": [
+    {
+      "ref_id": "REF1",
+      "title": "Ion-Conductive Hydrogel Electrolytes for Flexible Zinc Batteries: A Synthetic Demonstration Study",
+      "origin": "material",
+      "status": "verified",
+      "checks": {
+        "R1_doi": "ok",
+        "R2_year": "ok",
+        "R3_material": "ok: 匹配语料文档 paper_alpha",
+        "R4_conflict": "ok",
+        "R5_crossref": "skipped",
+        "status_reason": "verified: R1–R5 通过"
+      }
+    },
+    {
+      "ref_id": "REF2",
+      "title": "BetaMesh Covalent Organic Framework Catalysts for Photocatalytic Hydrogen Evolution: A Synthetic Demonstration Report",
+      "origin": "material",
+      "status": "verified",
+      "checks": {
+        "R1_doi": "ok",
+        "R2_year": "ok",
+        "R3_material": "ok: 匹配语料文档 paper_beta",
+        "R4_conflict": "ok",
+        "R5_crossref": "skipped",
+        "status_reason": "verified: R1–R5 通过"
+      }
+    },
+    {
+      "ref_id": "REF3",
+      "title": "GammaPress Sintering Aids for Solid-State Electrolyte Densification: A Synthetic One-Page Demonstration Note",
+      "origin": "material",
+      "status": "verified",
+      "checks": {
+        "R1_doi": "ok",
+        "R2_year": "ok",
+        "R3_material": "ok: 匹配语料文档 paper_gamma",
+        "R4_conflict": "ok",
+        "R5_crossref": "skipped",
+        "status_reason": "verified: R1–R5 通过"
+      }
+    },
+    {
+      "ref_id": "REF4",
+      "title": "Superconducting GammaDelta Alloys at Ambient Pressure: A Phantom Study",
+      "origin": "material",
+      "status": "material_phantom",
+      "checks": {
+        "R1_doi": "ok",
+        "R2_year": "ok",
+        "R3_material": "FAIL: 语料中无对应文档 -> material_phantom",
+        "R4_conflict": "ok",
+        "R5_crossref": "skipped",
+        "status_reason": "material_phantom: origin=material 但语料无此标题"
+      }
+    },
+    {
+      "ref_id": "REF5",
+      "title": "Untraceable Results on Quantum Hydrogel Supercapacitors",
+      "origin": "search",
+      "status": "suspected_fabricated",
+      "checks": {
+        "R1_doi": "malformed",
+        "R2_year": "ok",
+        "R3_material": "n/a (origin=search)",
+        "R4_conflict": "ok",
+        "R5_crossref": "skipped",
+        "status_reason": "suspected_fabricated: DOI malformed 且语料/Crossref 均无匹配"
+      }
+    }
+  ]
+}

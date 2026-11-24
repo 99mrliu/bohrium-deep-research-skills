@@ -1,0 +1,41 @@
+{
+  "case_id": "SYNTH-A-001",
+  "note": "合成示例 / synthetic：埋雷版，三颗雷——(1) 缺 search_log 字段（应触发 F2）；(2) status=completed 但 sources 为空（应触发 F4）；(3) synthesis 引用不存在的 [E-09]（应触发 F6）。预期 GATE: FAIL, exit 1",
+  "status": "completed",
+  "review_report": "# 合成迷你综述（埋雷版）\n\n合成示例 / synthetic。文献 A 报告 Pt-La 组增益 1.31±0.07，显著高于纯铂组 [E-01]；文献 B 重复实验未见显著差异 [E-03]。",
+  "evidence_matrix": [
+    {"paper": "S-01", "claim": "Pt-La 组表观增益 1.31±0.07，高于纯铂组 1.02±0.05", "evidence_id": "E-01"},
+    {"paper": "S-02", "claim": "独立重复实验未见 Pt-La 与纯铂的显著差异", "evidence_id": "E-03"}
+  ],
+  "limitations": [
+    "仅覆盖两篇合成文献，结论不可外推",
+    "跨装置比较存在混杂"
+  ],
+  "problem_decomposition": [
+    "Q1：文献 A 报告的 Pt-La 增益是多少，对照如何？",
+    "Q2：是否存在独立重复证据，结论是否一致？",
+    "Q3：现有证据的研究空白？"
+  ],
+  "search_coverage": [
+    {"sub_question": "Q1-Q3", "source": "examples/materials", "queries": ["Pt-La 合金 室温 能量增益"], "hits": 2, "kept": 2}
+  ],
+  "evidence_linkage": [
+    {"id": "E-01", "source_id": "S-01", "claim": "Pt-La 组表观增益 1.31±0.07，高于纯铂对照组", "locator": "synthetic_paper_a.txt 第2段"},
+    {"id": "E-02", "source_id": "S-01", "claim": "文献 A 量热系统未做空白校正", "locator": "synthetic_paper_a.txt 第3段"},
+    {"id": "E-03", "source_id": "S-02", "claim": "独立重复实验未见显著差异", "locator": "synthetic_paper_b.txt 第2段"}
+  ],
+  "conflict_evidence": [
+    {"topic": "Pt-La 是否存在真实室温增益", "positions": [
+      {"stance": "支持", "evidence_id": "E-01"},
+      {"stance": "反对", "evidence_id": "E-03"}
+    ], "resolution": "采纳反对面（埋雷版未展开）"}
+  ],
+  "synthesis": "综合：文献 A 的正向结果 [E-01] 与文献 B 的阴性重复 [E-03] 冲突；另有荟萃证据 [E-09] 提示 Pt-La 增益在多数实验中成立（埋雷 / synthetic trap：E-09 不存在于 evidence_linkage）。",
+  "research_gaps": [
+    "缺少经空白校正的同装置头对头实验"
+  ],
+  "sources": [],
+  "uncertainty": [
+    "埋雷版：sources 被故意置空以触发 F4"
+  ]
+}

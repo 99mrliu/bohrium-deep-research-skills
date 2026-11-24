@@ -1,0 +1,8 @@
+C1 冲突检出: 1 个冲突对 -> output_demo/bad_conflict_registry.json
+conflict_adjudicate 未通过: 6 项违例
+  C2 C-1（S-1 vs S-2）: design_comparison / n_comparison / consistency_note 至少两项非空（当前 1 项）
+  C2 C-1（S-1 vs S-2）: verdict=undecidable 时 consistency_note 不得为裸短语（如“尚存争议”），必须说明为何无法裁定
+  C3 结论#1: grade=A 要求 evidence 中 ≥2 个一致方向且 design∈{rct,meta_analysis,cohort} 的研究（当前一致方向最大计数 1）
+  C3 结论#1: 涉及未裁定冲突对研究 ['S-1']，grade 不得高于 C（当前 A）
+  C4 行3 句1: 缺少句级标签 [事实]/[推断]/[无法确定]（句首: 光照干预对所有人群均有效改善认知。）
+  C4 行4 句2: [事实] 句必须引用 ≥1 个矩阵内存在的 study_id（检出 ['S-99']）

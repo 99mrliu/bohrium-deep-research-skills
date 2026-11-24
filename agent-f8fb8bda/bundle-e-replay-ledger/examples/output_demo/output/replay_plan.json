@@ -1,0 +1,68 @@
+{
+  "replay_instructions": "按 seq 逐笔重放 tool+args，重算返回内容 SHA-256，与 expect_results_digest / expect_results_count 比对；empty/failed 笔应与重放时的真实失败语义一致。",
+  "steps": [
+    {
+      "seq": 1,
+      "tool": "web_search",
+      "args": {
+        "query": "material X low temperature stability",
+        "numResults": 8
+      },
+      "expect_results_count": 5,
+      "expect_results_digest": "373488aef93a456907e3c5a734f7eb66284c3c4cc4a6c77c5aee9ee2d79064cf",
+      "recorded_status": "ok"
+    },
+    {
+      "seq": 2,
+      "tool": "web_search",
+      "args": {
+        "query": "material X vs material Y direct comparison",
+        "numResults": 8
+      },
+      "expect_results_count": 0,
+      "expect_results_digest": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "recorded_status": "empty"
+    },
+    {
+      "seq": 3,
+      "tool": "fetch_pdf",
+      "args": {
+        "url": "https://example.invalid/paper_x.pdf"
+      },
+      "expect_results_count": 0,
+      "expect_results_digest": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "recorded_status": "failed"
+    },
+    {
+      "seq": 4,
+      "tool": "fetch_pdf",
+      "args": {
+        "url": "https://example.invalid/paper_x.pdf",
+        "retry_after_s": 5
+      },
+      "expect_results_count": 1,
+      "expect_results_digest": "c83909a7ff1f29694c77332862e56a28d1eea69d01b5b387729bf559392b5393",
+      "recorded_status": "retry"
+    },
+    {
+      "seq": 5,
+      "tool": "pdftotext",
+      "args": {
+        "path": "work/paper_x.pdf"
+      },
+      "expect_results_count": 1,
+      "expect_results_digest": "a8ce4fb3d327a9759ce4c4c619a87abe22db165710454c956b355a203cd5cae0",
+      "recorded_status": "ok"
+    },
+    {
+      "seq": 6,
+      "tool": "finalize",
+      "args": {
+        "out": "output/result.json"
+      },
+      "expect_results_count": 1,
+      "expect_results_digest": "ca1c9251e9f486fc8627ebfb7eff89a65825fe0fe2ad076f2d7d02dcb744c16d",
+      "recorded_status": "ok"
+    }
+  ]
+}

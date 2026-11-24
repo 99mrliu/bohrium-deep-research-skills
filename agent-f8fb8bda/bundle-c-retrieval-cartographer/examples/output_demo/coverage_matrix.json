@@ -1,0 +1,145 @@
+{
+  "met_threshold": 3,
+  "sources": [
+    "arxiv",
+    "crossref",
+    "semantic_scholar"
+  ],
+  "sq_count": 6,
+  "summary": {
+    "met": 3,
+    "unmet": 1,
+    "searched_absent": 1,
+    "not_searched": 1
+  },
+  "totals": {
+    "log_entries": 8,
+    "hits_total": 16,
+    "relevant_kept": 10,
+    "dupes_skipped": 2
+  },
+  "sq_status": {
+    "SQ-1": {
+      "status": "met",
+      "relevant_total": 3,
+      "by_source": {
+        "arxiv": 0,
+        "crossref": 2,
+        "semantic_scholar": 1
+      },
+      "sources_searched": [
+        "crossref",
+        "semantic_scholar"
+      ],
+      "actions": [
+        "A-01",
+        "A-07"
+      ],
+      "saturation": {
+        "new_relevant_last_action": 1,
+        "signal": "active"
+      }
+    },
+    "SQ-2": {
+      "status": "met",
+      "relevant_total": 3,
+      "by_source": {
+        "arxiv": 0,
+        "crossref": 3,
+        "semantic_scholar": 0
+      },
+      "sources_searched": [
+        "crossref"
+      ],
+      "actions": [
+        "A-02"
+      ],
+      "saturation": {
+        "new_relevant_last_action": 3,
+        "signal": "active"
+      }
+    },
+    "SQ-3": {
+      "status": "unmet",
+      "relevant_total": 1,
+      "by_source": {
+        "arxiv": 0,
+        "crossref": 1,
+        "semantic_scholar": 0
+      },
+      "sources_searched": [
+        "crossref",
+        "arxiv"
+      ],
+      "actions": [
+        "A-03",
+        "A-08"
+      ],
+      "saturation": {
+        "new_relevant_last_action": 0,
+        "signal": "saturated"
+      }
+    },
+    "SQ-4": {
+      "status": "searched_absent",
+      "relevant_total": 0,
+      "by_source": {
+        "arxiv": 0,
+        "crossref": 0,
+        "semantic_scholar": 0
+      },
+      "sources_searched": [
+        "crossref"
+      ],
+      "actions": [
+        "A-04"
+      ],
+      "saturation": {
+        "new_relevant_last_action": 0,
+        "signal": "saturated"
+      }
+    },
+    "SQ-5": {
+      "status": "not_searched",
+      "relevant_total": 0,
+      "by_source": {
+        "arxiv": 0,
+        "crossref": 0,
+        "semantic_scholar": 0
+      },
+      "sources_searched": [],
+      "actions": [],
+      "saturation": {
+        "new_relevant_last_action": 0,
+        "signal": "not_searched"
+      }
+    },
+    "SQ-6": {
+      "status": "met",
+      "relevant_total": 3,
+      "by_source": {
+        "arxiv": 1,
+        "crossref": 2,
+        "semantic_scholar": 0
+      },
+      "sources_searched": [
+        "crossref",
+        "arxiv"
+      ],
+      "actions": [
+        "A-06",
+        "A-09"
+      ],
+      "saturation": {
+        "new_relevant_last_action": 1,
+        "signal": "active"
+      }
+    }
+  },
+  "status_definitions": {
+    "met": "检索过且去重后相关命中 ≥ met_threshold",
+    "unmet": "检索过但相关命中 1..met_threshold-1（覆盖不足，非空白证据）",
+    "searched_absent": "检索过且相关命中为 0（唯一允许导出高置信空白的状态）",
+    "not_searched": "无任何检索记录（不可评估，严禁声称空白）"
+  }
+}

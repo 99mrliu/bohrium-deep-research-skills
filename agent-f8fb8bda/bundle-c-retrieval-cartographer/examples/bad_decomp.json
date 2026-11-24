@@ -1,0 +1,12 @@
+{
+  "note": "合成示例 / synthetic example：埋雷 decomposition，仅供演示 plan_check P1 环检测。SQ-2 与 SQ-3 互相依赖，构成环。",
+  "case_id": "SYNTH-C-001",
+  "sub_questions": [
+    {"id": "SQ-1", "statement": "背景定界（合成示例）", "depends_on": []},
+    {"id": "SQ-2", "statement": "机制（合成示例）", "depends_on": ["SQ-3"]},
+    {"id": "SQ-3", "statement": "对照效果（合成示例）", "depends_on": ["SQ-2"]},
+    {"id": "SQ-4", "statement": "证据边界（合成示例）", "depends_on": []},
+    {"id": "SQ-5", "statement": "趋势（合成示例）", "depends_on": []},
+    {"id": "SQ-6", "statement": "指标测量（合成示例）", "depends_on": []}
+  ]
+}

@@ -1,0 +1,20 @@
+{
+  "case_id": "SYNTH-A-001",
+  "note": "合成示例 / synthetic —— 仅用于演示 dr-contract-forge 流程，全部为虚构内容",
+  "output_contract": {
+    "review_report": "综述报告正文（Markdown 字符串），需覆盖任务问题并以 [E-编号] 回链证据",
+    "evidence_matrix": {
+      "description": "证据矩阵，逐条列出 文献-主张-证据编号",
+      "schema": {
+        "paper": "sources 中的来源 id",
+        "claim": "主张摘要",
+        "evidence_id": "E-编号"
+      }
+    },
+    "limitations": ["字符串数组，逐项声明结论的适用边界"],
+    "search_log": {
+      "description": "检索日志",
+      "fields": ["query", "source", "hits", "kept"]
+    }
+  }
+}

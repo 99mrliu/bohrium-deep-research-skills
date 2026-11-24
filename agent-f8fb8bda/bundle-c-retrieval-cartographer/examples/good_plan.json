@@ -1,0 +1,63 @@
+{
+  "note": "合成示例 / synthetic example：合规检索计划，6 个 action、两个波次，plan_check 应 exit 0。",
+  "waves": [
+    {
+      "wave": 1,
+      "actions": [
+        {
+          "action_id": "A-01",
+          "sq_id": "SQ-1",
+          "query": "high entropy oxide HEO anode definition classification scope lithium battery",
+          "source_scope": "crossref 与 semantic_scholar 元数据；标题+摘要；2018-2025",
+          "stop_condition": "SQ-1 去重后相关命中 ≥3 即停；或连续两次新增相关为 0 即停",
+          "wave": 1
+        }
+      ]
+    },
+    {
+      "wave": 2,
+      "actions": [
+        {
+          "action_id": "A-02",
+          "sq_id": "SQ-2",
+          "query": "spinel rock-salt phase transition lithium storage mechanism high entropy oxide anode",
+          "source_scope": "crossref 与 semantic_scholar 元数据；标题+摘要；2018-2025",
+          "stop_condition": "SQ-2 去重后相关命中 ≥3 即停；或连续两次新增相关为 0 即停",
+          "wave": 2
+        },
+        {
+          "action_id": "A-03",
+          "sq_id": "SQ-3",
+          "query": "high entropy oxide anode electrochemical performance comparison transition metal oxide Co3O4 Fe2O3",
+          "source_scope": "crossref 与 semantic_scholar 元数据；标题+摘要；2018-2025",
+          "stop_condition": "SQ-3 去重后相关命中 ≥3 即停；或连续两次新增相关为 0 即停",
+          "wave": 2
+        },
+        {
+          "action_id": "A-04",
+          "sq_id": "SQ-4",
+          "query": "high entropy oxide anode peer reviewed experimental evidence boundary lithium storage",
+          "source_scope": "crossref 与 semantic_scholar 元数据；标题+摘要；2018-2025",
+          "stop_condition": "SQ-4 去重后相关命中 ≥3 即停；或连续两次新增相关为 0 即停",
+          "wave": 2
+        },
+        {
+          "action_id": "A-05",
+          "sq_id": "SQ-5",
+          "query": "high entropy oxide anode research trend bibliometric 2018 2025 lithium battery",
+          "source_scope": "crossref 与 semantic_scholar 元数据；标题+摘要；2018-2025",
+          "stop_condition": "SQ-5 去重后相关命中 ≥3 即停；或连续两次新增相关为 0 即停",
+          "wave": 2
+        },
+        {
+          "action_id": "A-06",
+          "sq_id": "SQ-6",
+          "query": "coulombic efficiency capacity retention rate capability measurement protocol HEO anode",
+          "source_scope": "crossref 与 semantic_scholar 元数据；标题+摘要；2018-2025",
+          "stop_condition": "SQ-6 去重后相关命中 ≥3 即停；或连续两次新增相关为 0 即停",
+          "wave": 2
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,32 @@
+{
+  "rule": "高置信缺口仅允许来自 searched_absent 的 SQ；not_searched 一律 not_assessable；unmet 仅为 low_coverage，不得声称为研究空白。",
+  "high_confidence_gaps": [
+    {
+      "sq_id": "SQ-4",
+      "type": "searched_absent",
+      "basis": {
+        "actions": [
+          "A-04"
+        ],
+        "sources_searched": [
+          "crossref"
+        ],
+        "relevant_total": 0
+      },
+      "statement_hint": "已按计划检索但相关命中为 0，可据此声称高置信缺口。"
+    }
+  ],
+  "not_assessable": [
+    {
+      "sq_id": "SQ-5",
+      "reason": "not_searched：搜过没有 ≠ 没搜过；未检索方向严禁声称空白。"
+    }
+  ],
+  "low_coverage": [
+    {
+      "sq_id": "SQ-3",
+      "relevant_total": 1,
+      "note": "覆盖不足（< 3 条相关），证据不够，不能判定为研究空白。"
+    }
+  ]
+}

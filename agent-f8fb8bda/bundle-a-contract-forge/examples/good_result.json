@@ -1,0 +1,53 @@
+{
+  "case_id": "SYNTH-A-001",
+  "note": "合成示例 / synthetic：填满版，预期通过 F1-F6（GATE: PASS, exit 0）",
+  "status": "completed",
+  "review_report": "# 合成迷你综述：Pt-La 合金的室温表观能量增益\n\n合成示例 / synthetic。文献 A 报告 Pt-La 组增益 1.31±0.07，显著高于纯铂组 [E-01]；但文献 A 自述未做量热空白校正 [E-02]。文献 B 的独立重复实验未见显著差异（1.04±0.06 vs 1.03±0.05）[E-03]。综合判断：现有证据不足以支持 Pt-La 的真实增益，正向结果更可能源于系统误差。",
+  "evidence_matrix": [
+    {"paper": "S-01", "claim": "Pt-La 组表观增益 1.31±0.07，高于纯铂组 1.02±0.05", "evidence_id": "E-01"},
+    {"paper": "S-01", "claim": "量热系统未做空白校正，结果可能受电极老化影响", "evidence_id": "E-02"},
+    {"paper": "S-02", "claim": "独立重复实验未见 Pt-La 与纯铂的显著差异", "evidence_id": "E-03"}
+  ],
+  "limitations": [
+    "仅覆盖两篇合成文献，结论不可外推至真实研究",
+    "两篇文献装置不同（Reactor-X / Reactor-Y），跨装置比较存在混杂"
+  ],
+  "search_log": [
+    {"query": "Pt-La 合金 室温 能量增益", "source": "examples/materials 目录扫描", "hits": 2, "kept": 2},
+    {"query": "Pt-La replication calorimetry", "source": "examples/materials 目录扫描", "hits": 1, "kept": 1}
+  ],
+  "problem_decomposition": [
+    "Q1：文献 A 报告的 Pt-La 增益是多少，对照如何？（服务 review_report / evidence_matrix）",
+    "Q2：文献 A 的方法学缺陷是什么？（服务 limitations / conflict_evidence）",
+    "Q3：是否存在独立重复证据，结论是否一致？（服务 conflict_evidence / synthesis）",
+    "Q4：现有证据的研究空白？（服务 research_gaps）"
+  ],
+  "search_coverage": [
+    {"sub_question": "Q1-Q4", "source": "examples/materials", "queries": ["Pt-La 合金 室温 能量增益", "Pt-La replication calorimetry"], "hits": 3, "kept": 2, "note": "目录扫描两篇合成文献，全部纳入"}
+  ],
+  "evidence_linkage": [
+    {"id": "E-01", "source_id": "S-01", "claim": "Pt-La 组表观增益 1.31±0.07，高于纯铂对照组 1.02±0.05", "locator": "synthetic_paper_a.txt 第2段"},
+    {"id": "E-02", "source_id": "S-01", "claim": "文献 A 量热系统未做空白校正，结果可能受电极老化影响", "locator": "synthetic_paper_a.txt 第3段"},
+    {"id": "E-03", "source_id": "S-02", "claim": "独立重复实验中 Pt-La 1.04±0.06 与纯铂 1.03±0.05 无显著差异", "locator": "synthetic_paper_b.txt 第2段"}
+  ],
+  "conflict_evidence": [
+    {"topic": "Pt-La 是否存在真实室温增益", "positions": [
+      {"stance": "支持", "evidence_id": "E-01"},
+      {"stance": "反对", "evidence_id": "E-03"}
+    ], "resolution": "采纳反对面：文献 A 自述未做空白校正 [E-02]，文献 B 重复失败且指出同一缺陷，正向结果更可能为系统误差"}
+  ],
+  "synthesis": "综合：文献 A 的正向结果 [E-01] 与其自述的量热空白校正缺失 [E-02] 并存；文献 B 的独立重复实验 [E-03] 未能复现并给出替代解释。因此现有证据不支持 Pt-La 的真实增益结论。",
+  "research_gaps": [
+    "缺少经空白校正的同装置头对头实验",
+    "缺少第三方独立实验室的重复证据",
+    "电极老化对增益估计的影响未被定量分离"
+  ],
+  "sources": [
+    {"id": "S-01", "title": "Pt-La 合金在室温电解中的表观能量增益观测（虚构）", "locator": "examples/materials/synthetic_paper_a.txt"},
+    {"id": "S-02", "title": "对 Pt-La 表观增益的独立重复实验未能复现（虚构）", "locator": "examples/materials/synthetic_paper_b.txt"}
+  ],
+  "uncertainty": [
+    "合成文献样本极小（2 篇），效应量估计不稳定",
+    "跨装置比较的真实效应方向无法判定"
+  ]
+}

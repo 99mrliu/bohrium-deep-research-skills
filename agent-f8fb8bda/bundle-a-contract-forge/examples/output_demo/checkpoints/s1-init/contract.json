@@ -1,0 +1,68 @@
+{
+  "case_id": "SYNTH-A-001",
+  "generated_by": "contract_init.py",
+  "output_contract": {
+    "top_level_fields": [
+      "review_report",
+      "evidence_matrix",
+      "limitations",
+      "search_log"
+    ],
+    "fields": [
+      {
+        "path": "review_report",
+        "declaration": "\"综述报告正文（Markdown 字符串），需覆盖任务问题并以 [E-编号] 回链证据\""
+      },
+      {
+        "path": "evidence_matrix.description",
+        "declaration": "\"证据矩阵，逐条列出 文献-主张-证据编号\""
+      },
+      {
+        "path": "evidence_matrix.schema.paper",
+        "declaration": "\"sources 中的来源 id\""
+      },
+      {
+        "path": "evidence_matrix.schema.claim",
+        "declaration": "\"主张摘要\""
+      },
+      {
+        "path": "evidence_matrix.schema.evidence_id",
+        "declaration": "\"E-编号\""
+      },
+      {
+        "path": "limitations",
+        "declaration": "[\"字符串数组，逐项声明结论的适用边界\"]"
+      },
+      {
+        "path": "search_log.description",
+        "declaration": "\"检索日志\""
+      },
+      {
+        "path": "search_log.fields",
+        "declaration": "[\"query\", \"source\", \"hits\", \"kept\"]"
+      }
+    ]
+  },
+  "materials_dir": "/Users/liuhengshen/Desktop/bhr_product/f8fb8bda-five/bundles/bundle-a-contract-forge/examples/materials",
+  "materials": [
+    {
+      "path": "synthetic_paper_a.txt",
+      "sha256": "7fb0d0441a7e65541c5a4ddcf4bc6acd492899880048cffc6255bb31de6d225e",
+      "bytes": 546
+    },
+    {
+      "path": "synthetic_paper_b.txt",
+      "sha256": "8ca78b35dff1b83478d5601481c332ee72f68fec0bc585977dfcdbc0c10d960d",
+      "bytes": 509
+    }
+  ],
+  "reserved_key_collisions": [
+    "limitations"
+  ],
+  "notes": [
+    "fields[].path 为点路径展开结果；declaration 为 case.json 中的原始声明文本",
+    "result.json 骨架中所有契约字段以 PENDING 占位，必须由对应阶段回填",
+    "本文件不含随机数与时间戳，重复运行字节一致",
+    "以下契约字段名与保留键冲突，骨架中未为其设置 PENDING 占位：limitations"
+  ]
+}

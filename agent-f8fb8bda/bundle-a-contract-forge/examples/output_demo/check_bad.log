@@ -1,0 +1,4 @@
+GATE: FAIL（3 项违例）
+  F2 契约字段缺失：search_log
+  F4 completed 状态下 sources 为空（completed ⇒ sources 非空）
+  F6 synthesis 引用的证据 id 不存在于 evidence_linkage：E-09

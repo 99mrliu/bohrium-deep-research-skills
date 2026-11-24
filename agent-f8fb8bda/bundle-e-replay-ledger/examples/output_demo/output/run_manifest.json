@@ -1,0 +1,60 @@
+{
+  "manifest_version": 1,
+  "generated_at": "2026-11-24T23:25:17+0800",
+  "environment": {
+    "python": "3.12.14",
+    "platform": "macOS-15.7.4-arm64-arm-64bit"
+  },
+  "roots": {
+    "input_dir": "/Users/liuhengshen/Desktop/bhr_product/f8fb8bda-five/bundles/bundle-e-replay-ledger/examples/input_demo",
+    "out_dir": "/Users/liuhengshen/Desktop/bhr_product/f8fb8bda-five/bundles/bundle-e-replay-ledger/examples/output_demo/output",
+    "skill_dir": "/Users/liuhengshen/Desktop/bhr_product/f8fb8bda-five/bundles/bundle-e-replay-ledger/scripts"
+  },
+  "inputs": [
+    {
+      "path": "case.json",
+      "sha256": "21b021e6d0593e1d89cfd49761328e68faae824995454b37663d0c22d312e5c2",
+      "bytes": 431
+    },
+    {
+      "path": "material_notes.txt",
+      "sha256": "b3e6aefcfcafd55cb9c5333d6bff55d508b54fe2a694cd54b5b0081ee9a51656",
+      "bytes": 334
+    },
+    {
+      "path": "task.md",
+      "sha256": "2820632ed3ac19d5bda0ec82e03a688a861f39083aca2a9579661afc339f25ae",
+      "bytes": 401
+    }
+  ],
+  "outputs": [
+    {
+      "path": "replay_plan.json",
+      "sha256": "49791bac1a133480c503b6fb31c784f2e9b3ec75fcff233f93b3cb6b75b8c057",
+      "bytes": 2072
+    },
+    {
+      "path": "result.json",
+      "sha256": "ca1c9251e9f486fc8627ebfb7eff89a65825fe0fe2ad076f2d7d02dcb744c16d",
+      "bytes": 387
+    }
+  ],
+  "skill_files": [
+    {
+      "path": "journal.py",
+      "sha256": "46d9cbb98c7d549f40297f4c0182ea8145e47a75dbd964eccdc0b3c5c6f5bc5a",
+      "bytes": 8757
+    },
+    {
+      "path": "manifest.py",
+      "sha256": "81ac0297f09f33f9cd35eab1662d40e82331d61cc7ab9e2db4656d08a0ac7da1",
+      "bytes": 6245
+    },
+    {
+      "path": "resume.py",
+      "sha256": "e5589fa15adb5be40e5edb350cb7c037c01b60e04e648b1f3d488e2b76f689af",
+      "bytes": 5237
+    }
+  ],
+  "phase_timeline": null
+}

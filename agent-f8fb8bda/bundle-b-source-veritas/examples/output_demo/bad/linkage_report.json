@@ -1,0 +1,36 @@
+{
+  "ledger": "/Users/liuhengshen/Desktop/bhr_product/f8fb8bda-five/bundles/bundle-b-source-veritas/examples/bad_ledger.jsonl",
+  "corpus": "/Users/liuhengshen/Desktop/bhr_product/f8fb8bda-five/bundles/bundle-b-source-veritas/examples/output_demo/work/corpus",
+  "total": 3,
+  "verified": 0,
+  "page_mismatch": 1,
+  "not_verbatim": 1,
+  "doc_missing": 1,
+  "quote_empty": 0,
+  "malformed_entry": 0,
+  "linkage_rate": 0.0,
+  "by_field": {
+    "证据回链": {
+      "total": 3,
+      "verified": 0,
+      "linkage_rate": 0.0
+    }
+  },
+  "unverified": [
+    {
+      "evidence_id": "B1",
+      "status": "not_verbatim",
+      "detail": "归一化后全文档未命中（疑似改写或臆造）"
+    },
+    {
+      "evidence_id": "B2",
+      "status": "doc_missing",
+      "detail": "doc 'paper_delta' 不在语料中"
+    },
+    {
+      "evidence_id": "B3",
+      "status": "page_mismatch",
+      "detail": "引用实际位于第 1 页，声明页为 2"
+    }
+  ]
+}

@@ -1,0 +1,101 @@
+{
+  "case_id": "SYNTH-C-001",
+  "source_task": "/Users/liuhengshen/Desktop/bhr_product/f8fb8bda-five/bundles/bundle-c-retrieval-cartographer/examples/task.md",
+  "elements": {
+    "research_object": "高熵氧化物（HEO）锂离子动力电池负极材料体系",
+    "mechanism_intervention": "尖晶石-岩盐相转变对储锂性能的影响机制",
+    "comparison": "传统过渡金属氧化物负极（如 Co3O4、Fe2O3）",
+    "outcomes": "首次库仑效率、循环 500 次容量保持率、倍率性能",
+    "time_range": "2018-2025",
+    "evidence_requirements": "优先纳入同行评审实验研究，综述与预印本仅用于背景定界"
+  },
+  "element_labels_cn": {
+    "research_object": "研究对象",
+    "mechanism_intervention": "机制/干预",
+    "comparison": "对照",
+    "outcomes": "结局指标",
+    "time_range": "时间范围",
+    "evidence_requirements": "证据要求"
+  },
+  "to_fill_elements": [],
+  "sub_questions": [
+    {
+      "id": "SQ-1",
+      "statement": "高熵氧化物（HEO）锂离子动力电池负极材料体系 的定义、分类与研究边界是什么？",
+      "facets": {
+        "research_object": "高熵氧化物（HEO）锂离子动力电池负极材料体系"
+      },
+      "query_cn": "TO_FILL",
+      "query_en": "TO_FILL",
+      "acceptance_criteria": "TO_FILL",
+      "depends_on": []
+    },
+    {
+      "id": "SQ-2",
+      "statement": "尖晶石-岩盐相转变对储锂性能的影响机制 在 高熵氧化物（HEO）锂离子动力电池负极材料体系 中的作用机制是什么？",
+      "facets": {
+        "mechanism_intervention": "尖晶石-岩盐相转变对储锂性能的影响机制",
+        "research_object": "高熵氧化物（HEO）锂离子动力电池负极材料体系"
+      },
+      "query_cn": "TO_FILL",
+      "query_en": "TO_FILL",
+      "acceptance_criteria": "TO_FILL",
+      "depends_on": []
+    },
+    {
+      "id": "SQ-3",
+      "statement": "相较 传统过渡金属氧化物负极（如 Co3O4、Fe2O3），高熵氧化物（HEO）锂离子动力电池负极材料体系 在 首次库仑效率、循环 500 次容量保持率、倍率性能 上表现如何？",
+      "facets": {
+        "comparison": "传统过渡金属氧化物负极（如 Co3O4、Fe2O3）",
+        "research_object": "高熵氧化物（HEO）锂离子动力电池负极材料体系",
+        "outcomes": "首次库仑效率、循环 500 次容量保持率、倍率性能"
+      },
+      "query_cn": "TO_FILL",
+      "query_en": "TO_FILL",
+      "acceptance_criteria": "TO_FILL",
+      "depends_on": []
+    },
+    {
+      "id": "SQ-4",
+      "statement": "关于 高熵氧化物（HEO）锂离子动力电池负极材料体系 的现有证据（时间范围 2018-2025）满足哪些证据要求（优先纳入同行评审实验研究，综述与预印本仅用于背景定界），其适用边界为何？",
+      "facets": {
+        "research_object": "高熵氧化物（HEO）锂离子动力电池负极材料体系",
+        "time_range": "2018-2025",
+        "evidence_requirements": "优先纳入同行评审实验研究，综述与预印本仅用于背景定界"
+      },
+      "query_cn": "TO_FILL",
+      "query_en": "TO_FILL",
+      "acceptance_criteria": "TO_FILL",
+      "depends_on": []
+    },
+    {
+      "id": "SQ-5",
+      "statement": "2018-2025 内 高熵氧化物（HEO）锂离子动力电池负极材料体系 相关研究的趋势与演变如何？",
+      "facets": {
+        "time_range": "2018-2025",
+        "research_object": "高熵氧化物（HEO）锂离子动力电池负极材料体系"
+      },
+      "query_cn": "TO_FILL",
+      "query_en": "TO_FILL",
+      "acceptance_criteria": "TO_FILL",
+      "depends_on": []
+    },
+    {
+      "id": "SQ-6",
+      "statement": "高熵氧化物（HEO）锂离子动力电池负极材料体系 研究中 首次库仑效率、循环 500 次容量保持率、倍率性能 的测量方法与报告规范如何？",
+      "facets": {
+        "outcomes": "首次库仑效率、循环 500 次容量保持率、倍率性能",
+        "research_object": "高熵氧化物（HEO）锂离子动力电池负极材料体系"
+      },
+      "query_cn": "TO_FILL",
+      "query_en": "TO_FILL",
+      "acceptance_criteria": "TO_FILL",
+      "depends_on": []
+    }
+  ],
+  "notes": [
+    "本文件由 decompose.py 确定性生成；TO_FILL 字段必须由 Agent 人工补齐。",
+    "acceptance_criteria 写法见 references/decomposition_schema.md。",
+    "depends_on 仅在构造检索式确实需要另一 SQ 结果时才标注。"
+  ]
+}

@@ -1,0 +1,61 @@
+{
+  "materials_dir": "/Users/liuhengshen/Desktop/bhr_product/f8fb8bda-five/bundles/bundle-b-source-veritas/examples/materials",
+  "doc_count": 3,
+  "parse_ok": 3,
+  "docs": [
+    {
+      "doc_id": "paper_alpha",
+      "source_file": "paper_alpha.txt",
+      "sha256": "7d94be87f22d191ed3b240ca802d4aaada566a009003ab74935c5308a2136ab2",
+      "kind": "text",
+      "parse_status": "ok",
+      "parse_method": "direct-read",
+      "pages": 1,
+      "text_file": "text/paper_alpha.txt",
+      "page_spans": [
+        {
+          "page": 1,
+          "start": 0,
+          "end": 2839,
+          "chars": 2839
+        }
+      ]
+    },
+    {
+      "doc_id": "paper_beta",
+      "source_file": "paper_beta.txt",
+      "sha256": "5bbb6e78f42e8f59dda70f5cf08b654c6f9920fb6fca9441dc6a6c659e0c924e",
+      "kind": "text",
+      "parse_status": "ok",
+      "parse_method": "direct-read",
+      "pages": 1,
+      "text_file": "text/paper_beta.txt",
+      "page_spans": [
+        {
+          "page": 1,
+          "start": 0,
+          "end": 2591,
+          "chars": 2591
+        }
+      ]
+    },
+    {
+      "doc_id": "paper_gamma",
+      "source_file": "paper_gamma.pdf",
+      "sha256": "454f8aceb1b8058115b9d78577c8af592b9fc0f06c2dc05b12c1ceda4f2e8463",
+      "kind": "pdf",
+      "parse_status": "ok",
+      "parse_method": "pdftotext-layout",
+      "pages": 1,
+      "text_file": "text/paper_gamma.txt",
+      "page_spans": [
+        {
+          "page": 1,
+          "start": 0,
+          "end": 819,
+          "chars": 819
+        }
+      ]
+    }
+  ]
+}
