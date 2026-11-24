@@ -1,0 +1,95 @@
+{
+  "note": "severity_gate 降级/审计日志",
+  "audit_trail": [
+    {
+      "finding_id": "F-001",
+      "rule": "R3_integrity_needs_external",
+      "action": "severity_cap",
+      "detail": "image_reuse 类指控无 external_record 双信号，严重度封顶 major（原 critical）"
+    },
+    {
+      "finding_id": "F-001",
+      "rule": "R1_inference_cap",
+      "action": "severity_cap",
+      "detail": "evidence_kind=none，严重度封顶 minor（critical → minor）"
+    },
+    {
+      "finding_id": "F-002",
+      "rule": "R8_keep",
+      "action": "keep",
+      "detail": "严重度 minor 与证据种类 local_rule 匹配，无需调整"
+    },
+    {
+      "finding_id": "F-003",
+      "rule": "R8_keep",
+      "action": "keep",
+      "detail": "严重度 major 与证据种类 verbatim_quote 匹配，无需调整"
+    },
+    {
+      "finding_id": "F-004",
+      "rule": "R8_keep",
+      "action": "keep",
+      "detail": "严重度 major 与证据种类 external_record 匹配，无需调整"
+    },
+    {
+      "finding_id": "F-005",
+      "rule": "R8_keep",
+      "action": "keep",
+      "detail": "严重度 major 与证据种类 verbatim_quote 匹配，无需调整"
+    },
+    {
+      "finding_id": "F-006",
+      "rule": "R1_inference_cap",
+      "action": "severity_ok",
+      "detail": "evidence_kind=none，严重度封顶 minor（minor → minor）"
+    },
+    {
+      "finding_id": "F-006",
+      "rule": "R5_suggestion_info",
+      "action": "severity_cap",
+      "detail": "category=suggestion，严重度封顶 info（minor → info）"
+    },
+    {
+      "finding_id": "F-007",
+      "rule": "R8_keep",
+      "action": "keep",
+      "detail": "严重度 major 与证据种类 verbatim_quote 匹配，无需调整"
+    },
+    {
+      "finding_id": "F-008",
+      "rule": "R3_integrity_needs_external",
+      "action": "severity_cap",
+      "detail": "fabrication_suspected 类指控无 external_record 双信号，严重度封顶 major（原 critical）"
+    },
+    {
+      "finding_id": "F-009",
+      "rule": "R1_inference_cap",
+      "action": "severity_cap",
+      "detail": "evidence_kind=model_inference，严重度封顶 minor（major → minor）"
+    },
+    {
+      "finding_id": "F-009",
+      "rule": "R2_inference_pending",
+      "action": "status_pending",
+      "detail": "evidence_kind=model_inference，判定转待复核"
+    },
+    {
+      "finding_id": "F-010",
+      "rule": "R1_inference_cap",
+      "action": "severity_ok",
+      "detail": "evidence_kind=model_inference，严重度封顶 minor（minor → minor）"
+    },
+    {
+      "finding_id": "F-010",
+      "rule": "R2_inference_pending",
+      "action": "status_pending",
+      "detail": "evidence_kind=model_inference，判定转待复核"
+    }
+  ],
+  "summary": {
+    "total": 10,
+    "severity_adjusted": 4,
+    "pending_review": 4,
+    "rules_triggered": 9
+  }
+}

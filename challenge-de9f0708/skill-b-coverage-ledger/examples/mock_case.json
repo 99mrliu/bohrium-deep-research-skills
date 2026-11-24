@@ -1,0 +1,18 @@
+{
+  "note": "合成示意案例,非正式测评数据",
+  "case_id": "mock-coverage-001",
+  "task": "请对投稿论文 mock_paper.txt 执行学术规范与合规审查。审查面(review facets):1) 引用规范:逐条核对参考文献元数据完整性与正文引证对应;2) 伦理审查:核对人体研究的伦理批准与知情同意声明;3) 隐私合规:检查正文与附录是否泄露受试者个人信息(PII)。每条 finding 需给出文件、章节、逐字摘录与严重度。",
+  "materials": ["mock_paper.txt"],
+  "output_contract": {
+    "required_fields": [
+      "case_id",
+      "status",
+      "findings",
+      "not_reviewed",
+      "summary",
+      "sources",
+      "uncertainty",
+      "change_log"
+    ]
+  }
+}

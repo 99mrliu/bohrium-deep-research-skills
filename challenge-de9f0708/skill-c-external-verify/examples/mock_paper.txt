@@ -1,0 +1,55 @@
+【合成示意文本，非真实论文，仅用于演示 skill-c-external-verify 流水线】
+
+改性生物炭对水中镉(II)吸附性能的研究
+
+张明， 刘洋
+（某某大学环境科学与工程学院， 某市 100000）
+
+摘要：以竹屑为原料制备改性生物炭，考察其对水中 Cd(II) 的吸附性能。结果表明，
+在 pH=6.0、投加量 2 g/L、298 K 条件下，平衡吸附量达 41.2 mg/g；吸附过程符合
+准二级动力学模型与 Langmuir 等温模型。本研究为农林废弃物资源化利用与水体
+重金属治理提供了参考。
+
+关键词：生物炭；镉；吸附；改性
+
+1 引言
+
+随着工业废水排放量增加，水体镉污染问题日益突出。生物炭因其丰富的孔隙结构与
+表面官能团，被广泛用于水体中重金属的吸附去除[1]。已有综述系统总结了改性
+生物炭对多种重金属的吸附研究进展[4,5]，指出表面改性是提升吸附容量的关键
+路径。此外，催化剂负载量与焙烧温度对催化产率的协同效应已得到系统研究[2]，
+这为本研究的制备工艺优化提供了重要借鉴。在表征手段方面，光谱学方法被证明是
+解析金属配合物结构的有效工具[3]。最新研究还表明，机器学习模型可以高精度预测
+生物炭材料的吸附等温线[6]。
+
+2 材料与方法
+
+2.1 材料
+竹屑购自本地农贸市场，洗净烘干后粉碎过筛；CdCl2 为分析纯。
+
+2.2 生物炭制备与改性
+竹屑在 600 ℃ 限氧热解 2 h 制得原始生物炭，经 KOH 浸渍活化后二次热解得到
+改性生物炭。
+
+2.3 吸附实验
+取 50 mL 初始浓度 50 mg/L 的 Cd(II) 溶液，投加 0.1 g 生物炭，恒温振荡至平衡，
+原子吸收分光光度法测定残余浓度。
+
+3 结果与讨论
+
+改性后生物炭比表面积由 12.4 m2/g 提升至 386.7 m2/g。吸附在 120 min 内达到
+平衡，准二级动力学拟合 R2 = 0.999；Langmuir 模型拟合最大吸附量为 45.6 mg/g，
+与实测平衡吸附量 41.2 mg/g 接近。pH 升高有利于吸附，pH > 7 后出现沉淀干扰。
+
+4 结论
+
+KOH 改性显著提升竹屑生物炭对 Cd(II) 的吸附能力，吸附过程以化学吸附为主。
+后续工作将考察共存离子干扰与柱实验动态穿透行为。
+
+参考文献
+[1] Zhang W, Li M, Wang H. Adsorption of cadmium from aqueous solution using bamboo-derived biochar. Journal of Hazardous Materials, 2020, 384: 121-129. doi: 10.1016/j.jhazmat.2020.121456
+[2] 李华, 王芳. 明代青花瓷釉料成分的X射线荧光光谱分析. 文物保护与考古科学, 2018, 30(2): 45-52.
+[3] Smith J, Brown T, Davis R. Spectroscopic characterization of metal-organic complexes in aqueous media. Analytical Chemistry, 2021, 93(8): 4102-4110. doi: 10.1021
+[4] Wang L, Chen Y, Zhao P. Adsorption of heavy metals from aqueous solution by modified biochar: a review. Environmental Pollution, 2019, 252: 1331-1344. doi: 10.1016/j.envpol.2019.06.033
+[5] Liu Y, Sun Q, Zhou K. Adsorption of heavy metals from aqueous solutions by modified biochar: a review. Chemosphere, 2019, 231: 388-400. doi: 10.1016/j.chemosphere.2019.05.141
+[6] Chen X, Huang J, Wu S. Machine learning prediction of adsorption isotherms for biochar materials. Nature Communications, 2031, 12: 5555. doi: 10.1038/s41467-021-99999-x

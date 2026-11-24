@@ -1,0 +1,95 @@
+{
+  "note": "合成示例：Agent 视角的 findings 草稿。F-001~F-005 的 quote 均按原文逐字/归一化可匹配摘录；F-006 为演示用的错误锚定（quote 与原文不符），应被 quote_bind.py 自动降级为待复核。",
+  "findings": [
+    {
+      "id": "F-001",
+      "type": "fact_error",
+      "category": "reference_reliability",
+      "severity": "major",
+      "location": {
+        "file": "mock_paper.txt",
+        "page": 3,
+        "section": "References",
+        "quote": "Nature. 1897;512(7515):45-52."
+      },
+      "evidence": "本地规则 ref-metadata-consistency：Nature 第 512 卷对应 2014 年，年份 1897 与卷号 512 不可能同时成立；主题'quantum photosynthesis ... deep-sea bacteria'亦与期刊常规范围不符，疑似元数据编造或张冠李戴。",
+      "suggestion": "要求作者提供该文献的 DOI 或原文；若无法提供，删除或替换该引用。",
+      "verdict_status": "确认"
+    },
+    {
+      "id": "F-002",
+      "type": "fact_error",
+      "category": "fact_consistency",
+      "severity": "critical",
+      "location": {
+        "file": "mock_paper.txt",
+        "page": 2,
+        "section": "Methods",
+        "quote": "We enrolled 120 adult participants (aged 18 to 65 years)"
+      },
+      "evidence": "本地规则 sample-size-consistency：Methods 声称入组 120 人，与 Results 表 1 的分析人群 n = 102 不一致（见 F-003），两处数字必有一处错误。",
+      "suggestion": "核对原始入组记录，统一 Methods、Results 与 Table 1 的样本量，并说明 18 例差异去向（剔除/脱落）。",
+      "verdict_status": "确认"
+    },
+    {
+      "id": "F-003",
+      "type": "fact_error",
+      "category": "fact_consistency",
+      "severity": "critical",
+      "location": {
+        "file": "mock_paper.txt",
+        "page": 2,
+        "section": "Results",
+        "quote": "analysis population (n = 102)"
+      },
+      "evidence": "本地规则 sample-size-consistency：Table 1 标注分析人群 n = 102，与 Methods 的 120 人（F-002）矛盾；正文又称 58 of 102 达到 EASI-75，分母口径同样为 102。",
+      "suggestion": "同 F-002：统一样本量并补充受试者流程图（screened/enrolled/analyzed）。",
+      "verdict_status": "确认"
+    },
+    {
+      "id": "F-004",
+      "type": "norm_issue",
+      "category": "ethics_compliance",
+      "severity": "critical",
+      "location": {
+        "file": "mock_paper.txt",
+        "page": null,
+        "section": "全文",
+        "quote": ""
+      },
+      "evidence": "本地规则 ethics-statement-required：研究涉及 human participants（Methods 2.1 明确成人受试者每日口服研究药物 12 周），但全文检索不到 ethics/institutional review board/IRB/consent/知情同意/伦理 等任何伦理审批或知情同意声明（absence 类 finding，quote 为空，锚定核验记 skipped_absence_claim，需人工复核全文确认）。",
+      "suggestion": "补充伦理委员会审批编号与知情同意声明；无法补充时应说明豁免依据。",
+      "verdict_status": "确认"
+    },
+    {
+      "id": "F-005",
+      "type": "insufficient_evidence",
+      "category": "claim_support",
+      "severity": "major",
+      "location": {
+        "file": "mock_paper.txt",
+        "page": 3,
+        "section": "Conclusion",
+        "quote": "ZX-101 definitively causes durable remission"
+      },
+      "evidence": "本地规则 causal-claim-support：结论段使用 definitively causes 的强因果表述，但该句无任何引用或数据支撑，且与 Discussion 自述的 open-label 设计局限（limits the strength of any causal interpretation）直接冲突。",
+      "suggestion": "将因果表述降级为关联性表述（如 was associated with），或补充随机对照证据引用。",
+      "verdict_status": "确认"
+    },
+    {
+      "id": "F-006",
+      "type": "fact_error",
+      "category": "fact_consistency",
+      "severity": "minor",
+      "location": {
+        "file": "mock_paper.txt",
+        "page": 2,
+        "section": "Methods",
+        "quote": "We enrolled 130 adult participants"
+      },
+      "evidence": "Agent 草稿：凭印象记录入组 130 人，需在锚定核验中确认。",
+      "suggestion": "核对入组人数。",
+      "verdict_status": "确认"
+    }
+  ]
+}

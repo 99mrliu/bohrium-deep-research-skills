@@ -1,0 +1,9 @@
+{
+  "case_id": "mock-external-verify-001",
+  "note": "合成示意案例，非正式测评材料；论文文本与参考文献均为虚构，仅用于演示流水线。",
+  "task": "对论文 mock_paper.txt 做审查，审查面：1) 参考文献真实性与元数据一致性（外部核验）；2) 引文-文献对应关系；3) 参考文献著录规范与体例；4) 明显事实性问题（如未来年份）。",
+  "materials": ["mock_paper.txt"],
+  "output_contract": {
+    "required_fields": ["case_id", "status", "findings", "not_reviewed", "uncertainty", "sources", "change_log"]
+  }
+}

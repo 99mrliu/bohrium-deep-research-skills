@@ -1,0 +1,24 @@
+{
+  "case_id": "MOCK-ANCHOR-001",
+  "note": "合成示意案例，非真实测评数据；所有论文内容、机构、人物均为虚构。",
+  "task": "对论文 mock_paper.txt 做质量与规范审查，审查面：(1) fact_consistency 事实一致性（数字、前后表述）；(2) reference_reliability 参考文献可靠性（元数据合理性）；(3) ethics_compliance 伦理合规（伦理审批/知情同意声明）；(4) claim_support 论断证据支撑（结论是否有引用/数据支撑）。每条 finding 必须给出文件+页码+章节+逐字 quote。",
+  "review_facets": [
+    "fact_consistency",
+    "reference_reliability",
+    "ethics_compliance",
+    "claim_support"
+  ],
+  "materials": ["mock_paper.txt"],
+  "output_contract": {
+    "required_fields": [
+      "case_id",
+      "status",
+      "findings",
+      "not_reviewed",
+      "anchor_stats",
+      "uncertainty",
+      "sources",
+      "change_log"
+    ]
+  }
+}

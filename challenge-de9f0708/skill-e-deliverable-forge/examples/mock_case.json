@@ -1,0 +1,18 @@
+{
+  "note": "合成示意案例（mock case），仅用于演示 skill-e-deliverable-forge 的验收与渲染流水线，非正式测评数据。",
+  "case_id": "MOCK-E-001",
+  "task": "对 synthetic_paper.txt 做学术规范与合规审查。审查面（review facets）：1) 事实一致性（摘要/正文/表格数字是否自洽）；2) 引用与参考文献核验；3) 伦理与合规（伦理声明、个人可识别信息）；4) 论断证据充分性；5) 报告完整性（局限性讨论、图注）。逐条给出证据与严重度。",
+  "materials": ["synthetic_paper.txt"],
+  "output_contract": {
+    "required_fields": [
+      "case_id",
+      "status",
+      "findings",
+      "summary",
+      "sources",
+      "uncertainty",
+      "change_log",
+      "not_reviewed"
+    ]
+  }
+}

@@ -1,0 +1,145 @@
+{
+  "_note": "合成示例输出，非正式测评结果",
+  "tool": "extract_refs.py",
+  "version": "1.0",
+  "source_file": "/Users/liuhengshen/Desktop/bhr_product/3rd/4/submit/skills-de9f0708/skill-c-external-verify/examples/mock_paper.txt",
+  "references_section_found": true,
+  "ref_count": 6,
+  "citation_count": 5,
+  "refs": [
+    {
+      "index": 1,
+      "marker_style": "bracket",
+      "raw": "[1] Zhang W, Li M, Wang H. Adsorption of cadmium from aqueous solution using bamboo-derived biochar. Journal of Hazardous Materials, 2020, 384: 121-129. doi: 10.1016/j.jhazmat.2020.121456",
+      "offset": 974,
+      "page": 1,
+      "fields": {
+        "authors": "Zhang W, Li M, Wang H",
+        "year": 2020,
+        "title": "Adsorption of cadmium from aqueous solution using bamboo-derived biochar",
+        "journal": "Journal of Hazardous Materials",
+        "doi": "10.1016/j.jhazmat.2020.121456"
+      }
+    },
+    {
+      "index": 2,
+      "marker_style": "bracket",
+      "raw": "[2] 李华, 王芳. 明代青花瓷釉料成分的X射线荧光光谱分析. 文物保护与考古科学, 2018, 30(2): 45-52.",
+      "offset": 1162,
+      "page": 1,
+      "fields": {
+        "authors": "李华, 王芳",
+        "year": 2018,
+        "title": "明代青花瓷釉料成分的X射线荧光光谱分析",
+        "journal": "文物保护与考古科学",
+        "doi": null
+      }
+    },
+    {
+      "index": 3,
+      "marker_style": "bracket",
+      "raw": "[3] Smith J, Brown T, Davis R. Spectroscopic characterization of metal-organic complexes in aqueous media. Analytical Chemistry, 2021, 93(8): 4102-4110. doi: 10.1021",
+      "offset": 1226,
+      "page": 1,
+      "fields": {
+        "authors": "Smith J, Brown T, Davis R",
+        "year": 2021,
+        "title": "Spectroscopic characterization of metal-organic complexes in aqueous media",
+        "journal": "Analytical Chemistry",
+        "doi": "10.1021"
+      }
+    },
+    {
+      "index": 4,
+      "marker_style": "bracket",
+      "raw": "[4] Wang L, Chen Y, Zhao P. Adsorption of heavy metals from aqueous solution by modified biochar: a review. Environmental Pollution, 2019, 252: 1331-1344. doi: 10.1016/j.envpol.2019.06.033",
+      "offset": 1392,
+      "page": 1,
+      "fields": {
+        "authors": "Wang L, Chen Y, Zhao P",
+        "year": 2019,
+        "title": "Adsorption of heavy metals from aqueous solution by modified biochar: a review",
+        "journal": "Environmental Pollution",
+        "doi": "10.1016/j.envpol.2019.06.033"
+      }
+    },
+    {
+      "index": 5,
+      "marker_style": "bracket",
+      "raw": "[5] Liu Y, Sun Q, Zhou K. Adsorption of heavy metals from aqueous solutions by modified biochar: a review. Chemosphere, 2019, 231: 388-400. doi: 10.1016/j.chemosphere.2019.05.141",
+      "offset": 1581,
+      "page": 1,
+      "fields": {
+        "authors": "Liu Y, Sun Q, Zhou K",
+        "year": 2019,
+        "title": "Adsorption of heavy metals from aqueous solutions by modified biochar: a review",
+        "journal": "Chemosphere",
+        "doi": "10.1016/j.chemosphere.2019.05.141"
+      }
+    },
+    {
+      "index": 6,
+      "marker_style": "bracket",
+      "raw": "[6] Chen X, Huang J, Wu S. Machine learning prediction of adsorption isotherms for biochar materials. Nature Communications, 2031, 12: 5555. doi: 10.1038/s41467-021-99999-x",
+      "offset": 1760,
+      "page": 1,
+      "fields": {
+        "authors": "Chen X, Huang J, Wu S",
+        "year": 2031,
+        "title": "Machine learning prediction of adsorption isotherms for biochar materials",
+        "journal": "Nature Communications",
+        "doi": "10.1038/s41467-021-99999-x"
+      }
+    }
+  ],
+  "citations": [
+    {
+      "marker": "[1]",
+      "numbers": [
+        1
+      ],
+      "context": "表面官能团，被广泛用于水体中重金属的吸附去除[1]。",
+      "offset": 341,
+      "page": 1
+    },
+    {
+      "marker": "[4,5]",
+      "numbers": [
+        4,
+        5
+      ],
+      "context": "生物炭对多种重金属的吸附研究进展[4,5]，指出表面改性是提升吸附容量的关键",
+      "offset": 373,
+      "page": 1
+    },
+    {
+      "marker": "[2]",
+      "numbers": [
+        2
+      ],
+      "context": "此外，催化剂负载量与焙烧温度对催化产率的协同效应已得到系统研究[2]，",
+      "offset": 430,
+      "page": 1
+    },
+    {
+      "marker": "[3]",
+      "numbers": [
+        3
+      ],
+      "context": "解析金属配合物结构的有效工具[3]。",
+      "offset": 487,
+      "page": 1
+    },
+    {
+      "marker": "[6]",
+      "numbers": [
+        6
+      ],
+      "context": "生物炭材料的吸附等温线[6]。",
+      "offset": 524,
+      "page": 1
+    }
+  ],
+  "notes": [],
+  "caveat": "字段为正则抽取的初值，须由 lint/crossref 与人工复核后才可作结论。"
+}

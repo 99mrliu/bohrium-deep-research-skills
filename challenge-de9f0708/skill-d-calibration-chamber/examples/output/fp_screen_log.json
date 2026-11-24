@@ -1,0 +1,71 @@
+{
+  "note": "fp_screen 鉴别日志",
+  "fp_log": [
+    {
+      "finding_id": "F-001",
+      "fp_decision": "keep",
+      "fp_rule": "FP-00_no_rule_hit",
+      "fp_reason": "无鉴别规则命中，维持"
+    },
+    {
+      "finding_id": "F-002",
+      "fp_decision": "drop",
+      "fp_rule": "FP-01_no_doi_convention",
+      "fp_reason": "无 DOI 属于 conference 类文献的学科惯例（discrimination_rules.md FP-01），不构成问题"
+    },
+    {
+      "finding_id": "F-003",
+      "fp_decision": "drop",
+      "fp_rule": "FP-03_author_name_variant",
+      "fp_reason": "仅作者名拼写/缩写变体（如 van der Berg vs van der Berg, J.），著录差异非元数据错误（FP-03）"
+    },
+    {
+      "finding_id": "F-004",
+      "fp_decision": "keep",
+      "fp_rule": "FP-00_no_rule_hit",
+      "fp_reason": "无鉴别规则命中，维持"
+    },
+    {
+      "finding_id": "F-005",
+      "fp_decision": "keep",
+      "fp_rule": "FP-00_no_rule_hit",
+      "fp_reason": "无鉴别规则命中，维持"
+    },
+    {
+      "finding_id": "F-006",
+      "fp_decision": "keep",
+      "fp_rule": "FP-00_no_rule_hit",
+      "fp_reason": "无鉴别规则命中，维持"
+    },
+    {
+      "finding_id": "F-007",
+      "fp_decision": "keep",
+      "fp_rule": "FP-00_no_rule_hit",
+      "fp_reason": "无鉴别规则命中，维持"
+    },
+    {
+      "finding_id": "F-008",
+      "fp_decision": "keep",
+      "fp_rule": "FP-00_no_rule_hit",
+      "fp_reason": "无鉴别规则命中，维持"
+    },
+    {
+      "finding_id": "F-009",
+      "fp_decision": "drop",
+      "fp_rule": "FP-07_p_value_style",
+      "fp_reason": "仅 p 值报告写法差异，数值可复算一致，属统计报告习惯（FP-07）"
+    },
+    {
+      "finding_id": "F-010",
+      "fp_decision": "drop",
+      "fp_rule": "FP-10_abstract_detail_diff",
+      "fp_reason": "中英文摘要仅详略差异、结论一致，属惯例（FP-10）"
+    }
+  ],
+  "summary": {
+    "total": 10,
+    "keep": 6,
+    "downgrade": 0,
+    "drop": 4
+  }
+}

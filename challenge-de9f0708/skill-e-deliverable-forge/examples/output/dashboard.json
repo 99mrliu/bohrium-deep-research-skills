@@ -1,0 +1,80 @@
+{
+  "note": "结构化摘要输出，由 summary_dashboard.py 确定性生成",
+  "case_id": "MOCK-E-001",
+  "status": "complete",
+  "counts": {
+    "total_findings": 6,
+    "by_severity": {
+      "critical": 1,
+      "major": 2,
+      "minor": 2,
+      "info": 1
+    },
+    "by_type": {
+      "abstract_table_number_mismatch": 1,
+      "missing_ethics_statement": 1,
+      "missing_limitations": 1,
+      "possible_pii": 1,
+      "unsupported_novelty_claim": 1,
+      "unverifiable_reference": 1
+    },
+    "severity_by_type": {
+      "critical": {
+        "abstract_table_number_mismatch": 1
+      },
+      "major": {
+        "unverifiable_reference": 1,
+        "missing_ethics_statement": 1
+      },
+      "minor": {
+        "possible_pii": 1,
+        "unsupported_novelty_claim": 1
+      },
+      "info": {
+        "missing_limitations": 1
+      }
+    },
+    "pending_review": 1
+  },
+  "facet_coverage": {
+    "facets_reviewed": [
+      "事实一致性",
+      "引用与参考文献核验",
+      "伦理与合规",
+      "论断证据充分性",
+      "报告完整性"
+    ],
+    "not_reviewed_count": 1,
+    "not_reviewed": [
+      "无未覆盖审查面：case.json 声明的 5 个审查面（事实一致性/引用核验/伦理合规/论断证据/报告完整性）均已完成审查"
+    ]
+  },
+  "pending_review": [
+    {
+      "id": "F02",
+      "type": "unverifiable_reference",
+      "severity": "major",
+      "verdict_status": "待复核：需联网检索 Crossref/DOI 确认文献真伪，本合成示例环境未执行外部核验"
+    }
+  ],
+  "top_actions": [
+    {
+      "id": "F01",
+      "severity": "critical",
+      "type": "abstract_table_number_mismatch",
+      "action": "按表 1 混淆矩阵重新核算准确率，将摘要中的『97.3%』更正为 93.75%，或修正表 1 数据并说明两处口径差异。"
+    },
+    {
+      "id": "F02",
+      "severity": "major",
+      "type": "unverifiable_reference",
+      "action": "联网检索 Crossref/DOI 记录核验该文献是否真实存在；若无法核实，替换为真实可查的文献，或删除引言中依赖它的论断。"
+    },
+    {
+      "id": "F03",
+      "severity": "major",
+      "type": "missing_ethics_statement",
+      "action": "在方法节补充伦理审批机构名称、批件编号与知情同意获取方式；若未获审批，应如实说明并限制数据使用范围。"
+    }
+  ]
+}

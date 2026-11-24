@@ -1,0 +1,126 @@
+{
+  "_note": "合成示例输出，非正式测评结果",
+  "tool": "lint_refs.py",
+  "version": "1.0",
+  "input_file": "/Users/liuhengshen/Desktop/bhr_product/3rd/4/submit/skills-de9f0708/skill-c-external-verify/examples/output/refs.json",
+  "current_year": 2026,
+  "checks_run": [
+    "duplicate_reference",
+    "missing_field",
+    "year_anomaly",
+    "doi_format_invalid",
+    "format_inconsistency",
+    "claim_citation_mismatch"
+  ],
+  "candidate_count": 4,
+  "candidates": [
+    {
+      "id": "LINT-DUP-001",
+      "type": "duplicate_reference",
+      "severity_candidate": "major",
+      "category": "norm_issue",
+      "ref_index": [
+        4,
+        5
+      ],
+      "rule": "title_similarity>=0.85",
+      "evidence": {
+        "similarity": 0.992,
+        "title_a": "Adsorption of heavy metals from aqueous solution by modified biochar: a review",
+        "title_b": "Adsorption of heavy metals from aqueous solutions by modified biochar: a review"
+      },
+      "location_hint": {
+        "pages": [
+          1,
+          1
+        ]
+      },
+      "suggestion": "核对两条文献是否为同一工作的重复著录；如是，删除其一并统一编号。",
+      "verdict_status": "待复核",
+      "confidence": "medium",
+      "note": "本地初筛候选，非结论；须结合 crossref_check 检索记录与人工/模型复核后定级。"
+    },
+    {
+      "id": "LINT-DOI-002",
+      "type": "doi_format_invalid",
+      "severity_candidate": "major",
+      "category": "norm_issue",
+      "ref_index": [
+        3
+      ],
+      "rule": "doi_shape!=10.\\d{4,9}/<suffix>",
+      "evidence": {
+        "doi_found": "10.1021",
+        "raw_excerpt": "[3] Smith J, Brown T, Davis R. Spectroscopic characterization of metal-organic complexes in aqueous media. Analytical Chemistry, 2021, 93(8): 4102-4110. doi: 10.1021"
+      },
+      "location_hint": {
+        "page": 1,
+        "offset": 1226
+      },
+      "suggestion": "DOI 形态非法（缺后缀或注册号位数不足）；请核对原文 DOI 并改正。",
+      "verdict_status": "待复核",
+      "confidence": "high",
+      "note": "本地初筛候选，非结论；须结合 crossref_check 检索记录与人工/模型复核后定级。"
+    },
+    {
+      "id": "LINT-YEAR-003",
+      "type": "year_anomaly",
+      "severity_candidate": "major",
+      "category": "fact_error",
+      "ref_index": [
+        6
+      ],
+      "rule": "year>current_year(2026)",
+      "evidence": {
+        "year_found": 2031,
+        "raw_excerpt": "[6] Chen X, Huang J, Wu S. Machine learning prediction of adsorption isotherms for biochar materials. Nature Communications, 2031, 12: 5555. doi: 10.1038/s41467-021-99999-x"
+      },
+      "location_hint": {
+        "page": 1,
+        "offset": 1760
+      },
+      "suggestion": "年份晚于当前年，疑似笔误或著录错误；请对照原文/出版记录改正。",
+      "verdict_status": "待复核",
+      "confidence": "high",
+      "note": "本地初筛候选，非结论；须结合 crossref_check 检索记录与人工/模型复核后定级。"
+    },
+    {
+      "id": "LINT-CITE-004",
+      "type": "claim_citation_mismatch",
+      "severity_candidate": "major",
+      "category": "insufficient_evidence",
+      "ref_index": [
+        2
+      ],
+      "rule": "zero_content_overlap(context_vs_title)",
+      "evidence": {
+        "marker": "[2]",
+        "context": "此外，催化剂负载量与焙烧温度对催化产率的协同效应已得到系统研究[2]，",
+        "ref_title": "明代青花瓷釉料成分的X射线荧光光谱分析",
+        "ref_raw": "[2] 李华, 王芳. 明代青花瓷釉料成分的X射线荧光光谱分析. 文物保护与考古科学, 2018, 30(2): 45-52."
+      },
+      "location_hint": {
+        "page": 1,
+        "offset": 430
+      },
+      "suggestion": "引文 [2] 的语境句与文献 [2] 主题零重叠，疑似张冠李戴；请人工通读语境与文献，确认是否错引。",
+      "verdict_status": "待复核",
+      "confidence": "low",
+      "note": "本地初筛候选，非结论；须结合 crossref_check 检索记录与人工/模型复核后定级。"
+    }
+  ],
+  "info_notes": [
+    "ref[2] 无 DOI：人文/会议/书籍文献常见，按规程不判违规，仅记录。",
+    "citation [1]：语境与文献标题语种不同，跳过主题重叠判定（需模型/人工判读）。",
+    "citation [3]：语境与文献标题语种不同，跳过主题重叠判定（需模型/人工判读）。",
+    "citation [6]：语境与文献标题语种不同，跳过主题重叠判定（需模型/人工判读）。"
+  ],
+  "summary_by_type": {
+    "duplicate_reference": 1,
+    "doi_format_invalid": 1,
+    "year_anomaly": 1,
+    "claim_citation_mismatch": 1
+  },
+  "notes": [],
+  "caveat": "全部输出为候选问题（candidate），不是结论；无 DOI 不判违规。"
+}

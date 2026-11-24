@@ -1,0 +1,122 @@
+{
+  "note": "合成示例输出，非正式测评结果（补齐全部 contract 字段后的完整版）",
+  "case_id": "MOCK-E-001",
+  "status": "complete",
+  "summary": "对 synthetic_paper.txt 完成 5 个审查面的审查，共 6 条发现：critical 1、major 2、minor 2、info 1，其中 1 条待复核。",
+  "findings": [
+    {
+      "id": "F01",
+      "type": "abstract_table_number_mismatch",
+      "category": "fact_error",
+      "severity": "critical",
+      "location": {
+        "file": "synthetic_paper.txt",
+        "page": 1,
+        "section": "摘要",
+        "quote": "系统分诊准确率达 97.3%"
+      },
+      "evidence": "摘要称准确率 97.3%；第 2 页结果节表 1 汇总『总样本 400 例，其中正确分诊 375 例，错误 25 例』，据此计算为 375/400=93.75%，两处数字直接矛盾。",
+      "suggestion": "按表 1 混淆矩阵重新核算准确率，将摘要中的『97.3%』更正为 93.75%，或修正表 1 数据并说明两处口径差异。",
+      "verdict_status": "确认"
+    },
+    {
+      "id": "F02",
+      "type": "unverifiable_reference",
+      "category": "insufficient_evidence",
+      "severity": "major",
+      "location": {
+        "file": "synthetic_paper.txt",
+        "page": 3,
+        "section": "参考文献",
+        "quote": "Zhang, L. & Lee, H. (2021). Synthetic data augmentation for triage. Journal of Synthetic Data Studies, 12(3), 45-59."
+      },
+      "evidence": "该文献支撑第 1 页引言中『合成数据增强可以显著提升小样本场景下的模型性能』的关键论断，但期刊名 Journal of Synthetic Data Studies 在本地材料中无任何可核实记录，元数据存在编造嫌疑。",
+      "suggestion": "联网检索 Crossref/DOI 记录核验该文献是否真实存在；若无法核实，替换为真实可查的文献，或删除引言中依赖它的论断。",
+      "verdict_status": "待复核：需联网检索 Crossref/DOI 确认文献真伪，本合成示例环境未执行外部核验"
+    },
+    {
+      "id": "F03",
+      "type": "missing_ethics_statement",
+      "category": "norm_issue",
+      "severity": "major",
+      "location": {
+        "file": "synthetic_paper.txt",
+        "page": 2,
+        "section": "方法",
+        "quote": "我们通过问卷调查收集了 120 名受试者的健康数据"
+      },
+      "evidence": "研究涉及人体受试者健康数据，但全文（第 1-3 页）未出现任何伦理审批或知情同意声明，不满足涉及人体研究的基本合规要求。",
+      "suggestion": "在方法节补充伦理审批机构名称、批件编号与知情同意获取方式；若未获审批，应如实说明并限制数据使用范围。",
+      "verdict_status": "确认"
+    },
+    {
+      "id": "F04",
+      "type": "possible_pii",
+      "category": "norm_issue",
+      "severity": "minor",
+      "location": {
+        "file": "synthetic_paper.txt",
+        "page": 2,
+        "section": "方法",
+        "quote": "例如受试者王某（联系电话 13800001234）报告了持续两周的胸痛症状"
+      },
+      "evidence": "正文直接出现受试者姓氏与完整手机号，属疑似个人可识别信息（PII）泄露。",
+      "suggestion": "删除手机号，并将『王某』匿名化为受试者编号（如 S-017）。",
+      "verdict_status": "确认"
+    },
+    {
+      "id": "F05",
+      "type": "unsupported_novelty_claim",
+      "category": "insufficient_evidence",
+      "severity": "minor",
+      "location": {
+        "file": "synthetic_paper.txt",
+        "page": 1,
+        "section": "摘要",
+        "quote": "据我们所知，本研究是全球首个将量子启发算法用于县级医疗分诊的工作。"
+      },
+      "evidence": "首创性论断未附任何文献检索范围或综述依据支撑，属于无依据论断。",
+      "suggestion": "补充支撑该首创性判断的文献检索范围与结果，或将表述弱化为『鲜有报道』。",
+      "verdict_status": "确认"
+    },
+    {
+      "id": "F06",
+      "type": "missing_limitations",
+      "category": "suggestion",
+      "severity": "info",
+      "location": {
+        "file": "synthetic_paper.txt",
+        "page": 3,
+        "section": "讨论",
+        "quote": "实验结果表明本系统具有临床推广价值。"
+      },
+      "evidence": "讨论节仅一句结论性表述，未讨论样本规模（120 名受试者）、单一机构数据来源等对结论外推的限制。",
+      "suggestion": "在讨论节补充局限性段落，说明样本量与单中心数据来源对结论外推的限制。",
+      "verdict_status": "确认"
+    }
+  ],
+  "uncertainty": [
+    "参考文献[2]的真伪未能本地核实（见 F02 待复核）。",
+    "机械验收未通过项：sources: required field missing",
+    "机械验收未通过项：not_reviewed: required field missing"
+  ],
+  "change_log": [
+    "初稿：组装 findings_final.json 的 6 条发现。",
+    "机械验收未过，状态自动降级为 partial；缺失/非法字段：sources、not_reviewed",
+    "补齐缺失字段 sources、not_reviewed，status 恢复 complete，准备重跑机械验收。"
+  ],
+  "sources": [
+    "synthetic_paper.txt（/input 提供的合成示意论文文本，全部 quote 的逐字来源）",
+    "mock_case.json（output_contract 与审查面声明）"
+  ],
+  "not_reviewed": [
+    "无未覆盖审查面：case.json 声明的 5 个审查面（事实一致性/引用核验/伦理合规/论断证据/报告完整性）均已完成审查"
+  ],
+  "facets_reviewed": [
+    "事实一致性",
+    "引用与参考文献核验",
+    "伦理与合规",
+    "论断证据充分性",
+    "报告完整性"
+  ]
+}

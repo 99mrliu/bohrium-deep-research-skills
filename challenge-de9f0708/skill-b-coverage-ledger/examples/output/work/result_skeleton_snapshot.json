@@ -1,0 +1,45 @@
+{
+  "case_id": "mock-coverage-001",
+  "status": "partial",
+  "findings": [],
+  "not_reviewed": [
+    {
+      "facet": "citation",
+      "facet_label": "引用规范",
+      "reason": "审查进行中:该面检查项尚未执行"
+    },
+    {
+      "facet": "ethics",
+      "facet_label": "伦理审查",
+      "reason": "审查进行中:该面检查项尚未执行"
+    },
+    {
+      "facet": "privacy",
+      "facet_label": "隐私合规",
+      "reason": "审查进行中:该面检查项尚未执行"
+    }
+  ],
+  "summary": {
+    "findings_count": 0,
+    "facets_total": 3,
+    "facets_covered": 0,
+    "coverage_pct": 0.0,
+    "severity_counts": {
+      "critical": 0,
+      "major": 0,
+      "minor": 0,
+      "info": 0
+    },
+    "stage": "intake"
+  },
+  "sources": [],
+  "uncertainty": "审查进行中:本文件为开工 60 秒内生成的保底 partial 结果,不代表最终结论;任何中断时以此文件为诚实部分结果。",
+  "change_log": [
+    {
+      "seq": 1,
+      "action": "intake",
+      "detail": "case_intake.py 生成保底 partial result.json 骨架;全部 contract 字段以占位值就位"
+    }
+  ],
+  "_header": "合成/运行期保底输出,非正式测评结果"
+}

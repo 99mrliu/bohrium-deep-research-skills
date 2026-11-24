@@ -1,0 +1,508 @@
+{
+  "_note": "合成示例输出，非正式测评结果；在线检索时间见 generated_at_utc",
+  "tool": "crossref_check.py",
+  "version": "1.0",
+  "mode": "online",
+  "generated_at_utc": "2026-11-24T14:48:31.054337+00:00",
+  "budget": {
+    "max_queries": 12,
+    "used": 8,
+    "remaining": 4
+  },
+  "two_signal_rule": "fabrication_suspected 仅在 'Crossref 检索无结果' 且 'DOI 不可解析' 两信号齐备时给出；单一信号一律待复核。",
+  "status_counts": {
+    "pending_review": 1,
+    "not_found": 3,
+    "mismatch": 2
+  },
+  "results": [
+    {
+      "ref_index": 1,
+      "raw_excerpt": "[1] Zhang W, Li M, Wang H. Adsorption of cadmium from aqueous solution using bamboo-derived biochar. Journal of Hazardous Materials, 2020, 384: 121-129. doi: 10.1016/j.jhazmat.2020.121456",
+      "priority": 0,
+      "signals": {
+        "crossref_found": null,
+        "doi_resolvable": null
+      },
+      "retrieved_records": [],
+      "field_comparison": {},
+      "status": "pending_review",
+      "verdict": {
+        "type": null,
+        "severity": null,
+        "verdict_status": "待复核",
+        "rationale": "network degraded: network error: <urlopen error [Errno 54] Connection reset by peer>；后续条目不再发起请求。"
+      }
+    },
+    {
+      "ref_index": 2,
+      "raw_excerpt": "[2] 李华, 王芳. 明代青花瓷釉料成分的X射线荧光光谱分析. 文物保护与考古科学, 2018, 30(2): 45-52.",
+      "signals": {
+        "crossref_found": false,
+        "doi_resolvable": null
+      },
+      "retrieved_records": [
+        {
+          "source": "crossref query.bibliographic",
+          "record": {
+            "DOI": "10.3788/lop52.043401",
+            "title": "Micro-X-Ray Fluorescence Analysis of Colored pigments Containing Au on the Ancient Bowl of Qing Dynasty",
+            "container-title": "Laser &amp; Optoelectronics Progress",
+            "year": 2015,
+            "volume": "52",
+            "issue": "4",
+            "page": "043401",
+            "author": [
+              {
+                "family": "Cheng Lin",
+                "given": "程琳"
+              },
+              {
+                "family": "Li Meitian",
+                "given": "李梅田"
+              },
+              {
+                "family": "Wang Junling",
+                "given": "王君玲"
+              },
+              {
+                "family": "Duan Zeming",
+                "given": "段泽明"
+              },
+              {
+                "family": "Li Rongwu",
+                "given": "李融武"
+              },
+              {
+                "family": "Pan Qiuli",
+                "given": "潘秋丽"
+              }
+            ],
+            "type": "journal-article",
+            "URL": "https://doi.org/10.3788/lop52.043401"
+          }
+        },
+        {
+          "source": "crossref query.bibliographic",
+          "record": {
+            "DOI": "10.61369/era.2180",
+            "title": "X 射线荧光光谱法测定高硅硅酸盐岩石中的主次成分",
+            "container-title": "Engineering Research and Application",
+            "year": 2023,
+            "volume": "1",
+            "issue": "5",
+            "page": "4",
+            "author": [
+              {
+                "family": "陈",
+                "given": "亮伟"
+              },
+              {
+                "family": "曾",
+                "given": "雷"
+              }
+            ],
+            "type": "journal-article",
+            "URL": "https://doi.org/10.61369/era.2180"
+          }
+        },
+        {
+          "source": "crossref query.bibliographic",
+          "record": {
+            "DOI": "10.37155/2717-5316-0705-44",
+            "title": "X射线荧光光谱分析法在矿石检测中的应用与实践",
+            "container-title": "工程学研究与实用",
+            "year": 2026,
+            "volume": "7",
+            "issue": "5",
+            "page": "130-132",
+            "author": [
+              {
+                "family": "魏",
+                "given": "欢"
+              },
+              {
+                "family": "冀佳怡",
+                "given": null
+              }
+            ],
+            "type": "journal-article",
+            "URL": "https://doi.org/10.37155/2717-5316-0705-44"
+          }
+        }
+      ],
+      "field_comparison": {},
+      "status": "not_found",
+      "verdict": {
+        "type": null,
+        "severity": null,
+        "verdict_status": "待复核",
+        "rationale": "仅'检索无结果'单一信号，按规程不得判不存在；可能原因：收录延迟/预印本/小语种期刊/著录错误。"
+      },
+      "priority": 2
+    },
+    {
+      "ref_index": 3,
+      "raw_excerpt": "[3] Smith J, Brown T, Davis R. Spectroscopic characterization of metal-organic complexes in aqueous media. Analytical Chemistry, 2021, 93(8): 4102-4110. doi: 10.1021",
+      "signals": {
+        "crossref_found": false,
+        "doi_resolvable": null
+      },
+      "retrieved_records": [
+        {
+          "source": "crossref query.bibliographic",
+          "record": {
+            "DOI": "10.1021/ic049599k.s001",
+            "title": "Syntheses and Characterization of Dicarbonyl-Nitrosyl Complexes of Technetium(I) and Rhenium(I) in Aqueous Media: Spectroscopic, Structural, and DFT Analyses",
+            "container-title": null,
+            "year": 2020,
+            "volume": null,
+            "issue": null,
+            "page": null,
+            "author": [],
+            "type": "component",
+            "URL": "https://doi.org/10.1021/ic049599k.s001"
+          }
+        },
+        {
+          "source": "crossref query.bibliographic",
+          "record": {
+            "DOI": "10.1021/ic049599k.s002",
+            "title": "Syntheses and Characterization of Dicarbonyl-Nitrosyl Complexes of Technetium(I) and Rhenium(I) in Aqueous Media: Spectroscopic, Structural, and DFT Analyses",
+            "container-title": null,
+            "year": 2020,
+            "volume": null,
+            "issue": null,
+            "page": null,
+            "author": [],
+            "type": "component",
+            "URL": "https://doi.org/10.1021/ic049599k.s002"
+          }
+        },
+        {
+          "source": "crossref query.bibliographic",
+          "record": {
+            "DOI": "10.1007/978-94-011-3408-8_16",
+            "title": "Applications of Spectroscopic Measurements to Homogeneous Catalysis",
+            "container-title": "Catalysis by Metal Complexes",
+            "year": 1991,
+            "volume": null,
+            "issue": null,
+            "page": "329-365",
+            "author": [
+              {
+                "family": "Brown",
+                "given": "D."
+              },
+              {
+                "family": "Heaton",
+                "given": "B. T."
+              },
+              {
+                "family": "Iggo",
+                "given": "J. A."
+              }
+            ],
+            "type": "book-chapter",
+            "URL": "https://doi.org/10.1007/978-94-011-3408-8_16"
+          }
+        }
+      ],
+      "field_comparison": {},
+      "status": "not_found",
+      "verdict": {
+        "type": null,
+        "severity": null,
+        "verdict_status": "待复核",
+        "rationale": "仅'检索无结果'单一信号，按规程不得判不存在；可能原因：收录延迟/预印本/小语种期刊/著录错误。"
+      },
+      "priority": 7
+    },
+    {
+      "ref_index": 4,
+      "raw_excerpt": "[4] Wang L, Chen Y, Zhao P. Adsorption of heavy metals from aqueous solution by modified biochar: a review. Environmental Pollution, 2019, 252: 1331-1344. doi: 10.1016/j.envpol.2019.06.033",
+      "signals": {
+        "crossref_found": true,
+        "doi_resolvable": true
+      },
+      "retrieved_records": [
+        {
+          "source": "crossref /works/<doi>",
+          "record": {
+            "DOI": "10.1016/j.envpol.2019.06.033",
+            "title": "Associations between long-term exposure to ambient air pollution and risk of type 2 diabetes mellitus: A systematic review and meta-analysis",
+            "container-title": "Environmental Pollution",
+            "year": 2019,
+            "volume": "252",
+            "issue": null,
+            "page": "1235-1245",
+            "author": [
+              {
+                "family": "Liu",
+                "given": "Feifei"
+              },
+              {
+                "family": "Chen",
+                "given": "Gongbo"
+              },
+              {
+                "family": "Huo",
+                "given": "Wenqian"
+              },
+              {
+                "family": "Wang",
+                "given": "Chongjian"
+              },
+              {
+                "family": "Liu",
+                "given": "Suyang"
+              },
+              {
+                "family": "Li",
+                "given": "Na"
+              },
+              {
+                "family": "Mao",
+                "given": "Shuyuan"
+              },
+              {
+                "family": "Hou",
+                "given": "Yitan"
+              },
+              {
+                "family": "Lu",
+                "given": "Yuanan"
+              },
+              {
+                "family": "Xiang",
+                "given": "Hao"
+              }
+            ],
+            "type": "journal-article",
+            "URL": "https://doi.org/10.1016/j.envpol.2019.06.033"
+          }
+        }
+      ],
+      "field_comparison": {
+        "title": {
+          "ref": "Adsorption of heavy metals from aqueous solution by modified biochar: a review",
+          "crossref": "Associations between long-term exposure to ambient air pollution and risk of type 2 diabetes mellitus: A systematic review and meta-analysis",
+          "similarity": 0.359,
+          "verdict": "mismatch"
+        },
+        "year": {
+          "ref": 2019,
+          "crossref": 2019,
+          "verdict": "match"
+        },
+        "journal": {
+          "ref": "Environmental Pollution",
+          "crossref": "Environmental Pollution",
+          "similarity": 1.0,
+          "verdict": "match"
+        },
+        "authors": {
+          "ref_surnames": [
+            "chen",
+            "wang",
+            "zhao"
+          ],
+          "crossref_surnames": [
+            "chen",
+            "hou",
+            "huo",
+            "li",
+            "liu",
+            "lu",
+            "mao",
+            "wang",
+            "xiang"
+          ],
+          "overlap_ratio": 0.667,
+          "verdict": "match",
+          "tolerance": "von/van/de 等前缀、连字符、大小写差异已归一化，不构成 mismatch"
+        }
+      },
+      "status": "mismatch",
+      "verdict": {
+        "type": "metadata_mismatch",
+        "severity": "major",
+        "verdict_status": "确认",
+        "rationale": "字段 ['title'] 与 Crossref 检索记录不符；以 retrieved_records 中的原文为据。"
+      },
+      "priority": 2
+    },
+    {
+      "ref_index": 5,
+      "raw_excerpt": "[5] Liu Y, Sun Q, Zhou K. Adsorption of heavy metals from aqueous solutions by modified biochar: a review. Chemosphere, 2019, 231: 388-400. doi: 10.1016/j.chemosphere.2019.05.141",
+      "signals": {
+        "crossref_found": true,
+        "doi_resolvable": null
+      },
+      "retrieved_records": [
+        {
+          "source": "crossref /works/<doi>",
+          "record": {
+            "DOI": "10.1016/j.chemosphere.2019.05.141",
+            "title": "Analysis of translation control tumor protein related to deltamethrin stress in Drosophila kc cells",
+            "container-title": "Chemosphere",
+            "year": 2019,
+            "volume": "231",
+            "issue": null,
+            "page": "450-456",
+            "author": [
+              {
+                "family": "Ying",
+                "given": "Xiaoli"
+              },
+              {
+                "family": "Liu",
+                "given": "Yahui"
+              },
+              {
+                "family": "Chen",
+                "given": "Lu"
+              },
+              {
+                "family": "Bo",
+                "given": "Qian"
+              },
+              {
+                "family": "Xu",
+                "given": "Qin"
+              },
+              {
+                "family": "Li",
+                "given": "Fengliang"
+              },
+              {
+                "family": "Zhou",
+                "given": "Changfa"
+              },
+              {
+                "family": "Cheng",
+                "given": "Luogen"
+              }
+            ],
+            "type": "journal-article",
+            "URL": "https://doi.org/10.1016/j.chemosphere.2019.05.141"
+          }
+        }
+      ],
+      "field_comparison": {
+        "title": {
+          "ref": "Adsorption of heavy metals from aqueous solutions by modified biochar: a review",
+          "crossref": "Analysis of translation control tumor protein related to deltamethrin stress in Drosophila kc cells",
+          "similarity": 0.222,
+          "verdict": "mismatch"
+        },
+        "year": {
+          "ref": 2019,
+          "crossref": 2019,
+          "verdict": "match"
+        },
+        "journal": {
+          "ref": "Chemosphere",
+          "crossref": "Chemosphere",
+          "similarity": 1.0,
+          "verdict": "match"
+        },
+        "authors": {
+          "ref_surnames": [
+            "liu",
+            "sun",
+            "zhou"
+          ],
+          "crossref_surnames": [
+            "bo",
+            "chen",
+            "cheng",
+            "li",
+            "liu",
+            "xu",
+            "ying",
+            "zhou"
+          ],
+          "overlap_ratio": 0.667,
+          "verdict": "match",
+          "tolerance": "von/van/de 等前缀、连字符、大小写差异已归一化，不构成 mismatch"
+        }
+      },
+      "status": "mismatch",
+      "verdict": {
+        "type": "metadata_mismatch",
+        "severity": "major",
+        "verdict_status": "确认",
+        "rationale": "字段 ['title'] 与 Crossref 检索记录不符；以 retrieved_records 中的原文为据。（DOI 解析请求网络异常：network error: <urlopen error [Errno 54] Connection reset by peer>，本信号缺失）"
+      },
+      "priority": 2
+    },
+    {
+      "ref_index": 6,
+      "raw_excerpt": "[6] Chen X, Huang J, Wu S. Machine learning prediction of adsorption isotherms for biochar materials. Nature Communications, 2031, 12: 5555. doi: 10.1038/s41467-021-99999-x",
+      "signals": {
+        "crossref_found": false,
+        "doi_resolvable": false
+      },
+      "retrieved_records": [],
+      "field_comparison": {},
+      "status": "not_found",
+      "verdict": {
+        "type": "fabrication_suspected",
+        "severity": "critical",
+        "verdict_status": "待人工终裁",
+        "rationale": "两信号齐备：Crossref 无此 DOI 记录（404）且 doi.org 解析失败；疑似捏造文献，须人工终裁。"
+      },
+      "priority": 7
+    }
+  ],
+  "query_log": [
+    {
+      "url": "https://api.crossref.org/works?rows=3&query.bibliographic=Spectroscopic%20characterization%20of%20metal-organic%20complexes%20in%20aqueous%20media%20Smith%20J%2C%20Brown%20T%2C%20Davis%20R%202021",
+      "status": 200,
+      "error": null
+    },
+    {
+      "url": "https://api.crossref.org/works/10.1038%2Fs41467-021-99999-x",
+      "status": 404,
+      "error": "HTTP 404"
+    },
+    {
+      "url": "https://doi.org/10.1038/s41467-021-99999-x",
+      "status": 404,
+      "final_url": null,
+      "error": "HTTP 404"
+    },
+    {
+      "url": "https://api.crossref.org/works?rows=3&query.bibliographic=%E6%98%8E%E4%BB%A3%E9%9D%92%E8%8A%B1%E7%93%B7%E9%87%89%E6%96%99%E6%88%90%E5%88%86%E7%9A%84X%E5%B0%84%E7%BA%BF%E8%8D%A7%E5%85%89%E5%85%89%E8%B0%B1%E5%88%86%E6%9E%90%20%E6%9D%8E%E5%8D%8E%2C%20%E7%8E%8B%E8%8A%B3%202018",
+      "status": 200,
+      "error": null
+    },
+    {
+      "url": "https://api.crossref.org/works/10.1016%2Fj.envpol.2019.06.033",
+      "status": 200,
+      "error": null
+    },
+    {
+      "url": "https://doi.org/10.1016/j.envpol.2019.06.033",
+      "status": 200,
+      "final_url": "https://linkinghub.elsevier.com/retrieve/pii/S026974911930257X",
+      "error": null
+    },
+    {
+      "url": "https://api.crossref.org/works/10.1016%2Fj.chemosphere.2019.05.141",
+      "status": 200,
+      "error": null
+    },
+    {
+      "url": "https://doi.org/10.1016/j.chemosphere.2019.05.141",
+      "status": null,
+      "final_url": null,
+      "error": "network error: <urlopen error [Errno 54] Connection reset by peer>"
+    }
+  ],
+  "notes": [
+    "network failure encountered: network error: <urlopen error [Errno 54] Connection reset by peer>；其后条目全部降级为 pending_review。"
+  ],
+  "caveat": "retrieved_records 为实际检索到的元数据原文；本脚本不凭模型记忆补任何字段。"
+}

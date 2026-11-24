@@ -1,0 +1,131 @@
+{
+  "_note": "合成示例输出，非正式测评结果",
+  "tool": "crossref_check.py",
+  "version": "1.0",
+  "mode": "offline",
+  "generated_at_utc": "2026-11-24T14:48:03.718144+00:00",
+  "budget": {
+    "max_queries": 12,
+    "used": 0,
+    "remaining": 12
+  },
+  "two_signal_rule": "fabrication_suspected 仅在 'Crossref 检索无结果' 且 'DOI 不可解析' 两信号齐备时给出；单一信号一律待复核。",
+  "status_counts": {
+    "pending_review": 6
+  },
+  "results": [
+    {
+      "ref_index": 1,
+      "raw_excerpt": "[1] Zhang W, Li M, Wang H. Adsorption of cadmium from aqueous solution using bamboo-derived biochar. Journal of Hazardous Materials, 2020, 384: 121-129. doi: 10.1016/j.jhazmat.2020.121456",
+      "priority": 0,
+      "signals": {
+        "crossref_found": null,
+        "doi_resolvable": null
+      },
+      "retrieved_records": [],
+      "field_comparison": {},
+      "status": "pending_review",
+      "verdict": {
+        "type": null,
+        "severity": null,
+        "verdict_status": "待复核",
+        "rationale": "offline mode：外部核验未执行，绝不以'未检索'代替'不存在'。"
+      }
+    },
+    {
+      "ref_index": 2,
+      "raw_excerpt": "[2] 李华, 王芳. 明代青花瓷釉料成分的X射线荧光光谱分析. 文物保护与考古科学, 2018, 30(2): 45-52.",
+      "priority": 2,
+      "signals": {
+        "crossref_found": null,
+        "doi_resolvable": null
+      },
+      "retrieved_records": [],
+      "field_comparison": {},
+      "status": "pending_review",
+      "verdict": {
+        "type": null,
+        "severity": null,
+        "verdict_status": "待复核",
+        "rationale": "offline mode：外部核验未执行，绝不以'未检索'代替'不存在'。"
+      }
+    },
+    {
+      "ref_index": 3,
+      "raw_excerpt": "[3] Smith J, Brown T, Davis R. Spectroscopic characterization of metal-organic complexes in aqueous media. Analytical Chemistry, 2021, 93(8): 4102-4110. doi: 10.1021",
+      "priority": 7,
+      "signals": {
+        "crossref_found": null,
+        "doi_resolvable": null
+      },
+      "retrieved_records": [],
+      "field_comparison": {},
+      "status": "pending_review",
+      "verdict": {
+        "type": null,
+        "severity": null,
+        "verdict_status": "待复核",
+        "rationale": "offline mode：外部核验未执行，绝不以'未检索'代替'不存在'。"
+      }
+    },
+    {
+      "ref_index": 4,
+      "raw_excerpt": "[4] Wang L, Chen Y, Zhao P. Adsorption of heavy metals from aqueous solution by modified biochar: a review. Environmental Pollution, 2019, 252: 1331-1344. doi: 10.1016/j.envpol.2019.06.033",
+      "priority": 2,
+      "signals": {
+        "crossref_found": null,
+        "doi_resolvable": null
+      },
+      "retrieved_records": [],
+      "field_comparison": {},
+      "status": "pending_review",
+      "verdict": {
+        "type": null,
+        "severity": null,
+        "verdict_status": "待复核",
+        "rationale": "offline mode：外部核验未执行，绝不以'未检索'代替'不存在'。"
+      }
+    },
+    {
+      "ref_index": 5,
+      "raw_excerpt": "[5] Liu Y, Sun Q, Zhou K. Adsorption of heavy metals from aqueous solutions by modified biochar: a review. Chemosphere, 2019, 231: 388-400. doi: 10.1016/j.chemosphere.2019.05.141",
+      "priority": 2,
+      "signals": {
+        "crossref_found": null,
+        "doi_resolvable": null
+      },
+      "retrieved_records": [],
+      "field_comparison": {},
+      "status": "pending_review",
+      "verdict": {
+        "type": null,
+        "severity": null,
+        "verdict_status": "待复核",
+        "rationale": "offline mode：外部核验未执行，绝不以'未检索'代替'不存在'。"
+      }
+    },
+    {
+      "ref_index": 6,
+      "raw_excerpt": "[6] Chen X, Huang J, Wu S. Machine learning prediction of adsorption isotherms for biochar materials. Nature Communications, 2031, 12: 5555. doi: 10.1038/s41467-021-99999-x",
+      "priority": 7,
+      "signals": {
+        "crossref_found": null,
+        "doi_resolvable": null
+      },
+      "retrieved_records": [],
+      "field_comparison": {},
+      "status": "pending_review",
+      "verdict": {
+        "type": null,
+        "severity": null,
+        "verdict_status": "待复核",
+        "rationale": "offline mode：外部核验未执行，绝不以'未检索'代替'不存在'。"
+      }
+    }
+  ],
+  "query_log": [],
+  "notes": [
+    "offline mode (--offline)：未发起任何网络请求；全部条目标 pending_review，待有网时复核。"
+  ],
+  "caveat": "retrieved_records 为实际检索到的元数据原文；本脚本不凭模型记忆补任何字段。"
+}

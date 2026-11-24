@@ -1,0 +1,167 @@
+{
+  "_header": "合成/运行期检查清单输出,非正式测评结果",
+  "case_id": "mock-coverage-001",
+  "facet_labels": {
+    "citation": "引用规范",
+    "ethics": "伦理审查",
+    "privacy": "隐私合规"
+  },
+  "declared_facets": [
+    "citation",
+    "ethics",
+    "privacy"
+  ],
+  "inferred_facets": [],
+  "required_fields": [
+    "case_id",
+    "status",
+    "findings",
+    "not_reviewed",
+    "summary",
+    "sources",
+    "uncertainty",
+    "change_log"
+  ],
+  "items": [
+    {
+      "check_id": "CIT-01",
+      "facet": "citation",
+      "facet_label": "引用规范",
+      "question": "每条参考文献是否真实存在(作者/题名/刊物可核对,无编造嫌疑)?",
+      "status": "未开始"
+    },
+    {
+      "check_id": "CIT-02",
+      "facet": "citation",
+      "facet_label": "引用规范",
+      "question": "参考文献元数据是否完整一致(作者、题名、刊名、年、卷期、页码无缺失)?",
+      "status": "未开始"
+    },
+    {
+      "check_id": "CIT-03",
+      "facet": "citation",
+      "facet_label": "引用规范",
+      "question": "正文引证标注与文末文献表是否一一对应(无孤儿条目、无悬空引用)?",
+      "status": "未开始"
+    },
+    {
+      "check_id": "CIT-04",
+      "facet": "citation",
+      "facet_label": "引用规范",
+      "question": "引用体例是否全文统一(顺序编码制/著者-出版年制不混用)?",
+      "status": "未开始"
+    },
+    {
+      "check_id": "CIT-05",
+      "facet": "citation",
+      "facet_label": "引用规范",
+      "question": "引文是否支撑其所在论断(无张冠李戴、无引用无关文献)?",
+      "status": "未开始"
+    },
+    {
+      "check_id": "CIT-06",
+      "facet": "citation",
+      "facet_label": "引用规范",
+      "question": "是否混入未公开发表且不可获取的来源(私聊、内部报告未注明)?",
+      "status": "未开始"
+    },
+    {
+      "check_id": "CIT-07",
+      "facet": "citation",
+      "facet_label": "引用规范",
+      "question": "自引比例是否异常,是否存在堆砌无关自引?",
+      "status": "未开始"
+    },
+    {
+      "check_id": "CIT-08",
+      "facet": "citation",
+      "facet_label": "引用规范",
+      "question": "文献年代分布是否合理,关键近 5 年进展是否被遗漏?",
+      "status": "未开始"
+    },
+    {
+      "check_id": "ETH-01",
+      "facet": "ethics",
+      "facet_label": "伦理审查",
+      "question": "涉及人体研究是否有伦理委员会批准声明及批件编号?",
+      "status": "未开始"
+    },
+    {
+      "check_id": "ETH-02",
+      "facet": "ethics",
+      "facet_label": "伦理审查",
+      "question": "是否声明取得受试者知情同意(书面/口头,范围是否覆盖本研究用途)?",
+      "status": "未开始"
+    },
+    {
+      "check_id": "ETH-03",
+      "facet": "ethics",
+      "facet_label": "伦理审查",
+      "question": "伦理批件适用范围是否覆盖论文实际报告的研究内容?",
+      "status": "未开始"
+    },
+    {
+      "check_id": "ETH-04",
+      "facet": "ethics",
+      "facet_label": "伦理审查",
+      "question": "动物实验是否有动物伦理审批与 3R 原则说明?",
+      "status": "未开始"
+    },
+    {
+      "check_id": "ETH-05",
+      "facet": "ethics",
+      "facet_label": "伦理审查",
+      "question": "是否报告受试者退出机制、风险与补偿安排?",
+      "status": "未开始"
+    },
+    {
+      "check_id": "ETH-06",
+      "facet": "ethics",
+      "facet_label": "伦理审查",
+      "question": "临床研究是否注册(如 ChiCTR/ClinicalTrials.gov)并给出注册号?",
+      "status": "未开始"
+    },
+    {
+      "check_id": "PRV-01",
+      "facet": "privacy",
+      "facet_label": "隐私合规",
+      "question": "正文/图表/附录是否含直接 PII(姓名、手机号、身份证、病历号等)?",
+      "status": "未开始"
+    },
+    {
+      "check_id": "PRV-02",
+      "facet": "privacy",
+      "facet_label": "隐私合规",
+      "question": "是否含可重识别的间接标识组合(罕见病+地区+年龄等)?",
+      "status": "未开始"
+    },
+    {
+      "check_id": "PRV-03",
+      "facet": "privacy",
+      "facet_label": "隐私合规",
+      "question": "受限数据(医疗、基因、地理轨迹)使用是否在授权范围内?",
+      "status": "未开始"
+    },
+    {
+      "check_id": "PRV-04",
+      "facet": "privacy",
+      "facet_label": "隐私合规",
+      "question": "脱敏处理是否充分且说明方法(遮蔽/泛化/扰动)?",
+      "status": "未开始"
+    },
+    {
+      "check_id": "PRV-05",
+      "facet": "privacy",
+      "facet_label": "隐私合规",
+      "question": "数据共享声明是否不泄露原始个体数据?",
+      "status": "未开始"
+    },
+    {
+      "check_id": "PRV-06",
+      "facet": "privacy",
+      "facet_label": "隐私合规",
+      "question": "补充材料/代码仓库是否夹带未脱敏数据?",
+      "status": "未开始"
+    }
+  ]
+}

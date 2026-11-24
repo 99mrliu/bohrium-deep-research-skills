@@ -1,0 +1,39 @@
+{
+  "_header": "合成示例输入:findings 草稿,故意只覆盖引用+伦理两面,漏隐私面,用于演示覆盖矩阵抓漏",
+  "case_id": "mock-coverage-001",
+  "reviewed_facets": ["citation", "ethics"],
+  "findings": [
+    {
+      "id": "F-001",
+      "facet": "citation",
+      "category": "norm_issue",
+      "type": "citation_metadata_incomplete",
+      "severity": "major",
+      "location": {
+        "file": "mock_paper.txt",
+        "page": 2,
+        "section": "参考文献",
+        "quote": "[3] 吴倩, 孙立. 社交媒体使用与青少年睡眠:一项元分析. 心理科学进展, (9): 1502-1514."
+      },
+      "evidence": "本地规则 CIT-02:文献 [3] 缺少年份字段,元数据不完整",
+      "suggestion": "补全文献 [3] 的出版年份,并核对卷期页码与原文一致",
+      "verdict_status": "确认"
+    },
+    {
+      "id": "F-002",
+      "facet": "ethics",
+      "category": "norm_issue",
+      "type": "ethics_approval_missing",
+      "severity": "critical",
+      "location": {
+        "file": "mock_paper.txt",
+        "page": 1,
+        "section": "2 对象与方法",
+        "quote": "采用方便抽样,于 2025 年 3 月至 5 月在华东理澜大学与北方联合大学招募本科生\n共 412 名"
+      },
+      "evidence": "本地规则 ETH-01/ETH-02:全文检索无伦理委员会批准声明、无批件编号、无知情同意声明",
+      "suggestion": "补充伦理委员会名称与批件编号,说明知情同意取得方式;无法补充则该稿件不满足人体研究发表前提",
+      "verdict_status": "确认"
+    }
+  ]
+}

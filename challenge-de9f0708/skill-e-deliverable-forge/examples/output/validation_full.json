@@ -1,0 +1,83 @@
+{
+  "note": "机械验收输出，由 contract_validate.py 确定性生成",
+  "case_id": "MOCK-E-001",
+  "verdict": "PASS",
+  "required_fields": [
+    "case_id",
+    "status",
+    "findings",
+    "summary",
+    "sources",
+    "uncertainty",
+    "change_log",
+    "not_reviewed"
+  ],
+  "summary": {
+    "checks_total": 10,
+    "checks_failed": 0,
+    "missing_or_empty_fields": []
+  },
+  "auto_fix_applied": [],
+  "details": [
+    {
+      "field": "case_id",
+      "check": "exists+non_empty",
+      "ok": true,
+      "message": "ok"
+    },
+    {
+      "field": "status",
+      "check": "exists+non_empty",
+      "ok": true,
+      "message": "ok"
+    },
+    {
+      "field": "findings",
+      "check": "exists+non_empty",
+      "ok": true,
+      "message": "ok"
+    },
+    {
+      "field": "summary",
+      "check": "exists+non_empty",
+      "ok": true,
+      "message": "ok"
+    },
+    {
+      "field": "sources",
+      "check": "exists+non_empty",
+      "ok": true,
+      "message": "ok"
+    },
+    {
+      "field": "uncertainty",
+      "check": "exists+non_empty",
+      "ok": true,
+      "message": "ok"
+    },
+    {
+      "field": "change_log",
+      "check": "exists+non_empty",
+      "ok": true,
+      "message": "ok"
+    },
+    {
+      "field": "not_reviewed",
+      "check": "exists+non_empty",
+      "ok": true,
+      "message": "ok"
+    },
+    {
+      "field": "status",
+      "check": "enum",
+      "ok": true,
+      "message": "ok"
+    },
+    {
+      "field": "findings",
+      "check": "elements",
+      "ok": true,
+      "message": "6 finding(s) well-formed"
+    }
+  ]
+}

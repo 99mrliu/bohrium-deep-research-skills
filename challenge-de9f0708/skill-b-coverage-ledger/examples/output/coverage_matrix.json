@@ -1,0 +1,42 @@
+{
+  "facets": [
+    {
+      "facet": "citation",
+      "facet_label": "引用规范",
+      "checks_total": 8,
+      "checks_done": 0,
+      "checks_pending": 8,
+      "findings_count": 1,
+      "declared_reviewed": true,
+      "covered": true
+    },
+    {
+      "facet": "ethics",
+      "facet_label": "伦理审查",
+      "checks_total": 6,
+      "checks_done": 0,
+      "checks_pending": 6,
+      "findings_count": 1,
+      "declared_reviewed": true,
+      "covered": true
+    },
+    {
+      "facet": "privacy",
+      "facet_label": "隐私合规",
+      "checks_total": 6,
+      "checks_done": 0,
+      "checks_pending": 6,
+      "findings_count": 0,
+      "declared_reviewed": false,
+      "covered": false
+    }
+  ],
+  "facets_total": 3,
+  "facets_covered": 2,
+  "coverage_pct": 66.7,
+  "uncovered_facets": [
+    "privacy"
+  ],
+  "_header": "合成/运行期覆盖矩阵输出,非正式测评结果",
+  "case_id": "mock-coverage-001"
+}

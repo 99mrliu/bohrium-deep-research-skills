@@ -1,0 +1,72 @@
+{
+  "case_id": "mock-coverage-001",
+  "status": "partial",
+  "findings": [
+    {
+      "id": "F-001",
+      "facet": "citation",
+      "category": "norm_issue",
+      "type": "citation_metadata_incomplete",
+      "severity": "major",
+      "location": {
+        "file": "mock_paper.txt",
+        "page": 2,
+        "section": "参考文献",
+        "quote": "[3] 吴倩, 孙立. 社交媒体使用与青少年睡眠:一项元分析. 心理科学进展, (9): 1502-1514."
+      },
+      "evidence": "本地规则 CIT-02:文献 [3] 缺少年份字段,元数据不完整",
+      "suggestion": "补全文献 [3] 的出版年份,并核对卷期页码与原文一致",
+      "verdict_status": "确认"
+    },
+    {
+      "id": "F-002",
+      "facet": "ethics",
+      "category": "norm_issue",
+      "type": "ethics_approval_missing",
+      "severity": "critical",
+      "location": {
+        "file": "mock_paper.txt",
+        "page": 1,
+        "section": "2 对象与方法",
+        "quote": "采用方便抽样,于 2025 年 3 月至 5 月在华东理澜大学与北方联合大学招募本科生\n共 412 名"
+      },
+      "evidence": "本地规则 ETH-01/ETH-02:全文检索无伦理委员会批准声明、无批件编号、无知情同意声明",
+      "suggestion": "补充伦理委员会名称与批件编号,说明知情同意取得方式;无法补充则该稿件不满足人体研究发表前提",
+      "verdict_status": "确认"
+    }
+  ],
+  "not_reviewed": [
+    {
+      "facet": "privacy",
+      "reason": "覆盖矩阵判定该面未覆盖:无 findings 且 Agent 未声明已逐条审查,如实记账,不凭空补结论"
+    }
+  ],
+  "summary": {
+    "findings_count": 2,
+    "facets_total": 3,
+    "facets_covered": 2,
+    "coverage_pct": 66.7,
+    "severity_counts": {
+      "critical": 1,
+      "major": 1,
+      "minor": 0,
+      "info": 0
+    },
+    "stage": "coverage_check"
+  },
+  "sources": [],
+  "uncertainty": "审查未覆盖全部声明审查面(覆盖率 66.7%);未覆盖面已列入 not_reviewed,本结果为诚实 partial。",
+  "change_log": [
+    {
+      "seq": 1,
+      "action": "intake",
+      "detail": "case_intake.py 生成保底 partial result.json 骨架;全部 contract 字段以占位值就位"
+    },
+    {
+      "seq": 2,
+      "action": "coverage_check",
+      "detail": "覆盖矩阵对账:2/3 面覆盖(66.7%),findings=2,status=partial"
+    }
+  ],
+  "_header": "合成/运行期保底输出,非正式测评结果"
+}

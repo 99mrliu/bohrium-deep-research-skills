@@ -1,0 +1,24 @@
+{
+  "note": "合成示意案例，非正式测评数据；所有人名、期刊、DOI、基金号均为虚构",
+  "case_id": "mock-calibration-001",
+  "task": "对给定论文进行学术规范与合规审查，覆盖以下审查面：(1) 参考文献准确性与真实性；(2) 统计报告规范性；(3) 伦理与披露声明；(4) 论断的证据支撑；(5) 图像完整性。逐条给出证据与严重度。",
+  "materials": ["mock_paper.txt"],
+  "review_facets": [
+    "reference_accuracy",
+    "statistics_reporting",
+    "ethics_disclosure",
+    "claim_support",
+    "image_integrity"
+  ],
+  "output_contract": {
+    "required_fields": [
+      "case_id",
+      "status",
+      "findings",
+      "uncertainty",
+      "sources",
+      "change_log",
+      "not_reviewed"
+    ]
+  }
+}

@@ -1,0 +1,86 @@
+【合成示意案例，非真实论文；所有人名、单位、期刊、基金号、DOI 均为虚构】
+
+糖尿病视网膜病变影像的深度集成筛查方法研究
+
+王晓琳1，李国强1,2，陈思远2
+（1. 华东理工商学院 信息科学与工程系，上海 200237；2. 明州眼科医院 影像科，宁波 315000）
+
+摘  要：糖尿病视网膜病变（DR）是工作年龄人群致盲的首要原因。本文提出一种基于
+深度集成学习的 DR 影像筛查方法 DrNet-Ensemble，在眼底彩照数据集上取得良好性能。
+实验结果表明，本方法显著优于所有已报道基线方法。本研究对基层筛查具有应用价值。
+
+关键词：糖尿病视网膜病变；深度学习；集成学习；医学影像
+
+Abstract: Diabetic retinopathy (DR) is a leading cause of blindness among
+working-age adults. We propose DrNet-Ensemble, a deep ensemble learning method
+for DR screening from color fundus photographs. Trained on 12,480 images
+collected from three clinical centers between 2019 and 2022 and evaluated
+against four publicly available baselines, our method achieves an accuracy of
+94.7% and an AUC of 0.981 on the held-out test set, using an ensemble of five
+architectures (ResNet-50, EfficientNet-B3, DenseNet-121, ViT-B/16 and Swin-T).
+Sensitivity and specificity reach 93.2% and 95.1% respectively at the
+Youden-optimal operating point. Subgroup analyses by age group and image
+quality grade are provided, and calibration curves confirm good agreement
+between predicted and observed risk. These results suggest practical value for
+primary-care DR screening.
+
+1  引言
+
+糖尿病视网膜病变是糖尿病最常见的微血管并发症之一，早期筛查可显著降低致盲
+风险。近年来深度学习方法在眼底影像分析中取得进展。van der Berg 等[3] 提出
+基于卷积网络的 DR 自动分级框架，在五分类任务上达到专家水平。Wang 等[2] 在
+多中心队列上验证了深度学习筛查系统的泛化能力。Chen 等[4] 则探索了轻量级
+模型在移动端的部署。Li 等[5] 报道了集成变换器结构在眼底分析中的最新结果。
+
+然而，现有方法在跨中心泛化与小样本场景下仍存在性能波动。本文提出
+DrNet-Ensemble，通过多架构集成与不确定性加权融合提升筛查稳定性。
+
+2  数据与方法
+
+2.1  数据来源
+本研究回顾性收集三家临床中心 2019 年至 2022 年间的眼底彩照 12,480 张，
+由两名主治医师按国际临床分级标准双盲标注，分歧由高级职称医师仲裁。
+
+2.2  模型与训练
+DrNet-Ensemble 由 ResNet-50、EfficientNet-B3、DenseNet-121、ViT-B/16 与
+Swin-T 五个骨干网络组成，采用五折交叉验证训练，融合权重按验证集 AUC
+自适应确定。
+
+2.3  统计分析
+组间比较采用卡方检验与 t 检验，显著性水平取 0.05。
+
+3  结果
+
+如表 1 所示，DrNet-Ensemble 在留出测试集上取得 94.7% 的准确率与 0.981 的
+AUC。实验结果表明，本方法显著优于所有已报道基线方法。
+
+轻中度病变亚组的灵敏度显著高于重度亚组（P < 0.05）。图像质量良好亚组的
+特异度为 96.3%，质量欠佳亚组为 91.8%，差异具有统计学意义（p = 0.032）。
+
+图 2 与图 3 展示了不同分级下的典型样本与 Grad-CAM 可视化结果，可见模型
+关注区域与病灶区域高度一致。
+
+4  讨论
+
+本研究表明多架构集成可提升 DR 筛查的稳定性。与单模型相比，集成策略在跨
+中心测试上波动更小。局限包括回顾性设计与单一人种数据。
+
+5  结论
+
+DrNet-Ensemble 在基层 DR 筛查中具有应用潜力，值得开展前瞻性验证。
+
+致谢：本研究受国家自然科学基金（62177001）资助。
+
+参考文献
+[1] 王晓琳, 李国强. 基于卷积网络的眼底图像分级. 计算机工程与应用, 2021,
+    57(11): 190-196.
+[2] Wang, L., et al. Deep learning for diabetic retinopathy screening: a
+    multicenter study. J Diabetes Imaging, 2022, 14(3): 210-223.
+[3] van der Berg, J., et al. Automated grading of diabetic retinopathy with
+    convolutional networks. Retina Today, 2020, 8(2): 45-52.
+[4] Chen, X., et al. Lightweight fundus models for mobile deployment. Proc.
+    Int. Conf. Medical Imaging (ICMI), 2019: 112-118.
+[5] Li, M., et al. Ensemble transformers for fundus analysis. Adv. Quantum
+    Mater., 2023, 17(4): 88-99.
+[6] Zhao, H., et al. Uncertainty estimation in medical image ensembles.
+    Med Image Comput, 2021, 29(6): 301-312.

@@ -1,0 +1,137 @@
+{
+  "_note": "合成示例输出，非正式测评结果",
+  "case_id": "mock-external-verify-001",
+  "status": "partial",
+  "partial_reason": "示例以 --offline 运行，外部核验全部 pending_review；本地可判项（lint 候选）照常给出，候选 ≠ 结论。",
+  "findings": [
+    {
+      "id": "LINT-DUP-001",
+      "type": "duplicate_reference",
+      "severity": "major",
+      "category": "norm_issue",
+      "location": {
+        "file": "mock_paper.txt",
+        "page": 1,
+        "quote": ""
+      },
+      "evidence": {
+        "rule": "title_similarity>=0.85",
+        "detail": {
+          "similarity": 0.992,
+          "title_a": "Adsorption of heavy metals from aqueous solution by modified biochar: a review",
+          "title_b": "Adsorption of heavy metals from aqueous solutions by modified biochar: a review"
+        }
+      },
+      "suggestion": "核对两条文献是否为同一工作的重复著录；如是，删除其一并统一编号。",
+      "verdict_status": "待复核",
+      "confidence": "medium"
+    },
+    {
+      "id": "LINT-DOI-002",
+      "type": "doi_format_invalid",
+      "severity": "major",
+      "category": "norm_issue",
+      "location": {
+        "file": "mock_paper.txt",
+        "page": 1,
+        "quote": "[3] Smith J, Brown T, Davis R. Spectroscopic characterization of metal-organic complexes in aqueous media. Analytical Chemistry, 2021, 93(8): 4102-4110. doi: 10.1021"
+      },
+      "evidence": {
+        "rule": "doi_shape!=10.\\d{4,9}/<suffix>",
+        "detail": {
+          "doi_found": "10.1021",
+          "raw_excerpt": "[3] Smith J, Brown T, Davis R. Spectroscopic characterization of metal-organic complexes in aqueous media. Analytical Chemistry, 2021, 93(8): 4102-4110. doi: 10.1021"
+        }
+      },
+      "suggestion": "DOI 形态非法（缺后缀或注册号位数不足）；请核对原文 DOI 并改正。",
+      "verdict_status": "待复核",
+      "confidence": "high"
+    },
+    {
+      "id": "LINT-YEAR-003",
+      "type": "year_anomaly",
+      "severity": "major",
+      "category": "fact_error",
+      "location": {
+        "file": "mock_paper.txt",
+        "page": 1,
+        "quote": "[6] Chen X, Huang J, Wu S. Machine learning prediction of adsorption isotherms for biochar materials. Nature Communications, 2031, 12: 5555. doi: 10.1038/s41467-021-99999-x"
+      },
+      "evidence": {
+        "rule": "year>current_year(2026)",
+        "detail": {
+          "year_found": 2031,
+          "raw_excerpt": "[6] Chen X, Huang J, Wu S. Machine learning prediction of adsorption isotherms for biochar materials. Nature Communications, 2031, 12: 5555. doi: 10.1038/s41467-021-99999-x"
+        }
+      },
+      "suggestion": "年份晚于当前年，疑似笔误或著录错误；请对照原文/出版记录改正。",
+      "verdict_status": "待复核",
+      "confidence": "high"
+    },
+    {
+      "id": "LINT-CITE-004",
+      "type": "claim_citation_mismatch",
+      "severity": "major",
+      "category": "insufficient_evidence",
+      "location": {
+        "file": "mock_paper.txt",
+        "page": 1,
+        "quote": "此外，催化剂负载量与焙烧温度对催化产率的协同效应已得到系统研究[2]，"
+      },
+      "evidence": {
+        "rule": "zero_content_overlap(context_vs_title)",
+        "detail": {
+          "marker": "[2]",
+          "context": "此外，催化剂负载量与焙烧温度对催化产率的协同效应已得到系统研究[2]，",
+          "ref_title": "明代青花瓷釉料成分的X射线荧光光谱分析",
+          "ref_raw": "[2] 李华, 王芳. 明代青花瓷釉料成分的X射线荧光光谱分析. 文物保护与考古科学, 2018, 30(2): 45-52."
+        }
+      },
+      "suggestion": "引文 [2] 的语境句与文献 [2] 主题零重叠，疑似张冠李戴；请人工通读语境与文献，确认是否错引。",
+      "verdict_status": "待复核",
+      "confidence": "low"
+    }
+  ],
+  "external_verification": {
+    "mode": "offline",
+    "budget": {
+      "max_queries": 12,
+      "used": 0,
+      "remaining": 12
+    },
+    "status_counts": {
+      "pending_review": 6
+    },
+    "pending_review_refs": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6
+    ],
+    "two_signal_rule": "fabrication_suspected 仅在 'Crossref 检索无结果' 且 'DOI 不可解析' 两信号齐备时给出；单一信号一律待复核。"
+  },
+  "not_reviewed": [
+    {
+      "facet": "参考文献真实性外部核验",
+      "reason": "offline 模式，断网降级为待复核"
+    },
+    {
+      "facet": "claim_citation_mismatch 终裁",
+      "reason": "本地零重叠仅为低置信候选，需人工通读语境与文献"
+    }
+  ],
+  "uncertainty": "lint 输出全部为非结论候选；合成案例中的 DOI 为虚构，在线核验时预期 not_found/不可解析，属预期行为。",
+  "sources": [
+    "mock_paper.txt（合成）",
+    "lint_refs.py 本地规则",
+    "crossref_check.py --offline（未发起网络请求）"
+  ],
+  "change_log": [
+    {
+      "at": "2026-11-24T14:48:04.084019+00:00",
+      "action": "example pipeline run (offline)"
+    }
+  ]
+}
