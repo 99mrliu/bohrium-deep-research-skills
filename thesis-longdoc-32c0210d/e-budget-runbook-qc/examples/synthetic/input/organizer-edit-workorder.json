@@ -1,0 +1,21 @@
+{
+  "schema": "organizer-edit-workorder/v1",
+  "scope": "offline local workflow on sectioned chapters",
+  "items": [
+    {
+      "id": 1,
+      "title": "术语统一",
+      "action": "将全文术语“隔膜”统一为“隔板”",
+      "target": "全部章节",
+      "acceptance": "全部章节中不再出现\"隔膜\""
+    },
+    {
+      "id": 2,
+      "title": "图表引用完整性",
+      "action": "核对图/表引用与图题/表题一一对应",
+      "target": "全部章节",
+      "acceptance": "图表引用完整：所有图N/表N引用均有对应图题/表题"
+    }
+  ],
+  "note": "SYNTHETIC EXAMPLE — 合成示例，非正式案例结果"
+}

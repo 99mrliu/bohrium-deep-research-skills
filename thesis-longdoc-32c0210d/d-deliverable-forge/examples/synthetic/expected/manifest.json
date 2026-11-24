@@ -1,0 +1,90 @@
+{
+  "artifacts": [
+    {
+      "bytes": 454,
+      "path": "chapters/ch01.md",
+      "sha256": "6d70633549d9af9cbd02a095f7bb0c18f1a9db8ad5eadc52587a5ae03a6314b4"
+    },
+    {
+      "bytes": 367,
+      "path": "chapters/ch02.md",
+      "sha256": "c5dd0f31b07191658a104c799b05b33a0f8195d02fb15e0b665b0571aa15579c"
+    },
+    {
+      "bytes": 305,
+      "path": "chapters/ch03.md",
+      "sha256": "17b004ed78a0883a0101b6da6ddcc3fef565a8a11a9b37346df80480cbd42c8b"
+    },
+    {
+      "bytes": 1850,
+      "path": "result.json",
+      "sha256": "c9523c1078d878557bfceaf4119e25158ecf0ee078a10d8f522143379befbb88"
+    }
+  ],
+  "case_id": "synthetic-32c0210d-demo",
+  "checks": [
+    {
+      "detail": "result.json parses as JSON",
+      "id": "C1-result-parseable",
+      "ok": true
+    },
+    {
+      "detail": "result case_id 'synthetic-32c0210d-demo' vs case.json 'synthetic-32c0210d-demo'",
+      "id": "C2-case-id",
+      "ok": true
+    },
+    {
+      "detail": "key 'edited_chapters' filled",
+      "id": "C3-contract-keys",
+      "ok": true
+    },
+    {
+      "detail": "key 'change_record' filled",
+      "id": "C3-contract-keys",
+      "ok": true
+    },
+    {
+      "detail": "key 'consistency_report' filled",
+      "id": "C3-contract-keys",
+      "ok": true
+    },
+    {
+      "detail": "key 'uncertainty' filled",
+      "id": "C3-contract-keys",
+      "ok": true
+    },
+    {
+      "detail": "chapters/ch01.md sha256=6d70633549d9… (454 bytes)",
+      "id": "C4-artifacts-hashed",
+      "ok": true
+    },
+    {
+      "detail": "chapters/ch02.md sha256=c5dd0f31b071… (367 bytes)",
+      "id": "C4-artifacts-hashed",
+      "ok": true
+    },
+    {
+      "detail": "chapters/ch03.md sha256=17b004ed78a0… (305 bytes)",
+      "id": "C4-artifacts-hashed",
+      "ok": true
+    },
+    {
+      "detail": "chapter 'ch01.md' identical to work copy",
+      "id": "C5-chapters-consistent",
+      "ok": true
+    },
+    {
+      "detail": "chapter 'ch02.md' identical to work copy",
+      "id": "C5-chapters-consistent",
+      "ok": true
+    },
+    {
+      "detail": "chapter 'ch03.md' identical to work copy",
+      "id": "C5-chapters-consistent",
+      "ok": true
+    }
+  ],
+  "generated_by": "verify_delivery.py",
+  "note": "SYNTHETIC EXAMPLE — 合成示例，非正式案例结果",
+  "ok": true
+}

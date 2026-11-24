@@ -1,0 +1,25 @@
+{
+  "schema": "impact-report/v1",
+  "affected": [
+    {
+      "file": "chapter2.md",
+      "line": 19,
+      "impact_type": "caption-definition",
+      "detail": "figure 2-2 题注定义点：图 2-2 紫外固化工艺窗口示意图"
+    },
+    {
+      "file": "chapter3.md",
+      "line": 5,
+      "impact_type": "reference",
+      "detail": "正文对 figure 2-2 的引用点"
+    }
+  ],
+  "renumber": null,
+  "note": "SYNTHETIC EXAMPLE — 合成示例，非正式案例结果",
+  "anchor": {
+    "type": "float",
+    "kind": "figure",
+    "number": "2-2"
+  },
+  "affected_count": 2
+}

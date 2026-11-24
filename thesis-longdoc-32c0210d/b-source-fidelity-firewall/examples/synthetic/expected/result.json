@@ -1,0 +1,66 @@
+{
+  "schema": "result/v1",
+  "skill": "source-fidelity-firewall",
+  "case_id": "SYNTH-32c0210d-b-001",
+  "status": "complete",
+  "sources": [
+    {
+      "kind": "materials",
+      "path": "work_sim/input/materials"
+    },
+    {
+      "kind": "working_chapters",
+      "path": "work_sim/input/chapters"
+    }
+  ],
+  "uncertainty": [],
+  "change_records": [
+    {
+      "id": 1,
+      "title": "结果句改写",
+      "target": "03_results.md",
+      "before": "全电池在 200 次循环后容量保持率为 85% [1]。",
+      "after": "循环 200 次后，全电池容量保持率仍维持在 85% [1]，与实验记录一致。",
+      "guard": "PASS",
+      "note": "SYNTHETIC EXAMPLE — 合成示例，非正式案例结果"
+    }
+  ],
+  "problems": [],
+  "note": "SYNTHETIC EXAMPLE — 合成示例，非正式案例结果",
+  "edited_chapters": [
+    "01_intro.md",
+    "02_methods.md",
+    "03_results.md"
+  ],
+  "change_record": [
+    {
+      "id": 1,
+      "title": "结果句改写",
+      "target": "03_results.md",
+      "before": "全电池在 200 次循环后容量保持率为 85% [1]。",
+      "after": "循环 200 次后，全电池容量保持率仍维持在 85% [1]，与实验记录一致。",
+      "guard": "PASS",
+      "note": "SYNTHETIC EXAMPLE — 合成示例，非正式案例结果"
+    }
+  ],
+  "evidence_map": {
+    "path": "work_sim/work/evidence_map.json",
+    "stats": {
+      "total": 16,
+      "grounded_materials": 10,
+      "grounded_working_chapters": 6,
+      "unresolved": 0
+    },
+    "unresolved_count": 0
+  },
+  "consistency_report": {
+    "status": "PASS",
+    "flags": 0,
+    "tokens_checked": {
+      "number": 13,
+      "abbreviation": 2,
+      "citation": 2,
+      "new_sentences": 1
+    }
+  }
+}

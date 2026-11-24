@@ -1,0 +1,68 @@
+{
+  "schema": "surgical-edit-ops/v1",
+  "case_id": "synthetic-zab-separator-001",
+  "source_workorder": "organizer-edit-workorder.json",
+  "chapter_files": [
+    "ch01.md",
+    "ch02.md",
+    "ch03.md"
+  ],
+  "ops": [
+    {
+      "op_id": "op-001",
+      "item_id": 1,
+      "item_title": "术语统一",
+      "type": "term_unify",
+      "target_files": [
+        "ch01.md",
+        "ch02.md",
+        "ch03.md"
+      ],
+      "params": {
+        "from": "隔膜",
+        "to": "隔板",
+        "protect_patterns": [
+          "^\\s*\\[\\d+\\]"
+        ],
+        "protect_sections": [
+          "参考文献"
+        ],
+        "sync_abbrev": false
+      }
+    },
+    {
+      "op_id": "op-002",
+      "item_id": 2,
+      "item_title": "图表引用纠错",
+      "type": "float_ref_fix",
+      "target_files": [
+        "ch01.md",
+        "ch02.md",
+        "ch03.md"
+      ],
+      "params": {
+        "fixes": [
+          {
+            "file": "ch01.md",
+            "kind": "图",
+            "old_num": "1-2",
+            "new_num": "1-1",
+            "rule": "同章同类型题注唯一"
+          }
+        ],
+        "unresolved": [],
+        "captions": [
+          "图1-1",
+          "图2-1",
+          "表1-1"
+        ]
+      }
+    }
+  ],
+  "summary": {
+    "total": 2,
+    "manual": 0,
+    "deterministic": 2
+  },
+  "note": "SYNTHETIC EXAMPLE — 合成示例，非正式案例结果"
+}

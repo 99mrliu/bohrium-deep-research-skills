@@ -1,0 +1,31 @@
+{
+  "artifacts": [
+    "chapters/ch01.md",
+    "chapters/ch02.md",
+    "chapters/ch03.md"
+  ],
+  "case_id": "synthetic-32c0210d-demo",
+  "change_record": "# 变更记录（合成示例）\n\n1. 工单 #1 术语统一：ch01/ch02/ch03 正文中“隔膜”→“隔板”共 8 处；\n   引用标题《隔膜槽维护规程》按验收判据保留不变。\n2. 工单 #2 单位统一：ch03.md 中“m3/h”→“m³/h”共 2 处。\n\n交付物（均已真实落盘）：\n/app/output/chapters/ch01.md、/app/output/chapters/ch02.md、/app/output/chapters/ch03.md。\n",
+  "consistency_report": "# 一致性检查报告（合成示例）\n\n- 术语：编辑后全文仅引用标题《隔膜槽维护规程》含“隔膜”，符合验收判据。\n- 单位：ch03.md 中已无“m3/h”，统一为“m³/h”。\n- 跨章引用：ch01 提及的维护规程标题与 ch03 无冲突；未发现编号或图表引用。\n",
+  "edited_chapters": {
+    "ch01.md": "chapters/ch01.md",
+    "ch02.md": "chapters/ch02.md",
+    "ch03.md": "chapters/ch03.md"
+  },
+  "generated_by": "assemble_result.py",
+  "limits": [
+    "render skipped via FORGE_NO_RENDER=1 (deterministic mode); no preview generated, none claimed"
+  ],
+  "note": "SYNTHETIC EXAMPLE — 合成示例，非正式案例结果",
+  "problems": [],
+  "sources": [
+    "input/case.json",
+    "input/organizer-edit-workorder.json",
+    "input/chapters/ch01.md",
+    "input/chapters/ch02.md",
+    "input/chapters/ch03.md"
+  ],
+  "status": "complete",
+  "task": "对三章合成示例章节执行术语与单位统一，并装配、渲染、验证最终交付物",
+  "uncertainty": "# 不确定性（合成示例）\n\n- “隔膜→隔板共 8 处”按整词替换统计，若存在跨行断词未覆盖。\n- 章节为合成示例，数值均为虚构，未与任何外部来源核对。\n"
+}

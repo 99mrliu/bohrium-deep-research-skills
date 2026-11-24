@@ -1,0 +1,24 @@
+{
+  "events": [
+    {
+      "kind": "elapsed",
+      "note": "read case.json and workorder",
+      "seconds": 5
+    },
+    {
+      "kind": "request",
+      "note": "item1 terminology edit",
+      "seconds": 25
+    },
+    {
+      "kind": "request",
+      "note": "item2 figure/table ref check",
+      "seconds": 20
+    }
+  ],
+  "schema": "budget-ledger/v1",
+  "total_requests": 64,
+  "total_seconds": 900,
+  "used_requests": 2,
+  "used_seconds": 50
+}

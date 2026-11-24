@@ -1,0 +1,74 @@
+{
+  "case_id": "synthetic-xref-001",
+  "status": "success",
+  "note": "SYNTHETIC EXAMPLE — 合成示例，非正式案例结果",
+  "sources": [
+    "input/chapters/chapter1.md",
+    "input/chapters/chapter2.md",
+    "input/chapters/chapter3.md",
+    "input/organizer-edit-workorder.json"
+  ],
+  "uncertainty": [
+    "EVA 跨章重复定义（warn）未处理：不在工单范围内，保留以待作者决定"
+  ],
+  "change_records": [
+    {
+      "workorder_id": 1,
+      "file": "chapter3.md",
+      "before": "图 2-3",
+      "after": "图 2-2",
+      "reason": "dangling-float-reference：图 2-3 无对应题注"
+    },
+    {
+      "workorder_id": null,
+      "file": "chapter2.md",
+      "before": "图 2-1（第二处题注）",
+      "after": "图 2-2",
+      "reason": "duplicate-float-number：首检捕获的重复题注编号"
+    },
+    {
+      "workorder_id": 2,
+      "file": "chapter2.md, chapter3.md",
+      "before": "紫外固化胶",
+      "after": "UV固化胶",
+      "reason": "术语统一（参考文献条目标题保持原文）"
+    }
+  ],
+  "edited_chapters": [
+    "chapter1.md",
+    "chapter2.md",
+    "chapter3.md"
+  ],
+  "change_record": [
+    {
+      "workorder_id": 1,
+      "file": "chapter3.md",
+      "before": "图 2-3",
+      "after": "图 2-2",
+      "reason": "dangling-float-reference：图 2-3 无对应题注"
+    },
+    {
+      "workorder_id": null,
+      "file": "chapter2.md",
+      "before": "图 2-1（第二处题注）",
+      "after": "图 2-2",
+      "reason": "duplicate-float-number：首检捕获的重复题注编号"
+    },
+    {
+      "workorder_id": 2,
+      "file": "chapter2.md, chapter3.md",
+      "before": "紫外固化胶",
+      "after": "UV固化胶",
+      "reason": "术语统一（参考文献条目标题保持原文）"
+    }
+  ],
+  "consistency_report": {
+    "file": "consistency_report.json",
+    "errors": 0,
+    "warnings": 1
+  },
+  "impact_report": {
+    "file": "impact_report.json",
+    "affected_count": 2
+  }
+}

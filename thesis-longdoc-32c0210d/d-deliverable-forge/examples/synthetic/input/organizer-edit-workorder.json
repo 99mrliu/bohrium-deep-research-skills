@@ -1,0 +1,21 @@
+{
+  "schema": "organizer-edit-workorder/v1",
+  "scope": "offline local workflow on sectioned chapters",
+  "note": "SYNTHETIC EXAMPLE — 合成示例，非正式案例结果",
+  "items": [
+    {
+      "id": 1,
+      "title": "术语统一",
+      "action": "将全部章节正文中的“隔膜”统一为“隔板”，引用标题保持不变",
+      "target": "全部章节",
+      "acceptance": "除引用标题《隔膜槽维护规程》外不再出现“隔膜”"
+    },
+    {
+      "id": 2,
+      "title": "单位统一",
+      "action": "将 ch03 中的“m3/h”改为规范写法“m³/h”",
+      "target": "ch03.md",
+      "acceptance": "ch03.md 中不再出现“m3/h”"
+    }
+  ]
+}

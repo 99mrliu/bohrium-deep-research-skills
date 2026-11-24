@@ -1,0 +1,7 @@
+t=5s op=init fields=4 status=partial
+t=30s op=promote field=change_record status=partial
+t=50s op=promote field=consistency_report status=partial
+t=50s op=assemble chapters=3 status=partial
+t=50s op=promote field=uncertainty status=partial
+t=50s op=promote field=sources status=partial
+t=50s op=finalize status=complete

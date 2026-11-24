@@ -1,0 +1,14 @@
+{
+  "schema": "organizer-edit-workorder/v1",
+  "scope": "offline local workflow on sectioned chapters",
+  "note": "SYNTHETIC EXAMPLE — 合成示例，非正式案例工单",
+  "items": [
+    {
+      "id": 1,
+      "title": "结果句改写",
+      "action": "将 03_results.md 中“全电池在 200 次循环后容量保持率为 85% [1]。”改写为更学术的表述，数字 200 与 85%、引文 [1] 必须保留，不得引入材料外事实。",
+      "target": "03_results.md",
+      "acceptance": "改写后句子仍包含 200、85% 与 [1]，且不出现任何改前文本与材料中不存在的数字、缩写或引文。"
+    }
+  ]
+}

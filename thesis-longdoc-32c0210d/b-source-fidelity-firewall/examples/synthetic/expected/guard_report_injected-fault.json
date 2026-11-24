@@ -1,0 +1,33 @@
+{
+  "schema": "guard_report/v1",
+  "status": "FAIL",
+  "summary": {
+    "before_files": 3,
+    "after_files": 3,
+    "materials_files": 1,
+    "tokens_checked": {
+      "number": 13,
+      "abbreviation": 2,
+      "citation": 2,
+      "new_sentences": 1
+    },
+    "flags": 2
+  },
+  "flags": [
+    {
+      "type": "fabrication_token",
+      "token_kind": "number",
+      "token": "92",
+      "detail": "改后文本中的 number token '92' 既不在改前文本、也不在材料中，且未被 evidence_map 覆盖"
+    },
+    {
+      "type": "unverified_new_sentence",
+      "file": "03_results.md",
+      "sentence": "全电池在 200 次循环后容量保持率高达 92%，远优于同类报道。",
+      "missing_tokens": [
+        "92"
+      ],
+      "detail": "新增句子含未被 evidence_map 覆盖的 token：92"
+    }
+  ]
+}

@@ -1,0 +1,21 @@
+{
+  "schema": "organizer-edit-workorder/v1",
+  "scope": "offline local workflow on sectioned chapters",
+  "note": "SYNTHETIC EXAMPLE — 合成示例，非正式案例结果",
+  "items": [
+    {
+      "id": 1,
+      "title": "修复悬空图表引用",
+      "action": "第 3 章引用了不存在的“图 2-3”，请将该引用改为指向实际存在的图。",
+      "target": "chapter3.md",
+      "acceptance": "consistency_report 中不再存在 dangling-float-reference 错误"
+    },
+    {
+      "id": 2,
+      "title": "术语统一",
+      "action": "将全文的“紫外固化胶”统一为“UV固化胶”（参考文献条目标题保持原文）。",
+      "target": "全部章节",
+      "acceptance": "除参考文献条目标题外不再出现“紫外固化胶”"
+    }
+  ]
+}

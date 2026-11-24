@@ -1,0 +1,49 @@
+{
+  "schema": "surgical-edit-acceptance/v1",
+  "case_id": "synthetic-zab-separator-001",
+  "overall": "PASS",
+  "items": [
+    {
+      "item_id": 1,
+      "title": "术语统一",
+      "acceptance": "除参考文献条目外不再出现“隔膜”",
+      "status": "PASS",
+      "checks": [
+        {
+          "desc": "保护区（参考文献）外不再出现 “隔膜”",
+          "result": "PASS",
+          "detail": "未出现"
+        },
+        {
+          "desc": "出现统一后术语 “隔板”",
+          "result": "PASS",
+          "detail": "ch01.md:6; ch01.md:7; ch01.md:9; ch01.md:12"
+        }
+      ]
+    },
+    {
+      "item_id": 2,
+      "title": "图表引用纠错",
+      "acceptance": "正文中所有图x-y/表x-y引用均能在题注中找到",
+      "status": "PASS",
+      "checks": [
+        {
+          "desc": "正文不再引用旧编号 图1-2",
+          "result": "PASS",
+          "detail": "已清除"
+        }
+      ]
+    }
+  ],
+  "float_integrity": {
+    "desc": "全局图表引用完整性：正文引用必须存在于题注",
+    "result": "PASS",
+    "captions": [
+      "图1-1",
+      "图2-1",
+      "表1-1"
+    ],
+    "dangling": []
+  },
+  "note": "SYNTHETIC EXAMPLE — 合成示例，非正式案例结果"
+}

@@ -1,0 +1,27 @@
+{
+  "schema": "gates-report/v1",
+  "items": [
+    {
+      "id": 1,
+      "title": "术语统一",
+      "gate": "absent",
+      "assertion": "grep(['隔膜']) 命中数须为 0",
+      "verdict": "PASS",
+      "detail": "grep 0 命中: ['隔膜']",
+      "reason": null
+    },
+    {
+      "id": 2,
+      "title": "图表引用完整性",
+      "gate": "figure_ref_integrity",
+      "assertion": "所有 图N/表N 引用须存在对应图题/表题行",
+      "verdict": "PASS",
+      "detail": "引用=['图1'] 图题/表题=['图1']",
+      "reason": null
+    }
+  ],
+  "overall": "PASS",
+  "suggestion": "complete",
+  "failed_items": [],
+  "note": "SYNTHETIC EXAMPLE — 合成示例，非正式案例结果"
+}

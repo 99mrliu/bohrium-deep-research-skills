@@ -1,0 +1,301 @@
+{
+  "case_id": "synthetic-zab-separator-001",
+  "task": "按 organizer-edit-workorder 对分章节工作稿执行手术式编辑：术语统一与图表引用纠错。",
+  "edited_chapters": [
+    "chapters/ch01.md",
+    "chapters/ch02.md",
+    "chapters/ch03.md"
+  ],
+  "change_record": {
+    "schema": "surgical-edit-changelog/v1",
+    "case_id": "synthetic-zab-separator-001",
+    "mode": "apply",
+    "ops_total": 2,
+    "ops_applied": 2,
+    "ops_manual": 0,
+    "problems": [],
+    "manual_ops": [],
+    "hunks": [
+      {
+        "file": "ch01.md",
+        "op_id": "op-001",
+        "line_range": [
+          6,
+          7
+        ],
+        "before": [
+          "隔膜是锌空气电池的关键组件之一，其作用是物理隔离正负极，同时允许氢氧根离子自由迁移。",
+          "早期研究多采用聚烯烃类隔膜，但其电解液保持能力有限，且在锌枝晶穿刺下容易失效。"
+        ],
+        "after": [
+          "隔板是锌空气电池的关键组件之一，其作用是物理隔离正负极，同时允许氢氧根离子自由迁移。",
+          "早期研究多采用聚烯烃类隔板，但其电解液保持能力有限，且在锌枝晶穿刺下容易失效。"
+        ]
+      },
+      {
+        "file": "ch01.md",
+        "op_id": "op-001",
+        "line_range": [
+          9,
+          9
+        ],
+        "before": [
+          "如图1-2所示，隔膜的孔结构直接影响电解液分布与枝晶抑制效果。孔径过大时枝晶易穿透，"
+        ],
+        "after": [
+          "如图1-2所示，隔板的孔结构直接影响电解液分布与枝晶抑制效果。孔径过大时枝晶易穿透，"
+        ]
+      },
+      {
+        "file": "ch01.md",
+        "op_id": "op-001",
+        "line_range": [
+          12,
+          12
+        ],
+        "before": [
+          "**图1-1 隔膜孔结构对枝晶抑制影响的示意图（合成示意，非真实数据）**"
+        ],
+        "after": [
+          "**图1-1 隔板孔结构对枝晶抑制影响的示意图（合成示意，非真实数据）**"
+        ]
+      },
+      {
+        "file": "ch01.md",
+        "op_id": "op-001",
+        "line_range": [
+          16,
+          16
+        ],
+        "before": [
+          "本文以复合隔膜为对象，系统比较三种涂覆工艺对电池循环寿命的影响，主要性能指标汇总于表1-1。"
+        ],
+        "after": [
+          "本文以复合隔板为对象，系统比较三种涂覆工艺对电池循环寿命的影响，主要性能指标汇总于表1-1。"
+        ]
+      },
+      {
+        "file": "ch01.md",
+        "op_id": "op-001",
+        "line_range": [
+          18,
+          18
+        ],
+        "before": [
+          "**表1-1 三种涂覆工艺下隔膜的面电阻与循环寿命（合成数据）**"
+        ],
+        "after": [
+          "**表1-1 三种涂覆工艺下隔板的面电阻与循环寿命（合成数据）**"
+        ]
+      },
+      {
+        "file": "ch01.md",
+        "op_id": "op-001",
+        "line_range": [
+          26,
+          26
+        ],
+        "before": [
+          "综上，隔膜的工艺优化是提升锌空气电池寿命的可行路径，本文后续章节给出实验细节。"
+        ],
+        "after": [
+          "综上，隔板的工艺优化是提升锌空气电池寿命的可行路径，本文后续章节给出实验细节。"
+        ]
+      },
+      {
+        "file": "ch02.md",
+        "op_id": "op-001",
+        "line_range": [
+          3,
+          3
+        ],
+        "before": [
+          "## 2.1 材料与隔膜制备"
+        ],
+        "after": [
+          "## 2.1 材料与隔板制备"
+        ]
+      },
+      {
+        "file": "ch02.md",
+        "op_id": "op-001",
+        "line_range": [
+          5,
+          5
+        ],
+        "before": [
+          "实验所用隔膜基底为商用无纺布（合成供应商 A），涂覆浆料由聚乙烯醇与纳米氧化锆按质量比 8:2 配制。"
+        ],
+        "after": [
+          "实验所用隔板基底为商用无纺布（合成供应商 A），涂覆浆料由聚乙烯醇与纳米氧化锆按质量比 8:2 配制。"
+        ]
+      },
+      {
+        "file": "ch02.md",
+        "op_id": "op-001",
+        "line_range": [
+          10,
+          10
+        ],
+        "before": [
+          "如图2-1所示，扣式锌空气电池由锌负极、隔膜、空气正极与 6 mol/L KOH 电解液组成。"
+        ],
+        "after": [
+          "如图2-1所示，扣式锌空气电池由锌负极、隔板、空气正极与 6 mol/L KOH 电解液组成。"
+        ]
+      },
+      {
+        "file": "ch02.md",
+        "op_id": "op-001",
+        "line_range": [
+          15,
+          16
+        ],
+        "before": [
+          "隔膜面电阻采用交流阻抗法测量，频率范围 0.1 Hz 至 100 kHz，扰动振幅 5 mV。",
+          "每组隔膜样品平行测试 3 次，取平均值。"
+        ],
+        "after": [
+          "隔板面电阻采用交流阻抗法测量，频率范围 0.1 Hz 至 100 kHz，扰动振幅 5 mV。",
+          "每组隔板样品平行测试 3 次，取平均值。"
+        ]
+      },
+      {
+        "file": "ch03.md",
+        "op_id": "op-001",
+        "line_range": [
+          5,
+          6
+        ],
+        "before": [
+          "三种工艺中，喷涂法制备的隔膜面电阻最低，与表1-1的汇总一致。分析认为喷涂工艺形成的",
+          "涂层更均匀，隔膜内部孔隙连通性更好，离子迁移阻力更小。循环测试表明，采用喷涂隔膜"
+        ],
+        "after": [
+          "三种工艺中，喷涂法制备的隔板面电阻最低，与表1-1的汇总一致。分析认为喷涂工艺形成的",
+          "涂层更均匀，隔板内部孔隙连通性更好，离子迁移阻力更小。循环测试表明，采用喷涂隔板"
+        ]
+      },
+      {
+        "file": "ch03.md",
+        "op_id": "op-001",
+        "line_range": [
+          11,
+          12
+        ],
+        "before": [
+          "隔膜的涂覆工艺显著影响锌空气电池的循环寿命，喷涂工艺在本文条件下表现最优。",
+          "后续工作将考察隔膜在长期浮充条件下的尺寸稳定性。"
+        ],
+        "after": [
+          "隔板的涂覆工艺显著影响锌空气电池的循环寿命，喷涂工艺在本文条件下表现最优。",
+          "后续工作将考察隔板在长期浮充条件下的尺寸稳定性。"
+        ]
+      },
+      {
+        "file": "ch01.md",
+        "op_id": "op-002",
+        "line_range": [
+          9,
+          9
+        ],
+        "before": [
+          "如图1-2所示，隔板的孔结构直接影响电解液分布与枝晶抑制效果。孔径过大时枝晶易穿透，"
+        ],
+        "after": [
+          "如图1-1所示，隔板的孔结构直接影响电解液分布与枝晶抑制效果。孔径过大时枝晶易穿透，"
+        ]
+      }
+    ],
+    "note": "SYNTHETIC EXAMPLE — 合成示例，非正式案例结果"
+  },
+  "consistency_report": {
+    "float_integrity": {
+      "desc": "全局图表引用完整性：正文引用必须存在于题注",
+      "result": "PASS",
+      "captions": [
+        "图1-1",
+        "图2-1",
+        "表1-1"
+      ],
+      "dangling": []
+    },
+    "term_absence_checks": [
+      {
+        "desc": "保护区（参考文献）外不再出现 “隔膜”",
+        "result": "PASS",
+        "detail": "未出现"
+      }
+    ]
+  },
+  "acceptance_report": {
+    "schema": "surgical-edit-acceptance/v1",
+    "case_id": "synthetic-zab-separator-001",
+    "overall": "PASS",
+    "items": [
+      {
+        "item_id": 1,
+        "title": "术语统一",
+        "acceptance": "除参考文献条目外不再出现“隔膜”",
+        "status": "PASS",
+        "checks": [
+          {
+            "desc": "保护区（参考文献）外不再出现 “隔膜”",
+            "result": "PASS",
+            "detail": "未出现"
+          },
+          {
+            "desc": "出现统一后术语 “隔板”",
+            "result": "PASS",
+            "detail": "ch01.md:6; ch01.md:7; ch01.md:9; ch01.md:12"
+          }
+        ]
+      },
+      {
+        "item_id": 2,
+        "title": "图表引用纠错",
+        "acceptance": "正文中所有图x-y/表x-y引用均能在题注中找到",
+        "status": "PASS",
+        "checks": [
+          {
+            "desc": "正文不再引用旧编号 图1-2",
+            "result": "PASS",
+            "detail": "已清除"
+          }
+        ]
+      }
+    ],
+    "float_integrity": {
+      "desc": "全局图表引用完整性：正文引用必须存在于题注",
+      "result": "PASS",
+      "captions": [
+        "图1-1",
+        "图2-1",
+        "表1-1"
+      ],
+      "dangling": []
+    },
+    "note": "SYNTHETIC EXAMPLE — 合成示例，非正式案例结果"
+  },
+  "uncertainty": [],
+  "status": "complete",
+  "sources": {
+    "case": "case.json",
+    "workorder": "organizer-edit-workorder.json",
+    "chapters": [
+      "ch01.md",
+      "ch02.md",
+      "ch03.md"
+    ],
+    "ops": "ops.json"
+  },
+  "problems": [],
+  "contract_fields": [
+    "edited_chapters",
+    "change_record",
+    "consistency_report",
+    "acceptance_report",
+    "uncertainty"
+  ],
+  "note": "SYNTHETIC EXAMPLE — 合成示例，非正式案例结果"
+}

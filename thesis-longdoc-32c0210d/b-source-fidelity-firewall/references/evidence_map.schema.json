@@ -1,0 +1,55 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "evidence_map/v1 — source-fidelity-firewall 证据映射",
+  "type": "object",
+  "required": ["schema", "facts_file", "stats", "warnings", "entries"],
+  "properties": {
+    "schema": {"const": "evidence_map/v1"},
+    "facts_file": {"type": "string", "description": "输入 facts.json 路径（按命令行原样记录）"},
+    "materials_dir": {"type": ["string", "null"], "description": "材料目录；未提供为 null"},
+    "chapters_dir": {"type": ["string", "null"], "description": "原始工作稿章节目录（回退底稿）"},
+    "stats": {
+      "type": "object",
+      "required": ["total", "grounded_materials", "grounded_working_chapters", "unresolved"],
+      "properties": {
+        "total": {"type": "integer"},
+        "grounded_materials": {"type": "integer", "description": "origin=materials 条数"},
+        "grounded_working_chapters": {"type": "integer", "description": "origin=working_chapters 条数"},
+        "unresolved": {"type": "integer", "description": "无法回源条数"}
+      }
+    },
+    "warnings": {
+      "type": "array",
+      "items": {"type": "string"},
+      "description": "降级告警，如 CORPUS_MISSING（材料缺失）、PDF_UNREADABLE（无 pdftotext）"
+    },
+    "entries": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["fact_id", "type", "claim", "value", "evidence", "origin", "verification"],
+        "properties": {
+          "fact_id": {"type": "string", "pattern": "^F\\d{4}$"},
+          "type": {"enum": ["number_with_unit", "term_definition", "citation", "figure_ref"]},
+          "claim": {"type": "string", "description": "事实所在句子（回源核验的对象）"},
+          "value": {"type": "string", "description": "事实值表面形式，如 85%、[1]、图2"},
+          "evidence": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "required": ["source", "quote", "locator", "verification"],
+              "properties": {
+                "source": {"type": "string", "description": "materials/<rel> 或 working_chapters/<rel>"},
+                "quote": {"type": "string", "description": "来源中的逐字引文"},
+                "locator": {"type": "string", "description": "<相对路径>:<行号>"},
+                "verification": {"enum": ["PASS", "FAIL"], "description": "脚本回源重验结果，非人工声明"}
+              }
+            }
+          },
+          "origin": {"enum": ["materials", "working_chapters", "unresolved"]},
+          "verification": {"enum": ["PASS", "FAIL"]}
+        }
+      }
+    }
+  }
+}

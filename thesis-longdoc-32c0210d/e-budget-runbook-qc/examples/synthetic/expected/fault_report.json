@@ -1,0 +1,33 @@
+{
+  "schema": "fault-report/v1",
+  "controlled": true,
+  "note": "受控故障注入测试 (controlled fault-injection drill): 全部故障注入在 workdir/fault_lab/ 的 scratch 副本上进行, 未触碰真实产物; 本报告证明 partial 降级路径真实可用。",
+  "scenarios": [
+    {
+      "name": "s1_deleted_section",
+      "injected_fault": "删除图题/表题行: 03-results.md: 图1 实验装置示意图（合成示意，无真实数据）。",
+      "expected": "qc_gates 非零退出且 gates_report overall!=PASS",
+      "exit_code": 1,
+      "observed": "overall=FAIL failed_items=[2]",
+      "verdict": "contained"
+    },
+    {
+      "name": "s2_broken_json",
+      "injected_fault": "result.json 写入截断的非法 JSON",
+      "expected": "checkpoint validate 非零退出并报非法 JSON",
+      "exit_code": 1,
+      "observed": "- result.json 不是合法 JSON: Expecting property name enclosed in double quotes: line 1 column 3 (char 2)",
+      "verdict": "contained"
+    },
+    {
+      "name": "s3_missing_contract_key",
+      "injected_fault": "删除契约键: edited_chapters",
+      "expected": "checkpoint validate 非零退出并报该键缺失",
+      "exit_code": 1,
+      "observed": "- 契约键缺失: edited_chapters",
+      "verdict": "contained"
+    }
+  ],
+  "overall": "all-contained",
+  "example_note": "SYNTHETIC EXAMPLE — 合成示例，非正式案例结果"
+}

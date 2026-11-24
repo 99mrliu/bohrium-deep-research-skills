@@ -1,0 +1,88 @@
+{
+  "schema": "consistency-report/v1",
+  "summary": {
+    "errors": 2,
+    "warnings": 2,
+    "total": 4
+  },
+  "bibliography_found": true,
+  "issues": [
+    {
+      "id": "ISSUE-001",
+      "rule": "dangling-float-reference",
+      "severity": "error",
+      "message": "引用了不存在的图 2-3",
+      "locations": [
+        {
+          "file": "chapter3.md",
+          "line": 5
+        }
+      ],
+      "suggestion": "核对目标题注编号：若题注存在则为笔误，改正文引用；若图表已删除，删除或改写该引用。"
+    },
+    {
+      "id": "ISSUE-002",
+      "rule": "duplicate-definition-across-chapters",
+      "severity": "warn",
+      "message": "缩略语 EVA（乙烯-醋酸乙烯酯共聚物）在 2 个章节重复定义",
+      "locations": [
+        {
+          "file": "chapter2.md",
+          "line": 5
+        },
+        {
+          "file": "chapter3.md",
+          "line": 9
+        }
+      ],
+      "suggestion": "仅在首次出现的章节定义，后续章节直接使用缩略语。"
+    },
+    {
+      "id": "ISSUE-003",
+      "rule": "duplicate-float-number",
+      "severity": "error",
+      "message": "图 2-1 的题注出现 2 次",
+      "locations": [
+        {
+          "file": "chapter2.md",
+          "line": 17
+        },
+        {
+          "file": "chapter2.md",
+          "line": 19
+        }
+      ],
+      "suggestion": "保留其一，其余按顺序重新编号，并用 impact.py --renumber 找出全部需同步修改的引用点。"
+    },
+    {
+      "id": "ISSUE-004",
+      "rule": "term-variant-residue",
+      "severity": "warn",
+      "message": "术语“UV固化胶”存在多种写法：“UV固化胶”×2、“紫外固化胶”×2",
+      "locations": [
+        {
+          "file": "chapter1.md",
+          "line": 11,
+          "variant": "UV固化胶"
+        },
+        {
+          "file": "chapter2.md",
+          "line": 23,
+          "variant": "UV固化胶"
+        },
+        {
+          "file": "chapter2.md",
+          "line": 5,
+          "variant": "紫外固化胶"
+        },
+        {
+          "file": "chapter3.md",
+          "line": 5,
+          "variant": "紫外固化胶"
+        }
+      ],
+      "suggestion": "按工单统一为规范写法；参考文献条目标题保持原文不纳入统计。"
+    }
+  ],
+  "note": "SYNTHETIC EXAMPLE — 合成示例，非正式案例结果"
+}

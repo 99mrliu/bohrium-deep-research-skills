@@ -1,0 +1,271 @@
+{
+  "schema": "evidence_map/v1",
+  "facts_file": "work_sim/work/facts.json",
+  "materials_dir": "work_sim/input/materials",
+  "chapters_dir": "work_sim/input/chapters",
+  "stats": {
+    "total": 16,
+    "grounded_materials": 10,
+    "grounded_working_chapters": 6,
+    "unresolved": 0
+  },
+  "warnings": [],
+  "entries": [
+    {
+      "fact_id": "F0001",
+      "type": "term_definition",
+      "claim": "锂金属电池中固态电解质（SSE）被认为可以同时提升安全性与能量密度 [1]。",
+      "value": "锂金属电池中固态电解质（SSE）",
+      "evidence": [
+        {
+          "source": "working_chapters/01_intro.md",
+          "quote": "锂金属电池中固态电解质（SSE）被认为可以同时提升安全性与能量密度 [1]。",
+          "locator": "01_intro.md:3",
+          "verification": "PASS"
+        }
+      ],
+      "origin": "working_chapters",
+      "verification": "PASS"
+    },
+    {
+      "fact_id": "F0002",
+      "type": "citation",
+      "claim": "锂金属电池中固态电解质（SSE）被认为可以同时提升安全性与能量密度 [1]。",
+      "value": "[1]",
+      "evidence": [
+        {
+          "source": "working_chapters/01_intro.md",
+          "quote": "锂金属电池中固态电解质（SSE）被认为可以同时提升安全性与能量密度 [1]。",
+          "locator": "01_intro.md:3",
+          "verification": "PASS"
+        }
+      ],
+      "origin": "working_chapters",
+      "verification": "PASS"
+    },
+    {
+      "fact_id": "F0003",
+      "type": "number_with_unit",
+      "claim": "本工作采用的硫化物固态电解质的室温离子电导率为 1.2 mS/cm。",
+      "value": "1.2 mS/cm",
+      "evidence": [
+        {
+          "source": "materials/lab_notes.txt",
+          "quote": "本工作采用的硫化物固态电解质的室温离子电导率为 1.2 mS/cm。",
+          "locator": "lab_notes.txt:4",
+          "verification": "PASS"
+        }
+      ],
+      "origin": "materials",
+      "verification": "PASS"
+    },
+    {
+      "fact_id": "F0004",
+      "type": "figure_ref",
+      "claim": "图1给出了该电解质的晶体结构示意图。",
+      "value": "图1",
+      "evidence": [
+        {
+          "source": "working_chapters/01_intro.md",
+          "quote": "图1给出了该电解质的晶体结构示意图。",
+          "locator": "01_intro.md:5",
+          "verification": "PASS"
+        }
+      ],
+      "origin": "working_chapters",
+      "verification": "PASS"
+    },
+    {
+      "fact_id": "F0005",
+      "type": "number_with_unit",
+      "claim": "界面副反应会在负极侧形成固态电解质界面膜，其厚度可达 20 nm。",
+      "value": "20 nm",
+      "evidence": [
+        {
+          "source": "working_chapters/01_intro.md",
+          "quote": "界面副反应会在负极侧形成固态电解质界面膜，其厚度可达 20 nm。",
+          "locator": "01_intro.md:6",
+          "verification": "PASS"
+        }
+      ],
+      "origin": "working_chapters",
+      "verification": "PASS"
+    },
+    {
+      "fact_id": "F0006",
+      "type": "number_with_unit",
+      "claim": "采用电化学阻抗谱（EIS）在 60 °C 下表征界面阻抗演化 [2]。",
+      "value": "60 °C",
+      "evidence": [
+        {
+          "source": "materials/lab_notes.txt",
+          "quote": "采用电化学阻抗谱（EIS）在 60 °C 下表征界面阻抗演化 [2]。",
+          "locator": "lab_notes.txt:6",
+          "verification": "PASS"
+        }
+      ],
+      "origin": "materials",
+      "verification": "PASS"
+    },
+    {
+      "fact_id": "F0007",
+      "type": "term_definition",
+      "claim": "采用电化学阻抗谱（EIS）在 60 °C 下表征界面阻抗演化 [2]。",
+      "value": "采用电化学阻抗谱（EIS）",
+      "evidence": [
+        {
+          "source": "materials/lab_notes.txt",
+          "quote": "采用电化学阻抗谱（EIS）在 60 °C 下表征界面阻抗演化 [2]。",
+          "locator": "lab_notes.txt:6",
+          "verification": "PASS"
+        }
+      ],
+      "origin": "materials",
+      "verification": "PASS"
+    },
+    {
+      "fact_id": "F0008",
+      "type": "citation",
+      "claim": "采用电化学阻抗谱（EIS）在 60 °C 下表征界面阻抗演化 [2]。",
+      "value": "[2]",
+      "evidence": [
+        {
+          "source": "materials/lab_notes.txt",
+          "quote": "采用电化学阻抗谱（EIS）在 60 °C 下表征界面阻抗演化 [2]。",
+          "locator": "lab_notes.txt:6",
+          "verification": "PASS"
+        }
+      ],
+      "origin": "materials",
+      "verification": "PASS"
+    },
+    {
+      "fact_id": "F0009",
+      "type": "number_with_unit",
+      "claim": "对称电池以 0.1 mA 的电流密度循环，充电截止电压为 4.2 V。",
+      "value": "0.1 mA",
+      "evidence": [
+        {
+          "source": "materials/lab_notes.txt",
+          "quote": "对称电池以 0.1 mA 的电流密度循环，充电截止电压为 4.2 V。",
+          "locator": "lab_notes.txt:7",
+          "verification": "PASS"
+        }
+      ],
+      "origin": "materials",
+      "verification": "PASS"
+    },
+    {
+      "fact_id": "F0010",
+      "type": "number_with_unit",
+      "claim": "对称电池以 0.1 mA 的电流密度循环，充电截止电压为 4.2 V。",
+      "value": "4.2 V",
+      "evidence": [
+        {
+          "source": "materials/lab_notes.txt",
+          "quote": "对称电池以 0.1 mA 的电流密度循环，充电截止电压为 4.2 V。",
+          "locator": "lab_notes.txt:7",
+          "verification": "PASS"
+        }
+      ],
+      "origin": "materials",
+      "verification": "PASS"
+    },
+    {
+      "fact_id": "F0011",
+      "type": "figure_ref",
+      "claim": "表1列出了三种电解液添加剂的配比。",
+      "value": "表1",
+      "evidence": [
+        {
+          "source": "working_chapters/02_methods.md",
+          "quote": "表1列出了三种电解液添加剂的配比。",
+          "locator": "02_methods.md:5",
+          "verification": "PASS"
+        }
+      ],
+      "origin": "working_chapters",
+      "verification": "PASS"
+    },
+    {
+      "fact_id": "F0012",
+      "type": "number_with_unit",
+      "claim": "全电池在 200 次循环后容量保持率为 85% [1]。",
+      "value": "85%",
+      "evidence": [
+        {
+          "source": "materials/lab_notes.txt",
+          "quote": "全电池在 200 次循环后容量保持率为 85% [1]。",
+          "locator": "lab_notes.txt:9",
+          "verification": "PASS"
+        }
+      ],
+      "origin": "materials",
+      "verification": "PASS"
+    },
+    {
+      "fact_id": "F0013",
+      "type": "citation",
+      "claim": "全电池在 200 次循环后容量保持率为 85% [1]。",
+      "value": "[1]",
+      "evidence": [
+        {
+          "source": "materials/lab_notes.txt",
+          "quote": "全电池在 200 次循环后容量保持率为 85% [1]。",
+          "locator": "lab_notes.txt:9",
+          "verification": "PASS"
+        }
+      ],
+      "origin": "materials",
+      "verification": "PASS"
+    },
+    {
+      "fact_id": "F0014",
+      "type": "number_with_unit",
+      "claim": "界面阻抗在前 50 次循环内由 120 Ω 上升至 180 Ω。",
+      "value": "120 Ω",
+      "evidence": [
+        {
+          "source": "materials/lab_notes.txt",
+          "quote": "界面阻抗在前 50 次循环内由 120 Ω 上升至 180 Ω。",
+          "locator": "lab_notes.txt:10",
+          "verification": "PASS"
+        }
+      ],
+      "origin": "materials",
+      "verification": "PASS"
+    },
+    {
+      "fact_id": "F0015",
+      "type": "number_with_unit",
+      "claim": "界面阻抗在前 50 次循环内由 120 Ω 上升至 180 Ω。",
+      "value": "180 Ω",
+      "evidence": [
+        {
+          "source": "materials/lab_notes.txt",
+          "quote": "界面阻抗在前 50 次循环内由 120 Ω 上升至 180 Ω。",
+          "locator": "lab_notes.txt:10",
+          "verification": "PASS"
+        }
+      ],
+      "origin": "materials",
+      "verification": "PASS"
+    },
+    {
+      "fact_id": "F0016",
+      "type": "figure_ref",
+      "claim": "图2显示了循环前后的阻抗谱对比。",
+      "value": "图2",
+      "evidence": [
+        {
+          "source": "working_chapters/03_results.md",
+          "quote": "图2显示了循环前后的阻抗谱对比。",
+          "locator": "03_results.md:5",
+          "verification": "PASS"
+        }
+      ],
+      "origin": "working_chapters",
+      "verification": "PASS"
+    }
+  ]
+}

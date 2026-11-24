@@ -1,0 +1,21 @@
+{
+  "schema": "organizer-edit-workorder/v1",
+  "scope": "offline local workflow on sectioned chapters",
+  "note": "SYNTHETIC EXAMPLE — 合成示例，非正式案例结果",
+  "items": [
+    {
+      "id": 1,
+      "title": "术语统一",
+      "action": "将全文的“隔膜”统一为“隔板”（参考文献条目除外）",
+      "target": "全部章节",
+      "acceptance": "除参考文献条目外不再出现“隔膜”"
+    },
+    {
+      "id": 2,
+      "title": "图表引用纠错",
+      "action": "修正正文中的图表引用编号错误，使每个图/表引用都指向存在的题注",
+      "target": "全部章节",
+      "acceptance": "正文中所有图x-y/表x-y引用均能在题注中找到"
+    }
+  ]
+}

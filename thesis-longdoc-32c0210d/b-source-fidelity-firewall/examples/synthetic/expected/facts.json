@@ -1,0 +1,141 @@
+{
+  "schema": "facts/v1",
+  "chapters_dir": "work_sim/input/chapters",
+  "counts": {
+    "term_definition": 2,
+    "citation": 3,
+    "number_with_unit": 8,
+    "figure_ref": 3
+  },
+  "total": 16,
+  "facts": [
+    {
+      "id": "F0001",
+      "type": "term_definition",
+      "value": "锂金属电池中固态电解质（SSE）",
+      "context": "锂金属电池中固态电解质（SSE）被认为可以同时提升安全性与能量密度 [1]。",
+      "file": "01_intro.md",
+      "line": 3
+    },
+    {
+      "id": "F0002",
+      "type": "citation",
+      "value": "[1]",
+      "context": "锂金属电池中固态电解质（SSE）被认为可以同时提升安全性与能量密度 [1]。",
+      "file": "01_intro.md",
+      "line": 3
+    },
+    {
+      "id": "F0003",
+      "type": "number_with_unit",
+      "value": "1.2 mS/cm",
+      "context": "本工作采用的硫化物固态电解质的室温离子电导率为 1.2 mS/cm。",
+      "file": "01_intro.md",
+      "line": 4
+    },
+    {
+      "id": "F0004",
+      "type": "figure_ref",
+      "value": "图1",
+      "context": "图1给出了该电解质的晶体结构示意图。",
+      "file": "01_intro.md",
+      "line": 5
+    },
+    {
+      "id": "F0005",
+      "type": "number_with_unit",
+      "value": "20 nm",
+      "context": "界面副反应会在负极侧形成固态电解质界面膜，其厚度可达 20 nm。",
+      "file": "01_intro.md",
+      "line": 6
+    },
+    {
+      "id": "F0006",
+      "type": "number_with_unit",
+      "value": "60 °C",
+      "context": "采用电化学阻抗谱（EIS）在 60 °C 下表征界面阻抗演化 [2]。",
+      "file": "02_methods.md",
+      "line": 3
+    },
+    {
+      "id": "F0007",
+      "type": "term_definition",
+      "value": "采用电化学阻抗谱（EIS）",
+      "context": "采用电化学阻抗谱（EIS）在 60 °C 下表征界面阻抗演化 [2]。",
+      "file": "02_methods.md",
+      "line": 3
+    },
+    {
+      "id": "F0008",
+      "type": "citation",
+      "value": "[2]",
+      "context": "采用电化学阻抗谱（EIS）在 60 °C 下表征界面阻抗演化 [2]。",
+      "file": "02_methods.md",
+      "line": 3
+    },
+    {
+      "id": "F0009",
+      "type": "number_with_unit",
+      "value": "0.1 mA",
+      "context": "对称电池以 0.1 mA 的电流密度循环，充电截止电压为 4.2 V。",
+      "file": "02_methods.md",
+      "line": 4
+    },
+    {
+      "id": "F0010",
+      "type": "number_with_unit",
+      "value": "4.2 V",
+      "context": "对称电池以 0.1 mA 的电流密度循环，充电截止电压为 4.2 V。",
+      "file": "02_methods.md",
+      "line": 4
+    },
+    {
+      "id": "F0011",
+      "type": "figure_ref",
+      "value": "表1",
+      "context": "表1列出了三种电解液添加剂的配比。",
+      "file": "02_methods.md",
+      "line": 5
+    },
+    {
+      "id": "F0012",
+      "type": "number_with_unit",
+      "value": "85%",
+      "context": "全电池在 200 次循环后容量保持率为 85% [1]。",
+      "file": "03_results.md",
+      "line": 3
+    },
+    {
+      "id": "F0013",
+      "type": "citation",
+      "value": "[1]",
+      "context": "全电池在 200 次循环后容量保持率为 85% [1]。",
+      "file": "03_results.md",
+      "line": 3
+    },
+    {
+      "id": "F0014",
+      "type": "number_with_unit",
+      "value": "120 Ω",
+      "context": "界面阻抗在前 50 次循环内由 120 Ω 上升至 180 Ω。",
+      "file": "03_results.md",
+      "line": 4
+    },
+    {
+      "id": "F0015",
+      "type": "number_with_unit",
+      "value": "180 Ω",
+      "context": "界面阻抗在前 50 次循环内由 120 Ω 上升至 180 Ω。",
+      "file": "03_results.md",
+      "line": 4
+    },
+    {
+      "id": "F0016",
+      "type": "figure_ref",
+      "value": "图2",
+      "context": "图2显示了循环前后的阻抗谱对比。",
+      "file": "03_results.md",
+      "line": 5
+    }
+  ]
+}
