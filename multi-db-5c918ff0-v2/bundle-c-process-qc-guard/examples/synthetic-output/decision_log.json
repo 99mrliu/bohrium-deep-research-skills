@@ -1,0 +1,76 @@
+{
+  "entries": [
+    {
+      "decision": "auto_merge",
+      "detail": {
+        "already_linked": false,
+        "key": "10.99977/syn.0001"
+      },
+      "reason_code": "doi_exact",
+      "record_a": "crossref#00",
+      "record_b": "europepmc#00"
+    },
+    {
+      "decision": "auto_merge",
+      "detail": {
+        "already_linked": true,
+        "key": "synthetic perovskite halides for lattice dynamics studies|2021|zhang"
+      },
+      "reason_code": "title_year_first_author",
+      "record_a": "crossref#00",
+      "record_b": "europepmc#00"
+    },
+    {
+      "decision": "auto_merge",
+      "detail": {
+        "already_linked": false,
+        "key": "10.99977/syn.0002"
+      },
+      "reason_code": "doi_exact",
+      "record_a": "crossref#01",
+      "record_b": "publisher#00"
+    },
+    {
+      "decision": "auto_merge",
+      "detail": {
+        "already_linked": true,
+        "key": "defect passivation in synthetic halide perovskites|2022|chen"
+      },
+      "reason_code": "title_year_first_author",
+      "record_a": "crossref#01",
+      "record_b": "publisher#00"
+    },
+    {
+      "decision": "arbitrated_distinct",
+      "detail": {
+        "pair_id": "pair:crossref#03--publisher#02",
+        "rationale": "两记录 DOI 不同(10.99977/syn.0005 vs 10.99977/syn.0006),刊名、卷期与页码均不同;标题差异(halides vs halide films)指示研究对象不同,判定为两篇不同文献。"
+      },
+      "reason_code": "arbitration_decision",
+      "record_a": "crossref#03",
+      "record_b": "publisher#02"
+    },
+    {
+      "decision": "queued_for_arbitration",
+      "detail": {
+        "jaccard": "0.6250",
+        "pair_id": "pair:crossref#03--publisher#02",
+        "threshold": 0.6
+      },
+      "reason_code": "fuzzy_title_jaccard",
+      "record_a": "crossref#03",
+      "record_b": "publisher#02"
+    },
+    {
+      "decision": "auto_merge",
+      "detail": {
+        "already_linked": false,
+        "key": "synthetic defect tolerance in halide perovskite films|2022|kumar"
+      },
+      "reason_code": "title_year_first_author",
+      "record_a": "europepmc#01",
+      "record_b": "publisher#01"
+    }
+  ],
+  "entry_count": 7
+}

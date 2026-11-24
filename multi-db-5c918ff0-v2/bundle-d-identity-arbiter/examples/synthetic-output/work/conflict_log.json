@@ -1,0 +1,205 @@
+[
+  {
+    "canonical_members": [
+      "rec-0001",
+      "rec-0007"
+    ],
+    "chosen": {
+      "db": "publisher",
+      "value": "We study synthetic lattice dynamics of quasi-periodic crystals using harmonic approximations."
+    },
+    "field": "abstract",
+    "rule": "source_priority:publisher>crossref>europepmc",
+    "values": [
+      {
+        "artifact_id": "crossref_works.json",
+        "db": "crossref",
+        "locator": "message.items[0]",
+        "value": "We study synthetic lattice dynamics of quasi-periodic crystals."
+      },
+      {
+        "artifact_id": "publisher_articles.json",
+        "db": "publisher",
+        "locator": "[0]",
+        "value": "We study synthetic lattice dynamics of quasi-periodic crystals using harmonic approximations."
+      }
+    ]
+  },
+  {
+    "canonical_members": [
+      "rec-0001",
+      "rec-0007"
+    ],
+    "chosen": {
+      "db": "publisher",
+      "value": "45-58"
+    },
+    "field": "pages",
+    "rule": "source_priority:publisher>crossref>europepmc",
+    "values": [
+      {
+        "artifact_id": "crossref_works.json",
+        "db": "crossref",
+        "locator": "message.items[0]",
+        "value": "45–58"
+      },
+      {
+        "artifact_id": "publisher_articles.json",
+        "db": "publisher",
+        "locator": "[0]",
+        "value": "45-58"
+      }
+    ]
+  },
+  {
+    "canonical_members": [
+      "rec-0001",
+      "rec-0007"
+    ],
+    "chosen": {
+      "db": "publisher",
+      "value": "https://publisher.example/synth/2024/001"
+    },
+    "field": "url",
+    "rule": "source_priority:publisher>crossref>europepmc",
+    "values": [
+      {
+        "artifact_id": "crossref_works.json",
+        "db": "crossref",
+        "locator": "message.items[0]",
+        "value": "https://doi.org/10.99966/synth.2024.001"
+      },
+      {
+        "artifact_id": "publisher_articles.json",
+        "db": "publisher",
+        "locator": "[0]",
+        "value": "https://publisher.example/synth/2024/001"
+      }
+    ]
+  },
+  {
+    "canonical_members": [
+      "rec-0002",
+      "rec-0005"
+    ],
+    "chosen": {
+      "db": "crossref",
+      "value": [
+        "Na Li",
+        "John Smith"
+      ]
+    },
+    "field": "authors",
+    "rule": "source_priority:publisher>crossref>europepmc",
+    "values": [
+      {
+        "artifact_id": "crossref_works.json",
+        "db": "crossref",
+        "locator": "message.items[1]",
+        "value": [
+          "Na Li",
+          "John Smith"
+        ]
+      },
+      {
+        "artifact_id": "europepmc_results.json",
+        "db": "europepmc",
+        "locator": "resultList.result[1]",
+        "value": [
+          "Li N",
+          "Smith J"
+        ]
+      }
+    ]
+  },
+  {
+    "canonical_members": [
+      "rec-0002",
+      "rec-0005"
+    ],
+    "chosen": {
+      "db": "crossref",
+      "value": "Journal of Synthetic Combustion"
+    },
+    "field": "journal",
+    "rule": "source_priority:publisher>crossref>europepmc",
+    "values": [
+      {
+        "artifact_id": "crossref_works.json",
+        "db": "crossref",
+        "locator": "message.items[1]",
+        "value": "Journal of Synthetic Combustion"
+      },
+      {
+        "artifact_id": "europepmc_results.json",
+        "db": "europepmc",
+        "locator": "resultList.result[1]",
+        "value": "J Synth Combust"
+      }
+    ]
+  },
+  {
+    "canonical_members": [
+      "rec-0004",
+      "rec-0008"
+    ],
+    "chosen": {
+      "db": "publisher",
+      "value": "We map synthetic folding landscapes under nanoscale confinement."
+    },
+    "field": "abstract",
+    "rule": "source_priority:publisher>crossref>europepmc",
+    "values": [
+      {
+        "artifact_id": "europepmc_results.json",
+        "db": "europepmc",
+        "locator": "resultList.result[0]",
+        "value": "Synthetic folding landscapes are mapped under nanoscale confinement with replica-exchange sampling."
+      },
+      {
+        "artifact_id": "publisher_articles.json",
+        "db": "publisher",
+        "locator": "[1]",
+        "value": "We map synthetic folding landscapes under nanoscale confinement."
+      }
+    ]
+  },
+  {
+    "canonical_members": [
+      "rec-0004",
+      "rec-0008"
+    ],
+    "chosen": {
+      "db": "publisher",
+      "value": [
+        "Lei Wang",
+        "Yu Chen",
+        "Hao Zhao"
+      ]
+    },
+    "field": "authors",
+    "rule": "source_priority:publisher>crossref>europepmc",
+    "values": [
+      {
+        "artifact_id": "europepmc_results.json",
+        "db": "europepmc",
+        "locator": "resultList.result[0]",
+        "value": [
+          "Wang L",
+          "Chen Y",
+          "Zhao H"
+        ]
+      },
+      {
+        "artifact_id": "publisher_articles.json",
+        "db": "publisher",
+        "locator": "[1]",
+        "value": [
+          "Lei Wang",
+          "Yu Chen",
+          "Hao Zhao"
+        ]
+      }
+    ]
+  }
+]

@@ -1,0 +1,13 @@
+{
+  "nodes": [
+    {"id": "10.99999/synth.001", "label": "XQ-7 binding (2021)"},
+    {"id": "10.99999/synth.002", "label": "Allosteric pockets (2022)"},
+    {"id": "10.99999/synth.003", "label": "Selectivity profiling (2023)"},
+    {"id": "10.99999/synth.004", "label": "Resistance mutations (2024)"}
+  ],
+  "edges": [
+    {"from": "10.99999/synth.003", "to": "10.99999/synth.001", "type": "cites"},
+    {"from": "10.99999/synth.004", "to": "10.99999/synth.003", "type": "cites"},
+    {"from": "10.99999/synth.004", "to": "10.99999/synth.077", "type": "cites"}
+  ]
+}

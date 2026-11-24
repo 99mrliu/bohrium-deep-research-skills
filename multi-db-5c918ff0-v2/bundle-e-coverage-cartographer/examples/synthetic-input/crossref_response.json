@@ -1,0 +1,40 @@
+{
+  "status": "ok",
+  "message-type": "work-list",
+  "message": {
+    "total-results": 3,
+    "items": [
+      {
+        "DOI": "10.99955/SYN.2021.0001",
+        "title": ["Synthetic Graph Networks for Catalyst Screening"],
+        "author": [
+          {"given": "Wei", "family": "Zhang"},
+          {"given": "Hui", "family": "Li"}
+        ],
+        "container-title": ["Synthetic Journal of Catalysis"],
+        "issued": {"date-parts": [[2021]]},
+        "volume": "12",
+        "issue": "3",
+        "page": "101-115",
+        "abstract": "A synthetic abstract about graph neural networks for catalyst screening, written for teaching purposes only.",
+        "reference": [
+          {"key": "ref1", "DOI": "10.99955/syn.2020.0999"},
+          {"key": "ref2", "DOI": "10.99955/syn.2019.0007"}
+        ]
+      },
+      {
+        "DOI": "10.99955/syn.2021.0002",
+        "title": ["Synthetic Benchmarks for Literature Retrieval Agents"],
+        "author": [
+          {"given": "Lin", "family": "Chen"},
+          {"given": "Ana", "family": "Garcia"}
+        ],
+        "container-title": ["Synthetic Journal of Retrieval"],
+        "issued": {"date-parts": [[2021]]},
+        "volume": "5",
+        "issue": "1",
+        "page": "33-41"
+      }
+    ]
+  }
+}

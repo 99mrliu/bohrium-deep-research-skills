@@ -1,0 +1,98 @@
+{
+  "case_id": "synthetic-source-gate-001",
+  "excluded_items": [],
+  "gate_version": "1.0.0",
+  "quarantined_artifacts": [],
+  "record_count": 7,
+  "records": [
+    {
+      "container": "Journal of Synthetic Cheminformatics",
+      "identifiers": {
+        "doi": "10.99999/synth.001"
+      },
+      "locator": "message.items[0]",
+      "record_id": "rec-0001",
+      "source_artifact": "art-001",
+      "source_type": "crossref",
+      "title": "Synthetic Study of XQ-7 Binding to SynthKinase-2 in Vitro",
+      "year": 2021
+    },
+    {
+      "container": "Annals of Fictional Structural Biology",
+      "identifiers": {
+        "doi": "10.99999/synth.002"
+      },
+      "locator": "message.items[1]",
+      "record_id": "rec-0002",
+      "source_artifact": "art-001",
+      "source_type": "crossref",
+      "title": "Synthetic Study of Allosteric Pockets in SynthKinase Family Proteins",
+      "year": 2022
+    },
+    {
+      "container": "J Synth Cheminform",
+      "identifiers": {
+        "doi": "10.99999/synth.001",
+        "id": "33000001",
+        "pmid": "33000001"
+      },
+      "locator": "resultList.result[0]",
+      "record_id": "rec-0003",
+      "source_artifact": "art-002",
+      "source_type": "europepmc",
+      "title": "Synthetic study of XQ-7 binding to SynthKinase-2 in vitro.",
+      "year": "2021"
+    },
+    {
+      "container": "Fictional J Med Chem",
+      "identifiers": {
+        "doi": "10.99999/synth.003",
+        "id": "33000002",
+        "pmid": "33000002"
+      },
+      "locator": "resultList.result[1]",
+      "record_id": "rec-0004",
+      "source_artifact": "art-002",
+      "source_type": "europepmc",
+      "title": "Synthetic Study of Selectivity Profiling for XQ-class Ligands Against SynthKinase Panels.",
+      "year": "2023"
+    },
+    {
+      "container": "Journal of Synthetic Cheminformatics",
+      "identifiers": {
+        "doi": "10.99999/synth.001"
+      },
+      "locator": "[0]",
+      "record_id": "rec-0005",
+      "source_artifact": "art-004",
+      "source_type": "publisher",
+      "title": "Synthetic Study of XQ-7 Binding to SynthKinase-2 in Vitro",
+      "year": 2021
+    },
+    {
+      "container": "Fictional Journal of Medicinal Chemistry",
+      "identifiers": {
+        "doi": "10.99999/synth.003"
+      },
+      "locator": "[1]",
+      "record_id": "rec-0006",
+      "source_artifact": "art-004",
+      "source_type": "publisher",
+      "title": "Synthetic Study of Selectivity Profiling for XQ-class Ligands Against SynthKinase Panels",
+      "year": 2023
+    },
+    {
+      "container": "Imaginary Oncology Letters",
+      "identifiers": {
+        "doi": "10.99999/synth.004"
+      },
+      "locator": "[2]",
+      "record_id": "rec-0007",
+      "source_artifact": "art-004",
+      "source_type": "publisher",
+      "title": "Synthetic Study of Resistance Mutations in SynthKinase-2 Gatekeeper Region",
+      "year": 2024
+    }
+  ],
+  "run_id": "gate-f14deb7e8fdd0c95"
+}

@@ -1,0 +1,234 @@
+{
+  "artifacts": [
+    {
+      "path": "authenticity_ledger.json",
+      "sha256": "28ff0d7d68279d5e422a85b56b7695714adfcd0b4b5c2af5296017027b1c09ec"
+    },
+    {
+      "path": "authenticity_report.md",
+      "sha256": "fd2baf6ff16cd5e954c09fbde50c456fa26d7d0edeb4d80132495528f87fbaf6"
+    },
+    {
+      "path": "gated_records.json",
+      "sha256": "3d07a784737c3309ce286ce31f44b910815183c0f9b36058fd75ca93153c543c"
+    },
+    {
+      "path": "run-record.md",
+      "sha256": "c1e64c3d0b8f57aaa7093089e4e869ea3205732b8007c855d75081323b1a79b7"
+    },
+    {
+      "note": "self-hash omitted to avoid self-reference; verify by re-running the gate",
+      "path": "result.json",
+      "sha256": null
+    }
+  ],
+  "authenticity_summary": {
+    "edges_dangling": 1,
+    "edges_total": 3,
+    "import_entries": {
+      "inconsistent": 1,
+      "not_verifiable": 0,
+      "verified": 3
+    },
+    "quarantined": 0,
+    "total_artifacts": 5,
+    "total_gated_records": 7,
+    "total_records_seen": 7,
+    "trusted": 2,
+    "trusted_with_warnings": 3
+  },
+  "case_id": "synthetic-source-gate-001",
+  "change_records": [
+    {
+      "action": "intake_case",
+      "detail": "case.json read (sha256 9695bbee2f0f…); 5 contract fields declared",
+      "seq": 1
+    },
+    {
+      "action": "intake_task",
+      "detail": "task.md read (sha256 ec01ae4b7c64…)",
+      "seq": 2
+    },
+    {
+      "action": "discover_materials",
+      "detail": "5 material files discovered by sorted directory scan + case.json references; 0 referenced but missing",
+      "seq": 3
+    },
+    {
+      "action": "check_reference_graph",
+      "detail": "3 edges checked, 1 dangling (reported, not fatal)",
+      "seq": 4
+    },
+    {
+      "action": "quarantine_import_entry",
+      "detail": "art-003 records[3]: IMPORT_INCONSISTENT",
+      "seq": 5
+    },
+    {
+      "action": "write_output",
+      "detail": "authenticity_ledger.json",
+      "seq": 6
+    },
+    {
+      "action": "write_output",
+      "detail": "gated_records.json",
+      "seq": 7
+    },
+    {
+      "action": "write_output",
+      "detail": "authenticity_report.md",
+      "seq": 8
+    }
+  ],
+  "curator_comment": null,
+  "downstream_ready": true,
+  "gated_record_count": 7,
+  "gated_records": [
+    {
+      "container": "Journal of Synthetic Cheminformatics",
+      "identifiers": {
+        "doi": "10.99999/synth.001"
+      },
+      "locator": "message.items[0]",
+      "record_id": "rec-0001",
+      "source_artifact": "art-001",
+      "source_type": "crossref",
+      "title": "Synthetic Study of XQ-7 Binding to SynthKinase-2 in Vitro",
+      "year": 2021
+    },
+    {
+      "container": "Annals of Fictional Structural Biology",
+      "identifiers": {
+        "doi": "10.99999/synth.002"
+      },
+      "locator": "message.items[1]",
+      "record_id": "rec-0002",
+      "source_artifact": "art-001",
+      "source_type": "crossref",
+      "title": "Synthetic Study of Allosteric Pockets in SynthKinase Family Proteins",
+      "year": 2022
+    },
+    {
+      "container": "J Synth Cheminform",
+      "identifiers": {
+        "doi": "10.99999/synth.001",
+        "id": "33000001",
+        "pmid": "33000001"
+      },
+      "locator": "resultList.result[0]",
+      "record_id": "rec-0003",
+      "source_artifact": "art-002",
+      "source_type": "europepmc",
+      "title": "Synthetic study of XQ-7 binding to SynthKinase-2 in vitro.",
+      "year": "2021"
+    },
+    {
+      "container": "Fictional J Med Chem",
+      "identifiers": {
+        "doi": "10.99999/synth.003",
+        "id": "33000002",
+        "pmid": "33000002"
+      },
+      "locator": "resultList.result[1]",
+      "record_id": "rec-0004",
+      "source_artifact": "art-002",
+      "source_type": "europepmc",
+      "title": "Synthetic Study of Selectivity Profiling for XQ-class Ligands Against SynthKinase Panels.",
+      "year": "2023"
+    },
+    {
+      "container": "Journal of Synthetic Cheminformatics",
+      "identifiers": {
+        "doi": "10.99999/synth.001"
+      },
+      "locator": "[0]",
+      "record_id": "rec-0005",
+      "source_artifact": "art-004",
+      "source_type": "publisher",
+      "title": "Synthetic Study of XQ-7 Binding to SynthKinase-2 in Vitro",
+      "year": 2021
+    },
+    {
+      "container": "Fictional Journal of Medicinal Chemistry",
+      "identifiers": {
+        "doi": "10.99999/synth.003"
+      },
+      "locator": "[1]",
+      "record_id": "rec-0006",
+      "source_artifact": "art-004",
+      "source_type": "publisher",
+      "title": "Synthetic Study of Selectivity Profiling for XQ-class Ligands Against SynthKinase Panels",
+      "year": 2023
+    },
+    {
+      "container": "Imaginary Oncology Letters",
+      "identifiers": {
+        "doi": "10.99999/synth.004"
+      },
+      "locator": "[2]",
+      "record_id": "rec-0007",
+      "source_artifact": "art-004",
+      "source_type": "publisher",
+      "title": "Synthetic Study of Resistance Mutations in SynthKinase-2 Gatekeeper Region",
+      "year": 2024
+    }
+  ],
+  "quarantined_artifacts": [],
+  "run_id": "gate-f14deb7e8fdd0c95",
+  "sources": [
+    {
+      "path": "case.json",
+      "role": "case",
+      "sha256": "9695bbee2f0f68cb619d752a56c6412eb427ddbf937c6c8d75bc7097d02dcf93"
+    },
+    {
+      "path": "task.md",
+      "role": "task",
+      "sha256": "ec01ae4b7c646227f6327594e0e2feac72122fb067ce548a7865299ac4ad6b8e"
+    },
+    {
+      "artifact_id": "art-001",
+      "path": "materials/crossref_response.json",
+      "role": "material",
+      "sha256": "1a7d240b9c639442b93b566827b2b25205b1310db9ec0212badc08e2dec9f13e",
+      "verdict": "trusted"
+    },
+    {
+      "artifact_id": "art-002",
+      "path": "materials/europepmc_response.json",
+      "role": "material",
+      "sha256": "a25e11df6a4f0f08ca49eda05261796bb2db4c66acc5af348b436254a026ed60",
+      "verdict": "trusted_with_warnings"
+    },
+    {
+      "artifact_id": "art-003",
+      "path": "materials/import_state.json",
+      "role": "material",
+      "sha256": "834df48d44554364b978cad86cfd0157038651616d3143083b13ebcbd7e6ad79",
+      "verdict": "trusted_with_warnings"
+    },
+    {
+      "artifact_id": "art-004",
+      "path": "materials/publisher_records.json",
+      "role": "material",
+      "sha256": "1a9cede196eacd9a122b04385e97ae0be68a809438d074d962b45172a185aa58",
+      "verdict": "trusted"
+    },
+    {
+      "artifact_id": "art-005",
+      "path": "materials/reference_graph.json",
+      "role": "material",
+      "sha256": "401f7d5a344130568a7aa56fcd4f3e8c0651c6114b7f336d59a7d94584611e15",
+      "verdict": "trusted_with_warnings"
+    }
+  ],
+  "status": "partial",
+  "uncertainty": [
+    "1 reference-graph edge(s) dangle outside the gated identifier universe; reported, not fatal",
+    "1 import_state entrie(s) are inconsistent with the source responses and were quarantined",
+    "contract field(s) curator_comment could not be filled honestly and are null (see unresolved_contract_fields)"
+  ],
+  "unresolved_contract_fields": [
+    "curator_comment"
+  ]
+}

@@ -1,0 +1,8 @@
+[
+  {
+    "_note": "EXAMPLE of the --adjudications FILE format (synthetic teaching data). pair holds the two record ids exactly as they appear in dedup_decisions.jsonl / arbitration_queue.json; decision is merge|separate; rationale is preserved in the decision log. This ruling is illustrative — the shipped synthetic-output was produced WITHOUT adjudications so the T3 pair stays pending.",
+    "pair": ["rec-0006", "rec-0009"],
+    "decision": "separate",
+    "rationale": "Titles differ in scope (singular 'Prediction' 2023 vs plural 'Predictions' 2024) and abstracts describe different benchmark scales; treat as distinct studies pending curator review."
+  }
+]

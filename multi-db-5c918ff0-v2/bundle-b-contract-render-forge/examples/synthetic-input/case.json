@@ -1,0 +1,20 @@
+{
+  "case_id": "synthetic-render-forge-001",
+  "_note": "SYNTHETIC teaching data",
+  "research_question": "Which synthetic catalysts improve selectivity in fictional model reactions?",
+  "source_dbs": ["crossref", "europepmc", "publisher"],
+  "materials": [
+    "materials/crossref_response.json",
+    "materials/europepmc_response.json",
+    "materials/publisher_records.json",
+    "materials/reference_graph.json",
+    "materials/import_state.json"
+  ],
+  "output_contract": {
+    "candidate_set": "归一化去重后的候选记录全集(含字段级溯源)",
+    "ranking_basis": "排序依据:与 research_question / task.md 的匹配词、评分公式与最终次序",
+    "evidence_records": "每条规范化记录的完整证据链(来源库/材料/JSON 定位/去重成员)",
+    "status_notes": "数据处理状态说明:单一来源记录、系统性缺失、跨来源冲突、未决字段",
+    "coverage_statement": "数据库 × 关键字段覆盖矩阵的结论性陈述(计数、单一来源、系统性缺失)"
+  }
+}

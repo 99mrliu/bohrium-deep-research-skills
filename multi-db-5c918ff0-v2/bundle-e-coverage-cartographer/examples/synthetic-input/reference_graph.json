@@ -1,0 +1,27 @@
+{
+  "_note": "SYNTHETIC retained reference graph",
+  "nodes": [
+    {
+      "id": "n1",
+      "doi": "10.99955/syn.2021.0001",
+      "title": "Synthetic Graph Networks for Catalyst Screening",
+      "year": 2021
+    },
+    {
+      "id": "n2",
+      "doi": "10.99955/syn.2021.0002",
+      "title": "Synthetic Benchmarks for Literature Retrieval Agents",
+      "year": 2021
+    },
+    {
+      "id": "n3",
+      "doi": "10.99955/syn.2020.0999",
+      "title": "Synthetic Phantom Reference on Retrieval Evaluation",
+      "year": 2020
+    }
+  ],
+  "edges": [
+    {"from": "n1", "to": "n3"},
+    {"from": "n2", "to": "n3"}
+  ]
+}

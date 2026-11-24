@@ -1,0 +1,36 @@
+{
+  "status": "ok",
+  "message-type": "work-list",
+  "message-version": "1.0.0",
+  "message": {
+    "total-results": 2,
+    "items": [
+      {
+        "DOI": "10.99999/synth.001",
+        "title": ["Synthetic Study of XQ-7 Binding to SynthKinase-2 in Vitro"],
+        "author": [
+          {"family": "Zhan", "given": "A."},
+          {"family": "Morita", "given": "K."}
+        ],
+        "issued": {"date-parts": [[2021]]},
+        "container-title": ["Journal of Synthetic Cheminformatics"],
+        "volume": "12",
+        "issue": "3",
+        "page": "101-109"
+      },
+      {
+        "DOI": "10.99999/synth.002",
+        "title": ["Synthetic Study of Allosteric Pockets in SynthKinase Family Proteins"],
+        "author": [
+          {"family": "Okafor", "given": "N."},
+          {"family": "Lindqvist", "given": "E."}
+        ],
+        "issued": {"date-parts": [[2022]]},
+        "container-title": ["Annals of Fictional Structural Biology"],
+        "volume": "8",
+        "issue": "1",
+        "page": "44-52"
+      }
+    ]
+  }
+}

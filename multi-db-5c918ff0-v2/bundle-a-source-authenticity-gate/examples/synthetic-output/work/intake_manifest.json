@@ -1,0 +1,56 @@
+{
+  "case_id": "synthetic-source-gate-001",
+  "intake": [
+    {
+      "bom": false,
+      "classification": "crossref",
+      "path": "materials/crossref_response.json",
+      "replacement_char_count": 0,
+      "sha256": "1a7d240b9c639442b93b566827b2b25205b1310db9ec0212badc08e2dec9f13e",
+      "size_bytes": 1043,
+      "utf8_ok": true,
+      "verdict": "trusted"
+    },
+    {
+      "bom": false,
+      "classification": "europepmc",
+      "path": "materials/europepmc_response.json",
+      "replacement_char_count": 0,
+      "sha256": "a25e11df6a4f0f08ca49eda05261796bb2db4c66acc5af348b436254a026ed60",
+      "size_bytes": 857,
+      "utf8_ok": true,
+      "verdict": "trusted_with_warnings"
+    },
+    {
+      "bom": false,
+      "classification": "import_state",
+      "path": "materials/import_state.json",
+      "replacement_char_count": 0,
+      "sha256": "834df48d44554364b978cad86cfd0157038651616d3143083b13ebcbd7e6ad79",
+      "size_bytes": 304,
+      "utf8_ok": true,
+      "verdict": "trusted_with_warnings"
+    },
+    {
+      "bom": false,
+      "classification": "publisher",
+      "path": "materials/publisher_records.json",
+      "replacement_char_count": 0,
+      "sha256": "1a9cede196eacd9a122b04385e97ae0be68a809438d074d962b45172a185aa58",
+      "size_bytes": 935,
+      "utf8_ok": true,
+      "verdict": "trusted"
+    },
+    {
+      "bom": false,
+      "classification": "reference_graph",
+      "path": "materials/reference_graph.json",
+      "replacement_char_count": 0,
+      "sha256": "401f7d5a344130568a7aa56fcd4f3e8c0651c6114b7f336d59a7d94584611e15",
+      "size_bytes": 567,
+      "utf8_ok": true,
+      "verdict": "trusted_with_warnings"
+    }
+  ],
+  "run_id": "gate-f14deb7e8fdd0c95"
+}

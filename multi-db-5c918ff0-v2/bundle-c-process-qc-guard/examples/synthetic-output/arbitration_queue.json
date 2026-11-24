@@ -1,0 +1,21 @@
+{
+  "note": "模糊重复对绝不自动合并;须由模型在单次批量请求中仲裁,决定写入 work/arbitration_decisions.json 后 --resume 重跑",
+  "pairs": [
+    {
+      "jaccard": "0.6250",
+      "pair_id": "pair:crossref#03--publisher#02",
+      "reason_code": "fuzzy_title_jaccard",
+      "record_ids": [
+        "crossref#03",
+        "publisher#02"
+      ],
+      "status": "resolved_distinct",
+      "titles": [
+        "Synthetic lattice dynamics of perovskite halides",
+        "Synthetic lattice dynamics of perovskite halide films"
+      ]
+    }
+  ],
+  "pending_pair_ids": [],
+  "threshold": 0.6
+}

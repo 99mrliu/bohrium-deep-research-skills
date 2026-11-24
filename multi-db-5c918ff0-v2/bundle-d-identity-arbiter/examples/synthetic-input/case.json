@@ -1,0 +1,19 @@
+{
+  "case_id": "synthetic-identity-arbiter-001",
+  "_note": "SYNTHETIC teaching data — all papers, DOIs, PMIDs and venues are fictional; safe for public release.",
+  "research_question": "跨库联合检索去重：给定来自 Crossref、EuropePMC 与出版方的离线响应以及留存的引用图，判定哪些记录指向同一篇论文，产出规范记录与可解释的判定轨迹。",
+  "source_dbs": ["crossref", "europepmc", "publisher"],
+  "materials": [
+    "materials/crossref_works.json",
+    "materials/europepmc_results.json",
+    "materials/publisher_articles.json",
+    "materials/reference_graph.json",
+    "materials/import_state.json"
+  ],
+  "output_contract": {
+    "canonical_records": {"type": "list", "description": "去重后的规范记录，含字段级溯源"},
+    "conflicts": {"type": "list", "description": "跨来源字段冲突日志"},
+    "arbitration_pending": {"type": "list", "description": "待仲裁的 T3 模糊候选对"},
+    "identity_summary": {"type": "dict", "description": "分层计数与合并统计"}
+  }
+}

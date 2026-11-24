@@ -1,0 +1,18 @@
+{
+  "graph_id": "synthetic-refgraph-001",
+  "_note": "Retained reference graph; aliases are the ONLY sanctioned cross-identifier links.",
+  "aliases": [
+    {"doi": "10.99966/synth.2024.020", "pmid": "38900001"}
+  ],
+  "nodes": [
+    {"id": "10.99966/synth.2024.001", "kind": "doi"},
+    {"id": "10.99966/synth.2024.020", "kind": "doi"},
+    {"id": "10.99966/synth.2024.030", "kind": "doi"},
+    {"id": "10.99966/synth.2023.010", "kind": "doi"},
+    {"id": "10.99966/synth.2025.100", "kind": "doi"}
+  ],
+  "edges": [
+    {"from": "10.99966/synth.2024.030", "to": "10.99966/synth.2023.010", "kind": "cites"},
+    {"from": "10.99966/synth.2025.100", "to": "10.99966/synth.2024.001", "kind": "cites"}
+  ]
+}

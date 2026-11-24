@@ -1,0 +1,730 @@
+{
+  "arbitration_pending": [
+    {
+      "evidence": {
+        "shared_identifiers": [],
+        "surname_overlap": 1.0,
+        "title_sim": 0.75,
+        "year_diff": 1
+      },
+      "pair": [
+        "rec-0006",
+        "rec-0009"
+      ],
+      "reason_code": "T3_FUZZY_CANDIDATE",
+      "status": "pending_arbitration",
+      "tier": "T3"
+    }
+  ],
+  "artifacts": {
+    "arbitration_queue": "synthetic-output/work/arbitration_queue.json",
+    "conflict_log": "synthetic-output/work/conflict_log.json",
+    "dedup_decisions": "synthetic-output/work/dedup_decisions.jsonl",
+    "identity_report": "synthetic-output/work/identity_report.md",
+    "merged_records": "synthetic-output/work/merged_records.json"
+  },
+  "canonical_records": [
+    {
+      "abstract": "A synthetic spectral solver is validated on turbulent combustion benchmarks.",
+      "authors": [
+        "Na Li",
+        "John Smith"
+      ],
+      "canonical_id": "canon-0001",
+      "doi": "10.99966/synth.2023.010",
+      "issue": null,
+      "journal": "Journal of Synthetic Combustion",
+      "member_records": [
+        "rec-0002",
+        "rec-0005"
+      ],
+      "merge_tier": "T2",
+      "pages": "201-214",
+      "pmcid": null,
+      "pmid": "38765432",
+      "provenance": {
+        "abstract": {
+          "artifact_id": "europepmc_results.json",
+          "db": "europepmc",
+          "locator": "resultList.result[1]"
+        },
+        "authors": {
+          "artifact_id": "crossref_works.json",
+          "db": "crossref",
+          "locator": "message.items[1]"
+        },
+        "doi": {
+          "artifact_id": "crossref_works.json",
+          "db": "crossref",
+          "locator": "message.items[1]"
+        },
+        "issue": null,
+        "journal": {
+          "artifact_id": "crossref_works.json",
+          "db": "crossref",
+          "locator": "message.items[1]"
+        },
+        "pages": {
+          "artifact_id": "crossref_works.json",
+          "db": "crossref",
+          "locator": "message.items[1]"
+        },
+        "pmcid": null,
+        "pmid": {
+          "artifact_id": "europepmc_results.json",
+          "db": "europepmc",
+          "locator": "resultList.result[1]"
+        },
+        "title": {
+          "artifact_id": "crossref_works.json",
+          "db": "crossref",
+          "locator": "message.items[1]"
+        },
+        "url": {
+          "artifact_id": "crossref_works.json",
+          "db": "crossref",
+          "locator": "message.items[1]"
+        },
+        "volume": {
+          "artifact_id": "crossref_works.json",
+          "db": "crossref",
+          "locator": "message.items[1]"
+        },
+        "year": {
+          "artifact_id": "crossref_works.json",
+          "db": "crossref",
+          "locator": "message.items[1]"
+        }
+      },
+      "title": "Synthetic Spectral Methods for Turbulent Combustion",
+      "url": "https://doi.org/10.99966/synth.2023.010",
+      "volume": "8",
+      "year": 2023
+    },
+    {
+      "abstract": "We study synthetic lattice dynamics of quasi-periodic crystals using harmonic approximations.",
+      "authors": [
+        "Wei Zhang",
+        "Mei Liu"
+      ],
+      "canonical_id": "canon-0002",
+      "doi": "10.99966/synth.2024.001",
+      "issue": "2",
+      "journal": "Journal of Synthetic Crystallography",
+      "member_records": [
+        "rec-0001",
+        "rec-0007"
+      ],
+      "merge_tier": "T1",
+      "pages": "45-58",
+      "pmcid": null,
+      "pmid": null,
+      "provenance": {
+        "abstract": {
+          "artifact_id": "publisher_articles.json",
+          "db": "publisher",
+          "locator": "[0]"
+        },
+        "authors": {
+          "artifact_id": "publisher_articles.json",
+          "db": "publisher",
+          "locator": "[0]"
+        },
+        "doi": {
+          "artifact_id": "publisher_articles.json",
+          "db": "publisher",
+          "locator": "[0]"
+        },
+        "issue": {
+          "artifact_id": "publisher_articles.json",
+          "db": "publisher",
+          "locator": "[0]"
+        },
+        "journal": {
+          "artifact_id": "publisher_articles.json",
+          "db": "publisher",
+          "locator": "[0]"
+        },
+        "pages": {
+          "artifact_id": "publisher_articles.json",
+          "db": "publisher",
+          "locator": "[0]"
+        },
+        "pmcid": null,
+        "pmid": null,
+        "title": {
+          "artifact_id": "publisher_articles.json",
+          "db": "publisher",
+          "locator": "[0]"
+        },
+        "url": {
+          "artifact_id": "publisher_articles.json",
+          "db": "publisher",
+          "locator": "[0]"
+        },
+        "volume": {
+          "artifact_id": "publisher_articles.json",
+          "db": "publisher",
+          "locator": "[0]"
+        },
+        "year": {
+          "artifact_id": "publisher_articles.json",
+          "db": "publisher",
+          "locator": "[0]"
+        }
+      },
+      "title": "Synthetic Lattice Dynamics of Quasi-Periodic Crystals",
+      "url": "https://publisher.example/synth/2024/001",
+      "volume": "12",
+      "year": 2024
+    },
+    {
+      "abstract": "We map synthetic folding landscapes under nanoscale confinement.",
+      "authors": [
+        "Lei Wang",
+        "Yu Chen",
+        "Hao Zhao"
+      ],
+      "canonical_id": "canon-0003",
+      "doi": "10.99966/synth.2024.020",
+      "issue": null,
+      "journal": "Synthetic Biophysics Reports",
+      "member_records": [
+        "rec-0004",
+        "rec-0008"
+      ],
+      "merge_tier": "T1",
+      "pages": "88-97",
+      "pmcid": null,
+      "pmid": "38900001",
+      "provenance": {
+        "abstract": {
+          "artifact_id": "publisher_articles.json",
+          "db": "publisher",
+          "locator": "[1]"
+        },
+        "authors": {
+          "artifact_id": "publisher_articles.json",
+          "db": "publisher",
+          "locator": "[1]"
+        },
+        "doi": {
+          "artifact_id": "publisher_articles.json",
+          "db": "publisher",
+          "locator": "[1]"
+        },
+        "issue": null,
+        "journal": {
+          "artifact_id": "publisher_articles.json",
+          "db": "publisher",
+          "locator": "[1]"
+        },
+        "pages": {
+          "artifact_id": "publisher_articles.json",
+          "db": "publisher",
+          "locator": "[1]"
+        },
+        "pmcid": null,
+        "pmid": {
+          "artifact_id": "europepmc_results.json",
+          "db": "europepmc",
+          "locator": "resultList.result[0]"
+        },
+        "title": {
+          "artifact_id": "publisher_articles.json",
+          "db": "publisher",
+          "locator": "[1]"
+        },
+        "url": null,
+        "volume": {
+          "artifact_id": "publisher_articles.json",
+          "db": "publisher",
+          "locator": "[1]"
+        },
+        "year": {
+          "artifact_id": "publisher_articles.json",
+          "db": "publisher",
+          "locator": "[1]"
+        }
+      },
+      "title": "Synthetic Protein Folding Landscapes under Confinement",
+      "url": null,
+      "volume": "6",
+      "year": 2024
+    },
+    {
+      "abstract": "We propose synthetic graph kernels evaluated on large-scale molecular property prediction benchmarks with uncertainty calibration.",
+      "authors": [
+        "Rui Zhao",
+        "Shan Qian"
+      ],
+      "canonical_id": "canon-0004",
+      "doi": "10.99966/synth.2024.030",
+      "issue": null,
+      "journal": "Synthetic Cheminformatics",
+      "member_records": [
+        "rec-0009"
+      ],
+      "merge_tier": "single",
+      "pages": "301-315",
+      "pmcid": null,
+      "pmid": null,
+      "provenance": {
+        "abstract": {
+          "artifact_id": "publisher_articles.json",
+          "db": "publisher",
+          "locator": "[2]"
+        },
+        "authors": {
+          "artifact_id": "publisher_articles.json",
+          "db": "publisher",
+          "locator": "[2]"
+        },
+        "doi": {
+          "artifact_id": "publisher_articles.json",
+          "db": "publisher",
+          "locator": "[2]"
+        },
+        "issue": null,
+        "journal": {
+          "artifact_id": "publisher_articles.json",
+          "db": "publisher",
+          "locator": "[2]"
+        },
+        "pages": {
+          "artifact_id": "publisher_articles.json",
+          "db": "publisher",
+          "locator": "[2]"
+        },
+        "pmcid": null,
+        "pmid": null,
+        "title": {
+          "artifact_id": "publisher_articles.json",
+          "db": "publisher",
+          "locator": "[2]"
+        },
+        "url": null,
+        "volume": {
+          "artifact_id": "publisher_articles.json",
+          "db": "publisher",
+          "locator": "[2]"
+        },
+        "year": {
+          "artifact_id": "publisher_articles.json",
+          "db": "publisher",
+          "locator": "[2]"
+        }
+      },
+      "title": "Synthetic Graph Kernels for Molecular Property Predictions",
+      "url": null,
+      "volume": "11",
+      "year": 2024
+    },
+    {
+      "abstract": null,
+      "authors": [
+        "Priya Nair"
+      ],
+      "canonical_id": "canon-0005",
+      "doi": "10.99966/synth.2025.100",
+      "issue": null,
+      "journal": "Synthetic Oceanography Letters",
+      "member_records": [
+        "rec-0003"
+      ],
+      "merge_tier": "single",
+      "pages": "1-12",
+      "pmcid": null,
+      "pmid": null,
+      "provenance": {
+        "abstract": null,
+        "authors": {
+          "artifact_id": "crossref_works.json",
+          "db": "crossref",
+          "locator": "message.items[2]"
+        },
+        "doi": {
+          "artifact_id": "crossref_works.json",
+          "db": "crossref",
+          "locator": "message.items[2]"
+        },
+        "issue": null,
+        "journal": {
+          "artifact_id": "crossref_works.json",
+          "db": "crossref",
+          "locator": "message.items[2]"
+        },
+        "pages": {
+          "artifact_id": "crossref_works.json",
+          "db": "crossref",
+          "locator": "message.items[2]"
+        },
+        "pmcid": null,
+        "pmid": null,
+        "title": {
+          "artifact_id": "crossref_works.json",
+          "db": "crossref",
+          "locator": "message.items[2]"
+        },
+        "url": {
+          "artifact_id": "crossref_works.json",
+          "db": "crossref",
+          "locator": "message.items[2]"
+        },
+        "volume": {
+          "artifact_id": "crossref_works.json",
+          "db": "crossref",
+          "locator": "message.items[2]"
+        },
+        "year": {
+          "artifact_id": "crossref_works.json",
+          "db": "crossref",
+          "locator": "message.items[2]"
+        }
+      },
+      "title": "Synthetic Benchmarks for Ocean Acoustic Tomography",
+      "url": "https://doi.org/10.99966/synth.2025.100",
+      "volume": "3",
+      "year": 2025
+    },
+    {
+      "abstract": "We propose synthetic graph kernels evaluated on small molecular property prediction tasks.",
+      "authors": [
+        "Zhao R",
+        "Qian S"
+      ],
+      "canonical_id": "canon-0006",
+      "doi": null,
+      "issue": null,
+      "journal": "Synthetic Cheminformatics",
+      "member_records": [
+        "rec-0006"
+      ],
+      "merge_tier": "single",
+      "pages": null,
+      "pmcid": null,
+      "pmid": "38600111",
+      "provenance": {
+        "abstract": {
+          "artifact_id": "europepmc_results.json",
+          "db": "europepmc",
+          "locator": "resultList.result[2]"
+        },
+        "authors": {
+          "artifact_id": "europepmc_results.json",
+          "db": "europepmc",
+          "locator": "resultList.result[2]"
+        },
+        "doi": null,
+        "issue": null,
+        "journal": {
+          "artifact_id": "europepmc_results.json",
+          "db": "europepmc",
+          "locator": "resultList.result[2]"
+        },
+        "pages": null,
+        "pmcid": null,
+        "pmid": {
+          "artifact_id": "europepmc_results.json",
+          "db": "europepmc",
+          "locator": "resultList.result[2]"
+        },
+        "title": {
+          "artifact_id": "europepmc_results.json",
+          "db": "europepmc",
+          "locator": "resultList.result[2]"
+        },
+        "url": null,
+        "volume": null,
+        "year": {
+          "artifact_id": "europepmc_results.json",
+          "db": "europepmc",
+          "locator": "resultList.result[2]"
+        }
+      },
+      "title": "Synthetic Graph Kernels for Molecular Property Prediction",
+      "url": null,
+      "volume": null,
+      "year": 2023
+    }
+  ],
+  "case_id": "synthetic-identity-arbiter-001",
+  "change_records": [
+    "step0: wrote result.json skeleton (status=partial)",
+    "intake: loaded case.json (case_id=synthetic-identity-arbiter-001)",
+    "intake: task.md present (synthetic-input/task.md)",
+    "intake: classified 5 material file(s); 9 record(s); 0 quarantined",
+    "intake: 1 explicit alias pair(s) from reference_graph/import_state",
+    "matching: evaluated 36 pair(s): T1=2 T2=1 T3=1 NONE=32",
+    "merge: 9 record(s) -> 6 canonical record(s); 7 field conflict(s)",
+    "output: wrote dedup_decisions.jsonl, merged_records.json, arbitration_queue.json, conflict_log.json, identity_report.md"
+  ],
+  "conflicts": [
+    {
+      "canonical_members": [
+        "rec-0001",
+        "rec-0007"
+      ],
+      "chosen": {
+        "db": "publisher",
+        "value": "We study synthetic lattice dynamics of quasi-periodic crystals using harmonic approximations."
+      },
+      "field": "abstract",
+      "rule": "source_priority:publisher>crossref>europepmc",
+      "values": [
+        {
+          "artifact_id": "crossref_works.json",
+          "db": "crossref",
+          "locator": "message.items[0]",
+          "value": "We study synthetic lattice dynamics of quasi-periodic crystals."
+        },
+        {
+          "artifact_id": "publisher_articles.json",
+          "db": "publisher",
+          "locator": "[0]",
+          "value": "We study synthetic lattice dynamics of quasi-periodic crystals using harmonic approximations."
+        }
+      ]
+    },
+    {
+      "canonical_members": [
+        "rec-0001",
+        "rec-0007"
+      ],
+      "chosen": {
+        "db": "publisher",
+        "value": "45-58"
+      },
+      "field": "pages",
+      "rule": "source_priority:publisher>crossref>europepmc",
+      "values": [
+        {
+          "artifact_id": "crossref_works.json",
+          "db": "crossref",
+          "locator": "message.items[0]",
+          "value": "45–58"
+        },
+        {
+          "artifact_id": "publisher_articles.json",
+          "db": "publisher",
+          "locator": "[0]",
+          "value": "45-58"
+        }
+      ]
+    },
+    {
+      "canonical_members": [
+        "rec-0001",
+        "rec-0007"
+      ],
+      "chosen": {
+        "db": "publisher",
+        "value": "https://publisher.example/synth/2024/001"
+      },
+      "field": "url",
+      "rule": "source_priority:publisher>crossref>europepmc",
+      "values": [
+        {
+          "artifact_id": "crossref_works.json",
+          "db": "crossref",
+          "locator": "message.items[0]",
+          "value": "https://doi.org/10.99966/synth.2024.001"
+        },
+        {
+          "artifact_id": "publisher_articles.json",
+          "db": "publisher",
+          "locator": "[0]",
+          "value": "https://publisher.example/synth/2024/001"
+        }
+      ]
+    },
+    {
+      "canonical_members": [
+        "rec-0002",
+        "rec-0005"
+      ],
+      "chosen": {
+        "db": "crossref",
+        "value": [
+          "Na Li",
+          "John Smith"
+        ]
+      },
+      "field": "authors",
+      "rule": "source_priority:publisher>crossref>europepmc",
+      "values": [
+        {
+          "artifact_id": "crossref_works.json",
+          "db": "crossref",
+          "locator": "message.items[1]",
+          "value": [
+            "Na Li",
+            "John Smith"
+          ]
+        },
+        {
+          "artifact_id": "europepmc_results.json",
+          "db": "europepmc",
+          "locator": "resultList.result[1]",
+          "value": [
+            "Li N",
+            "Smith J"
+          ]
+        }
+      ]
+    },
+    {
+      "canonical_members": [
+        "rec-0002",
+        "rec-0005"
+      ],
+      "chosen": {
+        "db": "crossref",
+        "value": "Journal of Synthetic Combustion"
+      },
+      "field": "journal",
+      "rule": "source_priority:publisher>crossref>europepmc",
+      "values": [
+        {
+          "artifact_id": "crossref_works.json",
+          "db": "crossref",
+          "locator": "message.items[1]",
+          "value": "Journal of Synthetic Combustion"
+        },
+        {
+          "artifact_id": "europepmc_results.json",
+          "db": "europepmc",
+          "locator": "resultList.result[1]",
+          "value": "J Synth Combust"
+        }
+      ]
+    },
+    {
+      "canonical_members": [
+        "rec-0004",
+        "rec-0008"
+      ],
+      "chosen": {
+        "db": "publisher",
+        "value": "We map synthetic folding landscapes under nanoscale confinement."
+      },
+      "field": "abstract",
+      "rule": "source_priority:publisher>crossref>europepmc",
+      "values": [
+        {
+          "artifact_id": "europepmc_results.json",
+          "db": "europepmc",
+          "locator": "resultList.result[0]",
+          "value": "Synthetic folding landscapes are mapped under nanoscale confinement with replica-exchange sampling."
+        },
+        {
+          "artifact_id": "publisher_articles.json",
+          "db": "publisher",
+          "locator": "[1]",
+          "value": "We map synthetic folding landscapes under nanoscale confinement."
+        }
+      ]
+    },
+    {
+      "canonical_members": [
+        "rec-0004",
+        "rec-0008"
+      ],
+      "chosen": {
+        "db": "publisher",
+        "value": [
+          "Lei Wang",
+          "Yu Chen",
+          "Hao Zhao"
+        ]
+      },
+      "field": "authors",
+      "rule": "source_priority:publisher>crossref>europepmc",
+      "values": [
+        {
+          "artifact_id": "europepmc_results.json",
+          "db": "europepmc",
+          "locator": "resultList.result[0]",
+          "value": [
+            "Wang L",
+            "Chen Y",
+            "Zhao H"
+          ]
+        },
+        {
+          "artifact_id": "publisher_articles.json",
+          "db": "publisher",
+          "locator": "[1]",
+          "value": [
+            "Lei Wang",
+            "Yu Chen",
+            "Hao Zhao"
+          ]
+        }
+      ]
+    }
+  ],
+  "identity_summary": {
+    "alias_pairs_loaded": 1,
+    "arbitration_pending": 1,
+    "canonical_records": 6,
+    "conflicts": 7,
+    "input_records": 9,
+    "merges_applied": 3,
+    "quarantined_files": 0,
+    "tier_counts": {
+      "NONE": 32,
+      "T1": 2,
+      "T2": 1,
+      "T3": 1
+    }
+  },
+  "quarantined_materials": [],
+  "sources": [
+    {
+      "classification": "crossref",
+      "file": "crossref_works.json",
+      "records": 3
+    },
+    {
+      "classification": "europepmc",
+      "file": "europepmc_results.json",
+      "records": 3
+    },
+    {
+      "classification": "import_state",
+      "file": "import_state.json",
+      "records": 0
+    },
+    {
+      "classification": "publisher_array",
+      "file": "publisher_articles.json",
+      "records": 3
+    },
+    {
+      "classification": "reference_graph",
+      "file": "reference_graph.json",
+      "records": 0
+    }
+  ],
+  "status": "partial",
+  "summary": {
+    "alias_pairs_loaded": 1,
+    "arbitration_pending": 1,
+    "canonical_records": 6,
+    "conflicts": 7,
+    "input_records": 9,
+    "merges_applied": 3,
+    "quarantined_files": 0,
+    "tier_counts": {
+      "NONE": 32,
+      "T1": 2,
+      "T2": 1,
+      "T3": 1
+    }
+  },
+  "uncertainty": [
+    "1 T3 fuzzy pair(s) pending arbitration (NOT merged): rec-0006~rec-0009"
+  ],
+  "unresolved_contract_fields": []
+}

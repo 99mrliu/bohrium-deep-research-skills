@@ -1,0 +1,56 @@
+{
+  "budget_envelope": {
+    "budget_math_reference": "references/budget-and-checkpoints.md",
+    "max_model_requests": 64,
+    "max_seconds": 900,
+    "model_request_purpose": "identity 阶段模糊重复对的单次批量仲裁",
+    "planned_model_requests_max": 1,
+    "planned_model_requests_min": 0,
+    "reserve_model_requests": 63,
+    "reserve_note": "剩余预算保留给 Harness 编排、契约核验与异常重试",
+    "scripted_batching": "5 个脚本化阶段合并为 1 条 bash 命令执行"
+  },
+  "case_id": "synthetic-qc-guard-001",
+  "model_judgment_points": [
+    {
+      "kind": "fuzzy_duplicate_arbitration",
+      "mode": "single batched request over work/arbitration_queue.json",
+      "stage": "identity"
+    }
+  ],
+  "plan_version": "1.0.0",
+  "replayability": "python3 scripts/qc_guard.py ... --replay 双跑字节级比对",
+  "stages": [
+    {
+      "executor": "script",
+      "invariant": "every_discovered_material_classified",
+      "model_requests": 0,
+      "name": "intake"
+    },
+    {
+      "executor": "script",
+      "invariant": "record_counts_conserved",
+      "model_requests": 0,
+      "name": "normalize"
+    },
+    {
+      "executor": "script+model",
+      "invariant": "every_pair_decision_logged_with_reason_code",
+      "model_judgment_point": "模糊重复对仲裁:单次批量请求,决定写入 work/arbitration_decisions.json",
+      "model_requests": "0 或 1",
+      "name": "identity"
+    },
+    {
+      "executor": "script",
+      "invariant": "coverage_matrix_recomputes_from_merged_records",
+      "model_requests": 0,
+      "name": "coverage"
+    },
+    {
+      "executor": "script",
+      "invariant": "all_contract_fields_present",
+      "model_requests": 0,
+      "name": "report"
+    }
+  ]
+}

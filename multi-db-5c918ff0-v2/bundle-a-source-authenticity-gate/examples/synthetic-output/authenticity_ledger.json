@@ -1,0 +1,214 @@
+{
+  "artifacts": [
+    {
+      "artifact_id": "art-001",
+      "bom": false,
+      "checks": [],
+      "classification": "crossref",
+      "exists": true,
+      "format": "json",
+      "gated_record_count": 2,
+      "identifiers": [
+        "10.99999/synth.001",
+        "10.99999/synth.002"
+      ],
+      "path": "materials/crossref_response.json",
+      "record_count": 2,
+      "replacement_char_count": 0,
+      "sha256": "1a7d240b9c639442b93b566827b2b25205b1310db9ec0212badc08e2dec9f13e",
+      "size_bytes": 1043,
+      "utf8_ok": true,
+      "verdict": "trusted"
+    },
+    {
+      "artifact_id": "art-002",
+      "bom": false,
+      "checks": [
+        {
+          "code": "COUNT_MISMATCH",
+          "detail": "hitCount=3 but resultList contains 2 results; payload may be truncated or inconsistent",
+          "severity": "warning"
+        }
+      ],
+      "classification": "europepmc",
+      "exists": true,
+      "format": "json",
+      "gated_record_count": 2,
+      "identifiers": [
+        "10.99999/synth.001",
+        "10.99999/synth.003",
+        "33000001",
+        "33000002"
+      ],
+      "path": "materials/europepmc_response.json",
+      "record_count": 2,
+      "replacement_char_count": 0,
+      "sha256": "a25e11df6a4f0f08ca49eda05261796bb2db4c66acc5af348b436254a026ed60",
+      "size_bytes": 857,
+      "utf8_ok": true,
+      "verdict": "trusted_with_warnings"
+    },
+    {
+      "artifact_id": "art-003",
+      "bom": false,
+      "checks": [
+        {
+          "code": "IMPORT_INCONSISTENT",
+          "detail": "entry claims import from db 'europepmc' id '33000099' but that identifier is absent from art-002; entry quarantined",
+          "locator": "records[3]",
+          "severity": "warning"
+        }
+      ],
+      "classification": "import_state",
+      "exists": true,
+      "format": "json",
+      "gated_record_count": 0,
+      "import_entries": [
+        {
+          "batch": "b1",
+          "db": "crossref",
+          "db_norm": "crossref",
+          "identifier": "10.99999/synth.001",
+          "identifier_norm": "10.99999/synth.001",
+          "locator": "records[0]"
+        },
+        {
+          "batch": "b1",
+          "db": "crossref",
+          "db_norm": "crossref",
+          "identifier": "10.99999/synth.002",
+          "identifier_norm": "10.99999/synth.002",
+          "locator": "records[1]"
+        },
+        {
+          "batch": "b2",
+          "db": "europepmc",
+          "db_norm": "europepmc",
+          "identifier": "33000001",
+          "identifier_norm": "33000001",
+          "locator": "records[2]"
+        },
+        {
+          "batch": "b2",
+          "db": "europepmc",
+          "db_norm": "europepmc",
+          "identifier": "33000099",
+          "identifier_norm": "33000099",
+          "locator": "records[3]"
+        }
+      ],
+      "import_entry_results": [
+        {
+          "db": "crossref",
+          "identifier": "10.99999/synth.001",
+          "locator": "records[0]",
+          "verdict": "verified"
+        },
+        {
+          "db": "crossref",
+          "identifier": "10.99999/synth.002",
+          "locator": "records[1]",
+          "verdict": "verified"
+        },
+        {
+          "db": "europepmc",
+          "identifier": "33000001",
+          "locator": "records[2]",
+          "verdict": "verified"
+        },
+        {
+          "db": "europepmc",
+          "identifier": "33000099",
+          "locator": "records[3]",
+          "verdict": "quarantined"
+        }
+      ],
+      "path": "materials/import_state.json",
+      "record_count": 4,
+      "replacement_char_count": 0,
+      "sha256": "834df48d44554364b978cad86cfd0157038651616d3143083b13ebcbd7e6ad79",
+      "size_bytes": 304,
+      "utf8_ok": true,
+      "verdict": "trusted_with_warnings"
+    },
+    {
+      "artifact_id": "art-004",
+      "bom": false,
+      "checks": [],
+      "classification": "publisher",
+      "exists": true,
+      "format": "json",
+      "gated_record_count": 3,
+      "identifiers": [
+        "10.99999/synth.001",
+        "10.99999/synth.003",
+        "10.99999/synth.004"
+      ],
+      "path": "materials/publisher_records.json",
+      "record_count": 3,
+      "replacement_char_count": 0,
+      "sha256": "1a9cede196eacd9a122b04385e97ae0be68a809438d074d962b45172a185aa58",
+      "size_bytes": 935,
+      "utf8_ok": true,
+      "verdict": "trusted"
+    },
+    {
+      "artifact_id": "art-005",
+      "bom": false,
+      "checks": [
+        {
+          "code": "DANGLING_EDGE",
+          "detail": "edge endpoint(s) 10.99999/synth.077 do not resolve to any identifier present in the gated materials",
+          "locator": "edges[2]",
+          "severity": "warning"
+        }
+      ],
+      "classification": "reference_graph",
+      "exists": true,
+      "format": "json",
+      "gated_record_count": 0,
+      "graph_edges": [
+        {
+          "from": "10.99999/synth.003",
+          "locator": "edges[0]",
+          "to": "10.99999/synth.001"
+        },
+        {
+          "from": "10.99999/synth.004",
+          "locator": "edges[1]",
+          "to": "10.99999/synth.003"
+        },
+        {
+          "from": "10.99999/synth.004",
+          "locator": "edges[2]",
+          "to": "10.99999/synth.077"
+        }
+      ],
+      "path": "materials/reference_graph.json",
+      "record_count": 3,
+      "replacement_char_count": 0,
+      "sha256": "401f7d5a344130568a7aa56fcd4f3e8c0651c6114b7f336d59a7d94584611e15",
+      "size_bytes": 567,
+      "utf8_ok": true,
+      "verdict": "trusted_with_warnings"
+    }
+  ],
+  "case_id": "synthetic-source-gate-001",
+  "gate_version": "1.0.0",
+  "run_id": "gate-f14deb7e8fdd0c95",
+  "summary": {
+    "edges_dangling": 1,
+    "edges_total": 3,
+    "import_entries": {
+      "inconsistent": 1,
+      "not_verifiable": 0,
+      "verified": 3
+    },
+    "quarantined": 0,
+    "total_artifacts": 5,
+    "total_gated_records": 7,
+    "total_records_seen": 7,
+    "trusted": 2,
+    "trusted_with_warnings": 3
+  }
+}

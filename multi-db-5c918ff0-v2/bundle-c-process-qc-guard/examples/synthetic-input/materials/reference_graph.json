@@ -1,0 +1,14 @@
+{
+  "nodes": [
+    {"id": "10.99977/syn.0001", "label": "Synthetic perovskite halides for lattice dynamics studies"},
+    {"id": "10.99977/syn.0002", "label": "Defect passivation in synthetic halide perovskites"},
+    {"id": "10.99977/syn.0004", "label": "Synthetic phonon transport in layered perovskites"},
+    {"id": "10.99977/syn.0005", "label": "Synthetic lattice dynamics of perovskite halides"},
+    {"id": "10.99977/syn.0006", "label": "Synthetic lattice dynamics of perovskite halide films"}
+  ],
+  "edges": [
+    {"source": "10.99977/syn.0005", "target": "10.99977/syn.0001"},
+    {"source": "10.99977/syn.0001", "target": "10.99977/syn.0002"},
+    {"source": "10.99977/syn.0006", "target": "10.99977/syn.0005"}
+  ]
+}

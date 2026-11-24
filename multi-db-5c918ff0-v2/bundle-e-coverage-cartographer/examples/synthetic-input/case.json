@@ -1,0 +1,20 @@
+{
+  "case_id": "synthetic-coverage-001",
+  "_note": "SYNTHETIC teaching data",
+  "research_question": "图神经网络用于催化剂筛选的多数据库联合检索覆盖审计（虚构教学案例）：哪些数据库与字段被覆盖、哪些文献仅单一来源、哪些缺口是系统性的。",
+  "source_dbs": ["crossref", "europepmc", "publisher"],
+  "materials": [
+    "crossref_response.json",
+    "europepmc_response.json",
+    "publisher_records.json",
+    "reference_graph.json",
+    "import_state.json"
+  ],
+  "output_contract": {
+    "candidate_set": "list",
+    "coverage_summary": "dict",
+    "gap_summary": "list",
+    "uncertainty_statement": "string",
+    "change_records": "list"
+  }
+}

@@ -1,0 +1,26 @@
+{
+  "case_id": "synthetic-qc-guard-001",
+  "_note": "SYNTHETIC teaching data",
+  "research_question": "合成卤化物钙钛矿的晶格动力学与缺陷钝化有哪些代表性研究?",
+  "source_dbs": ["crossref", "europepmc", "publisher"],
+  "materials": [
+    "materials/crossref_response.json",
+    "materials/europepmc_response.json",
+    "materials/publisher_records.json",
+    "materials/reference_graph.json"
+  ],
+  "output_contract": {
+    "fields": [
+      {"name": "merged_records", "type": "array",
+       "description": "去重合并后的文献记录列表(含来源溯源)"},
+      {"name": "field_coverage_matrix", "type": "object",
+       "description": "数据库×字段覆盖矩阵"},
+      {"name": "duplicate_decision_log", "type": "array",
+       "description": "重复判定决策日志(每条含 reason_code)"},
+      {"name": "answer_summary", "type": "string",
+       "description": "面向研究问题的确定性摘要"},
+      {"name": "citation_graph_stats", "type": "object",
+       "description": "引用图统计(节点数/边数)"}
+    ]
+  }
+}

@@ -1,0 +1,10 @@
+{
+  "_note": "模型判断产物(本合成示例中由示例作者扮演模型):对 work/arbitration_queue.json 全部待决模糊重复对的单次批量仲裁",
+  "decisions": [
+    {
+      "pair_id": "pair:crossref#03--publisher#02",
+      "verdict": "distinct",
+      "rationale": "两记录 DOI 不同(10.99977/syn.0005 vs 10.99977/syn.0006),刊名、卷期与页码均不同;标题差异(halides vs halide films)指示研究对象不同,判定为两篇不同文献。"
+    }
+  ]
+}

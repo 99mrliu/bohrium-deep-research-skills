@@ -1,0 +1,675 @@
+{
+  "field_priority_order": [
+    "crossref",
+    "europepmc",
+    "publisher"
+  ],
+  "merged_count": 6,
+  "merged_records": [
+    {
+      "fields": {
+        "authors": {
+          "provenance": {
+            "from_db": "crossref",
+            "from_record": "crossref#00",
+            "priority_rank": 0,
+            "rule": "source_priority"
+          },
+          "status": "ok",
+          "value": [
+            "Zhang Li",
+            "Müller Anna"
+          ]
+        },
+        "doi": {
+          "provenance": {
+            "from_db": "crossref",
+            "from_record": "crossref#00",
+            "priority_rank": 0,
+            "rule": "source_priority"
+          },
+          "status": "ok",
+          "value": "10.99977/syn.0001"
+        },
+        "first_author_surname": {
+          "provenance": {
+            "from_db": "crossref",
+            "from_record": "crossref#00",
+            "priority_rank": 0,
+            "rule": "source_priority"
+          },
+          "status": "ok",
+          "value": "Zhang"
+        },
+        "issue": {
+          "provenance": {
+            "from_db": "crossref",
+            "from_record": "crossref#00",
+            "priority_rank": 0,
+            "rule": "source_priority"
+          },
+          "status": "ok",
+          "value": "3"
+        },
+        "journal": {
+          "provenance": {
+            "from_db": "crossref",
+            "from_record": "crossref#00",
+            "priority_rank": 0,
+            "rule": "source_priority"
+          },
+          "status": "ok",
+          "value": "Journal of Synthetic Materials"
+        },
+        "pages": {
+          "provenance": {
+            "from_db": "crossref",
+            "from_record": "crossref#00",
+            "priority_rank": 0,
+            "rule": "source_priority"
+          },
+          "status": "ok",
+          "value": "101-115"
+        },
+        "pmid": {
+          "provenance": {
+            "from_db": "europepmc",
+            "from_record": "europepmc#00",
+            "priority_rank": 1,
+            "rule": "source_priority"
+          },
+          "status": "ok",
+          "value": "38000001"
+        },
+        "title": {
+          "provenance": {
+            "from_db": "crossref",
+            "from_record": "crossref#00",
+            "priority_rank": 0,
+            "rule": "source_priority"
+          },
+          "status": "ok",
+          "value": "Synthetic perovskite halides for lattice dynamics studies"
+        },
+        "volume": {
+          "provenance": {
+            "from_db": "crossref",
+            "from_record": "crossref#00",
+            "priority_rank": 0,
+            "rule": "source_priority"
+          },
+          "status": "ok",
+          "value": "12"
+        },
+        "year": {
+          "provenance": {
+            "from_db": "crossref",
+            "from_record": "crossref#00",
+            "priority_rank": 0,
+            "rule": "source_priority"
+          },
+          "status": "ok",
+          "value": "2021"
+        }
+      },
+      "member_record_ids": [
+        "crossref#00",
+        "europepmc#00"
+      ],
+      "merged_id": "M001",
+      "sources": [
+        "crossref",
+        "europepmc"
+      ]
+    },
+    {
+      "fields": {
+        "authors": {
+          "provenance": {
+            "from_db": "crossref",
+            "from_record": "crossref#01",
+            "priority_rank": 0,
+            "rule": "source_priority"
+          },
+          "status": "ok",
+          "value": [
+            "Chen Wei",
+            "Kumar Raj"
+          ]
+        },
+        "doi": {
+          "provenance": {
+            "from_db": "crossref",
+            "from_record": "crossref#01",
+            "priority_rank": 0,
+            "rule": "source_priority"
+          },
+          "status": "ok",
+          "value": "10.99977/syn.0002"
+        },
+        "first_author_surname": {
+          "provenance": {
+            "from_db": "crossref",
+            "from_record": "crossref#01",
+            "priority_rank": 0,
+            "rule": "source_priority"
+          },
+          "status": "ok",
+          "value": "Chen"
+        },
+        "issue": {
+          "provenance": {
+            "from_db": "crossref",
+            "from_record": "crossref#01",
+            "priority_rank": 0,
+            "rule": "source_priority"
+          },
+          "status": "ok",
+          "value": "1"
+        },
+        "journal": {
+          "provenance": {
+            "from_db": "crossref",
+            "from_record": "crossref#01",
+            "priority_rank": 0,
+            "rule": "source_priority"
+          },
+          "status": "ok",
+          "value": "Synthetic Photonics Review"
+        },
+        "pages": {
+          "provenance": {
+            "from_db": "crossref",
+            "from_record": "crossref#01",
+            "priority_rank": 0,
+            "rule": "source_priority"
+          },
+          "status": "ok",
+          "value": "45-59"
+        },
+        "pmid": {
+          "provenance": null,
+          "status": "not_provided",
+          "value": null
+        },
+        "title": {
+          "provenance": {
+            "from_db": "crossref",
+            "from_record": "crossref#01",
+            "priority_rank": 0,
+            "rule": "source_priority"
+          },
+          "status": "ok",
+          "value": "Defect passivation in synthetic halide perovskites"
+        },
+        "volume": {
+          "provenance": {
+            "from_db": "crossref",
+            "from_record": "crossref#01",
+            "priority_rank": 0,
+            "rule": "source_priority"
+          },
+          "status": "ok",
+          "value": "8"
+        },
+        "year": {
+          "provenance": {
+            "from_db": "crossref",
+            "from_record": "crossref#01",
+            "priority_rank": 0,
+            "rule": "source_priority"
+          },
+          "status": "ok",
+          "value": "2022"
+        }
+      },
+      "member_record_ids": [
+        "crossref#01",
+        "publisher#00"
+      ],
+      "merged_id": "M002",
+      "sources": [
+        "crossref",
+        "publisher"
+      ]
+    },
+    {
+      "fields": {
+        "authors": {
+          "provenance": {
+            "from_db": "crossref",
+            "from_record": "crossref#02",
+            "priority_rank": 0,
+            "rule": "source_priority"
+          },
+          "status": "ok",
+          "value": [
+            "García María"
+          ]
+        },
+        "doi": {
+          "provenance": {
+            "from_db": "crossref",
+            "from_record": "crossref#02",
+            "priority_rank": 0,
+            "rule": "source_priority"
+          },
+          "status": "ok",
+          "value": "10.99977/syn.0004"
+        },
+        "first_author_surname": {
+          "provenance": {
+            "from_db": "crossref",
+            "from_record": "crossref#02",
+            "priority_rank": 0,
+            "rule": "source_priority"
+          },
+          "status": "ok",
+          "value": "García"
+        },
+        "issue": {
+          "provenance": {
+            "from_db": "crossref",
+            "from_record": "crossref#02",
+            "priority_rank": 0,
+            "rule": "source_priority"
+          },
+          "status": "ok",
+          "value": "2"
+        },
+        "journal": {
+          "provenance": {
+            "from_db": "crossref",
+            "from_record": "crossref#02",
+            "priority_rank": 0,
+            "rule": "source_priority"
+          },
+          "status": "ok",
+          "value": "Journal of Synthetic Materials"
+        },
+        "pages": {
+          "provenance": {
+            "from_db": "crossref",
+            "from_record": "crossref#02",
+            "priority_rank": 0,
+            "rule": "source_priority"
+          },
+          "status": "ok",
+          "value": "201-210"
+        },
+        "pmid": {
+          "provenance": null,
+          "status": "not_provided",
+          "value": null
+        },
+        "title": {
+          "provenance": {
+            "from_db": "crossref",
+            "from_record": "crossref#02",
+            "priority_rank": 0,
+            "rule": "source_priority"
+          },
+          "status": "ok",
+          "value": "Synthetic phonon transport in layered perovskites"
+        },
+        "volume": {
+          "provenance": {
+            "from_db": "crossref",
+            "from_record": "crossref#02",
+            "priority_rank": 0,
+            "rule": "source_priority"
+          },
+          "status": "ok",
+          "value": "14"
+        },
+        "year": {
+          "provenance": {
+            "from_db": "crossref",
+            "from_record": "crossref#02",
+            "priority_rank": 0,
+            "rule": "source_priority"
+          },
+          "status": "ok",
+          "value": "2023"
+        }
+      },
+      "member_record_ids": [
+        "crossref#02"
+      ],
+      "merged_id": "M003",
+      "sources": [
+        "crossref"
+      ]
+    },
+    {
+      "fields": {
+        "authors": {
+          "provenance": {
+            "from_db": "crossref",
+            "from_record": "crossref#03",
+            "priority_rank": 0,
+            "rule": "source_priority"
+          },
+          "status": "ok",
+          "value": [
+            "Zhang Li",
+            "Ito Kenji"
+          ]
+        },
+        "doi": {
+          "provenance": {
+            "from_db": "crossref",
+            "from_record": "crossref#03",
+            "priority_rank": 0,
+            "rule": "source_priority"
+          },
+          "status": "ok",
+          "value": "10.99977/syn.0005"
+        },
+        "first_author_surname": {
+          "provenance": {
+            "from_db": "crossref",
+            "from_record": "crossref#03",
+            "priority_rank": 0,
+            "rule": "source_priority"
+          },
+          "status": "ok",
+          "value": "Zhang"
+        },
+        "issue": {
+          "provenance": {
+            "from_db": "crossref",
+            "from_record": "crossref#03",
+            "priority_rank": 0,
+            "rule": "source_priority"
+          },
+          "status": "ok",
+          "value": "4"
+        },
+        "journal": {
+          "provenance": {
+            "from_db": "crossref",
+            "from_record": "crossref#03",
+            "priority_rank": 0,
+            "rule": "source_priority"
+          },
+          "status": "ok",
+          "value": "Synthetic Photonics Review"
+        },
+        "pages": {
+          "provenance": {
+            "from_db": "crossref",
+            "from_record": "crossref#03",
+            "priority_rank": 0,
+            "rule": "source_priority"
+          },
+          "status": "ok",
+          "value": "301-312"
+        },
+        "pmid": {
+          "provenance": null,
+          "status": "not_provided",
+          "value": null
+        },
+        "title": {
+          "provenance": {
+            "from_db": "crossref",
+            "from_record": "crossref#03",
+            "priority_rank": 0,
+            "rule": "source_priority"
+          },
+          "status": "ok",
+          "value": "Synthetic lattice dynamics of perovskite halides"
+        },
+        "volume": {
+          "provenance": {
+            "from_db": "crossref",
+            "from_record": "crossref#03",
+            "priority_rank": 0,
+            "rule": "source_priority"
+          },
+          "status": "ok",
+          "value": "10"
+        },
+        "year": {
+          "provenance": {
+            "from_db": "crossref",
+            "from_record": "crossref#03",
+            "priority_rank": 0,
+            "rule": "source_priority"
+          },
+          "status": "ok",
+          "value": "2024"
+        }
+      },
+      "member_record_ids": [
+        "crossref#03"
+      ],
+      "merged_id": "M004",
+      "sources": [
+        "crossref"
+      ]
+    },
+    {
+      "fields": {
+        "authors": {
+          "provenance": {
+            "from_db": "europepmc",
+            "from_record": "europepmc#01",
+            "priority_rank": 1,
+            "rule": "source_priority"
+          },
+          "status": "ok",
+          "value": [
+            "Kumar R",
+            "Zhang L"
+          ]
+        },
+        "doi": {
+          "provenance": null,
+          "status": "unknown",
+          "value": null
+        },
+        "first_author_surname": {
+          "provenance": {
+            "from_db": "europepmc",
+            "from_record": "europepmc#01",
+            "priority_rank": 1,
+            "rule": "source_priority"
+          },
+          "status": "ok",
+          "value": "Kumar"
+        },
+        "issue": {
+          "provenance": {
+            "from_db": "publisher",
+            "from_record": "publisher#01",
+            "priority_rank": 2,
+            "rule": "source_priority"
+          },
+          "status": "ok",
+          "value": "2"
+        },
+        "journal": {
+          "provenance": {
+            "from_db": "europepmc",
+            "from_record": "europepmc#01",
+            "priority_rank": 1,
+            "rule": "source_priority"
+          },
+          "status": "ok",
+          "value": "Synthetic Photonics Review"
+        },
+        "pages": {
+          "provenance": {
+            "from_db": "publisher",
+            "from_record": "publisher#01",
+            "priority_rank": 2,
+            "rule": "source_priority"
+          },
+          "status": "ok",
+          "value": "120-133"
+        },
+        "pmid": {
+          "provenance": {
+            "from_db": "europepmc",
+            "from_record": "europepmc#01",
+            "priority_rank": 1,
+            "rule": "source_priority"
+          },
+          "status": "ok",
+          "value": "38000002"
+        },
+        "title": {
+          "provenance": {
+            "from_db": "europepmc",
+            "from_record": "europepmc#01",
+            "priority_rank": 1,
+            "rule": "source_priority"
+          },
+          "status": "ok",
+          "value": "Synthetic defect tolerance in halide perovskite films"
+        },
+        "volume": {
+          "provenance": {
+            "from_db": "publisher",
+            "from_record": "publisher#01",
+            "priority_rank": 2,
+            "rule": "source_priority"
+          },
+          "status": "ok",
+          "value": "9"
+        },
+        "year": {
+          "provenance": {
+            "from_db": "europepmc",
+            "from_record": "europepmc#01",
+            "priority_rank": 1,
+            "rule": "source_priority"
+          },
+          "status": "ok",
+          "value": "2022"
+        }
+      },
+      "member_record_ids": [
+        "europepmc#01",
+        "publisher#01"
+      ],
+      "merged_id": "M005",
+      "sources": [
+        "europepmc",
+        "publisher"
+      ]
+    },
+    {
+      "fields": {
+        "authors": {
+          "provenance": {
+            "from_db": "publisher",
+            "from_record": "publisher#02",
+            "priority_rank": 2,
+            "rule": "source_priority"
+          },
+          "status": "ok",
+          "value": [
+            "Li Zhang",
+            "Raj Kumar"
+          ]
+        },
+        "doi": {
+          "provenance": {
+            "from_db": "publisher",
+            "from_record": "publisher#02",
+            "priority_rank": 2,
+            "rule": "source_priority"
+          },
+          "status": "ok",
+          "value": "10.99977/syn.0006"
+        },
+        "first_author_surname": {
+          "provenance": {
+            "from_db": "publisher",
+            "from_record": "publisher#02",
+            "priority_rank": 2,
+            "rule": "source_priority"
+          },
+          "status": "ok",
+          "value": "Zhang"
+        },
+        "issue": {
+          "provenance": {
+            "from_db": "publisher",
+            "from_record": "publisher#02",
+            "priority_rank": 2,
+            "rule": "source_priority"
+          },
+          "status": "ok",
+          "value": "1"
+        },
+        "journal": {
+          "provenance": {
+            "from_db": "publisher",
+            "from_record": "publisher#02",
+            "priority_rank": 2,
+            "rule": "source_priority"
+          },
+          "status": "ok",
+          "value": "Journal of Synthetic Materials"
+        },
+        "pages": {
+          "provenance": {
+            "from_db": "publisher",
+            "from_record": "publisher#02",
+            "priority_rank": 2,
+            "rule": "source_priority"
+          },
+          "status": "ok",
+          "value": "1-14"
+        },
+        "pmid": {
+          "provenance": null,
+          "status": "not_provided",
+          "value": null
+        },
+        "title": {
+          "provenance": {
+            "from_db": "publisher",
+            "from_record": "publisher#02",
+            "priority_rank": 2,
+            "rule": "source_priority"
+          },
+          "status": "ok",
+          "value": "Synthetic lattice dynamics of perovskite halide films"
+        },
+        "volume": {
+          "provenance": {
+            "from_db": "publisher",
+            "from_record": "publisher#02",
+            "priority_rank": 2,
+            "rule": "source_priority"
+          },
+          "status": "ok",
+          "value": "15"
+        },
+        "year": {
+          "provenance": {
+            "from_db": "publisher",
+            "from_record": "publisher#02",
+            "priority_rank": 2,
+            "rule": "source_priority"
+          },
+          "status": "ok",
+          "value": "2024"
+        }
+      },
+      "member_record_ids": [
+        "publisher#02"
+      ],
+      "merged_id": "M006",
+      "sources": [
+        "publisher"
+      ]
+    }
+  ],
+  "source_record_count": 9
+}

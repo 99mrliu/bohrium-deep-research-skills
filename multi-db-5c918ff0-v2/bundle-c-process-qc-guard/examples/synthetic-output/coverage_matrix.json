@@ -1,0 +1,72 @@
+{
+  "fields": [
+    "doi",
+    "pmid",
+    "title",
+    "year",
+    "first_author_surname",
+    "authors",
+    "journal",
+    "volume",
+    "issue",
+    "pages"
+  ],
+  "matrix": {
+    "MERGED_UNION": {
+      "authors": 6,
+      "doi": 5,
+      "first_author_surname": 6,
+      "issue": 6,
+      "journal": 6,
+      "pages": 6,
+      "pmid": 2,
+      "title": 6,
+      "volume": 6,
+      "year": 6
+    },
+    "crossref": {
+      "authors": 4,
+      "doi": 4,
+      "first_author_surname": 4,
+      "issue": 4,
+      "journal": 4,
+      "pages": 4,
+      "pmid": 1,
+      "title": 4,
+      "volume": 4,
+      "year": 4
+    },
+    "europepmc": {
+      "authors": 2,
+      "doi": 1,
+      "first_author_surname": 2,
+      "issue": 2,
+      "journal": 2,
+      "pages": 2,
+      "pmid": 2,
+      "title": 2,
+      "volume": 2,
+      "year": 2
+    },
+    "publisher": {
+      "authors": 3,
+      "doi": 2,
+      "first_author_surname": 3,
+      "issue": 3,
+      "journal": 3,
+      "pages": 3,
+      "pmid": 1,
+      "title": 3,
+      "volume": 3,
+      "year": 3
+    }
+  },
+  "merged_total": 6,
+  "rows": [
+    "crossref",
+    "europepmc",
+    "publisher",
+    "MERGED_UNION"
+  ],
+  "semantics": "matrix[db][field] = 含该库贡献且合并后该字段可用的合并记录数;MERGED_UNION 行为合并并集覆盖"
+}

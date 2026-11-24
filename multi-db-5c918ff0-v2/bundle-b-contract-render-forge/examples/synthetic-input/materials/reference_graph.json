@@ -1,0 +1,17 @@
+{
+  "retained_reference_graph": true,
+  "edge_semantics": "citing -> cited",
+  "nodes": [
+    "10.99988/synforge.2024.001",
+    "10.99988/synforge.2023.014",
+    "10.99988/synforge.2025.007",
+    "10.99988/synforge.2022.031",
+    "10.99988/synforge.2021.005"
+  ],
+  "edges": [
+    ["10.99988/synforge.2023.014", "10.99988/synforge.2024.001"],
+    ["10.99988/synforge.2025.007", "10.99988/synforge.2024.001"],
+    ["10.99988/synforge.2022.031", "10.99988/synforge.2023.014"],
+    ["10.99988/synforge.2021.005", "10.99988/synforge.2024.001"]
+  ]
+}

@@ -1,0 +1,1145 @@
+{
+  "artifacts": [
+    {
+      "location": "out",
+      "path": "candidate_table.md",
+      "sha256": "63074f0277386eea28c95a3ba86739fc33c8f035abf286443d006350c00849d0"
+    },
+    {
+      "location": "out",
+      "path": "coverage_matrix.md",
+      "sha256": "1db406ca3764ceb8b00eb041ce70036eafc189494faab24766e99043c343ba18"
+    },
+    {
+      "location": "out",
+      "path": "provenance_chain.md",
+      "sha256": "78207aa160920c3a1d619e463298b48dc9c1759932904ede513061b0d1fda677"
+    },
+    {
+      "location": "out",
+      "path": "render_gate_report.md",
+      "sha256": "51f0f17d222e276a4ce4c4c5aee2f970a6aa736b49398e03c46b5cc3e7b3b752"
+    }
+  ],
+  "candidate_set": [
+    {
+      "conflicts": [
+        {
+          "field": "authors",
+          "resolution": "per-field source priority: publisher",
+          "variants": [
+            "['Liu H', 'Chen Y']",
+            "['Liu, Hengshen', 'Chen, Yixin']"
+          ]
+        },
+        {
+          "field": "journal",
+          "resolution": "per-field source priority: publisher",
+          "variants": [
+            "J. Synth. Catal.",
+            "Journal of Synthetic Catalysis"
+          ]
+        }
+      ],
+      "dedup": {
+        "cluster_size": 3,
+        "match_basis": [
+          "doi"
+        ],
+        "members": [
+          {
+            "artifact": "materials/publisher_records.json",
+            "locator": "records[0]",
+            "missing_fields": [],
+            "source": "publisher"
+          },
+          {
+            "artifact": "materials/crossref_response.json",
+            "locator": "message.items[0]",
+            "missing_fields": [
+              "pmid"
+            ],
+            "source": "crossref"
+          },
+          {
+            "artifact": "materials/europepmc_response.json",
+            "locator": "resultList.result[0]",
+            "missing_fields": [
+              "issue",
+              "pages",
+              "volume"
+            ],
+            "source": "europepmc"
+          }
+        ]
+      },
+      "field_provenance": {
+        "authors": {
+          "artifact": "materials/publisher_records.json",
+          "locator": "records[0]",
+          "source": "publisher",
+          "state": "value"
+        },
+        "doi": {
+          "artifact": "materials/publisher_records.json",
+          "locator": "records[0]",
+          "source": "publisher",
+          "state": "value"
+        },
+        "first_author": {
+          "artifact": "materials/publisher_records.json",
+          "locator": "records[0]",
+          "source": "publisher",
+          "state": "value"
+        },
+        "issue": {
+          "artifact": "materials/publisher_records.json",
+          "locator": "records[0]",
+          "source": "publisher",
+          "state": "value"
+        },
+        "journal": {
+          "artifact": "materials/publisher_records.json",
+          "locator": "records[0]",
+          "source": "publisher",
+          "state": "value"
+        },
+        "pages": {
+          "artifact": "materials/publisher_records.json",
+          "locator": "records[0]",
+          "source": "publisher",
+          "state": "value"
+        },
+        "pmid": {
+          "artifact": "materials/publisher_records.json",
+          "locator": "records[0]",
+          "source": "publisher",
+          "state": "value"
+        },
+        "title": {
+          "artifact": "materials/publisher_records.json",
+          "locator": "records[0]",
+          "source": "publisher",
+          "state": "value"
+        },
+        "volume": {
+          "artifact": "materials/publisher_records.json",
+          "locator": "records[0]",
+          "source": "publisher",
+          "state": "value"
+        },
+        "year": {
+          "artifact": "materials/publisher_records.json",
+          "locator": "records[0]",
+          "source": "publisher",
+          "state": "value"
+        }
+      },
+      "merged": {
+        "authors": [
+          "Liu, Hengshen",
+          "Chen, Yixin"
+        ],
+        "doi": "10.99988/synforge.2024.001",
+        "first_author": "Liu",
+        "issue": "3",
+        "journal": "Journal of Synthetic Catalysis",
+        "pages": "201-215",
+        "pmid": "39998801",
+        "title": "Synthetic Cobalt Porphyrin Catalysts for Selective Oxidation in Model Reactions",
+        "volume": "12",
+        "year": 2024
+      },
+      "record_id": "rec-0001",
+      "sources_seen": [
+        "crossref",
+        "europepmc",
+        "publisher"
+      ]
+    },
+    {
+      "conflicts": [
+        {
+          "field": "authors",
+          "resolution": "per-field source priority: crossref",
+          "variants": [
+            "['Okafor A', 'Mueller K']",
+            "['Okafor, Adaeze', 'Mueller, Klaus']"
+          ]
+        }
+      ],
+      "dedup": {
+        "cluster_size": 2,
+        "match_basis": [
+          "doi"
+        ],
+        "members": [
+          {
+            "artifact": "materials/crossref_response.json",
+            "locator": "message.items[1]",
+            "missing_fields": [
+              "pmid"
+            ],
+            "source": "crossref"
+          },
+          {
+            "artifact": "materials/europepmc_response.json",
+            "locator": "resultList.result[1]",
+            "missing_fields": [
+              "issue",
+              "pages",
+              "volume"
+            ],
+            "source": "europepmc"
+          }
+        ]
+      },
+      "field_provenance": {
+        "authors": {
+          "artifact": "materials/crossref_response.json",
+          "locator": "message.items[1]",
+          "source": "crossref",
+          "state": "value"
+        },
+        "doi": {
+          "artifact": "materials/crossref_response.json",
+          "locator": "message.items[1]",
+          "source": "crossref",
+          "state": "value"
+        },
+        "first_author": {
+          "artifact": "materials/crossref_response.json",
+          "locator": "message.items[1]",
+          "source": "crossref",
+          "state": "value"
+        },
+        "issue": {
+          "artifact": "materials/crossref_response.json",
+          "locator": "message.items[1]",
+          "source": "crossref",
+          "state": "value"
+        },
+        "journal": {
+          "artifact": "materials/crossref_response.json",
+          "locator": "message.items[1]",
+          "source": "crossref",
+          "state": "value"
+        },
+        "pages": {
+          "artifact": "materials/crossref_response.json",
+          "locator": "message.items[1]",
+          "source": "crossref",
+          "state": "value"
+        },
+        "pmid": {
+          "artifact": "materials/europepmc_response.json",
+          "locator": "resultList.result[1]",
+          "source": "europepmc",
+          "state": "value"
+        },
+        "title": {
+          "artifact": "materials/crossref_response.json",
+          "locator": "message.items[1]",
+          "source": "crossref",
+          "state": "value"
+        },
+        "volume": {
+          "artifact": "materials/crossref_response.json",
+          "locator": "message.items[1]",
+          "source": "crossref",
+          "state": "value"
+        },
+        "year": {
+          "artifact": "materials/crossref_response.json",
+          "locator": "message.items[1]",
+          "source": "crossref",
+          "state": "value"
+        }
+      },
+      "merged": {
+        "authors": [
+          "Okafor, Adaeze",
+          "Mueller, Klaus"
+        ],
+        "doi": "10.99988/synforge.2023.014",
+        "first_author": "Okafor",
+        "issue": "11",
+        "journal": "Synthetic Materials Today",
+        "pages": "1101-1112",
+        "pmid": "39998814",
+        "title": "Synthetic Metal-Organic Framework Membranes for Gas Selectivity",
+        "volume": "7",
+        "year": 2023
+      },
+      "record_id": "rec-0002",
+      "sources_seen": [
+        "crossref",
+        "europepmc"
+      ]
+    },
+    {
+      "conflicts": [],
+      "dedup": {
+        "cluster_size": 1,
+        "match_basis": [],
+        "members": [
+          {
+            "artifact": "materials/crossref_response.json",
+            "locator": "message.items[2]",
+            "missing_fields": [
+              "pmid"
+            ],
+            "source": "crossref"
+          }
+        ]
+      },
+      "field_provenance": {
+        "authors": {
+          "artifact": "materials/crossref_response.json",
+          "locator": "message.items[2]",
+          "source": "crossref",
+          "state": "value"
+        },
+        "doi": {
+          "artifact": "materials/crossref_response.json",
+          "locator": "message.items[2]",
+          "source": "crossref",
+          "state": "value"
+        },
+        "first_author": {
+          "artifact": "materials/crossref_response.json",
+          "locator": "message.items[2]",
+          "source": "crossref",
+          "state": "value"
+        },
+        "issue": {
+          "artifact": "materials/crossref_response.json",
+          "locator": "message.items[2]",
+          "source": "crossref",
+          "state": "value"
+        },
+        "journal": {
+          "artifact": "materials/crossref_response.json",
+          "locator": "message.items[2]",
+          "source": "crossref",
+          "state": "value"
+        },
+        "pages": {
+          "artifact": "materials/crossref_response.json",
+          "locator": "message.items[2]",
+          "source": "crossref",
+          "state": "value"
+        },
+        "pmid": {
+          "artifact": null,
+          "locator": null,
+          "source": null,
+          "state": "not_provided_by_any_source"
+        },
+        "title": {
+          "artifact": "materials/crossref_response.json",
+          "locator": "message.items[2]",
+          "source": "crossref",
+          "state": "value"
+        },
+        "volume": {
+          "artifact": "materials/crossref_response.json",
+          "locator": "message.items[2]",
+          "source": "crossref",
+          "state": "value"
+        },
+        "year": {
+          "artifact": "materials/crossref_response.json",
+          "locator": "message.items[2]",
+          "source": "crossref",
+          "state": "value"
+        }
+      },
+      "merged": {
+        "authors": [
+          "Novak, Ivana"
+        ],
+        "doi": "10.99988/synforge.2022.031",
+        "first_author": "Novak",
+        "issue": "2",
+        "journal": "SynLett Fictional",
+        "pages": "88-97",
+        "pmid": null,
+        "title": "Synthetic Enzyme Mimics with Tailored Selectivity",
+        "volume": "4",
+        "year": 2022
+      },
+      "record_id": "rec-0003",
+      "sources_seen": [
+        "crossref"
+      ]
+    },
+    {
+      "conflicts": [
+        {
+          "field": "authors",
+          "resolution": "per-field source priority: publisher",
+          "variants": [
+            "['Zhao M', 'Park J']",
+            "['Zhao, Min', 'Park, Ji-woo']"
+          ]
+        }
+      ],
+      "dedup": {
+        "cluster_size": 2,
+        "match_basis": [
+          "title+year+first_author"
+        ],
+        "members": [
+          {
+            "artifact": "materials/publisher_records.json",
+            "locator": "records[1]",
+            "missing_fields": [
+              "pmid"
+            ],
+            "source": "publisher"
+          },
+          {
+            "artifact": "materials/europepmc_response.json",
+            "locator": "resultList.result[2]",
+            "missing_fields": [
+              "doi",
+              "issue",
+              "pages",
+              "volume"
+            ],
+            "source": "europepmc"
+          }
+        ]
+      },
+      "field_provenance": {
+        "authors": {
+          "artifact": "materials/publisher_records.json",
+          "locator": "records[1]",
+          "source": "publisher",
+          "state": "value"
+        },
+        "doi": {
+          "artifact": "materials/publisher_records.json",
+          "locator": "records[1]",
+          "source": "publisher",
+          "state": "value"
+        },
+        "first_author": {
+          "artifact": "materials/publisher_records.json",
+          "locator": "records[1]",
+          "source": "publisher",
+          "state": "value"
+        },
+        "issue": {
+          "artifact": "materials/publisher_records.json",
+          "locator": "records[1]",
+          "source": "publisher",
+          "state": "value"
+        },
+        "journal": {
+          "artifact": "materials/publisher_records.json",
+          "locator": "records[1]",
+          "source": "publisher",
+          "state": "value"
+        },
+        "pages": {
+          "artifact": "materials/publisher_records.json",
+          "locator": "records[1]",
+          "source": "publisher",
+          "state": "value"
+        },
+        "pmid": {
+          "artifact": "materials/europepmc_response.json",
+          "locator": "resultList.result[2]",
+          "source": "europepmc",
+          "state": "value"
+        },
+        "title": {
+          "artifact": "materials/publisher_records.json",
+          "locator": "records[1]",
+          "source": "publisher",
+          "state": "value"
+        },
+        "volume": {
+          "artifact": "materials/publisher_records.json",
+          "locator": "records[1]",
+          "source": "publisher",
+          "state": "value"
+        },
+        "year": {
+          "artifact": "materials/publisher_records.json",
+          "locator": "records[1]",
+          "source": "publisher",
+          "state": "value"
+        }
+      },
+      "merged": {
+        "authors": [
+          "Zhao, Min",
+          "Park, Ji-woo"
+        ],
+        "doi": "10.99988/synforge.2025.007",
+        "first_author": "Zhao",
+        "issue": "1",
+        "journal": "Synthetic Chemistry Letters",
+        "pages": "44-59",
+        "pmid": "39998877",
+        "title": "Synthetic Photoredox Methods in Fictional Batch Chemistry",
+        "volume": "8",
+        "year": 2025
+      },
+      "record_id": "rec-0004",
+      "sources_seen": [
+        "europepmc",
+        "publisher"
+      ]
+    }
+  ],
+  "case_id": "synthetic-render-forge-001",
+  "change_records": [
+    {
+      "action": "skeleton_written",
+      "detail": "honest early partial result.json",
+      "seq": 1,
+      "step": "step0"
+    },
+    {
+      "action": "args",
+      "detail": "case=custom; out=custom; task=custom; work=custom",
+      "seq": 2,
+      "step": "intake"
+    },
+    {
+      "action": "case_loaded",
+      "detail": "case_id=synthetic-render-forge-001",
+      "seq": 3,
+      "step": "intake"
+    },
+    {
+      "action": "task_loaded",
+      "detail": "task.md chars=632",
+      "seq": 4,
+      "step": "intake"
+    },
+    {
+      "action": "contract_discovered",
+      "detail": "fields=candidate_set,ranking_basis,evidence_records,status_notes,coverage_statement",
+      "seq": 5,
+      "step": "contract"
+    },
+    {
+      "action": "materials_discovered",
+      "detail": "materials/crossref_response.json=>crossref; materials/europepmc_response.json=>europepmc; materials/import_state.json=>import_state; materials/publisher_records.json=>publisher; materials/reference_graph.json=>reference_graph",
+      "seq": 6,
+      "step": "intake"
+    },
+    {
+      "action": "pipeline_ran",
+      "detail": "members=8 canonical=4",
+      "seq": 7,
+      "step": "intake"
+    },
+    {
+      "action": "artifacts_rendered",
+      "detail": "candidate_table.md, provenance_chain.md, coverage_matrix.md",
+      "seq": 8,
+      "step": "render"
+    },
+    {
+      "action": "gate_evaluated",
+      "detail": "checks=5 overall=PASS",
+      "seq": 9,
+      "step": "gate"
+    }
+  ],
+  "coverage_statement": {
+    "databases": [
+      "crossref",
+      "europepmc",
+      "publisher"
+    ],
+    "matrix": {
+      "authors": {
+        "crossref": 3,
+        "europepmc": 3,
+        "publisher": 2
+      },
+      "doi": {
+        "crossref": 3,
+        "europepmc": 2,
+        "publisher": 2
+      },
+      "first_author": {
+        "crossref": 3,
+        "europepmc": 3,
+        "publisher": 2
+      },
+      "issue": {
+        "crossref": 3,
+        "europepmc": 0,
+        "publisher": 2
+      },
+      "journal": {
+        "crossref": 3,
+        "europepmc": 3,
+        "publisher": 2
+      },
+      "pages": {
+        "crossref": 3,
+        "europepmc": 0,
+        "publisher": 2
+      },
+      "pmid": {
+        "crossref": 0,
+        "europepmc": 3,
+        "publisher": 1
+      },
+      "title": {
+        "crossref": 3,
+        "europepmc": 3,
+        "publisher": 2
+      },
+      "volume": {
+        "crossref": 3,
+        "europepmc": 0,
+        "publisher": 2
+      },
+      "year": {
+        "crossref": 3,
+        "europepmc": 3,
+        "publisher": 2
+      }
+    },
+    "merged_counts": {
+      "authors": 4,
+      "doi": 4,
+      "first_author": 4,
+      "issue": 4,
+      "journal": 4,
+      "pages": 4,
+      "pmid": 3,
+      "title": 4,
+      "volume": 4,
+      "year": 4
+    },
+    "single_source_records": [
+      {
+        "doi": "10.99988/synforge.2022.031",
+        "record_id": "rec-0003",
+        "source": "crossref"
+      }
+    ],
+    "systematically_absent": {
+      "crossref": [
+        "pmid"
+      ],
+      "europepmc": [
+        "issue",
+        "pages",
+        "volume"
+      ]
+    }
+  },
+  "evidence_records": [
+    {
+      "dedup": {
+        "cluster_size": 3,
+        "match_basis": [
+          "doi"
+        ],
+        "members": [
+          {
+            "artifact": "materials/publisher_records.json",
+            "locator": "records[0]",
+            "missing_fields": [],
+            "source": "publisher"
+          },
+          {
+            "artifact": "materials/crossref_response.json",
+            "locator": "message.items[0]",
+            "missing_fields": [
+              "pmid"
+            ],
+            "source": "crossref"
+          },
+          {
+            "artifact": "materials/europepmc_response.json",
+            "locator": "resultList.result[0]",
+            "missing_fields": [
+              "issue",
+              "pages",
+              "volume"
+            ],
+            "source": "europepmc"
+          }
+        ]
+      },
+      "field_provenance": {
+        "authors": {
+          "artifact": "materials/publisher_records.json",
+          "locator": "records[0]",
+          "source": "publisher",
+          "state": "value"
+        },
+        "doi": {
+          "artifact": "materials/publisher_records.json",
+          "locator": "records[0]",
+          "source": "publisher",
+          "state": "value"
+        },
+        "first_author": {
+          "artifact": "materials/publisher_records.json",
+          "locator": "records[0]",
+          "source": "publisher",
+          "state": "value"
+        },
+        "issue": {
+          "artifact": "materials/publisher_records.json",
+          "locator": "records[0]",
+          "source": "publisher",
+          "state": "value"
+        },
+        "journal": {
+          "artifact": "materials/publisher_records.json",
+          "locator": "records[0]",
+          "source": "publisher",
+          "state": "value"
+        },
+        "pages": {
+          "artifact": "materials/publisher_records.json",
+          "locator": "records[0]",
+          "source": "publisher",
+          "state": "value"
+        },
+        "pmid": {
+          "artifact": "materials/publisher_records.json",
+          "locator": "records[0]",
+          "source": "publisher",
+          "state": "value"
+        },
+        "title": {
+          "artifact": "materials/publisher_records.json",
+          "locator": "records[0]",
+          "source": "publisher",
+          "state": "value"
+        },
+        "volume": {
+          "artifact": "materials/publisher_records.json",
+          "locator": "records[0]",
+          "source": "publisher",
+          "state": "value"
+        },
+        "year": {
+          "artifact": "materials/publisher_records.json",
+          "locator": "records[0]",
+          "source": "publisher",
+          "state": "value"
+        }
+      },
+      "record_id": "rec-0001",
+      "sources_seen": [
+        "crossref",
+        "europepmc",
+        "publisher"
+      ]
+    },
+    {
+      "dedup": {
+        "cluster_size": 2,
+        "match_basis": [
+          "doi"
+        ],
+        "members": [
+          {
+            "artifact": "materials/crossref_response.json",
+            "locator": "message.items[1]",
+            "missing_fields": [
+              "pmid"
+            ],
+            "source": "crossref"
+          },
+          {
+            "artifact": "materials/europepmc_response.json",
+            "locator": "resultList.result[1]",
+            "missing_fields": [
+              "issue",
+              "pages",
+              "volume"
+            ],
+            "source": "europepmc"
+          }
+        ]
+      },
+      "field_provenance": {
+        "authors": {
+          "artifact": "materials/crossref_response.json",
+          "locator": "message.items[1]",
+          "source": "crossref",
+          "state": "value"
+        },
+        "doi": {
+          "artifact": "materials/crossref_response.json",
+          "locator": "message.items[1]",
+          "source": "crossref",
+          "state": "value"
+        },
+        "first_author": {
+          "artifact": "materials/crossref_response.json",
+          "locator": "message.items[1]",
+          "source": "crossref",
+          "state": "value"
+        },
+        "issue": {
+          "artifact": "materials/crossref_response.json",
+          "locator": "message.items[1]",
+          "source": "crossref",
+          "state": "value"
+        },
+        "journal": {
+          "artifact": "materials/crossref_response.json",
+          "locator": "message.items[1]",
+          "source": "crossref",
+          "state": "value"
+        },
+        "pages": {
+          "artifact": "materials/crossref_response.json",
+          "locator": "message.items[1]",
+          "source": "crossref",
+          "state": "value"
+        },
+        "pmid": {
+          "artifact": "materials/europepmc_response.json",
+          "locator": "resultList.result[1]",
+          "source": "europepmc",
+          "state": "value"
+        },
+        "title": {
+          "artifact": "materials/crossref_response.json",
+          "locator": "message.items[1]",
+          "source": "crossref",
+          "state": "value"
+        },
+        "volume": {
+          "artifact": "materials/crossref_response.json",
+          "locator": "message.items[1]",
+          "source": "crossref",
+          "state": "value"
+        },
+        "year": {
+          "artifact": "materials/crossref_response.json",
+          "locator": "message.items[1]",
+          "source": "crossref",
+          "state": "value"
+        }
+      },
+      "record_id": "rec-0002",
+      "sources_seen": [
+        "crossref",
+        "europepmc"
+      ]
+    },
+    {
+      "dedup": {
+        "cluster_size": 1,
+        "match_basis": [],
+        "members": [
+          {
+            "artifact": "materials/crossref_response.json",
+            "locator": "message.items[2]",
+            "missing_fields": [
+              "pmid"
+            ],
+            "source": "crossref"
+          }
+        ]
+      },
+      "field_provenance": {
+        "authors": {
+          "artifact": "materials/crossref_response.json",
+          "locator": "message.items[2]",
+          "source": "crossref",
+          "state": "value"
+        },
+        "doi": {
+          "artifact": "materials/crossref_response.json",
+          "locator": "message.items[2]",
+          "source": "crossref",
+          "state": "value"
+        },
+        "first_author": {
+          "artifact": "materials/crossref_response.json",
+          "locator": "message.items[2]",
+          "source": "crossref",
+          "state": "value"
+        },
+        "issue": {
+          "artifact": "materials/crossref_response.json",
+          "locator": "message.items[2]",
+          "source": "crossref",
+          "state": "value"
+        },
+        "journal": {
+          "artifact": "materials/crossref_response.json",
+          "locator": "message.items[2]",
+          "source": "crossref",
+          "state": "value"
+        },
+        "pages": {
+          "artifact": "materials/crossref_response.json",
+          "locator": "message.items[2]",
+          "source": "crossref",
+          "state": "value"
+        },
+        "pmid": {
+          "artifact": null,
+          "locator": null,
+          "source": null,
+          "state": "not_provided_by_any_source"
+        },
+        "title": {
+          "artifact": "materials/crossref_response.json",
+          "locator": "message.items[2]",
+          "source": "crossref",
+          "state": "value"
+        },
+        "volume": {
+          "artifact": "materials/crossref_response.json",
+          "locator": "message.items[2]",
+          "source": "crossref",
+          "state": "value"
+        },
+        "year": {
+          "artifact": "materials/crossref_response.json",
+          "locator": "message.items[2]",
+          "source": "crossref",
+          "state": "value"
+        }
+      },
+      "record_id": "rec-0003",
+      "sources_seen": [
+        "crossref"
+      ]
+    },
+    {
+      "dedup": {
+        "cluster_size": 2,
+        "match_basis": [
+          "title+year+first_author"
+        ],
+        "members": [
+          {
+            "artifact": "materials/publisher_records.json",
+            "locator": "records[1]",
+            "missing_fields": [
+              "pmid"
+            ],
+            "source": "publisher"
+          },
+          {
+            "artifact": "materials/europepmc_response.json",
+            "locator": "resultList.result[2]",
+            "missing_fields": [
+              "doi",
+              "issue",
+              "pages",
+              "volume"
+            ],
+            "source": "europepmc"
+          }
+        ]
+      },
+      "field_provenance": {
+        "authors": {
+          "artifact": "materials/publisher_records.json",
+          "locator": "records[1]",
+          "source": "publisher",
+          "state": "value"
+        },
+        "doi": {
+          "artifact": "materials/publisher_records.json",
+          "locator": "records[1]",
+          "source": "publisher",
+          "state": "value"
+        },
+        "first_author": {
+          "artifact": "materials/publisher_records.json",
+          "locator": "records[1]",
+          "source": "publisher",
+          "state": "value"
+        },
+        "issue": {
+          "artifact": "materials/publisher_records.json",
+          "locator": "records[1]",
+          "source": "publisher",
+          "state": "value"
+        },
+        "journal": {
+          "artifact": "materials/publisher_records.json",
+          "locator": "records[1]",
+          "source": "publisher",
+          "state": "value"
+        },
+        "pages": {
+          "artifact": "materials/publisher_records.json",
+          "locator": "records[1]",
+          "source": "publisher",
+          "state": "value"
+        },
+        "pmid": {
+          "artifact": "materials/europepmc_response.json",
+          "locator": "resultList.result[2]",
+          "source": "europepmc",
+          "state": "value"
+        },
+        "title": {
+          "artifact": "materials/publisher_records.json",
+          "locator": "records[1]",
+          "source": "publisher",
+          "state": "value"
+        },
+        "volume": {
+          "artifact": "materials/publisher_records.json",
+          "locator": "records[1]",
+          "source": "publisher",
+          "state": "value"
+        },
+        "year": {
+          "artifact": "materials/publisher_records.json",
+          "locator": "records[1]",
+          "source": "publisher",
+          "state": "value"
+        }
+      },
+      "record_id": "rec-0004",
+      "sources_seen": [
+        "europepmc",
+        "publisher"
+      ]
+    }
+  ],
+  "generated_by": "render_forge.py v1.0.0",
+  "ranking_basis": {
+    "method": "score = 3*title_term_hits + 1*context_term_hits + 2*in_graph_citations; deterministic tie-break by record_id",
+    "ranking": [
+      {
+        "citation_boost": 3,
+        "matched_terms": [
+          "catalysts",
+          "model",
+          "reactions",
+          "synthetic"
+        ],
+        "rank": 1,
+        "record_id": "rec-0001",
+        "score": 18
+      },
+      {
+        "citation_boost": 1,
+        "matched_terms": [
+          "selectivity",
+          "synthetic"
+        ],
+        "rank": 2,
+        "record_id": "rec-0002",
+        "score": 8
+      },
+      {
+        "citation_boost": 0,
+        "matched_terms": [
+          "selectivity",
+          "synthetic",
+          "fictional"
+        ],
+        "rank": 3,
+        "record_id": "rec-0003",
+        "score": 7
+      },
+      {
+        "citation_boost": 0,
+        "matched_terms": [
+          "fictional",
+          "synthetic"
+        ],
+        "rank": 4,
+        "record_id": "rec-0004",
+        "score": 6
+      }
+    ],
+    "terms": [
+      "basis",
+      "candidate",
+      "catalysts",
+      "chain",
+      "contract",
+      "coverage",
+      "deliverables",
+      "evidence",
+      "exclude",
+      "fictional",
+      "gate",
+      "improve",
+      "include",
+      "json",
+      "matrix",
+      "model",
+      "notes",
+      "null",
+      "pmid",
+      "provenance",
+      "ranking",
+      "reactions",
+      "records",
+      "render",
+      "report",
+      "scope",
+      "selectivity",
+      "source",
+      "statement",
+      "status",
+      "synthetic",
+      "table",
+      "task",
+      "unresolved"
+    ]
+  },
+  "sources": [
+    {
+      "classified_as": "crossref",
+      "path": "materials/crossref_response.json",
+      "sha256": "fc19e4f10481d872bd9b6736fce65c9a7f7d7a30658c18c5d517c639ce96bf87"
+    },
+    {
+      "classified_as": "europepmc",
+      "path": "materials/europepmc_response.json",
+      "sha256": "aa05b06e983e068e1ad4a049616d62679acd71ea911acd0a7696f624958b13bd"
+    },
+    {
+      "classified_as": "import_state",
+      "path": "materials/import_state.json",
+      "sha256": "69cbad8e6179b306772838edf50f95ee1fa22efa33f5d5e88a1f84a2e300af11"
+    },
+    {
+      "classified_as": "publisher",
+      "path": "materials/publisher_records.json",
+      "sha256": "e6af7040d8444c7840cc384887dd6f3ac0c49b8e2bde0ef8e777ab46cb38f3ad"
+    },
+    {
+      "classified_as": "reference_graph",
+      "path": "materials/reference_graph.json",
+      "sha256": "b16b476af710ca4e57231c1c4db8e2447007132c05dae5b781aee923518579e6"
+    }
+  ],
+  "status": "success",
+  "status_notes": {
+    "status_notes": [
+      "1 record(s) supported by a single source only: rec-0003",
+      "fields systematically absent in crossref: pmid",
+      "fields systematically absent in europepmc: issue, pages, volume",
+      "4 cross-source field conflict(s) resolved by per-field priority"
+    ],
+    "uncertainty": []
+  },
+  "uncertainty": [],
+  "unresolved_contract_fields": []
+}

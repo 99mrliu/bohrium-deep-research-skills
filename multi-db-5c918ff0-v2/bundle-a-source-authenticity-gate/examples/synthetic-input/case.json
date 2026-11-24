@@ -1,0 +1,20 @@
+{
+  "case_id": "synthetic-source-gate-001",
+  "_note": "SYNTHETIC teaching data - all papers, DOIs, databases and import states are fictional; this is NOT an official answer.",
+  "research_question": "合成问题：虚拟配体 XQ-7 对虚构激酶 SynthKinase-2 的选择性抑制是否已有文献报道？",
+  "source_dbs": ["crossref", "europepmc", "publisher"],
+  "materials": [
+    {"path": "materials/crossref_response.json", "role": "crossref"},
+    {"path": "materials/europepmc_response.json", "role": "europepmc"},
+    {"path": "materials/publisher_records.json", "role": "publisher"},
+    {"path": "materials/reference_graph.json", "role": "reference_graph"},
+    {"path": "materials/import_state.json", "role": "import_state"}
+  ],
+  "output_contract": {
+    "gated_records": "通过真实性门控、允许进入下游归一化/去重的文献记录列表",
+    "authenticity_summary": "门控汇总：各判定档位的工件数、记录数与一致性统计",
+    "quarantined_artifacts": "被隔离工件 id 列表（其记录不得进入下游）",
+    "downstream_ready": "布尔值：全部工件可信、无隔离时为 true",
+    "curator_comment": "策展人自由评述（本技能无法诚实填写，应为 null）"
+  }
+}

@@ -1,0 +1,210 @@
+{
+  "case_id": "synthetic-coverage-001",
+  "entries": [
+    {
+      "db": "crossref",
+      "entry_id": "gap-0001",
+      "evidence": {
+        "db": "crossref",
+        "field": "pmcid",
+        "locator": "coverage_matrix cells[crossref][pmcid]=0 over 2 records"
+      },
+      "impact": "字段 pmcid 在 crossref 的 2 条记录中 0 次提供：跨库合并时该字段对 crossref 系统性缺失，用户不能据此字段比较或筛选该库记录。",
+      "severity": "warning",
+      "type": "field_systematic_gap"
+    },
+    {
+      "db": "crossref",
+      "entry_id": "gap-0002",
+      "evidence": {
+        "db": "crossref",
+        "field": "pmid",
+        "locator": "coverage_matrix cells[crossref][pmid]=0 over 2 records"
+      },
+      "impact": "字段 pmid 在 crossref 的 2 条记录中 0 次提供：跨库合并时该字段对 crossref 系统性缺失，用户不能据此字段比较或筛选该库记录。",
+      "severity": "warning",
+      "type": "field_systematic_gap"
+    },
+    {
+      "db": "europepmc",
+      "entry_id": "gap-0003",
+      "evidence": {
+        "db": "europepmc",
+        "field": "issue",
+        "locator": "coverage_matrix cells[europepmc][issue]=0 over 2 records"
+      },
+      "impact": "字段 issue 在 europepmc 的 2 条记录中 0 次提供：跨库合并时该字段对 europepmc 系统性缺失，用户不能据此字段比较或筛选该库记录。",
+      "severity": "warning",
+      "type": "field_systematic_gap"
+    },
+    {
+      "db": "europepmc",
+      "entry_id": "gap-0004",
+      "evidence": {
+        "db": "europepmc",
+        "field": "pages",
+        "locator": "coverage_matrix cells[europepmc][pages]=0 over 2 records"
+      },
+      "impact": "字段 pages 在 europepmc 的 2 条记录中 0 次提供：跨库合并时该字段对 europepmc 系统性缺失，用户不能据此字段比较或筛选该库记录。",
+      "severity": "warning",
+      "type": "field_systematic_gap"
+    },
+    {
+      "db": "europepmc",
+      "entry_id": "gap-0005",
+      "evidence": {
+        "db": "europepmc",
+        "field": "reference_list",
+        "locator": "coverage_matrix cells[europepmc][reference_list]=0 over 2 records"
+      },
+      "impact": "字段 reference_list 在 europepmc 的 2 条记录中 0 次提供：跨库合并时该字段对 europepmc 系统性缺失，用户不能据此字段比较或筛选该库记录。",
+      "severity": "warning",
+      "type": "field_systematic_gap"
+    },
+    {
+      "db": "europepmc",
+      "entry_id": "gap-0006",
+      "evidence": {
+        "db": "europepmc",
+        "field": "volume",
+        "locator": "coverage_matrix cells[europepmc][volume]=0 over 2 records"
+      },
+      "impact": "字段 volume 在 europepmc 的 2 条记录中 0 次提供：跨库合并时该字段对 europepmc 系统性缺失，用户不能据此字段比较或筛选该库记录。",
+      "severity": "warning",
+      "type": "field_systematic_gap"
+    },
+    {
+      "db": "publisher",
+      "entry_id": "gap-0007",
+      "evidence": {
+        "db": "publisher",
+        "field": "abstract",
+        "locator": "coverage_matrix cells[publisher][abstract]=0 over 1 records"
+      },
+      "impact": "字段 abstract 在 publisher 的 1 条记录中 0 次提供：跨库合并时该字段对 publisher 系统性缺失，用户不能据此字段比较或筛选该库记录。",
+      "severity": "warning",
+      "type": "field_systematic_gap"
+    },
+    {
+      "db": "publisher",
+      "entry_id": "gap-0008",
+      "evidence": {
+        "db": "publisher",
+        "field": "pmcid",
+        "locator": "coverage_matrix cells[publisher][pmcid]=0 over 1 records"
+      },
+      "impact": "字段 pmcid 在 publisher 的 1 条记录中 0 次提供：跨库合并时该字段对 publisher 系统性缺失，用户不能据此字段比较或筛选该库记录。",
+      "severity": "warning",
+      "type": "field_systematic_gap"
+    },
+    {
+      "db": "publisher",
+      "entry_id": "gap-0009",
+      "evidence": {
+        "db": "publisher",
+        "field": "pmid",
+        "locator": "coverage_matrix cells[publisher][pmid]=0 over 1 records"
+      },
+      "impact": "字段 pmid 在 publisher 的 1 条记录中 0 次提供：跨库合并时该字段对 publisher 系统性缺失，用户不能据此字段比较或筛选该库记录。",
+      "severity": "warning",
+      "type": "field_systematic_gap"
+    },
+    {
+      "db": "crossref",
+      "entry_id": "gap-0010",
+      "evidence": {
+        "file": "crossref_response.json",
+        "locator": "message.total-results=3 vs items=2"
+      },
+      "impact": "crossref 声明命中总数 3，实际返回 2 条，且无翻页/游标证据：未返回部分不可见，用户不能断言已覆盖全部命中。",
+      "severity": "warning",
+      "type": "hitcount_mismatch"
+    },
+    {
+      "db": "crossref,publisher",
+      "entry_id": "gap-0011",
+      "evidence": {
+        "identifier": "doi:10.99955/syn.2021.0002",
+        "locator": "crossref_response.json,publisher_records.json"
+      },
+      "impact": "标识符 doi:10.99955/syn.2021.0002 在不同来源间元数据冲突（year: crossref=2021; publisher=2022）：已列出待仲裁、未静默合并；仲裁前用户不能确信其规范元数据。",
+      "severity": "warning",
+      "type": "identifier_conflict"
+    },
+    {
+      "db": "multi",
+      "entry_id": "gap-0012",
+      "evidence": {
+        "file": "import_state.json",
+        "identifier": "doi:10.99955/syn.2021.0777",
+        "locator": "imported_ids 中声明但检索响应中不存在"
+      },
+      "impact": "增量导入状态与检索响应不一致（claimed_not_in_responses：doi:10.99955/syn.2021.0777）：导入集与检索集存在偏差，用户不能断言二者一致。",
+      "severity": "warning",
+      "type": "import_state_gap"
+    },
+    {
+      "db": "crossref,europepmc",
+      "entry_id": "gap-0013",
+      "evidence": {
+        "dbs": "crossref,europepmc",
+        "locator": "task.md / case.json query evidence",
+        "query": "graph neural network catalyst screening"
+      },
+      "impact": "同一检索式被逐字发送至语法能力不同的数据库（crossref、europepmc）：各库的字段检索能力未被利用，召回可能系统性偏低或偏离预期。",
+      "severity": "warning",
+      "type": "mechanical_copy"
+    },
+    {
+      "db": "publisher",
+      "entry_id": "gap-0014",
+      "evidence": {
+        "db": "publisher",
+        "locator": "no query string found in case.json / task.md / envelope"
+      },
+      "impact": "数据库 publisher 缺少检索式/请求参数证据：无法复核其检索编排是否合理，该库覆盖度无法归因，用户不能断言检索是按预期执行的。",
+      "severity": "info",
+      "type": "query_evidence_missing"
+    },
+    {
+      "db": null,
+      "entry_id": "gap-0015",
+      "evidence": {
+        "file": "reference_graph.json",
+        "locator": "reference_graph.nodes (doi=10.99955/syn.2020.0999)",
+        "node": "n3"
+      },
+      "impact": "引用图节点 n3 未被任何来源检索到：引文追踪存在断点，被引/引用文献可能遗漏，用户不能断言引用网络已闭合。",
+      "severity": "warning",
+      "type": "referenced_not_retrieved"
+    },
+    {
+      "db": "europepmc",
+      "entry_id": "gap-0016",
+      "evidence": {
+        "identity": "pmid:38000002",
+        "locator": "europepmc_response.json"
+      },
+      "impact": "文献 pmid:38000002 仅出现于 europepmc：无第二来源交叉验证，其存在性与元数据可信度依赖单一来源。",
+      "severity": "info",
+      "type": "single_source_only"
+    }
+  ],
+  "summary": {
+    "by_severity": {
+      "info": 2,
+      "warning": 14
+    },
+    "by_type": {
+      "field_systematic_gap": 9,
+      "hitcount_mismatch": 1,
+      "identifier_conflict": 1,
+      "import_state_gap": 1,
+      "mechanical_copy": 1,
+      "query_evidence_missing": 1,
+      "referenced_not_retrieved": 1,
+      "single_source_only": 1
+    },
+    "total": 16
+  }
+}

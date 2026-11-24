@@ -1,0 +1,403 @@
+{
+  "answer_summary": "针对研究问题「合成卤化物钙钛矿的晶格动力学与缺陷钝化有哪些代表性研究?」:本案例跨 3 个数据库(crossref,europepmc,publisher)获取 9 条原始记录,经规范化与去重合并为 6 条文献记录;精确规则自动合并 5 对,模糊候选 1 对(待仲裁 0 对)。数据库×字段覆盖见 field_coverage_matrix。",
+  "artifacts": [
+    {
+      "path": "merged_records.json",
+      "sha256": "f456cf509dc7bbbbedf226bf60c915e253ccae2abb8e3c2ae7862c75777abbec"
+    },
+    {
+      "path": "coverage_matrix.json",
+      "sha256": "9aa0a434fa7d37f6f684cf2772f12d1e9872cb5e81bcba142027cfe8ed5f9637"
+    },
+    {
+      "path": "decision_log.json",
+      "sha256": "96df14c6e2135d80c6ea63afcfa20768536c79b43c75bb582351a589ce292707"
+    },
+    {
+      "path": "arbitration_queue.json",
+      "sha256": "a12ebf3e38d2a968267b38bf19c8e5a0ab24a48fd57c52c7c369bf805295f0ff"
+    },
+    {
+      "path": "qc_report.md",
+      "sha256": "4ed8ad79b8e1d598f822b73ec9ae52b71dd660cb9d2d36007a8261989adeda79"
+    }
+  ],
+  "case_id": "synthetic-qc-guard-001",
+  "change_records": [
+    {
+      "event": "run_plan_written",
+      "seq": 0,
+      "stage": null
+    },
+    {
+      "event": "stage_completed",
+      "seq": 1,
+      "stage": "intake"
+    },
+    {
+      "event": "stage_completed",
+      "seq": 2,
+      "stage": "normalize"
+    },
+    {
+      "event": "stage_completed",
+      "seq": 3,
+      "stage": "identity"
+    },
+    {
+      "event": "stage_completed",
+      "seq": 4,
+      "stage": "coverage"
+    },
+    {
+      "event": "gate_completed",
+      "seq": 5,
+      "stage": "report"
+    },
+    {
+      "event": "stage_completed",
+      "seq": 6,
+      "stage": "report"
+    },
+    {
+      "event": "run_plan_written",
+      "seq": 7,
+      "stage": null
+    },
+    {
+      "event": "stage_skipped",
+      "seq": 8,
+      "stage": "intake"
+    },
+    {
+      "event": "stage_skipped",
+      "seq": 9,
+      "stage": "normalize"
+    },
+    {
+      "event": "stale_detected",
+      "seq": 10,
+      "stage": "identity"
+    },
+    {
+      "event": "stage_completed",
+      "seq": 11,
+      "stage": "identity"
+    },
+    {
+      "event": "stage_skipped",
+      "seq": 12,
+      "stage": "coverage"
+    },
+    {
+      "event": "stale_detected",
+      "seq": 13,
+      "stage": "report"
+    },
+    {
+      "event": "gate_completed",
+      "seq": 14,
+      "stage": "report"
+    },
+    {
+      "event": "stage_completed",
+      "seq": 15,
+      "stage": "report"
+    },
+    {
+      "event": "replay_completed",
+      "seq": 16,
+      "stage": null
+    },
+    {
+      "event": "stale_detected",
+      "seq": 17,
+      "stage": "report"
+    }
+  ],
+  "citation_graph_stats": {
+    "edge_count": 3,
+    "node_count": 5,
+    "source_material": "materials/reference_graph.json"
+  },
+  "duplicate_decision_log": [
+    {
+      "decision": "auto_merge",
+      "detail": {
+        "already_linked": false,
+        "key": "10.99977/syn.0001"
+      },
+      "reason_code": "doi_exact",
+      "record_a": "crossref#00",
+      "record_b": "europepmc#00"
+    },
+    {
+      "decision": "auto_merge",
+      "detail": {
+        "already_linked": true,
+        "key": "synthetic perovskite halides for lattice dynamics studies|2021|zhang"
+      },
+      "reason_code": "title_year_first_author",
+      "record_a": "crossref#00",
+      "record_b": "europepmc#00"
+    },
+    {
+      "decision": "auto_merge",
+      "detail": {
+        "already_linked": false,
+        "key": "10.99977/syn.0002"
+      },
+      "reason_code": "doi_exact",
+      "record_a": "crossref#01",
+      "record_b": "publisher#00"
+    },
+    {
+      "decision": "auto_merge",
+      "detail": {
+        "already_linked": true,
+        "key": "defect passivation in synthetic halide perovskites|2022|chen"
+      },
+      "reason_code": "title_year_first_author",
+      "record_a": "crossref#01",
+      "record_b": "publisher#00"
+    },
+    {
+      "decision": "arbitrated_distinct",
+      "detail": {
+        "pair_id": "pair:crossref#03--publisher#02",
+        "rationale": "两记录 DOI 不同(10.99977/syn.0005 vs 10.99977/syn.0006),刊名、卷期与页码均不同;标题差异(halides vs halide films)指示研究对象不同,判定为两篇不同文献。"
+      },
+      "reason_code": "arbitration_decision",
+      "record_a": "crossref#03",
+      "record_b": "publisher#02"
+    },
+    {
+      "decision": "queued_for_arbitration",
+      "detail": {
+        "jaccard": "0.6250",
+        "pair_id": "pair:crossref#03--publisher#02",
+        "threshold": 0.6
+      },
+      "reason_code": "fuzzy_title_jaccard",
+      "record_a": "crossref#03",
+      "record_b": "publisher#02"
+    },
+    {
+      "decision": "auto_merge",
+      "detail": {
+        "already_linked": false,
+        "key": "synthetic defect tolerance in halide perovskite films|2022|kumar"
+      },
+      "reason_code": "title_year_first_author",
+      "record_a": "europepmc#01",
+      "record_b": "publisher#01"
+    }
+  ],
+  "field_coverage_matrix": {
+    "fields": [
+      "doi",
+      "pmid",
+      "title",
+      "year",
+      "first_author_surname",
+      "authors",
+      "journal",
+      "volume",
+      "issue",
+      "pages"
+    ],
+    "matrix": {
+      "MERGED_UNION": {
+        "authors": 6,
+        "doi": 5,
+        "first_author_surname": 6,
+        "issue": 6,
+        "journal": 6,
+        "pages": 6,
+        "pmid": 2,
+        "title": 6,
+        "volume": 6,
+        "year": 6
+      },
+      "crossref": {
+        "authors": 4,
+        "doi": 4,
+        "first_author_surname": 4,
+        "issue": 4,
+        "journal": 4,
+        "pages": 4,
+        "pmid": 1,
+        "title": 4,
+        "volume": 4,
+        "year": 4
+      },
+      "europepmc": {
+        "authors": 2,
+        "doi": 1,
+        "first_author_surname": 2,
+        "issue": 2,
+        "journal": 2,
+        "pages": 2,
+        "pmid": 2,
+        "title": 2,
+        "volume": 2,
+        "year": 2
+      },
+      "publisher": {
+        "authors": 3,
+        "doi": 2,
+        "first_author_surname": 3,
+        "issue": 3,
+        "journal": 3,
+        "pages": 3,
+        "pmid": 1,
+        "title": 3,
+        "volume": 3,
+        "year": 3
+      }
+    },
+    "merged_total": 6,
+    "rows": [
+      "crossref",
+      "europepmc",
+      "publisher",
+      "MERGED_UNION"
+    ],
+    "semantics": "matrix[db][field] = 含该库贡献且合并后该字段可用的合并记录数;MERGED_UNION 行为合并并集覆盖"
+  },
+  "merged_records": [
+    {
+      "doi": "10.99977/syn.0001",
+      "first_author_surname": "Zhang",
+      "journal": "Journal of Synthetic Materials",
+      "member_record_ids": [
+        "crossref#00",
+        "europepmc#00"
+      ],
+      "merged_id": "M001",
+      "pmid": "38000001",
+      "sources": [
+        "crossref",
+        "europepmc"
+      ],
+      "title": "Synthetic perovskite halides for lattice dynamics studies",
+      "year": "2021"
+    },
+    {
+      "doi": "10.99977/syn.0002",
+      "first_author_surname": "Chen",
+      "journal": "Synthetic Photonics Review",
+      "member_record_ids": [
+        "crossref#01",
+        "publisher#00"
+      ],
+      "merged_id": "M002",
+      "pmid": null,
+      "sources": [
+        "crossref",
+        "publisher"
+      ],
+      "title": "Defect passivation in synthetic halide perovskites",
+      "year": "2022"
+    },
+    {
+      "doi": "10.99977/syn.0004",
+      "first_author_surname": "García",
+      "journal": "Journal of Synthetic Materials",
+      "member_record_ids": [
+        "crossref#02"
+      ],
+      "merged_id": "M003",
+      "pmid": null,
+      "sources": [
+        "crossref"
+      ],
+      "title": "Synthetic phonon transport in layered perovskites",
+      "year": "2023"
+    },
+    {
+      "doi": "10.99977/syn.0005",
+      "first_author_surname": "Zhang",
+      "journal": "Synthetic Photonics Review",
+      "member_record_ids": [
+        "crossref#03"
+      ],
+      "merged_id": "M004",
+      "pmid": null,
+      "sources": [
+        "crossref"
+      ],
+      "title": "Synthetic lattice dynamics of perovskite halides",
+      "year": "2024"
+    },
+    {
+      "doi": null,
+      "first_author_surname": "Kumar",
+      "journal": "Synthetic Photonics Review",
+      "member_record_ids": [
+        "europepmc#01",
+        "publisher#01"
+      ],
+      "merged_id": "M005",
+      "pmid": "38000002",
+      "sources": [
+        "europepmc",
+        "publisher"
+      ],
+      "title": "Synthetic defect tolerance in halide perovskite films",
+      "year": "2022"
+    },
+    {
+      "doi": "10.99977/syn.0006",
+      "first_author_surname": "Zhang",
+      "journal": "Journal of Synthetic Materials",
+      "member_record_ids": [
+        "publisher#02"
+      ],
+      "merged_id": "M006",
+      "pmid": null,
+      "sources": [
+        "publisher"
+      ],
+      "title": "Synthetic lattice dynamics of perovskite halide films",
+      "year": "2024"
+    }
+  ],
+  "sources": [
+    {
+      "path": "case.json",
+      "sha256": "c5d6e2a5e9805287731e70b59d37cdf695ca73188b1c34d7810225ce02ef9a81"
+    },
+    {
+      "path": "task.md",
+      "sha256": "1194c9150dff43416d697ec8eaf9dc3adae60b556664678af743859409e247db"
+    },
+    {
+      "class": "crossref",
+      "path": "materials/crossref_response.json",
+      "sha256": "38386edeb8c6cea1b022a482f780421c968829ae3d996ec1b6267b59b68240b2"
+    },
+    {
+      "class": "europepmc",
+      "path": "materials/europepmc_response.json",
+      "sha256": "72ef87f757a0a48ba19306375697e7d420e0840ea55601753790c9a857a709cb"
+    },
+    {
+      "class": "publisher",
+      "path": "materials/publisher_records.json",
+      "sha256": "7f60f05317eb20ac369b8e0f9c3271f59d5d71c40130da0ac684e1416e46aba4"
+    },
+    {
+      "class": "reference_graph",
+      "path": "materials/reference_graph.json",
+      "sha256": "fa2fe23d620ae6654e8f9506e4895df10ab69fc99e6c633b2001c3f56b9b63b7"
+    }
+  ],
+  "status": "success",
+  "tool": {
+    "name": "qc_guard.py",
+    "version": "1.0.0"
+  },
+  "uncertainty": null,
+  "unresolved_contract_fields": []
+}
