@@ -1,0 +1,37 @@
+{
+  "closure": {
+    "closure_ok": true,
+    "duplicates": 2,
+    "excluded": 0,
+    "kept": 8,
+    "records_total": 10
+  },
+  "exclusion_log": [],
+  "per_source_file_counts": {
+    "/Users/liuhengshen/Desktop/bhr_product/frontier-073af7d3-five/bundles/bundle-a-corpus-coverage-gate/examples/synthetic_case/corpus.jsonl": 8
+  },
+  "per_year_counts": {
+    "2023": 3,
+    "2024": 3,
+    "2025": 1
+  },
+  "records_with_year": 7,
+  "records_without_year": 1,
+  "right_censoring": {
+    "assessment": "suspected_partial",
+    "final_year": 2025,
+    "final_year_count": 1,
+    "median_previous_3": 3,
+    "previous_3_years": {
+      "2022": 0,
+      "2023": 3,
+      "2024": 3
+    },
+    "rule": "final year suspected partial if its count < 0.4 * median of the counts of the previous 3 calendar years (missing years count as 0)",
+    "suspected_partial_years": [
+      2025
+    ],
+    "threshold": 1.2
+  },
+  "year_missing_rate": 0.125
+}

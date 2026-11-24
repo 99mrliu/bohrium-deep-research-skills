@@ -1,0 +1,45 @@
+{
+  "_comment": "SYNTHETIC 合成负向测试工件：被篡改的覆盖度台账。closure 数字不能闭合（10 != 8+2+1=11），且 closure_ok 被恶意置为 true，用于证明 gate_check.py 会重算闭环方程而非信任文件内标志。",
+  "closure": {
+    "closure_ok": true,
+    "duplicates": 2,
+    "excluded": 1,
+    "kept": 8,
+    "records_total": 10
+  },
+  "exclusion_log": [
+    {
+      "id": "R999",
+      "note": "tampered exclusion entry (synthetic negative test); this id does not exist in canon.jsonl",
+      "reason": "out_of_scope"
+    }
+  ],
+  "per_source_file_counts": {
+    "examples/synthetic_case/corpus.jsonl": 8
+  },
+  "per_year_counts": {
+    "2022": 0,
+    "2023": 3,
+    "2024": 3,
+    "2025": 1
+  },
+  "records_with_year": 7,
+  "records_without_year": 1,
+  "right_censoring": {
+    "assessment": "suspected_partial",
+    "final_year": 2025,
+    "final_year_count": 1,
+    "median_previous_3": 3,
+    "previous_3_years": {
+      "2022": 0,
+      "2023": 3,
+      "2024": 3
+    },
+    "rule": "final year suspected partial if its count < 0.4 * median of the counts of the previous 3 calendar years (missing years count as 0)",
+    "suspected_partial_years": [
+      2025
+    ],
+    "threshold": 1.2
+  },
+  "year_missing_rate": 0.125
+}

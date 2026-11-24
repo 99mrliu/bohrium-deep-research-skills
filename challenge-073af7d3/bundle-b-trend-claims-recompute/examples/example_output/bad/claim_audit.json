@@ -1,0 +1,118 @@
+{
+  "claims_file": "claims_bad.json",
+  "n_claims": 4,
+  "summary": {
+    "downgraded": 0,
+    "ok": 0,
+    "violation": 4
+  },
+  "verdicts": [
+    {
+      "claim_id": "b1",
+      "evidence": {
+        "censored_bin": "2025",
+        "censoring": {
+          "final_count": 1,
+          "final_label": "2025",
+          "median_prev3": 8,
+          "rule": "final_count < 0.40 * median(prev 3 bins)",
+          "threshold": 3.2
+        },
+        "final_count": 1,
+        "note": "末段计数疑似右删失（数据截取不全），不能作为衰退证据"
+      },
+      "kind": "decline",
+      "statement": "2025年产出骤降，领域正在退潮（错误示范：把右删失年份当衰退证据）。",
+      "verdict": "violation",
+      "violations": [
+        "censored_year_as_decline"
+      ]
+    },
+    {
+      "claim_id": "b2",
+      "evidence": {
+        "in_fluctuation_years": true,
+        "matched_candidate": {
+          "ci95_hi": 3.201558,
+          "ci95_lo": 0.969991,
+          "lambda1": 3.25,
+          "lambda2": 5.727273,
+          "ll_gain": 1.948682,
+          "rank": 7,
+          "rate_ratio": 1.762238,
+          "seg1": "2010..2013",
+          "seg2": "2014..2024",
+          "supported": false,
+          "tau": 2014,
+          "tau_label": "2014"
+        },
+        "note": "该年是 |z|>=2 的单年波动年，且无 supported 变点候选；单年尖峰是泊松噪声候选，不得当作真实拐点",
+        "tau": 2014
+      },
+      "kind": "changepoint",
+      "statement": "2014年的单年尖峰是真实拐点（错误示范：把泊松波动当变点）。",
+      "verdict": "violation",
+      "violations": [
+        "fluctuation_as_inflection"
+      ]
+    },
+    {
+      "claim_id": "b3",
+      "evidence": {
+        "in_fluctuation_years": false,
+        "matched_candidate": {
+          "ci95_hi": 2.342908,
+          "ci95_lo": 0.890526,
+          "lambda1": 4.0,
+          "lambda2": 5.777778,
+          "ll_gain": 1.156141,
+          "rank": 10,
+          "rate_ratio": 1.444444,
+          "seg1": "2010..2015",
+          "seg2": "2016..2024",
+          "supported": false,
+          "tau": 2016,
+          "tau_label": "2016"
+        },
+        "note": "主张显著变点，但该 τ 的 rate-ratio CI 未排除 1（或不在候选中）",
+        "tau": 2016
+      },
+      "kind": "changepoint",
+      "statement": "2016年出现显著变点（错误示范：统计不支持的τ）。",
+      "verdict": "violation",
+      "violations": [
+        "unsupported_changepoint"
+      ]
+    },
+    {
+      "claim_id": "b4",
+      "evidence": {
+        "ci95": [
+          1.047597,
+          2.702808
+        ],
+        "first_half": {
+          "bins": 7,
+          "range": "2010..2016",
+          "rate": 3.714286,
+          "total": 26
+        },
+        "note": "主张 down 但重算为统计显著的上升",
+        "rate_ratio_second_over_first": 1.682692,
+        "second_half": {
+          "bins": 8,
+          "range": "2017..2024",
+          "rate": 6.25,
+          "total": 50
+        },
+        "trimmed_censored_bin": null
+      },
+      "kind": "trend",
+      "statement": "2010—2024年产出持续走低（错误示范：方向与重算计数相反）。",
+      "verdict": "violation",
+      "violations": [
+        "direction_mismatch"
+      ]
+    }
+  ]
+}

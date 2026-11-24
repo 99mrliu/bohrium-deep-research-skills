@@ -1,0 +1,45 @@
+{
+  "gaps": [
+    {
+      "gap_id": "bad-1",
+      "statement": "语料中没有任何关于低光增强在医学内窥镜图像上的研究，因此这是研究空白。",
+      "gap_type": "missing-population-or-setting"
+    },
+    {
+      "gap_id": "bad-2",
+      "statement": "Quantum error correction for superconducting qubits lacks low-noise readout methods.",
+      "gap_type": "missing-population-or-setting",
+      "exclusion_evidence": {
+        "scope_description": "Provided corpus of 15 low-light image enhancement records, screened via q1 and q2.",
+        "query_ids": ["q1", "q2"],
+        "near_misses": [
+          {"record_id": "L001", "why_not": "A Retinex low-light paper; cited here as a near miss but it does not overlap the gap topic at all."}
+        ]
+      }
+    },
+    {
+      "gap_id": "bad-3",
+      "statement": "Diffusion-based low-light enhancement under extreme sensor noise remains unexplored.",
+      "gap_type": "hot-future-direction",
+      "exclusion_evidence": {
+        "scope_description": "Provided corpus of 15 low-light image enhancement records, screened via q1 and q2.",
+        "query_ids": ["q1", "q2"],
+        "near_misses": [
+          {"record_id": "L012", "why_not": "Diffusion-based enhancer, but it does not evaluate the extreme sensor noise regime."}
+        ]
+      }
+    },
+    {
+      "gap_id": "bad-4",
+      "statement": "Lightweight low-light enhancement for mobile deployment on edge devices.",
+      "gap_type": "method-failure-on-object-or-scale",
+      "exclusion_evidence": {
+        "scope_description": "Provided corpus of 15 low-light image enhancement records; but the query cited below was never logged.",
+        "query_ids": ["q999"],
+        "near_misses": [
+          {"record_id": "L015", "why_not": "Actually covers mobile deployment, so this claim would need downgrading anyway; the logged-evidence failure is the unknown query."}
+        ]
+      }
+    }
+  ]
+}

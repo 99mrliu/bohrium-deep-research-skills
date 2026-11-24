@@ -1,0 +1,19 @@
+{
+  "duplicates_removed": 2,
+  "pairs": [
+    {
+      "kept_id": "R001",
+      "removed_id": "R009",
+      "removed_title": "Autonomous LLM Agents for Hypothesis Generation in Materials Science",
+      "rule": "doi_exact",
+      "score": 1.0
+    },
+    {
+      "kept_id": "R002",
+      "removed_id": "R010",
+      "removed_title": "Automated Literature Synthesis via Retrieval-Augmented Reasoning",
+      "rule": "title_jaccard>=0.9",
+      "score": 1.0
+    }
+  ]
+}

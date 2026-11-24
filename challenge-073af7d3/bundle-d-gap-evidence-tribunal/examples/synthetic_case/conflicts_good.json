@@ -1,0 +1,19 @@
+{
+  "conflicts": [
+    {
+      "conflict_id": "c1",
+      "quantity_or_claim": "Effect of Retinex-style low-light enhancement on YOLOv5 mAP@0.5 on the ExDark dataset",
+      "side_a": {
+        "record_ids": ["L009"],
+        "value_or_finding": "mAP@0.5 improves by +4.2 points",
+        "location": "L009 abstract; Table 2 (synthetic)"
+      },
+      "side_b": {
+        "record_ids": ["L010"],
+        "value_or_finding": "mAP@0.5 changes by -0.3 points; not statistically significant",
+        "location": "L010 abstract; Section 4 (synthetic)"
+      },
+      "status": "unresolved"
+    }
+  ]
+}

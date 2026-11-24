@@ -1,0 +1,26 @@
+[
+  {
+    "claim_id": "g1",
+    "kind": "changepoint",
+    "year": 2018,
+    "direction": "up",
+    "significance": "claimed",
+    "statement": "2018年前后出现显著上升变点：年产出自约3.5篇跃升至约6.9篇（合成示例，与植入真值一致）。"
+  },
+  {
+    "claim_id": "g2",
+    "kind": "trend",
+    "year_range": [2010, 2024],
+    "direction": "up",
+    "significance": "claimed",
+    "statement": "2010—2024年整体产出呈统计上可区分的上升趋势（合成示例）。"
+  },
+  {
+    "claim_id": "g3",
+    "kind": "fluctuation",
+    "year": 2014,
+    "direction": "up",
+    "significance": "not_claimed",
+    "statement": "2014年单年尖峰按泊松噪声波动处理，不主张为拐点（合成示例，与植入真值一致）。"
+  }
+]

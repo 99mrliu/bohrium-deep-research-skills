@@ -1,0 +1,200 @@
+{
+ "meta": {
+  "boundaries_after_year": [
+   2015,
+   2020
+  ],
+  "distance_between": [
+   "2010-2011",
+   "2011-2012",
+   "2012-2013",
+   "2013-2014",
+   "2014-2015",
+   "2015-2016",
+   "2016-2017",
+   "2017-2018",
+   "2018-2019",
+   "2019-2020",
+   "2020-2021",
+   "2021-2022",
+   "2022-2023",
+   "2023-2024"
+  ],
+  "kernel": [
+   1,
+   2,
+   1
+  ],
+  "mad": 0.070744,
+  "median": 0.294769,
+  "raw_distances": [
+   0.282453,
+   0.197368,
+   0.201214,
+   0.196878,
+   0.234549,
+   0.665706,
+   0.213115,
+   0.190988,
+   0.182201,
+   0.190816,
+   0.673092,
+   0.193744,
+   0.383775,
+   0.253271
+  ],
+  "rule": "boundary = local maximum of 1-2-1-smoothed adjacent-year cosine distance strictly above median + 1.0*MAD",
+  "smoothed_distances": [
+   0.261182,
+   0.219601,
+   0.199168,
+   0.20738,
+   0.332921,
+   0.444769,
+   0.320731,
+   0.194323,
+   0.186552,
+   0.309231,
+   0.432686,
+   0.361089,
+   0.303641,
+   0.285897
+  ],
+  "threshold": 0.365513,
+  "years": [
+   2010,
+   2011,
+   2012,
+   2013,
+   2014,
+   2015,
+   2016,
+   2017,
+   2018,
+   2019,
+   2020,
+   2021,
+   2022,
+   2023,
+   2024
+  ]
+ },
+ "phases": [
+  {
+   "declining_terms": [
+    "machine",
+    "support",
+    "support vector",
+    "vector",
+    "vector machine",
+    "margin",
+    "training",
+    "bayes",
+    "input",
+    "kernel methods"
+   ],
+   "dominant_terms": [
+    "classification",
+    "kernel",
+    "kernel method",
+    "machine",
+    "method",
+    "sentiment",
+    "support",
+    "support vector",
+    "text",
+    "text classification"
+   ],
+   "emerging_terms": [
+    "classification",
+    "kernel",
+    "kernel method",
+    "machine",
+    "method",
+    "sentiment",
+    "support",
+    "support vector",
+    "text",
+    "text classification"
+   ],
+   "end": 2015,
+   "n_records": 11,
+   "phase_id": "P1",
+   "start": 2010
+  },
+  {
+   "declining_terms": [
+    "deep",
+    "deep neural",
+    "network",
+    "neural",
+    "neural network",
+    "convolutional",
+    "convolutional network",
+    "network convolutional",
+    "network design",
+    "analysis text"
+   ],
+   "dominant_terms": [
+    "deep",
+    "deep neural",
+    "network",
+    "neural",
+    "neural network",
+    "classification",
+    "convolutional",
+    "convolutional network",
+    "text",
+    "sentiment"
+   ],
+   "emerging_terms": [
+    "deep",
+    "deep neural",
+    "network",
+    "neural",
+    "neural network",
+    "convolutional",
+    "convolutional network",
+    "embedding",
+    "word",
+    "word embedding"
+   ],
+   "end": 2020,
+   "n_records": 10,
+   "phase_id": "P2",
+   "start": 2016
+  },
+  {
+   "declining_note": "final phase: decline unknowable due to corpus-end censoring; not reported",
+   "declining_terms": [],
+   "dominant_terms": [
+    "attention",
+    "classification",
+    "self",
+    "self attention",
+    "text",
+    "text classification",
+    "transformer",
+    "model",
+    "pretrained language model",
+    "sentiment"
+   ],
+   "emerging_terms": [
+    "self",
+    "self attention",
+    "transformer",
+    "model",
+    "pretrained language model",
+    "foundation",
+    "head",
+    "head self",
+    "model transformer",
+    "multi"
+   ],
+   "end": 2024,
+   "n_records": 9,
+   "phase_id": "P3",
+   "start": 2021
+  }
+ ]
+}

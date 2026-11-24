@@ -1,0 +1,149 @@
+{
+  "bins": [
+    {
+      "ci95_hi": 8.765364,
+      "ci95_lo": 0.602973,
+      "count": 3,
+      "end": 2010,
+      "label": "2010",
+      "start": 2010
+    },
+    {
+      "ci95_hi": 8.765364,
+      "ci95_lo": 0.602973,
+      "count": 3,
+      "end": 2011,
+      "label": "2011",
+      "start": 2011
+    },
+    {
+      "ci95_hi": 8.765364,
+      "ci95_lo": 0.602973,
+      "count": 3,
+      "end": 2012,
+      "label": "2012",
+      "start": 2012
+    },
+    {
+      "ci95_hi": 10.240753,
+      "ci95_lo": 1.07615,
+      "count": 4,
+      "end": 2013,
+      "label": "2013",
+      "start": 2013
+    },
+    {
+      "ci95_hi": 17.085781,
+      "ci95_lo": 4.106885,
+      "count": 9,
+      "end": 2014,
+      "label": "2014",
+      "start": 2014
+    },
+    {
+      "ci95_hi": 7.220869,
+      "ci95_lo": 0.224625,
+      "count": 2,
+      "end": 2015,
+      "label": "2015",
+      "start": 2015
+    },
+    {
+      "ci95_hi": 7.220869,
+      "ci95_lo": 0.224625,
+      "count": 2,
+      "end": 2016,
+      "label": "2016",
+      "start": 2016
+    },
+    {
+      "ci95_hi": 7.220869,
+      "ci95_lo": 0.224625,
+      "count": 2,
+      "end": 2017,
+      "label": "2017",
+      "start": 2017
+    },
+    {
+      "ci95_hi": 13.059751,
+      "ci95_lo": 2.190986,
+      "count": 6,
+      "end": 2018,
+      "label": "2018",
+      "start": 2018
+    },
+    {
+      "ci95_hi": 13.059751,
+      "ci95_lo": 2.190986,
+      "count": 6,
+      "end": 2019,
+      "label": "2019",
+      "start": 2019
+    },
+    {
+      "ci95_hi": 13.059751,
+      "ci95_lo": 2.190986,
+      "count": 6,
+      "end": 2020,
+      "label": "2020",
+      "start": 2020
+    },
+    {
+      "ci95_hi": 14.423263,
+      "ci95_lo": 2.804431,
+      "count": 7,
+      "end": 2021,
+      "label": "2021",
+      "start": 2021
+    },
+    {
+      "ci95_hi": 14.423263,
+      "ci95_lo": 2.804431,
+      "count": 7,
+      "end": 2022,
+      "label": "2022",
+      "start": 2022
+    },
+    {
+      "ci95_hi": 15.764,
+      "ci95_lo": 3.444691,
+      "count": 8,
+      "end": 2023,
+      "label": "2023",
+      "start": 2023
+    },
+    {
+      "ci95_hi": 15.764,
+      "ci95_lo": 3.444691,
+      "count": 8,
+      "end": 2024,
+      "label": "2024",
+      "start": 2024
+    },
+    {
+      "ci95_hi": 5.563756,
+      "ci95_lo": 0.013072,
+      "count": 1,
+      "end": 2025,
+      "label": "2025",
+      "start": 2025
+    }
+  ],
+  "censoring": {
+    "final_count": 1,
+    "final_label": "2025",
+    "median_prev3": 8,
+    "rule": "final_count < 0.40 * median(prev 3 bins)",
+    "threshold": 3.2
+  },
+  "ci_level": 0.95,
+  "ci_method": "garwood-wilson-hilferty",
+  "mode": "annual",
+  "n_missing_year": 0,
+  "n_records": 77,
+  "notes": [
+    "partial_year_suspect: 末段 2025 计数 1 < 阈值 3.2，疑似右删失（数据截取），禁止单独据此主张衰退"
+  ],
+  "partial_year_suspect": true,
+  "window": 1
+}

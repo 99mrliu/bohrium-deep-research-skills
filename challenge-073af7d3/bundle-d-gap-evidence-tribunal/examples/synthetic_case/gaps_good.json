@@ -1,0 +1,30 @@
+{
+  "gaps": [
+    {
+      "gap_id": "gap-1",
+      "statement": "No method in the provided corpus targets low-light enhancement for underwater imaging environments.",
+      "gap_type": "missing-population-or-setting",
+      "exclusion_evidence": {
+        "scope_description": "Provided corpus of 15 low-light image enhancement records (2015-2024), screened via q1 (full-corpus triage) and q2 (detection-utility rescreen); no external database search was executed.",
+        "query_ids": ["q1", "q2"],
+        "near_misses": [
+          {"record_id": "L014", "why_not": "Targets infrared-visible fusion for nighttime surveillance, a terrestrial setting; underwater imaging is not addressed."},
+          {"record_id": "L002", "why_not": "Handles nighttime street images only; no underwater or other non-terrestrial imaging environment."}
+        ]
+      }
+    },
+    {
+      "gap_id": "gap-2",
+      "statement": "Whether low-light enhancement reliably improves downstream object detection remains an unresolved conflict in the corpus.",
+      "gap_type": "conflict-unresolved",
+      "exclusion_evidence": {
+        "scope_description": "Provided corpus of 15 low-light image enhancement records (2015-2024), screened via q1 and q2; q2 specifically re-screened all corpus records mentioning downstream detection.",
+        "query_ids": ["q1", "q2"],
+        "near_misses": [
+          {"record_id": "L009", "why_not": "Reports a positive effect (+4.2 mAP) but is only one side of the conflict; it does not resolve the question."},
+          {"record_id": "L010", "why_not": "Reports no significant effect (-0.3 mAP), the opposite side; the two records disagree, leaving the question unresolved."}
+        ]
+      }
+    }
+  ]
+}

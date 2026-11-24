@@ -1,0 +1,71 @@
+{
+  "claims_file": "claims_good.json",
+  "n_claims": 3,
+  "summary": {
+    "downgraded": 0,
+    "ok": 3,
+    "violation": 0
+  },
+  "verdicts": [
+    {
+      "claim_id": "g1",
+      "evidence": {
+        "ci95": [
+          1.229311,
+          3.122401
+        ],
+        "lambda1": 3.5,
+        "lambda2": 6.857143,
+        "ll_gain": 4.167406,
+        "rank": 1,
+        "rate_ratio": 1.959184,
+        "tau": 2018
+      },
+      "kind": "changepoint",
+      "statement": "2018年前后出现显著上升变点：年产出自约3.5篇跃升至约6.9篇（合成示例，与植入真值一致）。",
+      "verdict": "ok",
+      "violations": []
+    },
+    {
+      "claim_id": "g2",
+      "evidence": {
+        "ci95": [
+          1.047597,
+          2.702808
+        ],
+        "first_half": {
+          "bins": 7,
+          "range": "2010..2016",
+          "rate": 3.714286,
+          "total": 26
+        },
+        "rate_ratio_second_over_first": 1.682692,
+        "second_half": {
+          "bins": 8,
+          "range": "2017..2024",
+          "rate": 6.25,
+          "total": 50
+        },
+        "trimmed_censored_bin": null
+      },
+      "kind": "trend",
+      "statement": "2010—2024年整体产出呈统计上可区分的上升趋势（合成示例）。",
+      "verdict": "ok",
+      "violations": []
+    },
+    {
+      "claim_id": "g3",
+      "evidence": {
+        "count": 9,
+        "ma_baseline": 3.333333,
+        "note": "与重算的波动清单一致",
+        "year": 2014,
+        "z": 3.103761
+      },
+      "kind": "fluctuation",
+      "statement": "2014年单年尖峰按泊松噪声波动处理，不主张为拐点（合成示例，与植入真值一致）。",
+      "verdict": "ok",
+      "violations": []
+    }
+  ]
+}

@@ -1,0 +1,74 @@
+{
+  "gaps": [
+    {
+      "evidence_summary": {
+        "max_shared_tokens": 0,
+        "n_near_misses": 0,
+        "n_queries": 0,
+        "scope": ""
+      },
+      "gap_id": "bad-1",
+      "verdict": "rejected",
+      "violations": [
+        {
+          "code": "bare_gap_claim",
+          "detail": "missing/empty exclusion_evidence; 'not found in retrieval' alone is a retrieval-omission suspect, not a research gap"
+        }
+      ]
+    },
+    {
+      "evidence_summary": {
+        "max_shared_tokens": 1,
+        "n_near_misses": 1,
+        "n_queries": 2,
+        "scope": "Provided corpus of 15 low-light image enhancement records, screened via q1 and q2."
+      },
+      "gap_id": "bad-2",
+      "verdict": "rejected",
+      "violations": [
+        {
+          "code": "irrelevant_near_miss",
+          "detail": "topical overlap below sanity floor",
+          "jaccard": 0.0345,
+          "record_id": "L001",
+          "shared_tokens": [
+            "low"
+          ]
+        }
+      ]
+    },
+    {
+      "evidence_summary": {
+        "max_shared_tokens": 4,
+        "n_near_misses": 1,
+        "n_queries": 2,
+        "scope": "Provided corpus of 15 low-light image enhancement records, screened via q1 and q2."
+      },
+      "gap_id": "bad-3",
+      "verdict": "rejected",
+      "violations": [
+        {
+          "code": "unknown_gap_type",
+          "detail": "gap_type 'hot-future-direction' not in taxonomy"
+        }
+      ]
+    },
+    {
+      "evidence_summary": {
+        "max_shared_tokens": 7,
+        "n_near_misses": 1,
+        "n_queries": 1,
+        "scope": "Provided corpus of 15 low-light image enhancement records; but the query cited below was never logged."
+      },
+      "gap_id": "bad-4",
+      "verdict": "rejected",
+      "violations": [
+        {
+          "code": "unknown_query",
+          "detail": "query_id not in retrieval report",
+          "query_id": "q999"
+        }
+      ]
+    }
+  ]
+}

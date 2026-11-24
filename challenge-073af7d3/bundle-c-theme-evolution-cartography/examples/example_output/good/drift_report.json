@@ -1,0 +1,57 @@
+{
+ "canonical_terms": {
+  "convolutional network": {
+   "merged_cohort_year_counts": {
+    "2016": 1,
+    "2017": 2,
+    "2018": 2,
+    "2019": 2,
+    "2020": 2
+   },
+   "reading": "vocabulary shift = one variant rises as another falls while the merged cohort stays continuous; this is renaming, NOT a new topic",
+   "variants": {
+    "convolutional network": {
+     "2016": 1,
+     "2017": 2,
+     "2018": 2,
+     "2019": 2,
+     "2020": 2
+    },
+    "convolutional neural network": {
+     "2017": 1
+    }
+   }
+  },
+  "pretrained language model": {
+   "merged_cohort_year_counts": {
+    "2021": 1,
+    "2022": 1,
+    "2023": 3,
+    "2024": 1
+   },
+   "reading": "vocabulary shift = one variant rises as another falls while the merged cohort stays continuous; this is renaming, NOT a new topic",
+   "variants": {
+    "foundation model": {
+     "2023": 3,
+     "2024": 1
+    },
+    "pre-trained language model": {},
+    "pretrained language model": {
+     "2021": 1,
+     "2022": 1
+    }
+   }
+  },
+  "recurrent network": {
+   "merged_cohort_year_counts": {},
+   "reading": "vocabulary shift = one variant rises as another falls while the merged cohort stays continuous; this is renaming, NOT a new topic",
+   "variants": {
+    "recurrent network": {},
+    "recurrent neural network": {
+     "2018": 1
+    }
+   }
+  }
+ },
+ "note": "per-variant LITERAL substring document counts per year (before synonym merge)"
+}

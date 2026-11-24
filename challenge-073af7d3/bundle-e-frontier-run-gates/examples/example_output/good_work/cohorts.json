@@ -1,0 +1,698 @@
+{
+  "min_df": 2,
+  "note": "naive lexical cohorts; agent must do phase segmentation and mark why-change claims as inference (SKILL.md G3)",
+  "top_k": 10,
+  "unit": "document count within year (title+abstract tokens, stopworded)",
+  "years": [
+    {
+      "terms": [
+        {
+          "count": 1,
+          "df": 2,
+          "term": "band"
+        },
+        {
+          "count": 1,
+          "df": 9,
+          "term": "conductivity"
+        },
+        {
+          "count": 1,
+          "df": 9,
+          "term": "metamaterial"
+        },
+        {
+          "count": 1,
+          "df": 4,
+          "term": "nanoscale"
+        },
+        {
+          "count": 1,
+          "df": 14,
+          "term": "phonon"
+        },
+        {
+          "count": 1,
+          "df": 9,
+          "term": "phononic"
+        },
+        {
+          "count": 1,
+          "df": 2,
+          "term": "silicon"
+        },
+        {
+          "count": 1,
+          "df": 15,
+          "term": "simulation"
+        },
+        {
+          "count": 1,
+          "df": 15,
+          "term": "thermal"
+        },
+        {
+          "count": 1,
+          "df": 13,
+          "term": "transport"
+        }
+      ],
+      "year": 2012
+    },
+    {
+      "terms": [
+        {
+          "count": 1,
+          "df": 9,
+          "term": "conductivity"
+        },
+        {
+          "count": 1,
+          "df": 2,
+          "term": "membranes"
+        },
+        {
+          "count": 1,
+          "df": 9,
+          "term": "metamaterial"
+        },
+        {
+          "count": 1,
+          "df": 4,
+          "term": "nanoscale"
+        },
+        {
+          "count": 1,
+          "df": 14,
+          "term": "phonon"
+        },
+        {
+          "count": 1,
+          "df": 9,
+          "term": "phononic"
+        },
+        {
+          "count": 1,
+          "df": 2,
+          "term": "silicon"
+        },
+        {
+          "count": 1,
+          "df": 15,
+          "term": "simulation"
+        },
+        {
+          "count": 1,
+          "df": 15,
+          "term": "thermal"
+        },
+        {
+          "count": 1,
+          "df": 13,
+          "term": "transport"
+        }
+      ],
+      "year": 2013
+    },
+    {
+      "terms": [
+        {
+          "count": 1,
+          "df": 2,
+          "term": "cells"
+        },
+        {
+          "count": 1,
+          "df": 6,
+          "term": "design"
+        },
+        {
+          "count": 1,
+          "df": 2,
+          "term": "flow"
+        },
+        {
+          "count": 1,
+          "df": 2,
+          "term": "framework"
+        },
+        {
+          "count": 1,
+          "df": 3,
+          "term": "heat"
+        },
+        {
+          "count": 1,
+          "df": 3,
+          "term": "optimization"
+        },
+        {
+          "count": 1,
+          "df": 14,
+          "term": "phonon"
+        },
+        {
+          "count": 1,
+          "df": 9,
+          "term": "phononic"
+        },
+        {
+          "count": 1,
+          "df": 15,
+          "term": "simulation"
+        },
+        {
+          "count": 1,
+          "df": 15,
+          "term": "thermal"
+        }
+      ],
+      "year": 2014
+    },
+    {
+      "terms": [
+        {
+          "count": 1,
+          "df": 2,
+          "term": "flow"
+        },
+        {
+          "count": 1,
+          "df": 3,
+          "term": "heat"
+        },
+        {
+          "count": 1,
+          "df": 2,
+          "term": "junction"
+        },
+        {
+          "count": 1,
+          "df": 2,
+          "term": "junctions"
+        },
+        {
+          "count": 1,
+          "df": 9,
+          "term": "metamaterial"
+        },
+        {
+          "count": 1,
+          "df": 4,
+          "term": "nanoscale"
+        },
+        {
+          "count": 1,
+          "df": 14,
+          "term": "phonon"
+        },
+        {
+          "count": 1,
+          "df": 9,
+          "term": "phononic"
+        },
+        {
+          "count": 1,
+          "df": 2,
+          "term": "rectification"
+        },
+        {
+          "count": 1,
+          "df": 15,
+          "term": "simulation"
+        }
+      ],
+      "year": 2015
+    },
+    {
+      "terms": [
+        {
+          "count": 1,
+          "df": 9,
+          "term": "conductivity"
+        },
+        {
+          "count": 1,
+          "df": 4,
+          "term": "metamaterials"
+        },
+        {
+          "count": 1,
+          "df": 14,
+          "term": "phonon"
+        },
+        {
+          "count": 1,
+          "df": 15,
+          "term": "simulation"
+        },
+        {
+          "count": 1,
+          "df": 15,
+          "term": "thermal"
+        },
+        {
+          "count": 1,
+          "df": 13,
+          "term": "transport"
+        }
+      ],
+      "year": 2016
+    },
+    {
+      "terms": [
+        {
+          "count": 1,
+          "df": 2,
+          "term": "band"
+        },
+        {
+          "count": 1,
+          "df": 2,
+          "term": "cells"
+        },
+        {
+          "count": 1,
+          "df": 9,
+          "term": "conductivity"
+        },
+        {
+          "count": 1,
+          "df": 6,
+          "term": "design"
+        },
+        {
+          "count": 1,
+          "df": 6,
+          "term": "learning"
+        },
+        {
+          "count": 1,
+          "df": 2,
+          "term": "loop"
+        },
+        {
+          "count": 1,
+          "df": 6,
+          "term": "machine"
+        },
+        {
+          "count": 1,
+          "df": 9,
+          "term": "metamaterial"
+        },
+        {
+          "count": 1,
+          "df": 2,
+          "term": "model"
+        },
+        {
+          "count": 1,
+          "df": 14,
+          "term": "phonon"
+        }
+      ],
+      "year": 2017
+    },
+    {
+      "terms": [
+        {
+          "count": 1,
+          "df": 6,
+          "term": "design"
+        },
+        {
+          "count": 1,
+          "df": 6,
+          "term": "learning"
+        },
+        {
+          "count": 1,
+          "df": 6,
+          "term": "machine"
+        },
+        {
+          "count": 1,
+          "df": 9,
+          "term": "metamaterial"
+        },
+        {
+          "count": 1,
+          "df": 3,
+          "term": "optimization"
+        },
+        {
+          "count": 1,
+          "df": 14,
+          "term": "phonon"
+        },
+        {
+          "count": 1,
+          "df": 15,
+          "term": "simulation"
+        },
+        {
+          "count": 1,
+          "df": 15,
+          "term": "thermal"
+        },
+        {
+          "count": 1,
+          "df": 3,
+          "term": "topology"
+        },
+        {
+          "count": 1,
+          "df": 13,
+          "term": "transport"
+        }
+      ],
+      "year": 2018
+    },
+    {
+      "terms": [
+        {
+          "count": 2,
+          "df": 9,
+          "term": "conductivity"
+        },
+        {
+          "count": 2,
+          "df": 14,
+          "term": "phonon"
+        },
+        {
+          "count": 2,
+          "df": 15,
+          "term": "simulation"
+        },
+        {
+          "count": 2,
+          "df": 15,
+          "term": "thermal"
+        },
+        {
+          "count": 2,
+          "df": 13,
+          "term": "transport"
+        },
+        {
+          "count": 1,
+          "df": 2,
+          "term": "membranes"
+        },
+        {
+          "count": 1,
+          "df": 9,
+          "term": "metamaterial"
+        },
+        {
+          "count": 1,
+          "df": 2,
+          "term": "models"
+        },
+        {
+          "count": 1,
+          "df": 4,
+          "term": "nanoscale"
+        },
+        {
+          "count": 1,
+          "df": 9,
+          "term": "phononic"
+        }
+      ],
+      "year": 2019
+    },
+    {
+      "terms": [
+        {
+          "count": 1,
+          "df": 6,
+          "term": "design"
+        },
+        {
+          "count": 1,
+          "df": 2,
+          "term": "geometries"
+        },
+        {
+          "count": 1,
+          "df": 2,
+          "term": "inverse"
+        },
+        {
+          "count": 1,
+          "df": 6,
+          "term": "learning"
+        },
+        {
+          "count": 1,
+          "df": 2,
+          "term": "loop"
+        },
+        {
+          "count": 1,
+          "df": 6,
+          "term": "machine"
+        },
+        {
+          "count": 1,
+          "df": 9,
+          "term": "metamaterial"
+        },
+        {
+          "count": 1,
+          "df": 4,
+          "term": "metamaterials"
+        },
+        {
+          "count": 1,
+          "df": 14,
+          "term": "phonon"
+        },
+        {
+          "count": 1,
+          "df": 15,
+          "term": "simulation"
+        }
+      ],
+      "year": 2020
+    },
+    {
+      "terms": [
+        {
+          "count": 2,
+          "df": 9,
+          "term": "phononic"
+        },
+        {
+          "count": 2,
+          "df": 15,
+          "term": "simulation"
+        },
+        {
+          "count": 2,
+          "df": 15,
+          "term": "thermal"
+        },
+        {
+          "count": 1,
+          "df": 2,
+          "term": "active"
+        },
+        {
+          "count": 1,
+          "df": 9,
+          "term": "conductivity"
+        },
+        {
+          "count": 1,
+          "df": 2,
+          "term": "geometries"
+        },
+        {
+          "count": 1,
+          "df": 3,
+          "term": "heat"
+        },
+        {
+          "count": 1,
+          "df": 2,
+          "term": "junction"
+        },
+        {
+          "count": 1,
+          "df": 2,
+          "term": "junctions"
+        },
+        {
+          "count": 1,
+          "df": 6,
+          "term": "learning"
+        }
+      ],
+      "year": 2021
+    },
+    {
+      "terms": [
+        {
+          "count": 1,
+          "df": 9,
+          "term": "conductivity"
+        },
+        {
+          "count": 1,
+          "df": 6,
+          "term": "design"
+        },
+        {
+          "count": 1,
+          "df": 2,
+          "term": "framework"
+        },
+        {
+          "count": 1,
+          "df": 9,
+          "term": "metamaterial"
+        },
+        {
+          "count": 1,
+          "df": 14,
+          "term": "phonon"
+        },
+        {
+          "count": 1,
+          "df": 9,
+          "term": "phononic"
+        },
+        {
+          "count": 1,
+          "df": 15,
+          "term": "simulation"
+        },
+        {
+          "count": 1,
+          "df": 15,
+          "term": "thermal"
+        },
+        {
+          "count": 1,
+          "df": 13,
+          "term": "transport"
+        }
+      ],
+      "year": 2022
+    },
+    {
+      "terms": [
+        {
+          "count": 1,
+          "df": 2,
+          "term": "active"
+        },
+        {
+          "count": 1,
+          "df": 6,
+          "term": "learning"
+        },
+        {
+          "count": 1,
+          "df": 6,
+          "term": "machine"
+        },
+        {
+          "count": 1,
+          "df": 4,
+          "term": "metamaterials"
+        },
+        {
+          "count": 1,
+          "df": 3,
+          "term": "optimization"
+        },
+        {
+          "count": 1,
+          "df": 14,
+          "term": "phonon"
+        },
+        {
+          "count": 1,
+          "df": 15,
+          "term": "simulation"
+        },
+        {
+          "count": 1,
+          "df": 15,
+          "term": "thermal"
+        },
+        {
+          "count": 1,
+          "df": 3,
+          "term": "topology"
+        },
+        {
+          "count": 1,
+          "df": 13,
+          "term": "transport"
+        }
+      ],
+      "year": 2023
+    },
+    {
+      "terms": [
+        {
+          "count": 1,
+          "df": 9,
+          "term": "conductivity"
+        },
+        {
+          "count": 1,
+          "df": 6,
+          "term": "design"
+        },
+        {
+          "count": 1,
+          "df": 2,
+          "term": "inverse"
+        },
+        {
+          "count": 1,
+          "df": 6,
+          "term": "learning"
+        },
+        {
+          "count": 1,
+          "df": 6,
+          "term": "machine"
+        },
+        {
+          "count": 1,
+          "df": 9,
+          "term": "metamaterial"
+        },
+        {
+          "count": 1,
+          "df": 2,
+          "term": "models"
+        },
+        {
+          "count": 1,
+          "df": 14,
+          "term": "phonon"
+        },
+        {
+          "count": 1,
+          "df": 15,
+          "term": "simulation"
+        },
+        {
+          "count": 1,
+          "df": 15,
+          "term": "thermal"
+        }
+      ],
+      "year": 2024
+    }
+  ]
+}

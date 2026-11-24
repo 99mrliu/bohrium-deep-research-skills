@@ -1,0 +1,5 @@
+claim_audit: 4 claims -> ok=0 violation=4 downgraded=0
+VIOLATION b1: censored_year_as_decline (2025年产出骤降，领域正在退潮（错误示范：把右删失年份当衰退证据）。)
+VIOLATION b2: fluctuation_as_inflection (2014年的单年尖峰是真实拐点（错误示范：把泊松波动当变点）。)
+VIOLATION b3: unsupported_changepoint (2016年出现显著变点（错误示范：统计不支持的τ）。)
+VIOLATION b4: direction_mismatch (2010—2024年产出持续走低（错误示范：方向与重算计数相反）。)

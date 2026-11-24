@@ -1,0 +1,44 @@
+{
+  "conflicts": [
+    {
+      "conflict_id": "c-b1",
+      "sides_summary": {
+        "quantity_or_claim": "Effect of low-light enhancement on downstream detection mAP",
+        "side_a_ids": [
+          "L009"
+        ],
+        "side_b_ids": [],
+        "status": "unresolved"
+      },
+      "verdict": "rejected",
+      "violations": [
+        {
+          "code": "missing_side",
+          "detail": "side is absent or not an object",
+          "side": "side_b"
+        }
+      ]
+    },
+    {
+      "conflict_id": "c-b2",
+      "sides_summary": {
+        "quantity_or_claim": "Effect of low-light enhancement on downstream detection mAP",
+        "side_a_ids": [
+          "L009"
+        ],
+        "side_b_ids": [
+          "L010"
+        ],
+        "status": "unresolved"
+      },
+      "verdict": "rejected",
+      "violations": [
+        {
+          "code": "not_a_conflict",
+          "detail": "normalized values are identical on both sides",
+          "value": "map@0.5 improves by +4.2 points"
+        }
+      ]
+    }
+  ]
+}

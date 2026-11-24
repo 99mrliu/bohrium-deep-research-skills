@@ -1,0 +1,18 @@
+{
+  "checks": {
+    "a_canon_exists": true,
+    "a_records_missing_id_or_provenance": 0,
+    "a_records_total": 8,
+    "b_duplicates_pairs": 2,
+    "b_ingest_closure": true,
+    "c_coverage_closure_equation": false,
+    "c_coverage_closure_flag": true,
+    "d_year_missing_rate": 0.125,
+    "e_duplicate_ids_in_canon": []
+  },
+  "gate": "fail",
+  "violations": [
+    "coverage_closure_mismatch: records_total(10) != kept(8) + duplicates(2) + excluded(1)"
+  ],
+  "warnings": []
+}

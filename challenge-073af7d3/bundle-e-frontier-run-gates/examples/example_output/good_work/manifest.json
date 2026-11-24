@@ -1,0 +1,169 @@
+{
+  "case": {
+    "case_id": "SYNTH-001",
+    "output_contract_fields": [
+      "trend_summary",
+      "theme_evolution",
+      "representative_works",
+      "research_gaps",
+      "evidence_matrix",
+      "uncertainty"
+    ],
+    "path": "/Users/liuhengshen/Desktop/bhr_product/frontier-073af7d3-five/bundles/bundle-e-frontier-run-gates/examples/synthetic_case/case.json"
+  },
+  "commands": [
+    {
+      "args": [
+        "--work",
+        "/Users/liuhengshen/Desktop/bhr_product/frontier-073af7d3-five/bundles/bundle-e-frontier-run-gates/examples/example_output/good_work",
+        "init",
+        "--input-dir",
+        "/Users/liuhengshen/Desktop/bhr_product/frontier-073af7d3-five/bundles/bundle-e-frontier-run-gates/examples/synthetic_case"
+      ],
+      "seq": 1,
+      "tool": "run_manifest.py"
+    },
+    {
+      "args": [
+        "--work",
+        "/Users/liuhengshen/Desktop/bhr_product/frontier-073af7d3-five/bundles/bundle-e-frontier-run-gates/examples/example_output/good_work",
+        "add-input",
+        "/Users/liuhengshen/Desktop/bhr_product/frontier-073af7d3-five/bundles/bundle-e-frontier-run-gates/examples/synthetic_case/corpus.jsonl"
+      ],
+      "seq": 2,
+      "tool": "run_manifest.py"
+    },
+    {
+      "args": [
+        "--work",
+        "/Users/liuhengshen/Desktop/bhr_product/frontier-073af7d3-five/bundles/bundle-e-frontier-run-gates/examples/example_output/good_work",
+        "add-input",
+        "/Users/liuhengshen/Desktop/bhr_product/frontier-073af7d3-five/bundles/bundle-e-frontier-run-gates/examples/synthetic_case/case.json"
+      ],
+      "seq": 3,
+      "tool": "run_manifest.py"
+    }
+  ],
+  "inputs": [
+    {
+      "path": "/Users/liuhengshen/Desktop/bhr_product/frontier-073af7d3-five/bundles/bundle-e-frontier-run-gates/examples/synthetic_case/case.json",
+      "sha256": "9db04b0f74a43ae160fdc7c799de141082d2afca9aabd2e9f01d7144977e6b88",
+      "size": 689
+    },
+    {
+      "path": "/Users/liuhengshen/Desktop/bhr_product/frontier-073af7d3-five/bundles/bundle-e-frontier-run-gates/examples/synthetic_case/corpus.jsonl",
+      "sha256": "876c5ea2ba0b77952c79ba3437d7511b9c48b71e2cc4b42dd6524af7569e5e60",
+      "size": 6490
+    },
+    {
+      "path": "/Users/liuhengshen/Desktop/bhr_product/frontier-073af7d3-five/bundles/bundle-e-frontier-run-gates/examples/synthetic_case/result_bad.json",
+      "sha256": "a548fe915fc499370fe63598efafac798d2617697e672bb760a1cdf356af1beb",
+      "size": 1047
+    }
+  ],
+  "notes": [],
+  "pipeline": {
+    "case": "/Users/liuhengshen/Desktop/bhr_product/frontier-073af7d3-five/bundles/bundle-e-frontier-run-gates/examples/synthetic_case/case.json",
+    "corpus": "/Users/liuhengshen/Desktop/bhr_product/frontier-073af7d3-five/bundles/bundle-e-frontier-run-gates/examples/synthetic_case/corpus.jsonl"
+  },
+  "seq": 11,
+  "stages": [
+    {
+      "artifacts": [
+        {
+          "path": "/Users/liuhengshen/Desktop/bhr_product/frontier-073af7d3-five/bundles/bundle-e-frontier-run-gates/examples/synthetic_case/case.json",
+          "sha256": "9db04b0f74a43ae160fdc7c799de141082d2afca9aabd2e9f01d7144977e6b88",
+          "size": 689
+        }
+      ],
+      "name": "G0_contract_read",
+      "seq": 4,
+      "status": "ok"
+    },
+    {
+      "artifacts": [
+        {
+          "path": "/Users/liuhengshen/Desktop/bhr_product/frontier-073af7d3-five/bundles/bundle-e-frontier-run-gates/examples/example_output/good_work/canon.jsonl",
+          "sha256": "36d28c33e040697493acc9aef536de545a372c82cf42cb872658c4889d014b66",
+          "size": 4829
+        }
+      ],
+      "name": "normalize",
+      "seq": 5,
+      "status": "ok"
+    },
+    {
+      "artifacts": [
+        {
+          "path": "/Users/liuhengshen/Desktop/bhr_product/frontier-073af7d3-five/bundles/bundle-e-frontier-run-gates/examples/example_output/good_work/slices.json",
+          "sha256": "10695c6349c886e5e05e06754254f2f420e555eb6d627dd96ef5db1170e24d69",
+          "size": 979
+        }
+      ],
+      "name": "slices",
+      "seq": 6,
+      "status": "ok"
+    },
+    {
+      "artifacts": [
+        {
+          "path": "/Users/liuhengshen/Desktop/bhr_product/frontier-073af7d3-five/bundles/bundle-e-frontier-run-gates/examples/example_output/good_work/cohorts.json",
+          "sha256": "df3f293f23af759d54492c12bf6de314b160fb2a60939c71a0e7e007c5274479",
+          "size": 12443
+        }
+      ],
+      "name": "cohorts",
+      "seq": 7,
+      "status": "ok"
+    },
+    {
+      "artifacts": [
+        {
+          "path": "/Users/liuhengshen/Desktop/bhr_product/frontier-073af7d3-five/bundles/bundle-e-frontier-run-gates/examples/example_output/good_work/representatives.json",
+          "sha256": "0f14ebd42749052a2ca2efa8ac8efd11041ca6c5160820c2353dcb42ba4f8475",
+          "size": 2888
+        }
+      ],
+      "name": "representatives",
+      "seq": 8,
+      "status": "ok"
+    },
+    {
+      "artifacts": [
+        {
+          "path": "/Users/liuhengshen/Desktop/bhr_product/frontier-073af7d3-five/bundles/bundle-e-frontier-run-gates/examples/example_output/good_work/gaps.json",
+          "sha256": "9bd9f832a538ab21e8f615caebe07dab5448231ac7adcdb963e508a10571693f",
+          "size": 271
+        }
+      ],
+      "name": "gaps",
+      "seq": 9,
+      "status": "ok"
+    },
+    {
+      "artifacts": [
+        {
+          "path": "/Users/liuhengshen/Desktop/bhr_product/frontier-073af7d3-five/bundles/bundle-e-frontier-run-gates/examples/example_output/good_work/evidence_matrix.jsonl",
+          "sha256": "76f496c2546490947bc63b47ce194d602dc0724d8ea8ff310002229ecd24af60",
+          "size": 3023
+        }
+      ],
+      "name": "evidence_matrix",
+      "seq": 10,
+      "status": "ok"
+    },
+    {
+      "artifacts": [
+        {
+          "path": "/Users/liuhengshen/Desktop/bhr_product/frontier-073af7d3-five/bundles/bundle-e-frontier-run-gates/examples/example_output/good_work/result_draft.json",
+          "sha256": "a4cc26c82959a718c295ac284a8fd6eb1d33f569004c69e81319fafb3547498d",
+          "size": 2050
+        }
+      ],
+      "name": "result_draft",
+      "seq": 11,
+      "status": "ok"
+    }
+  ],
+  "version": 1
+}

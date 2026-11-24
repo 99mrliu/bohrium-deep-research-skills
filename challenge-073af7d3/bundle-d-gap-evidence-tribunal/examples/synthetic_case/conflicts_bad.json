@@ -1,0 +1,29 @@
+{
+  "conflicts": [
+    {
+      "conflict_id": "c-b1",
+      "quantity_or_claim": "Effect of low-light enhancement on downstream detection mAP",
+      "side_a": {
+        "record_ids": ["L009"],
+        "value_or_finding": "mAP@0.5 improves by +4.2 points",
+        "location": "L009 abstract (synthetic)"
+      },
+      "status": "unresolved"
+    },
+    {
+      "conflict_id": "c-b2",
+      "quantity_or_claim": "Effect of low-light enhancement on downstream detection mAP",
+      "side_a": {
+        "record_ids": ["L009"],
+        "value_or_finding": "mAP@0.5 improves by +4.2 points",
+        "location": "L009 abstract (synthetic)"
+      },
+      "side_b": {
+        "record_ids": ["L010"],
+        "value_or_finding": "mAP@0.5 improves by +4.2 points",
+        "location": "L010 abstract (synthetic)"
+      },
+      "status": "unresolved"
+    }
+  ]
+}

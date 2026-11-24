@@ -1,0 +1,32 @@
+{
+  "label": "合成示例 / synthetic booby-trapped result - planted violations on purpose",
+  "case_id": "SYNTH-001",
+  "status": "done",
+  "trend_summary": {
+    "note": "synthetic placeholder trend text",
+    "annual": [
+      {"year": 2012, "count": 1},
+      {"year": 2013, "count": 1}
+    ]
+  },
+  "theme_evolution": {
+    "note": "synthetic placeholder theme text",
+    "phases": [
+      {"phase": 1, "themes": ["phononic metamaterial", "simulation"]}
+    ]
+  },
+  "representative_works": {
+    "note": "synthetic placeholder representatives",
+    "items": [
+      {"record_id": "SYNTH-R01", "title": "valid reference, resolves in evidence matrix"},
+      {"record_id": "SYNTH-R99", "title": "ghost reference - planted dangling record_id"}
+    ]
+  },
+  "evidence_matrix": {
+    "note": "synthetic placeholder; research_gaps field intentionally MISSING from this result",
+    "file": "evidence_matrix.jsonl"
+  },
+  "uncertainty": [
+    {"item": "synthetic_example", "detail": "this file is a booby-trapped fixture for contract_lint"}
+  ]
+}

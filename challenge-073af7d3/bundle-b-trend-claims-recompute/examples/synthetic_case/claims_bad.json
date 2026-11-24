@@ -1,0 +1,34 @@
+[
+  {
+    "claim_id": "b1",
+    "kind": "decline",
+    "year": 2025,
+    "direction": "down",
+    "significance": "claimed",
+    "statement": "2025年产出骤降，领域正在退潮（错误示范：把右删失年份当衰退证据）。"
+  },
+  {
+    "claim_id": "b2",
+    "kind": "changepoint",
+    "year": 2014,
+    "direction": "up",
+    "significance": "claimed",
+    "statement": "2014年的单年尖峰是真实拐点（错误示范：把泊松波动当变点）。"
+  },
+  {
+    "claim_id": "b3",
+    "kind": "changepoint",
+    "year": 2016,
+    "direction": "up",
+    "significance": "claimed",
+    "statement": "2016年出现显著变点（错误示范：统计不支持的τ）。"
+  },
+  {
+    "claim_id": "b4",
+    "kind": "trend",
+    "year_range": [2010, 2024],
+    "direction": "down",
+    "significance": "claimed",
+    "statement": "2010—2024年产出持续走低（错误示范：方向与重算计数相反）。"
+  }
+]

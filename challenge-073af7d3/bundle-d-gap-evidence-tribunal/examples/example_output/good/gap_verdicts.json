@@ -1,0 +1,26 @@
+{
+  "gaps": [
+    {
+      "evidence_summary": {
+        "max_shared_tokens": 3,
+        "n_near_misses": 2,
+        "n_queries": 2,
+        "scope": "Provided corpus of 15 low-light image enhancement records (2015-2024), screened via q1 (full-corpus triage) and q2 (detection-utility rescreen); no external database search was executed."
+      },
+      "gap_id": "gap-1",
+      "verdict": "admissible",
+      "violations": []
+    },
+    {
+      "evidence_summary": {
+        "max_shared_tokens": 7,
+        "n_near_misses": 2,
+        "n_queries": 2,
+        "scope": "Provided corpus of 15 low-light image enhancement records (2015-2024), screened via q1 and q2; q2 specifically re-screened all corpus records mentioning downstream detection."
+      },
+      "gap_id": "gap-2",
+      "verdict": "admissible",
+      "violations": []
+    }
+  ]
+}

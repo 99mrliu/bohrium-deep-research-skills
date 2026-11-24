@@ -1,0 +1,27 @@
+{
+  "closure_violations": [
+    {
+      "code": "closure_violation",
+      "detail": "hits != kept + len(excluded)",
+      "excluded_count": 1,
+      "hits": 10,
+      "kept": 6,
+      "line": 1,
+      "query_id": "qb1"
+    }
+  ],
+  "external_refs": [],
+  "other_violations": [],
+  "queries": [
+    {
+      "date": "2026-01-15",
+      "excluded_count": 1,
+      "hits": 10,
+      "kept": 6,
+      "query_id": "qb1",
+      "query_string": "low-light enhancement",
+      "source": "provided-corpus"
+    }
+  ],
+  "total_hits": 10
+}

@@ -1,0 +1,5 @@
+gap_tribunal: 4 gaps, 0 admissible, 4 rejected -> /var/folders/7r/mnfbx0px1j14kpqsr2bp7nyc0000gn/T/tmp.R73rJiGj9P/gap_verdicts.json
+  VIOLATION bad-1: bare_gap_claim (missing/empty exclusion_evidence; 'not found in retrieval' alone is a retrieval-omission suspect, not a research gap)
+  VIOLATION bad-2: irrelevant_near_miss (topical overlap below sanity floor)
+  VIOLATION bad-3: unknown_gap_type (gap_type 'hot-future-direction' not in taxonomy)
+  VIOLATION bad-4: unknown_query (query_id not in retrieval report)

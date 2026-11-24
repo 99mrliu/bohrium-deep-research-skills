@@ -1,0 +1,23 @@
+{
+  "case_id": "SYNTH-001",
+  "synthetic": true,
+  "label": "合成示例 / synthetic example - not real literature data",
+  "task": "（合成任务）基于随附合成语料完成研究前沿与趋势分析，产出：时间趋势、主题演化、代表性工作、研究空白，并附证据矩阵与不确定性说明。",
+  "output_contract": {
+    "fields": [
+      "trend_summary",
+      "theme_evolution",
+      "representative_works",
+      "research_gaps",
+      "evidence_matrix",
+      "uncertainty"
+    ]
+  },
+  "materials": [
+    {
+      "path": "corpus.jsonl",
+      "format": "jsonl",
+      "note": "synthetic/合成 corpus, 15 fabricated records, 2012-2024"
+    }
+  ]
+}

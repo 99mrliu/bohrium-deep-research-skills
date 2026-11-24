@@ -1,0 +1,32 @@
+{
+  "closure_violations": [],
+  "external_refs": [
+    {
+      "note": "not_in_canon_external",
+      "query_id": "q2",
+      "record_ref": "arXiv:2599.00001"
+    }
+  ],
+  "other_violations": [],
+  "queries": [
+    {
+      "date": "2026-01-15",
+      "excluded_count": 3,
+      "hits": 15,
+      "kept": 12,
+      "query_id": "q1",
+      "query_string": "scope=provided-corpus: all 15 records supplied in ./materials (no external database search executed)",
+      "source": "provided-corpus"
+    },
+    {
+      "date": "2026-01-15",
+      "excluded_count": 3,
+      "hits": 5,
+      "kept": 2,
+      "query_id": "q2",
+      "query_string": "low-light enhancement downstream object detection",
+      "source": "manual-rescreen-of-corpus"
+    }
+  ],
+  "total_hits": 20
+}
