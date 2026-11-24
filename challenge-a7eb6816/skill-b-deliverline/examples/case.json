@@ -1,0 +1,26 @@
+{
+  "case_id": "syn-b-deliverline-001",
+  "task": "根据提供的科研成果材料，撰写一份面向产业投资人的技术成果转化推介书（Markdown），并按 output_contract 交付结构化 result.json 与可检查的产物路径。",
+  "materials_note": "合成示例：真实案例中此处为成果技术资料、专利清单与实验数据，本例从略。",
+  "meta": {
+    "domain": "新材料 / 光伏",
+    "audience": "产业投资人",
+    "format": "markdown"
+  },
+  "output_contract": {
+    "type": "object",
+    "required": ["case_id", "status", "title", "summary", "deliverables", "word_count", "reviewed", "limitations", "notes"],
+    "properties": {
+      "case_id": {"type": "string", "description": "与输入 case_id 逐字节一致"},
+      "status": {"type": "string", "enum": ["complete", "partial"], "description": "complete 时 limitations 必须为空数组"},
+      "title": {"type": "string", "description": "交付物主标题"},
+      "summary": {"type": "string", "description": "200 字以内交付内容摘要"},
+      "deliverables": {"type": "array", "description": "产物相对路径列表，须真实存在"},
+      "word_count": {"type": "integer", "description": "稿件字数（JSON 整数，不接受 1200.0）"},
+      "reviewed": {"type": "boolean", "description": "是否已过验收门（JSON true/false，不接受 1/0）"},
+      "confidence": {"type": "number", "description": "可选，自评置信度 0-1"},
+      "limitations": {"type": "array", "description": "已知缺口；status=complete 时必须为空"},
+      "notes": {"type": "string", "description": "交付说明"}
+    }
+  }
+}

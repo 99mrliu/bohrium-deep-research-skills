@@ -1,0 +1,96 @@
+{
+  "tool": "glossary_check.py",
+  "mode": "single",
+  "glossary": "glossary.tsv",
+  "terms_checked": 4,
+  "issues": [
+    {
+      "type": "missing_expansion",
+      "file": "draft_public_bad.md",
+      "line": 5,
+      "source_term": "碳捕集利用与封存",
+      "found": "碳捕集利用与封存",
+      "message": "批准术语「碳捕集利用与封存」在第 5 行首次出现时未带展开（期望同段出现 expansion 片段：CCUS / Carbon Capture, Utilization and Storage）。",
+      "suggestion": "首次出现写为「碳捕集利用与封存（CCUS；Carbon Capture, Utilization and Storage）」或其等价形式。"
+    },
+    {
+      "type": "inconsistent_term",
+      "file": "draft_public_bad.md",
+      "line": 3,
+      "source_term": "三角褐指藻",
+      "found": "三角藻",
+      "message": "出现禁用同义词「三角藻」（第 3 行），请统一为批准术语「三角褐指藻」。",
+      "suggestion": "将「三角藻」替换为「三角褐指藻」。"
+    },
+    {
+      "type": "inconsistent_term",
+      "file": "draft_public_bad.md",
+      "line": 5,
+      "source_term": "岩藻黄素",
+      "found": "褐藻黄素",
+      "message": "出现禁用同义词「褐藻黄素」（第 5 行），请统一为批准术语「岩藻黄素」。",
+      "suggestion": "将「褐藻黄素」替换为「岩藻黄素」。"
+    },
+    {
+      "type": "inconsistent_term",
+      "file": "draft_public_bad.md",
+      "line": 3,
+      "source_term": "生物固碳速率",
+      "found": "固碳效率",
+      "message": "出现禁用同义词「固碳效率」（第 3 行），请统一为批准术语「生物固碳速率」。",
+      "suggestion": "将「固碳效率」替换为「生物固碳速率」。"
+    }
+  ],
+  "term_details": [
+    {
+      "source_term": "碳捕集利用与封存",
+      "approved_rendering": "碳捕集利用与封存",
+      "approved_count": 1,
+      "forbidden_hits": [],
+      "first_occurrence_expanded": false,
+      "first_occurrence_line": 5
+    },
+    {
+      "source_term": "三角褐指藻",
+      "approved_rendering": "三角褐指藻",
+      "approved_count": 0,
+      "forbidden_hits": [
+        {
+          "synonym": "三角藻",
+          "line": 3
+        }
+      ],
+      "first_occurrence_expanded": null,
+      "note": "批准术语未在本稿出现，跳过首次展开检查。"
+    },
+    {
+      "source_term": "岩藻黄素",
+      "approved_rendering": "岩藻黄素",
+      "approved_count": 0,
+      "forbidden_hits": [
+        {
+          "synonym": "褐藻黄素",
+          "line": 5
+        }
+      ],
+      "first_occurrence_expanded": null,
+      "note": "批准术语未在本稿出现，跳过首次展开检查。"
+    },
+    {
+      "source_term": "生物固碳速率",
+      "approved_rendering": "生物固碳速率",
+      "approved_count": 0,
+      "forbidden_hits": [
+        {
+          "synonym": "固碳效率",
+          "line": 3
+        }
+      ],
+      "first_occurrence_expanded": null,
+      "note": "批准术语未在本稿出现，跳过首次展开检查。"
+    }
+  ],
+  "pair": null,
+  "notes": [],
+  "exit_code": 7
+}

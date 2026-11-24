@@ -1,0 +1,11 @@
+{
+  "case_id": "synthetic-runops-001",
+  "draft_path": "output/draft.md",
+  "limitations": [
+    "inputs/missing_table.csv 缺失：性能对比数据未填入，相关结论待人工核实",
+    "能量密度口径冲突：main.md 为 320 Wh/kg，task.md 为 350 Wh/kg，未经人工确认未写入草稿",
+    "源文含未发表数据：仅本地处理，禁止外发"
+  ],
+  "status": "partial",
+  "word_count": 110
+}

@@ -1,0 +1,116 @@
+{
+  "tool": "audience_route.py",
+  "audience": "public",
+  "matched": true,
+  "fallback": false,
+  "declaration": "命中内置受众画像。",
+  "profile": {
+    "label": "公众科普",
+    "term_density_ceiling": 1.0,
+    "abbreviation_policy": {
+      "mode": "expand_all_first",
+      "rule": "所有非白名单缩写在首次出现处必须写为「全称（缩写）」",
+      "whitelist": [
+        "DNA",
+        "RNA",
+        "ATP",
+        "CO2"
+      ]
+    },
+    "analogy_policy": {
+      "mode": "encourage",
+      "rule": "每个核心概念至少配一个生活化类比，禁止公式与符号堆砌"
+    },
+    "structure_template": [
+      "悬念或痛点引入",
+      "一句话结论",
+      "它是什么（生活化类比）",
+      "科学家做了什么（无公式）",
+      "结果怎么样（数字化但口语化）",
+      "为什么重要（与读者生活的连接）"
+    ],
+    "length_guidance": "800–1200 字",
+    "banned_expressions": [
+      "赋能",
+      "抓手",
+      "颠覆性",
+      "诺奖级"
+    ]
+  },
+  "execution_checklist": {
+    "abbreviation_handling": "所有非白名单缩写在首次出现处必须写为「全称（缩写）」；白名单：DNA、RNA、ATP、CO2",
+    "must_expand_abbreviations": [
+      "CCUS"
+    ],
+    "term_density_ceiling_per_100_chars": 1.0,
+    "analogy_policy": {
+      "mode": "encourage",
+      "rule": "每个核心概念至少配一个生活化类比，禁止公式与符号堆砌"
+    },
+    "structure_skeleton": [
+      "悬念或痛点引入",
+      "一句话结论",
+      "它是什么（生活化类比）",
+      "科学家做了什么（无公式）",
+      "结果怎么样（数字化但口语化）",
+      "为什么重要（与读者生活的连接）"
+    ],
+    "banned_expressions": [
+      "三角藻",
+      "固碳效率",
+      "小褐藻",
+      "抓手",
+      "碳回收与封存",
+      "碳固定速率",
+      "碳捕获封存",
+      "藻褐素",
+      "褐藻黄素",
+      "诺奖级",
+      "赋能",
+      "颠覆性"
+    ],
+    "length_guidance": "800–1200 字"
+  },
+  "glossary_terms": [
+    {
+      "source_term": "碳捕集利用与封存",
+      "approved_rendering": "碳捕集利用与封存",
+      "expansion": "碳捕集利用与封存（CCUS；Carbon Capture, Utilization and Storage）",
+      "forbidden_synonyms": [
+        "碳捕获封存",
+        "碳回收与封存"
+      ]
+    },
+    {
+      "source_term": "三角褐指藻",
+      "approved_rendering": "三角褐指藻",
+      "expansion": "三角褐指藻（Phaeodactylum tricornutum）",
+      "forbidden_synonyms": [
+        "三角藻",
+        "小褐藻"
+      ]
+    },
+    {
+      "source_term": "岩藻黄素",
+      "approved_rendering": "岩藻黄素",
+      "expansion": "岩藻黄素（fucoxanthin）",
+      "forbidden_synonyms": [
+        "褐藻黄素",
+        "藻褐素"
+      ]
+    },
+    {
+      "source_term": "生物固碳速率",
+      "approved_rendering": "生物固碳速率",
+      "expansion": "生物固碳速率（biological carbon fixation rate）",
+      "forbidden_synonyms": [
+        "固碳效率",
+        "碳固定速率"
+      ]
+    }
+  ],
+  "notes": [
+    "本计划只规定解释深度、术语密度、缩写展开与结构骨架，不预生成任何正文内容。",
+    "配合 jargon_scan.py（行话密度与缩写展开）与 glossary_check.py（术语一致性）执行检查。"
+  ]
+}

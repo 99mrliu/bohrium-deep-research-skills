@@ -1,0 +1,12 @@
+{
+  "case_id": "synthetic-runops-001",
+  "task": "将 inputs/main.md 中的固态电解质科研成果改写为不超过 300 字的产业化转化推介稿。",
+  "inputs": ["inputs/main.md"],
+  "output_contract": {
+    "case_id": "字符串，必须与案例 case_id 一致",
+    "status": "三态之一：complete / partial / failed",
+    "draft_path": "推介稿 markdown 产物的相对路径",
+    "word_count": "整数，推介稿正文字数",
+    "limitations": "字符串数组，逐项列出已知缺口；complete 时必须为空"
+  }
+}

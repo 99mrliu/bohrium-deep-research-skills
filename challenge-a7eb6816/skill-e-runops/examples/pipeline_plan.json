@@ -1,0 +1,23 @@
+{
+  "case": "case.json",
+  "workdir": "work",
+  "outdir": "output",
+  "warn_threshold": {"stage_seconds": 30, "total_seconds": 120},
+  "stages": [
+    {
+      "name": "stats",
+      "command": "python3 transform_stub.py stats inputs/main.md work/stats.json",
+      "outputs": ["work/stats.json"]
+    },
+    {
+      "name": "draft",
+      "command": "python3 transform_stub.py draft --main inputs/main.md --out output/draft.md --meta work/draft_meta.json --table inputs/missing_table.csv",
+      "outputs": ["output/draft.md", "work/draft_meta.json"]
+    },
+    {
+      "name": "finalize",
+      "command": "python3 ../scripts/result_guard.py update --result output/result.json --field draft_path --value output/draft.md && python3 ../scripts/result_guard.py update --result output/result.json --field word_count --value-json \"$(python3 -c \"import json;print(json.load(open('work/draft_meta.json'))['draft_chars'])\")\" && python3 ../scripts/result_guard.py update --result output/result.json --field limitations --value-json \"[\\\"inputs/missing_table.csv 缺失：性能对比数据未填入，相关结论待人工核实\\\", \\\"能量密度口径冲突：main.md 为 320 Wh/kg，task.md 为 350 Wh/kg，未经人工确认未写入草稿\\\", \\\"源文含未发表数据：仅本地处理，禁止外发\\\"]\" && python3 ../scripts/result_guard.py finalize --result output/result.json --outdir output --case case.json",
+      "outputs": ["output/result.json"]
+    }
+  ]
+}

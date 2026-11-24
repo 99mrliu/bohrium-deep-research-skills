@@ -1,0 +1,73 @@
+{
+  "case_id": "syn-b-deliverline-001",
+  "contract_found": true,
+  "contract_location": "output_contract",
+  "contract_shape": "json_schema",
+  "field_count": 10,
+  "fields": [
+    {
+      "path": "case_id",
+      "type": "string",
+      "required": true,
+      "description": "与输入 case_id 逐字节一致"
+    },
+    {
+      "path": "status",
+      "type": "string",
+      "required": true,
+      "enum": [
+        "complete",
+        "partial"
+      ],
+      "description": "complete 时 limitations 必须为空数组"
+    },
+    {
+      "path": "title",
+      "type": "string",
+      "required": true,
+      "description": "交付物主标题"
+    },
+    {
+      "path": "summary",
+      "type": "string",
+      "required": true,
+      "description": "200 字以内交付内容摘要"
+    },
+    {
+      "path": "deliverables",
+      "type": "array",
+      "required": true,
+      "description": "产物相对路径列表，须真实存在"
+    },
+    {
+      "path": "word_count",
+      "type": "integer",
+      "required": true,
+      "description": "稿件字数（JSON 整数，不接受 1200.0）"
+    },
+    {
+      "path": "reviewed",
+      "type": "boolean",
+      "required": true,
+      "description": "是否已过验收门（JSON true/false，不接受 1/0）"
+    },
+    {
+      "path": "confidence",
+      "type": "number",
+      "required": false,
+      "description": "可选，自评置信度 0-1"
+    },
+    {
+      "path": "limitations",
+      "type": "array",
+      "required": true,
+      "description": "已知缺口；status=complete 时必须为空"
+    },
+    {
+      "path": "notes",
+      "type": "string",
+      "required": true,
+      "description": "交付说明"
+    }
+  ]
+}

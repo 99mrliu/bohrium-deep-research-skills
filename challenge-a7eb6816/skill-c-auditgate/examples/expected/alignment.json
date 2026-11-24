@@ -1,0 +1,169 @@
+{
+  "meta": {
+    "tool": "align_map.py",
+    "version": "1.0.0",
+    "mode": "normal",
+    "degrade_reasons": [],
+    "low_global_confidence": false,
+    "thresholds": {
+      "supported": 0.35,
+      "weak": 0.15
+    },
+    "ngram": 3,
+    "source_file": "examples/source.md",
+    "draft_file": "examples/draft.md",
+    "n_source_sentences": 9,
+    "n_draft_sentences": 7,
+    "mean_best_score": 0.5083
+  },
+  "draft_sentences": [
+    {
+      "id": "D1",
+      "text": "本研究开发了一种基于有机酸浸出的废旧锂电池正极材料回收工艺。",
+      "best_source": "S1",
+      "best_source_text": "本研究提出一种基于有机酸浸出的废旧锂离子电池正极材料回收工艺。",
+      "score": 0.5714,
+      "verdict": "supported"
+    },
+    {
+      "id": "D2",
+      "text": "在 80 °C、液固比 20:1 条件下,锂浸出率达到 96.5%,钴浸出率达到 94.2%。",
+      "best_source": "S2",
+      "best_source_text": "在 80 °C、液固比 20:1 条件下,锂的浸出率达到 96.5%,钴的浸出率达到 94.2%。",
+      "score": 0.7,
+      "verdict": "supported"
+    },
+    {
+      "id": "D3",
+      "text": "与无机酸工艺相比,新工艺的废酸排放量降低约 40%。",
+      "best_source": "S3",
+      "best_source_text": "与传统无机酸工艺相比,该工艺将废酸排放量降低了约 40%。",
+      "score": 0.3438,
+      "verdict": "weak"
+    },
+    {
+      "id": "D4",
+      "text": "团队首次将柠檬酸与抗坏血酸复配使用,显著提升了浸出速度。",
+      "best_source": "S5",
+      "best_source_text": "我们首次将柠檬酸与抗坏血酸复配用于该体系,协同效应显著提升了浸出动力学。",
+      "score": 0.4,
+      "verdict": "supported"
+    },
+    {
+      "id": "D5",
+      "text": "每吨处理成本约 3200 元,较现有工艺下降 18%。",
+      "best_source": "S6",
+      "best_source_text": "经济性分析显示,每吨处理成本约为 3200 元,较现有工艺下降 18%。",
+      "score": 0.5862,
+      "verdict": "supported"
+    },
+    {
+      "id": "D6",
+      "text": "该技术已在多家中试企业中应用,日处理量达 2 吨。",
+      "best_source": "S7",
+      "best_source_text": "该技术已在 3 家合作企业中试,日处理量达到 2 吨。",
+      "score": 0.2258,
+      "verdict": "weak"
+    },
+    {
+      "id": "D7",
+      "text": "该研究为废旧锂电池绿色回收提供了可工业化的新路径。",
+      "best_source": "S9",
+      "best_source_text": "本研究为废旧锂电池的绿色回收提供了可工业化的新路径。",
+      "score": 0.7308,
+      "verdict": "supported"
+    }
+  ],
+  "source_sentences": [
+    {
+      "id": "S1",
+      "text": "本研究提出一种基于有机酸浸出的废旧锂离子电池正极材料回收工艺。",
+      "key": false,
+      "covered": true,
+      "best_draft": "D1",
+      "best_draft_score": 0.5714
+    },
+    {
+      "id": "S2",
+      "text": "在 80 °C、液固比 20:1 条件下,锂的浸出率达到 96.5%,钴的浸出率达到 94.2%。",
+      "key": true,
+      "covered": true,
+      "best_draft": "D2",
+      "best_draft_score": 0.7
+    },
+    {
+      "id": "S3",
+      "text": "与传统无机酸工艺相比,该工艺将废酸排放量降低了约 40%。",
+      "key": true,
+      "covered": true,
+      "best_draft": "D3",
+      "best_draft_score": 0.3438
+    },
+    {
+      "id": "S4",
+      "text": "实验表明,浸出渣中金属残留率低于 0.8%。",
+      "key": true,
+      "covered": false,
+      "best_draft": null,
+      "best_draft_score": 0.0
+    },
+    {
+      "id": "S5",
+      "text": "我们首次将柠檬酸与抗坏血酸复配用于该体系,协同效应显著提升了浸出动力学。",
+      "key": true,
+      "covered": true,
+      "best_draft": "D4",
+      "best_draft_score": 0.4
+    },
+    {
+      "id": "S6",
+      "text": "经济性分析显示,每吨处理成本约为 3200 元,较现有工艺下降 18%。",
+      "key": true,
+      "covered": true,
+      "best_draft": "D5",
+      "best_draft_score": 0.5862
+    },
+    {
+      "id": "S7",
+      "text": "该技术已在 3 家合作企业中试,日处理量达到 2 吨。",
+      "key": true,
+      "covered": true,
+      "best_draft": "D6",
+      "best_draft_score": 0.2258
+    },
+    {
+      "id": "S8",
+      "text": "图 2 展示了不同温度下锂浸出率随时间的变化曲线。",
+      "key": true,
+      "covered": false,
+      "best_draft": "D2",
+      "best_draft_score": 0.0714
+    },
+    {
+      "id": "S9",
+      "text": "本研究为废旧锂电池的绿色回收提供了可工业化的新路径。",
+      "key": false,
+      "covered": true,
+      "best_draft": "D7",
+      "best_draft_score": 0.7308
+    }
+  ],
+  "uncovered_key_source": [
+    {
+      "id": "S4",
+      "text": "实验表明,浸出渣中金属残留率低于 0.8%。",
+      "key": true,
+      "covered": false,
+      "best_draft": null,
+      "best_draft_score": 0.0
+    },
+    {
+      "id": "S8",
+      "text": "图 2 展示了不同温度下锂浸出率随时间的变化曲线。",
+      "key": true,
+      "covered": false,
+      "best_draft": "D2",
+      "best_draft_score": 0.0714
+    }
+  ]
+}

@@ -1,0 +1,222 @@
+{
+  "tool": "ledger_extract",
+  "version": "1.0.0",
+  "sources": [
+    "examples/source.md"
+  ],
+  "counts": {
+    "citation": 3,
+    "figure_ref": 3,
+    "number": 10,
+    "strength": 5
+  },
+  "entries": [
+    {
+      "id": "cit-001",
+      "kind": "citation",
+      "style": "numeric",
+      "key": "cite:[1]",
+      "raw": "[1]",
+      "anchor": "CO 催化氧化是尾气净化的关键反应 [1]",
+      "locator": "examples/source.md:7"
+    },
+    {
+      "id": "cit-002",
+      "kind": "citation",
+      "style": "numeric",
+      "key": "cite:[2]",
+      "raw": "[2]",
+      "anchor": "贵金属催化剂成本较高 [2]，过渡金属氧化物被认为是潜在替代方案 (Smith, 2021)",
+      "locator": "examples/source.md:7"
+    },
+    {
+      "id": "cit-003",
+      "kind": "citation",
+      "style": "author-year",
+      "key": "cite:smith:2021",
+      "raw": "(Smith, 2021)",
+      "anchor": "贵金属催化剂成本较高 [2]，过渡金属氧化物被认为是潜在替代方案 (Smith, 2021)",
+      "locator": "examples/source.md:7"
+    },
+    {
+      "id": "fig-001",
+      "kind": "figure_ref",
+      "ref_type": "fig",
+      "ref_id": "1",
+      "key": "fig:1",
+      "raw": "图1",
+      "anchor": "XRD 结果（图1）显示，Co3O4/CeO2 复合氧化物的平均晶粒尺寸为 4.5 nm，比表面积为 112 m2/g",
+      "locator": "examples/source.md:11"
+    },
+    {
+      "id": "fig-002",
+      "kind": "figure_ref",
+      "ref_type": "fig",
+      "ref_id": "2",
+      "key": "fig:2",
+      "raw": "图2",
+      "anchor": "在 180 °C、质量空速 36000 mL/(g·h) 条件下，CO 转化率达到 99.2%（图2）",
+      "locator": "examples/source.md:11"
+    },
+    {
+      "id": "tab-001",
+      "kind": "figure_ref",
+      "ref_type": "tab",
+      "ref_id": "1",
+      "key": "tab:1",
+      "raw": "表1",
+      "anchor": "与纯 Co3O4 相比，复合催化剂的活性提升约 2.3 倍（表1）",
+      "locator": "examples/source.md:11"
+    },
+    {
+      "id": "num-001",
+      "kind": "number",
+      "value": "5",
+      "unit": "n=",
+      "key": "5|n=",
+      "raw": "n=5",
+      "anchor": "平行实验 n=5，组间差异 p<0.05",
+      "locator": "examples/source.md:11"
+    },
+    {
+      "id": "num-002",
+      "kind": "number",
+      "value": "0.05",
+      "unit": "p<",
+      "key": "0.05|p<",
+      "raw": "p<0.05",
+      "anchor": "平行实验 n=5，组间差异 p<0.05",
+      "locator": "examples/source.md:11"
+    },
+    {
+      "id": "num-003",
+      "kind": "number",
+      "value": "4.5",
+      "unit": "nm",
+      "key": "4.5|nm",
+      "raw": "4.5 nm",
+      "anchor": "XRD 结果（图1）显示，Co3O4/CeO2 复合氧化物的平均晶粒尺寸为 4.5 nm，比表面积为 112 m2/g",
+      "locator": "examples/source.md:11"
+    },
+    {
+      "id": "num-004",
+      "kind": "number",
+      "value": "112",
+      "unit": "m2/g",
+      "key": "112|m2/g",
+      "raw": "112 m2/g",
+      "anchor": "XRD 结果（图1）显示，Co3O4/CeO2 复合氧化物的平均晶粒尺寸为 4.5 nm，比表面积为 112 m2/g",
+      "locator": "examples/source.md:11"
+    },
+    {
+      "id": "num-005",
+      "kind": "number",
+      "value": "180",
+      "unit": "°C",
+      "key": "180|°C",
+      "raw": "180 °C",
+      "anchor": "在 180 °C、质量空速 36000 mL/(g·h) 条件下，CO 转化率达到 99.2%（图2）",
+      "locator": "examples/source.md:11"
+    },
+    {
+      "id": "num-006",
+      "kind": "number",
+      "value": "36000",
+      "unit": "mL",
+      "key": "36000|mL",
+      "raw": "36000 mL",
+      "anchor": "在 180 °C、质量空速 36000 mL/(g·h) 条件下，CO 转化率达到 99.2%（图2）",
+      "locator": "examples/source.md:11"
+    },
+    {
+      "id": "num-007",
+      "kind": "number",
+      "value": "99.2",
+      "unit": "%",
+      "key": "99.2|%",
+      "raw": "99.2%",
+      "anchor": "在 180 °C、质量空速 36000 mL/(g·h) 条件下，CO 转化率达到 99.2%（图2）",
+      "locator": "examples/source.md:11"
+    },
+    {
+      "id": "num-008",
+      "kind": "number",
+      "value": "2.3",
+      "unit": "倍",
+      "key": "2.3|倍",
+      "raw": "2.3 倍",
+      "anchor": "与纯 Co3O4 相比，复合催化剂的活性提升约 2.3 倍（表1）",
+      "locator": "examples/source.md:11"
+    },
+    {
+      "id": "num-009",
+      "kind": "number",
+      "value": "100",
+      "unit": "h",
+      "key": "100|h",
+      "raw": "100 h",
+      "anchor": "连续运行 100 h 后，转化率保持在 95.1% 以上",
+      "locator": "examples/source.md:11"
+    },
+    {
+      "id": "num-010",
+      "kind": "number",
+      "value": "95.1",
+      "unit": "%",
+      "key": "95.1|%",
+      "raw": "95.1%",
+      "anchor": "连续运行 100 h 后，转化率保持在 95.1% 以上",
+      "locator": "examples/source.md:11"
+    },
+    {
+      "id": "str-001",
+      "kind": "strength",
+      "word": "显示",
+      "level": 2.0,
+      "level_label": "表明(2)",
+      "category": "show",
+      "anchor": "XRD 结果（图1）显示，Co3O4/CeO2 复合氧化物的平均晶粒尺寸为 4.5 nm，比表面积为 112 m2/g",
+      "locator": "examples/source.md:11"
+    },
+    {
+      "id": "str-002",
+      "kind": "strength",
+      "word": "初步表明",
+      "level": 1.0,
+      "level_label": "提示/初步(1)",
+      "category": "tentative",
+      "anchor": "初步表明，CeO2 的引入促进了氧空位的形成",
+      "locator": "examples/source.md:13"
+    },
+    {
+      "id": "str-003",
+      "kind": "strength",
+      "word": "相关",
+      "level": 1.5,
+      "level_label": "相关(1.5)",
+      "category": "correlation",
+      "anchor": "催化剂活性与氧空位浓度相关",
+      "locator": "examples/source.md:13"
+    },
+    {
+      "id": "str-004",
+      "kind": "strength",
+      "word": "表明",
+      "level": 2.0,
+      "level_label": "表明(2)",
+      "category": "show",
+      "anchor": "稳定性测试结果表明该催化剂具有工业应用潜力，但长期稳定性仍可能受到水汽影响",
+      "locator": "examples/source.md:13"
+    },
+    {
+      "id": "str-005",
+      "kind": "strength",
+      "word": "可能",
+      "level": 0.0,
+      "level_label": "推测(0)",
+      "category": "hedge",
+      "anchor": "稳定性测试结果表明该催化剂具有工业应用潜力，但长期稳定性仍可能受到水汽影响",
+      "locator": "examples/source.md:13"
+    }
+  ]
+}

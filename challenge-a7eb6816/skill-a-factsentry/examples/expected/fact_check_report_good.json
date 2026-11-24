@@ -1,0 +1,24 @@
+{
+  "tool": "fact_check",
+  "version": "1.0.0",
+  "inputs": {
+    "ledger": "examples/expected/evidence_ledger.json",
+    "draft": "examples/draft_good.md"
+  },
+  "min_severity": "mandatory",
+  "summary": {
+    "status": "PASS",
+    "exit_code": 0,
+    "findings_total": 0,
+    "findings_blocking": 0,
+    "by_kind": {},
+    "checked": {
+      "draft_numbers": 10,
+      "source_numbers": 10,
+      "source_figure_refs": 3,
+      "source_citations": 3,
+      "strength_pairs": 4
+    }
+  },
+  "findings": []
+}

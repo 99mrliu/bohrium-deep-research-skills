@@ -1,0 +1,189 @@
+{
+  "tool": "jargon_scan.py",
+  "file": "draft_public_bad.md",
+  "audience": "public（公众科普）",
+  "term_density_ceiling": 1.0,
+  "whitelist": [
+    "ATP",
+    "CO2",
+    "DNA",
+    "RNA"
+  ],
+  "char_count": 201,
+  "jargon_hit_count": 19,
+  "jargon_density_per_100_chars": 9.453,
+  "density_ok": false,
+  "abbreviations": [
+    {
+      "abbr": "CCUS",
+      "count": 1,
+      "first_line": 3,
+      "expanded_at_first_occurrence": false,
+      "paren_form_exists_later": false,
+      "suggestion": "「CCUS」在第 3 行首次出现时未展开。请写为「全称（CCUS）」，或确认其属于白名单通用缩写。"
+    },
+    {
+      "abbr": "LCA",
+      "count": 1,
+      "first_line": 5,
+      "expanded_at_first_occurrence": false,
+      "paren_form_exists_later": false,
+      "suggestion": "「LCA」在第 5 行首次出现时未展开。请写为「全称（LCA）」，或确认其属于白名单通用缩写。"
+    }
+  ],
+  "jargon_terms": [
+    {
+      "term": "CCUS",
+      "count": 1,
+      "lines": [
+        3
+      ]
+    },
+    {
+      "term": "LCA",
+      "count": 1,
+      "lines": [
+        5
+      ]
+    },
+    {
+      "term": "RuBisCO",
+      "count": 1,
+      "lines": [
+        3
+      ]
+    },
+    {
+      "term": "三角藻",
+      "count": 1,
+      "lines": [
+        3
+      ]
+    },
+    {
+      "term": "代谢通路",
+      "count": 1,
+      "lines": [
+        3
+      ]
+    },
+    {
+      "term": "光系统",
+      "count": 1,
+      "lines": [
+        5
+      ]
+    },
+    {
+      "term": "全生命周期",
+      "count": 1,
+      "lines": [
+        5
+      ]
+    },
+    {
+      "term": "卡尔文循环",
+      "count": 1,
+      "lines": [
+        5
+      ]
+    },
+    {
+      "term": "固碳",
+      "count": 1,
+      "lines": [
+        1
+      ]
+    },
+    {
+      "term": "固碳效率",
+      "count": 1,
+      "lines": [
+        3
+      ]
+    },
+    {
+      "term": "敲除",
+      "count": 1,
+      "lines": [
+        3
+      ]
+    },
+    {
+      "term": "生物反应器",
+      "count": 1,
+      "lines": [
+        7
+      ]
+    },
+    {
+      "term": "生物量",
+      "count": 1,
+      "lines": [
+        5
+      ]
+    },
+    {
+      "term": "碳捕集利用与封存",
+      "count": 1,
+      "lines": [
+        5
+      ]
+    },
+    {
+      "term": "碳汇",
+      "count": 1,
+      "lines": [
+        3
+      ]
+    },
+    {
+      "term": "碳足迹",
+      "count": 1,
+      "lines": [
+        5
+      ]
+    },
+    {
+      "term": "类囊体",
+      "count": 1,
+      "lines": [
+        5
+      ]
+    },
+    {
+      "term": "褐藻黄素",
+      "count": 1,
+      "lines": [
+        5
+      ]
+    },
+    {
+      "term": "过表达",
+      "count": 1,
+      "lines": [
+        3
+      ]
+    }
+  ],
+  "issues": [
+    {
+      "type": "unexpanded_abbreviation",
+      "abbr": "CCUS",
+      "line": 3,
+      "message": "「CCUS」在第 3 行首次出现时未展开。请写为「全称（CCUS）」，或确认其属于白名单通用缩写。"
+    },
+    {
+      "type": "unexpanded_abbreviation",
+      "abbr": "LCA",
+      "line": 5,
+      "message": "「LCA」在第 5 行首次出现时未展开。请写为「全称（LCA）」，或确认其属于白名单通用缩写。"
+    },
+    {
+      "type": "jargon_density_exceeded",
+      "line": null,
+      "message": "行话密度 9.453 次/百字，超过受众上限 1.0。高频行话：CCUS、LCA、RuBisCO、三角藻、代谢通路。建议替换为日常表达或删减术语堆叠。"
+    }
+  ],
+  "exit_code": 6
+}

@@ -1,0 +1,52 @@
+{
+  "meta": {
+    "tool": "audit_gate.py",
+    "version": "1.0.0",
+    "alignment": "examples/expected/alignment.json",
+    "editlog_report": "examples/expected/editlog_report_good.json",
+    "degraded": false,
+    "degrade_reasons": []
+  },
+  "verdict": "PASS",
+  "exit_code": 0,
+  "checks": [
+    {
+      "name": "unsupported_draft_sentences",
+      "verdict": "PASS",
+      "detail": "unsupported 稿句 0 条，均已列入待确认",
+      "items": []
+    },
+    {
+      "name": "key_source_coverage",
+      "verdict": "PASS",
+      "detail": "未覆盖关键源句均有合法 omit/condense 记录",
+      "items": []
+    },
+    {
+      "name": "editlog_legal",
+      "verdict": "PASS",
+      "detail": "editlog_check 判定 PASS，错误 0 条",
+      "items": []
+    },
+    {
+      "name": "numeric_anchors",
+      "verdict": "PASS",
+      "detail": "稿件数字 9 个全部在源文中字面出现",
+      "items": []
+    }
+  ],
+  "pending_questions": [
+    {
+      "line": 6,
+      "locator": "S7-D6",
+      "action": "rephrase",
+      "reason": "将3家概括为多家以弱化商业信息"
+    },
+    {
+      "line": 8,
+      "locator": "S4",
+      "action": "omit",
+      "reason": "删去浸出渣金属残留率细节以压缩篇幅"
+    }
+  ]
+}

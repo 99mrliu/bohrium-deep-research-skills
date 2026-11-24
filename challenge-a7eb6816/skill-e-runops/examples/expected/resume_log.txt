@@ -1,0 +1,7 @@
+[pipeline] 保底 result.json 已存在，跳过 init
+[pipeline] [1] stats: 产物缺失或 hash 变化，重跑
+[pipeline] [1] stats: RUN  python3 transform_stub.py stats inputs/main.md work/stats.json
+[pipeline] [1] stats: OK (0.348s)
+[pipeline] [2] draft: SKIP（产物 hash 未变）
+[pipeline] [3] finalize: SKIP（产物 hash 未变）
+[pipeline] 完成: run=4 skip=2 total=3.368s warnings=0

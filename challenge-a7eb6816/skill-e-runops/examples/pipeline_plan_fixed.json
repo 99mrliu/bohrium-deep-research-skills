@@ -1,0 +1,23 @@
+{
+  "case": "case_fixed.json",
+  "workdir": "work2",
+  "outdir": "output2",
+  "warn_threshold": {"stage_seconds": 30, "total_seconds": 120},
+  "stages": [
+    {
+      "name": "stats",
+      "command": "python3 transform_stub.py stats inputs/main.md work2/stats.json",
+      "outputs": ["work2/stats.json"]
+    },
+    {
+      "name": "draft",
+      "command": "python3 transform_stub.py draft --main inputs/main.md --out output2/draft.md --meta work2/draft_meta.json",
+      "outputs": ["output2/draft.md", "work2/draft_meta.json"]
+    },
+    {
+      "name": "finalize",
+      "command": "python3 ../scripts/result_guard.py update --result output2/result.json --field draft_path --value output2/draft.md && python3 ../scripts/result_guard.py update --result output2/result.json --field word_count --value-json \"$(python3 -c \"import json;print(json.load(open('work2/draft_meta.json'))['draft_chars'])\")\" && python3 ../scripts/result_guard.py update --result output2/result.json --field limitations --value-json \"[]\" && python3 ../scripts/result_guard.py finalize --result output2/result.json --outdir output2 --case case_fixed.json",
+      "outputs": ["output2/result.json"]
+    }
+  ]
+}

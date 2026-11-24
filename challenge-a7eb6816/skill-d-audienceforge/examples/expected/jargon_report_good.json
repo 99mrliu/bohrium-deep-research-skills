@@ -1,0 +1,57 @@
+{
+  "tool": "jargon_scan.py",
+  "file": "draft_public_good.md",
+  "audience": "public（公众科普）",
+  "term_density_ceiling": 1.0,
+  "whitelist": [
+    "ATP",
+    "CO2",
+    "DNA",
+    "RNA"
+  ],
+  "char_count": 436,
+  "jargon_hit_count": 4,
+  "jargon_density_per_100_chars": 0.917,
+  "density_ok": true,
+  "abbreviations": [
+    {
+      "abbr": "CCUS",
+      "count": 1,
+      "first_line": 11,
+      "expanded_at_first_occurrence": true,
+      "paren_form_exists_later": true
+    }
+  ],
+  "jargon_terms": [
+    {
+      "term": "CCUS",
+      "count": 1,
+      "lines": [
+        11
+      ]
+    },
+    {
+      "term": "三角褐指藻",
+      "count": 1,
+      "lines": [
+        7
+      ]
+    },
+    {
+      "term": "光合作用",
+      "count": 1,
+      "lines": [
+        7
+      ]
+    },
+    {
+      "term": "碳捕集利用与封存",
+      "count": 1,
+      "lines": [
+        11
+      ]
+    }
+  ],
+  "issues": [],
+  "exit_code": 0
+}

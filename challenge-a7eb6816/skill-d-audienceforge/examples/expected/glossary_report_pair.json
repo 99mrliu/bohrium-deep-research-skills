@@ -1,0 +1,123 @@
+{
+  "tool": "glossary_check.py",
+  "mode": "pair",
+  "glossary": "glossary.tsv",
+  "terms_checked": 4,
+  "issues": [],
+  "term_details": [
+    {
+      "source_term": "碳捕集利用与封存",
+      "approved_rendering": "碳捕集利用与封存",
+      "approved_count": 2,
+      "forbidden_hits": [],
+      "first_occurrence_expanded": true,
+      "first_occurrence_line": 3
+    },
+    {
+      "source_term": "碳捕集利用与封存",
+      "approved_rendering": "碳捕集利用与封存",
+      "approved_count": 0,
+      "forbidden_hits": [],
+      "first_occurrence_expanded": null,
+      "note": "批准术语未在本稿出现，跳过首次展开检查。"
+    },
+    {
+      "source_term": "三角褐指藻",
+      "approved_rendering": "三角褐指藻",
+      "approved_count": 2,
+      "forbidden_hits": [],
+      "first_occurrence_expanded": true,
+      "first_occurrence_line": 3
+    },
+    {
+      "source_term": "三角褐指藻",
+      "approved_rendering": "三角褐指藻",
+      "approved_count": 0,
+      "forbidden_hits": [],
+      "first_occurrence_expanded": null,
+      "note": "批准术语未在本稿出现，跳过首次展开检查。"
+    },
+    {
+      "source_term": "岩藻黄素",
+      "approved_rendering": "岩藻黄素",
+      "approved_count": 1,
+      "forbidden_hits": [],
+      "first_occurrence_expanded": true,
+      "first_occurrence_line": 5
+    },
+    {
+      "source_term": "岩藻黄素",
+      "approved_rendering": "岩藻黄素",
+      "approved_count": 0,
+      "forbidden_hits": [],
+      "first_occurrence_expanded": null,
+      "note": "批准术语未在本稿出现，跳过首次展开检查。"
+    },
+    {
+      "source_term": "生物固碳速率",
+      "approved_rendering": "生物固碳速率",
+      "approved_count": 1,
+      "forbidden_hits": [],
+      "first_occurrence_expanded": true,
+      "first_occurrence_line": 3
+    },
+    {
+      "source_term": "生物固碳速率",
+      "approved_rendering": "生物固碳速率",
+      "approved_count": 0,
+      "forbidden_hits": [],
+      "first_occurrence_expanded": null,
+      "note": "批准术语未在本稿出现，跳过首次展开检查。"
+    }
+  ],
+  "pair": {
+    "zh": "zh.md",
+    "en": "en.md",
+    "ratio_threshold": 3.0,
+    "terms": [
+      {
+        "source_term": "碳捕集利用与封存",
+        "zh_rendering": "碳捕集利用与封存",
+        "en_rendering": "Carbon Capture, Utilization and Storage",
+        "zh_count": 2,
+        "en_count": 1,
+        "ratio": 2.0,
+        "status": "ok"
+      },
+      {
+        "source_term": "三角褐指藻",
+        "zh_rendering": "三角褐指藻",
+        "en_rendering": "Phaeodactylum tricornutum",
+        "zh_count": 2,
+        "en_count": 3,
+        "ratio": 1.5,
+        "status": "ok"
+      },
+      {
+        "source_term": "岩藻黄素",
+        "zh_rendering": "岩藻黄素",
+        "en_rendering": "fucoxanthin",
+        "zh_count": 1,
+        "en_count": 1,
+        "ratio": 1.0,
+        "status": "ok"
+      },
+      {
+        "source_term": "生物固碳速率",
+        "zh_rendering": "生物固碳速率",
+        "en_rendering": "biological carbon fixation rate",
+        "zh_count": 1,
+        "en_count": 1,
+        "ratio": 1.0,
+        "status": "ok"
+      }
+    ]
+  },
+  "notes": [
+    "「碳捕集利用与封存」中 2 次 / 英 1 次，比例 2.0 ≤ 3.0，差距可解释。",
+    "「三角褐指藻」中 2 次 / 英 3 次，比例 1.5 ≤ 3.0，差距可解释。",
+    "「岩藻黄素」中 1 次 / 英 1 次，比例 1.0 ≤ 3.0，差距可解释。",
+    "「生物固碳速率」中 1 次 / 英 1 次，比例 1.0 ≤ 3.0，差距可解释。"
+  ],
+  "exit_code": 0
+}

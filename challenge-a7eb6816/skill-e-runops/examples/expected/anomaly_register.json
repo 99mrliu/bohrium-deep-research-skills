@@ -1,0 +1,59 @@
+{
+  "generated_by": "anomaly_triage.py",
+  "case": "/Users/liuhengshen/Desktop/bhr_product/writing17-five/bundles/skill-e-runops/examples/case.json",
+  "scanned_files": [
+    "/Users/liuhengshen/Desktop/bhr_product/writing17-five/bundles/skill-e-runops/examples/inputs/main.md",
+    "/Users/liuhengshen/Desktop/bhr_product/writing17-five/bundles/skill-e-runops/examples/task.md"
+  ],
+  "counts": {
+    "missing_input": 1,
+    "conflict": 1,
+    "confidentiality": 3,
+    "length_conflict": 1
+  },
+  "halt": false,
+  "entries": [
+    {
+      "kind": "missing_input",
+      "locator": "case.json -> inputs/missing_table.csv",
+      "evidence": "引用的路径 'inputs/missing_table.csv' 在磁盘上不存在",
+      "disposition": "mark-gap",
+      "note": "相关内容留空并写入 limitations；待人工补充后重跑"
+    },
+    {
+      "kind": "conflict",
+      "locator": "锚点「能量密度」跨文件: main.md, task.md",
+      "evidence": "main.md:3 取值 320; task.md:8 取值 350",
+      "disposition": "mark-gap",
+      "note": "数值冲突，保守上报；须人工确认唯一口径后方可写入交付物"
+    },
+    {
+      "kind": "confidentiality",
+      "locator": "main.md:17",
+      "evidence": "命中标记「未发表」: ## 未发表数据声明",
+      "disposition": "proceed",
+      "note": "仅本地处理、禁止外发；限制须写入 result.json 的 limitations"
+    },
+    {
+      "kind": "confidentiality",
+      "locator": "main.md:19",
+      "evidence": "命中标记「保密」: 本节涉及未发表数据：界面阻抗原位演化曲线与第三方安全测试结果尚未投稿，保密期内仅本地处理，不得外传。",
+      "disposition": "proceed",
+      "note": "仅本地处理、禁止外发；限制须写入 result.json 的 limitations"
+    },
+    {
+      "kind": "confidentiality",
+      "locator": "main.md:19",
+      "evidence": "命中标记「不得外传」: 本节涉及未发表数据：界面阻抗原位演化曲线与第三方安全测试结果尚未投稿，保密期内仅本地处理，不得外传。",
+      "disposition": "proceed",
+      "note": "仅本地处理、禁止外发；限制须写入 result.json 的 limitations"
+    },
+    {
+      "kind": "length_conflict",
+      "locator": "task.md vs main.md",
+      "evidence": "task 字数上限 300 字 < 源文 35 个关键信息点×25 字 ≈ 875 字下限",
+      "disposition": "mark-gap",
+      "note": "篇幅约束冲突：须删减覆盖范围并在 limitations 声明，或与需求方确认"
+    }
+  ]
+}

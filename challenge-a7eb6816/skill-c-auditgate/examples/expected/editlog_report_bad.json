@@ -1,0 +1,112 @@
+{
+  "meta": {
+    "tool": "editlog_check.py",
+    "version": "1.0.0",
+    "editlog": "examples/edit_log_bad.jsonl",
+    "alignment": "examples/expected/alignment.json",
+    "allowed_actions": [
+      "condense",
+      "move",
+      "omit",
+      "rephrase",
+      "retain",
+      "translate"
+    ],
+    "min_reason_chars": 4
+  },
+  "verdict": "FAIL",
+  "stats": {
+    "entries": 5,
+    "errors": 2,
+    "pending": 0
+  },
+  "errors": [
+    {
+      "line": 1,
+      "type": "bad_reason",
+      "detail": "reason 缺失或过短（< 4 字）: ''"
+    },
+    {
+      "line": null,
+      "type": "omit_not_logged",
+      "detail": "关键源句 S8 被删减/大改，但 edit_log 中无合法的 omit/condense 记录: 图 2 展示了不同温度下锂浸出率随时间的变化曲线。"
+    }
+  ],
+  "pending": [],
+  "coverage": {
+    "uncovered_key_source": [
+      "S4",
+      "S8"
+    ],
+    "covered_by_log": [
+      "S4"
+    ],
+    "missing": [
+      {
+        "id": "S8",
+        "text": "图 2 展示了不同温度下锂浸出率随时间的变化曲线。"
+      }
+    ]
+  },
+  "entries": [
+    {
+      "line": 1,
+      "locator": "S1-D1",
+      "refs": [
+        "S1",
+        "D1"
+      ],
+      "action": "rephrase",
+      "reason": "",
+      "legal": false,
+      "needs_confirmation": false
+    },
+    {
+      "line": 2,
+      "locator": "S2-D2",
+      "refs": [
+        "S2",
+        "D2"
+      ],
+      "action": "rephrase",
+      "reason": "合并浸出条件与结果，行文更紧凑",
+      "legal": true,
+      "needs_confirmation": false
+    },
+    {
+      "line": 3,
+      "locator": "S5-D4",
+      "refs": [
+        "S5",
+        "D4"
+      ],
+      "action": "rephrase",
+      "reason": "通俗化表述复配与协同效应",
+      "legal": true,
+      "needs_confirmation": false
+    },
+    {
+      "line": 4,
+      "locator": "S4",
+      "refs": [
+        "S4"
+      ],
+      "action": "omit",
+      "reason": "压缩篇幅，删去浸出渣金属残留率细节",
+      "legal": true,
+      "needs_confirmation": false
+    },
+    {
+      "line": 5,
+      "locator": "S7-D6",
+      "refs": [
+        "S7",
+        "D6"
+      ],
+      "action": "rephrase",
+      "reason": "将3家概括为多家的处理",
+      "legal": true,
+      "needs_confirmation": false
+    }
+  ]
+}

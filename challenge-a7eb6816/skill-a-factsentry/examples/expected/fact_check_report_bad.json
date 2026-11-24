@@ -1,0 +1,177 @@
+{
+  "tool": "fact_check",
+  "version": "1.0.0",
+  "inputs": {
+    "ledger": "examples/expected/evidence_ledger.json",
+    "draft": "examples/draft_bad.md"
+  },
+  "min_severity": "mandatory",
+  "summary": {
+    "status": "FAIL",
+    "exit_code": 3,
+    "findings_total": 13,
+    "findings_blocking": 12,
+    "by_kind": {
+      "unsupported_number": 2,
+      "dropped_evidence": 9,
+      "strength_upgrade": 2
+    },
+    "checked": {
+      "draft_numbers": 5,
+      "source_numbers": 10,
+      "source_figure_refs": 3,
+      "source_citations": 3,
+      "strength_pairs": 5
+    }
+  },
+  "findings": [
+    {
+      "kind": "unsupported_number",
+      "severity": "mandatory",
+      "draft_locator": "examples/draft_bad.md:5",
+      "draft_anchor": "实验证实，该催化剂在 160 °C 下即可实现 99.8% 的 CO 转化率（图2），活性较纯 Co3O4 提升 2.3 倍，并可稳定运行 100 h",
+      "raw": "160 °C",
+      "value": "160",
+      "unit": "°C",
+      "hint": "源文中单位为「°C」的数值：180",
+      "suggestion": "疑似数字漂移：请对照台账核对数值与单位。"
+    },
+    {
+      "kind": "unsupported_number",
+      "severity": "mandatory",
+      "draft_locator": "examples/draft_bad.md:5",
+      "draft_anchor": "实验证实，该催化剂在 160 °C 下即可实现 99.8% 的 CO 转化率（图2），活性较纯 Co3O4 提升 2.3 倍，并可稳定运行 100 h",
+      "raw": "99.8%",
+      "value": "99.8",
+      "unit": "%",
+      "hint": "源文中单位为「%」的数值：95.1、99.2",
+      "suggestion": "疑似数字漂移：请对照台账核对数值与单位。"
+    },
+    {
+      "kind": "dropped_evidence",
+      "severity": "mandatory",
+      "category": "number",
+      "source_id": "num-004",
+      "source_locator": "examples/source.md:11",
+      "source_anchor": "XRD 结果（图1）显示，Co3O4/CeO2 复合氧化物的平均晶粒尺寸为 4.5 nm，比表面积为 112 m2/g",
+      "raw": "112 m2/g",
+      "suggestion": "该证据（112 m2/g）未在改写稿中出现；默认必须保留，请恢复，或在交付说明中写明删减理由（保留优先级见 references/retention_priority.md）。"
+    },
+    {
+      "kind": "dropped_evidence",
+      "severity": "mandatory",
+      "category": "number",
+      "source_id": "num-005",
+      "source_locator": "examples/source.md:11",
+      "source_anchor": "在 180 °C、质量空速 36000 mL/(g·h) 条件下，CO 转化率达到 99.2%（图2）",
+      "raw": "180 °C",
+      "suggestion": "该证据（180 °C）未在改写稿中出现；默认必须保留，请恢复，或在交付说明中写明删减理由（保留优先级见 references/retention_priority.md）。"
+    },
+    {
+      "kind": "dropped_evidence",
+      "severity": "mandatory",
+      "category": "number",
+      "source_id": "num-006",
+      "source_locator": "examples/source.md:11",
+      "source_anchor": "在 180 °C、质量空速 36000 mL/(g·h) 条件下，CO 转化率达到 99.2%（图2）",
+      "raw": "36000 mL",
+      "suggestion": "该证据（36000 mL）未在改写稿中出现；默认必须保留，请恢复，或在交付说明中写明删减理由（保留优先级见 references/retention_priority.md）。"
+    },
+    {
+      "kind": "dropped_evidence",
+      "severity": "mandatory",
+      "category": "number",
+      "source_id": "num-010",
+      "source_locator": "examples/source.md:11",
+      "source_anchor": "连续运行 100 h 后，转化率保持在 95.1% 以上",
+      "raw": "95.1%",
+      "suggestion": "该证据（95.1%）未在改写稿中出现；默认必须保留，请恢复，或在交付说明中写明删减理由（保留优先级见 references/retention_priority.md）。"
+    },
+    {
+      "kind": "dropped_evidence",
+      "severity": "mandatory",
+      "category": "number",
+      "source_id": "num-007",
+      "source_locator": "examples/source.md:11",
+      "source_anchor": "在 180 °C、质量空速 36000 mL/(g·h) 条件下，CO 转化率达到 99.2%（图2）",
+      "raw": "99.2%",
+      "suggestion": "该证据（99.2%）未在改写稿中出现；默认必须保留，请恢复，或在交付说明中写明删减理由（保留优先级见 references/retention_priority.md）。"
+    },
+    {
+      "kind": "dropped_evidence",
+      "severity": "mandatory",
+      "category": "number",
+      "source_id": "num-001",
+      "source_locator": "examples/source.md:11",
+      "source_anchor": "平行实验 n=5，组间差异 p<0.05",
+      "raw": "n=5",
+      "suggestion": "该证据（n=5）未在改写稿中出现；默认必须保留，请恢复，或在交付说明中写明删减理由（保留优先级见 references/retention_priority.md）。"
+    },
+    {
+      "kind": "dropped_evidence",
+      "severity": "mandatory",
+      "category": "number",
+      "source_id": "num-002",
+      "source_locator": "examples/source.md:11",
+      "source_anchor": "平行实验 n=5，组间差异 p<0.05",
+      "raw": "p<0.05",
+      "suggestion": "该证据（p<0.05）未在改写稿中出现；默认必须保留，请恢复，或在交付说明中写明删减理由（保留优先级见 references/retention_priority.md）。"
+    },
+    {
+      "kind": "dropped_evidence",
+      "severity": "mandatory",
+      "category": "figure_ref",
+      "source_id": "tab-001",
+      "source_locator": "examples/source.md:11",
+      "source_anchor": "与纯 Co3O4 相比，复合催化剂的活性提升约 2.3 倍（表1）",
+      "raw": "表1",
+      "suggestion": "该证据（表1）未在改写稿中出现；默认必须保留，请恢复，或在交付说明中写明删减理由（保留优先级见 references/retention_priority.md）。"
+    },
+    {
+      "kind": "dropped_evidence",
+      "severity": "recommended",
+      "category": "citation",
+      "source_id": "cit-002",
+      "source_locator": "examples/source.md:7",
+      "source_anchor": "贵金属催化剂成本较高 [2]，过渡金属氧化物被认为是潜在替代方案 (Smith, 2021)",
+      "raw": "[2]",
+      "suggestion": "该证据（[2]）未在改写稿中出现；默认必须保留，请恢复，或在交付说明中写明删减理由（保留优先级见 references/retention_priority.md）。"
+    },
+    {
+      "kind": "strength_upgrade",
+      "severity": "mandatory",
+      "draft_locator": "examples/draft_bad.md:5",
+      "draft_anchor": "研究还证实，CeO2 的引入促进了氧空位形成",
+      "source_locator": "examples/source.md:13",
+      "source_anchor": "初步表明，CeO2 的引入促进了氧空位的形成",
+      "source_words": [
+        "初步表明"
+      ],
+      "draft_words": [
+        "证实"
+      ],
+      "source_level": "提示/初步(1)",
+      "draft_level": "证实(3)",
+      "similarity": 0.524,
+      "suggestion": "论断强度由源文「初步表明」（提示/初步(1)）升格为「证实」（证实(3)）；建议改用与源文同级的表述。"
+    },
+    {
+      "kind": "strength_upgrade",
+      "severity": "mandatory",
+      "draft_locator": "examples/draft_bad.md:5",
+      "draft_anchor": "氧空位浓度的提高导致了催化剂活性的上升",
+      "source_locator": "examples/source.md:13",
+      "source_anchor": "催化剂活性与氧空位浓度相关",
+      "source_words": [
+        "相关"
+      ],
+      "draft_words": [
+        "导致"
+      ],
+      "source_level": "相关(1.5)",
+      "draft_level": "因果断言(4)",
+      "similarity": 0.364,
+      "suggestion": "论断强度由源文「相关」（相关(1.5)）升格为「导致」（因果断言(4)）；建议改用与源文同级的表述。"
+    }
+  ]
+}

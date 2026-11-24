@@ -1,0 +1,157 @@
+{
+  "meta": {
+    "tool": "editlog_check.py",
+    "version": "1.0.0",
+    "editlog": "examples/edit_log_good.jsonl",
+    "alignment": "examples/expected/alignment.json",
+    "allowed_actions": [
+      "condense",
+      "move",
+      "omit",
+      "rephrase",
+      "retain",
+      "translate"
+    ],
+    "min_reason_chars": 4
+  },
+  "verdict": "PASS",
+  "stats": {
+    "entries": 9,
+    "errors": 0,
+    "pending": 2
+  },
+  "errors": [],
+  "pending": [
+    {
+      "line": 6,
+      "locator": "S7-D6",
+      "action": "rephrase",
+      "reason": "将3家概括为多家以弱化商业信息"
+    },
+    {
+      "line": 8,
+      "locator": "S4",
+      "action": "omit",
+      "reason": "删去浸出渣金属残留率细节以压缩篇幅"
+    }
+  ],
+  "coverage": {
+    "uncovered_key_source": [
+      "S4",
+      "S8"
+    ],
+    "covered_by_log": [
+      "S4",
+      "S8"
+    ],
+    "missing": []
+  },
+  "entries": [
+    {
+      "line": 1,
+      "locator": "S1-D1",
+      "refs": [
+        "S1",
+        "D1"
+      ],
+      "action": "rephrase",
+      "reason": "将学术表述改为新闻风格表述",
+      "legal": true,
+      "needs_confirmation": false
+    },
+    {
+      "line": 2,
+      "locator": "S2-D2",
+      "refs": [
+        "S2",
+        "D2"
+      ],
+      "action": "rephrase",
+      "reason": "合并浸出条件与结果，数据原样保留",
+      "legal": true,
+      "needs_confirmation": false
+    },
+    {
+      "line": 3,
+      "locator": "S3-D3",
+      "refs": [
+        "S3",
+        "D3"
+      ],
+      "action": "condense",
+      "reason": "压缩对比表述，保留40%核心数据",
+      "legal": true,
+      "needs_confirmation": false
+    },
+    {
+      "line": 4,
+      "locator": "S5-D4",
+      "refs": [
+        "S5",
+        "D4"
+      ],
+      "action": "rephrase",
+      "reason": "通俗化表述复配与协同效应",
+      "legal": true,
+      "needs_confirmation": false
+    },
+    {
+      "line": 5,
+      "locator": "S6-D5",
+      "refs": [
+        "S6",
+        "D5"
+      ],
+      "action": "retain",
+      "reason": "成本与降幅数据原样保留",
+      "legal": true,
+      "needs_confirmation": false
+    },
+    {
+      "line": 6,
+      "locator": "S7-D6",
+      "refs": [
+        "S7",
+        "D6"
+      ],
+      "action": "rephrase",
+      "reason": "将3家概括为多家以弱化商业信息",
+      "legal": true,
+      "needs_confirmation": true
+    },
+    {
+      "line": 7,
+      "locator": "S9-D7",
+      "refs": [
+        "S9",
+        "D7"
+      ],
+      "action": "retain",
+      "reason": "结论句基本保留不变",
+      "legal": true,
+      "needs_confirmation": false
+    },
+    {
+      "line": 8,
+      "locator": "S4",
+      "refs": [
+        "S4"
+      ],
+      "action": "omit",
+      "reason": "删去浸出渣金属残留率细节以压缩篇幅",
+      "legal": true,
+      "needs_confirmation": true
+    },
+    {
+      "line": 9,
+      "locator": "S8",
+      "refs": [
+        "S8"
+      ],
+      "action": "omit",
+      "reason": "面向公众的稿件删去图表内部引用",
+      "legal": true,
+      "needs_confirmation": false
+    }
+  ]
+}

@@ -1,0 +1,39 @@
+{
+  "plan": "/Users/liuhengshen/Desktop/bhr_product/writing17-five/bundles/skill-e-runops/examples/pipeline_plan.json",
+  "root": "/Users/liuhengshen/Desktop/bhr_product/writing17-five/bundles/skill-e-runops/examples",
+  "started_at": "2026-11-24T13:22:25+00:00",
+  "stages": {
+    "stats": {
+      "status": "success",
+      "finished_at": "2026-11-24T13:22:26+00:00",
+      "duration_s": 0.295,
+      "outputs": {
+        "work/stats.json": "82b0885297eb718ad8bd8c9773aeeda90c320e0630250f38f331a6fc7d5b0e12"
+      }
+    },
+    "draft": {
+      "status": "success",
+      "finished_at": "2026-11-24T13:22:26+00:00",
+      "duration_s": 0.292,
+      "outputs": {
+        "output/draft.md": "29a499c8a0015b8088a530ff0b519a9b534fc40bf8e1b1d7f2836564af29ff7d",
+        "work/draft_meta.json": "810ef58b99ec0970de4e7c2496caa8990df338ecc30ea9f676308c9e5dd7164a"
+      }
+    },
+    "finalize": {
+      "status": "success",
+      "finished_at": "2026-11-24T13:22:28+00:00",
+      "duration_s": 2.433,
+      "outputs": {
+        "output/result.json": "0ec115ee7957298a1cc729e11bbebabcc7a9c939adff1b8be78e1f16d42b268d"
+      }
+    }
+  },
+  "ledger": {
+    "stages_run": 3,
+    "stages_skipped": 0,
+    "total_seconds": 3.02
+  },
+  "warnings": [],
+  "finished_at": "2026-11-24T13:22:28+00:00"
+}
