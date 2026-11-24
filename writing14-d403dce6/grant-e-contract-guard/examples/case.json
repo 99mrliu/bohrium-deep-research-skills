@@ -1,0 +1,20 @@
+{
+  "case_id": "demo-001",
+  "title": "合成示例：面向旱地农业的耐旱小麦分子设计育种研究",
+  "writing_requirements": [
+    "按七要素（立项依据、科学问题、研究目标、研究内容、技术路线、创新点、研究基础与可行性）撰写申请书章节稿",
+    "研究基础仅依据材料中确有内容，申请人近三年论文清单缺失，按缺失处理",
+    "论断与数字须可溯源，区分已完成与拟开展"
+  ],
+  "materials": [
+    {"path": "/input/literature-drought-wheat.pdf", "note": "外部文献综述（归外部作者）"},
+    {"path": "/input/applicant-prior-work.md", "note": "申请人既有工作简介（材料中缺失，需按缺失处理）"}
+  ],
+  "output_contract": {
+    "deliverables": "交付文件清单（数组，每项含 path 与说明）",
+    "status": "完成状态枚举：success/partial/unable_to_determine/refused",
+    "sources": "来源台账（数组，每条论断/数字/引用的出处与标注）",
+    "uncertainty": "不确定项与缺口说明（数组）",
+    "change_record": "变更记录（数组，每次就地迭代追加一条）"
+  }
+}

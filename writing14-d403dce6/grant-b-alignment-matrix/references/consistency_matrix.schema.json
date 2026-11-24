@@ -1,0 +1,55 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "consistency_matrix",
+  "description": "目标-内容-路线-指标一致性矩阵。边方向为子->父：G->Q、C->G、R->C、K->G。",
+  "type": "object",
+  "required": ["nodes", "edges"],
+  "additionalProperties": true,
+  "properties": {
+    "version": {"type": "string"},
+    "case_id": {"type": ["string", "null"]},
+    "nodes": {
+      "type": "object",
+      "required": ["q", "g", "c", "r", "k"],
+      "additionalProperties": false,
+      "properties": {
+        "q": {"$ref": "#/definitions/nodeList", "description": "科学问题，id 形如 Q1"},
+        "g": {"$ref": "#/definitions/nodeList", "description": "研究目标，id 形如 G1"},
+        "c": {"$ref": "#/definitions/nodeList", "description": "研究内容，id 形如 C1"},
+        "r": {"$ref": "#/definitions/nodeList", "description": "技术路线步骤，id 形如 R1"},
+        "k": {"$ref": "#/definitions/nodeList", "description": "考核指标，id 形如 K1"}
+      }
+    },
+    "edges": {
+      "type": "array",
+      "items": {"$ref": "#/definitions/edge"}
+    }
+  },
+  "definitions": {
+    "nodeList": {
+      "type": "array",
+      "items": {"$ref": "#/definitions/node"}
+    },
+    "node": {
+      "type": "object",
+      "required": ["id"],
+      "additionalProperties": true,
+      "properties": {
+        "id": {"type": "string", "pattern": "^[QGCRK][0-9]+$"},
+        "title": {"type": "string"},
+        "note": {"type": "string"}
+      }
+    },
+    "edge": {
+      "type": "object",
+      "required": ["from", "to"],
+      "additionalProperties": false,
+      "properties": {
+        "from": {"type": "string", "pattern": "^[QGCRK][0-9]+$",
+                 "description": "支撑方（子）。合法组合：G->Q, C->G, R->C, K->G"},
+        "to": {"type": "string", "pattern": "^[QGCRK][0-9]+$",
+               "description": "被支撑方（父）"}
+      }
+    }
+  }
+}

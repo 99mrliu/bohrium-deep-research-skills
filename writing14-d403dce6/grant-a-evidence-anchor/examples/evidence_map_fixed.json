@@ -1,0 +1,50 @@
+{
+  "meta": {
+    "note": "合成示例，非正式案例结果。修复版：E2 改为 外部工作；E3 的 quote 改为逐字原文。",
+    "version": "1.1-fixed"
+  },
+  "entries": [
+    {
+      "id": "E1",
+      "claim": "申请人已建成固定床评价装置并完成气密性检查（泄漏率 0.8%/h）。",
+      "quote": "搭建固定床评价装置，完成气密性检查，泄漏率 0.8%/h。",
+      "source": {"file": "applicant_prior_records.txt", "loc": "2023-07-14 条"},
+      "status": "已完成",
+      "source_class": "applicant"
+    },
+    {
+      "id": "E2",
+      "claim": "外部工作报道 Co3O4 催化剂甲烷转化率达 87.3%（修复：改为 外部工作）。",
+      "quote": "Wang 等报道的 Co3O4 催化剂对甲烷的转化率达到 87.3%",
+      "source": {"file": "external_paper_excerpt.txt", "loc": "第 2 节"},
+      "status": "外部工作",
+      "source_class": "external",
+      "citation": {"authors": "王珂, 刘一鸣", "year": 2021, "title": "低温等离子体辅助催化综述", "verified": true}
+    },
+    {
+      "id": "E3",
+      "claim": "外部工作报道表观活化能为 62 kJ/mol（修复：quote 改为逐字原文）。",
+      "quote": "表面氧空位浓度与表观活化能（62 kJ/mol）呈负相关。",
+      "source": {"file": "external_paper_excerpt.txt", "loc": "第 3 节"},
+      "status": "外部工作",
+      "source_class": "external",
+      "citation": {"authors": "王珂, 刘一鸣", "year": 2021, "title": "低温等离子体辅助催化综述", "verified": true}
+    },
+    {
+      "id": "E4",
+      "claim": "申请人前期在 280 °C 下测得甲烷转化率 41.6%（装置自检数据）。",
+      "quote": "在 280 °C 下甲烷转化率为 41.6%（装置自检数据，未发表）。",
+      "source": {"file": "applicant_prior_records.txt", "loc": "2023-09-02 条"},
+      "status": "已完成",
+      "source_class": "applicant"
+    },
+    {
+      "id": "E5",
+      "claim": "拟开展氧空位浓度调变对表观活化能影响的研究；申请人代表性成果材料缺失。",
+      "quote": "真实申请人证据明确缺失时按缺失处理",
+      "source": {"file": "organizer-workorder.json", "loc": "applicant_evidence_policy"},
+      "status": "拟开展",
+      "citation": "某会议论文（要件缺失示例，用于触发 warning）"
+    }
+  ]
+}

@@ -1,0 +1,81 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "evidence_map 证据底表",
+  "description": "申请书章节稿中每条关键论断（数字、术语、引用、事实）与材料原文逐字 quote 的锚定底表。anchor_audit.py 据此核验。",
+  "type": "object",
+  "required": ["entries"],
+  "properties": {
+    "meta": {
+      "type": "object",
+      "description": "可选元信息（备注、版本）。",
+      "additionalProperties": true
+    },
+    "entries": {
+      "type": "array",
+      "items": { "$ref": "#/definitions/entry" }
+    }
+  },
+  "definitions": {
+    "entry": {
+      "type": "object",
+      "required": ["id", "claim", "quote", "source", "status"],
+      "properties": {
+        "id": {
+          "type": "string",
+          "description": "条目唯一标识，章节稿中以（证据 Ex）回指。"
+        },
+        "claim": {
+          "type": "string",
+          "description": "章节稿中的论断原文（或概括），即需要被锚定的内容。"
+        },
+        "quote": {
+          "type": "string",
+          "description": "来源材料中的逐字原文（NFKC 归一化+空白折叠后须为来源文本子串）。不得改写、不得凭印象复述。"
+        },
+        "source": {
+          "type": "object",
+          "required": ["file", "loc"],
+          "properties": {
+            "file": {
+              "type": "string",
+              "description": "来源文件名（/input 内相对路径或 basename；anchor_audit 依次尝试 file、basename、basename+.txt、去扩展名+.txt 在 src_text 中定位）。"
+            },
+            "loc": {
+              "type": "string",
+              "description": "定位信息，如 PDF 页码 p.3、节号 第2节、记录日期 2023-07-14、JSON 键路径。"
+            }
+          },
+          "additionalProperties": false
+        },
+        "status": {
+          "type": "string",
+          "enum": ["已完成", "外部工作", "拟开展", "待确认"],
+          "description": "四态标注：已完成=申请人已有且材料有证据；外部工作=原论文/既有成果，归外部作者；拟开展=本研究计划将做；待确认=材料缺失需人工确认。判定规则见 status_taxonomy.md。"
+        },
+        "source_class": {
+          "type": "string",
+          "enum": ["applicant", "external"],
+          "description": "来源类别。status=已完成 时必须能判定为 applicant；缺省时由 materials_inventory.json 的 source_class_guess 兜底，仍为 unknown 则触发 warning。"
+        },
+        "citation": {
+          "description": "可选。外部工作建议给出。对象形式需含 authors/year/title 三要件；字符串形式需含 4 位年份与可辨识文字。缺件仅 warning；无法核实的引用应注明'未核验'（见 citation_rules.md），不得补造卷期页码 DOI。",
+          "oneOf": [
+            {
+              "type": "object",
+              "properties": {
+                "authors": {"type": "string"},
+                "year": {"type": ["integer", "string"]},
+                "title": {"type": "string"},
+                "venue": {"type": "string"},
+                "verified": {"type": "boolean", "description": "是否已在材料中核验到原文；false 时章节稿须标'未核验'。"}
+              },
+              "additionalProperties": true
+            },
+            {"type": "string"}
+          ]
+        }
+      },
+      "additionalProperties": true
+    }
+  }
+}

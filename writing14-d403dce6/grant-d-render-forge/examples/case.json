@@ -1,0 +1,16 @@
+{
+  "case_id": "case-synth-render-001",
+  "title": "合成示例：基金申请书章节稿交付（非正式案例）",
+  "task_brief": "依据给定材料撰写'研究内容与技术路线'章节稿，交付可编辑 docx、真实渲染预览、版本间修改记录，并按 output_contract 装配 result.json。",
+  "output_contract": {
+    "fields": [
+      "deliverables",
+      "status",
+      "reason",
+      "sources",
+      "uncertainty",
+      "change_records",
+      "element_mapping"
+    ]
+  }
+}
