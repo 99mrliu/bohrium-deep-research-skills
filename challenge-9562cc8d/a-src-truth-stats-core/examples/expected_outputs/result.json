@@ -1,0 +1,245 @@
+{
+  "case_id": "synthetic-plant-growth-demo",
+  "status": "success",
+  "summary": "数据 n=91，4 个数值变量、1 个分类变量。清洗：缺失值逐列计数未插补，重复行 1 条保留标记，1.5×IQR 异常值仅标记。主要描述统计（均值±SD）：height=26.655±5.470、leaf_count=9.705±3.202、root_mass=3.023±1.012、chlorophyll_spad=35.988±6.221。最强相关：height 与 leaf_count（r=0.914）。分组：treatment（低肥、对照、高肥）。图件 5 张（300 dpi PNG + 嵌入字体 PDF + 可编辑 SVG，单栏 89 mm，Okabe-Ito 色盲安全配色），图注见 captions.md；全部统计量经独立复算一致。",
+  "figures": [
+    {
+      "id": "fig1_distributions",
+      "files": {
+        "png": "fig1_distributions.png",
+        "pdf": "fig1_distributions.pdf",
+        "svg": "fig1_distributions.svg"
+      },
+      "width_mm": 89.0,
+      "dpi": 300,
+      "caption": "图 1　数值变量分布。4 个数值变量的直方图（叠加高斯 KDE 曲线），样本量 n=91。面板标题给出各变量偏度；标注“对数尺度”的变量因右偏（偏度>1 且最小值>0）采用对数横轴。数据来源：plant_growth_synthetic（合成示例数据（make_data.py 生成，非真实实验））。清洗口径：缺失值逐列计数未插补；重复行 1 条保留并标记；异常值按 1.5×IQR 仅标记不删除。",
+      "binding": {
+        "panels": [
+          {
+            "panel": "(a)",
+            "source_column": "height_cm",
+            "encoding": {
+              "x": "value",
+              "y": "count"
+            },
+            "log_scale": false
+          },
+          {
+            "panel": "(b)",
+            "source_column": "leaf_count",
+            "encoding": {
+              "x": "value",
+              "y": "count"
+            },
+            "log_scale": false
+          },
+          {
+            "panel": "(c)",
+            "source_column": "root_mass_g",
+            "encoding": {
+              "x": "value",
+              "y": "count"
+            },
+            "log_scale": false
+          },
+          {
+            "panel": "(d)",
+            "source_column": "chlorophyll_spad",
+            "encoding": {
+              "x": "value",
+              "y": "count"
+            },
+            "log_scale": false
+          }
+        ]
+      }
+    },
+    {
+      "id": "fig2_grouped_boxplots",
+      "files": {
+        "png": "fig2_grouped_boxplots.png",
+        "pdf": "fig2_grouped_boxplots.pdf",
+        "svg": "fig2_grouped_boxplots.svg"
+      },
+      "width_mm": 89.0,
+      "dpi": 300,
+      "caption": "图 2　分组箱线图（叠加散点）。按 treatment 分组（低肥 n=31、对照 n=30、高肥 n=30）；面板内叠加经固定种子抖动的原始观测点。误差线含义：箱线图中箱体为四分位距（Q1–Q3），中线为中位数，须线为 1.5×IQR 范围，须外点为离群观测（仅标记未删除）。样本量 n=91，数据来源：plant_growth_synthetic（合成示例数据（make_data.py 生成，非真实实验））。清洗口径：缺失值逐列计数未插补；重复行 1 条保留并标记；异常值按 1.5×IQR 仅标记不删除。",
+      "binding": {
+        "group_by": "treatment",
+        "group_levels": [
+          "低肥",
+          "对照",
+          "高肥"
+        ],
+        "n_per_level": {
+          "低肥": 31,
+          "对照": 30,
+          "高肥": 30
+        },
+        "whisker_rule": "1.5*IQR"
+      }
+    },
+    {
+      "id": "fig3_scatter_pairs",
+      "files": {
+        "png": "fig3_scatter_pairs.png",
+        "pdf": "fig3_scatter_pairs.pdf",
+        "svg": "fig3_scatter_pairs.svg"
+      },
+      "width_mm": 89.0,
+      "dpi": 300,
+      "caption": "图 3　关键变量两两散点图（分组着色）。选取 |r| 最大的变量对：(a) height 与 leaf_count：r=0.914，n=91；(b) height 与 root_mass：r=0.841，n=90；(c) height 与 chlorophyll_spad：r=0.791，n=90。颜色区分treatment 分组；图例与数据中的分组取值一一对应。样本量 n=91，数据来源：plant_growth_synthetic（合成示例数据（make_data.py 生成，非真实实验））。清洗口径：缺失值逐列计数未插补；重复行 1 条保留并标记；异常值按 1.5×IQR 仅标记不删除。",
+      "binding": {
+        "panels": [
+          {
+            "x": "height_cm",
+            "y": "leaf_count",
+            "pearson_r": 0.9136810713723554,
+            "n": 91,
+            "color_by": "treatment"
+          },
+          {
+            "x": "height_cm",
+            "y": "root_mass_g",
+            "pearson_r": 0.8405668256352092,
+            "n": 90,
+            "color_by": "treatment"
+          },
+          {
+            "x": "height_cm",
+            "y": "chlorophyll_spad",
+            "pearson_r": 0.7911117079638545,
+            "n": 90,
+            "color_by": "treatment"
+          }
+        ]
+      }
+    },
+    {
+      "id": "fig4_correlation_heatmap",
+      "files": {
+        "png": "fig4_correlation_heatmap.png",
+        "pdf": "fig4_correlation_heatmap.pdf",
+        "svg": "fig4_correlation_heatmap.svg"
+      },
+      "width_mm": 89.0,
+      "dpi": 300,
+      "caption": "图 4　数值变量 Pearson 相关热图（成对完整观测）。色标固定 [-1, 1]，格内数字为相关系数。最强相关：height 与 leaf_count（r=0.914）。样本量 n=91，数据来源：plant_growth_synthetic（合成示例数据（make_data.py 生成，非真实实验））。清洗口径：缺失值逐列计数未插补；重复行 1 条保留并标记；异常值按 1.5×IQR 仅标记不删除。",
+      "binding": {
+        "matrix": "statistics.json:correlations",
+        "color_scale": [
+          -1,
+          1
+        ]
+      }
+    },
+    {
+      "id": "fig5_missingness",
+      "files": {
+        "png": "fig5_missingness.png",
+        "pdf": "fig5_missingness.pdf",
+        "svg": "fig5_missingness.svg"
+      },
+      "width_mm": 89.0,
+      "dpi": 300,
+      "caption": "图 5　各列缺失值数量。缺失值仅计数报告、未插补。数据来源：plant_growth_synthetic（合成示例数据（make_data.py 生成，非真实实验））。清洗口径：缺失值逐列计数未插补；重复行 1 条保留并标记；异常值按 1.5×IQR 仅标记不删除。",
+      "binding": {}
+    }
+  ],
+  "statistics": {
+    "file": "statistics.json",
+    "md": "statistics.md",
+    "n_rows": 91,
+    "n_numeric": 4,
+    "n_categorical": 1,
+    "group": {
+      "mode": "categorical",
+      "column": "treatment",
+      "levels": [
+        "低肥",
+        "对照",
+        "高肥"
+      ],
+      "n_per_level": {
+        "低肥": 31,
+        "对照": 30,
+        "高肥": 30
+      }
+    },
+    "strongest_correlation": {
+      "x": "height_cm",
+      "y": "leaf_count",
+      "pearson_r": 0.9136810713723554
+    },
+    "definitions": {
+      "sd": "sample standard deviation (ddof=1)",
+      "sem": "sd/sqrt(n)",
+      "quartiles": "linear interpolation, type 7",
+      "skewness": "moment skewness m3/m2^1.5",
+      "pearson": "pairwise complete observations"
+    }
+  },
+  "cleaning_report": {
+    "file": "cleaning_report.json",
+    "input_rows": 91,
+    "duplicate_rows": 1,
+    "missing_by_column": {
+      "treatment": 0,
+      "height_cm": 0,
+      "leaf_count": 0,
+      "root_mass_g": 1,
+      "chlorophyll_spad": 1
+    },
+    "rules": [
+      {
+        "rule": "trim_whitespace",
+        "detail": "strip leading/trailing whitespace of every cell; values not otherwise modified"
+      },
+      {
+        "rule": "missing_values",
+        "detail": "missing tokens ['', '-', '--', '?', 'missing', 'n/a', 'na', 'nan', 'none', 'null'] counted per column; NOT imputed"
+      },
+      {
+        "rule": "duplicates",
+        "detail": "1 exact duplicate row(s) detected; kept and marked (no deletion without explicit task request)"
+      },
+      {
+        "rule": "outliers",
+        "detail": "1.5*IQR fences per numeric column; outliers flagged only, never deleted"
+      }
+    ]
+  },
+  "sources": {
+    "case_dataset": {
+      "name": "plant_growth_synthetic",
+      "source": "合成示例数据（make_data.py 生成，非真实实验）",
+      "rows_expected": 91
+    },
+    "primary_file": "plant_growth.csv",
+    "files": [
+      {
+        "file": "case.json",
+        "path": "/Users/liuhengshen/Desktop/bhr_product/3rd/4/9562-r2/bundles/a-src-truth-stats-core/examples/synthetic_case/case.json",
+        "sha256": "bb8ad1f84c847c663f2ead7b47b6c79b697c7cef5cb52c11e59527760b395938",
+        "bytes": 754
+      },
+      {
+        "file": "plant_growth.csv",
+        "path": "/Users/liuhengshen/Desktop/bhr_product/3rd/4/9562-r2/bundles/a-src-truth-stats-core/examples/synthetic_case/plant_growth.csv",
+        "sha256": "e425a5450e2d0a6c90f315e652e16139c727cf383280a64f0047c01b1d215928",
+        "bytes": 2625
+      },
+      {
+        "file": "task.md",
+        "path": "/Users/liuhengshen/Desktop/bhr_product/3rd/4/9562-r2/bundles/a-src-truth-stats-core/examples/synthetic_case/task.md",
+        "sha256": "6b4b499c40ffb80adc6c5a8b5260878668f779871ebca06bd0d7f15cc09666da",
+        "bytes": 1320
+      }
+    ],
+    "verification": "check_report.json",
+    "captions": "captions.md",
+    "figure_data_binding": "figures.figdata.json",
+    "run_manifest": "run_manifest.json"
+  },
+  "uncertainty": []
+}

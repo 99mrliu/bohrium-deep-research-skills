@@ -1,0 +1,245 @@
+{
+  "case_id": "synthetic-enzyme-kinetics-demo",
+  "status": "success",
+  "summary": "数据 n=122，4 个数值变量、1 个分类变量。清洗：缺失值逐列计数未插补，重复行 2 条保留标记，1.5×IQR 异常值仅标记。主要描述统计（均值±SD）：substrate=3.992±4.963、velocity_umol=57.209±39.508、temp=32.585±5.717、ph=6.989±0.336。最强相关：substrate 与 velocity_umol（r=0.730）。坐标轴尺度决策：substrate 右偏（偏度=1.55），图中采用对数坐标轴并已标注。分组：enzyme（EnzA、EnzB、EnzC）。图件 5 张（300 dpi PNG + 嵌入字体 PDF + 可编辑 SVG，单栏 89 mm，Okabe-Ito 色盲安全配色），图注见 captions.md；全部统计量经独立复算一致。",
+  "figures": [
+    {
+      "id": "fig1_distributions",
+      "files": {
+        "png": "fig1_distributions.png",
+        "pdf": "fig1_distributions.pdf",
+        "svg": "fig1_distributions.svg"
+      },
+      "width_mm": 89.0,
+      "dpi": 300,
+      "caption": "图 1　数值变量分布。4 个数值变量的直方图（叠加高斯 KDE 曲线），样本量 n=122。面板标题给出各变量偏度；标注“对数尺度”的变量因右偏（偏度>1 且最小值>0）采用对数横轴。数据来源：enzyme_kinetics_synthetic（合成示例数据（make_data.py 生成，非真实实验））。清洗口径：缺失值逐列计数未插补；重复行 2 条保留并标记；异常值按 1.5×IQR 仅标记不删除。",
+      "binding": {
+        "panels": [
+          {
+            "panel": "(a)",
+            "source_column": "substrate_mm",
+            "encoding": {
+              "x": "value",
+              "y": "count"
+            },
+            "log_scale": true
+          },
+          {
+            "panel": "(b)",
+            "source_column": "velocity_umol_min",
+            "encoding": {
+              "x": "value",
+              "y": "count"
+            },
+            "log_scale": false
+          },
+          {
+            "panel": "(c)",
+            "source_column": "temp_c",
+            "encoding": {
+              "x": "value",
+              "y": "count"
+            },
+            "log_scale": false
+          },
+          {
+            "panel": "(d)",
+            "source_column": "ph",
+            "encoding": {
+              "x": "value",
+              "y": "count"
+            },
+            "log_scale": false
+          }
+        ]
+      }
+    },
+    {
+      "id": "fig2_grouped_boxplots",
+      "files": {
+        "png": "fig2_grouped_boxplots.png",
+        "pdf": "fig2_grouped_boxplots.pdf",
+        "svg": "fig2_grouped_boxplots.svg"
+      },
+      "width_mm": 89.0,
+      "dpi": 300,
+      "caption": "图 2　分组箱线图（叠加散点）。按 enzyme 分组（EnzA n=42、EnzB n=40、EnzC n=40）；面板内叠加经固定种子抖动的原始观测点。误差线含义：箱线图中箱体为四分位距（Q1–Q3），中线为中位数，须线为 1.5×IQR 范围，须外点为离群观测（仅标记未删除）。样本量 n=122，数据来源：enzyme_kinetics_synthetic（合成示例数据（make_data.py 生成，非真实实验））。清洗口径：缺失值逐列计数未插补；重复行 2 条保留并标记；异常值按 1.5×IQR 仅标记不删除。",
+      "binding": {
+        "group_by": "enzyme",
+        "group_levels": [
+          "EnzA",
+          "EnzB",
+          "EnzC"
+        ],
+        "n_per_level": {
+          "EnzA": 42,
+          "EnzB": 40,
+          "EnzC": 40
+        },
+        "whisker_rule": "1.5*IQR"
+      }
+    },
+    {
+      "id": "fig3_scatter_pairs",
+      "files": {
+        "png": "fig3_scatter_pairs.png",
+        "pdf": "fig3_scatter_pairs.pdf",
+        "svg": "fig3_scatter_pairs.svg"
+      },
+      "width_mm": 89.0,
+      "dpi": 300,
+      "caption": "图 3　关键变量两两散点图（分组着色）。选取 |r| 最大的变量对：(a) substrate 与 velocity_umol：r=0.730，n=121；(b) velocity_umol 与 ph：r=0.319，n=121；(c) substrate 与 ph：r=0.157，n=122。颜色区分enzyme 分组；图例与数据中的分组取值一一对应。样本量 n=122，数据来源：enzyme_kinetics_synthetic（合成示例数据（make_data.py 生成，非真实实验））。清洗口径：缺失值逐列计数未插补；重复行 2 条保留并标记；异常值按 1.5×IQR 仅标记不删除。",
+      "binding": {
+        "panels": [
+          {
+            "x": "substrate_mm",
+            "y": "velocity_umol_min",
+            "pearson_r": 0.7300385740728914,
+            "n": 121,
+            "color_by": "enzyme"
+          },
+          {
+            "x": "velocity_umol_min",
+            "y": "ph",
+            "pearson_r": 0.31857912584630543,
+            "n": 121,
+            "color_by": "enzyme"
+          },
+          {
+            "x": "substrate_mm",
+            "y": "ph",
+            "pearson_r": 0.15749847033205785,
+            "n": 122,
+            "color_by": "enzyme"
+          }
+        ]
+      }
+    },
+    {
+      "id": "fig4_correlation_heatmap",
+      "files": {
+        "png": "fig4_correlation_heatmap.png",
+        "pdf": "fig4_correlation_heatmap.pdf",
+        "svg": "fig4_correlation_heatmap.svg"
+      },
+      "width_mm": 89.0,
+      "dpi": 300,
+      "caption": "图 4　数值变量 Pearson 相关热图（成对完整观测）。色标固定 [-1, 1]，格内数字为相关系数。最强相关：substrate 与 velocity_umol（r=0.730）。样本量 n=122，数据来源：enzyme_kinetics_synthetic（合成示例数据（make_data.py 生成，非真实实验））。清洗口径：缺失值逐列计数未插补；重复行 2 条保留并标记；异常值按 1.5×IQR 仅标记不删除。",
+      "binding": {
+        "matrix": "statistics.json:correlations",
+        "color_scale": [
+          -1,
+          1
+        ]
+      }
+    },
+    {
+      "id": "fig5_missingness",
+      "files": {
+        "png": "fig5_missingness.png",
+        "pdf": "fig5_missingness.pdf",
+        "svg": "fig5_missingness.svg"
+      },
+      "width_mm": 89.0,
+      "dpi": 300,
+      "caption": "图 5　各列缺失值数量。缺失值仅计数报告、未插补。数据来源：enzyme_kinetics_synthetic（合成示例数据（make_data.py 生成，非真实实验））。清洗口径：缺失值逐列计数未插补；重复行 2 条保留并标记；异常值按 1.5×IQR 仅标记不删除。",
+      "binding": {}
+    }
+  ],
+  "statistics": {
+    "file": "statistics.json",
+    "md": "statistics.md",
+    "n_rows": 122,
+    "n_numeric": 4,
+    "n_categorical": 1,
+    "group": {
+      "mode": "categorical",
+      "column": "enzyme",
+      "levels": [
+        "EnzA",
+        "EnzB",
+        "EnzC"
+      ],
+      "n_per_level": {
+        "EnzA": 42,
+        "EnzB": 40,
+        "EnzC": 40
+      }
+    },
+    "strongest_correlation": {
+      "x": "substrate_mm",
+      "y": "velocity_umol_min",
+      "pearson_r": 0.7300385740728914
+    },
+    "definitions": {
+      "sd": "sample standard deviation (ddof=1)",
+      "sem": "sd/sqrt(n)",
+      "quartiles": "linear interpolation, type 7",
+      "skewness": "moment skewness m3/m2^1.5",
+      "pearson": "pairwise complete observations"
+    }
+  },
+  "cleaning_report": {
+    "file": "cleaning_report.json",
+    "input_rows": 122,
+    "duplicate_rows": 2,
+    "missing_by_column": {
+      "enzyme": 0,
+      "substrate_mm": 0,
+      "velocity_umol_min": 1,
+      "temp_c": 0,
+      "ph": 0
+    },
+    "rules": [
+      {
+        "rule": "trim_whitespace",
+        "detail": "strip leading/trailing whitespace of every cell; values not otherwise modified"
+      },
+      {
+        "rule": "missing_values",
+        "detail": "missing tokens ['', '-', '--', '?', 'missing', 'n/a', 'na', 'nan', 'none', 'null'] counted per column; NOT imputed"
+      },
+      {
+        "rule": "duplicates",
+        "detail": "2 exact duplicate row(s) detected; kept and marked (no deletion without explicit task request)"
+      },
+      {
+        "rule": "outliers",
+        "detail": "1.5*IQR fences per numeric column; outliers flagged only, never deleted"
+      }
+    ]
+  },
+  "sources": {
+    "case_dataset": {
+      "name": "enzyme_kinetics_synthetic",
+      "source": "合成示例数据（make_data.py 生成，非真实实验）",
+      "rows_expected": 120
+    },
+    "primary_file": "enzyme_kinetics.csv",
+    "files": [
+      {
+        "file": "case.json",
+        "path": "/Users/liuhengshen/Desktop/bhr_product/3rd/4/9562-r2/bundles/b-journal-export-engineer/examples/synthetic_case/case.json",
+        "sha256": "090ac576582c485875ad8e85b02b370d2e7b8695ff450580086affa5aa339904",
+        "bytes": 758
+      },
+      {
+        "file": "enzyme_kinetics.csv",
+        "path": "/Users/liuhengshen/Desktop/bhr_product/3rd/4/9562-r2/bundles/b-journal-export-engineer/examples/synthetic_case/enzyme_kinetics.csv",
+        "sha256": "5979df1a60b2a90055eba7dfe3b758412e742014f98181ecd36b750be15efa13",
+        "bytes": 3228
+      },
+      {
+        "file": "task.md",
+        "path": "/Users/liuhengshen/Desktop/bhr_product/3rd/4/9562-r2/bundles/b-journal-export-engineer/examples/synthetic_case/task.md",
+        "sha256": "0db03ea6c1e6a38b4ead86870d3da5ab52e77ef8dd6fb2f58c985b921b1ef427",
+        "bytes": 1308
+      }
+    ],
+    "verification": "check_report.json",
+    "captions": "captions.md",
+    "figure_data_binding": "figures.figdata.json",
+    "run_manifest": "run_manifest.json"
+  },
+  "uncertainty": []
+}

@@ -1,0 +1,124 @@
+{
+  "recompute_from_source": {
+    "source_file": "b-journal-export-engineer/examples/synthetic_case/enzyme_kinetics.csv",
+    "checks": [
+      {
+        "check": "mean:substrate_mm",
+        "passed": true,
+        "recomputed": 3.9918032786885247,
+        "reported": 3.9918032786885247
+      },
+      {
+        "check": "n:substrate_mm",
+        "passed": true,
+        "recomputed": 122,
+        "reported": 122
+      },
+      {
+        "check": "mean:velocity_umol_min",
+        "passed": true,
+        "recomputed": 57.20859504132231,
+        "reported": 57.20859504132231
+      },
+      {
+        "check": "n:velocity_umol_min",
+        "passed": true,
+        "recomputed": 121,
+        "reported": 121
+      },
+      {
+        "check": "mean:temp_c",
+        "passed": true,
+        "recomputed": 32.58524590163935,
+        "reported": 32.58524590163935
+      },
+      {
+        "check": "n:temp_c",
+        "passed": true,
+        "recomputed": 122,
+        "reported": 122
+      },
+      {
+        "check": "mean:ph",
+        "passed": true,
+        "recomputed": 6.989180327868852,
+        "reported": 6.989180327868852
+      },
+      {
+        "check": "n:ph",
+        "passed": true,
+        "recomputed": 122,
+        "reported": 122
+      },
+      {
+        "check": "pearson:substrate_mm~velocity_umol_min",
+        "passed": true,
+        "recomputed": 0.7300385740728914,
+        "reported": 0.7300385740728914
+      },
+      {
+        "check": "pearson:velocity_umol_min~ph",
+        "passed": true,
+        "recomputed": 0.31857912584630543,
+        "reported": 0.31857912584630543
+      },
+      {
+        "check": "pearson:substrate_mm~ph",
+        "passed": true,
+        "recomputed": 0.15749847033205785,
+        "reported": 0.15749847033205785
+      }
+    ],
+    "all_passed": true,
+    "n_checks": 11,
+    "n_failed": 0
+  },
+  "export_audit": {
+    "fig1_distributions": {
+      "png_dpi": 299.9994,
+      "png_dpi_ok": true,
+      "pdf_font_embedded": true,
+      "pdf_bytes": 19221,
+      "svg_live_text": true,
+      "svg_bytes": 42791,
+      "ok": true
+    },
+    "fig2_grouped_boxplots": {
+      "png_dpi": 299.9994,
+      "png_dpi_ok": true,
+      "pdf_font_embedded": true,
+      "pdf_bytes": 25656,
+      "svg_live_text": true,
+      "svg_bytes": 125767,
+      "ok": true
+    },
+    "fig3_scatter_pairs": {
+      "png_dpi": 299.9994,
+      "png_dpi_ok": true,
+      "pdf_font_embedded": true,
+      "pdf_bytes": 24650,
+      "svg_live_text": true,
+      "svg_bytes": 96709,
+      "ok": true
+    },
+    "fig4_correlation_heatmap": {
+      "png_dpi": 299.9994,
+      "png_dpi_ok": true,
+      "pdf_font_embedded": true,
+      "pdf_bytes": 13867,
+      "svg_live_text": true,
+      "svg_bytes": 16359,
+      "ok": true
+    },
+    "fig5_missingness": {
+      "png_dpi": 299.9994,
+      "png_dpi_ok": true,
+      "pdf_font_embedded": true,
+      "pdf_bytes": 11406,
+      "svg_live_text": true,
+      "svg_bytes": 6149,
+      "ok": true
+    }
+  },
+  "all_passed": true
+}

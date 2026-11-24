@@ -1,0 +1,124 @@
+{
+  "recompute_from_source": {
+    "source_file": "a-src-truth-stats-core/examples/synthetic_case/plant_growth.csv",
+    "checks": [
+      {
+        "check": "mean:height_cm",
+        "passed": true,
+        "recomputed": 26.655274725274726,
+        "reported": 26.655274725274726
+      },
+      {
+        "check": "n:height_cm",
+        "passed": true,
+        "recomputed": 91,
+        "reported": 91
+      },
+      {
+        "check": "mean:leaf_count",
+        "passed": true,
+        "recomputed": 9.705494505494507,
+        "reported": 9.705494505494507
+      },
+      {
+        "check": "n:leaf_count",
+        "passed": true,
+        "recomputed": 91,
+        "reported": 91
+      },
+      {
+        "check": "mean:root_mass_g",
+        "passed": true,
+        "recomputed": 3.0228888888888887,
+        "reported": 3.0228888888888887
+      },
+      {
+        "check": "n:root_mass_g",
+        "passed": true,
+        "recomputed": 90,
+        "reported": 90
+      },
+      {
+        "check": "mean:chlorophyll_spad",
+        "passed": true,
+        "recomputed": 35.98777777777778,
+        "reported": 35.98777777777778
+      },
+      {
+        "check": "n:chlorophyll_spad",
+        "passed": true,
+        "recomputed": 90,
+        "reported": 90
+      },
+      {
+        "check": "pearson:height_cm~leaf_count",
+        "passed": true,
+        "recomputed": 0.9136810713723554,
+        "reported": 0.9136810713723554
+      },
+      {
+        "check": "pearson:height_cm~root_mass_g",
+        "passed": true,
+        "recomputed": 0.8405668256352092,
+        "reported": 0.8405668256352092
+      },
+      {
+        "check": "pearson:height_cm~chlorophyll_spad",
+        "passed": true,
+        "recomputed": 0.7911117079638545,
+        "reported": 0.7911117079638545
+      }
+    ],
+    "all_passed": true,
+    "n_checks": 11,
+    "n_failed": 0
+  },
+  "export_audit": {
+    "fig1_distributions": {
+      "png_dpi": 299.9994,
+      "png_dpi_ok": true,
+      "pdf_font_embedded": true,
+      "pdf_bytes": 17974,
+      "svg_live_text": true,
+      "svg_bytes": 36877,
+      "ok": true
+    },
+    "fig2_grouped_boxplots": {
+      "png_dpi": 299.9994,
+      "png_dpi_ok": true,
+      "pdf_font_embedded": true,
+      "pdf_bytes": 25363,
+      "svg_live_text": true,
+      "svg_bytes": 103008,
+      "ok": true
+    },
+    "fig3_scatter_pairs": {
+      "png_dpi": 299.9994,
+      "png_dpi_ok": true,
+      "pdf_font_embedded": true,
+      "pdf_bytes": 24047,
+      "svg_live_text": true,
+      "svg_bytes": 78379,
+      "ok": true
+    },
+    "fig4_correlation_heatmap": {
+      "png_dpi": 299.9994,
+      "png_dpi_ok": true,
+      "pdf_font_embedded": true,
+      "pdf_bytes": 15487,
+      "svg_live_text": true,
+      "svg_bytes": 16477,
+      "ok": true
+    },
+    "fig5_missingness": {
+      "png_dpi": 299.9994,
+      "png_dpi_ok": true,
+      "pdf_font_embedded": true,
+      "pdf_bytes": 12374,
+      "svg_live_text": true,
+      "svg_bytes": 6778,
+      "ok": true
+    }
+  },
+  "all_passed": true
+}

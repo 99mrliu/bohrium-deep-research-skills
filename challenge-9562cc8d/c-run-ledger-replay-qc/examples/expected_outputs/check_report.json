@@ -1,0 +1,88 @@
+{
+  "recompute_from_source": {
+    "source_file": "c-run-ledger-replay-qc/examples/synthetic_case/absorption.csv",
+    "checks": [
+      {
+        "check": "mean:concentration_mm",
+        "passed": true,
+        "recomputed": 2.5496666666666665,
+        "reported": 2.5496666666666665
+      },
+      {
+        "check": "n:concentration_mm",
+        "passed": true,
+        "recomputed": 60,
+        "reported": 60
+      },
+      {
+        "check": "mean:absorbance",
+        "passed": true,
+        "recomputed": 0.5450333333333333,
+        "reported": 0.5450333333333333
+      },
+      {
+        "check": "n:absorbance",
+        "passed": true,
+        "recomputed": 60,
+        "reported": 60
+      },
+      {
+        "check": "pearson:concentration_mm~absorbance",
+        "passed": true,
+        "recomputed": 0.9950246790079116,
+        "reported": 0.9950246790079116
+      }
+    ],
+    "all_passed": true,
+    "n_checks": 5,
+    "n_failed": 0
+  },
+  "export_audit": {
+    "fig1_distributions": {
+      "png_dpi": 299.9994,
+      "png_dpi_ok": true,
+      "pdf_font_embedded": true,
+      "pdf_bytes": 15788,
+      "svg_live_text": true,
+      "svg_bytes": 26534,
+      "ok": true
+    },
+    "fig2_grouped_boxplots": {
+      "png_dpi": 299.9994,
+      "png_dpi_ok": true,
+      "pdf_font_embedded": true,
+      "pdf_bytes": 17077,
+      "svg_live_text": true,
+      "svg_bytes": 41715,
+      "ok": true
+    },
+    "fig3_scatter_pairs": {
+      "png_dpi": 299.9994,
+      "png_dpi_ok": true,
+      "pdf_font_embedded": true,
+      "pdf_bytes": 15743,
+      "svg_live_text": true,
+      "svg_bytes": 22030,
+      "ok": true
+    },
+    "fig4_correlation_heatmap": {
+      "png_dpi": 299.9994,
+      "png_dpi_ok": true,
+      "pdf_font_embedded": true,
+      "pdf_bytes": 11024,
+      "svg_live_text": true,
+      "svg_bytes": 11879,
+      "ok": true
+    },
+    "fig5_missingness": {
+      "png_dpi": 299.9994,
+      "png_dpi_ok": true,
+      "pdf_font_embedded": true,
+      "pdf_bytes": 12042,
+      "svg_live_text": true,
+      "svg_bytes": 6776,
+      "ok": true
+    }
+  },
+  "all_passed": true
+}

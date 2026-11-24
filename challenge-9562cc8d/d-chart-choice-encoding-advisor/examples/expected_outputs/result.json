@@ -1,0 +1,250 @@
+{
+  "case_id": "synthetic-soil-demo",
+  "status": "success",
+  "summary": "数据 n=151，4 个数值变量、1 个分类变量。清洗：缺失值逐列计数未插补，重复行 1 条保留标记，1.5×IQR 异常值仅标记。主要描述统计（均值±SD）：moisture=23.763±5.223、ph=6.428±0.353、organic_matter_g=28.423±4.707、nitrate_mg=23.983±5.356。最强相关：moisture 与 nitrate_mg（r=0.831）。分组：site（site_A、site_B、site_C、site_D）。图件 5 张（300 dpi PNG + 嵌入字体 PDF + 可编辑 SVG，单栏 89 mm，Okabe-Ito 色盲安全配色），图注见 captions.md；全部统计量经独立复算一致。",
+  "figures": [
+    {
+      "id": "fig1_distributions",
+      "files": {
+        "png": "fig1_distributions.png",
+        "pdf": "fig1_distributions.pdf",
+        "svg": "fig1_distributions.svg"
+      },
+      "width_mm": 89.0,
+      "dpi": 300,
+      "caption": "图 1　数值变量分布。4 个数值变量的直方图（叠加高斯 KDE 曲线），样本量 n=151。面板标题给出各变量偏度；标注“对数尺度”的变量因右偏（偏度>1 且最小值>0）采用对数横轴。数据来源：soil_synthetic（合成示例数据（make_data.py 生成，非真实实验））。清洗口径：缺失值逐列计数未插补；重复行 1 条保留并标记；异常值按 1.5×IQR 仅标记不删除。",
+      "binding": {
+        "panels": [
+          {
+            "panel": "(a)",
+            "source_column": "moisture_pct",
+            "encoding": {
+              "x": "value",
+              "y": "count"
+            },
+            "log_scale": false
+          },
+          {
+            "panel": "(b)",
+            "source_column": "ph",
+            "encoding": {
+              "x": "value",
+              "y": "count"
+            },
+            "log_scale": false
+          },
+          {
+            "panel": "(c)",
+            "source_column": "organic_matter_g_kg",
+            "encoding": {
+              "x": "value",
+              "y": "count"
+            },
+            "log_scale": false
+          },
+          {
+            "panel": "(d)",
+            "source_column": "nitrate_mg_kg",
+            "encoding": {
+              "x": "value",
+              "y": "count"
+            },
+            "log_scale": false
+          }
+        ]
+      }
+    },
+    {
+      "id": "fig2_grouped_boxplots",
+      "files": {
+        "png": "fig2_grouped_boxplots.png",
+        "pdf": "fig2_grouped_boxplots.pdf",
+        "svg": "fig2_grouped_boxplots.svg"
+      },
+      "width_mm": 89.0,
+      "dpi": 300,
+      "caption": "图 2　分组箱线图（叠加散点）。按 site 分组（site_A n=39、site_B n=38、site_C n=37、site_D n=37）；面板内叠加经固定种子抖动的原始观测点。误差线含义：箱线图中箱体为四分位距（Q1–Q3），中线为中位数，须线为 1.5×IQR 范围，须外点为离群观测（仅标记未删除）。样本量 n=151，数据来源：soil_synthetic（合成示例数据（make_data.py 生成，非真实实验））。清洗口径：缺失值逐列计数未插补；重复行 1 条保留并标记；异常值按 1.5×IQR 仅标记不删除。",
+      "binding": {
+        "group_by": "site",
+        "group_levels": [
+          "site_A",
+          "site_B",
+          "site_C",
+          "site_D"
+        ],
+        "n_per_level": {
+          "site_A": 39,
+          "site_B": 38,
+          "site_C": 37,
+          "site_D": 37
+        },
+        "whisker_rule": "1.5*IQR"
+      }
+    },
+    {
+      "id": "fig3_scatter_pairs",
+      "files": {
+        "png": "fig3_scatter_pairs.png",
+        "pdf": "fig3_scatter_pairs.pdf",
+        "svg": "fig3_scatter_pairs.svg"
+      },
+      "width_mm": 89.0,
+      "dpi": 300,
+      "caption": "图 3　关键变量两两散点图（分组着色）。选取 |r| 最大的变量对：(a) moisture 与 nitrate_mg：r=0.831，n=150；(b) moisture 与 ph：r=-0.658，n=151；(c) ph 与 nitrate_mg：r=-0.573，n=150。颜色区分site 分组；图例与数据中的分组取值一一对应。样本量 n=151，数据来源：soil_synthetic（合成示例数据（make_data.py 生成，非真实实验））。清洗口径：缺失值逐列计数未插补；重复行 1 条保留并标记；异常值按 1.5×IQR 仅标记不删除。",
+      "binding": {
+        "panels": [
+          {
+            "x": "moisture_pct",
+            "y": "nitrate_mg_kg",
+            "pearson_r": 0.8306421835976715,
+            "n": 150,
+            "color_by": "site"
+          },
+          {
+            "x": "moisture_pct",
+            "y": "ph",
+            "pearson_r": -0.6580553110929204,
+            "n": 151,
+            "color_by": "site"
+          },
+          {
+            "x": "ph",
+            "y": "nitrate_mg_kg",
+            "pearson_r": -0.572518090031781,
+            "n": 150,
+            "color_by": "site"
+          }
+        ]
+      }
+    },
+    {
+      "id": "fig4_correlation_heatmap",
+      "files": {
+        "png": "fig4_correlation_heatmap.png",
+        "pdf": "fig4_correlation_heatmap.pdf",
+        "svg": "fig4_correlation_heatmap.svg"
+      },
+      "width_mm": 89.0,
+      "dpi": 300,
+      "caption": "图 4　数值变量 Pearson 相关热图（成对完整观测）。色标固定 [-1, 1]，格内数字为相关系数。最强相关：moisture 与 nitrate_mg（r=0.831）。样本量 n=151，数据来源：soil_synthetic（合成示例数据（make_data.py 生成，非真实实验））。清洗口径：缺失值逐列计数未插补；重复行 1 条保留并标记；异常值按 1.5×IQR 仅标记不删除。",
+      "binding": {
+        "matrix": "statistics.json:correlations",
+        "color_scale": [
+          -1,
+          1
+        ]
+      }
+    },
+    {
+      "id": "fig5_missingness",
+      "files": {
+        "png": "fig5_missingness.png",
+        "pdf": "fig5_missingness.pdf",
+        "svg": "fig5_missingness.svg"
+      },
+      "width_mm": 89.0,
+      "dpi": 300,
+      "caption": "图 5　各列缺失值数量。缺失值仅计数报告、未插补。数据来源：soil_synthetic（合成示例数据（make_data.py 生成，非真实实验））。清洗口径：缺失值逐列计数未插补；重复行 1 条保留并标记；异常值按 1.5×IQR 仅标记不删除。",
+      "binding": {}
+    }
+  ],
+  "statistics": {
+    "file": "statistics.json",
+    "md": "statistics.md",
+    "n_rows": 151,
+    "n_numeric": 4,
+    "n_categorical": 1,
+    "group": {
+      "mode": "categorical",
+      "column": "site",
+      "levels": [
+        "site_A",
+        "site_B",
+        "site_C",
+        "site_D"
+      ],
+      "n_per_level": {
+        "site_A": 39,
+        "site_B": 38,
+        "site_C": 37,
+        "site_D": 37
+      }
+    },
+    "strongest_correlation": {
+      "x": "moisture_pct",
+      "y": "nitrate_mg_kg",
+      "pearson_r": 0.8306421835976715
+    },
+    "definitions": {
+      "sd": "sample standard deviation (ddof=1)",
+      "sem": "sd/sqrt(n)",
+      "quartiles": "linear interpolation, type 7",
+      "skewness": "moment skewness m3/m2^1.5",
+      "pearson": "pairwise complete observations"
+    }
+  },
+  "cleaning_report": {
+    "file": "cleaning_report.json",
+    "input_rows": 151,
+    "duplicate_rows": 1,
+    "missing_by_column": {
+      "site": 0,
+      "moisture_pct": 0,
+      "ph": 0,
+      "organic_matter_g_kg": 0,
+      "nitrate_mg_kg": 1
+    },
+    "rules": [
+      {
+        "rule": "trim_whitespace",
+        "detail": "strip leading/trailing whitespace of every cell; values not otherwise modified"
+      },
+      {
+        "rule": "missing_values",
+        "detail": "missing tokens ['', '-', '--', '?', 'missing', 'n/a', 'na', 'nan', 'none', 'null'] counted per column; NOT imputed"
+      },
+      {
+        "rule": "duplicates",
+        "detail": "1 exact duplicate row(s) detected; kept and marked (no deletion without explicit task request)"
+      },
+      {
+        "rule": "outliers",
+        "detail": "1.5*IQR fences per numeric column; outliers flagged only, never deleted"
+      }
+    ]
+  },
+  "sources": {
+    "case_dataset": {
+      "name": "soil_synthetic",
+      "source": "合成示例数据（make_data.py 生成，非真实实验）",
+      "rows_expected": 150
+    },
+    "primary_file": "soil.csv",
+    "files": [
+      {
+        "file": "case.json",
+        "path": "/Users/liuhengshen/Desktop/bhr_product/3rd/4/9562-r2/bundles/d-chart-choice-encoding-advisor/examples/synthetic_case/case.json",
+        "sha256": "a6cca0678d23f976f2e8b6637bd659c2eb082b665976a8af6940f32c3434ca45",
+        "bytes": 731
+      },
+      {
+        "file": "soil.csv",
+        "path": "/Users/liuhengshen/Desktop/bhr_product/3rd/4/9562-r2/bundles/d-chart-choice-encoding-advisor/examples/synthetic_case/soil.csv",
+        "sha256": "0f2f9950c8efd34030e4d875f1a52fcbe75710b7bd558ef3094878cc6b866ab5",
+        "bytes": 4263
+      },
+      {
+        "file": "task.md",
+        "path": "/Users/liuhengshen/Desktop/bhr_product/3rd/4/9562-r2/bundles/d-chart-choice-encoding-advisor/examples/synthetic_case/task.md",
+        "sha256": "97bec30d0b309f5950d5f33882f3361204ac7fb9ead415feb38bd61d6ecf734b",
+        "bytes": 1310
+      }
+    ],
+    "verification": "check_report.json",
+    "captions": "captions.md",
+    "figure_data_binding": "figures.figdata.json",
+    "run_manifest": "run_manifest.json",
+    "chart_decisions": "chart_decisions.json"
+  },
+  "uncertainty": []
+}

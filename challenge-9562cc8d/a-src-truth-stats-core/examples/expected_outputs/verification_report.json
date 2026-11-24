@@ -1,0 +1,316 @@
+{
+  "source": "/Users/liuhengshen/Desktop/bhr_product/3rd/4/9562-r2/bundles/a-src-truth-stats-core/examples/synthetic_case/plant_growth.csv",
+  "method": "independent second implementation (Welford one-pass variance, type-7 quantiles, re-accumulated Pearson)",
+  "tolerance_rel": 1e-06,
+  "checks": [
+    {
+      "check": "n:height_cm",
+      "passed": true,
+      "recomputed": 91,
+      "reported": 91
+    },
+    {
+      "check": "mean:height_cm",
+      "passed": true,
+      "recomputed": 26.65527472527472,
+      "reported": 26.655274725274726
+    },
+    {
+      "check": "sd:height_cm",
+      "passed": true,
+      "recomputed": 5.470392904974792,
+      "reported": 5.4703929049747915
+    },
+    {
+      "check": "sem:height_cm",
+      "passed": true,
+      "recomputed": 0.5734529933196241,
+      "reported": 0.573452993319624
+    },
+    {
+      "check": "median:height_cm",
+      "passed": true,
+      "recomputed": 25.98,
+      "reported": 25.98
+    },
+    {
+      "check": "q1:height_cm",
+      "passed": true,
+      "recomputed": 23.200000000000003,
+      "reported": 23.200000000000003
+    },
+    {
+      "check": "q3:height_cm",
+      "passed": true,
+      "recomputed": 30.365000000000002,
+      "reported": 30.365000000000002
+    },
+    {
+      "check": "min:height_cm",
+      "passed": true,
+      "recomputed": 14.4,
+      "reported": 14.4
+    },
+    {
+      "check": "max:height_cm",
+      "passed": true,
+      "recomputed": 40.74,
+      "reported": 40.74
+    },
+    {
+      "check": "n:leaf_count",
+      "passed": true,
+      "recomputed": 91,
+      "reported": 91
+    },
+    {
+      "check": "mean:leaf_count",
+      "passed": true,
+      "recomputed": 9.705494505494503,
+      "reported": 9.705494505494507
+    },
+    {
+      "check": "sd:leaf_count",
+      "passed": true,
+      "recomputed": 3.2015747041230487,
+      "reported": 3.2015747041230487
+    },
+    {
+      "check": "sem:leaf_count",
+      "passed": true,
+      "recomputed": 0.3356162215964654,
+      "reported": 0.3356162215964654
+    },
+    {
+      "check": "median:leaf_count",
+      "passed": true,
+      "recomputed": 9.6,
+      "reported": 9.6
+    },
+    {
+      "check": "q1:leaf_count",
+      "passed": true,
+      "recomputed": 7.8,
+      "reported": 7.8
+    },
+    {
+      "check": "q3:leaf_count",
+      "passed": true,
+      "recomputed": 12.0,
+      "reported": 12.0
+    },
+    {
+      "check": "min:leaf_count",
+      "passed": true,
+      "recomputed": 3.3,
+      "reported": 3.3
+    },
+    {
+      "check": "max:leaf_count",
+      "passed": true,
+      "recomputed": 16.4,
+      "reported": 16.4
+    },
+    {
+      "check": "n:root_mass_g",
+      "passed": true,
+      "recomputed": 90,
+      "reported": 90
+    },
+    {
+      "check": "mean:root_mass_g",
+      "passed": true,
+      "recomputed": 3.0228888888888883,
+      "reported": 3.0228888888888887
+    },
+    {
+      "check": "sd:root_mass_g",
+      "passed": true,
+      "recomputed": 1.0120068441883905,
+      "reported": 1.0120068441883903
+    },
+    {
+      "check": "sem:root_mass_g",
+      "passed": true,
+      "recomputed": 0.10667488784381497,
+      "reported": 0.10667488784381494
+    },
+    {
+      "check": "median:root_mass_g",
+      "passed": true,
+      "recomputed": 3.03,
+      "reported": 3.03
+    },
+    {
+      "check": "q1:root_mass_g",
+      "passed": true,
+      "recomputed": 2.1725,
+      "reported": 2.1725
+    },
+    {
+      "check": "q3:root_mass_g",
+      "passed": true,
+      "recomputed": 3.8,
+      "reported": 3.8
+    },
+    {
+      "check": "min:root_mass_g",
+      "passed": true,
+      "recomputed": 0.8,
+      "reported": 0.8
+    },
+    {
+      "check": "max:root_mass_g",
+      "passed": true,
+      "recomputed": 5.31,
+      "reported": 5.31
+    },
+    {
+      "check": "n:chlorophyll_spad",
+      "passed": true,
+      "recomputed": 90,
+      "reported": 90
+    },
+    {
+      "check": "mean:chlorophyll_spad",
+      "passed": true,
+      "recomputed": 35.98777777777777,
+      "reported": 35.98777777777778
+    },
+    {
+      "check": "sd:chlorophyll_spad",
+      "passed": true,
+      "recomputed": 6.221471117943949,
+      "reported": 6.22147111794395
+    },
+    {
+      "check": "sem:chlorophyll_spad",
+      "passed": true,
+      "recomputed": 0.6558006376552314,
+      "reported": 0.6558006376552314
+    },
+    {
+      "check": "median:chlorophyll_spad",
+      "passed": true,
+      "recomputed": 35.2,
+      "reported": 35.2
+    },
+    {
+      "check": "q1:chlorophyll_spad",
+      "passed": true,
+      "recomputed": 32.05,
+      "reported": 32.05
+    },
+    {
+      "check": "q3:chlorophyll_spad",
+      "passed": true,
+      "recomputed": 40.125,
+      "reported": 40.125
+    },
+    {
+      "check": "min:chlorophyll_spad",
+      "passed": true,
+      "recomputed": 21.2,
+      "reported": 21.2
+    },
+    {
+      "check": "max:chlorophyll_spad",
+      "passed": true,
+      "recomputed": 52.5,
+      "reported": 52.5
+    },
+    {
+      "check": "pearson:height_cm~chlorophyll_spad",
+      "passed": true,
+      "recomputed": 0.7911117079638545,
+      "reported": 0.7911117079638545
+    },
+    {
+      "check": "pearson_n:height_cm~chlorophyll_spad",
+      "passed": true,
+      "recomputed": 90,
+      "reported": 90
+    },
+    {
+      "check": "pearson:height_cm~leaf_count",
+      "passed": true,
+      "recomputed": 0.9136810713723554,
+      "reported": 0.9136810713723554
+    },
+    {
+      "check": "pearson_n:height_cm~leaf_count",
+      "passed": true,
+      "recomputed": 91,
+      "reported": 91
+    },
+    {
+      "check": "pearson:height_cm~root_mass_g",
+      "passed": true,
+      "recomputed": 0.8405668256352092,
+      "reported": 0.8405668256352092
+    },
+    {
+      "check": "pearson_n:height_cm~root_mass_g",
+      "passed": true,
+      "recomputed": 90,
+      "reported": 90
+    },
+    {
+      "check": "pearson:leaf_count~chlorophyll_spad",
+      "passed": true,
+      "recomputed": 0.70024981198544,
+      "reported": 0.70024981198544
+    },
+    {
+      "check": "pearson_n:leaf_count~chlorophyll_spad",
+      "passed": true,
+      "recomputed": 90,
+      "reported": 90
+    },
+    {
+      "check": "pearson:leaf_count~root_mass_g",
+      "passed": true,
+      "recomputed": 0.770083414936779,
+      "reported": 0.770083414936779
+    },
+    {
+      "check": "pearson_n:leaf_count~root_mass_g",
+      "passed": true,
+      "recomputed": 90,
+      "reported": 90
+    },
+    {
+      "check": "pearson:root_mass_g~chlorophyll_spad",
+      "passed": true,
+      "recomputed": 0.6883944568281471,
+      "reported": 0.6883944568281471
+    },
+    {
+      "check": "pearson_n:root_mass_g~chlorophyll_spad",
+      "passed": true,
+      "recomputed": 89,
+      "reported": 89
+    },
+    {
+      "check": "group_n:treatment=低肥",
+      "passed": true,
+      "recomputed": 31,
+      "reported": 31
+    },
+    {
+      "check": "group_n:treatment=对照",
+      "passed": true,
+      "recomputed": 30,
+      "reported": 30
+    },
+    {
+      "check": "group_n:treatment=高肥",
+      "passed": true,
+      "recomputed": 30,
+      "reported": 30
+    }
+  ],
+  "n_pass": 51,
+  "n_fail": 0,
+  "all_passed": true
+}

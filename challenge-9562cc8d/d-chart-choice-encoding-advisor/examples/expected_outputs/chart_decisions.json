@@ -1,0 +1,154 @@
+{
+  "data_profile": {
+    "n_rows": 151,
+    "n_numeric": 4,
+    "n_categorical": 1,
+    "group": {
+      "mode": "categorical",
+      "column": "site",
+      "levels": [
+        "site_A",
+        "site_B",
+        "site_C",
+        "site_D"
+      ],
+      "n_per_level": {
+        "site_A": 39,
+        "site_B": 38,
+        "site_C": 37,
+        "site_D": 37
+      },
+      "bin_rule": null,
+      "target_column": null
+    }
+  },
+  "global_constraints": [
+    {
+      "constraint": "no_pie_for_unordered_categories",
+      "status": "enforced",
+      "detail": "类别为无序分类时禁止饼图/环图表达构成（角度与面积编码会夸大差异且不可比）；构成分布改用条形图（零基线）。"
+    },
+    {
+      "constraint": "zero_baseline_for_bars",
+      "status": "enforced",
+      "detail": "所有条形/柱状编码（长度编码）一律零基线，禁止截断纵轴。"
+    },
+    {
+      "constraint": "colorblind_safe_palette",
+      "status": "enforced",
+      "detail": "Okabe-Ito 调色板；灰度打印下叠加位置/形状冗余编码。"
+    }
+  ],
+  "figures": [
+    {
+      "id": "fig1_distributions",
+      "purpose": "分布（连续变量，单变量）",
+      "chosen": "histogram + gaussian KDE overlay（多面板网格）",
+      "encoding": {
+        "x": "变量取值（右偏正值变量为对数轴）",
+        "y": "频数",
+        "curve": "KDE 密度（副轴）",
+        "facet": "每变量一面板"
+      },
+      "rationale": "直方图直接展示频数分布与偏态；KDE 辅助判断峰态；面板化避免多变量叠印。",
+      "rejected": [
+        {
+          "chart": "饼图",
+          "reason": "连续变量无构成语义；角度编码不可比。"
+        },
+        {
+          "chart": "均值条形图",
+          "reason": "只显示点估计，掩盖分布形态与异常值。"
+        },
+        {
+          "chart": "茎叶图",
+          "reason": "n=151 超出其可读范围。"
+        }
+      ],
+      "panel_rule": "3 列网格；面板字母 (a)(b)…；面板内标注偏度。"
+    },
+    {
+      "id": "fig2_grouped_boxplots",
+      "purpose": "分组比较（连续变量 × 无序分类 site）",
+      "chosen": "分组箱线图 + 抖动散点叠加（panel 按组间 F 统计量排序，至多 8 个）",
+      "encoding": {
+        "x": "组（位置）",
+        "y": "变量取值（位置）",
+        "color": "组（Okabe-Ito，与散点图例一致）",
+        "box": "Q1–Q3",
+        "whisker": "1.5×IQR"
+      },
+      "rationale": "箱线图给出五数概括，散点叠加揭示样本量与离群点；按组间区分度（F 统计量）排序，把最有区分度的变量放在前面。",
+      "rejected": [
+        {
+          "chart": "仅均值±误差条形图（dynamite plot）",
+          "reason": "隐藏分布与样本量；误差线含义常被误读。"
+        },
+        {
+          "chart": "小提琴图",
+          "reason": "组内 n 较小（<20）时密度估计不稳定；本数据各组 n 见分组统计。"
+        },
+        {
+          "chart": "并列柱状图（时间序列式）",
+          "reason": "分组为无序类别，非有序时间轴。"
+        }
+      ],
+      "panel_rule": "F 统计量降序取前 8；须线=1.5×IQR；离群点仅标记。"
+    },
+    {
+      "id": "fig3_scatter_pairs",
+      "purpose": "相关（双变量）",
+      "chosen": "两两散点图（按 |r| 最大选取 + 任务点名变量对，分组着色）",
+      "encoding": {
+        "x": "变量 1（位置）",
+        "y": "变量 2（位置）",
+        "color": "分组（Okabe-Ito）",
+        "annotation": "Pearson r 与 n"
+      },
+      "rationale": "位置编码是最准确的定量通道；着色分组可识别辛普森悖论式结构；r 与 n 直接标注在面板标题。",
+      "rejected": [
+        {
+          "chart": "气泡图（面积编码第三变量）",
+          "reason": "面积感知非线性，夸大差异；第三变量改走分面或着色。"
+        },
+        {
+          "chart": "3D 散点图",
+          "reason": "透视造成位置判读失真。"
+        },
+        {
+          "chart": "双 y 轴组合图",
+          "reason": "双轴的相对尺度可任意调节，易误导；量纲不同变量分列展示。"
+        }
+      ],
+      "panel_rule": "|r| 降序前 3 + 任务点名对；n>300 固定种子抽样。"
+    },
+    {
+      "id": "fig4_correlation_heatmap",
+      "purpose": "相关结构（多变量）",
+      "chosen": "Pearson 相关热图（格内标注系数，色标固定 [-1, 1]，发散色 RdBu_r）",
+      "encoding": {
+        "cell": "|r|（饱和度的长度语义）",
+        "hue": "符号（红正蓝负）",
+        "text": "r 值（精确补偿颜色感知误差）"
+      },
+      "rationale": "固定对称色标防止跨图比较失真；格内数字补偿颜色通道的低精度；成对完整观测口径写入图注。",
+      "rejected": [
+        {
+          "chart": "未固定色标的聚类热图",
+          "reason": "色标随数据范围漂移，跨图不可比。"
+        },
+        {
+          "chart": "相关网络图",
+          "reason": "边粗细编码 |r| 精度低，节点布局引入无信息维度。"
+        }
+      ],
+      "panel_rule": "单面板；变量数 > 14 时仅展示 |r| 最高的 14 个并记录。"
+    }
+  ],
+  "advisories": [
+    "分类变量频数已在 statistics.json 给出；如需构成图，使用零基线条形图而非饼图（global constraint）。"
+  ],
+  "log_scale_decisions": [],
+  "decision_engine": "decide.py (chart-choice-encoding-advisor)",
+  "task_excerpt": "# 模拟土壤理化测量数据：清洗、分组统计与发表级可视化\n\n> 本案例为**合成示例**（synthetic demo）：数据由 examples 中的生成脚本\n> 用固定随机种子模拟产生，仅用于演示 Skill 的调用方式与输出结构，\n> 不构成任何真实实验结论。\n\n## 任务\n1. 读取数据字典与字段语义，确认数据口径：报告每列缺失值数量、重复记录\n   数量与处理方式，异常值（IQR 准则）只"
+}

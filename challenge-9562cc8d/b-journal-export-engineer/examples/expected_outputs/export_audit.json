@@ -1,0 +1,237 @@
+{
+  "expect": {
+    "width_mm": 89.0,
+    "png_dpi": 300,
+    "vector": [
+      "pdf",
+      "svg"
+    ]
+  },
+  "palette_audit": {
+    "palette": "Okabe-Ito",
+    "colors": [
+      "#0072B2",
+      "#E69F00",
+      "#009E73",
+      "#D55E00",
+      "#CC79A7",
+      "#56B4E9",
+      "#F0E442",
+      "#000000"
+    ],
+    "grayscale_levels": [
+      87.2,
+      162.1,
+      105.9,
+      118.9,
+      151.1,
+      157.9,
+      213.1,
+      0.0
+    ],
+    "relative_luminance": [
+      0.152,
+      0.416,
+      0.257,
+      0.222,
+      0.293,
+      0.405,
+      0.744,
+      0.0
+    ],
+    "min_grayscale_diff_first3": 18.6,
+    "grayscale_distinguishable_first3": true,
+    "grayscale_marginal_pairs_advisory": [
+      [
+        "#0072B2",
+        "#009E73",
+        18.6
+      ],
+      [
+        "#E69F00",
+        "#CC79A7",
+        11.0
+      ],
+      [
+        "#E69F00",
+        "#56B4E9",
+        4.2
+      ],
+      [
+        "#009E73",
+        "#D55E00",
+        13.0
+      ],
+      [
+        "#CC79A7",
+        "#56B4E9",
+        6.9
+      ]
+    ],
+    "advisory_note": "灰度打印下蓝(#0072B2)与绿(#009E73)亮度接近；纯灰度场景建议叠加线型/形状/纹样的冗余编码。本条目为建议性提示，不计入硬性合规。"
+  },
+  "cjk_font": "PingFang SC",
+  "figures": {
+    "fig1_distributions": {
+      "png": {
+        "file": "fig1_distributions.png",
+        "pixels": [
+          1051,
+          708
+        ],
+        "dpi": 300.0,
+        "dpi_ok": true,
+        "physical_width_mm": 89.0,
+        "width_mm_ok": true,
+        "ok": true
+      },
+      "pdf": {
+        "file": "fig1_distributions.pdf",
+        "font_embedded": true,
+        "type3_font_risk": false,
+        "width_mm": 89.0,
+        "width_mm_ok": true,
+        "ok": true
+      },
+      "svg": {
+        "file": "fig1_distributions.svg",
+        "live_text_elements": 38,
+        "outlined_paths_only": false,
+        "width_mm": 89.0,
+        "width_mm_ok": true,
+        "font_family_declared": true,
+        "ok": true
+      },
+      "ok": true
+    },
+    "fig2_grouped_boxplots": {
+      "png": {
+        "file": "fig2_grouped_boxplots.png",
+        "pixels": [
+          1051,
+          992
+        ],
+        "dpi": 300.0,
+        "dpi_ok": true,
+        "physical_width_mm": 89.0,
+        "width_mm_ok": true,
+        "ok": true
+      },
+      "pdf": {
+        "file": "fig2_grouped_boxplots.pdf",
+        "font_embedded": true,
+        "type3_font_risk": false,
+        "width_mm": 89.0,
+        "width_mm_ok": true,
+        "ok": true
+      },
+      "svg": {
+        "file": "fig2_grouped_boxplots.svg",
+        "live_text_elements": 49,
+        "outlined_paths_only": false,
+        "width_mm": 89.0,
+        "width_mm_ok": true,
+        "font_family_declared": true,
+        "ok": true
+      },
+      "ok": true
+    },
+    "fig3_scatter_pairs": {
+      "png": {
+        "file": "fig3_scatter_pairs.png",
+        "pixels": [
+          1051,
+          1062
+        ],
+        "dpi": 300.0,
+        "dpi_ok": true,
+        "physical_width_mm": 89.0,
+        "width_mm_ok": true,
+        "ok": true
+      },
+      "pdf": {
+        "file": "fig3_scatter_pairs.pdf",
+        "font_embedded": true,
+        "type3_font_risk": false,
+        "width_mm": 89.0,
+        "width_mm_ok": true,
+        "ok": true
+      },
+      "svg": {
+        "file": "fig3_scatter_pairs.svg",
+        "live_text_elements": 47,
+        "outlined_paths_only": false,
+        "width_mm": 89.0,
+        "width_mm_ok": true,
+        "font_family_declared": true,
+        "ok": true
+      },
+      "ok": true
+    },
+    "fig4_correlation_heatmap": {
+      "png": {
+        "file": "fig4_correlation_heatmap.png",
+        "pixels": [
+          1051,
+          1051
+        ],
+        "dpi": 300.0,
+        "dpi_ok": true,
+        "physical_width_mm": 89.0,
+        "width_mm_ok": true,
+        "ok": true
+      },
+      "pdf": {
+        "file": "fig4_correlation_heatmap.pdf",
+        "font_embedded": true,
+        "type3_font_risk": false,
+        "width_mm": 89.0,
+        "width_mm_ok": true,
+        "ok": true
+      },
+      "svg": {
+        "file": "fig4_correlation_heatmap.svg",
+        "live_text_elements": 34,
+        "outlined_paths_only": false,
+        "width_mm": 89.0,
+        "width_mm_ok": true,
+        "font_family_declared": true,
+        "ok": true
+      },
+      "ok": true
+    },
+    "fig5_missingness": {
+      "png": {
+        "file": "fig5_missingness.png",
+        "pixels": [
+          1051,
+          472
+        ],
+        "dpi": 300.0,
+        "dpi_ok": true,
+        "physical_width_mm": 89.0,
+        "width_mm_ok": true,
+        "ok": true
+      },
+      "pdf": {
+        "file": "fig5_missingness.pdf",
+        "font_embedded": true,
+        "type3_font_risk": false,
+        "width_mm": 89.0,
+        "width_mm_ok": true,
+        "ok": true
+      },
+      "svg": {
+        "file": "fig5_missingness.svg",
+        "live_text_elements": 9,
+        "outlined_paths_only": false,
+        "width_mm": 89.0,
+        "width_mm_ok": true,
+        "font_family_declared": true,
+        "ok": true
+      },
+      "ok": true
+    }
+  },
+  "all_passed": true
+}

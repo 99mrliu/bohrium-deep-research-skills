@@ -1,0 +1,151 @@
+{
+  "replay": "full pipeline re-executed once in isolated dirs",
+  "baseline_outdir": "/tmp/9562ex/c-run-ledger-replay-qc/out",
+  "files": {
+    "captions.json": {
+      "present_in_replay": true,
+      "identical": true,
+      "sha256_baseline": "e126c6cd082cf2585420167a5fc958fe4e736d80e6ec4f9d3cb2bd5920eb1185",
+      "sha256_replay": "e126c6cd082cf2585420167a5fc958fe4e736d80e6ec4f9d3cb2bd5920eb1185"
+    },
+    "captions.md": {
+      "present_in_replay": true,
+      "identical": true,
+      "sha256_baseline": "f1586217f44d26ccaa79d42d4fc96089e2018b3934a567123baadfa9abdb315b",
+      "sha256_replay": "f1586217f44d26ccaa79d42d4fc96089e2018b3934a567123baadfa9abdb315b"
+    },
+    "check_report.json": {
+      "present_in_replay": true,
+      "identical": false,
+      "sha256_baseline": "3f4b67332b8b30da23883dae4e803d4e6fdc368023f663a1653e4dfdad7c2c97",
+      "sha256_replay": "c0646fbdb841985c96ed22651c92790bd4709b3242e67a13541804d04cf9106f",
+      "first_diff_offset": 51
+    },
+    "cleaning_report.json": {
+      "present_in_replay": true,
+      "identical": true,
+      "sha256_baseline": "d8750f313cb7f32ea9371cf2799d18818b0a821dacc1d0bbac09d9ebfbd16f04",
+      "sha256_replay": "d8750f313cb7f32ea9371cf2799d18818b0a821dacc1d0bbac09d9ebfbd16f04"
+    },
+    "fig1_distributions.pdf": {
+      "present_in_replay": true,
+      "identical_after_metadata_normalization": true,
+      "raw_bytes_identical": false,
+      "note": "原始字节含嵌入时间戳/文档 ID；比对已归一化"
+    },
+    "fig1_distributions.png": {
+      "present_in_replay": true,
+      "identical": true,
+      "sha256_baseline": "fc032bbc361a1f3fd85b43c0d4a668573e314a00caf73e27272f3ba69ebae1f2",
+      "sha256_replay": "fc032bbc361a1f3fd85b43c0d4a668573e314a00caf73e27272f3ba69ebae1f2"
+    },
+    "fig1_distributions.svg": {
+      "present_in_replay": true,
+      "identical_after_metadata_normalization": true,
+      "raw_bytes_identical": false,
+      "note": "原始字节含嵌入时间戳/文档 ID；比对已归一化"
+    },
+    "fig2_grouped_boxplots.pdf": {
+      "present_in_replay": true,
+      "identical_after_metadata_normalization": true,
+      "raw_bytes_identical": false,
+      "note": "原始字节含嵌入时间戳/文档 ID；比对已归一化"
+    },
+    "fig2_grouped_boxplots.png": {
+      "present_in_replay": true,
+      "identical": true,
+      "sha256_baseline": "713ebbd6d742b88ebb394234491c2ca537b0e9be26240dacefcea55851be4412",
+      "sha256_replay": "713ebbd6d742b88ebb394234491c2ca537b0e9be26240dacefcea55851be4412"
+    },
+    "fig2_grouped_boxplots.svg": {
+      "present_in_replay": true,
+      "identical_after_metadata_normalization": true,
+      "raw_bytes_identical": false,
+      "note": "原始字节含嵌入时间戳/文档 ID；比对已归一化"
+    },
+    "fig3_scatter_pairs.pdf": {
+      "present_in_replay": true,
+      "identical_after_metadata_normalization": true,
+      "raw_bytes_identical": false,
+      "note": "原始字节含嵌入时间戳/文档 ID；比对已归一化"
+    },
+    "fig3_scatter_pairs.png": {
+      "present_in_replay": true,
+      "identical": true,
+      "sha256_baseline": "5229adcb2aabdc3f6db13894a5ffce833f982416229b977570d69c4bb2b45638",
+      "sha256_replay": "5229adcb2aabdc3f6db13894a5ffce833f982416229b977570d69c4bb2b45638"
+    },
+    "fig3_scatter_pairs.svg": {
+      "present_in_replay": true,
+      "identical_after_metadata_normalization": true,
+      "raw_bytes_identical": false,
+      "note": "原始字节含嵌入时间戳/文档 ID；比对已归一化"
+    },
+    "fig4_correlation_heatmap.pdf": {
+      "present_in_replay": true,
+      "identical_after_metadata_normalization": true,
+      "raw_bytes_identical": false,
+      "note": "原始字节含嵌入时间戳/文档 ID；比对已归一化"
+    },
+    "fig4_correlation_heatmap.png": {
+      "present_in_replay": true,
+      "identical": true,
+      "sha256_baseline": "e14bbdbb24cdd4a45201a34d2f5e864bd272f10464b65bfdc32bd99cfb1ddb23",
+      "sha256_replay": "e14bbdbb24cdd4a45201a34d2f5e864bd272f10464b65bfdc32bd99cfb1ddb23"
+    },
+    "fig4_correlation_heatmap.svg": {
+      "present_in_replay": true,
+      "identical_after_metadata_normalization": true,
+      "raw_bytes_identical": false,
+      "note": "原始字节含嵌入时间戳/文档 ID；比对已归一化"
+    },
+    "fig5_missingness.pdf": {
+      "present_in_replay": true,
+      "identical_after_metadata_normalization": true,
+      "raw_bytes_identical": false,
+      "note": "原始字节含嵌入时间戳/文档 ID；比对已归一化"
+    },
+    "fig5_missingness.png": {
+      "present_in_replay": true,
+      "identical": true,
+      "sha256_baseline": "9347f14df212c231d964371d0f99b6ea53e9bd6d0d1bfa44e0ad6935cc34ff8e",
+      "sha256_replay": "9347f14df212c231d964371d0f99b6ea53e9bd6d0d1bfa44e0ad6935cc34ff8e"
+    },
+    "fig5_missingness.svg": {
+      "present_in_replay": true,
+      "identical_after_metadata_normalization": true,
+      "raw_bytes_identical": false,
+      "note": "原始字节含嵌入时间戳/文档 ID；比对已归一化"
+    },
+    "figures.figdata.json": {
+      "present_in_replay": true,
+      "identical": true,
+      "sha256_baseline": "5ffb3f2b1b10d55646a3a84cf07cfad37bab6d8f5ad16f448346fe5b72789865",
+      "sha256_replay": "5ffb3f2b1b10d55646a3a84cf07cfad37bab6d8f5ad16f448346fe5b72789865"
+    },
+    "run_manifest.json": {
+      "present_in_replay": true,
+      "identical": false,
+      "sha256_baseline": "5ef735ad3fbe5d7d0d4548c923902f9ffcc8847c9430eda7e87b94834a076dc5",
+      "sha256_replay": "324efa42466112063766d16dbb681582f5fa4bbf1d4ff723bac5d1165b181bc3",
+      "first_diff_offset": 108
+    },
+    "statistics.json": {
+      "present_in_replay": true,
+      "identical": true,
+      "sha256_baseline": "148edfd671450b81ae353f2e16b736da16195b6c5b93649a5ba5a02a7a55dcf3",
+      "sha256_replay": "148edfd671450b81ae353f2e16b736da16195b6c5b93649a5ba5a02a7a55dcf3"
+    },
+    "statistics.md": {
+      "present_in_replay": true,
+      "identical": true,
+      "sha256_baseline": "80d4afbcae1df3d1ea5279c54ac038714b698aeceb9e38f2189725ef765a170a",
+      "sha256_replay": "80d4afbcae1df3d1ea5279c54ac038714b698aeceb9e38f2189725ef765a170a"
+    }
+  },
+  "text_identical": false,
+  "binary_identical": true,
+  "all_passed": false,
+  "notes": [],
+  "replay_returncode": 0
+}

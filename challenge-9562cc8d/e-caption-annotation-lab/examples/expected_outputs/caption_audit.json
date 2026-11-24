@@ -1,0 +1,112 @@
+{
+  "checks": [
+    {
+      "check": "completeness:fig1:样本量",
+      "passed": true,
+      "detail": "图 1　数值变量分布。4 个数值变量的直方图（叠加高斯 KDE 曲线），样本量 n=97。面板标题给出各变量偏度；标注“"
+    },
+    {
+      "check": "completeness:fig1:数据来源",
+      "passed": true,
+      "detail": "图 1　数值变量分布。4 个数值变量的直方图（叠加高斯 KDE 曲线），样本量 n=97。面板标题给出各变量偏度；标注“"
+    },
+    {
+      "check": "completeness:fig1:清洗口径",
+      "passed": true,
+      "detail": "图 1　数值变量分布。4 个数值变量的直方图（叠加高斯 KDE 曲线），样本量 n=97。面板标题给出各变量偏度；标注“"
+    },
+    {
+      "check": "completeness:fig2:样本量",
+      "passed": true,
+      "detail": "图 2　分组箱线图（叠加散点）。按 treatment 分组（drug_high n=32、drug_low n=32、"
+    },
+    {
+      "check": "completeness:fig2:数据来源",
+      "passed": true,
+      "detail": "图 2　分组箱线图（叠加散点）。按 treatment 分组（drug_high n=32、drug_low n=32、"
+    },
+    {
+      "check": "completeness:fig2:清洗口径",
+      "passed": true,
+      "detail": "图 2　分组箱线图（叠加散点）。按 treatment 分组（drug_high n=32、drug_low n=32、"
+    },
+    {
+      "check": "completeness:fig2:误差线/须线含义",
+      "passed": true,
+      "detail": "图 2　分组箱线图（叠加散点）。按 treatment 分组（drug_high n=32、drug_low n=32、"
+    },
+    {
+      "check": "completeness:fig3:样本量",
+      "passed": true,
+      "detail": "图 3　关键变量两两散点图（分组着色）。选取 |r| 最大的变量对：(a) viability 与 apoptosis："
+    },
+    {
+      "check": "completeness:fig3:数据来源",
+      "passed": true,
+      "detail": "图 3　关键变量两两散点图（分组着色）。选取 |r| 最大的变量对：(a) viability 与 apoptosis："
+    },
+    {
+      "check": "completeness:fig3:清洗口径",
+      "passed": true,
+      "detail": "图 3　关键变量两两散点图（分组着色）。选取 |r| 最大的变量对：(a) viability 与 apoptosis："
+    },
+    {
+      "check": "completeness:fig4:样本量",
+      "passed": true,
+      "detail": "图 4　数值变量 Pearson 相关热图（成对完整观测）。色标固定 [-1, 1]，格内数字为相关系数。最强相关：vi"
+    },
+    {
+      "check": "completeness:fig4:数据来源",
+      "passed": true,
+      "detail": "图 4　数值变量 Pearson 相关热图（成对完整观测）。色标固定 [-1, 1]，格内数字为相关系数。最强相关：vi"
+    },
+    {
+      "check": "completeness:fig4:清洗口径",
+      "passed": true,
+      "detail": "图 4　数值变量 Pearson 相关热图（成对完整观测）。色标固定 [-1, 1]，格内数字为相关系数。最强相关：vi"
+    },
+    {
+      "check": "completeness:fig5:样本量",
+      "passed": false,
+      "detail": "图 5　各列缺失值数量。缺失值仅计数报告、未插补。数据来源：cell_assay_synthetic（合成示例数据（ma"
+    },
+    {
+      "check": "completeness:fig5:数据来源",
+      "passed": true,
+      "detail": "图 5　各列缺失值数量。缺失值仅计数报告、未插补。数据来源：cell_assay_synthetic（合成示例数据（ma"
+    },
+    {
+      "check": "completeness:fig5:清洗口径",
+      "passed": true,
+      "detail": "图 5　各列缺失值数量。缺失值仅计数报告、未插补。数据来源：cell_assay_synthetic（合成示例数据（ma"
+    },
+    {
+      "check": "numeric:caption_r_values",
+      "passed": true,
+      "detail": "caption r values [-0.975, 0.939, -0.923, -0.975]; unmatched: []"
+    },
+    {
+      "check": "numeric:caption_n_values",
+      "passed": true,
+      "detail": "caption n values [32, 33, 96, 97]; valid set [32, 33, 96, 97]; unmatched []"
+    },
+    {
+      "check": "legend:group_levels_1to1",
+      "passed": true,
+      "detail": "statistics=['drug_high', 'drug_low', 'vehicle']; figdata=['drug_high', 'drug_low', 'vehicle']"
+    },
+    {
+      "check": "panels:sequential",
+      "passed": true,
+      "detail": "letters found: ['a', 'b', 'c']"
+    },
+    {
+      "check": "units:declared_in_figures",
+      "passed": true,
+      "detail": "unit-bearing columns rendered via disp() name+unit pipeline; spot-check list: []"
+    }
+  ],
+  "n_pass": 20,
+  "n_fail": 1,
+  "all_passed": false
+}

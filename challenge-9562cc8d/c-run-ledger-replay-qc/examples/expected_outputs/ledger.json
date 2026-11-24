@@ -1,0 +1,187 @@
+{
+  "case_id": "synthetic-absorption-demo",
+  "stages": [
+    {
+      "seq": 1,
+      "status": "partial",
+      "summary": "运行初始化完成，正在盘点输入。",
+      "artifacts_then": [
+        "result.json"
+      ]
+    },
+    {
+      "seq": 2,
+      "status": "partial",
+      "summary": "清洗口径已留痕，正在计算统计量。",
+      "artifacts_then": [
+        "cleaning_report.json",
+        "result.json"
+      ]
+    },
+    {
+      "seq": 3,
+      "status": "partial",
+      "summary": "统计量计算完成，正在绘制图件。",
+      "artifacts_then": [
+        "cleaning_report.json",
+        "result.json",
+        "statistics.json",
+        "statistics.md"
+      ]
+    },
+    {
+      "seq": 4,
+      "status": "success",
+      "summary": "数据 n=61，2 个数值变量、2 个分类变量。清洗：缺失值逐列计数未插补，重复行 1 条保留标记，1.5×IQR 异常值仅标记。主要描述统计（均值±SD）：c",
+      "artifacts_then": [
+        "captions.json",
+        "captions.md",
+        "check_report.json",
+        "cleaning_report.json",
+        "fig1_distributions.pdf",
+        "fig1_distributions.png",
+        "fig1_distributions.svg",
+        "fig2_grouped_boxplots.pdf",
+        "fig2_grouped_boxplots.png",
+        "fig2_grouped_boxplots.svg",
+        "fig3_scatter_pairs.pdf",
+        "fig3_scatter_pairs.png",
+        "fig3_scatter_pairs.svg",
+        "fig4_correlation_heatmap.pdf",
+        "fig4_correlation_heatmap.png",
+        "fig4_correlation_heatmap.svg",
+        "fig5_missingness.pdf",
+        "fig5_missingness.png",
+        "fig5_missingness.svg",
+        "figures.figdata.json",
+        "result.json",
+        "run_manifest.json",
+        "statistics.json",
+        "statistics.md"
+      ]
+    }
+  ],
+  "artifacts": [
+    {
+      "file": "captions.json",
+      "bytes": 2310,
+      "sha256": "e126c6cd082cf2585420167a5fc958fe4e736d80e6ec4f9d3cb2bd5920eb1185"
+    },
+    {
+      "file": "captions.md",
+      "bytes": 2278,
+      "sha256": "f1586217f44d26ccaa79d42d4fc96089e2018b3934a567123baadfa9abdb315b"
+    },
+    {
+      "file": "check_report.json",
+      "bytes": 2102,
+      "sha256": "3f4b67332b8b30da23883dae4e803d4e6fdc368023f663a1653e4dfdad7c2c97"
+    },
+    {
+      "file": "cleaning_report.json",
+      "bytes": 1641,
+      "sha256": "d8750f313cb7f32ea9371cf2799d18818b0a821dacc1d0bbac09d9ebfbd16f04"
+    },
+    {
+      "file": "fig1_distributions.pdf",
+      "bytes": 15788,
+      "sha256": "f762c51a5e0268397e70457762c71d846df1f67b806b0df718abbbe3d01ba59b"
+    },
+    {
+      "file": "fig1_distributions.png",
+      "bytes": 59196,
+      "sha256": "fc032bbc361a1f3fd85b43c0d4a668573e314a00caf73e27272f3ba69ebae1f2"
+    },
+    {
+      "file": "fig1_distributions.svg",
+      "bytes": 26534,
+      "sha256": "1056bc30b108093e4d7aa432257defa2d76b44aecaf2e9c0c6a39be680091a4d"
+    },
+    {
+      "file": "fig2_grouped_boxplots.pdf",
+      "bytes": 17077,
+      "sha256": "548281d3f0a95c03c05a676a7a8b16e9a8d9fb3628fcd456b17cb6f3f9817b76"
+    },
+    {
+      "file": "fig2_grouped_boxplots.png",
+      "bytes": 54560,
+      "sha256": "713ebbd6d742b88ebb394234491c2ca537b0e9be26240dacefcea55851be4412"
+    },
+    {
+      "file": "fig2_grouped_boxplots.svg",
+      "bytes": 41715,
+      "sha256": "324c6cc2abbc88e14935378ac90a7247095f8e4bcdca11e058a89877ea27fc7c"
+    },
+    {
+      "file": "fig3_scatter_pairs.pdf",
+      "bytes": 15743,
+      "sha256": "0c6e93599a2b1b05a23c909131f58e51f3dc8c4c6f4b7d7502cf9b0c1b594264"
+    },
+    {
+      "file": "fig3_scatter_pairs.png",
+      "bytes": 37190,
+      "sha256": "5229adcb2aabdc3f6db13894a5ffce833f982416229b977570d69c4bb2b45638"
+    },
+    {
+      "file": "fig3_scatter_pairs.svg",
+      "bytes": 22030,
+      "sha256": "96f7f1313fc982b94fd046d1031623534a8822420aafe8e6060125600baf09ba"
+    },
+    {
+      "file": "fig4_correlation_heatmap.pdf",
+      "bytes": 11024,
+      "sha256": "8c283a286327f3f9ff3fd8fe76b4fcf99c534f25e317a80aa152ef847ebae672"
+    },
+    {
+      "file": "fig4_correlation_heatmap.png",
+      "bytes": 36667,
+      "sha256": "e14bbdbb24cdd4a45201a34d2f5e864bd272f10464b65bfdc32bd99cfb1ddb23"
+    },
+    {
+      "file": "fig4_correlation_heatmap.svg",
+      "bytes": 11879,
+      "sha256": "370fc01233ce98db57663d47e7cab6461d9bc042050018d417450dbd843e8115"
+    },
+    {
+      "file": "fig5_missingness.pdf",
+      "bytes": 12042,
+      "sha256": "fa735df7e90a5e067441f60ebad167eb33be16a719eaf7a2234c4d700e72ba8d"
+    },
+    {
+      "file": "fig5_missingness.png",
+      "bytes": 21042,
+      "sha256": "9347f14df212c231d964371d0f99b6ea53e9bd6d0d1bfa44e0ad6935cc34ff8e"
+    },
+    {
+      "file": "fig5_missingness.svg",
+      "bytes": 6776,
+      "sha256": "576ae357ddcc3c1f26983694a8a23b9be064597b756945e38ed2029d3418edf6"
+    },
+    {
+      "file": "figures.figdata.json",
+      "bytes": 2569,
+      "sha256": "5ffb3f2b1b10d55646a3a84cf07cfad37bab6d8f5ad16f448346fe5b72789865"
+    },
+    {
+      "file": "result.json",
+      "bytes": 8426,
+      "sha256": "29e3c585d8c6723043c7958e42f2ecdf813b1bb7cd670295135f5fda19dae58f"
+    },
+    {
+      "file": "run_manifest.json",
+      "bytes": 1077,
+      "sha256": "5ef735ad3fbe5d7d0d4548c923902f9ffcc8847c9430eda7e87b94834a076dc5"
+    },
+    {
+      "file": "statistics.json",
+      "bytes": 4765,
+      "sha256": "148edfd671450b81ae353f2e16b736da16195b6c5b93649a5ba5a02a7a55dcf3"
+    },
+    {
+      "file": "statistics.md",
+      "bytes": 1089,
+      "sha256": "80d4afbcae1df3d1ea5279c54ac038714b698aeceb9e38f2189725ef765a170a"
+    }
+  ],
+  "note": "全部规则与产物哈希留痕；配合 replay_report.json 可复跑核验"
+}

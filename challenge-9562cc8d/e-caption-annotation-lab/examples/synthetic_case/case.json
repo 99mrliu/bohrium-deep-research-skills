@@ -1,0 +1,36 @@
+{
+  "case_id": "synthetic-cell-assay-demo",
+  "title": "模拟细胞活性实验数据：清洗、分组统计与发表级可视化",
+  "dataset": {
+    "name": "cell_assay_synthetic",
+    "source": "合成示例数据（make_data.py 生成，非真实实验）",
+    "rows_expected": 96
+  },
+  "files": [
+    "cell_assay.csv"
+  ],
+  "output_contract": [
+    "case_id",
+    "status",
+    "summary",
+    "figures",
+    "statistics",
+    "cleaning_report",
+    "sources",
+    "uncertainty"
+  ],
+  "constraints": {
+    "language": "zh",
+    "export": {
+      "png_dpi": 300,
+      "vector": [
+        "pdf",
+        "svg"
+      ],
+      "width_mm": 89
+    },
+    "palette": "colorblind_safe",
+    "baseline": "zero_for_bars"
+  },
+  "synthetic": true
+}

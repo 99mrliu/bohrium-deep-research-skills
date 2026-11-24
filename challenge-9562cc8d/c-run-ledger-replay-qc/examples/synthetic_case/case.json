@@ -1,0 +1,36 @@
+{
+  "case_id": "synthetic-absorption-demo",
+  "title": "模拟吸收光谱数据：清洗、分组统计与发表级可视化",
+  "dataset": {
+    "name": "absorption_synthetic",
+    "source": "合成示例数据（make_data.py 生成，非真实实验）",
+    "rows_expected": 60
+  },
+  "files": [
+    "absorption.csv"
+  ],
+  "output_contract": [
+    "case_id",
+    "status",
+    "summary",
+    "figures",
+    "statistics",
+    "cleaning_report",
+    "sources",
+    "uncertainty"
+  ],
+  "constraints": {
+    "language": "zh",
+    "export": {
+      "png_dpi": 300,
+      "vector": [
+        "pdf",
+        "svg"
+      ],
+      "width_mm": 89
+    },
+    "palette": "colorblind_safe",
+    "baseline": "zero_for_bars"
+  },
+  "synthetic": true
+}

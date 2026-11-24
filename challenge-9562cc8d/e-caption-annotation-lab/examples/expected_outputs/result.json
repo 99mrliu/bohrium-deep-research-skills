@@ -1,0 +1,248 @@
+{
+  "case_id": "synthetic-cell-assay-demo",
+  "status": "success",
+  "summary": "数据 n=97，4 个数值变量、1 个分类变量。清洗：缺失值逐列计数未插补，重复行 1 条保留标记，1.5×IQR 异常值仅标记。主要描述统计（均值±SD）：viability=68.863±22.711、apoptosis=31.196±23.527、ros_rfu=37.940±17.179、atp_rlum=2.511±0.556。最强相关：viability 与 apoptosis（r=-0.975）。分组：treatment（drug_high、drug_low、vehicle）。图件 5 张（300 dpi PNG + 嵌入字体 PDF + 可编辑 SVG，单栏 89 mm，Okabe-Ito 色盲安全配色），图注见 captions.md；全部统计量经独立复算一致。",
+  "figures": [
+    {
+      "id": "fig1_distributions",
+      "files": {
+        "png": "fig1_distributions.png",
+        "pdf": "fig1_distributions.pdf",
+        "svg": "fig1_distributions.svg"
+      },
+      "width_mm": 89.0,
+      "dpi": 300,
+      "caption": "图 1　数值变量分布。4 个数值变量的直方图（叠加高斯 KDE 曲线），样本量 n=97。面板标题给出各变量偏度；标注“对数尺度”的变量因右偏（偏度>1 且最小值>0）采用对数横轴。数据来源：cell_assay_synthetic（合成示例数据（make_data.py 生成，非真实实验））。清洗口径：缺失值逐列计数未插补；重复行 1 条保留并标记；异常值按 1.5×IQR 仅标记不删除。",
+      "binding": {
+        "panels": [
+          {
+            "panel": "(a)",
+            "source_column": "viability_pct",
+            "encoding": {
+              "x": "value",
+              "y": "count"
+            },
+            "log_scale": false
+          },
+          {
+            "panel": "(b)",
+            "source_column": "apoptosis_pct",
+            "encoding": {
+              "x": "value",
+              "y": "count"
+            },
+            "log_scale": false
+          },
+          {
+            "panel": "(c)",
+            "source_column": "ros_rfu",
+            "encoding": {
+              "x": "value",
+              "y": "count"
+            },
+            "log_scale": false
+          },
+          {
+            "panel": "(d)",
+            "source_column": "atp_rlum",
+            "encoding": {
+              "x": "value",
+              "y": "count"
+            },
+            "log_scale": false
+          }
+        ]
+      }
+    },
+    {
+      "id": "fig2_grouped_boxplots",
+      "files": {
+        "png": "fig2_grouped_boxplots.png",
+        "pdf": "fig2_grouped_boxplots.pdf",
+        "svg": "fig2_grouped_boxplots.svg"
+      },
+      "width_mm": 89.0,
+      "dpi": 300,
+      "caption": "图 2　分组箱线图（叠加散点）。按 treatment 分组（drug_high n=32、drug_low n=32、vehicle n=33）；面板内叠加经固定种子抖动的原始观测点。误差线含义：箱线图中箱体为四分位距（Q1–Q3），中线为中位数，须线为 1.5×IQR 范围，须外点为离群观测（仅标记未删除）。样本量 n=97，数据来源：cell_assay_synthetic（合成示例数据（make_data.py 生成，非真实实验））。清洗口径：缺失值逐列计数未插补；重复行 1 条保留并标记；异常值按 1.5×IQR 仅标记不删除。",
+      "binding": {
+        "group_by": "treatment",
+        "group_levels": [
+          "drug_high",
+          "drug_low",
+          "vehicle"
+        ],
+        "n_per_level": {
+          "drug_high": 32,
+          "drug_low": 32,
+          "vehicle": 33
+        },
+        "whisker_rule": "1.5*IQR"
+      }
+    },
+    {
+      "id": "fig3_scatter_pairs",
+      "files": {
+        "png": "fig3_scatter_pairs.png",
+        "pdf": "fig3_scatter_pairs.pdf",
+        "svg": "fig3_scatter_pairs.svg"
+      },
+      "width_mm": 89.0,
+      "dpi": 300,
+      "caption": "图 3　关键变量两两散点图（分组着色）。选取 |r| 最大的变量对：(a) viability 与 apoptosis：r=-0.975，n=96；(b) viability 与 atp_rlum：r=0.939，n=97；(c) apoptosis 与 atp_rlum：r=-0.923，n=96。颜色区分treatment 分组；图例与数据中的分组取值一一对应。样本量 n=97，数据来源：cell_assay_synthetic（合成示例数据（make_data.py 生成，非真实实验））。清洗口径：缺失值逐列计数未插补；重复行 1 条保留并标记；异常值按 1.5×IQR 仅标记不删除。",
+      "binding": {
+        "panels": [
+          {
+            "x": "viability_pct",
+            "y": "apoptosis_pct",
+            "pearson_r": -0.9753586910298779,
+            "n": 96,
+            "color_by": "treatment"
+          },
+          {
+            "x": "viability_pct",
+            "y": "atp_rlum",
+            "pearson_r": 0.9392601216671248,
+            "n": 97,
+            "color_by": "treatment"
+          },
+          {
+            "x": "apoptosis_pct",
+            "y": "atp_rlum",
+            "pearson_r": -0.9225031020642489,
+            "n": 96,
+            "color_by": "treatment"
+          }
+        ]
+      }
+    },
+    {
+      "id": "fig4_correlation_heatmap",
+      "files": {
+        "png": "fig4_correlation_heatmap.png",
+        "pdf": "fig4_correlation_heatmap.pdf",
+        "svg": "fig4_correlation_heatmap.svg"
+      },
+      "width_mm": 89.0,
+      "dpi": 300,
+      "caption": "图 4　数值变量 Pearson 相关热图（成对完整观测）。色标固定 [-1, 1]，格内数字为相关系数。最强相关：viability 与 apoptosis（r=-0.975）。样本量 n=97，数据来源：cell_assay_synthetic（合成示例数据（make_data.py 生成，非真实实验））。清洗口径：缺失值逐列计数未插补；重复行 1 条保留并标记；异常值按 1.5×IQR 仅标记不删除。",
+      "binding": {
+        "matrix": "statistics.json:correlations",
+        "color_scale": [
+          -1,
+          1
+        ]
+      }
+    },
+    {
+      "id": "fig5_missingness",
+      "files": {
+        "png": "fig5_missingness.png",
+        "pdf": "fig5_missingness.pdf",
+        "svg": "fig5_missingness.svg"
+      },
+      "width_mm": 89.0,
+      "dpi": 300,
+      "caption": "图 5　各列缺失值数量。缺失值仅计数报告、未插补。数据来源：cell_assay_synthetic（合成示例数据（make_data.py 生成，非真实实验））。清洗口径：缺失值逐列计数未插补；重复行 1 条保留并标记；异常值按 1.5×IQR 仅标记不删除。",
+      "binding": {}
+    }
+  ],
+  "statistics": {
+    "file": "statistics.json",
+    "md": "statistics.md",
+    "n_rows": 97,
+    "n_numeric": 4,
+    "n_categorical": 1,
+    "group": {
+      "mode": "categorical",
+      "column": "treatment",
+      "levels": [
+        "drug_high",
+        "drug_low",
+        "vehicle"
+      ],
+      "n_per_level": {
+        "drug_high": 32,
+        "drug_low": 32,
+        "vehicle": 33
+      }
+    },
+    "strongest_correlation": {
+      "x": "viability_pct",
+      "y": "apoptosis_pct",
+      "pearson_r": -0.9753586910298779
+    },
+    "definitions": {
+      "sd": "sample standard deviation (ddof=1)",
+      "sem": "sd/sqrt(n)",
+      "quartiles": "linear interpolation, type 7",
+      "skewness": "moment skewness m3/m2^1.5",
+      "pearson": "pairwise complete observations"
+    }
+  },
+  "cleaning_report": {
+    "file": "cleaning_report.json",
+    "input_rows": 97,
+    "duplicate_rows": 1,
+    "missing_by_column": {
+      "treatment": 0,
+      "viability_pct": 0,
+      "apoptosis_pct": 1,
+      "ros_rfu": 0,
+      "atp_rlum": 0
+    },
+    "rules": [
+      {
+        "rule": "trim_whitespace",
+        "detail": "strip leading/trailing whitespace of every cell; values not otherwise modified"
+      },
+      {
+        "rule": "missing_values",
+        "detail": "missing tokens ['', '-', '--', '?', 'missing', 'n/a', 'na', 'nan', 'none', 'null'] counted per column; NOT imputed"
+      },
+      {
+        "rule": "duplicates",
+        "detail": "1 exact duplicate row(s) detected; kept and marked (no deletion without explicit task request)"
+      },
+      {
+        "rule": "outliers",
+        "detail": "1.5*IQR fences per numeric column; outliers flagged only, never deleted"
+      }
+    ]
+  },
+  "sources": {
+    "case_dataset": {
+      "name": "cell_assay_synthetic",
+      "source": "合成示例数据（make_data.py 生成，非真实实验）",
+      "rows_expected": 96
+    },
+    "primary_file": "cell_assay.csv",
+    "files": [
+      {
+        "file": "case.json",
+        "path": "/Users/liuhengshen/Desktop/bhr_product/3rd/4/9562-r2/bundles/e-caption-annotation-lab/examples/synthetic_case/case.json",
+        "sha256": "e2886fc438dee565e6bb77452c348a52e172e4f445ecdfccd88a7ad1f756acf1",
+        "bytes": 748
+      },
+      {
+        "file": "cell_assay.csv",
+        "path": "/Users/liuhengshen/Desktop/bhr_product/3rd/4/9562-r2/bundles/e-caption-annotation-lab/examples/synthetic_case/cell_assay.csv",
+        "sha256": "f575a55b421259a01d44f2c34c63e2802099675229ba43666833569093223aeb",
+        "bytes": 2908
+      },
+      {
+        "file": "task.md",
+        "path": "/Users/liuhengshen/Desktop/bhr_product/3rd/4/9562-r2/bundles/e-caption-annotation-lab/examples/synthetic_case/task.md",
+        "sha256": "1703658ec09cc15a260c488b5e5b3ed21821a80dac2146cc9eba5e074a9b1438",
+        "bytes": 1320
+      }
+    ],
+    "verification": "check_report.json",
+    "captions": "captions.md",
+    "figure_data_binding": "figures.figdata.json",
+    "run_manifest": "run_manifest.json",
+    "caption_audit": "caption_audit.json"
+  },
+  "uncertainty": [
+    "图注一致性审计未全部通过（详见 caption_audit.json）：{\"all_passed\": false, \"n_pass\": 20, \"n_fail\": 1}\n"
+  ]
+}

@@ -1,0 +1,124 @@
+{
+  "recompute_from_source": {
+    "source_file": "d-chart-choice-encoding-advisor/examples/synthetic_case/soil.csv",
+    "checks": [
+      {
+        "check": "mean:moisture_pct",
+        "passed": true,
+        "recomputed": 23.762913907284766,
+        "reported": 23.762913907284766
+      },
+      {
+        "check": "n:moisture_pct",
+        "passed": true,
+        "recomputed": 151,
+        "reported": 151
+      },
+      {
+        "check": "mean:ph",
+        "passed": true,
+        "recomputed": 6.428145695364238,
+        "reported": 6.428145695364238
+      },
+      {
+        "check": "n:ph",
+        "passed": true,
+        "recomputed": 151,
+        "reported": 151
+      },
+      {
+        "check": "mean:organic_matter_g_kg",
+        "passed": true,
+        "recomputed": 28.42251655629139,
+        "reported": 28.42251655629139
+      },
+      {
+        "check": "n:organic_matter_g_kg",
+        "passed": true,
+        "recomputed": 151,
+        "reported": 151
+      },
+      {
+        "check": "mean:nitrate_mg_kg",
+        "passed": true,
+        "recomputed": 23.983333333333334,
+        "reported": 23.983333333333334
+      },
+      {
+        "check": "n:nitrate_mg_kg",
+        "passed": true,
+        "recomputed": 150,
+        "reported": 150
+      },
+      {
+        "check": "pearson:moisture_pct~nitrate_mg_kg",
+        "passed": true,
+        "recomputed": 0.8306421835976715,
+        "reported": 0.8306421835976715
+      },
+      {
+        "check": "pearson:moisture_pct~ph",
+        "passed": true,
+        "recomputed": -0.6580553110929204,
+        "reported": -0.6580553110929204
+      },
+      {
+        "check": "pearson:ph~nitrate_mg_kg",
+        "passed": true,
+        "recomputed": -0.572518090031781,
+        "reported": -0.572518090031781
+      }
+    ],
+    "all_passed": true,
+    "n_checks": 11,
+    "n_failed": 0
+  },
+  "export_audit": {
+    "fig1_distributions": {
+      "png_dpi": 299.9994,
+      "png_dpi_ok": true,
+      "pdf_font_embedded": true,
+      "pdf_bytes": 17698,
+      "svg_live_text": true,
+      "svg_bytes": 39078,
+      "ok": true
+    },
+    "fig2_grouped_boxplots": {
+      "png_dpi": 299.9994,
+      "png_dpi_ok": true,
+      "pdf_font_embedded": true,
+      "pdf_bytes": 27789,
+      "svg_live_text": true,
+      "svg_bytes": 149994,
+      "ok": true
+    },
+    "fig3_scatter_pairs": {
+      "png_dpi": 299.9994,
+      "png_dpi_ok": true,
+      "pdf_font_embedded": true,
+      "pdf_bytes": 24546,
+      "svg_live_text": true,
+      "svg_bytes": 108700,
+      "ok": true
+    },
+    "fig4_correlation_heatmap": {
+      "png_dpi": 299.9994,
+      "png_dpi_ok": true,
+      "pdf_font_embedded": true,
+      "pdf_bytes": 14737,
+      "svg_live_text": true,
+      "svg_bytes": 16316,
+      "ok": true
+    },
+    "fig5_missingness": {
+      "png_dpi": 299.9994,
+      "png_dpi_ok": true,
+      "pdf_font_embedded": true,
+      "pdf_bytes": 11434,
+      "svg_live_text": true,
+      "svg_bytes": 6131,
+      "ok": true
+    }
+  },
+  "all_passed": true
+}
