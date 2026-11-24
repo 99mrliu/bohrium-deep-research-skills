@@ -1,0 +1,96 @@
+{
+  "claims": [
+    {
+      "claim_id": "C01",
+      "sentence_id": "S0003",
+      "section": "abstract",
+      "quote": "我们提出一种梯度涂层工艺。",
+      "attribution_hint": "author_claim?",
+      "attribution": "author_claim",
+      "verdict": "insufficient",
+      "evidence_sentence_ids": [
+        "S0008",
+        "S0009"
+      ],
+      "note": "演示：主张强度需与结果章数值核对"
+    },
+    {
+      "claim_id": "C02",
+      "sentence_id": "S0004",
+      "section": "abstract",
+      "quote": "实验表明该工艺使疲劳寿命显著提高 50%",
+      "attribution_hint": "author_claim?",
+      "attribution": "author_claim",
+      "verdict": "insufficient",
+      "evidence_sentence_ids": [
+        "S0008",
+        "S0009"
+      ],
+      "note": "演示：主张强度需与结果章数值核对"
+    },
+    {
+      "claim_id": "C03",
+      "sentence_id": "S0005",
+      "section": "abstract",
+      "quote": "Smith et al. (2021) reported that 涂层界面结合力是关键限制因素。",
+      "attribution_hint": "cited_view?",
+      "attribution": "author_claim",
+      "verdict": "unsupported",
+      "evidence_sentence_ids": [],
+      "note": ""
+    },
+    {
+      "claim_id": "C04",
+      "sentence_id": "S0006",
+      "section": "abstract",
+      "quote": "本研究为航空构件延寿提供了新途径。",
+      "attribution_hint": "author_claim?",
+      "attribution": "author_claim",
+      "verdict": "insufficient",
+      "evidence_sentence_ids": [
+        "S0008",
+        "S0009"
+      ],
+      "note": "演示：主张强度需与结果章数值核对"
+    },
+    {
+      "claim_id": "C05",
+      "sentence_id": "S0009",
+      "section": "introduction",
+      "quote": "已有研究表明表面改性是有效手段 [2]。",
+      "attribution_hint": "author_claim?",
+      "attribution": "author_claim",
+      "verdict": "insufficient",
+      "evidence_sentence_ids": [
+        "S0008",
+        "S0009"
+      ],
+      "note": "演示：主张强度需与结果章数值核对"
+    },
+    {
+      "claim_id": "C06",
+      "sentence_id": "S0019",
+      "section": "discussion",
+      "quote": "我们认为界面结合力主导了寿命增益。",
+      "attribution_hint": "author_claim?",
+      "attribution": "author_claim",
+      "verdict": "insufficient",
+      "evidence_sentence_ids": [
+        "S0008",
+        "S0009"
+      ],
+      "note": "演示：主张强度需与结果章数值核对"
+    },
+    {
+      "claim_id": "C07",
+      "sentence_id": "S0020",
+      "section": "discussion",
+      "quote": "假如涂层不发生早期剥落，增益有望进一步提高。",
+      "attribution_hint": "hypothesis?",
+      "attribution": "hypothesis",
+      "verdict": "pending",
+      "evidence_sentence_ids": [],
+      "note": "作者明确标注的假设情形，不构成缺陷"
+    }
+  ]
+}

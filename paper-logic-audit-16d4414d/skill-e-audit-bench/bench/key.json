@@ -1,0 +1,52 @@
+{
+  "note": "合成基准（非正式案例）植入缺陷清单。match 规则：finding.quote 或 basis 含 quote_contains 片段即命中，一对一。",
+  "papers": {
+    "p1": {
+      "defects": [
+        {
+          "defect_id": "P1-D1",
+          "type": "证据不足",
+          "quote_contains": "显著缩短干燥时间",
+          "expect": "句称“显著”但全文无 p 值/置信区间/检验名（n=3）"
+        },
+        {
+          "defect_id": "P1-D2",
+          "type": "证据不足",
+          "quote_contains": "证明其可将能耗降低一半",
+          "expect": "试点设计+n=3，能耗仅 2.0→1.6 kWh（降 20%），“证明”“降低一半”双重超出数据"
+        },
+        {
+          "defect_id": "P1-D3",
+          "type": "证据不足",
+          "quote_contains": "确定性方案",
+          "expect": "摘要结论“确定性方案”强度超出试点证据；讨论“确定性价值”同源"
+        }
+      ]
+    },
+    "p2": {
+      "defects": [
+        {
+          "defect_id": "P2-D1",
+          "type": "事实错误",
+          "quote_contains": "去除率达 98%",
+          "expect": "摘要称 98%，结果章为 87%，数值不一致"
+        },
+        {
+          "defect_id": "P2-D2",
+          "type": "摘要—正文数值不一致",
+          "quote_contains": "吸附容量提高 60%",
+          "expect": "摘要称提高 60%，结果章为 45→58 mg/g（约 29%）"
+        },
+        {
+          "defect_id": "P2-D3",
+          "type": "引言承诺未交付",
+          "quote_contains": "建立吸附动力学模型",
+          "expect": "引言承诺吸附等温线与动力学模型，结果/讨论均未交付"
+        }
+      ]
+    },
+    "p3": {
+      "defects": []
+    }
+  }
+}

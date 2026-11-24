@@ -1,0 +1,62 @@
+{
+  "engine": "evmap/1.0.0",
+  "instruction": "以下均为机械候选，不是结论。逐条定案：成立则转 finding （带严重度与可执行建议），不成立则记驳回理由；无法确认标待复核并写明缺什么。",
+  "n_candidates": 6,
+  "candidates": [
+    {
+      "type": "overclaim_no_evidence",
+      "rule": "E1",
+      "sentence_id": "S0003",
+      "section": "abstract",
+      "strength": "strong",
+      "quote": "实验表明该工艺显著提高材料的亲水性，并证明其可延长植入体使用寿命。",
+      "basis": "结果/讨论章的数值句与该强主张无关键词重叠，且无图表引用可挂——结论可能超出数据",
+      "needed": "指出支撑该主张的具体数据句或图表；否则降级表述强度"
+    },
+    {
+      "type": "overclaim_no_evidence",
+      "rule": "E1",
+      "sentence_id": "S0016",
+      "section": "discussion",
+      "strength": "strong",
+      "quote": "该工艺证明了其在临床植入体延寿中的应用价值。",
+      "basis": "结果/讨论章的数值句与该强主张无关键词重叠，且无图表引用可挂——结论可能超出数据",
+      "needed": "指出支撑该主张的具体数据句或图表；否则降级表述强度"
+    },
+    {
+      "type": "strength_design_mismatch",
+      "rule": "E2",
+      "sentence_id": "S0003",
+      "section": "abstract",
+      "quote": "实验表明该工艺显著提高材料的亲水性，并证明其可延长植入体使用寿命。",
+      "basis": "研究自标 试点，但此句用强断言措辞",
+      "needed": "强断言需确证性设计支撑；否则改用提示性措辞"
+    },
+    {
+      "type": "strength_design_mismatch",
+      "rule": "E2",
+      "sentence_id": "S0016",
+      "section": "discussion",
+      "quote": "该工艺证明了其在临床植入体延寿中的应用价值。",
+      "basis": "研究自标 试点，但此句用强断言措辞",
+      "needed": "强断言需确证性设计支撑；否则改用提示性措辞"
+    },
+    {
+      "type": "significance_without_stats",
+      "rule": "E3",
+      "sentence_id": "S0003",
+      "section": "abstract",
+      "quote": "实验表明该工艺显著提高材料的亲水性，并证明其可延长植入体使用寿命。",
+      "basis": "句称“显著”但全文未检出 p 值/置信区间/检验名",
+      "needed": "补统计检验与 p/CI；或将“显著”改为“提高了/降低了”"
+    },
+    {
+      "type": "dangling_figref",
+      "rule": "E4",
+      "sentence_id": "S0004",
+      "quote": "接触角数据见图3。",
+      "basis": "正文引用 图3 但全文无对应图表标题",
+      "needed": "补图表或修正编号"
+    }
+  ]
+}

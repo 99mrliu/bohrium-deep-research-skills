@@ -1,0 +1,25 @@
+{
+  "engine": "bench/1.0.0",
+  "paper": "p1",
+  "ts": 1795531805,
+  "n_defects": 3,
+  "n_findings": 3,
+  "hits": {
+    "P1-D1": "W01"
+  },
+  "missed": [
+    "P1-D2",
+    "P1-D3"
+  ],
+  "false_alarms": [
+    "W02",
+    "W03"
+  ],
+  "verbatim_violations": [
+    "W03"
+  ],
+  "precision": 0.3333,
+  "recall": 0.3333,
+  "f1": 0.3333,
+  "stability_vs_previous": "DRIFT"
+}

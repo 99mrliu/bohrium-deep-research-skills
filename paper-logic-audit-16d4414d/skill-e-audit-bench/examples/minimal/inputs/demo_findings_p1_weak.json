@@ -1,0 +1,31 @@
+{
+  "findings": [
+    {
+      "id": "W01",
+      "type": "证据不足",
+      "severity": "minor",
+      "sentence_id": "S0003",
+      "quote": "显著缩短干燥时间",
+      "basis": "合成示例：命中 P1-D1，但漏报 P1-D2/P1-D3",
+      "suggestion": "补统计检验或删去“显著”二字"
+    },
+    {
+      "id": "W02",
+      "type": "建议",
+      "severity": "info",
+      "sentence_id": "S0006",
+      "quote": "微波干燥在农产品加工中应用广泛",
+      "basis": "误报演示：背景句无缺陷，应计 false_alarm",
+      "suggestion": "无需修改，此条演示误报如何被评分器识别"
+    },
+    {
+      "id": "W03",
+      "type": "证据不足",
+      "severity": "major",
+      "sentence_id": "S0003",
+      "quote": "证明其可将能耗降低 80%",
+      "basis": "伪造 quote 演示（原文为“一半”），应被逐字校验标出",
+      "suggestion": "此条演示逐字校验违规"
+    }
+  ]
+}

@@ -1,0 +1,24 @@
+{
+  "findings": [
+    {
+      "id": "R01",
+      "type": "因果措辞超出设计",
+      "severity": "critical",
+      "conclusion_sentence_id": "S0003",
+      "quote": "数据分析表明睡眠不足导致效率下降",
+      "premise_sentence_ids": ["S0012"],
+      "basis": "合成示例演示：横断面+相关性设计（r = 0.31），无随机化或纵向追踪，结论句用因果动词“导致”（R1 定案）",
+      "suggestion": "将 S0003 的“导致效率下降”改为“与效率下降相关”，因果断言待纵向或干预研究验证"
+    },
+    {
+      "id": "R02",
+      "type": "小样本全称结论",
+      "severity": "major",
+      "conclusion_sentence_id": "S0003",
+      "quote": "所有高强度岗位均受影响",
+      "premise_sentence_ids": ["S0013"],
+      "basis": "结果章仅报告总体相关与分组比较，无分岗位数据，“所有…均受影响”无对应前提（R2/R4 定案）",
+      "suggestion": "删除“所有高强度岗位均受影响”，或补分岗位亚组分析后限缩为“在受访样本中观察到岗位间差异”"
+    }
+  ]
+}

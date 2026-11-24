@@ -1,0 +1,14 @@
+{
+  "findings": [
+    {
+      "id": "F01",
+      "type": "证据不足",
+      "severity": "major",
+      "sentence_id": "S0003",
+      "quote": "实验表明该工艺显著提高材料的亲水性 30%",
+      "basis": "伪造 quote 演示（原文无 30%），应被 verify 拦下",
+      "needed_evidence": "",
+      "suggestion": "建议加强"
+    }
+  ]
+}

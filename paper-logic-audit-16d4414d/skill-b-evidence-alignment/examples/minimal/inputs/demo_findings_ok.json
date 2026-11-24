@@ -1,0 +1,34 @@
+{
+  "findings": [
+    {
+      "id": "F01",
+      "type": "证据不足",
+      "severity": "major",
+      "sentence_id": "S0003",
+      "quote": "实验表明该工艺显著提高材料的亲水性",
+      "basis": "合成示例演示：句称“显著”但全文无 p 值/置信区间/检验名（E3 候选定案）",
+      "needed_evidence": "补统计检验（如两组接触角 t 检验，报告 p 值与 95% CI，n=3/组）",
+      "suggestion": "补 Mann-Whitney 或 t 检验并在结果章报告 p 值；或将“显著提高”改为“由 78° 降至 32°”"
+    },
+    {
+      "id": "F02",
+      "type": "证据不足",
+      "severity": "critical",
+      "sentence_id": "S0016",
+      "quote": "该工艺证明了其在临床植入体延寿中的应用价值",
+      "basis": "试点研究（pilot）仅测接触角，无任何寿命/植入实验数据，强断言超出证据（E1+E2 定案）",
+      "needed_evidence": "植入体寿命或动物/疲劳实验数据",
+      "suggestion": "将 S0016 的“证明了其在临床植入体延寿中的应用价值”改为“为后续植入体寿命研究提供了表面改性基础”"
+    },
+    {
+      "id": "F03",
+      "type": "规范问题",
+      "severity": "minor",
+      "sentence_id": "S0004",
+      "quote": "接触角数据见图3",
+      "basis": "正文引用图3但全文无图3标题（E4 候选定案）",
+      "needed_evidence": "",
+      "suggestion": "补充图3及其标题，或将引用改为实际存在的图号"
+    }
+  ]
+}

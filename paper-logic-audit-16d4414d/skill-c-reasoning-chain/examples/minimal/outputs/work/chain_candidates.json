@@ -1,0 +1,52 @@
+{
+  "engine": "chainlint/1.0.0",
+  "instruction": "机械候选，须回原文定案：成立转 finding（必须同时给conclusion_sentence_id 与 premise_sentence_ids 两端锚定），不成立记驳回理由，无法确认标待复核。",
+  "n_candidates": 5,
+  "candidates": [
+    {
+      "rule": "R1",
+      "type": "因果措辞超出设计",
+      "conclusion_sentence_id": "S0003",
+      "section": "abstract",
+      "quote": "数据分析表明睡眠不足导致效率下降，所有高强度岗位均受影响。",
+      "basis": "设计线索为 横断面/相关性分析/问卷调查 且无随机/对照线索，此句用因果动词 导致",
+      "premise_hint": "核对结果章是否只有相关/组间比较证据"
+    },
+    {
+      "rule": "R1",
+      "type": "因果措辞超出设计",
+      "conclusion_sentence_id": "S0004",
+      "section": "abstract",
+      "quote": "这一发现为企业排班制度提供了决定性依据。",
+      "basis": "设计线索为 横断面/相关性分析/问卷调查 且无随机/对照线索，此句用因果动词 决定",
+      "premise_hint": "核对结果章是否只有相关/组间比较证据"
+    },
+    {
+      "rule": "R1",
+      "type": "因果措辞超出设计",
+      "conclusion_sentence_id": "S0015",
+      "section": "discussion",
+      "quote": "睡眠不足导致效率下降，因此企业应取消弹性夜班。",
+      "basis": "设计线索为 横断面/相关性分析/问卷调查 且无随机/对照线索，此句用因果动词 导致",
+      "premise_hint": "核对结果章是否只有相关/组间比较证据"
+    },
+    {
+      "rule": "R2",
+      "type": "前提未交付",
+      "conclusion_sentence_id": "S0015",
+      "section": "discussion",
+      "quote": "睡眠不足导致效率下降，因此企业应取消弹性夜班。",
+      "basis": "该句关键词 89% 在结果章无覆盖（缺失例：下降、不足、业应、企业、取消、夜班）",
+      "premise_hint": "回结果章找前提句；找不到即推理跳跃"
+    },
+    {
+      "rule": "R2",
+      "type": "前提未交付",
+      "conclusion_sentence_id": "S0016",
+      "section": "discussion",
+      "quote": "我们没有讨论其他可能影响效率的因素。",
+      "basis": "该句关键词 93% 在结果章无覆盖（缺失例：他可、们没、其他、可能、响效、因素）",
+      "premise_hint": "回结果章找前提句；找不到即推理跳跃"
+    }
+  ]
+}

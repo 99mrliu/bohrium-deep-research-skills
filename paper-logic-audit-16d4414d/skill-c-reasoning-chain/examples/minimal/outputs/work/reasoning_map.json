@@ -1,0 +1,78 @@
+{
+  "engine": "chainlint/1.0.0",
+  "n_sentences": 18,
+  "sections": [
+    {
+      "section": "abstract",
+      "offset": 0
+    },
+    {
+      "section": "introduction",
+      "offset": 85
+    },
+    {
+      "section": "methods",
+      "offset": 125
+    },
+    {
+      "section": "results",
+      "offset": 172
+    },
+    {
+      "section": "discussion",
+      "offset": 219
+    },
+    {
+      "section": "references",
+      "offset": 265
+    }
+  ],
+  "design": {
+    "observational_cues": [
+      "横断面",
+      "相关性分析",
+      "问卷调查"
+    ],
+    "experimental_cues": [],
+    "correlation_words": [
+      "相关",
+      "关联"
+    ]
+  },
+  "causal_sentences": [
+    {
+      "sentence_id": "S0003",
+      "section": "abstract",
+      "cues": [
+        "导致"
+      ]
+    },
+    {
+      "sentence_id": "S0004",
+      "section": "abstract",
+      "cues": [
+        "决定"
+      ]
+    },
+    {
+      "sentence_id": "S0015",
+      "section": "discussion",
+      "cues": [
+        "导致"
+      ]
+    }
+  ],
+  "limitation_sentences": [
+    "S0003",
+    "S0015"
+  ],
+  "universal_sentences": [
+    "S0003"
+  ],
+  "sample_sizes": [
+    {
+      "sentence_id": "S0010",
+      "n": 320
+    }
+  ]
+}

@@ -1,0 +1,144 @@
+{
+  "engine": "xcheck/1.0.0",
+  "n_sentences": 21,
+  "sections": [
+    {
+      "section": "abstract",
+      "offset": 0
+    },
+    {
+      "section": "introduction",
+      "offset": 71
+    },
+    {
+      "section": "methods",
+      "offset": 160
+    },
+    {
+      "section": "results",
+      "offset": 207
+    },
+    {
+      "section": "discussion",
+      "offset": 267
+    },
+    {
+      "section": "references",
+      "offset": 321
+    }
+  ],
+  "abstract_numbers": [
+    {
+      "value": "65%",
+      "sentence_id": "S0002",
+      "section": "abstract"
+    },
+    {
+      "value": "20%",
+      "sentence_id": "S0002",
+      "section": "abstract"
+    },
+    {
+      "value": "2",
+      "sentence_id": "S0003",
+      "section": "abstract"
+    }
+  ],
+  "body_numbers": [
+    {
+      "value": "60",
+      "sentence_id": "S0011",
+      "section": "methods"
+    },
+    {
+      "value": "0.08",
+      "sentence_id": "S0011",
+      "section": "methods"
+    },
+    {
+      "value": "4个",
+      "sentence_id": "S0012",
+      "section": "methods"
+    },
+    {
+      "value": "2.1",
+      "sentence_id": "S0014",
+      "section": "results"
+    },
+    {
+      "value": "3.0",
+      "sentence_id": "S0014",
+      "section": "results"
+    },
+    {
+      "value": "43%",
+      "sentence_id": "S0014",
+      "section": "results"
+    },
+    {
+      "value": "5.2",
+      "sentence_id": "S0015",
+      "section": "results"
+    },
+    {
+      "value": "4.4",
+      "sentence_id": "S0015",
+      "section": "results"
+    },
+    {
+      "value": "15%",
+      "sentence_id": "S0015",
+      "section": "results"
+    },
+    {
+      "value": "1",
+      "sentence_id": "S0019",
+      "section": "discussion"
+    },
+    {
+      "value": "1",
+      "sentence_id": "S0021",
+      "section": "references"
+    },
+    {
+      "value": "2017",
+      "sentence_id": "S0021",
+      "section": "references"
+    }
+  ],
+  "promises": [
+    {
+      "sentence_id": "S0007",
+      "section": "introduction",
+      "text": "本文将分析热风—真空耦合工艺的能耗特征，并回答复水率与能耗的权衡关系。"
+    },
+    {
+      "sentence_id": "S0008",
+      "section": "introduction",
+      "text": "本文将建立脱水过程的动力学模型。"
+    }
+  ],
+  "captions": {
+    "表1": "S0019"
+  },
+  "figure_refs": [
+    {
+      "key": "表2",
+      "sentence_id": "S0003",
+      "in_caption": false
+    },
+    {
+      "key": "表1",
+      "sentence_id": "S0019",
+      "in_caption": true
+    }
+  ],
+  "acronyms": [
+    {
+      "token": "VRF",
+      "count": 3,
+      "first_sentence": "S0004",
+      "defined": false
+    }
+  ]
+}

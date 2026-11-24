@@ -1,0 +1,100 @@
+{
+  "engine": "evmap/1.0.0",
+  "n_sentences": 18,
+  "sections": [
+    {
+      "section": "abstract",
+      "offset": 0
+    },
+    {
+      "section": "introduction",
+      "offset": 70
+    },
+    {
+      "section": "methods",
+      "offset": 118
+    },
+    {
+      "section": "results",
+      "offset": 159
+    },
+    {
+      "section": "discussion",
+      "offset": 195
+    },
+    {
+      "section": "references",
+      "offset": 236
+    }
+  ],
+  "captions": {},
+  "figure_refs": [
+    {
+      "kind": "图",
+      "num": "3",
+      "sentence_id": "S0004",
+      "in_caption": false
+    }
+  ],
+  "numeric_sentences": [
+    {
+      "sentence_id": "S0004",
+      "section": "abstract",
+      "n_numbers": 1
+    },
+    {
+      "sentence_id": "S0009",
+      "section": "methods",
+      "n_numbers": 1
+    },
+    {
+      "sentence_id": "S0010",
+      "section": "methods",
+      "n_numbers": 1
+    },
+    {
+      "sentence_id": "S0012",
+      "section": "results",
+      "n_numbers": 2
+    },
+    {
+      "sentence_id": "S0018",
+      "section": "references",
+      "n_numbers": 2
+    }
+  ],
+  "stat_sentences": [],
+  "design_flags": {
+    "weak_design": [
+      "试点"
+    ],
+    "observational": []
+  },
+  "strength_index": [
+    {
+      "sentence_id": "S0003",
+      "section": "abstract",
+      "strength": "strong"
+    },
+    {
+      "sentence_id": "S0006",
+      "section": "introduction",
+      "strength": "strong"
+    },
+    {
+      "sentence_id": "S0007",
+      "section": "introduction",
+      "strength": "mid"
+    },
+    {
+      "sentence_id": "S0015",
+      "section": "discussion",
+      "strength": "mid"
+    },
+    {
+      "sentence_id": "S0016",
+      "section": "discussion",
+      "strength": "strong"
+    }
+  ]
+}
