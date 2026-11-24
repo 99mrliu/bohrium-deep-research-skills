@@ -1,0 +1,29 @@
+{
+  "synthetic": true,
+  "synthetic_note": "合成的 Crossref 风格题录响应快照；DOI 仅为格式样例，条目内容为虚构。",
+  "source": "crossref",
+  "fetched_at": "2026-10-22T12:00:00Z",
+  "items": [
+    {
+      "DOI": "10.1038/nature12373",
+      "title": ["Synthetic demo: late-indexed condensed matter study"],
+      "published": {"date-parts": [[2026, 10, 8]]},
+      "indexed": "2026-10-21T09:14:32Z",
+      "_design_intent": "延迟入库：发表在已关闭窗口 W2026-10-05，本轮才出现 -> backfill"
+    },
+    {
+      "DOI": "10.1126/science.adr0001",
+      "title": ["Synthetic demo: boundary article at window start"],
+      "published": {"date-parts": [[2026, 10, 19]]},
+      "indexed": "2026-10-19T06:05:11Z",
+      "_design_intent": "published 日区间 earliest 恰好等于当前窗口左端点 -> 归当前窗口（boundary_left）"
+    },
+    {
+      "DOI": "10.7554/eLife.99001",
+      "title": ["Synthetic demo: year-only precision review"],
+      "published": {"date-parts": [[2026]]},
+      "indexed": "2026-10-22T08:40:00Z",
+      "_design_intent": "只有年份的低精度日期，区间跨越多个窗口 -> low_precision"
+    }
+  ]
+}

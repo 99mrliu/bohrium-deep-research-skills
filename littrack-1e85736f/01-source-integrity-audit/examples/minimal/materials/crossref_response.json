@@ -1,0 +1,45 @@
+{
+  "synthetic": true,
+  "synthetic_note": "合成示例数据，非真实 Crossref 响应；DOI 仅借用真实文献格式。",
+  "source": "crossref",
+  "snapshot_frozen_at": "2026-11-20T08:00:00Z",
+  "query": "two-dimensional magnets AND spin dynamics",
+  "records": [
+    {
+      "record_id": "cr-001",
+      "title": "Ultrafast spin dynamics in van der Waals magnets",
+      "authors": ["Ada Chen", "Bo Li"],
+      "doi": "10.1038/nature12373",
+      "published": "2026-11-05",
+      "container": "Nature"
+    },
+    {
+      "record_id": "cr-002",
+      "title": "Room-temperature skyrmions in synthetic antiferromagnets",
+      "authors": ["Carlos Diaz"],
+      "doi": "10.1126/science.adk2211",
+      "published": "2027-01-15",
+      "container": "Science"
+    },
+    {
+      "record_id": "cr-003",
+      "title": "Defect-engineered valley polarization in MoS2",
+      "authors": ["Dana Kim", "Eli Ross"],
+      "doi": "10.123/abc def",
+      "published": "2026-11-10",
+      "container": "Nano Letters"
+    },
+    {
+      "record_id": "cr-004",
+      "title": "RETRACTED ARTICLE: Quantum dot cellular automata at room temperature",
+      "authors": ["Fang Wei"],
+      "doi": "10.1007/s00216-021-03355-y",
+      "published": "2026-10-28",
+      "container": "Analytical and Bioanalytical Chemistry",
+      "retracted": true,
+      "relation": {
+        "is-retraction-of": "10.1007/s00216-020-00000-0"
+      }
+    }
+  ]
+}

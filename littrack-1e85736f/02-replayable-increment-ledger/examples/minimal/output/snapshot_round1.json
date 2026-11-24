@@ -1,0 +1,72 @@
+{
+  "as_of_utc": "2025-06-08T00:00:00Z",
+  "schema": "increment-snapshot/1.0",
+  "seen_items": [
+    {
+      "arxiv_base": "2505.99999",
+      "arxiv_version_max": 1,
+      "dedup_key": "arxiv:2505.99999",
+      "doi": null,
+      "first_seen_run": "run-cb841f8b6f944666",
+      "locator": {
+        "file": "examples/minimal/materials/round1_arxiv.json",
+        "file_sha256": "13d52e4fa03972304bb8e70250f3b5b4af87c3d5139da94736fe15211ac438ae",
+        "json_path": "$.entries[1]"
+      },
+      "title": "Old preprint outside the window (synthetic filler)",
+      "title_fp": "old preprint outside the window synthetic filler"
+    },
+    {
+      "arxiv_base": "2506.01234",
+      "arxiv_version_max": 1,
+      "dedup_key": "arxiv:2506.01234",
+      "doi": null,
+      "first_seen_run": "run-cb841f8b6f944666",
+      "locator": {
+        "file": "examples/minimal/materials/round1_arxiv.json",
+        "file_sha256": "13d52e4fa03972304bb8e70250f3b5b4af87c3d5139da94736fe15211ac438ae",
+        "json_path": "$.entries[0]"
+      },
+      "title": "Graph networks for battery degradation: a synthetic study",
+      "title_fp": "graph networks for battery degradation a synthetic study"
+    },
+    {
+      "arxiv_base": null,
+      "arxiv_version_max": null,
+      "dedup_key": "doi:10.1038/nature12373",
+      "doi": "10.1038/nature12373",
+      "first_seen_run": "run-cb841f8b6f944666",
+      "locator": {
+        "file": "examples/minimal/materials/round1_crossref.json",
+        "file_sha256": "e05204b997269c856043b8602ae9f02c39278abd2704d242fee2f6246028ea26",
+        "json_path": "$.message.items[0]"
+      },
+      "title": "A synthetic study on lithium migration in solid electrolytes",
+      "title_fp": "a synthetic study on lithium migration in solid electrolytes"
+    },
+    {
+      "arxiv_base": null,
+      "arxiv_version_max": null,
+      "dedup_key": "doi:10.1234/synth.electrolyte.0001",
+      "doi": "10.1234/synth.electrolyte.0001",
+      "first_seen_run": "run-05fee0c198cdbbcc",
+      "locator": {
+        "file": "examples/minimal/materials/round0_crossref.json",
+        "file_sha256": "63682c6419f8fbb62db7c41edbe111bd06de5798b52e587d12a05eafd3ceb5d9",
+        "json_path": "$.message.items[0]"
+      },
+      "title": "Baseline survey of sulfide solid electrolytes (synthetic example record)",
+      "title_fp": "baseline survey of sulfide solid electrolytes synthetic example record"
+    }
+  ],
+  "sources": {
+    "arxiv": {
+      "last_seen_date": "2025-06-05T00:00:00Z",
+      "last_seen_id": "2506.01234v1"
+    },
+    "crossref": {
+      "last_seen_date": "2025-06-03T00:00:00Z",
+      "last_seen_id": "10.1038/nature12373"
+    }
+  }
+}

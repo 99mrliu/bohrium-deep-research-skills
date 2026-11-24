@@ -1,0 +1,310 @@
+{
+  "case_id": "synthetic-replay-ledger-001",
+  "change_records": [
+    {
+      "dedup_key": "arxiv:2506.04567",
+      "field": "seen_items",
+      "locator": {
+        "file": "examples/minimal/materials/round2_arxiv.json",
+        "file_sha256": "fc345065a25a07ecbf610d3bfc4ea750337dda26819ae96f39a5792a70eab05b",
+        "json_path": "$.entries[0]"
+      },
+      "op": "add",
+      "rule": "R0-new",
+      "run_id": "run-9b93e0cd3e54c0a6"
+    },
+    {
+      "dedup_key": "arxiv:2506.01234",
+      "field": "seen_items",
+      "locator": {
+        "file": "examples/minimal/materials/round2_arxiv.json",
+        "file_sha256": "fc345065a25a07ecbf610d3bfc4ea750337dda26819ae96f39a5792a70eab05b",
+        "json_path": "$.entries[1]"
+      },
+      "op": "update",
+      "rule": "R2-arxiv-version",
+      "run_id": "run-9b93e0cd3e54c0a6"
+    },
+    {
+      "dedup_key": "doi:10.1038/s41586-025-00001-x",
+      "field": "seen_items",
+      "locator": {
+        "file": "examples/minimal/materials/round2_crossref.json",
+        "file_sha256": "ab60d6c315487608d4890c6af7742f15f8eefd1647e806924e31a29c149e707a",
+        "json_path": "$.message.items[0]"
+      },
+      "op": "update",
+      "rule": "R3-preprint-published-link",
+      "run_id": "run-9b93e0cd3e54c0a6"
+    },
+    {
+      "after": {
+        "last_seen_date": "2025-06-13T00:00:00Z",
+        "last_seen_id": "2506.09988v1"
+      },
+      "before": {
+        "last_seen_date": "2025-06-05T00:00:00Z",
+        "last_seen_id": "2506.01234v1"
+      },
+      "field": "sources.arxiv.watermark",
+      "op": "update",
+      "run_id": "run-9b93e0cd3e54c0a6"
+    },
+    {
+      "after": {
+        "last_seen_date": "2025-06-12T00:00:00Z",
+        "last_seen_id": "10.1038/s41586-025-00001-x"
+      },
+      "before": {
+        "last_seen_date": "2025-06-03T00:00:00Z",
+        "last_seen_id": "10.1038/nature12373"
+      },
+      "field": "sources.crossref.watermark",
+      "op": "update",
+      "run_id": "run-9b93e0cd3e54c0a6"
+    },
+    {
+      "field": "increment_journal",
+      "journal_line": 3,
+      "locator": {
+        "file": "examples/minimal/output/increment_journal.jsonl"
+      },
+      "op": "append",
+      "run_id": "run-9b93e0cd3e54c0a6"
+    }
+  ],
+  "deliveries": [
+    {
+      "channel": "log",
+      "decision": "new",
+      "dedup_key": "arxiv:2506.04567",
+      "delivered_to": "journal-log",
+      "delivery_hash": "1acd6bf5a2bc0d7987c513080a02d4eb11b21ea017d17c8b16e3660617c72c37"
+    },
+    {
+      "channel": "log",
+      "decision": "version_update",
+      "dedup_key": "arxiv:2506.01234",
+      "delivered_to": "journal-log",
+      "delivery_hash": "2d05f62b35830d09b1697e6f06d57c3b12caac8a9f5b7b0ff78866a8467744a4"
+    },
+    {
+      "channel": "log",
+      "decision": "version_update",
+      "dedup_key": "doi:10.1038/s41586-025-00001-x",
+      "delivered_to": "journal-log",
+      "delivery_hash": "1d53d072a46ca8c3199213be49aa6de97a0e6750c2312ca4137f0f591254de94"
+    }
+  ],
+  "duplicates": [
+    {
+      "decision": "duplicate",
+      "dedup_key": "arxiv:2506.09988",
+      "item_date": "2025-06-13T00:00:00Z",
+      "locator": {
+        "file": "examples/minimal/materials/round2_arxiv.json",
+        "file_sha256": "fc345065a25a07ecbf610d3bfc4ea750337dda26819ae96f39a5792a70eab05b",
+        "json_path": "$.entries[2]"
+      },
+      "matched": {
+        "dedup_key": "doi:10.1038/nature12373",
+        "first_seen_run": "run-cb841f8b6f944666",
+        "locator": {
+          "file": "examples/minimal/materials/round1_crossref.json",
+          "file_sha256": "e05204b997269c856043b8602ae9f02c39278abd2704d242fee2f6246028ea26",
+          "json_path": "$.message.items[0]"
+        }
+      },
+      "rule": "R4-title-fingerprint",
+      "source": "arxiv",
+      "title": "A SYNTHETIC STUDY ON LITHIUM MIGRATION IN SOLID ELECTROLYTES."
+    },
+    {
+      "decision": "duplicate",
+      "dedup_key": "doi:10.1038/nature12373",
+      "item_date": "2025-06-09T00:00:00Z",
+      "locator": {
+        "file": "examples/minimal/materials/round2_crossref.json",
+        "file_sha256": "ab60d6c315487608d4890c6af7742f15f8eefd1647e806924e31a29c149e707a",
+        "json_path": "$.message.items[1]"
+      },
+      "matched": {
+        "dedup_key": "doi:10.1038/nature12373",
+        "first_seen_run": "run-cb841f8b6f944666",
+        "locator": {
+          "file": "examples/minimal/materials/round1_crossref.json",
+          "file_sha256": "e05204b997269c856043b8602ae9f02c39278abd2704d242fee2f6246028ea26",
+          "json_path": "$.message.items[0]"
+        }
+      },
+      "rule": "R1-exact-doi",
+      "source": "crossref",
+      "title": "A synthetic study on lithium migration in solid electrolytes"
+    }
+  ],
+  "idempotency_verification": {
+    "deliveries_after_rerun": 0,
+    "journal_byte_identical_after_rerun": true,
+    "new_events_after_rerun": 0,
+    "report_path": "examples/minimal/output/idempotency_report.json",
+    "status": "pass"
+  },
+  "journal_ref": {
+    "path": "examples/minimal/output/increment_journal.jsonl",
+    "record_count": 3,
+    "run_ids": [
+      "run-cb841f8b6f944666",
+      "run-9b93e0cd3e54c0a6"
+    ],
+    "sha256": "0ac79db08d0d2148e4bbe46b8f9753cabb46ea40fe6c2cadb681ccc95ccacf4b"
+  },
+  "new_items": [
+    {
+      "decision": "new",
+      "dedup_key": "arxiv:2506.04567",
+      "item_date": "2025-06-10T00:00:00Z",
+      "locator": {
+        "file": "examples/minimal/materials/round2_arxiv.json",
+        "file_sha256": "fc345065a25a07ecbf610d3bfc4ea750337dda26819ae96f39a5792a70eab05b",
+        "json_path": "$.entries[0]"
+      },
+      "matched": null,
+      "rule": "R0-new",
+      "source": "arxiv",
+      "title": "Entropy stabilization in halide electrolytes: a synthetic report"
+    }
+  ],
+  "replay_verification": {
+    "byte_equal": true,
+    "report_paths": [
+      "examples/minimal/output/replay_diff_round1.json",
+      "examples/minimal/output/replay_diff_round2.json"
+    ],
+    "runs_replayed": [
+      "run-cb841f8b6f944666",
+      "run-9b93e0cd3e54c0a6"
+    ],
+    "status": "consistent"
+  },
+  "sources": [
+    {
+      "file": "examples/minimal/materials/round1_crossref.json",
+      "role": "bibliographic-response/crossref",
+      "sha256": "e05204b997269c856043b8602ae9f02c39278abd2704d242fee2f6246028ea26"
+    },
+    {
+      "file": "examples/minimal/materials/round1_arxiv.json",
+      "role": "bibliographic-response/arxiv",
+      "sha256": "13d52e4fa03972304bb8e70250f3b5b4af87c3d5139da94736fe15211ac438ae"
+    },
+    {
+      "file": "examples/minimal/materials/round2_crossref.json",
+      "json_paths_used": [
+        "$.message.items[0]",
+        "$.message.items[1]"
+      ],
+      "role": "bibliographic-response/crossref",
+      "sha256": "ab60d6c315487608d4890c6af7742f15f8eefd1647e806924e31a29c149e707a"
+    },
+    {
+      "file": "examples/minimal/materials/round2_arxiv.json",
+      "json_paths_used": [
+        "$.entries[0]",
+        "$.entries[1]",
+        "$.entries[2]"
+      ],
+      "role": "bibliographic-response/arxiv",
+      "sha256": "fc345065a25a07ecbf610d3bfc4ea750337dda26819ae96f39a5792a70eab05b"
+    },
+    {
+      "file": "examples/minimal/case.json",
+      "role": "case-definition",
+      "sha256": "e98b9a565337a389072bf43da6275149c8985212f592f79f4462f3fb24f73bf3"
+    },
+    {
+      "file": "examples/minimal/output/snapshot_round1.json",
+      "role": "previous-snapshot",
+      "sha256": "d337e19e7c0f6ab9f29ef71e4871cf8bee248e8de3f31aca5188f0feaff46dc1"
+    },
+    {
+      "file": "examples/minimal/output/snapshot_round2.json",
+      "role": "new-snapshot",
+      "sha256": "a4bf5df46678bb28c561b913c1e30af9d5e7fdcc3e027dac1704c782d7aafdf0"
+    },
+    {
+      "file": "examples/minimal/output/increment_journal.jsonl",
+      "role": "increment-journal",
+      "sha256": "0ac79db08d0d2148e4bbe46b8f9753cabb46ea40fe6c2cadb681ccc95ccacf4b"
+    },
+    {
+      "file": "examples/minimal/output/replay_diff_round1.json",
+      "role": "replay-diff-report",
+      "sha256": "a4a43e549426fdeae4961bb7774b7c7084bf04c1790b70ecba2f031843ca2b0e"
+    },
+    {
+      "file": "examples/minimal/output/replay_diff_round2.json",
+      "role": "replay-diff-report",
+      "sha256": "45e2a4ceb30aefef3b3817221163b3082d5d5ff5ec53ce76ba76fc0e411f6460"
+    },
+    {
+      "file": "examples/minimal/output/idempotency_report.json",
+      "role": "idempotency-report",
+      "sha256": "7fa1ee452e55682c4dbd5d484cdbbd544675fd3c8fc2f8d44683f9d4ebfa05f9"
+    }
+  ],
+  "status": "complete",
+  "uncertainty": [
+    "标题指纹判重（R4）对极短标题或完全不同表述的同文重复可能误判；本轮命中的 R4 均有 locator 可人工复核。",
+    "Crossref 日期粒度为日级、arXiv 为秒级；水位比较统一规范化为 UTC 秒级后取 max。"
+  ],
+  "version_updates": [
+    {
+      "decision": "version_update",
+      "dedup_key": "arxiv:2506.01234",
+      "item_date": "2025-06-11T09:30:00Z",
+      "locator": {
+        "file": "examples/minimal/materials/round2_arxiv.json",
+        "file_sha256": "fc345065a25a07ecbf610d3bfc4ea750337dda26819ae96f39a5792a70eab05b",
+        "json_path": "$.entries[1]"
+      },
+      "matched": {
+        "dedup_key": "arxiv:2506.01234",
+        "first_seen_run": "run-cb841f8b6f944666",
+        "locator": {
+          "file": "examples/minimal/materials/round1_arxiv.json",
+          "file_sha256": "13d52e4fa03972304bb8e70250f3b5b4af87c3d5139da94736fe15211ac438ae",
+          "json_path": "$.entries[0]"
+        }
+      },
+      "rule": "R2-arxiv-version",
+      "source": "arxiv",
+      "title": "Graph networks for battery degradation: a synthetic study"
+    },
+    {
+      "decision": "version_update",
+      "dedup_key": "doi:10.1038/s41586-025-00001-x",
+      "item_date": "2025-06-12T00:00:00Z",
+      "locator": {
+        "file": "examples/minimal/materials/round2_crossref.json",
+        "file_sha256": "ab60d6c315487608d4890c6af7742f15f8eefd1647e806924e31a29c149e707a",
+        "json_path": "$.message.items[0]"
+      },
+      "matched": {
+        "dedup_key": "arxiv:2506.01234",
+        "first_seen_run": "run-cb841f8b6f944666",
+        "locator": {
+          "file": "examples/minimal/materials/round1_arxiv.json",
+          "file_sha256": "13d52e4fa03972304bb8e70250f3b5b4af87c3d5139da94736fe15211ac438ae",
+          "json_path": "$.entries[0]"
+        }
+      },
+      "rule": "R3-preprint-published-link",
+      "source": "crossref",
+      "title": "Graph networks for battery degradation: a synthetic study"
+    }
+  ],
+  "window": {
+    "end_utc": "2025-06-15T00:00:00Z",
+    "start_utc": "2025-06-08T00:00:00Z"
+  }
+}

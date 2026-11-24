@@ -1,0 +1,134 @@
+{
+  "case_id": "synthetic-demo-001",
+  "status": "ok",
+  "window": {
+    "id": "2026-W47",
+    "start": "2026-11-16",
+    "end": "2026-11-22"
+  },
+  "items": [
+    {
+      "doi": "10.1038/nature12373",
+      "title": "Synthetic demo record A1: volumetric calcium imaging (mock)",
+      "source": "crossref_a",
+      "window": "2026-W47",
+      "locator": "materials/source_a.json#/message/items/0",
+      "extra": {
+        "container-title": [
+          "Nature (synthetic fixture)"
+        ],
+        "publisher": "Springer Nature (fixture)",
+        "published": {
+          "date-parts": [
+            [
+              2026,
+              11,
+              17
+            ]
+          ]
+        },
+        "URL": "https://doi.org/10.1038/nature12373"
+      }
+    },
+    {
+      "doi": "10.1126/science.1259855",
+      "title": "Synthetic demo record A2: stimulus-triggered fate conversion (mock)",
+      "source": "crossref_a",
+      "window": "2026-W47",
+      "locator": "materials/source_a.json#/message/items/1",
+      "extra": {
+        "container-title": [
+          "Science (synthetic fixture)"
+        ],
+        "publisher": "AAAS (fixture)",
+        "published": {
+          "date-parts": [
+            [
+              2026,
+              11,
+              19
+            ]
+          ]
+        },
+        "URL": "https://doi.org/10.1126/science.1259855"
+      }
+    },
+    {
+      "doi": "10.1016/j.cell.2014.05.010",
+      "title": "Synthetic demo record B1: transcriptional dynamics (mock)",
+      "source": "eupmc_b",
+      "window": "2026-W47",
+      "locator": "materials/source_b.json#/resultList/result/0",
+      "extra": {
+        "journalTitle": "Cell (synthetic fixture)",
+        "pubYear": "2026"
+      }
+    }
+  ],
+  "degraded_sources": [],
+  "sources": [
+    {
+      "source": "crossref_a",
+      "window": "2026-W47",
+      "material": "materials/source_a.json",
+      "attempts": 1,
+      "status": "done",
+      "note": "ok",
+      "delivered": 2
+    },
+    {
+      "source": "eupmc_b",
+      "window": "2026-W47",
+      "material": "materials/source_b.json",
+      "attempts": 4,
+      "status": "done",
+      "note": "ok",
+      "delivered": 1
+    },
+    {
+      "source": "publisher_c",
+      "window": "2026-W47",
+      "material": "materials/source_c.json",
+      "attempts": 1,
+      "status": "done",
+      "note": "empty_window",
+      "delivered": 0
+    }
+  ],
+  "uncertainty": [
+    "源 eupmc_b 记录 materials/source_b.json#/resultList/result/1 缺字段 title，已按 missing_field 策略跳过（覆盖不完整）。",
+    "源 publisher_c 窗口 2026-W47 为空窗口（0 条），非故障。"
+  ],
+  "change_records": [
+    {
+      "run_no": 1,
+      "event": "run_summary",
+      "detail": "processed=2 skipped_completed=0 degraded=1 delivered=2 dedup_skipped=0 records_skipped=0",
+      "ts": "2026-11-24T08:53:30Z"
+    },
+    {
+      "run_no": 1,
+      "event": "terminal_decision",
+      "detail": "eupmc_b|2026-W47 attempt 3: parse_error -> degrade_source(retries_exhausted)",
+      "ts": "2026-11-24T08:53:30Z"
+    },
+    {
+      "run_no": 2,
+      "event": "run_summary",
+      "detail": "processed=1 skipped_completed=2 degraded=0 delivered=1 dedup_skipped=0 records_skipped=1",
+      "ts": "2026-11-24T08:53:30Z"
+    },
+    {
+      "run_no": 3,
+      "event": "run_summary",
+      "detail": "processed=0 skipped_completed=3 degraded=0 delivered=0 dedup_skipped=0 records_skipped=0",
+      "ts": "2026-11-24T08:53:30Z"
+    }
+  ],
+  "stats": {
+    "runs": 3,
+    "items_delivered": 3,
+    "sources_done": 3,
+    "sources_degraded": 0
+  }
+}

@@ -1,0 +1,26 @@
+{
+  "case_id": "case-1e85736f-syn-001",
+  "synthetic": true,
+  "synthetic_note": "合成示例：本文件及 materials/ 下全部数据均为演示而编造，不代表真实检索结果。个别 DOI 借用了真实存在文献的格式（如 10.1038/nature12373），仅为格式演示用途。",
+  "task": "对本地固化的上游题录快照（Crossref / Europe PMC / arXiv）执行完整性与真实性校验：建立 SHA-256 哈希台账、Schema 校验、元数据一致性检查与异常检测，给出 quarantine 清单与 gating 决策，并组装满足 output_contract 的 result.json。",
+  "window": {
+    "start": "2026-10-22",
+    "end": "2026-11-21",
+    "timezone": "UTC",
+    "note": "以窗口终点 end 为'现在'，用于判定未来日期"
+  },
+  "materials_dir": "materials",
+  "output_dir": "output",
+  "output_contract": [
+    "case_id",
+    "status",
+    "window",
+    "gating_decision",
+    "integrity_report",
+    "quarantine",
+    "sources",
+    "uncertainty",
+    "change_records",
+    "limitations"
+  ]
+}

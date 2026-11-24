@@ -1,0 +1,20 @@
+{
+  "_notice": "SYNTHETIC 合成示例数据：Europe PMC 风格快照【修复版】；其中第 2 条刻意缺 title 字段，用于演示 missing_field 记录级跳过。",
+  "resultList": {
+    "result": [
+      {
+        "id": "SYN0001",
+        "doi": "10.1016/j.cell.2014.05.010",
+        "title": "Synthetic demo record B1: transcriptional dynamics (mock)",
+        "journalTitle": "Cell (synthetic fixture)",
+        "pubYear": "2026"
+      },
+      {
+        "id": "SYN0002",
+        "doi": "10.7554/eLife.00000",
+        "journalTitle": "eLife (synthetic fixture)",
+        "pubYear": "2026"
+      }
+    ]
+  }
+}

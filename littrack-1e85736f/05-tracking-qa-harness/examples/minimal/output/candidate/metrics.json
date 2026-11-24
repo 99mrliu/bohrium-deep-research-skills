@@ -1,0 +1,29 @@
+{
+  "tool": "metrics",
+  "status": "pass",
+  "metrics": {
+    "alert_precision": 0.4,
+    "quarantine_rate": 0.6,
+    "locator_resolvability": 0.8,
+    "dedup_rate": 0.2,
+    "window_coverage": 0.6,
+    "window_coverage_strict": 0.4,
+    "delivery_consistency": 1.0
+  },
+  "counts": {
+    "new_items": 5,
+    "expected_in_window": 5,
+    "quarantined_items": [
+      2,
+      3,
+      4
+    ]
+  },
+  "notes": [
+    "通过全部已运行门禁的条目 2/5",
+    "locator 可解析率: 4/5 条 locator 可解析",
+    "去重失败: 内部重复 0 条，与 previous_snapshot 重叠 1 条",
+    "期望新增 5 条，result 覆盖 3 条，缺失: ['10.1021/jacs.6c09988', '10.1101/2026.10.09.555001']",
+    "投递一致性: 5/5 条 result 条目在投递记录中"
+  ]
+}

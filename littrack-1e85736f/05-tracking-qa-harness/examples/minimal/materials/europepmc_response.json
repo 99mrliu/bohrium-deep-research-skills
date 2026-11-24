@@ -1,0 +1,33 @@
+{
+  "synthetic": true,
+  "note": "合成示例数据：模拟 Europe PMC search 响应结构，全部条目虚构。",
+  "hitCount": 2,
+  "request": {
+    "query": "FIRST_PDATE:[2026-10-01 TO 2026-10-31]",
+    "pageSize": 25
+  },
+  "resultList": {
+    "result": [
+      {
+        "id": "SYNTH001",
+        "source": "MED",
+        "doi": "10.7554/elife.90001",
+        "title": "Mechanistic basis of mitochondrial translation rescue",
+        "authorString": "Hoffmann K, Duarte M.",
+        "journalTitle": "eLife",
+        "pubYear": "2026",
+        "firstPublicationDate": "2026-10-18"
+      },
+      {
+        "id": "SYNTH002",
+        "source": "PPR",
+        "doi": "10.1101/2026.10.09.555001",
+        "title": "Deep generative priors for cryo-EM heterogeneity",
+        "authorString": "Petrov I, Nakamura H.",
+        "journalTitle": "bioRxiv",
+        "pubYear": "2026",
+        "firstPublicationDate": "2026-10-09"
+      }
+    ]
+  }
+}

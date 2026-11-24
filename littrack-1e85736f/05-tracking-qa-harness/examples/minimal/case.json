@@ -1,0 +1,29 @@
+{
+  "case_id": "synthetic-qa-demo-001",
+  "synthetic": true,
+  "note": "合成示例（synthetic）：本案例全部数据由 tracking-qa-harness 作者为演示 QA 门禁而虚构，题录、DOI、日期、作者均不代表任何真实文献或检索结果。DOI 仅借用真实存在的 DOI 前缀格式。",
+  "task": "对 2026-10 窗口的一次文献追踪运行产出执行质量门禁：契约校验、证据 locator 抽查、新鲜度核验、指标计算并汇总 QA 报告。",
+  "output_contract": [
+    "case_id",
+    "status",
+    "window",
+    "new_items",
+    "sources",
+    "uncertainty",
+    "change_records"
+  ],
+  "window": {
+    "label": "2026-10",
+    "start": "2026-10-01",
+    "end": "2026-10-31",
+    "timezone": "UTC"
+  },
+  "materials": {
+    "sources": [
+      "materials/crossref_response.json",
+      "materials/europepmc_response.json"
+    ],
+    "previous_snapshot": "materials/previous_snapshot.json",
+    "delivery_log": "materials/delivery_log.json"
+  }
+}

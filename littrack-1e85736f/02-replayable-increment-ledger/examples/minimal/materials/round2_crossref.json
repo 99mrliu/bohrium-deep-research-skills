@@ -1,0 +1,35 @@
+{
+  "_synthetic": true,
+  "_note": "SYNTHETIC example data; NOT a real Crossref response. DOI 仅借用真实存在的格式，内容全部虚构。",
+  "status": "ok",
+  "message-type": "work-list",
+  "message": {
+    "total-results": 2,
+    "query": {"search-terms": "battery degradation graph networks"},
+    "items": [
+      {
+        "DOI": "10.1038/s41586-025-00001-x",
+        "type": "journal-article",
+        "title": ["Graph networks for battery degradation: a synthetic study"],
+        "container-title": ["Synthetic Nature Letters"],
+        "issued": {"date-parts": [[2025, 6, 12]]},
+        "author": [{"family": "Li", "given": "H.", "sequence": "first"}, {"family": "Wang", "given": "Y."}],
+        "publisher": "Synthetic Example Press",
+        "relation": {
+          "has-preprint": [
+            {"id-type": "uri", "id": "https://arxiv.org/abs/2506.01234v2", "asserted-by": "publisher"}
+          ]
+        }
+      },
+      {
+        "DOI": "10.1038/Nature12373",
+        "type": "journal-article",
+        "title": ["A synthetic study on lithium migration in solid electrolytes"],
+        "container-title": ["Synthetic Materials Letters"],
+        "issued": {"date-parts": [[2025, 6, 9]]},
+        "author": [{"family": "Chen", "given": "Li", "sequence": "first"}],
+        "publisher": "Synthetic Example Press"
+      }
+    ]
+  }
+}

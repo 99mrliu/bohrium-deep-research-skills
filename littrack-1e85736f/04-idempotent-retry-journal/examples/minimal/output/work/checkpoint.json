@@ -1,0 +1,39 @@
+{
+  "case_id": "synthetic-demo-001",
+  "version": 1,
+  "completed": {
+    "crossref_a|2026-W47": {
+      "done_at": "2026-11-24T08:53:30Z",
+      "run_no": 1,
+      "delivered": 2,
+      "dedup_skipped": 0,
+      "records_skipped": [],
+      "note": "ok"
+    },
+    "publisher_c|2026-W47": {
+      "done_at": "2026-11-24T08:53:30Z",
+      "run_no": 1,
+      "delivered": 0,
+      "dedup_skipped": 0,
+      "records_skipped": [],
+      "note": "empty_window"
+    },
+    "eupmc_b|2026-W47": {
+      "done_at": "2026-11-24T08:53:30Z",
+      "run_no": 2,
+      "delivered": 1,
+      "dedup_skipped": 0,
+      "records_skipped": [
+        {
+          "locator": "materials/source_b.json#/resultList/result/1",
+          "failure_class": "missing_field",
+          "missing": [
+            "title"
+          ]
+        }
+      ],
+      "note": "ok"
+    }
+  },
+  "degraded": {}
+}

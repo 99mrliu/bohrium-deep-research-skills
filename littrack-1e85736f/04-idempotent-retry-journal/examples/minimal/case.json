@@ -1,0 +1,21 @@
+{
+  "case_id": "synthetic-demo-001",
+  "notice": "SYNTHETIC EXAMPLE / 合成示例：本文件及 materials/ 下全部数据均为人工构造，仅用于演示 idempotent-retry-journal 的失败重试与幂等恢复流程；其中 DOI 仅为真实存在的格式样例，与真实文献追踪任务无关。",
+  "task": "汇总窗口 2026-W47 内三个来源的新增题录。所有源响应已固化为 materials/ 下的本地 JSON 快照，全程离线。要求：失败可恢复、重跑幂等、零二次推送；不可用源诚实降级并标注。",
+  "window": {"id": "2026-W47", "start": "2026-11-16", "end": "2026-11-22"},
+  "sources": [
+    {"source_id": "crossref_a", "material": "materials/source_a.json", "windows": ["2026-W47"]},
+    {"source_id": "eupmc_b", "material": "materials/source_b.json", "windows": ["2026-W47"]},
+    {"source_id": "publisher_c", "material": "materials/source_c.json", "windows": ["2026-W47"]}
+  ],
+  "output_contract": [
+    "case_id",
+    "status",
+    "window",
+    "items",
+    "degraded_sources",
+    "sources",
+    "uncertainty",
+    "change_records"
+  ]
+}

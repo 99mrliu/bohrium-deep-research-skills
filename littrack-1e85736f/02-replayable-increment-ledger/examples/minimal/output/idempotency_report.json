@@ -1,0 +1,19 @@
+{
+  "deliveries_after_rerun": 0,
+  "explanation": "同一轮在相同快照上重跑：零追加、零新事件、零二次投递，幂等性成立。",
+  "journal_byte_identical_after_rerun": true,
+  "journal_path": "examples/minimal/output/increment_journal.jsonl",
+  "journal_sha256_before": "0ac79db08d0d2148e4bbe46b8f9753cabb46ea40fe6c2cadb681ccc95ccacf4b",
+  "new_events_after_rerun": 0,
+  "record_run_returncode": 0,
+  "record_run_stderr": "",
+  "record_run_stdout": "{\"appended\": false, \"run_id\": \"run-9b93e0cd3e54c0a6\", \"reason\": \"run-already-recorded-idempotent-noop\"}",
+  "rerun_appended": false,
+  "rerun_reason": "run-already-recorded-idempotent-noop",
+  "rerun_run_id": "run-9b93e0cd3e54c0a6",
+  "status": "pass",
+  "window": {
+    "end_utc": "2025-06-15T00:00:00Z",
+    "start_utc": "2025-06-08T00:00:00Z"
+  }
+}

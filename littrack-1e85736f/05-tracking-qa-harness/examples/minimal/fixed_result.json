@@ -1,0 +1,96 @@
+{
+  "case_id": "synthetic-qa-demo-001",
+  "status": "complete",
+  "synthetic": true,
+  "note": "合成示例：对 candidate_result.json 的三处错误修复后的产出，QA 门禁应全部通过。",
+  "window": {"start": "2026-10-01", "end": "2026-10-31"},
+  "new_items": [
+    {
+      "doi": "10.1038/s41586-026-00011-2",
+      "title": "Coherent control of dipolar spin ensembles at room temperature",
+      "published_date": "2026-10-12",
+      "authors": ["Wei Zhang", "Yan Li"],
+      "source": "crossref",
+      "locator": "materials/crossref_response.json#/message/items/0"
+    },
+    {
+      "doi": "10.1126/science.adq1234",
+      "title": "Single-cell chromatin accessibility atlas of regenerating liver",
+      "published_date": "2026-10-05",
+      "authors": ["Maria Chen", "Jie Liu"],
+      "source": "crossref",
+      "locator": "materials/crossref_response.json#/message/items/1"
+    },
+    {
+      "doi": "10.1021/jacs.6c09988",
+      "title": "Photocatalytic C-H amidation with earth-abundant iron complexes",
+      "published_date": "2026-10-28",
+      "authors": ["Anna Schmidt", "Rui Wang"],
+      "source": "crossref",
+      "locator": "materials/crossref_response.json#/message/items/2"
+    },
+    {
+      "doi": "10.7554/elife.90001",
+      "title": "Mechanistic basis of mitochondrial translation rescue",
+      "published_date": "2026-10-18",
+      "authors": ["K. Hoffmann", "M. Duarte"],
+      "source": "europepmc",
+      "locator": "materials/europepmc_response.json#/resultList/result/0"
+    },
+    {
+      "doi": "10.1101/2026.10.09.555001",
+      "title": "Deep generative priors for cryo-EM heterogeneity",
+      "published_date": "2026-10-09",
+      "authors": ["I. Petrov", "H. Nakamura"],
+      "source": "europepmc",
+      "locator": "materials/europepmc_response.json#/resultList/result/1"
+    }
+  ],
+  "sources": [
+    {
+      "path": "materials/crossref_response.json",
+      "type": "crossref",
+      "note": "本地固化题录快照（合成）"
+    },
+    {
+      "path": "materials/europepmc_response.json",
+      "type": "europepmc",
+      "note": "本地固化题录快照（合成）"
+    },
+    {
+      "path": "materials/previous_snapshot.json",
+      "type": "snapshot",
+      "note": "增量导入状态快照（合成），用于去重"
+    }
+  ],
+  "uncertainty": [
+    "Europe PMC 条目 authors 字段按 authorString 转写，仅用于展示；以源记录为准。"
+  ],
+  "change_records": [
+    {
+      "type": "qa-fix",
+      "at": "2026-11-01T09:30:00Z",
+      "message": "修复 1：new_items[2] (10.7554/elife.90001) locator 由不可解析的 /resultList/result/7 更正为 /resultList/result/0。"
+    },
+    {
+      "type": "qa-fix",
+      "at": "2026-11-01T09:30:00Z",
+      "message": "修复 2：移除 new_items[3] (10.1016/j.cell.2026.08.015)，其发表日期 2026-08-20 落在窗口外且无 backfill 标记。"
+    },
+    {
+      "type": "qa-fix",
+      "at": "2026-11-01T09:30:00Z",
+      "message": "修复 3：移除 new_items[4] (10.1038/s41586-026-00001-x)，其已存在于 previous_snapshot（旧文重报）。"
+    },
+    {
+      "type": "qa-fix",
+      "at": "2026-11-01T09:35:00Z",
+      "message": "补录遗漏的窗口内新增 10.1021/jacs.6c09988 与 10.1101/2026.10.09.555001，覆盖率恢复 100%。"
+    },
+    {
+      "type": "qa-conclusion",
+      "at": "2026-11-01T09:40:00Z",
+      "message": "QA harness 全部门禁通过（overall_status=pass），见 output/fixed/qa_report.json。"
+    }
+  ]
+}

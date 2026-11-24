@@ -1,0 +1,36 @@
+{
+  "rule": "对每条接缝要求 prev.end == next.start（gap_seconds=0 且 overlap_seconds=0）",
+  "seams": [
+    {
+      "seam": "W2026-10-05 -> W2026-10-12",
+      "prev_end": "2026-10-12T00:00:00Z",
+      "next_start": "2026-10-12T00:00:00Z",
+      "equal": true,
+      "gap_seconds": 0.0,
+      "overlap_seconds": 0.0,
+      "pass": true
+    },
+    {
+      "seam": "W2026-10-12 -> W2026-10-19",
+      "prev_end": "2026-10-19T00:00:00Z",
+      "next_start": "2026-10-19T00:00:00Z",
+      "equal": true,
+      "gap_seconds": 0.0,
+      "overlap_seconds": 0.0,
+      "pass": true
+    },
+    {
+      "seam": "W2026-10-19 -> W2026-10-26",
+      "prev_end": "2026-10-26T00:00:00Z",
+      "next_start": "2026-10-26T00:00:00Z",
+      "equal": true,
+      "gap_seconds": 0.0,
+      "overlap_seconds": 0.0,
+      "pass": true
+    }
+  ],
+  "overall_pass": true,
+  "inputs": {
+    "window_plan": "/Users/liuhengshen/Desktop/bhr_product/littrack-five/bundles/03-window-backfill-scheduler/examples/minimal/output/window_plan.json"
+  }
+}

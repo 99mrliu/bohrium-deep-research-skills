@@ -1,0 +1,21 @@
+{
+  "_synthetic": true,
+  "_note": "SYNTHETIC example data; NOT a real Crossref response. DOI 10.1234/... 为保留示例前缀。",
+  "status": "ok",
+  "message-type": "work-list",
+  "message": {
+    "total-results": 1,
+    "query": {"search-terms": "sulfide solid electrolytes"},
+    "items": [
+      {
+        "DOI": "10.1234/synth.electrolyte.0001",
+        "type": "journal-article",
+        "title": ["Baseline survey of sulfide solid electrolytes (synthetic example record)"],
+        "container-title": ["Journal of Synthetic Examples"],
+        "issued": {"date-parts": [[2025, 5, 28]]},
+        "author": [{"family": "Zhang", "given": "Wei", "sequence": "first"}],
+        "publisher": "Synthetic Example Press"
+      }
+    ]
+  }
+}

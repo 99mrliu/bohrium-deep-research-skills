@@ -1,0 +1,30 @@
+{
+  "case_id": "challenge-1e85736f-synthetic-window-demo-001",
+  "synthetic": true,
+  "synthetic_note": "本文件及 examples/minimal/ 下全部数据均为 Skill 作者新造的合成示例，仅 DOI 字符串借用真实存在的格式样例，不对应任何真实抓取结果。",
+  "task": "给定上一轮窗口状态快照与两个源题录响应快照，接续生成 7 天 UTC 窗口链并证明无缝；归一化条目日期；按 [start, end) 判定归属；补抓延迟入库条目；输出 result.json。",
+  "window_config": {
+    "window_length_days": 7,
+    "timezone": "UTC",
+    "new_windows": 1,
+    "boundary_rule": "[start, end)"
+  },
+  "materials": [
+    "materials/crossref_response.json",
+    "materials/europmc_response.json"
+  ],
+  "previous_snapshot": "previous_snapshot.json",
+  "output_contract": [
+    "case_id",
+    "status",
+    "window_plan",
+    "seam_proof",
+    "current_window_additions",
+    "backfill_events",
+    "deferred_items",
+    "undated_items",
+    "sources",
+    "uncertainty",
+    "change_records"
+  ]
+}

@@ -1,0 +1,89 @@
+{
+  "tool": "freshness_check",
+  "status": "pass",
+  "summary": {
+    "checks": 13,
+    "errors": 0,
+    "warnings": 0
+  },
+  "checks": [
+    {
+      "id": "window.declared",
+      "status": "pass",
+      "message": "追踪窗口: 2026-10-01 ~ 2026-10-31（闭区间）",
+      "severity": "info"
+    },
+    {
+      "id": "window.consistent",
+      "status": "pass",
+      "message": "result.window 与 case.window 一致",
+      "severity": "info"
+    },
+    {
+      "id": "snapshot.loaded",
+      "status": "pass",
+      "message": "previous_snapshot 已载入: /Users/liuhengshen/Desktop/bhr_product/littrack-five/bundles/05-tracking-qa-harness/examples/minimal/materials/previous_snapshot.json（3 个已知 DOI）",
+      "severity": "info"
+    },
+    {
+      "id": "item[0].window",
+      "status": "pass",
+      "message": "new_items[0] (10.1038/s41586-026-00011-2) 日期 2026-10-12 在窗口 2026-10-01~2026-10-31 内",
+      "severity": "info"
+    },
+    {
+      "id": "item[0].dedup",
+      "status": "pass",
+      "message": "new_items[0] (10.1038/s41586-026-00011-2) 不在 previous_snapshot 中",
+      "severity": "info"
+    },
+    {
+      "id": "item[1].window",
+      "status": "pass",
+      "message": "new_items[1] (10.1126/science.adq1234) 日期 2026-10-05 在窗口 2026-10-01~2026-10-31 内",
+      "severity": "info"
+    },
+    {
+      "id": "item[1].dedup",
+      "status": "pass",
+      "message": "new_items[1] (10.1126/science.adq1234) 不在 previous_snapshot 中",
+      "severity": "info"
+    },
+    {
+      "id": "item[2].window",
+      "status": "pass",
+      "message": "new_items[2] (10.1021/jacs.6c09988) 日期 2026-10-28 在窗口 2026-10-01~2026-10-31 内",
+      "severity": "info"
+    },
+    {
+      "id": "item[2].dedup",
+      "status": "pass",
+      "message": "new_items[2] (10.1021/jacs.6c09988) 不在 previous_snapshot 中",
+      "severity": "info"
+    },
+    {
+      "id": "item[3].window",
+      "status": "pass",
+      "message": "new_items[3] (10.7554/elife.90001) 日期 2026-10-18 在窗口 2026-10-01~2026-10-31 内",
+      "severity": "info"
+    },
+    {
+      "id": "item[3].dedup",
+      "status": "pass",
+      "message": "new_items[3] (10.7554/elife.90001) 不在 previous_snapshot 中",
+      "severity": "info"
+    },
+    {
+      "id": "item[4].window",
+      "status": "pass",
+      "message": "new_items[4] (10.1101/2026.10.09.555001) 日期 2026-10-09 在窗口 2026-10-01~2026-10-31 内",
+      "severity": "info"
+    },
+    {
+      "id": "item[4].dedup",
+      "status": "pass",
+      "message": "new_items[4] (10.1101/2026.10.09.555001) 不在 previous_snapshot 中",
+      "severity": "info"
+    }
+  ]
+}

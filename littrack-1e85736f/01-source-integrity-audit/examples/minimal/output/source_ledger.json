@@ -1,0 +1,87 @@
+{
+  "generated_by": "hash_ledger.py",
+  "materials_dir": "/Users/liuhengshen/Desktop/bhr_product/littrack-five/bundles/01-source-integrity-audit/examples/minimal/materials",
+  "algorithm": "sha256",
+  "total_files": 6,
+  "total_bytes": 4657,
+  "files": [
+    {
+      "path": "/Users/liuhengshen/Desktop/bhr_product/littrack-five/bundles/01-source-integrity-audit/examples/minimal/materials/arxiv_response.json",
+      "locator": "/Users/liuhengshen/Desktop/bhr_product/littrack-five/bundles/01-source-integrity-audit/examples/minimal/materials/arxiv_response.json#",
+      "sha256": "682d712ec3f8b0b0c9824a4076eb3e5069dba5e8b801f8733fd0f9bf6f5a8686",
+      "bytes": 664,
+      "kind": "source_snapshot",
+      "source": "arxiv",
+      "frozen_at": "2026-11-18T00:00:00Z",
+      "frozen_at_locator": "/Users/liuhengshen/Desktop/bhr_product/littrack-five/bundles/01-source-integrity-audit/examples/minimal/materials/arxiv_response.json#/snapshot_frozen_at",
+      "record_count": 2,
+      "parse_error": null,
+      "content_duplicate_of": null
+    },
+    {
+      "path": "/Users/liuhengshen/Desktop/bhr_product/littrack-five/bundles/01-source-integrity-audit/examples/minimal/materials/crossref_response.json",
+      "locator": "/Users/liuhengshen/Desktop/bhr_product/littrack-five/bundles/01-source-integrity-audit/examples/minimal/materials/crossref_response.json#",
+      "sha256": "fe39b5fa233d214714ef6d00c24e277324dcf5e1a6ec68af0a7483e308f483e4",
+      "bytes": 1431,
+      "kind": "source_snapshot",
+      "source": "crossref",
+      "frozen_at": "2026-11-20T08:00:00Z",
+      "frozen_at_locator": "/Users/liuhengshen/Desktop/bhr_product/littrack-five/bundles/01-source-integrity-audit/examples/minimal/materials/crossref_response.json#/snapshot_frozen_at",
+      "record_count": 4,
+      "parse_error": null,
+      "content_duplicate_of": null
+    },
+    {
+      "path": "/Users/liuhengshen/Desktop/bhr_product/littrack-five/bundles/01-source-integrity-audit/examples/minimal/materials/crossref_snapshot_v1.json",
+      "locator": "/Users/liuhengshen/Desktop/bhr_product/littrack-five/bundles/01-source-integrity-audit/examples/minimal/materials/crossref_snapshot_v1.json#",
+      "sha256": "f1037b37e4b67ed3b0bc08bd5f5922a4c961c8006e2f7c7f3bd3f8aefa35e330",
+      "bytes": 471,
+      "kind": "versioned_snapshot",
+      "source": "crossref-archive",
+      "frozen_at": "2026-09-30T00:00:00Z",
+      "frozen_at_locator": "/Users/liuhengshen/Desktop/bhr_product/littrack-five/bundles/01-source-integrity-audit/examples/minimal/materials/crossref_snapshot_v1.json#/snapshot_frozen_at",
+      "record_count": 1,
+      "parse_error": null,
+      "content_duplicate_of": null
+    },
+    {
+      "path": "/Users/liuhengshen/Desktop/bhr_product/littrack-five/bundles/01-source-integrity-audit/examples/minimal/materials/crossref_snapshot_v2.json",
+      "locator": "/Users/liuhengshen/Desktop/bhr_product/littrack-five/bundles/01-source-integrity-audit/examples/minimal/materials/crossref_snapshot_v2.json#",
+      "sha256": "006141a85c3a804b51b98d02448b45ec3a3d372d68eb3935a98a688eb54b6c16",
+      "bytes": 586,
+      "kind": "versioned_snapshot",
+      "source": "crossref-archive",
+      "frozen_at": "2026-10-31T00:00:00Z",
+      "frozen_at_locator": "/Users/liuhengshen/Desktop/bhr_product/littrack-five/bundles/01-source-integrity-audit/examples/minimal/materials/crossref_snapshot_v2.json#/snapshot_frozen_at",
+      "record_count": 1,
+      "parse_error": null,
+      "content_duplicate_of": null
+    },
+    {
+      "path": "/Users/liuhengshen/Desktop/bhr_product/littrack-five/bundles/01-source-integrity-audit/examples/minimal/materials/europepmc_response.json",
+      "locator": "/Users/liuhengshen/Desktop/bhr_product/littrack-five/bundles/01-source-integrity-audit/examples/minimal/materials/europepmc_response.json#",
+      "sha256": "2a6c9e0f9442684283893676b72e9d8ed61803184df36ee1970183ffab86413e",
+      "bytes": 946,
+      "kind": "source_snapshot",
+      "source": "europepmc",
+      "frozen_at": "2026-11-19T12:30:00Z",
+      "frozen_at_locator": "/Users/liuhengshen/Desktop/bhr_product/littrack-five/bundles/01-source-integrity-audit/examples/minimal/materials/europepmc_response.json#/snapshot_frozen_at",
+      "record_count": 3,
+      "parse_error": null,
+      "content_duplicate_of": null
+    },
+    {
+      "path": "/Users/liuhengshen/Desktop/bhr_product/littrack-five/bundles/01-source-integrity-audit/examples/minimal/materials/previous_snapshot.json",
+      "locator": "/Users/liuhengshen/Desktop/bhr_product/littrack-five/bundles/01-source-integrity-audit/examples/minimal/materials/previous_snapshot.json#",
+      "sha256": "56287ea63a21889af205b20eb214d4dc69d11328a3aecaa15ed9d629a225ccf8",
+      "bytes": 559,
+      "kind": "source_snapshot",
+      "source": null,
+      "frozen_at": "2026-11-01T00:00:00Z",
+      "frozen_at_locator": "/Users/liuhengshen/Desktop/bhr_product/littrack-five/bundles/01-source-integrity-audit/examples/minimal/materials/previous_snapshot.json#/taken_at",
+      "record_count": null,
+      "parse_error": null,
+      "content_duplicate_of": null
+    }
+  ]
+}

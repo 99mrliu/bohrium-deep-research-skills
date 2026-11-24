@@ -1,0 +1,165 @@
+{
+  "materials": [
+    "materials/crossref_response.json",
+    "materials/europmc_response.json"
+  ],
+  "item_count": 6,
+  "items": [
+    {
+      "doi": "10.1038/nature12373",
+      "title": "Synthetic demo: late-indexed condensed matter study",
+      "source": "crossref",
+      "source_file": "materials/crossref_response.json",
+      "item_locator": "materials/crossref_response.json#/items/0",
+      "published": {
+        "earliest": "2026-10-08T00:00:00Z",
+        "latest": "2026-10-08T23:59:59Z",
+        "precision": "day",
+        "raw": {
+          "date-parts": [
+            [
+              2026,
+              10,
+              8
+            ]
+          ]
+        },
+        "field": "published",
+        "locator": "materials/crossref_response.json#/items/0/published"
+      },
+      "indexed": {
+        "earliest": "2026-10-21T09:14:32Z",
+        "latest": "2026-10-21T09:14:32Z",
+        "precision": "second",
+        "raw": "2026-10-21T09:14:32Z",
+        "field": "indexed",
+        "locator": "materials/crossref_response.json#/items/0/indexed"
+      },
+      "unparseable_published": null
+    },
+    {
+      "doi": "10.1126/science.adr0001",
+      "title": "Synthetic demo: boundary article at window start",
+      "source": "crossref",
+      "source_file": "materials/crossref_response.json",
+      "item_locator": "materials/crossref_response.json#/items/1",
+      "published": {
+        "earliest": "2026-10-19T00:00:00Z",
+        "latest": "2026-10-19T23:59:59Z",
+        "precision": "day",
+        "raw": {
+          "date-parts": [
+            [
+              2026,
+              10,
+              19
+            ]
+          ]
+        },
+        "field": "published",
+        "locator": "materials/crossref_response.json#/items/1/published"
+      },
+      "indexed": {
+        "earliest": "2026-10-19T06:05:11Z",
+        "latest": "2026-10-19T06:05:11Z",
+        "precision": "second",
+        "raw": "2026-10-19T06:05:11Z",
+        "field": "indexed",
+        "locator": "materials/crossref_response.json#/items/1/indexed"
+      },
+      "unparseable_published": null
+    },
+    {
+      "doi": "10.7554/eLife.99001",
+      "title": "Synthetic demo: year-only precision review",
+      "source": "crossref",
+      "source_file": "materials/crossref_response.json",
+      "item_locator": "materials/crossref_response.json#/items/2",
+      "published": {
+        "earliest": "2026-01-01T00:00:00Z",
+        "latest": "2026-12-31T23:59:59Z",
+        "precision": "year",
+        "raw": {
+          "date-parts": [
+            [
+              2026
+            ]
+          ]
+        },
+        "field": "published",
+        "locator": "materials/crossref_response.json#/items/2/published"
+      },
+      "indexed": {
+        "earliest": "2026-10-22T08:40:00Z",
+        "latest": "2026-10-22T08:40:00Z",
+        "precision": "second",
+        "raw": "2026-10-22T08:40:00Z",
+        "field": "indexed",
+        "locator": "materials/crossref_response.json#/items/2/indexed"
+      },
+      "unparseable_published": null
+    },
+    {
+      "doi": "10.1016/j.cell.2026.10.001",
+      "title": "Synthetic demo: epub ahead exactly at window end",
+      "source": "europmc",
+      "source_file": "materials/europmc_response.json",
+      "item_locator": "materials/europmc_response.json#/items/0",
+      "published": {
+        "earliest": "2026-10-26T00:00:00Z",
+        "latest": "2026-10-26T00:00:00Z",
+        "precision": "second",
+        "raw": "2026-10-26T00:00:00Z",
+        "field": "published",
+        "locator": "materials/europmc_response.json#/items/0/published"
+      },
+      "indexed": {
+        "earliest": "2026-10-25T18:30:00Z",
+        "latest": "2026-10-25T18:30:00Z",
+        "precision": "second",
+        "raw": "2026-10-25T18:30:00Z",
+        "field": "indexed",
+        "locator": "materials/europmc_response.json#/items/0/indexed"
+      },
+      "unparseable_published": null
+    },
+    {
+      "doi": "10.1101/2026.10.18.654321",
+      "title": "Synthetic demo: timezone-offset preprint timestamp",
+      "source": "europmc",
+      "source_file": "materials/europmc_response.json",
+      "item_locator": "materials/europmc_response.json#/items/1",
+      "published": {
+        "earliest": "2026-10-20T00:30:00Z",
+        "latest": "2026-10-20T00:30:00Z",
+        "precision": "second",
+        "raw": "2026-10-20T08:30:00+08:00",
+        "field": "published",
+        "locator": "materials/europmc_response.json#/items/1/published"
+      },
+      "indexed": {
+        "earliest": "2026-10-21T02:00:00Z",
+        "latest": "2026-10-21T02:00:00Z",
+        "precision": "second",
+        "raw": "2026-10-21T02:00:00Z",
+        "field": "indexed",
+        "locator": "materials/europmc_response.json#/items/1/indexed"
+      },
+      "unparseable_published": null
+    },
+    {
+      "doi": "10.15252/embj.2026115001",
+      "title": "Synthetic demo: in-press record without any usable date",
+      "source": "europmc",
+      "source_file": "materials/europmc_response.json",
+      "item_locator": "materials/europmc_response.json#/items/2",
+      "published": null,
+      "indexed": null,
+      "unparseable_published": {
+        "field": "published",
+        "raw": "in press",
+        "locator": "materials/europmc_response.json#/items/2/published"
+      }
+    }
+  ]
+}

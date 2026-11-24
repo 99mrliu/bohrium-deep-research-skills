@@ -1,0 +1,30 @@
+{
+  "as_of_utc": "2025-06-01T00:00:00Z",
+  "schema": "increment-snapshot/1.0",
+  "seen_items": [
+    {
+      "arxiv_base": null,
+      "arxiv_version_max": null,
+      "dedup_key": "doi:10.1234/synth.electrolyte.0001",
+      "doi": "10.1234/synth.electrolyte.0001",
+      "first_seen_run": "run-05fee0c198cdbbcc",
+      "locator": {
+        "file": "examples/minimal/materials/round0_crossref.json",
+        "file_sha256": "63682c6419f8fbb62db7c41edbe111bd06de5798b52e587d12a05eafd3ceb5d9",
+        "json_path": "$.message.items[0]"
+      },
+      "title": "Baseline survey of sulfide solid electrolytes (synthetic example record)",
+      "title_fp": "baseline survey of sulfide solid electrolytes synthetic example record"
+    }
+  ],
+  "sources": {
+    "arxiv": {
+      "last_seen_date": null,
+      "last_seen_id": null
+    },
+    "crossref": {
+      "last_seen_date": "2025-05-28T00:00:00Z",
+      "last_seen_id": "10.1234/synth.electrolyte.0001"
+    }
+  }
+}

@@ -1,0 +1,10 @@
+{
+  "generated_by": "gate.py",
+  "decision": "proceed_with_quarantine",
+  "block_reasons": [],
+  "quarantine_count": 6,
+  "thresholds": {
+    "block_schema_failure_rate": 0.5
+  },
+  "rationale": "block=源不可用或失败率过半；proceed_with_quarantine=存在可隔离的局部异常；proceed=零异常。"
+}

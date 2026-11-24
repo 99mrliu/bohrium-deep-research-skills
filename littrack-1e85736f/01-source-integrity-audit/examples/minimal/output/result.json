@@ -1,0 +1,442 @@
+{
+  "case_id": "case-1e85736f-syn-001",
+  "status": "complete",
+  "task": "对本地固化的上游题录快照（Crossref / Europe PMC / arXiv）执行完整性与真实性校验：建立 SHA-256 哈希台账、Schema 校验、元数据一致性检查与异常检测，给出 quarantine 清单与 gating 决策，并组装满足 output_contract 的 result.json。",
+  "window": {
+    "start": "2026-10-22",
+    "end": "2026-11-21",
+    "timezone": "UTC",
+    "note": "以窗口终点 end 为'现在'，用于判定未来日期"
+  },
+  "gating_decision": {
+    "generated_by": "gate.py",
+    "decision": "proceed_with_quarantine",
+    "block_reasons": [],
+    "quarantine_count": 6,
+    "thresholds": {
+      "block_schema_failure_rate": 0.5
+    },
+    "rationale": "block=源不可用或失败率过半；proceed_with_quarantine=存在可隔离的局部异常；proceed=零异常。"
+  },
+  "integrity_report": {
+    "generated_by": "gate.py",
+    "ledger_summary": {
+      "total_files": 6,
+      "total_bytes": 4657,
+      "algorithm": "sha256",
+      "files_missing_frozen_at": [],
+      "parse_errors": [],
+      "content_duplicates": []
+    },
+    "schema_summary": {
+      "total_records": 9,
+      "failed_records": 1,
+      "failure_rate": 0.111111
+    },
+    "metadata_summary": {
+      "checked": [
+        "doi",
+        "arxiv_id",
+        "pmid",
+        "date",
+        "title",
+        "retraction/correction markers"
+      ],
+      "now_reference": "window_end（按规则以 case.json 窗口终点为'现在'）"
+    },
+    "anomaly_summary": {
+      "total": 10,
+      "by_type": {
+        "invalid_arxiv": 1,
+        "future_date": 1,
+        "invalid_doi": 1,
+        "retraction_flag": 1,
+        "invalid_pmid": 1,
+        "empty_title": 1,
+        "missing_date": 1,
+        "duplicate_in_source": 1,
+        "schema_drift": 1,
+        "source_record_disappeared": 1
+      },
+      "by_severity": {
+        "medium": 4,
+        "high": 4,
+        "low": 2
+      }
+    },
+    "anomalies": [
+      {
+        "type": "invalid_arxiv",
+        "severity": "medium",
+        "locator": "/Users/liuhengshen/Desktop/bhr_product/littrack-five/bundles/01-source-integrity-audit/examples/minimal/materials/arxiv_response.json#/records/1/arxiv_id",
+        "detail": "arXiv 号不符合新格式 YYMM.NNNNN(vN) 或旧格式 arch/NNNNNNN",
+        "evidence": "2026.abc",
+        "record_locator": "/Users/liuhengshen/Desktop/bhr_product/littrack-five/bundles/01-source-integrity-audit/examples/minimal/materials/arxiv_response.json#/records/1"
+      },
+      {
+        "type": "future_date",
+        "severity": "high",
+        "locator": "/Users/liuhengshen/Desktop/bhr_product/littrack-five/bundles/01-source-integrity-audit/examples/minimal/materials/crossref_response.json#/records/1/published",
+        "detail": "日期 2027-01-15 晚于窗口终点 2026-11-21（以窗口终点为'现在'，属未来日期）",
+        "evidence": "2027-01-15",
+        "record_locator": "/Users/liuhengshen/Desktop/bhr_product/littrack-five/bundles/01-source-integrity-audit/examples/minimal/materials/crossref_response.json#/records/1"
+      },
+      {
+        "type": "invalid_doi",
+        "severity": "high",
+        "locator": "/Users/liuhengshen/Desktop/bhr_product/littrack-five/bundles/01-source-integrity-audit/examples/minimal/materials/crossref_response.json#/records/2/doi",
+        "detail": "DOI 不符合语法 ^10\\.\\d{4,9}/\\S+$",
+        "evidence": "10.123/abc def",
+        "record_locator": "/Users/liuhengshen/Desktop/bhr_product/littrack-five/bundles/01-source-integrity-audit/examples/minimal/materials/crossref_response.json#/records/2"
+      },
+      {
+        "type": "retraction_flag",
+        "severity": "high",
+        "locator": "/Users/liuhengshen/Desktop/bhr_product/littrack-five/bundles/01-source-integrity-audit/examples/minimal/materials/crossref_response.json#/records/3",
+        "detail": "检测到撤稿标记（字段/关系/标题前缀）",
+        "evidence": [
+          {
+            "field": "retracted",
+            "value": true
+          },
+          {
+            "field": "relation.is-retraction-of",
+            "value": "10.1007/s00216-020-00000-0"
+          },
+          {
+            "field": "title",
+            "value": "RETRACTED ARTICLE: Quantum dot cellular automata at room temperature"
+          }
+        ],
+        "record_locator": "/Users/liuhengshen/Desktop/bhr_product/littrack-five/bundles/01-source-integrity-audit/examples/minimal/materials/crossref_response.json#/records/3"
+      },
+      {
+        "type": "invalid_pmid",
+        "severity": "medium",
+        "locator": "/Users/liuhengshen/Desktop/bhr_product/littrack-five/bundles/01-source-integrity-audit/examples/minimal/materials/europepmc_response.json#/records/2/pmid",
+        "detail": "PMID 应为纯数字",
+        "evidence": "39abc123",
+        "record_locator": "/Users/liuhengshen/Desktop/bhr_product/littrack-five/bundles/01-source-integrity-audit/examples/minimal/materials/europepmc_response.json#/records/2"
+      },
+      {
+        "type": "empty_title",
+        "severity": "low",
+        "locator": "/Users/liuhengshen/Desktop/bhr_product/littrack-five/bundles/01-source-integrity-audit/examples/minimal/materials/europepmc_response.json#/records/2/title",
+        "detail": "标题为空字符串",
+        "evidence": "",
+        "record_locator": "/Users/liuhengshen/Desktop/bhr_product/littrack-five/bundles/01-source-integrity-audit/examples/minimal/materials/europepmc_response.json#/records/2"
+      },
+      {
+        "type": "missing_date",
+        "severity": "low",
+        "locator": "/Users/liuhengshen/Desktop/bhr_product/littrack-five/bundles/01-source-integrity-audit/examples/minimal/materials/europepmc_response.json#/records/2",
+        "detail": "无任何日期字段（published/date/issued/...）",
+        "evidence": null,
+        "record_locator": "/Users/liuhengshen/Desktop/bhr_product/littrack-five/bundles/01-source-integrity-audit/examples/minimal/materials/europepmc_response.json#/records/2"
+      },
+      {
+        "type": "duplicate_in_source",
+        "severity": "medium",
+        "locator": "/Users/liuhengshen/Desktop/bhr_product/littrack-five/bundles/01-source-integrity-audit/examples/minimal/materials/europepmc_response.json#/records/1",
+        "detail": "与同源第 0 条题录重复（按 doi 匹配）",
+        "evidence": {
+          "match_key_kind": "doi",
+          "first_occurrence": "/Users/liuhengshen/Desktop/bhr_product/littrack-five/bundles/01-source-integrity-audit/examples/minimal/materials/europepmc_response.json#/records/0"
+        },
+        "record_locator": "/Users/liuhengshen/Desktop/bhr_product/littrack-five/bundles/01-source-integrity-audit/examples/minimal/materials/europepmc_response.json#/records/1"
+      },
+      {
+        "type": "schema_drift",
+        "severity": "medium",
+        "locator": "/Users/liuhengshen/Desktop/bhr_product/littrack-five/bundles/01-source-integrity-audit/examples/minimal/materials/crossref_snapshot_v2.json#",
+        "detail": "源 'crossref_snapshot' v1 -> v2 快照结构漂移：题录字段新增 ['author_list', 'license', 'publication_date']、消失 ['authors', 'published']",
+        "evidence": {
+          "base_snapshot": "/Users/liuhengshen/Desktop/bhr_product/littrack-five/bundles/01-source-integrity-audit/examples/minimal/materials/crossref_snapshot_v1.json",
+          "compared_snapshot": "/Users/liuhengshen/Desktop/bhr_product/littrack-five/bundles/01-source-integrity-audit/examples/minimal/materials/crossref_snapshot_v2.json",
+          "record_fields_added": [
+            "author_list",
+            "license",
+            "publication_date"
+          ],
+          "record_fields_removed": [
+            "authors",
+            "published"
+          ],
+          "top_level_fields_added": [],
+          "top_level_fields_removed": []
+        }
+      },
+      {
+        "type": "source_record_disappeared",
+        "severity": "high",
+        "locator": "/Users/liuhengshen/Desktop/bhr_product/littrack-five/bundles/01-source-integrity-audit/examples/minimal/materials/previous_snapshot.json#/imported/1",
+        "detail": "该记录此前已导入本地，但当前源快照中不存在（上游删除/改版迹象）",
+        "evidence": {
+          "source": "europepmc",
+          "record_id": "epmc-000",
+          "pmid": "37999999",
+          "imported_at": "2026-10-29T10:00:00Z"
+        }
+      }
+    ],
+    "previous_snapshot": {
+      "path": "/Users/liuhengshen/Desktop/bhr_product/littrack-five/bundles/01-source-integrity-audit/examples/minimal/materials/previous_snapshot.json",
+      "taken_at": "2026-11-01T00:00:00Z",
+      "imported_count": 2,
+      "still_present": 1,
+      "disappeared_count": 1,
+      "disappeared": [
+        {
+          "locator": "/Users/liuhengshen/Desktop/bhr_product/littrack-five/bundles/01-source-integrity-audit/examples/minimal/materials/previous_snapshot.json#/imported/1",
+          "imported_entry": {
+            "source": "europepmc",
+            "record_id": "epmc-000",
+            "pmid": "37999999",
+            "imported_at": "2026-10-29T10:00:00Z"
+          }
+        }
+      ],
+      "current_record_count": 9,
+      "new_record_count": 8
+    },
+    "quarantine_count": 6,
+    "gating_decision": "proceed_with_quarantine"
+  },
+  "quarantine": [
+    {
+      "scope": "record",
+      "record_locator": "/Users/liuhengshen/Desktop/bhr_product/littrack-five/bundles/01-source-integrity-audit/examples/minimal/materials/arxiv_response.json#/records/1",
+      "source_file": "/Users/liuhengshen/Desktop/bhr_product/littrack-five/bundles/01-source-integrity-audit/examples/minimal/materials/arxiv_response.json",
+      "locator": "/Users/liuhengshen/Desktop/bhr_product/littrack-five/bundles/01-source-integrity-audit/examples/minimal/materials/arxiv_response.json#/records/1",
+      "anomaly_types": [
+        "invalid_arxiv"
+      ],
+      "severities": [
+        "medium"
+      ],
+      "action": "exclude_from_tracking_and_alert_review",
+      "reason": "arXiv 号不符合新格式 YYMM.NNNNN(vN) 或旧格式 arch/NNNNNNN"
+    },
+    {
+      "scope": "record",
+      "record_locator": "/Users/liuhengshen/Desktop/bhr_product/littrack-five/bundles/01-source-integrity-audit/examples/minimal/materials/crossref_response.json#/records/1",
+      "source_file": "/Users/liuhengshen/Desktop/bhr_product/littrack-five/bundles/01-source-integrity-audit/examples/minimal/materials/crossref_response.json",
+      "locator": "/Users/liuhengshen/Desktop/bhr_product/littrack-five/bundles/01-source-integrity-audit/examples/minimal/materials/crossref_response.json#/records/1",
+      "anomaly_types": [
+        "future_date"
+      ],
+      "severities": [
+        "high"
+      ],
+      "action": "exclude_from_tracking_and_alert_review",
+      "reason": "日期 2027-01-15 晚于窗口终点 2026-11-21（以窗口终点为'现在'，属未来日期）"
+    },
+    {
+      "scope": "record",
+      "record_locator": "/Users/liuhengshen/Desktop/bhr_product/littrack-five/bundles/01-source-integrity-audit/examples/minimal/materials/crossref_response.json#/records/2",
+      "source_file": "/Users/liuhengshen/Desktop/bhr_product/littrack-five/bundles/01-source-integrity-audit/examples/minimal/materials/crossref_response.json",
+      "locator": "/Users/liuhengshen/Desktop/bhr_product/littrack-five/bundles/01-source-integrity-audit/examples/minimal/materials/crossref_response.json#/records/2",
+      "anomaly_types": [
+        "invalid_doi"
+      ],
+      "severities": [
+        "high"
+      ],
+      "action": "exclude_from_tracking_and_alert_review",
+      "reason": "DOI 不符合语法 ^10\\.\\d{4,9}/\\S+$"
+    },
+    {
+      "scope": "record",
+      "record_locator": "/Users/liuhengshen/Desktop/bhr_product/littrack-five/bundles/01-source-integrity-audit/examples/minimal/materials/crossref_response.json#/records/3",
+      "source_file": "/Users/liuhengshen/Desktop/bhr_product/littrack-five/bundles/01-source-integrity-audit/examples/minimal/materials/crossref_response.json",
+      "locator": "/Users/liuhengshen/Desktop/bhr_product/littrack-five/bundles/01-source-integrity-audit/examples/minimal/materials/crossref_response.json#/records/3",
+      "anomaly_types": [
+        "retraction_flag"
+      ],
+      "severities": [
+        "high"
+      ],
+      "action": "exclude_from_tracking_and_alert_review",
+      "reason": "检测到撤稿标记（字段/关系/标题前缀）"
+    },
+    {
+      "scope": "record",
+      "record_locator": "/Users/liuhengshen/Desktop/bhr_product/littrack-five/bundles/01-source-integrity-audit/examples/minimal/materials/europepmc_response.json#/records/1",
+      "source_file": "/Users/liuhengshen/Desktop/bhr_product/littrack-five/bundles/01-source-integrity-audit/examples/minimal/materials/europepmc_response.json",
+      "locator": "/Users/liuhengshen/Desktop/bhr_product/littrack-five/bundles/01-source-integrity-audit/examples/minimal/materials/europepmc_response.json#/records/1",
+      "anomaly_types": [
+        "duplicate_in_source"
+      ],
+      "severities": [
+        "medium"
+      ],
+      "action": "exclude_from_tracking_and_alert_review",
+      "reason": "与同源第 0 条题录重复（按 doi 匹配）"
+    },
+    {
+      "scope": "record",
+      "record_locator": "/Users/liuhengshen/Desktop/bhr_product/littrack-five/bundles/01-source-integrity-audit/examples/minimal/materials/europepmc_response.json#/records/2",
+      "source_file": "/Users/liuhengshen/Desktop/bhr_product/littrack-five/bundles/01-source-integrity-audit/examples/minimal/materials/europepmc_response.json",
+      "locator": "/Users/liuhengshen/Desktop/bhr_product/littrack-five/bundles/01-source-integrity-audit/examples/minimal/materials/europepmc_response.json#/records/2",
+      "anomaly_types": [
+        "invalid_pmid",
+        "empty_title",
+        "missing_date"
+      ],
+      "severities": [
+        "low",
+        "medium"
+      ],
+      "action": "exclude_from_tracking_and_alert_review",
+      "reason": "PMID 应为纯数字; 标题为空字符串; 无任何日期字段（published/date/issued/...）"
+    }
+  ],
+  "sources": [
+    {
+      "file": "/Users/liuhengshen/Desktop/bhr_product/littrack-five/bundles/01-source-integrity-audit/examples/minimal/materials/arxiv_response.json",
+      "locator": "/Users/liuhengshen/Desktop/bhr_product/littrack-five/bundles/01-source-integrity-audit/examples/minimal/materials/arxiv_response.json#",
+      "sha256": "682d712ec3f8b0b0c9824a4076eb3e5069dba5e8b801f8733fd0f9bf6f5a8686",
+      "bytes": 664,
+      "kind": "source_snapshot",
+      "source": "arxiv",
+      "frozen_at": "2026-11-18T00:00:00Z",
+      "frozen_at_locator": "/Users/liuhengshen/Desktop/bhr_product/littrack-five/bundles/01-source-integrity-audit/examples/minimal/materials/arxiv_response.json#/snapshot_frozen_at",
+      "record_count": 2
+    },
+    {
+      "file": "/Users/liuhengshen/Desktop/bhr_product/littrack-five/bundles/01-source-integrity-audit/examples/minimal/materials/crossref_response.json",
+      "locator": "/Users/liuhengshen/Desktop/bhr_product/littrack-five/bundles/01-source-integrity-audit/examples/minimal/materials/crossref_response.json#",
+      "sha256": "fe39b5fa233d214714ef6d00c24e277324dcf5e1a6ec68af0a7483e308f483e4",
+      "bytes": 1431,
+      "kind": "source_snapshot",
+      "source": "crossref",
+      "frozen_at": "2026-11-20T08:00:00Z",
+      "frozen_at_locator": "/Users/liuhengshen/Desktop/bhr_product/littrack-five/bundles/01-source-integrity-audit/examples/minimal/materials/crossref_response.json#/snapshot_frozen_at",
+      "record_count": 4
+    },
+    {
+      "file": "/Users/liuhengshen/Desktop/bhr_product/littrack-five/bundles/01-source-integrity-audit/examples/minimal/materials/crossref_snapshot_v1.json",
+      "locator": "/Users/liuhengshen/Desktop/bhr_product/littrack-five/bundles/01-source-integrity-audit/examples/minimal/materials/crossref_snapshot_v1.json#",
+      "sha256": "f1037b37e4b67ed3b0bc08bd5f5922a4c961c8006e2f7c7f3bd3f8aefa35e330",
+      "bytes": 471,
+      "kind": "versioned_snapshot",
+      "source": "crossref-archive",
+      "frozen_at": "2026-09-30T00:00:00Z",
+      "frozen_at_locator": "/Users/liuhengshen/Desktop/bhr_product/littrack-five/bundles/01-source-integrity-audit/examples/minimal/materials/crossref_snapshot_v1.json#/snapshot_frozen_at",
+      "record_count": 1
+    },
+    {
+      "file": "/Users/liuhengshen/Desktop/bhr_product/littrack-five/bundles/01-source-integrity-audit/examples/minimal/materials/crossref_snapshot_v2.json",
+      "locator": "/Users/liuhengshen/Desktop/bhr_product/littrack-five/bundles/01-source-integrity-audit/examples/minimal/materials/crossref_snapshot_v2.json#",
+      "sha256": "006141a85c3a804b51b98d02448b45ec3a3d372d68eb3935a98a688eb54b6c16",
+      "bytes": 586,
+      "kind": "versioned_snapshot",
+      "source": "crossref-archive",
+      "frozen_at": "2026-10-31T00:00:00Z",
+      "frozen_at_locator": "/Users/liuhengshen/Desktop/bhr_product/littrack-five/bundles/01-source-integrity-audit/examples/minimal/materials/crossref_snapshot_v2.json#/snapshot_frozen_at",
+      "record_count": 1
+    },
+    {
+      "file": "/Users/liuhengshen/Desktop/bhr_product/littrack-five/bundles/01-source-integrity-audit/examples/minimal/materials/europepmc_response.json",
+      "locator": "/Users/liuhengshen/Desktop/bhr_product/littrack-five/bundles/01-source-integrity-audit/examples/minimal/materials/europepmc_response.json#",
+      "sha256": "2a6c9e0f9442684283893676b72e9d8ed61803184df36ee1970183ffab86413e",
+      "bytes": 946,
+      "kind": "source_snapshot",
+      "source": "europepmc",
+      "frozen_at": "2026-11-19T12:30:00Z",
+      "frozen_at_locator": "/Users/liuhengshen/Desktop/bhr_product/littrack-five/bundles/01-source-integrity-audit/examples/minimal/materials/europepmc_response.json#/snapshot_frozen_at",
+      "record_count": 3
+    },
+    {
+      "file": "/Users/liuhengshen/Desktop/bhr_product/littrack-five/bundles/01-source-integrity-audit/examples/minimal/materials/previous_snapshot.json",
+      "locator": "/Users/liuhengshen/Desktop/bhr_product/littrack-five/bundles/01-source-integrity-audit/examples/minimal/materials/previous_snapshot.json#",
+      "sha256": "56287ea63a21889af205b20eb214d4dc69d11328a3aecaa15ed9d629a225ccf8",
+      "bytes": 559,
+      "kind": "source_snapshot",
+      "source": null,
+      "frozen_at": "2026-11-01T00:00:00Z",
+      "frozen_at_locator": "/Users/liuhengshen/Desktop/bhr_product/littrack-five/bundles/01-source-integrity-audit/examples/minimal/materials/previous_snapshot.json#/taken_at",
+      "record_count": null
+    }
+  ],
+  "uncertainty": [
+    "固化时间 frozen_at 取自各快照自带字段；离线条件下无法独立验证其真实性，只能校验其存在性与格式。",
+    "本审计校验的是本地固化材料内部的一致性（哈希、Schema、元数据、重复、漂移）；按离线约束，无法证明上游 API 响应在固化前未被篡改。",
+    "重复检测基于规范化 DOI（缺 DOI 时退化为规范化标题）；对跨源重复（同一论文同时出现在 Crossref 与 Europe PMC）不做合并判定。"
+  ],
+  "change_records": [
+    {
+      "change_type": "ledger_initialized",
+      "description": "为 6 个材料文件建立 SHA-256 内容哈希台账（共 4657 字节）",
+      "locator": "/Users/liuhengshen/Desktop/bhr_product/littrack-five/bundles/01-source-integrity-audit/examples/minimal/output/source_ledger.json",
+      "evidence": null
+    },
+    {
+      "change_type": "schema_drift",
+      "description": "源 'crossref_snapshot' v1 -> v2 快照结构漂移：题录字段新增 ['author_list', 'license', 'publication_date']、消失 ['authors', 'published']",
+      "locator": "/Users/liuhengshen/Desktop/bhr_product/littrack-five/bundles/01-source-integrity-audit/examples/minimal/materials/crossref_snapshot_v2.json#",
+      "evidence": {
+        "base_snapshot": "/Users/liuhengshen/Desktop/bhr_product/littrack-five/bundles/01-source-integrity-audit/examples/minimal/materials/crossref_snapshot_v1.json",
+        "compared_snapshot": "/Users/liuhengshen/Desktop/bhr_product/littrack-five/bundles/01-source-integrity-audit/examples/minimal/materials/crossref_snapshot_v2.json",
+        "record_fields_added": [
+          "author_list",
+          "license",
+          "publication_date"
+        ],
+        "record_fields_removed": [
+          "authors",
+          "published"
+        ],
+        "top_level_fields_added": [],
+        "top_level_fields_removed": []
+      }
+    },
+    {
+      "change_type": "source_record_disappeared",
+      "description": "该记录此前已导入本地，但当前源快照中不存在（上游删除/改版迹象）",
+      "locator": "/Users/liuhengshen/Desktop/bhr_product/littrack-five/bundles/01-source-integrity-audit/examples/minimal/materials/previous_snapshot.json#/imported/1",
+      "evidence": {
+        "source": "europepmc",
+        "record_id": "epmc-000",
+        "pmid": "37999999",
+        "imported_at": "2026-10-29T10:00:00Z"
+      }
+    },
+    {
+      "change_type": "previous_snapshot_comparison",
+      "description": "与本地增量导入状态对比：此前导入 2 条，当前源快照中仍在 1 条、消失 1 条、新增 8 条",
+      "locator": "/Users/liuhengshen/Desktop/bhr_product/littrack-five/bundles/01-source-integrity-audit/examples/minimal/materials/previous_snapshot.json",
+      "evidence": {
+        "path": "/Users/liuhengshen/Desktop/bhr_product/littrack-five/bundles/01-source-integrity-audit/examples/minimal/materials/previous_snapshot.json",
+        "taken_at": "2026-11-01T00:00:00Z",
+        "imported_count": 2,
+        "still_present": 1,
+        "disappeared_count": 1,
+        "disappeared": [
+          {
+            "locator": "/Users/liuhengshen/Desktop/bhr_product/littrack-five/bundles/01-source-integrity-audit/examples/minimal/materials/previous_snapshot.json#/imported/1",
+            "imported_entry": {
+              "source": "europepmc",
+              "record_id": "epmc-000",
+              "pmid": "37999999",
+              "imported_at": "2026-10-29T10:00:00Z"
+            }
+          }
+        ],
+        "current_record_count": 9,
+        "new_record_count": 8
+      }
+    }
+  ],
+  "limitations": [],
+  "artifacts": {
+    "source_ledger": "/Users/liuhengshen/Desktop/bhr_product/littrack-five/bundles/01-source-integrity-audit/examples/minimal/output/source_ledger.json",
+    "schema_report": "/Users/liuhengshen/Desktop/bhr_product/littrack-five/bundles/01-source-integrity-audit/examples/minimal/output/schema_report.json",
+    "anomaly_report": "/Users/liuhengshen/Desktop/bhr_product/littrack-five/bundles/01-source-integrity-audit/examples/minimal/output/anomaly_report.json",
+    "integrity_report": "/Users/liuhengshen/Desktop/bhr_product/littrack-five/bundles/01-source-integrity-audit/examples/minimal/output/integrity_report.json",
+    "quarantine": "/Users/liuhengshen/Desktop/bhr_product/littrack-five/bundles/01-source-integrity-audit/examples/minimal/output/quarantine.json",
+    "gating_decision": "/Users/liuhengshen/Desktop/bhr_product/littrack-five/bundles/01-source-integrity-audit/examples/minimal/output/gating_decision.json"
+  },
+  "synthetic": true,
+  "synthetic_note": "合成示例：本文件及 materials/ 下全部数据均为演示而编造，不代表真实检索结果。个别 DOI 借用了真实存在文献的格式（如 10.1038/nature12373），仅为格式演示用途。"
+}

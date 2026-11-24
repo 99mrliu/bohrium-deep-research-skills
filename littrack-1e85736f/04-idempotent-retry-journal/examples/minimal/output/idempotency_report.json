@@ -1,0 +1,25 @@
+{
+  "phases": {
+    "run1": {
+      "status": "partial",
+      "journal_entries": 5,
+      "deliveries": 2,
+      "degraded": [
+        "eupmc_b"
+      ]
+    },
+    "run2": {
+      "status": "ok",
+      "new_journal_entries": 1,
+      "new_deliveries": 1
+    },
+    "run3": {
+      "status": "ok",
+      "new_journal_entries": 0,
+      "new_deliveries": 0
+    }
+  },
+  "duplicate_delivery_suppressed": true,
+  "verdict": "idempotent",
+  "all_checks_passed": true
+}

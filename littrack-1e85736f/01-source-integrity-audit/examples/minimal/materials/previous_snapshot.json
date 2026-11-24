@@ -1,0 +1,20 @@
+{
+  "synthetic": true,
+  "synthetic_note": "合成示例数据：模拟'本地增量导入状态'快照，记录此前已导入本地的题录标识。",
+  "snapshot_type": "local_incremental_import_state",
+  "taken_at": "2026-11-01T00:00:00Z",
+  "imported": [
+    {
+      "source": "crossref",
+      "record_id": "cr-001",
+      "doi": "10.1038/nature12373",
+      "imported_at": "2026-10-30T09:00:00Z"
+    },
+    {
+      "source": "europepmc",
+      "record_id": "epmc-000",
+      "pmid": "37999999",
+      "imported_at": "2026-10-29T10:00:00Z"
+    }
+  ]
+}

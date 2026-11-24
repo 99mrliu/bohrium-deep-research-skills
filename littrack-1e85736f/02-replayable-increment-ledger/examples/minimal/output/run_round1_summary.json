@@ -1,0 +1,138 @@
+{
+  "appended": true,
+  "counts": {
+    "candidates": 3,
+    "duplicates": 0,
+    "in_window": 2,
+    "new": 2,
+    "skipped_no_date": 0,
+    "skipped_out_of_window": 1,
+    "version_updates": 0
+  },
+  "deliveries": [
+    {
+      "channel": "log",
+      "decision": "new",
+      "dedup_key": "arxiv:2506.01234",
+      "delivered_to": "journal-log",
+      "delivery_hash": "9a89690580f7223b5def6089a93dae4f29f38d409a03e91244b0199deba7dd55"
+    },
+    {
+      "channel": "log",
+      "decision": "new",
+      "dedup_key": "doi:10.1038/nature12373",
+      "delivered_to": "journal-log",
+      "delivery_hash": "99c0fc4e6f1a02d78a95fab3e460cef7b669c92602c6cfac2ebbf49532a62b8c"
+    }
+  ],
+  "events": [
+    {
+      "decision": "new",
+      "dedup_key": "arxiv:2506.01234",
+      "identifiers": {
+        "arxiv_base": "2506.01234",
+        "arxiv_version": 1,
+        "doi": null,
+        "title_fp": "graph networks for battery degradation a synthetic study"
+      },
+      "item_date": "2025-06-05T00:00:00Z",
+      "item_index": 0,
+      "key_rule": "K2-arxiv",
+      "locator": {
+        "file": "examples/minimal/materials/round1_arxiv.json",
+        "file_sha256": "13d52e4fa03972304bb8e70250f3b5b4af87c3d5139da94736fe15211ac438ae",
+        "json_path": "$.entries[0]"
+      },
+      "matched": null,
+      "rule": "R0-new",
+      "source": "arxiv",
+      "title": "Graph networks for battery degradation: a synthetic study"
+    },
+    {
+      "decision": "skipped",
+      "dedup_key": "arxiv:2505.99999",
+      "identifiers": {
+        "arxiv_base": "2505.99999",
+        "arxiv_version": 1,
+        "doi": null,
+        "title_fp": "old preprint outside the window synthetic filler"
+      },
+      "item_date": "2025-05-20T00:00:00Z",
+      "item_index": 1,
+      "key_rule": "K2-arxiv",
+      "locator": {
+        "file": "examples/minimal/materials/round1_arxiv.json",
+        "file_sha256": "13d52e4fa03972304bb8e70250f3b5b4af87c3d5139da94736fe15211ac438ae",
+        "json_path": "$.entries[1]"
+      },
+      "matched": null,
+      "rule": "RX-out-of-window",
+      "source": "arxiv",
+      "title": "Old preprint outside the window (synthetic filler)"
+    },
+    {
+      "decision": "new",
+      "dedup_key": "doi:10.1038/nature12373",
+      "identifiers": {
+        "arxiv_base": null,
+        "arxiv_version": null,
+        "doi": "10.1038/nature12373",
+        "title_fp": "a synthetic study on lithium migration in solid electrolytes"
+      },
+      "item_date": "2025-06-03T00:00:00Z",
+      "item_index": 0,
+      "key_rule": "K1-doi",
+      "locator": {
+        "file": "examples/minimal/materials/round1_crossref.json",
+        "file_sha256": "e05204b997269c856043b8602ae9f02c39278abd2704d242fee2f6246028ea26",
+        "json_path": "$.message.items[0]"
+      },
+      "matched": null,
+      "rule": "R0-new",
+      "source": "crossref",
+      "title": "A synthetic study on lithium migration in solid electrolytes"
+    }
+  ],
+  "journal_line": 2,
+  "journal_path": "examples/minimal/output/increment_journal.jsonl",
+  "journal_sha256": "e1d742d2758e589d0a3bfdea3c05bff16c985a45db50b5e05ff42bbd82effaba",
+  "run_id": "run-cb841f8b6f944666",
+  "snapshot_in": "examples/minimal/output/snapshot_prev.json",
+  "snapshot_out": "examples/minimal/output/snapshot_round1.json",
+  "sources": [
+    {
+      "name": "crossref",
+      "path": "examples/minimal/materials/round1_crossref.json",
+      "sha256": "e05204b997269c856043b8602ae9f02c39278abd2704d242fee2f6246028ea26"
+    },
+    {
+      "name": "arxiv",
+      "path": "examples/minimal/materials/round1_arxiv.json",
+      "sha256": "13d52e4fa03972304bb8e70250f3b5b4af87c3d5139da94736fe15211ac438ae"
+    }
+  ],
+  "watermarks_after": {
+    "arxiv": {
+      "last_seen_date": "2025-06-05T00:00:00Z",
+      "last_seen_id": "2506.01234v1"
+    },
+    "crossref": {
+      "last_seen_date": "2025-06-03T00:00:00Z",
+      "last_seen_id": "10.1038/nature12373"
+    }
+  },
+  "watermarks_before": {
+    "arxiv": {
+      "last_seen_date": null,
+      "last_seen_id": null
+    },
+    "crossref": {
+      "last_seen_date": "2025-05-28T00:00:00Z",
+      "last_seen_id": "10.1234/synth.electrolyte.0001"
+    }
+  },
+  "window": {
+    "end_utc": "2025-06-08T00:00:00Z",
+    "start_utc": "2025-06-01T00:00:00Z"
+  }
+}

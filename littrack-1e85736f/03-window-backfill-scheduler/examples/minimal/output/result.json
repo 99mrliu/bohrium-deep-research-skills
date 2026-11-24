@@ -1,0 +1,286 @@
+{
+  "case_id": "challenge-1e85736f-synthetic-window-demo-001",
+  "status": "complete",
+  "window_plan": {
+    "window_length_days": 7,
+    "timezone": "UTC",
+    "boundary_rule": "[start, end) 左闭右开：恰好等于 start 归本窗口，恰好等于 end 归下一窗口",
+    "chain": [
+      {
+        "id": "W2026-10-05",
+        "start": "2026-10-05T00:00:00Z",
+        "end": "2026-10-12T00:00:00Z",
+        "status": "closed",
+        "origin": "previous_snapshot"
+      },
+      {
+        "id": "W2026-10-12",
+        "start": "2026-10-12T00:00:00Z",
+        "end": "2026-10-19T00:00:00Z",
+        "status": "closed",
+        "origin": "previous_snapshot"
+      },
+      {
+        "id": "W2026-10-19",
+        "start": "2026-10-19T00:00:00Z",
+        "end": "2026-10-26T00:00:00Z",
+        "status": "current",
+        "origin": "planned"
+      },
+      {
+        "id": "W2026-10-26",
+        "start": "2026-10-26T00:00:00Z",
+        "end": "2026-11-02T00:00:00Z",
+        "status": "future_reference",
+        "origin": "planned"
+      }
+    ],
+    "current_window_ids": [
+      "W2026-10-19"
+    ],
+    "continuity_note": "新窗口起点取自 previous_snapshot 最后窗口的 end，接缝证明见 seam_proof.py 产物",
+    "inputs": {
+      "case": "/Users/liuhengshen/Desktop/bhr_product/littrack-five/bundles/03-window-backfill-scheduler/examples/minimal/case.json",
+      "previous_snapshot": "/Users/liuhengshen/Desktop/bhr_product/littrack-five/bundles/03-window-backfill-scheduler/examples/minimal/previous_snapshot.json"
+    }
+  },
+  "seam_proof": {
+    "rule": "对每条接缝要求 prev.end == next.start（gap_seconds=0 且 overlap_seconds=0）",
+    "seams": [
+      {
+        "seam": "W2026-10-05 -> W2026-10-12",
+        "prev_end": "2026-10-12T00:00:00Z",
+        "next_start": "2026-10-12T00:00:00Z",
+        "equal": true,
+        "gap_seconds": 0.0,
+        "overlap_seconds": 0.0,
+        "pass": true
+      },
+      {
+        "seam": "W2026-10-12 -> W2026-10-19",
+        "prev_end": "2026-10-19T00:00:00Z",
+        "next_start": "2026-10-19T00:00:00Z",
+        "equal": true,
+        "gap_seconds": 0.0,
+        "overlap_seconds": 0.0,
+        "pass": true
+      },
+      {
+        "seam": "W2026-10-19 -> W2026-10-26",
+        "prev_end": "2026-10-26T00:00:00Z",
+        "next_start": "2026-10-26T00:00:00Z",
+        "equal": true,
+        "gap_seconds": 0.0,
+        "overlap_seconds": 0.0,
+        "pass": true
+      }
+    ],
+    "overall_pass": true,
+    "inputs": {
+      "window_plan": "/Users/liuhengshen/Desktop/bhr_product/littrack-five/bundles/03-window-backfill-scheduler/examples/minimal/output/window_plan.json"
+    }
+  },
+  "current_window_additions": [
+    {
+      "doi": "10.1126/science.adr0001",
+      "title": "Synthetic demo: boundary article at window start",
+      "source": "crossref",
+      "content_window": "W2026-10-19",
+      "published_utc": {
+        "earliest": "2026-10-19T00:00:00Z",
+        "latest": "2026-10-19T23:59:59Z",
+        "precision": "day"
+      },
+      "indexed_utc": "2026-10-19T06:05:11Z",
+      "flags": [
+        "boundary_left"
+      ],
+      "note": null,
+      "locators": {
+        "item": "materials/crossref_response.json#/items/1",
+        "published": "materials/crossref_response.json#/items/1/published",
+        "indexed": "materials/crossref_response.json#/items/1/indexed"
+      }
+    },
+    {
+      "doi": "10.7554/eLife.99001",
+      "title": "Synthetic demo: year-only precision review",
+      "source": "crossref",
+      "content_window": "indeterminate",
+      "published_utc": {
+        "earliest": "2026-01-01T00:00:00Z",
+        "latest": "2026-12-31T23:59:59Z",
+        "precision": "year"
+      },
+      "indexed_utc": "2026-10-22T08:40:00Z",
+      "flags": [
+        "low_precision_date"
+      ],
+      "note": "published 精度为 year，UTC 区间 [2026-01-01T00:00:00Z, 2026-12-31T23:59:59Z] 跨越多个窗口或超出窗口链覆盖，无法唯一定窗；因 indexed 落在本轮而计入新增并单独标记",
+      "locators": {
+        "item": "materials/crossref_response.json#/items/2",
+        "published": "materials/crossref_response.json#/items/2/published",
+        "indexed": "materials/crossref_response.json#/items/2/indexed"
+      }
+    },
+    {
+      "doi": "10.1101/2026.10.18.654321",
+      "title": "Synthetic demo: timezone-offset preprint timestamp",
+      "source": "europmc",
+      "content_window": "W2026-10-19",
+      "published_utc": {
+        "earliest": "2026-10-20T00:30:00Z",
+        "latest": "2026-10-20T00:30:00Z",
+        "precision": "second"
+      },
+      "indexed_utc": "2026-10-21T02:00:00Z",
+      "flags": [],
+      "note": null,
+      "locators": {
+        "item": "materials/europmc_response.json#/items/1",
+        "published": "materials/europmc_response.json#/items/1/published",
+        "indexed": "materials/europmc_response.json#/items/1/indexed"
+      }
+    }
+  ],
+  "backfill_events": [
+    {
+      "doi": "10.1038/nature12373",
+      "title": "Synthetic demo: late-indexed condensed matter study",
+      "source": "crossref",
+      "original_window": "W2026-10-05",
+      "arrival_window": "W2026-10-19",
+      "published_utc": {
+        "earliest": "2026-10-08T00:00:00Z",
+        "latest": "2026-10-08T23:59:59Z",
+        "precision": "day"
+      },
+      "indexed_utc": "2026-10-21T09:14:32Z",
+      "delay_days": 12.3851,
+      "reason": "late_indexing",
+      "explanation": "published 落在已关闭窗口 W2026-10-05，但本轮才在源 crossref 中出现，补抓回原窗口并计入本轮新增（单独标记）",
+      "locators": {
+        "item": "materials/crossref_response.json#/items/0",
+        "published": "materials/crossref_response.json#/items/0/published",
+        "indexed": "materials/crossref_response.json#/items/0/indexed"
+      },
+      "flags": []
+    }
+  ],
+  "deferred_items": [
+    {
+      "doi": "10.1016/j.cell.2026.10.001",
+      "title": "Synthetic demo: epub ahead exactly at window end",
+      "source": "europmc",
+      "content_window": "W2026-10-26",
+      "published_utc": {
+        "earliest": "2026-10-26T00:00:00Z",
+        "latest": "2026-10-26T00:00:00Z",
+        "precision": "second"
+      },
+      "indexed_utc": "2026-10-25T18:30:00Z",
+      "flags": [
+        "boundary_right"
+      ],
+      "note": null,
+      "locators": {
+        "item": "materials/europmc_response.json#/items/0",
+        "published": "materials/europmc_response.json#/items/0/published",
+        "indexed": "materials/europmc_response.json#/items/0/indexed"
+      }
+    }
+  ],
+  "undated_items": [
+    {
+      "doi": "10.15252/embj.2026115001",
+      "title": "Synthetic demo: in-press record without any usable date",
+      "source": "europmc",
+      "reason": "unparseable_published_date",
+      "honest_note": "无法从源记录确定 published 日期，不做猜测，进入 undated 清单",
+      "unparseable_published": {
+        "field": "published",
+        "raw": "in press",
+        "locator": "materials/europmc_response.json#/items/2/published"
+      },
+      "locator": "materials/europmc_response.json#/items/2"
+    }
+  ],
+  "sources": [
+    {
+      "file": "materials/crossref_response.json",
+      "role": "source_bibliographic_snapshot",
+      "item_count": 3
+    },
+    {
+      "file": "materials/europmc_response.json",
+      "role": "source_bibliographic_snapshot",
+      "item_count": 3
+    },
+    {
+      "file": "previous_snapshot.json",
+      "role": "previous_window_state_snapshot"
+    },
+    {
+      "file": "case.json",
+      "role": "case_definition"
+    }
+  ],
+  "uncertainty": [
+    "条目 10.7554/eLife.99001 的 published 精度为 year（区间 [2026-01-01T00:00:00Z, 2026-12-31T23:59:59Z]），内容窗口无法唯一确定，已按 low_precision 计入本轮新增并标记"
+  ],
+  "change_records": [
+    {
+      "step": 1,
+      "script": "window_planner.py",
+      "output": "window_plan.json",
+      "detail": "从 previous_snapshot 终点接续生成窗口链：current=W2026-10-19"
+    },
+    {
+      "step": 2,
+      "script": "seam_proof.py",
+      "output": "seam_proof.json",
+      "detail": "逐接缝证明 3 条，overall_pass=True"
+    },
+    {
+      "step": 3,
+      "script": "date_normalize.py",
+      "output": "normalized_items.json",
+      "detail": "归一化 6 条题录的 published/indexed 日期为 UTC 区间"
+    },
+    {
+      "step": 4,
+      "script": "assign_windows.py",
+      "output": "assigned_items.json",
+      "detail": "归属判定计数：{'backfill': 1, 'current_addition': 2, 'low_precision': 1, 'deferred': 1, 'undated': 1}"
+    },
+    {
+      "step": 5,
+      "script": "backfill.py",
+      "output": "backfill_events.json",
+      "detail": "生成 1 条延迟入库补抓事件"
+    },
+    {
+      "step": 6,
+      "script": "assemble_result.py",
+      "output": "result.json",
+      "detail": "汇总 output_contract 字段 + sources + uncertainty + change_records"
+    }
+  ],
+  "output_contract_check": {
+    "contract": [
+      "case_id",
+      "status",
+      "window_plan",
+      "seam_proof",
+      "current_window_additions",
+      "backfill_events",
+      "deferred_items",
+      "undated_items",
+      "sources",
+      "uncertainty",
+      "change_records"
+    ],
+    "missing_fields": [],
+    "all_present": true
+  }
+}

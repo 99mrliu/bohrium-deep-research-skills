@@ -1,0 +1,186 @@
+{
+  "tool": "evidence_spotcheck",
+  "status": "pass",
+  "summary": {
+    "checks": 25,
+    "errors": 0,
+    "warnings": 0
+  },
+  "checks": [
+    {
+      "id": "item[0].locator",
+      "status": "pass",
+      "message": "new_items[0] (10.1038/s41586-026-00011-2) locator 可解析 → /Users/liuhengshen/Desktop/bhr_product/littrack-five/bundles/05-tracking-qa-harness/examples/minimal/materials/crossref_response.json",
+      "severity": "info",
+      "locator": "materials/crossref_response.json#/message/items/0"
+    },
+    {
+      "id": "item[0].doi",
+      "status": "pass",
+      "message": "new_items[0] (10.1038/s41586-026-00011-2) DOI 一致: 10.1038/s41586-026-00011-2",
+      "severity": "info",
+      "locator": "materials/crossref_response.json#/message/items/0"
+    },
+    {
+      "id": "item[0].title",
+      "status": "pass",
+      "message": "new_items[0] (10.1038/s41586-026-00011-2) 标题比对: 标题一致",
+      "severity": "info",
+      "locator": "materials/crossref_response.json#/message/items/0"
+    },
+    {
+      "id": "item[0].date",
+      "status": "pass",
+      "message": "new_items[0] (10.1038/s41586-026-00011-2) 日期比对: 日期与源记录完全一致",
+      "severity": "info",
+      "locator": "materials/crossref_response.json#/message/items/0"
+    },
+    {
+      "id": "item[0].authors",
+      "status": "pass",
+      "message": "new_items[0] (10.1038/s41586-026-00011-2) 首作者 'Zhang' 与源记录一致",
+      "severity": "info",
+      "locator": "materials/crossref_response.json#/message/items/0"
+    },
+    {
+      "id": "item[1].locator",
+      "status": "pass",
+      "message": "new_items[1] (10.1126/science.adq1234) locator 可解析 → /Users/liuhengshen/Desktop/bhr_product/littrack-five/bundles/05-tracking-qa-harness/examples/minimal/materials/crossref_response.json",
+      "severity": "info",
+      "locator": "materials/crossref_response.json#/message/items/1"
+    },
+    {
+      "id": "item[1].doi",
+      "status": "pass",
+      "message": "new_items[1] (10.1126/science.adq1234) DOI 一致: 10.1126/science.adq1234",
+      "severity": "info",
+      "locator": "materials/crossref_response.json#/message/items/1"
+    },
+    {
+      "id": "item[1].title",
+      "status": "pass",
+      "message": "new_items[1] (10.1126/science.adq1234) 标题比对: 标题一致",
+      "severity": "info",
+      "locator": "materials/crossref_response.json#/message/items/1"
+    },
+    {
+      "id": "item[1].date",
+      "status": "pass",
+      "message": "new_items[1] (10.1126/science.adq1234) 日期比对: 日期与源记录完全一致",
+      "severity": "info",
+      "locator": "materials/crossref_response.json#/message/items/1"
+    },
+    {
+      "id": "item[1].authors",
+      "status": "pass",
+      "message": "new_items[1] (10.1126/science.adq1234) 首作者 'Chen' 与源记录一致",
+      "severity": "info",
+      "locator": "materials/crossref_response.json#/message/items/1"
+    },
+    {
+      "id": "item[2].locator",
+      "status": "pass",
+      "message": "new_items[2] (10.1021/jacs.6c09988) locator 可解析 → /Users/liuhengshen/Desktop/bhr_product/littrack-five/bundles/05-tracking-qa-harness/examples/minimal/materials/crossref_response.json",
+      "severity": "info",
+      "locator": "materials/crossref_response.json#/message/items/2"
+    },
+    {
+      "id": "item[2].doi",
+      "status": "pass",
+      "message": "new_items[2] (10.1021/jacs.6c09988) DOI 一致: 10.1021/jacs.6c09988",
+      "severity": "info",
+      "locator": "materials/crossref_response.json#/message/items/2"
+    },
+    {
+      "id": "item[2].title",
+      "status": "pass",
+      "message": "new_items[2] (10.1021/jacs.6c09988) 标题比对: 标题一致",
+      "severity": "info",
+      "locator": "materials/crossref_response.json#/message/items/2"
+    },
+    {
+      "id": "item[2].date",
+      "status": "pass",
+      "message": "new_items[2] (10.1021/jacs.6c09988) 日期比对: 日期与源记录完全一致",
+      "severity": "info",
+      "locator": "materials/crossref_response.json#/message/items/2"
+    },
+    {
+      "id": "item[2].authors",
+      "status": "pass",
+      "message": "new_items[2] (10.1021/jacs.6c09988) 首作者 'Schmidt' 与源记录一致",
+      "severity": "info",
+      "locator": "materials/crossref_response.json#/message/items/2"
+    },
+    {
+      "id": "item[3].locator",
+      "status": "pass",
+      "message": "new_items[3] (10.7554/elife.90001) locator 可解析 → /Users/liuhengshen/Desktop/bhr_product/littrack-five/bundles/05-tracking-qa-harness/examples/minimal/materials/europepmc_response.json",
+      "severity": "info",
+      "locator": "materials/europepmc_response.json#/resultList/result/0"
+    },
+    {
+      "id": "item[3].doi",
+      "status": "pass",
+      "message": "new_items[3] (10.7554/elife.90001) DOI 一致: 10.7554/elife.90001",
+      "severity": "info",
+      "locator": "materials/europepmc_response.json#/resultList/result/0"
+    },
+    {
+      "id": "item[3].title",
+      "status": "pass",
+      "message": "new_items[3] (10.7554/elife.90001) 标题比对: 标题一致",
+      "severity": "info",
+      "locator": "materials/europepmc_response.json#/resultList/result/0"
+    },
+    {
+      "id": "item[3].date",
+      "status": "pass",
+      "message": "new_items[3] (10.7554/elife.90001) 日期比对: 日期与源记录完全一致",
+      "severity": "info",
+      "locator": "materials/europepmc_response.json#/resultList/result/0"
+    },
+    {
+      "id": "item[3].authors",
+      "status": "pass",
+      "message": "new_items[3] (10.7554/elife.90001) 首作者 'Hoffmann' 与源记录一致",
+      "severity": "info",
+      "locator": "materials/europepmc_response.json#/resultList/result/0"
+    },
+    {
+      "id": "item[4].locator",
+      "status": "pass",
+      "message": "new_items[4] (10.1101/2026.10.09.555001) locator 可解析 → /Users/liuhengshen/Desktop/bhr_product/littrack-five/bundles/05-tracking-qa-harness/examples/minimal/materials/europepmc_response.json",
+      "severity": "info",
+      "locator": "materials/europepmc_response.json#/resultList/result/1"
+    },
+    {
+      "id": "item[4].doi",
+      "status": "pass",
+      "message": "new_items[4] (10.1101/2026.10.09.555001) DOI 一致: 10.1101/2026.10.09.555001",
+      "severity": "info",
+      "locator": "materials/europepmc_response.json#/resultList/result/1"
+    },
+    {
+      "id": "item[4].title",
+      "status": "pass",
+      "message": "new_items[4] (10.1101/2026.10.09.555001) 标题比对: 标题一致",
+      "severity": "info",
+      "locator": "materials/europepmc_response.json#/resultList/result/1"
+    },
+    {
+      "id": "item[4].date",
+      "status": "pass",
+      "message": "new_items[4] (10.1101/2026.10.09.555001) 日期比对: 日期与源记录完全一致",
+      "severity": "info",
+      "locator": "materials/europepmc_response.json#/resultList/result/1"
+    },
+    {
+      "id": "item[4].authors",
+      "status": "pass",
+      "message": "new_items[4] (10.1101/2026.10.09.555001) 首作者 'Petrov' 与源记录一致",
+      "severity": "info",
+      "locator": "materials/europepmc_response.json#/resultList/result/1"
+    }
+  ]
+}

@@ -1,0 +1,65 @@
+{
+  "tool": "contract_validate",
+  "status": "pass",
+  "summary": {
+    "checks": 9,
+    "errors": 0,
+    "warnings": 0
+  },
+  "checks": [
+    {
+      "id": "contract.declared",
+      "status": "pass",
+      "message": "case.json output_contract 共 7 个字段: ['case_id', 'status', 'window', 'new_items', 'sources', 'uncertainty', 'change_records']",
+      "severity": "info"
+    },
+    {
+      "id": "case_id.match",
+      "status": "pass",
+      "message": "case_id 一致: 'synthetic-qa-demo-001'",
+      "severity": "info"
+    },
+    {
+      "id": "field.case_id",
+      "status": "pass",
+      "message": "契约字段 'case_id' 合规",
+      "severity": "info"
+    },
+    {
+      "id": "field.status",
+      "status": "pass",
+      "message": "契约字段 'status' 合规",
+      "severity": "info"
+    },
+    {
+      "id": "field.window",
+      "status": "pass",
+      "message": "契约字段 'window' 合规",
+      "severity": "info"
+    },
+    {
+      "id": "field.new_items",
+      "status": "pass",
+      "message": "契约字段 'new_items' 合规",
+      "severity": "info"
+    },
+    {
+      "id": "field.sources",
+      "status": "pass",
+      "message": "契约字段 'sources' 合规",
+      "severity": "info"
+    },
+    {
+      "id": "field.uncertainty",
+      "status": "pass",
+      "message": "契约字段 'uncertainty' 合规",
+      "severity": "info"
+    },
+    {
+      "id": "field.change_records",
+      "status": "pass",
+      "message": "契约字段 'change_records' 合规",
+      "severity": "info"
+    }
+  ]
+}

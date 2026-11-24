@@ -1,0 +1,48 @@
+{
+  "byte_equal": true,
+  "checks": [
+    {
+      "equal": true,
+      "field": "run_id",
+      "recorded_sha256": "e113b01a42ee3eb49d39cf9076232cf7b9e9f7ca190b994481ba6ada37f27064",
+      "replayed_sha256": "e113b01a42ee3eb49d39cf9076232cf7b9e9f7ca190b994481ba6ada37f27064"
+    },
+    {
+      "equal": true,
+      "field": "input_digest",
+      "recorded_sha256": "1d150c9922be698e4bc2bc2066a3cf8cd2adef503bacfe27422fb9297a4426cc",
+      "replayed_sha256": "1d150c9922be698e4bc2bc2066a3cf8cd2adef503bacfe27422fb9297a4426cc"
+    },
+    {
+      "equal": true,
+      "field": "counts",
+      "recorded_sha256": "b578e557e87d46aba9d55b6a2355434a28adf771dc31d8da26ac802617503b76",
+      "replayed_sha256": "b578e557e87d46aba9d55b6a2355434a28adf771dc31d8da26ac802617503b76"
+    },
+    {
+      "equal": true,
+      "field": "events",
+      "recorded_sha256": "bc4ea6a3db5fd42200f12e1de47614360be9fd762d21581585fc0b6937a7e486",
+      "replayed_sha256": "bc4ea6a3db5fd42200f12e1de47614360be9fd762d21581585fc0b6937a7e486"
+    },
+    {
+      "equal": true,
+      "field": "deliveries",
+      "recorded_sha256": "75fa725aa861cec128f32a7fef610c67f81bf9f252ef5fd6c9f043c26a2c47a8",
+      "replayed_sha256": "75fa725aa861cec128f32a7fef610c67f81bf9f252ef5fd6c9f043c26a2c47a8"
+    },
+    {
+      "equal": true,
+      "field": "watermarks_after",
+      "recorded_sha256": "7055aeb4e16228c35af85f413177f7f2dad3e5533359028d71cff0ec1cf67e4f",
+      "replayed_sha256": "7055aeb4e16228c35af85f413177f7f2dad3e5533359028d71cff0ec1cf67e4f"
+    }
+  ],
+  "explanation": "重放结果与 journal 记录逐字节一致：状态重建与判定规则可完全复现。",
+  "journal_line": 2,
+  "journal_path": "examples/minimal/output/increment_journal.jsonl",
+  "mismatches": [],
+  "run_id": "run-cb841f8b6f944666",
+  "snapshot_used": "examples/minimal/output/snapshot_prev.json",
+  "status": "consistent"
+}

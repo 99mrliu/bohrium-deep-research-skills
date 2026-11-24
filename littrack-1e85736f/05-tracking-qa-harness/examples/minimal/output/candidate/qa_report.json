@@ -1,0 +1,73 @@
+{
+  "tool": "qa_report",
+  "generated_at": "2026-11-24T08:53:24+00:00",
+  "offline": true,
+  "case_file": "/Users/liuhengshen/Desktop/bhr_product/littrack-five/bundles/05-tracking-qa-harness/examples/minimal/case.json",
+  "result_file": "/Users/liuhengshen/Desktop/bhr_product/littrack-five/bundles/05-tracking-qa-harness/examples/minimal/candidate_result.json",
+  "case_id": "synthetic-qa-demo-001",
+  "overall_status": "fail",
+  "gates": [
+    {
+      "tool": "contract_validate",
+      "status": "pass",
+      "summary": {
+        "checks": 9,
+        "errors": 0,
+        "warnings": 0
+      }
+    },
+    {
+      "tool": "evidence_spotcheck",
+      "status": "fail",
+      "summary": {
+        "checks": 21,
+        "errors": 1,
+        "warnings": 0
+      }
+    },
+    {
+      "tool": "freshness_check",
+      "status": "fail",
+      "summary": {
+        "checks": 13,
+        "errors": 2,
+        "warnings": 0
+      }
+    },
+    {
+      "tool": "metrics",
+      "status": "pass",
+      "summary": null
+    }
+  ],
+  "blocking_items": [
+    {
+      "tool": "evidence_spotcheck",
+      "id": "item[2].locator",
+      "message": "new_items[2] (10.7554/elife.90001) locator 不可解析: 数组下标越界: 7（数组长度 2，pointer=/resultList/result/7）",
+      "locator": "materials/europepmc_response.json#/resultList/result/7"
+    },
+    {
+      "tool": "freshness_check",
+      "id": "item[3].window",
+      "message": "new_items[3] (10.1016/j.cell.2026.08.015) 日期 2026-08-20 落在窗口 2026-10-01~2026-10-31 之外，且无 backfill 标记（不属于本窗口新增）"
+    },
+    {
+      "tool": "freshness_check",
+      "id": "item[4].dedup",
+      "message": "new_items[4] (10.1038/s41586-026-00001-x) 已存在于 previous_snapshot（旧文重报，应去重）"
+    }
+  ],
+  "warnings": [],
+  "metrics": {
+    "alert_precision": 0.4,
+    "quarantine_rate": 0.6,
+    "locator_resolvability": 0.8,
+    "dedup_rate": 0.2,
+    "window_coverage": 0.6,
+    "window_coverage_strict": 0.4,
+    "delivery_consistency": 1.0
+  },
+  "uncertainty": [],
+  "verdict": "存在阻断项，禁止交付：修复 blocking_items 后重跑全部门禁"
+}

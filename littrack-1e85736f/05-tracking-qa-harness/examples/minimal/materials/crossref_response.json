@@ -1,0 +1,75 @@
+{
+  "status": "ok",
+  "synthetic": true,
+  "note": "合成示例数据：模拟 Crossref /works 响应结构，全部条目虚构。",
+  "message-type": "work-list",
+  "message": {
+    "total-results": 5,
+    "query": {
+      "filter": "from-pub-date:2026-10-01,until-pub-date:2026-10-31",
+      "terms": "materials science literature tracking demo"
+    },
+    "items": [
+      {
+        "DOI": "10.1038/s41586-026-00011-2",
+        "title": ["Coherent control of dipolar spin ensembles at room temperature"],
+        "author": [
+          {"family": "Zhang", "given": "Wei"},
+          {"family": "Li", "given": "Yan"}
+        ],
+        "container-title": ["Nature"],
+        "type": "journal-article",
+        "published": {"date-parts": [[2026, 10, 12]]},
+        "issued": {"date-parts": [[2026, 10, 12]]}
+      },
+      {
+        "DOI": "10.1126/science.adq1234",
+        "title": ["Single-cell chromatin accessibility atlas of regenerating liver"],
+        "author": [
+          {"family": "Chen", "given": "Maria"},
+          {"family": "Liu", "given": "Jie"}
+        ],
+        "container-title": ["Science"],
+        "type": "journal-article",
+        "published": {"date-parts": [[2026, 10, 5]]},
+        "issued": {"date-parts": [[2026, 10, 5]]}
+      },
+      {
+        "DOI": "10.1021/jacs.6c09988",
+        "title": ["Photocatalytic C-H amidation with earth-abundant iron complexes"],
+        "author": [
+          {"family": "Schmidt", "given": "Anna"},
+          {"family": "Wang", "given": "Rui"}
+        ],
+        "container-title": ["Journal of the American Chemical Society"],
+        "type": "journal-article",
+        "published": {"date-parts": [[2026, 10, 28]]},
+        "issued": {"date-parts": [[2026, 10, 28]]}
+      },
+      {
+        "DOI": "10.1016/j.cell.2026.08.015",
+        "title": ["A spatial proteomics map of the human secretory pathway"],
+        "author": [
+          {"family": "Baker", "given": "Tom"},
+          {"family": "Wei", "given": "Li"}
+        ],
+        "container-title": ["Cell"],
+        "type": "journal-article",
+        "published": {"date-parts": [[2026, 8, 20]]},
+        "issued": {"date-parts": [[2026, 8, 20]]}
+      },
+      {
+        "DOI": "10.1038/s41586-026-00001-x",
+        "title": ["Topological superconductivity in twisted van der Waals bilayers"],
+        "author": [
+          {"family": "Sato", "given": "Kenji"},
+          {"family": "Zhang", "given": "Wei"}
+        ],
+        "container-title": ["Nature"],
+        "type": "journal-article",
+        "published": {"date-parts": [[2026, 10, 3]]},
+        "issued": {"date-parts": [[2026, 10, 3]]}
+      }
+    ]
+  }
+}

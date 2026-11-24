@@ -1,0 +1,71 @@
+{
+  "generated_by": "validate_schema.py",
+  "required_fields": {
+    "title": "必须存在且为 str",
+    "authors": "必须存在、为 list 且非空",
+    "date": "published/date/issued/publication_date 至少一个",
+    "identifier": "doi/arxiv_id/pmid/record_id 至少一个"
+  },
+  "total_records": 9,
+  "failed_records": 1,
+  "failure_rate": 0.111111,
+  "files": [
+    {
+      "path": "/Users/liuhengshen/Desktop/bhr_product/littrack-five/bundles/01-source-integrity-audit/examples/minimal/materials/arxiv_response.json",
+      "skipped": false,
+      "skip_reason": null,
+      "record_count": 2,
+      "failed_count": 0,
+      "failures": []
+    },
+    {
+      "path": "/Users/liuhengshen/Desktop/bhr_product/littrack-five/bundles/01-source-integrity-audit/examples/minimal/materials/crossref_response.json",
+      "skipped": false,
+      "skip_reason": null,
+      "record_count": 4,
+      "failed_count": 0,
+      "failures": []
+    },
+    {
+      "path": "/Users/liuhengshen/Desktop/bhr_product/littrack-five/bundles/01-source-integrity-audit/examples/minimal/materials/crossref_snapshot_v1.json",
+      "skipped": true,
+      "skip_reason": "versioned_snapshot（历史快照，仅用于漂移检测）",
+      "record_count": 0,
+      "failed_count": 0,
+      "failures": []
+    },
+    {
+      "path": "/Users/liuhengshen/Desktop/bhr_product/littrack-five/bundles/01-source-integrity-audit/examples/minimal/materials/crossref_snapshot_v2.json",
+      "skipped": true,
+      "skip_reason": "versioned_snapshot（历史快照，仅用于漂移检测）",
+      "record_count": 0,
+      "failed_count": 0,
+      "failures": []
+    },
+    {
+      "path": "/Users/liuhengshen/Desktop/bhr_product/littrack-five/bundles/01-source-integrity-audit/examples/minimal/materials/europepmc_response.json",
+      "skipped": false,
+      "skip_reason": null,
+      "record_count": 3,
+      "failed_count": 1,
+      "failures": [
+        {
+          "locator": "/Users/liuhengshen/Desktop/bhr_product/littrack-five/bundles/01-source-integrity-audit/examples/minimal/materials/europepmc_response.json#/records/2",
+          "index": 2,
+          "record_id": "epmc-003",
+          "violations": [
+            "date_field_missing"
+          ]
+        }
+      ]
+    },
+    {
+      "path": "/Users/liuhengshen/Desktop/bhr_product/littrack-five/bundles/01-source-integrity-audit/examples/minimal/materials/previous_snapshot.json",
+      "skipped": true,
+      "skip_reason": "no_records_found（非题录源文件，如增量导入状态快照）",
+      "record_count": 0,
+      "failed_count": 0,
+      "failures": []
+    }
+  ]
+}

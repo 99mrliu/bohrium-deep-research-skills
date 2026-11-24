@@ -1,0 +1,221 @@
+{
+  "appended": true,
+  "counts": {
+    "candidates": 5,
+    "duplicates": 2,
+    "in_window": 5,
+    "new": 1,
+    "skipped_no_date": 0,
+    "skipped_out_of_window": 0,
+    "version_updates": 2
+  },
+  "deliveries": [
+    {
+      "channel": "log",
+      "decision": "new",
+      "dedup_key": "arxiv:2506.04567",
+      "delivered_to": "journal-log",
+      "delivery_hash": "1acd6bf5a2bc0d7987c513080a02d4eb11b21ea017d17c8b16e3660617c72c37"
+    },
+    {
+      "channel": "log",
+      "decision": "version_update",
+      "dedup_key": "arxiv:2506.01234",
+      "delivered_to": "journal-log",
+      "delivery_hash": "2d05f62b35830d09b1697e6f06d57c3b12caac8a9f5b7b0ff78866a8467744a4"
+    },
+    {
+      "channel": "log",
+      "decision": "version_update",
+      "dedup_key": "doi:10.1038/s41586-025-00001-x",
+      "delivered_to": "journal-log",
+      "delivery_hash": "1d53d072a46ca8c3199213be49aa6de97a0e6750c2312ca4137f0f591254de94"
+    }
+  ],
+  "events": [
+    {
+      "decision": "new",
+      "dedup_key": "arxiv:2506.04567",
+      "identifiers": {
+        "arxiv_base": "2506.04567",
+        "arxiv_version": 1,
+        "doi": null,
+        "title_fp": "entropy stabilization in halide electrolytes a synthetic report"
+      },
+      "item_date": "2025-06-10T00:00:00Z",
+      "item_index": 0,
+      "key_rule": "K2-arxiv",
+      "locator": {
+        "file": "examples/minimal/materials/round2_arxiv.json",
+        "file_sha256": "fc345065a25a07ecbf610d3bfc4ea750337dda26819ae96f39a5792a70eab05b",
+        "json_path": "$.entries[0]"
+      },
+      "matched": null,
+      "rule": "R0-new",
+      "source": "arxiv",
+      "title": "Entropy stabilization in halide electrolytes: a synthetic report"
+    },
+    {
+      "decision": "version_update",
+      "dedup_key": "arxiv:2506.01234",
+      "identifiers": {
+        "arxiv_base": "2506.01234",
+        "arxiv_version": 2,
+        "doi": null,
+        "title_fp": "graph networks for battery degradation a synthetic study"
+      },
+      "item_date": "2025-06-11T09:30:00Z",
+      "item_index": 1,
+      "key_rule": "K2-arxiv",
+      "locator": {
+        "file": "examples/minimal/materials/round2_arxiv.json",
+        "file_sha256": "fc345065a25a07ecbf610d3bfc4ea750337dda26819ae96f39a5792a70eab05b",
+        "json_path": "$.entries[1]"
+      },
+      "matched": {
+        "dedup_key": "arxiv:2506.01234",
+        "first_seen_run": "run-cb841f8b6f944666",
+        "locator": {
+          "file": "examples/minimal/materials/round1_arxiv.json",
+          "file_sha256": "13d52e4fa03972304bb8e70250f3b5b4af87c3d5139da94736fe15211ac438ae",
+          "json_path": "$.entries[0]"
+        }
+      },
+      "rule": "R2-arxiv-version",
+      "source": "arxiv",
+      "title": "Graph networks for battery degradation: a synthetic study"
+    },
+    {
+      "decision": "duplicate",
+      "dedup_key": "arxiv:2506.09988",
+      "identifiers": {
+        "arxiv_base": "2506.09988",
+        "arxiv_version": 1,
+        "doi": null,
+        "title_fp": "a synthetic study on lithium migration in solid electrolytes"
+      },
+      "item_date": "2025-06-13T00:00:00Z",
+      "item_index": 2,
+      "key_rule": "K2-arxiv",
+      "locator": {
+        "file": "examples/minimal/materials/round2_arxiv.json",
+        "file_sha256": "fc345065a25a07ecbf610d3bfc4ea750337dda26819ae96f39a5792a70eab05b",
+        "json_path": "$.entries[2]"
+      },
+      "matched": {
+        "dedup_key": "doi:10.1038/nature12373",
+        "first_seen_run": "run-cb841f8b6f944666",
+        "locator": {
+          "file": "examples/minimal/materials/round1_crossref.json",
+          "file_sha256": "e05204b997269c856043b8602ae9f02c39278abd2704d242fee2f6246028ea26",
+          "json_path": "$.message.items[0]"
+        }
+      },
+      "rule": "R4-title-fingerprint",
+      "source": "arxiv",
+      "title": "A SYNTHETIC STUDY ON LITHIUM MIGRATION IN SOLID ELECTROLYTES."
+    },
+    {
+      "decision": "version_update",
+      "dedup_key": "doi:10.1038/s41586-025-00001-x",
+      "identifiers": {
+        "arxiv_base": null,
+        "arxiv_version": null,
+        "doi": "10.1038/s41586-025-00001-x",
+        "title_fp": "graph networks for battery degradation a synthetic study"
+      },
+      "item_date": "2025-06-12T00:00:00Z",
+      "item_index": 0,
+      "key_rule": "K1-doi",
+      "locator": {
+        "file": "examples/minimal/materials/round2_crossref.json",
+        "file_sha256": "ab60d6c315487608d4890c6af7742f15f8eefd1647e806924e31a29c149e707a",
+        "json_path": "$.message.items[0]"
+      },
+      "matched": {
+        "dedup_key": "arxiv:2506.01234",
+        "first_seen_run": "run-cb841f8b6f944666",
+        "locator": {
+          "file": "examples/minimal/materials/round1_arxiv.json",
+          "file_sha256": "13d52e4fa03972304bb8e70250f3b5b4af87c3d5139da94736fe15211ac438ae",
+          "json_path": "$.entries[0]"
+        }
+      },
+      "rule": "R3-preprint-published-link",
+      "source": "crossref",
+      "title": "Graph networks for battery degradation: a synthetic study"
+    },
+    {
+      "decision": "duplicate",
+      "dedup_key": "doi:10.1038/nature12373",
+      "identifiers": {
+        "arxiv_base": null,
+        "arxiv_version": null,
+        "doi": "10.1038/nature12373",
+        "title_fp": "a synthetic study on lithium migration in solid electrolytes"
+      },
+      "item_date": "2025-06-09T00:00:00Z",
+      "item_index": 1,
+      "key_rule": "K1-doi",
+      "locator": {
+        "file": "examples/minimal/materials/round2_crossref.json",
+        "file_sha256": "ab60d6c315487608d4890c6af7742f15f8eefd1647e806924e31a29c149e707a",
+        "json_path": "$.message.items[1]"
+      },
+      "matched": {
+        "dedup_key": "doi:10.1038/nature12373",
+        "first_seen_run": "run-cb841f8b6f944666",
+        "locator": {
+          "file": "examples/minimal/materials/round1_crossref.json",
+          "file_sha256": "e05204b997269c856043b8602ae9f02c39278abd2704d242fee2f6246028ea26",
+          "json_path": "$.message.items[0]"
+        }
+      },
+      "rule": "R1-exact-doi",
+      "source": "crossref",
+      "title": "A synthetic study on lithium migration in solid electrolytes"
+    }
+  ],
+  "journal_line": 3,
+  "journal_path": "examples/minimal/output/increment_journal.jsonl",
+  "journal_sha256": "0ac79db08d0d2148e4bbe46b8f9753cabb46ea40fe6c2cadb681ccc95ccacf4b",
+  "run_id": "run-9b93e0cd3e54c0a6",
+  "snapshot_in": "examples/minimal/output/snapshot_round1.json",
+  "snapshot_out": "examples/minimal/output/snapshot_round2.json",
+  "sources": [
+    {
+      "name": "crossref",
+      "path": "examples/minimal/materials/round2_crossref.json",
+      "sha256": "ab60d6c315487608d4890c6af7742f15f8eefd1647e806924e31a29c149e707a"
+    },
+    {
+      "name": "arxiv",
+      "path": "examples/minimal/materials/round2_arxiv.json",
+      "sha256": "fc345065a25a07ecbf610d3bfc4ea750337dda26819ae96f39a5792a70eab05b"
+    }
+  ],
+  "watermarks_after": {
+    "arxiv": {
+      "last_seen_date": "2025-06-13T00:00:00Z",
+      "last_seen_id": "2506.09988v1"
+    },
+    "crossref": {
+      "last_seen_date": "2025-06-12T00:00:00Z",
+      "last_seen_id": "10.1038/s41586-025-00001-x"
+    }
+  },
+  "watermarks_before": {
+    "arxiv": {
+      "last_seen_date": "2025-06-05T00:00:00Z",
+      "last_seen_id": "2506.01234v1"
+    },
+    "crossref": {
+      "last_seen_date": "2025-06-03T00:00:00Z",
+      "last_seen_id": "10.1038/nature12373"
+    }
+  },
+  "window": {
+    "end_utc": "2025-06-15T00:00:00Z",
+    "start_utc": "2025-06-08T00:00:00Z"
+  }
+}

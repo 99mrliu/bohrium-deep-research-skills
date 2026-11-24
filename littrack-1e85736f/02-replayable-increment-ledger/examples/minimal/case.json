@@ -1,0 +1,30 @@
+{
+  "case_id": "synthetic-replay-ledger-001",
+  "synthetic": true,
+  "description": "合成示例（SYNTHETIC）：本案例全部题录均为手工编造的测试数据，不代表任何真实 Crossref / arXiv 检索结果；DOI 仅借用真实存在的格式，不保证对应真实文献。用途：演示 replayable-increment-ledger 的增量记录、回放与幂等校验闭环。",
+  "task": "对两个来源（crossref、arxiv）的固化题录响应执行两轮增量导入：第 1 轮建立 append-only journal，第 2 轮识别新增、跨源重复、标题差异重复与预印本→正式版版本更新；随后回放两轮并做幂等校验，最终组装 result.json。",
+  "windows": {
+    "round1": {"start_utc": "2025-06-01T00:00:00Z", "end_utc": "2025-06-08T00:00:00Z"},
+    "round2": {"start_utc": "2025-06-08T00:00:00Z", "end_utc": "2025-06-15T00:00:00Z"}
+  },
+  "sources": {
+    "crossref": {"items_path": "$.message.items"},
+    "arxiv": {"items_path": "$.entries"}
+  },
+  "alerts": {"channel": "log"},
+  "output_contract": [
+    "case_id",
+    "status",
+    "window",
+    "new_items",
+    "version_updates",
+    "duplicates",
+    "deliveries",
+    "journal_ref",
+    "replay_verification",
+    "idempotency_verification",
+    "change_records",
+    "sources",
+    "uncertainty"
+  ]
+}

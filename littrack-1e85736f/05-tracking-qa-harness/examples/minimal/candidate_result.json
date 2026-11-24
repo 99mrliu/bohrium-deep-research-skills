@@ -1,0 +1,71 @@
+{
+  "case_id": "synthetic-qa-demo-001",
+  "status": "partial",
+  "synthetic": true,
+  "note": "合成示例：待检候选产出，故意埋有 3 处错误（见 README.md），QA harness 应全部检出。",
+  "window": {"start": "2026-10-01", "end": "2026-10-31"},
+  "new_items": [
+    {
+      "doi": "10.1038/s41586-026-00011-2",
+      "title": "Coherent control of dipolar spin ensembles at room temperature",
+      "published_date": "2026-10-12",
+      "authors": ["Wei Zhang", "Yan Li"],
+      "source": "crossref",
+      "locator": "materials/crossref_response.json#/message/items/0"
+    },
+    {
+      "doi": "10.1126/science.adq1234",
+      "title": "Single-cell chromatin accessibility atlas of regenerating liver",
+      "published_date": "2026-10-05",
+      "authors": ["Maria Chen", "Jie Liu"],
+      "source": "crossref",
+      "locator": "materials/crossref_response.json#/message/items/1"
+    },
+    {
+      "doi": "10.7554/elife.90001",
+      "title": "Mechanistic basis of mitochondrial translation rescue",
+      "published_date": "2026-10-18",
+      "authors": ["K. Hoffmann", "M. Duarte"],
+      "source": "europepmc",
+      "locator": "materials/europepmc_response.json#/resultList/result/7"
+    },
+    {
+      "doi": "10.1016/j.cell.2026.08.015",
+      "title": "A spatial proteomics map of the human secretory pathway",
+      "published_date": "2026-08-20",
+      "authors": ["Tom Baker", "Li Wei"],
+      "source": "crossref",
+      "locator": "materials/crossref_response.json#/message/items/3"
+    },
+    {
+      "doi": "10.1038/s41586-026-00001-x",
+      "title": "Topological superconductivity in twisted van der Waals bilayers",
+      "published_date": "2026-10-03",
+      "authors": ["Kenji Sato", "Wei Zhang"],
+      "source": "crossref",
+      "locator": "materials/crossref_response.json#/message/items/4"
+    }
+  ],
+  "sources": [
+    {
+      "path": "materials/crossref_response.json",
+      "type": "crossref",
+      "note": "本地固化题录快照（合成）"
+    },
+    {
+      "path": "materials/europepmc_response.json",
+      "type": "europepmc",
+      "note": "本地固化题录快照（合成）"
+    }
+  ],
+  "uncertainty": [
+    "本结果为 QA 门禁执行前的候选产出，未经证据抽查与新鲜度核验。"
+  ],
+  "change_records": [
+    {
+      "type": "note",
+      "at": "2026-11-01T09:00:00Z",
+      "message": "候选产出组装完成，待 QA 门禁检查。"
+    }
+  ]
+}

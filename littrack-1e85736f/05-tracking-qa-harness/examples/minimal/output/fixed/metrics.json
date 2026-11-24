@@ -1,0 +1,25 @@
+{
+  "tool": "metrics",
+  "status": "pass",
+  "metrics": {
+    "alert_precision": 1.0,
+    "quarantine_rate": 0.0,
+    "locator_resolvability": 1.0,
+    "dedup_rate": 0.0,
+    "window_coverage": 1.0,
+    "window_coverage_strict": 1.0,
+    "delivery_consistency": 1.0
+  },
+  "counts": {
+    "new_items": 5,
+    "expected_in_window": 5,
+    "quarantined_items": []
+  },
+  "notes": [
+    "通过全部已运行门禁的条目 5/5",
+    "locator 可解析率: 5/5 条 locator 可解析",
+    "去重失败: 内部重复 0 条，与 previous_snapshot 重叠 0 条",
+    "期望新增 5 条，result 覆盖 5 条",
+    "投递一致性: 5/5 条 result 条目在投递记录中"
+  ]
+}

@@ -1,0 +1,56 @@
+{
+  "tool": "qa_report",
+  "generated_at": "2026-11-24T08:53:24+00:00",
+  "offline": true,
+  "case_file": "/Users/liuhengshen/Desktop/bhr_product/littrack-five/bundles/05-tracking-qa-harness/examples/minimal/case.json",
+  "result_file": "/Users/liuhengshen/Desktop/bhr_product/littrack-five/bundles/05-tracking-qa-harness/examples/minimal/fixed_result.json",
+  "case_id": "synthetic-qa-demo-001",
+  "overall_status": "pass",
+  "gates": [
+    {
+      "tool": "contract_validate",
+      "status": "pass",
+      "summary": {
+        "checks": 9,
+        "errors": 0,
+        "warnings": 0
+      }
+    },
+    {
+      "tool": "evidence_spotcheck",
+      "status": "pass",
+      "summary": {
+        "checks": 25,
+        "errors": 0,
+        "warnings": 0
+      }
+    },
+    {
+      "tool": "freshness_check",
+      "status": "pass",
+      "summary": {
+        "checks": 13,
+        "errors": 0,
+        "warnings": 0
+      }
+    },
+    {
+      "tool": "metrics",
+      "status": "pass",
+      "summary": null
+    }
+  ],
+  "blocking_items": [],
+  "warnings": [],
+  "metrics": {
+    "alert_precision": 1.0,
+    "quarantine_rate": 0.0,
+    "locator_resolvability": 1.0,
+    "dedup_rate": 0.0,
+    "window_coverage": 1.0,
+    "window_coverage_strict": 1.0,
+    "delivery_consistency": 1.0
+  },
+  "uncertainty": [],
+  "verdict": "全部质量门禁通过，result.json 可交付"
+}

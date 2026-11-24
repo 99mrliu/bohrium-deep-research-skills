@@ -1,0 +1,27 @@
+{
+  "backfill_count": 1,
+  "events": [
+    {
+      "doi": "10.1038/nature12373",
+      "title": "Synthetic demo: late-indexed condensed matter study",
+      "source": "crossref",
+      "original_window": "W2026-10-05",
+      "arrival_window": "W2026-10-19",
+      "published_utc": {
+        "earliest": "2026-10-08T00:00:00Z",
+        "latest": "2026-10-08T23:59:59Z",
+        "precision": "day"
+      },
+      "indexed_utc": "2026-10-21T09:14:32Z",
+      "delay_days": 12.3851,
+      "reason": "late_indexing",
+      "explanation": "published 落在已关闭窗口 W2026-10-05，但本轮才在源 crossref 中出现，补抓回原窗口并计入本轮新增（单独标记）",
+      "locators": {
+        "item": "materials/crossref_response.json#/items/0",
+        "published": "materials/crossref_response.json#/items/0/published",
+        "indexed": "materials/crossref_response.json#/items/0/indexed"
+      },
+      "flags": []
+    }
+  ]
+}
