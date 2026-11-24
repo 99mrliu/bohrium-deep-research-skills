@@ -1,0 +1,9 @@
+{
+  "synthetic": true,
+  "note": "Known-item retrieval smoke tests. must_find_id must appear in the gate's top-5; must_find_id null = negative control expecting zero hits.",
+  "queries": [
+    {"q": "sparse attention", "must_find_id": "ann-001"},
+    {"q": "增量学习", "must_find_id": "note-002"},
+    {"q": "quantum zebra teleportation", "must_find_id": null, "why": "negative control: no document contains these terms"}
+  ]
+}

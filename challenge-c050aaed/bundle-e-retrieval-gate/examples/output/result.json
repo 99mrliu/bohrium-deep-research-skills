@@ -1,0 +1,36 @@
+{
+  "case_id": "synthetic-demo-001",
+  "status": "complete",
+  "synthetic": true,
+  "inventory": "inventory.json",
+  "notes": "notes.json",
+  "index": "index.json",
+  "verification": "verification.json",
+  "artifacts": {
+    "inventory": {
+      "path": "inventory.json",
+      "sha256": "c394f85bee38e1045bb53e86abef6af4f08a78b2db0943ac8c83481f03a801df"
+    },
+    "notes": {
+      "path": "notes.json",
+      "sha256": "4ec3855b35bae0371350aaf8f7bff8ab8c0ffb941433fc7aac54bc826162dcc6"
+    },
+    "index": {
+      "path": "index.json",
+      "sha256": "46a51fe5ea5ac01d3d54df7249179ed38227e1028cee0329fe50609509c71660"
+    },
+    "verification": {
+      "path": "verification.json",
+      "sha256": "3ea0e5754681fe41d82faed93ed3f82e652bba9264b866d63f96cc65a043a3b7"
+    }
+  },
+  "sources": [
+    "annotations.jsonl",
+    "notes.jsonl",
+    "files_inventory.json"
+  ],
+  "uncertainty": [],
+  "change_records": [
+    "2026-11-24 synthetic demo: initial complete result assembled"
+  ]
+}

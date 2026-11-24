@@ -1,0 +1,88 @@
+{
+  "schema": "deliverable-forge/note-schema",
+  "version": "1.0.0",
+  "description": "Typed structured note drafts authored by the agent. compose_notes.py validates drafts against these rules, resolves evidence to source locators, and writes normalized notes.jsonl.",
+  "note_types": ["problem", "method", "result", "reusable_point", "doubt"],
+  "draft_record": {
+    "note_id": {
+      "type": "string",
+      "required": true,
+      "rules": ["non-empty after strip", "unique within drafts.jsonl"]
+    },
+    "note_type": {
+      "type": "string",
+      "required": true,
+      "rules": ["must be one of note_types"]
+    },
+    "claim": {
+      "type": "string",
+      "required": true,
+      "rules": [
+        "non-empty after strip",
+        "the agent's own statement in its own words; if claim is identical to an evidence quote after normalization, the note is flagged with the excerpt_only warning (a warning, not a rejection)"
+      ]
+    },
+    "evidence": {
+      "type": "array",
+      "required": true,
+      "minItems": 1,
+      "item": {
+        "oneOf": [
+          {
+            "description": "reference an extracted annotation",
+            "required_fields": ["annotation_id"],
+            "rules": [
+              "annotation_id must exist in annotations.jsonl",
+              "the referenced annotation must carry anchored_text of >= 8 chars after normalization, a valid integer page, and a non-empty file; the locator (file, page, quote) is taken from the annotation"
+            ]
+          },
+          {
+            "description": "direct source locator",
+            "required_fields": ["file", "page", "quote"],
+            "rules": [
+              "file: non-empty string, matches a sources/<filekey>/ directory",
+              "page: integer, addresses sources/<filekey>/page-NNN.txt (3-digit zero-padded)",
+              "quote: verbatim text, >= 8 chars after Unicode NFKC + whitespace-collapse normalization"
+            ]
+          }
+        ]
+      }
+    },
+    "tags": {
+      "type": "array of strings",
+      "required": false,
+      "default": []
+    }
+  },
+  "normalized_note_record": {
+    "note_id": "string",
+    "note_type": "string",
+    "claim": "string",
+    "tags": ["string"],
+    "evidence": [
+      {
+        "file": "string",
+        "page": "integer",
+        "quote": "string (verbatim)",
+        "annotation_id": "string or null"
+      }
+    ],
+    "annotation_ids": ["sorted unique annotation ids referenced by this note (note -> annotation correspondence)"],
+    "warnings": ["excerpt_only | source_dir_missing"],
+    "tool": "deliverable-forge 1.0.0"
+  },
+  "correspondence": {
+    "note_to_annotations": "the annotation_ids field of each normalized note",
+    "annotation_to_notes": "printed in the compose_notes.py stdout summary, including unreferenced annotations"
+  },
+  "validation_outcomes": {
+    "exit 0": "all drafts valid; notes.jsonl written",
+    "exit 3": "at least one invalid draft; every offending note_id with its reasons is listed on stderr; notes.jsonl is NOT written",
+    "exit 2": "usage or IO error (missing file, malformed JSONL, duplicate annotation_id, ...)"
+  },
+  "verification_rule": {
+    "description": "verify_claims.py normalizes quote and page text identically (Unicode NFKC, then collapse all whitespace runs to a single space, strip) and requires substring containment in sources/<file>/page-NNN.txt",
+    "statuses": ["verified", "file_missing", "page_missing", "quote_not_found"],
+    "gate": "exit 3 unless every claim is verified"
+  }
+}

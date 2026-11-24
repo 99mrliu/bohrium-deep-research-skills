@@ -1,0 +1,1269 @@
+{
+ "docs": {
+  "ann-001": {
+   "date": "2026-11-18",
+   "file": "papers/efficient_transformers_survey.pdf",
+   "files": [
+    "papers/efficient_transformers_survey.pdf"
+   ],
+   "id": "ann-001",
+   "kind": "annotation",
+   "page": 3,
+   "tags": [
+    "complexity",
+    "sparse-attention"
+   ],
+   "text": "Sparse attention reduces complexity from O(n^2) to O(n log n)\ncore complexity claim of the survey",
+   "type": "highlight"
+  },
+  "ann-002": {
+   "date": "2026-11-18",
+   "file": "papers/efficient_transformers_survey.pdf",
+   "files": [
+    "papers/efficient_transformers_survey.pdf"
+   ],
+   "id": "ann-002",
+   "kind": "annotation",
+   "page": 5,
+   "tags": [
+    "linear-attention"
+   ],
+   "text": "Linear attention approximates softmax attention with kernel feature maps\ncompare with the Performer",
+   "type": "underline"
+  },
+  "ann-003": {
+   "date": "2026-11-18",
+   "file": "papers/efficient_transformers_survey.pdf",
+   "files": [
+    "papers/efficient_transformers_survey.pdf"
+   ],
+   "id": "ann-003",
+   "kind": "annotation",
+   "page": 7,
+   "tags": [
+    "longformer",
+    "sparse-attention"
+   ],
+   "text": "Longformer uses sliding window sparse attention with a window size of 512\nlocal pattern plus global tokens",
+   "type": "highlight"
+  },
+  "ann-004": {
+   "date": "2026-11-19",
+   "file": "notes/continual_learning_zh.txt",
+   "files": [
+    "notes/continual_learning_zh.txt"
+   ],
+   "id": "ann-004",
+   "kind": "annotation",
+   "page": 1,
+   "tags": [
+    "增量学习",
+    "遗忘"
+   ],
+   "text": "增量学习的核心挑战是灾难性遗忘\n持续学习读书笔记（合成示例）",
+   "type": "highlight"
+  },
+  "ann-005": {
+   "date": "2026-11-19",
+   "file": "notes/continual_learning_zh.txt",
+   "files": [
+    "notes/continual_learning_zh.txt"
+   ],
+   "id": "ann-005",
+   "kind": "annotation",
+   "page": 2,
+   "tags": [
+    "回放",
+    "增量学习"
+   ],
+   "text": "回放缓冲区可以显著缓解遗忘问题\n经验回放类方法",
+   "type": "comment"
+  },
+  "ann-006": {
+   "date": "2026-11-18",
+   "file": "papers/efficient_transformers_survey.pdf",
+   "files": [
+    "papers/efficient_transformers_survey.pdf"
+   ],
+   "id": "ann-006",
+   "kind": "annotation",
+   "page": 9,
+   "tags": [
+    "flash-attention",
+    "systems"
+   ],
+   "text": "FlashAttention computes exact attention with IO-aware tiling\nsystems-level optimization, orthogonal to sparsity",
+   "type": "comment"
+  },
+  "file:notes/continual_learning_zh.txt": {
+   "date": "2026-11-19",
+   "file": "notes/continual_learning_zh.txt",
+   "files": [
+    "notes/continual_learning_zh.txt"
+   ],
+   "id": "file:notes/continual_learning_zh.txt",
+   "kind": "file",
+   "page": null,
+   "tags": [],
+   "text": "notes/continual_learning_zh.txt",
+   "type": "file"
+  },
+  "file:papers/efficient_transformers_survey.pdf": {
+   "date": "2026-11-18",
+   "file": "papers/efficient_transformers_survey.pdf",
+   "files": [
+    "papers/efficient_transformers_survey.pdf"
+   ],
+   "id": "file:papers/efficient_transformers_survey.pdf",
+   "kind": "file",
+   "page": null,
+   "tags": [],
+   "text": "papers/efficient_transformers_survey.pdf",
+   "type": "file"
+  },
+  "note-001": {
+   "date": "2026-11-20",
+   "file": "papers/efficient_transformers_survey.pdf",
+   "files": [
+    "papers/efficient_transformers_survey.pdf"
+   ],
+   "id": "note-001",
+   "kind": "note",
+   "page": 3,
+   "tags": [
+    "complexity",
+    "sparse-attention"
+   ],
+   "text": "Sparse attention methods reduce self-attention complexity below quadratic scaling.\nreduces complexity from O(n^2) to O(n log n)\nsliding window sparse attention",
+   "type": "claim"
+  },
+  "note-002": {
+   "date": "2026-11-20",
+   "file": "notes/continual_learning_zh.txt",
+   "files": [
+    "notes/continual_learning_zh.txt"
+   ],
+   "id": "note-002",
+   "kind": "note",
+   "page": 1,
+   "tags": [
+    "增量学习",
+    "权衡"
+   ],
+   "text": "增量学习方法必须在遗忘与可塑性之间取得权衡。\n增量学习的核心挑战是灾难性遗忘",
+   "type": "claim"
+  },
+  "note-003": {
+   "date": "2026-11-21",
+   "file": "papers/efficient_transformers_survey.pdf",
+   "files": [
+    "papers/efficient_transformers_survey.pdf"
+   ],
+   "id": "note-003",
+   "kind": "note",
+   "page": 5,
+   "tags": [
+    "linear-attention"
+   ],
+   "text": "Kernel-based linear attention trades exact softmax for linear-time inference.\nkernel feature maps",
+   "type": "claim"
+  },
+  "note-004": {
+   "date": "2026-11-21",
+   "file": "papers/efficient_transformers_survey.pdf",
+   "files": [
+    "papers/efficient_transformers_survey.pdf"
+   ],
+   "id": "note-004",
+   "kind": "note",
+   "page": 9,
+   "tags": [
+    "sparse-attention",
+    "systems"
+   ],
+   "text": "Systems-level IO-aware kernels complement algorithmic sparsity for long-context efficiency.\nIO-aware tiling\nsliding window sparse attention",
+   "type": "synthesis"
+  }
+ },
+ "index": {
+  "2": {
+   "ann-001": {
+    "text": 1
+   },
+   "note-001": {
+    "text": 1
+   }
+  },
+  "512": {
+   "ann-003": {
+    "text": 1
+   }
+  },
+  "a": {
+   "ann-003": {
+    "text": 1
+   }
+  },
+  "algorithmic": {
+   "note-004": {
+    "text": 1
+   }
+  },
+  "approximates": {
+   "ann-002": {
+    "text": 1
+   }
+  },
+  "attention": {
+   "ann-001": {
+    "tags": 1,
+    "text": 1
+   },
+   "ann-002": {
+    "tags": 1,
+    "text": 2
+   },
+   "ann-003": {
+    "tags": 1,
+    "text": 1
+   },
+   "ann-006": {
+    "tags": 1,
+    "text": 1
+   },
+   "note-001": {
+    "tags": 1,
+    "text": 3
+   },
+   "note-003": {
+    "tags": 1,
+    "text": 1
+   },
+   "note-004": {
+    "tags": 1,
+    "text": 1
+   }
+  },
+  "aware": {
+   "ann-006": {
+    "text": 1
+   },
+   "note-004": {
+    "text": 2
+   }
+  },
+  "based": {
+   "note-003": {
+    "text": 1
+   }
+  },
+  "below": {
+   "note-001": {
+    "text": 1
+   }
+  },
+  "claim": {
+   "ann-001": {
+    "text": 1
+   },
+   "note-001": {
+    "type": 1
+   },
+   "note-002": {
+    "type": 1
+   },
+   "note-003": {
+    "type": 1
+   }
+  },
+  "comment": {
+   "ann-005": {
+    "type": 1
+   },
+   "ann-006": {
+    "type": 1
+   }
+  },
+  "compare": {
+   "ann-002": {
+    "text": 1
+   }
+  },
+  "complement": {
+   "note-004": {
+    "text": 1
+   }
+  },
+  "complexity": {
+   "ann-001": {
+    "tags": 1,
+    "text": 2
+   },
+   "note-001": {
+    "tags": 1,
+    "text": 2
+   }
+  },
+  "computes": {
+   "ann-006": {
+    "text": 1
+   }
+  },
+  "context": {
+   "note-004": {
+    "text": 1
+   }
+  },
+  "continual": {
+   "ann-004": {
+    "file": 1
+   },
+   "ann-005": {
+    "file": 1
+   },
+   "file:notes/continual_learning_zh.txt": {
+    "file": 1,
+    "text": 1
+   },
+   "note-002": {
+    "file": 1
+   }
+  },
+  "core": {
+   "ann-001": {
+    "text": 1
+   }
+  },
+  "efficiency": {
+   "note-004": {
+    "text": 1
+   }
+  },
+  "efficient": {
+   "ann-001": {
+    "file": 1
+   },
+   "ann-002": {
+    "file": 1
+   },
+   "ann-003": {
+    "file": 1
+   },
+   "ann-006": {
+    "file": 1
+   },
+   "file:papers/efficient_transformers_survey.pdf": {
+    "file": 1,
+    "text": 1
+   },
+   "note-001": {
+    "file": 1
+   },
+   "note-003": {
+    "file": 1
+   },
+   "note-004": {
+    "file": 1
+   }
+  },
+  "exact": {
+   "ann-006": {
+    "text": 1
+   },
+   "note-003": {
+    "text": 1
+   }
+  },
+  "feature": {
+   "ann-002": {
+    "text": 1
+   },
+   "note-003": {
+    "text": 1
+   }
+  },
+  "file": {
+   "file:notes/continual_learning_zh.txt": {
+    "type": 1
+   },
+   "file:papers/efficient_transformers_survey.pdf": {
+    "type": 1
+   }
+  },
+  "flash": {
+   "ann-006": {
+    "tags": 1
+   }
+  },
+  "flashattention": {
+   "ann-006": {
+    "text": 1
+   }
+  },
+  "for": {
+   "note-003": {
+    "text": 1
+   },
+   "note-004": {
+    "text": 1
+   }
+  },
+  "from": {
+   "ann-001": {
+    "text": 1
+   },
+   "note-001": {
+    "text": 1
+   }
+  },
+  "global": {
+   "ann-003": {
+    "text": 1
+   }
+  },
+  "highlight": {
+   "ann-001": {
+    "type": 1
+   },
+   "ann-003": {
+    "type": 1
+   },
+   "ann-004": {
+    "type": 1
+   }
+  },
+  "inference": {
+   "note-003": {
+    "text": 1
+   }
+  },
+  "io": {
+   "ann-006": {
+    "text": 1
+   },
+   "note-004": {
+    "text": 2
+   }
+  },
+  "kernel": {
+   "ann-002": {
+    "text": 1
+   },
+   "note-003": {
+    "text": 2
+   }
+  },
+  "kernels": {
+   "note-004": {
+    "text": 1
+   }
+  },
+  "learning": {
+   "ann-004": {
+    "file": 1
+   },
+   "ann-005": {
+    "file": 1
+   },
+   "file:notes/continual_learning_zh.txt": {
+    "file": 1,
+    "text": 1
+   },
+   "note-002": {
+    "file": 1
+   }
+  },
+  "level": {
+   "ann-006": {
+    "text": 1
+   },
+   "note-004": {
+    "text": 1
+   }
+  },
+  "linear": {
+   "ann-002": {
+    "tags": 1,
+    "text": 1
+   },
+   "note-003": {
+    "tags": 1,
+    "text": 2
+   }
+  },
+  "local": {
+   "ann-003": {
+    "text": 1
+   }
+  },
+  "log": {
+   "ann-001": {
+    "text": 1
+   },
+   "note-001": {
+    "text": 1
+   }
+  },
+  "long": {
+   "note-004": {
+    "text": 1
+   }
+  },
+  "longformer": {
+   "ann-003": {
+    "tags": 1,
+    "text": 1
+   }
+  },
+  "maps": {
+   "ann-002": {
+    "text": 1
+   },
+   "note-003": {
+    "text": 1
+   }
+  },
+  "methods": {
+   "note-001": {
+    "text": 1
+   }
+  },
+  "n": {
+   "ann-001": {
+    "text": 3
+   },
+   "note-001": {
+    "text": 3
+   }
+  },
+  "notes": {
+   "ann-004": {
+    "file": 1
+   },
+   "ann-005": {
+    "file": 1
+   },
+   "file:notes/continual_learning_zh.txt": {
+    "file": 1,
+    "text": 1
+   },
+   "note-002": {
+    "file": 1
+   }
+  },
+  "o": {
+   "ann-001": {
+    "text": 2
+   },
+   "note-001": {
+    "text": 2
+   }
+  },
+  "of": {
+   "ann-001": {
+    "text": 1
+   },
+   "ann-003": {
+    "text": 1
+   }
+  },
+  "optimization": {
+   "ann-006": {
+    "text": 1
+   }
+  },
+  "orthogonal": {
+   "ann-006": {
+    "text": 1
+   }
+  },
+  "papers": {
+   "ann-001": {
+    "file": 1
+   },
+   "ann-002": {
+    "file": 1
+   },
+   "ann-003": {
+    "file": 1
+   },
+   "ann-006": {
+    "file": 1
+   },
+   "file:papers/efficient_transformers_survey.pdf": {
+    "file": 1,
+    "text": 1
+   },
+   "note-001": {
+    "file": 1
+   },
+   "note-003": {
+    "file": 1
+   },
+   "note-004": {
+    "file": 1
+   }
+  },
+  "pattern": {
+   "ann-003": {
+    "text": 1
+   }
+  },
+  "pdf": {
+   "ann-001": {
+    "file": 1
+   },
+   "ann-002": {
+    "file": 1
+   },
+   "ann-003": {
+    "file": 1
+   },
+   "ann-006": {
+    "file": 1
+   },
+   "file:papers/efficient_transformers_survey.pdf": {
+    "file": 1,
+    "text": 1
+   },
+   "note-001": {
+    "file": 1
+   },
+   "note-003": {
+    "file": 1
+   },
+   "note-004": {
+    "file": 1
+   }
+  },
+  "performer": {
+   "ann-002": {
+    "text": 1
+   }
+  },
+  "plus": {
+   "ann-003": {
+    "text": 1
+   }
+  },
+  "quadratic": {
+   "note-001": {
+    "text": 1
+   }
+  },
+  "reduce": {
+   "note-001": {
+    "text": 1
+   }
+  },
+  "reduces": {
+   "ann-001": {
+    "text": 1
+   },
+   "note-001": {
+    "text": 1
+   }
+  },
+  "scaling": {
+   "note-001": {
+    "text": 1
+   }
+  },
+  "self": {
+   "note-001": {
+    "text": 1
+   }
+  },
+  "size": {
+   "ann-003": {
+    "text": 1
+   }
+  },
+  "sliding": {
+   "ann-003": {
+    "text": 1
+   },
+   "note-001": {
+    "text": 1
+   },
+   "note-004": {
+    "text": 1
+   }
+  },
+  "softmax": {
+   "ann-002": {
+    "text": 1
+   },
+   "note-003": {
+    "text": 1
+   }
+  },
+  "sparse": {
+   "ann-001": {
+    "tags": 1,
+    "text": 1
+   },
+   "ann-003": {
+    "tags": 1,
+    "text": 1
+   },
+   "note-001": {
+    "tags": 1,
+    "text": 2
+   },
+   "note-004": {
+    "tags": 1,
+    "text": 1
+   }
+  },
+  "sparsity": {
+   "ann-006": {
+    "text": 1
+   },
+   "note-004": {
+    "text": 1
+   }
+  },
+  "survey": {
+   "ann-001": {
+    "file": 1,
+    "text": 1
+   },
+   "ann-002": {
+    "file": 1
+   },
+   "ann-003": {
+    "file": 1
+   },
+   "ann-006": {
+    "file": 1
+   },
+   "file:papers/efficient_transformers_survey.pdf": {
+    "file": 1,
+    "text": 1
+   },
+   "note-001": {
+    "file": 1
+   },
+   "note-003": {
+    "file": 1
+   },
+   "note-004": {
+    "file": 1
+   }
+  },
+  "synthesis": {
+   "note-004": {
+    "type": 1
+   }
+  },
+  "systems": {
+   "ann-006": {
+    "tags": 1,
+    "text": 1
+   },
+   "note-004": {
+    "tags": 1,
+    "text": 1
+   }
+  },
+  "the": {
+   "ann-001": {
+    "text": 1
+   },
+   "ann-002": {
+    "text": 1
+   }
+  },
+  "tiling": {
+   "ann-006": {
+    "text": 1
+   },
+   "note-004": {
+    "text": 1
+   }
+  },
+  "time": {
+   "note-003": {
+    "text": 1
+   }
+  },
+  "to": {
+   "ann-001": {
+    "text": 1
+   },
+   "ann-006": {
+    "text": 1
+   },
+   "note-001": {
+    "text": 1
+   }
+  },
+  "tokens": {
+   "ann-003": {
+    "text": 1
+   }
+  },
+  "trades": {
+   "note-003": {
+    "text": 1
+   }
+  },
+  "transformers": {
+   "ann-001": {
+    "file": 1
+   },
+   "ann-002": {
+    "file": 1
+   },
+   "ann-003": {
+    "file": 1
+   },
+   "ann-006": {
+    "file": 1
+   },
+   "file:papers/efficient_transformers_survey.pdf": {
+    "file": 1,
+    "text": 1
+   },
+   "note-001": {
+    "file": 1
+   },
+   "note-003": {
+    "file": 1
+   },
+   "note-004": {
+    "file": 1
+   }
+  },
+  "txt": {
+   "ann-004": {
+    "file": 1
+   },
+   "ann-005": {
+    "file": 1
+   },
+   "file:notes/continual_learning_zh.txt": {
+    "file": 1,
+    "text": 1
+   },
+   "note-002": {
+    "file": 1
+   }
+  },
+  "underline": {
+   "ann-002": {
+    "type": 1
+   }
+  },
+  "uses": {
+   "ann-003": {
+    "text": 1
+   }
+  },
+  "window": {
+   "ann-003": {
+    "text": 2
+   },
+   "note-001": {
+    "text": 1
+   },
+   "note-004": {
+    "text": 1
+   }
+  },
+  "with": {
+   "ann-002": {
+    "text": 2
+   },
+   "ann-003": {
+    "text": 1
+   },
+   "ann-006": {
+    "text": 1
+   }
+  },
+  "zh": {
+   "ann-004": {
+    "file": 1
+   },
+   "ann-005": {
+    "file": 1
+   },
+   "file:notes/continual_learning_zh.txt": {
+    "file": 1,
+    "text": 1
+   },
+   "note-002": {
+    "file": 1
+   }
+  },
+  "与可": {
+   "note-002": {
+    "text": 1
+   }
+  },
+  "之间": {
+   "note-002": {
+    "text": 1
+   }
+  },
+  "习方": {
+   "note-002": {
+    "text": 1
+   }
+  },
+  "习的": {
+   "ann-004": {
+    "text": 1
+   },
+   "note-002": {
+    "text": 1
+   }
+  },
+  "习读": {
+   "ann-004": {
+    "text": 1
+   }
+  },
+  "书笔": {
+   "ann-004": {
+    "text": 1
+   }
+  },
+  "以显": {
+   "ann-005": {
+    "text": 1
+   }
+  },
+  "冲区": {
+   "ann-005": {
+    "text": 1
+   }
+  },
+  "区可": {
+   "ann-005": {
+    "text": 1
+   }
+  },
+  "取得": {
+   "note-002": {
+    "text": 1
+   }
+  },
+  "可以": {
+   "ann-005": {
+    "text": 1
+   }
+  },
+  "可塑": {
+   "note-002": {
+    "text": 1
+   }
+  },
+  "合成": {
+   "ann-004": {
+    "text": 1
+   }
+  },
+  "回放": {
+   "ann-005": {
+    "tags": 1,
+    "text": 2
+   }
+  },
+  "在遗": {
+   "note-002": {
+    "text": 1
+   }
+  },
+  "塑性": {
+   "note-002": {
+    "text": 1
+   }
+  },
+  "增量": {
+   "ann-004": {
+    "tags": 1,
+    "text": 1
+   },
+   "ann-005": {
+    "tags": 1
+   },
+   "note-002": {
+    "tags": 1,
+    "text": 2
+   }
+  },
+  "学习": {
+   "ann-004": {
+    "tags": 1,
+    "text": 2
+   },
+   "ann-005": {
+    "tags": 1
+   },
+   "note-002": {
+    "tags": 1,
+    "text": 2
+   }
+  },
+  "得权": {
+   "note-002": {
+    "text": 1
+   }
+  },
+  "心挑": {
+   "ann-004": {
+    "text": 1
+   },
+   "note-002": {
+    "text": 1
+   }
+  },
+  "必须": {
+   "note-002": {
+    "text": 1
+   }
+  },
+  "忘与": {
+   "note-002": {
+    "text": 1
+   }
+  },
+  "忘问": {
+   "ann-005": {
+    "text": 1
+   }
+  },
+  "性之": {
+   "note-002": {
+    "text": 1
+   }
+  },
+  "性遗": {
+   "ann-004": {
+    "text": 1
+   },
+   "note-002": {
+    "text": 1
+   }
+  },
+  "成示": {
+   "ann-004": {
+    "text": 1
+   }
+  },
+  "战是": {
+   "ann-004": {
+    "text": 1
+   },
+   "note-002": {
+    "text": 1
+   }
+  },
+  "持续": {
+   "ann-004": {
+    "text": 1
+   }
+  },
+  "挑战": {
+   "ann-004": {
+    "text": 1
+   },
+   "note-002": {
+    "text": 1
+   }
+  },
+  "放类": {
+   "ann-005": {
+    "text": 1
+   }
+  },
+  "放缓": {
+   "ann-005": {
+    "text": 1
+   }
+  },
+  "方法": {
+   "ann-005": {
+    "text": 1
+   },
+   "note-002": {
+    "text": 1
+   }
+  },
+  "是灾": {
+   "ann-004": {
+    "text": 1
+   },
+   "note-002": {
+    "text": 1
+   }
+  },
+  "显著": {
+   "ann-005": {
+    "text": 1
+   }
+  },
+  "权衡": {
+   "note-002": {
+    "tags": 1,
+    "text": 1
+   }
+  },
+  "核心": {
+   "ann-004": {
+    "text": 1
+   },
+   "note-002": {
+    "text": 1
+   }
+  },
+  "法必": {
+   "note-002": {
+    "text": 1
+   }
+  },
+  "灾难": {
+   "ann-004": {
+    "text": 1
+   },
+   "note-002": {
+    "text": 1
+   }
+  },
+  "的核": {
+   "ann-004": {
+    "text": 1
+   },
+   "note-002": {
+    "text": 1
+   }
+  },
+  "示例": {
+   "ann-004": {
+    "text": 1
+   }
+  },
+  "笔记": {
+   "ann-004": {
+    "text": 1
+   }
+  },
+  "类方": {
+   "ann-005": {
+    "text": 1
+   }
+  },
+  "经验": {
+   "ann-005": {
+    "text": 1
+   }
+  },
+  "续学": {
+   "ann-004": {
+    "text": 1
+   }
+  },
+  "缓冲": {
+   "ann-005": {
+    "text": 1
+   }
+  },
+  "缓解": {
+   "ann-005": {
+    "text": 1
+   }
+  },
+  "著缓": {
+   "ann-005": {
+    "text": 1
+   }
+  },
+  "解遗": {
+   "ann-005": {
+    "text": 1
+   }
+  },
+  "读书": {
+   "ann-004": {
+    "text": 1
+   }
+  },
+  "遗忘": {
+   "ann-004": {
+    "tags": 1,
+    "text": 1
+   },
+   "ann-005": {
+    "text": 1
+   },
+   "note-002": {
+    "text": 2
+   }
+  },
+  "量学": {
+   "ann-004": {
+    "tags": 1,
+    "text": 1
+   },
+   "ann-005": {
+    "tags": 1
+   },
+   "note-002": {
+    "tags": 1,
+    "text": 2
+   }
+  },
+  "问题": {
+   "ann-005": {
+    "text": 1
+   }
+  },
+  "间取": {
+   "note-002": {
+    "text": 1
+   }
+  },
+  "难性": {
+   "ann-004": {
+    "text": 1
+   },
+   "note-002": {
+    "text": 1
+   }
+  },
+  "须在": {
+   "note-002": {
+    "text": 1
+   }
+  },
+  "验回": {
+   "ann-005": {
+    "text": 1
+   }
+  }
+ },
+ "meta": {
+  "counts": {
+   "annotations": 6,
+   "documents": 12,
+   "files": 2,
+   "notes": 4,
+   "terms": 135
+  },
+  "format": "retrieval-gate-index",
+  "input_sha256": {
+   "annotations": "c64d9a950a2eeb3289635f600b4f1b9f4a21922fea715cd96190a7a54422dffb",
+   "inventory": "c394f85bee38e1045bb53e86abef6af4f08a78b2db0943ac8c83481f03a801df",
+   "notes": "63675ea2bf841a4d29321cdf77e7f5717e6a89c2eecc2f0cd56d06a597e8ae22"
+  },
+  "inputs": {
+   "annotations": "annotations.jsonl",
+   "inventory": "files_inventory.json",
+   "notes": "notes.jsonl"
+  },
+  "version": 1
+ }
+}

@@ -1,0 +1,42 @@
+{
+  "schema": "version-bridge/manifest@1",
+  "note": "Synthetic fixture inventory. sha256/size are the real values of the fixture files; mtime values are fictional ISO-8601 UTC strings chosen to exercise the canonical-member rule.",
+  "files": [
+    {
+      "relpath": "downloads/report.pdf",
+      "sha256": "b28551bd57a93467d1f54dd3e86ec077f3ea5f86bf017b4305645c204d72e3fa",
+      "size": 243,
+      "mtime": "2026-01-12T09:00:00Z"
+    },
+    {
+      "relpath": "notes_v1.txt",
+      "sha256": "dd894862aafac7d7a321a5ad0e6348df8e299a494d441a23f54eee294f0e30f5",
+      "size": 554,
+      "mtime": "2026-02-01T10:00:00Z"
+    },
+    {
+      "relpath": "notes_v2.txt",
+      "sha256": "ecb30f8ba2c1b076e92d2096de87861e8ca335bf2f83398ed607be3c3f735cd5",
+      "size": 467,
+      "mtime": "2026-02-05T10:00:00Z"
+    },
+    {
+      "relpath": "report.pdf",
+      "sha256": "b28551bd57a93467d1f54dd3e86ec077f3ea5f86bf017b4305645c204d72e3fa",
+      "size": 243,
+      "mtime": "2026-01-10T09:00:00Z"
+    },
+    {
+      "relpath": "report_copy.pdf",
+      "sha256": "b28551bd57a93467d1f54dd3e86ec077f3ea5f86bf017b4305645c204d72e3fa",
+      "size": 243,
+      "mtime": "2026-01-11T09:00:00Z"
+    },
+    {
+      "relpath": "unrelated.md",
+      "sha256": "ebad600c5a514f0a59e6d6062a3d86ec1bd336e7f62ed4323a4ed75370f2be8f",
+      "size": 56,
+      "mtime": "2026-03-01T08:00:00Z"
+    }
+  ]
+}

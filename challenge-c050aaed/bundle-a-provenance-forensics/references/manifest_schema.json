@@ -1,0 +1,84 @@
+{
+  "description": "Documented (schema-ish) formats for provenance-forensics artifacts. Plain documented JSON, not a strict JSON Schema.",
+  "manifest": {
+    "produced_by": "scripts/forensic_inventory.py --dir DIR --out manifest.json",
+    "determinism": "files sorted by relpath; groups sorted by first member / normalized stem; no wall-clock fields; mtime values come from the input files",
+    "fields": {
+      "generated_by": "string, tool identifier",
+      "tool_version": "string, e.g. 1.0.0",
+      "root": "string, absolute path of the inventoried directory at run time",
+      "files": [
+        {
+          "relpath": "string, path relative to root, OS separators, sorted",
+          "sha256": "string hex, or null when the file could not be read",
+          "size": "integer bytes, or null when stat failed",
+          "mtime": "number, seconds since epoch FROM THE INPUT FILE (not run time), or null",
+          "mode": "string, 4-digit octal permission bits, e.g. 0644, or null",
+          "readable": "boolean, whether the file content could be opened and read",
+          "sniffed": "one of: pdf | zip | png | jpeg | utf8_text | binary_unknown | empty | null",
+          "extension": "lowercase file extension including dot, e.g. .pdf (may be empty string)",
+          "extension_mismatch": "boolean, true when extension is in the known map {.pdf,.zip,.png,.jpg,.jpeg,.txt,.md,.json,.csv} and sniffed type differs",
+          "pdf_encrypted": "boolean, true when sniffed=pdf and raw bytes '/Encrypt' appear within the first 65536 bytes",
+          "empty": "boolean, true when size == 0",
+          "classification": "exactly one of: readable | encrypted | unreadable | permission_denied | empty | mismatched_extension",
+          "error": "string with the OS error detail, or null"
+        }
+      ],
+      "duplicate_groups": [
+        {
+          "sha256": "string hex shared by all members",
+          "size": "integer bytes",
+          "members": ["relpath", "relpath (>= 2 members, byte-identical, sorted)"]
+        }
+      ],
+      "version_suspect_groups": [
+        {
+          "normalized_stem": "string: lowercase basename minus extension, with trailing ' (1)', ' (2024)', ' copy', '-v2', '_v10' markers stripped, whitespace collapsed",
+          "members": [
+            {"relpath": "string", "sha256": "string hex or null"}
+          ],
+          "rule": ">= 2 files share the normalized stem AND have >= 2 distinct sha256 values; same-content files land in duplicate_groups instead"
+        }
+      ],
+      "summary": {
+        "total_files": "integer",
+        "classification_counts": "object mapping classification -> count (sorted keys)",
+        "duplicate_groups": "integer",
+        "version_suspect_groups": "integer",
+        "encrypted_files": "integer",
+        "empty_files": "integer",
+        "extension_mismatch_files": "integer",
+        "unreadable_or_denied_files": "integer"
+      }
+    }
+  },
+  "audit_log": {
+    "produced_by": "scripts/audit_log.py append --log audit.jsonl --op OP [--detail k=v ...]",
+    "format": "JSON Lines; one entry object per line; append-only",
+    "entry_fields": {
+      "seq": "integer, 1-based, strictly increasing; the ONLY ordering/time signal (no wall-clock time anywhere)",
+      "op": "string, free-form operation name, conventional values: inventory | classify | dedup_decision | version_decision | skip | recovery | conflict | replay_check | result_write",
+      "details": "object of string->string key=value pairs from --detail flags",
+      "prev_sha256": "hex of previous entry's entry_sha256; the first entry uses the genesis constant '0000000000000000000000000000000000000000000000000000000000000000'",
+      "entry_sha256": "sha256 hex of canonical JSON of the entry WITHOUT this field; canonical JSON = json.dumps(obj, sort_keys=True, separators=(',',':'), ensure_ascii=False) encoded UTF-8"
+    },
+    "verification": "scripts/audit_log.py verify re-reads the file, checks seq continuity, prev_sha256 linkage, and re-computes every entry_sha256; exits 0 when intact, 3 on any break (including invalid JSON lines)"
+  },
+  "replay_report": {
+    "produced_by": "scripts/replay_check.py --manifest manifest.json --dir DIR --out replay_report.json",
+    "fields": {
+      "generated_by": "string",
+      "tool_version": "string",
+      "manifest": "absolute path of the manifest compared against",
+      "dir": "absolute path of the directory re-inventoried",
+      "clean": "boolean, true only when all four diff lists are empty",
+      "added": ["relpaths present now but absent from manifest, sorted"],
+      "removed": ["relpaths in manifest but missing now, sorted"],
+      "changed": ["relpaths present in both with different sha256, sorted"],
+      "renamed_suspects": [{"from": "removed relpath", "to": "added relpath", "sha256": "shared hash"}],
+      "summary": {"added": "int", "removed": "int", "changed": "int", "renamed_suspects": "int"}
+    },
+    "exit_codes": "0 = clean (no difference), 3 = any difference or unloadable manifest, 2 = usage error"
+  },
+  "exit_codes_global": "all scripts: 0 success, 2 usage error (argparse), 3 verification failure / differences found"
+}

@@ -1,0 +1,85 @@
+{
+  "bundle": "version-bridge",
+  "schemas": {
+    "manifest": {
+      "schema_id": "version-bridge/manifest@1",
+      "description": "Minimal local inventory of the document library. One JSON object. sha256/size must be measured from the real files; mtime is the file mtime in ISO-8601 UTC (weak version evidence, see merge_playbook.md).",
+      "format": {
+        "schema": "version-bridge/manifest@1",
+        "files": [
+          {
+            "relpath": "path relative to the library root, forward slashes, unique",
+            "sha256": "lowercase hex digest of the file bytes",
+            "size": "integer, bytes",
+            "mtime": "ISO-8601 UTC string, e.g. 2026-02-05T10:00:00Z"
+          }
+        ]
+      }
+    },
+    "page_texts": {
+      "schema_id": "version-bridge/page_texts@1",
+      "description": "Extracted page texts live in a directory tree, not a JSON file: texts/<filekey>/page-NNN.txt, UTF-8, where filekey = relpath with '/' replaced by '__' and NNN is the 1-based zero-padded page number. Scripts normalize page text (lowercase, whitespace collapsed) before matching; all reported char offsets refer to the NORMALIZED page text."
+    },
+    "annotations": {
+      "schema_id": "version-bridge/annotations@1",
+      "description": "JSONL, one object per line. file is the manifest relpath of the version the annotation was taken on; file_sha256 pins the exact bytes.",
+      "format": {
+        "annotation_id": "string, unique",
+        "file": "relpath of the source version",
+        "file_sha256": "sha256 of the source version",
+        "page": "integer, 1-based",
+        "type": "highlight | note | comment | ...",
+        "anchored_text": "verbatim quoted text the annotation is anchored to",
+        "contents": "the annotation body written by the reader"
+      }
+    },
+    "version_graph": {
+      "schema_id": "version-bridge/version_graph@1",
+      "produced_by": "scripts/version_graph.py --manifest M --texts-dir T --out G",
+      "fields": {
+        "schema": "version-bridge/version_graph@1",
+        "generator": "tool name + version string",
+        "params": "{similarity_threshold: 0.6, ngram: 5, stem_stop_tokens: [...]}",
+        "nodes": "[{relpath, sha256, size, mtime, stem}] sorted by relpath",
+        "edges": "[{type, from, to, evidence}] sorted by (type, from, to). type byte_duplicate: same sha256 AND same basename; renamed_copy: same sha256, different basename (evidence.sha256); version_of: different sha256, same normalized stem, text similarity >= 0.6, directed older->newer by mtime (evidence.normalized_stem, evidence.text_similarity = character 5-gram Jaccard over normalized concatenated page texts, evidence.older_mtime/newer_mtime, evidence.direction_basis).",
+        "clusters": "[{cluster_id, members, canonical, canonical_rule}]; canonical = newest mtime, ties broken by shortest relpath then lexicographic order",
+        "metadata_conflicts": "[{type: suspected_mislabel|similarity_unavailable, files, stem, text_similarity, reason}] — same normalized stem but no version_of edge",
+        "uncertainty": "list of strings; always includes the mtime-is-weak-evidence note",
+        "degraded": "list of strings; non-empty => process exited 3"
+      }
+    },
+    "migration_report": {
+      "schema_id": "version-bridge/migration_report@1",
+      "produced_by": "scripts/migrate_annotations.py --annotations A --texts-dir T --graph G --out R",
+      "format": "JSONL, one record per input annotation, sorted by annotation_id. Annotations are never merged; every record keeps annotation_id, source.file_sha256 and target.file_sha256.",
+      "record": {
+        "schema": "version-bridge/migration_report@1",
+        "annotation_id": "string",
+        "type": "copied from input",
+        "contents": "copied from input (verbatim, enables conflict detection)",
+        "status": "native (already on the canonical member) | migrated (ratio >= 0.9) | shifted (0.7 <= ratio < 0.9) | orphaned (ratio < 0.7, kept on source version) | error (processing failed)",
+        "source": "{file, file_sha256, page}",
+        "target": "null for orphaned/error, else {file, file_sha256, page, char_start, char_end} with offsets into the NORMALIZED canonical page text; char_start/char_end may be null when offsets could not be computed for a native record",
+        "ratio": "best SequenceMatcher ratio, rounded to 4 decimals; 1.0 for native; null for error",
+        "uncertainty": "present on shifted records",
+        "note": "present on orphaned/native-standalone/error records",
+        "warnings": "optional list, e.g. annotation file_sha256 disagrees with the manifest"
+      }
+    },
+    "merge_plan": {
+      "schema_id": "version-bridge/merge_plan@1",
+      "produced_by": "scripts/merge_plan.py --graph G --migration R --out P [--read-only RELPATH ...]",
+      "fields": {
+        "schema": "version-bridge/merge_plan@1",
+        "generator": "tool name + version string",
+        "policy": "{deletion, conflict_resolution, region_size_chars: 500, canonical_rule}",
+        "read_only": "sorted relpaths the case rules mark untouchable (from --read-only)",
+        "clusters": "[{cluster_id, canonical, aliases, alias_policy, annotation_counts: {status: n}, conflict_queue}]",
+        "conflict_queue": "[{canonical_page, region_index, region_char_span, overlap_char_span, annotations: [{annotation_id, source_file, contents}], reason}] — annotations from DIFFERENT source versions whose target spans overlap on the same canonical page region while contents disagree; grouped for human review, never auto-resolved",
+        "annotations_outside_graph": "count of migration records whose source file is in no cluster",
+        "requires_human_review": "[{kind: conflict|shifted|orphaned|error, cluster_id, annotation_ids, reason}]; empty list means fully automatic",
+        "fully_automatic": "boolean, true iff requires_human_review is empty"
+      }
+    }
+  }
+}

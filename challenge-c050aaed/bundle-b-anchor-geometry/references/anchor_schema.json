@@ -1,0 +1,87 @@
+{
+  "$comment": "Documentation of the text artifacts used by the anchor-geometry skill. All coordinates are in PAGE space with origin TOP-LEFT, y growing DOWN (the pdftotext -bbox / PyMuPDF convention). All files are UTF-8. JSONL = one JSON object per line.",
+  "annotations_jsonl": {
+    "path": "annotations.jsonl (input)",
+    "fields": {
+      "annotation_id": {"type": "string", "required": true, "doc": "unique id of the raw mark; never fabricated, carried through verbatim"},
+      "file": {"type": "string", "required": true, "doc": "source document name; resolves to pages/<file>/page-NNN.words.tsv"},
+      "page": {"type": "integer", "required": true, "doc": "1-based page number; TSV name is zero-padded to 3 digits"},
+      "type": {"type": "string", "required": true, "doc": "PDF annotation type: Highlight | Underline | Squiggly | StrikeOut | FreeText | Ink | ... ; preserved verbatim, never merged into one bucket"},
+      "category": {"type": "string", "required": false, "doc": "task-level tag (e.g. evidence, question); preserved verbatim"},
+      "color_rgb": {"type": "array[3] of float 0..1", "required": false, "doc": "mark color; preserved verbatim, never bucketed"},
+      "quadpoints": {"type": "array of number, length multiple of 8", "required": "for area marks", "doc": "x1 y1 x2 y2 x3 y3 x4 y4 per quad, already converted to top-left origin; each quad is reduced to its bounding rect"},
+      "rect": {"type": "array[4] x0 y0 x1 y1", "required": "for FreeText/Ink without quads", "doc": "mark bounding box (top-left origin)"},
+      "contents": {"type": "string", "required": false, "doc": "recorded quote or note text; used by drift_correct as the re-anchor target"},
+      "author": {"type": "string", "required": false, "doc": "annotation author; preserved verbatim"}
+    }
+  },
+  "words_tsv": {
+    "path": "pages/<file>/page-NNN.words.tsv",
+    "format": "tab-separated, one word per line, optional #-comment header lines",
+    "columns": [
+      {"name": "word", "doc": "the token text (no tabs)"},
+      {"name": "x0", "doc": "left edge, top-left origin"},
+      {"name": "y0", "doc": "top edge"},
+      {"name": "x1", "doc": "right edge"},
+      {"name": "y1", "doc": "bottom edge"},
+      {"name": "origin", "optional": true, "default": "text", "doc": "text (born-digital layer) | ocr (from ocr-tool)"},
+      {"name": "confidence", "optional": true, "doc": "OCR confidence 0..1 when origin=ocr"}
+    ],
+    "doc": "word index i (0-based, file order after skipping comments) is the stable word id referenced by word_indices"
+  },
+  "resolved_jsonl": {
+    "path": "resolved.jsonl (output of anchor_resolve.py)",
+    "doc": "every input field is preserved verbatim; the following fields are added",
+    "added_fields": {
+      "status": "resolved | empty_match | no_words_file | failed",
+      "anchor_kind": "quad | rect | nearest_block",
+      "anchored_text": "marked text, words joined in (column, line_y, x0) reading order; for nearest_block: the nearest line's text",
+      "word_indices": "0-based word ids (file order) used, in join order",
+      "bbox": "union of quad rects (the mark geometry); for nearest_block: the block box",
+      "quad_count": "number of quads processed (area marks only)",
+      "coverage": "fraction of total quad area covered by matched words, 0..1 (null for nearest_block)",
+      "column_count": "columns detected on the page via x-projection gutters (>=8 units of zero coverage with words on both sides)",
+      "column_gutters_x": "x positions of detected gutters (only when column_count > 1)",
+      "page_origin": "text | ocr | mixed",
+      "drift_suspected": "true when matched but coverage < 0.5",
+      "anchor_distance": "euclidean distance from mark rect center to nearest block (nearest_block only)",
+      "error": "human-readable reason when status != resolved"
+    }
+  },
+  "verify_report_json": {
+    "path": "verify_report.json (output of anchor_verify.py)",
+    "fields": {
+      "input": "basename of the verified jsonl",
+      "summary": {
+        "total": "all anchors in input",
+        "classified": "anchors actually re-verified (non-skipped)",
+        "exact | normalized | drifted | failed | skipped": "counts; classes: ratio>=0.99 exact, >=0.90 normalized, >=0.60 drifted, <0.60 failed",
+        "*_rate": "count / classified (null when classified = 0)"
+      },
+      "anchors": [{
+        "annotation_id": "...", "file": "...", "page": 0, "anchor_kind": "...",
+        "resolve_status": "status from resolved.jsonl",
+        "cls": "exact | normalized | drifted | failed | skipped",
+        "ratio": "difflib ratio of normalized recorded vs re-clipped text (null when skipped)",
+        "recorded_text": "anchored_text from input",
+        "reclip_text": "independently re-clipped text (word-center-inside rule, per-quad rects, column-aware order)",
+        "n_words_recorded": 0, "n_words_reclip": 0, "note": "present on skips"
+      }]
+    },
+    "exit_codes": {"0": "no failed anchor", "2": "fatal error", "3": ">=1 failed anchor"}
+  },
+  "corrected_jsonl": {
+    "path": "corrected.jsonl (output of drift_correct.py)",
+    "doc": "resolved.jsonl plus a 'correction' object per record; corrected records also get bbox/quadpoints/word_indices/anchored_text replaced by the winning window",
+    "correction": {
+      "status": "ok | corrected | unrecoverable | not_checked | skipped",
+      "ratio": "best window ratio (ok/corrected)",
+      "best_ratio": "best window ratio below threshold (unrecoverable)",
+      "old_bbox": "bbox before correction", "new_bbox": "bbox after correction",
+      "old_anchored_text": "text before correction",
+      "target_source": "contents | anchored_text",
+      "reason": "human-readable explanation (skipped/not_checked/unrecoverable)"
+    },
+    "exit_codes": {"0": "no unrecoverable anchor", "2": "fatal error", "3": ">=1 unrecoverable anchor"}
+  }
+}
