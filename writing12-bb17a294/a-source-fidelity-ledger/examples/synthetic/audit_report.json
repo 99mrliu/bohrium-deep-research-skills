@@ -1,0 +1,255 @@
+{
+  "summary": {
+    "total_facts": 24,
+    "preserved": 23,
+    "normalized": 1,
+    "missing": 0,
+    "altered": 0,
+    "added": 0
+  },
+  "verdicts": [
+    {
+      "id": "F0001",
+      "type": "sample_size",
+      "raw": "n = 1,248",
+      "source_page": 1,
+      "source_line": 3,
+      "verdict": "preserved",
+      "detail": "exact/digit-exact form 'n = 1,248'",
+      "translation_line": 3
+    },
+    {
+      "id": "F0002",
+      "type": "year",
+      "raw": "2019",
+      "source_page": 1,
+      "source_line": 3,
+      "verdict": "preserved",
+      "detail": "year present",
+      "translation_line": 3
+    },
+    {
+      "id": "F0003",
+      "type": "year",
+      "raw": "2023",
+      "source_page": 1,
+      "source_line": 3,
+      "verdict": "preserved",
+      "detail": "year present",
+      "translation_line": 3
+    },
+    {
+      "id": "F0004",
+      "type": "number",
+      "raw": "14",
+      "source_page": 1,
+      "source_line": 3,
+      "verdict": "preserved",
+      "detail": "exact/digit-exact form '14'",
+      "translation_line": 3
+    },
+    {
+      "id": "F0005",
+      "type": "citation_marker",
+      "raw": "(Smith, 2020)",
+      "source_page": 1,
+      "source_line": 4,
+      "verdict": "preserved",
+      "detail": "author-year 'Smith, 2020' present",
+      "translation_line": 3
+    },
+    {
+      "id": "F0006",
+      "type": "range",
+      "raw": "2–6 years",
+      "source_page": 1,
+      "source_line": 4,
+      "verdict": "preserved",
+      "detail": "range '2–6' with connector",
+      "translation_line": 3
+    },
+    {
+      "id": "F0007",
+      "type": "unit_value",
+      "raw": "3.5 years",
+      "source_page": 1,
+      "source_line": 4,
+      "verdict": "preserved",
+      "detail": "value '3.5' + unit 'years'",
+      "translation_line": 3
+    },
+    {
+      "id": "F0008",
+      "type": "percent",
+      "raw": "15.0%",
+      "source_page": 1,
+      "source_line": 5,
+      "verdict": "preserved",
+      "detail": "percent kept as '15.0%'",
+      "translation_line": 4
+    },
+    {
+      "id": "F0009",
+      "type": "number",
+      "raw": "187",
+      "source_page": 1,
+      "source_line": 5,
+      "verdict": "preserved",
+      "detail": "exact/digit-exact form '187'",
+      "translation_line": 4
+    },
+    {
+      "id": "F0010",
+      "type": "figure_ref",
+      "raw": "Figure 2",
+      "source_page": 1,
+      "source_line": 6,
+      "verdict": "preserved",
+      "detail": "reference intact as '图 2'",
+      "translation_line": 4
+    },
+    {
+      "id": "F0011",
+      "type": "percent",
+      "raw": "8.2%",
+      "source_page": 1,
+      "source_line": 6,
+      "verdict": "preserved",
+      "detail": "percent kept as '8.2%'",
+      "translation_line": 4
+    },
+    {
+      "id": "F0012",
+      "type": "percent",
+      "raw": "5.6%",
+      "source_page": 1,
+      "source_line": 6,
+      "verdict": "preserved",
+      "detail": "percent kept as '5.6%'",
+      "translation_line": 4
+    },
+    {
+      "id": "F0013",
+      "type": "number",
+      "raw": "0.001",
+      "source_page": 1,
+      "source_line": 6,
+      "verdict": "preserved",
+      "detail": "exact/digit-exact form '0.001'",
+      "translation_line": 4
+    },
+    {
+      "id": "F0014",
+      "type": "range",
+      "raw": "5–10 mg",
+      "source_page": 1,
+      "source_line": 7,
+      "verdict": "preserved",
+      "detail": "range '5–10' with connector",
+      "translation_line": 5
+    },
+    {
+      "id": "F0015",
+      "type": "unit_value",
+      "raw": "25 mg",
+      "source_page": 1,
+      "source_line": 7,
+      "verdict": "preserved",
+      "detail": "value '25' + unit 'mg'",
+      "translation_line": 5
+    },
+    {
+      "id": "F0016",
+      "type": "table_ref",
+      "raw": "Table 1",
+      "source_page": 1,
+      "source_line": 8,
+      "verdict": "preserved",
+      "detail": "reference intact as '表 1'",
+      "translation_line": 5
+    },
+    {
+      "id": "F0017",
+      "type": "number",
+      "raw": "2.5 million",
+      "source_page": 1,
+      "source_line": 9,
+      "verdict": "normalized",
+      "detail": "cross-locale form '250 万'",
+      "translation_line": 6
+    },
+    {
+      "id": "F0018",
+      "type": "citation_marker",
+      "raw": "[12]",
+      "source_page": 1,
+      "source_line": 10,
+      "verdict": "preserved",
+      "detail": "bracket citation intact",
+      "translation_line": 6
+    },
+    {
+      "id": "F0019",
+      "type": "citation_marker",
+      "raw": "Li et al. (2021)",
+      "source_page": 1,
+      "source_line": 10,
+      "verdict": "preserved",
+      "detail": "author-year 'Li, 2021' present",
+      "translation_line": 6
+    },
+    {
+      "id": "F0020",
+      "type": "unit_value",
+      "raw": "2,004 USD",
+      "source_page": 1,
+      "source_line": 10,
+      "verdict": "preserved",
+      "detail": "value '2,004' + unit 'USD'",
+      "translation_line": 6
+    },
+    {
+      "id": "F0021",
+      "type": "unit_value",
+      "raw": "1.3 × 10^3 ng/mL",
+      "source_page": 1,
+      "source_line": 11,
+      "verdict": "preserved",
+      "detail": "value '1.3 × 10^3' + unit 'ng/mL'",
+      "translation_line": 7
+    },
+    {
+      "id": "F0022",
+      "type": "unit_value",
+      "raw": "4 hours",
+      "source_page": 1,
+      "source_line": 11,
+      "verdict": "preserved",
+      "detail": "value '4' + unit 'hours'",
+      "translation_line": 7
+    },
+    {
+      "id": "F0023",
+      "type": "unit_value",
+      "raw": "0.05 ng/mL",
+      "source_page": 1,
+      "source_line": 12,
+      "verdict": "preserved",
+      "detail": "value '0.05' + unit 'ng/mL'",
+      "translation_line": 7
+    },
+    {
+      "id": "F0024",
+      "type": "unit_value",
+      "raw": "37.0 °C",
+      "source_page": 1,
+      "source_line": 12,
+      "verdict": "preserved",
+      "detail": "value '37.0' + unit '°C'",
+      "translation_line": 7
+    }
+  ],
+  "added": [],
+  "exit_meaning": "exit 1 if missing>0 or altered>0; 'normalized' and 'added' are listed but non-fatal",
+  "generated_utc": "2026-11-24T13:26:22+00:00"
+}

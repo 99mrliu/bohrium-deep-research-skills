@@ -1,0 +1,18 @@
+{
+  "tool": "validate_contract.py",
+  "case": "/Users/liuhengshen/Desktop/bhr_product/bb17a294-five/e-delivery-forge/examples/synthetic/case.json",
+  "outdir": "/Users/liuhengshen/Desktop/bhr_product/bb17a294-five/e-delivery-forge/examples/synthetic/output",
+  "violations": [],
+  "warnings": [],
+  "contract_fields": [
+    "deliverable",
+    "fact_source_map",
+    "version_boundary",
+    "status",
+    "sources",
+    "uncertainty",
+    "change_log"
+  ],
+  "contract_origin": "explicit",
+  "verdict": "PASS"
+}

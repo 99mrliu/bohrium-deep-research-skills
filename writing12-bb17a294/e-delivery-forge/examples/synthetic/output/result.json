@@ -1,0 +1,37 @@
+{
+  "_comment": "合成示例 / synthetic example — hand-written good result.json matching the mock case's explicit output_contract",
+  "case_id": "synthetic-delivery-0001",
+  "deliverable": [
+    "bilingual_master.md",
+    "bilingual.html",
+    "bilingual.pdf",
+    "bilingual_page1.png"
+  ],
+  "fact_source_map": {
+    "S0001": "bilingual_master.md ⟦S0001⟧ SRC/TGT pair",
+    "S0002": "bilingual_master.md ⟦S0002⟧ SRC/TGT pair",
+    "S0003": "bilingual_master.md ⟦S0003⟧ (Figure 1 / 图 1 caption)",
+    "S0004": "bilingual_master.md ⟦S0004⟧ (equation (1))",
+    "S0005": "bilingual_master.md ⟦S0005⟧",
+    "S0006": "bilingual_master.md ⟦S0006⟧",
+    "S0007": "bilingual_master.md ⟦S0007⟧ (reference: Zhang 2021)",
+    "S0008": "bilingual_master.md ⟦S0008⟧ (reference: Chen 2023)"
+  },
+  "version_boundary": {
+    "version": "v1.0-synthetic",
+    "scope": "EN->ZH translation of 8 synthetic segments, 3 headings, 1 figure caption, 1 equation label, 2 reference entries",
+    "out_of_scope": "No real research content; all text fabricated for tooling demonstration."
+  },
+  "status": "success",
+  "sources": [
+    "examples/synthetic/bilingual_master.md",
+    "examples/synthetic/structure_inventory.json",
+    "examples/synthetic/case.json"
+  ],
+  "uncertainty": "None for this synthetic example; all inventory items verified covered by coverage_report.json.",
+  "change_log": [
+    {"stage": "render", "detail": "bilingual.html + bilingual.pdf + bilingual_page1.png generated; QA in render_qa_log.json"},
+    {"stage": "census", "detail": "coverage_report.json verdict PASS, 7/7 items covered"},
+    {"stage": "contract", "detail": "contract_check.json verdict PASS"}
+  ]
+}

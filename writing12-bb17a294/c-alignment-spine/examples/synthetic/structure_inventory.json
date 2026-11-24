@@ -1,0 +1,92 @@
+{
+  "source_file": "source.md",
+  "segment_count": 11,
+  "counts": {
+    "heading": 3,
+    "paragraph": 3,
+    "caption": 1,
+    "equation": 1,
+    "footnote": 1,
+    "reference_entry": 2
+  },
+  "ids_by_kind": {
+    "heading": [
+      "S0001",
+      "S0003",
+      "S0009"
+    ],
+    "paragraph": [
+      "S0002",
+      "S0004",
+      "S0005"
+    ],
+    "caption": [
+      "S0006"
+    ],
+    "equation": [
+      "S0007"
+    ],
+    "footnote": [
+      "S0008"
+    ],
+    "reference_entry": [
+      "S0010",
+      "S0011"
+    ]
+  },
+  "sections": [
+    {
+      "id": "S0001",
+      "level": 1,
+      "title": "Synthetic Study of Alignment Spines in Bilingual Corpora",
+      "segment_ids": [
+        "S0001",
+        "S0002"
+      ]
+    },
+    {
+      "id": "S0003",
+      "level": 2,
+      "title": "1. Introduction",
+      "segment_ids": [
+        "S0003",
+        "S0004",
+        "S0005",
+        "S0006",
+        "S0007",
+        "S0008"
+      ]
+    },
+    {
+      "id": "S0009",
+      "level": 2,
+      "title": "References",
+      "segment_ids": [
+        "S0009",
+        "S0010",
+        "S0011"
+      ]
+    }
+  ],
+  "figures": [
+    {
+      "number": "1",
+      "segment_id": "S0006",
+      "label": "Figure"
+    }
+  ],
+  "tables": [],
+  "equation_count": 1,
+  "equation_ids": [
+    "S0007"
+  ],
+  "reference_entry_count": 2,
+  "reference_entry_ids": [
+    "S0010",
+    "S0011"
+  ],
+  "footnote_ids": [
+    "S0008"
+  ],
+  "note": "Never renumber, merge, drop, or reorder these segment IDs."
+}

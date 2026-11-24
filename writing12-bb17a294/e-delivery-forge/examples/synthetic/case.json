@@ -1,0 +1,18 @@
+{
+  "_comment": "合成示例 / synthetic example — mock case file with an explicit output_contract",
+  "case_id": "synthetic-delivery-0001",
+  "topic": "写作12｜学术翻译与双语写作",
+  "language_direction": "EN->ZH",
+  "task": "Translate the supplied synthetic research excerpt into Chinese, deliver a bilingual master plus rendered bilingual deliverable with previews, and prove completeness and contract conformance.",
+  "materials": ["bilingual_master.md", "structure_inventory.json"],
+  "requested_deliverables": ["bilingual_master.md", "bilingual.html", "bilingual.pdf", "bilingual_page1.png"],
+  "output_contract": [
+    "deliverable",
+    "fact_source_map",
+    "version_boundary",
+    "status",
+    "sources",
+    "uncertainty",
+    "change_log"
+  ]
+}

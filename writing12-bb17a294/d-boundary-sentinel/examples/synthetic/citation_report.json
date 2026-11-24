@@ -1,0 +1,59 @@
+{
+  "_label": "合成示例 / synthetic example — invented test data only",
+  "summary": {
+    "intext_markers": 3,
+    "intext_lost": 0,
+    "source_entries": 2,
+    "translation_entries": 2,
+    "order_ok": true,
+    "errors": 0,
+    "warnings": 0,
+    "status": "pass"
+  },
+  "in_text": [
+    {
+      "marker": {
+        "kind": "numeric",
+        "raw": "[12]",
+        "identifier": "[12]"
+      },
+      "status": "preserved"
+    },
+    {
+      "marker": {
+        "kind": "author_year",
+        "raw": "(Smith, 2020)",
+        "identifier": "Smith 2020",
+        "author": "Smith",
+        "year": "2020"
+      },
+      "status": "preserved"
+    },
+    {
+      "marker": {
+        "kind": "narrative",
+        "raw": "Smith et al. (2021)",
+        "identifier": "Smith 2021",
+        "author": "Smith",
+        "year": "2021"
+      },
+      "status": "preserved"
+    }
+  ],
+  "references": [
+    {
+      "source_entry": "[12] Doe J, Kim H. A rapid sample preparation assay. J Synth Methods. 2019;5(2):101-110.",
+      "identifier": "12",
+      "count_in_translation": 1,
+      "status": "ok"
+    },
+    {
+      "source_entry": "Smith, A. (2020). External validation of cohort models. Journal of Synthetic Studies, 8(1), 1-9.",
+      "identifier": "Smith 2020",
+      "count_in_translation": 1,
+      "status": "ok"
+    }
+  ],
+  "findings": [],
+  "note": "Heuristic, recall-oriented check; human resolves findings. et al. may be kept or rendered 等 (documented allowance)."
+}

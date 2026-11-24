@@ -1,0 +1,83 @@
+{
+  "status": "pass",
+  "bilingual_file": "examples/synthetic/bilingual.md",
+  "source_segments_file": "examples/synthetic/source_segments.txt",
+  "summary": {
+    "total_source_segments": 11,
+    "ok": 11,
+    "missing_tgt": 0,
+    "missing_src": 0,
+    "marker_mismatch": 0,
+    "order_violation": 0,
+    "duplicate_ids": [],
+    "unknown_ids": []
+  },
+  "verdicts": [
+    {
+      "id": "S0001",
+      "kind": "heading",
+      "verdict": "ok",
+      "details": []
+    },
+    {
+      "id": "S0002",
+      "kind": "paragraph",
+      "verdict": "ok",
+      "details": []
+    },
+    {
+      "id": "S0003",
+      "kind": "heading",
+      "verdict": "ok",
+      "details": []
+    },
+    {
+      "id": "S0004",
+      "kind": "paragraph",
+      "verdict": "ok",
+      "details": []
+    },
+    {
+      "id": "S0005",
+      "kind": "paragraph",
+      "verdict": "ok",
+      "details": []
+    },
+    {
+      "id": "S0006",
+      "kind": "caption",
+      "verdict": "ok",
+      "details": []
+    },
+    {
+      "id": "S0007",
+      "kind": "equation",
+      "verdict": "ok",
+      "details": []
+    },
+    {
+      "id": "S0008",
+      "kind": "footnote",
+      "verdict": "ok",
+      "details": []
+    },
+    {
+      "id": "S0009",
+      "kind": "heading",
+      "verdict": "ok",
+      "details": []
+    },
+    {
+      "id": "S0010",
+      "kind": "reference_entry",
+      "verdict": "ok",
+      "details": []
+    },
+    {
+      "id": "S0011",
+      "kind": "reference_entry",
+      "verdict": "ok",
+      "details": []
+    }
+  ]
+}

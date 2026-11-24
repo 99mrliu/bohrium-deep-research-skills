@@ -1,0 +1,60 @@
+{
+  "tool": "census_coverage.py",
+  "inventory": "structure_inventory.json",
+  "deliverable": "output/bilingual_master.md",
+  "categories": {
+    "sections": [
+      {
+        "id": "sec1",
+        "verdict": "covered",
+        "evidence": "heading text found"
+      },
+      {
+        "id": "sec2",
+        "verdict": "covered",
+        "evidence": "heading text found"
+      },
+      {
+        "id": "sec3",
+        "verdict": "covered",
+        "evidence": "heading text found"
+      }
+    ],
+    "figures": [
+      {
+        "id": "fig1",
+        "verdict": "covered",
+        "evidence": "label 'Figure 1' found"
+      }
+    ],
+    "equations": [
+      {
+        "id": "eq1",
+        "verdict": "covered",
+        "evidence": "label '(1)' found"
+      }
+    ],
+    "references": [
+      {
+        "id": "ref1",
+        "verdict": "covered",
+        "evidence": "author 'Zhang' + year 2021 found"
+      },
+      {
+        "id": "ref2",
+        "verdict": "covered",
+        "evidence": "author 'Chen' + year 2023 found"
+      }
+    ]
+  },
+  "totals": {
+    "items": 7,
+    "covered": 7,
+    "missing": 0
+  },
+  "unknown_keys": [
+    "_comment"
+  ],
+  "verdict": "PASS",
+  "missing": []
+}

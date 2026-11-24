@@ -1,0 +1,49 @@
+[
+  {
+    "source": "perovskite solar cell",
+    "target": "钙钛矿太阳能电池",
+    "note": "locked for this case; synthetic example / 合成示例",
+    "discipline": "photovoltaics / materials science",
+    "first_mention": "钙钛矿太阳能电池（perovskite solar cell, PSC）",
+    "forbidden_variants": ["钙钛矿电池"]
+  },
+  {
+    "source": "power conversion efficiency",
+    "target": "光电转换效率",
+    "note": "photovoltaics sense of efficiency; not 功率转换效率",
+    "discipline": "photovoltaics",
+    "first_mention": "光电转换效率（power conversion efficiency, PCE）",
+    "forbidden_variants": ["功率转换效率"]
+  },
+  {
+    "source": "charge carrier mobility",
+    "target": "载流子迁移率",
+    "note": "semiconductor physics sense",
+    "discipline": "semiconductor physics"
+  },
+  {
+    "source": "grain boundary",
+    "target": "晶界",
+    "note": "materials microstructure sense",
+    "discipline": "materials science"
+  },
+  {
+    "source": "spin coating",
+    "target": "旋涂",
+    "note": "thin-film deposition method; locked short form 旋涂",
+    "discipline": "materials processing"
+  },
+  {
+    "source": "open-circuit voltage",
+    "target": "开路电压",
+    "note": "device metric; hyphenated source compound",
+    "discipline": "photovoltaics"
+  },
+  {
+    "source": "cell",
+    "target": "电池",
+    "note": "DISCIPLINE-SENSITIVE: photovoltaic cell = 电池 (electrochemistry/device sense), never 细胞 (biology)",
+    "discipline": "electrochemistry / photovoltaics (not biology)",
+    "forbidden_variants": ["细胞"]
+  }
+]
