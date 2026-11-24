@@ -1,0 +1,109 @@
+{
+  "summary": {
+    "nodes": 9,
+    "verified": 5,
+    "mislocated": 1,
+    "fabricated": 1,
+    "unanchored": 0,
+    "number_not_found": 1,
+    "warnings": 1
+  },
+  "findings": [
+    {
+      "node_id": "n01",
+      "check": "quote_verbatim",
+      "verdict": "verified",
+      "detail": "引文与 material_alpha.txt 第 1 页文本逐字一致",
+      "evidence": {
+        "file": "material_alpha.txt",
+        "page": 1,
+        "section": "合成与表征",
+        "quote": "本研究采用水热法合成材料X，反应温度为 120 ℃，反应时间为 12 小时。"
+      }
+    },
+    {
+      "node_id": "n02",
+      "check": "quote_verbatim",
+      "verdict": "verified",
+      "detail": "引文与 material_alpha.txt 第 2 页文本逐字一致",
+      "evidence": {
+        "file": "material_alpha.txt",
+        "page": 2,
+        "section": "催化性能测试",
+        "quote": "材料X 降解罗丹明B 的产率 87.5%"
+      }
+    },
+    {
+      "node_id": "n03",
+      "check": "quote_verbatim",
+      "verdict": "verified",
+      "detail": "引文与 material_alpha.txt 第 2 页文本逐字一致",
+      "evidence": {
+        "file": "material_alpha.txt",
+        "page": 2,
+        "section": "催化性能测试",
+        "quote": "材料X 经过 5 次循环使用后活性保持率为 92.0%。"
+      }
+    },
+    {
+      "node_id": "n04",
+      "check": "quote_verbatim",
+      "verdict": "verified",
+      "detail": "引文与 material_beta.txt 第 1 页文本逐字一致",
+      "evidence": {
+        "file": "material_beta.txt",
+        "page": 1,
+        "section": "性能评估",
+        "quote": "在标准测试条件下，器件Y 的开路电压为 0.85 V。"
+      }
+    },
+    {
+      "node_id": "n05",
+      "check": "quote_verbatim",
+      "verdict": "verified",
+      "detail": "引文与 material_alpha.txt 第 3 页文本逐字一致",
+      "evidence": {
+        "file": "material_alpha.txt",
+        "page": 3,
+        "section": "表征结果与讨论",
+        "quote": "比表面积测试结果为 45.6 m2/g。"
+      }
+    },
+    {
+      "node_id": "n06",
+      "check": "quote_verbatim",
+      "verdict": "fabricated",
+      "detail": "引文在文件 material_alpha.txt 的全部页面中均不存在，疑似改写或杜撰",
+      "evidence": {
+        "file": "material_alpha.txt",
+        "page": 3,
+        "section": "表征结果与讨论",
+        "quote": "透射电子显微镜证实材料X 具有三维多孔结构。"
+      }
+    },
+    {
+      "node_id": "n07",
+      "check": "quote_verbatim",
+      "verdict": "mislocated",
+      "detail": "引文未出现于第 3 页，实际出现于 material_alpha.txt 第 1 页",
+      "evidence": {
+        "file": "material_alpha.txt",
+        "page": 3,
+        "section": "表征结果与讨论",
+        "quote": "X 射线衍射图谱显示材料X 具有良好的结晶性。"
+      }
+    },
+    {
+      "node_id": "n08",
+      "check": "label_number",
+      "verdict": "number_not_found",
+      "detail": "标签中的数字 99.9% 在全部材料文本中均未出现"
+    },
+    {
+      "node_id": "n09",
+      "check": "inference_note",
+      "verdict": "warning",
+      "detail": "basis=inference 但未提供 note 说明推理依据"
+    }
+  ]
+}

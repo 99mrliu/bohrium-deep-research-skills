@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>催化剂Q研究规划 — Markmap</title>
+<style>
+  body { font-family: sans-serif; margin: 0; padding: 1em 2em; }
+  .markmap { width: 100%; height: 60vh; border: 1px solid #ccc; margin-bottom: 1em; }
+  .markmap svg { width: 100%; height: 100%; }
+  .kind { color: #666; font-size: 0.9em; }
+  .note { color: #555; font-size: 0.85em; margin-left: 0.5em; }
+  #offline-note { color: #a00; }
+</style>
+</head>
+<body>
+<h1>催化剂Q研究规划</h1>
+<p id="offline-note"></p>
+<div class="markmap">
+<script type="text/template">
+# 催化剂Q研究规划
+
+- 应用验证（任务）
+  - CO2加氢性能评价（子任务）
+- 表征方案（任务）
+  - XRD与SEM（联用）（子任务）
+  - 原位红外测试（子任务）
+- 文献调研（任务）
+  - 文献计量分析（子任务）
+    - 备注：检索式示例："catalyst & Q"（合成示例数据，仅演示 XML 转义）。
+  - 关键催化剂体系梳理（子任务）
+- 合成路线（任务）
+  - 水热合成参数优化（子任务）
+    - 备注：重点关注温度与保温时间的交互作用；参数范围参考既往水热法经验。
+    - 温度梯度实验（实验）
+    - 前驱体比例筛选（实验）
+  - 掺杂策略筛选（子任务）
+
+## 关系
+- XRD与SEM（联用） → CO2加氢性能评价（验证）
+- 关键催化剂体系梳理 → 掺杂策略筛选（支撑）：体系梳理结果为掺杂策略提供候选元素
+- 温度梯度实验 → 前驱体比例筛选（并行）
+</script>
+</div>
+<h2>静态大纲（离线可读回退）</h2>
+<ul class="tree"><li><span class="label">催化剂Q研究规划</span> <span class="kind">（主题）</span><ul><li><span class="label">应用验证</span> <span class="kind">（任务）</span><ul><li><span class="label">CO2加氢性能评价</span> <span class="kind">（子任务）</span></li></ul></li><li><span class="label">表征方案</span> <span class="kind">（任务）</span><ul><li><span class="label">XRD与SEM（联用）</span> <span class="kind">（子任务）</span></li><li><span class="label">原位红外测试</span> <span class="kind">（子任务）</span></li></ul></li><li><span class="label">文献调研</span> <span class="kind">（任务）</span><ul><li><span class="label">文献计量分析</span> <span class="kind">（子任务）</span><div class="note">备注：检索式示例：&quot;catalyst &amp; Q&quot;（合成示例数据，仅演示 XML 转义）。</div></li><li><span class="label">关键催化剂体系梳理</span> <span class="kind">（子任务）</span></li></ul></li><li><span class="label">合成路线</span> <span class="kind">（任务）</span><ul><li><span class="label">水热合成参数优化</span> <span class="kind">（子任务）</span><div class="note">备注：重点关注温度与保温时间的交互作用；参数范围参考既往水热法经验。</div><ul><li><span class="label">温度梯度实验</span> <span class="kind">（实验）</span></li><li><span class="label">前驱体比例筛选</span> <span class="kind">（实验）</span></li></ul></li><li><span class="label">掺杂策略筛选</span> <span class="kind">（子任务）</span></li></ul></li></ul></li></ul>
+<script type="application/json" id="mindmap-json">
+{
+  "_meta": {
+    "description": "合成示例数据：虚构课题“催化剂Q研究规划”，仅用于演示与回归测试，不代表任何真实研究内容。",
+    "synthetic": true
+  },
+  "nodes": [
+    {
+      "id": "root",
+      "kind": "主题",
+      "label": "催化剂Q研究规划",
+      "parent": null
+    },
+    {
+      "id": "n-app",
+      "kind": "任务",
+      "label": "应用验证",
+      "parent": "root"
+    },
+    {
+      "id": "n-app-1",
+      "kind": "子任务",
+      "label": "CO2加氢性能评价",
+      "parent": "n-app"
+    },
+    {
+      "id": "n-char",
+      "kind": "任务",
+      "label": "表征方案",
+      "parent": "root"
+    },
+    {
+      "id": "n-char-1",
+      "kind": "子任务",
+      "label": "XRD与SEM（联用）",
+      "parent": "n-char"
+    },
+    {
+      "id": "n-char-2",
+      "kind": "子任务",
+      "label": "原位红外测试",
+      "parent": "n-char"
+    },
+    {
+      "id": "n-lit",
+      "kind": "任务",
+      "label": "文献调研",
+      "parent": "root"
+    },
+    {
+      "id": "n-lit-1",
+      "kind": "子任务",
+      "label": "文献计量分析",
+      "note": "检索式示例：\"catalyst & Q\"（合成示例数据，仅演示 XML 转义）。",
+      "parent": "n-lit"
+    },
+    {
+      "id": "n-lit-2",
+      "kind": "子任务",
+      "label": "关键催化剂体系梳理",
+      "parent": "n-lit"
+    },
+    {
+      "id": "n-syn",
+      "kind": "任务",
+      "label": "合成路线",
+      "parent": "root"
+    },
+    {
+      "id": "n-syn-1",
+      "kind": "子任务",
+      "label": "水热合成参数优化",
+      "note": "重点关注温度与保温时间的交互作用；参数范围参考既往水热法经验。",
+      "parent": "n-syn"
+    },
+    {
+      "id": "n-syn-1a",
+      "kind": "实验",
+      "label": "温度梯度实验",
+      "parent": "n-syn-1"
+    },
+    {
+      "id": "n-syn-1b",
+      "kind": "实验",
+      "label": "前驱体比例筛选",
+      "parent": "n-syn-1"
+    },
+    {
+      "id": "n-syn-2",
+      "kind": "子任务",
+      "label": "掺杂策略筛选",
+      "parent": "n-syn"
+    }
+  ],
+  "relations": [
+    {
+      "from": "n-lit-2",
+      "note": "体系梳理结果为掺杂策略提供候选元素",
+      "to": "n-syn-2",
+      "type": "支撑"
+    },
+    {
+      "from": "n-char-1",
+      "to": "n-app-1",
+      "type": "验证"
+    },
+    {
+      "from": "n-syn-1a",
+      "to": "n-syn-1b",
+      "type": "并行"
+    }
+  ],
+  "root": "root"
+}
+</script>
+<script>
+/* 在线时自 CDN 加载 markmap-autoloader 渲染交互图；
+   加载失败（离线/网络受限）时保留下方静态嵌套列表，页面内容完整可读。 */
+window.addEventListener('load', function () {
+  var note = document.getElementById('offline-note');
+  if (typeof navigator !== 'undefined' && navigator.onLine === false) {
+    note.textContent = '（当前离线：以静态大纲呈现。）';
+    return;
+  }
+  var s = document.createElement('script');
+  s.src = 'https://cdn.jsdelivr.net/npm/markmap-autoloader@0.18';
+  s.onerror = function () {
+    note.textContent = '（Markmap CDN 不可用：以静态大纲呈现。）';
+  };
+  document.head.appendChild(s);
+});
+</script>
+</body>
+</html>

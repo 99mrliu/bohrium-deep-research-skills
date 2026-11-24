@@ -1,0 +1,5 @@
+{"kept": "n-dup1", "op": "merge_duplicate", "removed": "n-dup2", "removed_kind": "method", "removed_label": "表征方法", "reparented_children": []}
+{"kept": "n-c2", "new_parent": "n-q", "op": "collapse_chain", "removed": "n-c1", "removed_kind": "question", "removed_label": "孔道结构调控机理"}
+{"kept": "n-c3", "new_parent": "n-q", "op": "collapse_chain", "removed": "n-c2", "removed_kind": "method", "removed_label": "模板剂作用机理分析"}
+{"created": [{"children": ["n-r2", "n-r4", "n-r6"], "id": "n-r-grp-evidence", "kind": "evidence", "label": "evidence类"}, {"children": ["n-r7"], "id": "n-r-grp-other", "kind": "other", "label": "other类"}, {"children": ["n-r1", "n-r3", "n-r5", "n-r8"], "id": "n-r-grp-result", "kind": "result", "label": "result类"}, {"children": ["n-r9"], "id": "n-r-grp-task", "kind": "task", "label": "task类"}], "op": "split_overloaded", "parent": "n-r"}
+{"new_label": "本研究仅在实验室小规模条件下验证了多孔材料Z的合成工艺参数窗口尚未开展中试放大…", "node": "n-lim", "op": "truncate_label", "original_label": "本研究仅在实验室小规模条件下验证了多孔材料Z的合成工艺参数窗口尚未开展中试放大与长期稳定性评估"}

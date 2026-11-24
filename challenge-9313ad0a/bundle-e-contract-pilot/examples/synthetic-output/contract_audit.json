@@ -1,0 +1,44 @@
+{
+  "verdict": "pass",
+  "checks": [
+    {
+      "check": "result_json_parses",
+      "ok": true,
+      "detail": "result.json 解析成功"
+    },
+    {
+      "check": "case_id_matches",
+      "ok": true,
+      "detail": "case_id=synthetic-demo-001"
+    },
+    {
+      "check": "contract_fields_filled",
+      "ok": true,
+      "detail": "契约字段 4/4 已填写"
+    },
+    {
+      "check": "artifacts_exist_nonempty",
+      "ok": true,
+      "detail": "全部 artifact 存在且非空"
+    },
+    {
+      "check": "status_consistency",
+      "ok": true,
+      "detail": "status=success 且契约零违例"
+    },
+    {
+      "check": "uncertainty_entries_nonempty",
+      "ok": true,
+      "detail": "uncertainty 共 0 条，均为非空字符串"
+    },
+    {
+      "check": "change_record_present",
+      "ok": true,
+      "detail": "change_record.md 含 3 条记录"
+    }
+  ],
+  "contract_coverage": {
+    "required": 4,
+    "filled": 4
+  }
+}

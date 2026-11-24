@@ -1,0 +1,15 @@
+{
+  "_synthetic": "合成示例：本文件全部内容为虚构，仅用于演示 relation-web 工具链，不对应任何真实研究。",
+  "nodes": [
+    {"id": "n1", "label": "催化剂Q研究", "kind": "topic", "parent": null},
+    {"id": "n2", "label": "制备方法", "kind": "branch", "parent": "n1"},
+    {"id": "n3", "label": "共沉淀法制备", "kind": "method", "parent": "n2"},
+    {"id": "n4", "label": "焙烧工艺", "kind": "method", "parent": "n2"},
+    {"id": "n5", "label": "表征结果", "kind": "branch", "parent": "n1"},
+    {"id": "n6", "label": "比表面积测定", "kind": "characterization", "parent": "n5"},
+    {"id": "n7", "label": "性能评价", "kind": "branch", "parent": "n1"},
+    {"id": "n8", "label": "产率数据", "kind": "result", "parent": "n7"},
+    {"id": "n9", "label": "失活机理", "kind": "branch", "parent": "n1"},
+    {"id": "n10", "label": "助剂添加策略", "kind": "method", "parent": "n2"}
+  ]
+}

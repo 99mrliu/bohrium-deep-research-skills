@@ -1,0 +1,85 @@
+{
+  "findings": [
+    {
+      "check": "kind_mixing",
+      "detail": "节点 n-r 的兄弟组混用 4 种 kind（>2），分类轴不一致: evidence, other, result, task",
+      "node_ids": [
+        "n-r"
+      ],
+      "severity": "WARN"
+    },
+    {
+      "check": "kind_mixing",
+      "detail": "节点 n-root 的兄弟组混用 4 种 kind（>2），分类轴不一致: limitation, method, question, result",
+      "node_ids": [
+        "n-root"
+      ],
+      "severity": "WARN"
+    },
+    {
+      "check": "long_label",
+      "detail": "标签显示长度超过 40: n-lim（47 字符）",
+      "node_ids": [
+        "n-lim"
+      ],
+      "severity": "WARN"
+    },
+    {
+      "check": "missing_core_kind",
+      "detail": "purpose=paper 要求核心 kind ['question', 'method', 'result', 'conclusion']，缺失: conclusion",
+      "node_ids": [],
+      "severity": "WARN"
+    },
+    {
+      "check": "orphan",
+      "detail": "以下节点自 root 不可达（孤儿节点），需人工决策归属或删除: n-orphan",
+      "node_ids": [
+        "n-orphan"
+      ],
+      "severity": "ERROR"
+    },
+    {
+      "check": "overloaded",
+      "detail": "节点 n-r 有 9 个子节点（>7），分支过载: n-r1, n-r2, n-r3, n-r4, n-r5, n-r6, n-r7, n-r8, n-r9",
+      "node_ids": [
+        "n-r"
+      ],
+      "severity": "WARN"
+    },
+    {
+      "check": "parent_missing",
+      "detail": "以下节点的 parent 引用不存在的 id: n-orphan -> n-deleted",
+      "node_ids": [
+        "n-orphan"
+      ],
+      "severity": "ERROR"
+    },
+    {
+      "check": "sibling_near_duplicate",
+      "detail": "兄弟节点标签规范化后完全相同: n-dup1（'表征方法'）≡ n-dup2（'表征方法'）",
+      "node_ids": [
+        "n-dup1",
+        "n-dup2"
+      ],
+      "severity": "WARN"
+    },
+    {
+      "check": "single_child_chain",
+      "detail": "长度为 4 的单子链（逐级仅一个子节点）: n-q -> n-c1 -> n-c2 -> n-c3",
+      "node_ids": [
+        "n-c1",
+        "n-c2",
+        "n-c3",
+        "n-q"
+      ],
+      "severity": "WARN"
+    }
+  ],
+  "summary": {
+    "errors": 2,
+    "max_children": 9,
+    "max_depth": 5,
+    "nodes": 20,
+    "warnings": 7
+  }
+}

@@ -1,0 +1,86 @@
+{
+  "_synthetic": "合成示例：9 条关系边中 5 条完全合法（r1–r5），4 条植入了不同类型缺陷（r6 虚构引句、r7 层级冗余、r8 自环、r9 推断缺注），用于演示闸门行为。",
+  "relations": [
+    {
+      "id": "r1",
+      "from": "n4",
+      "to": "n9",
+      "type": "causes",
+      "basis": "fact",
+      "evidence": {"file": "catalystQ_report.pdf", "page": 1, "quote": "焙烧温度过高导致活性组分烧结，是催化剂Q失活的主要原因"},
+      "note": ""
+    },
+    {
+      "id": "r2",
+      "from": "n6",
+      "to": "n8",
+      "type": "supports",
+      "basis": "fact",
+      "evidence": {"file": "catalystQ_report.pdf", "page": 2, "quote": "比表面积测定结果表明催化剂Q具有较高分散度，支撑其优异产率表现"},
+      "note": ""
+    },
+    {
+      "id": "r3",
+      "from": "n10",
+      "to": "n9",
+      "type": "mitigates",
+      "basis": "fact",
+      "evidence": {"file": "catalystQ_report.pdf", "page": 2, "quote": "添加助剂La可缓解积炭失活"},
+      "note": ""
+    },
+    {
+      "id": "r4",
+      "from": "n3",
+      "to": "n4",
+      "type": "precedes",
+      "basis": "fact",
+      "evidence": {"file": "catalystQ_report.pdf", "page": 1, "quote": "共沉淀后样品经焙烧工艺处理方可成型"},
+      "note": ""
+    },
+    {
+      "id": "r5",
+      "from": "n8",
+      "to": "n9",
+      "type": "supports",
+      "basis": "inference",
+      "evidence": null,
+      "note": "综合第 1、3 页两次产率记录的差异推断：性能数据间接支持失活机理的存在，属推断而非材料直述。"
+    },
+    {
+      "id": "r6",
+      "from": "n5",
+      "to": "n9",
+      "type": "supports",
+      "basis": "fact",
+      "evidence": {"file": "catalystQ_report.pdf", "page": 2, "quote": "表征结果直接证明了催化剂Q的失活机理"},
+      "note": ""
+    },
+    {
+      "id": "r7",
+      "from": "n4",
+      "to": "n2",
+      "type": "depends_on",
+      "basis": "fact",
+      "evidence": {"file": "catalystQ_report.pdf", "page": 1, "quote": "焙烧工艺是制备方法的核心步骤"},
+      "note": ""
+    },
+    {
+      "id": "r8",
+      "from": "n8",
+      "to": "n8",
+      "type": "measures",
+      "basis": "fact",
+      "evidence": {"file": "catalystQ_report.pdf", "page": 3, "quote": "以产率数据度量催化剂Q的催化性能"},
+      "note": ""
+    },
+    {
+      "id": "r9",
+      "from": "n4",
+      "to": "n8",
+      "type": "causes",
+      "basis": "inference",
+      "evidence": null,
+      "note": ""
+    }
+  ]
+}

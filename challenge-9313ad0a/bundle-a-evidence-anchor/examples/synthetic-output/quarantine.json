@@ -1,0 +1,7 @@
+{
+  "quarantine": [
+    "n06",
+    "n08"
+  ],
+  "rule": "凡被判定为 fabricated / unanchored / number_not_found / page_out_of_range 的节点，必须修正或删除后方可进入最终交付的思维导图；mislocated 节点须更正定位（文件/页码/章节）后重新审计。"
+}

@@ -1,0 +1,31 @@
+{
+  "_meta": {
+    "synthetic": true,
+    "description": "合成示例数据：虚构课题“催化剂Q研究规划”，仅用于演示与回归测试，不代表任何真实研究内容。"
+  },
+  "root": "root",
+  "nodes": [
+    {"id": "root", "parent": null, "label": "催化剂Q研究规划", "kind": "主题"},
+    {"id": "n-app", "parent": "root", "label": "应用验证", "kind": "任务"},
+    {"id": "n-app-1", "parent": "n-app", "label": "CO2加氢性能评价", "kind": "子任务"},
+    {"id": "n-char", "parent": "root", "label": "表征方案", "kind": "任务"},
+    {"id": "n-char-1", "parent": "n-char", "label": "XRD与SEM（联用）", "kind": "子任务"},
+    {"id": "n-char-2", "parent": "n-char", "label": "原位红外测试", "kind": "子任务"},
+    {"id": "n-lit", "parent": "root", "label": "文献调研", "kind": "任务"},
+    {"id": "n-lit-1", "parent": "n-lit", "label": "文献计量分析", "kind": "子任务",
+     "note": "检索式示例：\"catalyst & Q\"（合成示例数据，仅演示 XML 转义）。"},
+    {"id": "n-lit-2", "parent": "n-lit", "label": "关键催化剂体系梳理", "kind": "子任务"},
+    {"id": "n-syn", "parent": "root", "label": "合成路线", "kind": "任务"},
+    {"id": "n-syn-1", "parent": "n-syn", "label": "水热合成参数优化", "kind": "子任务",
+     "note": "重点关注温度与保温时间的交互作用；参数范围参考既往水热法经验。"},
+    {"id": "n-syn-1a", "parent": "n-syn-1", "label": "温度梯度实验", "kind": "实验"},
+    {"id": "n-syn-1b", "parent": "n-syn-1", "label": "前驱体比例筛选", "kind": "实验"},
+    {"id": "n-syn-2", "parent": "n-syn", "label": "掺杂策略筛选", "kind": "子任务"}
+  ],
+  "relations": [
+    {"from": "n-lit-2", "to": "n-syn-2", "type": "支撑",
+     "note": "体系梳理结果为掺杂策略提供候选元素"},
+    {"from": "n-char-1", "to": "n-app-1", "type": "验证"},
+    {"from": "n-syn-1a", "to": "n-syn-1b", "type": "并行"}
+  ]
+}

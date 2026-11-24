@@ -1,0 +1,137 @@
+{
+  "meta": {
+    "audience": "课题组成员",
+    "budget": 50,
+    "note": "合成示例（synthetic，非真实科研数据）：虚构课题“多孔材料Z的合成”，仅供工具演示。人为植入缺陷：兄弟重复标签 1 对（n-dup1/n-dup2）、9 子过载且混用 kind 的分支 1 处（n-r）、单子链 1 处（n-q→n-c1→n-c2→n-c3）、孤儿节点 1 个（n-orphan，parent 引用已删除的 n-deleted）、超长标签 1 条（n-lim）、全图缺失 kind=conclusion。",
+    "purpose": "paper"
+  },
+  "nodes": [
+    {
+      "id": "n-c3",
+      "kind": "concept",
+      "label": "模板剂与孔壁相互作用",
+      "parent": "n-q"
+    },
+    {
+      "id": "n-dup1",
+      "kind": "method",
+      "label": "表征方法",
+      "parent": "n-m"
+    },
+    {
+      "id": "n-lim",
+      "kind": "limitation",
+      "label": "本研究仅在实验室小规模条件下验证了多孔材料Z的合成工艺参数窗口尚未开展中试放大…",
+      "parent": "n-root"
+    },
+    {
+      "id": "n-m",
+      "kind": "method",
+      "label": "合成路线设计",
+      "parent": "n-root"
+    },
+    {
+      "id": "n-orphan",
+      "kind": "evidence",
+      "label": "文献对照数据（已失效分支）",
+      "parent": "n-deleted"
+    },
+    {
+      "id": "n-q",
+      "kind": "question",
+      "label": "如何提高多孔材料Z的比表面积与水热稳定性",
+      "parent": "n-root"
+    },
+    {
+      "id": "n-r",
+      "kind": "result",
+      "label": "实验结果汇总",
+      "parent": "n-root"
+    },
+    {
+      "id": "n-r-grp-evidence",
+      "kind": "evidence",
+      "label": "evidence类",
+      "parent": "n-r"
+    },
+    {
+      "id": "n-r-grp-other",
+      "kind": "other",
+      "label": "other类",
+      "parent": "n-r"
+    },
+    {
+      "id": "n-r-grp-result",
+      "kind": "result",
+      "label": "result类",
+      "parent": "n-r"
+    },
+    {
+      "id": "n-r-grp-task",
+      "kind": "task",
+      "label": "task类",
+      "parent": "n-r"
+    },
+    {
+      "id": "n-r1",
+      "kind": "result",
+      "label": "比表面积达 850 m²/g",
+      "parent": "n-r-grp-result"
+    },
+    {
+      "id": "n-r2",
+      "kind": "evidence",
+      "label": "XRD 图谱显示高度有序介孔",
+      "parent": "n-r-grp-evidence"
+    },
+    {
+      "id": "n-r3",
+      "kind": "result",
+      "label": "孔容提升至 0.92 cm³/g",
+      "parent": "n-r-grp-result"
+    },
+    {
+      "id": "n-r4",
+      "kind": "evidence",
+      "label": "氮气吸附脱附等温线为 IV 型",
+      "parent": "n-r-grp-evidence"
+    },
+    {
+      "id": "n-r5",
+      "kind": "result",
+      "label": "水热处理后结构保持率 87%",
+      "parent": "n-r-grp-result"
+    },
+    {
+      "id": "n-r6",
+      "kind": "evidence",
+      "label": "TEM 图像显示规则孔道排列",
+      "parent": "n-r-grp-evidence"
+    },
+    {
+      "id": "n-r7",
+      "kind": "other",
+      "label": "待补充文献对比",
+      "parent": "n-r-grp-other"
+    },
+    {
+      "id": "n-r8",
+      "kind": "result",
+      "label": "最佳模板剂配比为 1:0.35",
+      "parent": "n-r-grp-result"
+    },
+    {
+      "id": "n-r9",
+      "kind": "task",
+      "label": "重复第三批合成以验证重现性",
+      "parent": "n-r-grp-task"
+    },
+    {
+      "id": "n-root",
+      "kind": "concept",
+      "label": "多孔材料Z的合成研究",
+      "parent": null
+    }
+  ],
+  "root": "n-root"
+}

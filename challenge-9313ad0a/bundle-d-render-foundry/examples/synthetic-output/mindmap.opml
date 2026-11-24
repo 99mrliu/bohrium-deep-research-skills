@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<opml version="2.0">
+  <head>
+    <title>催化剂Q研究规划</title>
+  </head>
+  <body>
+    <outline text="催化剂Q研究规划" type="主题">
+      <outline text="应用验证" type="任务">
+        <outline text="CO2加氢性能评价" type="子任务"/>
+      </outline>
+      <outline text="表征方案" type="任务">
+        <outline text="XRD与SEM（联用）" type="子任务"/>
+        <outline text="原位红外测试" type="子任务"/>
+      </outline>
+      <outline text="文献调研" type="任务">
+        <outline text="文献计量分析" type="子任务" _note="检索式示例：&quot;catalyst &amp; Q&quot;（合成示例数据，仅演示 XML 转义）。"/>
+        <outline text="关键催化剂体系梳理" type="子任务"/>
+      </outline>
+      <outline text="合成路线" type="任务">
+        <outline text="水热合成参数优化" type="子任务" _note="重点关注温度与保温时间的交互作用；参数范围参考既往水热法经验。">
+          <outline text="温度梯度实验" type="实验"/>
+          <outline text="前驱体比例筛选" type="实验"/>
+        </outline>
+        <outline text="掺杂策略筛选" type="子任务"/>
+      </outline>
+    </outline>
+  </body>
+</opml>

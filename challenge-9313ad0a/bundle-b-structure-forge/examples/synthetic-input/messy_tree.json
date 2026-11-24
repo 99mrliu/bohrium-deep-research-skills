@@ -1,0 +1,31 @@
+{
+  "meta": {
+    "purpose": "paper",
+    "budget": 50,
+    "audience": "课题组成员",
+    "note": "合成示例（synthetic，非真实科研数据）：虚构课题“多孔材料Z的合成”，仅供工具演示。人为植入缺陷：兄弟重复标签 1 对（n-dup1/n-dup2）、9 子过载且混用 kind 的分支 1 处（n-r）、单子链 1 处（n-q→n-c1→n-c2→n-c3）、孤儿节点 1 个（n-orphan，parent 引用已删除的 n-deleted）、超长标签 1 条（n-lim）、全图缺失 kind=conclusion。"
+  },
+  "root": "n-root",
+  "nodes": [
+    {"id": "n-root", "parent": null, "label": "多孔材料Z的合成研究", "kind": "concept"},
+    {"id": "n-q", "parent": "n-root", "label": "如何提高多孔材料Z的比表面积与水热稳定性", "kind": "question"},
+    {"id": "n-c1", "parent": "n-q", "label": "孔道结构调控机理", "kind": "question"},
+    {"id": "n-c2", "parent": "n-c1", "label": "模板剂作用机理分析", "kind": "method"},
+    {"id": "n-c3", "parent": "n-c2", "label": "模板剂与孔壁相互作用", "kind": "concept"},
+    {"id": "n-m", "parent": "n-root", "label": "合成路线设计", "kind": "method"},
+    {"id": "n-dup1", "parent": "n-m", "label": "表征方法", "kind": "method"},
+    {"id": "n-dup2", "parent": "n-m", "label": "表征方法", "kind": "method"},
+    {"id": "n-r", "parent": "n-root", "label": "实验结果汇总", "kind": "result"},
+    {"id": "n-r1", "parent": "n-r", "label": "比表面积达 850 m²/g", "kind": "result"},
+    {"id": "n-r2", "parent": "n-r", "label": "XRD 图谱显示高度有序介孔", "kind": "evidence"},
+    {"id": "n-r3", "parent": "n-r", "label": "孔容提升至 0.92 cm³/g", "kind": "result"},
+    {"id": "n-r4", "parent": "n-r", "label": "氮气吸附脱附等温线为 IV 型", "kind": "evidence"},
+    {"id": "n-r5", "parent": "n-r", "label": "水热处理后结构保持率 87%", "kind": "result"},
+    {"id": "n-r6", "parent": "n-r", "label": "TEM 图像显示规则孔道排列", "kind": "evidence"},
+    {"id": "n-r7", "parent": "n-r", "label": "待补充文献对比", "kind": "other"},
+    {"id": "n-r8", "parent": "n-r", "label": "最佳模板剂配比为 1:0.35", "kind": "result"},
+    {"id": "n-r9", "parent": "n-r", "label": "重复第三批合成以验证重现性", "kind": "task"},
+    {"id": "n-lim", "parent": "n-root", "label": "本研究仅在实验室小规模条件下验证了多孔材料Z的合成工艺参数窗口尚未开展中试放大与长期稳定性评估", "kind": "limitation"},
+    {"id": "n-orphan", "parent": "n-deleted", "label": "文献对照数据（已失效分支）", "kind": "evidence"}
+  ]
+}

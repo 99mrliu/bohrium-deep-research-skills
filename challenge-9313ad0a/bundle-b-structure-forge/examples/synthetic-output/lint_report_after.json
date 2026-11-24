@@ -1,0 +1,49 @@
+{
+  "findings": [
+    {
+      "check": "kind_mixing",
+      "detail": "节点 n-r 的兄弟组混用 4 种 kind（>2），分类轴不一致: evidence, other, result, task",
+      "node_ids": [
+        "n-r"
+      ],
+      "severity": "WARN"
+    },
+    {
+      "check": "kind_mixing",
+      "detail": "节点 n-root 的兄弟组混用 4 种 kind（>2），分类轴不一致: limitation, method, question, result",
+      "node_ids": [
+        "n-root"
+      ],
+      "severity": "WARN"
+    },
+    {
+      "check": "missing_core_kind",
+      "detail": "purpose=paper 要求核心 kind ['question', 'method', 'result', 'conclusion']，缺失: conclusion",
+      "node_ids": [],
+      "severity": "WARN"
+    },
+    {
+      "check": "orphan",
+      "detail": "以下节点自 root 不可达（孤儿节点），需人工决策归属或删除: n-orphan",
+      "node_ids": [
+        "n-orphan"
+      ],
+      "severity": "ERROR"
+    },
+    {
+      "check": "parent_missing",
+      "detail": "以下节点的 parent 引用不存在的 id: n-orphan -> n-deleted",
+      "node_ids": [
+        "n-orphan"
+      ],
+      "severity": "ERROR"
+    }
+  ],
+  "summary": {
+    "errors": 2,
+    "max_children": 4,
+    "max_depth": 4,
+    "nodes": 21,
+    "warnings": 3
+  }
+}

@@ -1,0 +1,41 @@
+{
+  "summary": {
+    "relations": 9,
+    "accepted": 5,
+    "rejected": 4,
+    "warnings": 0
+  },
+  "accepted": [
+    "r1",
+    "r2",
+    "r3",
+    "r4",
+    "r5"
+  ],
+  "findings": [
+    {
+      "relation_id": "r6",
+      "check": "evidence_verbatim",
+      "verdict": "error",
+      "detail": "fabricated: 引句在全部材料中均不存在: '表征结果直接证明了催化剂Q的失活机理'"
+    },
+    {
+      "relation_id": "r7",
+      "check": "hierarchy_redundant",
+      "verdict": "reject",
+      "detail": "from 与 to 存在父子层级关系（'n4' 与 'n2' 互为祖先/后代），该内容属于主题树而非横向边"
+    },
+    {
+      "relation_id": "r8",
+      "check": "self_loop",
+      "verdict": "reject",
+      "detail": "自环: from == to == 'n8'"
+    },
+    {
+      "relation_id": "r9",
+      "check": "inference_note",
+      "verdict": "reject",
+      "detail": "basis=inference 但 note 为空"
+    }
+  ]
+}

@@ -1,0 +1,30 @@
+{
+  "case_id": "synthetic-demo-001",
+  "mindmap_file": "output/toy_mindmap.md",
+  "evidence_map": "output/evidence_map.json",
+  "status": "success",
+  "uncertainty": [],
+  "sources": [
+    "material_demo.txt"
+  ],
+  "contract_fields": [
+    "mindmap_file",
+    "evidence_map",
+    "status",
+    "uncertainty"
+  ],
+  "artifacts": [
+    {
+      "name": "mindmap_file",
+      "path": "output/toy_mindmap.md",
+      "exists": true,
+      "bytes": 420
+    },
+    {
+      "name": "evidence_map",
+      "path": "output/evidence_map.json",
+      "exists": true,
+      "bytes": 407
+    }
+  ]
+}

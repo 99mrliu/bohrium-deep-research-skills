@@ -1,0 +1,72 @@
+{
+  "rejected": [
+    {
+      "relation": {
+        "id": "r6",
+        "from": "n5",
+        "to": "n9",
+        "type": "supports",
+        "basis": "fact",
+        "evidence": {
+          "file": "catalystQ_report.pdf",
+          "page": 2,
+          "quote": "表征结果直接证明了催化剂Q的失活机理"
+        },
+        "note": ""
+      },
+      "reasons": [
+        "fabricated: 引句在材料中不存在"
+      ]
+    },
+    {
+      "relation": {
+        "id": "r7",
+        "from": "n4",
+        "to": "n2",
+        "type": "depends_on",
+        "basis": "fact",
+        "evidence": {
+          "file": "catalystQ_report.pdf",
+          "page": 1,
+          "quote": "焙烧工艺是制备方法的核心步骤"
+        },
+        "note": ""
+      },
+      "reasons": [
+        "层级冗余：端点互为祖先/后代"
+      ]
+    },
+    {
+      "relation": {
+        "id": "r8",
+        "from": "n8",
+        "to": "n8",
+        "type": "measures",
+        "basis": "fact",
+        "evidence": {
+          "file": "catalystQ_report.pdf",
+          "page": 3,
+          "quote": "以产率数据度量催化剂Q的催化性能"
+        },
+        "note": ""
+      },
+      "reasons": [
+        "自环"
+      ]
+    },
+    {
+      "relation": {
+        "id": "r9",
+        "from": "n4",
+        "to": "n8",
+        "type": "causes",
+        "basis": "inference",
+        "evidence": null,
+        "note": ""
+      },
+      "reasons": [
+        "basis=inference 但 note 为空"
+      ]
+    }
+  ]
+}

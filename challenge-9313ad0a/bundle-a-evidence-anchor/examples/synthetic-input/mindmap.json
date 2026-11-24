@@ -1,0 +1,117 @@
+{
+  "_comment": "合成示例：本思维导图为完全虚构的演示输入（非真实论文、非真实数据）。节点 n01–n05 证据正确；n06 引文为改写（预期 fabricated）；n07 引文正确但页码错误（预期 mislocated）；n08 标签含材料中不存在的数字（预期 number_not_found）；n09 为缺少 note 的 inference 节点（预期 warning）。",
+  "nodes": [
+    {
+      "id": "n01",
+      "label": "材料X 采用水热法合成",
+      "kind": "方法",
+      "basis": "fact",
+      "evidence": [
+        {
+          "file": "material_alpha.txt",
+          "page": 1,
+          "section": "合成与表征",
+          "quote": "本研究采用水热法合成材料X，反应温度为 120 ℃，反应时间为 12 小时。"
+        }
+      ]
+    },
+    {
+      "id": "n02",
+      "label": "材料X 降解罗丹明B 的产率为 87.5%",
+      "kind": "结果",
+      "basis": "fact",
+      "evidence": [
+        {
+          "file": "material_alpha.txt",
+          "page": 2,
+          "section": "催化性能测试",
+          "quote": "材料X 降解罗丹明B 的产率 87.5%"
+        }
+      ]
+    },
+    {
+      "id": "n03",
+      "label": "材料X 循环 5 次后活性保持率为 92.0%",
+      "kind": "结果",
+      "basis": "fact",
+      "evidence": [
+        {
+          "file": "material_alpha.txt",
+          "page": 2,
+          "section": "催化性能测试",
+          "quote": "材料X 经过 5 次循环使用后活性保持率为 92.0%。"
+        }
+      ]
+    },
+    {
+      "id": "n04",
+      "label": "器件Y 的开路电压为 0.85 V",
+      "kind": "结果",
+      "basis": "fact",
+      "evidence": [
+        {
+          "file": "material_beta.txt",
+          "page": 1,
+          "section": "性能评估",
+          "quote": "在标准测试条件下，器件Y 的开路电压为 0.85 V。"
+        }
+      ]
+    },
+    {
+      "id": "n05",
+      "label": "材料X 的比表面积为 45.6 m2/g",
+      "kind": "结果",
+      "basis": "fact",
+      "evidence": [
+        {
+          "file": "material_alpha.txt",
+          "page": 3,
+          "section": "表征结果与讨论",
+          "quote": "比表面积测试结果为 45.6 m2/g。"
+        }
+      ]
+    },
+    {
+      "id": "n06",
+      "label": "材料X 具有三维多孔结构",
+      "kind": "结果",
+      "basis": "fact",
+      "evidence": [
+        {
+          "file": "material_alpha.txt",
+          "page": 3,
+          "section": "表征结果与讨论",
+          "quote": "透射电子显微镜证实材料X 具有三维多孔结构。"
+        }
+      ]
+    },
+    {
+      "id": "n07",
+      "label": "材料X 具有良好的结晶性",
+      "kind": "结果",
+      "basis": "fact",
+      "evidence": [
+        {
+          "file": "material_alpha.txt",
+          "page": 3,
+          "section": "表征结果与讨论",
+          "quote": "X 射线衍射图谱显示材料X 具有良好的结晶性。"
+        }
+      ]
+    },
+    {
+      "id": "n08",
+      "label": "材料X 的产率达到 99.9%",
+      "kind": "结果",
+      "basis": "summary",
+      "evidence": []
+    },
+    {
+      "id": "n09",
+      "label": "材料X 有望用于工业废水处理",
+      "kind": "展望",
+      "basis": "inference",
+      "evidence": []
+    }
+  ]
+}
