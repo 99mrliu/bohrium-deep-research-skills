@@ -1,0 +1,55 @@
+{
+ "meta": {
+  "purpose": "Semantics reference for known public datasets: per-field meaning, unit, coding and statistical caliber. Reference only — the actual snapshot and any task-provided data dictionary take precedence; mismatches must be reported.",
+  "provenance": "Field meanings and units from the UCI ML Repository dataset description pages for iris, wine and concrete/compressive; observed value ranges recomputed from the original UCI files on 2026-11-24.",
+  "version": "1.0"
+ },
+ "datasets": {
+  "iris": {
+   "match_columns": ["sepal_length", "sepal_width", "petal_length", "petal_width"],
+   "row_count": 150,
+   "fields": {
+    "sepal_length": {"aliases": ["sepal length (cm)", "sepal_length_cm", "sepallength"], "meaning": "sepal length", "unit": "cm", "caliber": "continuous morphometric measurement per flower specimen"},
+    "sepal_width": {"aliases": ["sepal width (cm)", "sepal_width_cm", "sepalwidth"], "meaning": "sepal width", "unit": "cm", "caliber": "continuous morphometric measurement per flower specimen"},
+    "petal_length": {"aliases": ["petal length (cm)", "petal_length_cm", "petallength"], "meaning": "petal length", "unit": "cm", "caliber": "continuous morphometric measurement per flower specimen"},
+    "petal_width": {"aliases": ["petal width (cm)", "petal_width_cm", "petalwidth"], "meaning": "petal width", "unit": "cm", "caliber": "continuous morphometric measurement per flower specimen"},
+    "species": {"aliases": ["class", "iris_class", "target"], "meaning": "Iris species label", "unit": null, "coding": {"Iris-setosa": 50, "Iris-versicolor": 50, "Iris-virginica": 50}, "caliber": "nominal class; one row = one specimen; report counts/proportions, never average"}
+   }
+  },
+  "wine": {
+   "match_columns": ["alcohol", "malic_acid", "proline"],
+   "row_count": 178,
+   "fields": {
+    "class": {"aliases": ["cultivar", "wine_class", "target"], "meaning": "cultivar (1/2/3)", "unit": null, "coding": {"1": 59, "2": 71, "3": 48}, "caliber": "numeric-CODED class label; counts only, never average"},
+    "alcohol": {"meaning": "alcohol content", "unit": "% vol", "caliber": "continuous chemical assay"},
+    "malic_acid": {"meaning": "malic acid", "unit": "g/L", "caliber": "continuous chemical assay"},
+    "ash": {"meaning": "ash content", "unit": "g/L", "caliber": "continuous chemical assay"},
+    "alcalinity_of_ash": {"meaning": "alcalinity of ash", "unit": "meq/L", "caliber": "continuous chemical assay"},
+    "magnesium": {"meaning": "magnesium", "unit": "mg/L", "caliber": "continuous chemical assay"},
+    "total_phenols": {"meaning": "total phenols", "unit": "g/L", "caliber": "continuous chemical assay"},
+    "flavanoids": {"meaning": "flavanoids", "unit": "g/L", "caliber": "continuous chemical assay"},
+    "nonflavanoid_phenols": {"meaning": "nonflavanoid phenols", "unit": "g/L", "caliber": "continuous chemical assay"},
+    "proanthocyanins": {"meaning": "proanthocyanins", "unit": "g/L", "caliber": "continuous chemical assay"},
+    "color_intensity": {"meaning": "color intensity", "unit": "dimensionless index", "caliber": "continuous spectrophotometric index"},
+    "hue": {"meaning": "hue", "unit": "dimensionless", "caliber": "continuous spectrophotometric index"},
+    "od280_od315_of_diluted_wines": {"aliases": ["od280/od315_of_diluted_wines", "od280"], "meaning": "OD280/OD315 of diluted wines", "unit": "ratio", "caliber": "protein-quality indicator ratio"},
+    "proline": {"meaning": "proline", "unit": "mg/L", "caliber": "continuous chemical assay; scale ~100x other features — normalize before distance-based analysis"}
+   }
+  },
+  "concrete": {
+   "match_columns": ["cement", "water", "compressive_strength"],
+   "row_count": 1030,
+   "fields": {
+    "cement": {"aliases": ["cement_component_1", "cement (component 1)(kg in a m^3 mixture)"], "meaning": "cement, component 1", "unit": "kg per m^3 mixture", "caliber": "mixture dosage per cubic metre"},
+    "blast_furnace_slag": {"aliases": ["slag", "blast_furnace_slag_component_2"], "meaning": "blast furnace slag, component 2", "unit": "kg per m^3 mixture", "caliber": "mixture dosage; 0 is a genuine absence, not missing"},
+    "fly_ash": {"aliases": ["fly_ash_component_3"], "meaning": "fly ash, component 3", "unit": "kg per m^3 mixture", "caliber": "mixture dosage; 0 is genuine absence"},
+    "water": {"aliases": ["water_component_4"], "meaning": "water, component 4", "unit": "kg per m^3 mixture", "caliber": "mixture dosage"},
+    "superplasticizer": {"aliases": ["superplasticiser", "superplasticizer_component_5"], "meaning": "superplasticizer, component 5", "unit": "kg per m^3 mixture", "caliber": "mixture dosage; 0 is genuine absence"},
+    "coarse_aggregate": {"aliases": ["coarse_aggregate_component_6"], "meaning": "coarse aggregate, component 6", "unit": "kg per m^3 mixture", "caliber": "mixture dosage"},
+    "fine_aggregate": {"aliases": ["fine_aggregate_component_7"], "meaning": "fine aggregate, component 7", "unit": "kg per m^3 mixture", "caliber": "mixture dosage"},
+    "age_day": {"aliases": ["age", "age (day)", "age_days"], "meaning": "curing age", "unit": "day", "caliber": "1..365; mixture of discrete test ages — treat as grouped time, not continuous calendar"},
+    "compressive_strength_mpa": {"aliases": ["strength", "concrete_compressive_strength", "ccs"], "meaning": "concrete compressive strength", "unit": "MPa", "caliber": "regression target; highly skewed — report median/IQR alongside mean"}
+   }
+  }
+ }
+}

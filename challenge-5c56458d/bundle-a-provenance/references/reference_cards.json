@@ -1,0 +1,103 @@
+{
+ "meta": {
+  "purpose": "Reference fingerprint cards for known public scientific datasets. Cards are semantic/reference material, NOT case answers: verify_snapshot.py compares the actual snapshot against them and reports drift instead of repairing it.",
+  "provenance": "All statistics computed 2026-11-24 directly from the original UCI ML Repository files listed in each card's source field (file_sha256 = sha256 of the downloaded file). No third-party aggregates used.",
+  "tolerance": {"rel_stat": 0.01, "row_count": "exact", "min_match_score": 3.0},
+  "cards_version": "1.0"
+ },
+ "cards": {
+  "iris-uci-corrected": {
+   "source": "UCI ML Repository iris/iris.data (downloaded 2026-11-24)",
+   "file_sha256": "6f608b71a7317216319b4d27b4d9bc84e6abd734eda7872b71a458569e2656c0",
+   "row_count": 150,
+   "feature_columns": ["sepal_length_cm", "sepal_width_cm", "petal_length_cm", "petal_width_cm"],
+   "class_column": "species",
+   "class_counts": {"Iris-setosa": 50, "Iris-versicolor": 50, "Iris-virginica": 50},
+   "aliases": {
+    "sepal_length_cm": ["sepal length (cm)", "sepal length", "sepal_length"],
+    "sepal_width_cm": ["sepal width (cm)", "sepal width", "sepal_width"],
+    "petal_length_cm": ["petal length (cm)", "petal length", "petal_length"],
+    "petal_width_cm": ["petal width (cm)", "petal width", "petal_width"]
+   },
+   "column_stats": {
+    "sepal_length_cm": {"min": 4.3, "max": 7.9, "mean": 5.8433, "std": 0.8281},
+    "sepal_width_cm": {"min": 2.0, "max": 4.4, "mean": 3.054, "std": 0.4336},
+    "petal_length_cm": {"min": 1.0, "max": 6.9, "mean": 3.7587, "std": 1.7644},
+    "petal_width_cm": {"min": 0.1, "max": 2.5, "mean": 1.1987, "std": 0.7632}
+   }
+  },
+  "iris-bezdek-original": {
+   "source": "UCI ML Repository iris/bezdekIris.data (downloaded 2026-11-24)",
+   "file_sha256": "0fed2a99db77ec533a62dc66894d3ec6df3b58b6a8f3cf4a6b47e4086b7f97dc",
+   "row_count": 150,
+   "feature_columns": ["sepal_length_cm", "sepal_width_cm", "petal_length_cm", "petal_width_cm"],
+   "class_column": "species",
+   "class_counts": {"Iris-setosa": 50, "Iris-versicolor": 50, "Iris-virginica": 50},
+   "aliases": {
+    "sepal_length_cm": ["sepal length (cm)", "sepal length", "sepal_length"],
+    "sepal_width_cm": ["sepal width (cm)", "sepal width", "sepal_width"],
+    "petal_length_cm": ["petal length (cm)", "petal length", "petal_length"],
+    "petal_width_cm": ["petal width (cm)", "petal width", "petal_width"]
+   },
+   "column_stats": {
+    "sepal_length_cm": {"min": 4.3, "max": 7.9, "mean": 5.8433, "std": 0.8281},
+    "sepal_width_cm": {"min": 2.0, "max": 4.4, "mean": 3.0573, "std": 0.4359},
+    "petal_length_cm": {"min": 1.0, "max": 6.9, "mean": 3.758, "std": 1.7653},
+    "petal_width_cm": {"min": 0.1, "max": 2.5, "mean": 1.1993, "std": 0.7622}
+   }
+  },
+  "wine-uci": {
+   "source": "UCI ML Repository wine/wine.data (downloaded 2026-11-24)",
+   "file_sha256": "6be6b1203f3d51df0b553a70e57b8a723cd405683958204f96d23d7cd6aea659",
+   "row_count": 178,
+   "feature_columns": ["alcohol", "malic_acid", "ash", "alcalinity_of_ash", "magnesium", "total_phenols", "flavanoids", "nonflavanoid_phenols", "proanthocyanins", "color_intensity", "hue", "od280_od315_of_diluted_wines", "proline"],
+   "class_column": "class",
+   "class_counts": {"1": 59, "2": 71, "3": 48},
+   "aliases": {"od280_od315_of_diluted_wines": ["od280/od315_of_diluted_wines", "od280"]},
+   "column_stats": {
+    "alcohol": {"min": 11.03, "max": 14.83, "mean": 13.0006, "std": 0.8118},
+    "malic_acid": {"min": 0.74, "max": 5.8, "mean": 2.3363, "std": 1.1171},
+    "ash": {"min": 1.36, "max": 3.23, "mean": 2.3665, "std": 0.2743},
+    "alcalinity_of_ash": {"min": 10.6, "max": 30.0, "mean": 19.4949, "std": 3.3396},
+    "magnesium": {"min": 70.0, "max": 162.0, "mean": 99.7416, "std": 14.2825},
+    "total_phenols": {"min": 0.98, "max": 3.88, "mean": 2.2951, "std": 0.6259},
+    "flavanoids": {"min": 0.34, "max": 5.08, "mean": 2.0293, "std": 0.9989},
+    "nonflavanoid_phenols": {"min": 0.13, "max": 0.66, "mean": 0.3619, "std": 0.1245},
+    "proanthocyanins": {"min": 0.41, "max": 3.58, "mean": 1.5909, "std": 0.5724},
+    "color_intensity": {"min": 1.28, "max": 13.0, "mean": 5.0581, "std": 2.3183},
+    "hue": {"min": 0.48, "max": 1.71, "mean": 0.9574, "std": 0.2286},
+    "od280_od315_of_diluted_wines": {"min": 1.27, "max": 4.0, "mean": 2.6117, "std": 0.71},
+    "proline": {"min": 278.0, "max": 1680.0, "mean": 746.8933, "std": 314.9075}
+   }
+  },
+  "concrete-uci": {
+   "source": "UCI ML Repository concrete/compressive/Concrete_Data.xls (downloaded 2026-11-24)",
+   "file_sha256": "710076c66b9ca3f8050e7942f3dcbdbe04013534daeb0077ffd3079a52d8e0c4",
+   "row_count": 1030,
+   "feature_columns": ["cement", "blast_furnace_slag", "fly_ash", "water", "superplasticizer", "coarse_aggregate", "fine_aggregate", "age_day"],
+   "target_column": "compressive_strength_mpa",
+   "aliases": {
+    "cement": ["cement_component_1", "cement (component 1)(kg in a m^3 mixture)"],
+    "blast_furnace_slag": ["blast_furnace_slag_component_2", "slag"],
+    "fly_ash": ["fly_ash_component_3"],
+    "water": ["water_component_4"],
+    "superplasticizer": ["superplasticizer_component_5", "superplasticiser"],
+    "coarse_aggregate": ["coarse_aggregate_component_6"],
+    "fine_aggregate": ["fine_aggregate_component_7"],
+    "age_day": ["age", "age_days", "age (day)"],
+    "compressive_strength_mpa": ["strength", "concrete_compressive_strength", "ccs"]
+   },
+   "column_stats": {
+    "cement": {"min": 102.0, "max": 540.0, "mean": 281.1656, "std": 104.5071},
+    "blast_furnace_slag": {"min": 0.0, "max": 359.4, "mean": 73.8955, "std": 86.2791},
+    "fly_ash": {"min": 0.0, "max": 200.1, "mean": 54.1871, "std": 63.9965},
+    "water": {"min": 121.75, "max": 247.0, "mean": 181.5664, "std": 21.3556},
+    "superplasticizer": {"min": 0.0, "max": 32.2, "mean": 6.2031, "std": 5.9735},
+    "coarse_aggregate": {"min": 801.0, "max": 1145.0, "mean": 972.9186, "std": 77.7538},
+    "fine_aggregate": {"min": 594.0, "max": 992.6, "mean": 773.5789, "std": 80.1754},
+    "age_day": {"min": 1.0, "max": 365.0, "mean": 45.6621, "std": 63.1699},
+    "compressive_strength_mpa": {"min": 2.3318, "max": 82.5992, "mean": 35.8178, "std": 16.7057}
+   }
+  }
+ }
+}
