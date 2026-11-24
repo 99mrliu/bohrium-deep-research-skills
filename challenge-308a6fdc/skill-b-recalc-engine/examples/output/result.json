@@ -1,0 +1,63 @@
+{
+  "case_id": "EXAMPLE-NOT-A-TEST-CASE",
+  "deliverable": "deliverable.md",
+  "preserved_facts": [
+    "4.3 — RAW-SUPPORTED — experiment_data.csv 第5行原文：control,2,4.3",
+    "12.2% — DERIVED-SUPPORTED — 重算值 12.1951（D0017，公式：pct_change = (mean(B) - mean(A)) / mean(A) * 100%；输入：{\"column\": \"response\", \"group_column\": \"group\", \"baseline_group\": \"control\", \"baseline_n\": 5, \"target_group\": \"treatment\", \"target_n\": 5}）"
+  ],
+  "evidence_map": {
+    "4.3": {
+      "verdict": "RAW-SUPPORTED",
+      "evidence": "experiment_data.csv 第5行原文：control,2,4.3",
+      "context": "草稿（虚构数据，仅演示三态核验，非正式案例结果）  两组重复测量显示，处理组响应整体高于对照组。对照组第二次重复测量为 4.3， 处于该组观测范围之内。以对照组为基线重算，处理组均值较对照组升高 12.2%。 处理组均值为 4.79。组间差异显著"
+    },
+    "12.2%": {
+      "verdict": "DERIVED-SUPPORTED",
+      "evidence": "重算值 12.1951（D0017，公式：pct_change = (mean(B) - mean(A)) / mean(A) * 100%；输入：{\"column\": \"response\", \"group_column\": \"group\", \"baseline_group\": \"control\", \"baseline_n\": 5, \"target_group\": \"treatment\", \"target_n\": 5}）",
+      "context": "响应整体高于对照组。对照组第二次重复测量为 4.3， 处于该组观测范围之内。以对照组为基线重算，处理组均值较对照组升高 12.2%。 处理组均值为 4.79。组间差异显著（p = 0.032）。 "
+    },
+    "4.79": {
+      "verdict": "UNSUPPORTED",
+      "evidence": "材料原文与重算派生量均不匹配（已按上下文限定 kind=['mean']）",
+      "context": "二次重复测量为 4.3， 处于该组观测范围之内。以对照组为基线重算，处理组均值较对照组升高 12.2%。 处理组均值为 4.79。组间差异显著（p = 0.032）。 "
+    },
+    "0.032": {
+      "verdict": "UNSUPPORTED-PVALUE",
+      "evidence": "材料中查不到该 p 值字符串",
+      "context": "组观测范围之内。以对照组为基线重算，处理组均值较对照组升高 12.2%。 处理组均值为 4.79。组间差异显著（p = 0.032）。 "
+    }
+  },
+  "change_log": [
+    {
+      "number": "4.79",
+      "verdict": "UNSUPPORTED",
+      "action": "删除 / 改写 / 标【待确认】",
+      "hint": "最接近的重算值为 4.6（mean，公式：mean = sum(x) / n；输入：{\"column\": \"response\", \"group_column\": \"group\", \"group\": \"treatment\", \"rows\": 5}）"
+    },
+    {
+      "number": "0.032",
+      "verdict": "UNSUPPORTED-PVALUE",
+      "action": "删除 / 改写 / 标【待确认】",
+      "hint": "本环境不计算 p 值；材料未给出的 p 值必须删除或标【待确认】"
+    }
+  ],
+  "status": "partial",
+  "sources": [
+    "case.json",
+    "experiment_data.csv",
+    "task.md"
+  ],
+  "uncertainty": [
+    "本工具不计算 p 值与统计显著性（无 scipy，不做统计推断）；p 值仅核对字符串是否与材料一致。"
+  ],
+  "recalc_summary": {
+    "derived_total": 17,
+    "numbers_extracted": 4,
+    "raw_supported": 1,
+    "derived_supported": 1,
+    "unsupported": 1,
+    "unsupported_pvalue": 1,
+    "verify_pass_rate": 0.5
+  },
+  "preview": "本机无 pandoc，未渲染 PDF/PNG 预览（如实记录，未伪造）。"
+}

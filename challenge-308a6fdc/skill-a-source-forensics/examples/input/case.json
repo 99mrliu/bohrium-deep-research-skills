@@ -1,0 +1,12 @@
+{
+  "case_id": "EXAMPLE-NOT-A-TEST-CASE",
+  "title": "合成示例：文本分类模型效果简报",
+  "note": "合成示例，非正式案例结果；全部材料为合成示例数据，非真实科研数据。",
+  "output_contract": {
+    "case_id": "string，与输入 case_id 原样一致",
+    "deliverable": "string，交付稿文件名",
+    "preserved_facts": "array，通过锚核验的带锚事实句清单",
+    "evidence_map": "object，锚到材料原文的证据映射",
+    "change_log": "array，取证与核验的变更记录"
+  }
+}

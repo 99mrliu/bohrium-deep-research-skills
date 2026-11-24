@@ -1,0 +1,129 @@
+{
+  "case_id": "EXAMPLE-NOT-A-TEST-CASE",
+  "deliverable": [
+    "examples/output/deliverable.docx",
+    "examples/output/deliverable_tracked.docx"
+  ],
+  "preserved_facts": [
+    "示例事实A：三组平行样本的合成均值分别为 12.4、15.1、13.8（合成数据）。",
+    "示例事实B：示例反应温度为 60 摄氏度，时间为 2 小时（合成数据）。"
+  ],
+  "evidence_map": {
+    "examples/output/deliverable.docx": "bc34ec576a6cb6a1cbdc0ad856b2f033c49096b141f3143eb088b757b53d04db",
+    "examples/output/deliverable_tracked.docx": "d62cd981fbb0bd6eca509db27be3e6d1f6763870b67de350011952ff492f9b56",
+    "examples/output/review_record.csv": "976ea04c2b9c21cea92574cc8a905413b6d7c09f30a5ef497dcc410b07d40063",
+    "examples/output/preview.pdf": "0bc1e8ab04d8642a65ce86cafcd3d4d04987f281ef22251bfcfeccec7460ea09",
+    "examples/output/preview-1.png": "99afc4e77cdacf4619fac91b181cb43b7bfda4a86778a3209fc97861a0deaa60",
+    "examples/output/forge_report.md": "470ef2fb080419df65ab554eaf54246d335754e6d669936c33a73fc871c24da7"
+  },
+  "change_log": [
+    {
+      "id": 1,
+      "type": "replace",
+      "find": "50 摄氏度",
+      "replace": "60 摄氏度",
+      "reason": "与 case.json 中示例事实B 的温度口径对齐（合成示例）。",
+      "status": "applied",
+      "author": "skill-agent"
+    },
+    {
+      "id": 2,
+      "type": "replace",
+      "find": "但差异未做统计检验",
+      "replace": "且该差异未经统计检验，不得外推为因果结论",
+      "reason": "避免把趋势描述写成因果（合成示例）。",
+      "status": "applied",
+      "author": "skill-agent"
+    },
+    {
+      "id": 3,
+      "type": "replace",
+      "find": "反应釜编号为 RK-07",
+      "replace": "反应釜编号为 RK-08",
+      "reason": "故意设置的未命中条目：原文不存在该片段，用于演示 misses 如实记录。",
+      "status": "missed"
+    }
+  ],
+  "status": "ok",
+  "skill": "editable-deliverable-forge",
+  "generated_at_utc": "2026-11-24T11:03:39Z",
+  "artifacts": [
+    {
+      "path": "examples/output/deliverable.docx",
+      "bytes": 2846,
+      "sha256": "bc34ec576a6cb6a1cbdc0ad856b2f033c49096b141f3143eb088b757b53d04db"
+    },
+    {
+      "path": "examples/output/deliverable_tracked.docx",
+      "bytes": 2994,
+      "sha256": "d62cd981fbb0bd6eca509db27be3e6d1f6763870b67de350011952ff492f9b56"
+    },
+    {
+      "path": "examples/output/review_record.csv",
+      "bytes": 567,
+      "sha256": "976ea04c2b9c21cea92574cc8a905413b6d7c09f30a5ef497dcc410b07d40063"
+    },
+    {
+      "path": "examples/output/preview.pdf",
+      "bytes": 37607,
+      "sha256": "0bc1e8ab04d8642a65ce86cafcd3d4d04987f281ef22251bfcfeccec7460ea09"
+    },
+    {
+      "path": "examples/output/preview-1.png",
+      "bytes": 101933,
+      "sha256": "99afc4e77cdacf4619fac91b181cb43b7bfda4a86778a3209fc97861a0deaa60"
+    },
+    {
+      "path": "examples/output/forge_report.md",
+      "bytes": 2490,
+      "sha256": "470ef2fb080419df65ab554eaf54246d335754e6d669936c33a73fc871c24da7"
+    }
+  ],
+  "round_trip": [
+    {
+      "docx": "examples/output/deliverable.docx",
+      "retention": 1.0,
+      "paragraphs": 23,
+      "tables": 1,
+      "ins": 0,
+      "del": 0,
+      "ok": true
+    },
+    {
+      "docx": "examples/output/deliverable_tracked.docx",
+      "retention": 1.0,
+      "paragraphs": 23,
+      "tables": 1,
+      "ins": 2,
+      "del": 2,
+      "ok": true
+    }
+  ],
+  "preview_status": {
+    "status": "rendered_pdf_png",
+    "renderer": "textutil+cupsfilter",
+    "pdf": "examples/output/preview.pdf",
+    "pngs": [
+      "examples/output/preview-1.png"
+    ],
+    "notes": [
+      "纯文本版式 PDF（textutil 抽取 + cupsfilter 渲染），排版与 DOCX 不同，仅供内容预览"
+    ],
+    "detected": {
+      "soffice": null,
+      "libreoffice": null,
+      "pandoc": null,
+      "textutil": "/usr/bin/textutil",
+      "cupsfilter": "/usr/sbin/cupsfilter",
+      "qlmanage": "/usr/bin/qlmanage",
+      "pdftoppm": "/Users/liuhengshen/Library/Application Support/com.bohrium.runtime/darwin-aarch64/poppler-2560d3705d5614d7/dependencies/poppler/bin/pdftoppm"
+    }
+  },
+  "revision_stats": {
+    "planned": 3,
+    "applied": 2,
+    "missed": 1,
+    "author": "skill-agent"
+  },
+  "uncertainty": "1 条 edit_plan 修改未命中原文，需人工处理"
+}

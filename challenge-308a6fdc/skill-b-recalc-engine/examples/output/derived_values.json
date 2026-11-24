@@ -1,0 +1,291 @@
+{
+  "tool": "recalc.py",
+  "input_dir": "examples/input",
+  "derived_count": 17,
+  "values": [
+    {
+      "id": "D0001",
+      "table": "experiment_data.csv",
+      "kind": "n",
+      "column": "response",
+      "group_column": "group",
+      "group": "control",
+      "value": 5,
+      "formula": "n = count(x)",
+      "inputs": {
+        "column": "response",
+        "group_column": "group",
+        "group": "control",
+        "rows": 5
+      }
+    },
+    {
+      "id": "D0002",
+      "table": "experiment_data.csv",
+      "kind": "mean",
+      "column": "response",
+      "group_column": "group",
+      "group": "control",
+      "value": 4.1,
+      "formula": "mean = sum(x) / n",
+      "inputs": {
+        "column": "response",
+        "group_column": "group",
+        "group": "control",
+        "rows": 5
+      }
+    },
+    {
+      "id": "D0003",
+      "table": "experiment_data.csv",
+      "kind": "median",
+      "column": "response",
+      "group_column": "group",
+      "group": "control",
+      "value": 4.1,
+      "formula": "median = 排序后中位值",
+      "inputs": {
+        "column": "response",
+        "group_column": "group",
+        "group": "control",
+        "rows": 5
+      }
+    },
+    {
+      "id": "D0004",
+      "table": "experiment_data.csv",
+      "kind": "sd",
+      "column": "response",
+      "group_column": "group",
+      "group": "control",
+      "value": 0.15811388300841897,
+      "formula": "SD = sqrt( sum((x - mean)^2) / (n - 1) )  # 样本标准差",
+      "inputs": {
+        "column": "response",
+        "group_column": "group",
+        "group": "control",
+        "rows": 5
+      }
+    },
+    {
+      "id": "D0005",
+      "table": "experiment_data.csv",
+      "kind": "sem",
+      "column": "response",
+      "group_column": "group",
+      "group": "control",
+      "value": 0.07071067811865475,
+      "formula": "SEM = SD / sqrt(n)",
+      "inputs": {
+        "column": "response",
+        "group_column": "group",
+        "group": "control",
+        "rows": 5
+      }
+    },
+    {
+      "id": "D0006",
+      "table": "experiment_data.csv",
+      "kind": "min",
+      "column": "response",
+      "group_column": "group",
+      "group": "control",
+      "value": 3.9,
+      "formula": "min(x)",
+      "inputs": {
+        "column": "response",
+        "group_column": "group",
+        "group": "control",
+        "rows": 5
+      }
+    },
+    {
+      "id": "D0007",
+      "table": "experiment_data.csv",
+      "kind": "max",
+      "column": "response",
+      "group_column": "group",
+      "group": "control",
+      "value": 4.3,
+      "formula": "max(x)",
+      "inputs": {
+        "column": "response",
+        "group_column": "group",
+        "group": "control",
+        "rows": 5
+      }
+    },
+    {
+      "id": "D0008",
+      "table": "experiment_data.csv",
+      "kind": "n",
+      "column": "response",
+      "group_column": "group",
+      "group": "treatment",
+      "value": 5,
+      "formula": "n = count(x)",
+      "inputs": {
+        "column": "response",
+        "group_column": "group",
+        "group": "treatment",
+        "rows": 5
+      }
+    },
+    {
+      "id": "D0009",
+      "table": "experiment_data.csv",
+      "kind": "mean",
+      "column": "response",
+      "group_column": "group",
+      "group": "treatment",
+      "value": 4.6,
+      "formula": "mean = sum(x) / n",
+      "inputs": {
+        "column": "response",
+        "group_column": "group",
+        "group": "treatment",
+        "rows": 5
+      }
+    },
+    {
+      "id": "D0010",
+      "table": "experiment_data.csv",
+      "kind": "median",
+      "column": "response",
+      "group_column": "group",
+      "group": "treatment",
+      "value": 4.6,
+      "formula": "median = 排序后中位值",
+      "inputs": {
+        "column": "response",
+        "group_column": "group",
+        "group": "treatment",
+        "rows": 5
+      }
+    },
+    {
+      "id": "D0011",
+      "table": "experiment_data.csv",
+      "kind": "sd",
+      "column": "response",
+      "group_column": "group",
+      "group": "treatment",
+      "value": 0.15811388300841883,
+      "formula": "SD = sqrt( sum((x - mean)^2) / (n - 1) )  # 样本标准差",
+      "inputs": {
+        "column": "response",
+        "group_column": "group",
+        "group": "treatment",
+        "rows": 5
+      }
+    },
+    {
+      "id": "D0012",
+      "table": "experiment_data.csv",
+      "kind": "sem",
+      "column": "response",
+      "group_column": "group",
+      "group": "treatment",
+      "value": 0.07071067811865468,
+      "formula": "SEM = SD / sqrt(n)",
+      "inputs": {
+        "column": "response",
+        "group_column": "group",
+        "group": "treatment",
+        "rows": 5
+      }
+    },
+    {
+      "id": "D0013",
+      "table": "experiment_data.csv",
+      "kind": "min",
+      "column": "response",
+      "group_column": "group",
+      "group": "treatment",
+      "value": 4.4,
+      "formula": "min(x)",
+      "inputs": {
+        "column": "response",
+        "group_column": "group",
+        "group": "treatment",
+        "rows": 5
+      }
+    },
+    {
+      "id": "D0014",
+      "table": "experiment_data.csv",
+      "kind": "max",
+      "column": "response",
+      "group_column": "group",
+      "group": "treatment",
+      "value": 4.8,
+      "formula": "max(x)",
+      "inputs": {
+        "column": "response",
+        "group_column": "group",
+        "group": "treatment",
+        "rows": 5
+      }
+    },
+    {
+      "id": "D0015",
+      "table": "experiment_data.csv",
+      "kind": "diff",
+      "column": "response",
+      "group_column": "group",
+      "group": null,
+      "value": 0.5,
+      "formula": "diff = mean(B) - mean(A)",
+      "inputs": {
+        "column": "response",
+        "group_column": "group",
+        "baseline_group": "control",
+        "baseline_n": 5,
+        "target_group": "treatment",
+        "target_n": 5
+      },
+      "from_group": "control",
+      "to_group": "treatment"
+    },
+    {
+      "id": "D0016",
+      "table": "experiment_data.csv",
+      "kind": "ratio",
+      "column": "response",
+      "group_column": "group",
+      "group": null,
+      "value": 1.1219512195121952,
+      "formula": "ratio = mean(B) / mean(A)",
+      "inputs": {
+        "column": "response",
+        "group_column": "group",
+        "baseline_group": "control",
+        "baseline_n": 5,
+        "target_group": "treatment",
+        "target_n": 5
+      },
+      "from_group": "control",
+      "to_group": "treatment"
+    },
+    {
+      "id": "D0017",
+      "table": "experiment_data.csv",
+      "kind": "pct_change",
+      "column": "response",
+      "group_column": "group",
+      "group": null,
+      "value": 12.195121951219514,
+      "formula": "pct_change = (mean(B) - mean(A)) / mean(A) * 100%",
+      "inputs": {
+        "column": "response",
+        "group_column": "group",
+        "baseline_group": "control",
+        "baseline_n": 5,
+        "target_group": "treatment",
+        "target_n": 5
+      },
+      "from_group": "control",
+      "to_group": "treatment"
+    }
+  ]
+}

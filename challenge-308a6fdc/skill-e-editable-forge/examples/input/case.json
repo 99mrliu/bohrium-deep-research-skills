@@ -1,0 +1,16 @@
+{
+  "case_id": "EXAMPLE-NOT-A-TEST-CASE",
+  "note": "合成示例输入，仅用于演示 editable-deliverable-forge 的接口与流程，非正式评测案例。",
+  "task": "把合成的实验记录成稿编译为可编辑 DOCX，并按 edit_plan.json 生成带修订留痕的改稿，交付真实渲染预览与验证报告。",
+  "facts": [
+    "示例事实A：三组平行样本的合成均值分别为 12.4、15.1、13.8（合成数据）。",
+    "示例事实B：示例反应温度为 60 摄氏度，时间为 2 小时（合成数据）。"
+  ],
+  "output_contract": {
+    "case_id": "",
+    "deliverable": "",
+    "preserved_facts": "",
+    "evidence_map": "",
+    "change_log": ""
+  }
+}

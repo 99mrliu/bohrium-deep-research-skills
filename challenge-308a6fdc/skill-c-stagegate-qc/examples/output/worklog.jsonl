@@ -1,0 +1,10 @@
+{"ts": "2026-11-24T11:02:29+00:00", "stage": "init", "verdict": "GO", "notes": "workplan 生成；契约字段 ['case_id', 'deliverable', 'preserved_facts', 'evidence_map', 'change_log']；首次 init"}
+{"ts": "2026-11-24T11:02:30+00:00", "stage": "intake", "verdict": "FAIL", "notes": "缺失：notes/material_inventory.md"}
+{"ts": "2026-11-24T11:02:30+00:00", "stage": "intake", "verdict": "GO", "notes": "elapsed=1s deadline=120s"}
+{"ts": "2026-11-24T11:02:31+00:00", "stage": "outline", "verdict": "GO", "notes": "elapsed=1s deadline=300s"}
+{"ts": "2026-11-24T11:02:41+00:00", "stage": "draft", "verdict": "GO", "notes": "elapsed=11s deadline=600s"}
+{"ts": "2026-11-24T11:02:41+00:00", "stage": "audit", "verdict": "GO", "notes": "elapsed=11s deadline=780s"}
+{"ts": "2026-11-24T11:02:41+00:00", "stage": "selfcheck", "verdict": "WARN-BUT-PROCEED", "notes": "机器项 4/5 通过；报告见 selfcheck_report.md"}
+{"ts": "2026-11-24T11:02:48+00:00", "stage": "finalize", "verdict": "FAIL", "notes": "deliver：4 项通过，1 项失败；elapsed=18s/900s"}
+{"ts": "2026-11-24T11:02:54+00:00", "stage": "finalize", "verdict": "GO", "notes": "deliver：5 项通过，0 项失败；elapsed=25s/900s"}
+{"ts": "2026-11-24T11:03:23+00:00", "stage": "finalize", "verdict": "GO", "notes": "deliver：5 项通过，0 项失败；elapsed=53s/900s"}

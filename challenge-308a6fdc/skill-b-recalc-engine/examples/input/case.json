@@ -1,0 +1,11 @@
+{
+  "case_id": "EXAMPLE-NOT-A-TEST-CASE",
+  "note": "合成示例，非正式案例结果。仅用于演示 recalc-verify-engine 的输入格式。",
+  "output_contract": {
+    "case_id": "原样回填本案例的 case_id",
+    "deliverable": "输出目录中的可编辑产物文件名",
+    "preserved_facts": "核验通过（RAW-SUPPORTED / DERIVED-SUPPORTED）的事实与数字清单",
+    "evidence_map": "每个数字到其证据（材料原文行或重算公式+输入）的映射",
+    "change_log": "对 UNSUPPORTED / UNSUPPORTED-PVALUE 数字的处理记录"
+  }
+}

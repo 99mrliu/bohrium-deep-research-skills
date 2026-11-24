@@ -1,0 +1,12 @@
+{
+  "case_id": "EXAMPLE-NOT-A-TEST-CASE",
+  "title": "合成示例：撰写一份关于「门禁式写作法」的简报",
+  "output_contract": {
+    "case_id": "与输入 case_id 完全一致",
+    "deliverable": "最终交付物正文（Markdown 简报）",
+    "preserved_facts": "必须保留的事实清单（list）",
+    "evidence_map": "结论到证据来源的映射（dict）",
+    "change_log": "变更与降级记录（list）"
+  },
+  "note": "本文件为合成示例输入，非正式案例结果；仅用于演示 stagegate-qc-runner 的流程。"
+}

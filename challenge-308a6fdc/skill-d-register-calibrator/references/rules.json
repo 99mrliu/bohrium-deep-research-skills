@@ -1,0 +1,71 @@
+{
+  "_comment": "zh-register-calibrator 规则表（机器可读）。所有词表/阈值均可在此调整，register_lint.py 启动时加载。人类可读说明见 rules.md。",
+  "r1_person": {
+    "severity": "高",
+    "pattern": "我们|笔者|您|你|我(?!国|们)",
+    "autofix_map": {
+      "笔者": "本文",
+      "我们": "本研究"
+    },
+    "suggestion": "学术正文避免第一/第二人称，建议改为「本文」「本研究」或改为无主语句式。"
+  },
+  "r2_punctuation": {
+    "severity": "中",
+    "autofix": true,
+    "map": {
+      ",": "，",
+      ".": "。",
+      "(": "（",
+      ")": "）",
+      ":": "：",
+      ";": "；"
+    },
+    "suggestion": "中文语境应使用全角标点。可用 --fix 自动替换。"
+  },
+  "r3_colloquial": {
+    "severity": "高",
+    "terms": ["搞", "弄", "东西", "挺", "差不多", "一大堆", "啥", "靠谱", "给力", "干货"],
+    "hen_whitelist": "很可能|很多|很少|较大|较小",
+    "hen_term": "很",
+    "suggestion": "口语化表达，改为书面语（如「搞」→「开展/进行」，「东西」→具体名词，「差不多」→「大致/约」）。"
+  },
+  "r4_exaggeration": {
+    "severity": "高",
+    "terms": ["革命性", "颠覆性", "首次提出", "完美", "彻底解决", "填补空白", "国际领先", "划时代"],
+    "evidence_marker": "材料依据",
+    "suggestion": "夸大/越级表述。删除或降级为客观陈述；确需保留时须在同一行内附「（材料依据：…）」标注。"
+  },
+  "r5_strength": {
+    "l3_markers": ["证实", "证明", "确证", "定论"],
+    "l2_markers": ["表明", "显示", "揭示"],
+    "l1_markers": ["初步表明", "提示", "有望", "可能"],
+    "material_l1_signals": ["初步", "preliminary", "Preliminary", "pilot", "Pilot", "小样本", "探索性", "试点"],
+    "material_strong_signals": ["随机对照", "randomized", "Randomized", "多中心", "大样本", "荟萃", "meta-analysis", "Meta-analysis", "RCT"],
+    "small_sample_regex": "[nN]\\s*=\\s*(\\d+)",
+    "small_sample_threshold": 30,
+    "suggestion": "措辞强度需与材料证据强度对齐：材料仅含初步/小样本信号时，稿件不得使用 L3 定论措辞，建议降级为 L1（初步表明/提示/有望）。"
+  },
+  "r6_causality": {
+    "severity": "中",
+    "causal_verbs": ["导致", "使得", "促进了", "降低了", "提升了", "引起了", "改善了"],
+    "sections": ["摘要", "结果", "结论"],
+    "design_signals": ["随机对照", "干预实验", "randomized", "Randomized", "对照实验", "RCT", "准实验", "双盲"],
+    "suggestion": "材料无因果设计信号时，结果/摘要章节避免因果动词，建议改为「相关」「伴随」「与……有关」。"
+  },
+  "r7_abbreviation": {
+    "severity_undefined": "中",
+    "severity_redefined": "低",
+    "token_pattern": "(?<![A-Za-z0-9])[A-Z]{2,}(?![A-Za-z0-9])",
+    "ignore": ["AI", "ID", "URL", "PDF", "LED", "APP"],
+    "suggestion": "缩写首次出现须以「中文全称（ABBR）」定义，之后不得重复定义。"
+  },
+  "r8_terminology": {
+    "severity": "低",
+    "min_term_len": 2,
+    "max_term_len": 6,
+    "min_freq": 3,
+    "max_groups": 30,
+    "glossary_filename": "glossary.lock",
+    "suggestion": "同一概念出现多种表面形式，请按 glossary.lock 锁定译名统一；无锁定时由模型裁决后写回。"
+  }
+}

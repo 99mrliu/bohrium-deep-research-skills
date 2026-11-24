@@ -1,0 +1,56 @@
+{
+  "version": 1,
+  "case_id": "EXAMPLE-NOT-A-TEST-CASE",
+  "contract_keys": [
+    "case_id",
+    "deliverable",
+    "preserved_facts",
+    "evidence_map",
+    "change_log"
+  ],
+  "init_epoch": 1795518149.725292,
+  "init_iso": "2026-11-24T11:02:29+00:00",
+  "budget_sec": 900,
+  "paths": {
+    "input": "/Users/liuhengshen/Desktop/bhr_product/308a6fdc-new/skill-c-stagegate-qc/examples/input",
+    "work": "/Users/liuhengshen/Desktop/bhr_product/308a6fdc-new/skill-c-stagegate-qc/examples/output",
+    "output": "/Users/liuhengshen/Desktop/bhr_product/308a6fdc-new/skill-c-stagegate-qc/examples/output"
+  },
+  "stages": {
+    "intake": {
+      "desc": "材料清点：列出全部输入材料、可用性与初步判断",
+      "deadline_sec": 120,
+      "required_artifacts": [
+        "notes/material_inventory.md"
+      ]
+    },
+    "outline": {
+      "desc": "章节骨架 + 证据分派表：每个章节挂哪些材料/事实",
+      "deadline_sec": 300,
+      "required_artifacts": [
+        "notes/outline.md",
+        "notes/evidence_assignment.md"
+      ]
+    },
+    "draft": {
+      "desc": "完整初稿：允许含【待确认】标注，但不允许 TODO/XXX 等占位符",
+      "deadline_sec": 600,
+      "required_artifacts": [
+        "deliverable.md"
+      ]
+    },
+    "audit": {
+      "desc": "自查：契约字段齐、无占位符、缺口已标注",
+      "deadline_sec": 780,
+      "required_artifacts": [
+        "notes/audit_report.md"
+      ]
+    },
+    "finalize": {
+      "desc": "装配 result.json 并交付（产物由 deliver 子命令生成）",
+      "deadline_sec": 860,
+      "required_artifacts": []
+    }
+  },
+  "reinit_idempotent": false
+}

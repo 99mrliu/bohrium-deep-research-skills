@@ -1,0 +1,48 @@
+{
+  "generated_at": "2026-11-24T19:03:07+0800",
+  "input_dir": "examples/input",
+  "material_count": 5,
+  "materials": [
+    {
+      "id": "M1",
+      "path": "case.json",
+      "type": "text",
+      "sha256": "4c9dbc532a4c2ff5e9d61927e8c8c9ecf160ed765e115ae86dfafd4085230274",
+      "bytes": 551,
+      "status": "extracted"
+    },
+    {
+      "id": "M2",
+      "path": "materials/exp_log.txt",
+      "type": "text",
+      "sha256": "834173d1bfa051729d7a6bac724424c89dc50c3c43f0db2ccc0f98c6c99b9c71",
+      "bytes": 524,
+      "status": "extracted"
+    },
+    {
+      "id": "M3",
+      "path": "materials/metrics.csv",
+      "type": "text",
+      "sha256": "e0d0b3c109a6275cf79640b7e2fac15c172a1f41ffaffed63d8a2f21f5e4d824",
+      "bytes": 154,
+      "status": "extracted"
+    },
+    {
+      "id": "M4",
+      "path": "materials/survey_notes.md",
+      "type": "text",
+      "sha256": "c1c109df085687fbeaafaa12f6374a4dbb2e0403ee37306ea4ec1bb752b32bad",
+      "bytes": 311,
+      "status": "extracted"
+    },
+    {
+      "id": "M5",
+      "path": "task.md",
+      "type": "text",
+      "sha256": "bfe5b53cbd0a221fda751248f7cce4b6d764f0fce2cb9facaa653fa67ed2a4ba",
+      "bytes": 360,
+      "status": "extracted"
+    }
+  ],
+  "integrity": "baseline_recorded"
+}

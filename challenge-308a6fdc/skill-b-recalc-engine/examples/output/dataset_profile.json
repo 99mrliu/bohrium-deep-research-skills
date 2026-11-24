@@ -1,0 +1,29 @@
+{
+  "tool": "recalc.py",
+  "input_dir": "examples/input",
+  "tables": [
+    {
+      "file": "experiment_data.csv",
+      "rows": 10,
+      "columns": 3,
+      "column_profile": {
+        "group": {
+          "type": "group",
+          "missing": 0,
+          "n": 10
+        },
+        "replicate": {
+          "type": "identifier",
+          "missing": 0,
+          "n": 10
+        },
+        "response": {
+          "type": "numeric",
+          "missing": 0,
+          "n": 10
+        }
+      }
+    }
+  ],
+  "degraded": false
+}

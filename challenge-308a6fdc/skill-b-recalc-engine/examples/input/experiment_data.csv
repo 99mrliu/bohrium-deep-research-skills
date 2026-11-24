@@ -1,0 +1,13 @@
+# 合成示例数据：虚构的两组重复测量，仅用于演示重算引擎，非正式案例数据。
+# 对照组与处理组各 5 次重复测量（response 为虚构响应值）。
+group,replicate,response
+control,1,4.1
+control,2,4.3
+control,3,3.9
+control,4,4.2
+control,5,4.0
+treatment,1,4.6
+treatment,2,4.8
+treatment,3,4.5
+treatment,4,4.7
+treatment,5,4.4

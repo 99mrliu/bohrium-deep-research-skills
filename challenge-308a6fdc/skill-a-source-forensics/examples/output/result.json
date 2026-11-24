@@ -1,0 +1,137 @@
+{
+  "case_id": "EXAMPLE-NOT-A-TEST-CASE",
+  "deliverable": "deliverable.md",
+  "preserved_facts": [
+    "新模型在 1200 条标注样本上微调 6 个 epoch[M2:L3][M2:L8]，验证集 300 条[M2:L3]。",
+    "准确率达到 87.3%，较规则基线的 81.5% 提升 5.8 个百分点[M2:L4-L6]。",
+    "宏平均 F1 由 0.792 升至 0.851[M3:L4]。",
+    "单条推理平均耗时 42 ms，较基线 58 ms 下降 16 ms[M2:L7][M3:L5]。",
+    "用户调研显示，78% 的受访者表示检索等待超过 10 分钟会放弃查询[M4:L5]，本轮共回收有效问卷 32 份[M4:L4]。",
+    "样本类别分布不均衡，正向类占 64%[M2:L9]，结论外推需谨慎。"
+  ],
+  "evidence_map": {
+    "M2:L3": {
+      "material": "M2",
+      "status": "OK",
+      "claim": "新模型在 1200 条标注样本上微调 6 个 epoch，验证集 300 条。",
+      "excerpt": "# 合成示例数据，非真实科研数据\n# 实验记录：文本分类模型 v0.3\n2026-11-10 09:12 训练集规模：1200 条标注样本，验证集 300 条\n2026-11-10 11:40 基线模型（规则法）准确率：81.5%\n2026-11-10 15:03 新模型（RoBERTa 微调）准确率：87.3%"
+    },
+    "M2:L8": {
+      "material": "M2",
+      "status": "OK",
+      "claim": "新模型在 1200 条标注样本上微调 6 个 epoch，验证集 300 条。",
+      "excerpt": "2026-11-10 15:04 较基线提升 5.8 个百分点\n2026-11-11 10:22 单条推理平均耗时 42 ms（CPU）\n2026-11-11 16:55 训练轮次：6 epoch，batch size 16\n2026-11-12 09:01 备注：样本类别分布不均衡，正向类占 64%"
+    },
+    "M2:L4-L6": {
+      "material": "M2",
+      "status": "OK",
+      "claim": "准确率达到 87.3%，较规则基线的 81.5% 提升 5.8 个百分点。",
+      "excerpt": "# 实验记录：文本分类模型 v0.3\n2026-11-10 09:12 训练集规模：1200 条标注样本，验证集 300 条\n2026-11-10 11:40 基线模型（规则法）准确率：81.5%\n2026-11-10 15:03 新模型（RoBERTa 微调）准确率：87.3%\n2026-11-10 15:04 较基线提升 5.8 个百分点\n2026-11-11 10:22 单条推理平均耗时 4"
+    },
+    "M3:L4": {
+      "material": "M3",
+      "status": "OK",
+      "claim": "宏平均 F1 由 0.792 升至 0.851。",
+      "excerpt": "metric,baseline,new_model,delta\naccuracy,0.815,0.873,+0.058\nf1_macro,0.792,0.851,+0.059\nlatency_ms,58,42,-16"
+    },
+    "M2:L7": {
+      "material": "M2",
+      "status": "OK",
+      "claim": "单条推理平均耗时 42 ms，较基线 58 ms 下降 16 ms。",
+      "excerpt": "2026-11-10 15:03 新模型（RoBERTa 微调）准确率：87.3%\n2026-11-10 15:04 较基线提升 5.8 个百分点\n2026-11-11 10:22 单条推理平均耗时 42 ms（CPU）\n2026-11-11 16:55 训练轮次：6 epoch，batch size 16\n2026-11-12 09:01 备注：样本类别分布不均衡，正向类占 64%"
+    },
+    "M3:L5": {
+      "material": "M3",
+      "status": "OK",
+      "claim": "单条推理平均耗时 42 ms，较基线 58 ms 下降 16 ms。",
+      "excerpt": "accuracy,0.815,0.873,+0.058\nf1_macro,0.792,0.851,+0.059\nlatency_ms,58,42,-16"
+    },
+    "M4:L5": {
+      "material": "M4",
+      "status": "OK",
+      "claim": "用户调研显示，78% 的受访者表示检索等待超过 10 分钟会放弃查询，本轮共回收有效问卷 32 份。",
+      "excerpt": "- 共回收有效问卷 32 份，覆盖 3 个科室。\n- 78% 的受访者表示检索等待时间超过 10 分钟会放弃查询。\n- 多数受访者希望结果附带出处。\n- 访谈于 2026-11-08 至 2026-11-09 完成。"
+    },
+    "M4:L4": {
+      "material": "M4",
+      "status": "OK",
+      "claim": "用户调研显示，78% 的受访者表示检索等待超过 10 分钟会放弃查询，本轮共回收有效问卷 32 份。",
+      "excerpt": "# 用户访谈纪要（合成）\n\n- 共回收有效问卷 32 份，覆盖 3 个科室。\n- 78% 的受访者表示检索等待时间超过 10 分钟会放弃查询。\n- 多数受访者希望结果附带出处。"
+    },
+    "M2:L9": {
+      "material": "M2",
+      "status": "OK",
+      "claim": "样本类别分布不均衡，正向类占 64%，结论外推需谨慎。",
+      "excerpt": "2026-11-11 10:22 单条推理平均耗时 42 ms（CPU）\n2026-11-11 16:55 训练轮次：6 epoch，batch size 16\n2026-11-12 09:01 备注：样本类别分布不均衡，正向类占 64%"
+    }
+  },
+  "change_log": [
+    {
+      "time": "2026-11-24T19:03:07+0800",
+      "action": "forensic_intake",
+      "detail": "建库 5 份材料，记录 SHA-256 基线"
+    },
+    {
+      "time": "2026-11-24T19:03:17+0800",
+      "action": "anchor_audit",
+      "detail": "核验锚 10 个，通过 10，异常 0，无锚事实句 0"
+    }
+  ],
+  "sources": [
+    {
+      "id": "M1",
+      "path": "case.json",
+      "type": "text",
+      "sha256": "4c9dbc532a4c2ff5e9d61927e8c8c9ecf160ed765e115ae86dfafd4085230274",
+      "bytes": 551,
+      "status": "extracted"
+    },
+    {
+      "id": "M2",
+      "path": "materials/exp_log.txt",
+      "type": "text",
+      "sha256": "834173d1bfa051729d7a6bac724424c89dc50c3c43f0db2ccc0f98c6c99b9c71",
+      "bytes": 524,
+      "status": "extracted"
+    },
+    {
+      "id": "M3",
+      "path": "materials/metrics.csv",
+      "type": "text",
+      "sha256": "e0d0b3c109a6275cf79640b7e2fac15c172a1f41ffaffed63d8a2f21f5e4d824",
+      "bytes": 154,
+      "status": "extracted"
+    },
+    {
+      "id": "M4",
+      "path": "materials/survey_notes.md",
+      "type": "text",
+      "sha256": "c1c109df085687fbeaafaa12f6374a4dbb2e0403ee37306ea4ec1bb752b32bad",
+      "bytes": 311,
+      "status": "extracted"
+    },
+    {
+      "id": "M5",
+      "path": "task.md",
+      "type": "text",
+      "sha256": "bfe5b53cbd0a221fda751248f7cce4b6d764f0fce2cb9facaa653fa67ed2a4ba",
+      "bytes": 360,
+      "status": "extracted"
+    }
+  ],
+  "uncertainty": "无已知不确定项",
+  "integrity_check": "pass",
+  "forensics": {
+    "materials": 5,
+    "anchors_total": 10,
+    "anchors_ok": 10,
+    "anchor_mismatch_or_invalid": 0,
+    "unanchored_claims": 0,
+    "pending_claims": 0,
+    "pass_rate": 1.0,
+    "integrity_check": "pass",
+    "extractor_gaps": []
+  },
+  "status": "complete",
+  "note": "合成示例，非正式案例结果"
+}

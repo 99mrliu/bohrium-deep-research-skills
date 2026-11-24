@@ -1,0 +1,92 @@
+{
+  "case_id": "EXAMPLE-NOT-A-TEST-CASE",
+  "deliverable": "# 简报：门禁式写作法（Stage-Gate Writing Method）\n\n> 合成示例交付物，非正式案例结果。方法及数据均来自虚构素材 material-01.md。\n\n## 引言\n\n「门禁式写作法」是一种虚构的写作过程管理方法，据称由某过程工程小组于 2024 年\n提出。其核心思想是把写作拆成若干阶段，每阶段设\"门禁\"：产物不齐不得进入下一\n阶段，但允许带标注降级通过。\n\n## 三条核心原则\n\n1. **先交付后优化**：流程开始即产出骨架交付物，任何中断都有 partial；\n2. **预算纪律**：每阶段设时间 deadline，逾期降级而非停滞；\n3. **诚实留痕**：所有降级、跳过与未完成项必须写入变更日志。\n\n## 实验数据（虚构）\n\n- 12 组模拟任务中，\"空交率\"从 25% 降至 0%；\n- 平均交付完整度评分（百分制）从 71 分提升到 88 分。\n\n## 局限与待确认\n\n材料未提供该方法在真实学术写作场景中的同行评审证据与长期随访数据，其实际效果\n【待确认】。此外，12 组样本量过小，结论外推需谨慎【待确认】。",
+  "preserved_facts": [
+    "空交率从 25% 降至 0%（12 组模拟任务，虚构数据）",
+    "平均交付完整度评分从 71 分提升到 88 分（百分制，虚构数据）",
+    "方法据称由某过程工程小组于 2024 年提出"
+  ],
+  "evidence_map": {
+    "三条核心原则": [
+      "materials/material-01.md#三条核心原则"
+    ],
+    "空交率 25%→0%": [
+      "materials/material-01.md#实验数据"
+    ],
+    "完整度 71→88 分": [
+      "materials/material-01.md#实验数据"
+    ],
+    "局限说明": [
+      "materials/material-01.md#材料未提供"
+    ]
+  },
+  "change_log": [
+    {
+      "ts": "2026-11-24T11:02:29+00:00",
+      "stage": "init",
+      "verdict": "GO",
+      "notes": "workplan 生成；契约字段 ['case_id', 'deliverable', 'preserved_facts', 'evidence_map', 'change_log']；首次 init"
+    },
+    {
+      "ts": "2026-11-24T11:02:30+00:00",
+      "stage": "intake",
+      "verdict": "FAIL",
+      "notes": "缺失：notes/material_inventory.md"
+    },
+    {
+      "ts": "2026-11-24T11:02:30+00:00",
+      "stage": "intake",
+      "verdict": "GO",
+      "notes": "elapsed=1s deadline=120s"
+    },
+    {
+      "ts": "2026-11-24T11:02:31+00:00",
+      "stage": "outline",
+      "verdict": "GO",
+      "notes": "elapsed=1s deadline=300s"
+    },
+    {
+      "ts": "2026-11-24T11:02:41+00:00",
+      "stage": "draft",
+      "verdict": "GO",
+      "notes": "elapsed=11s deadline=600s"
+    },
+    {
+      "ts": "2026-11-24T11:02:41+00:00",
+      "stage": "audit",
+      "verdict": "GO",
+      "notes": "elapsed=11s deadline=780s"
+    },
+    {
+      "ts": "2026-11-24T11:02:41+00:00",
+      "stage": "selfcheck",
+      "verdict": "WARN-BUT-PROCEED",
+      "notes": "机器项 4/5 通过；报告见 selfcheck_report.md"
+    },
+    {
+      "ts": "2026-11-24T11:02:48+00:00",
+      "stage": "finalize",
+      "verdict": "FAIL",
+      "notes": "deliver：4 项通过，1 项失败；elapsed=18s/900s"
+    },
+    {
+      "ts": "2026-11-24T11:02:54+00:00",
+      "stage": "finalize",
+      "verdict": "GO",
+      "notes": "deliver：5 项通过，0 项失败；elapsed=25s/900s"
+    },
+    {
+      "ts": "2026-11-24T11:03:23+00:00",
+      "stage": "finalize",
+      "verdict": "GO",
+      "notes": "deliver：5 项通过，0 项失败；elapsed=53s/900s"
+    }
+  ],
+  "status": "partial",
+  "sources": [
+    "materials/material-01.md"
+  ],
+  "uncertainty": [
+    "【待确认】。此外，12 组样本量过小，结论外推需谨慎【待确认】。"
+  ]
+}

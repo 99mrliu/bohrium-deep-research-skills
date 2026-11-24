@@ -1,0 +1,23 @@
+[
+  {"rule": "R3", "line": 4, "action": "fixed", "original": "搞了一大堆东西", "replacement": "开展特征提取", "reason": "口语化动宾结构改为书面语，语义由材料「文本挖掘」记录支持。"},
+  {"rule": "R3", "line": 4, "action": "fixed", "original": "效果挺不错的", "replacement": "取得了可复现的初步结果", "reason": "口语评价改为客观陈述，并与材料 L1 强度对齐。"},
+  {"rule": "R3", "line": 7, "action": "fixed", "original": "这东西研究起来很费劲", "replacement": "研究难度较高", "reason": "口语化表达改为书面语。"},
+  {"rule": "R3", "line": 7, "action": "fixed", "original": "发展很快", "replacement": "发展迅速", "reason": "程度副词「很」改为书面表达。"},
+  {"rule": "R3", "line": 7, "action": "fixed", "original": "差不多所有相关研究", "replacement": "多数相关研究", "reason": "模糊口语量词改为审慎表述。"},
+  {"rule": "R3", "line": 7, "action": "fixed", "original": "很费劲", "replacement": "难度较高", "reason": "同 line 7 口语化处理。"},
+  {"rule": "R3", "line": 4, "action": "fixed", "original": "搞", "replacement": "开展", "reason": "与「搞了一大堆东西」合并处理。"},
+  {"rule": "R3", "line": 4, "action": "fixed", "original": "挺", "replacement": "（删除）", "reason": "与「效果挺不错的」合并处理。"},
+  {"rule": "R4", "line": 4, "action": "fixed", "original": "首次提出了一种革命性的配伍分析方法，彻底解决了方剂配伍规律挖掘的问题", "replacement": "构建了一种配伍分析方法，用于辅助方剂配伍规律挖掘", "reason": "材料无任何支持「首次/革命性/彻底解决」的依据且未附材料依据标注，降级为客观陈述。"},
+  {"rule": "R4", "line": 4, "action": "fixed", "original": "革命性", "replacement": "（删除）", "reason": "并入上条改写。"},
+  {"rule": "R4", "line": 4, "action": "fixed", "original": "彻底解决", "replacement": "（删除）", "reason": "并入上条改写。"},
+  {"rule": "R5", "line": 4, "action": "fixed", "original": "实验证实 LLM 导致了配伍规律的发现", "replacement": "实验初步表明，大语言模型（LLM）的输出与部分配伍模式的发现相伴随", "reason": "CALIBRATION-MISMATCH：材料仅含 L1 信号（初步/preliminary/pilot/小样本/n=12），L3「证实」降级为 L1「初步表明」，同时化解 R6 因果动词「导致」。"},
+  {"rule": "R5", "line": 13, "action": "fixed", "original": "结果证明该方法有效", "replacement": "结果提示该方法在小样本语料上可行", "reason": "CALIBRATION-MISMATCH：L3「证明」降级为 L1「提示」，并限定小样本适用范围。"},
+  {"rule": "R6", "line": 4, "action": "fixed", "original": "导致了", "replacement": "相伴随", "reason": "材料无因果设计信号，因果动词改为关联表述（与 R5 同句合并改写）。"},
+  {"rule": "R6", "line": 13, "action": "fixed", "original": "使得准确率提升", "replacement": "与准确率提升相关", "reason": "材料无因果设计信号，改为相关表述。"},
+  {"rule": "R6", "line": 13, "action": "fixed", "original": "促进了配伍规律的挖掘", "replacement": "伴随配伍规律挖掘效率的改善", "reason": "材料无因果设计信号，改为伴随表述；同时按 glossary.lock 统一为「配伍规律挖掘」。"},
+  {"rule": "R7", "line": 1, "action": "fixed", "original": "基于LLM的方剂配伍规律研究", "replacement": "基于大语言模型的方剂配伍规律研究", "reason": "标题中的缩写写全称；LLM 移至摘要首次出现时以「大语言模型（LLM）」定义。"},
+  {"rule": "R7", "line": 4, "action": "fixed", "original": "BERT", "replacement": "双向编码器表示模型（BERT）", "reason": "首次出现补充中文全称定义。"},
+  {"rule": "R8", "line": 13, "action": "fixed", "original": "配伍规律的挖掘", "replacement": "配伍规律挖掘", "reason": "按 glossary.lock 锁定译名统一。"},
+  {"rule": "R8", "line": 16, "action": "fixed", "original": "大模型", "replacement": "LLM", "reason": "按 glossary.lock，「大模型」为「大语言模型」的禁用变体；此处使用已定义缩写 LLM。"},
+  {"rule": "R8", "line": 0, "action": "rejected", "original": "候选术语组：配伍规律（6 次）/ 方剂配伍（3 次）", "replacement": "（不修改）", "reason": "二者为不同概念（属性名词 vs 动宾结构），共享子串「配伍」不构成译名不一致，驳回统一建议。"}
+]
