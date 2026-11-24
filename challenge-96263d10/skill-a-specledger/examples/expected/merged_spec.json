@@ -1,0 +1,471 @@
+{
+  "spec_version": "1.0",
+  "generator": "spec_merge.py",
+  "sources": [
+    {
+      "file": "examples/work/rules.txt",
+      "sha256": "d90d299669f1dcb7ee4f020c2b970bfb67153b47810b2d812a19297c4a85f5a0",
+      "kind": "prose-rules",
+      "priority": 100
+    },
+    {
+      "file": "examples/work/template.docx",
+      "sha256": "184a4c928f579e005d4f35aebcb609043567cfcbc4103bbb2141a9b41c08c4d8",
+      "kind": "docx-template",
+      "priority": 10
+    }
+  ],
+  "items": [
+    {
+      "id": "caption.figure.position",
+      "category": "caption",
+      "property": "figure_caption_position",
+      "value": "below",
+      "unit": "",
+      "status": "stated",
+      "source": {
+        "file": "examples/work/rules.txt",
+        "pointer": "line 4",
+        "quote": "3. 单栏排版。图题注置于图下方，表题注置于表上方。"
+      },
+      "priority": 100
+    },
+    {
+      "id": "caption.table.position",
+      "category": "caption",
+      "property": "table_caption_position",
+      "value": "above",
+      "unit": "",
+      "status": "stated",
+      "source": {
+        "file": "examples/work/rules.txt",
+        "pointer": "line 4",
+        "quote": "3. 单栏排版。图题注置于图下方，表题注置于表上方。"
+      },
+      "priority": 100
+    },
+    {
+      "id": "page.columns",
+      "category": "page",
+      "property": "columns",
+      "value": 1,
+      "unit": "栏",
+      "status": "stated",
+      "source": {
+        "file": "examples/work/rules.txt",
+        "pointer": "line 4",
+        "quote": "3. 单栏排版。图题注置于图下方，表题注置于表上方。"
+      },
+      "priority": 100
+    },
+    {
+      "id": "page.header_footer_refs",
+      "category": "page",
+      "property": "header_footer_refs",
+      "value": {
+        "headers": 0,
+        "footers": 0
+      },
+      "unit": "",
+      "status": "measured",
+      "source": {
+        "file": "examples/work/template.docx",
+        "pointer": "word/document.xml#body/sectPr",
+        "quote": ""
+      },
+      "priority": 10
+    },
+    {
+      "id": "page.margin.bottom",
+      "category": "page",
+      "property": "margin_bottom",
+      "value": 3.17,
+      "unit": "cm",
+      "status": "stated",
+      "source": {
+        "file": "examples/work/rules.txt",
+        "pointer": "line 2",
+        "quote": "1. 页面 A4，上、下页边距 3.17 cm，左、右页边距 2.54 cm。"
+      },
+      "priority": 100
+    },
+    {
+      "id": "page.margin.footer",
+      "category": "page",
+      "property": "margin_footer",
+      "value": 1.75,
+      "unit": "cm",
+      "status": "measured",
+      "source": {
+        "file": "examples/work/template.docx",
+        "pointer": "word/document.xml#body/sectPr/pgMar@footer",
+        "quote": "footer=992 twips"
+      },
+      "priority": 10
+    },
+    {
+      "id": "page.margin.gutter",
+      "category": "page",
+      "property": "margin_gutter",
+      "value": 0.0,
+      "unit": "cm",
+      "status": "measured",
+      "source": {
+        "file": "examples/work/template.docx",
+        "pointer": "word/document.xml#body/sectPr/pgMar@gutter",
+        "quote": "gutter=0 twips"
+      },
+      "priority": 10
+    },
+    {
+      "id": "page.margin.header",
+      "category": "page",
+      "property": "margin_header",
+      "value": 1.501,
+      "unit": "cm",
+      "status": "measured",
+      "source": {
+        "file": "examples/work/template.docx",
+        "pointer": "word/document.xml#body/sectPr/pgMar@header",
+        "quote": "header=851 twips"
+      },
+      "priority": 10
+    },
+    {
+      "id": "page.margin.left",
+      "category": "page",
+      "property": "margin_left",
+      "value": 2.54,
+      "unit": "cm",
+      "status": "measured",
+      "source": {
+        "file": "examples/work/template.docx",
+        "pointer": "word/document.xml#body/sectPr/pgMar@left",
+        "quote": "left=1440 twips"
+      },
+      "priority": 10
+    },
+    {
+      "id": "page.margin.right",
+      "category": "page",
+      "property": "margin_right",
+      "value": 2.54,
+      "unit": "cm",
+      "status": "stated",
+      "source": {
+        "file": "examples/work/rules.txt",
+        "pointer": "line 2",
+        "quote": "1. 页面 A4，上、下页边距 3.17 cm，左、右页边距 2.54 cm。"
+      },
+      "priority": 100
+    },
+    {
+      "id": "page.margin.top",
+      "category": "page",
+      "property": "margin_top",
+      "value": 3.169,
+      "unit": "cm",
+      "status": "measured",
+      "source": {
+        "file": "examples/work/template.docx",
+        "pointer": "word/document.xml#body/sectPr/pgMar@top",
+        "quote": "top=1797 twips"
+      },
+      "priority": 10
+    },
+    {
+      "id": "page.section_count",
+      "category": "page",
+      "property": "section_count",
+      "value": 1,
+      "unit": "节",
+      "status": "measured",
+      "source": {
+        "file": "examples/work/template.docx",
+        "pointer": "word/document.xml",
+        "quote": "sectPr x1"
+      },
+      "priority": 10
+    },
+    {
+      "id": "page.size.height",
+      "category": "page",
+      "property": "page_height",
+      "value": 29.7,
+      "unit": "cm",
+      "status": "measured",
+      "source": {
+        "file": "examples/work/template.docx",
+        "pointer": "word/document.xml#body/sectPr/pgSz@h",
+        "quote": "h=16840 twips"
+      },
+      "priority": 10
+    },
+    {
+      "id": "page.size.width",
+      "category": "page",
+      "property": "page_width",
+      "value": 21.0,
+      "unit": "cm",
+      "status": "measured",
+      "source": {
+        "file": "examples/work/template.docx",
+        "pointer": "word/document.xml#body/sectPr/pgSz@w",
+        "quote": "w=11907 twips"
+      },
+      "priority": 10
+    },
+    {
+      "id": "refs.standard",
+      "category": "refs",
+      "property": "reference_standard",
+      "value": "GB/T 7714",
+      "unit": "",
+      "status": "stated",
+      "source": {
+        "file": "examples/work/rules.txt",
+        "pointer": "line 5",
+        "quote": "4. 参考文献著录执行 GB/T 7714。"
+      },
+      "priority": 100
+    },
+    {
+      "id": "style.Heading1.bold",
+      "category": "style",
+      "property": "heading 1.bold",
+      "value": true,
+      "unit": "",
+      "status": "measured",
+      "source": {
+        "file": "examples/work/template.docx",
+        "pointer": "word/styles.xml#style[@styleId=Heading1]/rPr/b",
+        "quote": ""
+      },
+      "priority": 10
+    },
+    {
+      "id": "style.Heading1.font_eastasia",
+      "category": "style",
+      "property": "heading 1.font_eastasia",
+      "value": "SimHei",
+      "unit": "",
+      "status": "measured",
+      "source": {
+        "file": "examples/work/template.docx",
+        "pointer": "word/styles.xml#style[@styleId=Heading1]/rPr/rFonts@eastAsia",
+        "quote": "SimHei"
+      },
+      "priority": 10
+    },
+    {
+      "id": "style.Heading1.font_latin",
+      "category": "style",
+      "property": "heading 1.font_latin",
+      "value": "Liberation Serif",
+      "unit": "",
+      "status": "measured",
+      "source": {
+        "file": "examples/work/template.docx",
+        "pointer": "word/styles.xml#style[@styleId=Heading1]/rPr/rFonts@ascii",
+        "quote": "Liberation Serif"
+      },
+      "priority": 10
+    },
+    {
+      "id": "style.Heading1.outline_level",
+      "category": "style",
+      "property": "heading 1.outline_level",
+      "value": 1,
+      "unit": "级",
+      "status": "measured",
+      "source": {
+        "file": "examples/work/template.docx",
+        "pointer": "word/styles.xml#style[@styleId=Heading1]/pPr/outlineLvl@val",
+        "quote": "outlineLvl=0"
+      },
+      "priority": 10
+    },
+    {
+      "id": "style.Heading1.size",
+      "category": "style",
+      "property": "heading 1.size",
+      "value": 16.0,
+      "unit": "pt",
+      "status": "measured",
+      "source": {
+        "file": "examples/work/template.docx",
+        "pointer": "word/styles.xml#style[@styleId=Heading1]/rPr/sz@val",
+        "quote": "half-points=32"
+      },
+      "priority": 10
+    },
+    {
+      "id": "style.Heading1.space_after",
+      "category": "style",
+      "property": "heading 1.space_after",
+      "value": 60.0,
+      "unit": "pt",
+      "status": "measured",
+      "source": {
+        "file": "examples/work/template.docx",
+        "pointer": "word/styles.xml#style[@styleId=Heading1]/pPr/spacing@after",
+        "quote": "twentieths=120"
+      },
+      "priority": 10
+    },
+    {
+      "id": "style.Heading1.space_before",
+      "category": "style",
+      "property": "heading 1.space_before",
+      "value": 120.0,
+      "unit": "pt",
+      "status": "measured",
+      "source": {
+        "file": "examples/work/template.docx",
+        "pointer": "word/styles.xml#style[@styleId=Heading1]/pPr/spacing@before",
+        "quote": "twentieths=240"
+      },
+      "priority": 10
+    },
+    {
+      "id": "style.Normal.font_eastasia",
+      "category": "style",
+      "property": "Normal.font_eastasia",
+      "value": "SimSun",
+      "unit": "",
+      "status": "measured",
+      "source": {
+        "file": "examples/work/template.docx",
+        "pointer": "word/styles.xml#style[@styleId=Normal]/rPr/rFonts@eastAsia",
+        "quote": "SimSun"
+      },
+      "priority": 10
+    },
+    {
+      "id": "style.Normal.font_latin",
+      "category": "style",
+      "property": "Normal.font_latin",
+      "value": "Liberation Serif",
+      "unit": "",
+      "status": "measured",
+      "source": {
+        "file": "examples/work/template.docx",
+        "pointer": "word/styles.xml#style[@styleId=Normal]/rPr/rFonts@ascii",
+        "quote": "Liberation Serif"
+      },
+      "priority": 10
+    },
+    {
+      "id": "style.Normal.line_spacing",
+      "category": "text",
+      "property": "Normal.line_spacing",
+      "value": 1.25,
+      "unit": "倍",
+      "status": "conflict-resolved",
+      "source": {
+        "file": "examples/work/rules.txt",
+        "pointer": "line 3",
+        "quote": "2. 正文五号字（10.5 pt），行距 1.25 倍；一级标题三号加粗。"
+      },
+      "priority": 100
+    },
+    {
+      "id": "style.Normal.size",
+      "category": "text",
+      "property": "Normal.size",
+      "value": 10.5,
+      "unit": "pt",
+      "status": "stated",
+      "source": {
+        "file": "examples/work/rules.txt",
+        "pointer": "line 3",
+        "quote": "2. 正文五号字（10.5 pt），行距 1.25 倍；一级标题三号加粗。"
+      },
+      "priority": 100
+    },
+    {
+      "id": "style.Normal.space_after",
+      "category": "style",
+      "property": "Normal.space_after",
+      "value": 80.0,
+      "unit": "pt",
+      "status": "measured",
+      "source": {
+        "file": "examples/work/template.docx",
+        "pointer": "word/styles.xml#style[@styleId=Normal]/pPr/spacing@after",
+        "quote": "twentieths=160"
+      },
+      "priority": 10
+    },
+    {
+      "id": "text.line_spacing",
+      "category": "text",
+      "property": "line_spacing",
+      "value": 1.25,
+      "unit": "倍",
+      "status": "stated",
+      "source": {
+        "file": "examples/work/rules.txt",
+        "pointer": "line 3",
+        "quote": "2. 正文五号字（10.5 pt），行距 1.25 倍；一级标题三号加粗。"
+      },
+      "priority": 100
+    },
+    {
+      "id": "text.一级标题.size",
+      "category": "text",
+      "property": "一级标题.size",
+      "value": 16,
+      "unit": "pt",
+      "status": "stated",
+      "source": {
+        "file": "examples/work/rules.txt",
+        "pointer": "line 3",
+        "quote": "2. 正文五号字（10.5 pt），行距 1.25 倍；一级标题三号加粗。"
+      },
+      "priority": 100
+    },
+    {
+      "id": "text.正文.size",
+      "category": "text",
+      "property": "正文.size",
+      "value": 10.5,
+      "unit": "pt",
+      "status": "stated",
+      "source": {
+        "file": "examples/work/rules.txt",
+        "pointer": "line 3",
+        "quote": "2. 正文五号字（10.5 pt），行距 1.25 倍；一级标题三号加粗。"
+      },
+      "priority": 100
+    }
+  ],
+  "conflicts": [
+    {
+      "id": "style.Normal.line_spacing",
+      "adopted": {
+        "value": 1.25,
+        "unit": "倍",
+        "source": {
+          "file": "examples/work/rules.txt",
+          "pointer": "line 3",
+          "quote": "2. 正文五号字（10.5 pt），行距 1.25 倍；一级标题三号加粗。"
+        },
+        "priority": 100
+      },
+      "rejected": [
+        {
+          "value": 1.5,
+          "unit": "倍",
+          "source": {
+            "file": "examples/work/template.docx",
+            "pointer": "word/styles.xml#style[@styleId=Normal]/pPr/spacing@line",
+            "quote": "line=360 lineRule=auto"
+          },
+          "priority": 10
+        }
+      ],
+      "policy": "高优先级来源胜出；若任务说明与模板冲突，以任务说明为准并在 uncertainties 声明"
+    }
+  ]
+}

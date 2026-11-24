@@ -1,0 +1,61 @@
+{
+  "spec": "examples/work/spec.json",
+  "measurements": "examples/work/measurements.json",
+  "tolerance_cm": 0.2,
+  "summary": {
+    "total": 6,
+    "pass": 5,
+    "fail": 1,
+    "unmeasured": 0
+  },
+  "verdicts": [
+    {
+      "item": "page.size.width_cm",
+      "expected": 21.0,
+      "measured": 21.0,
+      "verdict": "PASS",
+      "basis": "/MediaBox 实测"
+    },
+    {
+      "item": "page.size.height_cm",
+      "expected": 29.7,
+      "measured": 29.7,
+      "verdict": "PASS",
+      "basis": "/MediaBox 实测"
+    },
+    {
+      "item": "page.margin.left_cm",
+      "expected": 2.54,
+      "measured": {
+        "min": 2.54,
+        "max": 2.54
+      },
+      "verdict": "PASS",
+      "basis": "pdftotext -bbox 字形框逐页实测（容差 ±0.2cm）"
+    },
+    {
+      "item": "page.margin.top_cm",
+      "expected": 2.4,
+      "measured": {
+        "min": 2.232,
+        "max": 2.232
+      },
+      "verdict": "PASS",
+      "basis": "pdftotext -bbox 字形框逐页实测（容差 ±0.2cm）"
+    },
+    {
+      "item": "page.columns",
+      "expected": 1,
+      "measured": 1,
+      "verdict": "PASS",
+      "basis": "版心间隙检测"
+    },
+    {
+      "item": "fonts.embedded_all",
+      "expected": true,
+      "measured": false,
+      "verdict": "FAIL",
+      "basis": "/FontFile 流计数启发式（见 references/render-method.md）"
+    }
+  ]
+}

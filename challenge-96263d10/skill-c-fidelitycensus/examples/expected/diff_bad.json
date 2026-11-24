@@ -1,0 +1,44 @@
+{
+  "source": "examples/work/census_src.json",
+  "output": "examples/work/census_bad.json",
+  "identical": false,
+  "diff_count": 6,
+  "diffs": [
+    {
+      "kind": "unit_count",
+      "detail": "源 5 单元 vs 产物 4 单元",
+      "locator": "global"
+    },
+    {
+      "kind": "text_mismatch",
+      "detail": "单元 1 文本不同",
+      "locator": "unit 1",
+      "source_text": "实验在 300 K 下进行，测得转化率为 0.85，与文献 [1] 报道一致。",
+      "output_text": "实验在 300 K 下进行，测得转化率为 0.86，与文献 [1] 报道一致。"
+    },
+    {
+      "kind": "text_mismatch",
+      "detail": "单元 2 文本不同",
+      "locator": "unit 2",
+      "source_text": "对照组在相同条件下重复 3 次，标准偏差小于 2%。",
+      "output_text": "对照组在相同条件下重复 5 次，标准偏差小于 2%。"
+    },
+    {
+      "kind": "text_mismatch",
+      "detail": "单元 3 文本不同",
+      "locator": "unit 3",
+      "source_text": "综上，该催化剂表现出稳定的活性。",
+      "output_text": "组别 | 产率 | A | 92.4%"
+    },
+    {
+      "kind": "numeric_lost",
+      "detail": "{\"0.85\": 1, \"3\": 1}",
+      "locator": "tokens"
+    },
+    {
+      "kind": "numeric_added",
+      "detail": "{\"0.86\": 1, \"5\": 1}",
+      "locator": "tokens"
+    }
+  ]
+}

@@ -1,0 +1,25 @@
+{
+  "source": "examples/work/census_src.json",
+  "output": "examples/work/census_adp.json",
+  "identical": false,
+  "diff_count": 3,
+  "diffs": [
+    {
+      "kind": "text_mismatch",
+      "detail": "单元 1 文本不同",
+      "locator": "unit 1",
+      "source_text": "实验在 300 K 下进行，测得转化率为 0.85，与文献 [1] 报道一致。",
+      "output_text": "实验在 300 K 下进行，测得转化率为 0.86，与文献 [1] 报道一致。"
+    },
+    {
+      "kind": "numeric_lost",
+      "detail": "{\"0.85\": 1}",
+      "locator": "tokens"
+    },
+    {
+      "kind": "numeric_added",
+      "detail": "{\"0.86\": 1}",
+      "locator": "tokens"
+    }
+  ]
+}

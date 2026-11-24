@@ -1,0 +1,78 @@
+{
+  "doc": "examples/work/manuscript.md",
+  "rules": {
+    "figure_caption": "below",
+    "table_caption": "above"
+  },
+  "captions": [
+    {
+      "block": 3,
+      "kind": "figure",
+      "label": "图",
+      "num": "1",
+      "text": "图1 合成装置结构示意图"
+    },
+    {
+      "block": 6,
+      "kind": "figure",
+      "label": "图",
+      "num": "3",
+      "text": "图3 合成温度曲线（编号错误：应为图2）"
+    },
+    {
+      "block": 9,
+      "kind": "table",
+      "label": "表",
+      "num": "1",
+      "text": "表1 合成数据汇总（题注位置错误：应在表上方）"
+    }
+  ],
+  "references": [
+    {
+      "block": 1,
+      "kind": "figure",
+      "num": "1",
+      "context": "如图1所示，合成装置的示意结构包含三个腔体。"
+    },
+    {
+      "block": 4,
+      "kind": "figure",
+      "num": "2",
+      "context": "如图2所示，温度曲线在 300 K 附近出现拐"
+    },
+    {
+      "block": 7,
+      "kind": "table",
+      "num": "1",
+      "context": "合成数据汇总见表1。"
+    }
+  ],
+  "summary": {
+    "captions": 3,
+    "in_text_refs": 3,
+    "errors": 2,
+    "warnings": 2
+  },
+  "issues": [
+    {
+      "severity": "WARNING",
+      "code": "numbering_gap",
+      "detail": "figure 编号序列 ['1', '3'] 非 1..N 连续（含子编号时属正常）"
+    },
+    {
+      "severity": "ERROR",
+      "code": "dangling_reference",
+      "detail": "块 4 引用了不存在的 figure 2：…如图2所示，温度曲线在 300 K 附近出现拐…"
+    },
+    {
+      "severity": "WARNING",
+      "code": "unreferenced_caption",
+      "detail": "figure 3 未被正文引用（块 6）"
+    },
+    {
+      "severity": "ERROR",
+      "code": "caption_position",
+      "detail": "表 1 题注应在上方（块 9 未满足）"
+    }
+  ]
+}

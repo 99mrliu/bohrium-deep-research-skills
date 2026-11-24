@@ -1,0 +1,47 @@
+{
+  "time": "2026-11-24T19:09:57+0800",
+  "output": "examples/work/mini_output",
+  "verdict": "SEAL REFUSED",
+  "checks": [
+    {
+      "check": "S1-parse",
+      "pass": true,
+      "detail": "result.json parses"
+    },
+    {
+      "check": "S2-case-id",
+      "pass": true,
+      "detail": "result='demo-synthetic-001' case='demo-synthetic-001'"
+    },
+    {
+      "check": "S3-contract-fields",
+      "pass": false,
+      "detail": "fields=2 missing=['summary']"
+    },
+    {
+      "check": "S4-status-consistency",
+      "pass": false,
+      "detail": "status=complete but open items: ['题注位置未经渲染确认']"
+    },
+    {
+      "check": "S5-artifacts",
+      "pass": true,
+      "detail": "1 artifacts verified"
+    },
+    {
+      "check": "S6-sources",
+      "pass": true,
+      "detail": "3 sources"
+    },
+    {
+      "check": "S7-changes",
+      "pass": true,
+      "detail": "1 change records"
+    },
+    {
+      "check": "S8-deliverables",
+      "pass": true,
+      "detail": "1 files besides result.json"
+    }
+  ]
+}

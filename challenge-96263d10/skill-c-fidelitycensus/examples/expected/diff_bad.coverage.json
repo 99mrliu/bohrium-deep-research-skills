@@ -1,0 +1,28 @@
+{
+  "ledger": "examples/work/ledger.json",
+  "diff": "examples/work/diff_bad.json",
+  "entries": 1,
+  "diffs": 6,
+  "uncovered": [
+    {
+      "kind": "unit_count",
+      "detail": "源 5 单元 vs 产物 4 单元",
+      "locator": "global"
+    },
+    {
+      "kind": "text_mismatch",
+      "detail": "单元 2 文本不同",
+      "locator": "unit 2",
+      "source_text": "对照组在相同条件下重复 3 次，标准偏差小于 2%。",
+      "output_text": "对照组在相同条件下重复 5 次，标准偏差小于 2%。"
+    },
+    {
+      "kind": "text_mismatch",
+      "detail": "单元 3 文本不同",
+      "locator": "unit 3",
+      "source_text": "综上，该催化剂表现出稳定的活性。",
+      "output_text": "组别 | 产率 | A | 92.4%"
+    }
+  ],
+  "verdict": "UNDECLARED_CHANGES"
+}

@@ -1,0 +1,33 @@
+{
+  "input": "examples/work/sample.docx",
+  "outdir": "examples/work/preview_docx",
+  "time": "2026-11-24T19:03:11+0800",
+  "renderer": "/Applications/LibreOffice.app/Contents/MacOS/soffice",
+  "pdf": "examples/work/preview_docx/sample.pdf",
+  "pngs": [
+    "page-1.png"
+  ],
+  "status": "rendered",
+  "commands": [
+    [
+      "/Applications/LibreOffice.app/Contents/MacOS/soffice",
+      "--headless",
+      "--norestore",
+      "--convert-to",
+      "pdf",
+      "--outdir",
+      "examples/work/preview_docx",
+      "examples/work/sample.docx"
+    ],
+    [
+      "/Users/liuhengshen/Library/Application Support/com.bohrium.runtime/darwin-aarch64/poppler-2560d3705d5614d7/dependencies/poppler/bin/pdftoppm",
+      "-png",
+      "-r",
+      "110",
+      "examples/work/preview_docx/sample.pdf",
+      "examples/work/preview_docx/page"
+    ]
+  ],
+  "convert_returncode": 0,
+  "pdftoppm_returncode": 0
+}

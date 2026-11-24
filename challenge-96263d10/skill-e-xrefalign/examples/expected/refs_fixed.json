@@ -1,0 +1,31 @@
+{
+  "doc": "examples/work/fixed.md",
+  "reference_section_found": true,
+  "style": "GB/T 7714 数字顺序制（形式初筛）",
+  "summary": {
+    "entries": 3,
+    "errors": 0,
+    "entries_with_warnings": 0,
+    "entries_pass": 3
+  },
+  "results": [
+    {
+      "num": 1,
+      "text": "张三, 李四, 王五, 等. 合成催化剂研究[J]. 合成学报, 2020, 15(3): 123-130.",
+      "problems": [],
+      "verdict": "PASS"
+    },
+    {
+      "num": 2,
+      "text": "Smith J, Doe A, Brown B, et al. A synthetic study. Journal of Examples [J], 2021, 8(2): 45-52.",
+      "problems": [],
+      "verdict": "PASS"
+    },
+    {
+      "num": 3,
+      "text": "赵六. 合成方法学 [M]. 北京: 合成出版社, 2019.",
+      "problems": [],
+      "verdict": "PASS"
+    }
+  ]
+}

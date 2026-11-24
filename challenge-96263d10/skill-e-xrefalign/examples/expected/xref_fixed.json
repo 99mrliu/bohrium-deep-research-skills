@@ -1,0 +1,57 @@
+{
+  "doc": "examples/work/fixed.md",
+  "rules": {
+    "figure_caption": "below",
+    "table_caption": "above"
+  },
+  "captions": [
+    {
+      "block": 3,
+      "kind": "figure",
+      "label": "图",
+      "num": "1",
+      "text": "图1 合成装置结构示意图"
+    },
+    {
+      "block": 6,
+      "kind": "figure",
+      "label": "图",
+      "num": "2",
+      "text": "图2 合成温度曲线"
+    },
+    {
+      "block": 7,
+      "kind": "table",
+      "label": "表",
+      "num": "1",
+      "text": "表1 合成数据汇总"
+    }
+  ],
+  "references": [
+    {
+      "block": 1,
+      "kind": "figure",
+      "num": "1",
+      "context": "如图1所示，合成装置的示意结构包含三个腔体。"
+    },
+    {
+      "block": 4,
+      "kind": "figure",
+      "num": "2",
+      "context": "如图2所示，温度曲线在 300 K 附近出现拐"
+    },
+    {
+      "block": 9,
+      "kind": "table",
+      "num": "1",
+      "context": "合成数据汇总见表1。"
+    }
+  ],
+  "summary": {
+    "captions": 3,
+    "in_text_refs": 3,
+    "errors": 0,
+    "warnings": 0
+  },
+  "issues": []
+}

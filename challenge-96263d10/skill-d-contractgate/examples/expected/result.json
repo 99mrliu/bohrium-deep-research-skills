@@ -1,0 +1,40 @@
+{
+  "case_id": "demo-synthetic-001",
+  "status": "partial",
+  "sources": [
+    {
+      "path": "examples/work/mini_input/case.json",
+      "sha256": "cf84ce81b657efed2afc416a39208562cfa617217bb38dc099b8b50d8c282e71"
+    },
+    {
+      "path": "examples/work/mini_input/task.md",
+      "sha256": "e254c98d48caa49791ca666e117b988ad5713c36571cd13fcaa79e8918bdfb6d"
+    },
+    {
+      "path": "examples/work/mini_input/稿件.md",
+      "sha256": "a696a7bbbfde989fef1b07e3024e53a10188db2b0efff262e2237e5a00cf0823"
+    }
+  ],
+  "changes": [
+    {
+      "unit": "styles",
+      "before": "default",
+      "after": "template",
+      "reason": "任务要求"
+    }
+  ],
+  "uncertainties": [],
+  "manual_confirm": [],
+  "limits": [],
+  "artifacts": [
+    {
+      "path": "examples/work/mini_output/adapted.md",
+      "sha256": "23a926fa21b91dc78a9773b7878783d03924edb5c6fd54d680d2787181545ab4",
+      "size": 81
+    }
+  ],
+  "created": "2026-11-24T19:09:43+0800",
+  "last_checkpoint": "2026-11-24T19:09:44+0800",
+  "adapted_file": "adapted.md",
+  "summary": "合成示例：样式重绑完成，内容零改动。"
+}

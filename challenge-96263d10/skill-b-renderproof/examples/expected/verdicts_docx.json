@@ -1,0 +1,54 @@
+{
+  "spec": "examples/work/spec_docx.json",
+  "measurements": "examples/work/measurements_docx.json",
+  "tolerance_cm": 0.2,
+  "summary": {
+    "total": 5,
+    "pass": 5,
+    "fail": 0,
+    "unmeasured": 0
+  },
+  "verdicts": [
+    {
+      "item": "page.size.width_cm",
+      "expected": 21.0,
+      "measured": 21.001,
+      "verdict": "PASS",
+      "basis": "/MediaBox 实测"
+    },
+    {
+      "item": "page.size.height_cm",
+      "expected": 29.7,
+      "measured": 29.7,
+      "verdict": "PASS",
+      "basis": "/MediaBox 实测"
+    },
+    {
+      "item": "page.margin.left_cm",
+      "expected": 2.54,
+      "measured": {
+        "min": 2.544,
+        "max": 2.544
+      },
+      "verdict": "PASS",
+      "basis": "pdftotext -bbox 字形框逐页实测（容差 ±0.2cm）"
+    },
+    {
+      "item": "page.margin.top_cm",
+      "expected": 3.17,
+      "measured": {
+        "min": 3.091,
+        "max": 3.091
+      },
+      "verdict": "PASS",
+      "basis": "pdftotext -bbox 字形框逐页实测（容差 ±0.2cm）"
+    },
+    {
+      "item": "page.columns",
+      "expected": 1,
+      "measured": 1,
+      "verdict": "PASS",
+      "basis": "版心间隙检测"
+    }
+  ]
+}

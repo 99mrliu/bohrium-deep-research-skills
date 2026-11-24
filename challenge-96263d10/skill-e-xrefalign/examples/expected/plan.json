@@ -1,0 +1,35 @@
+{
+  "source_report": "examples/work/xref_bad.json",
+  "note": "合成/正式通用：先按本方案改题注，再逐点改正文引用，改完重跑 xref_scan 验证；dangling_refs_manual 与 compound_numbers_skipped 必须人工裁定，不自动处理。",
+  "plans": {
+    "figure": {
+      "mapping": {
+        "3": "2"
+      },
+      "caption_edits": [
+        {
+          "block": 6,
+          "old": "3",
+          "new": "2",
+          "text": "图3 合成温度曲线（编号错误：应为图2）"
+        }
+      ],
+      "intext_ref_edits": [],
+      "dangling_refs_manual": [
+        {
+          "block": 4,
+          "num": "2",
+          "context": "如图2所示，温度曲线在 300 K 附近出现拐"
+        }
+      ],
+      "compound_numbers_skipped": []
+    },
+    "table": {
+      "mapping": {},
+      "caption_edits": [],
+      "intext_ref_edits": [],
+      "dangling_refs_manual": [],
+      "compound_numbers_skipped": []
+    }
+  }
+}

@@ -1,0 +1,64 @@
+{
+  "doc": "examples/work/manuscript.md",
+  "reference_section_found": true,
+  "style": "GB/T 7714 数字顺序制（形式初筛）",
+  "summary": {
+    "entries": 3,
+    "errors": 1,
+    "entries_with_warnings": 2,
+    "entries_pass": 0
+  },
+  "results": [
+    {
+      "num": 1,
+      "text": "张三, 李四, 王五, 等. 合成催化剂研究. 合成学报, 2020, 15(3): 123-130.",
+      "problems": [
+        {
+          "severity": "WARNING",
+          "code": "missing_type_marker",
+          "detail": "缺文献类型标志（[J]/[M]/[D]/[EB/OL] 等）"
+        }
+      ],
+      "verdict": "WARN"
+    },
+    {
+      "num": 2,
+      "text": "Smith J, Doe A, Brown B, Green C. A synthetic study. Journal of Examples, 2021, 8(2): 45-52",
+      "problems": [
+        {
+          "severity": "WARNING",
+          "code": "missing_type_marker",
+          "detail": "缺文献类型标志（[J]/[M]/[D]/[EB/OL] 等）"
+        },
+        {
+          "severity": "WARNING",
+          "code": "author_truncation",
+          "detail": "作者约 4 名（>3）未见“等/et al.”截断"
+        },
+        {
+          "severity": "WARNING",
+          "code": "missing_period",
+          "detail": "条目未以句点结尾"
+        }
+      ],
+      "verdict": "WARN"
+    },
+    {
+      "num": 3,
+      "text": "赵六. 合成方法学. 北京: 合成出版社.",
+      "problems": [
+        {
+          "severity": "ERROR",
+          "code": "missing_year",
+          "detail": "未检出年份 (19xx/20xx)"
+        },
+        {
+          "severity": "WARNING",
+          "code": "missing_type_marker",
+          "detail": "缺文献类型标志（[J]/[M]/[D]/[EB/OL] 等）"
+        }
+      ],
+      "verdict": "ERROR"
+    }
+  ]
+}

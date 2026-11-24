@@ -1,0 +1,436 @@
+{
+  "spec": "examples/work/merged_spec.json",
+  "output": "examples/work/output_ok.docx",
+  "tolerance": 0.06,
+  "summary": {
+    "total": 30,
+    "pass": 19,
+    "fail": 1,
+    "unknown": 10
+  },
+  "results": [
+    {
+      "id": "caption.figure.position",
+      "expected": "below",
+      "unit": "",
+      "spec_source": {
+        "file": "examples/work/rules.txt",
+        "pointer": "line 4",
+        "quote": "3. 单栏排版。图题注置于图下方，表题注置于表上方。"
+      },
+      "spec_status": "stated",
+      "verdict": "UNKNOWN",
+      "measured": null,
+      "basis": "非机器可核对项（题注措辞/参考文献样式/版心细节等），需人工或渲染证据"
+    },
+    {
+      "id": "caption.table.position",
+      "expected": "above",
+      "unit": "",
+      "spec_source": {
+        "file": "examples/work/rules.txt",
+        "pointer": "line 4",
+        "quote": "3. 单栏排版。图题注置于图下方，表题注置于表上方。"
+      },
+      "spec_status": "stated",
+      "verdict": "UNKNOWN",
+      "measured": null,
+      "basis": "非机器可核对项（题注措辞/参考文献样式/版心细节等），需人工或渲染证据"
+    },
+    {
+      "id": "page.columns",
+      "expected": 1,
+      "unit": "栏",
+      "spec_source": {
+        "file": "examples/work/rules.txt",
+        "pointer": "line 4",
+        "quote": "3. 单栏排版。图题注置于图下方，表题注置于表上方。"
+      },
+      "spec_status": "stated",
+      "verdict": "PASS",
+      "measured": 1,
+      "basis": "机器实测 examples/work/output_ok.docx"
+    },
+    {
+      "id": "page.header_footer_refs",
+      "expected": {
+        "headers": 0,
+        "footers": 0
+      },
+      "unit": "",
+      "spec_source": {
+        "file": "examples/work/template.docx",
+        "pointer": "word/document.xml#body/sectPr",
+        "quote": ""
+      },
+      "spec_status": "measured",
+      "verdict": "UNKNOWN",
+      "measured": null,
+      "basis": "非机器可核对项（题注措辞/参考文献样式/版心细节等），需人工或渲染证据"
+    },
+    {
+      "id": "page.margin.bottom",
+      "expected": 3.17,
+      "unit": "cm",
+      "spec_source": {
+        "file": "examples/work/rules.txt",
+        "pointer": "line 2",
+        "quote": "1. 页面 A4，上、下页边距 3.17 cm，左、右页边距 2.54 cm。"
+      },
+      "spec_status": "stated",
+      "verdict": "PASS",
+      "measured": 3.169,
+      "basis": "机器实测 examples/work/output_ok.docx"
+    },
+    {
+      "id": "page.margin.footer",
+      "expected": 1.75,
+      "unit": "cm",
+      "spec_source": {
+        "file": "examples/work/template.docx",
+        "pointer": "word/document.xml#body/sectPr/pgMar@footer",
+        "quote": "footer=992 twips"
+      },
+      "spec_status": "measured",
+      "verdict": "PASS",
+      "measured": 1.75,
+      "basis": "机器实测 examples/work/output_ok.docx"
+    },
+    {
+      "id": "page.margin.gutter",
+      "expected": 0.0,
+      "unit": "cm",
+      "spec_source": {
+        "file": "examples/work/template.docx",
+        "pointer": "word/document.xml#body/sectPr/pgMar@gutter",
+        "quote": "gutter=0 twips"
+      },
+      "spec_status": "measured",
+      "verdict": "PASS",
+      "measured": 0.0,
+      "basis": "机器实测 examples/work/output_ok.docx"
+    },
+    {
+      "id": "page.margin.header",
+      "expected": 1.501,
+      "unit": "cm",
+      "spec_source": {
+        "file": "examples/work/template.docx",
+        "pointer": "word/document.xml#body/sectPr/pgMar@header",
+        "quote": "header=851 twips"
+      },
+      "spec_status": "measured",
+      "verdict": "PASS",
+      "measured": 1.501,
+      "basis": "机器实测 examples/work/output_ok.docx"
+    },
+    {
+      "id": "page.margin.left",
+      "expected": 2.54,
+      "unit": "cm",
+      "spec_source": {
+        "file": "examples/work/template.docx",
+        "pointer": "word/document.xml#body/sectPr/pgMar@left",
+        "quote": "left=1440 twips"
+      },
+      "spec_status": "measured",
+      "verdict": "PASS",
+      "measured": 2.54,
+      "basis": "机器实测 examples/work/output_ok.docx"
+    },
+    {
+      "id": "page.margin.right",
+      "expected": 2.54,
+      "unit": "cm",
+      "spec_source": {
+        "file": "examples/work/rules.txt",
+        "pointer": "line 2",
+        "quote": "1. 页面 A4，上、下页边距 3.17 cm，左、右页边距 2.54 cm。"
+      },
+      "spec_status": "stated",
+      "verdict": "PASS",
+      "measured": 2.54,
+      "basis": "机器实测 examples/work/output_ok.docx"
+    },
+    {
+      "id": "page.margin.top",
+      "expected": 3.169,
+      "unit": "cm",
+      "spec_source": {
+        "file": "examples/work/template.docx",
+        "pointer": "word/document.xml#body/sectPr/pgMar@top",
+        "quote": "top=1797 twips"
+      },
+      "spec_status": "measured",
+      "verdict": "PASS",
+      "measured": 3.169,
+      "basis": "机器实测 examples/work/output_ok.docx"
+    },
+    {
+      "id": "page.section_count",
+      "expected": 1,
+      "unit": "节",
+      "spec_source": {
+        "file": "examples/work/template.docx",
+        "pointer": "word/document.xml",
+        "quote": "sectPr x1"
+      },
+      "spec_status": "measured",
+      "verdict": "PASS",
+      "measured": 1,
+      "basis": "机器实测 examples/work/output_ok.docx"
+    },
+    {
+      "id": "page.size.height",
+      "expected": 29.7,
+      "unit": "cm",
+      "spec_source": {
+        "file": "examples/work/template.docx",
+        "pointer": "word/document.xml#body/sectPr/pgSz@h",
+        "quote": "h=16840 twips"
+      },
+      "spec_status": "measured",
+      "verdict": "PASS",
+      "measured": 29.7,
+      "basis": "机器实测 examples/work/output_ok.docx"
+    },
+    {
+      "id": "page.size.width",
+      "expected": 21.0,
+      "unit": "cm",
+      "spec_source": {
+        "file": "examples/work/template.docx",
+        "pointer": "word/document.xml#body/sectPr/pgSz@w",
+        "quote": "w=11907 twips"
+      },
+      "spec_status": "measured",
+      "verdict": "PASS",
+      "measured": 21.0,
+      "basis": "机器实测 examples/work/output_ok.docx"
+    },
+    {
+      "id": "refs.standard",
+      "expected": "GB/T 7714",
+      "unit": "",
+      "spec_source": {
+        "file": "examples/work/rules.txt",
+        "pointer": "line 5",
+        "quote": "4. 参考文献著录执行 GB/T 7714。"
+      },
+      "spec_status": "stated",
+      "verdict": "UNKNOWN",
+      "measured": null,
+      "basis": "非机器可核对项（题注措辞/参考文献样式/版心细节等），需人工或渲染证据"
+    },
+    {
+      "id": "style.Heading1.bold",
+      "expected": true,
+      "unit": "",
+      "spec_source": {
+        "file": "examples/work/template.docx",
+        "pointer": "word/styles.xml#style[@styleId=Heading1]/rPr/b",
+        "quote": ""
+      },
+      "spec_status": "measured",
+      "verdict": "PASS",
+      "measured": true,
+      "basis": "机器实测 examples/work/output_ok.docx"
+    },
+    {
+      "id": "style.Heading1.font_eastasia",
+      "expected": "SimHei",
+      "unit": "",
+      "spec_source": {
+        "file": "examples/work/template.docx",
+        "pointer": "word/styles.xml#style[@styleId=Heading1]/rPr/rFonts@eastAsia",
+        "quote": "SimHei"
+      },
+      "spec_status": "measured",
+      "verdict": "PASS",
+      "measured": "SimHei",
+      "basis": "机器实测 examples/work/output_ok.docx"
+    },
+    {
+      "id": "style.Heading1.font_latin",
+      "expected": "Liberation Serif",
+      "unit": "",
+      "spec_source": {
+        "file": "examples/work/template.docx",
+        "pointer": "word/styles.xml#style[@styleId=Heading1]/rPr/rFonts@ascii",
+        "quote": "Liberation Serif"
+      },
+      "spec_status": "measured",
+      "verdict": "PASS",
+      "measured": "Liberation Serif",
+      "basis": "机器实测 examples/work/output_ok.docx"
+    },
+    {
+      "id": "style.Heading1.outline_level",
+      "expected": 1,
+      "unit": "级",
+      "spec_source": {
+        "file": "examples/work/template.docx",
+        "pointer": "word/styles.xml#style[@styleId=Heading1]/pPr/outlineLvl@val",
+        "quote": "outlineLvl=0"
+      },
+      "spec_status": "measured",
+      "verdict": "PASS",
+      "measured": 1,
+      "basis": "机器实测 examples/work/output_ok.docx"
+    },
+    {
+      "id": "style.Heading1.size",
+      "expected": 16.0,
+      "unit": "pt",
+      "spec_source": {
+        "file": "examples/work/template.docx",
+        "pointer": "word/styles.xml#style[@styleId=Heading1]/rPr/sz@val",
+        "quote": "half-points=32"
+      },
+      "spec_status": "measured",
+      "verdict": "PASS",
+      "measured": 16.0,
+      "basis": "机器实测 examples/work/output_ok.docx"
+    },
+    {
+      "id": "style.Heading1.space_after",
+      "expected": 60.0,
+      "unit": "pt",
+      "spec_source": {
+        "file": "examples/work/template.docx",
+        "pointer": "word/styles.xml#style[@styleId=Heading1]/pPr/spacing@after",
+        "quote": "twentieths=120"
+      },
+      "spec_status": "measured",
+      "verdict": "UNKNOWN",
+      "measured": null,
+      "basis": "非机器可核对项（题注措辞/参考文献样式/版心细节等），需人工或渲染证据"
+    },
+    {
+      "id": "style.Heading1.space_before",
+      "expected": 120.0,
+      "unit": "pt",
+      "spec_source": {
+        "file": "examples/work/template.docx",
+        "pointer": "word/styles.xml#style[@styleId=Heading1]/pPr/spacing@before",
+        "quote": "twentieths=240"
+      },
+      "spec_status": "measured",
+      "verdict": "UNKNOWN",
+      "measured": null,
+      "basis": "非机器可核对项（题注措辞/参考文献样式/版心细节等），需人工或渲染证据"
+    },
+    {
+      "id": "style.Normal.font_eastasia",
+      "expected": "SimSun",
+      "unit": "",
+      "spec_source": {
+        "file": "examples/work/template.docx",
+        "pointer": "word/styles.xml#style[@styleId=Normal]/rPr/rFonts@eastAsia",
+        "quote": "SimSun"
+      },
+      "spec_status": "measured",
+      "verdict": "PASS",
+      "measured": "SimSun",
+      "basis": "机器实测 examples/work/output_ok.docx"
+    },
+    {
+      "id": "style.Normal.font_latin",
+      "expected": "Liberation Serif",
+      "unit": "",
+      "spec_source": {
+        "file": "examples/work/template.docx",
+        "pointer": "word/styles.xml#style[@styleId=Normal]/rPr/rFonts@ascii",
+        "quote": "Liberation Serif"
+      },
+      "spec_status": "measured",
+      "verdict": "PASS",
+      "measured": "Liberation Serif",
+      "basis": "机器实测 examples/work/output_ok.docx"
+    },
+    {
+      "id": "style.Normal.line_spacing",
+      "expected": 1.25,
+      "unit": "倍",
+      "spec_source": {
+        "file": "examples/work/rules.txt",
+        "pointer": "line 3",
+        "quote": "2. 正文五号字（10.5 pt），行距 1.25 倍；一级标题三号加粗。"
+      },
+      "spec_status": "conflict-resolved",
+      "verdict": "FAIL",
+      "measured": 1.5,
+      "basis": "机器实测 examples/work/output_ok.docx"
+    },
+    {
+      "id": "style.Normal.size",
+      "expected": 10.5,
+      "unit": "pt",
+      "spec_source": {
+        "file": "examples/work/rules.txt",
+        "pointer": "line 3",
+        "quote": "2. 正文五号字（10.5 pt），行距 1.25 倍；一级标题三号加粗。"
+      },
+      "spec_status": "stated",
+      "verdict": "PASS",
+      "measured": 10.5,
+      "basis": "机器实测 examples/work/output_ok.docx"
+    },
+    {
+      "id": "style.Normal.space_after",
+      "expected": 80.0,
+      "unit": "pt",
+      "spec_source": {
+        "file": "examples/work/template.docx",
+        "pointer": "word/styles.xml#style[@styleId=Normal]/pPr/spacing@after",
+        "quote": "twentieths=160"
+      },
+      "spec_status": "measured",
+      "verdict": "UNKNOWN",
+      "measured": null,
+      "basis": "非机器可核对项（题注措辞/参考文献样式/版心细节等），需人工或渲染证据"
+    },
+    {
+      "id": "text.line_spacing",
+      "expected": 1.25,
+      "unit": "倍",
+      "spec_source": {
+        "file": "examples/work/rules.txt",
+        "pointer": "line 3",
+        "quote": "2. 正文五号字（10.5 pt），行距 1.25 倍；一级标题三号加粗。"
+      },
+      "spec_status": "stated",
+      "verdict": "UNKNOWN",
+      "measured": null,
+      "basis": "非机器可核对项（题注措辞/参考文献样式/版心细节等），需人工或渲染证据"
+    },
+    {
+      "id": "text.一级标题.size",
+      "expected": 16,
+      "unit": "pt",
+      "spec_source": {
+        "file": "examples/work/rules.txt",
+        "pointer": "line 3",
+        "quote": "2. 正文五号字（10.5 pt），行距 1.25 倍；一级标题三号加粗。"
+      },
+      "spec_status": "stated",
+      "verdict": "UNKNOWN",
+      "measured": null,
+      "basis": "非机器可核对项（题注措辞/参考文献样式/版心细节等），需人工或渲染证据"
+    },
+    {
+      "id": "text.正文.size",
+      "expected": 10.5,
+      "unit": "pt",
+      "spec_source": {
+        "file": "examples/work/rules.txt",
+        "pointer": "line 3",
+        "quote": "2. 正文五号字（10.5 pt），行距 1.25 倍；一级标题三号加粗。"
+      },
+      "spec_status": "stated",
+      "verdict": "UNKNOWN",
+      "measured": null,
+      "basis": "非机器可核对项（题注措辞/参考文献样式/版心细节等），需人工或渲染证据"
+    }
+  ]
+}
