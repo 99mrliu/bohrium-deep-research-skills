@@ -1,0 +1,56 @@
+{
+  "defects": [],
+  "grade_counts": {
+    "critical": 0,
+    "high": 2,
+    "low": 1,
+    "medium": 0
+  },
+  "note": "合成示例 / SYNTHETIC EXAMPLE：本报告由虚构输入生成，仅演示接口与流程，非正式案例结果。",
+  "plan_id": "P2",
+  "risks": [
+    {
+      "detectability": 5,
+      "fallback_ref": "P2-F2",
+      "grade": "high",
+      "has_mitigation": true,
+      "likelihood": 4,
+      "risk_id": "P2-R2",
+      "rpn": 60,
+      "severity": 3,
+      "title": "干燥气流不稳定产生针孔"
+    },
+    {
+      "detectability": 3,
+      "fallback_ref": "P2-F1",
+      "grade": "high",
+      "has_mitigation": true,
+      "likelihood": 4,
+      "risk_id": "P2-R1",
+      "rpn": 48,
+      "severity": 4,
+      "title": "刮涂放大后大面积膜厚不均"
+    },
+    {
+      "detectability": 3,
+      "fallback_ref": null,
+      "grade": "low",
+      "has_mitigation": true,
+      "likelihood": 2,
+      "risk_id": "P2-R3",
+      "rpn": 12,
+      "severity": 2,
+      "title": "墨水批次间粘度差异"
+    }
+  ],
+  "thresholds": {
+    "critical_if_severity_gte": 5,
+    "high_if_rpn_gte": 60,
+    "high_if_severity_gte": 4,
+    "medium_if_rpn_gte": 25
+  },
+  "thresholds_source": "builtin:references/thresholds.json",
+  "tool": "fmea.py",
+  "verdict": "PASS",
+  "warnings": []
+}

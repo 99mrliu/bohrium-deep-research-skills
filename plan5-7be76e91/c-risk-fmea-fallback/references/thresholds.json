@@ -1,0 +1,8 @@
+{
+  "_comment": "FMEA 分级阈值表（脚本默认值；可用 --thresholds 覆盖，覆盖后须在输出中声明）",
+  "critical_if_severity_gte": 5,
+  "high_if_severity_gte": 4,
+  "high_if_rpn_gte": 60,
+  "medium_if_rpn_gte": 25,
+  "grading_rule_text": "critical: severity>=critical_if_severity_gte; high: severity>=high_if_severity_gte 或 RPN>=high_if_rpn_gte; medium: RPN>=medium_if_rpn_gte; 其余 low。RPN = severity x likelihood x detectability。"
+}

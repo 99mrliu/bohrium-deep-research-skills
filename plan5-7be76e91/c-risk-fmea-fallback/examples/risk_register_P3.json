@@ -1,0 +1,47 @@
+{
+  "disclaimer": "合成示例 / SYNTHETIC EXAMPLE：虚构方案 P3（负例 booby-trap：critical 风险无回退，必须被 fallback_graph.py 以 exit 3 捕获）。",
+  "plan_id": "P3",
+  "risks": [
+    {
+      "risk_id": "P3-R1",
+      "title": "高真空热蒸发腔体含铯前驱体泄漏的安全风险",
+      "trigger_condition": "蒸发源温度超过 550 C 且腔体密封圈使用次数超过 20 次（情景给定设备已使用 18 次）",
+      "consequence_magnitude": "可能造成可记录以上级别伤害并触发安全事件上报，课题中断 >4 周",
+      "severity": 5,
+      "likelihood": 2,
+      "detectability": 3,
+      "mitigation": "限定蒸发源温度 <520 C，更换新密封圈并做升压检漏测试",
+      "mitigation_cost_cny": 5000,
+      "mitigation_time_days": 5,
+      "fallback_ref": null,
+      "consequence_cost_cny": 60000,
+      "consequence_time_days": 30,
+      "evidence_source": "severity_anchors.md 安全维度 S5（可造成严重伤害/触发上报）"
+    },
+    {
+      "risk_id": "P3-R2",
+      "title": "蒸发源耗材货期 8 周超出 6 周交付窗口",
+      "trigger_condition": "下单后供应商确认货期超过 42 天（情景契约 SUP-07 前瞻性给定货期 8 周）",
+      "consequence_magnitude": "延误 2 周以上，直接突破 6 周截止线",
+      "severity": 3,
+      "likelihood": 4,
+      "detectability": 3,
+      "mitigation": "第 1 周下单并每周跟催；同步评估情景内替代规格",
+      "mitigation_cost_cny": 300,
+      "mitigation_time_days": 0,
+      "fallback_ref": "P3-F1",
+      "consequence_cost_cny": 3000,
+      "consequence_time_days": 14,
+      "evidence_source": "severity_anchors.md 进度维度 S3；情景契约 SUP-07（前瞻性给定，非真实报价）"
+    }
+  ],
+  "fallback_actions": [
+    {
+      "action_id": "P3-F1",
+      "description": "改用情景内国产替代蒸发源规格（SUP-09，货期 3 周），重新标定蒸发速率",
+      "adds_cost": 4500,
+      "adds_time": 4,
+      "requires_expert_confirm": false
+    }
+  ]
+}

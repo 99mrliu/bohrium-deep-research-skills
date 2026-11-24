@@ -1,0 +1,47 @@
+{
+  "defects": [],
+  "grade_counts": {
+    "critical": 1,
+    "high": 0,
+    "low": 0,
+    "medium": 1
+  },
+  "note": "合成示例 / SYNTHETIC EXAMPLE：本报告由虚构输入生成，仅演示接口与流程，非正式案例结果。",
+  "plan_id": "P3",
+  "risks": [
+    {
+      "detectability": 3,
+      "fallback_ref": null,
+      "grade": "critical",
+      "has_mitigation": true,
+      "likelihood": 2,
+      "risk_id": "P3-R1",
+      "rpn": 30,
+      "severity": 5,
+      "title": "高真空热蒸发腔体含铯前驱体泄漏的安全风险"
+    },
+    {
+      "detectability": 3,
+      "fallback_ref": "P3-F1",
+      "grade": "medium",
+      "has_mitigation": true,
+      "likelihood": 4,
+      "risk_id": "P3-R2",
+      "rpn": 36,
+      "severity": 3,
+      "title": "蒸发源耗材货期 8 周超出 6 周交付窗口"
+    }
+  ],
+  "thresholds": {
+    "critical_if_severity_gte": 5,
+    "high_if_rpn_gte": 60,
+    "high_if_severity_gte": 4,
+    "medium_if_rpn_gte": 25
+  },
+  "thresholds_source": "builtin:references/thresholds.json",
+  "tool": "fmea.py",
+  "verdict": "PASS",
+  "warnings": [
+    "risks[0](P3-R1): critical 级风险 fallback_ref 为空，将由 fallback_graph.py 判定"
+  ]
+}

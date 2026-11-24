@@ -1,0 +1,15 @@
+{
+  "_comment": "合成示例 / SYNTHETIC EXAMPLE，非正式案例结果。虚构候选方案 B（含预埋域外参数陷阱：temperature_c=41 超出参数域 20..39）。",
+  "plan_id": "PLAN-B",
+  "title": "高温促增殖变体（虚构，含陷阱）",
+  "parameters": {
+    "temperature_c": {"value": 41, "unit": "°C"},
+    "fbs_percent": {"value": 10, "unit": "%"},
+    "medium_type": {"value": "DMEM", "unit": null}
+  },
+  "totals": {
+    "total_cost_cny": 9700,
+    "duration_days": 21
+  },
+  "notes": "草案作者（虚构）声称 41 °C 可加速增殖，但未给出任何来源锚点；且 41 °C 超出 mini-case.json 参数域与虚构培养箱量程（20–39 °C）。"
+}

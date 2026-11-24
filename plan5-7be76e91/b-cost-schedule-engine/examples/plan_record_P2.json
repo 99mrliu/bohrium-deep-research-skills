@@ -1,0 +1,76 @@
+{
+  "_notice": "合成示例 / SYNTHETIC EXAMPLE —— P2 贵但快；条目为虚构演示值",
+  "plan_id": "P2",
+  "plan_label": "高分辨电镜快速通道（贵但快）",
+  "cost_items": [
+    {
+      "name": "高分辨电镜机时",
+      "category": "equipment_time",
+      "basis": "per_run",
+      "quantity": 8,
+      "unit": "小时",
+      "unit_price": 600,
+      "runs": 1,
+      "source": "contract_pricing.example.md",
+      "locator": "§1.2"
+    },
+    {
+      "name": "通用耗材包",
+      "category": "consumable",
+      "basis": "per_run",
+      "quantity": 2,
+      "unit": "套",
+      "unit_price": 500,
+      "runs": 1,
+      "source": "contract_pricing.example.md",
+      "locator": "§3.4"
+    },
+    {
+      "name": "外送第三方表征",
+      "category": "outsourcing",
+      "basis": "per_run",
+      "quantity": 1,
+      "unit": "批次",
+      "unit_price": 3500,
+      "runs": 1,
+      "source": "contract_pricing.example.md",
+      "locator": "§4.2"
+    },
+    {
+      "name": "高级实验员工时",
+      "category": "labor",
+      "basis": "per_run",
+      "quantity": 6,
+      "unit": "工日",
+      "unit_price": 500,
+      "runs": 1,
+      "source": "contract_pricing.example.md",
+      "locator": "§4.1"
+    },
+    {
+      "name": "优先排期费（一次性）",
+      "category": "other",
+      "basis": "one_time",
+      "quantity": 1,
+      "unit": "次",
+      "unit_price": 2500,
+      "source": "contract_pricing.example.md",
+      "locator": "§2.2"
+    }
+  ],
+  "time_items": [
+    {"phase": "sample_prep", "duration": 1, "unit": "days"},
+    {"phase": "booking_wait", "duration": 2, "unit": "days", "source": "contract_pricing.example.md", "locator": "§2.2"},
+    {
+      "phase": "execution",
+      "duration": 3,
+      "unit": "days",
+      "rework_probability": 0.2,
+      "rework_cost": 1,
+      "source": "contract_pricing.example.md",
+      "locator": "§1.2"
+    },
+    {"phase": "characterization_queue", "duration": 1, "unit": "days"},
+    {"phase": "analysis", "duration": 2, "unit": "days"}
+  ]
+}

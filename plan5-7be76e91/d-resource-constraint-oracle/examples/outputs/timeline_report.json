@@ -1,0 +1,90 @@
+{
+  "case_id": "case-syn-resource-001",
+  "deadline": "2026-03-31",
+  "n_scheduled": 2,
+  "n_unschedulable": 1,
+  "note": "合成示例 / SYNTHETIC EXAMPLE：本报告由虚构输入生成，仅演示接口与裁决逻辑，非正式案例结果或真实实验室/供应商数据。",
+  "plans": [
+    {
+      "critical_waits": [],
+      "earliest_finish": "2026-01-10",
+      "earliest_start": "2026-01-05",
+      "first_execution_start": "2026-01-06",
+      "past_deadline": false,
+      "plan_id": "P1",
+      "schedulable": true,
+      "stages": [
+        {
+          "end": "2026-01-06",
+          "resource": "-",
+          "stage": "prepare",
+          "start": "2026-01-05"
+        },
+        {
+          "end": "2026-01-09",
+          "resource": "FURNACE-01",
+          "stage": "execute",
+          "start": "2026-01-06"
+        },
+        {
+          "end": "2026-01-10",
+          "resource": "XRD-01",
+          "stage": "characterize",
+          "start": "2026-01-09"
+        }
+      ],
+      "status": "scheduled"
+    },
+    {
+      "critical_waits": [
+        {
+          "item": "MAT-LATP",
+          "kind": "consumable_lead_time",
+          "reason": "耗材 MAT-LATP（LATP 固态电解质粉体）货期 10 天，2026-01-15 到货",
+          "wait_until": "2026-01-15"
+        },
+        {
+          "item": "PRESS-01",
+          "kind": "equipment_booking",
+          "reason": "设备 PRESS-01（阶段 execute）档期冲突，顺延至 2026-01-31",
+          "wait_until": "2026-01-31"
+        }
+      ],
+      "earliest_finish": "2026-02-06",
+      "earliest_start": "2026-01-15",
+      "first_execution_start": "2026-01-31",
+      "past_deadline": false,
+      "plan_id": "P2",
+      "schedulable": true,
+      "stages": [
+        {
+          "end": "2026-01-17",
+          "resource": "-",
+          "stage": "prepare",
+          "start": "2026-01-15"
+        },
+        {
+          "end": "2026-02-05",
+          "resource": "PRESS-01",
+          "stage": "execute",
+          "start": "2026-01-31"
+        },
+        {
+          "end": "2026-02-06",
+          "resource": "XRD-01",
+          "stage": "characterize",
+          "start": "2026-02-05"
+        }
+      ],
+      "status": "scheduled"
+    },
+    {
+      "plan_id": "P3",
+      "reason": "constraints.py 裁决 infeasible，跳过排期。",
+      "schedulable": false,
+      "status": "skipped_infeasible"
+    }
+  ],
+  "reference_date": "2026-01-05",
+  "slip_cap_days": 365
+}

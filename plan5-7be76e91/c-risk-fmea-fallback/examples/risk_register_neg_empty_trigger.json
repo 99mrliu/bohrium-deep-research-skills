@@ -1,0 +1,19 @@
+{
+  "disclaimer": "合成示例 / SYNTHETIC EXAMPLE：负例 booby-trap —— trigger_condition 为空（「存在一定风险」式空话），必须被 fmea.py 以 exit 3 捕获。",
+  "plan_id": "NEG-EMPTY-TRIGGER",
+  "risks": [
+    {
+      "risk_id": "NEG-R1",
+      "title": "工艺放大存在一定风险",
+      "trigger_condition": "",
+      "consequence_magnitude": "延误若干天",
+      "severity": 3,
+      "likelihood": 3,
+      "detectability": 3,
+      "mitigation": "加强过程监控",
+      "fallback_ref": null,
+      "evidence_source": "无（负例故意缺失触发条件）"
+    }
+  ],
+  "fallback_actions": []
+}

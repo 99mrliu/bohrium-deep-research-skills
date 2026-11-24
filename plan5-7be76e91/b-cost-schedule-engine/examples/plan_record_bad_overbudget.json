@@ -1,0 +1,24 @@
+{
+  "_notice": "合成示例 / SYNTHETIC EXAMPLE —— booby-trap 负例：总成本 30000 超 case 预算 20000，必须被 time_model 预算门以 exit 3 (over_budget) 捕获",
+  "plan_id": "BADBUDGET",
+  "plan_label": "坏例：超预算方案",
+  "workday_hours": 8,
+  "cost_items": [
+    {
+      "name": "高分辨电镜机时（超预算）",
+      "category": "equipment_time",
+      "basis": "per_run",
+      "quantity": 100,
+      "unit": "小时",
+      "unit_price": 300,
+      "runs": 1,
+      "source": "contract_pricing.example.md",
+      "locator": "§1"
+    }
+  ],
+  "time_items": [
+    {"phase": "sample_prep", "duration": 1, "unit": "days"},
+    {"phase": "execution", "duration": 5, "unit": "days"},
+    {"phase": "analysis", "duration": 1, "unit": "days"}
+  ]
+}

@@ -1,0 +1,56 @@
+{
+  "case_file": "examples/mini-case.json",
+  "case_id": "SYNTH-0001",
+  "hard_constraints": {
+    "budget_cny": 12000,
+    "deadline_days": 30
+  },
+  "no_domain_notes": [],
+  "note": "合成示例 / SYNTHETIC EXAMPLE，非正式案例结果",
+  "parameter_domains": {
+    "fbs_percent": {
+      "max": 20,
+      "min": 0
+    },
+    "medium_type": [
+      "DMEM",
+      "RPMI-1640"
+    ],
+    "temperature_c": {
+      "max": 39,
+      "min": 20
+    }
+  },
+  "plans_checked": [
+    "PLAN-A",
+    "PLAN-B"
+  ],
+  "summary": {
+    "out_of_domain": 1,
+    "over_budget": 0,
+    "past_deadline": 0,
+    "plans": 2,
+    "unit_inconsistent": 0,
+    "violations": 1
+  },
+  "tool": "domain_check.py",
+  "tool_version": "1.0",
+  "unit_sets": {
+    "fbs_percent": [
+      "%"
+    ],
+    "temperature_c": [
+      "°C"
+    ]
+  },
+  "violations": [
+    {
+      "detail": "值 41 高于域上限 39",
+      "field": "temperature_c",
+      "kind": "out_of_domain",
+      "plan_id": "PLAN-B",
+      "unit": "°C",
+      "value": 41
+    }
+  ]
+}

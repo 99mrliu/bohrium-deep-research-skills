@@ -1,0 +1,25 @@
+{
+  "criterion": "risk_adjusted_cost_cny 升序（并列看 time，再并列看 plan_id）",
+  "note": "合成示例 / SYNTHETIC EXAMPLE：本报告由虚构输入生成，仅演示接口与流程，非正式案例结果。",
+  "ranking": [
+    {
+      "plan_id": "P1",
+      "rank": 1,
+      "risk_adjusted_cost_cny": 39890.0,
+      "risk_adjusted_time_days": 27.2
+    },
+    {
+      "plan_id": "P2",
+      "rank": 2,
+      "risk_adjusted_cost_cny": 64420.0,
+      "risk_adjusted_time_days": 40.35
+    },
+    {
+      "plan_id": "P3",
+      "rank": 3,
+      "risk_adjusted_cost_cny": 91100.0,
+      "risk_adjusted_time_days": 51.9
+    }
+  ],
+  "tool": "expected_cost.py"
+}

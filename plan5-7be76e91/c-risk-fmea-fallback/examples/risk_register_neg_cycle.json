@@ -1,0 +1,40 @@
+{
+  "disclaimer": "合成示例 / SYNTHETIC EXAMPLE：负例 booby-trap —— 回退链成环（F1 -> F2 -> F1），必须被 fallback_graph.py 以 exit 3 捕获。",
+  "plan_id": "NEG-CYCLE",
+  "risks": [
+    {
+      "risk_id": "NEG-R1",
+      "title": "关键设备单点故障（回退成环负例）",
+      "trigger_condition": "主设备 EQ-99 在批次中途停机且 24 小时内无法复位",
+      "consequence_magnitude": "整批报废，延误 10 天，增支 12000 CNY",
+      "severity": 4,
+      "likelihood": 4,
+      "detectability": 4,
+      "mitigation": "批次前做预防性维护点检",
+      "mitigation_cost_cny": 500,
+      "mitigation_time_days": 0.5,
+      "fallback_ref": "NEG-F1",
+      "consequence_cost_cny": 12000,
+      "consequence_time_days": 10,
+      "evidence_source": "severity_anchors.md 进度维度 S4（负例构造）"
+    }
+  ],
+  "fallback_actions": [
+    {
+      "action_id": "NEG-F1",
+      "description": "切换备用设备 EQ-98",
+      "adds_cost": 3000,
+      "adds_time": 3,
+      "requires_expert_confirm": false,
+      "on_failure_ref": "NEG-F2"
+    },
+    {
+      "action_id": "NEG-F2",
+      "description": "再切回主设备 EQ-99（构成回环，负例）",
+      "adds_cost": 2000,
+      "adds_time": 2,
+      "requires_expert_confirm": false,
+      "on_failure_ref": "NEG-F1"
+    }
+  ]
+}

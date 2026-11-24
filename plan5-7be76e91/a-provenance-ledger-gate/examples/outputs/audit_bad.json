@@ -1,0 +1,79 @@
+{
+  "claims_file": "examples/claims_bad.json",
+  "note": "合成示例 / SYNTHETIC EXAMPLE，非正式案例结果",
+  "registry_file": "examples/outputs/registry.json",
+  "results": [
+    {
+      "char_offset": 199,
+      "claim_index": 0,
+      "detail": "quote 逐字命中 price_contract.txt（locator=条目 1, offset=199）",
+      "field": "fbs_unit_price_cny",
+      "field_group": "resources",
+      "plan_id": "PLAN-A",
+      "status": "given",
+      "unit": "CNY/500mL",
+      "value": 850,
+      "verdict": "supported"
+    },
+    {
+      "char_offset": 266,
+      "claim_index": 1,
+      "detail": "quote 已定位（offset=266），但 value 数值 [12.0] 与 quote 中数值 [10.0] 无交集",
+      "field": "fbs_percent",
+      "field_group": "parameters",
+      "plan_id": "PLAN-A",
+      "status": "given",
+      "unit": "%",
+      "value": 12,
+      "verdict": "conflict"
+    },
+    {
+      "char_offset": null,
+      "claim_index": 2,
+      "detail": "quote 在 paper_excerpt.txt 中逐字查找失败（NFKC+空白折叠后）",
+      "field": "doubling_time_hours",
+      "field_group": "interpretation_criteria",
+      "plan_id": "PLAN-B",
+      "status": "given",
+      "unit": "h",
+      "value": 18,
+      "verdict": "unsupported"
+    },
+    {
+      "char_offset": null,
+      "claim_index": 3,
+      "detail": "模型推断值，仅记录，不参与判负；进入比较前须标注为假设",
+      "field": "temperature_c",
+      "field_group": "parameters",
+      "plan_id": "PLAN-B",
+      "status": "inferred",
+      "unit": "°C",
+      "value": 41,
+      "verdict": "recorded_inferred"
+    },
+    {
+      "char_offset": null,
+      "claim_index": 4,
+      "detail": "方案未给出该字段，仅记录为缺口",
+      "field": "ethics_approval",
+      "field_group": "assumptions",
+      "plan_id": "PLAN-A",
+      "status": "missing",
+      "unit": null,
+      "value": null,
+      "verdict": "recorded_missing"
+    }
+  ],
+  "summary": {
+    "conflict": 1,
+    "defects": 2,
+    "missing_source": 0,
+    "recorded_inferred": 1,
+    "recorded_missing": 1,
+    "supported": 1,
+    "total": 5,
+    "unsupported": 1
+  },
+  "tool": "claim_audit.py",
+  "tool_version": "1.0"
+}

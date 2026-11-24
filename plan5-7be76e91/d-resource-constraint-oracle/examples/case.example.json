@@ -1,0 +1,14 @@
+{
+  "synthetic_notice": "合成示例 / SYNTHETIC EXAMPLE —— 全部数字为虚构规划情景，非真实实验室/供应商数据，不得当作实测。",
+  "case_id": "case-syn-resource-001",
+  "reference_date": "2026-01-05",
+  "deadline": "2026-03-31",
+  "budget_cny": 20000,
+  "contract_domain": {
+    "temperature_C": {"min": 600, "max": 1050},
+    "hold_time_h": {"min": 1, "max": 48},
+    "pressure_MPa": {"min": 10, "max": 40},
+    "xrd_2theta_deg": {"min": 10, "max": 80}
+  },
+  "plan_ids": ["P1", "P2", "P3"]
+}

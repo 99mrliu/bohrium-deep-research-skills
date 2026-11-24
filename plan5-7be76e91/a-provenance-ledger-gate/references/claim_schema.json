@@ -1,0 +1,44 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "claims.json — 模型抽取论断清单（provenance-ledger-gate）",
+  "description": "模型对每个候选方案逐字段抽取的论断。每条 given/conflict 断言必须带 source{file,locator,quote}，quote 必须是来源文本中的逐字片段（NFKC+空白折叠后匹配）。",
+  "type": "object",
+  "required": ["claims"],
+  "properties": {
+    "_comment": {"type": "string", "description": "示例数据必须在此标注：合成示例 / SYNTHETIC EXAMPLE，非正式案例结果"},
+    "claims": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["plan_id", "field_group", "field", "value", "status"],
+        "properties": {
+          "plan_id": {"type": "string", "description": "候选方案标识，与方案文件中的 plan_id 一致"},
+          "field_group": {
+            "type": "string",
+            "enum": ["assumptions", "variables", "controls", "steps", "parameters", "resources", "interpretation_criteria"],
+            "description": "七类字段之一，定义见 references/field_groups.md"
+          },
+          "field": {"type": "string", "description": "字段名，如 temperature_c"},
+          "value": {"description": "论断值（数值/字符串/null）。status=missing 时为 null"},
+          "unit": {"type": ["string", "null"], "description": "单位；无单位用 null。同一 field 跨方案单位必须一致（domain_check 校验）"},
+          "status": {
+            "type": "string",
+            "enum": ["given", "inferred", "missing", "conflict"],
+            "description": "given=方案/来源明示；inferred=模型推断（只记录不判负，进入比较须标注为假设）；missing=方案未给出；conflict=方案内部或来源间已标冲突（按 given 同样核验）"
+          },
+          "source": {
+            "type": ["object", "null"],
+            "description": "status=given/conflict 时必填；inferred/missing 时为 null",
+            "required": ["file", "locator", "quote"],
+            "properties": {
+              "file": {"type": "string", "description": "registry.json 中的 rel_path，如 sources/paper_a.txt"},
+              "locator": {"type": "string", "description": "人读定位：页/段/表/行，如 '第3页 表2 第4行'"},
+              "quote": {"type": "string", "description": "来源文本逐字片段（允许空白差异，NFKC+空白折叠后与来源匹配）"}
+            }
+          },
+          "note": {"type": "string", "description": "可选备注（如推断依据、缺口说明）"}
+        }
+      }
+    }
+  }
+}

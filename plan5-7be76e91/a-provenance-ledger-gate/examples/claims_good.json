@@ -1,0 +1,122 @@
+{
+  "_comment": "合成示例 / SYNTHETIC EXAMPLE，非正式案例结果。正例：全部 given 断言均可逐字锚定到 sources/ 虚构来源，claim_audit 应 exit 0。",
+  "claims": [
+    {
+      "plan_id": "PLAN-A",
+      "field_group": "parameters",
+      "field": "temperature_c",
+      "value": 37,
+      "unit": "°C",
+      "status": "given",
+      "source": {
+        "file": "paper_excerpt.txt",
+        "locator": "第1段（方法）",
+        "quote": "细胞在 37 °C、5% CO2 条件下培养"
+      }
+    },
+    {
+      "plan_id": "PLAN-A",
+      "field_group": "parameters",
+      "field": "fbs_percent",
+      "value": 10,
+      "unit": "%",
+      "status": "given",
+      "source": {
+        "file": "paper_excerpt.txt",
+        "locator": "第1段（方法）",
+        "quote": "基础培养基为 DMEM，添加 10% FBS"
+      }
+    },
+    {
+      "plan_id": "PLAN-A",
+      "field_group": "parameters",
+      "field": "medium_type",
+      "value": "DMEM",
+      "unit": null,
+      "status": "given",
+      "source": {
+        "file": "paper_excerpt.txt",
+        "locator": "第1段（方法）",
+        "quote": "基础培养基为 DMEM，添加 10% FBS"
+      }
+    },
+    {
+      "plan_id": "PLAN-A",
+      "field_group": "interpretation_criteria",
+      "field": "doubling_time_hours",
+      "value": 24,
+      "unit": "h",
+      "status": "given",
+      "source": {
+        "file": "paper_excerpt.txt",
+        "locator": "第2段（结果）",
+        "quote": "XJ-7 细胞群体倍增时间约 24 小时"
+      }
+    },
+    {
+      "plan_id": "PLAN-A",
+      "field_group": "interpretation_criteria",
+      "field": "viability_percent",
+      "value": 95,
+      "unit": "%",
+      "status": "given",
+      "source": {
+        "file": "paper_excerpt.txt",
+        "locator": "第2段（结果）",
+        "quote": "台盼蓝排斥法测得细胞活力不低于 95%"
+      }
+    },
+    {
+      "plan_id": "PLAN-A",
+      "field_group": "resources",
+      "field": "fbs_unit_price_cny",
+      "value": 850,
+      "unit": "CNY/500mL",
+      "status": "given",
+      "source": {
+        "file": "price_contract.txt",
+        "locator": "条目 1",
+        "quote": "单价 850 CNY/500 mL"
+      }
+    },
+    {
+      "plan_id": "PLAN-A",
+      "field_group": "resources",
+      "field": "medium_unit_price_cny",
+      "value": 120,
+      "unit": "CNY/500mL",
+      "status": "given",
+      "source": {
+        "file": "price_contract.txt",
+        "locator": "条目 2",
+        "quote": "DMEM 培养基，规格 500 mL/瓶，单价 120 CNY/500 mL"
+      }
+    },
+    {
+      "plan_id": "PLAN-A",
+      "field_group": "resources",
+      "field": "incubator_daily_cost_cny",
+      "value": 60,
+      "unit": "CNY/day",
+      "status": "given",
+      "source": {
+        "file": "booking_contract.txt",
+        "locator": "条款 1",
+        "quote": "占用费 60 CNY/天"
+      }
+    },
+    {
+      "plan_id": "PLAN-B",
+      "field_group": "parameters",
+      "field": "fbs_percent",
+      "value": 10,
+      "unit": "%",
+      "status": "given",
+      "source": {
+        "file": "paper_excerpt.txt",
+        "locator": "第1段（方法）",
+        "quote": "基础培养基为 DMEM，添加 10% FBS"
+      }
+    }
+  ]
+}

@@ -1,0 +1,46 @@
+{
+  "critical_high_risks": [
+    "P2-R1",
+    "P2-R2"
+  ],
+  "cycle": null,
+  "defects": [],
+  "edges": {
+    "P2-R1": [
+      "P2-F1"
+    ],
+    "P2-R2": [
+      "P2-F2"
+    ]
+  },
+  "fallback_actions": [
+    "P2-F1",
+    "P2-F2"
+  ],
+  "note": "合成示例 / SYNTHETIC EXAMPLE：本报告由虚构输入生成，仅演示接口与流程，非正式案例结果。",
+  "paths": [
+    {
+      "chain_complete": true,
+      "fallback_chain": [
+        "P2-F1"
+      ],
+      "grade": "high",
+      "risk_id": "P2-R1",
+      "title": "刮涂放大后大面积膜厚不均",
+      "trigger_condition": "刮刀间隙 >80 um 且走刀速度 >20 mm/s 时，10x10 cm 面内膜厚偏差超过 +/-5%"
+    },
+    {
+      "chain_complete": true,
+      "fallback_chain": [
+        "P2-F2"
+      ],
+      "grade": "high",
+      "risk_id": "P2-R2",
+      "title": "干燥气流不稳定产生针孔",
+      "trigger_condition": "风刀流量波动超过设定值 +/-10% 且基底温度低于 60 C"
+    }
+  ],
+  "plan_id": "P2",
+  "tool": "fallback_graph.py",
+  "verdict": "needs_expert"
+}

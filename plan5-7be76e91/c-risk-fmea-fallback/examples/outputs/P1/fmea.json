@@ -1,0 +1,56 @@
+{
+  "defects": [],
+  "grade_counts": {
+    "critical": 0,
+    "high": 0,
+    "low": 3,
+    "medium": 0
+  },
+  "note": "合成示例 / SYNTHETIC EXAMPLE：本报告由虚构输入生成，仅演示接口与流程，非正式案例结果。",
+  "plan_id": "P1",
+  "risks": [
+    {
+      "detectability": 4,
+      "fallback_ref": null,
+      "grade": "low",
+      "has_mitigation": true,
+      "likelihood": 3,
+      "risk_id": "P1-R3",
+      "rpn": 24,
+      "severity": 2,
+      "title": "旋涂边缘珠边效应影响有效面积"
+    },
+    {
+      "detectability": 3,
+      "fallback_ref": "P1-F1",
+      "grade": "low",
+      "has_mitigation": true,
+      "likelihood": 3,
+      "risk_id": "P1-R1",
+      "rpn": 18,
+      "severity": 2,
+      "title": "环境湿度波动导致结晶不均匀"
+    },
+    {
+      "detectability": 2,
+      "fallback_ref": null,
+      "grade": "low",
+      "has_mitigation": true,
+      "likelihood": 2,
+      "risk_id": "P1-R2",
+      "rpn": 8,
+      "severity": 2,
+      "title": "前驱体溶液老化导致成膜缺陷"
+    }
+  ],
+  "thresholds": {
+    "critical_if_severity_gte": 5,
+    "high_if_rpn_gte": 60,
+    "high_if_severity_gte": 4,
+    "medium_if_rpn_gte": 25
+  },
+  "thresholds_source": "builtin:references/thresholds.json",
+  "tool": "fmea.py",
+  "verdict": "PASS",
+  "warnings": []
+}

@@ -1,0 +1,115 @@
+{
+  "artifact": "time_model",
+  "defects": [],
+  "elapsed_days": "9.2",
+  "elapsed_hours": "73.6",
+  "gate_status": "pass",
+  "gates": {
+    "budget": {
+      "limit": "20000",
+      "status": "pass",
+      "total_cost": "14800"
+    },
+    "deadline": {
+      "elapsed_days": "9.2",
+      "limit_days": "30",
+      "status": "pass"
+    }
+  },
+  "items": [
+    {
+      "counts_toward": "labor+elapsed",
+      "duration": "1",
+      "duration_hours": "8",
+      "expected_rework_hours": null,
+      "index": 0,
+      "locator": null,
+      "phase": "sample_prep",
+      "phase_label": "样品准备",
+      "rework_cost": null,
+      "rework_probability": null,
+      "source": null,
+      "unit": "days"
+    },
+    {
+      "counts_toward": "elapsed_only",
+      "duration": "2",
+      "duration_hours": "16",
+      "expected_rework_hours": null,
+      "index": 1,
+      "locator": "§2.2",
+      "phase": "booking_wait",
+      "phase_label": "设备排期等待",
+      "rework_cost": null,
+      "rework_probability": null,
+      "source": "contract_pricing.example.md",
+      "unit": "days"
+    },
+    {
+      "counts_toward": "labor+elapsed",
+      "duration": "3",
+      "duration_hours": "24",
+      "expected_rework_hours": "1.6",
+      "index": 2,
+      "locator": "§1.2",
+      "phase": "execution",
+      "phase_label": "实验执行",
+      "rework_cost": "1",
+      "rework_probability": "0.2",
+      "source": "contract_pricing.example.md",
+      "unit": "days"
+    },
+    {
+      "counts_toward": "elapsed_only",
+      "duration": "1",
+      "duration_hours": "8",
+      "expected_rework_hours": null,
+      "index": 3,
+      "locator": null,
+      "phase": "characterization_queue",
+      "phase_label": "表征排队",
+      "rework_cost": null,
+      "rework_probability": null,
+      "source": null,
+      "unit": "days"
+    },
+    {
+      "counts_toward": "labor+elapsed",
+      "duration": "2",
+      "duration_hours": "16",
+      "expected_rework_hours": null,
+      "index": 4,
+      "locator": null,
+      "phase": "analysis",
+      "phase_label": "数据分析",
+      "rework_cost": null,
+      "rework_probability": null,
+      "source": null,
+      "unit": "days"
+    }
+  ],
+  "labor_hours": "49.6",
+  "notice": "合成示例 / SYNTHETIC EXAMPLE —— P2 贵但快；条目为虚构演示值",
+  "phase_labor_hours": {
+    "实验执行": "25.6",
+    "数据分析": "16",
+    "样品准备": "8",
+    "表征排队": "0",
+    "设备排期等待": "0",
+    "返工缓冲": "0"
+  },
+  "phase_totals_hours": {
+    "实验执行": "25.6",
+    "数据分析": "16",
+    "样品准备": "8",
+    "表征排队": "8",
+    "设备排期等待": "16",
+    "返工缓冲": "0"
+  },
+  "plan_id": "P2",
+  "schema_version": "plan_record/1.0",
+  "status": "ok",
+  "total_cost": "14800",
+  "workday_hours": "8",
+  "workday_hours_source": "case.workday_hours"
+}

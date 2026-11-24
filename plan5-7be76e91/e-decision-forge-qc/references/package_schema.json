@@ -1,0 +1,135 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "decision-forge-qc/package_schema.json",
+  "title": "decision_package.json 结构约定（decision-forge-qc）",
+  "description": "决策包结构契约。本文件为文档性 schema（bundle 仅依赖 Python 标准库，运行时不做 JSON-Schema 库校验；全部机检规则由 scripts/quality_gate.py 以标准库代码实现，语义以 quality_gate.py 与 references/gate_rules.md 为准）。",
+  "type": "object",
+  "required": ["case_id", "plans", "matrix", "eliminations", "scores", "weights", "confirmations", "selection", "result_skeleton"],
+  "properties": {
+    "case_id": {
+      "type": "string",
+      "minLength": 1,
+      "description": "与 /input/case.json 的 case_id 逐字一致。"
+    },
+    "synthetic": {
+      "type": "boolean",
+      "description": "合成示例标记。为 true 时渲染报告带「合成示例 / SYNTHETIC EXAMPLE」横幅；正式案例省略或为 false。"
+    },
+    "plans": {
+      "type": "array",
+      "minItems": 1,
+      "description": "候选方案清单，plan_id 全包唯一。",
+      "items": {
+        "type": "object",
+        "required": ["plan_id", "name"],
+        "properties": {
+          "plan_id": {"type": "string", "minLength": 1},
+          "name": {"type": "string"},
+          "summary": {"type": "string"}
+        }
+      }
+    },
+    "matrix": {
+      "type": "object",
+      "description": "七类字段比较矩阵，键为 plan_id；每个方案必须七组全部非空，条目必须带稳定 id（供 evidence_refs 引用）。",
+      "additionalProperties": {
+        "type": "object",
+        "required": ["assumptions", "variables", "controls", "steps", "parameters", "resources", "evaluation_criteria"],
+        "properties": {
+          "assumptions": {"$ref": "#/$defs/entryList", "description": "假设"},
+          "variables": {"$ref": "#/$defs/entryList", "description": "变量"},
+          "controls": {"$ref": "#/$defs/entryList", "description": "对照"},
+          "steps": {"$ref": "#/$defs/entryList", "description": "步骤"},
+          "parameters": {"$ref": "#/$defs/entryList", "description": "参数"},
+          "resources": {"$ref": "#/$defs/entryList", "description": "资源"},
+          "evaluation_criteria": {"$ref": "#/$defs/entryList", "description": "判读标准"}
+        }
+      }
+    },
+    "eliminations": {
+      "type": "array",
+      "description": "硬规则淘汰日志：谁被淘汰、依据哪条规则哪条证据。可为空数组（无硬规则淘汰时）。",
+      "items": {
+        "type": "object",
+        "required": ["plan_id", "rule", "evidence_refs"],
+        "properties": {
+          "plan_id": {"type": "string", "description": "必须是 plans 中存在的 plan_id"},
+          "rule": {"type": "string", "minLength": 1, "description": "淘汰规则标识，如 hard_threshold_timeline"},
+          "evidence_refs": {
+            "type": "array",
+            "minItems": 1,
+            "description": "证据引用，每项必须指向包内存在的条目：矩阵条目 id、\"<plan_id>.<category>\" 组引用、或确认项 id。",
+            "items": {"type": "string"}
+          }
+        }
+      }
+    },
+    "scores": {
+      "type": "object",
+      "description": "各方案维度分（模型裁决给定）。键为 plan_id；每个方案必须覆盖 weights 的全部维度，数值评分。",
+      "additionalProperties": {
+        "type": "object",
+        "additionalProperties": {"type": "number"}
+      }
+    },
+    "weights": {
+      "type": "object",
+      "minProperties": 1,
+      "description": "比较维度权重，正数；分析时归一化。",
+      "additionalProperties": {"type": "number", "exclusiveMinimum": 0}
+    },
+    "confirmations": {
+      "type": "array",
+      "description": "确认项（confirmed vs pending 显式分区）。pending 项 id 不得出现在 selection 文本中；存在 pending 时 selection.status 必须为 provisional。",
+      "items": {
+        "type": "object",
+        "required": ["id", "kind", "item", "status"],
+        "properties": {
+          "id": {"type": "string", "minLength": 1},
+          "kind": {"enum": ["safety", "ethics", "equipment_availability", "expert"]},
+          "item": {"type": "string"},
+          "status": {"enum": ["confirmed", "pending"]},
+          "note": {"type": "string"}
+        }
+      }
+    },
+    "selection": {
+      "type": "object",
+      "required": ["selected_plan_id", "status", "rationale", "discarded_reasons"],
+      "properties": {
+        "selected_plan_id": {"type": ["string", "null"], "description": "选定方案；全部不可行时为 null"},
+        "status": {"enum": ["final", "provisional"], "description": "有 pending 确认项时必须为 provisional"},
+        "rationale": {"type": "string", "description": "选择理由，引用证据 id；不得把 pending 确认项写成已确认事实"},
+        "discarded_reasons": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "required": ["plan_id", "reason"],
+            "properties": {
+              "plan_id": {"type": "string"},
+              "reason": {"type": "string"}
+            }
+          }
+        }
+      }
+    },
+    "result_skeleton": {
+      "type": "object",
+      "description": "最终 result.json 骨架：必须含 case_id（与包及 case.json 一致）以及 case.json output_contract 的全部原始键（值可先为 null/占位，尽早落盘后增量填充）；允许额外键（status/sources/uncertainty/变更记录等）。"
+    }
+  },
+  "$defs": {
+    "entryList": {
+      "type": "array",
+      "minItems": 1,
+      "items": {
+        "type": "object",
+        "required": ["id", "text"],
+        "properties": {
+          "id": {"type": "string", "minLength": 1},
+          "text": {"type": "string"}
+        }
+      }
+    }
+  }
+}

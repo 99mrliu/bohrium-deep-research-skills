@@ -1,0 +1,47 @@
+{
+  "base_cost_cny": 75000.0,
+  "base_source": "情景给定预算表 B-03（合成示例）",
+  "base_time_days": 34.0,
+  "expected_risk_cost_cny": 10800.0,
+  "expected_risk_time_days": 12.9,
+  "items": [
+    {
+      "consequence_cost_cny": 60000.0,
+      "consequence_time_days": 30.0,
+      "expected_cost_cny": 9000.0,
+      "expected_time_days": 4.5,
+      "likelihood": 2,
+      "mitigation_cost_cny": 5000.0,
+      "mitigation_time_days": 5.0,
+      "prob": 0.15,
+      "prob_source": "builtin_map",
+      "risk_id": "P3-R1"
+    },
+    {
+      "consequence_cost_cny": 3000.0,
+      "consequence_time_days": 14.0,
+      "expected_cost_cny": 1800.0,
+      "expected_time_days": 8.4,
+      "likelihood": 4,
+      "mitigation_cost_cny": 300.0,
+      "mitigation_time_days": 0.0,
+      "prob": 0.6,
+      "prob_source": "builtin_map",
+      "risk_id": "P3-R2"
+    }
+  ],
+  "likelihood_prob_map": {
+    "1": 0.05,
+    "2": 0.15,
+    "3": 0.35,
+    "4": 0.6,
+    "5": 0.85
+  },
+  "mitigation_cost_cny": 5300.0,
+  "mitigation_time_days": 5.0,
+  "note": "合成示例 / SYNTHETIC EXAMPLE：本报告由虚构输入生成，仅演示接口与流程，非正式案例结果。",
+  "plan_id": "P3",
+  "prob_overrides": [],
+  "risk_adjusted_cost_cny": 91100.0,
+  "risk_adjusted_time_days": 51.9
+}

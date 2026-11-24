@@ -1,0 +1,298 @@
+{
+  "baseline": {
+    "ranking": [
+      "P_A",
+      "P_C",
+      "P_B"
+    ],
+    "top": "P_A",
+    "totals": {
+      "P_A": 4.0,
+      "P_B": 3.4000000000000004,
+      "P_C": 3.6
+    },
+    "weights": {
+      "cost": 0.2,
+      "duration": 0.2,
+      "reliability": 0.4,
+      "safety": 0.2
+    }
+  },
+  "case_id": "SYNTH-EXP-2026-001",
+  "note": "合成示例 / SYNTHETIC EXAMPLE：本报告由虚构输入生成，仅演示接口与流程，非正式案例结果。",
+  "scenarios": [
+    {
+      "dimension": "cost",
+      "direction": "down",
+      "factor": 0.5,
+      "flipped": false,
+      "name": "cost_down",
+      "ranking": [
+        "P_A",
+        "P_C",
+        "P_B"
+      ],
+      "top": "P_A",
+      "totals": {
+        "P_A": 4.25,
+        "P_B": 3.2,
+        "P_C": 3.55
+      },
+      "weights": {
+        "cost": 0.1,
+        "duration": 0.225,
+        "reliability": 0.45,
+        "safety": 0.225
+      }
+    },
+    {
+      "dimension": "cost",
+      "direction": "up",
+      "factor": 1.5,
+      "flipped": false,
+      "name": "cost_up",
+      "ranking": [
+        "P_A",
+        "P_C",
+        "P_B"
+      ],
+      "top": "P_A",
+      "totals": {
+        "P_A": 3.75,
+        "P_B": 3.5999999999999996,
+        "P_C": 3.6500000000000004
+      },
+      "weights": {
+        "cost": 0.30000000000000004,
+        "duration": 0.175,
+        "reliability": 0.35,
+        "safety": 0.175
+      }
+    },
+    {
+      "dimension": "duration",
+      "direction": "down",
+      "factor": 0.5,
+      "flipped": false,
+      "name": "duration_down",
+      "ranking": [
+        "P_A",
+        "P_B",
+        "P_C"
+      ],
+      "top": "P_A",
+      "totals": {
+        "P_A": 4.0,
+        "P_B": 3.45,
+        "P_C": 3.425
+      },
+      "weights": {
+        "cost": 0.225,
+        "duration": 0.1,
+        "reliability": 0.45,
+        "safety": 0.225
+      }
+    },
+    {
+      "dimension": "duration",
+      "direction": "up",
+      "factor": 1.5,
+      "flipped": false,
+      "name": "duration_up",
+      "ranking": [
+        "P_A",
+        "P_C",
+        "P_B"
+      ],
+      "top": "P_A",
+      "totals": {
+        "P_A": 4.0,
+        "P_B": 3.3499999999999996,
+        "P_C": 3.7750000000000004
+      },
+      "weights": {
+        "cost": 0.175,
+        "duration": 0.30000000000000004,
+        "reliability": 0.35,
+        "safety": 0.175
+      }
+    },
+    {
+      "dimension": "reliability",
+      "direction": "down",
+      "factor": 0.5,
+      "flipped": true,
+      "name": "reliability_down",
+      "ranking": [
+        "P_C",
+        "P_A",
+        "P_B"
+      ],
+      "top": "P_C",
+      "totals": {
+        "P_A": 3.666666666666667,
+        "P_B": 3.533333333333334,
+        "P_C": 4.133333333333334
+      },
+      "weights": {
+        "cost": 0.2666666666666667,
+        "duration": 0.2666666666666667,
+        "reliability": 0.2,
+        "safety": 0.2666666666666667
+      }
+    },
+    {
+      "dimension": "reliability",
+      "direction": "up",
+      "factor": 1.5,
+      "flipped": false,
+      "name": "reliability_up",
+      "ranking": [
+        "P_A",
+        "P_B",
+        "P_C"
+      ],
+      "top": "P_A",
+      "totals": {
+        "P_A": 4.333333333333334,
+        "P_B": 3.2666666666666666,
+        "P_C": 3.0666666666666664
+      },
+      "weights": {
+        "cost": 0.1333333333333333,
+        "duration": 0.1333333333333333,
+        "reliability": 0.6000000000000001,
+        "safety": 0.1333333333333333
+      }
+    },
+    {
+      "dimension": "safety",
+      "direction": "down",
+      "factor": 0.5,
+      "flipped": false,
+      "name": "safety_down",
+      "ranking": [
+        "P_A",
+        "P_B",
+        "P_C"
+      ],
+      "top": "P_A",
+      "totals": {
+        "P_A": 4.0,
+        "P_B": 3.45,
+        "P_C": 3.425
+      },
+      "weights": {
+        "cost": 0.225,
+        "duration": 0.225,
+        "reliability": 0.45,
+        "safety": 0.1
+      }
+    },
+    {
+      "dimension": "safety",
+      "direction": "up",
+      "factor": 1.5,
+      "flipped": false,
+      "name": "safety_up",
+      "ranking": [
+        "P_A",
+        "P_C",
+        "P_B"
+      ],
+      "top": "P_A",
+      "totals": {
+        "P_A": 4.0,
+        "P_B": 3.3499999999999996,
+        "P_C": 3.7750000000000004
+      },
+      "weights": {
+        "cost": 0.175,
+        "duration": 0.175,
+        "reliability": 0.35,
+        "safety": 0.30000000000000004
+      }
+    },
+    {
+      "dimension": "equal_weights",
+      "direction": "equal",
+      "factor": null,
+      "flipped": true,
+      "name": "equal_weights",
+      "ranking": [
+        "P_C",
+        "P_A",
+        "P_B"
+      ],
+      "top": "P_C",
+      "totals": {
+        "P_A": 3.75,
+        "P_B": 3.5,
+        "P_C": 4.0
+      },
+      "weights": {
+        "cost": 0.25,
+        "duration": 0.25,
+        "reliability": 0.25,
+        "safety": 0.25
+      }
+    }
+  ],
+  "thresholds": [
+    {
+      "dimension": "cost",
+      "down_flip": null,
+      "up_flip": {
+        "flip_if": "cost 权重升至 0.333333 以上",
+        "new_top": "P_B",
+        "threshold": 0.33333333333333326
+      }
+    },
+    {
+      "dimension": "duration",
+      "down_flip": null,
+      "up_flip": {
+        "flip_if": "duration 权重升至 0.428571 以上",
+        "new_top": "P_C",
+        "threshold": 0.42857142857142855
+      }
+    },
+    {
+      "dimension": "reliability",
+      "down_flip": {
+        "flip_if": "reliability 权重降至 0.307692 以下",
+        "new_top": "P_C",
+        "threshold": 0.3076923076923077
+      },
+      "up_flip": null
+    },
+    {
+      "dimension": "safety",
+      "down_flip": null,
+      "up_flip": {
+        "flip_if": "safety 权重升至 0.428571 以上",
+        "new_top": "P_C",
+        "threshold": 0.42857142857142855
+      }
+    }
+  ],
+  "tool": "decision-forge-qc/sensitivity.py",
+  "verdict": {
+    "note": "首选在部分权重扰动下翻转，结论对权重取值敏感，交付时必须附带翻转点说明",
+    "status": "sensitive",
+    "triggers": [
+      {
+        "dimension": "reliability",
+        "direction": "down",
+        "new_top": "P_C",
+        "scenario": "reliability_down"
+      },
+      {
+        "dimension": "equal_weights",
+        "direction": "equal",
+        "new_top": "P_C",
+        "scenario": "equal_weights"
+      }
+    ]
+  }
+}

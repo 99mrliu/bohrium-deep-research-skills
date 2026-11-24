@@ -1,0 +1,91 @@
+{
+  "synthetic_notice": "合成示例 / SYNTHETIC EXAMPLE —— 演示工作流步骤 4 的最终 result.json 写法；全部数字来自本目录脚本对合成 facts 的真实运行输出，但 case 本身是虚构情景。",
+  "case_id": "case-syn-resource-001",
+  "status": "complete",
+  "assumptions": [
+    "契约（contract.example.json）为组织方前瞻性给定情景，非真实实验室/供应商报价；档期与货期数字按契约口径使用，不声称实测。",
+    "所有日期区间为半开 [start, end)；排期基准日取 case 给定的 2026-01-05，未使用系统时钟。",
+    "TECH-A 可用窗口 [2026-01-05, 2026-03-31) 覆盖全部排期；未声明窗口的人员视为全时段可用（本例未触发）。"
+  ],
+  "variables": ["temperature_C", "hold_time_h", "pressure_MPa", "xrd_2theta_deg"],
+  "controls": ["每方案均以同一契约参数域（contract_domain）为对照域做三方窗口对照；见 outputs/window_report.json。"],
+  "steps": [
+    "步骤0 读 case/契约/方案并落盘部分 result.json",
+    "步骤1 抽取 facts.example.json（每条事实挂 source）",
+    "步骤2 constraints.py 裁决 → outputs/constraints_report.json",
+    "步骤3 window_check.py / timeline.py → outputs/window_report.json, outputs/timeline_report.json, outputs/gantt.md",
+    "步骤4 本文件：逐方案 verdict + 依据与风险 + 确认项"
+  ],
+  "parameters": {
+    "P1": {"temperature_C": "[850,1000] ⊆ 允许 [600,1050]", "hold_time_h": "[20,30] ⊆ 允许 [1,48]"},
+    "P2": {"temperature_C": "[700,780] ⊆ 允许 [600,800]", "pressure_MPa": "[20,30] ⊆ 允许 [10,40]"},
+    "P3": {"temperature_C": "[1100,1200] ∩ 允许 [600,1050] = ∅（空交集）"}
+  },
+  "resources": {
+    "P1": "FURNACE-01（3 天）+ XRD-01（1 天）+ MAT-AL2O3 现货 + 审批已获批 + 技师甲技能覆盖",
+    "P2": "PRESS-01（5 天，档期占用至 01-30）+ XRD-01（1 天）+ MAT-LATP 货期 10 天 + 审批已获批",
+    "P3": "FURNACE-01（2 天）+ MAT-AL2O3 现货；资源本身可满足，瓶颈在参数窗口"
+  },
+  "interpretation_criteria": "feasible_now = 无 blocking 且 start_bound ≤ 基准日；feasible_after(日期) = 无 blocking 但 start_bound > 基准日；infeasible = 存在 blocking；另需 earliest_finish ≤ deadline 才算本实验室现在赶得上。",
+  "plan_verdicts": [
+    {
+      "plan_id": "P1",
+      "verdict": "feasible_now",
+      "theoretically_feasible": true,
+      "doable_now": true,
+      "earliest_start": "2026-01-05",
+      "earliest_finish": "2026-01-10",
+      "past_deadline": false,
+      "evidence": "constraints_report.json#plans[P1]（0 blocking）；timeline_report.json#plans[P1]"
+    },
+    {
+      "plan_id": "P2",
+      "verdict": "feasible_after(2026-01-31)",
+      "theoretically_feasible": true,
+      "doable_now": false,
+      "doable_now_note": "理论可行且资源可达，但热压炉档期被占至 01-30、LATP 01-15 到货；01-31 起可执行，02-06 完成，仍早于 deadline 03-31。",
+      "earliest_start": "2026-01-15",
+      "first_execution_start": "2026-01-31",
+      "earliest_finish": "2026-02-06",
+      "past_deadline": false,
+      "critical_waits": ["MAT-LATP 到货 2026-01-15", "PRESS-01 档期顺延至 2026-01-31"],
+      "evidence": "constraints_report.json#plans[P2]；gantt.md"
+    },
+    {
+      "plan_id": "P3",
+      "verdict": "infeasible(参数窗口空交集)",
+      "theoretically_feasible": false,
+      "doable_now": false,
+      "reason": "temperature_C 要求 [1100,1200] 与允许区间 [600,1050]（设备极限 ∩ 契约域）空交集；照搬文献超高温流程未核对契约域上限。",
+      "blocking": ["parameter_window_conflict"],
+      "relax_hint": "把要求窗口收缩/平移到 [600,1050] 之内，或向契约方申请放宽参数域。",
+      "evidence": "constraints_report.json#plans[P3]；window_report.json#empty_intersections"
+    }
+  ],
+  "risks": [
+    "P2 的可行性依赖 PRESS-01 档期不再被新占用；契约是前瞻情景，执行前需复核档期表版本。",
+    "P2 若 deadline 提前到 2026-02-06 之前将变为'理论可行但现在赶不上'。"
+  ],
+  "confirmations_needed": [
+    "设备可用性：执行前与设备管理员复核 PRESS-01 在 2026-01-31 后无新增占用。",
+    "安全审批：APPR-HT / APPR-XRD 虽为 granted，仍建议执行前确认审批覆盖具体工艺参数区间。",
+    "专家确认：P3 若收缩温度窗口至 ≤1050°C，需专家确认材料体系在该温度下仍可致密化（本裁决不含科学判断）。"
+  ],
+  "sources": [
+    "case.example.json（合成 case）",
+    "contract.example.json（虚构契约：档期/货期/参数域/审批/人员）",
+    "facts.example.json（模型抽取事实，逐条挂 source）",
+    "outputs/constraints_report.json", "outputs/window_report.json",
+    "outputs/timeline_report.json", "outputs/gantt.md"
+  ],
+  "uncertainty": [
+    "契约未给出的设备能力项按无界处理（本例未触发）。",
+    "货期按契约 lead_time_days 静态值计算，未建模物流波动。"
+  ],
+  "change_log": [
+    "step0: 落盘部分 result.json（status=partial，output_contract 键占位）",
+    "step2: constraints 裁决完成，更新 P1/P2/P3 verdict",
+    "step3: 窗口对照与排期完成，补时间线字段",
+    "step4: status=complete"
+  ]
+}

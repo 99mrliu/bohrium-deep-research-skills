@@ -1,0 +1,37 @@
+{
+  "arithmetic_note": "全部金额运算使用 decimal.Decimal，无 float 尾差。",
+  "artifact": "cost_ledger",
+  "currency_note": "按输入数值原样求和；不做币种换算，币种一致性由模型在抽取阶段核实。",
+  "defects": [],
+  "grand_total": "30000",
+  "items": [
+    {
+      "basis": "per_run",
+      "basis_label": "按次消耗",
+      "category": "equipment_time",
+      "category_label": "机时费",
+      "index": 0,
+      "line_total": "30000",
+      "locator": "§1",
+      "name": "高分辨电镜机时（超预算）",
+      "quantity": "100",
+      "runs": 1,
+      "source": "contract_pricing.example.md",
+      "unit": "小时",
+      "unit_price": "300"
+    }
+  ],
+  "notice": "合成示例 / SYNTHETIC EXAMPLE —— booby-trap 负例：总成本 30000 超 case 预算 20000，必须被 time_model 预算门以 exit 3 (over_budget) 捕获",
+  "one_time_total": "0",
+  "per_run_total": "30000",
+  "plan_id": "BADBUDGET",
+  "schema_version": "plan_record/1.0",
+  "status": "ok",
+  "subtotals_by_category": {
+    "人力": "0",
+    "其他": "0",
+    "外送": "0",
+    "机时费": "30000",
+    "耗材": "0"
+  }
+}

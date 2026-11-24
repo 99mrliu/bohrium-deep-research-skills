@@ -1,0 +1,205 @@
+{
+  "case_id": "case-syn-resource-001",
+  "empty_intersections": [
+    {
+      "parameter": "temperature_C",
+      "plan_id": "P3"
+    }
+  ],
+  "matrix": [
+    {
+      "allowed": {
+        "max": 1050,
+        "min": 600
+      },
+      "device_sources": [
+        "FURNACE-01"
+      ],
+      "device_window": {
+        "max": 1150,
+        "min": 20
+      },
+      "domain_window": {
+        "max": 1050,
+        "min": 600
+      },
+      "intersection_with_required": {
+        "max": 1000,
+        "min": 850
+      },
+      "parameter": "temperature_C",
+      "plan_id": "P1",
+      "required": {
+        "max": 1000,
+        "min": 850
+      },
+      "status": "ok"
+    },
+    {
+      "allowed": {
+        "max": 48,
+        "min": 1
+      },
+      "device_sources": [
+        "FURNACE-01"
+      ],
+      "device_window": {
+        "max": 72,
+        "min": 0.5
+      },
+      "domain_window": {
+        "max": 48,
+        "min": 1
+      },
+      "intersection_with_required": {
+        "max": 30,
+        "min": 20
+      },
+      "parameter": "hold_time_h",
+      "plan_id": "P1",
+      "required": {
+        "max": 30,
+        "min": 20
+      },
+      "status": "ok"
+    },
+    {
+      "allowed": {
+        "max": 80,
+        "min": 10
+      },
+      "device_sources": [
+        "XRD-01"
+      ],
+      "device_window": {
+        "max": 90,
+        "min": 5
+      },
+      "domain_window": {
+        "max": 80,
+        "min": 10
+      },
+      "intersection_with_required": {
+        "max": 80,
+        "min": 10
+      },
+      "parameter": "xrd_2theta_deg",
+      "plan_id": "P1",
+      "required": {
+        "max": 80,
+        "min": 10
+      },
+      "status": "ok"
+    },
+    {
+      "allowed": {
+        "max": 800,
+        "min": 600
+      },
+      "device_sources": [
+        "PRESS-01"
+      ],
+      "device_window": {
+        "max": 800,
+        "min": 20
+      },
+      "domain_window": {
+        "max": 1050,
+        "min": 600
+      },
+      "intersection_with_required": {
+        "max": 780,
+        "min": 700
+      },
+      "parameter": "temperature_C",
+      "plan_id": "P2",
+      "required": {
+        "max": 780,
+        "min": 700
+      },
+      "status": "ok"
+    },
+    {
+      "allowed": {
+        "max": 40,
+        "min": 10
+      },
+      "device_sources": [
+        "PRESS-01"
+      ],
+      "device_window": {
+        "max": 50,
+        "min": 0
+      },
+      "domain_window": {
+        "max": 40,
+        "min": 10
+      },
+      "intersection_with_required": {
+        "max": 30,
+        "min": 20
+      },
+      "parameter": "pressure_MPa",
+      "plan_id": "P2",
+      "required": {
+        "max": 30,
+        "min": 20
+      },
+      "status": "ok"
+    },
+    {
+      "allowed": {
+        "max": 80,
+        "min": 10
+      },
+      "device_sources": [
+        "XRD-01"
+      ],
+      "device_window": {
+        "max": 90,
+        "min": 5
+      },
+      "domain_window": {
+        "max": 80,
+        "min": 10
+      },
+      "intersection_with_required": {
+        "max": 80,
+        "min": 10
+      },
+      "parameter": "xrd_2theta_deg",
+      "plan_id": "P2",
+      "required": {
+        "max": 80,
+        "min": 10
+      },
+      "status": "ok"
+    },
+    {
+      "allowed": {
+        "max": 1050,
+        "min": 600
+      },
+      "device_sources": [
+        "FURNACE-01"
+      ],
+      "device_window": {
+        "max": 1150,
+        "min": 20
+      },
+      "domain_window": {
+        "max": 1050,
+        "min": 600
+      },
+      "intersection_with_required": null,
+      "parameter": "temperature_C",
+      "plan_id": "P3",
+      "required": {
+        "max": 1200,
+        "min": 1100
+      },
+      "status": "empty_intersection"
+    }
+  ],
+  "note": "合成示例 / SYNTHETIC EXAMPLE：本报告由虚构输入生成，仅演示接口与裁决逻辑，非正式案例结果或真实实验室/供应商数据。"
+}

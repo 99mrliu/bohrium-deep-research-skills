@@ -1,0 +1,83 @@
+{
+  "all_infeasible": false,
+  "case_id": "case-syn-resource-001",
+  "deadline": "2026-03-31",
+  "note": "合成示例 / SYNTHETIC EXAMPLE：本报告由虚构输入生成，仅演示接口与裁决逻辑，非正式案例结果或真实实验室/供应商数据。",
+  "plans": [
+    {
+      "feasible_after": null,
+      "notes": [
+        "耗材 MAT-AL2O3（氧化铝坩埚）现货，立即可用。",
+        "审批 APPR-HT（高温炉使用安全审批）已获批。",
+        "审批 APPR-XRD（XRD 机时使用审批）已获批。"
+      ],
+      "plan_id": "P1",
+      "start_bound": "2026-01-05",
+      "verdict": "feasible_now",
+      "violations": []
+    },
+    {
+      "feasible_after": "2026-01-31",
+      "notes": [
+        "设备 PRESS-01（阶段 execute）首个 >= 5 天空档自 2026-01-31 起，构成启动约束。",
+        "耗材 MAT-LATP 预计 2026-01-15 到货（货期 10 天），构成启动约束。",
+        "审批 APPR-HT（高温炉使用安全审批）已获批。",
+        "审批 APPR-XRD（XRD 机时使用审批）已获批。"
+      ],
+      "plan_id": "P2",
+      "start_bound": "2026-01-31",
+      "verdict": "feasible_after",
+      "violations": []
+    },
+    {
+      "feasible_after": null,
+      "notes": [
+        "耗材 MAT-AL2O3（氧化铝坩埚）现货，立即可用。",
+        "审批 APPR-HT（高温炉使用安全审批）已获批。"
+      ],
+      "plan_id": "P3",
+      "start_bound": "2026-01-05",
+      "verdict": "infeasible",
+      "violations": [
+        {
+          "blocking": true,
+          "data": {
+            "allowed": {
+              "max": 1050,
+              "min": 600
+            },
+            "device_window": {
+              "max": 1150,
+              "min": 20
+            },
+            "domain_window": {
+              "max": 1050,
+              "min": 600
+            },
+            "empty_intersection": true,
+            "parameter": "temperature_C",
+            "required": {
+              "max": 1200,
+              "min": 1100
+            }
+          },
+          "detail": "参数 temperature_C 空交集：方案要求 [1100, 1200] ∩ (设备极限 [20, 1150] ∩ 契约域 [600, 1050] = 允许 [600, 1050]) = ∅。",
+          "type": "parameter_window_conflict"
+        }
+      ]
+    }
+  ],
+  "reference_date": "2026-01-05",
+  "relax_hints": {},
+  "summary": {
+    "feasible_after": [
+      "P2"
+    ],
+    "feasible_now": [
+      "P1"
+    ],
+    "infeasible": [
+      "P3"
+    ]
+  }
+}

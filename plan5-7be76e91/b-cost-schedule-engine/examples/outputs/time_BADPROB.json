@@ -1,0 +1,89 @@
+{
+  "artifact": "time_model",
+  "defects": [
+    "time_items[1] rework_probability 必须在 [0,1]: 1.4"
+  ],
+  "elapsed_days": "7",
+  "elapsed_hours": "56",
+  "gate_status": "pass",
+  "gates": {
+    "budget": {
+      "limit": "20000",
+      "status": "pass",
+      "total_cost": "1500"
+    },
+    "deadline": {
+      "elapsed_days": "7",
+      "limit_days": "30",
+      "status": "pass"
+    }
+  },
+  "items": [
+    {
+      "counts_toward": "labor+elapsed",
+      "duration": "1",
+      "duration_hours": "8",
+      "expected_rework_hours": null,
+      "index": 0,
+      "locator": null,
+      "phase": "sample_prep",
+      "phase_label": "样品准备",
+      "rework_cost": null,
+      "rework_probability": null,
+      "source": null,
+      "unit": "days"
+    },
+    {
+      "counts_toward": "labor+elapsed",
+      "duration": "5",
+      "duration_hours": "40",
+      "expected_rework_hours": null,
+      "index": 1,
+      "locator": null,
+      "phase": "execution",
+      "phase_label": "实验执行",
+      "rework_cost": "8",
+      "rework_probability": null,
+      "source": null,
+      "unit": "days"
+    },
+    {
+      "counts_toward": "labor+elapsed",
+      "duration": "1",
+      "duration_hours": "8",
+      "expected_rework_hours": null,
+      "index": 2,
+      "locator": null,
+      "phase": "analysis",
+      "phase_label": "数据分析",
+      "rework_cost": null,
+      "rework_probability": null,
+      "source": null,
+      "unit": "days"
+    }
+  ],
+  "labor_hours": "56",
+  "notice": "合成示例 / SYNTHETIC EXAMPLE —— booby-trap 负例：rework_probability=1.4 越界 [0,1]，必须被 time_model 以 exit 3 捕获",
+  "phase_labor_hours": {
+    "实验执行": "40",
+    "数据分析": "8",
+    "样品准备": "8",
+    "表征排队": "0",
+    "设备排期等待": "0",
+    "返工缓冲": "0"
+  },
+  "phase_totals_hours": {
+    "实验执行": "40",
+    "数据分析": "8",
+    "样品准备": "8",
+    "表征排队": "0",
+    "设备排期等待": "0",
+    "返工缓冲": "0"
+  },
+  "plan_id": "BADPROB",
+  "schema_version": "plan_record/1.0",
+  "status": "defects",
+  "total_cost": "1500",
+  "workday_hours": "8",
+  "workday_hours_source": "plan_record.workday_hours"
+}

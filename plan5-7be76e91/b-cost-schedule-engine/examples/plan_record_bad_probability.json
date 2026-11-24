@@ -1,0 +1,30 @@
+{
+  "_notice": "合成示例 / SYNTHETIC EXAMPLE —— booby-trap 负例：rework_probability=1.4 越界 [0,1]，必须被 time_model 以 exit 3 捕获",
+  "plan_id": "BADPROB",
+  "plan_label": "坏例：非法返工概率",
+  "workday_hours": 8,
+  "cost_items": [
+    {
+      "name": "标准电子显微镜机时",
+      "category": "equipment_time",
+      "basis": "per_run",
+      "quantity": 10,
+      "unit": "小时",
+      "unit_price": 150,
+      "runs": 1,
+      "source": "contract_pricing.example.md",
+      "locator": "§1.1"
+    }
+  ],
+  "time_items": [
+    {"phase": "sample_prep", "duration": 1, "unit": "days"},
+    {
+      "phase": "execution",
+      "duration": 5,
+      "unit": "days",
+      "rework_probability": 1.4,
+      "rework_cost": 8
+    },
+    {"phase": "analysis", "duration": 1, "unit": "days"}
+  ]
+}

@@ -1,0 +1,27 @@
+{
+  "critical_high_risks": [
+    "P3-R1"
+  ],
+  "cycle": null,
+  "defects": [
+    "P3-R1(critical): 关键失败场景无回退路径（fallback_ref 为空）"
+  ],
+  "edges": {},
+  "fallback_actions": [
+    "P3-F1"
+  ],
+  "note": "合成示例 / SYNTHETIC EXAMPLE：本报告由虚构输入生成，仅演示接口与流程，非正式案例结果。",
+  "paths": [
+    {
+      "chain_complete": false,
+      "fallback_chain": [],
+      "grade": "critical",
+      "risk_id": "P3-R1",
+      "title": "高真空热蒸发腔体含铯前驱体泄漏的安全风险",
+      "trigger_condition": "蒸发源温度超过 550 C 且腔体密封圈使用次数超过 20 次（情景给定设备已使用 18 次）"
+    }
+  ],
+  "plan_id": "P3",
+  "tool": "fallback_graph.py",
+  "verdict": "infeasible_without_change"
+}

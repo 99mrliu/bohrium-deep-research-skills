@@ -1,0 +1,63 @@
+{
+  "synthetic_notice": "合成示例 / SYNTHETIC EXAMPLE —— 虚构的组织方前瞻性资源/档期/货期契约，非真实实验室或供应商报价。",
+  "contract_id": "contract-syn-001",
+  "case_id": "case-syn-resource-001",
+  "valid_from": "2026-01-05",
+  "equipment_calendar": [
+    {
+      "id": "FURNACE-01",
+      "name": "高温箱式炉",
+      "available": true,
+      "capabilities": {
+        "temperature_C": {"min": 20, "max": 1150},
+        "hold_time_h": {"min": 0.5, "max": 72}
+      },
+      "booked_windows": [
+        {"start": "2026-02-02", "end": "2026-02-09", "note": "计划维保（半开区间，2-02 至 2-08 占用）"}
+      ]
+    },
+    {
+      "id": "PRESS-01",
+      "name": "热压烧结炉",
+      "available": true,
+      "capabilities": {
+        "temperature_C": {"min": 20, "max": 800},
+        "pressure_MPa": {"min": 0, "max": 50}
+      },
+      "booked_windows": [
+        {"start": "2026-01-05", "end": "2026-01-31", "note": "已被甲组课题占用（1-05 至 1-30 占用，1-31 起空闲）"}
+      ]
+    },
+    {
+      "id": "XRD-01",
+      "name": "X 射线衍射仪",
+      "available": true,
+      "capabilities": {
+        "xrd_2theta_deg": {"min": 5, "max": 90}
+      },
+      "booked_windows": [
+        {"start": "2026-01-12", "end": "2026-01-16", "note": "计量校准（1-12 至 1-15 占用）"}
+      ]
+    }
+  ],
+  "consumable_table": [
+    {"id": "MAT-AL2O3", "name": "氧化铝坩埚", "in_stock": true, "lead_time_days": 7, "unit_cost_cny": 120, "orderable": true},
+    {"id": "MAT-LATP", "name": "LATP 固态电解质粉体", "in_stock": false, "lead_time_days": 10, "unit_cost_cny": 800, "orderable": true},
+    {"id": "MAT-AU", "name": "金靶材", "in_stock": false, "lead_time_days": 120, "unit_cost_cny": 5000, "orderable": true}
+  ],
+  "parameter_domain": {
+    "temperature_C": {"min": 600, "max": 1050},
+    "hold_time_h": {"min": 1, "max": 48},
+    "pressure_MPa": {"min": 10, "max": 40},
+    "xrd_2theta_deg": {"min": 10, "max": 80}
+  },
+  "approvals": [
+    {"id": "APPR-HT", "name": "高温炉使用安全审批", "status": "granted"},
+    {"id": "APPR-XRD", "name": "XRD 机时使用审批", "status": "granted"}
+  ],
+  "personnel": [
+    {"id": "TECH-A", "name": "技师甲",
+     "skills": ["furnace_operation", "hot_press_operation", "xrd_operation"],
+     "available_windows": [{"start": "2026-01-05", "end": "2026-03-31"}]}
+  ]
+}

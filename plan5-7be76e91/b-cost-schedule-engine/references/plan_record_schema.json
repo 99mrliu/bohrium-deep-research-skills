@@ -1,0 +1,94 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "plan_record schema (plan_record/1.0) — 每方案一份，由模型从真实材料抽取填写",
+  "type": "object",
+  "required": ["plan_id", "cost_items", "time_items"],
+  "additionalProperties": true,
+  "properties": {
+    "_notice": {
+      "type": "string",
+      "description": "可选。若为合成示例须填『合成示例 / SYNTHETIC EXAMPLE』，脚本会透传到产物。"
+    },
+    "plan_id": {
+      "type": "string",
+      "minLength": 1,
+      "description": "方案标识，如 P1。同一比较中不得重复。"
+    },
+    "plan_label": {
+      "type": "string",
+      "description": "方案一句话说明。"
+    },
+    "workday_hours": {
+      "type": ["number", "string"],
+      "exclusiveMinimum": 0,
+      "description": "1 day = 多少小时。plan 顶层或 case.json 必须有一处给定；都缺则 time_model exit 2。"
+    },
+    "cost_items": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["name", "category", "basis", "quantity", "unit", "unit_price"],
+        "additionalProperties": true,
+        "properties": {
+          "name": {"type": "string", "minLength": 1},
+          "category": {
+            "enum": ["equipment_time", "consumable", "labor", "outsourcing", "other"],
+            "description": "equipment_time=机时费 consumable=耗材 labor=人力 outsourcing=外送 other=其他"
+          },
+          "basis": {
+            "enum": ["one_time", "per_run"],
+            "description": "one_time=一次性投入；per_run=按次消耗（line_total 乘 runs）"
+          },
+          "quantity": {
+            "type": ["number", "string"],
+            "minimum": 0,
+            "description": "非负数字。缺失进缺陷清单 exit 3，绝不静默当 0。"
+          },
+          "unit": {"type": "string", "minLength": 1, "description": "计量单位，如 小时/工日/套/批次"},
+          "unit_price": {
+            "type": ["number", "string"],
+            "minimum": 0,
+            "description": "非负数字。缺失进缺陷清单 exit 3，绝不静默当 0。"
+          },
+          "runs": {
+            "type": "integer",
+            "minimum": 1,
+            "default": 1,
+            "description": "重复次数；仅 per_run 参与折算。"
+          },
+          "source": {"type": "string", "description": "来源文件名（真实材料）"},
+          "locator": {"type": "string", "description": "来源定位：页码/章节/条款号"}
+        }
+      }
+    },
+    "time_items": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["phase", "duration", "unit"],
+        "additionalProperties": true,
+        "properties": {
+          "phase": {
+            "enum": ["sample_prep", "booking_wait", "execution", "characterization_queue", "analysis", "rework_buffer"],
+            "description": "booking_wait 与 characterization_queue 只计自然周期，不计人力工时"
+          },
+          "duration": {"type": ["number", "string"], "minimum": 0},
+          "unit": {"enum": ["hours", "days"]},
+          "rework_probability": {
+            "type": ["number", "string"],
+            "minimum": 0,
+            "maximum": 1,
+            "description": "返工概率，[0,1]。越界 exit 3。给了它就必须给 rework_cost。"
+          },
+          "rework_cost": {
+            "type": ["number", "string"],
+            "minimum": 0,
+            "description": "单次返工代价，单位与该条目 unit 相同。expected_rework = probability x cost。"
+          },
+          "source": {"type": "string"},
+          "locator": {"type": "string"}
+        }
+      }
+    }
+  }
+}

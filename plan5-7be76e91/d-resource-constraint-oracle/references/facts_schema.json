@@ -1,0 +1,86 @@
+{
+  "schema_version": "1.0",
+  "description": "facts JSON 结构约定：模型从 /input 的契约、候选方案、科研材料中抽取资源供给与需求事实并挂来源（source 字段），脚本只做确定性校验。所有日期为 ISO 字符串；所有日期区间为半开区间 [start, end)；数值窗口为 {min, max}，缺省端表示无界。",
+  "top_level": {
+    "meta": {
+      "case_id": "string，与 case.json 一致",
+      "facts_version": "string，模型自定义版本标记",
+      "extracted_by": "string，抽取者说明",
+      "date_semantics": "string，固定写明半开区间约定"
+    },
+    "resources_available": {
+      "equipment": [
+        {
+          "id": "string，设备唯一标识",
+          "name": "string",
+          "available": "bool，false 表示停用/大修等不可用",
+          "capabilities": {"<参数名>": {"min": "number|null", "max": "number|null"}},
+          "booked_windows": [{"start": "YYYY-MM-DD", "end": "YYYY-MM-DD", "note": "string 可选"}],
+          "source": "string，事实来源（契约文件#位置）"
+        }
+      ],
+      "consumables": [
+        {
+          "id": "string",
+          "name": "string",
+          "in_stock": "bool",
+          "lead_time_days": "int，无现货时从基准日起算的到货天数",
+          "unit_cost": "number 可选，单价（与 case.budget_cny 同币种）",
+          "orderable": "bool，false 且 in_stock=false → blocking",
+          "source": "string"
+        }
+      ],
+      "approvals": [
+        {
+          "id": "string",
+          "name": "string",
+          "status": "granted | pending | rejected | not_started",
+          "expected_date": "YYYY-MM-DD，status=pending 时建议给出",
+          "source": "string"
+        }
+      ],
+      "personnel": [
+        {
+          "id": "string",
+          "name": "string",
+          "skills": ["string，技能标签，须与方案 skill_needs 用词一致"],
+          "available_windows": [{"start": "YYYY-MM-DD", "end": "YYYY-MM-DD"}],
+          "source": "string"
+        }
+      ]
+    },
+    "plan_requirements": [
+      {
+        "plan_id": "string，与方案版本标识一致",
+        "title": "string 可选",
+        "equipment_needs": [
+          {
+            "equipment_id": "string",
+            "stage": "execute | characterize | 其他（排期按 procure→prepare→execute→characterize 排序）",
+            "duration_days": "int，需要的连续占用天数",
+            "earliest_use": "YYYY-MM-DD，需求窗口左端（含）",
+            "latest_use": "YYYY-MM-DD，需求窗口右端（不含）；timeline.py 中可省略，省略则以基准日+365 天为界",
+            "required_capabilities": {"<参数名>": {"min": "number", "max": "number"}}
+          }
+        ],
+        "consumable_needs": [
+          {"consumable_id": "string", "quantity": "number，默认 1", "needed_by": "YYYY-MM-DD，到货截止（含当日）"}
+        ],
+        "parameter_windows": [
+          {"parameter": "string，参数名", "required": {"min": "number", "max": "number"}}
+        ],
+        "skill_needs": ["string"],
+        "approval_needs": ["string，审批 id"],
+        "prep_days": "int，采购齐备后的准备天数，默认 0",
+        "source": "string，方案来源（方案文件/页码）"
+      }
+    ]
+  },
+  "case_json_fields_used": {
+    "case_id": "string",
+    "reference_date": "YYYY-MM-DD，排期基准日（评测中取 case 给定值，不得用系统时钟）",
+    "deadline": "YYYY-MM-DD 可选，超过则 timeline 标记 past_deadline",
+    "budget_cny": "number 可选，方案耗材总价超过则 blocking budget_exceeded",
+    "contract_domain": {"<参数名>": {"min": "number", "max": "number"}}
+  }
+}

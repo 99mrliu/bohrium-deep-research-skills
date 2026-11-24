@@ -1,0 +1,30 @@
+{
+  "_notice": "合成示例 / SYNTHETIC EXAMPLE —— booby-trap 负例：一个条目缺 unit_price，必须被 cost_ledger 以 exit 3 捕获",
+  "plan_id": "BADPRICE",
+  "plan_label": "坏例：缺单价（不允许静默当 0）",
+  "workday_hours": 8,
+  "cost_items": [
+    {
+      "name": "标准电子显微镜机时",
+      "category": "equipment_time",
+      "basis": "per_run",
+      "quantity": 20,
+      "unit": "小时",
+      "unit_price": 150,
+      "runs": 1
+    },
+    {
+      "name": "微量滤膜（缺单价陷阱）",
+      "category": "consumable",
+      "basis": "per_run",
+      "quantity": 1,
+      "unit": "盒",
+      "runs": 1,
+      "source": "contract_pricing.example.md",
+      "locator": "§3.1"
+    }
+  ],
+  "time_items": [
+    {"phase": "execution", "duration": 5, "unit": "days"}
+  ]
+}

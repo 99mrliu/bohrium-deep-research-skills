@@ -1,0 +1,24 @@
+{
+  "_comment": "合成示例 / SYNTHETIC EXAMPLE，非正式案例结果。本文件是教学用虚构案例，不对应真实评测案例。",
+  "case_id": "SYNTH-0001",
+  "title": "合成示例：虚构细胞系 XJ-7 培养方案比较",
+  "scenario": "组织方构造的规划情景：在预算与工期内比较两个 XJ-7 细胞培养候选方案并给出选择。所有材料均为虚构。",
+  "output_contract": {
+    "selected_plan": "最终选择的 plan_id 及一句话理由",
+    "comparison_table": "逐方案七类字段对照表",
+    "evidence_basis": "每个关键数字的来源锚点（file+locator+quote）",
+    "risks": "各方案依据与风险",
+    "confirmations": "safety/ethics/equipment_availability/expert 四类确认项状态",
+    "uncertainty": "不确定性与无法判断项",
+    "status": "complete 或 partial（partial 必须写明限制）"
+  },
+  "parameter_domains": {
+    "temperature_c": {"min": 20, "max": 39},
+    "fbs_percent": {"min": 0, "max": 20},
+    "medium_type": ["DMEM", "RPMI-1640"]
+  },
+  "hard_constraints": {
+    "budget_cny": 12000,
+    "deadline_days": 30
+  }
+}

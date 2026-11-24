@@ -1,0 +1,17 @@
+{
+  "case_id": "SYNTH-EXP-2026-001",
+  "title": "合成示例：重组蛋白表达实验方案比较与选择",
+  "synthetic": true,
+  "notice": "合成示例 / SYNTHETIC EXAMPLE：本文件为 decision-forge-qc 的演示输入，全部数字与契约为虚构情景，不是真实案例结果，不得冒充正式评测产物。",
+  "task_summary": "在 4 周硬期限内完成目标蛋白的小试表达验证。三个候选方案：P_A 昆虫细胞-杆状病毒系统（可靠性高、成本高）、P_B 大肠杆菌快速表达（成本低、周期长于此情景无优势）、P_C 哺乳动物细胞瞬时表达（速度快但关键设备档期冲突）。权重：reliability 0.4 / cost 0.2 / duration 0.2 / safety 0.2。",
+  "hard_constraints": [
+    {"id": "HC-TIME-1", "rule": "hard_threshold_timeline", "text": "全部实验必须在 4 周硬期限内完成"}
+  ],
+  "output_contract": {
+    "selected_plan": "最终选择的方案 id 及一句话理由",
+    "decision_log": "淘汰/选择决策日志：谁被淘汰、依据哪条规则哪条证据",
+    "confidence_level": "结论置信度：final 或 provisional，附降级理由",
+    "sensitivity_summary": "权重扰动敏感性结论：verdict 与翻转点",
+    "key_risks": "关键风险与确认项（安全/伦理/设备可用性/专家）状态"
+  }
+}

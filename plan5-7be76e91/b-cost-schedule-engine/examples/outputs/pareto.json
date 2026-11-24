@@ -1,0 +1,54 @@
+{
+  "artifact": "pareto",
+  "gate_failed": [],
+  "notice": "合成示例 / SYNTHETIC EXAMPLE —— P1 便宜但慢；条目为虚构演示值",
+  "objectives": {
+    "elapsed_days": "min",
+    "total_cost": "min"
+  },
+  "pareto_frontier_all": [
+    "P1",
+    "P2"
+  ],
+  "plans": [
+    {
+      "dominated": false,
+      "dominated_by": [],
+      "elapsed_days": "27",
+      "gate_status": "pass",
+      "ledger_file": "ledger_P1.json",
+      "plan_id": "P1",
+      "rubric_score": "0.7438202702702702702702702703",
+      "time_file": "time_P1.json",
+      "total_cost": "8480.9"
+    },
+    {
+      "dominated": false,
+      "dominated_by": [],
+      "elapsed_days": "9.2",
+      "gate_status": "pass",
+      "ledger_file": "ledger_P2.json",
+      "plan_id": "P2",
+      "rubric_score": "0.7362962962962962962962962963",
+      "time_file": "time_P2.json",
+      "total_cost": "14800"
+    },
+    {
+      "dominated": true,
+      "dominated_by": [
+        "P1"
+      ],
+      "elapsed_days": "28",
+      "gate_status": "pass",
+      "ledger_file": "ledger_P3.json",
+      "plan_id": "P3",
+      "rubric_score": null,
+      "time_file": "time_P3.json",
+      "total_cost": "14100"
+    }
+  ],
+  "recommendation": "P2",
+  "rule_explanation": "字典序：先 gate pass，再 Pareto 前沿，再按 case_rubric 决胜。",
+  "rule_source": "case_rubric",
+  "status_note": "ok"
+}

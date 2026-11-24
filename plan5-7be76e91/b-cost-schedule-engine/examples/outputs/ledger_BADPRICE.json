@@ -1,0 +1,54 @@
+{
+  "arithmetic_note": "全部金额运算使用 decimal.Decimal，无 float 尾差。",
+  "artifact": "cost_ledger",
+  "currency_note": "按输入数值原样求和；不做币种换算，币种一致性由模型在抽取阶段核实。",
+  "defects": [
+    "条目[微量滤膜（缺单价陷阱）] 缺 unit_price（必填，不允许静默当 0）"
+  ],
+  "grand_total": "3000",
+  "items": [
+    {
+      "basis": "per_run",
+      "basis_label": "按次消耗",
+      "category": "equipment_time",
+      "category_label": "机时费",
+      "index": 0,
+      "line_total": "3000",
+      "locator": null,
+      "name": "标准电子显微镜机时",
+      "quantity": "20",
+      "runs": 1,
+      "source": null,
+      "unit": "小时",
+      "unit_price": "150"
+    },
+    {
+      "basis": "per_run",
+      "basis_label": "按次消耗",
+      "category": "consumable",
+      "category_label": "耗材",
+      "index": 1,
+      "line_total": null,
+      "locator": "§3.1",
+      "name": "微量滤膜（缺单价陷阱）",
+      "quantity": "1",
+      "runs": 1,
+      "source": "contract_pricing.example.md",
+      "unit": "盒",
+      "unit_price": null
+    }
+  ],
+  "notice": "合成示例 / SYNTHETIC EXAMPLE —— booby-trap 负例：一个条目缺 unit_price，必须被 cost_ledger 以 exit 3 捕获",
+  "one_time_total": "0",
+  "per_run_total": "3000",
+  "plan_id": "BADPRICE",
+  "schema_version": "plan_record/1.0",
+  "status": "defects",
+  "subtotals_by_category": {
+    "人力": "0",
+    "其他": "0",
+    "外送": "0",
+    "机时费": "3000",
+    "耗材": "0"
+  }
+}

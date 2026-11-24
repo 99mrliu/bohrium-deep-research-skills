@@ -1,0 +1,15 @@
+{
+  "_comment": "合成示例 / SYNTHETIC EXAMPLE，非正式案例结果。虚构候选方案 A。",
+  "plan_id": "PLAN-A",
+  "title": "标准 10% FBS 培养（虚构）",
+  "parameters": {
+    "temperature_c": {"value": 37, "unit": "°C"},
+    "fbs_percent": {"value": 10, "unit": "%"},
+    "medium_type": {"value": "DMEM", "unit": null}
+  },
+  "totals": {
+    "total_cost_cny": 9700,
+    "duration_days": 21
+  },
+  "notes": "按虚构论文片段建议维持 10% FBS；设备用 CO2 培养箱 2 号（虚构）。"
+}

@@ -1,0 +1,25 @@
+{
+  "case_id": "SYNTH-EXP-2026-001",
+  "defect_count": 4,
+  "defects": [
+    {
+      "code": "FIELD_GROUP_EMPTY",
+      "detail": "方案 P_B 的字段组 controls 缺失或为空"
+    },
+    {
+      "code": "ELIMINATION_EVIDENCE_MISSING",
+      "detail": "eliminations[0]（方案 P_C）缺少 evidence_refs"
+    },
+    {
+      "code": "SELECTION_CITES_PENDING",
+      "detail": "selection.rationale 引用了未确认（pending）确认项 CONF-EQP-01；未确认项不得写成已确认事实"
+    },
+    {
+      "code": "CONTRACT_KEY_MISSING",
+      "detail": "result_skeleton 缺少 output_contract 键: 'key_risks'"
+    }
+  ],
+  "note": "合成示例 / SYNTHETIC EXAMPLE：本报告由虚构输入生成，仅演示接口与流程，非正式案例结果。",
+  "passed": false,
+  "tool": "decision-forge-qc/quality_gate.py"
+}

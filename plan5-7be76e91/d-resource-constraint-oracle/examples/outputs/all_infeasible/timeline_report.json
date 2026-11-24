@@ -1,0 +1,29 @@
+{
+  "case_id": "case-syn-resource-001",
+  "deadline": "2026-03-31",
+  "n_scheduled": 0,
+  "n_unschedulable": 3,
+  "note": "合成示例 / SYNTHETIC EXAMPLE：本报告由虚构输入生成，仅演示接口与裁决逻辑，非正式案例结果或真实实验室/供应商数据。",
+  "plans": [
+    {
+      "plan_id": "Q1",
+      "reason": "constraints.py 裁决 infeasible，跳过排期。",
+      "schedulable": false,
+      "status": "skipped_infeasible"
+    },
+    {
+      "plan_id": "Q2",
+      "reason": "constraints.py 裁决 infeasible，跳过排期。",
+      "schedulable": false,
+      "status": "skipped_infeasible"
+    },
+    {
+      "plan_id": "Q3",
+      "reason": "constraints.py 裁决 infeasible，跳过排期。",
+      "schedulable": false,
+      "status": "skipped_infeasible"
+    }
+  ],
+  "reference_date": "2026-01-05",
+  "slip_cap_days": 365
+}

@@ -1,0 +1,79 @@
+{
+  "_notice": "合成示例 / SYNTHETIC EXAMPLE —— P1 便宜但慢；条目为虚构演示值",
+  "plan_id": "P1",
+  "plan_label": "标准电镜路线（便宜但慢）",
+  "cost_items": [
+    {
+      "name": "标准电子显微镜机时",
+      "category": "equipment_time",
+      "basis": "per_run",
+      "quantity": 20,
+      "unit": "小时",
+      "unit_price": 150,
+      "runs": 1,
+      "source": "contract_pricing.example.md",
+      "locator": "§1.1"
+    },
+    {
+      "name": "微量滤膜",
+      "category": "consumable",
+      "basis": "per_run",
+      "quantity": 7,
+      "unit": "盒",
+      "unit_price": 0.1,
+      "runs": 1,
+      "source": "contract_pricing.example.md",
+      "locator": "§3.1"
+    },
+    {
+      "name": "标准样品",
+      "category": "consumable",
+      "basis": "per_run",
+      "quantity": 1,
+      "unit": "瓶",
+      "unit_price": 0.2,
+      "runs": 1,
+      "source": "contract_pricing.example.md",
+      "locator": "§3.2"
+    },
+    {
+      "name": "反应试剂套装",
+      "category": "consumable",
+      "basis": "per_run",
+      "quantity": 4,
+      "unit": "套",
+      "unit_price": 120,
+      "runs": 1,
+      "source": "contract_pricing.example.md",
+      "locator": "§3.3"
+    },
+    {
+      "name": "实验员工时",
+      "category": "labor",
+      "basis": "per_run",
+      "quantity": 10,
+      "unit": "工日",
+      "unit_price": 400,
+      "runs": 1,
+      "source": "contract_pricing.example.md",
+      "locator": "§4.1"
+    },
+    {
+      "name": "设备改装（一次性）",
+      "category": "other",
+      "basis": "one_time",
+      "quantity": 1,
+      "unit": "项",
+      "unit_price": 1000,
+      "source": "contract_pricing.example.md",
+      "locator": "§5.1"
+    }
+  ],
+  "time_items": [
+    {"phase": "sample_prep", "duration": 2, "unit": "days", "source": "contract_pricing.example.md", "locator": "§2"},
+    {"phase": "booking_wait", "duration": 10, "unit": "days", "source": "contract_pricing.example.md", "locator": "§2.1"},
+    {"phase": "execution", "duration": 5, "unit": "days"},
+    {"phase": "characterization_queue", "duration": 8, "unit": "days"},
+    {"phase": "analysis", "duration": 2, "unit": "days"}
+  ]
+}

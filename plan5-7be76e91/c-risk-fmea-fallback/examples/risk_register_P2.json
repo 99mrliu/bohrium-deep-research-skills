@@ -1,0 +1,71 @@
+{
+  "disclaimer": "合成示例 / SYNTHETIC EXAMPLE：虚构方案 P2（高 RPN 但有缓解、有回退的正例；含一处概率覆盖声明演示）。",
+  "plan_id": "P2",
+  "risks": [
+    {
+      "risk_id": "P2-R1",
+      "title": "刮涂放大后大面积膜厚不均",
+      "trigger_condition": "刮刀间隙 >80 um 且走刀速度 >20 mm/s 时，10x10 cm 面内膜厚偏差超过 +/-5%",
+      "consequence_magnitude": "均匀性不达标，主结论需降级表述，返工延误 7 天，增支 9000 CNY",
+      "severity": 4,
+      "likelihood": 4,
+      "detectability": 3,
+      "mitigation": "先以 5x5 cm 小样标定间隙-速度窗口，再上全尺寸；过程内每 10 cm 测厚一次",
+      "mitigation_cost_cny": 3500,
+      "mitigation_time_days": 3,
+      "fallback_ref": "P2-F1",
+      "consequence_cost_cny": 9000,
+      "consequence_time_days": 7,
+      "evidence_source": "severity_anchors.md 数据质量维度 S4；虚构论文 [Synth-2023-B] 图 6 放大效应"
+    },
+    {
+      "risk_id": "P2-R2",
+      "title": "干燥气流不稳定产生针孔",
+      "trigger_condition": "风刀流量波动超过设定值 +/-10% 且基底温度低于 60 C",
+      "consequence_magnitude": "针孔密度超标，2 批次报废，增支 4000 CNY，延误 4 天",
+      "severity": 3,
+      "likelihood": 4,
+      "likelihood_prob_override": 0.5,
+      "detectability": 5,
+      "mitigation": "风刀出口加装稳流板，流量纳入过程记录；覆盖声明：情景给定设备波动率介于 L3 与 L4 之间，经记录取 P=0.5",
+      "mitigation_cost_cny": 1200,
+      "mitigation_time_days": 1,
+      "fallback_ref": "P2-F2",
+      "consequence_cost_cny": 4000,
+      "consequence_time_days": 4,
+      "evidence_source": "severity_anchors.md 进度维度 S3；likelihood 覆盖见 mitigation 内声明"
+    },
+    {
+      "risk_id": "P2-R3",
+      "title": "墨水批次间粘度差异",
+      "trigger_condition": "新到墨水批次粘度与标定值偏差超过 8%",
+      "consequence_magnitude": "需重新标定工艺，延误 1 天，增支 800 CNY",
+      "severity": 2,
+      "likelihood": 2,
+      "detectability": 3,
+      "mitigation": "每批次入库测粘度，偏差 >5% 即触发标定流程",
+      "mitigation_cost_cny": 200,
+      "mitigation_time_days": 0,
+      "fallback_ref": null,
+      "consequence_cost_cny": 800,
+      "consequence_time_days": 1,
+      "evidence_source": "severity_anchors.md 进度维度 S2；情景契约 SUP-02 批次条款（前瞻性给定）"
+    }
+  ],
+  "fallback_actions": [
+    {
+      "action_id": "P2-F1",
+      "description": "退回旋涂法完成关键对照样品，同时保留刮涂数据作工艺窗口分析（改变工艺路线，需 PI 确认）",
+      "adds_cost": 6000,
+      "adds_time": 5,
+      "requires_expert_confirm": true
+    },
+    {
+      "action_id": "P2-F2",
+      "description": "切换情景内备用风刀（EQ-11）并降低走刀速度 30% 重试",
+      "adds_cost": 1500,
+      "adds_time": 2,
+      "requires_expert_confirm": false
+    }
+  ]
+}

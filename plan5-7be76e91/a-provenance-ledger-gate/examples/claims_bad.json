@@ -1,0 +1,64 @@
+{
+  "_comment": "合成示例 / SYNTHETIC EXAMPLE，非正式案例结果。负例（booby-trap）：第2条 conflict（quote 说 10% FBS 而 value 写 12）、第3条 unsupported（quote 在来源中不存在）；claim_audit 应 exit 3 且缺陷清单精确命中这 2 条。另有 1 条 inferred（PLAN-B temperature_c=41，留给 domain_check 判域外）与 1 条 missing，仅记录不判负。",
+  "claims": [
+    {
+      "plan_id": "PLAN-A",
+      "field_group": "resources",
+      "field": "fbs_unit_price_cny",
+      "value": 850,
+      "unit": "CNY/500mL",
+      "status": "given",
+      "source": {
+        "file": "price_contract.txt",
+        "locator": "条目 1",
+        "quote": "单价 850 CNY/500 mL"
+      }
+    },
+    {
+      "plan_id": "PLAN-A",
+      "field_group": "parameters",
+      "field": "fbs_percent",
+      "value": 12,
+      "unit": "%",
+      "status": "given",
+      "source": {
+        "file": "paper_excerpt.txt",
+        "locator": "第2段（结果）",
+        "quote": "含 10% FBS 的 DMEM 中培养"
+      }
+    },
+    {
+      "plan_id": "PLAN-B",
+      "field_group": "interpretation_criteria",
+      "field": "doubling_time_hours",
+      "value": 18,
+      "unit": "h",
+      "status": "given",
+      "source": {
+        "file": "paper_excerpt.txt",
+        "locator": "第2段（结果）",
+        "quote": "倍增时间约 18 小时"
+      }
+    },
+    {
+      "plan_id": "PLAN-B",
+      "field_group": "parameters",
+      "field": "temperature_c",
+      "value": 41,
+      "unit": "°C",
+      "status": "inferred",
+      "source": null,
+      "note": "草案作者声称值，无来源锚点；该值超出 mini-case.json 参数域（20..39），应由 domain_check 判违例。"
+    },
+    {
+      "plan_id": "PLAN-A",
+      "field_group": "assumptions",
+      "field": "ethics_approval",
+      "value": null,
+      "unit": null,
+      "status": "missing",
+      "source": null,
+      "note": "方案未说明伦理审批状态，记录为缺口，进入 result.json 的 confirmations.ethics=pending。"
+    }
+  ]
+}

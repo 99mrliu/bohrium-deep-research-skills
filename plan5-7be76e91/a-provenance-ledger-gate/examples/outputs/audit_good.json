@@ -1,0 +1,127 @@
+{
+  "claims_file": "examples/claims_good.json",
+  "note": "合成示例 / SYNTHETIC EXAMPLE，非正式案例结果",
+  "registry_file": "examples/outputs/registry.json",
+  "results": [
+    {
+      "char_offset": 185,
+      "claim_index": 0,
+      "detail": "quote 逐字命中 paper_excerpt.txt（locator=第1段（方法）, offset=185）",
+      "field": "temperature_c",
+      "field_group": "parameters",
+      "plan_id": "PLAN-A",
+      "status": "given",
+      "unit": "°C",
+      "value": 37,
+      "verdict": "supported"
+    },
+    {
+      "char_offset": 208,
+      "claim_index": 1,
+      "detail": "quote 逐字命中 paper_excerpt.txt（locator=第1段（方法）, offset=208）",
+      "field": "fbs_percent",
+      "field_group": "parameters",
+      "plan_id": "PLAN-A",
+      "status": "given",
+      "unit": "%",
+      "value": 10,
+      "verdict": "supported"
+    },
+    {
+      "char_offset": 208,
+      "claim_index": 2,
+      "detail": "quote 逐字命中 paper_excerpt.txt（locator=第1段（方法）, offset=208）",
+      "field": "medium_type",
+      "field_group": "parameters",
+      "plan_id": "PLAN-A",
+      "status": "given",
+      "unit": null,
+      "value": "DMEM",
+      "verdict": "supported"
+    },
+    {
+      "char_offset": 288,
+      "claim_index": 3,
+      "detail": "quote 逐字命中 paper_excerpt.txt（locator=第2段（结果）, offset=288）",
+      "field": "doubling_time_hours",
+      "field_group": "interpretation_criteria",
+      "plan_id": "PLAN-A",
+      "status": "given",
+      "unit": "h",
+      "value": 24,
+      "verdict": "supported"
+    },
+    {
+      "char_offset": 310,
+      "claim_index": 4,
+      "detail": "quote 逐字命中 paper_excerpt.txt（locator=第2段（结果）, offset=310）",
+      "field": "viability_percent",
+      "field_group": "interpretation_criteria",
+      "plan_id": "PLAN-A",
+      "status": "given",
+      "unit": "%",
+      "value": 95,
+      "verdict": "supported"
+    },
+    {
+      "char_offset": 199,
+      "claim_index": 5,
+      "detail": "quote 逐字命中 price_contract.txt（locator=条目 1, offset=199）",
+      "field": "fbs_unit_price_cny",
+      "field_group": "resources",
+      "plan_id": "PLAN-A",
+      "status": "given",
+      "unit": "CNY/500mL",
+      "value": 850,
+      "verdict": "supported"
+    },
+    {
+      "char_offset": 232,
+      "claim_index": 6,
+      "detail": "quote 逐字命中 price_contract.txt（locator=条目 2, offset=232）",
+      "field": "medium_unit_price_cny",
+      "field_group": "resources",
+      "plan_id": "PLAN-A",
+      "status": "given",
+      "unit": "CNY/500mL",
+      "value": 120,
+      "verdict": "supported"
+    },
+    {
+      "char_offset": 202,
+      "claim_index": 7,
+      "detail": "quote 逐字命中 booking_contract.txt（locator=条款 1, offset=202）",
+      "field": "incubator_daily_cost_cny",
+      "field_group": "resources",
+      "plan_id": "PLAN-A",
+      "status": "given",
+      "unit": "CNY/day",
+      "value": 60,
+      "verdict": "supported"
+    },
+    {
+      "char_offset": 208,
+      "claim_index": 8,
+      "detail": "quote 逐字命中 paper_excerpt.txt（locator=第1段（方法）, offset=208）",
+      "field": "fbs_percent",
+      "field_group": "parameters",
+      "plan_id": "PLAN-B",
+      "status": "given",
+      "unit": "%",
+      "value": 10,
+      "verdict": "supported"
+    }
+  ],
+  "summary": {
+    "conflict": 0,
+    "defects": 0,
+    "missing_source": 0,
+    "recorded_inferred": 0,
+    "recorded_missing": 0,
+    "supported": 9,
+    "total": 9,
+    "unsupported": 0
+  },
+  "tool": "claim_audit.py",
+  "tool_version": "1.0"
+}

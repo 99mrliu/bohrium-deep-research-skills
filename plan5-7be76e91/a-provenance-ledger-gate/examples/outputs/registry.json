@@ -1,0 +1,34 @@
+{
+  "asof": "2026-01-01",
+  "file_count": 3,
+  "files": [
+    {
+      "bytes": 734,
+      "needs_extraction": false,
+      "rel_path": "booking_contract.txt",
+      "sha256": "5957a82aee7c1176801cebd58dc7d3d4079990d918377e0a6af11fb062aba776",
+      "text": "合成示例 / SYNTHETIC EXAMPLE，非正式案例结果\n==============================================\n\n【虚构设备预订契约】本契约为规划情景的前瞻性给定，不代表真实设备排期或审批。\n\n契约编号：SYNTH-BOOK-002（虚构）\n设备：CO2 培养箱 2 号（虚构设备，无真实对应物）\n\n条款 1：该培养箱在情景时间窗第 5 天至第 28 天可预订，占用费 60 CNY/天。\n条款 2：温度可调范围为 20 °C 至 39 °C，CO2 浓度固定 5%。\n条款 3：预订须在使用前 3 天提交虚构《设备使用申请单》，未经虚构设备管理员确认不得占用。\n\n附则：以上排期与费用均为合成示例数字，不构成真实设备可用性承诺。\n",
+      "text_extracted": true
+    },
+    {
+      "bytes": 969,
+      "needs_extraction": false,
+      "rel_path": "paper_excerpt.txt",
+      "sha256": "f93dc7c951a34131ad8fb9dd59a6aed33b5188aa28fa2baba3c3e5189a2eda63",
+      "text": "合成示例 / SYNTHETIC EXAMPLE，非正式案例结果\n==============================================\n\n【虚构论文片段】以下文本为教学用合成示例，不对应任何真实论文、细胞系或实验数据。\n\n题目：虚构细胞系 XJ-7 培养条件的初步观察（合成示例）\n\n第1段（方法）：虚构细胞系 XJ-7 由虚构机构\"示例细胞库\"提供。细胞在 37 °C、5% CO2\n条件下培养，基础培养基为 DMEM，添加 10% FBS。所有操作按虚构生物安全一级规范进行。\n\n第2段（结果）：在 37 °C、含 10% FBS 的 DMEM 中培养时，XJ-7 细胞群体倍增时间约 24 小时，\n台盼蓝排斥法测得细胞活力不低于 95%。当 FBS 浓度降至 5% 时，倍增时间延长至约 36 小时。\n\n第3段（讨论）：作者（虚构）推测 XJ-7 对血清浓度敏感，建议后续实验维持 10% FBS。\n本段所有数字均为合成示例虚构值，不得当作真实文献结论引用。\n",
+      "text_extracted": true
+    },
+    {
+      "bytes": 706,
+      "needs_extraction": false,
+      "rel_path": "price_contract.txt",
+      "sha256": "9d351f24ff5435c2e7dc176257ced82e44ffbbc968f934456cd4a8d824730b05",
+      "text": "合成示例 / SYNTHETIC EXAMPLE，非正式案例结果\n==============================================\n\n【虚构价格契约】本契约为规划情景的前瞻性给定数字，不是真实供应商报价。\n\n契约编号：SYNTH-PRICE-001（虚构）\n缔约方：虚构供应商 \"SynthiaBio 试剂（示例）\"\n\n条目 1：特级胎牛血清 FBS，规格 500 mL/瓶，单价 850 CNY/500 mL，情景货期 7 天。\n条目 2：DMEM 培养基，规格 500 mL/瓶，单价 120 CNY/500 mL，情景货期 3 天。\n条目 3：RPMI-1640 培养基，规格 500 mL/瓶，单价 130 CNY/500 mL，情景货期 3 天。\n\n附则：以上价格仅在本合成示例情景内有效，禁止作为真实采购依据。\n",
+      "text_extracted": true
+    }
+  ],
+  "input_dir": "examples/sources",
+  "note": "合成示例 / SYNTHETIC EXAMPLE，非正式案例结果",
+  "tool": "source_registry.py",
+  "tool_version": "1.0"
+}

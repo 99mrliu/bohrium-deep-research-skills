@@ -1,0 +1,132 @@
+{
+  "synthetic_notice": "合成示例 / SYNTHETIC EXAMPLE —— 由模型从虚构契约与虚构方案中抽取的资源供需事实，非真实数据。",
+  "meta": {
+    "case_id": "case-syn-resource-001",
+    "facts_version": "1.0",
+    "extracted_by": "model（示例角色，实际评测中由阅读 /input 的模型填写）",
+    "date_semantics": "所有日期区间均为半开区间 [start, end)"
+  },
+  "resources_available": {
+    "equipment": [
+      {
+        "id": "FURNACE-01",
+        "name": "高温箱式炉",
+        "available": true,
+        "capabilities": {
+          "temperature_C": {"min": 20, "max": 1150},
+          "hold_time_h": {"min": 0.5, "max": 72}
+        },
+        "booked_windows": [{"start": "2026-02-02", "end": "2026-02-09", "note": "计划维保"}],
+        "source": "contract.example.json#equipment_calendar[0]"
+      },
+      {
+        "id": "PRESS-01",
+        "name": "热压烧结炉",
+        "available": true,
+        "capabilities": {
+          "temperature_C": {"min": 20, "max": 800},
+          "pressure_MPa": {"min": 0, "max": 50}
+        },
+        "booked_windows": [{"start": "2026-01-05", "end": "2026-01-31", "note": "已被甲组课题占用"}],
+        "source": "contract.example.json#equipment_calendar[1]"
+      },
+      {
+        "id": "XRD-01",
+        "name": "X 射线衍射仪",
+        "available": true,
+        "capabilities": {
+          "xrd_2theta_deg": {"min": 5, "max": 90}
+        },
+        "booked_windows": [{"start": "2026-01-12", "end": "2026-01-16", "note": "计量校准"}],
+        "source": "contract.example.json#equipment_calendar[2]"
+      }
+    ],
+    "consumables": [
+      {"id": "MAT-AL2O3", "name": "氧化铝坩埚", "in_stock": true, "lead_time_days": 7, "unit_cost": 120, "orderable": true, "source": "contract.example.json#consumable_table[0]"},
+      {"id": "MAT-LATP", "name": "LATP 固态电解质粉体", "in_stock": false, "lead_time_days": 10, "unit_cost": 800, "orderable": true, "source": "contract.example.json#consumable_table[1]"},
+      {"id": "MAT-AU", "name": "金靶材", "in_stock": false, "lead_time_days": 120, "unit_cost": 5000, "orderable": true, "source": "contract.example.json#consumable_table[2]"}
+    ],
+    "approvals": [
+      {"id": "APPR-HT", "name": "高温炉使用安全审批", "status": "granted", "source": "contract.example.json#approvals[0]"},
+      {"id": "APPR-XRD", "name": "XRD 机时使用审批", "status": "granted", "source": "contract.example.json#approvals[1]"}
+    ],
+    "personnel": [
+      {
+        "id": "TECH-A",
+        "name": "技师甲",
+        "skills": ["furnace_operation", "hot_press_operation", "xrd_operation"],
+        "available_windows": [{"start": "2026-01-05", "end": "2026-03-31"}],
+        "source": "contract.example.json#personnel[0]"
+      }
+    ]
+  },
+  "plan_requirements": [
+    {
+      "plan_id": "P1",
+      "title": "常规箱式炉烧结路线（合成示例方案）",
+      "equipment_needs": [
+        {"equipment_id": "FURNACE-01", "stage": "execute", "duration_days": 3,
+         "earliest_use": "2026-01-05", "latest_use": "2026-02-15",
+         "required_capabilities": {"temperature_C": {"min": 850, "max": 1000}, "hold_time_h": {"min": 20, "max": 30}}},
+        {"equipment_id": "XRD-01", "stage": "characterize", "duration_days": 1,
+         "earliest_use": "2026-01-05", "latest_use": "2026-03-01",
+         "required_capabilities": {"xrd_2theta_deg": {"min": 10, "max": 80}}}
+      ],
+      "consumable_needs": [
+        {"consumable_id": "MAT-AL2O3", "quantity": 2, "needed_by": "2026-01-10"}
+      ],
+      "parameter_windows": [
+        {"parameter": "temperature_C", "required": {"min": 850, "max": 1000}},
+        {"parameter": "hold_time_h", "required": {"min": 20, "max": 30}},
+        {"parameter": "xrd_2theta_deg", "required": {"min": 10, "max": 80}}
+      ],
+      "skill_needs": ["furnace_operation", "xrd_operation"],
+      "approval_needs": ["APPR-HT", "APPR-XRD"],
+      "prep_days": 1,
+      "source": "合成方案 P1（常规路线），参数取自虚构文献区间 [850,1000]°C"
+    },
+    {
+      "plan_id": "P2",
+      "title": "热压烧结路线（合成示例方案，设备档期冲突 → feasible_after）",
+      "equipment_needs": [
+        {"equipment_id": "PRESS-01", "stage": "execute", "duration_days": 5,
+         "earliest_use": "2026-01-05", "latest_use": "2026-03-15",
+         "required_capabilities": {"temperature_C": {"min": 700, "max": 780}, "pressure_MPa": {"min": 20, "max": 30}}},
+        {"equipment_id": "XRD-01", "stage": "characterize", "duration_days": 1,
+         "earliest_use": "2026-01-05", "latest_use": "2026-03-20",
+         "required_capabilities": {"xrd_2theta_deg": {"min": 10, "max": 80}}}
+      ],
+      "consumable_needs": [
+        {"consumable_id": "MAT-LATP", "quantity": 1, "needed_by": "2026-02-01"}
+      ],
+      "parameter_windows": [
+        {"parameter": "temperature_C", "required": {"min": 700, "max": 780}},
+        {"parameter": "pressure_MPa", "required": {"min": 20, "max": 30}},
+        {"parameter": "xrd_2theta_deg", "required": {"min": 10, "max": 80}}
+      ],
+      "skill_needs": ["hot_press_operation", "xrd_operation"],
+      "approval_needs": ["APPR-HT", "APPR-XRD"],
+      "prep_days": 2,
+      "source": "合成方案 P2（热压路线）"
+    },
+    {
+      "plan_id": "P3",
+      "title": "超高温烧结路线（合成示例方案，参数窗口空交集 → infeasible 负例）",
+      "equipment_needs": [
+        {"equipment_id": "FURNACE-01", "stage": "execute", "duration_days": 2,
+         "earliest_use": "2026-01-05", "latest_use": "2026-02-15",
+         "required_capabilities": {"temperature_C": {"min": 1100, "max": 1150}}}
+      ],
+      "consumable_needs": [
+        {"consumable_id": "MAT-AL2O3", "quantity": 1, "needed_by": "2026-01-10"}
+      ],
+      "parameter_windows": [
+        {"parameter": "temperature_C", "required": {"min": 1100, "max": 1200}}
+      ],
+      "skill_needs": ["furnace_operation"],
+      "approval_needs": ["APPR-HT"],
+      "prep_days": 1,
+      "source": "合成方案 P3（照搬文献超高温流程，未核对契约域上限 1050°C）"
+    }
+  ]
+}
