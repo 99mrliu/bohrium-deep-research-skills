@@ -1,0 +1,8 @@
+row,field,action,old,new,rule,source
+3,value,unit_converted,7900,7.9,μg/L->mg/L (x0.001),"dictionary.md#缺失码表+QC规则; workorder.md#1-2,4"
+3,unit,unit_label_updated,μg/L,mg/L,follow value,"dictionary.md#缺失码表+QC规则; workorder.md#1-2,4"
+4,value,missing_marked,ND,ND,missing:not_detected,"dictionary.md#缺失码表+QC规则; workorder.md#1-2,4"
+5,value,missing_marked,<0.01,<0.01,missing:below_lod,"dictionary.md#缺失码表+QC规则; workorder.md#1-2,4"
+6,value,missing_marked,-999,-999,missing:entry_missing,"dictionary.md#缺失码表+QC规则; workorder.md#1-2,4"
+9,value,out_of_bounds_flag,25,25,"bounds:[0,5]","dictionary.md#缺失码表+QC规则; workorder.md#1-2,4"
+8,sample_id/metric,dedup_drop,"[""w-06 "", ""总磷"", ""0.12"", ""mg/L"", ""3""]",,dedup:most_complete,decisions.json

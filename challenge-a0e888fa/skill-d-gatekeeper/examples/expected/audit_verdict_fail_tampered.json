@@ -1,0 +1,70 @@
+{
+  "all_pass": false,
+  "skipped": [],
+  "checks": [
+    {
+      "check": "B_row_reconciliation",
+      "pass": true,
+      "detail": {
+        "raw_rows": 6,
+        "cleaned_rows": 5,
+        "dedup_drops_in_ledger": 1,
+        "expected_raw": 6
+      }
+    },
+    {
+      "check": "C_no_invented_rows",
+      "pass": true,
+      "detail": {
+        "invented_keys": []
+      }
+    },
+    {
+      "check": "C_no_silent_edits",
+      "pass": false,
+      "detail": {
+        "unlogged_diffs": [
+          {
+            "key": "p-01␟ph",
+            "field": "conc",
+            "raw": "6.5",
+            "cleaned": "6.9"
+          }
+        ],
+        "unlogged_count": 1
+      }
+    },
+    {
+      "check": "D_dropped_rows_logged",
+      "pass": true,
+      "detail": {
+        "keys_only_in_raw": 0,
+        "dedup_drops_in_ledger": 1,
+        "note": "每个消失的键至少需一条 dedup_drop 台账"
+      }
+    },
+    {
+      "check": "E_unit_inverse",
+      "pass": true,
+      "detail": {
+        "checked": 1,
+        "bad": []
+      }
+    },
+    {
+      "check": "F_report_recompute",
+      "pass": true,
+      "detail": {
+        "diffs": {}
+      }
+    },
+    {
+      "check": "G_workorder_coverage",
+      "pass": true,
+      "detail": {
+        "items": 4,
+        "uncovered": []
+      }
+    }
+  ]
+}

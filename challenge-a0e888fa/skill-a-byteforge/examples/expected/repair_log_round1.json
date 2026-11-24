@@ -1,0 +1,64 @@
+{
+  "input_file": "/Users/liuhengshen/Desktop/bhr_product/a0e888fa-5dir/bundles/skill-a-byteforge/examples/demo_table.csv",
+  "input_sha256": "6298f60065557db8bf58675245e8dbee759bfb14d470e21f3604054cef2e3ddd",
+  "applied": [
+    {
+      "id": "R01",
+      "op": {
+        "op": "mojibake_fix",
+        "via": "latin1_utf8"
+      },
+      "score": 0.99,
+      "repaired_lines": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9
+      ],
+      "repaired_line_count": 9,
+      "skipped_lines": [],
+      "skipped_line_count": 0
+    },
+    {
+      "id": "R02",
+      "op": {
+        "op": "normalize_eol",
+        "to": "\\n"
+      },
+      "score": 0.95,
+      "linebreaks_normalized": 20
+    },
+    {
+      "id": "R03",
+      "op": {
+        "op": "set_delimiter",
+        "delimiter": ";"
+      },
+      "score": 0.9,
+      "note": "delimiter 在序列化阶段应用: ';'"
+    },
+    {
+      "id": "R04",
+      "op": {
+        "op": "strip_invisible",
+        "chars": [
+          " "
+        ]
+      },
+      "score": 0.9,
+      "removed_chars": 1
+    }
+  ],
+  "warnings": [],
+  "delimiter_reserialized": {
+    "from": ";",
+    "rows": 10
+  },
+  "output_file": "/tmp/bfa/repair/recovered.csv",
+  "output_sha256": "d02ec9500960496437433622d557edfc099ee23d3ee518e6b5bc180ddb00c896"
+}

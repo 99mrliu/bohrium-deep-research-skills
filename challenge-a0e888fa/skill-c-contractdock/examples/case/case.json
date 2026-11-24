@@ -1,0 +1,18 @@
+{
+  "case_id": "SYNTH-DEMO-001",
+  "title": "合成示例：某汇总表清洗交付",
+  "materials": ["raw.csv"],
+  "output_contract": {
+    "cleaned_table": {"type": "string", "description": "清洗表相对路径", "required": true},
+    "ledger": {"type": "string", "description": "逐格台账相对路径", "required": true},
+    "quality_report": {"type": "string", "description": "质量报告 JSON 相对路径", "required": true},
+    "summary": {
+      "rows_in": {"type": "integer", "description": "原始行数"},
+      "rows_out": {"type": "integer", "description": "清洗后行数"},
+      "missing_marked": {"type": "integer", "description": "缺失标记条数"},
+      "units_converted": {"type": "integer", "description": "单位换算条数"}
+    },
+    "uncertainty": {"type": "array", "description": "不确定性说明列表", "required": false},
+    "notes": {"type": "string", "description": "异常与说明", "required": false}
+  }
+}

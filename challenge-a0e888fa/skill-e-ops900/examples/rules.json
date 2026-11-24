@@ -1,0 +1,12 @@
+{
+  "input": "examples/greenhouse.csv",
+  "key_columns": ["plot", "treatment"],
+  "case_id": "SYNTH-OPS900-001",
+  "contract_scaffold": {"cleaned_table": "", "quality_report": "", "notes": ""},
+  "missing": {"policy": "mark",
+              "tokens": {"-999": "entry_missing", "ND": "not_detected"}},
+  "units": [{"field": "_yield", "from_column": "unit",
+             "map": {"g/m2": ["kg/m2", 0.001]}}],
+  "bounds": [{"field": "_yield", "range": [0, 15]}],
+  "dedup": {"keep": "most_complete"}
+}

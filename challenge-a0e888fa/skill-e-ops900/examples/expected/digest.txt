@@ -1,0 +1,26 @@
+# 产物摘要（digest.py 生成）
+
+## cleaned.csv (170 B)
+6 行 x 5 列 | 表头: plot,treatment,_yield,unit,reps
+  T1 | 对照 | 4.21 | kg/m2 | 4
+  T2 | 氮肥 | 5.06 | kg/m2 | 4
+  T3 | 氮肥 | -999 | kg/m2 | 4
+  … 其余 3 行省略
+
+## ledger.csv (595 B)
+8 行 x 7 列 | 表头: row,field,action,old,new,rule,source
+动作统计: {"missing_marked": 2, "unit_converted": 2, "unit_label_updated": 2, "dedup_drop": 1, "out_of_bounds_flag": 1}
+  4 | _yield | missing_marked | -999 | -999 | missing:entry_missing | rules.json
+  7 | _yield | missing_marked | ND | ND | missing:not_detected | rules.json
+  5 | _yield | unit_converted | 5100 | 5.1 | g/m2->kg/m2 (x0.001) | rules.json
+  … 其余 5 行省略
+
+## quality_report.json (452 B)
+{"table": {"rows_out": 6, "cols": 5, "input_sha256": "6a5baa177ed2e2d9762bcd5f28507bd017933afbf4f9ea16238dbf18084cf4a1"}, "counts": {"missing_marked": 2, "units_converted": 2, "dedup_dropped": 1, "out_of_bounds": 1, "review_queue": 0}, "actions": {"missing_marked": 2, "unit_converted": 2, "unit_labe
+
+## result.json (528 B)
+case_id=SYNTH-OPS900-001 status=success keys=artifacts,case_id,cleaned_table,notes,quality_report,status,summary
+
+## review_queue.csv (23 B)
+0 行 x 4 列 | 表头: row,field,value,reason
+

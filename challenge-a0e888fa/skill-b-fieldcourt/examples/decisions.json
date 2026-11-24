@@ -1,0 +1,123 @@
+{
+  "table": "examples/measurements.csv",
+  "key_columns": [
+    "sample_id",
+    "metric"
+  ],
+  "dedup": {
+    "normalize": [
+      "casefold",
+      "strip",
+      "fullwidth",
+      "collapse_space"
+    ],
+    "keep": "most_complete",
+    "on_conflict": "review_queue"
+  },
+  "fields": {
+    "sample_id": {
+      "role": "identifier",
+      "policy": "keep",
+      "missing": {},
+      "unit": {
+        "observed": [],
+        "canonical": null
+      },
+      "bounds": {
+        "min": null,
+        "max": null
+      },
+      "source": "dictionary.md#字段表: 主键的一部分"
+    },
+    "metric": {
+      "role": "identifier",
+      "policy": "keep",
+      "missing": {},
+      "unit": {
+        "observed": [],
+        "canonical": null
+      },
+      "bounds": {
+        "min": null,
+        "max": null
+      },
+      "source": "dictionary.md#字段表: 主键的一部分"
+    },
+    "value": {
+      "role": "measurement",
+      "policy": "mark",
+      "missing": {
+        "ND": "not_detected",
+        "-999": "entry_missing",
+        "<0.01": "below_lod"
+      },
+      "unit": {
+        "from_column": "unit",
+        "canonical": "mg/L",
+        "convert_only": [
+          "mg/L",
+          "μg/L",
+          "µg/L",
+          "g/L",
+          "μg/mL",
+          "µg/mL",
+          "ng/L"
+        ]
+      },
+      "bounds": {
+        "min": null,
+        "max": null
+      },
+      "bounds_by": {
+        "column": "metric",
+        "map": {
+          "溶解氧": {
+            "min": 0,
+            "max": 20
+          },
+          "总磷": {
+            "min": 0,
+            "max": 5
+          }
+        }
+      },
+      "source": "dictionary.md#缺失码表+QC规则; workorder.md#1-2,4"
+    },
+    "unit": {
+      "role": "metadata",
+      "policy": "keep",
+      "missing": {},
+      "unit": {
+        "observed": [
+          "mg/L",
+          "μg/L",
+          "NTU"
+        ],
+        "canonical": null
+      },
+      "bounds": {
+        "min": null,
+        "max": null
+      },
+      "source": "dictionary.md#字段表"
+    },
+    "n": {
+      "role": "metadata",
+      "policy": "keep",
+      "missing": {},
+      "unit": {
+        "observed": [],
+        "canonical": null
+      },
+      "bounds": {
+        "min": 1,
+        "max": null
+      },
+      "source": "dictionary.md#字段表: 正整数"
+    }
+  },
+  "global_rules": {
+    "no_imputation": true,
+    "unknown_unit": "keep_and_flag"
+  }
+}

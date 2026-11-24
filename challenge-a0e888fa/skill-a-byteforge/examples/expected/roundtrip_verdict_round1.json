@@ -1,0 +1,36 @@
+{
+  "checks": [
+    {
+      "check": "input_sha256_match",
+      "pass": true,
+      "detail": {
+        "actual": "6298f60065557db8bf58675245e8dbee759bfb14d470e21f3604054cef2e3ddd",
+        "recorded": "6298f60065557db8bf58675245e8dbee759bfb14d470e21f3604054cef2e3ddd"
+      }
+    },
+    {
+      "check": "independent_recompute_match",
+      "pass": true,
+      "detail": {
+        "recomputed_sha256": "d02ec9500960496437433622d557edfc099ee23d3ee518e6b5bc180ddb00c896",
+        "delivered_sha256": "d02ec9500960496437433622d557edfc099ee23d3ee518e6b5bc180ddb00c896"
+      }
+    },
+    {
+      "check": "invisible_removed",
+      "pass": true,
+      "detail": {
+        "residual": {}
+      }
+    },
+    {
+      "check": "mojibake_byte_roundtrip",
+      "pass": true,
+      "detail": {
+        "sampled_repaired_lines": 9,
+        "bad_lines": []
+      }
+    }
+  ],
+  "all_pass": true
+}

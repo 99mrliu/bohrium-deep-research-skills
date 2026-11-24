@@ -1,0 +1,76 @@
+{
+  "input_file": "/Users/liuhengshen/Desktop/bhr_product/a0e888fa-5dir/bundles/skill-a-byteforge/examples/demo_table.csv",
+  "input_sha256": "6298f60065557db8bf58675245e8dbee759bfb14d470e21f3604054cef2e3ddd",
+  "repairs": [
+    {
+      "id": "R01",
+      "op": {
+        "op": "mojibake_fix",
+        "via": "latin1_utf8"
+      },
+      "score": 0.99,
+      "evidence": {
+        "before": [
+          "æ ·åç¼å·;ææ ;åå¼;åä½;n"
+        ],
+        "after": [
+          "样品编号;指标;均值;单位;n"
+        ]
+      },
+      "approved": true,
+      "ambiguous": false,
+      "reversible": true,
+      "approval_reason": "合成示例：证据自洽，全部批准"
+    },
+    {
+      "id": "R02",
+      "op": {
+        "op": "normalize_eol",
+        "to": "\\n"
+      },
+      "score": 0.95,
+      "evidence": {
+        "CRLF": 5,
+        "LF": 5,
+        "CR": 0
+      },
+      "approved": true,
+      "ambiguous": false,
+      "reversible": true,
+      "approval_reason": "合成示例：证据自洽，全部批准"
+    },
+    {
+      "id": "R03",
+      "op": {
+        "op": "set_delimiter",
+        "delimiter": ";"
+      },
+      "score": 0.9,
+      "evidence": {
+        "consistency": 1.0,
+        "fields": 5
+      },
+      "approved": true,
+      "ambiguous": false,
+      "reversible": true,
+      "approval_reason": "合成示例：证据自洽，全部批准"
+    },
+    {
+      "id": "R04",
+      "op": {
+        "op": "strip_invisible",
+        "chars": [
+          " "
+        ]
+      },
+      "score": 0.9,
+      "evidence": {
+        "NBSP@1处": 3
+      },
+      "approved": true,
+      "ambiguous": false,
+      "reversible": true,
+      "approval_reason": "合成示例：证据自洽，全部批准"
+    }
+  ]
+}

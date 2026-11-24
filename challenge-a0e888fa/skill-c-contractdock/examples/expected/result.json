@@ -1,0 +1,15 @@
+{
+  "case_id": "SYNTH-DEMO-001",
+  "status": "success",
+  "cleaned_table": "cleaned.csv",
+  "ledger": "ledger.csv",
+  "quality_report": "report/quality_report.json",
+  "summary": {
+    "rows_in": 5,
+    "rows_out": 4,
+    "missing_marked": 1,
+    "units_converted": 1
+  },
+  "uncertainty": [],
+  "notes": "合成示例：-999 按字典标记录入缺失未填补；1 行完全重复已去重"
+}

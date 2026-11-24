@@ -1,0 +1,70 @@
+{
+  "case_id": "SYNTH-DEMO-001",
+  "contract_path": "$.output_contract",
+  "fields": [
+    {
+      "path": "cleaned_table",
+      "name": "cleaned_table",
+      "type": "string",
+      "required": true,
+      "description": "清洗表相对路径"
+    },
+    {
+      "path": "ledger",
+      "name": "ledger",
+      "type": "string",
+      "required": true,
+      "description": "逐格台账相对路径"
+    },
+    {
+      "path": "quality_report",
+      "name": "quality_report",
+      "type": "string",
+      "required": true,
+      "description": "质量报告 JSON 相对路径"
+    },
+    {
+      "path": "summary.rows_in",
+      "name": "rows_in",
+      "type": "integer",
+      "required": true,
+      "description": "原始行数"
+    },
+    {
+      "path": "summary.rows_out",
+      "name": "rows_out",
+      "type": "integer",
+      "required": true,
+      "description": "清洗后行数"
+    },
+    {
+      "path": "summary.missing_marked",
+      "name": "missing_marked",
+      "type": "integer",
+      "required": true,
+      "description": "缺失标记条数"
+    },
+    {
+      "path": "summary.units_converted",
+      "name": "units_converted",
+      "type": "integer",
+      "required": true,
+      "description": "单位换算条数"
+    },
+    {
+      "path": "uncertainty",
+      "name": "uncertainty",
+      "type": "array",
+      "required": false,
+      "description": "不确定性说明列表"
+    },
+    {
+      "path": "notes",
+      "name": "notes",
+      "type": "string",
+      "required": false,
+      "description": "异常与说明"
+    }
+  ],
+  "field_count": 9
+}

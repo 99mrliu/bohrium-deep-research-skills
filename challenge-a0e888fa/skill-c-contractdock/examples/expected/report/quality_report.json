@@ -1,0 +1,59 @@
+{
+  "artifacts": {
+    "cleaned": {
+      "path": "/Users/liuhengshen/Desktop/bhr_product/a0e888fa-5dir/bundles/skill-c-contractdock/examples/case/cleaned.csv",
+      "sha256": "cd5a0b2da5368b435b3f8649bd99ad2fee1ea00cde9019ef4084b5902a43faa9"
+    },
+    "raw": {
+      "path": "/Users/liuhengshen/Desktop/bhr_product/a0e888fa-5dir/bundles/skill-c-contractdock/examples/case/raw.csv",
+      "sha256": "b119cb9260c4869df3fd2021f921e54d0617d28831b1345c009d2652e3dfb8de"
+    },
+    "ledger": {
+      "path": "/Users/liuhengshen/Desktop/bhr_product/a0e888fa-5dir/bundles/skill-c-contractdock/examples/case/ledger.csv",
+      "sha256": "9c873cdb6d43781b0ea4bc8413be9b24c2d696ad98f50301a9ca1304ad575fcb"
+    }
+  },
+  "table": {
+    "rows_out": 4,
+    "cols": 4,
+    "rows_in": 5,
+    "rows_dropped": 1
+  },
+  "fields": {
+    "sample_id": {
+      "empty_cells": 0,
+      "empty_rate": 0.0
+    },
+    "metric": {
+      "empty_cells": 0,
+      "empty_rate": 0.0
+    },
+    "value": {
+      "empty_cells": 0,
+      "empty_rate": 0.0,
+      "ledger_actions": {
+        "unit_converted": 1,
+        "missing_marked": 1
+      }
+    },
+    "unit": {
+      "empty_cells": 0,
+      "empty_rate": 0.0,
+      "ledger_actions": {
+        "unit_label_updated": 1
+      }
+    },
+    "sample_id/metric": {
+      "ledger_actions": {
+        "dedup_drop": 1
+      }
+    }
+  },
+  "actions": {
+    "unit_converted": 1,
+    "unit_label_updated": 1,
+    "missing_marked": 1,
+    "dedup_drop": 1
+  },
+  "ledger_entries": 4
+}

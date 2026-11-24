@@ -1,0 +1,28 @@
+{
+  "checks": [
+    {
+      "check": "input_sha256_match",
+      "pass": true,
+      "detail": {
+        "actual": "d02ec9500960496437433622d557edfc099ee23d3ee518e6b5bc180ddb00c896",
+        "recorded": "d02ec9500960496437433622d557edfc099ee23d3ee518e6b5bc180ddb00c896"
+      }
+    },
+    {
+      "check": "independent_recompute_match",
+      "pass": true,
+      "detail": {
+        "recomputed_sha256": "fb0af96f60580b0391b4c7b08c4f1d5e1235b46fc8760353e3de15b713609ed2",
+        "delivered_sha256": "fb0af96f60580b0391b4c7b08c4f1d5e1235b46fc8760353e3de15b713609ed2"
+      }
+    },
+    {
+      "check": "fullwidth_converted",
+      "pass": true,
+      "detail": {
+        "residual": []
+      }
+    }
+  ],
+  "all_pass": true
+}

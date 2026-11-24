@@ -1,0 +1,20 @@
+{
+  "case_id": "SYNTH-OPS900-001",
+  "cleaned_table": "cleaned.csv",
+  "quality_report": "quality_report.json",
+  "notes": "合成示例：-999/ND 仅标记不填补；g/m2→kg/m2 换算 2 格；t4 近似重复行去重 1 行；25.0 越界标记保留",
+  "summary": {
+    "missing_marked": 2,
+    "units_converted": 2,
+    "dedup_dropped": 1,
+    "out_of_bounds": 1,
+    "review_queue": 0
+  },
+  "status": "success",
+  "artifacts": [
+    "cleaned.csv",
+    "ledger.csv",
+    "quality_report.json",
+    "review_queue.csv"
+  ]
+}

@@ -1,0 +1,55 @@
+{
+  "all_pass": true,
+  "checks": [
+    {
+      "check": "case_id_present",
+      "pass": true,
+      "detail": {
+        "expected": "SYNTH-DEMO-001",
+        "actual": "SYNTH-DEMO-001"
+      }
+    },
+    {
+      "check": "contract_fields_present",
+      "pass": true,
+      "detail": {
+        "missing": []
+      }
+    },
+    {
+      "check": "contract_field_types",
+      "pass": true,
+      "detail": {
+        "wrong_type": []
+      }
+    },
+    {
+      "check": "required_fields_filled",
+      "pass": true,
+      "detail": {
+        "empty_required": []
+      }
+    },
+    {
+      "check": "referenced_artifacts_exist",
+      "pass": true,
+      "detail": {
+        "missing_files": []
+      }
+    },
+    {
+      "check": "report_self_consistent",
+      "pass": true,
+      "detail": {
+        "diffs": {}
+      }
+    },
+    {
+      "check": "result_numbers_consistent",
+      "pass": true,
+      "detail": {
+        "diffs": {}
+      }
+    }
+  ]
+}
