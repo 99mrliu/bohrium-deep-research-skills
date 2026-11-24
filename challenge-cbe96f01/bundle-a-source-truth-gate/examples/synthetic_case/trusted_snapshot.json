@@ -1,0 +1,51 @@
+{
+  "source": "synthetic-example-snapshot (fabricated for skill testing; NOT a real database)",
+  "records": [
+    {
+      "doi": "10.1152/physrev.00032.2012",
+      "title": "About sleep's role in memory",
+      "first_author": "Rasch",
+      "year": 2013,
+      "status": "published"
+    },
+    {
+      "doi": "10.1038/s41593-019-0467-3",
+      "title": "Mechanisms of systems memory consolidation during sleep",
+      "first_author": "Klinzing",
+      "year": 2019,
+      "status": "published"
+    },
+    {
+      "doi": "10.1038/nn.2384",
+      "title": "Selective suppression of hippocampal ripples impairs spatial memory",
+      "first_author": "Girardeau",
+      "year": 2018,
+      "status": "published",
+      "note": "synthetic: planted year mismatch (paper cites 2009, snapshot says 2018) to exercise metadata_conflict"
+    },
+    {
+      "doi": "10.1016/j.neuron.2013.12.025",
+      "title": "Sleep and the price of plasticity",
+      "first_author": "Tononi",
+      "year": 2014,
+      "status": "preprint",
+      "version_of": "10.1016/j.neuron.2014.01.001",
+      "note": "synthetic: planted preprint-vs-published version mismatch"
+    },
+    {
+      "doi": "10.1016/j.neuron.2014.01.001",
+      "title": "Sleep and the price of plasticity: from synaptic and cellular homeostasis to memory consolidation and integration",
+      "first_author": "Tononi",
+      "year": 2014,
+      "status": "published"
+    },
+    {
+      "doi": "10.1016/j.stem.2010.04.001",
+      "title": "Adult hippocampal neurogenesis drives learning",
+      "first_author": "Doe",
+      "year": 2010,
+      "status": "retracted",
+      "note": "synthetic: planted retraction to exercise retraction_flagged"
+    }
+  ]
+}

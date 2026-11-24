@@ -1,0 +1,62 @@
+{
+  "case_id": "SYNTH-ATLAS-001",
+  "skill": "evidence-atlas-forge",
+  "status": "completed",
+  "coverage": {
+    "事实核验": "checked",
+    "引用支持": "partial",
+    "方法设计": "checked",
+    "统计报告": "checked",
+    "论证链": "checked",
+    "学术规范": "checked"
+  },
+  "findings": [
+    {
+      "id": "F-01",
+      "category": "统计报告",
+      "issue_type": "证据不足",
+      "severity": "minor",
+      "location": {"locator": "p.1 ¶2", "page": 1,
+        "quote": "the difference was significant (p = 0.049)"},
+      "claim": "18.2% 的改善具有统计显著性",
+      "verdict": "p = 0.049 仅边缘显著，检验方法与效应量未报告",
+      "basis": "正文未给出检验名称与统计量，无法复核该 p 值（非机械判定）",
+      "suggestion": "补充检验方法、统计量、自由度与效应量",
+      "confidence": "high",
+      "recheck": "需原始数据重算；当前材料未提供",
+      "needs_human_review": false
+    },
+    {
+      "id": "F-02",
+      "category": "引用支持",
+      "issue_type": "证据不足",
+      "severity": "minor",
+      "location": {"locator": "p.1 ¶2", "page": 1,
+        "quote": "sleep supports declarative memory [1]"},
+      "claim": "[1] 支持睡眠巩固陈述性记忆的主张",
+      "verdict": "undeterminable：未核读被引原文",
+      "basis": "条目元信息与主张范围相容，但未取得 [1] 全文；依据限于条目语义范围",
+      "suggestion": "核读 [1] 全文后确认支持状态",
+      "confidence": "low",
+      "recheck": "Crossref 元数据 + 原文核读",
+      "needs_human_review": true
+    },
+    {
+      "id": "F-03",
+      "category": "学术规范",
+      "issue_type": "规范问题",
+      "severity": "minor",
+      "location": {"locator": "p.1 ¶2", "page": 1,
+        "quote": "available on request"},
+      "claim": "数据与代码可用性声明",
+      "verdict": "“on request”声明不可核验",
+      "basis": "未提供仓库、DOI 或版本信息",
+      "suggestion": "存入可信仓库并给出 DOI 与访问日期",
+      "confidence": "high",
+      "recheck": "核对目标期刊数据政策",
+      "needs_human_review": false
+    }
+  ],
+  "unchecked_items": [],
+  "uncertainties": ["合成示例：输入与 finding 均为虚构，仅演示渲染契约"]
+}

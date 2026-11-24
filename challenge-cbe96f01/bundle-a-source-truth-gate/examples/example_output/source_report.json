@@ -1,0 +1,67 @@
+{
+  "snapshot_source": "synthetic-example-snapshot (fabricated for skill testing; NOT a real database)",
+  "counts": {
+    "verified": 2,
+    "metadata_conflict": 1,
+    "version_mismatch": 1,
+    "suspected_fabricated": 1,
+    "retraction_flagged": 1
+  },
+  "entries": [
+    {
+      "ref_id": 1,
+      "doi": "10.1152/physrev.00032.2012",
+      "title_guess": "About sleep's role in memory.",
+      "state": "verified",
+      "reasons": [
+        "matched via snapshot"
+      ]
+    },
+    {
+      "ref_id": 2,
+      "doi": "10.1038/s41593-019-0467-3",
+      "title_guess": "Mechanisms of systems memory consolidation during sleep.",
+      "state": "verified",
+      "reasons": [
+        "matched via snapshot"
+      ]
+    },
+    {
+      "ref_id": 3,
+      "doi": "10.1038/nn.2384",
+      "title_guess": "Selective suppression of hippocampal ripples impairs spatial memory.",
+      "state": "metadata_conflict",
+      "reasons": [
+        "matched via snapshot",
+        "year 2009 vs trusted 2018"
+      ]
+    },
+    {
+      "ref_id": 4,
+      "doi": "10.1016/j.neuron.2013.12.025",
+      "title_guess": "Sleep and the price of plasticity.",
+      "state": "version_mismatch",
+      "reasons": [
+        "cited preprint but published version exists: 10.1016/j.neuron.2014.01.001"
+      ]
+    },
+    {
+      "ref_id": 5,
+      "doi": "10.999/fake.12345",
+      "title_guess": "Sleep deprivation does not affect memory: a meta-analysis.",
+      "state": "suspected_fabricated",
+      "reasons": [
+        "not found in trusted source AND DOI syntax invalid"
+      ]
+    },
+    {
+      "ref_id": 6,
+      "doi": "10.1016/j.stem.2010.04.001",
+      "title_guess": "Adult hippocampal neurogenesis drives learning.",
+      "state": "retraction_flagged",
+      "reasons": [
+        "trusted source marks record as retracted: synthetic: planted retraction to exercise retraction_flagged"
+      ]
+    }
+  ]
+}

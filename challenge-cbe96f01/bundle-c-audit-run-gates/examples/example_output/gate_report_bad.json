@@ -1,0 +1,39 @@
+{
+  "passed": false,
+  "failures": [
+    {
+      "gate": "G2",
+      "detail": "output_contract field 'review_report' missing in result.json"
+    },
+    {
+      "gate": "G2",
+      "detail": "output_contract field 'evidence_pack' missing in result.json"
+    },
+    {
+      "gate": "G6",
+      "detail": "finding[0] bad severity 'catastrophic'"
+    },
+    {
+      "gate": "G6",
+      "detail": "finding[0] bad confidence 'very high'"
+    },
+    {
+      "gate": "G5",
+      "detail": "finding[0] quote not verbatim on page 1"
+    },
+    {
+      "gate": "G7",
+      "detail": "status=completed but coverage unchecked: ['引用支持']"
+    }
+  ],
+  "gates": [
+    "G1",
+    "G2",
+    "G3",
+    "G4",
+    "G5",
+    "G6",
+    "G7",
+    "G8"
+  ]
+}

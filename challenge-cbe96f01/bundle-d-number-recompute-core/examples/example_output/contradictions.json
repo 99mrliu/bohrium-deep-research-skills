@@ -1,0 +1,86 @@
+{
+  "hard": [
+    {
+      "id": "C-01",
+      "check": "N1",
+      "page": 1,
+      "quote": "52.5% (55/120)",
+      "claimed": "52.5%",
+      "recomputed": "55/120 = 45.83%",
+      "rule": "|claimed - recomputed| > 0.5 pp",
+      "context": "ticipants for a nap intervention study. The nap intervention improved recall by 52.5% (55/120) relative to baseline, a highly significant effect (p = 0.049). Methods A total ",
+      "ledger_id": "N-006"
+    },
+    {
+      "id": "C-02",
+      "check": "N2",
+      "page": 1,
+      "quote": "p = 0.049",
+      "claimed": "p = 0.049",
+      "recomputed": "ved recall by 52.5% (55/120) relative to baseline, a highly significant effect (p = 0.049). Methods A total of 118 participants were enrolled after screening. The nap gr",
+      "rule": "highly significant requires p < 0.01",
+      "context": "ved recall by 52.5% (55/120) relative to baseline, a highly significant effect (p = 0.049). Methods A total of 118 participants were enrolled after screening. The nap gr",
+      "ledger_id": "N-007"
+    },
+    {
+      "id": "C-03",
+      "check": "N2",
+      "page": 1,
+      "quote": "p = 0.083",
+      "claimed": "p = 0.083",
+      "recomputed": "| 65 | 999 | The between-group difference in improvement rates was significant (p = 0.083). Mean improvement was 4.6 points (95% CI, 1.2 to 8.0).",
+      "rule": "significant requires p < 0.05",
+      "context": "| 65 | 999 | The between-group difference in improvement rates was significant (p = 0.083). Mean improvement was 4.6 points (95% CI, 1.2 to 8.0). ",
+      "ledger_id": "N-008"
+    },
+    {
+      "id": "C-04",
+      "check": "N3",
+      "page": 1,
+      "quote": "The nap group contained 60 participants and the control group contained 62 participants.",
+      "claimed": "group sum = 122",
+      "recomputed": "declared participants totals: [60, 62, 118, 120]",
+      "rule": "group counts must sum to a declared total",
+      "context": "The nap group contained 60 participants and the control group contained 62 participants.",
+      "ledger_id": "-"
+    },
+    {
+      "id": "C-05",
+      "check": "N5",
+      "page": 1,
+      "quote": "| Total | 55 | 65 | 999 |",
+      "claimed": "column 3 total 999.0",
+      "recomputed": "sum of rows above = 120.0",
+      "rule": "Total row must equal column-wise sum",
+      "context": "| Total | 55 | 65 | 999 |",
+      "ledger_id": "-"
+    }
+  ],
+  "notes": [
+    {
+      "check": "N4",
+      "noun": "participants",
+      "values": [
+        60,
+        62,
+        118,
+        120
+      ],
+      "pages": [
+        1
+      ],
+      "rule": "same noun carries multiple count values; verify abstract vs body consistency"
+    }
+  ],
+  "checks": {
+    "N1": "run",
+    "N2": "run",
+    "N3": "run",
+    "N4": "run",
+    "N5": "run"
+  },
+  "summary": {
+    "hard": 5,
+    "notes": 1
+  }
+}

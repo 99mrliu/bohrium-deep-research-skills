@@ -1,0 +1,52 @@
+{
+  "rows": 3,
+  "violations": [
+    {
+      "row": 1,
+      "sub_claim_id": "p1.S2.c1",
+      "check": "C4",
+      "detail": "quote not verbatim on page 1"
+    },
+    {
+      "row": 2,
+      "sub_claim_id": "p1.S3.c1",
+      "check": "C2",
+      "detail": "bad verdict 'mostly_true'"
+    },
+    {
+      "row": 3,
+      "sub_claim_id": "p1.S4.c1",
+      "check": "C7",
+      "detail": "sub_claim copies the whole sentence"
+    },
+    {
+      "row": null,
+      "check": "C6",
+      "detail": "citing sentence p1.S5 has no matrix row"
+    },
+    {
+      "row": null,
+      "check": "C6",
+      "detail": "citing sentence p1.S6 has no matrix row"
+    },
+    {
+      "row": null,
+      "check": "C6",
+      "detail": "citing sentence p1.S7 has no matrix row"
+    },
+    {
+      "row": null,
+      "check": "C6",
+      "detail": "ref_id 3 cited but absent from matrix"
+    },
+    {
+      "row": null,
+      "check": "C6",
+      "detail": "ref_id 9 cited but absent from matrix"
+    }
+  ],
+  "passed": false,
+  "verdict_counts": {
+    "supported": 2
+  }
+}

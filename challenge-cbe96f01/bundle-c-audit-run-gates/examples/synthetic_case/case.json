@@ -1,0 +1,9 @@
+{
+  "case_id": "SYNTH-QC-001",
+  "task": "synthetic example input for audit-run-gates; NOT a formal test case",
+  "material": "paper.txt",
+  "output_contract": {
+    "review_report": "human-readable audit report path",
+    "evidence_pack": "directory with machine-checkable evidence artifacts"
+  }
+}

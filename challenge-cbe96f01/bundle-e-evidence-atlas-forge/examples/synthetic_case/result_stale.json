@@ -1,0 +1,32 @@
+{
+  "case_id": "SYNTH-ATLAS-001",
+  "skill": "evidence-atlas-forge",
+  "status": "completed",
+  "coverage": {
+    "事实核验": "checked",
+    "引用支持": "checked",
+    "方法设计": "checked",
+    "统计报告": "checked",
+    "论证链": "checked",
+    "学术规范": "checked"
+  },
+  "findings": [
+    {
+      "id": "F-01",
+      "category": "统计报告",
+      "issue_type": "事实错误",
+      "severity": "major",
+      "location": {"locator": "p.1 ¶2", "page": 1,
+        "quote": "the difference was highly significant (p = 0.0049)"},
+      "claim": "planted violation: stale quote that never existed in the page text",
+      "verdict": "planted",
+      "basis": "planted",
+      "suggestion": "planted",
+      "confidence": "high",
+      "recheck": "planted",
+      "needs_human_review": false
+    }
+  ],
+  "unchecked_items": [],
+  "uncertainties": ["synthetic booby-trapped result: quote is stale"]
+}

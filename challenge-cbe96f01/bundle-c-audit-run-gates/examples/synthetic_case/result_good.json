@@ -1,0 +1,67 @@
+{
+  "case_id": "SYNTH-QC-001",
+  "skill": "audit-run-gates",
+  "status": "partial",
+  "review_report": "review_report.md",
+  "evidence_pack": "evidence/",
+  "coverage": {
+    "事实核验": "checked",
+    "引用支持": "partial",
+    "方法设计": "checked",
+    "统计报告": "checked",
+    "论证链": "checked",
+    "学术规范": "checked"
+  },
+  "findings": [
+    {
+      "id": "F-01",
+      "category": "统计报告",
+      "issue_type": "建议性意见",
+      "severity": "minor",
+      "location": {
+        "locator": "p.1 P3",
+        "anchor": "p1.P3",
+        "page": 1,
+        "quote": "the difference was significant (p = 0.049)"
+      },
+      "claim": "18.2% 的组间差异具有统计显著性",
+      "verdict": "p = 0.049 仅跨过 0.05 阈值，未报告检验方法与效应量",
+      "basis": "正文未给出所用检验、样本量分配与方差结构，无法复核该 p 值",
+      "suggestion": "补充检验名称、统计量、自由度与效应量",
+      "confidence": "high",
+      "recheck": "重算需原始数据；当前材料未提供",
+      "needs_human_review": false
+    },
+    {
+      "id": "F-02",
+      "category": "学术规范",
+      "issue_type": "规范问题",
+      "severity": "minor",
+      "location": {
+        "locator": "p.1 P5",
+        "anchor": "p1.P5",
+        "page": 1,
+        "quote": "available on request from the authors"
+      },
+      "claim": "数据与代码可用性声明",
+      "verdict": "“on request”式声明不满足可核验的可用性要求",
+      "basis": "未提供仓库、DOI 或访问日期，兑现程度无法核实",
+      "suggestion": "将数据与代码存入可信仓库并给出 DOI 与版本",
+      "confidence": "high",
+      "recheck": "检查目标期刊的数据可用性政策",
+      "needs_human_review": false
+    }
+  ],
+  "process_quality": {
+    "gates": {"G0": "pass", "G1": "pass", "G2": "pass", "G3": "pass", "G9": "pass"},
+    "replay_deterministic": true,
+    "checkpoints": ["stage0", "stage1", "stage2", "stage3", "stage4"]
+  },
+  "unchecked_items": [
+    "引用支持类仅部分检查：合成示例未提供被引文献全文快照，[1][2] 的支持判定待复核（复核路径：Crossref 元数据 + 原文核读）"
+  ],
+  "uncertainties": [
+    "合成示例：所有输入为虚构，finding 仅演示产出形态"
+  ],
+  "artifacts": {"report": "review_report.md", "gate_report": "evidence/gate_report.json", "log": "run_log.jsonl"}
+}

@@ -1,0 +1,6 @@
+{"t": "stage0", "action": "ingest synthetic paper.txt", "artifact": "checkpoints/stage0/pages.jsonl", "status": "ok"}
+{"t": "stage0", "action": "anchor_index", "artifact": "checkpoints/stage0/anchors.json", "status": "ok", "gate": "G0=pass"}
+{"t": "stage1", "action": "claims extraction (synthetic)", "artifact": "checkpoints/stage1/claims.jsonl", "status": "ok", "gate": "G1=pass"}
+{"t": "stage2", "action": "six-facet audit (synthetic)", "artifact": "checkpoints/stage2/findings.draft.jsonl", "status": "ok", "gate": "G2=pass"}
+{"t": "stage3", "action": "gate_check G1-G8", "artifact": "checkpoints/stage3/gate_report.json", "status": "ok", "gate": "G3=pass"}
+{"t": "stage4", "action": "replay_diff", "artifact": "checkpoints/stage4/replay_report.json", "status": "ok", "gate": "G9=pass"}

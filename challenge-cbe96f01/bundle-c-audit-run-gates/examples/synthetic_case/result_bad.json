@@ -1,0 +1,34 @@
+{
+  "case_id": "SYNTH-QC-001",
+  "skill": "audit-run-gates",
+  "status": "completed",
+  "coverage": {
+    "事实核验": "checked",
+    "引用支持": "unchecked",
+    "方法设计": "checked",
+    "统计报告": "checked",
+    "论证链": "checked",
+    "学术规范": "checked"
+  },
+  "findings": [
+    {
+      "id": "F-01",
+      "category": "统计报告",
+      "issue_type": "事实错误",
+      "severity": "catastrophic",
+      "location": {
+        "locator": "p.1 P3",
+        "anchor": "p1.P3",
+        "page": 1,
+        "quote": "the difference was highly significant (p = 0.0049)"
+      },
+      "claim": "planted violation: fabricated quote and p-value",
+      "verdict": "planted",
+      "basis": "planted",
+      "suggestion": "planted",
+      "confidence": "very high"
+    }
+  ],
+  "unchecked_items": [],
+  "uncertainties": []
+}
