@@ -1,0 +1,64 @@
+{
+  "schema_version": "1.0",
+  "note": "合成示例（booby-trap）：与 decisions.json 的唯一区别是把 M2 冲突组 G009 判成 merge。merge_adjudicate.py 必须拒绝（退出码 1）且不写任何产物。",
+  "decisions": [
+    {
+      "group_id": "G001",
+      "verdict": "merge",
+      "canonical": "R001",
+      "reason": "M1：三条记录规范化 DOI 完全一致，书目坐标一致，canonical 取字段最全的 R001。"
+    },
+    {
+      "group_id": "G002",
+      "verdict": "merge",
+      "canonical": "R005",
+      "reason": "规范化题名相同且作者/年/容器三重佐证，canonical 取含页码的 R005。"
+    },
+    {
+      "group_id": "G003",
+      "verdict": "merge",
+      "canonical": "R007",
+      "reason": "同第一作者同年高 Jaccard 且容器卷一致，canonical 取 R007。"
+    },
+    {
+      "group_id": "G004",
+      "verdict": "merge",
+      "canonical": "R009",
+      "reason": "M4：note 声明预印本-正式版关系，并入正式版 R009，留谱系。"
+    },
+    {
+      "group_id": "G005",
+      "verdict": "merge",
+      "canonical": "R011",
+      "reason": "translation_of 线索 + 共享规范化 DOI，canonical 取 R011。"
+    },
+    {
+      "group_id": "G006",
+      "verdict": "merge",
+      "canonical": "R013",
+      "reason": "共享规范化 DOI，坐标一致，canonical 取 R013。"
+    },
+    {
+      "group_id": "G007",
+      "verdict": "merge",
+      "canonical": "R015",
+      "reason": "url 内嵌 DOI 与 R015 规范化 DOI 相同，canonical 取 R015。"
+    },
+    {
+      "group_id": "G008",
+      "verdict": "keep_separate",
+      "reason": "M5：同姓同年但题名/容器/作者不同，是不同文献。"
+    },
+    {
+      "group_id": "G009",
+      "verdict": "merge",
+      "canonical": "R018",
+      "reason": "DOI 相同所以直接合并（错误示范：忽略了年份与页码冲突，应被 M2 拒绝）。"
+    },
+    {
+      "group_id": "G010",
+      "verdict": "keep_separate",
+      "reason": "M3：仅题名相同，无 corroboration，保持分离。"
+    }
+  ]
+}

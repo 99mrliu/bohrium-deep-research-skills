@@ -1,0 +1,68 @@
+# Tidal Battery Aging in a Fictional Coastal Microgrid
+
+## 1. Introduction
+
+Coastal microgrids increasingly depend on tidal battery banks, and
+recent field surveys [3] report accelerated aging under salt fog.
+Independent laboratory work on electrode corrosion [1] points in the
+same direction, while grid-scale modeling of whole storage fleets [7]
+remains scarce and mostly theoretical. Operators therefore plan
+maintenance cycles from rules of thumb rather than from evidence.
+A widely circulated industry whitepaper even cites unpublished
+workshop notes [9], which nobody has been able to retrieve.
+
+Early pilot projects [4] were small and often poorly documented,
+but their maintenance logs remain the richest public record of
+long-term salt-fog exposure for battery containers.
+
+The present study combines both traditions: we run a controlled
+field campaign at a single site, but we interpret the results
+against the published survey and laboratory baselines. Our goal is
+a practical aging model that a microgrid operator can apply with
+nothing more than a salinity logger and a maintenance ledger.
+
+## 2. Methods
+
+We instrumented three battery containers over eighteen months at the
+fictional Port Meridian test site. Humidity and salinity were logged
+every ten minutes, and the raw data streams were archived following
+the consortium data-management plan [7,3]. Container firmware was
+cross-checked against the calibration notes [6] before each campaign,
+and any sensor drifting more than two percent was replaced. All three
+containers were repainted midway through the study so that coating
+effects could be separated from corrosion effects in the analysis.
+
+Figure 1. Monthly capacity fade of the three containers; dashed lines show the corrosion-only baseline [5].
+
+Table 1. Mean salt deposition versus capacity fade by container; bins reproduce the field-survey strata [3].
+
+## 3. Results
+
+Capacity fade correlated strongly with measured salt deposition
+across all three containers [3,7]. The correlation held after
+controlling for repaint cycles and firmware versions. Containers
+moored near the splash zone aged fastest.
+
+We caution that the eighteen-month window is still short relative to
+the advertised service life of tidal battery banks. The corrosion-only
+baseline explains roughly half of the observed fade, which suggests
+that mechanical stress from repeated crane lifts and thermal cycling
+also contribute. A longer follow-up study, ideally covering two full
+overhaul cycles, would be needed to separate these factors cleanly.
+
+Future work will pair the salinity logger with a cheap strain gauge
+on the container lifting points, so that mechanical stress can be
+logged on the same ten-minute cadence as the environmental channels.
+We also plan to publish the anonymized maintenance ledger together
+with the aging model, because a model that operators cannot audit
+against their own records is unlikely to be trusted in the field.
+
+注：本示例中所有人名、地名、机构与数据均为虚构，仅用于演示 [1]。
+
+## Appendix A. Supplementary notes
+
+The supplementary log format is described in the maintenance
+manual [2]. Raw hourly aggregates are available from the authors
+on request. The aggregation script groups records by container,
+then by week, and discards any week with fewer than five valid
+sampling days before computing summary statistics.

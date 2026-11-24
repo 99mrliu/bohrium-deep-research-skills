@@ -1,0 +1,762 @@
+{
+  "schema_version": "1.0",
+  "tool": "merge_adjudicate.py",
+  "summary": {
+    "groups": 10,
+    "merged": 7,
+    "keep_separate": 2,
+    "human_queue": 1,
+    "records_before": 21,
+    "records_after": 13,
+    "redirects": 8
+  },
+  "cases": [
+    {
+      "group_id": "G001",
+      "verdict": "merge",
+      "reason": "M1：三条记录规范化 DOI 完全一致（仅大小写/前缀差异，R003 从 url 提取同一 DOI），书目坐标（年/卷/期/页）规范化后一致，确认为同一文献的跨库重复；canonical 取字段最全的 Crossref 记录 R001，保留 R002 的 PMID 与 R003 的机构信息。",
+      "members": [
+        "R001",
+        "R002",
+        "R003"
+      ],
+      "signals": [
+        {
+          "type": "same_doi",
+          "grade": "strong",
+          "members": [
+            "R001",
+            "R002"
+          ],
+          "detail": "规范化 DOI 相同: 10.55555/jnmc.2024.001"
+        },
+        {
+          "type": "same_title",
+          "grade": "moderate",
+          "members": [
+            "R001",
+            "R002"
+          ],
+          "detail": "规范化题名相同（坐标一致数=3/3）"
+        },
+        {
+          "type": "same_doi",
+          "grade": "strong",
+          "members": [
+            "R001",
+            "R003"
+          ],
+          "detail": "规范化 DOI 相同: 10.55555/jnmc.2024.001"
+        },
+        {
+          "type": "same_title",
+          "grade": "moderate",
+          "members": [
+            "R001",
+            "R003"
+          ],
+          "detail": "规范化题名相同（坐标一致数=3/3）"
+        },
+        {
+          "type": "same_doi",
+          "grade": "strong",
+          "members": [
+            "R002",
+            "R003"
+          ],
+          "detail": "规范化 DOI 相同: 10.55555/jnmc.2024.001"
+        },
+        {
+          "type": "same_title",
+          "grade": "moderate",
+          "members": [
+            "R002",
+            "R003"
+          ],
+          "detail": "规范化题名相同（坐标一致数=3/3）"
+        }
+      ],
+      "evidence_grade": "strong",
+      "field_conflicts": [
+        {
+          "field": "title",
+          "values": {
+            "R001": "Neural Circuit Motifs for Adaptive Motor Control",
+            "R002": "Neural circuit motifs for adaptive motor control",
+            "R003": "Neural Circuit Motifs for Adaptive Motor Control"
+          },
+          "normalized_equal": true
+        },
+        {
+          "field": "pages",
+          "values": {
+            "R001": "210–229",
+            "R002": "210-229"
+          },
+          "normalized_equal": true
+        },
+        {
+          "field": "doi",
+          "values": {
+            "R001": "10.55555/JNMC.2024.001",
+            "R002": "10.55555/jnmc.2024.001",
+            "R003": "[from url] https://doi.org/10.55555/JNMC.2024.001"
+          },
+          "normalized_equal": true
+        }
+      ],
+      "canonical": "R001",
+      "absorbed": [
+        "R002",
+        "R003"
+      ],
+      "exceptions": [
+        {
+          "field": "title",
+          "canonical_value": "Neural Circuit Motifs for Adaptive Motor Control",
+          "member_id": "R002",
+          "member_value": "Neural circuit motifs for adaptive motor control",
+          "normalized_equal": true
+        },
+        {
+          "field": "pages",
+          "canonical_value": "210–229",
+          "member_id": "R002",
+          "member_value": "210-229",
+          "normalized_equal": true
+        }
+      ],
+      "lineage": [],
+      "redirects": {
+        "R002": "R001",
+        "R003": "R001"
+      }
+    },
+    {
+      "group_id": "G002",
+      "verdict": "merge",
+      "reason": "规范化题名完全相同（仅大小写与冒号差异），缺 DOI 但坐标三重佐证（同第一作者 Kowalski、同年 2023、同容器同卷）， corroboration 充分；canonical 取含页码的出版方记录 R005。",
+      "members": [
+        "R004",
+        "R005"
+      ],
+      "signals": [
+        {
+          "type": "same_title",
+          "grade": "moderate",
+          "members": [
+            "R004",
+            "R005"
+          ],
+          "detail": "规范化题名相同（坐标一致数=3/3）"
+        }
+      ],
+      "evidence_grade": "moderate",
+      "field_conflicts": [
+        {
+          "field": "title",
+          "values": {
+            "R004": "Attention is not all you need: revisiting recurrent inductive biases",
+            "R005": "Attention Is Not All You Need Revisiting Recurrent Inductive Biases"
+          },
+          "normalized_equal": true
+        }
+      ],
+      "canonical": "R005",
+      "absorbed": [
+        "R004"
+      ],
+      "exceptions": [
+        {
+          "field": "title",
+          "canonical_value": "Attention Is Not All You Need Revisiting Recurrent Inductive Biases",
+          "member_id": "R004",
+          "member_value": "Attention is not all you need: revisiting recurrent inductive biases",
+          "normalized_equal": true
+        }
+      ],
+      "lineage": [],
+      "redirects": {
+        "R004": "R005"
+      }
+    },
+    {
+      "group_id": "G003",
+      "verdict": "merge",
+      "reason": "同第一作者 Nakamura、同年 2022、题名 token Jaccard=0.889（正式版多副标题 a review），且容器与卷完全一致，moderate 证据成立；canonical 取带页码的 R007，题名差异入 exception list 备查。",
+      "members": [
+        "R006",
+        "R007"
+      ],
+      "signals": [
+        {
+          "type": "author_year_title_jaccard",
+          "grade": "moderate",
+          "members": [
+            "R006",
+            "R007"
+          ],
+          "detail": "同第一作者姓(nakamura)+同年(2022)+题名 token Jaccard=0.889"
+        }
+      ],
+      "evidence_grade": "moderate",
+      "field_conflicts": [
+        {
+          "field": "title",
+          "values": {
+            "R006": "Uncertainty quantification for graph neural network force fields",
+            "R007": "Uncertainty quantification for graph neural network force fields: a review"
+          },
+          "normalized_equal": false
+        }
+      ],
+      "canonical": "R007",
+      "absorbed": [
+        "R006"
+      ],
+      "exceptions": [
+        {
+          "field": "title",
+          "canonical_value": "Uncertainty quantification for graph neural network force fields: a review",
+          "member_id": "R006",
+          "member_value": "Uncertainty quantification for graph neural network force fields",
+          "normalized_equal": false
+        }
+      ],
+      "lineage": [],
+      "redirects": {
+        "R006": "R007"
+      }
+    },
+    {
+      "group_id": "G004",
+      "verdict": "merge",
+      "reason": "M4：预印本 R008（arXiv:2401.98765v2）与正式版 R009 题名相同、作者相同；材料内 note 字段明确声明版本关系并给出正式版 DOI 10.55555/SPLS.2025.017，证据 strong。并入正式版 R009，保留谱系（preprint id、版本关系、重定向），年份差 2024/2025 属预印本-正式版正常现象，入 exception list。",
+      "members": [
+        "R008",
+        "R009"
+      ],
+      "signals": [
+        {
+          "type": "same_title",
+          "grade": "weak",
+          "members": [
+            "R008",
+            "R009"
+          ],
+          "detail": "规范化题名相同（坐标一致数=1/3）"
+        },
+        {
+          "type": "preprint_published",
+          "members": [
+            "R008",
+            "R009"
+          ],
+          "grade": "strong",
+          "detail": "预印本 R008（arXiv:2401.98765） ↔ 正式版 R009；材料内 note 字段声明版本关系"
+        }
+      ],
+      "evidence_grade": "strong",
+      "field_conflicts": [
+        {
+          "field": "year",
+          "values": {
+            "R008": 2024,
+            "R009": 2025
+          },
+          "normalized_equal": false
+        },
+        {
+          "field": "type",
+          "values": {
+            "R008": "preprint",
+            "R009": "inproceedings"
+          },
+          "normalized_equal": false
+        }
+      ],
+      "canonical": "R009",
+      "absorbed": [
+        "R008"
+      ],
+      "exceptions": [
+        {
+          "field": "year",
+          "canonical_value": 2025,
+          "member_id": "R008",
+          "member_value": 2024,
+          "normalized_equal": false
+        },
+        {
+          "field": "type",
+          "canonical_value": "inproceedings",
+          "member_id": "R008",
+          "member_value": "preprint",
+          "normalized_equal": false
+        }
+      ],
+      "lineage": [
+        {
+          "relation": "published_version_of",
+          "canonical_record_id": "R009",
+          "preprint_record_id": "R008",
+          "preprint_arxiv": "2401.98765",
+          "preprint_url": "https://arxiv.org/abs/2401.98765",
+          "preprint_year": 2024,
+          "preprint_version": "v2",
+          "redirect": "R008 -> R009",
+          "evidence": "材料内 note 字段声明版本关系"
+        }
+      ],
+      "redirects": {
+        "R008": "R009"
+      }
+    },
+    {
+      "group_id": "G005",
+      "verdict": "merge",
+      "reason": "中英题名对：R011 的 translation_of 字段指向 R010，且共享规范化 DOI（仅大小写差异），M1 成立；容器与作者差异为中英译名/罗马化所致，不属书目坐标冲突，入 exception list；canonical 取字段更全的 R011，保留 R010 的中文原始题名为 title_original。",
+      "members": [
+        "R010",
+        "R011"
+      ],
+      "signals": [
+        {
+          "type": "same_doi",
+          "grade": "strong",
+          "members": [
+            "R010",
+            "R011"
+          ],
+          "detail": "规范化 DOI 相同: 10.55555/cip.2023.005"
+        },
+        {
+          "type": "translation_pair",
+          "members": [
+            "R010",
+            "R011"
+          ],
+          "grade": "strong",
+          "detail": "R011 的 translation_of 字段指向 R010，且共享规范化 DOI"
+        }
+      ],
+      "evidence_grade": "strong",
+      "field_conflicts": [
+        {
+          "field": "title",
+          "values": {
+            "R010": "面向低资源场景的医疗文本结构化抽取方法",
+            "R011": "Structured Extraction of Medical Texts in Low-Resource Scenarios"
+          },
+          "normalized_equal": false
+        },
+        {
+          "field": "container",
+          "values": {
+            "R010": "中文信息学报",
+            "R011": "Journal of Chinese Information Processing"
+          },
+          "normalized_equal": false
+        },
+        {
+          "field": "doi",
+          "values": {
+            "R010": "10.55555/CIP.2023.005",
+            "R011": "10.55555/cip.2023.005"
+          },
+          "normalized_equal": true
+        },
+        {
+          "field": "first_author_family",
+          "values": {
+            "R010": "王",
+            "R011": "Wang"
+          },
+          "normalized_equal": false
+        }
+      ],
+      "canonical": "R011",
+      "absorbed": [
+        "R010"
+      ],
+      "exceptions": [
+        {
+          "field": "title",
+          "canonical_value": "Structured Extraction of Medical Texts in Low-Resource Scenarios",
+          "member_id": "R010",
+          "member_value": "面向低资源场景的医疗文本结构化抽取方法",
+          "normalized_equal": false
+        },
+        {
+          "field": "container",
+          "canonical_value": "Journal of Chinese Information Processing",
+          "member_id": "R010",
+          "member_value": "中文信息学报",
+          "normalized_equal": false
+        }
+      ],
+      "lineage": [],
+      "redirects": {
+        "R010": "R011"
+      }
+    },
+    {
+      "group_id": "G006",
+      "verdict": "merge",
+      "reason": "M1：CNKI 与 Crossref 导出共享规范化 DOI（仅大小写差异），卷期页规范化后一致（连字符 vs en dash 为格式差异）；题名/刊名/作者差异为中英导出惯例，入 exception list；canonical 取含 URL 的 Crossref 记录 R013。",
+      "members": [
+        "R012",
+        "R013"
+      ],
+      "signals": [
+        {
+          "type": "same_doi",
+          "grade": "strong",
+          "members": [
+            "R012",
+            "R013"
+          ],
+          "detail": "规范化 DOI 相同: 10.55555/jos.2024.088"
+        }
+      ],
+      "evidence_grade": "strong",
+      "field_conflicts": [
+        {
+          "field": "title",
+          "values": {
+            "R012": "多模态情感分析中的跨语言对齐研究",
+            "R013": "Cross-lingual alignment for multimodal sentiment analysis"
+          },
+          "normalized_equal": false
+        },
+        {
+          "field": "container",
+          "values": {
+            "R012": "软件学报",
+            "R013": "Ruan Jian Xue Bao (Journal of Software)"
+          },
+          "normalized_equal": false
+        },
+        {
+          "field": "pages",
+          "values": {
+            "R012": "3561-3574",
+            "R013": "3561–3574"
+          },
+          "normalized_equal": true
+        },
+        {
+          "field": "doi",
+          "values": {
+            "R012": "10.55555/JOS.2024.088",
+            "R013": "10.55555/jos.2024.088"
+          },
+          "normalized_equal": true
+        },
+        {
+          "field": "first_author_family",
+          "values": {
+            "R012": "陈",
+            "R013": "Chen"
+          },
+          "normalized_equal": false
+        }
+      ],
+      "canonical": "R013",
+      "absorbed": [
+        "R012"
+      ],
+      "exceptions": [
+        {
+          "field": "title",
+          "canonical_value": "Cross-lingual alignment for multimodal sentiment analysis",
+          "member_id": "R012",
+          "member_value": "多模态情感分析中的跨语言对齐研究",
+          "normalized_equal": false
+        },
+        {
+          "field": "container",
+          "canonical_value": "Ruan Jian Xue Bao (Journal of Software)",
+          "member_id": "R012",
+          "member_value": "软件学报",
+          "normalized_equal": false
+        },
+        {
+          "field": "pages",
+          "canonical_value": "3561–3574",
+          "member_id": "R012",
+          "member_value": "3561-3574",
+          "normalized_equal": true
+        }
+      ],
+      "lineage": [],
+      "redirects": {
+        "R012": "R013"
+      }
+    },
+    {
+      "group_id": "G007",
+      "verdict": "merge",
+      "reason": "M1：EndNote 导出把 DOI 放在 url 字段，规范化后与 Crossref 记录 R015 的 DOI 完全一致，年/卷/页一致；canonical 取带显式 doi 字段的 R015。",
+      "members": [
+        "R014",
+        "R015"
+      ],
+      "signals": [
+        {
+          "type": "same_doi",
+          "grade": "strong",
+          "members": [
+            "R014",
+            "R015"
+          ],
+          "detail": "规范化 DOI 相同: 10.55555/per.2021.004"
+        },
+        {
+          "type": "same_title",
+          "grade": "moderate",
+          "members": [
+            "R014",
+            "R015"
+          ],
+          "detail": "规范化题名相同（坐标一致数=3/3）"
+        }
+      ],
+      "evidence_grade": "strong",
+      "field_conflicts": [
+        {
+          "field": "title",
+          "values": {
+            "R014": "Soil microbiome responses to permafrost thaw",
+            "R015": "Soil Microbiome Responses to Permafrost Thaw"
+          },
+          "normalized_equal": true
+        },
+        {
+          "field": "doi",
+          "values": {
+            "R014": "[from url] https://doi.org/10.55555/PER.2021.004",
+            "R015": "10.55555/per.2021.004"
+          },
+          "normalized_equal": true
+        }
+      ],
+      "canonical": "R015",
+      "absorbed": [
+        "R014"
+      ],
+      "exceptions": [
+        {
+          "field": "title",
+          "canonical_value": "Soil Microbiome Responses to Permafrost Thaw",
+          "member_id": "R014",
+          "member_value": "Soil microbiome responses to permafrost thaw",
+          "normalized_equal": true
+        }
+      ],
+      "lineage": [],
+      "redirects": {
+        "R014": "R015"
+      }
+    },
+    {
+      "group_id": "G008",
+      "verdict": "keep_separate",
+      "reason": "M5 同名作者保护：R016（Zhang, Wei）与 R017（Zhang, Lei）同姓同年、题名仅一词之差（flow vs speed），但作者给定名不同、共同作者不同、容器/卷/页/DOI 全异，是同名姓作者的两篇不同文献，显式保护不予合并。",
+      "members": [
+        "R016",
+        "R017"
+      ],
+      "signals": [
+        {
+          "type": "author_year_title_jaccard",
+          "grade": "weak",
+          "members": [
+            "R016",
+            "R017"
+          ],
+          "detail": "同第一作者姓(zhang)+同年(2024)+题名 token Jaccard=0.818"
+        }
+      ],
+      "evidence_grade": "weak",
+      "field_conflicts": [
+        {
+          "field": "title",
+          "values": {
+            "R016": "Deep learning models for short term urban traffic flow prediction",
+            "R017": "Deep learning models for short term urban traffic speed prediction"
+          },
+          "normalized_equal": false
+        },
+        {
+          "field": "container",
+          "values": {
+            "R016": "IEEE Open Journal of Intelligent Transportation",
+            "R017": "Transportation Research Procedia"
+          },
+          "normalized_equal": false
+        },
+        {
+          "field": "volume",
+          "values": {
+            "R016": "5",
+            "R017": "71"
+          },
+          "normalized_equal": false
+        },
+        {
+          "field": "pages",
+          "values": {
+            "R016": "100–112",
+            "R017": "220–231"
+          },
+          "normalized_equal": false
+        },
+        {
+          "field": "doi",
+          "values": {
+            "R016": "10.55555/OJIT.2024.011",
+            "R017": "10.55555/TRP.2024.055"
+          },
+          "normalized_equal": false
+        }
+      ]
+    },
+    {
+      "group_id": "G009",
+      "verdict": "human_queue",
+      "reason": "M2：两记录共享规范化 DOI 10.55555/abl.2021.033，但年份（2021 vs 2022）与页码（77–88 vs 177–188）规范化后冲突，禁止自动并；升级人工核查：解析 DOI 落地页核对真实年份与页码，判定是 R019 导出错误还是 DOI 错配。",
+      "members": [
+        "R018",
+        "R019"
+      ],
+      "signals": [
+        {
+          "type": "same_doi",
+          "grade": "strong",
+          "members": [
+            "R018",
+            "R019"
+          ],
+          "detail": "规范化 DOI 相同: 10.55555/abl.2021.033"
+        },
+        {
+          "type": "same_title",
+          "grade": "moderate",
+          "members": [
+            "R018",
+            "R019"
+          ],
+          "detail": "规范化题名相同（坐标一致数=2/3）"
+        }
+      ],
+      "evidence_grade": "strong",
+      "field_conflicts": [
+        {
+          "field": "year",
+          "values": {
+            "R018": 2021,
+            "R019": 2022
+          },
+          "normalized_equal": false
+        },
+        {
+          "field": "pages",
+          "values": {
+            "R018": "77–88",
+            "R019": "177–188"
+          },
+          "normalized_equal": false
+        },
+        {
+          "field": "doi",
+          "values": {
+            "R018": "10.55555/ABL.2021.033",
+            "R019": "10.55555/abl.2021.033"
+          },
+          "normalized_equal": true
+        }
+      ],
+      "follow_up": "人工核查路径：核对出版方页面/DOI 解析结果后再判；在结果中显式登记为未决不确定性，不得静默跳过。"
+    },
+    {
+      "group_id": "G010",
+      "verdict": "keep_separate",
+      "reason": "M3：两篇仅规范化题名相同（Digital twins in manufacturing），第一作者、年份、容器、卷、页、DOI 全部不同，无任何 corroboration，属短通用题名的题名撞车，证据 weak，保持分离。",
+      "members": [
+        "R020",
+        "R021"
+      ],
+      "signals": [
+        {
+          "type": "same_title",
+          "grade": "weak",
+          "members": [
+            "R020",
+            "R021"
+          ],
+          "detail": "规范化题名相同（坐标一致数=0/3）"
+        }
+      ],
+      "evidence_grade": "weak",
+      "field_conflicts": [
+        {
+          "field": "title",
+          "values": {
+            "R020": "Digital twins in manufacturing",
+            "R021": "Digital Twins in Manufacturing"
+          },
+          "normalized_equal": true
+        },
+        {
+          "field": "year",
+          "values": {
+            "R020": 2020,
+            "R021": 2023
+          },
+          "normalized_equal": false
+        },
+        {
+          "field": "container",
+          "values": {
+            "R020": "Journal of Industrial Informatics Quarterly",
+            "R021": "Manufacturing Systems Letters"
+          },
+          "normalized_equal": false
+        },
+        {
+          "field": "volume",
+          "values": {
+            "R020": "4",
+            "R021": "2"
+          },
+          "normalized_equal": false
+        },
+        {
+          "field": "pages",
+          "values": {
+            "R020": "10–19",
+            "R021": "55–63"
+          },
+          "normalized_equal": false
+        },
+        {
+          "field": "doi",
+          "values": {
+            "R020": "10.55555/JIIQ.2020.002",
+            "R021": "10.55555/MSL.2023.009"
+          },
+          "normalized_equal": false
+        },
+        {
+          "field": "first_author_family",
+          "values": {
+            "R020": "Rocha",
+            "R021": "Asante"
+          },
+          "normalized_equal": false
+        }
+      ]
+    }
+  ]
+}

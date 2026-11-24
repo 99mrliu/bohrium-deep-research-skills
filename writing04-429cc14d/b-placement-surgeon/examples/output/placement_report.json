@@ -1,0 +1,95 @@
+{
+  "tool": "placement_audit.py",
+  "stats": {
+    "sentences": 19,
+    "body": 17,
+    "caption": 2,
+    "footnote": 0,
+    "markers": 4
+  },
+  "skipped_rules": [
+    {
+      "rule": "P2",
+      "reason": "未提供 intent.jsonl 台账，跳过 P2"
+    }
+  ],
+  "violations": [
+    {
+      "rule": "P1",
+      "severity": "major",
+      "paragraph": "P002",
+      "sentences": [
+        "S005",
+        "S006"
+      ],
+      "marker": "[2]",
+      "location": {
+        "line": 16,
+        "col": 19
+      },
+      "evidence": "2019 年，一项覆盖 12 个国家的流行病学调查报告， 耐多药结核病的全球治愈率仅为 57%。；2023 年发表的另一项荟萃分析则显示， 短程口服方案可将该指标提升至 82%[2]。",
+      "suggestion": {
+        "action": "split",
+        "detail": "段末唯一标记 [2] 无法同时锚定 2 个不同论断；为每个独立论断分别挂已核验来源，或把标记移到它真正支撑的那句。"
+      }
+    },
+    {
+      "rule": "P3",
+      "severity": "major",
+      "paragraph": "P005",
+      "sentences": [
+        "S016"
+      ],
+      "marker": "[6]",
+      "location": {
+        "line": 41,
+        "col": 19
+      },
+      "evidence": "标记 [6] 出现在图表注区（第 41 行）",
+      "suggestion": {
+        "action": "move",
+        "detail": "支撑正文论断的标记应挂回正文对应论断句；若该标记仅服务于图注自身且正文已有等价引用，可移除"
+      }
+    },
+    {
+      "rule": "P4",
+      "severity": "major",
+      "paragraph": "P006",
+      "sentences": [
+        "S018"
+      ],
+      "marker": null,
+      "location": {
+        "line": 46,
+        "col": 1
+      },
+      "evidence": "事实句无任何标记（线索：number_unit）：近期一项宏基因组学研究在 1500 份临床分离株中 鉴定出 4 个新的噬菌体抗性基因家族。",
+      "suggestion": {
+        "action": "insert_mark",
+        "detail": "若文献表中存在对应的已核验来源则补挂；否则只在审计报告标注 [缺来源]，禁止为占位而虚构引用"
+      }
+    },
+    {
+      "rule": "P5",
+      "severity": "major",
+      "paragraph": "P004",
+      "sentences": [
+        "S010",
+        "S011",
+        "S012",
+        "S013",
+        "S014"
+      ],
+      "marker": "[4]",
+      "location": {
+        "line": 29,
+        "col": 12
+      },
+      "evidence": "标记 [4] 之后连续 4 句无新标记，且 S012 出现新事实：一项纳入 860 名受试者的横断面研究发现， 该比值每下降 10%， 患者的炎症评分平均上升 0.…",
+      "suggestion": {
+        "action": "split",
+        "detail": "单一标记覆盖 >3 句且中间出现新事实；为出现新数据/新结论的论断句分别补挂对应来源"
+      }
+    }
+  ]
+}

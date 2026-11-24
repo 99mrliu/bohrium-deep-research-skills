@@ -1,0 +1,29 @@
+{
+  "tool": "source_registry",
+  "version": "1.0.0",
+  "generated_utc": "1970-01-01T00:00:00Z",
+  "sources_dir": "examples/input/sources",
+  "file_count": 3,
+  "total_bytes": 4811,
+  "files": [
+    {
+      "path": "fake_paper_alpha.txt",
+      "bytes": 1840,
+      "sha256": "cc5525a77711cdd2ffe5ba844027e962542b34ad6bef1396fa990a21ab94947c",
+      "type": "txt"
+    },
+    {
+      "path": "fake_paper_beta.txt",
+      "bytes": 1600,
+      "sha256": "9e1b2344f85fe7eca2551ae636a813d5055904250ff6248b850b1310e1911a40",
+      "type": "txt"
+    },
+    {
+      "path": "fake_paper_gamma.txt",
+      "bytes": 1371,
+      "sha256": "55637a526f41d16926cd628c61daf44323f3c6d5711f7c96749ef9205c1216c4",
+      "type": "txt"
+    }
+  ],
+  "warnings": []
+}

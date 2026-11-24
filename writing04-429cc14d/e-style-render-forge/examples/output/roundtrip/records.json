@@ -1,0 +1,266 @@
+{
+  "schema": "style-render-forge/records/v1",
+  "generator": "import_records.py (style-render-forge)",
+  "record_count": 9,
+  "warnings": [
+    "ris: 风味判定为 cnki-refworks（命中提示标签 10/120）"
+  ],
+  "meta": {
+    "sources": [
+      {
+        "file": "roundtrip_export.ris",
+        "format": "ris",
+        "count": 9,
+        "meta": {
+          "ris_flavor": "cnki-refworks"
+        }
+      }
+    ]
+  },
+  "records": [
+    {
+      "id": "chen2022dedup",
+      "type": "inproceedings",
+      "authors": [
+        "Chen, Hao",
+        "Sun, Yu"
+      ],
+      "editors": [],
+      "title": "Reference Deduplication via Contrastive Retrieval",
+      "title_alt": null,
+      "year": "2022",
+      "venue": "Proceedings of the Fictional Conference on Scholarly Documents",
+      "volume": null,
+      "issue": null,
+      "pages": "88-95",
+      "article_number": null,
+      "publisher": "Fictional Academic Press",
+      "address": "Shanghai",
+      "doi": null,
+      "url": null,
+      "isbn": null,
+      "language": "en",
+      "type_tag": "C",
+      "raw_source": "TY  - CONF\nID  - chen2022dedup\nTI  - Reference Deduplication via Contrastive Retrieval\nAU  - Chen, Hao\nAU  - Sun, Yu\nPY  - 2022\nT2  - Proceedings of the Fictional Conference on Scholarly Documents\nSP  - 88\nEP  - 95\nPB  - Fictional Academic Press\nCY  - Shanghai\nLA  - en\nM3  - C\nER  - ",
+      "unmapped_fields": {},
+      "warnings": []
+    },
+    {
+      "id": "cnki3-1",
+      "type": "journal-article",
+      "authors": [
+        "陈思远",
+        "刘雅琴"
+      ],
+      "editors": [],
+      "title": "GB/T 7714—2015 应用中的标点问题:兼论混排",
+      "title_alt": null,
+      "year": "2019",
+      "venue": "合成文献工作",
+      "volume": "31",
+      "issue": "2",
+      "pages": "210-215",
+      "article_number": null,
+      "publisher": null,
+      "address": null,
+      "doi": "10.55557/hwx.2019.0201",
+      "url": null,
+      "isbn": null,
+      "language": "zh",
+      "type_tag": "J",
+      "raw_source": "TY  - JOUR\nID  - cnki3-1\nTI  - GB/T 7714—2015 应用中的标点问题:兼论混排\nAU  - 陈思远\nAU  - 刘雅琴\nPY  - 2019\nJO  - 合成文献工作\nVL  - 31\nIS  - 2\nSP  - 210\nEP  - 215\nDO  - 10.55557/hwx.2019.0201\nLA  - zh\nM3  - J\nER  - ",
+      "unmapped_fields": {},
+      "warnings": []
+    },
+    {
+      "id": "cnki3-2",
+      "type": "journal-article",
+      "authors": [
+        "周子昂"
+      ],
+      "editors": [],
+      "title": "参考文献管理软件的比较研究",
+      "title_alt": null,
+      "year": "2018",
+      "venue": "合成信息研究",
+      "volume": "38",
+      "issue": "7",
+      "pages": "120-126",
+      "article_number": null,
+      "publisher": null,
+      "address": null,
+      "doi": null,
+      "url": null,
+      "isbn": null,
+      "language": "zh",
+      "type_tag": "J",
+      "raw_source": "TY  - JOUR\nID  - cnki3-2\nTI  - 参考文献管理软件的比较研究\nAU  - 周子昂\nPY  - 2018\nJO  - 合成信息研究\nVL  - 38\nIS  - 7\nSP  - 120\nEP  - 126\nLA  - zh\nM3  - J\nER  - ",
+      "unmapped_fields": {},
+      "warnings": []
+    },
+    {
+      "id": "liu2021methods",
+      "type": "book",
+      "authors": [
+        "Liu, Ming"
+      ],
+      "editors": [],
+      "title": "Methods of Bibliographic Style Engineering",
+      "title_alt": null,
+      "year": "2021",
+      "venue": null,
+      "volume": null,
+      "issue": null,
+      "pages": null,
+      "article_number": null,
+      "publisher": "Fictional Academic Press",
+      "address": "Beijing",
+      "doi": null,
+      "url": null,
+      "isbn": "978-7-0000-0000-0",
+      "language": "en",
+      "type_tag": "M",
+      "raw_source": "TY  - BOOK\nID  - liu2021methods\nTI  - Methods of Bibliographic Style Engineering\nAU  - Liu, Ming\nPY  - 2021\nPB  - Fictional Academic Press\nCY  - Beijing\nSN  - 978-7-0000-0000-0\nLA  - en\nM3  - M\nER  - ",
+      "unmapped_fields": {},
+      "warnings": []
+    },
+    {
+      "id": "ris2-1",
+      "type": "journal-article",
+      "authors": [
+        "赵明轩",
+        "钱文静"
+      ],
+      "editors": [],
+      "title": "面向科技文献的参考文献自动核验方法",
+      "title_alt": null,
+      "year": "2022",
+      "venue": "合成情报学报",
+      "volume": "43",
+      "issue": "5",
+      "pages": "55-62",
+      "article_number": null,
+      "publisher": null,
+      "address": null,
+      "doi": "10.55556/hcb.2022.0505",
+      "url": null,
+      "isbn": null,
+      "language": "zh",
+      "type_tag": "J",
+      "raw_source": "TY  - JOUR\nID  - ris2-1\nTI  - 面向科技文献的参考文献自动核验方法\nAU  - 赵明轩\nAU  - 钱文静\nPY  - 2022\nJO  - 合成情报学报\nVL  - 43\nIS  - 5\nSP  - 55\nEP  - 62\nDO  - 10.55556/hcb.2022.0505\nLA  - zh\nM3  - J\nK1  - CNKI-SAMPLE-0001\nER  - ",
+      "unmapped_fields": {
+        "K1": "CNKI-SAMPLE-0001"
+      },
+      "warnings": [
+        "未映射 RIS 标签 K1，verbatim 保留"
+      ]
+    },
+    {
+      "id": "ris2-2",
+      "type": "thesis",
+      "authors": [
+        "孙立新"
+      ],
+      "editors": [],
+      "title": "学术写作中的引用规范演化研究",
+      "title_alt": null,
+      "year": "2020",
+      "venue": null,
+      "volume": null,
+      "issue": null,
+      "pages": null,
+      "article_number": null,
+      "publisher": "虚构大学",
+      "address": "南京",
+      "doi": null,
+      "url": null,
+      "isbn": null,
+      "language": "zh",
+      "type_tag": "D",
+      "raw_source": "TY  - THES\nID  - ris2-2\nTI  - 学术写作中的引用规范演化研究\nAU  - 孙立新\nPY  - 2020\nPB  - 虚构大学\nCY  - 南京\nLA  - zh\nM3  - D\nER  - ",
+      "unmapped_fields": {},
+      "warnings": []
+    },
+    {
+      "id": "ris2-3",
+      "type": "journal-article",
+      "authors": [
+        "吴雪梅"
+      ],
+      "editors": [],
+      "title": "中文期刊参考文献格式的抽样调查",
+      "title_alt": null,
+      "year": null,
+      "venue": "合成编辑学刊",
+      "volume": "30",
+      "issue": "8",
+      "pages": "701-709",
+      "article_number": null,
+      "publisher": null,
+      "address": null,
+      "doi": null,
+      "url": null,
+      "isbn": null,
+      "language": "zh",
+      "type_tag": "J",
+      "raw_source": "TY  - JOUR\nID  - ris2-3\nTI  - 中文期刊参考文献格式的抽样调查\nAU  - 吴雪梅\nJO  - 合成编辑学刊\nVL  - 30\nIS  - 8\nSP  - 701\nEP  - 709\nLA  - zh\nM3  - J\nER  - ",
+      "unmapped_fields": {},
+      "warnings": []
+    },
+    {
+      "id": "wang2024missing",
+      "type": "journal-article",
+      "authors": [
+        "Wang, Fang"
+      ],
+      "editors": [],
+      "title": "Placeholder Strategies in Reference Rendering",
+      "title_alt": null,
+      "year": "2024",
+      "venue": "Journal of Synthetic Citation Studies",
+      "volume": "13",
+      "issue": "1",
+      "pages": null,
+      "article_number": null,
+      "publisher": null,
+      "address": null,
+      "doi": "10.55555/jscis.2024.0002",
+      "url": null,
+      "isbn": null,
+      "language": "en",
+      "type_tag": "J",
+      "raw_source": "TY  - JOUR\nID  - wang2024missing\nTI  - Placeholder Strategies in Reference Rendering\nAU  - Wang, Fang\nPY  - 2024\nJO  - Journal of Synthetic Citation Studies\nVL  - 13\nIS  - 1\nDO  - 10.55555/jscis.2024.0002\nLA  - en\nM3  - J\nER  - ",
+      "unmapped_fields": {},
+      "warnings": []
+    },
+    {
+      "id": "zhang2023survey",
+      "type": "journal-article",
+      "authors": [
+        "Zhang, Wei",
+        "Li, Xiaomin",
+        "Wang, Fang",
+        "Chen, Hao"
+      ],
+      "editors": [],
+      "title": "A Survey of Citation Graph Embeddings for Digital Libraries",
+      "title_alt": null,
+      "year": "2023",
+      "venue": "Journal of Synthetic Citation Studies",
+      "volume": "12",
+      "issue": "3",
+      "pages": "145-162",
+      "article_number": null,
+      "publisher": null,
+      "address": null,
+      "doi": "10.55555/jscis.2023.0001",
+      "url": null,
+      "isbn": null,
+      "language": "en",
+      "type_tag": "J",
+      "raw_source": "TY  - JOUR\nID  - zhang2023survey\nTI  - A Survey of Citation Graph Embeddings for Digital Libraries\nAU  - Zhang, Wei\nAU  - Li, Xiaomin\nAU  - Wang, Fang\nAU  - Chen, Hao\nPY  - 2023\nJO  - Journal of Synthetic Citation Studies\nVL  - 12\nIS  - 3\nSP  - 145\nEP  - 162\nDO  - 10.55555/jscis.2023.0001\nLA  - en\nM3  - J\nER  - ",
+      "unmapped_fields": {},
+      "warnings": []
+    }
+  ]
+}

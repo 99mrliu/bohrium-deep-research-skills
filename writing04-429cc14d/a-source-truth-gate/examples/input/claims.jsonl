@@ -1,0 +1,5 @@
+{"id": "C1", "claim": "HNX-3 在 320 K 下 ZT 达到 1.42，较基线提升约 37%", "source": "fake_paper_alpha.txt", "quote": "在 320 K 时，HNX-3 的无量纲热电优值 ZT 达到 1.42，较基线材料提升约 37%。", "_example_note": "合成示例数据，不对应真实文献"}
+{"id": "C2", "claim": "绿地覆盖率提高至 40% 时夏季夜间平均气温降低 1.8 °C", "source": "fake_paper_beta.txt", "quote": "与 10% 覆盖率情景相比，40% 覆盖率情景下夏季夜间平均气温降低 1.8 °C。", "locator": "第 3 节", "_example_note": "合成示例数据，不对应真实文献"}
+{"id": "C3", "claim": "GMP-7 对 S-伪素的 kcat/Km 为 3.6×10^5 L/(mol·s)", "source": "fake_paper_gamma.txt", "quote": "在 pH 7.4、25 °C 条件下，GMP-7 对 S-伪素的催化效率 kcat/Km 为 3.6×10^5 L/(mol·s)。", "_example_note": "合成示例数据，不对应真实文献"}
+{"id": "C4", "claim": "HNX-3 的热电优值在 320 K 时较基线提升约 37%", "source": "fake_paper_alpha.txt", "quote": "在 320 K 时，HNX-3 的热电优值 ZT 达到 1.42，较基线材料提升约 37%。", "_example_note": "合成示例数据，不对应真实文献；本条 quote 为转述（删去“无量纲”），应 FAIL"}
+{"id": "C5", "claim": "HNX-3 的热导率最低值出现在 400 K", "source": "fake_paper_alpha.txt", "quote": "热导率在全部测点均低于 0.9 W/(m·K)，最低值出现在 400 K。", "_example_note": "合成示例数据，不对应真实文献"}

@@ -1,0 +1,50 @@
+% =====================================================================
+% 合成示例（style-render-forge examples/input/library.bib）
+% 本文件全部条目、刊名、出版社、DOI 均为虚构，仅用于演示导入/渲染流程。
+% 故意包含：1 个 @string 宏（刊名）、1 条缺页码条目（wang2024missing）。
+% =====================================================================
+
+@string{jscis = "Journal of Synthetic Citation Studies"}
+
+@preamble{"Synthetic example preamble - kept verbatim by import_records.py"}
+
+@article{zhang2023survey,
+  author  = {Zhang, Wei and Li, Xiaomin and Wang, Fang and Chen, Hao},
+  title   = {A Survey of Citation Graph Embeddings for Digital Libraries},
+  journal = jscis,
+  year    = {2023},
+  volume  = {12},
+  number  = {3},
+  pages   = {145-162},
+  doi     = {10.55555/jscis.2023.0001},
+  note    = {Fictional entry for skill demo},
+}
+
+@book{liu2021methods,
+  author    = {Liu, Ming},
+  title     = {Methods of Bibliographic Style Engineering},
+  publisher = {Fictional Academic Press},
+  address   = {Beijing},
+  year      = {2021},
+  isbn      = {978-7-0000-0000-0},
+}
+
+@inproceedings{chen2022dedup,
+  author    = {Chen, Hao and Sun, Yu},
+  title     = {Reference Deduplication via Contrastive Retrieval},
+  booktitle = {Proceedings of the Fictional Conference on Scholarly Documents},
+  year      = {2022},
+  pages     = {88-95},
+  address   = {Shanghai},
+  publisher = {Fictional Academic Press},
+}
+
+@article{wang2024missing,
+  author  = {Wang, Fang},
+  title   = {Placeholder Strategies in Reference Rendering},
+  journal = jscis,
+  year    = {2024},
+  volume  = {13},
+  number  = {1},
+  doi     = {10.55555/jscis.2024.0002},
+}

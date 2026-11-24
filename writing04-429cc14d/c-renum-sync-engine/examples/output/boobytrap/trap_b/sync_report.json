@@ -1,0 +1,68 @@
+{
+  "all_pass": false,
+  "style_detected": "numeric-bracket",
+  "rules": {
+    "V1": {
+      "name": "无悬空标记（每个正文标记可解析到列表条目）",
+      "pass": false,
+      "detail": "1 个悬空标记: [{\"reading_order\": 2, \"line\": 5, \"col\": 184, \"region\": \"body\", \"raw\": \"[9]\", \"unresolved\": [\"9\"]}]"
+    },
+    "V2": {
+      "name": "无多余条目（每条被引至少一次，或带保留标注）",
+      "pass": true,
+      "detail": "全部列表条目均被引用或已标注保留"
+    },
+    "V3": {
+      "name": "编号自 1 连续无跳号（列表与正文使用双侧检查）",
+      "pass": false,
+      "detail": "正文使用的编号 [1, 2, 3, 4, 5, 6, 7, 9] 存在跳号"
+    },
+    "V4": {
+      "name": "区间合法（a<=b 且端点存在）",
+      "pass": true,
+      "detail": "全部区间合法"
+    },
+    "V5": {
+      "name": "样式统一（不混用标记形态，无占位符残留）",
+      "pass": true,
+      "detail": "标记样式全稿统一"
+    },
+    "V6": {
+      "name": "著者-年后缀正文与列表一致",
+      "pass": true,
+      "detail": "不适用（非著者-年制），自动跳过"
+    },
+    "V7": {
+      "name": "图注/表注/脚注/附录标记全部纳入编号",
+      "pass": true,
+      "detail": "特殊区域标记计数 {'figure_caption': 1, 'table_caption': 1, 'footnote': 1, 'appendix': 1}，全部纳入编号"
+    },
+    "V8": {
+      "name": "重算幂等（空 ops 重跑零变化）",
+      "pass": false,
+      "detail": "空 ops 重算抛错: 存在未处理的悬空标记（原标签不在文献列表中），请先用 delete_marker 显式删除: [{\"reading_order\": 2, \"label\": \"9\", \"line\": 5, \"col\": 184}]"
+    }
+  },
+  "summary": {
+    "occurrences": 12,
+    "numeric_markers": 12,
+    "author_year_markers": 0,
+    "reference_entries": 8,
+    "numeric_labels": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7
+    ],
+    "retained_uncited_entries": 1,
+    "unparsed_reference_lines": [],
+    "failed_rules": [
+      "V1",
+      "V3",
+      "V8"
+    ]
+  }
+}

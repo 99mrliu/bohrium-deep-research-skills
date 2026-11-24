@@ -1,0 +1,23 @@
+{
+  "comment": "全虚构合成示例的操作集。坐标一律指向原始稿件（examples/input/manuscript.txt）。reading_order 来自 cite_scan 的 occurrences.jsonl；para_a/para_b 为 0 基段落索引（段落=空行分隔的非空行块）。",
+  "ops": [
+    {
+      "op": "delete_marker",
+      "reading_order": 4,
+      "reason": "删除悬空标记 [9]：原标签 9 不在文献列表中（列表只有 1-8），不可臆造条目，只能显式删除"
+    },
+    {
+      "op": "merge_paragraphs",
+      "para_a": 2,
+      "para_b": 3,
+      "reason": "合并引言的前两段（现场调查段与早期试点段）为一段"
+    },
+    {
+      "op": "insert_marker",
+      "line": 44,
+      "after_text": "aged fastest",
+      "labels": ["2"],
+      "reason": "在结果段首段末尾补引维护手册（原标签 2），作为老化最快的处置依据"
+    }
+  ]
+}

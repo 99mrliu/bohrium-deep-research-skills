@@ -1,0 +1,101 @@
+{
+  "format_version": "1.0",
+  "style": "numeric-bracket",
+  "ops": [
+    {
+      "op": "delete_marker",
+      "reading_order": 4,
+      "reason": "删除悬空标记 [9]：原标签 9 不在文献列表中（列表只有 1-8），不可臆造条目，只能显式删除"
+    },
+    {
+      "op": "merge_paragraphs",
+      "para_a": 2,
+      "para_b": 3,
+      "reason": "合并引言的前两段（现场调查段与早期试点段）为一段"
+    },
+    {
+      "op": "insert_marker",
+      "line": 44,
+      "after_text": "aged fastest",
+      "labels": [
+        "2"
+      ],
+      "reason": "在结果段首段末尾补引维护手册（原标签 2），作为老化最快的处置依据"
+    }
+  ],
+  "mappings": [
+    {
+      "sid": "sid-001",
+      "original_label": "3",
+      "new_label": "1",
+      "status": "cited"
+    },
+    {
+      "sid": "sid-002",
+      "original_label": "1",
+      "new_label": "2",
+      "status": "cited"
+    },
+    {
+      "sid": "sid-003",
+      "original_label": "7",
+      "new_label": "3",
+      "status": "cited"
+    },
+    {
+      "sid": "sid-004",
+      "original_label": "4",
+      "new_label": "4",
+      "status": "cited"
+    },
+    {
+      "sid": "sid-005",
+      "original_label": "6",
+      "new_label": "5",
+      "status": "cited"
+    },
+    {
+      "sid": "sid-006",
+      "original_label": "5",
+      "new_label": "6",
+      "status": "cited"
+    },
+    {
+      "sid": "sid-007",
+      "original_label": "2",
+      "new_label": "7",
+      "status": "cited"
+    },
+    {
+      "sid": "sid-008",
+      "original_label": "8",
+      "new_label": null,
+      "status": "uncited_retained"
+    }
+  ],
+  "reference_order": [
+    "sid-001",
+    "sid-002",
+    "sid-003",
+    "sid-004",
+    "sid-005",
+    "sid-006",
+    "sid-007"
+  ],
+  "dangling_removed": [
+    {
+      "reading_order": 4,
+      "raw": "[9]",
+      "region": "body",
+      "line": 12
+    }
+  ],
+  "uncited_retained": [
+    "8"
+  ],
+  "edited_manuscript_text": "# Tidal Battery Aging in a Fictional Coastal Microgrid\n\n## 1. Introduction\n\nCoastal microgrids increasingly depend on tidal battery banks, and recent field surveys [1] report accelerated aging under salt fog. Independent laboratory work on electrode corrosion [2] points in the same direction, while grid-scale modeling of whole storage fleets [3] remains scarce and mostly theoretical. Operators therefore plan maintenance cycles from rules of thumb rather than from evidence. A widely circulated industry whitepaper even cites unpublished workshop notes, which nobody has been able to retrieve. Early pilot projects [4] were small and often poorly documented, but their maintenance logs remain the richest public record of long-term salt-fog exposure for battery containers.\n\nThe present study combines both traditions: we run a controlled\nfield campaign at a single site, but we interpret the results\nagainst the published survey and laboratory baselines. Our goal is\na practical aging model that a microgrid operator can apply with\nnothing more than a salinity logger and a maintenance ledger.\n\n## 2. Methods\n\nWe instrumented three battery containers over eighteen months at the\nfictional Port Meridian test site. Humidity and salinity were logged\nevery ten minutes, and the raw data streams were archived following\nthe consortium data-management plan [1,3]. Container firmware was\ncross-checked against the calibration notes [5] before each campaign,\nand any sensor drifting more than two percent was replaced. All three\ncontainers were repainted midway through the study so that coating\neffects could be separated from corrosion effects in the analysis.\n\nFigure 1. Monthly capacity fade of the three containers; dashed lines show the corrosion-only baseline [6].\n\nTable 1. Mean salt deposition versus capacity fade by container; bins reproduce the field-survey strata [1].\n\n## 3. Results\n\nCapacity fade correlated strongly with measured salt deposition\nacross all three containers [1,3]. The correlation held after\ncontrolling for repaint cycles and firmware versions. Containers\nmoored near the splash zone aged fastest [7].\n\nWe caution that the eighteen-month window is still short relative to\nthe advertised service life of tidal battery banks. The corrosion-only\nbaseline explains roughly half of the observed fade, which suggests\nthat mechanical stress from repeated crane lifts and thermal cycling\nalso contribute. A longer follow-up study, ideally covering two full\noverhaul cycles, would be needed to separate these factors cleanly.\n\nFuture work will pair the salinity logger with a cheap strain gauge\non the container lifting points, so that mechanical stress can be\nlogged on the same ten-minute cadence as the environmental channels.\nWe also plan to publish the anonymized maintenance ledger together\nwith the aging model, because a model that operators cannot audit\nagainst their own records is unlikely to be trusted in the field.\n\n注：本示例中所有人名、地名、机构与数据均为虚构，仅用于演示 [2]。\n\n## Appendix A. Supplementary notes\n\nThe supplementary log format is described in the maintenance\nmanual [7]. Raw hourly aggregates are available from the authors\non request. The aggregation script groups records by container,\nthen by week, and discards any week with fewer than five valid\nsampling days before computing summary statistics.\n",
+  "edited_references_text": "[1] Lindqvist, S. Field survey of salt-fog aging in Nordic microgrids. Renewable Storage Letters, 2021.\n[2] Alvarez, M. Corrosion kinetics of marine battery electrodes. Journal of Coastal Energy, 2019.\n[3] Nguyen, L. Grid-scale modeling of tidal storage fleets. Sustainable Grids, 2023.\n[4] Beaumont, R. Lessons from early tidal pilot projects. Marine Energy Reports, 2017.\n[5] Duarte, P. Calibration notes for container firmware v3.2. Internal Technical Series, 2022.\n[6] Hoshino, K. Corrosion-only baselines for capacity fade modeling. Battery Systems Review, 2020.\n[7] Okafor, T. Maintenance manual for tidal battery containers. Portside Technical Press, 2018.\n[*] Castellanos, V. Oral history of the Port Meridian microgrid. Local Heritage Pamphlet, 2015.【未引用·保留】\n",
+  "notes": [
+    "合并段落 2 与 3"
+  ]
+}

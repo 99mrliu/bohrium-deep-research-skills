@@ -1,0 +1,42 @@
+{
+  "schema": "style-render-forge/lint-report/v1",
+  "records_file": "records.json",
+  "record_count": 9,
+  "roundtrip_file": null,
+  "summary": {
+    "error": 2,
+    "warning": 1,
+    "info": 1,
+    "exit_code": 1
+  },
+  "findings": [
+    {
+      "rule": "L1",
+      "severity": "error",
+      "record_id": "ris2-3",
+      "field": "year",
+      "message": "journal-article 缺必备字段 [年份]，渲染将输出占位符 [缺: 年份]，不得凭记忆补齐"
+    },
+    {
+      "rule": "L1",
+      "severity": "error",
+      "record_id": "wang2024missing",
+      "field": "pages",
+      "message": "期刊论文既无页码也无文章号，渲染将输出占位符 [缺: 页码]"
+    },
+    {
+      "rule": "L7",
+      "severity": "warning",
+      "record_id": "cnki3-1",
+      "field": "title",
+      "message": "中文条目 `题名` 检出 CJK 紧邻半角标点: `GB/T 7714—2015 应用中的标点问题:兼论混排`，lint 不改写原文，请人工确认是否应全角化"
+    },
+    {
+      "rule": "L4",
+      "severity": "info",
+      "record_id": "zhang2023survey",
+      "field": "authors",
+      "message": "作者共 4 名，GB/T 7714 渲染将列前 3 名后加 等/et al.，导出格式保留全部作者"
+    }
+  ]
+}

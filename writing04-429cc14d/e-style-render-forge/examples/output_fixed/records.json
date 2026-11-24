@@ -1,0 +1,343 @@
+{
+  "schema": "style-render-forge/records/v1",
+  "generator": "import_records.py (style-render-forge)",
+  "record_count": 9,
+  "warnings": [
+    "ris: 风味判定为 cnki-refworks（命中提示标签 10/30）"
+  ],
+  "meta": {
+    "sources": [
+      {
+        "file": "library.bib",
+        "format": "bibtex",
+        "count": 4,
+        "meta": {
+          "bibtex_strings_raw": [
+            "@string{jscis = \"Journal of Synthetic Citation Studies\"}"
+          ],
+          "bibtex_comments": [
+            "=====================================================================",
+            "合成示例（style-render-forge examples/input/library.bib）",
+            "本文件全部条目、刊名、出版社、DOI 均为虚构，仅用于演示导入/渲染流程。",
+            "故意包含：1 个 @string 宏（刊名）、1 条缺页码条目（wang2024missing）。",
+            "====================================================================="
+          ],
+          "bibtex_preambles": [
+            "@preamble{\"Synthetic example preamble - kept verbatim by import_records.py\"}"
+          ],
+          "bibtex_strings": {
+            "jscis": "Journal of Synthetic Citation Studies"
+          }
+        }
+      },
+      {
+        "file": "cnki_export.ris",
+        "format": "ris",
+        "count": 3,
+        "meta": {
+          "ris_flavor": "cnki-refworks"
+        }
+      },
+      {
+        "file": "cnki_text.txt",
+        "format": "cnki-text",
+        "count": 2,
+        "meta": {
+          "cnki_text_blocks": 2
+        }
+      }
+    ]
+  },
+  "records": [
+    {
+      "id": "chen2022dedup",
+      "type": "inproceedings",
+      "authors": [
+        "Chen, Hao",
+        "Sun, Yu"
+      ],
+      "editors": [],
+      "title": "Reference Deduplication via Contrastive Retrieval",
+      "title_alt": null,
+      "year": "2022",
+      "venue": "Proceedings of the Fictional Conference on Scholarly Documents",
+      "volume": null,
+      "issue": null,
+      "pages": "88-95",
+      "article_number": null,
+      "publisher": "Fictional Academic Press",
+      "address": "Shanghai",
+      "doi": null,
+      "url": null,
+      "isbn": null,
+      "language": "en",
+      "type_tag": "C",
+      "raw_source": "@inproceedings{chen2022dedup,\n  author    = {Chen, Hao and Sun, Yu},\n  title     = {Reference Deduplication via Contrastive Retrieval},\n  booktitle = {Proceedings of the Fictional Conference on Scholarly Documents},\n  year      = {2022},\n  pages     = {88-95},\n  address   = {Shanghai},\n  publisher = {Fictional Academic Press},\n}",
+      "unmapped_fields": {},
+      "warnings": [],
+      "raw_fields": {
+        "author": "{Chen, Hao and Sun, Yu}",
+        "title": "{Reference Deduplication via Contrastive Retrieval}",
+        "booktitle": "{Proceedings of the Fictional Conference on Scholarly Documents}",
+        "year": "{2022}",
+        "pages": "{88-95}",
+        "address": "{Shanghai}",
+        "publisher": "{Fictional Academic Press}"
+      }
+    },
+    {
+      "id": "cnki3-1",
+      "type": "journal-article",
+      "authors": [
+        "陈思远",
+        "刘雅琴"
+      ],
+      "editors": [],
+      "title": "GB/T 7714—2015 应用中的标点问题:兼论混排",
+      "title_alt": null,
+      "year": "2019",
+      "venue": "合成文献工作",
+      "volume": "31",
+      "issue": "2",
+      "pages": "210-215",
+      "article_number": null,
+      "publisher": null,
+      "address": null,
+      "doi": "10.55557/hwx.2019.0201",
+      "url": null,
+      "isbn": null,
+      "language": "zh",
+      "type_tag": "J",
+      "raw_source": "题名: GB/T 7714—2015 应用中的标点问题:兼论混排\n作者: 陈思远; 刘雅琴\n来源: 合成文献工作\n年: 2019\n卷: 31\n期: 2\n页码: 210-215\nDOI: 10.55557/hwx.2019.0201",
+      "unmapped_fields": {},
+      "warnings": [
+        "CNKI 文本导出不带文献类型，默认按期刊论文登记；如实际为其他类型请人工改 type/type_tag"
+      ]
+    },
+    {
+      "id": "cnki3-2",
+      "type": "journal-article",
+      "authors": [
+        "周子昂"
+      ],
+      "editors": [],
+      "title": "参考文献管理软件的比较研究",
+      "title_alt": null,
+      "year": "2018",
+      "venue": "合成信息研究",
+      "volume": "38",
+      "issue": "7",
+      "pages": "120-126",
+      "article_number": null,
+      "publisher": null,
+      "address": null,
+      "doi": null,
+      "url": null,
+      "isbn": null,
+      "language": "zh",
+      "type_tag": "J",
+      "raw_source": "题名: 参考文献管理软件的比较研究\n作者: 周子昂\n来源: 合成信息研究\n年: 2018\n卷: 38\n期: 7\n页码: 120-126",
+      "unmapped_fields": {},
+      "warnings": [
+        "CNKI 文本导出不带文献类型，默认按期刊论文登记；如实际为其他类型请人工改 type/type_tag"
+      ]
+    },
+    {
+      "id": "liu2021methods",
+      "type": "book",
+      "authors": [
+        "Liu, Ming"
+      ],
+      "editors": [],
+      "title": "Methods of Bibliographic Style Engineering",
+      "title_alt": null,
+      "year": "2021",
+      "venue": null,
+      "volume": null,
+      "issue": null,
+      "pages": null,
+      "article_number": null,
+      "publisher": "Fictional Academic Press",
+      "address": "Beijing",
+      "doi": null,
+      "url": null,
+      "isbn": "978-7-0000-0000-0",
+      "language": "en",
+      "type_tag": "M",
+      "raw_source": "@book{liu2021methods,\n  author    = {Liu, Ming},\n  title     = {Methods of Bibliographic Style Engineering},\n  publisher = {Fictional Academic Press},\n  address   = {Beijing},\n  year      = {2021},\n  isbn      = {978-7-0000-0000-0},\n}",
+      "unmapped_fields": {},
+      "warnings": [],
+      "raw_fields": {
+        "author": "{Liu, Ming}",
+        "title": "{Methods of Bibliographic Style Engineering}",
+        "publisher": "{Fictional Academic Press}",
+        "address": "{Beijing}",
+        "year": "{2021}",
+        "isbn": "{978-7-0000-0000-0}"
+      }
+    },
+    {
+      "id": "ris2-1",
+      "type": "journal-article",
+      "authors": [
+        "赵明轩",
+        "钱文静"
+      ],
+      "editors": [],
+      "title": "面向科技文献的参考文献自动核验方法",
+      "title_alt": null,
+      "year": "2022",
+      "venue": "合成情报学报",
+      "volume": "43",
+      "issue": "5",
+      "pages": "55-62",
+      "article_number": null,
+      "publisher": null,
+      "address": null,
+      "doi": "10.55556/hcb.2022.0505",
+      "url": null,
+      "isbn": null,
+      "language": "zh",
+      "type_tag": "J",
+      "raw_source": "TY  - JOUR\nT1  - 面向科技文献的参考文献自动核验方法\nA1  - 赵明轩\nA1  - 钱文静\nJF  - 合成情报学报\nY1  - 2022\nVL  - 43\nIS  - 5\nSP  - 55\nEP  - 62\nDO  - 10.55556/hcb.2022.0505\nK1  - CNKI-SAMPLE-0001\nER  - ",
+      "unmapped_fields": {
+        "K1": "CNKI-SAMPLE-0001"
+      },
+      "warnings": [
+        "未映射 RIS 标签 K1，verbatim 保留"
+      ]
+    },
+    {
+      "id": "ris2-2",
+      "type": "thesis",
+      "authors": [
+        "孙立新"
+      ],
+      "editors": [],
+      "title": "学术写作中的引用规范演化研究",
+      "title_alt": null,
+      "year": "2020",
+      "venue": null,
+      "volume": null,
+      "issue": null,
+      "pages": null,
+      "article_number": null,
+      "publisher": "虚构大学",
+      "address": "南京",
+      "doi": null,
+      "url": null,
+      "isbn": null,
+      "language": "zh",
+      "type_tag": "D",
+      "raw_source": "TY  - THES\nT1  - 学术写作中的引用规范演化研究\nA1  - 孙立新\nPB  - 虚构大学\nCY  - 南京\nY1  - 2020\nER  - ",
+      "unmapped_fields": {},
+      "warnings": []
+    },
+    {
+      "id": "ris2-3",
+      "type": "journal-article",
+      "authors": [
+        "吴雪梅"
+      ],
+      "editors": [],
+      "title": "中文期刊参考文献格式的抽样调查",
+      "title_alt": null,
+      "year": "2021",
+      "venue": "合成编辑学刊",
+      "volume": "30",
+      "issue": "8",
+      "pages": "701-709",
+      "article_number": null,
+      "publisher": null,
+      "address": null,
+      "doi": null,
+      "url": null,
+      "isbn": null,
+      "language": "zh",
+      "type_tag": "J",
+      "raw_source": "TY  - JOUR\nT1  - 中文期刊参考文献格式的抽样调查\nY1  - 2021\nA1  - 吴雪梅\nJF  - 合成编辑学刊\nVL  - 30\nIS  - 8\nSP  - 701\nEP  - 709\nER  - ",
+      "unmapped_fields": {},
+      "warnings": []
+    },
+    {
+      "id": "wang2024missing",
+      "type": "journal-article",
+      "authors": [
+        "Wang, Fang"
+      ],
+      "editors": [],
+      "title": "Placeholder Strategies in Reference Rendering",
+      "title_alt": null,
+      "year": "2024",
+      "venue": "Journal of Synthetic Citation Studies",
+      "volume": "13",
+      "issue": "1",
+      "pages": "33-41",
+      "article_number": null,
+      "publisher": null,
+      "address": null,
+      "doi": "10.55555/jscis.2024.0002",
+      "url": null,
+      "isbn": null,
+      "language": "en",
+      "type_tag": "J",
+      "raw_source": "@article{wang2024missing,\n  author  = {Wang, Fang},\n  title   = {Placeholder Strategies in Reference Rendering},\n  journal = jscis,\n  year    = {2024},\n  volume  = {13},\n  number  = {1},\n  pages   = {33-41},\n  doi     = {10.55555/jscis.2024.0002},\n}",
+      "unmapped_fields": {},
+      "warnings": [],
+      "raw_fields": {
+        "author": "{Wang, Fang}",
+        "title": "{Placeholder Strategies in Reference Rendering}",
+        "journal": "jscis",
+        "year": "{2024}",
+        "volume": "{13}",
+        "number": "{1}",
+        "pages": "{33-41}",
+        "doi": "{10.55555/jscis.2024.0002}"
+      }
+    },
+    {
+      "id": "zhang2023survey",
+      "type": "journal-article",
+      "authors": [
+        "Zhang, Wei",
+        "Li, Xiaomin",
+        "Wang, Fang",
+        "Chen, Hao"
+      ],
+      "editors": [],
+      "title": "A Survey of Citation Graph Embeddings for Digital Libraries",
+      "title_alt": null,
+      "year": "2023",
+      "venue": "Journal of Synthetic Citation Studies",
+      "volume": "12",
+      "issue": "3",
+      "pages": "145-162",
+      "article_number": null,
+      "publisher": null,
+      "address": null,
+      "doi": "10.55555/jscis.2023.0001",
+      "url": null,
+      "isbn": null,
+      "language": "en",
+      "type_tag": "J",
+      "raw_source": "@article{zhang2023survey,\n  author  = {Zhang, Wei and Li, Xiaomin and Wang, Fang and Chen, Hao},\n  title   = {A Survey of Citation Graph Embeddings for Digital Libraries},\n  journal = jscis,\n  year    = {2023},\n  volume  = {12},\n  number  = {3},\n  pages   = {145-162},\n  doi     = {10.55555/jscis.2023.0001},\n  note    = {Fictional entry for skill demo},\n}",
+      "unmapped_fields": {
+        "note": "Fictional entry for skill demo"
+      },
+      "warnings": [
+        "未映射 BibTeX 字段 `note`，verbatim 保留"
+      ],
+      "raw_fields": {
+        "author": "{Zhang, Wei and Li, Xiaomin and Wang, Fang and Chen, Hao}",
+        "title": "{A Survey of Citation Graph Embeddings for Digital Libraries}",
+        "journal": "jscis",
+        "year": "{2023}",
+        "volume": "{12}",
+        "number": "{3}",
+        "pages": "{145-162}",
+        "doi": "{10.55555/jscis.2023.0001}",
+        "note": "{Fictional entry for skill demo}"
+      }
+    }
+  ]
+}

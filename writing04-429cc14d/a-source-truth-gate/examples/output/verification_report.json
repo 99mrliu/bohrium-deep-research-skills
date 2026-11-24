@@ -1,0 +1,92 @@
+{
+  "tool": "verify_entries",
+  "version": "1.0.0",
+  "generated_utc": "1970-01-01T00:00:00Z",
+  "verification_basis": "本报告仅以输入快照（snapshot）为核验依据，未进行任何联网核实；not_found_in_snapshot 表示快照覆盖不全，不等于条目系伪造；DOI 解析失败（传输层）与 Crossref 404 均不得作为删除条目的理由。",
+  "entries_file": "examples/input/entries.jsonl",
+  "snapshot_file": "examples/input/snapshot.json",
+  "snapshot_record_count": 5,
+  "summary": {
+    "total": 6,
+    "invalid_input": 0,
+    "metadata_conflict": 1,
+    "not_checked": 0,
+    "not_found_in_snapshot": 0,
+    "suspected_fabricated": 1,
+    "verified_identity": 4
+  },
+  "results": [
+    {
+      "id": "E1",
+      "title": "基于虚构晶格材料 HNX-3 的热电转换效率研究",
+      "status": "verified_identity",
+      "reason": "doi_match_and_fields_consistent",
+      "evidence": {
+        "matched_by": "doi",
+        "snapshot_doi": "10.55001/fakej.2023.001"
+      },
+      "conflicts": []
+    },
+    {
+      "id": "E2",
+      "title": "城市绿地对夜间气温影响的模拟研究（合成示例）",
+      "status": "verified_identity",
+      "reason": "doi_match_and_fields_consistent",
+      "evidence": {
+        "matched_by": "doi",
+        "snapshot_doi": "10.55001/fakej.2021.014"
+      },
+      "conflicts": []
+    },
+    {
+      "id": "E3",
+      "title": "一种虚构酶 GMP-7 的催化动力学研究（合成示例）",
+      "status": "verified_identity",
+      "reason": "doi_match_and_fields_consistent",
+      "evidence": {
+        "matched_by": "doi",
+        "snapshot_doi": "10.55002/enz.2019.077"
+      },
+      "conflicts": []
+    },
+    {
+      "id": "E4",
+      "title": "合成语料标注一致性的统计方法研究",
+      "status": "verified_identity",
+      "reason": "title_match_and_fields_consistent",
+      "evidence": {
+        "matched_by": "title",
+        "snapshot_doi": "10.55003/stat.2022.005"
+      },
+      "conflicts": [],
+      "note": "by_title"
+    },
+    {
+      "id": "E5",
+      "title": "量子海绵吸水性能的虚构研究",
+      "status": "suspected_fabricated",
+      "reason": "invalid_doi_syntax",
+      "evidence": {
+        "doi": "10.1234 /bogus.2024.001"
+      },
+      "conflicts": []
+    },
+    {
+      "id": "E6",
+      "title": "合成数据增强在低资源机器翻译中的作用",
+      "status": "metadata_conflict",
+      "reason": "doi_resolves_but_fields_differ",
+      "evidence": {
+        "matched_by": "doi",
+        "snapshot_doi": "10.55003/nlp.2020.011"
+      },
+      "conflicts": [
+        {
+          "field": "year",
+          "entry_value": 2021,
+          "snapshot_value": 2020
+        }
+      ]
+    }
+  ]
+}

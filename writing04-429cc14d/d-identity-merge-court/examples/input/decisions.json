@@ -1,0 +1,63 @@
+{
+  "schema_version": "1.0",
+  "note": "合成示例：针对 examples/output/candidates.json 的 10 个候选组的正确裁决（7 merge + 2 keep_separate + 1 human_queue）。",
+  "decisions": [
+    {
+      "group_id": "G001",
+      "verdict": "merge",
+      "canonical": "R001",
+      "reason": "M1：三条记录规范化 DOI 完全一致（仅大小写/前缀差异，R003 从 url 提取同一 DOI），书目坐标（年/卷/期/页）规范化后一致，确认为同一文献的跨库重复；canonical 取字段最全的 Crossref 记录 R001，保留 R002 的 PMID 与 R003 的机构信息。"
+    },
+    {
+      "group_id": "G002",
+      "verdict": "merge",
+      "canonical": "R005",
+      "reason": "规范化题名完全相同（仅大小写与冒号差异），缺 DOI 但坐标三重佐证（同第一作者 Kowalski、同年 2023、同容器同卷）， corroboration 充分；canonical 取含页码的出版方记录 R005。"
+    },
+    {
+      "group_id": "G003",
+      "verdict": "merge",
+      "canonical": "R007",
+      "reason": "同第一作者 Nakamura、同年 2022、题名 token Jaccard=0.889（正式版多副标题 a review），且容器与卷完全一致，moderate 证据成立；canonical 取带页码的 R007，题名差异入 exception list 备查。"
+    },
+    {
+      "group_id": "G004",
+      "verdict": "merge",
+      "canonical": "R009",
+      "reason": "M4：预印本 R008（arXiv:2401.98765v2）与正式版 R009 题名相同、作者相同；材料内 note 字段明确声明版本关系并给出正式版 DOI 10.55555/SPLS.2025.017，证据 strong。并入正式版 R009，保留谱系（preprint id、版本关系、重定向），年份差 2024/2025 属预印本-正式版正常现象，入 exception list。"
+    },
+    {
+      "group_id": "G005",
+      "verdict": "merge",
+      "canonical": "R011",
+      "reason": "中英题名对：R011 的 translation_of 字段指向 R010，且共享规范化 DOI（仅大小写差异），M1 成立；容器与作者差异为中英译名/罗马化所致，不属书目坐标冲突，入 exception list；canonical 取字段更全的 R011，保留 R010 的中文原始题名为 title_original。"
+    },
+    {
+      "group_id": "G006",
+      "verdict": "merge",
+      "canonical": "R013",
+      "reason": "M1：CNKI 与 Crossref 导出共享规范化 DOI（仅大小写差异），卷期页规范化后一致（连字符 vs en dash 为格式差异）；题名/刊名/作者差异为中英导出惯例，入 exception list；canonical 取含 URL 的 Crossref 记录 R013。"
+    },
+    {
+      "group_id": "G007",
+      "verdict": "merge",
+      "canonical": "R015",
+      "reason": "M1：EndNote 导出把 DOI 放在 url 字段，规范化后与 Crossref 记录 R015 的 DOI 完全一致，年/卷/页一致；canonical 取带显式 doi 字段的 R015。"
+    },
+    {
+      "group_id": "G008",
+      "verdict": "keep_separate",
+      "reason": "M5 同名作者保护：R016（Zhang, Wei）与 R017（Zhang, Lei）同姓同年、题名仅一词之差（flow vs speed），但作者给定名不同、共同作者不同、容器/卷/页/DOI 全异，是同名姓作者的两篇不同文献，显式保护不予合并。"
+    },
+    {
+      "group_id": "G009",
+      "verdict": "human_queue",
+      "reason": "M2：两记录共享规范化 DOI 10.55555/abl.2021.033，但年份（2021 vs 2022）与页码（77–88 vs 177–188）规范化后冲突，禁止自动并；升级人工核查：解析 DOI 落地页核对真实年份与页码，判定是 R019 导出错误还是 DOI 错配。"
+    },
+    {
+      "group_id": "G010",
+      "verdict": "keep_separate",
+      "reason": "M3：两篇仅规范化题名相同（Digital twins in manufacturing），第一作者、年份、容器、卷、页、DOI 全部不同，无任何 corroboration，属短通用题名的题名撞车，证据 weak，保持分离。"
+    }
+  ]
+}

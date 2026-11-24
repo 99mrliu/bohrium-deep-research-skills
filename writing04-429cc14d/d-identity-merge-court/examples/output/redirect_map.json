@@ -1,0 +1,68 @@
+{
+  "schema_version": "1.0",
+  "record_redirects": {
+    "R002": "R001",
+    "R003": "R001",
+    "R004": "R005",
+    "R006": "R007",
+    "R008": "R009",
+    "R010": "R011",
+    "R012": "R013",
+    "R014": "R015"
+  },
+  "cite_key_redirects": {
+    "chen2024neuralpm": "chen2024neural",
+    "chen2024circuit": "chen2024neural",
+    "kowalski2023attention": "kowalski2023revisiting",
+    "nakamura2022uq": "nakamura2022uqreview",
+    "torres2024fedunlearn": "torres2025fedunlearn",
+    "wang2023medical": "wang2023structured",
+    "chen2024multimodal": "chen2024crosslingual",
+    "solberg2021soil": "solberg2021permafrost"
+  },
+  "groups": {
+    "G001": {
+      "canonical": "R001",
+      "absorbed": [
+        "R002",
+        "R003"
+      ]
+    },
+    "G002": {
+      "canonical": "R005",
+      "absorbed": [
+        "R004"
+      ]
+    },
+    "G003": {
+      "canonical": "R007",
+      "absorbed": [
+        "R006"
+      ]
+    },
+    "G004": {
+      "canonical": "R009",
+      "absorbed": [
+        "R008"
+      ]
+    },
+    "G005": {
+      "canonical": "R011",
+      "absorbed": [
+        "R010"
+      ]
+    },
+    "G006": {
+      "canonical": "R013",
+      "absorbed": [
+        "R012"
+      ]
+    },
+    "G007": {
+      "canonical": "R015",
+      "absorbed": [
+        "R014"
+      ]
+    }
+  }
+}

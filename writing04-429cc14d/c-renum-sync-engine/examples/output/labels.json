@@ -1,0 +1,99 @@
+{
+  "style_hint": "numeric",
+  "labels": {
+    "3": "sid-001",
+    "1": "sid-002",
+    "7": "sid-003",
+    "4": "sid-004",
+    "6": "sid-005",
+    "5": "sid-006",
+    "2": "sid-007",
+    "8": "sid-008"
+  },
+  "sid_to_label": {
+    "sid-001": "3",
+    "sid-002": "1",
+    "sid-003": "7",
+    "sid-004": "4",
+    "sid-005": "6",
+    "sid-006": "5",
+    "sid-007": "2",
+    "sid-008": "8"
+  },
+  "entries": [
+    {
+      "sid": "sid-002",
+      "original_label": "1",
+      "kind": "numeric",
+      "text": "Alvarez, M. Corrosion kinetics of marine battery electrodes. Journal of Coastal Energy, 2019.",
+      "ref_line": 1
+    },
+    {
+      "sid": "sid-007",
+      "original_label": "2",
+      "kind": "numeric",
+      "text": "Okafor, T. Maintenance manual for tidal battery containers. Portside Technical Press, 2018.",
+      "ref_line": 2
+    },
+    {
+      "sid": "sid-001",
+      "original_label": "3",
+      "kind": "numeric",
+      "text": "Lindqvist, S. Field survey of salt-fog aging in Nordic microgrids. Renewable Storage Letters, 2021.",
+      "ref_line": 3
+    },
+    {
+      "sid": "sid-004",
+      "original_label": "4",
+      "kind": "numeric",
+      "text": "Beaumont, R. Lessons from early tidal pilot projects. Marine Energy Reports, 2017.",
+      "ref_line": 4
+    },
+    {
+      "sid": "sid-006",
+      "original_label": "5",
+      "kind": "numeric",
+      "text": "Hoshino, K. Corrosion-only baselines for capacity fade modeling. Battery Systems Review, 2020.",
+      "ref_line": 5
+    },
+    {
+      "sid": "sid-005",
+      "original_label": "6",
+      "kind": "numeric",
+      "text": "Duarte, P. Calibration notes for container firmware v3.2. Internal Technical Series, 2022.",
+      "ref_line": 6
+    },
+    {
+      "sid": "sid-003",
+      "original_label": "7",
+      "kind": "numeric",
+      "text": "Nguyen, L. Grid-scale modeling of tidal storage fleets. Sustainable Grids, 2023.",
+      "ref_line": 7
+    },
+    {
+      "sid": "sid-008",
+      "original_label": "8",
+      "kind": "numeric",
+      "text": "Castellanos, V. Oral history of the Port Meridian microgrid. Local Heritage Pamphlet, 2015.",
+      "ref_line": 8
+    }
+  ],
+  "dangling": [
+    "9"
+  ],
+  "uncited": [
+    "8"
+  ],
+  "occurrence_count": 12,
+  "reference_count": 8,
+  "manuscript": "manuscript.txt",
+  "references": "references.txt",
+  "region_counts": {
+    "body": 8,
+    "figure_caption": 1,
+    "table_caption": 1,
+    "footnote": 1,
+    "appendix": 1
+  },
+  "unparsed_reference_lines": []
+}

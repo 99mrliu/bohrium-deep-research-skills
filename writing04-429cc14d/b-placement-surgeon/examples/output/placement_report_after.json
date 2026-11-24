@@ -1,0 +1,17 @@
+{
+  "tool": "placement_audit.py",
+  "stats": {
+    "sentences": 19,
+    "body": 17,
+    "caption": 2,
+    "footnote": 0,
+    "markers": 7
+  },
+  "skipped_rules": [
+    {
+      "rule": "P2",
+      "reason": "未提供 intent.jsonl 台账，跳过 P2"
+    }
+  ],
+  "violations": []
+}
