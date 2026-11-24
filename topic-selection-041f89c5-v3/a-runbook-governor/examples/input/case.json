@@ -1,0 +1,14 @@
+{
+  "case_id": "SYNTH-RUNBOOK-001",
+  "task_instruction": "【合成示例，非正式测试案例】围绕一个虚构的研究问题完成选题评估演示。",
+  "output_contract": {
+    "case_id": "原样保留",
+    "status": "success|partial|failed",
+    "question_definition": "可检验的研究问题陈述",
+    "prior_work_comparison": "已有工作比较",
+    "novelty_assessment": "创新点判定",
+    "feasibility_assessment": "可行性判断",
+    "uncertainties": "不确定性与边界"
+  },
+  "materials": ["paper_alpha.txt", "paper_beta.txt"]
+}

@@ -1,0 +1,154 @@
+{
+  "case_id": "SYNTH-RUNBOOK-001",
+  "contract_fields": [
+    "case_id",
+    "status",
+    "question_definition",
+    "prior_work_comparison",
+    "novelty_assessment",
+    "feasibility_assessment",
+    "uncertainties"
+  ],
+  "phases": {
+    "intake": {
+      "entered": 1795533746.277146,
+      "exited": 1795533746.6816828,
+      "note": "登记 4 个输入文件；骨架 result.json 已由 init 落盘"
+    },
+    "question": {
+      "entered": 1795533747.461355,
+      "exited": 1795533747.7494788,
+      "note": "五要素成稿；未指定项：D 的划分细节（材料未给）"
+    },
+    "retrieve": {
+      "entered": 1795533748.302669,
+      "exited": 1795533748.5573819,
+      "note": "2/2 纳入；覆盖边界=输入文献集"
+    },
+    "extract": {
+      "entered": 1795533749.382519,
+      "exited": 1795533749.6771042,
+      "note": "2 篇文献字段提取完毕"
+    },
+    "synthesize": {
+      "entered": null,
+      "exited": null,
+      "note": null
+    },
+    "closeout": {
+      "entered": null,
+      "exited": null,
+      "note": null
+    }
+  },
+  "active_phase": null,
+  "budget": {
+    "requests_cap": 10,
+    "seconds_cap": 900,
+    "requests_used": 10,
+    "started_epoch": 1795533745.7673879
+  },
+  "result_path": "/Users/liuhengshen/Desktop/bhr_product/041f89c5-v3/a-runbook-governor/examples/output/app_output/result.json",
+  "case_path": "/Users/liuhengshen/Desktop/bhr_product/041f89c5-v3/a-runbook-governor/examples/input/case.json",
+  "checkpoints": [
+    "/Users/liuhengshen/Desktop/bhr_product/041f89c5-v3/a-runbook-governor/examples/output/work/checkpoints/result_20261124T232227_idle.json",
+    "/Users/liuhengshen/Desktop/bhr_product/041f89c5-v3/a-runbook-governor/examples/output/work/checkpoints/result_20261124T232229_idle.json"
+  ],
+  "events": [
+    {
+      "t": 1795533745.7674382,
+      "event": "init",
+      "detail": "7 个契约字段"
+    },
+    {
+      "t": 1795533746.2771468,
+      "event": "enter",
+      "detail": "intake"
+    },
+    {
+      "t": 1795533746.6816828,
+      "event": "exit",
+      "detail": "intake: 登记 4 个输入文件；骨架 result.json 已由 init 落盘"
+    },
+    {
+      "t": 1795533746.938995,
+      "event": "tick",
+      "detail": "+2 requests"
+    },
+    {
+      "t": 1795533747.218988,
+      "event": "checkpoint",
+      "detail": "result_20261124T232227_idle.json"
+    },
+    {
+      "t": 1795533747.461355,
+      "event": "enter",
+      "detail": "question"
+    },
+    {
+      "t": 1795533747.74948,
+      "event": "exit",
+      "detail": "question: 五要素成稿；未指定项：D 的划分细节（材料未给）"
+    },
+    {
+      "t": 1795533748.002456,
+      "event": "tick",
+      "detail": "+2 requests"
+    },
+    {
+      "t": 1795533748.302669,
+      "event": "enter",
+      "detail": "retrieve"
+    },
+    {
+      "t": 1795533748.5573819,
+      "event": "exit",
+      "detail": "retrieve: 2/2 纳入；覆盖边界=输入文献集"
+    },
+    {
+      "t": 1795533748.840684,
+      "event": "tick",
+      "detail": "+2 requests"
+    },
+    {
+      "t": 1795533749.122796,
+      "event": "checkpoint",
+      "detail": "result_20261124T232229_idle.json"
+    },
+    {
+      "t": 1795533749.382519,
+      "event": "enter",
+      "detail": "extract"
+    },
+    {
+      "t": 1795533749.677105,
+      "event": "exit",
+      "detail": "extract: 2 篇文献字段提取完毕"
+    },
+    {
+      "t": 1795533749.964129,
+      "event": "tick",
+      "detail": "+2 requests"
+    },
+    {
+      "t": 1795533750.2045991,
+      "event": "tick",
+      "detail": "+2 requests"
+    },
+    {
+      "t": 1795533750.774297,
+      "event": "triage",
+      "detail": "forced partial"
+    },
+    {
+      "t": 1795533751.008974,
+      "event": "finalize",
+      "detail": "partial"
+    }
+  ],
+  "finalized": {
+    "status": "partial",
+    "reason": "示例故意耗尽 10 次请求预算，synthesize/closeout 未执行；已交付骨架与过程产物",
+    "t": 1795533751.008974
+  }
+}

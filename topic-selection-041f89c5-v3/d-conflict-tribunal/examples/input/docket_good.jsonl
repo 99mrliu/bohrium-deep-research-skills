@@ -1,0 +1,5 @@
+{"type":"evidence","group":"G1","side":"support","claim":"方法 M 在数据集 D 上显著提升指标 X","source_file":"paper_a.txt","quote":"方法 M 把指标 X 从 0.71 提升到 0.79","locator":"paper_a.txt 第1页","quality":{"directness":"direct","evidence_kind":"experimental","method_rigor":"high","year":2024}}
+{"type":"evidence","group":"G1","side":"counter","claim":"方法 M 在数据集 D 上显著提升指标 X","source_file":"paper_b.txt","quote":"方法 M 仅把 X 从 0.71 提升到 0.72","locator":"paper_b.txt 第1页","quality":{"directness":"direct","evidence_kind":"experimental","method_rigor":"medium","year":2025}}
+{"type":"counter_search","group":"G1","scope":"翻检输入材料集全部 3 个来源的结果与讨论段","found":true,"note":"在 paper_b.txt 发现相反结论（提升幅度 0.01，与 0.08 冲突）"}
+{"type":"evidence","group":"G2","side":"support","claim":"M 类方法在与 D 类似的数据集上普遍有效","source_file":"paper_c.txt","quote":"M 类方法在类似数据集上普遍有效","locator":"paper_c.txt 第1页","quality":{"directness":"indirect","evidence_kind":"review","method_rigor":"medium","year":2023}}
+{"type":"counter_search","group":"G2","scope":"翻检输入材料集全部 3 个来源的结果、讨论与局限段","found":false,"note":"逐篇核对了 3 个来源全文，未见与该断言相反的陈述"}

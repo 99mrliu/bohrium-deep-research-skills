@@ -1,0 +1,41 @@
+{
+  "files": [
+    "/Users/liuhengshen/Desktop/bhr_product/041f89c5-v3/b-dual-pass-gain-meter/examples/input/pass0_result.json"
+  ],
+  "total_hits": 4,
+  "bounded_hits": 0,
+  "violations": [
+    {
+      "file": "/Users/liuhengshen/Desktop/bhr_product/041f89c5-v3/b-dual-pass-gain-meter/examples/input/pass0_result.json",
+      "where": "summary",
+      "pattern": "尚无人研究",
+      "hit": "尚无人研究",
+      "context": "【合成示例：基线稿】现有工作普遍研究了方法 M，效果良好。该方向尚无人研究过 M 与数据集 D 的结合，属于填补空白的工作。方案技术路线可行。",
+      "bounded": false
+    },
+    {
+      "file": "/Users/liuhengshen/Desktop/bhr_product/041f89c5-v3/b-dual-pass-gain-meter/examples/input/pass0_result.json",
+      "where": "summary",
+      "pattern": "填补.{0,8}空白",
+      "hit": "填补空白",
+      "context": "【合成示例：基线稿】现有工作普遍研究了方法 M，效果良好。该方向尚无人研究过 M 与数据集 D 的结合，属于填补空白的工作。方案技术路线可行。",
+      "bounded": false
+    },
+    {
+      "file": "/Users/liuhengshen/Desktop/bhr_product/041f89c5-v3/b-dual-pass-gain-meter/examples/input/pass0_result.json",
+      "where": "novelty_assessment",
+      "pattern": "国际首创",
+      "hit": "国际首创",
+      "context": "本提案首次提出把 M 用于 D，是国际首创。",
+      "bounded": false
+    },
+    {
+      "file": "/Users/liuhengshen/Desktop/bhr_product/041f89c5-v3/b-dual-pass-gain-meter/examples/input/pass0_result.json",
+      "where": "novelty_assessment",
+      "pattern": "首次提出",
+      "hit": "首次提出",
+      "context": "本提案首次提出把 M 用于 D，是国际首创。",
+      "bounded": false
+    }
+  ]
+}

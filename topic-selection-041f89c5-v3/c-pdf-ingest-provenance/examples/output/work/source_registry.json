@@ -1,0 +1,46 @@
+{
+  "generated_at": "2026-11-24T23:22:32+0800",
+  "input_dir": "/Users/liuhengshen/Desktop/bhr_product/041f89c5-v3/c-pdf-ingest-provenance/examples/input",
+  "sources": [
+    {
+      "file": "synth_paper_alpha.pdf",
+      "bytes": 1160,
+      "sha256": "948d592529c0926b10a435cba2c32964514c7072bef26556ea0ac11b77fbf929",
+      "kind": "pdf",
+      "status": "ok",
+      "pages": [
+        {
+          "page": 1,
+          "chars": 168,
+          "garble_ratio": 0.0
+        },
+        {
+          "page": 2,
+          "chars": 124,
+          "garble_ratio": 0.0
+        }
+      ],
+      "text_layer": "sources/synth_paper_alpha.pdf.txt"
+    },
+    {
+      "file": "synth_paper_beta.pdf",
+      "bytes": 992,
+      "sha256": "ecd9ed1a47935cb3a4a025aa68cd4d674e1acf92a71e70200d1e372741b61d20",
+      "kind": "pdf",
+      "status": "ok",
+      "pages": [
+        {
+          "page": 1,
+          "chars": 171,
+          "garble_ratio": 0.0
+        },
+        {
+          "page": 2,
+          "chars": 0,
+          "garble_ratio": 0.0
+        }
+      ],
+      "text_layer": "sources/synth_paper_beta.pdf.txt"
+    }
+  ]
+}

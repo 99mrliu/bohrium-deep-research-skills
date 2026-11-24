@@ -1,0 +1,117 @@
+{
+  "note": "比较图谱报告（机器生成）；空白=输入文献集内空白，不做全局新颖性断言",
+  "records": 6,
+  "facets": [
+    "task",
+    "method_family"
+  ],
+  "coverage_matrix": {
+    "合成工艺优化 × 机器学习": [],
+    "合成工艺优化 × 物理建模": [
+      "R4",
+      "R6"
+    ],
+    "合成工艺优化 × 高通量实验": [
+      "R5"
+    ],
+    "容量保持率预测 × 机器学习": [
+      "R1",
+      "R2"
+    ],
+    "容量保持率预测 × 物理建模": [
+      "R3"
+    ],
+    "容量保持率预测 × 高通量实验": []
+  },
+  "empty_cells": [
+    {
+      "task": "合成工艺优化",
+      "method_family": "机器学习"
+    },
+    {
+      "task": "容量保持率预测",
+      "method_family": "高通量实验"
+    }
+  ],
+  "metric_gaps": [
+    {
+      "class": "半电池循环",
+      "record_id": "R1",
+      "missing_metrics": [
+        "循环寿命"
+      ],
+      "class_metric_union": [
+        "容量保持率",
+        "循环寿命",
+        "首效"
+      ]
+    },
+    {
+      "class": "半电池循环",
+      "record_id": "R2",
+      "missing_metrics": [
+        "容量保持率",
+        "首效"
+      ],
+      "class_metric_union": [
+        "容量保持率",
+        "循环寿命",
+        "首效"
+      ]
+    },
+    {
+      "class": "半电池循环",
+      "record_id": "R3",
+      "missing_metrics": [
+        "首效"
+      ],
+      "class_metric_union": [
+        "容量保持率",
+        "循环寿命",
+        "首效"
+      ]
+    },
+    {
+      "class": "工艺收率",
+      "record_id": "R4",
+      "missing_metrics": [
+        "纯度"
+      ],
+      "class_metric_union": [
+        "收率",
+        "纯度"
+      ]
+    },
+    {
+      "class": "工艺收率",
+      "record_id": "R6",
+      "missing_metrics": [
+        "收率"
+      ],
+      "class_metric_union": [
+        "收率",
+        "纯度"
+      ]
+    }
+  ],
+  "incomparable_pairs": [
+    {
+      "pair": [
+        "R1",
+        "R2"
+      ],
+      "reason": "同一任务（容量保持率预测）但指标集不相交：['容量保持率', '首效'] vs ['循环寿命']；结论不能直接比较，只能分别陈述"
+    },
+    {
+      "pair": [
+        "R4",
+        "R6"
+      ],
+      "reason": "同一任务（合成工艺优化）但指标集不相交：['收率'] vs ['纯度']；结论不能直接比较，只能分别陈述"
+    }
+  ],
+  "validation_warnings": [
+    "R2 与 R1 的 (task, method_family, data_domain) 完全相同；若是独立研究请忽略，若是重复登记请合并",
+    "R6 与 R4 的 (task, method_family, data_domain) 完全相同；若是独立研究请忽略，若是重复登记请合并"
+  ]
+}

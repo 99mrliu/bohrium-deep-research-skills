@@ -1,0 +1,24 @@
+{
+  "note": "对抗裁决报告（机器生成）；准则优先级：直接性 > 证据类型 > 方法严谨度 > 时效",
+  "verdicts": [
+    {
+      "group": "G1",
+      "verdict": "support",
+      "deciding_criterion": "方法严谨度",
+      "rationale": "按方法严谨度裁决：paper_a.txt（direct/experimental/high/2024）优于 paper_b.txt（direct/experimental/medium/2025）；取舍理由已登记，反方证据并列保留",
+      "winner_source": "paper_a.txt",
+      "loser_source": "paper_b.txt",
+      "support_count": 1,
+      "counter_count": 1
+    },
+    {
+      "group": "G2",
+      "verdict": "unchallenged",
+      "deciding_criterion": null,
+      "rationale": "对抗检索未找到反证；断言成立但置信度低于经过对抗检验的结论，综述中必须如实标注",
+      "support_count": 1,
+      "counter_count": 0,
+      "search_scope": "翻检输入材料集全部 3 个来源的结果、讨论与局限段"
+    }
+  ]
+}

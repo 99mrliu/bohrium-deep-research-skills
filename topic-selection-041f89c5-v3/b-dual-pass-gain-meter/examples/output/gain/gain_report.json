@@ -1,0 +1,47 @@
+{
+  "note": "双通道增益报告（机器生成）；指标定义见 references/metrics_format.md",
+  "fields_compared": [
+    "status",
+    "summary",
+    "novelty_assessment",
+    "uncertainties"
+  ],
+  "baseline": {
+    "contract_fields_total": 4,
+    "contract_fields_filled": 3,
+    "fill_rate": 0.75,
+    "evidence_anchors": 0,
+    "overclaims_total": 4,
+    "overclaims_unbounded": 4,
+    "uncertainty_items": 0,
+    "conflict_mentions": 0
+  },
+  "final": {
+    "contract_fields_total": 4,
+    "contract_fields_filled": 4,
+    "fill_rate": 1.0,
+    "evidence_anchors": 4,
+    "overclaims_total": 0,
+    "overclaims_unbounded": 0,
+    "uncertainty_items": 3,
+    "conflict_mentions": 3
+  },
+  "delta": {
+    "contract_fields_total": 0,
+    "contract_fields_filled": 1,
+    "fill_rate": 0.25,
+    "evidence_anchors": 4,
+    "overclaims_total": -4,
+    "overclaims_unbounded": -4,
+    "uncertainty_items": 3,
+    "conflict_mentions": 3
+  },
+  "verdicts": {
+    "填充率提升": true,
+    "证据锚点增加": true,
+    "越界断言减少或不增": true,
+    "不确定性登记增加": true,
+    "冲突登记增加或不减": true
+  },
+  "all_verdicts_pass": true
+}

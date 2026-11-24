@@ -1,0 +1,21 @@
+{
+  "registry": "/Users/liuhengshen/Desktop/bhr_product/041f89c5-v3/c-pdf-ingest-provenance/examples/output/work/source_registry.json",
+  "verdicts": [
+    {
+      "file": "synth_paper_alpha.pdf",
+      "verdict": "ok",
+      "reason": "-",
+      "pages": 2,
+      "total_chars": 292
+    },
+    {
+      "file": "synth_paper_beta.pdf",
+      "verdict": "ok_with_notes",
+      "reason": "空页:[2] 低文字页:-",
+      "pages": 2,
+      "total_chars": 171
+    }
+  ],
+  "unreadable_sources": [],
+  "rule": "unreadable: 相关结论必须降级为 partial 并说明；suspect: 引用前人工目检对应页；ok_with_notes: 空页/低文字页已记录"
+}
