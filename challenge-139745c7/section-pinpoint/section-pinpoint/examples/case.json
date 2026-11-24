@@ -1,0 +1,9 @@
+{
+  "case_id": "synthetic-demo-pinpoint",
+  "library_root": "library",
+  "questions": [
+    {"id": "q1", "text": "终稿里缓冲液配方写在哪一节？配方内容是什么？"},
+    {"id": "q2", "text": "量子点合成的温度曲线记录在哪？"}
+  ],
+  "output_contract": ["case_id", "status", "summary", "results", "uncertainty"]
+}

@@ -1,0 +1,9 @@
+{
+  "case_id": "synthetic-demo-custody",
+  "library_root": "library",
+  "questions": [
+    {"id": "q1", "text": "缓冲液配方写在哪份记录？原文是什么？"},
+    {"id": "q2", "text": "质谱上样量是多少？"}
+  ],
+  "output_contract": ["case_id", "status", "summary", "answers", "uncertainty"]
+}

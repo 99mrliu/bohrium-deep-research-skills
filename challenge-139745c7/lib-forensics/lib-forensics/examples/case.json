@@ -1,0 +1,9 @@
+{
+  "case_id": "synthetic-demo-forensics",
+  "library_root": "library",
+  "questions": [
+    {"id": "q1", "text": "缓冲液配方写在哪份记录？"},
+    {"id": "q2", "text": "离心机转子型号是什么？"}
+  ],
+  "output_contract": ["case_id", "status", "summary", "answers", "excluded", "uncertainty"]
+}

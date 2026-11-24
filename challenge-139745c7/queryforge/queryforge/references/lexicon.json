@@ -1,0 +1,19 @@
+{
+  "_comment": "可编辑中英同义/缩写/上下位词表。键为规范词，值为扩展词。Agent 可按案例领域补充，但必须在 queries.json 的 expansion_log 中留下记录。",
+  "缓冲液": ["buffer", "缓冲溶液", "缓冲体系"],
+  "配方": ["配比", "组成", "recipe", "formulation"],
+  "终稿": ["final", "正式版", "定稿"],
+  "初稿": ["draft", "草稿"],
+  "修订": ["revised", "修改版", "revision"],
+  "实验记录": ["实验日志", "lab notebook", "record"],
+  "批次": ["batch", "批号"],
+  "收率": ["yield", "回收率"],
+  "保留时间": ["retention time", "rt"],
+  "层析": ["色谱", "chromatography"],
+  "纯化": ["purification"],
+  "蛋白": ["protein", "蛋白质"],
+  "开题报告": ["proposal", "开题"],
+  "补充材料": ["supplementary", "supporting information", "si"],
+  "预印本": ["preprint"],
+  "仪器导出": ["instrument export", "raw export"]
+}

@@ -1,0 +1,10 @@
+{
+  "case_id": "synthetic-demo-queryforge",
+  "library_root": "library",
+  "questions": [
+    {"id": "q1", "text": "2023年终稿版本的缓冲液配方是什么？"},
+    {"id": "q2", "text": "B2023-014 批次的 HPLC 保留时间是多少？"},
+    {"id": "q3", "text": "2025年终稿版本的缓冲液配方是什么？"}
+  ],
+  "output_contract": ["case_id", "status", "summary", "results", "uncertainty"]
+}
