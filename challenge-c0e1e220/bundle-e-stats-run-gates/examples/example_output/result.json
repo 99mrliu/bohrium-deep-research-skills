@@ -1,0 +1,253 @@
+{
+  "analysis_plan": {
+    "alpha": 0.05,
+    "group_column": "group",
+    "groups": [
+      "control",
+      "treatment"
+    ],
+    "outcomes": [
+      "yield_rate"
+    ],
+    "unit": "%"
+  },
+  "case_id": "case-synthetic-vinegar-demo",
+  "cleaning": {
+    "closure": "rows_raw == rows_kept + rows_dropped",
+    "closure_ok": true,
+    "db_consistency": {
+      "checked": true,
+      "column_types": [
+        "TEXT",
+        "TEXT"
+      ],
+      "detail": "全部 47 行 × 2 列一致",
+      "match": true,
+      "table": "vinegar"
+    },
+    "duplicate_policy": "flag_and_report",
+    "duplicates_flagged": 3,
+    "duplicates_removed": 0,
+    "group_missing_removed": 0,
+    "missing_by_variable": {
+      "group": 0,
+      "yield_rate": 2
+    },
+    "outliers_flagged_cells": {
+      "yield_rate": 3
+    },
+    "outliers_flagged_rows": 3,
+    "rows_dropped": 0,
+    "rows_kept": 47,
+    "rows_raw": 47,
+    "rules": [
+      {
+        "affected_rows": 3,
+        "detail": "完全重复行只标记报告不删除（删除需 constraints.duplicate_policy 显式授权）",
+        "rule": "flag_and_report"
+      },
+      {
+        "affected_rows": 0,
+        "detail": "分组变量缺失行整行剔除；结局变量缺失按逐变量有效 n 处理（不零填、不插补）",
+        "rule": "missing_report_and_exclude"
+      },
+      {
+        "affected_rows": 3,
+        "detail": "1.5×IQR 栅栏只标记不删除",
+        "rule": "outlier_flag_1.5IQR"
+      }
+    ]
+  },
+  "confidence_interval": {
+    "yield_rate": {
+      "effect": {
+        "ci95": [
+          -0.21108301077664843,
+          1.3925553174837002
+        ],
+        "method": "bootstrap percentile B=2000 seed=20240501",
+        "type": "hedges_g",
+        "value": 0.3321484438921651
+      },
+      "id": "CI:yield_rate",
+      "location": {
+        "ci95": [
+          3.5,
+          5.810000000000002
+        ],
+        "direction": "treatment - control",
+        "estimate": 4.449999999999996,
+        "method": "hodges_lehmann",
+        "type": "hodges_lehmann_median_diff"
+      }
+    }
+  },
+  "decisions": [
+    {
+      "id": "DEC-001",
+      "source": "auto",
+      "status": "confirmed",
+      "topic": "分组列",
+      "value": "group"
+    },
+    {
+      "id": "DEC-002",
+      "source": "auto",
+      "status": "confirmed",
+      "topic": "结局变量",
+      "value": [
+        "yield_rate"
+      ]
+    },
+    {
+      "id": "DEC-005",
+      "source": "auto",
+      "status": "confirmed",
+      "topic": "测量单位",
+      "value": "%"
+    }
+  ],
+  "descriptive": {
+    "yield_rate": {
+      "groups": {
+        "control": {
+          "max": 82.5,
+          "mean": 50.70869565217391,
+          "median": 50.91,
+          "min": 35.88,
+          "n": 23,
+          "q1": 46.555,
+          "q3": 53.215,
+          "sd": 8.417067241540643,
+          "skewness": 2.146813830275757
+        },
+        "treatment": {
+          "max": 63.37,
+          "mean": 53.63545454545456,
+          "median": 54.56,
+          "min": 21.3,
+          "n": 22,
+          "q1": 50.7,
+          "q3": 59.0375,
+          "sd": 8.901443289753221,
+          "skewness": -2.1203305410194377
+        }
+      },
+      "unit": "%"
+    }
+  },
+  "effect_size": {
+    "yield_rate": {
+      "ci95": [
+        -0.21108301077664843,
+        1.3925553174837002
+      ],
+      "ci_method": "bootstrap percentile B=2000 seed=20240501",
+      "direction": "treatment - control",
+      "id": "ES:yield_rate",
+      "magnitude": "小",
+      "type": "hedges_g",
+      "value": 0.3321484438921651
+    }
+  },
+  "evidence_index": [
+    "HT:yield_rate",
+    "ES:yield_rate",
+    "CI:yield_rate",
+    "SRC:synthetic_vinegar.csv",
+    "SRC:synthetic_vinegar.db",
+    "STAGE:stage_01_ingest.json",
+    "STAGE:stage_02_clean.json",
+    "STAGE:stage_03_descriptive.json",
+    "STAGE:stage_04_inference.json",
+    "STAGE:stage_05_result_draft.json",
+    "DEC-001",
+    "DEC-002",
+    "DEC-005"
+  ],
+  "exceptions": [],
+  "hypothesis_test": {
+    "yield_rate": {
+      "alpha": 0.05,
+      "assumptions": {
+        "levene": {
+          "W": 0.2330697398250992,
+          "center": "median",
+          "df": [
+            1,
+            43
+          ],
+          "homogeneous": true,
+          "p": 0.6317057864806535
+        },
+        "normality": {
+          "control": {
+            "K2": 28.97994994255581,
+            "n": 23,
+            "normal": false,
+            "note": "",
+            "p": 5.094291910534565e-07
+          },
+          "treatment": {
+            "K2": 26.52058934462739,
+            "n": 22,
+            "normal": false,
+            "note": "",
+            "p": 1.742317085384748e-06
+          }
+        }
+      },
+      "df": null,
+      "groups_order": [
+        "control",
+        "treatment"
+      ],
+      "id": "HT:yield_rate",
+      "method": "mannwhitney_u",
+      "p": 0.017102358989354638,
+      "post_hoc": [],
+      "reason_code": "2G_NONNORM",
+      "reference": {
+        "df": 42.56321068784329,
+        "method": "welch_t(classical reference)",
+        "note": "仅作可比性参考；主结论以 mannwhitney_u 为准",
+        "p": 0.2638746493275881,
+        "statistic": 1.1322336609517634
+      },
+      "significant": true,
+      "statistic": 148.0
+    }
+  },
+  "interpretation": [
+    "yield_rate（单位：%）：control（n=23）与 treatment（n=22）比较，采用Mann-Whitney U 检验（tie 校正正态近似）（统计显著），p = 0.0171；均值差（treatment - control）= 2.9268 %。效应量 hedges_g（0.3321），95% CI [-0.2111, 1.3926]。统计显著不等于实际意义：本效应幅度为「小」。本结果为组间关联证据，不能表述为「证明」因果。[HT:yield_rate] [ES:yield_rate] [CI:yield_rate]",
+    "yield_rate：为主结论稳健性附记经典参考统计量（welch_t(classical reference)，统计量 = 1.1322，p = 0.2639）；该参考值不改变以假设门控选定方法为准的结论。[HT:yield_rate]"
+  ],
+  "limitations": [
+    "yield_rate 有 3 个 1.5×IQR 栅栏外取值（仅标记未删除），极端值可能影响参数法结果。",
+    "本分析基于观察性数据，全部结论为关联性证据，不支持因果断言。"
+  ],
+  "reproducibility": {
+    "bootstrap_B": 2000,
+    "platform": "macOS-15.7.4-arm64-arm-64bit",
+    "python": "3.9.6",
+    "seed": 20240501,
+    "timestamp_utc": "2026-11-24T16:16:32Z"
+  },
+  "sources": [
+    {
+      "bytes": 759,
+      "file": "synthetic_vinegar.csv",
+      "sha256": "2cefae667adea72fc682c7374e4e70c7fa146a056d6b2b3939a362fb86731569"
+    },
+    {
+      "bytes": 8192,
+      "file": "synthetic_vinegar.db",
+      "sha256": "906719ce7178dd610be3225ae1646abef4dc2706322115b0a77e474a78089d88"
+    }
+  ],
+  "status": "complete",
+  "uncertainty": [
+    "效应量 95% CI 来自分层百分位 bootstrap（B=2000，seed=20240501），重抽样尾部分位本身存在蒙特卡洛误差。",
+    "yield_rate 采用秩检验正态近似（tie 校正），极端 ties 或小组样本下 p 值为近似。"
+  ]
+}

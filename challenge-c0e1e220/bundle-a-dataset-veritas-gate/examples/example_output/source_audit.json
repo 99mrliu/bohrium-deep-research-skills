@@ -1,0 +1,134 @@
+{
+  "audit_utc": "2026-11-24T16:02:24Z",
+  "input_dir": "/tmp/veritas_out.m5to/input",
+  "inventory": [
+    {
+      "file": "case.json",
+      "size": 638,
+      "sha256": "f366c1f81d59b172c424eeab5c06b9f852024cfdb5443002d4e9e7b7aba96728"
+    },
+    {
+      "file": "plants.csv",
+      "size": 677,
+      "sha256": "8db4b568013c9eeaa2e5fe77a481972fd961e71579d6c7954f7a9a8c7260a524"
+    },
+    {
+      "file": "plants.db",
+      "size": 8192,
+      "sha256": "e02003f3ee54e5288eb780bd0b2325abc1fd46768e00f0a5c3f708e3d1bc8019"
+    },
+    {
+      "file": "task.md",
+      "size": 747,
+      "sha256": "db760e6baae4943e53aefcf6a1af407698d3d85900ab6dc3a99bec2aa3d05b69"
+    }
+  ],
+  "csvs": [
+    {
+      "file": "plants.csv",
+      "encoding": "utf-8-sig",
+      "delimiter": ",",
+      "has_header": true,
+      "header": [
+        "id",
+        "group",
+        "height_cm",
+        "notes"
+      ],
+      "n_rows": 29,
+      "n_cols": 4
+    }
+  ],
+  "dbs": [
+    {
+      "file": "plants.db",
+      "tables": [
+        {
+          "name": "plants",
+          "n_rows": 29,
+          "n_cols": 4,
+          "columns": [
+            {
+              "name": "id",
+              "decl_type": "TEXT",
+              "affinity": "TEXT",
+              "numeric_fraction": 0.0,
+              "numeric_in_text": false
+            },
+            {
+              "name": "group",
+              "decl_type": "TEXT",
+              "affinity": "TEXT",
+              "numeric_fraction": 0.0,
+              "numeric_in_text": false
+            },
+            {
+              "name": "height_cm",
+              "decl_type": "TEXT",
+              "affinity": "TEXT",
+              "numeric_fraction": 1.0,
+              "numeric_in_text": true
+            },
+            {
+              "name": "notes",
+              "decl_type": "TEXT",
+              "affinity": "TEXT",
+              "numeric_fraction": 0.0,
+              "numeric_in_text": false
+            }
+          ],
+          "create_sql": "CREATE TABLE plants (id TEXT, \"group\" TEXT, height_cm TEXT, notes TEXT)"
+        }
+      ]
+    }
+  ],
+  "cross_source": [
+    {
+      "csv": "plants.csv",
+      "db": "plants.db",
+      "db_table": "plants",
+      "rows_csv": 29,
+      "rows_db": 29,
+      "rows_equal": true,
+      "mapping_method": "exact",
+      "mapping": [
+        {
+          "csv_col": "id",
+          "csv_index": 0,
+          "db_col": "id",
+          "method": "exact"
+        },
+        {
+          "csv_col": "group",
+          "csv_index": 1,
+          "db_col": "group",
+          "method": "exact"
+        },
+        {
+          "csv_col": "height_cm",
+          "csv_index": 2,
+          "db_col": "height_cm",
+          "method": "exact"
+        },
+        {
+          "csv_col": "notes",
+          "csv_index": 3,
+          "db_col": "notes",
+          "method": "exact"
+        }
+      ],
+      "numeric_in_text_cols": [
+        "height_cm"
+      ],
+      "n_value_mismatch": 0,
+      "compare_scope": "full（全量 29 行）",
+      "n_cells_compared": 116,
+      "mismatch_examples": [],
+      "verdict": "consistent_with_type_coercion"
+    }
+  ],
+  "fingerprints": [],
+  "warnings": [
+    "numeric-in-text: plants.db 表 plants 的列 ['height_cm'] 以 TEXT affinity 存储数值（numeric_fraction≥0.95），已识别；跨源比对与统计解析将按数值处理"
+  ]
+}

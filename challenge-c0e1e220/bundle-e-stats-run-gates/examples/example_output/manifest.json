@@ -1,0 +1,94 @@
+{
+  "case_id": "case-synthetic-vinegar-demo",
+  "environment": {
+    "platform": "macOS-15.7.4-arm64-arm-64bit",
+    "python": "3.9.6"
+  },
+  "generated_at_utc": "2026-11-24T16:16:32Z",
+  "inputs": [
+    {
+      "bytes": 577,
+      "file": "case.json",
+      "sha256": "32eec1261a6be675db92b74900ac25d81da695890ed04685bfb6fab8d9ef8bb5"
+    },
+    {
+      "bytes": 83,
+      "file": "plan.json",
+      "sha256": "f6e9842a6ec435a44db6f79ecc5211740490f9ed0a04ef505da3f23782d39164"
+    },
+    {
+      "bytes": 759,
+      "file": "synthetic_vinegar.csv",
+      "sha256": "2cefae667adea72fc682c7374e4e70c7fa146a056d6b2b3939a362fb86731569"
+    },
+    {
+      "bytes": 8192,
+      "file": "synthetic_vinegar.db",
+      "sha256": "906719ce7178dd610be3225ae1646abef4dc2706322115b0a77e474a78089d88"
+    },
+    {
+      "bytes": 608,
+      "file": "task.md",
+      "sha256": "ff38a39fab1a712d28b4d0ba54c68fcacea2aa0bf908e3bc8cc9a0ead49b535d"
+    }
+  ],
+  "manifest_version": 1,
+  "outputs": [
+    {
+      "file": "figure.svg",
+      "sha256": "5e7c2dff3fed3792937cee67e8d294fdbe471c5955e15769f172d26cb3910840"
+    },
+    {
+      "file": "report.md",
+      "sha256": "02906b137be2fee4f86049f7f91b5e14c6d08310f4e8b399c905d8b0dc969b38"
+    },
+    {
+      "file": "result.json",
+      "sha256": "8a584e280e62c33b47b194892fb009c596627307bdd8f12eb001db2f3db78e5b"
+    }
+  ],
+  "pipeline": {
+    "argv": [
+      "--input",
+      "<INPUT>",
+      "--work",
+      "<WORK>",
+      "--output",
+      "<OUTPUT>"
+    ],
+    "decisions_sha256": "6d201c97129dacf56f02fde13aca363cf9d081333e156658e0e09439643e0dad",
+    "script": "pipeline_e.py"
+  },
+  "stages": [
+    {
+      "file": "stage_05_result_draft.json",
+      "seq": 1,
+      "sha256": "4d36f93e95c81966709b12006de7a9bdca73a62eb493e6670f7160571ecaffe7",
+      "status": "written"
+    },
+    {
+      "file": "stage_01_ingest.json",
+      "seq": 2,
+      "sha256": "c1c15c31fcf4461ffc250ab093ed1dae834f55f829dfdbe231f0b7aa569520d2",
+      "status": "written"
+    },
+    {
+      "file": "stage_02_clean.json",
+      "seq": 3,
+      "sha256": "9f03e19db4e928b35e3557c0ace8e9b3b370974e43fbd12e50af96bea5d7ff1a",
+      "status": "written"
+    },
+    {
+      "file": "stage_03_descriptive.json",
+      "seq": 4,
+      "sha256": "cb335d14fcf6bb763a3c3aed86c921bd6814f28d63fc1f5bebe204f25ebb91e1",
+      "status": "written"
+    },
+    {
+      "file": "stage_04_inference.json",
+      "seq": 5,
+      "sha256": "4f87f3fc2fd14a966e7af7f5bb12a0a9f46e600e8ab75aa7915ef2ae42fde8e6",
+      "status": "written"
+    }
+  ]
+}

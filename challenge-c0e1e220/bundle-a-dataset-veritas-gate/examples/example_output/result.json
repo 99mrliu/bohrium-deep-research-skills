@@ -1,0 +1,288 @@
+{
+  "case_id": "case-plants-synthetic",
+  "status": "ok",
+  "cleaning": {
+    "rules_applied": [
+      {
+        "id": "R1",
+        "name": "dedupe_exact_keep_first",
+        "semantics": "drop",
+        "dropped_raw_rows": [
+          27,
+          28
+        ],
+        "count": 2
+      },
+      {
+        "id": "R2",
+        "name": "missing_report_and_exclude",
+        "semantics": "per-variable exclude（不删行、不插补）",
+        "tokens": [
+          "",
+          "na",
+          "n/a",
+          "nan",
+          "null",
+          "-",
+          "none"
+        ],
+        "per_column_missing": {
+          "height_cm": 2,
+          "notes": 1
+        },
+        "rows_dropped": 0
+      },
+      {
+        "id": "R3",
+        "name": "outlier_iqr_flag_only",
+        "semantics": "flag",
+        "fence": "1.5*IQR",
+        "per_column": {
+          "height_cm": {
+            "fences": [
+              13.549999999999995,
+              37.150000000000006
+            ],
+            "n_flagged": 1,
+            "flagged_rows": [
+              24
+            ]
+          }
+        },
+        "rows_dropped": 0
+      }
+    ],
+    "rows_raw": 29,
+    "rows_kept": 27,
+    "rows_dropped": 2,
+    "duplicates_removed": 2,
+    "missing_per_column": {
+      "height_cm": 2,
+      "notes": 1
+    },
+    "outliers_flagged": {
+      "height_cm": 1
+    },
+    "closure_law": "rows_raw(29) == rows_kept(27) + rows_dropped(2)",
+    "closure_holds": true,
+    "ledger_file": "cleaning_ledger.json",
+    "cleaned_sha256": "00104019aacb0240289cbadea10f5dd7de3607e6f64fdbe69254a314997c3cf7"
+  },
+  "descriptive": {
+    "height_cm": {
+      "n": 25,
+      "mean": 25.824,
+      "sd": 5.218020058732367,
+      "median": 24.0,
+      "q1": 22.4,
+      "q3": 28.3,
+      "min": 21.3,
+      "max": 45.8,
+      "skewness": 2.2360314769971494,
+      "unit": "cm",
+      "n_missing": 2
+    }
+  },
+  "hypothesis_test": {
+    "height_cm": {
+      "variable": "height_cm",
+      "status": "ok",
+      "route": "GATE_2_MANN_WHITNEY",
+      "route_name": "Mann-Whitney U（两组·非正态保守路线）",
+      "alpha": 0.05,
+      "groups": [
+        "control",
+        "treatment"
+      ],
+      "skipped_groups": {},
+      "assumptions": {
+        "normality": {
+          "control": {
+            "n": 13,
+            "K2": 1.4759465495036013,
+            "p": 0.47808187490241316,
+            "normal": true
+          },
+          "treatment": {
+            "n": 12,
+            "K2": 30.2200902423742,
+            "p": 2.7402537614273626e-07,
+            "normal": false
+          }
+        },
+        "levene": null,
+        "all_normal": false,
+        "homogeneous": null
+      },
+      "statistic": 0.0,
+      "z": 4.215444272458265,
+      "p": 2.4928694647430305e-05,
+      "statistic_name": "U",
+      "raw_data_reference": {
+        "test": "Student t on RAW data（未去重，仅外部对照用，非决策依据）",
+        "t": -5.420913388517512,
+        "df": 25,
+        "p": 1.2592852173147876e-05,
+        "n_raw": 27
+      },
+      "classical_reference": {
+        "test": "Student t (ungated reference, 非决策依据)",
+        "t": -4.983669775547248,
+        "df": 23,
+        "p": 4.857062571117043e-05
+      },
+      "effect_size": {
+        "hedges_g": -1.929293240364512,
+        "rank_biserial_r": 1.0
+      },
+      "confidence_interval": {
+        "hedges_g_bootstrap95": {
+          "lo": -6.466794273765173,
+          "hi": -1.6240738884401262,
+          "B": 2000,
+          "seed": 20240501,
+          "method": "percentile"
+        },
+        "hodges_lehmann95": {
+          "estimate": -6.099999999999998,
+          "lo": -6.400000000000002,
+          "hi": -5.699999999999999,
+          "group_order": [
+            "control",
+            "treatment"
+          ]
+        }
+      }
+    }
+  },
+  "effect_size": {
+    "height_cm": {
+      "hedges_g": -1.929293240364512,
+      "rank_biserial_r": 1.0
+    }
+  },
+  "confidence_interval": {
+    "height_cm": {
+      "hedges_g_bootstrap95": {
+        "lo": -6.466794273765173,
+        "hi": -1.6240738884401262,
+        "B": 2000,
+        "seed": 20240501,
+        "method": "percentile"
+      },
+      "hodges_lehmann95": {
+        "estimate": -6.099999999999998,
+        "lo": -6.400000000000002,
+        "hi": -5.699999999999999,
+        "group_order": [
+          "control",
+          "treatment"
+        ]
+      }
+    }
+  },
+  "interpretation": {
+    "height_cm": "【height_cm】（单位：cm）采用 Mann-Whitney U（两组·非正态保守路线）（理由码 GATE_2_MANN_WHITNEY）。 组间差异在 α=0.05 水平统计显著（p=<0.0001）。 Hedges g=-1.9293（大效应）；实际意义须结合单位与领域背景判断，统计显著不代表实际重要。 结论为关联性证据，非因果证明。"
+  },
+  "limitations": [
+    "缺失按 report_and_exclude 处理（各变量有效 n 不同），未插补；若缺失非随机，结果可能有偏。",
+    "异常值仅按 1.5×IQR 标记未删除（除非裁决 outlier_action=drop），重尾分布下标记率会偏高。",
+    "跨源一致性为记录级核对，不构成对上游采集过程真实性的证明。",
+    "推断结论为关联性证据；未控制的混杂因素不在本分析范围内。"
+  ],
+  "group_column": "group",
+  "group_column_reason": "auto(score=7: 列名命中分组提示词+文本列+唯一值数=2≤10)",
+  "exceptions": [],
+  "uncertainty": [
+    "SQLite 存在 TEXT affinity 存数值列，已按数值解析；若原口径为字符编码需人工确认"
+  ],
+  "sources": [
+    {
+      "file": "case.json",
+      "sha256": "f366c1f81d59b172c424eeab5c06b9f852024cfdb5443002d4e9e7b7aba96728",
+      "size_bytes": 638
+    },
+    {
+      "file": "plants.csv",
+      "sha256": "8db4b568013c9eeaa2e5fe77a481972fd961e71579d6c7954f7a9a8c7260a524",
+      "size_bytes": 677
+    },
+    {
+      "file": "plants.db",
+      "sha256": "e02003f3ee54e5288eb780bd0b2325abc1fd46768e00f0a5c3f708e3d1bc8019",
+      "size_bytes": 8192
+    },
+    {
+      "file": "task.md",
+      "sha256": "db760e6baae4943e53aefcf6a1af407698d3d85900ab6dc3a99bec2aa3d05b69",
+      "size_bytes": 747
+    }
+  ],
+  "reproducibility": {
+    "seed": 20240501,
+    "bootstrap_B": 2000,
+    "python": "3.12.14",
+    "platform": "macOS-15.7.4-arm64-arm-64bit",
+    "generated_utc": "2026-11-24T16:02:24Z",
+    "pipeline": "pipeline_a.py (dataset-veritas-gate, stdlib-only)"
+  },
+  "decisions": [
+    {
+      "key": "group_column",
+      "value": "group",
+      "source": "auto",
+      "reason": "auto(score=7: 列名命中分组提示词+文本列+唯一值数=2≤10)"
+    }
+  ],
+  "source_audit": {
+    "cross_source": [
+      {
+        "csv": "plants.csv",
+        "db": "plants.db",
+        "db_table": "plants",
+        "rows_csv": 29,
+        "rows_db": 29,
+        "rows_equal": true,
+        "mapping_method": "exact",
+        "mapping": [
+          {
+            "csv_col": "id",
+            "csv_index": 0,
+            "db_col": "id",
+            "method": "exact"
+          },
+          {
+            "csv_col": "group",
+            "csv_index": 1,
+            "db_col": "group",
+            "method": "exact"
+          },
+          {
+            "csv_col": "height_cm",
+            "csv_index": 2,
+            "db_col": "height_cm",
+            "method": "exact"
+          },
+          {
+            "csv_col": "notes",
+            "csv_index": 3,
+            "db_col": "notes",
+            "method": "exact"
+          }
+        ],
+        "numeric_in_text_cols": [
+          "height_cm"
+        ],
+        "n_value_mismatch": 0,
+        "compare_scope": "full（全量 29 行）",
+        "n_cells_compared": 116,
+        "mismatch_examples": [],
+        "verdict": "consistent_with_type_coercion"
+      }
+    ],
+    "warnings": [
+      "numeric-in-text: plants.db 表 plants 的列 ['height_cm'] 以 TEXT affinity 存储数值（numeric_fraction≥0.95），已识别；跨源比对与统计解析将按数值处理"
+    ],
+    "fingerprints": []
+  }
+}

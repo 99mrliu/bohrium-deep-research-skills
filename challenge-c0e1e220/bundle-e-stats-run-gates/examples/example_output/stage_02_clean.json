@@ -1,0 +1,47 @@
+{
+  "cleaned_sha256": "2da30b0e0423c13987d2e8008d3763579095852243d5ee5aa15fd2c5fe4eb343",
+  "closure_ok": true,
+  "db_consistency": {
+    "checked": true,
+    "column_types": [
+      "TEXT",
+      "TEXT"
+    ],
+    "detail": "全部 47 行 × 2 列一致",
+    "match": true,
+    "table": "vinegar"
+  },
+  "duplicate_policy": "flag_and_report",
+  "duplicates_flagged": 3,
+  "duplicates_removed": 0,
+  "group_missing_removed": 0,
+  "missing_by_variable": {
+    "group": 0,
+    "yield_rate": 2
+  },
+  "outliers_flagged_cells": {
+    "yield_rate": 3
+  },
+  "outliers_flagged_rows": 3,
+  "rows_dropped": 0,
+  "rows_in_analysis_groups": 47,
+  "rows_kept": 47,
+  "rows_raw": 47,
+  "rules": [
+    {
+      "affected_rows": 3,
+      "detail": "完全重复行只标记报告不删除（删除需 constraints.duplicate_policy 显式授权）",
+      "rule": "flag_and_report"
+    },
+    {
+      "affected_rows": 0,
+      "detail": "分组变量缺失行整行剔除；结局变量缺失按逐变量有效 n 处理（不零填、不插补）",
+      "rule": "missing_report_and_exclude"
+    },
+    {
+      "affected_rows": 3,
+      "detail": "1.5×IQR 栅栏只标记不删除",
+      "rule": "outlier_flag_1.5IQR"
+    }
+  ]
+}

@@ -1,0 +1,24 @@
+{
+  "case_id": "case-synthetic-demo",
+  "dataset": "合成示例数据（make_synthetic.py 生成，非真实实验）",
+  "source": "synthetic generator, seed=20240501",
+  "data_files": [
+    "synthetic.csv"
+  ],
+  "output_contract": {
+    "required_fields": [
+      "case_id",
+      "status",
+      "cleaning",
+      "descriptive",
+      "hypothesis_test",
+      "effect_size",
+      "confidence_interval",
+      "interpretation",
+      "limitations"
+    ]
+  },
+  "constraints": {
+    "alpha": 0.05
+  }
+}

@@ -1,0 +1,4 @@
+ledger_gate PASS — plants.csv
+[PASS] 闭合律: rows_raw(29) == rows_kept(27) + rows_dropped(2)
+[PASS] 规则重放: 原始 29 行 → 去重剔除 2 行，kept/dropped 集合与台账完全一致
+[PASS] 产物哈希: cleaned_table.csv sha256=00104019aacb0240…，27 行逐行哈希全部一致

@@ -1,0 +1,615 @@
+{
+  "case_id": "case-synthetic-demo",
+  "status": "ok",
+  "alpha": 0.05,
+  "cleaning": {
+    "rules": [
+      "完全重复行：发现 0 行，按默认口径仅报告不删除",
+      "缺失 token：'' / NA / N/A / NaN / null / - / nan，按变量排除",
+      "异常值：1.5×IQR 栅栏只标记不删除"
+    ],
+    "missing": {
+      "value": {
+        "n_missing": 0,
+        "policy": "report_and_exclude（按变量有效 n，不零填、不插补）"
+      },
+      "pair_group": {
+        "n_missing": 75,
+        "policy": "report_and_exclude（按变量有效 n，不零填、不插补）"
+      },
+      "trio_group": {
+        "n_missing": 24,
+        "policy": "report_and_exclude（按变量有效 n，不零填、不插补）"
+      }
+    },
+    "duplicates": {
+      "policy": "report_only_no_removal",
+      "duplicate_rows_found": 0,
+      "note": "未声明 duplicate_policy：低精度/圆整测量下完全重复可能为真实重复观测，默认只报告不删除（防止 n 偏倚）"
+    },
+    "outliers": {
+      "value": {
+        "n_flagged_1.5iqr": 7,
+        "policy": "只标记不删除"
+      }
+    }
+  },
+  "descriptive": {
+    "A1": {
+      "outcome": "value",
+      "unit": "结局，单位 score",
+      "group_var": "pair_group",
+      "overall": {
+        "n": 24,
+        "mean": 6.9380275,
+        "sd": 7.813402316129666,
+        "median": 4.764011,
+        "q1": 3.1590185,
+        "q3": 7.5662775,
+        "min": 1.244091,
+        "max": 39.694149,
+        "skewness": 3.234953270934072
+      },
+      "by_group": {
+        "skew_high": {
+          "n": 12,
+          "mean": 10.563382333333333,
+          "sd": 9.839943605257394,
+          "median": 7.964843999999999,
+          "q1": 5.888537,
+          "q3": 12.044513,
+          "min": 1.506042,
+          "max": 39.694149,
+          "skewness": 2.332775176193308
+        },
+        "skew_low": {
+          "n": 12,
+          "mean": 3.3126726666666664,
+          "sd": 1.4655668035468754,
+          "median": 3.361956,
+          "q1": 2.29891125,
+          "q3": 3.9635575,
+          "min": 1.244091,
+          "max": 6.097829,
+          "skewness": 0.28994871236018926
+        }
+      }
+    },
+    "A2": {
+      "outcome": "value",
+      "unit": "结局，单位 score",
+      "group_var": "trio_group",
+      "overall": {
+        "n": 75,
+        "mean": 11.13728048,
+        "sd": 2.2324142614666007,
+        "median": 11.104733,
+        "q1": 9.3791925,
+        "q3": 12.508094,
+        "min": 6.584738,
+        "max": 16.792154,
+        "skewness": 0.2649701943990892
+      },
+      "by_group": {
+        "norm_A": {
+          "n": 25,
+          "mean": 9.821177320000002,
+          "sd": 1.8291571424364585,
+          "median": 9.747113,
+          "q1": 8.687003,
+          "q3": 10.720148,
+          "min": 6.584738,
+          "max": 15.000681,
+          "skewness": 0.5873874330290552
+        },
+        "norm_B": {
+          "n": 25,
+          "mean": 10.49220124,
+          "sd": 1.75171389115342,
+          "median": 10.166433,
+          "q1": 9.044973,
+          "q3": 11.687872,
+          "min": 7.052589,
+          "max": 14.060203,
+          "skewness": 0.2276376523241475
+        },
+        "norm_C": {
+          "n": 25,
+          "mean": 13.098462880000001,
+          "sd": 1.6455234398452654,
+          "median": 13.053918,
+          "q1": 12.119873,
+          "q3": 14.278639,
+          "min": 10.431811,
+          "max": 16.792154,
+          "skewness": 0.5318610519930729
+        }
+      }
+    }
+  },
+  "hypothesis_test": {
+    "alpha": 0.05,
+    "multiplicity": "Holm（族=结局内两两比较）",
+    "analyses": {
+      "A1": {
+        "outcome": "value",
+        "group_var": "pair_group",
+        "role": "two_group",
+        "design": "two_group",
+        "chosen_test": "mannwhitney_u",
+        "method": "Mann-Whitney U 检验（tie 校正渐近）",
+        "reason_codes": [
+          "NORMALITY_FAIL:skew_high p=0.0000",
+          "VAR_HOMOG p=0.1017",
+          "SELECT mannwhitney_u"
+        ],
+        "statistic_name": "U",
+        "statistic": 16.0,
+        "df": [
+          null
+        ],
+        "p": 0.0012242832644311363,
+        "alpha": 0.05,
+        "significant": true,
+        "posthoc": []
+      },
+      "A2": {
+        "outcome": "value",
+        "group_var": "trio_group",
+        "role": "k_group",
+        "design": "k_group",
+        "chosen_test": "anova",
+        "method": "单因素方差分析（ANOVA）",
+        "reason_codes": [
+          "NORMALITY_OK",
+          "VAR_HOMOG p=0.8179",
+          "SELECT anova"
+        ],
+        "statistic_name": "F",
+        "statistic": 24.642821930757503,
+        "df": [
+          2,
+          72
+        ],
+        "p": 7.02799662910536e-09,
+        "alpha": 0.05,
+        "significant": true,
+        "posthoc": [
+          {
+            "pair": [
+              "norm_A",
+              "norm_B"
+            ],
+            "test": "student_t",
+            "statistic": -1.324746505674459,
+            "p_raw": 0.19152779109255214,
+            "mean_diff": 0.6710239199999979,
+            "p_holm": 0.19152779109255214,
+            "significant": false
+          },
+          {
+            "pair": [
+              "norm_A",
+              "norm_C"
+            ],
+            "test": "student_t",
+            "statistic": -6.6600692794624425,
+            "p_raw": 2.443005286956179e-08,
+            "mean_diff": 3.2772855599999993,
+            "p_holm": 7.329015860868537e-08,
+            "significant": true
+          },
+          {
+            "pair": [
+              "norm_B",
+              "norm_C"
+            ],
+            "test": "student_t",
+            "statistic": -5.422069313126961,
+            "p_raw": 1.8889030100055493e-06,
+            "mean_diff": 2.6062616400000014,
+            "p_holm": 3.7778060200110986e-06,
+            "significant": true
+          }
+        ]
+      }
+    }
+  },
+  "effect_size": {
+    "A1": {
+      "hedges_g": {
+        "value": -0.9951042884295733,
+        "direction": "mean(skew_low) - mean(skew_high)",
+        "correction": "exact J via lgamma"
+      },
+      "rank_biserial_r": {
+        "value": -0.7777777777777778,
+        "direction": "正值表示 skew_low 组取值倾向更大"
+      }
+    },
+    "A2": {
+      "eta_squared": 0.40636007933296525,
+      "omega_squared": 0.3866818897814746
+    }
+  },
+  "confidence_interval": {
+    "A1": {
+      "hedges_g_bootstrap": {
+        "point": -0.9951042884295733,
+        "lo": -2.5140279106603587,
+        "hi": -0.7268154733481355,
+        "B": 2000,
+        "seed": 20240501,
+        "method": "percentile",
+        "level": 0.95
+      },
+      "median_diff_hodges_lehmann": {
+        "point": -4.823029,
+        "lo": -5.819057,
+        "hi": -3.8488299999999995,
+        "level": 0.95,
+        "note": "两两差中位数，大样本分位区间"
+      }
+    },
+    "A2": {}
+  },
+  "interpretation": "【A1】value 按 pair_group 比较（单位：结局，单位 score）：假设门控结果（NORMALITY_FAIL:skew_high p=0.0000；VAR_HOMOG p=0.1017；SELECT mannwhitney_u）→ 采用 Mann-Whitney U 检验（tie 校正渐近）：U=16，df=[None]，p=0.0012。在 α=0.05 水平下，组间差异具有统计学意义。效应量 Hedges g=-0.9951（大 等效应）；统计显著性需结合实际效应大小判断其科学意义 本结论为统计关联层面证据，不构成因果证明。\n\n【A2】value 按 trio_group 比较（单位：结局，单位 score）：假设门控结果（NORMALITY_OK；VAR_HOMOG p=0.8179；SELECT anova）→ 采用 单因素方差分析（ANOVA）：F=24.6428，df=[2, 72]，p=<0.0001。在 α=0.05 水平下，组间差异具有统计学意义。效应量 η²=0.4064，ω²=0.3867；统计显著性需结合实际效应大小判断其科学意义事后两两比较（Holm 校正）显著对：norm_A vs norm_C、norm_B vs norm_C。 本结论为统计关联层面证据，不构成因果证明。",
+  "limitations": [
+    "缺失值按变量有效 n 排除（report_and_exclude），若缺失非随机可能引入偏倚",
+    "异常值仅以 1.5×IQR 标记未删除；秩方法与稳健效应对其不敏感，参数路线结论在存在标记异常值时应谨慎",
+    "bootstrap CI 为百分位法（B=2000，seed=20240501）；对小样本或强偏态可能欠覆盖",
+    "CSV/SQLite 跨源一致性、单位口径审计不在本 bundle 范围（属数据真实性层）",
+    "统计显著不等于实际意义；因果解释需实验设计支持，本分析仅作关联层面推断",
+    "未声明 duplicate_policy，完全重复行仅报告未删除（见 cleaning.duplicates）"
+  ],
+  "decision_log": [
+    {
+      "design": "two_group",
+      "group_levels": [
+        "skew_high",
+        "skew_low"
+      ],
+      "groups": [
+        {
+          "label": "skew_high",
+          "n": 12,
+          "values_sha256": "6e5184b26078e943be309e8e7f82b891c43a0ea23ea53ca7d7e5c18de8263427",
+          "normality": {
+            "test": "dagostino_k2",
+            "statistic": 24.06079838322493,
+            "p": 5.960243681268906e-06,
+            "conclusion": "non_normal",
+            "note": ""
+          }
+        },
+        {
+          "label": "skew_low",
+          "n": 12,
+          "values_sha256": "dc0d24ef80523049ac11b8a2a32594934451bf22774547a0810d38fe67a0202e",
+          "normality": {
+            "test": "dagostino_k2",
+            "statistic": 0.29838983772290584,
+            "p": 0.8614011951939097,
+            "conclusion": "normal",
+            "note": ""
+          }
+        }
+      ],
+      "levene": {
+        "center": "median",
+        "statistic": 2.9181947597057745,
+        "df1": 1,
+        "df2": 22,
+        "p": 0.10165922982397468,
+        "conclusion": "homogeneous"
+      },
+      "assumptions": {
+        "all_normal": false,
+        "var_homogeneous": true,
+        "min_n": 12
+      },
+      "candidates": [
+        "student_t",
+        "welch_t",
+        "mannwhitney_u"
+      ],
+      "chosen_test": "mannwhitney_u",
+      "reason_codes": [
+        "NORMALITY_FAIL:skew_high p=0.0000",
+        "VAR_HOMOG p=0.1017",
+        "SELECT mannwhitney_u"
+      ],
+      "rejected_candidates": [
+        {
+          "test": "student_t",
+          "reason": "正态性不满足或 n<8"
+        },
+        {
+          "test": "welch_t",
+          "reason": "正态性不满足，Welch 仅校正方差不能校正偏态"
+        }
+      ],
+      "test_result": {
+        "statistic_name": "U",
+        "statistic": 16.0,
+        "df": [
+          null
+        ],
+        "p": 0.0012242832644311363,
+        "alpha": 0.05,
+        "significant": true
+      },
+      "analysis_id": "A1",
+      "role": "two_group",
+      "data": {
+        "file": "synthetic_demo.csv",
+        "source_type": "csv",
+        "group_column": {
+          "name": "pair_group",
+          "index": 1
+        },
+        "outcome_column": {
+          "name": "value",
+          "index": 0
+        },
+        "levels": [
+          "skew_high",
+          "skew_low"
+        ],
+        "unit": "结局，单位 score"
+      },
+      "posthoc": [],
+      "effect_size": {
+        "hedges_g": {
+          "value": -0.9951042884295733,
+          "direction": "mean(skew_low) - mean(skew_high)",
+          "correction": "exact J via lgamma"
+        },
+        "rank_biserial_r": {
+          "value": -0.7777777777777778,
+          "direction": "正值表示 skew_low 组取值倾向更大"
+        }
+      },
+      "confidence_interval": {
+        "hedges_g_bootstrap": {
+          "point": -0.9951042884295733,
+          "lo": -2.5140279106603587,
+          "hi": -0.7268154733481355,
+          "B": 2000,
+          "seed": 20240501,
+          "method": "percentile",
+          "level": 0.95
+        },
+        "median_diff_hodges_lehmann": {
+          "point": -4.823029,
+          "lo": -5.819057,
+          "hi": -3.8488299999999995,
+          "level": 0.95,
+          "note": "两两差中位数，大样本分位区间"
+        }
+      }
+    },
+    {
+      "design": "k_group",
+      "group_levels": [
+        "norm_A",
+        "norm_B",
+        "norm_C"
+      ],
+      "groups": [
+        {
+          "label": "norm_A",
+          "n": 25,
+          "values_sha256": "bb568f788208ccd6a5a546e77550fbfd29cfbd8742068ef4ddf1e2c89c02fce6",
+          "normality": {
+            "test": "dagostino_k2",
+            "statistic": 4.064003052864413,
+            "p": 0.13107291252814413,
+            "conclusion": "normal",
+            "note": ""
+          }
+        },
+        {
+          "label": "norm_B",
+          "n": 25,
+          "values_sha256": "f03a40f5db02bbb157411589244e0d45df21ad4371d2c4a54d715609e69536d0",
+          "normality": {
+            "test": "dagostino_k2",
+            "statistic": 0.3975631016482135,
+            "p": 0.8197289428876294,
+            "conclusion": "normal",
+            "note": ""
+          }
+        },
+        {
+          "label": "norm_C",
+          "n": 25,
+          "values_sha256": "e8ec3ba41fe2765898a3605530abae4e06f6f71ed7a1f6e2ac9c63ee6a0f4304",
+          "normality": {
+            "test": "dagostino_k2",
+            "statistic": 1.674379644509451,
+            "p": 0.4329254129626775,
+            "conclusion": "normal",
+            "note": ""
+          }
+        }
+      ],
+      "levene": {
+        "center": "median",
+        "statistic": 0.2015842178515232,
+        "df1": 2,
+        "df2": 72,
+        "p": 0.8178944995795097,
+        "conclusion": "homogeneous"
+      },
+      "assumptions": {
+        "all_normal": true,
+        "var_homogeneous": true,
+        "min_n": 25
+      },
+      "candidates": [
+        "anova",
+        "welch_anova",
+        "kruskal_wallis"
+      ],
+      "chosen_test": "anova",
+      "reason_codes": [
+        "NORMALITY_OK",
+        "VAR_HOMOG p=0.8179",
+        "SELECT anova"
+      ],
+      "rejected_candidates": [
+        {
+          "test": "welch_anova",
+          "reason": "方差齐性成立"
+        },
+        {
+          "test": "kruskal_wallis",
+          "reason": "全部组正态且方差齐，参数检验功效更高"
+        }
+      ],
+      "test_result": {
+        "statistic_name": "F",
+        "statistic": 24.642821930757503,
+        "df": [
+          2,
+          72
+        ],
+        "p": 7.02799662910536e-09,
+        "alpha": 0.05,
+        "significant": true
+      },
+      "analysis_id": "A2",
+      "role": "k_group",
+      "data": {
+        "file": "synthetic_demo.csv",
+        "source_type": "csv",
+        "group_column": {
+          "name": "trio_group",
+          "index": 2
+        },
+        "outcome_column": {
+          "name": "value",
+          "index": 0
+        },
+        "levels": [
+          "norm_A",
+          "norm_B",
+          "norm_C"
+        ],
+        "unit": "结局，单位 score"
+      },
+      "posthoc": [
+        {
+          "pair": [
+            "norm_A",
+            "norm_B"
+          ],
+          "test": "student_t",
+          "statistic": -1.324746505674459,
+          "p_raw": 0.19152779109255214,
+          "mean_diff": 0.6710239199999979,
+          "p_holm": 0.19152779109255214,
+          "significant": false
+        },
+        {
+          "pair": [
+            "norm_A",
+            "norm_C"
+          ],
+          "test": "student_t",
+          "statistic": -6.6600692794624425,
+          "p_raw": 2.443005286956179e-08,
+          "mean_diff": 3.2772855599999993,
+          "p_holm": 7.329015860868537e-08,
+          "significant": true
+        },
+        {
+          "pair": [
+            "norm_B",
+            "norm_C"
+          ],
+          "test": "student_t",
+          "statistic": -5.422069313126961,
+          "p_raw": 1.8889030100055493e-06,
+          "mean_diff": 2.6062616400000014,
+          "p_holm": 3.7778060200110986e-06,
+          "significant": true
+        }
+      ],
+      "holm": {
+        "family": "outcome 内全部两两比较",
+        "m": 3,
+        "raw": [
+          0.19152779109255214,
+          2.443005286956179e-08,
+          1.8889030100055493e-06
+        ],
+        "adjusted": [
+          0.19152779109255214,
+          7.329015860868537e-08,
+          3.7778060200110986e-06
+        ]
+      },
+      "effect_size": {
+        "eta_squared": 0.40636007933296525,
+        "omega_squared": 0.3866818897814746
+      },
+      "confidence_interval": {}
+    }
+  ],
+  "sources": {
+    "input_sha256": {
+      "synthetic_demo.csv": "e2b407be8bb15b1aff5957a9f06733cd826a5944c41732ff7aa3f912bc62a72b"
+    }
+  },
+  "reproducibility": {
+    "bootstrap_seed": 20240501,
+    "bootstrap_B": 2000,
+    "python": "3.9.6",
+    "platform": "macOS-15.7.4-arm64-arm-64bit",
+    "utc": "2026-11-24T16:16:29Z",
+    "stat_core": "statcore_b.py（纯标准库）"
+  },
+  "uncertainty": [
+    "主要结论不依赖临界 p 值；残余不确定性见 limitations"
+  ],
+  "exceptions": [],
+  "decisions": [
+    {
+      "key": "groupings_detected",
+      "value": [
+        {
+          "group": "pair_group",
+          "levels": [
+            "skew_high",
+            "skew_low"
+          ],
+          "score": 6
+        },
+        {
+          "group": "trio_group",
+          "levels": [
+            "norm_A",
+            "norm_B",
+            "norm_C"
+          ],
+          "score": 6
+        }
+      ],
+      "reason": "auto"
+    },
+    {
+      "key": "outcomes_detected",
+      "value": [
+        "value"
+      ],
+      "reason": "auto"
+    },
+    {
+      "key": "alpha",
+      "value": 0.05,
+      "reason": "case.json constraints 或默认 0.05"
+    }
+  ]
+}

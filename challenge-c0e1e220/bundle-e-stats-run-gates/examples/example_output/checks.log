@@ -1,0 +1,24 @@
+[example] == 0. 生成合成示例数据 ==
+SYNTHETIC OK: /tmp/stats_run_gates_example.Kmf9bz/input（合成示例数据，47 行 × 2 列 + db + case.json + task.md + plan.json）
+[example] == 1a. 好例：pipeline run ==
+PIPELINE_RUN OK: status=complete, outcomes=['yield_rate'], decisions_pending=3
+[example] == 1b. decide --confirm-all + finalize ==
+DECIDE OK: confirmed=['DEC-001', 'DEC-002', 'DEC-005'] overrides=[]（随后请运行 finalize）
+PIPELINE_FINALIZE OK: status=complete, outcomes=['yield_rate'], decisions_pending=0
+[example] == 1c. gate_check（期望 exit 0）==
+GATE_CHECK PASS: G0-G7 全部通过
+[example] == 1d. contract_lint（期望 exit 0）==
+CONTRACT_LINT PASS: 9 个契约字段齐全，status=complete，引用闭合
+[example] == 1e. run_manifest check（期望 exit 0）==
+MANIFEST_CHECK PASS: 5 inputs, 5 stage entries, 3 outputs 全部一致
+[example] == 1f. replay_diff 影子复跑（期望 exit 0，逐字节一致）==
+REPLAY_DIFF PASS: 13 个产物除易变字段 ['reproducibility.timestamp_utc', 'generated_at_utc'] 外逐字节一致
+[example] == 2. 埋雷 b：坏 result.json（INVALID_STATUS + MISSING_FIELD + CASE_ID_MISMATCH）==
+MISSING_FIELD: hypothesis_test
+INVALID_STATUS: 'success' 不在枚举 ['complete', 'partial', 'failed']
+CASE_ID_MISMATCH: case.json='case-synthetic-vinegar-demo' result.json='case-WRONG'
+CONTRACT_LINT FAIL: 3 项违例
+[example] == 3. 埋雷 c：report.md 篡改一个 p 值（期望 G6 REPORT_NUMBER_DRIFT exit 1）==
+G6 FAIL REPORT_NUMBER_DRIFT: report.md 出现 'p = 0.0000'，result.json 中无一致 p 值
+GATE_CHECK FAIL: 1 项违规
+[example] == 4. 归档真实产物到 example_output/ ==

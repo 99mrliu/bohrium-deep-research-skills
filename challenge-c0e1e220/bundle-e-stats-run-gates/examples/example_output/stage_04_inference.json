@@ -1,0 +1,79 @@
+{
+  "inference": {
+    "yield_rate": {
+      "assumptions": {
+        "levene": {
+          "W": 0.2330697398250992,
+          "center": "median",
+          "df": [
+            1,
+            43
+          ],
+          "homogeneous": true,
+          "p": 0.6317057864806535
+        },
+        "normality": {
+          "control": {
+            "K2": 28.97994994255581,
+            "n": 23,
+            "normal": false,
+            "note": "",
+            "p": 5.094291910534565e-07
+          },
+          "treatment": {
+            "K2": 26.52058934462739,
+            "n": 22,
+            "normal": false,
+            "note": "",
+            "p": 1.742317085384748e-06
+          }
+        }
+      },
+      "effect": {
+        "ci95": [
+          -0.21108301077664843,
+          1.3925553174837002
+        ],
+        "ci_method": "bootstrap percentile B=2000 seed=20240501",
+        "direction": "treatment - control",
+        "magnitude": "小",
+        "type": "hedges_g",
+        "value": 0.3321484438921651
+      },
+      "groups_order": [
+        "control",
+        "treatment"
+      ],
+      "location": {
+        "ci95": [
+          3.5,
+          5.810000000000002
+        ],
+        "direction": "treatment - control",
+        "estimate": 4.449999999999996,
+        "method": "hodges_lehmann",
+        "type": "hodges_lehmann_median_diff"
+      },
+      "main": {
+        "alpha": 0.05,
+        "df": null,
+        "method": "mannwhitney_u",
+        "p": 0.017102358989354638,
+        "reason_code": "2G_NONNORM",
+        "significant": true,
+        "statistic": 148.0
+      },
+      "post_hoc": [],
+      "reference": {
+        "df": 42.56321068784329,
+        "method": "welch_t(classical reference)",
+        "note": "仅作可比性参考；主结论以 mannwhitney_u 为准",
+        "p": 0.2638746493275881,
+        "statistic": 1.1322336609517634
+      },
+      "scipy_crosscheck": {
+        "available": false
+      }
+    }
+  }
+}

@@ -1,0 +1,255 @@
+{
+  "case_id": "synth-figforge-demo",
+  "status": "ok",
+  "cleaning": {
+    "missing": {
+      "policy": "report_and_exclude（按变量有效 n，不零填不插补）",
+      "counts": {}
+    },
+    "duplicates": {
+      "policy_requested": "report_only_keep",
+      "detected_rows": 1,
+      "removed_rows": 0
+    },
+    "outliers": {
+      "policy": "1.5×IQR 栅栏只标记不删除",
+      "flagged_per_column": {
+        "rt": 0
+      }
+    },
+    "rows_in": 27,
+    "rows_used": 27,
+    "type_coercion": [],
+    "rules_applied": [
+      "missing=report_and_exclude",
+      "duplicates=report_only_keep",
+      "outliers=1.5xIQR_flag_only"
+    ]
+  },
+  "descriptive": {
+    "by_outcome": {
+      "rt": {
+        "unit": "ms",
+        "by_group": {
+          "control": {
+            "n": 8,
+            "mean": 9.840625,
+            "sd": 0.8533128613150714,
+            "median": 9.5985,
+            "q1": 9.33025,
+            "q3": 10.467,
+            "min": 8.868,
+            "max": 11.231,
+            "skew": 0.3754425883614809
+          },
+          "treatA": {
+            "n": 9,
+            "mean": 11.768,
+            "sd": 1.2067933750232471,
+            "median": 12.059,
+            "q1": 11.675,
+            "q3": 12.452,
+            "min": 8.893,
+            "max": 12.842,
+            "skew": -1.6276947432428255
+          },
+          "treatB": {
+            "n": 10,
+            "mean": 13.062899999999999,
+            "sd": 1.37424496037319,
+            "median": 12.802,
+            "q1": 11.81075,
+            "q3": 14.408999999999999,
+            "min": 11.635,
+            "max": 14.777,
+            "skew": 0.09718430860012424
+          }
+        }
+      }
+    }
+  },
+  "hypothesis_test": {
+    "alpha": 0.05,
+    "analyses": [
+      {
+        "id": "a1",
+        "design": "k_group",
+        "outcome": "rt",
+        "group_var": "group",
+        "unit": "ms",
+        "k": 3,
+        "method": "Kruskal-Wallis",
+        "reason_code": "NON_NORMAL_OR_SMALL_N->KRUSKAL_WALLIS",
+        "statistic": 14.361041560644615,
+        "stat_name": "H",
+        "df": [
+          2.0
+        ],
+        "p": 0.000761271283795377,
+        "p_fmt": "p=0.0008",
+        "alpha": 0.05,
+        "significant": true,
+        "groups": {
+          "control": {
+            "n": 8,
+            "mean": 9.840625,
+            "sd": 0.8533128613150714,
+            "median": 9.5985,
+            "q1": 9.33025,
+            "q3": 10.467
+          },
+          "treatA": {
+            "n": 9,
+            "mean": 11.768,
+            "sd": 1.2067933750232471,
+            "median": 12.059,
+            "q1": 11.675,
+            "q3": 12.452
+          },
+          "treatB": {
+            "n": 10,
+            "mean": 13.062899999999999,
+            "sd": 1.37424496037319,
+            "median": 12.802,
+            "q1": 11.81075,
+            "q3": 14.408999999999999
+          }
+        },
+        "assumptions": {
+          "normality": {
+            "control": {
+              "K2": 0.7203085710684585,
+              "p": 0.6975686930096698,
+              "normal": true
+            },
+            "treatA": {
+              "K2": 12.322343535560622,
+              "p": 0.002109779650942645,
+              "normal": false
+            },
+            "treatB": {
+              "K2": 8.067165164426688,
+              "p": 0.017710765885050658,
+              "normal": false
+            }
+          },
+          "levene": {
+            "W": 2.2418162008319475,
+            "df1": 2.0,
+            "df2": 24.0,
+            "p": 0.1280531991465793
+          }
+        },
+        "reference_classic_anova": {
+          "F": 16.450524527308087,
+          "df1": 2.0,
+          "df2": 24.0,
+          "p": 3.1702361990375564e-05,
+          "p_fmt": "p<0.0001"
+        },
+        "reference_welch_anova": {
+          "F": 19.46508060613529,
+          "df1": 2.0,
+          "df2": 15.885967810271852,
+          "p": 5.339630093588916e-05
+        },
+        "reference_kruskal_wallis": {
+          "H": 14.361041560644615,
+          "df": 2.0,
+          "p": 0.000761271283795377
+        },
+        "effect_size": {
+          "epsilon_squared": 0.5150433983601923
+        },
+        "posthoc": [
+          {
+            "pair": [
+              "control",
+              "treatA"
+            ],
+            "method": "Mann-Whitney U",
+            "statistic": 7.0,
+            "p": 0.006098945931214406,
+            "p_holm": 0.012197891862428811,
+            "significant_holm": true
+          },
+          {
+            "pair": [
+              "control",
+              "treatB"
+            ],
+            "method": "Mann-Whitney U",
+            "statistic": 0.0,
+            "p": 0.0004456198682647461,
+            "p_holm": 0.0013368596047942383,
+            "significant_holm": true
+          },
+          {
+            "pair": [
+              "treatA",
+              "treatB"
+            ],
+            "method": "Mann-Whitney U",
+            "statistic": 32.0,
+            "p": 0.3072219093749886,
+            "p_holm": 0.3072219093749886,
+            "significant_holm": false
+          }
+        ]
+      }
+    ]
+  },
+  "effect_size": {
+    "a1": {
+      "epsilon_squared": 0.5150433983601923
+    }
+  },
+  "confidence_interval": {},
+  "interpretation": "【rt】按 group 比较（3 组，ms）：Kruskal-Wallis（依据 NON_NORMAL_OR_SMALL_N->KRUSKAL_WALLIS），H=14.36，df=2，p=0.0008，α=0.05 → 统计上显著。ε²=0.5150（效应大）。事后两两比较（同路线 + Holm 校正）：2/3 对显著。注意：统计显著不等于实际意义，结论不能被表述为“证明”；单位=ms。",
+  "limitations": [
+    "推断基于报告数据的假设门控路线；非参路线统计量为渐近近似。",
+    "未注明确认单位的变量在图注中标记“单位未注明”。"
+  ],
+  "sources": {
+    "response.csv": {
+      "sha256": "5ef4140455a583c67859f6abe8edd7897742c3926ebd9b42f2d9a18e6e8a3bf9",
+      "rows": 27,
+      "cols": 2,
+      "encoding": "utf-8-sig"
+    }
+  },
+  "reproducibility": {
+    "seed": 20240501,
+    "python": "3.9.6",
+    "platform": "macOS-15.7.4-arm64-arm-64bit",
+    "utc": "2026-11-24T16:16:29+00:00"
+  },
+  "uncertainty": [
+    "检测到 1 行完全重复，按策略 report_only_keep 保留（可用 --set duplicate_policy=dedupe_exact_keep_first 覆盖）"
+  ],
+  "exceptions": [],
+  "decisions": {},
+  "figures": {
+    "generated": [
+      {
+        "file": "fig1.svg",
+        "type": "boxplot_jitter",
+        "analyses": [
+          "a1"
+        ],
+        "channel": "svg"
+      },
+      {
+        "file": "fig2.svg",
+        "type": "ecdf",
+        "analyses": [
+          "a1"
+        ],
+        "channel": "svg"
+      }
+    ],
+    "waivers": {},
+    "policy": "每个做过假设检验的结局变量至少一张图或显式 waiver（见 figures.md）",
+    "channel": "svg"
+  }
+}

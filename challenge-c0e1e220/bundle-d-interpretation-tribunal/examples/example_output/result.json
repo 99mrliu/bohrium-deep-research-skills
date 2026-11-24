@@ -1,0 +1,203 @@
+{
+  "case_id": "case-synthetic-demo",
+  "status": "complete",
+  "cleaning": {
+    "rows_in": 4000,
+    "rows_used": 3892,
+    "missing_policy": "report_and_exclude",
+    "missing_by_column": {},
+    "missing_excluded_rows": 0,
+    "duplicate_policy": "dedupe_exact_keep_first",
+    "duplicates_removed": 108,
+    "outlier_policy": "1.5xIQR_flag_only",
+    "outliers_flagged": {
+      "score": 27
+    }
+  },
+  "descriptive": {
+    "outcome": "score",
+    "group": "group",
+    "unit": "分",
+    "overall": {
+      "n": 3892,
+      "mean": 50.697041366906355,
+      "sd": 10.135763418111942,
+      "median": 50.726,
+      "q1": 43.83825,
+      "q3": 57.63825,
+      "min": 19.619,
+      "max": 94.069,
+      "skew": -0.020101451376003616
+    },
+    "by_group": {
+      "对照组": {
+        "n": 1945,
+        "mean": 49.91249717223637,
+        "sd": 10.040258640596836,
+        "median": 50.192,
+        "q1": 43.24,
+        "q3": 56.8,
+        "min": 19.824,
+        "max": 87.233,
+        "skew": -0.042945025181758106
+      },
+      "处理组": {
+        "n": 1947,
+        "mean": 51.48077966101694,
+        "sd": 10.172593758333392,
+        "median": 51.431,
+        "q1": 44.822500000000005,
+        "q3": 58.501999999999995,
+        "min": 19.619,
+        "max": 94.069,
+        "skew": -0.0044896160596899016
+      }
+    }
+  },
+  "hypothesis_test": {
+    "route": "student_t",
+    "method": "Student 独立样本 t 检验",
+    "reason_code": "normal_ok_var_equal",
+    "statistic": -4.840299974072144,
+    "df": [
+      3890.0
+    ],
+    "p": 1.346766077992001e-06,
+    "p_display": "p<0.0001",
+    "alpha": 0.05,
+    "normality": {
+      "对照组": {
+        "n": 1945,
+        "K2": 0.7977135360993765,
+        "p": 0.6710868155433889,
+        "normal_at_alpha": true
+      },
+      "处理组": {
+        "n": 1947,
+        "K2": 0.5876939060332655,
+        "p": 0.7453905624909707,
+        "normal_at_alpha": true
+      }
+    },
+    "levene": {
+      "W": 0.12908767506954857,
+      "df": [
+        1.0,
+        3890
+      ],
+      "p": 0.7193993510719618,
+      "equal_variance_at_alpha": true
+    },
+    "sensitivity": {
+      "method": "Welch t 检验",
+      "statistic": -4.840332550346626,
+      "df": [
+        3889.433774966096
+      ],
+      "p": 1.3465540840140733e-06,
+      "note": "方差不齐情形下的敏感性对照"
+    },
+    "posthoc": []
+  },
+  "effect_size": {
+    "name": "hedges_g",
+    "symbol": "Hedges g",
+    "value": -0.1551429940358356,
+    "ci95": [
+      -0.21670797107355813,
+      -0.09334963966913978
+    ],
+    "magnitude": "negligible",
+    "method": "pooled SD 标准化 + bootstrap B=2000 seed=20240501 percentile CI"
+  },
+  "confidence_interval": {
+    "parameter": "mean_difference (对照组 - 处理组)",
+    "estimate": -1.568282488780568,
+    "ci95": [
+      -2.2035144680603316,
+      -0.9330505095008044
+    ],
+    "method": "Welch t 置信区间"
+  },
+  "interpretation": {
+    "summary": [
+      "在 α=0.05 水平下，对照组与处理组的 score 差异具有统计学意义（Student 独立样本 t 检验，p<0.0001）；处理组的均值更高，均值差（对照组−处理组）为 -1.568 分。[ev:H1]"
+    ],
+    "practical_significance": [
+      "效应量 Hedges g = -0.155，95% 置信区间为 [-0.217, -0.093]，按常用阈值属于可忽略效应；统计显著并不等同于实际重要，该差异的实际意义有限，是否达到最小实际重要差异 Δ 需结合领域标准判断。[ev:H1]"
+    ],
+    "ci_meaning": "置信区间刻画的是估计量的不确定性，并非个体取值的范围。",
+    "evidence_binding": "结果解释章节每句结论句以 [ev:Hk] 结尾，可在 claims 数组中解析复核",
+    "caveats": [
+      "统计显著并不等同于实际重要，两者分开表述；",
+      "数据为观察性来源，组间差异不能推断因果。"
+    ]
+  },
+  "limitations": [
+    "数据为观察性来源，组间差异不能推断因果。",
+    "结果变量存在 27 个 1.5×IQR 栅栏外取值，按口径只标记未删除；对结论的敏感性需人工评估。"
+  ],
+  "claims": [
+    {
+      "id": "H1",
+      "outcome": "score",
+      "comparison": "对照组 vs 处理组",
+      "direction": "decrease",
+      "significant": true,
+      "p": 1.346766077992001e-06,
+      "alpha": 0.05,
+      "effect_size": {
+        "name": "hedges_g",
+        "value": -0.1551429940358356,
+        "ci95": [
+          -0.21670797107355813,
+          -0.09334963966913978
+        ]
+      },
+      "method": "Student 独立样本 t 检验",
+      "group_a": "对照组",
+      "group_b": "处理组",
+      "mean_a": 49.91249717223637,
+      "mean_b": 51.48077966101694,
+      "diff": -1.568282488780568,
+      "magnitude": "negligible",
+      "diff_label": "均值差",
+      "sentence": "在 α=0.05 水平下，对照组与处理组的 score 差异具有统计学意义（Student 独立样本 t 检验，p<0.0001）；处理组的均值更高，均值差（对照组−处理组）为 -1.568 分。[ev:H1]",
+      "practical_note": "效应量 Hedges g = -0.155，95% 置信区间为 [-0.217, -0.093]，按常用阈值属于可忽略效应；统计显著并不等同于实际重要，该差异的实际意义有限，是否达到最小实际重要差异 Δ 需结合领域标准判断。[ev:H1]"
+    }
+  ],
+  "sources": {
+    "synthetic.csv": {
+      "sha256": "f1337144153d57902787095bfb36c74a80674191706b805dfdc6eb708ea36d5a",
+      "bytes": 68012
+    }
+  },
+  "reproducibility": {
+    "seed": 20240501,
+    "python": "3.9.6",
+    "platform": "macOS-15.7.4-arm64-arm-64bit",
+    "utc": "2026-11-24T16:16:32+00:00",
+    "versions": {
+      "statcore_d": "1.0.0",
+      "pipeline_d": "1.0.0",
+      "wording_lint": "1.0.0",
+      "claim_bind": "1.0.0"
+    }
+  },
+  "uncertainty": [
+    "置信区间刻画的是估计量的不确定性，并非个体取值的范围。",
+    "bootstrap CI 基于 B=2000、seed=20240501，复跑可完全复现。",
+    "敏感性对照（Welch t 检验）与主检验结论一致。"
+  ],
+  "exceptions": [],
+  "decisions": {
+    "outcome": "score",
+    "group": "group",
+    "levels": null,
+    "unit": "分",
+    "alpha": 0.05,
+    "outcome_basis": "启发式：列名出现在 task.md 中",
+    "group_basis": "启发式：首个非数值列且取值数>=2",
+    "source": "auto+defaults"
+  }
+}
