@@ -1,0 +1,281 @@
+{
+  "version": "1.0",
+  "sources": [
+    {
+      "file": "examples/dictionary.md",
+      "role": "dictionary",
+      "lines": 19
+    },
+    {
+      "file": "examples/workorder.md",
+      "role": "workorder",
+      "lines": 7
+    }
+  ],
+  "rules": [
+    {
+      "rule_id": "R001",
+      "kind": "sentinel_missing",
+      "field": "temperature_c",
+      "params": {
+        "tokens": [
+          "-999"
+        ]
+      },
+      "source": {
+        "file": "examples/dictionary.md",
+        "line": 10,
+        "text": "| temperature_c | °C | -999 | [-50, 60] | - | 测量温度 |"
+      },
+      "origin": "compiler"
+    },
+    {
+      "rule_id": "R002",
+      "kind": "range_qc",
+      "field": "temperature_c",
+      "params": {
+        "lo": -50,
+        "hi": 60,
+        "lo_inclusive": true,
+        "hi_inclusive": true
+      },
+      "source": {
+        "file": "examples/dictionary.md",
+        "line": 10,
+        "text": "| temperature_c | °C | -999 | [-50, 60] | - | 测量温度 |"
+      },
+      "origin": "compiler"
+    },
+    {
+      "rule_id": "R003",
+      "kind": "sentinel_missing",
+      "field": "concentration",
+      "params": {
+        "tokens": [
+          "-999",
+          "ND"
+        ]
+      },
+      "source": {
+        "file": "examples/dictionary.md",
+        "line": 11,
+        "text": "| concentration | mg/L | -999, ND | [0, 100) | 0.01 | 目标物浓度 |"
+      },
+      "origin": "compiler"
+    },
+    {
+      "rule_id": "R004",
+      "kind": "range_qc",
+      "field": "concentration",
+      "params": {
+        "lo": 0,
+        "hi": 100,
+        "lo_inclusive": true,
+        "hi_inclusive": false
+      },
+      "source": {
+        "file": "examples/dictionary.md",
+        "line": 11,
+        "text": "| concentration | mg/L | -999, ND | [0, 100) | 0.01 | 目标物浓度 |"
+      },
+      "origin": "compiler"
+    },
+    {
+      "rule_id": "R005",
+      "kind": "lod_below",
+      "field": "concentration",
+      "params": {
+        "lod": 0.01
+      },
+      "source": {
+        "file": "examples/dictionary.md",
+        "line": 11,
+        "text": "| concentration | mg/L | -999, ND | [0, 100) | 0.01 | 目标物浓度 |"
+      },
+      "origin": "compiler"
+    },
+    {
+      "rule_id": "R006",
+      "kind": "sentinel_missing",
+      "field": "ph",
+      "params": {
+        "tokens": [
+          ""
+        ]
+      },
+      "source": {
+        "file": "examples/dictionary.md",
+        "line": 12,
+        "text": "| ph | - | blank | [0, 14] | - | pH 值 |"
+      },
+      "origin": "compiler"
+    },
+    {
+      "rule_id": "R007",
+      "kind": "range_qc",
+      "field": "ph",
+      "params": {
+        "lo": 0,
+        "hi": 14,
+        "lo_inclusive": true,
+        "hi_inclusive": true
+      },
+      "source": {
+        "file": "examples/dictionary.md",
+        "line": 12,
+        "text": "| ph | - | blank | [0, 14] | - | pH 值 |"
+      },
+      "origin": "compiler"
+    },
+    {
+      "rule_id": "R008",
+      "kind": "sentinel_missing",
+      "field": "turbidity_ntu",
+      "params": {
+        "tokens": [
+          "NA"
+        ]
+      },
+      "source": {
+        "file": "examples/dictionary.md",
+        "line": 13,
+        "text": "| turbidity_ntu | NTU | NA | [0, 4000] | 见附录 B | 浊度 |"
+      },
+      "origin": "compiler"
+    },
+    {
+      "rule_id": "R009",
+      "kind": "range_qc",
+      "field": "turbidity_ntu",
+      "params": {
+        "lo": 0,
+        "hi": 4000,
+        "lo_inclusive": true,
+        "hi_inclusive": true
+      },
+      "source": {
+        "file": "examples/dictionary.md",
+        "line": 13,
+        "text": "| turbidity_ntu | NTU | NA | [0, 4000] | 见附录 B | 浊度 |"
+      },
+      "origin": "compiler"
+    },
+    {
+      "rule_id": "R010",
+      "kind": "sentinel_missing",
+      "field": "volume_ml",
+      "params": {
+        "tokens": [
+          "-999"
+        ]
+      },
+      "source": {
+        "file": "examples/dictionary.md",
+        "line": 17,
+        "text": "- volume_ml: 单位 mL；哨兵 -999；物理界 [0, 1000]；量取样体积"
+      },
+      "origin": "compiler"
+    },
+    {
+      "rule_id": "R011",
+      "kind": "physical_bound",
+      "field": "volume_ml",
+      "params": {
+        "lo": 0,
+        "hi": 1000,
+        "lo_inclusive": true,
+        "hi_inclusive": true
+      },
+      "source": {
+        "file": "examples/dictionary.md",
+        "line": 17,
+        "text": "- volume_ml: 单位 mL；哨兵 -999；物理界 [0, 1000]；量取样体积"
+      },
+      "origin": "compiler"
+    },
+    {
+      "rule_id": "R012",
+      "kind": "sentinel_missing",
+      "field": "conductivity_us_cm",
+      "params": {
+        "tokens": [
+          "-999"
+        ]
+      },
+      "source": {
+        "file": "examples/dictionary.md",
+        "line": 18,
+        "text": "- conductivity_us_cm: 单位 μS/cm；哨兵 -999；范围 0 ~ 2000 μS/cm"
+      },
+      "origin": "compiler"
+    },
+    {
+      "rule_id": "R013",
+      "kind": "unit_scale",
+      "field": "concentration",
+      "params": {
+        "from_unit": "mg/L",
+        "to_unit": "μg/L",
+        "factor": 1000
+      },
+      "source": {
+        "file": "examples/workorder.md",
+        "line": 4,
+        "text": "2. [WO-2] 单位换算：将 concentration 由 mg/L 换算为 μg/L（×1000），保留原列。"
+      },
+      "origin": "compiler"
+    },
+    {
+      "rule_id": "R014",
+      "kind": "dedup",
+      "field": "sample_id",
+      "params": {
+        "key": "sample_id",
+        "normalize": [
+          "strip",
+          "upper"
+        ],
+        "keep": "first"
+      },
+      "source": {
+        "file": "examples/workorder.md",
+        "line": 5,
+        "text": "3. [WO-3] 去重：按 sample_id 归一化主键去重（去空白、统一大写），保留首条记录。"
+      },
+      "origin": "compiler"
+    },
+    {
+      "rule_id": "R101",
+      "kind": "range_qc",
+      "field": "conductivity_us_cm",
+      "params": {
+        "lo": 0,
+        "hi": 2000,
+        "lo_inclusive": true,
+        "hi_inclusive": true
+      },
+      "source": {
+        "file": "examples/dictionary.md",
+        "line": 18,
+        "text": "- conductivity_us_cm: 单位 μS/cm；哨兵 -999；范围 0 ~ 2000 μS/cm"
+      },
+      "origin": "resolution",
+      "resolution_target": "U002",
+      "rationale": "「0 ~ 2000 μS/cm」为无括号波浪号闭区间写法，编译器不支持该语法；按字典原义补全为闭区间 [0, 2000]。"
+    }
+  ],
+  "gaps": [
+    {
+      "type": "uncovered_field",
+      "field": "remark_note",
+      "disposition": "原样保留，未做任何处理"
+    }
+  ],
+  "stats": {
+    "rules": 15,
+    "draft_rules": 14,
+    "resolution_rules": 1,
+    "rejected": 1,
+    "gaps": 1
+  }
+}

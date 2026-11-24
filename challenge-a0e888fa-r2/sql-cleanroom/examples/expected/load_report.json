@@ -1,0 +1,23 @@
+{
+  "columns": [
+    "sample_id",
+    "station",
+    "parameter",
+    "value",
+    "unit",
+    "sample_date"
+  ],
+  "db_file": "/tmp/sqlc-demo.HQyytq/case.db",
+  "delimiter": ",",
+  "delimiter_note": "按首行候选分隔符计数判定（,=5 ;=0 \\t=0 |=0）",
+  "encoding": "utf-8-sig",
+  "encoding_note": "检测到 UTF-8 BOM，按 utf-8-sig 解码并剥离 BOM",
+  "input_file": "/Users/liuhengshen/Desktop/bhr_product/a0e888fa-v2/bundles/sql-cleanroom/examples/water_quality.csv",
+  "n_cols": 6,
+  "n_rows": 9,
+  "notes": [],
+  "physical_lines": 10,
+  "sha256": "8e729cb88edff15b3dd8cc2b1d7bb2882cc602db3fe8e852d3b584ce4c493d11",
+  "size_bytes": 376,
+  "status": "success"
+}

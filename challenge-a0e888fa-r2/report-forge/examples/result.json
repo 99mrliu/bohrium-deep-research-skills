@@ -1,0 +1,31 @@
+{
+  "case_id": "case-synth-soil-001",
+  "status": "success",
+  "sources": [
+    "cleaned.csv",
+    "ledger.csv",
+    "summary.json"
+  ],
+  "uncertainty": [
+    "本示例全部为人工编造的合成数据，仅用于演示交付面渲染管线，不构成任何真实科研结论。"
+  ],
+  "change_records": 4,
+  "cleaned_rows": 6,
+  "missing_rate_pct": 4.17,
+  "duplicates_removed": 1,
+  "unit_conversions": 1,
+  "outliers_flagged": 1,
+  "artifact_hashes": {
+    "cleaned.csv": "fc3e38f1901dc5aaedf66a95d4a3807c717061c222b9e540d37bbca043669b54",
+    "ledger.csv": "cf08c414331cbba2119952412076ca78193f40e4c3cf630e9b8e30e56aea57ce",
+    "summary.json": "c66fbe4a9e1fa19b0d30ba7a1a55cebfc3dbcab89779203fee89346be53f0f92",
+    "expected/quality_report.md": "1eba7db0cd72945ba9b538b68cb9520fd307e0c048058b81bf5a0d0206df1599",
+    "expected/quality_report.html": "ecddda835dc4eef9a3facd43ca6d1dcb9ef018438f0f1d33d68c15dd890159ee",
+    "expected/figures_index.json": "3381b40b142bca5c950c4d6bb3bcce949e1d1325f5553d6b205939bc57ae6ea1",
+    "expected/figures/fig_action_composition.svg": "a8d3152347b08a30c669792c560b913a33992354a82c03555e7681100eaf30d2",
+    "expected/figures/fig_field_issues.svg": "6ad58e00defeea592fd2774e26e1e6ea6f4264a5c4adfba7fff024718e57d1ce",
+    "expected/figures/fig_hist_cd_mg_kg.svg": "fa66f4506eb4ad8df619329b52482049f33f6843337d4132885e92a8044f48d3",
+    "expected/figures/fig_hist_pb_mg_kg.svg": "efafd2799c2daf8220ecc64c9d0e172b7a6e8df813986b979097e92a0167af5f",
+    "expected/figures/fig_missing_by_field.svg": "4232d6038d724013ecf7412d7bb908ecef656adc75ff74d5538429d5123d6b37"
+  }
+}

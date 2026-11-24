@@ -1,0 +1,36 @@
+{
+  "version": "1",
+  "tolerance": {"rel": 1e-6},
+  "roles": {
+    "label_column": {"index": 0, "source": "data_dictionary.md#字段表：第一列“组别”为分组标签"},
+    "n_columns": [
+      {"index": 1, "source": "data_dictionary.md#n：各组例数，整数，1-200，合计=各组之和"}
+    ],
+    "count_columns": [
+      {"index": 2, "source": "data_dictionary.md#male_n：男性例数，整数，合计=各组之和"},
+      {"index": 4, "source": "data_dictionary.md#responders：应答例数，整数，合计=各组之和"}
+    ],
+    "percent_columns": [
+      {"index": 3, "numerator": 2, "denominator": 1, "source": "data_dictionary.md#male_pct=male_n/n×100"},
+      {"index": 5, "numerator": 4, "denominator": 1, "source": "data_dictionary.md#response_pct=responders/n×100"}
+    ],
+    "mean_columns": [
+      {"index": 6, "source": "data_dictionary.md#age_mean：组内平均年龄，合计行按 n 加权"}
+    ],
+    "sum_mean_pairs": [
+      {"sum": 7, "mean": 8, "n": 1, "source": "data_dictionary.md#dose_mg_mean=dose_mg_sum/n"}
+    ],
+    "additive_columns": []
+  },
+  "bounds": [
+    {"column": 1, "min": 1, "max": 200, "source": "data_dictionary.md#n 物理界 1-200"},
+    {"column": 2, "min": 0, "max": 200, "source": "data_dictionary.md#male_n 物理界 0-200"},
+    {"column": 3, "min": 0, "max": 100, "source": "data_dictionary.md#male_pct 物理界 0-100"},
+    {"column": 4, "min": 0, "max": 200, "source": "data_dictionary.md#responders 物理界 0-200"},
+    {"column": 5, "min": 0, "max": 100, "source": "data_dictionary.md#response_pct 物理界 0-100"},
+    {"column": 6, "min": 18, "max": 75, "source": "data_dictionary.md#age_mean 入选标准 18-75 岁"},
+    {"column": 7, "min": 0, "max": 48000, "source": "data_dictionary.md#dose_mg_sum 物理界 0-48000"},
+    {"column": 8, "min": 60, "max": 240, "source": "data_dictionary.md#dose_mg_mean 物理界 60-240"}
+  ],
+  "unit_pairs": []
+}

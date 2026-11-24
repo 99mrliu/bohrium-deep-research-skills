@@ -1,0 +1,561 @@
+{
+  "version": "1.0",
+  "sources": [
+    {
+      "file": "examples/dictionary.md",
+      "role": "dictionary",
+      "lines": 19
+    },
+    {
+      "file": "examples/workorder.md",
+      "role": "workorder",
+      "lines": 7
+    }
+  ],
+  "fields": {
+    "sample_id": {},
+    "temperature_c": {
+      "unit": "°C",
+      "unit_line": 10
+    },
+    "concentration": {
+      "unit": "mg/L",
+      "unit_line": 11
+    },
+    "ph": {},
+    "turbidity_ntu": {
+      "unit": "NTU",
+      "unit_line": 13
+    },
+    "volume_ml": {
+      "unit": "mL",
+      "unit_line": 17
+    },
+    "conductivity_us_cm": {
+      "unit": "μS/cm",
+      "unit_line": 18
+    },
+    "remark_note": {}
+  },
+  "rules": [
+    {
+      "rule_id": "R001",
+      "kind": "sentinel_missing",
+      "field": "temperature_c",
+      "params": {
+        "tokens": [
+          "-999"
+        ]
+      },
+      "source": {
+        "file": "examples/dictionary.md",
+        "line": 10,
+        "text": "| temperature_c | °C | -999 | [-50, 60] | - | 测量温度 |"
+      },
+      "origin": "compiler"
+    },
+    {
+      "rule_id": "R002",
+      "kind": "range_qc",
+      "field": "temperature_c",
+      "params": {
+        "lo": -50,
+        "hi": 60,
+        "lo_inclusive": true,
+        "hi_inclusive": true
+      },
+      "source": {
+        "file": "examples/dictionary.md",
+        "line": 10,
+        "text": "| temperature_c | °C | -999 | [-50, 60] | - | 测量温度 |"
+      },
+      "origin": "compiler"
+    },
+    {
+      "rule_id": "R003",
+      "kind": "sentinel_missing",
+      "field": "concentration",
+      "params": {
+        "tokens": [
+          "-999",
+          "ND"
+        ]
+      },
+      "source": {
+        "file": "examples/dictionary.md",
+        "line": 11,
+        "text": "| concentration | mg/L | -999, ND | [0, 100) | 0.01 | 目标物浓度 |"
+      },
+      "origin": "compiler"
+    },
+    {
+      "rule_id": "R004",
+      "kind": "range_qc",
+      "field": "concentration",
+      "params": {
+        "lo": 0,
+        "hi": 100,
+        "lo_inclusive": true,
+        "hi_inclusive": false
+      },
+      "source": {
+        "file": "examples/dictionary.md",
+        "line": 11,
+        "text": "| concentration | mg/L | -999, ND | [0, 100) | 0.01 | 目标物浓度 |"
+      },
+      "origin": "compiler"
+    },
+    {
+      "rule_id": "R005",
+      "kind": "lod_below",
+      "field": "concentration",
+      "params": {
+        "lod": 0.01
+      },
+      "source": {
+        "file": "examples/dictionary.md",
+        "line": 11,
+        "text": "| concentration | mg/L | -999, ND | [0, 100) | 0.01 | 目标物浓度 |"
+      },
+      "origin": "compiler"
+    },
+    {
+      "rule_id": "R006",
+      "kind": "sentinel_missing",
+      "field": "ph",
+      "params": {
+        "tokens": [
+          ""
+        ]
+      },
+      "source": {
+        "file": "examples/dictionary.md",
+        "line": 12,
+        "text": "| ph | - | blank | [0, 14] | - | pH 值 |"
+      },
+      "origin": "compiler"
+    },
+    {
+      "rule_id": "R007",
+      "kind": "range_qc",
+      "field": "ph",
+      "params": {
+        "lo": 0,
+        "hi": 14,
+        "lo_inclusive": true,
+        "hi_inclusive": true
+      },
+      "source": {
+        "file": "examples/dictionary.md",
+        "line": 12,
+        "text": "| ph | - | blank | [0, 14] | - | pH 值 |"
+      },
+      "origin": "compiler"
+    },
+    {
+      "rule_id": "R008",
+      "kind": "sentinel_missing",
+      "field": "turbidity_ntu",
+      "params": {
+        "tokens": [
+          "NA"
+        ]
+      },
+      "source": {
+        "file": "examples/dictionary.md",
+        "line": 13,
+        "text": "| turbidity_ntu | NTU | NA | [0, 4000] | 见附录 B | 浊度 |"
+      },
+      "origin": "compiler"
+    },
+    {
+      "rule_id": "R009",
+      "kind": "range_qc",
+      "field": "turbidity_ntu",
+      "params": {
+        "lo": 0,
+        "hi": 4000,
+        "lo_inclusive": true,
+        "hi_inclusive": true
+      },
+      "source": {
+        "file": "examples/dictionary.md",
+        "line": 13,
+        "text": "| turbidity_ntu | NTU | NA | [0, 4000] | 见附录 B | 浊度 |"
+      },
+      "origin": "compiler"
+    },
+    {
+      "rule_id": "R010",
+      "kind": "sentinel_missing",
+      "field": "volume_ml",
+      "params": {
+        "tokens": [
+          "-999"
+        ]
+      },
+      "source": {
+        "file": "examples/dictionary.md",
+        "line": 17,
+        "text": "- volume_ml: 单位 mL；哨兵 -999；物理界 [0, 1000]；量取样体积"
+      },
+      "origin": "compiler"
+    },
+    {
+      "rule_id": "R011",
+      "kind": "physical_bound",
+      "field": "volume_ml",
+      "params": {
+        "lo": 0,
+        "hi": 1000,
+        "lo_inclusive": true,
+        "hi_inclusive": true
+      },
+      "source": {
+        "file": "examples/dictionary.md",
+        "line": 17,
+        "text": "- volume_ml: 单位 mL；哨兵 -999；物理界 [0, 1000]；量取样体积"
+      },
+      "origin": "compiler"
+    },
+    {
+      "rule_id": "R012",
+      "kind": "sentinel_missing",
+      "field": "conductivity_us_cm",
+      "params": {
+        "tokens": [
+          "-999"
+        ]
+      },
+      "source": {
+        "file": "examples/dictionary.md",
+        "line": 18,
+        "text": "- conductivity_us_cm: 单位 μS/cm；哨兵 -999；范围 0 ~ 2000 μS/cm"
+      },
+      "origin": "compiler"
+    },
+    {
+      "rule_id": "R013",
+      "kind": "unit_scale",
+      "field": "concentration",
+      "params": {
+        "from_unit": "mg/L",
+        "to_unit": "μg/L",
+        "factor": 1000
+      },
+      "source": {
+        "file": "examples/workorder.md",
+        "line": 4,
+        "text": "2. [WO-2] 单位换算：将 concentration 由 mg/L 换算为 μg/L（×1000），保留原列。"
+      },
+      "origin": "compiler"
+    },
+    {
+      "rule_id": "R014",
+      "kind": "dedup",
+      "field": "sample_id",
+      "params": {
+        "key": "sample_id",
+        "normalize": [
+          "strip",
+          "upper"
+        ],
+        "keep": "first"
+      },
+      "source": {
+        "file": "examples/workorder.md",
+        "line": 5,
+        "text": "3. [WO-3] 去重：按 sample_id 归一化主键去重（去空白、统一大写），保留首条记录。"
+      },
+      "origin": "compiler"
+    }
+  ],
+  "workorder_items": [
+    {
+      "wo_id": "WO-1",
+      "file": "examples/workorder.md",
+      "line": 3,
+      "text": "缺失分类：将 temperature_c、concentration、ph、turbidity_ntu、volume_ml、conductivity_us_cm 中的哨兵值标记为 missing，不得插补。",
+      "fields": [
+        "temperature_c",
+        "concentration",
+        "ph",
+        "turbidity_ntu",
+        "volume_ml",
+        "conductivity_us_cm"
+      ],
+      "actions": [
+        "sentinel_missing"
+      ]
+    },
+    {
+      "wo_id": "WO-2",
+      "file": "examples/workorder.md",
+      "line": 4,
+      "text": "单位换算：将 concentration 由 mg/L 换算为 μg/L（×1000），保留原列。",
+      "fields": [
+        "concentration"
+      ],
+      "actions": [
+        "unit_scale"
+      ]
+    },
+    {
+      "wo_id": "WO-3",
+      "file": "examples/workorder.md",
+      "line": 5,
+      "text": "去重：按 sample_id 归一化主键去重（去空白、统一大写），保留首条记录。",
+      "fields": [
+        "sample_id"
+      ],
+      "actions": [
+        "dedup"
+      ]
+    },
+    {
+      "wo_id": "WO-4",
+      "file": "examples/workorder.md",
+      "line": 6,
+      "text": "QC 标记：temperature_c 物理界 [-50, 60]，concentration 有效范围 [0, 100)，越界仅标记不修改。",
+      "fields": [
+        "temperature_c",
+        "concentration"
+      ],
+      "actions": [
+        "range_qc"
+      ]
+    },
+    {
+      "wo_id": "WO-5",
+      "file": "examples/workorder.md",
+      "line": 7,
+      "text": "检出限：concentration 低于 0.01 mg/L 标记 <LOD，不改动数值。",
+      "fields": [
+        "concentration"
+      ],
+      "actions": [
+        "lod_below"
+      ]
+    }
+  ],
+  "unparsed": [
+    {
+      "unparsed_id": "U001",
+      "file": "examples/dictionary.md",
+      "line": 13,
+      "text": "| turbidity_ntu | NTU | NA | [0, 4000] | 见附录 B | 浊度 |",
+      "reason": "检出限表述无法解析：单元格「见附录 B」"
+    },
+    {
+      "unparsed_id": "U002",
+      "file": "examples/dictionary.md",
+      "line": 18,
+      "text": "- conductivity_us_cm: 单位 μS/cm；哨兵 -999；范围 0 ~ 2000 μS/cm",
+      "reason": "范围写法无法解析（支持 [a,b] / (a,b) / a–b）：单元格「0 ~ 2000 μS/cm」"
+    }
+  ],
+  "line_register": [
+    {
+      "file": "examples/dictionary.md",
+      "line": 1,
+      "text": "# 数据字典（示例）",
+      "category": "skipped",
+      "detail": "标题行",
+      "rule_ids": [],
+      "unparsed_id": null
+    },
+    {
+      "file": "examples/dictionary.md",
+      "line": 3,
+      "text": "> 本文件为人工编造的合成示例，用于演示 dict-compiler 技能，不对应任何真实实验。",
+      "category": "skipped",
+      "detail": "引用/说明行",
+      "rule_ids": [],
+      "unparsed_id": null
+    },
+    {
+      "file": "examples/dictionary.md",
+      "line": 5,
+      "text": "## 字段表",
+      "category": "skipped",
+      "detail": "标题行",
+      "rule_ids": [],
+      "unparsed_id": null
+    },
+    {
+      "file": "examples/dictionary.md",
+      "line": 7,
+      "text": "| 字段 | 单位 | 哨兵值 | 有效范围 | 检出限 | 说明 |",
+      "category": "skipped",
+      "detail": "表头行",
+      "rule_ids": [],
+      "unparsed_id": null
+    },
+    {
+      "file": "examples/dictionary.md",
+      "line": 8,
+      "text": "| --- | --- | --- | --- | --- | --- |",
+      "category": "skipped",
+      "detail": "表格分隔行",
+      "rule_ids": [],
+      "unparsed_id": null
+    },
+    {
+      "file": "examples/dictionary.md",
+      "line": 10,
+      "text": "| temperature_c | °C | -999 | [-50, 60] | - | 测量温度 |",
+      "category": "parsed",
+      "detail": "登记单位 °C；哨兵 -999 → R001；range [-50, 60] → R002",
+      "rule_ids": [
+        "R001",
+        "R002"
+      ],
+      "unparsed_id": null
+    },
+    {
+      "file": "examples/dictionary.md",
+      "line": 11,
+      "text": "| concentration | mg/L | -999, ND | [0, 100) | 0.01 | 目标物浓度 |",
+      "category": "parsed",
+      "detail": "登记单位 mg/L；哨兵 -999, ND → R003；range [0, 100) → R004；检出限 0.01 → R005",
+      "rule_ids": [
+        "R003",
+        "R004",
+        "R005"
+      ],
+      "unparsed_id": null
+    },
+    {
+      "file": "examples/dictionary.md",
+      "line": 12,
+      "text": "| ph | - | blank | [0, 14] | - | pH 值 |",
+      "category": "parsed",
+      "detail": "哨兵 blank → R006；range [0, 14] → R007",
+      "rule_ids": [
+        "R006",
+        "R007"
+      ],
+      "unparsed_id": null
+    },
+    {
+      "file": "examples/dictionary.md",
+      "line": 13,
+      "text": "| turbidity_ntu | NTU | NA | [0, 4000] | 见附录 B | 浊度 |",
+      "category": "unparsed",
+      "detail": "字段 turbidity_ntu 的检出限单元格未解析",
+      "rule_ids": [],
+      "unparsed_id": "U001"
+    },
+    {
+      "file": "examples/dictionary.md",
+      "line": 13,
+      "text": "| turbidity_ntu | NTU | NA | [0, 4000] | 见附录 B | 浊度 |",
+      "category": "parsed",
+      "detail": "登记单位 NTU；哨兵 NA → R008；range [0, 4000] → R009；检出限单元格「见附录 B」未解析 → U001",
+      "rule_ids": [
+        "R008",
+        "R009"
+      ],
+      "unparsed_id": null
+    },
+    {
+      "file": "examples/dictionary.md",
+      "line": 15,
+      "text": "## 补充条目",
+      "category": "skipped",
+      "detail": "标题行",
+      "rule_ids": [],
+      "unparsed_id": null
+    },
+    {
+      "file": "examples/dictionary.md",
+      "line": 17,
+      "text": "- volume_ml: 单位 mL；哨兵 -999；物理界 [0, 1000]；量取样体积",
+      "category": "parsed",
+      "detail": "登记单位 mL；哨兵 -999 → R010；physical [0, 1000] → R011；忽略描述段「量取样体积」",
+      "rule_ids": [
+        "R010",
+        "R011"
+      ],
+      "unparsed_id": null
+    },
+    {
+      "file": "examples/dictionary.md",
+      "line": 18,
+      "text": "- conductivity_us_cm: 单位 μS/cm；哨兵 -999；范围 0 ~ 2000 μS/cm",
+      "category": "unparsed",
+      "detail": "字段 conductivity_us_cm 的范围/物理界单元格未解析",
+      "rule_ids": [],
+      "unparsed_id": "U002"
+    },
+    {
+      "file": "examples/dictionary.md",
+      "line": 18,
+      "text": "- conductivity_us_cm: 单位 μS/cm；哨兵 -999；范围 0 ~ 2000 μS/cm",
+      "category": "parsed",
+      "detail": "登记单位 μS/cm；哨兵 -999 → R012；范围单元格「0 ~ 2000 μS/cm」未解析 → U002",
+      "rule_ids": [
+        "R012"
+      ],
+      "unparsed_id": null
+    },
+    {
+      "file": "examples/dictionary.md",
+      "line": 19,
+      "text": "- remark_note: 自由文本备注，无 QC 规则",
+      "category": "parsed",
+      "detail": "忽略描述段「自由文本备注，无 QC 规则」",
+      "rule_ids": [],
+      "unparsed_id": null
+    },
+    {
+      "file": "examples/workorder.md",
+      "line": 3,
+      "text": "1. [WO-1] 缺失分类：将 temperature_c、concentration、ph、turbidity_ntu、volume_ml、conductivity_us_cm 中的哨兵值标记为 missing，不得插补。",
+      "category": "workorder",
+      "detail": "工单条目 WO-1；动作 ['sentinel_missing']；涉及字段 ['temperature_c', 'concentration', 'ph', 'turbidity_ntu', 'volume_ml', 'conductivity_us_cm']",
+      "rule_ids": [],
+      "unparsed_id": null
+    },
+    {
+      "file": "examples/workorder.md",
+      "line": 4,
+      "text": "2. [WO-2] 单位换算：将 concentration 由 mg/L 换算为 μg/L（×1000），保留原列。",
+      "category": "workorder",
+      "detail": "工单条目 WO-2；动作 ['unit_scale']；涉及字段 ['concentration']",
+      "rule_ids": [
+        "R013"
+      ],
+      "unparsed_id": null
+    },
+    {
+      "file": "examples/workorder.md",
+      "line": 5,
+      "text": "3. [WO-3] 去重：按 sample_id 归一化主键去重（去空白、统一大写），保留首条记录。",
+      "category": "workorder",
+      "detail": "工单条目 WO-3；动作 ['dedup']；涉及字段 ['sample_id']",
+      "rule_ids": [
+        "R014"
+      ],
+      "unparsed_id": null
+    },
+    {
+      "file": "examples/workorder.md",
+      "line": 6,
+      "text": "4. [WO-4] QC 标记：temperature_c 物理界 [-50, 60]，concentration 有效范围 [0, 100)，越界仅标记不修改。",
+      "category": "workorder",
+      "detail": "工单条目 WO-4；动作 ['range_qc']；涉及字段 ['temperature_c', 'concentration']",
+      "rule_ids": [],
+      "unparsed_id": null
+    },
+    {
+      "file": "examples/workorder.md",
+      "line": 7,
+      "text": "5. [WO-5] 检出限：concentration 低于 0.01 mg/L 标记 <LOD，不改动数值。",
+      "category": "workorder",
+      "detail": "工单条目 WO-5；动作 ['lod_below']；涉及字段 ['concentration']",
+      "rule_ids": [],
+      "unparsed_id": null
+    }
+  ]
+}

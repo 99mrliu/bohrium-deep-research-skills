@@ -1,0 +1,43 @@
+{
+  "db": "/tmp/sqlc-demo.HQyytq/case.db",
+  "queries_file": "/Users/liuhengshen/Desktop/bhr_product/a0e888fa-v2/bundles/sql-cleanroom/examples/report_queries.sql",
+  "cleaned_sha256": "27e4c544054dd5bcd77555eab20f6cedc4855fce34398440b5f0995edb6cf00d",
+  "exported": {
+    "cleaned_rows": 8,
+    "change_log_rows": 7,
+    "issues_rows": 2
+  },
+  "checks": [
+    {
+      "metric": "raw_rows",
+      "report_value": 9,
+      "recomputed": 9,
+      "status": "match"
+    },
+    {
+      "metric": "cleaned_rows",
+      "report_value": 8,
+      "recomputed": 8,
+      "status": "match"
+    },
+    {
+      "metric": "issues_rows",
+      "report_value": 2,
+      "recomputed": 2,
+      "status": "match"
+    },
+    {
+      "metric": "change_log_rows",
+      "report_value": 7,
+      "recomputed": 7,
+      "status": "match"
+    },
+    {
+      "metric": "duplicates_dropped",
+      "report_value": 1,
+      "recomputed": 1,
+      "status": "match"
+    }
+  ],
+  "all_match": true
+}

@@ -1,0 +1,67 @@
+{
+  "overall": "PASS",
+  "check_count": 12,
+  "fail_count": 0,
+  "checks": [
+    {
+      "name": "A.inputs_exist",
+      "status": "PASS",
+      "detail": "全部输入产物存在"
+    },
+    {
+      "name": "A.inputs_parseable",
+      "status": "PASS",
+      "detail": "全部输入可解析"
+    },
+    {
+      "name": "B.summary_matches_recompute",
+      "status": "PASS",
+      "detail": "已核对 9 项统计字段与 field_issue_counts，全部一致"
+    },
+    {
+      "name": "C.result_contract_fields",
+      "status": "PASS",
+      "detail": "output_contract 全部 10 个字段齐备"
+    },
+    {
+      "name": "C.case_id_match",
+      "status": "PASS",
+      "detail": "result.case_id='case-synth-soil-001'，case.case_id='case-synth-soil-001'"
+    },
+    {
+      "name": "C.status_honest_enum",
+      "status": "PASS",
+      "detail": "status='success'（合法值：success / partial / failed）"
+    },
+    {
+      "name": "C.sources_uncertainty_present",
+      "status": "PASS",
+      "detail": "sources 与 uncertainty 均为数组"
+    },
+    {
+      "name": "D.result_numbers_match_recompute",
+      "status": "PASS",
+      "detail": "已核对 6 个统计字段，全部一致"
+    },
+    {
+      "name": "E.report_md_deterministic",
+      "status": "PASS",
+      "detail": "quality_report.md 与重渲染结果逐字节一致"
+    },
+    {
+      "name": "E.report_html_deterministic",
+      "status": "PASS",
+      "detail": "quality_report.html 与重渲染结果逐字节一致"
+    },
+    {
+      "name": "F.artifact_hashes",
+      "status": "PASS",
+      "detail": "11 个登记文件存在且 sha256 全部一致"
+    },
+    {
+      "name": "G.referenced_figures_exist",
+      "status": "PASS",
+      "detail": "报告与 figures_index 引用的图表文件全部存在"
+    }
+  ]
+}

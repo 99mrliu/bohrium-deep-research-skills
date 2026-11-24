@@ -1,0 +1,22 @@
+seq,row,field,old_value,new_value,action,flag,rule_id,source_file,source_line
+1,2,temperature_c,-999,,marked_missing,missing:-999,R001,examples/dictionary.md,10
+2,6,concentration,ND,,marked_missing,missing:ND,R003,examples/dictionary.md,11
+3,8,ph,,,marked_missing,missing:blank,R006,examples/dictionary.md,12
+4,6,turbidity_ntu,NA,,marked_missing,missing:NA,R008,examples/dictionary.md,13
+5,7,volume_ml,-999,,marked_missing,missing:-999,R010,examples/dictionary.md,17
+6,6,conductivity_us_cm,-999,,marked_missing,missing:-999,R012,examples/dictionary.md,18
+7,4,sample_id, s-003 ,,dedup_drop,dup_of_row:3,R014,examples/workorder.md,5
+8,1,concentration,1.25,1250,unit_convert,mg/L->μg/L x1000,R013,examples/workorder.md,4
+9,2,concentration,0.85,850,unit_convert,mg/L->μg/L x1000,R013,examples/workorder.md,4
+10,3,concentration,150.0,150000,unit_convert,mg/L->μg/L x1000,R013,examples/workorder.md,4
+11,5,concentration,0.50,500,unit_convert,mg/L->μg/L x1000,R013,examples/workorder.md,4
+12,7,concentration,0.005,5,unit_convert,mg/L->μg/L x1000,R013,examples/workorder.md,4
+13,8,concentration,2.10,2100,unit_convert,mg/L->μg/L x1000,R013,examples/workorder.md,4
+14,9,concentration,1.10,1100,unit_convert,mg/L->μg/L x1000,R013,examples/workorder.md,4
+15,10,concentration,0.90,900,unit_convert,mg/L->μg/L x1000,R013,examples/workorder.md,4
+16,5,temperature_c,80.0,80.0,qc_flag,"out_of_range:[-50,60]",R002,examples/dictionary.md,10
+17,3,concentration,150.0,150.0,qc_flag,"out_of_range:[0,100)",R004,examples/dictionary.md,11
+18,7,concentration,0.005,0.005,qc_flag,below_lod:0.01,R005,examples/dictionary.md,11
+19,9,ph,15.0,15.0,qc_flag,"out_of_range:[0,14]",R007,examples/dictionary.md,12
+20,10,volume_ml,abc,abc,qc_flag,non_numeric,R011,examples/dictionary.md,17
+21,3,conductivity_us_cm,2500,2500,qc_flag,"out_of_range:[0,2000]",R101,examples/dictionary.md,18

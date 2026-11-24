@@ -1,0 +1,5 @@
+record_id,row_id,field,action,before,after,rule,note
+L001,S04,pb_mg_kg,unit_convert,0.0613,61.3,R-UNIT-01,源表该单元格以 g/kg 记录 按数据字典换算为 mg/kg
+L002,S05,as_mg_kg,drop_invalid,13.6a,,R-VAL-02,源值为非法数值 token 按规则剔除为空 不插补
+L003,S02-dup,*,drop_duplicate,S02-duplicate,removed,R-DUP-01,与 S02 行完全重复的整行 予以剔除
+L004,S06,cd_mg_kg,flag_outlier,0.35,0.35,R-QC-03,IQR 规则标记为异常 复核后在 QC 范围内 保留原值

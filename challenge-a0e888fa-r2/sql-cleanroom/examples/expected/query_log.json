@@ -1,0 +1,102 @@
+{
+  "db": "/tmp/sqlc-demo.HQyytq/case.db",
+  "steps_file": "/Users/liuhengshen/Desktop/bhr_product/a0e888fa-v2/bundles/sql-cleanroom/examples/steps.sql",
+  "rules_dir": "/Users/liuhengshen/Desktop/bhr_product/a0e888fa-v2/bundles/sql-cleanroom/examples/rules",
+  "rule_tables": {
+    "rule_missing_tokens": {
+      "file": "missing_tokens.csv",
+      "rows": 3
+    },
+    "rule_unit_map": {
+      "file": "unit_map.csv",
+      "rows": 1
+    },
+    "rule_qc_bounds": {
+      "file": "qc_bounds.csv",
+      "rows": 3
+    },
+    "rule_key_fields": {
+      "file": "key_fields.csv",
+      "rows": 1
+    }
+  },
+  "warnings": [],
+  "statements": [
+    {
+      "seq": 1,
+      "sql_preview": "-- steps.sql —— 清洗即查询（示例：water_quality） -- 全部变换表达为 SQLite 关系操作，由 run_steps.py 在单个事务内按序执行。 -- 约定：raw 表由 load_raw.py 创建（全 TEXT）；规则表 rule_* 由 run_steps.py 创建。 -- 每",
+      "rows_affected": null
+    },
+    {
+      "seq": 2,
+      "sql_preview": "CREATE TABLE issues ( line_no INTEGER, field TEXT, issue_type TEXT, detail TEXT, rule_id INTEGER );",
+      "rows_affected": null
+    },
+    {
+      "seq": 3,
+      "sql_preview": "-- S1 缺失 token 分类 + 键/字段名规范化（规则表 LEFT JOIN，NULL 化在 S2 完成） CREATE TABLE step1_missing AS SELECT r.line_no, upper(trim(r.sample_id)) AS sample_id_norm, r.sample_i",
+      "rows_affected": null
+    },
+    {
+      "seq": 4,
+      "sql_preview": "-- S2 单位换算（JOIN rule_unit_map；缺失值不参与换算；非数值如实置 NULL 并记 issues） CREATE TABLE step2_units AS SELECT s.*, COALESCE(um.to_unit, s.unit_orig) AS unit_norm, CASE WHEN ",
+      "rows_affected": null
+    },
+    {
+      "seq": 5,
+      "sql_preview": "-- S3 归一化主键去重：保留 line_no 最小者，keep 依据落表 CREATE TABLE dedup_keep AS SELECT sample_id_norm, MIN(line_no) AS keep_line, 'normalized sample_id 分组保留最小 line_no（清洗工单 W-",
+      "rows_affected": null
+    },
+    {
+      "seq": 6,
+      "sql_preview": "CREATE TABLE duplicates_dropped AS SELECT s.line_no, s.sample_id_norm, k.keep_line FROM step2_units s JOIN dedup_keep k ON s.sample_id_norm = k.sample_id_norm W",
+      "rows_affected": null
+    },
+    {
+      "seq": 7,
+      "sql_preview": "CREATE TABLE cleaned AS SELECT s.line_no, s.sample_id_norm AS sample_id, s.station, s.parameter, s.value_num AS value, s.unit_norm AS unit, s.missing_class, s.s",
+      "rows_affected": null
+    },
+    {
+      "seq": 8,
+      "sql_preview": "-- S4 change_log：缺失 token -> NULL（保留分类列 missing_class） INSERT INTO change_log SELECT s.line_no, 'value', s.value_orig, NULL, s.missing_rule_id FROM step2_units ",
+      "rows_affected": 3
+    },
+    {
+      "seq": 9,
+      "sql_preview": "-- S5 change_log：单位换算（值与单位各记一格） INSERT INTO change_log SELECT s.line_no, 'value', s.value_trim, CAST(s.value_num AS TEXT), s.unit_rule_id FROM step2_units s WHE",
+      "rows_affected": 1
+    },
+    {
+      "seq": 10,
+      "sql_preview": "INSERT INTO change_log SELECT s.line_no, 'unit', s.unit_orig, s.unit_norm, s.unit_rule_id FROM step2_units s WHERE s.unit_rule_id IS NOT NULL AND s.missing_clas",
+      "rows_affected": 1
+    },
+    {
+      "seq": 11,
+      "sql_preview": "-- S6 change_log：主键规范化（大小写/空格） INSERT INTO change_log SELECT s.line_no, 'sample_id', s.sample_id_orig, s.sample_id_norm, kf.rule_id FROM step2_units s, rule_key",
+      "rows_affected": 1
+    },
+    {
+      "seq": 12,
+      "sql_preview": "-- S7 change_log：重复行剔除（行级变更，field 记为 _row） INSERT INTO change_log SELECT d.line_no, '_row', 'duplicate of line ' || d.keep_line, NULL, kf.rule_id FROM duplicate",
+      "rows_affected": 1
+    },
+    {
+      "seq": 13,
+      "sql_preview": "-- S8 issues：QC 越界标记（仅 flag 动作；值缺失者不参与） INSERT INTO issues SELECT c.line_no, 'value', 'qc_out_of_bounds', 'value ' || CAST(c.value AS TEXT) || ' ' || c.unit || ",
+      "rows_affected": 1
+    },
+    {
+      "seq": 14,
+      "sql_preview": "-- S9 issues：非数值源值（未猜测、置 NULL，如实登记） INSERT INTO issues SELECT s.line_no, 'value', 'non_numeric_source', 'source value ' || quote(s.value_orig) || ' is not numer",
+      "rows_affected": 0
+    },
+    {
+      "seq": 15,
+      "sql_preview": "-- S10 issues：重复剔除登记 INSERT INTO issues SELECT d.line_no, 'sample_id', 'duplicate_removed', 'normalized key ' || d.sample_id_norm || ' duplicated; kept line ' |",
+      "rows_affected": 1
+    }
+  ],
+  "status": "success"
+}

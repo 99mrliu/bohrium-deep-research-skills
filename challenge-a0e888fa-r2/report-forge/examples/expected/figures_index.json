@@ -1,0 +1,47 @@
+{
+  "version": "1.0",
+  "figure_count": 5,
+  "figures": [
+    {
+      "file": "figures/fig_hist_pb_mg_kg.svg",
+      "kind": "histogram",
+      "kind_label": "直方图",
+      "title": "pb_mg_kg 分布直方图",
+      "rationale": "该指标为连续数值型汇总列，需观察取值分布与离群迹象；依据 figure_choice.md「分布 → 直方图」。",
+      "caption": "基于 cleaned.csv 中 pb_mg_kg 列 6 个非缺失数值绘制。"
+    },
+    {
+      "file": "figures/fig_hist_cd_mg_kg.svg",
+      "kind": "histogram",
+      "kind_label": "直方图",
+      "title": "cd_mg_kg 分布直方图",
+      "rationale": "该指标为连续数值型汇总列，需观察取值分布与离群迹象；依据 figure_choice.md「分布 → 直方图」。",
+      "caption": "基于 cleaned.csv 中 cd_mg_kg 列 5 个非缺失数值绘制。"
+    },
+    {
+      "file": "figures/fig_missing_by_field.svg",
+      "kind": "grouped_bar",
+      "kind_label": "分组条形图",
+      "title": "各字段缺失 / 非缺失单元格计数",
+      "rationale": "缺失按字段分类计数，属于分类计数对比；依据 figure_choice.md「缺失分类 → 分组条形图」。",
+      "caption": "cleaned.csv 共 6 行 × 8 字段，缺失单元格总数 2。"
+    },
+    {
+      "file": "figures/fig_field_issues.svg",
+      "kind": "bar",
+      "kind_label": "条形图",
+      "title": "各字段问题条数",
+      "rationale": "字段问题数为离散计数对比；依据 figure_choice.md「对比 → 条形图」。",
+      "caption": "ledger.csv 共 4 条变更记录，按字段归并计数。"
+    },
+    {
+      "file": "figures/fig_action_composition.svg",
+      "kind": "stacked_bar",
+      "kind_label": "堆叠条形图",
+      "title": "处理动作构成",
+      "rationale": "展示各类处理动作在全部变更记录中的构成；依据 figure_choice.md「构成 → 堆叠条形图」。",
+      "caption": "ledger.csv 共 4 条变更记录，按动作类型归并。"
+    }
+  ],
+  "skipped": []
+}

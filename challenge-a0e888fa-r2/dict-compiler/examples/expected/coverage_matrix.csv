@@ -1,0 +1,23 @@
+view,item,detail,covered_by,status,disposition
+field,sample_id,数据列/规则目标字段,R014,covered,
+field,temperature_c,数据列/规则目标字段,R001;R002,covered,
+field,concentration,数据列/规则目标字段,R003;R004;R005;R013,covered,
+field,ph,数据列/规则目标字段,R006;R007,covered,
+field,turbidity_ntu,数据列/规则目标字段,R008;R009,covered,
+field,volume_ml,数据列/规则目标字段,R010;R011,covered,
+field,conductivity_us_cm,数据列/规则目标字段,R012;R101,covered,
+field,remark_note,数据列,,uncovered,原样保留
+dict_line,examples/dictionary.md:10,"| temperature_c | °C | -999 | [-50, 60] | - | 测量温度 |",R001;R002,parsed,
+dict_line,examples/dictionary.md:11,"| concentration | mg/L | -999, ND | [0, 100) | 0.01 | 目标物浓度 |",R003;R004;R005,parsed,
+dict_line,examples/dictionary.md:12,"| ph | - | blank | [0, 14] | - | pH 值 |",R006;R007,parsed,
+dict_line,examples/dictionary.md:13,"| turbidity_ntu | NTU | NA | [0, 4000] | 见附录 B | 浊度 |",,rejected,"已裁决不执行：turbidity_ntu 检出限写作「见附录 B」，附录 B 未随案提供，无法编译为可执行规则；按铁律不猜测数值。该行其余单元格（哨兵 NA、范围 [0, 4000]）已正常编译为 R008、R009。"
+dict_line,examples/dictionary.md:13,"| turbidity_ntu | NTU | NA | [0, 4000] | 见附录 B | 浊度 |",R008;R009,parsed,
+dict_line,examples/dictionary.md:17,"- volume_ml: 单位 mL；哨兵 -999；物理界 [0, 1000]；量取样体积",R010;R011,parsed,
+dict_line,examples/dictionary.md:18,- conductivity_us_cm: 单位 μS/cm；哨兵 -999；范围 0 ~ 2000 μS/cm,R101,resolved,经裁决补全为规则
+dict_line,examples/dictionary.md:18,- conductivity_us_cm: 单位 μS/cm；哨兵 -999；范围 0 ~ 2000 μS/cm,R012,parsed,
+dict_line,examples/dictionary.md:19,- remark_note: 自由文本备注，无 QC 规则,,parsed_no_rule,描述/登记行，无需规则
+workorder,WO-1,缺失分类：将 temperature_c、concentration、ph、turbidity_ntu、volume_ml、conductivity_us_cm,R001;R003;R006;R008;R010;R012,covered,
+workorder,WO-2,单位换算：将 concentration 由 mg/L 换算为 μg/L（×1000），保留原列。,R013,covered,
+workorder,WO-3,去重：按 sample_id 归一化主键去重（去空白、统一大写），保留首条记录。,R014,covered,
+workorder,WO-4,"QC 标记：temperature_c 物理界 [-50, 60]，concentration 有效范围 [0, 100)，越界仅标记不修改。",R002;R004,covered,
+workorder,WO-5,检出限：concentration 低于 0.01 mg/L 标记 <LOD，不改动数值。,R005,covered,

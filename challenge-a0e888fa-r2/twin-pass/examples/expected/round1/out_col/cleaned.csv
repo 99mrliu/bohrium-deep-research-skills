@@ -1,0 +1,9 @@
+src_row,analyte_raw,analyte_norm,matrix,batch,unit_raw,concentration,concentration_class,concentration_flag,recovery_pct,recovery_pct_class,recovery_pct_flag
+1,Glucose,glucose,plasma,B01,mg/L,85.2,valid,,99.1,valid,
+3, caffeine ,caffeine,plasma,B01,mg/L,13,valid,,96.5,valid,
+5,Urea,urea,plasma,B02,μg/mL,301.4,valid,,,below_detection_limit,
+6,Ethanol,ethanol,plasma,B02,mg/L,,not_detected,,100,valid,
+7,Sulfate,sulfate,plasma,B02,mg/L,0,true_zero,,99.9,valid,
+8,Potassium,potassium,plasma,B03,mg/L,99999,valid,out_of_bounds_high,101.2,valid,
+9,Magnesium,magnesium,plasma,B03,μg/mL,21,valid,,135,valid,out_of_bounds_high
+10,Calcium,calcium,plasma,B03,mg/L,,below_detection_limit,,95.5,valid,

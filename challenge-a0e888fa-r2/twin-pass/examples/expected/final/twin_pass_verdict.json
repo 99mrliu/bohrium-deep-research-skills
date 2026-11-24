@@ -1,0 +1,32 @@
+{
+  "case_id": "SYNTH-EX-001",
+  "idempotence": {
+    "csv": "lab_table.csv",
+    "engine": "../scripts/engine_row.py",
+    "files": [
+      "cleaned.csv",
+      "ledger.csv",
+      "summary.json"
+    ],
+    "mismatches": [],
+    "rules": "rules.json",
+    "status": "PASS"
+  },
+  "inputs": {
+    "engine_a_dir": "expected/final/out_row",
+    "engine_b_dir": "expected/final/out_col"
+  },
+  "policy": "no delivery while verdict is FAIL; resolve divergence in rules.json (spec ambiguity) or in one engine (defect), then re-run BOTH engines",
+  "reconciliation": {
+    "by_artifact": {
+      "cleaned.csv": 0,
+      "ledger.csv": 0,
+      "summary.json": 0
+    },
+    "divergences": 0,
+    "queue_file": "reconciliation_queue.csv",
+    "status": "PASS"
+  },
+  "tool": "diff_runs.py",
+  "verdict": "PASS"
+}

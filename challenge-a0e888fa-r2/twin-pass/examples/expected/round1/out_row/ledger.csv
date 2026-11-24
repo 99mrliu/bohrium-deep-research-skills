@@ -1,0 +1,13 @@
+record,src_row,field,record_class,detail,source
+dedup_keep,1,analyte,duplicate_key,norm_key='glucose'; candidates=2; kept score=2; tie=first_occurrence,synthetic:work_order#dedup (normalize key; keep most complete row) -- NOTE: tie rule left unspecified on purpose; this is the round-1 underspecified spec
+dedup_keep,2,analyte,duplicate_key,norm_key='caffeine'; candidates=2; kept score=2; tie=first_occurrence,synthetic:work_order#dedup (normalize key; keep most complete row) -- NOTE: tie rule left unspecified on purpose; this is the round-1 underspecified spec
+dedup_drop,3,analyte,duplicate_key,norm_key='caffeine'; kept src_row=2 score=2; dropped score=2; tie=first_occurrence,synthetic:work_order#dedup (normalize key; keep most complete row) -- NOTE: tie rule left unspecified on purpose; this is the round-1 underspecified spec
+dedup_drop,4,analyte,duplicate_key,norm_key='glucose'; kept src_row=1 score=2; dropped score=1; tie=first_occurrence,synthetic:work_order#dedup (normalize key; keep most complete row) -- NOTE: tie rule left unspecified on purpose; this is the round-1 underspecified spec
+unit_convert,5,concentration,unit_converted,unit 'μg/mL' -> 'mg/L' factor=1,"synthetic:unit_qc_rules#unit-map (1 mg/L = 1 μg/mL, factor 1.0 both ways)"
+cell_flag,5,recovery_pct,below_detection_limit,"raw='ND'; marked below_detection_limit, not imputed",synthetic:work_order#sentinels (ND = below detection limit)
+cell_flag,6,concentration,not_detected,"raw=''; marked not_detected, not imputed",synthetic:work_order#sentinels (blank cell = not detected)
+cell_flag,7,concentration,true_zero,"raw='0'; numeric zero; marked true_zero, not imputed",synthetic:data_dictionary#concentration
+cell_flag,8,concentration,out_of_bounds_high,"value 99999 > max 5000; original kept, flagged",synthetic:unit_qc_rules#bounds (plausible range 0-5000 mg/L)
+unit_convert,9,concentration,unit_converted,unit 'μg/mL' -> 'mg/L' factor=1,"synthetic:unit_qc_rules#unit-map (1 mg/L = 1 μg/mL, factor 1.0 both ways)"
+cell_flag,9,recovery_pct,out_of_bounds_high,"value 135 > max 120; original kept, flagged",synthetic:unit_qc_rules#bounds (recovery plausible range 0-120%)
+cell_flag,10,concentration,below_detection_limit,"raw='ND'; marked below_detection_limit, not imputed",synthetic:work_order#sentinels (ND = below detection limit)

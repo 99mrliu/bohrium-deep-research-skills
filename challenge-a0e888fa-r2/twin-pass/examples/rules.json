@@ -1,0 +1,90 @@
+{
+  "version": 1,
+  "case_id": "SYNTH-EX-001",
+  "key": {
+    "column": "analyte"
+  },
+  "meta_columns": [
+    "matrix",
+    "batch"
+  ],
+  "unit_column": {
+    "column": "unit",
+    "target": "mg/L",
+    "factors": {
+      "mg/L": 1.0,
+      "μg/mL": 1.0
+    },
+    "source": "synthetic:unit_qc_rules#unit-map (1 mg/L = 1 μg/mL, factor 1.0 both ways)"
+  },
+  "measures": [
+    {
+      "column": "concentration",
+      "source": "synthetic:data_dictionary#concentration",
+      "convert_units": true,
+      "sentinels": [
+        {
+          "pattern": "",
+          "class": "not_detected",
+          "source": "synthetic:work_order#sentinels (blank cell = not detected)"
+        },
+        {
+          "pattern": "ND",
+          "class": "below_detection_limit",
+          "source": "synthetic:work_order#sentinels (ND = below detection limit)"
+        },
+        {
+          "pattern": "-999",
+          "class": "entry_missing",
+          "source": "synthetic:work_order#sentinels (-999 = entry missing)"
+        }
+      ],
+      "zero_is_true": true,
+      "bounds": {
+        "min": 0,
+        "max": 5000,
+        "action": "flag_keep",
+        "source": "synthetic:unit_qc_rules#bounds (plausible range 0-5000 mg/L)"
+      }
+    },
+    {
+      "column": "recovery_pct",
+      "source": "synthetic:data_dictionary#recovery_pct",
+      "convert_units": false,
+      "sentinels": [
+        {
+          "pattern": "",
+          "class": "not_detected",
+          "source": "synthetic:work_order#sentinels (blank cell = not detected)"
+        },
+        {
+          "pattern": "ND",
+          "class": "below_detection_limit",
+          "source": "synthetic:work_order#sentinels (ND = below detection limit)"
+        },
+        {
+          "pattern": "-999",
+          "class": "entry_missing",
+          "source": "synthetic:work_order#sentinels (-999 = entry missing)"
+        }
+      ],
+      "zero_is_true": false,
+      "bounds": {
+        "min": 0,
+        "max": 120,
+        "action": "flag_keep",
+        "source": "synthetic:unit_qc_rules#bounds (recovery plausible range 0-120%)"
+      }
+    }
+  ],
+  "dedup": {
+    "normalize": [
+      "trim",
+      "collapse_ws",
+      "lower"
+    ],
+    "keep": "most_complete",
+    "tie": "first_occurrence",
+    "source": "synthetic:work_order#dedup (normalize key; keep most complete row; ties keep first occurrence)"
+  }
+}

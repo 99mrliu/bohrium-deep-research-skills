@@ -1,0 +1,10 @@
+sample_id,temperature_c,concentration,ph,turbidity_ntu,volume_ml,conductivity_us_cm,remark_note,concentration__ug_per_L,temperature_c__qc,concentration__qc,ph__qc,turbidity_ntu__qc,volume_ml__qc,conductivity_us_cm__qc
+S-001,22.5,1.25,7.1,12,100,410,正常,1250,,,,,,
+S-002,,0.85,6.8,5,98,390,温度哨兵缺失,850,missing,,,,,
+S-003,21.0,150.0,7.0,9,100,2500,浓度越界 电导率越界,150000,,out_of_range,,,,out_of_range
+S-004,80.0,0.50,7.4,20,100,420,温度越界,500,out_of_range,,,,,
+S-005,19.8,,7.2,,100,,浓度ND 浊度NA 电导率哨兵,,,missing,,missing,,missing
+S-006,20.1,0.005,7.0,3,,440,体积哨兵 浓度低于检出限,5,,below_lod,,,missing,
+S-007,20.0,2.10,,8,100,450,pH空白哨兵,2100,,,missing,,,
+S-008,23.3,1.10,15.0,7,100,460,pH越界,1100,,,out_of_range,,,
+S-009,20.5,0.90,7.3,6,abc,470,体积非数值,900,,,,,non_numeric,

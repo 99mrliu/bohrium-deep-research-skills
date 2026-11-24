@@ -1,0 +1,21 @@
+{
+  "resolutions": [
+    {
+      "target": "U001",
+      "action": "reject",
+      "rationale": "turbidity_ntu 检出限写作「见附录 B」，附录 B 未随案提供，无法编译为可执行规则；按铁律不猜测数值。该行其余单元格（哨兵 NA、范围 [0, 4000]）已正常编译为 R008、R009。",
+      "source": {"file": "examples/dictionary.md", "line": 13}
+    },
+    {
+      "target": "U002",
+      "action": "adjust",
+      "rule": {
+        "kind": "range_qc",
+        "field": "conductivity_us_cm",
+        "params": {"lo": 0, "hi": 2000, "lo_inclusive": true, "hi_inclusive": true}
+      },
+      "rationale": "「0 ~ 2000 μS/cm」为无括号波浪号闭区间写法，编译器不支持该语法；按字典原义补全为闭区间 [0, 2000]。",
+      "source": {"file": "examples/dictionary.md", "line": 18}
+    }
+  ]
+}
