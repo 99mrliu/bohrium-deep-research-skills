@@ -1,0 +1,21 @@
+{
+  "version_chains": [
+    {
+      "stem": "report",
+      "chain": [
+        {
+          "source_path": "report_v1.txt",
+          "sha256": "fbd51b19d4ef6296df053e8794d14f04e033b2056c656c63b26416b36135385b",
+          "mtime": "2026-11-24T15:10:13+00:00"
+        },
+        {
+          "source_path": "report_最终版.txt",
+          "sha256": "c07cb8b8aaef7e3c887a8db669a90afdff4e860ea0223a10c8996bb766579a14",
+          "mtime": "2026-11-24T15:10:13+00:00"
+        }
+      ],
+      "note": "词干相同内容不同，按 mtime 排序；内容相同者另见 duplicates"
+    }
+  ],
+  "rule": "规范化词干（去版本尾巴）分组，按 mtime 排序"
+}

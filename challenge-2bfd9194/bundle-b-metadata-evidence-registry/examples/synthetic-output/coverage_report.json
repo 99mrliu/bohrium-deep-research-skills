@@ -1,0 +1,98 @@
+{
+  "fields": [
+    "project",
+    "year",
+    "data_type",
+    "author",
+    "instrument",
+    "version_note",
+    "retention",
+    "access_scope",
+    "source_party"
+  ],
+  "denominator_files": 10,
+  "sidecar_files": [
+    "admin_notes.txt",
+    "metadata.csv"
+  ],
+  "per_field": {
+    "project": {
+      "filled": 4,
+      "total": 10,
+      "fill_rate": 0.4
+    },
+    "year": {
+      "filled": 5,
+      "total": 10,
+      "fill_rate": 0.5
+    },
+    "data_type": {
+      "filled": 6,
+      "total": 10,
+      "fill_rate": 0.6
+    },
+    "author": {
+      "filled": 4,
+      "total": 10,
+      "fill_rate": 0.4
+    },
+    "instrument": {
+      "filled": 7,
+      "total": 10,
+      "fill_rate": 0.7
+    },
+    "version_note": {
+      "filled": 2,
+      "total": 10,
+      "fill_rate": 0.2
+    },
+    "retention": {
+      "filled": 7,
+      "total": 10,
+      "fill_rate": 0.7
+    },
+    "access_scope": {
+      "filled": 0,
+      "total": 10,
+      "fill_rate": 0.0
+    },
+    "source_party": {
+      "filled": 7,
+      "total": 10,
+      "fill_rate": 0.7
+    }
+  },
+  "per_level_winner_count": {
+    "L1": 37,
+    "L2": 1,
+    "L3": 4
+  },
+  "unfilled_files": [
+    "corrupted_scan_note.txt",
+    "random_memo.txt",
+    "别名_数据副本.txt"
+  ],
+  "l2_skipped_nontext": [],
+  "unassigned": [
+    {
+      "file": "corrupted_scan_note.txt",
+      "reason": "模板 {project}/{year}/{data_type} 缺字段：project,year,data_type（已诚实留空，未猜测）"
+    },
+    {
+      "file": "random_memo.txt",
+      "reason": "模板 {project}/{year}/{data_type} 缺字段：project,year,data_type（已诚实留空，未猜测）"
+    },
+    {
+      "file": "report_v1.txt",
+      "reason": "模板 {project}/{year}/{data_type} 缺字段：project,year（已诚实留空，未猜测）"
+    },
+    {
+      "file": "report_最终版.txt",
+      "reason": "模板 {project}/{year}/{data_type} 缺字段：project,year（已诚实留空，未猜测）"
+    },
+    {
+      "file": "实验记录_张三.txt",
+      "reason": "模板 {project}/{year}/{data_type} 缺字段：project,data_type（已诚实留空，未猜测）"
+    }
+  ]
+}

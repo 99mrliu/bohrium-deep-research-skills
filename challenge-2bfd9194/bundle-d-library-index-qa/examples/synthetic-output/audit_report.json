@@ -1,0 +1,36 @@
+{
+  "overall": "PASS",
+  "checks": [
+    {
+      "check": "deliverables_present",
+      "status": "PASS",
+      "detail": "all 12 present"
+    },
+    {
+      "check": "files_rows_eq_manifest",
+      "status": "PASS",
+      "detail": "files=12 manifest=12"
+    },
+    {
+      "check": "input_coverage",
+      "status": "PASS",
+      "detail": "input_files=12 manifest_rows=12"
+    },
+    {
+      "check": "hash_spot_check",
+      "status": "PASS",
+      "detail": "sampled=5/10 mismatches=[]"
+    },
+    {
+      "check": "qa_evidence_real",
+      "status": "PASS",
+      "detail": "qa_entries=2 evidence_checked=3 problems=[]"
+    },
+    {
+      "check": "rebuild_diff_empty",
+      "status": "PASS",
+      "detail": "status=empty_diff missing=0 extra=0"
+    }
+  ],
+  "scope": "read-only audit of /tmp/r4-test/output against /tmp/r4-test/input"
+}

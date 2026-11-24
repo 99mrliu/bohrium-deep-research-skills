@@ -1,0 +1,20 @@
+{"ts": "2026-11-24T15:10:27+00:00", "event": "init", "case_id": "synthetic-demo-r4", "contract_fields": 4}
+{"ts": "2026-11-24T15:10:27+00:00", "event": "scan", "files": 12, "skipped": 1}
+{"ts": "2026-11-24T15:10:27+00:00", "event": "plan", "planned": 12, "duplicate_groups": 1, "version_chains": 1, "conflicts": 0}
+{"ts": "2026-11-24T15:10:27+00:00", "event": "apply", "source": "XRD原始数据说明.txt", "target": "data/XRD原始数据说明.txt", "action": "commit_new"}
+{"ts": "2026-11-24T15:10:27+00:00", "event": "apply", "source": "draft_分析草稿.txt", "target": "drafts/draft_分析草稿.txt", "action": "commit_new"}
+{"ts": "2026-11-24T15:10:27+00:00", "event": "apply", "source": "report_v1.txt", "target": "papers/report_v1.txt", "action": "commit_new"}
+{"ts": "2026-11-24T15:10:27+00:00", "event": "apply", "source": "report_最终版.txt", "target": "papers/report_最终版.txt", "action": "commit_new"}
+{"ts": "2026-11-24T15:10:27+00:00", "event": "apply", "source": "supplementary_图注.txt", "target": "supplementary/supplementary_图注.txt", "action": "commit_new"}
+{"ts": "2026-11-24T15:10:27+00:00", "event": "apply", "source": "xrd_2024-05-12.dat", "target": "data/xrd_2024-05-12.dat", "action": "commit_new"}
+{"ts": "2026-11-24T15:10:27+00:00", "event": "apply", "source": "会议纪要2024-春.txt", "target": "admin/会议纪要2024-春.txt", "action": "commit_new"}
+{"ts": "2026-11-24T15:10:27+00:00", "event": "apply", "source": "实验参数metadata.csv", "target": "data/实验参数metadata.csv", "action": "commit_new"}
+{"ts": "2026-11-24T15:10:27+00:00", "event": "apply", "source": "损坏文件占位.txt", "target": null, "action": "skipped", "reason": "不可读或模拟损坏，不入库"}
+{"ts": "2026-11-24T15:10:27+00:00", "event": "apply", "source": "行政版本备注.txt", "target": "admin/行政版本备注.txt", "action": "commit_new"}
+{"ts": "2026-11-24T15:10:27+00:00", "event": "apply", "source": "量子点发光二极管实验记录.txt", "target": "data/量子点发光二极管实验记录.txt", "action": "commit_new"}
+{"ts": "2026-11-24T15:10:27+00:00", "event": "apply", "source": "量子点实验记录-副本.txt", "target": "data/量子点发光二极管实验记录.txt", "action": "already_committed_identical"}
+{"ts": "2026-11-24T15:10:27+00:00", "event": "index", "db": "/tmp/r4-test/output/index/catalog.db", "stats": "/tmp/r4-test/output/index/index_stats.json", "degraded": false, "indexed": 10, "files_rows": 12}
+{"ts": "2026-11-24T15:10:27+00:00", "event": "qa", "questions": 2, "origin": "questions_file", "answered_or_partial": 2, "unanswered": 0}
+{"ts": "2026-11-24T15:10:27+00:00", "event": "rebuild", "status": "empty_diff", "runtime_entries": 12, "rebuilt_entries": 12, "diff_out": "/tmp/r4-test/output/REBUILD_DIFF.json"}
+{"ts": "2026-11-24T15:10:27+00:00", "event": "verify", "output": "{\"overall\": \"PASS\", \"failed\": [], \"report\": \"/tmp/r4-test/output/audit_report.json\"}"}
+{"ts": "2026-11-24T15:10:27+00:00", "event": "finalize", "status": "partial", "audit": "PASS"}

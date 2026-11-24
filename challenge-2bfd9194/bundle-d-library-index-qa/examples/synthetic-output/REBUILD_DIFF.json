@@ -1,0 +1,11 @@
+{
+  "status": "empty_diff",
+  "runtime_db": "/tmp/r4-test/output/index/catalog.db",
+  "rebuilt_db": "/tmp/r4-test/output/index/rebuild_check/catalog.db",
+  "runtime_entries": 12,
+  "rebuilt_entries": 12,
+  "missing_in_rebuild": [],
+  "extra_in_rebuild": [],
+  "rebuild_degraded": false,
+  "note": "empty_diff=仅凭清单与落库文件即可无损重建索引；非空差异需人工核查"
+}

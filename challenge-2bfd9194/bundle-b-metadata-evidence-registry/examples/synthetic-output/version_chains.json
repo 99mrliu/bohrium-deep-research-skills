@@ -1,0 +1,24 @@
+{
+  "rule": "规范化词干(去 vN/final/最终版/终稿/定稿/副本/copy) + 同扩展名分组",
+  "chains": [
+    {
+      "stem": "report",
+      "ext": ".txt",
+      "members": [
+        {
+          "file": "report_v1.txt",
+          "sha256": "34e26a8c9c637dec2ecf550b391ca77cc780ec49014d41100d0d4b080fd0688c",
+          "mtime": 1795532964.2899954,
+          "bytes": 87
+        },
+        {
+          "file": "report_最终版.txt",
+          "sha256": "0c00398fee0233b2eac5916e17191908d8204c99b21b5848818c955f54bc6eea",
+          "mtime": 1795532964.2902274,
+          "bytes": 142
+        }
+      ],
+      "note": "按 mtime 升序，后者视为较新版本；词干规范化去除版本后缀"
+    }
+  ]
+}

@@ -1,0 +1,19 @@
+{
+  "chains": [
+    {
+      "stem": "report",
+      "members": [
+        "report_v1.txt",
+        "report_最终版.txt"
+      ],
+      "distinct_contents": 2,
+      "edges": [
+        {
+          "from": "report_v1.txt",
+          "to": "report_最终版.txt",
+          "relation": "supersedes"
+        }
+      ]
+    }
+  ]
+}

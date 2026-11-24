@@ -1,0 +1,65 @@
+{
+  "overall": "PASS",
+  "verifier": "verify_lineage.py",
+  "checks": [
+    {
+      "id": "graph_exists",
+      "status": "PASS",
+      "detail": ""
+    },
+    {
+      "id": "nodes_match_input",
+      "status": "PASS",
+      "detail": ""
+    },
+    {
+      "id": "admin_note_locator_verified",
+      "status": "PASS",
+      "detail": ""
+    },
+    {
+      "id": "stem_mtime_edges_valid",
+      "status": "PASS",
+      "detail": ""
+    },
+    {
+      "id": "no_undeclared_cycles",
+      "status": "PASS",
+      "detail": ""
+    },
+    {
+      "id": "report_consistent_with_graph",
+      "status": "PASS",
+      "detail": ""
+    },
+    {
+      "id": "manifest_matches_tree",
+      "status": "PASS",
+      "detail": ""
+    },
+    {
+      "id": "duplicates_match",
+      "status": "PASS",
+      "detail": ""
+    },
+    {
+      "id": "skipped_disclosed",
+      "status": "PASS",
+      "detail": ""
+    },
+    {
+      "id": "journal_closed",
+      "status": "PASS",
+      "detail": ""
+    },
+    {
+      "id": "result_structure",
+      "status": "PASS",
+      "detail": ""
+    }
+  ],
+  "counts": {
+    "pass": 11,
+    "fail": 0
+  }
+}

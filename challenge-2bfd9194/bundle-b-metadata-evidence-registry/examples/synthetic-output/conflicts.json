@@ -1,0 +1,87 @@
+{
+  "rule": "同文件同字段多来源不同值即入矩阵；winner 先 L4 裁定后 L1>L2>L3；全部候选保留并标注",
+  "conflicts": [
+    {
+      "file": "spectrum_2020_raw.csv",
+      "field": "instrument",
+      "winner": {
+        "file": "spectrum_2020_raw.csv",
+        "field": "instrument",
+        "value": "Thermo Orbitrap Exploris 480",
+        "level": "L1",
+        "source_kind": "admin_note",
+        "locator": "admin_notes.txt#L2",
+        "pattern_id": null,
+        "confidence": 0.8,
+        "note": "全局行政备注（仅作用于已有文件级证据的文件）；共2条候选"
+      },
+      "resolution": "level_priority",
+      "candidates": [
+        {
+          "file": "spectrum_2020_raw.csv",
+          "field": "instrument",
+          "value": "Thermo Orbitrap Exploris 480",
+          "level": "L1",
+          "source_kind": "admin_note",
+          "locator": "admin_notes.txt#L2",
+          "pattern_id": null,
+          "confidence": 0.8,
+          "note": "全局行政备注（仅作用于已有文件级证据的文件）"
+        },
+        {
+          "file": "spectrum_2020_raw.csv",
+          "field": "instrument",
+          "value": "Orbitrap Exploris 480（本机记录）",
+          "level": "L2",
+          "source_kind": "content_head",
+          "locator": "spectrum_2020_raw.csv#L2",
+          "pattern_id": "cx_instrument_cn",
+          "confidence": 0.85,
+          "note": "内容首部4KB模式命中"
+        }
+      ],
+      "note": "同文件同字段多来源不同值；全部候选保留，winner 按 level_priority 裁定"
+    },
+    {
+      "file": "spectrum_2020_raw.csv",
+      "field": "year",
+      "winner": {
+        "file": "spectrum_2020_raw.csv",
+        "field": "year",
+        "value": "2021",
+        "level": "L1",
+        "source_kind": "sidecar_table",
+        "locator": "metadata.csv#L2",
+        "pattern_id": null,
+        "confidence": 0.95,
+        "note": "伴随表列[year]；共2条候选"
+      },
+      "resolution": "level_priority",
+      "candidates": [
+        {
+          "file": "spectrum_2020_raw.csv",
+          "field": "year",
+          "value": "2021",
+          "level": "L1",
+          "source_kind": "sidecar_table",
+          "locator": "metadata.csv#L2",
+          "pattern_id": null,
+          "confidence": 0.95,
+          "note": "伴随表列[year]"
+        },
+        {
+          "file": "spectrum_2020_raw.csv",
+          "field": "year",
+          "value": "2020",
+          "level": "L3",
+          "source_kind": "name_pattern",
+          "locator": "spectrum_2020_raw.csv",
+          "pattern_id": "rx_year_anywhere",
+          "confidence": 0.6,
+          "note": "文件名正则命中"
+        }
+      ],
+      "note": "同文件同字段多来源不同值；全部候选保留，winner 按 level_priority 裁定"
+    }
+  ]
+}

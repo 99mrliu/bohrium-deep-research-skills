@@ -1,0 +1,19 @@
+{
+  "generated_at": "2026-11-24T15:05:30.965+00:00",
+  "reconciled_at_apply_start": 0,
+  "skipped": [
+    {
+      "path": "damaged_simulated.txt",
+      "reason": "simulated_corrupt_marker"
+    },
+    {
+      "src": "damaged_simulated.txt",
+      "dst": null,
+      "sha256": "bc03ade219523f2634570060ee8af6bad581f3718f2943d75deb5a6cf743e9b4",
+      "bytes": 108,
+      "action": "skipped_simulated_corrupt",
+      "reason": "文件含 X-SIMULATED-CORRUPT 标记，按隔离规则不复制"
+    }
+  ],
+  "conflicts": []
+}

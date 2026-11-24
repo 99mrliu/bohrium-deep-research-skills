@@ -1,0 +1,27 @@
+{
+  "manifest_rows": 12,
+  "files_table_rows": 12,
+  "unique_library_files": 10,
+  "indexed_text_files": 10,
+  "not_indexed_binary": 0,
+  "skipped_rows": 1,
+  "truncated_files": 0,
+  "by_category": {
+    "data": 5,
+    "drafts": 1,
+    "papers": 2,
+    "supplementary": 1,
+    "admin": 2,
+    "_unassigned": 1
+  },
+  "by_text_status": {
+    "indexed": 10,
+    "skipped": 1,
+    "alias_of_indexed": 1
+  },
+  "degraded": false,
+  "degrade_reason": null,
+  "db_path": "/tmp/r4-test/output/index/catalog.db",
+  "index_coverage": 1.0,
+  "index_coverage_note": "indexed_text_files / unique_library_files；二进制文件不计入分子，属预期"
+}

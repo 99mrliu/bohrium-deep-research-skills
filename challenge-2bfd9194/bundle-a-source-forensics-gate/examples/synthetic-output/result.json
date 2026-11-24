@@ -1,0 +1,98 @@
+{
+  "skill": "source-forensics-gate",
+  "status": "partial",
+  "started_at": "2026-11-24T23:04:27+08:00",
+  "sources": [
+    "admin_notes.txt",
+    "empty.txt",
+    "fake.pdf",
+    "metadata.csv",
+    "paper_notes.txt",
+    "paper_notes_副本.txt",
+    "report_v1.txt",
+    "report_最终版.txt",
+    "scan_readme.md",
+    "spectrum_v2.csv",
+    "truncated.pdf",
+    "数据说明.txt"
+  ],
+  "uncertainties": [
+    "取证判定 empty：empty.txt（详见 FORENSICS_REPORT.json 证据字段）",
+    "取证判定 type_mismatch：fake.pdf（详见 FORENSICS_REPORT.json 证据字段）",
+    "取证判定 corrupt_suspect：truncated.pdf（详见 FORENSICS_REPORT.json 证据字段）"
+  ],
+  "change_records": [
+    {
+      "stage": "init",
+      "time": "2026-11-24T23:04:27+08:00",
+      "note": "stage finished"
+    },
+    {
+      "stage": "scan",
+      "time": "2026-11-24T23:04:27+08:00",
+      "note": "stage finished"
+    },
+    {
+      "stage": "forensics",
+      "time": "2026-11-24T23:04:27+08:00",
+      "note": "stage finished"
+    },
+    {
+      "stage": "plan",
+      "time": "2026-11-24T23:04:27+08:00",
+      "note": "stage finished"
+    },
+    {
+      "stage": "apply",
+      "time": "2026-11-24T23:04:27+08:00",
+      "note": "stage finished"
+    },
+    {
+      "stage": "verify",
+      "time": "2026-11-24T23:04:27+08:00",
+      "note": "stage finished"
+    },
+    {
+      "stage": "finalize",
+      "time": "2026-11-24T23:04:27+08:00",
+      "note": "stage finished"
+    }
+  ],
+  "failures_and_recovery": [],
+  "case_id": "synthetic-demo-r1",
+  "contract_fields": {
+    "library_manifest": "LIBRARY_MANIFEST.jsonl",
+    "forensics_report": "FORENSICS_REPORT.json",
+    "audit_report": "audit_report.json",
+    "qa_log": "QA_LOG.json"
+  },
+  "task_excerpt_path": "work/task_excerpt.txt",
+  "limits": [
+    "3 个文件取证未通过，已隔离至 library/_quarantine/：['empty.txt', 'fake.pdf', 'truncated.pdf']"
+  ],
+  "summary": {
+    "input_files": 12,
+    "input_bytes": 939,
+    "verdict_counts": {
+      "authentic": 9,
+      "type_mismatch": 1,
+      "corrupt_suspect": 1,
+      "empty": 1,
+      "unreadable": 0
+    },
+    "quarantined": 3,
+    "duplicate_groups": 1,
+    "version_chains": 1,
+    "skipped": 0,
+    "conflicts": 0,
+    "audit_overall": "PASS",
+    "apply_stats": {
+      "committed": 11,
+      "already_committed_identical": 0,
+      "alias": 1,
+      "quarantined": 3,
+      "copy_failed": 0
+    }
+  },
+  "finished_at": "2026-11-24T23:04:27+08:00"
+}

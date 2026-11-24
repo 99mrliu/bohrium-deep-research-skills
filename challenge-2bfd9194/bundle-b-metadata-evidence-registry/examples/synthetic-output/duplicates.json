@@ -1,0 +1,13 @@
+{
+  "duplicate_groups": [
+    {
+      "sha256": "5689dd3c2b04f41167296cd851e5b4a0a903a1462b5a8226b2f781a6b72137b8",
+      "files": [
+        "alias_a.txt",
+        "别名_数据副本.txt"
+      ],
+      "canonical": "alias_a.txt"
+    }
+  ],
+  "rule": "按内容 SHA-256 分组；canonical 为相对路径字典序最小者"
+}

@@ -1,0 +1,25 @@
+{
+  "preflight": "run-ledger-audit PREFLIGHT",
+  "generated_at": "2026-11-24T15:05:30.962+00:00",
+  "status": "ok",
+  "inventory": {
+    "file_count": 12,
+    "total_bytes": 1274,
+    "depth_distribution": {
+      "4": 1,
+      "1": 11
+    },
+    "unreadable": []
+  },
+  "disk": {
+    "total": 494384795648,
+    "used": 457449062400,
+    "free": 36935733248,
+    "required_with_margin": 1528,
+    "margin": 1.2
+  },
+  "estimated_ops": 12,
+  "risks": [],
+  "external_paths_not_copied": [],
+  "blocking_reason": null
+}

@@ -1,0 +1,105 @@
+{
+  "overall": "PASS",
+  "counts": {
+    "pass": 16,
+    "fail": 0
+  },
+  "checks": [
+    {
+      "id": "REG-JSONL",
+      "name": "metadata_registry.jsonl 全部行可解析",
+      "status": "PASS",
+      "detail": "坏行 0"
+    },
+    {
+      "id": "REG-PROV",
+      "name": "registry 逐条 provenance 回查（42 条）",
+      "status": "PASS",
+      "detail": "PASS 42 / FAIL 0"
+    },
+    {
+      "id": "MAN-JSONL",
+      "name": "LIBRARY_MANIFEST.jsonl 全部行可解析",
+      "status": "PASS",
+      "detail": "坏行 0"
+    },
+    {
+      "id": "MAN-TREE-1",
+      "name": "manifest 目标存在且 SHA-256 重算一致",
+      "status": "PASS",
+      "detail": ""
+    },
+    {
+      "id": "MAN-TREE-2",
+      "name": "library 目录树无 manifest 外文件",
+      "status": "PASS",
+      "detail": "多余 "
+    },
+    {
+      "id": "MAN-DUP",
+      "name": "重复别名记录与 canonical 一致",
+      "status": "PASS",
+      "detail": ""
+    },
+    {
+      "id": "JRN-PARSE",
+      "name": "日志每行可解析",
+      "status": "PASS",
+      "detail": "坏行 0"
+    },
+    {
+      "id": "JRN-CLOSE",
+      "name": "日志以 phase_end 闭合",
+      "status": "PASS",
+      "detail": "末行 op=phase_end"
+    },
+    {
+      "id": "JRN-COVER",
+      "name": "manifest 每行均有对应日志操作",
+      "status": "PASS",
+      "detail": "缺 "
+    },
+    {
+      "id": "AUX-conflicts.json",
+      "name": "辅助交付物 conflicts.json 存在且可解析",
+      "status": "PASS",
+      "detail": ""
+    },
+    {
+      "id": "AUX-coverage_report.json",
+      "name": "辅助交付物 coverage_report.json 存在且可解析",
+      "status": "PASS",
+      "detail": ""
+    },
+    {
+      "id": "AUX-duplicates.json",
+      "name": "辅助交付物 duplicates.json 存在且可解析",
+      "status": "PASS",
+      "detail": ""
+    },
+    {
+      "id": "AUX-version_chains.json",
+      "name": "辅助交付物 version_chains.json 存在且可解析",
+      "status": "PASS",
+      "detail": ""
+    },
+    {
+      "id": "AUX-skipped_and_conflicts.json",
+      "name": "辅助交付物 skipped_and_conflicts.json 存在且可解析",
+      "status": "PASS",
+      "detail": ""
+    },
+    {
+      "id": "AUX-result.json",
+      "name": "辅助交付物 result.json 存在且可解析",
+      "status": "PASS",
+      "detail": ""
+    },
+    {
+      "id": "AUX-CONFLICT-STRUCT",
+      "name": "冲突矩阵条目结构完整（winner+多值候选）",
+      "status": "PASS",
+      "detail": "异常 0 条"
+    }
+  ]
+}

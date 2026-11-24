@@ -1,0 +1,60 @@
+{
+  "audit": "run-ledger-audit independent audit",
+  "generated_at": "2026-11-24T15:05:31.009+00:00",
+  "input_dir": "/tmp/r5-test/input",
+  "output_dir": "/tmp/r5-test/output",
+  "overall": "PASS",
+  "checks": [
+    {
+      "id": "A",
+      "name": "input_manifest_coverage",
+      "status": "PASS",
+      "detail": {
+        "input_files": 12,
+        "manifest_records": 12,
+        "missing_in_manifest": [],
+        "duplicate_src_records": [],
+        "records_without_destination": [],
+        "manifest_bad_lines": []
+      }
+    },
+    {
+      "id": "B",
+      "name": "library_done_hash_consistency",
+      "status": "PASS",
+      "detail": {
+        "library_files": 10,
+        "problems": []
+      }
+    },
+    {
+      "id": "C",
+      "name": "journal_closure",
+      "status": "PASS",
+      "detail": {
+        "journal_records": 22,
+        "begins_without_close": [],
+        "corrupt_lines": [],
+        "journal_bad_lines": []
+      }
+    },
+    {
+      "id": "D",
+      "name": "dup_and_chain_members_exist",
+      "status": "PASS",
+      "detail": {
+        "problems": []
+      }
+    },
+    {
+      "id": "E",
+      "name": "status_consistent_with_evidence",
+      "status": "PASS",
+      "detail": {
+        "result_status": "in_progress",
+        "unrecovered_failed_ids": [],
+        "problems": []
+      }
+    }
+  ]
+}

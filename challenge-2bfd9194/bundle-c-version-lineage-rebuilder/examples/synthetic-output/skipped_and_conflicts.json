@@ -1,0 +1,20 @@
+{
+  "skipped": [
+    {
+      "path": "损坏数据_corrupt.txt",
+      "reason": "simulated_corrupt_marker",
+      "detail": "文件头含 SIMULATED-CORRUPT 标记，按模拟损坏处理"
+    }
+  ],
+  "lineage_conflicts": [],
+  "plan_conflicts": [
+    {
+      "type": "target_name_collision",
+      "target": "admin/notes.txt",
+      "kept": "projA/notes.txt",
+      "renamed": "projB/notes.txt",
+      "new_target": "admin/notes__v2.txt",
+      "resolution": "auto_suffix __v2，不覆盖"
+    }
+  ]
+}

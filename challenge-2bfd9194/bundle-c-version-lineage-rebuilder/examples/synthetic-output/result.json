@@ -1,0 +1,43 @@
+{
+  "case_id": "synthetic-demo-r3",
+  "status": "complete",
+  "skill": "version-lineage-rebuilder",
+  "contract_fields": {
+    "version_graph": "version_graph.json",
+    "lineage_report": "LINEAGE_REPORT.md",
+    "library_manifest": "LIBRARY_MANIFEST.jsonl",
+    "audit_report": "audit_report.json"
+  },
+  "sources": [
+    "/tmp/r3-test/input/case.json",
+    "/tmp/r3-test/input/task.md"
+  ],
+  "uncertainties": [],
+  "change_records": [
+    {
+      "artifact": "library/",
+      "action": "copy（不移动），latest 以规范化名入主目录，superseded 进 _versions/<stem>/，别名不重复入库"
+    },
+    {
+      "artifact": "version_graph.json / LINEAGE_REPORT.md",
+      "action": "三级证据重建版本世系；无证据不连边"
+    }
+  ],
+  "summary": {
+    "files_scanned": 12,
+    "files_committed": 11,
+    "bytes_committed": 1147,
+    "alias_groups": 1,
+    "version_chains": 2,
+    "version_edges": 3,
+    "skipped": 1,
+    "conflicts": 0,
+    "audit_pass": 11,
+    "audit_fail": 0
+  },
+  "failures_and_recovery": [],
+  "started_at": "2026-11-24T23:12:53+08:00",
+  "limits": [],
+  "audit_overall": "PASS",
+  "finished_at": "2026-11-24T23:12:53+08:00"
+}

@@ -1,0 +1,17 @@
+{
+  "note": "按规范化词干聚类的版本候选链（内容不同的同名族）",
+  "chain_count": 1,
+  "chains": [
+    {
+      "stem": "report",
+      "ext": "txt",
+      "members": [
+        "report_v1.txt",
+        "report_最终版.txt"
+      ],
+      "distinct_hashes": 2,
+      "latest_by_mtime": "report_最终版.txt",
+      "note": "词干相同但内容不同 → 版本候选链；latest_by_mtime 仅为推断，以 task.md 或行政备注约定为准"
+    }
+  ]
+}

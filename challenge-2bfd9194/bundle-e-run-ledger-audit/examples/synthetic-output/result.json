@@ -1,0 +1,121 @@
+{
+  "case_id": "synthetic-demo-r5",
+  "status": "complete",
+  "skill": "run-ledger-audit",
+  "created_at": "2026-11-24T15:05:29.815+00:00",
+  "contract_fields": {
+    "library_manifest": {
+      "path": "LIBRARY_MANIFEST.jsonl",
+      "present": true
+    },
+    "operations_journal": {
+      "path": "operations_journal.jsonl",
+      "present": true
+    },
+    "audit_report": {
+      "path": "AUDIT_REPORT.json",
+      "present": true
+    },
+    "replay_diff": {
+      "path": "REPLAY_DIFF.json",
+      "present": true
+    }
+  },
+  "sources": [
+    "case.json",
+    "input_files",
+    "task.md"
+  ],
+  "uncertainties": [],
+  "change_records": [
+    {
+      "src": "a/b/c/d.txt",
+      "dst": "library/_unassigned/d.txt",
+      "action": "already_committed_identical"
+    },
+    {
+      "src": "admin_采购备注.txt",
+      "dst": "library/admin/admin_采购备注.txt",
+      "action": "already_committed_identical"
+    },
+    {
+      "src": "damaged_simulated.txt",
+      "dst": null,
+      "action": "skipped_simulated_corrupt"
+    },
+    {
+      "src": "metadata.csv",
+      "dst": "library/data/metadata.csv",
+      "action": "already_committed_identical"
+    },
+    {
+      "src": "notes_alpha.txt",
+      "dst": "library/_unassigned/notes_alpha.txt",
+      "action": "already_committed_identical"
+    },
+    {
+      "src": "observations.csv",
+      "dst": "library/data/observations.csv",
+      "action": "already_committed_identical"
+    },
+    {
+      "src": "report_v1.txt",
+      "dst": "library/drafts/report_v1.txt",
+      "action": "already_committed_identical"
+    },
+    {
+      "src": "report_最终版.txt",
+      "dst": "library/drafts/report_最终版.txt",
+      "action": "already_committed_identical"
+    },
+    {
+      "src": "scan_发票.txt",
+      "dst": "library/scans/scan_发票.txt",
+      "action": "already_committed_identical"
+    },
+    {
+      "src": "supplement_附录A.txt",
+      "dst": "library/supplementary/supplement_附录A.txt",
+      "action": "already_committed_identical"
+    },
+    {
+      "src": "中文笔记.txt",
+      "dst": "library/_unassigned/中文笔记.txt",
+      "action": "already_committed_identical"
+    },
+    {
+      "src": "会议记录-别名.txt",
+      "dst": "library/_unassigned/notes_alpha.txt",
+      "action": "duplicate_alias"
+    }
+  ],
+  "failures_and_recovery": [],
+  "summary": {
+    "input_files": 12,
+    "unreadable_or_skipped": 0,
+    "duplicate_groups": 1,
+    "version_chains": 1,
+    "planned_commits": 0,
+    "conflicts": 0,
+    "journal_stats": {
+      "begin": 11,
+      "done": 10,
+      "failed": 0,
+      "reconciled": 1
+    },
+    "library_files": 10,
+    "replay_exit_code": 0,
+    "audit_exit_code": 0,
+    "audit_overall": "PASS",
+    "replay_equal": true,
+    "finalized_at": "2026-11-24T15:05:31.013+00:00"
+  },
+  "output_contract_fields": [
+    "library_manifest",
+    "operations_journal",
+    "audit_report",
+    "replay_diff"
+  ],
+  "updated_at": "2026-11-24T15:05:31.013+00:00",
+  "preflight_status": "ok"
+}

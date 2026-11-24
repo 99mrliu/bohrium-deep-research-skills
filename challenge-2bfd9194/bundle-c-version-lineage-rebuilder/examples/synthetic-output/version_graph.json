@@ -1,0 +1,154 @@
+{
+  "schema": "version_graph/v1",
+  "evidence_levels": {
+    "E1": "admin_note",
+    "E2": "content_hash_alias",
+    "E3": "stem_mtime"
+  },
+  "nodes": [
+    {
+      "sha256": "bbc44e7ca41a8393f368c2744e3d42ad0654bdcba10ee27a07614db01ffa374c",
+      "path": "admin_notes.txt",
+      "stem": "admin_notes",
+      "mtime": 1795533172.8913407,
+      "size": 227
+    },
+    {
+      "sha256": "3baef987d9bba0ce93097c0b3b2672aff5f507c6de51b982fe486eed2496be54",
+      "path": "data_copy.txt",
+      "stem": "data_copy",
+      "mtime": 1795533172.891617,
+      "size": 40
+    },
+    {
+      "sha256": "7a349d28c46ef62b00c41681c701cfc76dea0441f52f8ffd36f13d30ef11c68b",
+      "path": "metadata.csv",
+      "stem": "metadata",
+      "mtime": 1795533172.8926597,
+      "size": 123
+    },
+    {
+      "sha256": "7c4be548ae7ec64803218900264d37221c7382c41cfa658a30659fce7f5a623c",
+      "path": "projA/notes.txt",
+      "stem": "notes",
+      "mtime": 1795533172.8938916,
+      "size": 81
+    },
+    {
+      "sha256": "251850d361d030e043da0a15cc98213d70066f4408ec4cc247671cdbfed33179",
+      "path": "projB/notes.txt",
+      "stem": "notes",
+      "mtime": 1795533172.8943183,
+      "size": 81
+    },
+    {
+      "sha256": "470f930bd5102b2ffce9b0ef009b5a5c8a184e7bf4bcbfdeadeaf498da9d294d",
+      "path": "report_v1.txt",
+      "stem": "report",
+      "mtime": 1795533172.8946428,
+      "size": 97
+    },
+    {
+      "sha256": "ea290c1fca391622c6d9316892bec5cc09a7229920b8e227e8dbc19717724f98",
+      "path": "report_v2.txt",
+      "stem": "report",
+      "mtime": 1795533172.8951705,
+      "size": 103
+    },
+    {
+      "sha256": "540df6dfe2d8e55a0525f88960a451907b3acc1bc6a5fa4f0ab147eff4e5cc24",
+      "path": "report_最终版.txt",
+      "stem": "report",
+      "mtime": 1795533172.8953824,
+      "size": 112
+    },
+    {
+      "sha256": "412de5b3f8ddb048c4965a0d0e584b5c2864a80f2157bec007840d90284a4c4f",
+      "path": "scan_final.pdf",
+      "stem": "scan_final",
+      "mtime": 1795533172.8955476,
+      "size": 99
+    },
+    {
+      "sha256": "7e81d1bee56f32e7d0ba0b1ecac579d56f9d2cbc6fd31189a51f5e0e24d403d0",
+      "path": "scan_old.pdf",
+      "stem": "scan_old",
+      "mtime": 1795533172.8957148,
+      "size": 94
+    },
+    {
+      "sha256": "3baef987d9bba0ce93097c0b3b2672aff5f507c6de51b982fe486eed2496be54",
+      "path": "实验数据备份.txt",
+      "stem": "实验数据",
+      "mtime": 1795533172.8959553,
+      "size": 40
+    },
+    {
+      "sha256": "2b1a4b8a2194957638e2991d6ede70ed69b6038adbd2c60ea89dda41429e2c93",
+      "path": "实验记录_2024春.txt",
+      "stem": "实验记录_2024春",
+      "mtime": 1795533172.8961792,
+      "size": 90
+    }
+  ],
+  "edges": [
+    {
+      "src_sha": "7e81d1bee56f32e7d0ba0b1ecac579d56f9d2cbc6fd31189a51f5e0e24d403d0",
+      "dst_sha": "412de5b3f8ddb048c4965a0d0e584b5c2864a80f2157bec007840d90284a4c4f",
+      "basis": "admin_note",
+      "evidence": "行政备注原文: 1. scan_final.pdf 替代 scan_old.pdf，旧件仅存档备查。",
+      "locator": "admin_notes.txt#L2"
+    },
+    {
+      "src_sha": "470f930bd5102b2ffce9b0ef009b5a5c8a184e7bf4bcbfdeadeaf498da9d294d",
+      "dst_sha": "ea290c1fca391622c6d9316892bec5cc09a7229920b8e227e8dbc19717724f98",
+      "basis": "stem_mtime",
+      "evidence": "size_delta=+6B; mtime_delta=0s; stem=report"
+    },
+    {
+      "src_sha": "ea290c1fca391622c6d9316892bec5cc09a7229920b8e227e8dbc19717724f98",
+      "dst_sha": "540df6dfe2d8e55a0525f88960a451907b3acc1bc6a5fa4f0ab147eff4e5cc24",
+      "basis": "stem_mtime",
+      "evidence": "size_delta=+9B; mtime_delta=0s; stem=report"
+    }
+  ],
+  "aliases": [
+    {
+      "canonical_sha": "3baef987d9bba0ce93097c0b3b2672aff5f507c6de51b982fe486eed2496be54",
+      "canonical_path": "实验数据备份.txt",
+      "alias_sha": "3baef987d9bba0ce93097c0b3b2672aff5f507c6de51b982fe486eed2496be54",
+      "alias_path": "data_copy.txt"
+    }
+  ],
+  "chains": [
+    [
+      "7e81d1bee56f32e7d0ba0b1ecac579d56f9d2cbc6fd31189a51f5e0e24d403d0",
+      "412de5b3f8ddb048c4965a0d0e584b5c2864a80f2157bec007840d90284a4c4f"
+    ],
+    [
+      "470f930bd5102b2ffce9b0ef009b5a5c8a184e7bf4bcbfdeadeaf498da9d294d",
+      "ea290c1fca391622c6d9316892bec5cc09a7229920b8e227e8dbc19717724f98",
+      "540df6dfe2d8e55a0525f88960a451907b3acc1bc6a5fa4f0ab147eff4e5cc24"
+    ]
+  ],
+  "chain_meta": [
+    {
+      "stem": "scan_final",
+      "latest_sha": "412de5b3f8ddb048c4965a0d0e584b5c2864a80f2157bec007840d90284a4c4f"
+    },
+    {
+      "stem": "report",
+      "latest_sha": "540df6dfe2d8e55a0525f88960a451907b3acc1bc6a5fa4f0ab147eff4e5cc24"
+    }
+  ],
+  "orphans": [
+    "bbc44e7ca41a8393f368c2744e3d42ad0654bdcba10ee27a07614db01ffa374c",
+    "7a349d28c46ef62b00c41681c701cfc76dea0441f52f8ffd36f13d30ef11c68b",
+    "7c4be548ae7ec64803218900264d37221c7382c41cfa658a30659fce7f5a623c",
+    "251850d361d030e043da0a15cc98213d70066f4408ec4cc247671cdbfed33179",
+    "3baef987d9bba0ce93097c0b3b2672aff5f507c6de51b982fe486eed2496be54",
+    "2b1a4b8a2194957638e2991d6ede70ed69b6038adbd2c60ea89dda41429e2c93"
+  ],
+  "conflicts": [],
+  "degraded": false
+}

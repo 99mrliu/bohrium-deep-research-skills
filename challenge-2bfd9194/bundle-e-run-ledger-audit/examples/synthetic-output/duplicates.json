@@ -1,0 +1,18 @@
+{
+  "note": "按内容 SHA-256 去重分组；canonical 为字典序最前者，aliases 为同内容别名",
+  "group_count": 1,
+  "groups": [
+    {
+      "sha256": "b52647950c1899554cff33825f8890705346fd2fa903ac8565b57be2cbb2afae",
+      "bytes": 139,
+      "canonical": "notes_alpha.txt",
+      "aliases": [
+        "会议记录-别名.txt"
+      ],
+      "members": [
+        "notes_alpha.txt",
+        "会议记录-别名.txt"
+      ]
+    }
+  ]
+}

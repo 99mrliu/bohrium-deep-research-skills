@@ -1,0 +1,12 @@
+{"seq": 1, "op": "copy", "src": "admin_notes.txt", "dst": "admin/admin_notes.txt", "sha256": "bbc44e7ca41a8393f368c2744e3d42ad0654bdcba10ee27a07614db01ffa374c", "role": "orphan", "status": "copied"}
+{"seq": 2, "op": "alias_record", "src": "data_copy.txt", "dst": null, "sha256": "3baef987d9bba0ce93097c0b3b2672aff5f507c6de51b982fe486eed2496be54", "role": "alias", "status": "recorded_not_copied"}
+{"seq": 3, "op": "copy", "src": "metadata.csv", "dst": "data/metadata.csv", "sha256": "7a349d28c46ef62b00c41681c701cfc76dea0441f52f8ffd36f13d30ef11c68b", "role": "orphan", "status": "copied"}
+{"seq": 4, "op": "copy", "src": "projA/notes.txt", "dst": "admin/notes.txt", "sha256": "7c4be548ae7ec64803218900264d37221c7382c41cfa658a30659fce7f5a623c", "role": "orphan", "status": "copied"}
+{"seq": 5, "op": "copy", "src": "projB/notes.txt", "dst": "admin/notes__v2.txt", "sha256": "251850d361d030e043da0a15cc98213d70066f4408ec4cc247671cdbfed33179", "role": "orphan", "status": "copied"}
+{"seq": 6, "op": "copy", "src": "report_v1.txt", "dst": "_versions/report/report_v1.txt", "sha256": "470f930bd5102b2ffce9b0ef009b5a5c8a184e7bf4bcbfdeadeaf498da9d294d", "role": "superseded", "status": "copied"}
+{"seq": 7, "op": "copy", "src": "report_v2.txt", "dst": "_versions/report/report_v2.txt", "sha256": "ea290c1fca391622c6d9316892bec5cc09a7229920b8e227e8dbc19717724f98", "role": "superseded", "status": "copied"}
+{"seq": 8, "op": "copy", "src": "report_最终版.txt", "dst": "supplementary/report.txt", "sha256": "540df6dfe2d8e55a0525f88960a451907b3acc1bc6a5fa4f0ab147eff4e5cc24", "role": "latest", "status": "copied"}
+{"seq": 9, "op": "copy", "src": "scan_final.pdf", "dst": "scans/scan_final.pdf", "sha256": "412de5b3f8ddb048c4965a0d0e584b5c2864a80f2157bec007840d90284a4c4f", "role": "latest", "status": "copied"}
+{"seq": 10, "op": "copy", "src": "scan_old.pdf", "dst": "_versions/scan_final/scan_old.pdf", "sha256": "7e81d1bee56f32e7d0ba0b1ecac579d56f9d2cbc6fd31189a51f5e0e24d403d0", "role": "superseded", "status": "copied"}
+{"seq": 11, "op": "copy", "src": "实验数据备份.txt", "dst": "supplementary/实验数据备份.txt", "sha256": "3baef987d9bba0ce93097c0b3b2672aff5f507c6de51b982fe486eed2496be54", "role": "orphan", "status": "copied"}
+{"seq": 12, "op": "copy", "src": "实验记录_2024春.txt", "dst": "supplementary/实验记录_2024春.txt", "sha256": "2b1a4b8a2194957638e2991d6ede70ed69b6038adbd2c60ea89dda41429e2c93", "role": "orphan", "status": "copied"}

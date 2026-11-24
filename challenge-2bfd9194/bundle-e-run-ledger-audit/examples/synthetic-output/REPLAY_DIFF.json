@@ -1,0 +1,20 @@
+{
+  "replay": "journal-only replay vs library",
+  "generated_at": "2026-11-24T15:05:30.986+00:00",
+  "journal": "/tmp/r5-test/output/operations_journal.jsonl",
+  "equal": true,
+  "replayed_done_ops": 10,
+  "skipped_records": {
+    "failed": 0,
+    "reconciled": 1,
+    "corrupt_lines": []
+  },
+  "library_files": 10,
+  "replay_files": 10,
+  "missing_in_replay": [],
+  "extra_in_replay": [],
+  "hash_mismatch": [],
+  "missing_source_in_input": [],
+  "errors": [],
+  "note": "equal=true 表示第三方仅凭 journal 与 /input 即可逐字节复现 library/"
+}

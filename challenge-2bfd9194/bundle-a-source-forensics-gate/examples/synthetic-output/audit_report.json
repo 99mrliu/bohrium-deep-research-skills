@@ -1,0 +1,91 @@
+{
+  "auditor": "verify_forensics.py（独立校验器，只读重算）",
+  "overall": "PASS",
+  "summary": {
+    "total": 16,
+    "pass": 16,
+    "fail": 0
+  },
+  "checks": [
+    {
+      "name": "deliverable_exists:LIBRARY_MANIFEST.jsonl",
+      "status": "PASS",
+      "detail": "/tmp/r1-test/output/LIBRARY_MANIFEST.jsonl"
+    },
+    {
+      "name": "deliverable_exists:FORENSICS_REPORT.json",
+      "status": "PASS",
+      "detail": "/tmp/r1-test/output/FORENSICS_REPORT.json"
+    },
+    {
+      "name": "deliverable_exists:operations_journal.jsonl",
+      "status": "PASS",
+      "detail": "/tmp/r1-test/output/operations_journal.jsonl"
+    },
+    {
+      "name": "deliverable_exists:duplicates.json",
+      "status": "PASS",
+      "detail": "/tmp/r1-test/output/duplicates.json"
+    },
+    {
+      "name": "deliverable_exists:version_chains.json",
+      "status": "PASS",
+      "detail": "/tmp/r1-test/output/version_chains.json"
+    },
+    {
+      "name": "deliverable_exists:result.json",
+      "status": "PASS",
+      "detail": "/tmp/r1-test/output/result.json"
+    },
+    {
+      "name": "manifest_row_count_equals_input_count",
+      "status": "PASS",
+      "detail": "manifest=12 input=12"
+    },
+    {
+      "name": "manifest_covers_every_input",
+      "status": "PASS",
+      "detail": "缺失=[] 多余=[]"
+    },
+    {
+      "name": "src_fixity_recomputed_hash_matches_manifest",
+      "status": "PASS",
+      "detail": ""
+    },
+    {
+      "name": "dst_fixity_recomputed_hash_matches_manifest",
+      "status": "PASS",
+      "detail": ""
+    },
+    {
+      "name": "forensic_verdicts_recomputed_match_report",
+      "status": "PASS",
+      "detail": ""
+    },
+    {
+      "name": "quarantine_placement_correct",
+      "status": "PASS",
+      "detail": ""
+    },
+    {
+      "name": "duplicate_groups_consistent",
+      "status": "PASS",
+      "detail": ""
+    },
+    {
+      "name": "version_chains_valid",
+      "status": "PASS",
+      "detail": ""
+    },
+    {
+      "name": "operations_journal_closed",
+      "status": "PASS",
+      "detail": ""
+    },
+    {
+      "name": "result_json_honest_status",
+      "status": "PASS",
+      "detail": ""
+    }
+  ]
+}

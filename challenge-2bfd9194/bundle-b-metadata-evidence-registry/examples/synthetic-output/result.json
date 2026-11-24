@@ -1,0 +1,102 @@
+{
+  "case_id": "synthetic-demo-r2",
+  "skill": "metadata-evidence-registry",
+  "status": "complete",
+  "created_at": "2026-11-24T23:09:24+0800",
+  "contract_fields": {
+    "audit_report": {
+      "path": "audit_report.json",
+      "status": "delivered"
+    },
+    "coverage_report": {
+      "path": "coverage_report.json",
+      "status": "delivered"
+    },
+    "library_manifest": {
+      "path": "LIBRARY_MANIFEST.jsonl",
+      "status": "delivered"
+    },
+    "metadata_registry": {
+      "path": "metadata_registry.jsonl",
+      "status": "delivered"
+    }
+  },
+  "contract_field_names": [
+    "audit_report",
+    "coverage_report",
+    "library_manifest",
+    "metadata_registry"
+  ],
+  "extra_metadata_fields": [],
+  "task_md_present": true,
+  "sources": [
+    "2022_summary.csv",
+    "admin_notes.txt",
+    "alias_a.txt",
+    "corrupted_scan_note.txt",
+    "metadata.csv",
+    "projectA_notes.txt",
+    "random_memo.txt",
+    "report_v1.txt",
+    "report_最终版.txt",
+    "spectrum_2020_raw.csv",
+    "别名_数据副本.txt",
+    "实验记录_张三.txt"
+  ],
+  "uncertainties": [
+    "conflicts.json 含 2 条多来源不同值冲突，已按级别规则裁定并保留全部候选"
+  ],
+  "change_records": [
+    {
+      "stage": "init",
+      "ts": "2026-11-24T23:09:24+0800",
+      "detail": "防御式解析 case.json/task.md 完成"
+    },
+    {
+      "stage": "scan",
+      "ts": "2026-11-24T23:09:24+0800",
+      "detail": "扫描 12 个文件，跳过 0，重复组 1"
+    },
+    {
+      "stage": "extract",
+      "ts": "2026-11-24T23:09:24+0800",
+      "detail": "registry 42 行，冲突 2 条"
+    },
+    {
+      "stage": "plan",
+      "ts": "2026-11-24T23:09:24+0800",
+      "detail": "模板=['project', 'year', 'data_type']；版本链 1；_unassigned 5"
+    },
+    {
+      "stage": "apply",
+      "ts": "2026-11-24T23:09:24+0800",
+      "detail": "manifest 12 行，冲突 0"
+    },
+    {
+      "stage": "verify",
+      "ts": "2026-11-24T23:09:24+0800",
+      "detail": "audit overall=PASS pass=16 fail=0"
+    },
+    {
+      "stage": "finalize",
+      "ts": "2026-11-24T23:09:24+0800",
+      "detail": "status=complete；degraded=0"
+    }
+  ],
+  "failures_and_recovery": [],
+  "summary": {
+    "input_files": 12,
+    "manifest_rows": 12,
+    "total_bytes": 1593,
+    "duplicate_groups": 1,
+    "version_chains": 1,
+    "metadata_conflicts": 2,
+    "skipped": 0,
+    "apply_conflicts": 0,
+    "audit_overall": "PASS",
+    "audit_pass": 16,
+    "audit_fail": 0
+  },
+  "updated_at": "2026-11-24T23:09:24+0800",
+  "limits": []
+}

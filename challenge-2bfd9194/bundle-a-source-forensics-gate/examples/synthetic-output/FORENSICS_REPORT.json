@@ -1,0 +1,225 @@
+{
+  "root": "/tmp/r1-test/input",
+  "file_count": 12,
+  "verdict_counts": {
+    "authentic": 9,
+    "type_mismatch": 1,
+    "corrupt_suspect": 1,
+    "empty": 1,
+    "unreadable": 0
+  },
+  "records": [
+    {
+      "path": "admin_notes.txt",
+      "size": 102,
+      "mtime": 1795532667.47049,
+      "sha256": "68c849ce566e39e4b215789de9eec1fe8171a08892c16ceffd91a1cccbfe7ea3",
+      "extension": ".txt",
+      "detected_type": "text",
+      "encoding": "utf-8",
+      "verdict": "authentic",
+      "evidence": {
+        "head_hex": "e8 a1 8c e6 94 bf e5 a4 87 e6 b3 a8 ef bc 9a 72",
+        "encoding_probe": {
+          "encoding": "utf-8",
+          "has_replacement": false,
+          "note": null
+        }
+      }
+    },
+    {
+      "path": "empty.txt",
+      "size": 0,
+      "mtime": 1795532667.4709463,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "extension": ".txt",
+      "detected_type": null,
+      "encoding": null,
+      "verdict": "empty",
+      "evidence": {
+        "size": 0
+      }
+    },
+    {
+      "path": "fake.pdf",
+      "size": 107,
+      "mtime": 1795532667.4715385,
+      "sha256": "d9e28c964338029ef8709f65120bbfc5b6a833fc7ae80da7f05bd938f885c46e",
+      "extension": ".pdf",
+      "detected_type": "text",
+      "encoding": null,
+      "verdict": "type_mismatch",
+      "evidence": {
+        "head_hex": "e8 bf 99 e4 bb bd e6 96 87 e4 bb b6 e6 89 a9 e5",
+        "check": "signature_vs_extension",
+        "extension": ".pdf",
+        "expected_types": [
+          "pdf"
+        ],
+        "detected_type": "text"
+      }
+    },
+    {
+      "path": "metadata.csv",
+      "size": 90,
+      "mtime": 1795532667.4717734,
+      "sha256": "ef5d776406bcd6c0cbe0cc9c35af9c51825961076e9ca43e17dd91f025df972c",
+      "extension": ".csv",
+      "detected_type": "text",
+      "encoding": "utf-8",
+      "verdict": "authentic",
+      "evidence": {
+        "head_hex": "66 69 6c 65 2c 61 75 74 68 6f 72 2c 64 61 74 65",
+        "encoding_probe": {
+          "encoding": "utf-8",
+          "has_replacement": false,
+          "note": null
+        }
+      }
+    },
+    {
+      "path": "paper_notes.txt",
+      "size": 92,
+      "mtime": 1795532667.4720256,
+      "sha256": "b4820732049d1b69fdf06ff6b2747c4cceadae5f602158d72c3ac7ecf76bddc6",
+      "extension": ".txt",
+      "detected_type": "text",
+      "encoding": "utf-8",
+      "verdict": "authentic",
+      "evidence": {
+        "head_hex": "e5 ae 9e e9 aa 8c e8 ae b0 e5 bd 95 ef bc 9a e5",
+        "encoding_probe": {
+          "encoding": "utf-8",
+          "has_replacement": false,
+          "note": null
+        }
+      }
+    },
+    {
+      "path": "paper_notes_副本.txt",
+      "size": 92,
+      "mtime": 1795532667.4722366,
+      "sha256": "b4820732049d1b69fdf06ff6b2747c4cceadae5f602158d72c3ac7ecf76bddc6",
+      "extension": ".txt",
+      "detected_type": "text",
+      "encoding": "utf-8",
+      "verdict": "authentic",
+      "evidence": {
+        "head_hex": "e5 ae 9e e9 aa 8c e8 ae b0 e5 bd 95 ef bc 9a e5",
+        "encoding_probe": {
+          "encoding": "utf-8",
+          "has_replacement": false,
+          "note": null
+        }
+      }
+    },
+    {
+      "path": "report_v1.txt",
+      "size": 58,
+      "mtime": 1795532667.4724169,
+      "sha256": "8065b99dbac42ddfc8b3ab0024ae4886f0bf2a190afc7b926cc6115298805317",
+      "extension": ".txt",
+      "detected_type": "text",
+      "encoding": "utf-8",
+      "verdict": "authentic",
+      "evidence": {
+        "head_hex": "e6 9c 88 e6 8a a5 20 76 31 ef bc 9a e6 9c ac e6",
+        "encoding_probe": {
+          "encoding": "utf-8",
+          "has_replacement": false,
+          "note": null
+        }
+      }
+    },
+    {
+      "path": "report_最终版.txt",
+      "size": 96,
+      "mtime": 1795532667.4725924,
+      "sha256": "3f18d6b951b7e6da0e2ada231d7a67af6556dff5dde22d35ff1015c51ad9e889",
+      "extension": ".txt",
+      "detected_type": "text",
+      "encoding": "utf-8",
+      "verdict": "authentic",
+      "evidence": {
+        "head_hex": "e6 9c 88 e6 8a a5 20 e6 9c 80 e7 bb 88 e7 89 88",
+        "encoding_probe": {
+          "encoding": "utf-8",
+          "has_replacement": false,
+          "note": null
+        }
+      }
+    },
+    {
+      "path": "scan_readme.md",
+      "size": 73,
+      "mtime": 1795532667.4727638,
+      "sha256": "03d56255713d48b83c4d0a32901013a99b562546eadcfa5473cef558cdb8cce1",
+      "extension": ".md",
+      "detected_type": "text",
+      "encoding": "utf-8",
+      "verdict": "authentic",
+      "evidence": {
+        "head_hex": "23 20 e6 89 ab e6 8f 8f e4 bb b6 e8 af b4 e6 98",
+        "encoding_probe": {
+          "encoding": "utf-8",
+          "has_replacement": false,
+          "note": null
+        }
+      }
+    },
+    {
+      "path": "spectrum_v2.csv",
+      "size": 50,
+      "mtime": 1795532667.4729424,
+      "sha256": "61367debcfbda2a80bb1d38f51cb61d54478ebec53552268b9b9845d66924a8e",
+      "extension": ".csv",
+      "detected_type": "text",
+      "encoding": "utf-8",
+      "verdict": "authentic",
+      "evidence": {
+        "head_hex": "77 61 76 65 6e 75 6d 62 65 72 2c 61 62 73 6f 72",
+        "encoding_probe": {
+          "encoding": "utf-8",
+          "has_replacement": false,
+          "note": null
+        }
+      }
+    },
+    {
+      "path": "truncated.pdf",
+      "size": 112,
+      "mtime": 1795532667.4732764,
+      "sha256": "b56f28f9cfe6743247aa3e31c4052e70b77958e9443553608f3090d39f4105cf",
+      "extension": ".pdf",
+      "detected_type": "pdf",
+      "encoding": null,
+      "verdict": "corrupt_suspect",
+      "evidence": {
+        "head_hex": "25 50 44 46 2d 31 2e 34 0a 31 20 30 20 6f 62 6a",
+        "check": "truncation",
+        "expected": "尾部 1KB 内应含 %%EOF",
+        "actual_tail_hex": "72 75 70 74 5f 73 75 73 70 65 63 74 ef bc 89 0a",
+        "passed": false
+      }
+    },
+    {
+      "path": "数据说明.txt",
+      "size": 67,
+      "mtime": 1795532667.4734495,
+      "sha256": "051fcb5a6966cfb7c0678a1e14edb95e7aa4c4d7737ac463bcf59879d6823159",
+      "extension": ".txt",
+      "detected_type": "text",
+      "encoding": "utf-8",
+      "verdict": "authentic",
+      "evidence": {
+        "head_hex": "e6 9c ac e7 9b ae e5 bd 95 e6 95 b0 e6 8d ae e4",
+        "encoding_probe": {
+          "encoding": "utf-8",
+          "has_replacement": false,
+          "note": null
+        }
+      }
+    }
+  ],
+  "generated_at": "2026-11-24T23:04:27+08:00"
+}

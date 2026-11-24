@@ -1,0 +1,65 @@
+{
+  "case_id": "synthetic-demo-r4",
+  "status": "partial",
+  "skill": "library-index-qa",
+  "contract_fields": {
+    "library_manifest": {
+      "value": "LIBRARY_MANIFEST.jsonl"
+    },
+    "qa_log": {
+      "value": "QA_LOG.json"
+    },
+    "index_stats": {
+      "value": "index/index_stats.json"
+    },
+    "audit_report": {
+      "value": "audit_report.json"
+    }
+  },
+  "summary": {
+    "input_files": 12,
+    "manifest_rows": 12,
+    "committed_bytes": 2343,
+    "duplicate_groups": 1,
+    "version_chains": 1,
+    "skipped": 1,
+    "conflicts": 0,
+    "indexed_text_files": 10,
+    "qa": {
+      "questions": 2,
+      "origin": "questions_file",
+      "answered_or_partial": 2,
+      "unanswered": 0
+    }
+  },
+  "qa_summary": {
+    "questions": 2,
+    "origin": "questions_file",
+    "answered_or_partial": 2,
+    "unanswered": 0
+  },
+  "degraded": false,
+  "sources": [
+    "/input/case.json",
+    "/input/task.md"
+  ],
+  "uncertainties": [
+    "1 个文件被跳过（见 skipped_and_conflicts.json）"
+  ],
+  "change_records": [
+    {
+      "ts": "2026-11-24T15:10:27+00:00",
+      "change": "init: result.json 建立"
+    },
+    {
+      "ts": "2026-11-24T15:10:27+00:00",
+      "change": "apply: 12 行写入 manifest"
+    },
+    {
+      "ts": "2026-11-24T15:10:27+00:00",
+      "change": "finalize: status=partial (audit=PASS)"
+    }
+  ],
+  "failures_and_recovery": [],
+  "updated_at": "2026-11-24T15:10:27+00:00"
+}

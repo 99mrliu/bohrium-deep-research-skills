@@ -1,0 +1,13 @@
+{"stage": "apply", "action": "committed", "src": "admin_notes.txt", "dst": "library/admin/admin_notes.txt", "status": "done", "seq": 1, "time": "2026-11-24T23:04:27+08:00"}
+{"stage": "apply", "action": "committed", "src": "empty.txt", "dst": "library/_quarantine/empty.txt", "status": "done", "seq": 2, "time": "2026-11-24T23:04:27+08:00"}
+{"stage": "apply", "action": "committed", "src": "fake.pdf", "dst": "library/_quarantine/fake.pdf", "status": "done", "seq": 3, "time": "2026-11-24T23:04:27+08:00"}
+{"stage": "apply", "action": "committed", "src": "metadata.csv", "dst": "library/data/metadata.csv", "status": "done", "seq": 4, "time": "2026-11-24T23:04:27+08:00"}
+{"stage": "apply", "action": "committed", "src": "paper_notes.txt", "dst": "library/admin/paper_notes.txt", "status": "done", "seq": 5, "time": "2026-11-24T23:04:27+08:00"}
+{"stage": "apply", "action": "alias_recorded", "src": "paper_notes_副本.txt", "canonical": "paper_notes.txt", "status": "done", "seq": 6, "time": "2026-11-24T23:04:27+08:00"}
+{"stage": "apply", "action": "committed", "src": "report_v1.txt", "dst": "library/_unassigned/report_v1.txt", "status": "done", "seq": 7, "time": "2026-11-24T23:04:27+08:00"}
+{"stage": "apply", "action": "committed", "src": "report_最终版.txt", "dst": "library/_unassigned/report_最终版.txt", "status": "done", "seq": 8, "time": "2026-11-24T23:04:27+08:00"}
+{"stage": "apply", "action": "committed", "src": "scan_readme.md", "dst": "library/papers/scan_readme.md", "status": "done", "seq": 9, "time": "2026-11-24T23:04:27+08:00"}
+{"stage": "apply", "action": "committed", "src": "spectrum_v2.csv", "dst": "library/data/spectrum_v2.csv", "status": "done", "seq": 10, "time": "2026-11-24T23:04:27+08:00"}
+{"stage": "apply", "action": "committed", "src": "truncated.pdf", "dst": "library/_quarantine/truncated.pdf", "status": "done", "seq": 11, "time": "2026-11-24T23:04:27+08:00"}
+{"stage": "apply", "action": "committed", "src": "数据说明.txt", "dst": "library/admin/数据说明.txt", "status": "done", "seq": 12, "time": "2026-11-24T23:04:27+08:00"}
+{"stage": "apply", "event": "stage_complete", "status": "done", "stats": {"committed": 11, "already_committed_identical": 0, "alias": 1, "quarantined": 3, "copy_failed": 0}, "seq": 13, "time": "2026-11-24T23:04:27+08:00"}
