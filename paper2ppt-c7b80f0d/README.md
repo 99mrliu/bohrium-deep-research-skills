@@ -21,3 +21,16 @@ paths exercised). No prepared answers or official case outputs are included;
 the platform runs the Skills on its own fixed cases.
 
 Authoring session: 2026-11, SciMaster harness.
+
+## Round 2 (v6) — five additional independent directions
+
+| Directory | Skill | Center of gravity |
+|-|-|-|
+| `d-talkscript-contract/` | `ppt-talkscript-contract` | **Talk-script contract (presentation logic).** Time-budgeted verbatim script first, beats cut to slides, idempotent per-slide forge, notes-as-script with machine non-duplication gate, rehearsal timing. |
+| `e-figure-veritas/` | `ppt-figure-veritas` | **Upstream visual-evidence fidelity.** Figure harvesting + caption binding, schematic-vs-data classification gate, chart redraw only from machine-readable data with zero-drift numeric verification, per-figure provenance labels. |
+| `f-native-edit-proofer/` | `ppt-native-edit-proofer` | **Downstream editability/render engineering.** OOXML-native elements only (no text-as-image, real table shapes), font safety probing, editability lint, round-trip reopen checks, measured render evidence. |
+| `g-redteam-tribunal/` | `ppt-redteam-tribunal` | **Adversarial process QC.** Deterministic defect detectors (R1–R8) attack the draft deck; every finding enters a ledger and must be fixed or formally dispositioned; convergence gate before success. |
+| `h-deck-surgery/` | `ppt-deck-surgery` | **Change engineering / versioned editing.** Edit-mode specialization: ops journal, idempotent application, version snapshots with rollback, machine deck diff, minimal-change lint, change_records audit trail. |
+
+Each bundle was again smoke-tested end-to-end locally on synthetic inputs
+(marked as such); no prepared answers or official case outputs are included.
