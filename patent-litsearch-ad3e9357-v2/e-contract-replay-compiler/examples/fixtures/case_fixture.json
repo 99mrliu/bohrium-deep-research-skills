@@ -1,0 +1,19 @@
+{
+  "_notice": "合成示例 / 虚构数据：本文件仅用于 result-contract-replay-compiler 的自检与演示，其中所有对象、号码、来源均不存在。",
+  "case_id": "SYNTH-EXAMPLE-005",
+  "task_type": "法律状态复核（虚构）",
+  "query": {
+    "subject": "虚构装置甲（合成示例）",
+    "jurisdiction": "CN",
+    "as_of": "2026-11-24"
+  },
+  "output_contract": {
+    "candidates": "候选对象清单，每条须含证据定位符",
+    "evidence_records": "证据记录：来源、日期、定位符",
+    "legal_status": "法律状态结论",
+    "omissions_note": "遗漏与限制说明",
+    "status": "交付状态：ok / partial / failed",
+    "sources": "来源清单：名称、版本、查询日期",
+    "uncertainty": "不确定性与未完成项清单"
+  }
+}

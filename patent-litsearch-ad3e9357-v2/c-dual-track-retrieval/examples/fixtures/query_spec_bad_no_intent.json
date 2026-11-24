@@ -1,0 +1,24 @@
+{
+  "_comment": "合成示例/虚构：故意违反 R2（词项缺少 intent）的反面样例，validate 应退出码 2 并报告 R2。",
+  "research_question": "（虚构）柔性锌空气电池主题检索——缺 intent 反面样例",
+  "blocks": [
+    {
+      "name": "电池体系",
+      "operator": "AND",
+      "terms": [
+        {"text": "锌空气电池", "intent": "core"},
+        {"text": "锌-空气电池"}
+      ]
+    },
+    {
+      "name": "柔性特征",
+      "operator": "AND",
+      "terms": [
+        {"text": "柔性", "intent": "core"}
+      ]
+    }
+  ],
+  "exclusion_terms": [],
+  "classification_codes": [],
+  "date_range": {"start": "2015-01-01", "end": "2026-12-31"}
+}

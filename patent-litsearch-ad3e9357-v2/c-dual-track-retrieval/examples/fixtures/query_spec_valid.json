@@ -1,0 +1,35 @@
+{
+  "_comment": "合成示例/虚构：本检索式规格仅用于 dual-track-retrieval-lab 演示与自查，主题为虚构的“柔性锌空气电池”方向。",
+  "research_question": "（虚构）2015 年以来柔性锌空气电池（凝胶/固态电解质方向）的专利与论文证据有哪些？",
+  "blocks": [
+    {
+      "name": "电池体系",
+      "operator": "AND",
+      "terms": [
+        {"text": "锌空气电池", "intent": "core"},
+        {"text": "锌-空气电池", "intent": "variant"}
+      ]
+    },
+    {
+      "name": "柔性特征",
+      "operator": "AND",
+      "terms": [
+        {"text": "柔性", "intent": "core"},
+        {"text": "可穿戴", "intent": "variant"}
+      ]
+    },
+    {
+      "name": "上位与分类限定",
+      "operator": "AND",
+      "terms": [
+        {"text": "金属空气电池", "intent": "core"},
+        {"text": "H01M 12/06", "intent": "classification"}
+      ]
+    }
+  ],
+  "exclusion_terms": [
+    {"text": "锂空气", "reason": "研究问题限定锌体系，锂空气为相邻但不同的技术路线，命中即排除以避免体系混淆"}
+  ],
+  "classification_codes": ["H01M 12/06"],
+  "date_range": {"start": "2015-01-01", "end": "2026-12-31"}
+}

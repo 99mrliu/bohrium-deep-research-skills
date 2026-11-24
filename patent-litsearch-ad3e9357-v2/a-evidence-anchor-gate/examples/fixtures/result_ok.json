@@ -1,0 +1,88 @@
+{
+  "_notice": "合成示例 / SYNTHETIC FIXTURE：本结果中所有专利号、论文与结论均为虚构，仅用于演示逐字引用锚定审计通过的情形。",
+  "case_id": "SYNTH-EXAMPLE-001",
+  "status": "ok",
+  "candidates": [
+    {
+      "publication_number": "US0000000EX1",
+      "title": "一种基于谐振腔反馈的量子退火加速装置",
+      "applicant": "北极星合成仪器公司（虚构机构）",
+      "legal_status": "虚构状态-审查中（SYNTHETIC STATUS ONLY）",
+      "anchors": [
+        {
+          "field": "candidates[0].publication_number",
+          "quote": "公开号：US0000000EX1",
+          "source_path": "examples/fixtures/src_patent_EX1001.txt",
+          "source_sha256": "f00306a0da902858ece0a6f7504de9023629f1833f49d88edc1bb2303f6c3bd9"
+        },
+        {
+          "field": "candidates[0].title",
+          "quote": "发明名称：一种基于谐振腔反馈的量子退火加速装置",
+          "source_path": "examples/fixtures/src_patent_EX1001.txt",
+          "source_sha256": "f00306a0da902858ece0a6f7504de9023629f1833f49d88edc1bb2303f6c3bd9"
+        },
+        {
+          "field": "candidates[0].applicant",
+          "quote": "申请人：北极星合成仪器公司（虚构机构）",
+          "source_path": "examples/fixtures/src_patent_EX1001.txt",
+          "source_sha256": "f00306a0da902858ece0a6f7504de9023629f1833f49d88edc1bb2303f6c3bd9"
+        },
+        {
+          "field": "candidates[0].legal_status",
+          "quote": "法律状态：虚构状态-审查中（SYNTHETIC STATUS ONLY）",
+          "source_path": "examples/fixtures/src_patent_EX1001.txt",
+          "source_sha256": "f00306a0da902858ece0a6f7504de9023629f1833f49d88edc1bb2303f6c3bd9"
+        }
+      ]
+    }
+  ],
+  "related_literature": [
+    {
+      "record_id": "EX2001",
+      "venue": "Journal of Synthetic Examples (JSE), Vol. 0, No. 0, 2024",
+      "anchors": [
+        {
+          "field": "related_literature[0].venue",
+          "quote": "Journal of Synthetic Examples (JSE), Vol. 0, No. 0, 2024",
+          "source_path": "examples/fixtures/src_paper_EX2001.txt",
+          "source_sha256": "fb4ee3a81d956da9777a60f59cc37dbd042da5e9ca0de68b6597ba047c9abaa2"
+        }
+      ]
+    }
+  ],
+  "evidence_records": [
+    {
+      "field": "candidates[0].family_members",
+      "quote": "同族成员：CN0000000EX1；EP0000000EX1（均为虚构号）",
+      "source_path": "examples/fixtures/src_patent_EX1001.txt",
+      "source_sha256": "f00306a0da902858ece0a6f7504de9023629f1833f49d88edc1bb2303f6c3bd9"
+    }
+  ],
+  "sources": [
+    {
+      "path": "examples/fixtures/src_patent_EX1001.txt",
+      "sha256": "f00306a0da902858ece0a6f7504de9023629f1833f49d88edc1bb2303f6c3bd9",
+      "role": "patent_record"
+    },
+    {
+      "path": "examples/fixtures/src_paper_EX2001.txt",
+      "sha256": "fb4ee3a81d956da9777a60f59cc37dbd042da5e9ca0de68b6597ba047c9abaa2",
+      "role": "paper_abstract"
+    }
+  ],
+  "uncertainty": [],
+  "change_records": [
+    {
+      "ts": "2026-11-24T00:00:00Z",
+      "action": "scaffold",
+      "status": "partial",
+      "note": "合成示例：初始骨架。"
+    },
+    {
+      "ts": "2026-11-24T00:01:00Z",
+      "action": "fill+audit",
+      "status": "ok",
+      "note": "合成示例：填入已锚定字段并通过 quote_audit。"
+    }
+  ]
+}

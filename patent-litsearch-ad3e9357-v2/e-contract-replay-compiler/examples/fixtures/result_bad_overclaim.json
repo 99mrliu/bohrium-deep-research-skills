@@ -1,0 +1,33 @@
+{
+  "_notice": "合成示例 / 虚构数据：反例——status 声称为 ok 但契约字段 legal_status 仍为 null，应触发 V3 失败（过度声明）。",
+  "case_id": "SYNTH-EXAMPLE-005",
+  "status": "ok",
+  "candidates": [
+    {
+      "name": "虚构装置甲（合成示例）",
+      "pub_no": "CN000000000A",
+      "evidence": ["fixture://synthetic/doc1#para-0007"]
+    }
+  ],
+  "evidence_records": [
+    {
+      "source": "虚构专利检索库（合成示例）",
+      "date": "2026-11-24",
+      "locator": "fixture://synthetic/doc1#para-0007"
+    }
+  ],
+  "legal_status": null,
+  "omissions_note": "合成示例：检索范围仅限虚构库。",
+  "sources": [
+    {
+      "name": "虚构专利检索库（合成示例）",
+      "version": "v0.0-fixture",
+      "query_date": "2026-11-24"
+    }
+  ],
+  "uncertainty": [],
+  "change_records": [
+    {"ts": "2026-11-24T02:00:00Z", "note": "脚手架初始化（合成示例）"},
+    {"ts": "2026-11-24T02:05:00Z", "note": "填入候选与证据（合成示例）"}
+  ]
+}

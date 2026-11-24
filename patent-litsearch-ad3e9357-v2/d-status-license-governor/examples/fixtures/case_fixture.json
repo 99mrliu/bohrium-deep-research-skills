@@ -1,0 +1,21 @@
+{
+  "note": "合成示例 / 虚构：本案为例行 fixture，专利号、来源、材料均为虚构。",
+  "case_id": "SYNTH-EXAMPLE-004",
+  "task": "核验三件虚构专利的当前法律状态，并对所给五个来源进行授权分级与能力降级规划。",
+  "materials": [
+    "examples/fixtures/sources.json",
+    "examples/fixtures/status_ok.jsonl"
+  ],
+  "output_contract": {
+    "case_id": "string，与输入一致",
+    "status": "ok|partial|failed，诚实状态",
+    "legal_status": "每件专利的头条状态、依据来源层级、查询日期与滞后声明",
+    "license_report": "license_tiers.py classify 的输出",
+    "degradation_plan": "license_tiers.py plan 的输出（含能力降级 checklist）",
+    "conflicts": "状态冲突披露块（双保留+登记级优先）",
+    "wording_check": "wording_guard.py 对结论草稿的扫描报告",
+    "sources": "实际使用的来源清单（含 tier 与 color）",
+    "uncertainty": "不确定性声明列表",
+    "change_records": "变更记录列表"
+  }
+}

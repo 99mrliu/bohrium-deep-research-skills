@@ -1,0 +1,23 @@
+{
+  "_comment": "合成示例/虚构：故意违反 R4（裸 NOT 运算块）的反面样例，validate 应退出码 2 并报告 R4。",
+  "research_question": "（虚构）柔性锌空气电池主题检索——裸 NOT 反面样例",
+  "blocks": [
+    {
+      "name": "电池体系",
+      "operator": "AND",
+      "terms": [
+        {"text": "锌空气电池", "intent": "core"}
+      ]
+    },
+    {
+      "name": "排除锂体系",
+      "operator": "NOT",
+      "terms": [
+        {"text": "锂空气", "intent": "core"}
+      ]
+    }
+  ],
+  "exclusion_terms": [],
+  "classification_codes": [],
+  "date_range": {"start": "2015-01-01", "end": "2026-12-31"}
+}

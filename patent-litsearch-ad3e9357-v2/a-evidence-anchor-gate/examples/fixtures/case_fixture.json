@@ -1,0 +1,17 @@
+{
+  "_notice": "合成示例 / SYNTHETIC FIXTURE：本案件及其中所有专利号、文献均为虚构，仅用于 verbatim-anchor-evidence-gate 技能包自测。",
+  "case_id": "SYNTH-EXAMPLE-001",
+  "query": "检索虚构专利 US0000000EX1 的著录项目、同族成员与法律状态，并关联虚构论文 EX2001（全部为合成数据）。",
+  "materials": [
+    "src_patent_EX1001.txt",
+    "src_paper_EX2001.txt"
+  ],
+  "output_contract": {
+    "candidates": "array，候选专利记录（含锚点）",
+    "evidence_records": "array，证据锚点记录（quote + source_sha256）",
+    "related_literature": "array，相关论文（含锚点）",
+    "status": "string，ok/partial/failed",
+    "sources": "array，输入源清单（path + sha256）",
+    "uncertainty": "array，不确定性与未填字段说明"
+  }
+}

@@ -1,0 +1,60 @@
+{
+  "note": "合成示例 / 虚构：本文件中的全部来源、域名、许可条款均为虚构，仅用于演示绿/黄/红授权分级与登记优先协议。",
+  "sources": [
+    {
+      "source_id": "REG-CNIPA-FICT",
+      "name": "虚构国家专利登记簿（示例）",
+      "tier": "register",
+      "version": "2026.01",
+      "url_or_file": "https://register.example-fict.invalid/cn",
+      "access": "public",
+      "display_scope": "full",
+      "retention_days": 365,
+      "confidentiality_note": "公开登记数据，可全文引用。"
+    },
+    {
+      "source_id": "GAZ-CN-FICT",
+      "name": "虚构专利公报（示例）",
+      "tier": "official_gazette",
+      "version": "2025-W52",
+      "url_or_file": "https://gazette.example-fict.invalid/",
+      "access": "public",
+      "display_scope": "full",
+      "retention_days": 365,
+      "confidentiality_note": "公开公报，可全文引用。"
+    },
+    {
+      "source_id": "AGG-PATENTLENS-FICT",
+      "name": "虚构专利聚合检索站（示例）",
+      "tier": "aggregation",
+      "version": "unknown",
+      "url_or_file": "https://agg.example-fict.invalid/patent",
+      "access": "registration",
+      "display_scope": "fields_only",
+      "retention_days": 90,
+      "confidentiality_note": "注册后可查看字段级数据；不得展示全文，不得当作登记依据。"
+    },
+    {
+      "source_id": "REPOST-BLOG-FICT",
+      "name": "虚构技术转载博客（示例）",
+      "tier": "repost",
+      "version": "unknown",
+      "url_or_file": "https://blog.example-fict.invalid/post/123",
+      "access": "public",
+      "display_scope": "citation_only",
+      "retention_days": 30,
+      "confidentiality_note": "转载内容，仅可引述其存在，不得作为状态依据。"
+    },
+    {
+      "source_id": "PAID-GLOBALDB-FICT",
+      "name": "虚构商业付费专利库（示例）",
+      "tier": "unknown",
+      "version": "2026.01",
+      "url_or_file": "https://paiddb.example-fict.invalid/",
+      "access": "paid",
+      "display_scope": "none",
+      "retention_days": 0,
+      "confidentiality_note": "付费且登录受限；禁止抓取、禁止展示原文。"
+    }
+  ]
+}

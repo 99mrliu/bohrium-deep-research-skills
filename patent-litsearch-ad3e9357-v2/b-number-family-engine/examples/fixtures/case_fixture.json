@@ -1,0 +1,26 @@
+{
+  "_comment": "合成示例 / 虚构案例，仅用于测试，不对应任何真实专利、真实文献或真实评测案例。",
+  "case_id": "SYNTH-EXAMPLE-002",
+  "task_type": "number_query",
+  "query": {
+    "numbers": ["XX1000001B2"],
+    "keywords": ["示例催化剂ZX-1"]
+  },
+  "materials": [
+    "examples/fixtures/corpus/rec_EX1001.txt",
+    "examples/fixtures/corpus/rec_EX1002.txt",
+    "examples/fixtures/corpus/rec_EX1003.txt",
+    "examples/fixtures/corpus/rec_EX2001.txt"
+  ],
+  "output_contract": {
+    "case_id": "string",
+    "status": "ok|partial|failed",
+    "query_numbers": "array",
+    "normalized_numbers": "array",
+    "corpus_hits": "array",
+    "families": "object",
+    "sources": "array",
+    "uncertainty": "array",
+    "change_records": "array"
+  }
+}

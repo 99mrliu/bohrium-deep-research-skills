@@ -1,0 +1,25 @@
+{
+  "_comment": "合成示例/虚构：本 case 为 dual-track-retrieval-lab 的演示夹具，不对应真实评测案例。",
+  "case_id": "SYNTH-EXAMPLE-003",
+  "task_type": "topic_search",
+  "title": "（合成示例）柔性锌空气电池主题检索",
+  "research_question": "（虚构）2015 年以来柔性锌空气电池（凝胶/固态电解质方向）的专利与论文证据有哪些？",
+  "input_materials": [
+    "examples/fixtures/corpus/pat_EX1001.txt",
+    "examples/fixtures/corpus/pat_EX1002.txt",
+    "examples/fixtures/corpus/pat_EX1003.txt",
+    "examples/fixtures/corpus/npl_EX2001.txt",
+    "examples/fixtures/corpus/npl_EX2002.txt"
+  ],
+  "output_contract": {
+    "research_question": "string|null：复述的研究问题",
+    "query_log": "array|null：双轨检索式、参数与渲染说明",
+    "candidates": "array|null：去重后记录及命中定位（file+line）",
+    "screening": "object|null：PRISMA 计数（脚本重算）与排除理由汇总",
+    "omissions_note": "string|null：遗漏说明（未覆盖概念块/零命中词项/排除分布）",
+    "status": "ok|partial|failed",
+    "sources": "array：实际读取的材料清单",
+    "uncertainty": "array：不确定性声明",
+    "change_records": "array：结果演化记录"
+  }
+}
