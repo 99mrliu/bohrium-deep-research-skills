@@ -1,0 +1,56 @@
+{
+  "status": "CONTINUE",
+  "stop_criterion": null,
+  "next_round": 3,
+  "stage": "confirmation_repeat",
+  "points": [
+    {
+      "temperature": 460.0,
+      "time": 3.5,
+      "flow": 110.0,
+      "replicate": 1
+    },
+    {
+      "temperature": 460.0,
+      "time": 3.5,
+      "flow": 110.0,
+      "replicate": 2
+    }
+  ],
+  "rationale": "refinement improved the best response by 32.75% (>= 2%); emitting 2 confirmation repeat(s) of the best point to estimate noise",
+  "criterion_states": {
+    "budget_exhausted": {
+      "used": 8,
+      "budget": 10,
+      "triggered": false
+    },
+    "low_improvement": {
+      "applicable": true,
+      "value": 0.32750859782955866,
+      "threshold": 0.02,
+      "triggered": false
+    },
+    "boundary_constrained": {
+      "triggered": false,
+      "within_one_step_dims": []
+    },
+    "all_candidates_duplicate": {
+      "triggered": false
+    }
+  },
+  "budget": {
+    "total": 10,
+    "used": 8,
+    "remaining": 2
+  },
+  "warnings": [],
+  "best_point": {
+    "round": 2,
+    "temperature": 460.0,
+    "time": 3.5,
+    "flow": 110.0,
+    "response": -0.181071
+  },
+  "schema_version": "1.0.0",
+  "log_seq": 3
+}

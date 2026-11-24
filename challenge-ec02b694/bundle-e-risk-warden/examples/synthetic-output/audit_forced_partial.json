@@ -1,0 +1,58 @@
+{
+  "generated_at": "2026-11-24T14:17:28Z",
+  "result_path": "examples/synthetic-output/result_forced_partial.json",
+  "case_id": "synthetic-ec02b694-001",
+  "checks": [
+    {
+      "check_id": "C1",
+      "name": "result.json 存在且可解析",
+      "passed": true,
+      "details": "ok"
+    },
+    {
+      "check_id": "C2",
+      "name": "case_id 有效且与 case.json 一致",
+      "passed": true,
+      "details": "case_id='synthetic-ec02b694-001' expected='synthetic-ec02b694-001'"
+    },
+    {
+      "check_id": "C3",
+      "name": "output_contract 全部字段存在且非占位",
+      "passed": false,
+      "details": "missing=[] placeholder=['evidence_and_risk', 'confirmation_items']"
+    },
+    {
+      "check_id": "C4",
+      "name": "无占位残留",
+      "passed": false,
+      "details": "residue=['$.evidence_and_risk', \"$.evidence_and_risk.note='待填写：由 Agent 在主体工作阶段填充'\"]"
+    },
+    {
+      "check_id": "C5",
+      "name": "每条推荐参数值带可行性证据引用或标注待确认",
+      "passed": true,
+      "details": "recommendations=1 lacking_evidence=[]"
+    },
+    {
+      "check_id": "C6",
+      "name": "存在假设时 confirmation_items 非空",
+      "passed": true,
+      "details": "assumptions=0 confirmation_items=0"
+    },
+    {
+      "check_id": "C7",
+      "name": "status 取值合法",
+      "passed": true,
+      "details": "status='success'"
+    },
+    {
+      "check_id": "C8",
+      "name": "sources/uncertainty/change_log 存在且为列表",
+      "passed": true,
+      "details": "bad=[]"
+    }
+  ],
+  "verdict": "fail",
+  "forced_partial": true,
+  "note": "审计失败：已强制回退 partial，修复违例后重新审计"
+}

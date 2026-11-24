@@ -1,0 +1,33 @@
+{
+  "schema_version": "1.0",
+  "generated_by": "predict.py",
+  "surrogate_mode": "fallback",
+  "n_points": 1,
+  "any_extrapolation": true,
+  "global_notice": "模型预测不是实测值；任何用于实验计划的数值都必须标注 [模型预测] 并携带不确定区间。",
+  "load_errors": [],
+  "predictions": [
+    {
+      "mode": "fallback",
+      "estimator": "nearest-neighbor(k=4, normalized distance=0.7071)",
+      "point": {
+        "temp_C": 70,
+        "time_h": 8
+      },
+      "prediction": 67.475,
+      "interval_95_nominal": [
+        52.065830651848884,
+        82.8841693481511
+      ],
+      "interval_notice": "降级模式区间为探索性尺度（max(3*std, 0.5*range)），不是统计意义的 95% 区间",
+      "extrapolation": true,
+      "forced_extrapolation_level_warning": true,
+      "warnings": [
+        "代理模型处于降级模式（quadratic 模型需要 n >= p+2 = 8，实际 n = 4；linear 模型需要 n >= p+2 = 5，实际 n = 4）",
+        "该预测为待确认假设，不得作为可执行事实；候选点位于代理模型有效域之外（或模型处于降级模式），必须安排实测确认后方可用于决策。",
+        "样本不足，预测仅供假设；输出强制使用 extrapolation 级警告"
+      ]
+    }
+  ],
+  "extrapolation_notice": "该预测为待确认假设，不得作为可执行事实；候选点位于代理模型有效域之外（或模型处于降级模式），必须安排实测确认后方可用于决策。"
+}

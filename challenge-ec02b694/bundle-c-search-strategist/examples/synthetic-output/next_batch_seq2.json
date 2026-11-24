@@ -1,0 +1,64 @@
+{
+  "status": "CONTINUE",
+  "stop_criterion": null,
+  "next_round": 2,
+  "stage": "local_refinement",
+  "points": [
+    {
+      "temperature": 460.0,
+      "time": 3.5,
+      "flow": 110.0
+    },
+    {
+      "temperature": 480.0,
+      "time": 3.5,
+      "flow": 110.0
+    },
+    {
+      "temperature": 470.0,
+      "time": 3.0,
+      "flow": 110.0
+    },
+    {
+      "temperature": 470.0,
+      "time": 4.0,
+      "flow": 110.0
+    }
+  ],
+  "rationale": "screening complete; coordinate finite-difference stepping around best point; emitting 4 point(s)",
+  "criterion_states": {
+    "budget_exhausted": {
+      "used": 4,
+      "budget": 10,
+      "triggered": false
+    },
+    "low_improvement": {
+      "applicable": false,
+      "value": null,
+      "threshold": 0.02,
+      "triggered": false
+    },
+    "boundary_constrained": {
+      "triggered": false,
+      "within_one_step_dims": []
+    },
+    "all_candidates_duplicate": {
+      "triggered": false
+    }
+  },
+  "budget": {
+    "total": 10,
+    "used": 4,
+    "remaining": 6
+  },
+  "warnings": [],
+  "best_point": {
+    "round": 1,
+    "temperature": 470.0,
+    "time": 3.5,
+    "flow": 110.0,
+    "response": -0.269254
+  },
+  "schema_version": "1.0.0",
+  "log_seq": 2
+}

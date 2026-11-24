@@ -1,0 +1,14 @@
+{
+  "case_id": "synthetic-ec02b694-001",
+  "task": "为某陶瓷粉体优化焙烧工艺参数（焙烧温度、保温时间、升温速率），使烧结密度最大化。注意：本案例为合成示例，材料中故意包含一处目标与约束的冲突以及一个不存在的材料路径。",
+  "output_contract": [
+    "experiment_plan",
+    "evidence_and_risk",
+    "confirmation_items"
+  ],
+  "materials": [
+    {"path": "materials/brief.md", "role": "任务简报"},
+    {"path": "materials/material_spec.txt", "role": "材料规格书"},
+    {"path": "materials/prior_runs.csv", "role": "历史焙烧实验记录（故意不提供的缺失材料）"}
+  ]
+}

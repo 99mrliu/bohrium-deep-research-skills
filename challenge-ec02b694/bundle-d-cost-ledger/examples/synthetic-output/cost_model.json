@@ -1,0 +1,52 @@
+{
+  "schema_version": "cost-model/1.0",
+  "status": "ok",
+  "declared_units": {
+    "machine_rate": "CNY/hour",
+    "consumable_price": "CNY/portion",
+    "sample_prep_time": "hour/sample",
+    "daily_machine_hours": "hour/day",
+    "budget": "CNY",
+    "deadline": "working_day",
+    "typical_run_hours": "hour"
+  },
+  "fields": {
+    "machine_rate": {
+      "value": "180",
+      "unit": "CNY/hour",
+      "source": "contract:resource_contract.json"
+    },
+    "consumable_price": {
+      "value": "45",
+      "unit": "CNY/portion",
+      "source": "contract:resource_contract.json"
+    },
+    "sample_prep_time": {
+      "value": "0.5",
+      "unit": "hour/sample",
+      "source": "contract:resource_contract.json"
+    },
+    "daily_machine_hours": {
+      "value": "6",
+      "unit": "hour/day",
+      "source": "contract:resource_contract.json"
+    },
+    "budget": {
+      "value": "8000",
+      "unit": "CNY",
+      "source": "contract:resource_contract.json"
+    },
+    "deadline": {
+      "value": "10",
+      "unit": "working_day",
+      "source": "contract:resource_contract.json"
+    },
+    "typical_run_hours": {
+      "value": "2.5",
+      "unit": "hour",
+      "source": "contract:resource_contract.json"
+    }
+  },
+  "conversions_applied": [],
+  "uncertainty": []
+}

@@ -1,0 +1,33 @@
+{
+  "case_id": "synthetic-ec02b694-001",
+  "status": "partial",
+  "experiment_plan": {
+    "steps": [
+      {
+        "param": "calcination_temperature_c",
+        "value": 900,
+        "evidence": "materials/material_spec.txt: 推荐焙烧窗口 800–950°C"
+      }
+    ]
+  },
+  "evidence_and_risk": {
+    "_placeholder": true,
+    "note": "待填写：由 Agent 在主体工作阶段填充"
+  },
+  "confirmation_items": [],
+  "sources": [],
+  "uncertainty": [],
+  "change_log": [
+    {
+      "ts": "2026-11-24T00:00:00Z",
+      "event": "manual_edit",
+      "detail": "负例：evidence_and_risk 仍为占位却声称 success（合成示例）"
+    },
+    {
+      "ts": "2026-11-24T14:17:28Z",
+      "event": "final_audit_forced_partial",
+      "detail": "final_audit 检出未消解违例，强制回退 partial：C3(output_contract 全部字段存在且非占位): missing=[] placeholder=['evidence_and_risk', 'confirmation_items']；C4(无占位残留): residue=['$.evidence_and_risk', \"$.evidence_and_risk.note='待填写：由 Agent 在主体工作阶段填充'\"]"
+    }
+  ],
+  "partial_reason": "final_audit 检出未消解违例，强制回退 partial：C3(output_contract 全部字段存在且非占位): missing=[] placeholder=['evidence_and_risk', 'confirmation_items']；C4(无占位残留): residue=['$.evidence_and_risk', \"$.evidence_and_risk.note='待填写：由 Agent 在主体工作阶段填充'\"]"
+}

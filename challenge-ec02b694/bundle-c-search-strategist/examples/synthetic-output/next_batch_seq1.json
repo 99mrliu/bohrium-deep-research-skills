@@ -1,0 +1,58 @@
+{
+  "status": "CONTINUE",
+  "stop_criterion": null,
+  "next_round": 1,
+  "stage": "screening_lhs",
+  "points": [
+    {
+      "temperature": 470.0,
+      "time": 3.5,
+      "flow": 110.0
+    },
+    {
+      "temperature": 340.0,
+      "time": 1.5,
+      "flow": 200.0
+    },
+    {
+      "temperature": 370.0,
+      "time": 5.5,
+      "flow": 250.0
+    },
+    {
+      "temperature": 400.0,
+      "time": 4.5,
+      "flow": 70.0
+    }
+  ],
+  "rationale": "screening round incomplete (0/4); emitting 4 seeded-LHS candidate(s)",
+  "criterion_states": {
+    "budget_exhausted": {
+      "used": 0,
+      "budget": 10,
+      "triggered": false
+    },
+    "low_improvement": {
+      "applicable": false,
+      "value": null,
+      "threshold": 0.02,
+      "triggered": false
+    },
+    "boundary_constrained": {
+      "triggered": false,
+      "within_one_step_dims": []
+    },
+    "all_candidates_duplicate": {
+      "triggered": false
+    }
+  },
+  "budget": {
+    "total": 10,
+    "used": 0,
+    "remaining": 10
+  },
+  "warnings": [],
+  "best_point": null,
+  "schema_version": "1.0.0",
+  "log_seq": 1
+}

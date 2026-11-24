@@ -1,0 +1,10 @@
+{
+  "case_id": "synthetic-ec02b694-001",
+  "task": "在 10 个新实验点的预算内，为某热化学转化过程提出实验参数搜索策略：决定每轮在哪些参数组合做实验、做多少点、何时停止，并留下可独立复核的决策记录。",
+  "output_contract": ["experiment_plan", "evidence_and_risk", "confirmation_items"],
+  "materials": {
+    "parameter_space": "examples/synthetic-input/param_space.json",
+    "budget": "examples/synthetic-input/budget.json",
+    "synthetic_oracle": "examples/synthetic-input/oracle.py"
+  }
+}

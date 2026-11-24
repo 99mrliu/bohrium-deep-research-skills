@@ -1,0 +1,38 @@
+{
+  "schema_version": "1.0",
+  "generated_by": "predict.py",
+  "surrogate_mode": "rsm",
+  "n_points": 1,
+  "any_extrapolation": true,
+  "global_notice": "模型预测不是实测值；任何用于实验计划的数值都必须标注 [模型预测] 并携带不确定区间。",
+  "load_errors": [],
+  "predictions": [
+    {
+      "mode": "rsm",
+      "point": {
+        "temp_C": 110,
+        "time_h": 16
+      },
+      "coded_point": [
+        2.0,
+        2.0
+      ],
+      "prediction": 79.29881992965943,
+      "interval_95": [
+        54.20900536432252,
+        104.38863449499634
+      ],
+      "extrapolation": true,
+      "domain_check": [
+        "temp_C=110 高于训练上限 90",
+        "time_h=16 高于训练上限 12"
+      ],
+      "leverage": 13.718910646446952,
+      "warnings": [
+        "该预测为待确认假设，不得作为可执行事实；候选点位于代理模型有效域之外（或模型处于降级模式），必须安排实测确认后方可用于决策。",
+        "区间已按 (1 + 3*0.500) 放大"
+      ]
+    }
+  ],
+  "extrapolation_notice": "该预测为待确认假设，不得作为可执行事实；候选点位于代理模型有效域之外（或模型处于降级模式），必须安排实测确认后方可用于决策。"
+}

@@ -1,0 +1,10 @@
+{
+  "case_id": "synthetic-calcination-001",
+  "task": "针对合成气甲烷化催化剂的焙烧工序，给出焙烧温度、升温速率、载气流量与焙烧时间的参数优化建议，并说明证据与风险。",
+  "output_contract": ["experiment_plan", "evidence_and_risk", "confirmation_items"],
+  "materials": [
+    "materials/furnace_spec.txt",
+    "materials/history.csv"
+  ],
+  "parameters": ["温度", "升温速率", "载气流量", "焙烧时间", "搅拌转速"]
+}

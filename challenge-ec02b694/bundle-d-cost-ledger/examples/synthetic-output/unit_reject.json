@@ -1,0 +1,17 @@
+{
+  "schema_version": "cost-model/1.0",
+  "status": "refused",
+  "reason": "字段 typical_run_hours 使用单位 '分钟'，与声明单位 'hour' 不一致，且契约未提供 unit_conversions 换算关系；按单位规则拒绝，绝不静默换算",
+  "declared_units": {
+    "machine_rate": "CNY/hour",
+    "consumable_price": "CNY/portion",
+    "sample_prep_time": "hour/sample",
+    "daily_machine_hours": "hour/day",
+    "budget": "CNY",
+    "deadline": "working_day",
+    "typical_run_hours": "hour"
+  },
+  "uncertainty": [
+    "成本模型未建立：单位不自洽。下游 plan_costing/pareto 不应运行，result.json 的 status 应为 refused 或 partial，并把本拒绝原因写入 uncertainty。"
+  ]
+}

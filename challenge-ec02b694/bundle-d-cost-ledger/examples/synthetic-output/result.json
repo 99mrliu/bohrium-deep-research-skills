@@ -1,0 +1,49 @@
+{
+  "case_id": "synthetic-ec02b694-cost-ledger-001",
+  "status": "success",
+  "experiment_plan": {
+    "recommended_version": "v2_sequential_10",
+    "summary": "在总预算 8000 元、截止 10 个工作日的契约约束下，推荐 v2 序贯 10 点方案：总成本 5400.00 元（机时 25.00 h x 180 元/h = 4500.00 元；耗材 20 份 x 45 元/份 = 900.00 元），历时 5 个工作日，通量 2.00 样品/天，预测响应 88 yield_percent。",
+    "alternatives": [
+      {"version": "v1_full_grid_27", "total_cost": "14580.00", "total_days": 12, "predicted_response": 92, "verdict": "within_budget=false, within_deadline=false：超预算 6580.00 元、超期 2 个工作日，不可行"},
+      {"version": "v3_screening_6", "total_cost": "2430.00", "total_days": 2, "predicted_response": 74, "verdict": "可行但响应最低，仅适合预算极度收紧时兜底"}
+    ],
+    "tradeoffs": [
+      "推荐版 v2_sequential_10 相对最便宜可行版 v3_screening_6 多花 2970.00 元，换取 14.00 yield_percent 响应提升。",
+      "推荐版 v2_sequential_10 相对最高响应版 v1_full_grid_27 牺牲 4.35% 响应（92 -> 88 yield_percent），节省 9180.00 元（v1 超预算超期，本不可行）。"
+    ]
+  },
+  "evidence_and_risk": {
+    "artifacts": [
+      "examples/synthetic-output/cost_model.json",
+      "examples/synthetic-output/cost_sheet.json",
+      "examples/synthetic-output/pareto.json"
+    ],
+    "arithmetic_trace_example": "total_cost = machine_cost(12150.00 元) + consumable_cost(2430.00 元) = 14580.00 元（v1；其中 12150.00 = 27 runs x 2.5 h x 180 元/h，2430.00 = 54 份 x 45 元/份）",
+    "risks": [
+      "价格契约为前瞻性计划数据而非真实报价，实际结算以设备处当季公示为准；",
+      "预测响应值为候选方案自带估计，本技能不建立响应模型、不验证其准确性；",
+      "历时按机时预约窗口口径（每日 6 h、向上取整）计算，样品制备时间 0.5 h/样品单列，未计入工作日。"
+    ]
+  },
+  "confirmation_items": [
+    "与设备处确认机时费率 180 元/h 与每日 6 h 预约窗口在目标周期内有效；",
+    "确认耗材包 45 元/份的库存与采购周期；",
+    "确认 8000 元预算是否含税及是否覆盖样品表征等未列项费用。"
+  ],
+  "sources": [
+    "examples/synthetic-input/case.json",
+    "examples/synthetic-input/resource_contract.json",
+    "examples/synthetic-input/plans.json",
+    "examples/synthetic-input/materials/lab_notice.md"
+  ],
+  "uncertainty": [
+    "全部价格与预约参数为合成示例的前瞻性计划数据，非真实报价。"
+  ],
+  "change_log": [
+    "step1 cost_model.py: 契约 7 字段全部解析成功，单位与声明单位一致，无换算，status=ok；",
+    "step2 plan_costing.py: 3 个版本核算完成，v1 within_budget=false（14580.00 > 8000），v2/v3 可行，status=ok；",
+    "step3 pareto.py: 3 个版本均在 Pareto 前沿（成本-响应单调），推荐 v2_sequential_10，status=ok；",
+    "negative case: 分钟单位契约变体被 cost_model.py 拒绝（exit 2），产物 unit_reject.json。"
+  ]
+}

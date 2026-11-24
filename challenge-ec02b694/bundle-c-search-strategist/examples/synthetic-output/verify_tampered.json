@@ -1,0 +1,12 @@
+{
+  "schema_version": "1.0.0",
+  "log": "/Users/liuhengshen/Desktop/bhr_product/3rd/4/ec02b694-five/bundle-c-search-strategist/examples/synthetic-output/tampered_log.jsonl",
+  "records_checked": 4,
+  "seq_monotonic_from_1": true,
+  "digests_consistent": false,
+  "cross_check": null,
+  "problems": [
+    "line 1: results_digest mismatch (recorded 0f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945, recomputed 4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945) -- log entry or results were tampered with"
+  ],
+  "status": "fail"
+}

@@ -1,0 +1,8 @@
+{
+  "objective": "maximize",
+  "parameters": [
+    {"name": "temperature", "lower": 300, "upper": 500, "step": 10, "unit": "degC", "type": "continuous"},
+    {"name": "time", "lower": 1, "upper": 6, "step": 0.5, "unit": "h", "type": "continuous"},
+    {"name": "flow", "lower": 50, "upper": 300, "step": 10, "unit": "mL/min", "type": "continuous"}
+  ]
+}

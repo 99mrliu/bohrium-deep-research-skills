@@ -1,0 +1,23 @@
+{
+  "case_id": "synthetic-ec02b694-001",
+  "note": "Agent 在 intake 后汇总的首轮异常事实（合成示例）",
+  "constraint_conflicts": [
+    {
+      "id": "CC-1",
+      "description": "委托目标焙烧温度 1000°C 超过材料耐温上限 950°C（安全红线）",
+      "resolvable": false,
+      "evidence": "materials/brief.md: 目标焙烧温度 1000°C；materials/material_spec.txt: 材料耐温上限 950°C。消解需委托方修改目标或更换材料，属人裁决事项。"
+    }
+  ],
+  "infeasible_constraints": [],
+  "missing_materials": [
+    {
+      "path": "materials/prior_runs.csv",
+      "critical": true,
+      "reason": "warden_boot 的 intake_manifest 报告该路径不存在；历史实验数据缺失使参数建议缺乏先验依据"
+    }
+  ],
+  "metric_conflicts": [],
+  "device_errors": [],
+  "permission_issues": []
+}

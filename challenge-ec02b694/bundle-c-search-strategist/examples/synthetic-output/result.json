@@ -1,0 +1,74 @@
+{
+  "case_id": "synthetic-ec02b694-001",
+  "status": "success",
+  "sources": [
+    "examples/synthetic-input/param_space.json",
+    "examples/synthetic-input/budget.json",
+    "examples/synthetic-input/oracle.py (SYNTHETIC oracle, not real data)",
+    "examples/synthetic-output/search_plan.json",
+    "examples/synthetic-output/decision_log.jsonl",
+    "examples/synthetic-output/verify_report.json"
+  ],
+  "uncertainty": "All responses come from a synthetic oracle (quadratic surface + +/-0.005 deterministic noise); the recommended optimum is evidence about the WORKFLOW, not about any real process. Noise estimate from confirmation repeats is based on >=2 replicates only.",
+  "change_log": [
+    "plan_search.py emitted strategy 'staged_sequential' with 3 round(s)",
+    "next_batch.py made 4 decision(s); final: STOP (budget_exhausted)",
+    "search_log.py verify: pass; tampered replay: caught (exit 1)",
+    "determinism rerun: byte_identical=True"
+  ],
+  "experiment_plan": {
+    "strategy": "staged_sequential",
+    "strategy_rationale": "rule 4 fired: 6006 combinations exceed the budget (10). Budget split: screening 4 (40%), local refinement 4, confirmation repeats 2. 0 history points are recorded for context but do not consume the new budget.",
+    "seed": 20240611,
+    "budget": 10,
+    "rounds": [
+      {
+        "round": 1,
+        "name": "screening_lhs",
+        "n_points": 4
+      },
+      {
+        "round": 2,
+        "name": "local_refinement",
+        "n_points": 4
+      },
+      {
+        "round": 3,
+        "name": "confirmation_repeat",
+        "n_points": 2
+      }
+    ],
+    "stop": {
+      "criterion": "budget_exhausted",
+      "rationale": "evaluated 10 of 10 new points; budget exhausted"
+    },
+    "recommended_point": {
+      "round": 3,
+      "temperature": 460.0,
+      "time": 3.5,
+      "flow": 110.0,
+      "response": -0.175243
+    }
+  },
+  "evidence_and_risk": {
+    "decisions_logged": 4,
+    "log_verified": true,
+    "tamper_detection": "verify on tampered_log.jsonl exits 1 with a digest mismatch (verify_tampered.json)",
+    "determinism": {
+      "seed": 20240611,
+      "runs_compared": 2,
+      "byte_identical": true,
+      "status": "pass"
+    },
+    "risks": [
+      "LHS screening with 4 points can miss a narrow optimum region",
+      "2% relative-improvement threshold may stop early on plateaus",
+      "synthetic oracle: real noise, drift and constraints absent"
+    ]
+  },
+  "confirmation_items": [
+    "re-run plan_search.py with seed 20240611; expect byte-identical plan",
+    "re-run search_log.py verify on decision_log.jsonl; expect pass",
+    "repeat the recommended best point >= 2 times with real measurements before trusting the noise estimate"
+  ]
+}

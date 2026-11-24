@@ -1,0 +1,11 @@
+{
+  "contract_id": "synthetic-contract-bad-unit",
+  "kind": "NEGATIVE CASE: 契约变体——单 run 机时单位写成“分钟”，且未提供 unit_conversions 换算关系",
+  "machine_rate": {"value": 180, "unit": "CNY/hour"},
+  "consumable_price": {"value": 45, "unit": "CNY/portion"},
+  "sample_prep_time": {"value": 0.5, "unit": "hour/sample"},
+  "daily_machine_hours": {"value": 6, "unit": "hour/day"},
+  "budget": {"value": 8000, "unit": "CNY"},
+  "deadline": {"value": 10, "unit": "working_day"},
+  "typical_run_hours": {"value": 150, "unit": "分钟"}
+}

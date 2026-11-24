@@ -1,0 +1,143 @@
+{
+  "schema_version": "1.0.0",
+  "seed": 20240611,
+  "objective": "maximize",
+  "budget": 10,
+  "history_points": 0,
+  "parameters": [
+    {
+      "name": "temperature",
+      "lower": 300.0,
+      "upper": 500.0,
+      "step": 10.0,
+      "unit": "degC",
+      "kind": "continuous",
+      "n_levels": 21
+    },
+    {
+      "name": "time",
+      "lower": 1.0,
+      "upper": 6.0,
+      "step": 0.5,
+      "unit": "h",
+      "kind": "continuous",
+      "n_levels": 11
+    },
+    {
+      "name": "flow",
+      "lower": 50.0,
+      "upper": 300.0,
+      "step": 10.0,
+      "unit": "mL/min",
+      "kind": "continuous",
+      "n_levels": 26
+    }
+  ],
+  "feasible_combinations": 6006,
+  "decision_table": [
+    {
+      "rule": 1,
+      "condition": "budget <= 0",
+      "strategy": "none"
+    },
+    {
+      "rule": 2,
+      "condition": "feasible_combinations <= budget",
+      "strategy": "full_grid"
+    },
+    {
+      "rule": 3,
+      "condition": "budget < 4",
+      "strategy": "screening_only"
+    },
+    {
+      "rule": 4,
+      "condition": "otherwise",
+      "strategy": "staged_sequential"
+    }
+  ],
+  "rounds": [
+    {
+      "round": 1,
+      "name": "screening_lhs",
+      "n_points": 4,
+      "budget_share": 0.4,
+      "candidates": [
+        {
+          "temperature": 470.0,
+          "time": 3.5,
+          "flow": 110.0
+        },
+        {
+          "temperature": 340.0,
+          "time": 1.5,
+          "flow": 200.0
+        },
+        {
+          "temperature": 370.0,
+          "time": 5.5,
+          "flow": 250.0
+        },
+        {
+          "temperature": 400.0,
+          "time": 4.5,
+          "flow": 70.0
+        }
+      ],
+      "candidates_determined": true,
+      "lhs_duplicates_nudged": 0,
+      "generation_rule": "seeded Latin hypercube, random.Random(20240611), stratified per dimension, snapped to step grid",
+      "stop_criteria": [
+        "budget_exhausted"
+      ]
+    },
+    {
+      "round": 2,
+      "name": "local_refinement",
+      "n_points": 4,
+      "budget_share": 0.4,
+      "candidates": null,
+      "candidates_determined": false,
+      "generation_rule": "coordinate finite-difference stepping around the current best point: for each dimension in plan order try -step then +step, clamp to bounds, drop already-evaluated points, take the first n_points survivors; if none survive, fall back to the nearest unvisited grid point (deterministic expanding-radius scan). next_batch.py instantiates this rule; the exact points are pinned in the decision log and are reproducible from the seed plus the results CSV.",
+      "stop_criteria": [
+        "budget_exhausted",
+        "low_improvement",
+        "boundary_constrained",
+        "all_candidates_duplicate"
+      ]
+    },
+    {
+      "round": 3,
+      "name": "confirmation_repeat",
+      "n_points": 2,
+      "budget_share": 0.2,
+      "candidates": null,
+      "candidates_determined": false,
+      "generation_rule": "re-run the current best point >= 2 times (identical coordinates, distinct replicate ids) to estimate noise.",
+      "stop_criteria": [
+        "budget_exhausted"
+      ]
+    }
+  ],
+  "strategy": "staged_sequential",
+  "strategy_rationale": "rule 4 fired: 6006 combinations exceed the budget (10). Budget split: screening 4 (40%), local refinement 4, confirmation repeats 2. 0 history points are recorded for context but do not consume the new budget.",
+  "global_stop_criteria": [
+    {
+      "name": "budget_exhausted",
+      "definition": "evaluated new points >= budget"
+    },
+    {
+      "name": "low_improvement",
+      "definition": "relative improvement of the best response between the last two completed search rounds < 2%; when it fires before the confirmation round, the repeats are skipped and reported as outstanding confirmation items"
+    },
+    {
+      "name": "boundary_constrained",
+      "definition": "the current best point lies within one step of the bounds in EVERY dimension"
+    },
+    {
+      "name": "all_candidates_duplicate",
+      "definition": "every generated candidate was already evaluated and no unvisited fallback grid point exists"
+    }
+  ],
+  "replay_instructions": "Re-run plan_search.py with the same --space/--budget/--history/--seed to reproduce this plan byte-for-byte. Re-run next_batch.py with this plan and the same results CSV to reproduce every emitted batch; search_log.py --verify re-checks the append-only decision log."
+}

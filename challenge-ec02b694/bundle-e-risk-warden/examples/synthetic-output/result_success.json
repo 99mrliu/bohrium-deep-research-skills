@@ -1,0 +1,68 @@
+{
+  "case_id": "synthetic-ec02b694-001",
+  "status": "success",
+  "experiment_plan": {
+    "objective": "在材料安全窗口内最大化烧结密度（目标温度经委托方确认降为 900°C）",
+    "steps": [
+      {
+        "param": "calcination_temperature_c",
+        "value": 900,
+        "unit": "°C",
+        "evidence": "materials/material_spec.txt: 材料耐温上限 950°C，推荐焙烧窗口 800–950°C，900°C 文献密度约 93%"
+      },
+      {
+        "param": "dwell_time_h",
+        "value": 2,
+        "unit": "h",
+        "evidence": "materials/material_spec.txt: 900°C、保温 2 h 条件下文献报道烧结密度约 93%"
+      },
+      {
+        "param": "heating_rate_c_per_min",
+        "value": 5,
+        "unit": "°C/min",
+        "evidence": "materials/material_spec.txt: 文献条件升温 5°C/min；处于任务简报允许区间 2–10°C/min"
+      }
+    ]
+  },
+  "evidence_and_risk": {
+    "evidence": [
+      "materials/brief.md: 验收指标为烧结密度 ≥ 理论值 95%，保温 1–4 h、升温 2–10°C/min 可调",
+      "materials/material_spec.txt: 耐温上限 950°C，900°C/2h/5°C-min 文献密度约 93%",
+      "examples/synthetic-output/work/intake_manifest.json: 两份材料 sha256 已登记，prior_runs.csv 缺失已记录"
+    ],
+    "risks": [
+      {
+        "risk": "文献锚点密度约 93%，低于验收指标 95%",
+        "mitigation": "在 900–950°C 窗口内安排 3 点验证焙烧；若仍不达标，启动与委托方的指标复议",
+        "assumption": true
+      },
+      {
+        "risk": "历史实验数据曾缺失，先验有限",
+        "mitigation": "以规格书文献值为锚点，首轮仅做小步长探索"
+      }
+    ]
+  },
+  "confirmation_items": [
+    "委托方已书面确认目标温度由 1000°C 降为 900°C（原 1000°C 目标与 950°C 耐温上限冲突，见 triage_handoff.json 规则 R_CON_01）",
+    "93% 文献密度低于 95% 验收指标的风险已向委托方披露，待其确认是否接受验证焙烧方案"
+  ],
+  "sources": [
+    "materials/brief.md",
+    "materials/material_spec.txt",
+    "examples/synthetic-output/triage_handoff.json",
+    "examples/synthetic-output/triage_proceed.json"
+  ],
+  "uncertainty": [
+    {
+      "kind": "data_gap",
+      "detail": "历史焙烧实验记录在首轮 intake 时缺失，参数建议以规格书文献值为锚点",
+      "impact": "首轮探索置信度有限，需以验证焙烧校正"
+    }
+  ],
+  "change_log": [
+    {"ts": "2026-11-24T00:00:00Z", "event": "warden_boot_first_partial", "detail": "首份 partial 在任何实质计算之前落盘"},
+    {"ts": "2026-11-24T00:05:00Z", "event": "triage_handoff", "detail": "R_CON_01 + R_MIS_01 命中，转人工裁决温度目标与缺失数据"},
+    {"ts": "2026-11-24T00:20:00Z", "event": "triage_proceed", "detail": "人工裁决完成，异常清空，R_OK_01 proceed"},
+    {"ts": "2026-11-24T00:40:00Z", "event": "contract_filled", "detail": "三字段填齐，每条推荐值附证据引用"}
+  ]
+}

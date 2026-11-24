@@ -1,0 +1,145 @@
+{
+  "schema_version": "1.0",
+  "generated_by": "extract_domain.py",
+  "source_case": "synthetic-input/case.json",
+  "case_id": "synthetic-calcination-001",
+  "targets": {},
+  "constraints": [
+    {
+      "parameter": "温度",
+      "unit": "°C",
+      "lower": null,
+      "upper": 1100.0,
+      "step": null,
+      "mutex_group": null,
+      "safety_related": false,
+      "origin": "text",
+      "source": {
+        "file": "synthetic-input/materials/furnace_spec.txt",
+        "line": 3,
+        "quote": "1. 温度量程：室温–1100°C（控温精度 ±1°C）"
+      }
+    },
+    {
+      "parameter": "升温速率",
+      "unit": "°C/min",
+      "lower": null,
+      "upper": 10.0,
+      "step": null,
+      "mutex_group": null,
+      "safety_related": false,
+      "origin": "text",
+      "source": {
+        "file": "synthetic-input/materials/furnace_spec.txt",
+        "line": 4,
+        "quote": "2. 升温速率上限：≤10°C/min"
+      }
+    },
+    {
+      "parameter": "催化剂温度",
+      "unit": "°C",
+      "lower": null,
+      "upper": 950.0,
+      "step": null,
+      "mutex_group": null,
+      "safety_related": true,
+      "origin": "text",
+      "source": {
+        "file": "synthetic-input/materials/furnace_spec.txt",
+        "line": 5,
+        "quote": "3. 催化剂耐温上限：950°C（超过将导致烧结失活，属安全相关约束）"
+      }
+    },
+    {
+      "parameter": "载气流量",
+      "unit": "mL/min",
+      "lower": 10.0,
+      "upper": 500.0,
+      "step": null,
+      "mutex_group": null,
+      "safety_related": false,
+      "origin": "text",
+      "source": {
+        "file": "synthetic-input/materials/furnace_spec.txt",
+        "line": 6,
+        "quote": "4. 载气流量范围：10–500 mL/min（N2 或 H2/N2 混合气）"
+      }
+    },
+    {
+      "parameter": "焙烧时间",
+      "unit": "min",
+      "lower": null,
+      "upper": null,
+      "step": 30.0,
+      "mutex_group": null,
+      "safety_related": false,
+      "origin": "text",
+      "source": {
+        "file": "synthetic-input/materials/furnace_spec.txt",
+        "line": 7,
+        "quote": "5. 焙烧时间步进：30 min（可设置 30 / 60 / 90 / 120 ...）"
+      }
+    },
+    {
+      "parameter": "氢气载气",
+      "unit": null,
+      "lower": null,
+      "upper": null,
+      "step": null,
+      "mutex_group": "atmosphere",
+      "safety_related": false,
+      "origin": "text",
+      "source": {
+        "file": "synthetic-input/materials/furnace_spec.txt",
+        "line": 8,
+        "quote": "6. 互斥说明：氢气载气与空气载气不能同时使用（互斥组 atmosphere）"
+      }
+    },
+    {
+      "parameter": "空气载气",
+      "unit": null,
+      "lower": null,
+      "upper": null,
+      "step": null,
+      "mutex_group": "atmosphere",
+      "safety_related": false,
+      "origin": "text",
+      "source": {
+        "file": "synthetic-input/materials/furnace_spec.txt",
+        "line": 8,
+        "quote": "6. 互斥说明：氢气载气与空气载气不能同时使用（互斥组 atmosphere）"
+      }
+    },
+    {
+      "parameter": "历史焙烧温度",
+      "unit": "°C",
+      "lower": null,
+      "upper": 900.0,
+      "step": null,
+      "mutex_group": null,
+      "safety_related": false,
+      "origin": "text",
+      "source": {
+        "file": "synthetic-input/materials/history.csv",
+        "line": 2,
+        "quote": "# 备注：历史焙烧温度均未超过 900°C，高于此温度未见稳定运行记录"
+      }
+    }
+  ],
+  "ungrounded_parameters": [
+    "搅拌转速"
+  ],
+  "uncertainty": [
+    "以下任务提及的参数未找到任何约束依据，已列入 ungrounded_parameters；不得为其编造数值，相关建议须降级或请求人工确认: 搅拌转速"
+  ],
+  "extraction_log": {
+    "files_scanned": [
+      "synthetic-input/materials/furnace_spec.txt",
+      "synthetic-input/materials/history.csv"
+    ],
+    "files_skipped": [],
+    "errors": [],
+    "warnings": [],
+    "constraints_extracted": 8
+  }
+}

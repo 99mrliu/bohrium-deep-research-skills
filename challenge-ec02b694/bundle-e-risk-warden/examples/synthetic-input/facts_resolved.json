@@ -1,0 +1,14 @@
+{
+  "case_id": "synthetic-ec02b694-001",
+  "note": "人工裁决后的修复状态（合成示例）：委托方书面确认将目标温度降为 900°C，约束冲突解除；缺失的历史数据由委托方补发副本并置于 materials/prior_runs.csv（本示例中视为已补齐），缺失数据解除。所有异常事实清空后重跑 triage 应得 proceed。",
+  "resolution_log": [
+    "CC-1: 委托方确认目标温度由 1000°C 降为 900°C，落入材料推荐窗口 800–950°C，冲突解除",
+    "MISS-1: 历史实验记录已补发，关键数据缺失解除"
+  ],
+  "constraint_conflicts": [],
+  "infeasible_constraints": [],
+  "missing_materials": [],
+  "metric_conflicts": [],
+  "device_errors": [],
+  "permission_issues": []
+}

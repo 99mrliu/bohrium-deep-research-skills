@@ -1,0 +1,12 @@
+{
+  "contract_id": "synthetic-contract-001",
+  "kind": "forward-looking resource/price/reservation contract (synthetic)",
+  "machine_rate": {"value": 180, "unit": "CNY/hour"},
+  "consumable_price": {"value": 45, "unit": "CNY/portion"},
+  "sample_prep_time": {"value": 0.5, "unit": "hour/sample"},
+  "daily_machine_hours": {"value": 6, "unit": "hour/day"},
+  "budget": {"value": 8000, "unit": "CNY"},
+  "deadline": {"value": 10, "unit": "working_day"},
+  "typical_run_hours": {"value": 2.5, "unit": "hour"},
+  "unit_conversions": {}
+}

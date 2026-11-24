@@ -1,0 +1,42 @@
+{
+  "status": "STOP",
+  "stop_criterion": "budget_exhausted",
+  "next_round": 3,
+  "points": [],
+  "rationale": "evaluated 10 of 10 new points; budget exhausted",
+  "criterion_states": {
+    "budget_exhausted": {
+      "used": 10,
+      "budget": 10,
+      "triggered": true
+    },
+    "low_improvement": {
+      "applicable": false,
+      "value": null,
+      "threshold": 0.02,
+      "triggered": false
+    },
+    "boundary_constrained": {
+      "triggered": false,
+      "within_one_step_dims": []
+    },
+    "all_candidates_duplicate": {
+      "triggered": false
+    }
+  },
+  "budget": {
+    "total": 10,
+    "used": 10,
+    "remaining": 0
+  },
+  "warnings": [],
+  "best_point": {
+    "round": 3,
+    "temperature": 460.0,
+    "time": 3.5,
+    "flow": 110.0,
+    "response": -0.175243
+  },
+  "schema_version": "1.0.0",
+  "log_seq": 4
+}

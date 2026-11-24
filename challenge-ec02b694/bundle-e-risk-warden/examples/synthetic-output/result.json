@@ -1,0 +1,38 @@
+{
+  "case_id": "synthetic-ec02b694-001",
+  "status": "partial",
+  "partial_reason": "流水线初始化：warden_boot 首份占位，尚未开始实质计算",
+  "sources": [],
+  "uncertainty": [
+    {
+      "kind": "missing_material",
+      "path": "materials/prior_runs.csv",
+      "detail": "材料缺失：路径不存在",
+      "impact": "以该材料为依据的结论必须降级或标注待确认"
+    }
+  ],
+  "change_log": [
+    {
+      "ts": "2026-11-24T14:16:23Z",
+      "event": "warden_boot_first_partial",
+      "detail": "首份 partial 在任何实质计算之前落盘（核心不变量）"
+    },
+    {
+      "ts": "2026-11-24T14:16:23Z",
+      "event": "intake_completed",
+      "detail": "清点材料 3 项，缺失/不可读 1 项"
+    }
+  ],
+  "experiment_plan": {
+    "_placeholder": true,
+    "note": "待填写：由 Agent 在主体工作阶段填充"
+  },
+  "evidence_and_risk": {
+    "_placeholder": true,
+    "note": "待填写：由 Agent 在主体工作阶段填充"
+  },
+  "confirmation_items": {
+    "_placeholder": true,
+    "note": "待填写：由 Agent 在主体工作阶段填充"
+  }
+}

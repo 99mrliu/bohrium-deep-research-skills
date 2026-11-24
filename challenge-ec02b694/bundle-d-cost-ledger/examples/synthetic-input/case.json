@@ -1,0 +1,11 @@
+{
+  "case_id": "synthetic-ec02b694-cost-ledger-001",
+  "task": "某湿法合成工艺需要优化三个工艺参数（温度、时间、催化剂负载量）。实验室给出了前瞻性的资源/价格/预约契约与三个候选实验方案版本（v1 全网格 27 点、v2 序贯 10 点、v3 筛选 6 点）。请对每个版本做成本-时间-通量核算，给出带算术痕迹的成本表与成本-响应 Pareto 权衡，在预算与截止约束下推荐一个版本，并如实声明不确定性。",
+  "output_contract": ["experiment_plan", "evidence_and_risk", "confirmation_items"],
+  "materials": {
+    "resource_contract": "examples/synthetic-input/resource_contract.json",
+    "plans": "examples/synthetic-input/plans.json",
+    "lab_notice": "examples/synthetic-input/materials/lab_notice.md"
+  },
+  "note": "本案例为合成示例：所有价格、预约窗口与预测响应均为前瞻性计划数据，非真实报价。"
+}

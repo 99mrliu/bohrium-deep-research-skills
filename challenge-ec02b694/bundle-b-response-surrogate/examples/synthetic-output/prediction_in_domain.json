@@ -1,0 +1,34 @@
+{
+  "schema_version": "1.0",
+  "generated_by": "predict.py",
+  "surrogate_mode": "rsm",
+  "n_points": 1,
+  "any_extrapolation": false,
+  "global_notice": "模型预测不是实测值；任何用于实验计划的数值都必须标注 [模型预测] 并携带不确定区间。",
+  "load_errors": [],
+  "predictions": [
+    {
+      "mode": "rsm",
+      "point": {
+        "temp_C": 70,
+        "time_h": 8
+      },
+      "coded_point": [
+        0.0,
+        0.0
+      ],
+      "prediction": 70.82463508876111,
+      "interval_95": [
+        67.81199290490672,
+        73.83727727261551
+      ],
+      "extrapolation": false,
+      "domain_check": [
+        "temp_C=70 在 [50, 90] 内",
+        "time_h=8 在 [4, 12] 内"
+      ],
+      "leverage": 0.32634312001217697,
+      "warnings": []
+    }
+  ]
+}

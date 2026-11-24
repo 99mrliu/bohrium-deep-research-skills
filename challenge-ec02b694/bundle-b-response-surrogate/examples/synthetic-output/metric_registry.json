@@ -1,0 +1,54 @@
+{
+  "schema_version": "1.0",
+  "generated_by": "metric_registry.py",
+  "spec_source": "case.json:response_metrics",
+  "factors": [
+    "temp_C",
+    "time_h"
+  ],
+  "metrics": [
+    {
+      "name": "conversion_pct",
+      "unit": "%",
+      "method": "HPLC 面积归一化法（合成设定）",
+      "direction": "maximize",
+      "acceptable_fluctuation": {
+        "type": "absolute",
+        "value": 1.5,
+        "unit": "percentage_point"
+      },
+      "spec_source": "case.json:response_metrics"
+    }
+  ],
+  "validation": {
+    "status": "ok",
+    "n_checks": 4,
+    "n_failed": 0,
+    "checks": [
+      {
+        "check": "spec",
+        "metric": "conversion_pct",
+        "status": "pass",
+        "detail": "单位/方法/方向/波动限齐全"
+      },
+      {
+        "check": "csv_readable",
+        "status": "pass",
+        "detail": "读取 12 行, 列: experiment_id, temp_C, time_h, conversion_pct"
+      },
+      {
+        "check": "column_present",
+        "metric": "conversion_pct",
+        "status": "pass",
+        "detail": "列 conversion_pct 存在"
+      },
+      {
+        "check": "numeric",
+        "metric": "conversion_pct",
+        "status": "pass",
+        "detail": "12 行全部为数值"
+      }
+    ],
+    "uncertainties": []
+  }
+}

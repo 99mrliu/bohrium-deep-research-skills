@@ -1,0 +1,68 @@
+{
+  "schema_version": "1.0",
+  "generated_by": "fit_surrogate.py",
+  "mode": "fallback",
+  "fallback_reason": "quadratic 模型需要 n >= p+2 = 8，实际 n = 4；linear 模型需要 n >= p+2 = 5，实际 n = 4",
+  "fallback_notice": "样本不足或设计矩阵奇异，无法拟合响应面；以下预测仅供提出假设，不得作为可执行事实，任何候选条件都必须经实测确认。",
+  "factors": [
+    "temp_C",
+    "time_h"
+  ],
+  "response": "conversion_pct",
+  "n_used": 4,
+  "estimator": "mean / nearest-neighbor",
+  "mean_response": 67.475,
+  "std_response": 5.136389782717038,
+  "interval_model": "prediction interval = estimate +/- max(3*std, 0.5*range)；样本不足时不存在可信的模型化不确定度，故按探索性尺度显式放大",
+  "data_range": [
+    62.8,
+    74.8
+  ],
+  "training_points": [
+    {
+      "x": [
+        55.0,
+        5.0
+      ],
+      "y": 62.8
+    },
+    {
+      "x": [
+        55.0,
+        11.0
+      ],
+      "y": 65.9
+    },
+    {
+      "x": [
+        85.0,
+        5.0
+      ],
+      "y": 66.4
+    },
+    {
+      "x": [
+        85.0,
+        11.0
+      ],
+      "y": 74.8
+    }
+  ],
+  "valid_domain": {
+    "factors": [
+      "temp_C",
+      "time_h"
+    ],
+    "box": {
+      "temp_C": [
+        55.0,
+        85.0
+      ],
+      "time_h": [
+        5.0,
+        11.0
+      ]
+    }
+  },
+  "warnings": []
+}

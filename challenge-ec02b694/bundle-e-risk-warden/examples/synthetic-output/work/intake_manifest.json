@@ -1,0 +1,38 @@
+{
+  "generated_at": "2026-11-24T14:16:23Z",
+  "case_path": "examples/synthetic-input/case.json",
+  "total": 3,
+  "missing_count": 1,
+  "entries": [
+    {
+      "path": "materials/brief.md",
+      "resolved_path": "/Users/liuhengshen/Desktop/bhr_product/3rd/4/ec02b694-five/bundle-e-risk-warden/examples/synthetic-input/materials/brief.md",
+      "role": "任务简报",
+      "exists": true,
+      "size": 447,
+      "sha256": "4b900f23a9543baadc7ac9314117ec3943ef15649b92f7dc6f1284b0b2df7179",
+      "readable": true,
+      "note": "ok"
+    },
+    {
+      "path": "materials/material_spec.txt",
+      "resolved_path": "/Users/liuhengshen/Desktop/bhr_product/3rd/4/ec02b694-five/bundle-e-risk-warden/examples/synthetic-input/materials/material_spec.txt",
+      "role": "材料规格书",
+      "exists": true,
+      "size": 467,
+      "sha256": "6f6f353e3a8ea4294393dd0edfc1a91ee9866b39b0b097adbcc2107010e457f1",
+      "readable": true,
+      "note": "ok"
+    },
+    {
+      "path": "materials/prior_runs.csv",
+      "resolved_path": "/Users/liuhengshen/Desktop/bhr_product/3rd/4/ec02b694-five/bundle-e-risk-warden/examples/synthetic-input/materials/prior_runs.csv",
+      "role": "历史焙烧实验记录（故意不提供的缺失材料）",
+      "exists": false,
+      "size": null,
+      "sha256": null,
+      "readable": false,
+      "note": "材料缺失：路径不存在"
+    }
+  ]
+}

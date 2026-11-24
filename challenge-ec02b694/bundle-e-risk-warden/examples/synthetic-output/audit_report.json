@@ -1,0 +1,58 @@
+{
+  "generated_at": "2026-11-24T14:17:21Z",
+  "result_path": "examples/synthetic-output/result_success.json",
+  "case_id": "synthetic-ec02b694-001",
+  "checks": [
+    {
+      "check_id": "C1",
+      "name": "result.json 存在且可解析",
+      "passed": true,
+      "details": "ok"
+    },
+    {
+      "check_id": "C2",
+      "name": "case_id 有效且与 case.json 一致",
+      "passed": true,
+      "details": "case_id='synthetic-ec02b694-001' expected='synthetic-ec02b694-001'"
+    },
+    {
+      "check_id": "C3",
+      "name": "output_contract 全部字段存在且非占位",
+      "passed": true,
+      "details": "missing=[] placeholder=[]"
+    },
+    {
+      "check_id": "C4",
+      "name": "无占位残留",
+      "passed": true,
+      "details": "residue=[]"
+    },
+    {
+      "check_id": "C5",
+      "name": "每条推荐参数值带可行性证据引用或标注待确认",
+      "passed": true,
+      "details": "recommendations=3 lacking_evidence=[]"
+    },
+    {
+      "check_id": "C6",
+      "name": "存在假设时 confirmation_items 非空",
+      "passed": true,
+      "details": "assumptions=1 confirmation_items=2"
+    },
+    {
+      "check_id": "C7",
+      "name": "status 取值合法",
+      "passed": true,
+      "details": "status='success'"
+    },
+    {
+      "check_id": "C8",
+      "name": "sources/uncertainty/change_log 存在且为列表",
+      "passed": true,
+      "details": "bad=[]"
+    }
+  ],
+  "verdict": "pass",
+  "forced_partial": false,
+  "note": "审计通过，可交付"
+}

@@ -1,0 +1,27 @@
+{
+  "generated_at": "2026-11-24T14:16:40Z",
+  "case_id": "synthetic-ec02b694-001",
+  "triggered_rules": [
+    {
+      "rule_id": "R_CON_01",
+      "category": "constraint_conflict",
+      "condition": "存在 resolvable=false 的约束冲突（消解需改变既定目标，须人裁决）",
+      "evidence": [
+        "{\"id\": \"CC-1\", \"description\": \"委托目标焙烧温度 1000°C 超过材料耐温上限 950°C（安全红线）\", \"resolvable\": false, \"evidence\": \"materials/brief.md: 目标焙烧温度 1000°C；materials/material_spec.txt: 材料耐温上限 950°C。消解需委托方修改目标或更换材料，属人裁决"
+      ],
+      "action": "handoff_to_human"
+    },
+    {
+      "rule_id": "R_MIS_01",
+      "category": "missing_data",
+      "condition": "存在 critical=true 的缺失材料",
+      "evidence": [
+        "{\"path\": \"materials/prior_runs.csv\", \"critical\": true, \"reason\": \"warden_boot 的 intake_manifest 报告该路径不存在；历史实验数据缺失使参数建议缺乏先验依据\"}"
+      ],
+      "action": "handoff_to_human"
+    }
+  ],
+  "final_action": "handoff_to_human",
+  "final_category": "constraint_conflict",
+  "note": "转人工：停止自主决策，写明待裁决事项后交付 partial"
+}

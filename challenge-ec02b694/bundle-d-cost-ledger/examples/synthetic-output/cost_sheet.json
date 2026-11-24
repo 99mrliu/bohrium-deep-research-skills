@@ -1,0 +1,111 @@
+{
+  "schema_version": "cost-sheet/1.0",
+  "status": "ok",
+  "budget": "8000",
+  "deadline_working_days": "10",
+  "plans": [
+    {
+      "version": "v1_full_grid_27",
+      "status": "ok",
+      "total_machine_hours": "67.50",
+      "total_consumables": "54.00",
+      "machine_cost": "12150.00",
+      "consumable_cost": "2430.00",
+      "total_cost": "14580.00",
+      "total_days": 12,
+      "total_samples": "27",
+      "throughput_samples_per_day": "2.25",
+      "total_prep_hours": "13.50",
+      "duration_basis": "machine_hours_only（预约窗口约束；样品制备单列）",
+      "within_budget": false,
+      "within_deadline": false,
+      "predicted_response": {
+        "value": 92,
+        "direction": "maximize",
+        "unit": "yield_percent"
+      },
+      "trace": [
+        "total_machine_hours = runs(27) x hours_per_run(2.5 hour) = 67.50 hour",
+        "machine_cost = total_machine_hours(67.50 hour) x rate(180 元/hour) = 12150.00 元",
+        "total_consumables = runs(27) x consumables_per_run(2 份) = 54.00 份",
+        "consumable_cost = total_consumables(54.00 份) x price(45 元/份) = 2430.00 元",
+        "total_cost = machine_cost(12150.00 元) + consumable_cost(2430.00 元) = 14580.00 元",
+        "total_days = ceil(total_machine_hours(67.50 hour) / daily_machine_hours(6 hour/day)) = ceil(11.2500) = 12 工作日",
+        "total_samples = runs(27) x samples_per_run(1) x replicates(1) = 27 样品",
+        "throughput = total_samples(27) / total_days(12) = 2.25 样品/天",
+        "total_prep_hours = total_samples(27) x sample_prep_time(0.5 hour/sample) = 13.50 hour（样品制备时间，单列展示；历时工作日按机时预约口径计算）",
+        "within_budget = total_cost(14580.00 元) <= budget(8000 元) -> false",
+        "within_deadline = total_days(12) <= deadline(10 工作日) -> false"
+      ]
+    },
+    {
+      "version": "v2_sequential_10",
+      "status": "ok",
+      "total_machine_hours": "25.00",
+      "total_consumables": "20.00",
+      "machine_cost": "4500.00",
+      "consumable_cost": "900.00",
+      "total_cost": "5400.00",
+      "total_days": 5,
+      "total_samples": "10",
+      "throughput_samples_per_day": "2.00",
+      "total_prep_hours": "5.00",
+      "duration_basis": "machine_hours_only（预约窗口约束；样品制备单列）",
+      "within_budget": true,
+      "within_deadline": true,
+      "predicted_response": {
+        "value": 88,
+        "direction": "maximize",
+        "unit": "yield_percent"
+      },
+      "trace": [
+        "total_machine_hours = runs(10) x hours_per_run(2.5 hour) = 25.00 hour",
+        "machine_cost = total_machine_hours(25.00 hour) x rate(180 元/hour) = 4500.00 元",
+        "total_consumables = runs(10) x consumables_per_run(2 份) = 20.00 份",
+        "consumable_cost = total_consumables(20.00 份) x price(45 元/份) = 900.00 元",
+        "total_cost = machine_cost(4500.00 元) + consumable_cost(900.00 元) = 5400.00 元",
+        "total_days = ceil(total_machine_hours(25.00 hour) / daily_machine_hours(6 hour/day)) = ceil(4.1667) = 5 工作日",
+        "total_samples = runs(10) x samples_per_run(1) x replicates(1) = 10 样品",
+        "throughput = total_samples(10) / total_days(5) = 2.00 样品/天",
+        "total_prep_hours = total_samples(10) x sample_prep_time(0.5 hour/sample) = 5.00 hour（样品制备时间，单列展示；历时工作日按机时预约口径计算）",
+        "within_budget = total_cost(5400.00 元) <= budget(8000 元) -> true",
+        "within_deadline = total_days(5) <= deadline(10 工作日) -> true"
+      ]
+    },
+    {
+      "version": "v3_screening_6",
+      "status": "ok",
+      "total_machine_hours": "12.00",
+      "total_consumables": "6.00",
+      "machine_cost": "2160.00",
+      "consumable_cost": "270.00",
+      "total_cost": "2430.00",
+      "total_days": 2,
+      "total_samples": "6",
+      "throughput_samples_per_day": "3.00",
+      "total_prep_hours": "3.00",
+      "duration_basis": "machine_hours_only（预约窗口约束；样品制备单列）",
+      "within_budget": true,
+      "within_deadline": true,
+      "predicted_response": {
+        "value": 74,
+        "direction": "maximize",
+        "unit": "yield_percent"
+      },
+      "trace": [
+        "total_machine_hours = runs(6) x hours_per_run(2 hour) = 12.00 hour",
+        "machine_cost = total_machine_hours(12.00 hour) x rate(180 元/hour) = 2160.00 元",
+        "total_consumables = runs(6) x consumables_per_run(1 份) = 6.00 份",
+        "consumable_cost = total_consumables(6.00 份) x price(45 元/份) = 270.00 元",
+        "total_cost = machine_cost(2160.00 元) + consumable_cost(270.00 元) = 2430.00 元",
+        "total_days = ceil(total_machine_hours(12.00 hour) / daily_machine_hours(6 hour/day)) = ceil(2.0000) = 2 工作日",
+        "total_samples = runs(6) x samples_per_run(1) x replicates(1) = 6 样品",
+        "throughput = total_samples(6) / total_days(2) = 3.00 样品/天",
+        "total_prep_hours = total_samples(6) x sample_prep_time(0.5 hour/sample) = 3.00 hour（样品制备时间，单列展示；历时工作日按机时预约口径计算）",
+        "within_budget = total_cost(2430.00 元) <= budget(8000 元) -> true",
+        "within_deadline = total_days(2) <= deadline(10 工作日) -> true"
+      ]
+    }
+  ],
+  "uncertainty": []
+}

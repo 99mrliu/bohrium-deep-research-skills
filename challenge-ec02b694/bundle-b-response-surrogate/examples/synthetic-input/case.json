@@ -1,0 +1,27 @@
+{
+  "case_id": "synthetic-ec02b694-demo-01",
+  "task": "基于历史酯化反应实验数据（温度、反应时间 -> 转化率），登记响应指标口径，拟合代理模型，并给出下一轮实验的候选条件建议。所有模型预测必须携带不确定度并标注外推风险。",
+  "output_contract": [
+    "experiment_plan",
+    "evidence_and_risk",
+    "confirmation_items"
+  ],
+  "materials": {
+    "history_csv": "examples/synthetic-input/history.csv",
+    "small_csv": "examples/synthetic-input/small_history.csv",
+    "note": "本案例数据为人工合成（见 examples/README.md），仅用于演示技能流水线。"
+  },
+  "factors": [
+    {"name": "temp_C", "unit": "degC", "role": "factor"},
+    {"name": "time_h", "unit": "h", "role": "factor"}
+  ],
+  "response_metrics": [
+    {
+      "name": "conversion_pct",
+      "unit": "%",
+      "method": "HPLC 面积归一化法（合成设定）",
+      "direction": "maximize",
+      "acceptable_fluctuation": {"type": "absolute", "value": 1.5, "unit": "percentage_point"}
+    }
+  ]
+}

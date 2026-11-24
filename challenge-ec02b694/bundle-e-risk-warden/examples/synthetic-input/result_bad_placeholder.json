@@ -1,0 +1,16 @@
+{
+  "case_id": "synthetic-ec02b694-001",
+  "status": "success",
+  "experiment_plan": {
+    "steps": [
+      {"param": "calcination_temperature_c", "value": 900, "evidence": "materials/material_spec.txt: 推荐焙烧窗口 800–950°C"}
+    ]
+  },
+  "evidence_and_risk": {"_placeholder": true, "note": "待填写：由 Agent 在主体工作阶段填充"},
+  "confirmation_items": [],
+  "sources": [],
+  "uncertainty": [],
+  "change_log": [
+    {"ts": "2026-11-24T00:00:00Z", "event": "manual_edit", "detail": "负例：evidence_and_risk 仍为占位却声称 success（合成示例）"}
+  ]
+}

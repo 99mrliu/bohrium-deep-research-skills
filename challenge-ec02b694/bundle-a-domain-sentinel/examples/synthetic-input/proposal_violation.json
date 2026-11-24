@@ -1,0 +1,10 @@
+{
+  "case_id": "synthetic-calcination-001",
+  "notes": "播种违例方案（合成示例负例）：温度越界 + 步进违例 + ungrounded 参数",
+  "parameters": {
+    "温度": 1200,
+    "升温速率": 5,
+    "焙烧时间": 100,
+    "搅拌转速": 300
+  }
+}

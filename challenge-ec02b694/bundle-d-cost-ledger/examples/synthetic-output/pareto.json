@@ -1,0 +1,57 @@
+{
+  "schema_version": "pareto/1.0",
+  "status": "ok",
+  "objective": "minimize(total_cost), maximize(response)",
+  "frontier": [
+    {
+      "version": "v3_screening_6",
+      "total_cost": "2430.00",
+      "total_days": 2,
+      "predicted_response": "74",
+      "response_direction": "maximize",
+      "response_unit": "yield_percent",
+      "within_budget": true,
+      "within_deadline": true,
+      "dominated": false,
+      "dominated_by": []
+    },
+    {
+      "version": "v2_sequential_10",
+      "total_cost": "5400.00",
+      "total_days": 5,
+      "predicted_response": "88",
+      "response_direction": "maximize",
+      "response_unit": "yield_percent",
+      "within_budget": true,
+      "within_deadline": true,
+      "dominated": false,
+      "dominated_by": []
+    },
+    {
+      "version": "v1_full_grid_27",
+      "total_cost": "14580.00",
+      "total_days": 12,
+      "predicted_response": "92",
+      "response_direction": "maximize",
+      "response_unit": "yield_percent",
+      "within_budget": false,
+      "within_deadline": false,
+      "dominated": false,
+      "dominated_by": []
+    }
+  ],
+  "dominated": [],
+  "recommendation": {
+    "version": "v2_sequential_10",
+    "total_cost": "5400.00",
+    "total_days": 5,
+    "predicted_response": "88",
+    "response_unit": "yield_percent",
+    "on_pareto_frontier": true,
+    "tradeoffs": [
+      "推荐版 v2_sequential_10 相对最便宜可行版 v3_screening_6 多花 2970.00 元，换取 14.00 yield_percent 响应提升。",
+      "推荐版 v2_sequential_10 相对最高响应版 v1_full_grid_27 牺牲 4.35% 响应（92 -> 88 yield_percent），节省 9180.00 元（该版本超出预算或截止约束，本不可行）。"
+    ]
+  },
+  "uncertainty": []
+}

@@ -1,0 +1,79 @@
+{
+  "schema_version": "1.0",
+  "generated_by": "domain_audit.py",
+  "results": [
+    {
+      "parameter": "温度",
+      "proposed": 1200,
+      "verdict": "violation",
+      "checks": [
+        {
+          "check": "upper_bound",
+          "passed": false,
+          "detail": "1200.0 > 上限 1100.0 °C",
+          "evidence": {
+            "file": "synthetic-input/materials/furnace_spec.txt",
+            "line": 3,
+            "quote": "1. 温度量程：室温–1100°C（控温精度 ±1°C）"
+          }
+        }
+      ]
+    },
+    {
+      "parameter": "升温速率",
+      "proposed": 5,
+      "verdict": "pass",
+      "checks": [
+        {
+          "check": "bounds+step+mutex",
+          "passed": true,
+          "detail": "在可行域内（lower=None, upper=10.0, steps=[]）",
+          "evidence": {
+            "file": "synthetic-input/materials/furnace_spec.txt",
+            "line": 4,
+            "quote": "2. 升温速率上限：≤10°C/min"
+          }
+        }
+      ]
+    },
+    {
+      "parameter": "焙烧时间",
+      "proposed": 100,
+      "verdict": "violation",
+      "checks": [
+        {
+          "check": "step",
+          "passed": false,
+          "detail": "100.0 不满足步进 30.0（基准 0.0）",
+          "evidence": {
+            "file": "synthetic-input/materials/furnace_spec.txt",
+            "line": 7,
+            "quote": "5. 焙烧时间步进：30 min（可设置 30 / 60 / 90 / 120 ...）"
+          }
+        }
+      ]
+    },
+    {
+      "parameter": "搅拌转速",
+      "proposed": 300,
+      "verdict": "ungrounded",
+      "checks": [
+        {
+          "check": "grounded",
+          "passed": false,
+          "detail": "参数不存在于 domain.json：无约束依据，按违规处理；请回到材料中定位证据，或从方案中移除该参数",
+          "evidence": null
+        }
+      ]
+    }
+  ],
+  "summary": {
+    "total": 4,
+    "pass": 1,
+    "violation": 2,
+    "ungrounded": 1
+  },
+  "status": "fail",
+  "domain_file": "synthetic-output/domain.json",
+  "proposal_file": "synthetic-input/proposal_violation.json"
+}

@@ -1,0 +1,117 @@
+{
+  "schema_version": "1.0",
+  "generated_by": "domain_audit.py",
+  "results": [
+    {
+      "parameter": "温度",
+      "proposed": 800,
+      "verdict": "pass",
+      "checks": [
+        {
+          "check": "bounds+step+mutex",
+          "passed": true,
+          "detail": "在可行域内（lower=None, upper=1100.0, steps=[]）",
+          "evidence": {
+            "file": "synthetic-input/materials/furnace_spec.txt",
+            "line": 3,
+            "quote": "1. 温度量程：室温–1100°C（控温精度 ±1°C）"
+          }
+        }
+      ]
+    },
+    {
+      "parameter": "升温速率",
+      "proposed": 5,
+      "verdict": "pass",
+      "checks": [
+        {
+          "check": "bounds+step+mutex",
+          "passed": true,
+          "detail": "在可行域内（lower=None, upper=10.0, steps=[]）",
+          "evidence": {
+            "file": "synthetic-input/materials/furnace_spec.txt",
+            "line": 4,
+            "quote": "2. 升温速率上限：≤10°C/min"
+          }
+        }
+      ]
+    },
+    {
+      "parameter": "催化剂温度",
+      "proposed": 800,
+      "verdict": "pass",
+      "checks": [
+        {
+          "check": "bounds+step+mutex",
+          "passed": true,
+          "detail": "在可行域内（lower=None, upper=950.0, steps=[]）",
+          "evidence": {
+            "file": "synthetic-input/materials/furnace_spec.txt",
+            "line": 5,
+            "quote": "3. 催化剂耐温上限：950°C（超过将导致烧结失活，属安全相关约束）"
+          }
+        }
+      ]
+    },
+    {
+      "parameter": "载气流量",
+      "proposed": 200,
+      "verdict": "pass",
+      "checks": [
+        {
+          "check": "bounds+step+mutex",
+          "passed": true,
+          "detail": "在可行域内（lower=10.0, upper=500.0, steps=[]）",
+          "evidence": {
+            "file": "synthetic-input/materials/furnace_spec.txt",
+            "line": 6,
+            "quote": "4. 载气流量范围：10–500 mL/min（N2 或 H2/N2 混合气）"
+          }
+        }
+      ]
+    },
+    {
+      "parameter": "焙烧时间",
+      "proposed": 120,
+      "verdict": "pass",
+      "checks": [
+        {
+          "check": "bounds+step+mutex",
+          "passed": true,
+          "detail": "在可行域内（lower=None, upper=None, steps=[30.0]）",
+          "evidence": {
+            "file": "synthetic-input/materials/furnace_spec.txt",
+            "line": 7,
+            "quote": "5. 焙烧时间步进：30 min（可设置 30 / 60 / 90 / 120 ...）"
+          }
+        }
+      ]
+    },
+    {
+      "parameter": "氢气载气",
+      "proposed": 1,
+      "verdict": "pass",
+      "checks": [
+        {
+          "check": "bounds+step+mutex",
+          "passed": true,
+          "detail": "在可行域内（lower=None, upper=None, steps=[]）",
+          "evidence": {
+            "file": "synthetic-input/materials/furnace_spec.txt",
+            "line": 8,
+            "quote": "6. 互斥说明：氢气载气与空气载气不能同时使用（互斥组 atmosphere）"
+          }
+        }
+      ]
+    }
+  ],
+  "summary": {
+    "total": 6,
+    "pass": 6,
+    "violation": 0,
+    "ungrounded": 0
+  },
+  "status": "pass",
+  "domain_file": "synthetic-output/domain.json",
+  "proposal_file": "synthetic-input/proposal_pass.json"
+}

@@ -1,0 +1,59 @@
+{
+  "schema_version": "1.0",
+  "generated_by": "conflict_scan.py",
+  "domain_file": "synthetic-input/domain_variant_conflict.json",
+  "status": "conflicts_found",
+  "summary": {
+    "conflict_count": 3,
+    "by_action": {
+      "degrade": 1,
+      "handoff": 2,
+      "terminate": 0
+    }
+  },
+  "conflicts": [
+    {
+      "type": "inverted_bounds",
+      "parameters": [
+        "载气流量"
+      ],
+      "detail": "单条约束 lower(500.0) > upper(10.0)",
+      "evidence": {
+        "file": "synthetic-input/（人工播种的冲突变体）",
+        "line": null,
+        "quote": "seeded: 载气流量 lower=500, upper=10（倒置）"
+      },
+      "recommended_action": "handoff"
+    },
+    {
+      "type": "effective_bounds_inverted",
+      "parameters": [
+        "载气流量"
+      ],
+      "detail": "多来源合并后 max(lower)=500.0 > min(upper)=10.0，可行域为空",
+      "evidence": [
+        {
+          "file": "synthetic-input/（人工播种的冲突变体）",
+          "line": null,
+          "quote": "seeded: 载气流量 lower=500, upper=10（倒置）"
+        }
+      ],
+      "recommended_action": "handoff"
+    },
+    {
+      "type": "target_outside_domain",
+      "parameters": [
+        "温度"
+      ],
+      "detail": "目标值 1200.0 越出可行域 [None, 1100.0]",
+      "evidence": [
+        {
+          "file": "synthetic-input/materials/furnace_spec.txt",
+          "line": 3,
+          "quote": "1. 温度量程：室温–1100°C（控温精度 ±1°C）"
+        }
+      ],
+      "recommended_action": "degrade"
+    }
+  ]
+}
