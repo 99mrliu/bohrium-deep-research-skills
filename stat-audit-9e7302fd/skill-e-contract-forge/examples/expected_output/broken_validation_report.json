@@ -1,0 +1,19 @@
+{
+  "tool": "contract-forge-audit/contract_validate.py",
+  "result_file": "/Users/liuhengshen/Desktop/bhr_product/ch-9e7302fd/skills/skill-e-contract-forge/examples/broken_result.json",
+  "schema_file": "/Users/liuhengshen/Desktop/bhr_product/ch-9e7302fd/skills/skill-e-contract-forge/examples/run_output/contract_schema.json",
+  "case_id": "SYNTH-DEMO-999",
+  "status": "complete",
+  "schema_fallback": false,
+  "ok": false,
+  "violation_count": 6,
+  "violations": [
+    "case_id 不匹配: result='SYNTH-DEMO-999', 契约='SYNTH-DEMO-001'",
+    "case_id 与 case.json 不一致: result='SYNTH-DEMO-999', case='SYNTH-DEMO-001'",
+    "字段 findings 第 0 项缺少必备键 'message'",
+    "字段 findings 第 1 项不是对象",
+    "字段 recommendation 仍是 PENDING 哨兵；仅当 status=partial/failed 且在 pending_reasons 中登记非空理由时才允许。",
+    "字段 word_count 类型不符: 声明 'integer'，实际 str"
+  ],
+  "warnings": []
+}

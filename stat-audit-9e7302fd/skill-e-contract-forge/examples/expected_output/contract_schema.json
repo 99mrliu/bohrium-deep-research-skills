@@ -1,0 +1,44 @@
+{
+  "schema_version": "1.0",
+  "generator": "contract-forge-audit/contract_scaffold.py",
+  "fallback": false,
+  "note": "由真实 case.json 的 output_contract 编译而来。",
+  "contract_location": "output_contract",
+  "case_id": "SYNTH-DEMO-001",
+  "fields": {
+    "summary": {
+      "type": "string",
+      "required": true,
+      "description": "一段话总体审查结论",
+      "item_required_keys": null
+    },
+    "findings": {
+      "type": "array",
+      "required": true,
+      "description": "审查发现数组，每项须含 id/location/message 等键",
+      "item_required_keys": [
+        "id",
+        "location",
+        "message"
+      ]
+    },
+    "recommendation": {
+      "type": "string",
+      "required": true,
+      "description": "给作者的综合修改建议",
+      "item_required_keys": null
+    },
+    "confidence": {
+      "type": "string",
+      "required": false,
+      "description": "整体置信度（high/medium/low）",
+      "item_required_keys": null
+    },
+    "word_count": {
+      "type": "integer",
+      "required": true,
+      "description": "被审材料正文字数（估计值需说明）",
+      "item_required_keys": null
+    }
+  }
+}

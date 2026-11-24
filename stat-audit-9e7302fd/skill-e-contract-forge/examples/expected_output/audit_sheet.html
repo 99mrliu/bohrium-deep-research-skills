@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<title>审查单 audit_sheet</title>
+<style>
+body{font-family:-apple-system,"PingFang SC","Microsoft YaHei",sans-serif;margin:2em;color:#222}
+h1{border-bottom:2px solid #444;padding-bottom:.3em}
+table{border-collapse:collapse;width:100%;margin:1em 0;font-size:14px}
+th,td{border:1px solid #ccc;padding:6px 8px;vertical-align:top;text-align:left}
+th{background:#f0f0f0}
+.quote{color:#555;font-style:italic}
+.badge{padding:1px 6px;border-radius:4px;color:#fff;font-size:12px}
+.badge.sev-critical{background:#c0392b}.badge.sev-major{background:#e67e22}
+.badge.sev-minor{background:#f1c40f;color:#333}.badge.sev-suggestion{background:#7f8c8d}
+tr.sev-critical{background:#fdecea}tr.sev-major{background:#fdf3e7}
+.meta{color:#666;font-size:13px}
+</style>
+</head>
+<body>
+<h1>审查单（audit_sheet）</h1>
+<p class="meta">由 render_audit_sheet.py 从 <code>findings.jsonl</code> 同源渲染，共 4 条发现。
+本文件自包含（无外部资源），可直接用浏览器打开检查。</p>
+<h2>汇总</h2>
+<table><thead><tr><th>维度</th><th>取值</th><th>数量</th></tr></thead>
+<tbody><tr><td>严重度</td><td>critical (致命)</td><td>1</td></tr>
+<tr><td>严重度</td><td>major (严重)</td><td>2</td></tr>
+<tr><td>严重度</td><td>minor (次要)</td><td>1</td></tr>
+<tr><td>严重度</td><td>suggestion (建议)</td><td>0</td></tr>
+<tr><td>缺陷类型</td><td>事实错误</td><td>1</td></tr>
+<tr><td>缺陷类型</td><td>证据不足</td><td>1</td></tr>
+<tr><td>缺陷类型</td><td>规范问题</td><td>1</td></tr>
+<tr><td>缺陷类型</td><td>建议</td><td>1</td></tr>
+<tr><td>处置状态</td><td>open</td><td>3</td></tr>
+<tr><td>处置状态</td><td>resolved</td><td>0</td></tr>
+<tr><td>处置状态</td><td>待复核</td><td>1</td></tr></tbody></table>
+<h2>明细</h2>
+<table><thead><tr><th>id</th><th>审查面</th><th>缺陷类型</th><th>严重度</th>
+<th>原文位置</th><th>原文引用</th><th>依据/说明</th><th>修改建议</th><th>状态</th></tr></thead>
+<tbody><tr class='sev-critical'><td>F-001</td><td>统计方法</td><td>事实错误</td><td><span class='badge sev-critical'>critical</span></td><td>摘要第3句</td><td class='quote'>差异有统计学意义（P&lt;0.05）</td><td>仅给出 P&lt;0.05 却未报告具体 p 值、检验统计量与置信区间，且合成数据中两组均值差仅 0.4，标准差约 1.2，n=120 时无法支持「有统计学意义」的强表述（按摘录估算 p≈0.09）。</td><td>报告检验名称、统计量、精确 p 值与 95% CI；若为 t 检验应给出 t 值与自由度。</td><td>open</td></tr>
+<tr class='sev-major'><td>F-002</td><td>统计方法</td><td>规范问题</td><td><span class='badge sev-major'>major</span></td><td>方法段</td><td class='quote'>多重结局未校正</td><td>多个结局指标未进行多重比较校正（如 Bonferroni/FDR），第一类错误膨胀。</td><td>预先指定主要结局，其余结局按探索性处理或做多重性校正。</td><td>open</td></tr>
+<tr class='sev-major'><td>F-003</td><td>样本量</td><td>证据不足</td><td><span class='badge sev-major'>major</span></td><td>方法段首句</td><td class='quote'>本研究纳入 120 名受试者</td><td>未见先验功效分析，120 例的样本量来源无依据，无法判断检验效能。</td><td>补充功效分析（效应量假设、α、功效）或说明样本量为便利性样本。</td><td>open</td></tr>
+<tr class='sev-minor'><td>F-004</td><td>结果报告</td><td>建议</td><td><span class='badge sev-minor'>minor</span></td><td>结果段</td><td class='quote'>干预组均值 5.2±1.1，对照组 4.8±1.3</td><td>「±」未说明是标准差还是标准误，读者无法解释离散程度。</td><td>明确标注 SD 或 SE，并报告每组实际 n。</td><td>待复核</td></tr></tbody></table>
+<h2>待复核 / 未解决</h2>
+<ul><li><b>F-001</b>（open / critical）摘要第3句 — 仅给出 P&lt;0.05 却未报告具体 p 值、检验统计量与置信区间，且合成数据中两组均值差仅 0.4，标准差约 1.2，n=120 时无法支持「有统计学意义」的强表述（按摘录估算 p≈0.09）。</li><li><b>F-002</b>（open / major）方法段 — 多个结局指标未进行多重比较校正（如 Bonferroni/FDR），第一类错误膨胀。</li><li><b>F-003</b>（open / major）方法段首句 — 未见先验功效分析，120 例的样本量来源无依据，无法判断检验效能。</li><li><b>F-004</b>（待复核 / minor）结果段 — 「±」未说明是标准差还是标准误，读者无法解释离散程度。</li></ul>
+</body>
+</html>

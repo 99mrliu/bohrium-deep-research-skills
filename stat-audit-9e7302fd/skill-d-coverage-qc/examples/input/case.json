@@ -1,0 +1,24 @@
+{
+  "case_id": "SYN-DEMO-001",
+  "note": "【合成示例】人工构造的演示用例,非真实评测用例",
+  "paper_path": "input/paper.txt",
+  "task": "对该论文做研究方法与统计审查,出具结构化审查结果与审查单。",
+  "output_contract": {
+    "case_id": "string,必须与输入一致",
+    "status": "complete|partial|failed",
+    "summary": "string,一段中文总体结论",
+    "findings": [
+      {
+        "id": "string",
+        "category": "事实错误|证据不足|规范问题|建议",
+        "severity": "高|中|低|提示",
+        "location": "string,原文位置,非空",
+        "evidence": "string,依据",
+        "suggestion": "string,修改建议"
+      }
+    ],
+    "coverage_statement": "string,六审查面×五检查面完备性声明",
+    "sources": ["string,使用的材料清单"],
+    "uncertainty": ["string,全部待复核事项"]
+  }
+}

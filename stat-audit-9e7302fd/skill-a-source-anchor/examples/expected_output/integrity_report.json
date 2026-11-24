@@ -1,0 +1,33 @@
+{
+  "verdict": "ok",
+  "fail_reasons": [],
+  "warn_reasons": [],
+  "metrics": {
+    "total_chars": 1753,
+    "total_pages": 2,
+    "total_lines": 91,
+    "garble_count": 0,
+    "garble_ratio": 0.0,
+    "empty_pages": 0,
+    "empty_page_ratio": 0.0,
+    "mean_line_len": 18.27,
+    "long_lines": 0,
+    "long_line_ratio": 0.0,
+    "cjk_chars": 1175,
+    "latin_chars": 56,
+    "cjk_latin_ratio": 0.7022
+  },
+  "thresholds": {
+    "MIN_TOTAL_CHARS": 1500,
+    "MAX_GARBLE_RATIO": 0.001,
+    "WARN_GARBLE_RATIO": 0.0002,
+    "MAX_EMPTY_PAGE_RATIO": 0.3,
+    "EMPTY_PAGE_MIN_CHARS": 5,
+    "LONG_LINE_LEN": 400,
+    "MAX_LONG_LINE_RATIO": 0.05,
+    "MIN_MEAN_LINE_LEN": 8,
+    "MAX_MEAN_LINE_LEN": 300,
+    "MIN_CJK_LATIN_RATIO": 0.3
+  },
+  "disposition": "可进入五面审查。"
+}

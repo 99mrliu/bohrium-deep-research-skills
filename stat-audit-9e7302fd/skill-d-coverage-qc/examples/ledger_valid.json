@@ -1,0 +1,28 @@
+{
+  "case_id": "SYN-DEMO-001",
+  "note": "【合成示例】人工构造的演示台账,非真实审查结果",
+  "design_type": "RCT",
+  "facets": ["design", "variables", "statistics", "sample_size", "reporting"],
+  "counts": {"通过": 7, "问题": 3, "待复核": 2, "不适用": 1, "未检查": 1},
+  "cells": [
+    {"cell_id": "C-01", "item_id": "D-01", "facet": "design", "surface": "方法设计", "status": "通过", "reason": "2.2 节声明随机分组,执行与设计声明一致", "finding_ids": [], "journal_ref": "J-005"},
+    {"cell_id": "C-02", "item_id": "D-03", "facet": "design", "surface": "方法设计", "status": "问题", "reason": "全文仅写“随机分为两组”,未描述随机序列产生方法", "finding_ids": ["F-001"], "journal_ref": "J-006"},
+    {"cell_id": "C-03", "item_id": "D-12", "facet": "design", "surface": "论证链", "status": "通过", "reason": "RCT 设计支撑疗效结论,因果强度声称与设计匹配", "finding_ids": [], "journal_ref": "J-007"},
+    {"cell_id": "C-04", "item_id": "V-01", "facet": "variables", "surface": "方法设计", "status": "通过", "reason": "2.3 节明确主要结局为 12 周末 HbA1c 变化", "finding_ids": [], "journal_ref": "J-008"},
+    {"cell_id": "C-05", "item_id": "V-04", "facet": "variables", "surface": "事实核验", "status": "待复核", "reason": "3.1 节称“基线数值表略”,无表可核,基线可比性无法验证", "finding_ids": [], "journal_ref": "J-009"},
+    {"cell_id": "C-06", "item_id": "V-12", "facet": "variables", "surface": "学术规范", "status": "不适用", "reason": "本研究未做任何亚组分析", "finding_ids": [], "journal_ref": "J-010"},
+    {"cell_id": "C-07", "item_id": "S-01", "facet": "statistics", "surface": "统计报告", "status": "通过", "reason": "2.4 节声明 t 检验,与连续型主要结局匹配", "finding_ids": [], "journal_ref": "J-011"},
+    {"cell_id": "C-08", "item_id": "S-02", "facet": "statistics", "surface": "统计报告", "status": "问题", "reason": "3.2 节仅报告 t 值与 P 值,未报告 HbA1c 下降差值及置信区间", "finding_ids": ["F-002"], "journal_ref": "J-012"},
+    {"cell_id": "C-09", "item_id": "S-09", "facet": "statistics", "surface": "学术规范", "status": "未检查", "reason": "原文无数据/代码可得性声明,且预算内无法取得补充材料核实", "finding_ids": [], "journal_ref": "J-013"},
+    {"cell_id": "C-10", "item_id": "N-01", "facet": "sample_size", "surface": "方法设计", "status": "通过", "reason": "2.1 节报告总样本量 120 例,两组各 60 例(示例中视为已声明)", "finding_ids": [], "journal_ref": "J-014"},
+    {"cell_id": "C-11", "item_id": "N-03", "facet": "sample_size", "surface": "论证链", "status": "通过", "reason": "结果节样本量与计划一致,无脱落报告需求之外的缺口", "finding_ids": [], "journal_ref": "J-015"},
+    {"cell_id": "C-12", "item_id": "R-02", "facet": "reporting", "surface": "引用支持", "status": "问题", "reason": "引言以文献[3]支持“甲安片已获批准用于本适应症”,而文后[3]实为有氧运动研究,不能支持该论断", "finding_ids": ["F-003"], "journal_ref": "J-016"},
+    {"cell_id": "C-13", "item_id": "R-05", "facet": "reporting", "surface": "学术规范", "status": "通过", "reason": "示例设定伦理信息已在 2.1 节给出(合成文本从简,按通过演示)", "finding_ids": [], "journal_ref": "J-017"},
+    {"cell_id": "C-14", "item_id": "R-09", "facet": "reporting", "surface": "事实核验", "status": "待复核", "reason": "摘要称“下降显著优于对照组”但正文未给出两组下降幅度数值,一致性无法核验", "finding_ids": [], "journal_ref": "J-018"}
+  ],
+  "findings": [
+    {"id": "F-001", "category": "规范问题", "severity": "中", "location": "2.2 节“分组与干预”", "evidence": "仅写“随机分为两组”,未描述随机序列产生方法及分配隐藏,违反随机对照试验报告常规条款(D-03)", "suggestion": "补充随机序列产生方法(如随机数字表/区组随机)与分配隐藏措施的描述"},
+    {"id": "F-002", "category": "证据不足", "severity": "中", "location": "3.2 节“主要结局”", "evidence": "仅报告 t=2.31、P<0.05,缺少组间差值、效应量与 95% 置信区间,疗效大小论断证据不足(S-02)", "suggestion": "报告两组 HbA1c 下降差值及其 95% CI,并精确报告 P 值"},
+    {"id": "F-003", "category": "事实错误", "severity": "高", "location": "引言第 2 段(引文[3]处)", "evidence": "“已获药品监管部门批准用于本适应症[3]”,但文后文献[3]为有氧运动干预研究,与该论断无关,属引文张冠李戴(R-02)", "suggestion": "更换为药品注册/说明书类来源,或删除该论断"}
+  ]
+}

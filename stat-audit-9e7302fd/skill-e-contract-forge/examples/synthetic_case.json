@@ -1,0 +1,36 @@
+{
+  "case_id": "SYNTH-DEMO-001",
+  "title": "【合成示例】某虚构干预对虚构结局的影响：方法学审查",
+  "note": "本文件为合成示例（SYNTHETIC DEMO），所有内容均为虚构，仅用于演示 contract-forge-audit 工作流。",
+  "paper_excerpt": "本研究纳入 120 名受试者，随机分为两组。干预组均值 5.2±1.1，对照组 4.8±1.3，差异有统计学意义（P<0.05）。多重结局未校正。",
+  "output_contract": {
+    "fields": {
+      "summary": {
+        "type": "string",
+        "required": true,
+        "description": "一段话总体审查结论"
+      },
+      "findings": {
+        "type": "array",
+        "required": true,
+        "description": "审查发现数组，每项须含 id/location/message 等键",
+        "item_required_keys": ["id", "location", "message"]
+      },
+      "recommendation": {
+        "type": "string",
+        "required": true,
+        "description": "给作者的综合修改建议"
+      },
+      "confidence": {
+        "type": "string",
+        "required": false,
+        "description": "整体置信度（high/medium/low）"
+      },
+      "word_count": {
+        "type": "integer",
+        "required": true,
+        "description": "被审材料正文字数（估计值需说明）"
+      }
+    }
+  }
+}

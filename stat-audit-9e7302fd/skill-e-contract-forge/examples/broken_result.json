@@ -1,0 +1,17 @@
+{
+  "case_id": "SYNTH-DEMO-999",
+  "status": "complete",
+  "summary": "【合成示例·故意损坏版】该 result.json 用于演示 contract_validate.py 的违例检测。",
+  "findings": [
+    {
+      "id": "F-001",
+      "location": "摘要第3句"
+    },
+    "这不是一个对象"
+  ],
+  "recommendation": "PENDING::recommendation",
+  "word_count": "八十六",
+  "sources": [],
+  "uncertainty": "",
+  "pending_reasons": {}
+}

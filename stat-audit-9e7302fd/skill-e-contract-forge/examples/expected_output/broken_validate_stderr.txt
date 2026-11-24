@@ -1,0 +1,7 @@
+contract_validate: VIOLATION: case_id 不匹配: result='SYNTH-DEMO-999', 契约='SYNTH-DEMO-001'
+contract_validate: VIOLATION: case_id 与 case.json 不一致: result='SYNTH-DEMO-999', case='SYNTH-DEMO-001'
+contract_validate: VIOLATION: 字段 findings 第 0 项缺少必备键 'message'
+contract_validate: VIOLATION: 字段 findings 第 1 项不是对象
+contract_validate: VIOLATION: 字段 recommendation 仍是 PENDING 哨兵；仅当 status=partial/failed 且在 pending_reasons 中登记非空理由时才允许。
+contract_validate: VIOLATION: 字段 word_count 类型不符: 声明 'integer'，实际 str
+contract_validate: FAILED (6 项违例)，报告见 /Users/liuhengshen/Desktop/bhr_product/ch-9e7302fd/skills/skill-e-contract-forge/examples/run_output/broken_validation_report.json

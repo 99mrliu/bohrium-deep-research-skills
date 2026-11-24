@@ -1,0 +1,50 @@
+{
+  "source": "findings.jsonl",
+  "count": 4,
+  "findings": [
+    {
+      "id": "F-001",
+      "facet": "统计方法",
+      "category": "事实错误",
+      "severity": "critical",
+      "location": "摘要第3句",
+      "quote": "差异有统计学意义（P<0.05）",
+      "message": "仅给出 P<0.05 却未报告具体 p 值、检验统计量与置信区间，且合成数据中两组均值差仅 0.4，标准差约 1.2，n=120 时无法支持「有统计学意义」的强表述（按摘录估算 p≈0.09）。",
+      "fix": "报告检验名称、统计量、精确 p 值与 95% CI；若为 t 检验应给出 t 值与自由度。",
+      "status": "open"
+    },
+    {
+      "id": "F-002",
+      "facet": "统计方法",
+      "category": "规范问题",
+      "severity": "major",
+      "location": "方法段",
+      "quote": "多重结局未校正",
+      "message": "多个结局指标未进行多重比较校正（如 Bonferroni/FDR），第一类错误膨胀。",
+      "fix": "预先指定主要结局，其余结局按探索性处理或做多重性校正。",
+      "status": "open"
+    },
+    {
+      "id": "F-003",
+      "facet": "样本量",
+      "category": "证据不足",
+      "severity": "major",
+      "location": "方法段首句",
+      "quote": "本研究纳入 120 名受试者",
+      "message": "未见先验功效分析，120 例的样本量来源无依据，无法判断检验效能。",
+      "fix": "补充功效分析（效应量假设、α、功效）或说明样本量为便利性样本。",
+      "status": "open"
+    },
+    {
+      "id": "F-004",
+      "facet": "结果报告",
+      "category": "建议",
+      "severity": "minor",
+      "location": "结果段",
+      "quote": "干预组均值 5.2±1.1，对照组 4.8±1.3",
+      "message": "「±」未说明是标准差还是标准误，读者无法解释离散程度。",
+      "fix": "明确标注 SD 或 SE，并报告每组实际 n。",
+      "status": "待复核"
+    }
+  ]
+}
