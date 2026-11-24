@@ -1,0 +1,12 @@
+{
+  "case_id": "SYNTHETIC-DEMO-001",
+  "note": "SYNTHETIC EXAMPLE INPUT — not a real platform case. Hand-written to exercise runqc.py end-to-end.",
+  "task": "Review the attached synthetic manuscript excerpt for logic and argumentation issues.",
+  "output_contract": {
+    "findings": "array of issue objects with location, type, severity, suggestion",
+    "passed_items": "array of checks that found no problem",
+    "needs_review": "array of items that could not be confirmed",
+    "unchecked_items": "array of items not examined, with reasons",
+    "summary": "one-paragraph overall assessment"
+  }
+}

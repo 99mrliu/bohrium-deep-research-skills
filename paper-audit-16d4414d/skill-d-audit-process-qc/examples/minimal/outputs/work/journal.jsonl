@@ -1,0 +1,32 @@
+{"ts": "2026-11-24T08:49:21+00:00", "stage": "init", "note": "skeleton with 5 contract fields written atomically", "result_sha256": "651bbd75dd16a091f51c90af20c80ee1faf6bc41ab6051ba77a5a4b4faf2ec2f"}
+{"ts": "2026-11-24T08:49:22+00:00", "stage": "coverage", "note": "fact_check -> examined", "result_sha256": "651bbd75dd16a091f51c90af20c80ee1faf6bc41ab6051ba77a5a4b4faf2ec2f"}
+{"ts": "2026-11-24T08:49:22+00:00", "stage": "coverage", "note": "citation_support -> examined", "result_sha256": "651bbd75dd16a091f51c90af20c80ee1faf6bc41ab6051ba77a5a4b4faf2ec2f"}
+{"ts": "2026-11-24T08:49:22+00:00", "stage": "coverage", "note": "method_design -> examined", "result_sha256": "651bbd75dd16a091f51c90af20c80ee1faf6bc41ab6051ba77a5a4b4faf2ec2f"}
+{"ts": "2026-11-24T08:49:23+00:00", "stage": "coverage", "note": "stats_report -> examined", "result_sha256": "651bbd75dd16a091f51c90af20c80ee1faf6bc41ab6051ba77a5a4b4faf2ec2f"}
+{"ts": "2026-11-24T08:49:23+00:00", "stage": "coverage", "note": "reasoning_chain -> examined", "result_sha256": "651bbd75dd16a091f51c90af20c80ee1faf6bc41ab6051ba77a5a4b4faf2ec2f"}
+{"ts": "2026-11-24T08:49:23+00:00", "stage": "coverage", "note": "academic_norm -> skipped", "result_sha256": "651bbd75dd16a091f51c90af20c80ee1faf6bc41ab6051ba77a5a4b4faf2ec2f"}
+{"ts": "2026-11-24T08:49:24+00:00", "stage": "findings-draft", "note": "2 confirmed, 1 needs_review", "result_sha256": "651bbd75dd16a091f51c90af20c80ee1faf6bc41ab6051ba77a5a4b4faf2ec2f"}
+{"ts": "2026-11-24T08:49:24+00:00", "stage": "fill-contract", "note": "", "field_set": "unchecked_items", "result_sha256": "12d7fe55844da9672a0e4595c6a330b8030b40c410398c54d2190260ebadb94c"}
+{"ts": "2026-11-24T08:49:24+00:00", "stage": "set-status", "note": "", "field_set": "status", "result_sha256": "d3783f6fabd37ae8c40aaf4bfec35f3e13e1aadc78145a09bccc427c20b6b32c"}
+{"ts": "2026-11-24T08:49:25+00:00", "stage": "budget", "note": "41/64 used (warn: 停止开新检查线，优先把已确认发现写入交付物)", "result_sha256": "d3783f6fabd37ae8c40aaf4bfec35f3e13e1aadc78145a09bccc427c20b6b32c"}
+{"ts": "2026-11-24T08:49:25+00:00", "stage": "reruncheck", "note": "DRIFT (3 diffs)", "result_sha256": "d3783f6fabd37ae8c40aaf4bfec35f3e13e1aadc78145a09bccc427c20b6b32c"}
+{"ts": "2026-11-24T08:49:25+00:00", "stage": "finalize", "note": "PASS", "result_sha256": "d3783f6fabd37ae8c40aaf4bfec35f3e13e1aadc78145a09bccc427c20b6b32c"}
+{"ts": "2026-11-24T08:49:25+00:00", "stage": "sabotage", "note": "", "field_set": "status", "result_sha256": "12e176e8b2ae3cc6aee7753e12956c044541beb0c5e744c2402da166737b7790"}
+{"ts": "2026-11-24T08:49:26+00:00", "stage": "finalize", "note": "FAIL", "result_sha256": "12e176e8b2ae3cc6aee7753e12956c044541beb0c5e744c2402da166737b7790"}
+{"ts": "2026-11-24T08:49:26+00:00", "stage": "restore", "note": "", "field_set": "status", "result_sha256": "d3783f6fabd37ae8c40aaf4bfec35f3e13e1aadc78145a09bccc427c20b6b32c"}
+{"ts": "2026-11-24T08:54:57+00:00", "stage": "init", "note": "skeleton with 5 contract fields written atomically", "result_sha256": "1c851e7a801b1a6dd557e13c089ea3efa679f67e8299ce3efac265ec59884962"}
+{"ts": "2026-11-24T08:54:57+00:00", "stage": "coverage", "note": "fact_check -> examined", "result_sha256": "1c851e7a801b1a6dd557e13c089ea3efa679f67e8299ce3efac265ec59884962"}
+{"ts": "2026-11-24T08:54:57+00:00", "stage": "coverage", "note": "citation_support -> examined", "result_sha256": "1c851e7a801b1a6dd557e13c089ea3efa679f67e8299ce3efac265ec59884962"}
+{"ts": "2026-11-24T08:54:58+00:00", "stage": "coverage", "note": "method_design -> examined", "result_sha256": "1c851e7a801b1a6dd557e13c089ea3efa679f67e8299ce3efac265ec59884962"}
+{"ts": "2026-11-24T08:54:58+00:00", "stage": "coverage", "note": "stats_report -> examined", "result_sha256": "1c851e7a801b1a6dd557e13c089ea3efa679f67e8299ce3efac265ec59884962"}
+{"ts": "2026-11-24T08:54:58+00:00", "stage": "coverage", "note": "reasoning_chain -> examined", "result_sha256": "1c851e7a801b1a6dd557e13c089ea3efa679f67e8299ce3efac265ec59884962"}
+{"ts": "2026-11-24T08:54:59+00:00", "stage": "coverage", "note": "academic_norm -> skipped", "result_sha256": "1c851e7a801b1a6dd557e13c089ea3efa679f67e8299ce3efac265ec59884962"}
+{"ts": "2026-11-24T08:54:59+00:00", "stage": "findings-draft", "note": "2 confirmed, 1 needs_review", "result_sha256": "1c851e7a801b1a6dd557e13c089ea3efa679f67e8299ce3efac265ec59884962"}
+{"ts": "2026-11-24T08:54:59+00:00", "stage": "fill-contract", "note": "", "field_set": "unchecked_items", "result_sha256": "afc9ee20598df6627e0efdf59827e02a9bdfe58d8548d17cbd480ebc050b1ca4"}
+{"ts": "2026-11-24T08:55:00+00:00", "stage": "set-status", "note": "", "field_set": "status", "result_sha256": "618309dcceef74233ed4d963db80a4c7cd7a7256bfb22618d4fcfeca9bfc4f50"}
+{"ts": "2026-11-24T08:55:00+00:00", "stage": "budget", "note": "41/64 used (warn: 停止开新检查线，优先把已确认发现写入交付物)", "result_sha256": "618309dcceef74233ed4d963db80a4c7cd7a7256bfb22618d4fcfeca9bfc4f50"}
+{"ts": "2026-11-24T08:55:00+00:00", "stage": "reruncheck", "note": "DRIFT (3 diffs)", "result_sha256": "618309dcceef74233ed4d963db80a4c7cd7a7256bfb22618d4fcfeca9bfc4f50"}
+{"ts": "2026-11-24T08:55:01+00:00", "stage": "finalize", "note": "PASS", "result_sha256": "618309dcceef74233ed4d963db80a4c7cd7a7256bfb22618d4fcfeca9bfc4f50"}
+{"ts": "2026-11-24T08:55:01+00:00", "stage": "sabotage", "note": "", "field_set": "status", "result_sha256": "9d2ecf2fe88a23ef06b1c0b43724f8f5454b0743250b4805e1b5e10488cf43ef"}
+{"ts": "2026-11-24T08:55:01+00:00", "stage": "finalize", "note": "FAIL", "result_sha256": "9d2ecf2fe88a23ef06b1c0b43724f8f5454b0743250b4805e1b5e10488cf43ef"}
+{"ts": "2026-11-24T08:55:02+00:00", "stage": "restore", "note": "", "field_set": "status", "result_sha256": "618309dcceef74233ed4d963db80a4c7cd7a7256bfb22618d4fcfeca9bfc4f50"}

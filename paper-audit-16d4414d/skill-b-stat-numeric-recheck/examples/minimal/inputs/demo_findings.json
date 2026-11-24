@@ -1,0 +1,14 @@
+[
+  {
+    "id": "DEMO-OK",
+    "sentence_id": "S0018",
+    "quote": "The difference was statistically significant (p = 0.31).",
+    "note": "verbatim: must pass verify"
+  },
+  {
+    "id": "DEMO-BAD",
+    "sentence_id": "S0018",
+    "quote": "The difference was not statistically significant (p = 0.31).",
+    "note": "word inserted; quote no longer verbatim: must FAIL verify"
+  }
+]

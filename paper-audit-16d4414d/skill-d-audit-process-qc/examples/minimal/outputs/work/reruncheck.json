@@ -1,0 +1,24 @@
+{
+  "verdict": "DRIFT",
+  "diffs": [
+    {
+      "id": "F01",
+      "diff": "changed",
+      "fields": {
+        "severity": [
+          "major",
+          "critical"
+        ]
+      }
+    },
+    {
+      "id": "F03",
+      "diff": "missing_in_rerun"
+    },
+    {
+      "id": "F04",
+      "diff": "added_in_rerun"
+    }
+  ],
+  "note": "DRIFT 不一定是错误（材料/预算不同），但必须逐条在报告中解释；无法解释的 DRIFT 说明过程不可复核，相关 finding 降级为待复核"
+}

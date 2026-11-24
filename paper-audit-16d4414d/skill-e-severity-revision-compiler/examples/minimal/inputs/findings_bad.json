@@ -1,0 +1,70 @@
+[
+  {
+    "id": "F01",
+    "sentence_id": "S0009",
+    "quote": "The difference was statistically significant (p = 0.31).",
+    "category": "stats_report",
+    "type": "factual_error",
+    "severity": "major",
+    "status": "confirmed",
+    "evidence": "S0011（Methods）定义显著性阈值为 p < 0.05；S0009 报告 p = 0.31 却声称 statistically significant，p 值与措辞直接冲突。",
+    "rationale": {
+      "main_conclusion_impact": "直接否定主结论的统计依据",
+      "fixability": "easy_single_edit",
+      "reproducibility_impact": "不影响实验可复现性，只影响表述"
+    },
+    "revision_op": "rewrite",
+    "revision": "将 S0009 改为 'The difference was not statistically significant (p = 0.31).'，或在重算后更正 p 值并同步摘要。"
+  },
+  {
+    "id": "F02",
+    "sentence_id": "S0014",
+    "quote": "These results prove that Compound Y cures root rot.",
+    "category": "reasoning_chain",
+    "type": "insufficient_evidence",
+    "severity": "critical",
+    "status": "confirmed",
+    "evidence": "S0018（Methods）表明设计为单盆单剂量观察；S0014 用 prove/cures 的因果强表述，设计证据上限只到关联。",
+    "rationale": {
+      "main_conclusion_impact": "单盆单剂量的相关结果无法支撑治愈这一因果强主张",
+      "fixability": "moderate_rewrite",
+      "reproducibility_impact": "结论强度超出他人复现时可达证据"
+    },
+    "revision_op": "downgrade_strength",
+    "revision": "将 S0014 的 'prove ... cures' 降级为 'is associated with reduced root rot incidence in this single-pot setup'，并在 Discussion 增补替代解释段。"
+  },
+  {
+    "id": "F03",
+    "sentence_id": "S0021",
+    "quote": "Future work should address this.",
+    "category": "academic_norm",
+    "type": "suggestion",
+    "severity": "suggestion",
+    "status": "confirmed",
+    "evidence": "S0021 的 future work 未指明对象、数量与检验方式，不可执行。",
+    "rationale": {
+      "main_conclusion_impact": "无影响",
+      "fixability": "easy_single_edit",
+      "reproducibility_impact": "无影响"
+    },
+    "revision_op": "rewrite",
+    "revision": "将 S0021 具体化为可检验的下一步，例如 'replicate across three soils and two doses'，指明对象与数量。"
+  },
+  {
+    "id": "F04",
+    "sentence_id": "S0005",
+    "quote": "Biochar improves water retention in sandy soils [1].",
+    "category": "citation_support",
+    "type": "insufficient_evidence",
+    "severity": "major",
+    "status": "confirmed",
+    "evidence": "S0005 以单篇 [1] 支撑领域级背景命题；工作单核对发现该命题通常由综述支撑（待人工获取原文复核）。",
+    "rationale": {
+      "main_conclusion_impact": "背景命题，不直接影响主结论",
+      "fixability": "easy_single_edit",
+      "reproducibility_impact": "不影响"
+    },
+    "revision_op": "add_citation",
+    "revision": "建议补充论证"
+  }
+]

@@ -1,0 +1,14 @@
+[
+  {
+    "id": "DEMO-OK",
+    "sentence_id": "S0028",
+    "quote": "The difference was statistically significant (p = 0.03).",
+    "note": "verbatim substring of its sentence: must pass quotecheck"
+  },
+  {
+    "id": "DEMO-BAD",
+    "sentence_id": "S0028",
+    "quote": "The difference was highly significant (p = 0.003).",
+    "note": "fabricated wording and altered p value: must FAIL quotecheck"
+  }
+]

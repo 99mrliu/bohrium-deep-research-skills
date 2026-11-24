@@ -1,0 +1,14 @@
+[
+  {
+    "id": "DEMO-OK",
+    "sentence_id": "S0013",
+    "quote": "Compound Z cures root rot [3].",
+    "note": "verbatim: must pass verify"
+  },
+  {
+    "id": "DEMO-BAD",
+    "sentence_id": "S0013",
+    "quote": "Compound Z completely cures root rot [3].",
+    "note": "word inserted; not verbatim: must FAIL verify"
+  }
+]

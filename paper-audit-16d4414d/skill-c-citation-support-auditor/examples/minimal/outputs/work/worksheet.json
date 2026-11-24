@@ -1,0 +1,86 @@
+{
+  "citation_count": 7,
+  "strong_claim_citations": 1,
+  "worksheet": [
+    {
+      "sentence_id": "S0010",
+      "citation_raw": "[1]",
+      "citation_key": 1,
+      "function_guess": "mention",
+      "strong_claim_with_citation": false,
+      "host_sentence": "Introduction Biochar improves water retention in sandy soils [1].",
+      "reference_entry": "Li H, Chen Y. Biochar and sandy soils. J Soil Sci, 2015.",
+      "reference_found": true,
+      "agent_tasks": []
+    },
+    {
+      "sentence_id": "S0011",
+      "citation_raw": "[2]",
+      "citation_key": 2,
+      "function_guess": "contrast",
+      "strong_claim_with_citation": false,
+      "host_sentence": "However, clay soils respond weakly [2].",
+      "reference_entry": "Kumar R. Clay soils respond weakly to biochar. Geoderma, 2017.",
+      "reference_found": true,
+      "agent_tasks": []
+    },
+    {
+      "sentence_id": "S0012",
+      "citation_raw": "Zhang et al. (2018)",
+      "citation_key": "Zhang et al. 2018",
+      "function_guess": "background",
+      "strong_claim_with_citation": false,
+      "host_sentence": "Zhang et al. (2018) reviewed the field.",
+      "reference_entry": "Zhang L, Wu Q. Biochar field review. Agron Rev, 2018.",
+      "reference_found": true,
+      "agent_tasks": []
+    },
+    {
+      "sentence_id": "S0013",
+      "citation_raw": "[3]",
+      "citation_key": 3,
+      "function_guess": "mention",
+      "strong_claim_with_citation": true,
+      "host_sentence": "Compound Z cures root rot [3].",
+      "reference_entry": null,
+      "reference_found": false,
+      "agent_tasks": [
+        "该句为强主张且带引用：核对被引文献是否真支持该强度（能获取原文则用外部工具，不能则标待复核，禁止凭空断言不支持）"
+      ]
+    },
+    {
+      "sentence_id": "S0014",
+      "citation_raw": "Wang et al. (2021)",
+      "citation_key": "Wang et al. 2021",
+      "function_guess": "support",
+      "strong_claim_with_citation": false,
+      "host_sentence": "Wang et al. (2021) showed dose effects matter.",
+      "reference_entry": null,
+      "reference_found": false,
+      "agent_tasks": []
+    },
+    {
+      "sentence_id": "S0015",
+      "citation_raw": "[1]",
+      "citation_key": 1,
+      "function_guess": "method_source",
+      "strong_claim_with_citation": false,
+      "host_sentence": "Methods We followed the pot protocol of [1].",
+      "reference_entry": "Li H, Chen Y. Biochar and sandy soils. J Soil Sci, 2015.",
+      "reference_found": true,
+      "agent_tasks": []
+    },
+    {
+      "sentence_id": "S0018",
+      "citation_raw": "[2]",
+      "citation_key": 2,
+      "function_guess": "mention",
+      "strong_claim_with_citation": false,
+      "host_sentence": "Discussion Our single-soil result echoes earlier reports [2].",
+      "reference_entry": "Kumar R. Clay soils respond weakly to biochar. Geoderma, 2017.",
+      "reference_found": true,
+      "agent_tasks": []
+    }
+  ],
+  "honesty_rule": "无法获取被引原文时，引用支持度一律标待复核并写明原因；只允许对 cited_not_listed 这类文本内确定性缺陷直接定案"
+}

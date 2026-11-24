@@ -1,0 +1,77 @@
+{
+  "candidate_count": 7,
+  "rules": {
+    "C1_pvalue_wording": 2,
+    "C2_percent_fraction": 1,
+    "C3_ci_point_outside": 1,
+    "C4_impossible_pvalue": 1,
+    "C5_crosssection_value": 1,
+    "C6_direction_conflict": 1
+  },
+  "candidates": [
+    {
+      "rule": "C3_ci_point_outside",
+      "sentence_id": "S0015",
+      "section": "results",
+      "quote": "Results Mean root length in controls was 12.4 cm (95% CI 13.9, 16.9).",
+      "deterministic_detail": "点估计 12.4 落在 CI [13.9, 16.9] 之外",
+      "severity_hint": "major",
+      "agent_must_confirm": true
+    },
+    {
+      "rule": "C6_direction_conflict",
+      "sentence_id": "S0017",
+      "section": "results",
+      "quote": "The treatment arm showed higher survival than control (82 vs 91%).",
+      "deterministic_detail": "句内有 higher/greater 类表述，但数值顺序 82 vs 91 为前者更小",
+      "severity_hint": "major",
+      "agent_must_confirm": true
+    },
+    {
+      "rule": "C1_pvalue_wording",
+      "sentence_id": "S0018",
+      "section": "results",
+      "quote": "The difference was statistically significant (p = 0.31).",
+      "deterministic_detail": "p = 0.31 按 0.05 阈值不显著，但句子声称 significant",
+      "severity_hint": "major",
+      "agent_must_confirm": true
+    },
+    {
+      "rule": "C2_percent_fraction",
+      "sentence_id": "S0019",
+      "section": "results",
+      "quote": "90% (17/20) of seeds germinated in the treatment arm.",
+      "deterministic_detail": "句内 90.0% 与 (17/20)=85.0% 不符（容差 ±1.0pp）",
+      "severity_hint": "major",
+      "agent_must_confirm": true
+    },
+    {
+      "rule": "C1_pvalue_wording",
+      "sentence_id": "S0020",
+      "section": "results",
+      "quote": "The dose response was significant (p = 1.20).",
+      "deterministic_detail": "p = 1.2 按 0.05 阈值不显著，但句子声称 significant",
+      "severity_hint": "major",
+      "agent_must_confirm": true
+    },
+    {
+      "rule": "C4_impossible_pvalue",
+      "sentence_id": "S0020",
+      "section": "results",
+      "quote": "The dose response was significant (p = 1.20).",
+      "deterministic_detail": "p 值 1.2 落在 [0,1] 之外，数学上不可能",
+      "severity_hint": "critical",
+      "agent_must_confirm": true
+    },
+    {
+      "rule": "C5_crosssection_value",
+      "sentence_id": "multiple",
+      "section": "abstract+results",
+      "quote": "",
+      "deterministic_detail": "单位 cm 的取值集合在 abstract=[15.1] 与 results=[12.4, 14.1, 15.1] 不一致；回 sentences.jsonl 逐句核对是否同一量",
+      "severity_hint": "needs_review",
+      "agent_must_confirm": true
+    }
+  ],
+  "note": "全部为确定性候选；agent 必须回到 sentences.jsonl 读原句确认后才可升级为 finding"
+}

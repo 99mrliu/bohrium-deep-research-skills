@@ -1,0 +1,32 @@
+{
+  "fidelity_gate": "degraded",
+  "char_count": 1220,
+  "page_count_estimate": null,
+  "sections_detected": [
+    "abstract",
+    "introduction",
+    "methods",
+    "results",
+    "discussion"
+  ],
+  "canonical_sections_missing": [
+    "references"
+  ],
+  "truncation_suspected": true,
+  "line_profile": {
+    "lines": 30,
+    "nonempty_lines": 23,
+    "median_line_chars": 61,
+    "short_line_ratio": 0.3043
+  },
+  "issues": [],
+  "warnings": [
+    "abrupt_end: text ends mid-sentence (...' single cultivar. Future work should rep'); suspect truncation",
+    "very_short: 1220 chars total; is this the full paper?"
+  ],
+  "paper_sha256": "feb2ab8e9dcbf9b72557b86fb67c782b70d1777a24bf21b673a94c159e106f94",
+  "obligations": [
+    "禁止宣称已完成全文审查；缺失/可疑部分必须列入 result.json 的未检查项",
+    "每条 finding 的 quote 必须用 anchor 产物做逐字 quotecheck"
+  ]
+}
