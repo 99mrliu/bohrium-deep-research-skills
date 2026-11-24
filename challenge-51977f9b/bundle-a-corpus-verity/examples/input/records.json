@@ -1,0 +1,125 @@
+{
+  "_notice": "合成示例 / synthetic, illustrative：以下 10 条题录的题名、作者、期刊、DOI 均为虚构，仅用于演示 verify_corpus.py 的核验规则，不得冒充真实文献或正式案例结果。埋雷设计：R02 DOI 非法、R03 年份 2089、R04/R05 精确重复、R06/R07 近似重复（标题仅标点差异）、R08 含撤稿信号、R09 缺 title。",
+  "records": [
+    {
+      "id": "R01",
+      "title": "Effects of glucagon-like peptide-1 receptor agonists on cardiovascular outcomes in type 2 diabetes: a multicenter randomized trial",
+      "authors": ["Alden Meyer", "Priya Raman", "Kobus van der Merwe"],
+      "year": 2023,
+      "venue": "Journal of Synthetic Cardiology",
+      "doi": "10.1056/synth.2023.001",
+      "type": "article",
+      "language": "en",
+      "abstract": "Synthetic abstract. This fictional trial examines whether GLP-1 receptor agonists reduce major adverse cardiovascular events in adults with type 2 diabetes.",
+      "note": ""
+    },
+    {
+      "id": "R02",
+      "title": "Dulaglutide and renal outcomes in type 2 diabetes: post hoc analysis of a fictional outcomes trial",
+      "authors": ["Beatrix Halvorsen", "Idris Mensah"],
+      "year": 2022,
+      "venue": "Annals of Invented Endocrinology",
+      "doi": "10.999/fake.x",
+      "type": "article",
+      "language": "en",
+      "abstract": "Synthetic abstract with an intentionally malformed DOI (registrant code too short) to trigger rule V2.",
+      "note": ""
+    },
+    {
+      "id": "R03",
+      "title": "Once-weekly semaglutide versus placebo for cardiovascular risk reduction: the IMAGINARY-7 trial",
+      "authors": ["Casimir Novak", "Yuki Tanabe"],
+      "year": 2089,
+      "venue": "Future Journal of Fabricated Trials",
+      "doi": "10.1007/synth.2089.007",
+      "type": "article",
+      "language": "en",
+      "abstract": "Synthetic abstract with an impossible publication year (2089) to trigger rule V3.",
+      "note": ""
+    },
+    {
+      "id": "R04",
+      "title": "Semaglutide and major adverse cardiovascular events in patients with type 2 diabetes: a retrospective cohort study",
+      "authors": ["Marta Keller", "Jonas Lindqvist"],
+      "year": 2022,
+      "venue": "European Journal of Synthetic Diabetology",
+      "doi": "10.2337/synth.2022.014",
+      "type": "article",
+      "language": "en",
+      "abstract": "Synthetic abstract. This record is the canonical copy of an exact-duplicate pair (R05 duplicates it).",
+      "note": ""
+    },
+    {
+      "id": "R05",
+      "title": "Semaglutide and major adverse cardiovascular events in patients with type 2 diabetes: a retrospective cohort study",
+      "authors": ["Marta Keller", "Jonas Lindqvist"],
+      "year": 2022,
+      "venue": "European Journal of Synthetic Diabetology",
+      "doi": "https://doi.org/10.2337/synth.2022.014",
+      "type": "article",
+      "language": "en",
+      "abstract": "Synthetic abstract. Exact duplicate of R04; the DOI carries an https://doi.org/ prefix to exercise normalization (rule V4).",
+      "note": "exported twice from two databases"
+    },
+    {
+      "id": "R06",
+      "title": "Liraglutide therapy and hospitalization for heart failure in type 2 diabetes: real-world evidence",
+      "authors": ["Sofia Andrade", "Tomas Novak"],
+      "year": 2021,
+      "venue": "Synthetic Heart Journal",
+      "doi": "10.1001/synth.2021.077",
+      "type": "article",
+      "language": "en",
+      "abstract": "Synthetic abstract. Canonical copy of a near-duplicate pair; R07 differs only by punctuation in the title.",
+      "note": ""
+    },
+    {
+      "id": "R07",
+      "title": "Liraglutide therapy and hospitalization for heart failure in type 2 diabetes - real-world evidence",
+      "authors": ["Helena Ruiz", "Tomas Novak"],
+      "year": 2021,
+      "venue": "Synthetic Heart Journal",
+      "doi": "10.1001/synth.2021.077b",
+      "type": "article",
+      "language": "en",
+      "abstract": "Synthetic abstract. Near duplicate of R06: title differs only by punctuation (hyphen vs colon); different first author prevents an exact V4 match, exercising rule V5.",
+      "note": ""
+    },
+    {
+      "id": "R08",
+      "title": "Exenatide microspheres and cardiovascular safety in type 2 diabetes: a single-center randomized study",
+      "authors": ["Dmitri Volkov", "Aisha Bello"],
+      "year": 2019,
+      "venue": "Journal of Retracted Synthetic Research",
+      "doi": "10.1210/synth.2019.045",
+      "type": "article",
+      "language": "en",
+      "abstract": "Synthetic abstract carrying a retraction signal to trigger rule V6.",
+      "note": "RETRACTED by the publisher in 2024 due to fabricated data; do not cite."
+    },
+    {
+      "id": "R09",
+      "title": "",
+      "authors": ["Unknown Author"],
+      "year": 2020,
+      "venue": "Incomplete Records Quarterly",
+      "doi": "10.5555/synth.2020.009",
+      "type": "article",
+      "language": "en",
+      "abstract": "Synthetic abstract. The title field is empty to trigger schema rule V1.",
+      "note": ""
+    },
+    {
+      "id": "R10",
+      "title": "胰高血糖素样肽-1受体激动剂对2型糖尿病患者心血管结局影响的前瞻性队列研究",
+      "authors": ["林晓峰", "周雅琴"],
+      "year": 2020,
+      "venue": "中华合成医学杂志",
+      "doi": "10.3760/synth.2020.003",
+      "type": "article",
+      "language": "zh",
+      "abstract": "合成摘要：本虚构队列研究考察 GLP-1 受体激动剂与 2 型糖尿病患者心血管结局的关联。",
+      "note": ""
+    }
+  ]
+}

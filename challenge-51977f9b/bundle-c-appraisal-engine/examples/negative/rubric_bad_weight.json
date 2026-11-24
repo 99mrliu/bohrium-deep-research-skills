@@ -1,0 +1,65 @@
+{
+  "note": "埋雷负例 / synthetic：权重之和 = 0.9，应触发 R1 违规。",
+  "scale_id": "mini-rob2-lite",
+  "version": "0.9.0-bad",
+  "dimensions": [
+    {
+      "dim_id": "rand_seq",
+      "name": "随机序列生成",
+      "levels": [
+        {"level_id": "low", "score": 1.0, "definition": "随机序列由计算机随机数、随机数字表等适当方法生成。"},
+        {"level_id": "some", "score": 0.5, "definition": "随机化方法描述不充分，无法判断序列生成是否适当。"},
+        {"level_id": "high", "score": 0.0, "definition": "采用交替分组、按就诊顺序或研究者主观决定等非随机方法。"}
+      ],
+      "weight": 0.2
+    },
+    {
+      "dim_id": "alloc_conceal",
+      "name": "分配隐藏",
+      "levels": [
+        {"level_id": "low", "score": 1.0, "definition": "采用中心随机化、顺序编号不透明信封等适当分配隐藏措施。"},
+        {"level_id": "some", "score": 0.5, "definition": "分配隐藏措施描述不清，无法判断入组者能否预知分组。"},
+        {"level_id": "high", "score": 0.0, "definition": "未采取分配隐藏措施，分组过程开放或可预知。"}
+      ],
+      "weight": 0.2
+    },
+    {
+      "dim_id": "blind_outcome",
+      "name": "结局测量盲法",
+      "levels": [
+        {"level_id": "low", "score": 1.0, "definition": "结局评估者不知晓分组，盲法实施有具体描述。"},
+        {"level_id": "some", "score": 0.5, "definition": "声称盲法但缺乏实施细节，无法判断盲态是否维持。"},
+        {"level_id": "high", "score": 0.0, "definition": "结局评估者知晓分组，或结局测量明显受分组信息影响。"}
+      ],
+      "weight": 0.2
+    },
+    {
+      "dim_id": "incomplete_data",
+      "name": "不完整结局数据",
+      "levels": [
+        {"level_id": "low", "score": 1.0, "definition": "失访率低且均衡，采用意向性分析等适当方法处理缺失。"},
+        {"level_id": "some", "score": 0.5, "definition": "失访率偏高或缺失处理欠妥，但未见明显方向性偏倚。"},
+        {"level_id": "high", "score": 0.0, "definition": "失访严重或缺失处理明显不当，结果很可能受缺失数据影响。"}
+      ],
+      "weight": 0.2
+    },
+    {
+      "dim_id": "selective_report",
+      "name": "选择性报告",
+      "levels": [
+        {"level_id": "low", "score": 1.0, "definition": "有注册方案且报告结局与预设结局一致。"},
+        {"level_id": "some", "score": 0.5, "definition": "无注册信息或部分结局报告不完整，但未见明显选择性报告证据。"},
+        {"level_id": "high", "score": 0.0, "definition": "仅报告阳性结局或明显遗漏预设结局，存在选择性报告。"}
+      ],
+      "weight": 0.1
+    }
+  ],
+  "grade_rules": [
+    {"grade": "low", "min_score": 0.8, "max_score": 1.0,
+     "implication": "低偏倚风险：该研究结果可作为结论的主要证据（主证）。"},
+    {"grade": "some_concerns", "min_score": 0.4, "max_score": 0.8,
+     "implication": "存在一定顾虑：可作支持性证据，作为主证时需有低危研究结论复核。"},
+    {"grade": "high", "min_score": 0.0, "max_score": 0.4,
+     "implication": "高偏倚风险：只作佐证、不作主证；剔除后须重算结论支撑（敏感性分析）。"}
+  ]
+}

@@ -1,0 +1,41 @@
+{
+  "tool": "parse_case.py",
+  "skill": "slr-corpus-verity",
+  "case_id": "case-synthetic-glp1-001",
+  "output_contract": [
+    "case_id",
+    "skill_name",
+    "status",
+    "product",
+    "evidence_matrix",
+    "sources",
+    "uncertainty",
+    "change_records",
+    "counts",
+    "checks",
+    "corpus_report",
+    "prisma_flow",
+    "quarantine_list"
+  ],
+  "output_contract_source": "case.json",
+  "research_question": {
+    "text": "GLP-1 受体激动剂对 2 型糖尿病患者心血管结局（MACE、心衰住院、心血管死亡）的影响：基于随机对照试验与队列研究的系统综述",
+    "needs_confirmation": false,
+    "source": "case.json"
+  },
+  "materials": [
+    {
+      "file": "records.json",
+      "inferred_purpose": "候选题录清单（records 候选）",
+      "exists_in_case_dir": true
+    }
+  ],
+  "records_path_candidates": [
+    "records.json"
+  ],
+  "parse_status": {
+    "case_json": "ok",
+    "task_md": "ok"
+  },
+  "warnings": []
+}

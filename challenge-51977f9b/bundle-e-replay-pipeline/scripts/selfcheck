@@ -1,0 +1,235 @@
+#!/usr/bin/env python3
+"""selfcheck — slr-replay-pipeline 端到端自检（无扩展名，python3 可执行）。
+
+断言：
+  A. 全部脚本 py_compile 通过；
+  B. 正例：合成示例三步流水线真实运行 + runlog 登记 → verify=0 → reconcile=0
+     → replay 输出 "3 identical, 0 differ" 且 exit 0；
+  C. 负例1：篡改中间产物 → runlog verify exit 3 且指名步骤与文件；
+  D. 负例2：flow_broken.json（100 vs 98）→ reconcile exit 3 且指名 F2；
+  E. 负例3：runlog 登记哈希被改 → replay exit 3 且指名漂移步骤；
+  F. 负例4：非确定性步骤（随机数产物）→ replay exit 3 且报 V4；
+  G. 降级：缺输入 → 各脚本 exit 2。
+任一断言失败 → exit 3；全部通过 → exit 0。
+"""
+import json
+import os
+import py_compile
+import shlex
+import shutil
+import subprocess
+import sys
+import tempfile
+
+ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+SCRIPTS = os.path.join(ROOT, "scripts")
+EXAMPLES = os.path.join(ROOT, "examples")
+PY = sys.executable or "python3"
+
+FAILURES = []
+
+
+def check(name, cond, detail=""):
+    tag = "PASS" if cond else "FAIL"
+    print(f"[{tag}] {name}" + (f" | {detail}" if detail else ""))
+    if not cond:
+        FAILURES.append(name)
+
+
+def run(cmd, cwd=None):
+    return subprocess.run(cmd, cwd=cwd, capture_output=True, text=True)
+
+
+def combined(p):
+    return (p.stdout or "") + (p.stderr or "")
+
+
+def main():
+    if "--help" in sys.argv or "-h" in sys.argv:
+        print(__doc__)
+        return 0
+    print("=== A. py_compile 全部脚本 ===")
+    script_files = [
+        os.path.join(SCRIPTS, n) for n in
+        ("parse_case.py", "scaffold_result.py", "runlog.py", "reconcile.py", "replay.py")
+    ] + [
+        os.path.join(EXAMPLES, "pipeline", n) for n in
+        ("step1_dedupe.py", "step2_screen_count.py", "step3_freeze.py")
+    ]
+    for path in script_files:
+        try:
+            cfile = os.path.join(tempfile.gettempdir(),
+                                 f"slr_chk_{os.path.basename(path)}.pyc")
+            py_compile.compile(path, cfile=cfile, doraise=True)
+            check(f"py_compile {os.path.basename(path)}", True)
+        except py_compile.PyCompileError as e:
+            check(f"py_compile {os.path.basename(path)}", False, str(e)[:200])
+
+    print("=== B. 正例：迷你流水线 + 登记 + 轧账 + 重放 ===")
+    tmp = tempfile.mkdtemp(prefix="slr_selfcheck_")
+    work = os.path.join(tmp, "work")
+    rdir = os.path.join(tmp, "replay")
+    os.makedirs(work)
+    os.makedirs(rdir)
+    log = os.path.join(tmp, "runlog.jsonl")
+    records = os.path.join(EXAMPLES, "input", "records.json")
+    p1 = os.path.join(EXAMPLES, "pipeline", "step1_dedupe.py")
+    p2 = os.path.join(EXAMPLES, "pipeline", "step2_screen_count.py")
+    p3 = os.path.join(EXAMPLES, "pipeline", "step3_freeze.py")
+
+    def rl(*args):
+        return run([PY, os.path.join(SCRIPTS, "runlog.py"), "--log", log] + list(args))
+
+    steps_ok = True
+    p = rl("record", "--step", "ingest", "--actor", "selfcheck",
+           "--inputs", records, "--outputs", records, "--note", "合成示例：题录摄入")
+    steps_ok &= p.returncode == 0
+    p = run([PY, p1, "--input", records, "--output", os.path.join(work, "deduped.json")])
+    steps_ok &= p.returncode == 0
+    p = rl("record", "--step", "dedupe", "--actor", "selfcheck",
+           "--inputs", records, "--outputs", os.path.join(work, "deduped.json"))
+    steps_ok &= p.returncode == 0
+    p = run([PY, p2, "--input", os.path.join(work, "deduped.json"),
+             "--output", os.path.join(work, "screening.json"),
+             "--decisions", os.path.join(work, "decisions.jsonl")])
+    steps_ok &= p.returncode == 0
+    p = rl("record", "--step", "screen_ta", "--actor", "selfcheck",
+           "--inputs", os.path.join(work, "deduped.json"),
+           "--outputs", os.path.join(work, "screening.json"), os.path.join(work, "decisions.jsonl"))
+    steps_ok &= p.returncode == 0
+    p = run([PY, p3, "--records", records, "--deduped", os.path.join(work, "deduped.json"),
+             "--decisions", os.path.join(work, "decisions.jsonl"),
+             "--output-decisions", os.path.join(work, "decisions.jsonl"),
+             "--output-included", os.path.join(work, "included.json"),
+             "--output-flow", os.path.join(work, "flow.json")])
+    steps_ok &= p.returncode == 0
+    p = rl("record", "--step", "screen_ft", "--actor", "selfcheck",
+           "--inputs", os.path.join(work, "decisions.jsonl"),
+           "--outputs", os.path.join(work, "decisions.jsonl"),
+           os.path.join(work, "included.json"), os.path.join(work, "flow.json"))
+    steps_ok &= p.returncode == 0
+    check("正例: 三步流水线与 runlog 登记全部 exit 0", steps_ok)
+
+    p = rl("verify")
+    check("正例: runlog verify exit 0", p.returncode == 0, combined(p).strip()[:120])
+
+    p = rl("status")
+    check("正例: runlog status 提示下一环节 appraise",
+          p.returncode == 0 and "appraise" in combined(p), combined(p).strip().splitlines()[-1] if combined(p).strip() else "")
+
+    p = run([PY, os.path.join(SCRIPTS, "reconcile.py"),
+             "--flow", os.path.join(work, "flow.json"),
+             "--decisions", os.path.join(work, "decisions.jsonl")])
+    check("正例: reconcile（流水线产出 flow.json + decisions）exit 0",
+          p.returncode == 0, combined(p).strip()[:160])
+
+    p = run([PY, os.path.join(SCRIPTS, "reconcile.py"),
+             "--flow", os.path.join(EXAMPLES, "flow.json")])
+    check("正例: reconcile（静态合规 examples/flow.json）exit 0", p.returncode == 0)
+
+    q1 = shlex.quote
+    manifest = {"steps": [
+        {"step_id": "dedupe",
+         "cmd": f"{q1(PY)} {q1(p1)} --input {q1(records)} --output deduped.json",
+         "outputs": ["deduped.json"]},
+        {"step_id": "screen_ta",
+         "cmd": f"{q1(PY)} {q1(p2)} --input deduped.json --output screening.json --decisions decisions.jsonl",
+         "outputs": ["screening.json", "decisions.jsonl"]},
+        {"step_id": "screen_ft",
+         "cmd": f"{q1(PY)} {q1(p3)} --records {q1(records)} --deduped deduped.json "
+                f"--decisions decisions.jsonl --output-decisions decisions.jsonl "
+                f"--output-included included.json --output-flow flow.json",
+         "outputs": ["decisions.jsonl", "included.json", "flow.json"]},
+    ]}
+    mpath = os.path.join(tmp, "manifest.json")
+    with open(mpath, "w", encoding="utf-8") as f:
+        json.dump(manifest, f, ensure_ascii=False, indent=2)
+    p = run([PY, os.path.join(SCRIPTS, "replay.py"),
+             "--manifest", mpath, "--workdir", rdir, "--runlog", log])
+    check('正例: replay exit 0 且输出 "3 identical, 0 differ"',
+          p.returncode == 0 and "3 identical, 0 differ" in combined(p),
+          combined(p).strip().splitlines()[-1] if combined(p).strip() else "")
+
+    print("=== C. 负例1：篡改中间产物 → runlog verify exit 3 指名步骤 ===")
+    with open(os.path.join(work, "screening.json"), "a", encoding="utf-8") as f:
+        f.write("tampered")
+    p = rl("verify")
+    out = combined(p)
+    check("负例1: verify exit 3 且指名 screen_ta 与 screening.json",
+          p.returncode == 3 and "screen_ta" in out and "screening.json" in out,
+          out.strip().splitlines()[0] if out.strip() else "")
+    # 复原，供后续断言使用（重跑 step2+step3 恢复全部登记产物）
+    p = run([PY, p2, "--input", os.path.join(work, "deduped.json"),
+             "--output", os.path.join(work, "screening.json"),
+             "--decisions", os.path.join(work, "decisions.jsonl")])
+    p = run([PY, p3, "--records", records, "--deduped", os.path.join(work, "deduped.json"),
+             "--decisions", os.path.join(work, "decisions.jsonl"),
+             "--output-decisions", os.path.join(work, "decisions.jsonl"),
+             "--output-included", os.path.join(work, "included.json"),
+             "--output-flow", os.path.join(work, "flow.json")])
+
+    print("=== D. 负例2：flow_broken.json（100 vs 98）→ reconcile exit 3 指名 F2 ===")
+    p = run([PY, os.path.join(SCRIPTS, "reconcile.py"),
+             "--flow", os.path.join(EXAMPLES, "negative", "flow_broken.json")])
+    out = combined(p)
+    check("负例2: reconcile exit 3 且输出指名 F2 失衡",
+          p.returncode == 3 and "F2" in out, out.strip().splitlines()[0] if out.strip() else "")
+
+    print("=== E. 负例3：登记哈希被改 → replay exit 3 指名漂移步骤 ===")
+    with open(log, encoding="utf-8") as f:
+        lines = [json.loads(x) for x in f if x.strip()]
+    for e in lines:
+        if e.get("step") == "dedupe":
+            e["outputs"][0]["sha256"] = "0" * 64
+    tlog = os.path.join(tmp, "runlog_tampered.jsonl")
+    with open(tlog, "w", encoding="utf-8") as f:
+        for e in lines:
+            f.write(json.dumps(e, ensure_ascii=False, sort_keys=True) + "\n")
+    p = run([PY, os.path.join(SCRIPTS, "replay.py"),
+             "--manifest", mpath, "--workdir", os.path.join(tmp, "replay2"), "--runlog", tlog])
+    out = combined(p)
+    check("负例3: replay exit 3 且指名漂移步骤 dedupe",
+          p.returncode == 3 and "dedupe" in out and "differ" in out,
+          out.strip().splitlines()[-2] if len(out.strip().splitlines()) > 1 else out.strip())
+
+    print("=== F. 负例4：非确定性步骤 → replay exit 3 报 V4 ===")
+    ndlog = os.path.join(tmp, "runlog_nd.jsonl")
+    ndwork = os.path.join(tmp, "ndwork")
+    os.makedirs(ndwork)
+    nd_cmd = (f"{q1(PY)} -c \"import random; open('nd.json','w').write(str(random.random()))\"")
+    subprocess.run(nd_cmd, shell=True, cwd=ndwork, capture_output=True, text=True)
+    p = run([PY, os.path.join(SCRIPTS, "runlog.py"), "--log", ndlog, "record",
+             "--step", "nd_step", "--actor", "selfcheck",
+             "--outputs", os.path.join(ndwork, "nd.json")])
+    nd_manifest = os.path.join(tmp, "manifest_nd.json")
+    with open(nd_manifest, "w", encoding="utf-8") as f:
+        json.dump({"steps": [{"step_id": "nd_step", "cmd": nd_cmd, "outputs": ["nd.json"]}]}, f)
+    p = run([PY, os.path.join(SCRIPTS, "replay.py"),
+             "--manifest", nd_manifest, "--workdir", os.path.join(tmp, "ndreplay"),
+             "--runlog", ndlog])
+    out = combined(p)
+    check("负例4: replay exit 3 且报 V4 非确定性",
+          p.returncode == 3 and "V4" in out, out.strip().splitlines()[0] if out.strip() else "")
+
+    print("=== G. 降级：缺输入 → exit 2 ===")
+    p = run([PY, os.path.join(SCRIPTS, "parse_case.py"), "--case", "/nonexistent/case.json",
+             "--out", os.path.join(tmp, "cs.json")])
+    check("降级: parse_case 缺 case.json → exit 2", p.returncode == 2)
+    p = run([PY, os.path.join(SCRIPTS, "reconcile.py"), "--flow", "/nonexistent/flow.json"])
+    check("降级: reconcile 缺 flow.json → exit 2", p.returncode == 2)
+    p = run([PY, os.path.join(SCRIPTS, "replay.py"), "--manifest", "/nonexistent/m.json"])
+    check("降级: replay 缺 manifest → exit 2", p.returncode == 2)
+    p = run([PY, os.path.join(SCRIPTS, "runlog.py"), "--log", "/nonexistent/runlog.jsonl", "verify"])
+    check("降级: runlog verify 缺 runlog → exit 2", p.returncode == 2)
+
+    shutil.rmtree(tmp, ignore_errors=True)
+    print("=== 汇总 ===")
+    if FAILURES:
+        print(f"selfcheck: {len(FAILURES)} 项断言失败: {'; '.join(FAILURES)}")
+        return 3
+    print("selfcheck: 全部断言通过（正例 exit 0 / 负例 exit 3 指名故障点 / 缺输入 exit 2）")
+    return 0
+
+
+if __name__ == "__main__":
+    sys.exit(main())

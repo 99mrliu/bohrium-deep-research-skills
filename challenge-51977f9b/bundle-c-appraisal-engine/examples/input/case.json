@@ -1,0 +1,22 @@
+{
+  "case_id": "synthetic-appraisal-001",
+  "title": "正念干预对医护人员职业倦怠的效果——随机对照试验的系统综述（合成示例）",
+  "question": "正念干预相比常规护理/无干预，能否降低医护人员职业倦怠（Maslach 量表情感衰竭等维度）？",
+  "output_contract": {
+    "case_id": "案例编号",
+    "skill_name": "技能名",
+    "status": "complete/partial/failed+原因",
+    "product": "综述正文与结论（按 stable/weakened/unsupported 标注）",
+    "evidence_matrix": "逐研究逐维度质量判定+依据定位",
+    "sources": "纳入研究清单与源材料",
+    "uncertainty": "量表选择争议、weakened/unsupported 论断等",
+    "change_records": "关键决策留痕",
+    "counts": "检索/筛选/纳入/判定计数",
+    "checks": "自查结果"
+  },
+  "materials": [
+    "input/included.json（6 篇合成研究 id 清单）",
+    "input/sources/S1.txt ～ S6.txt（合成全文文本）"
+  ],
+  "note": "本案例全部为合成示例 / synthetic, illustrative，非真实文献与真实案例。"
+}

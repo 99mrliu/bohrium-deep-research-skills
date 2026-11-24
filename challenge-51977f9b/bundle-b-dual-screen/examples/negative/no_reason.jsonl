@@ -1,0 +1,24 @@
+{"record_id": "R01", "round": 1, "screener": "A", "decision": "include", "reason_code": null, "reason_text": "RCT，人群干预结局均符合纳入条款"}
+{"record_id": "R01", "round": 1, "screener": "B", "decision": "include", "reason_code": null, "reason_text": "符合 IN-POP/IN-INT/IN-OUT/IN-DESIGN"}
+{"record_id": "R02", "round": 1, "screener": "A", "decision": "include", "reason_code": null, "reason_text": "中文 RCT，报告 ARAT 与 FMA-UE"}
+{"record_id": "R02", "round": 1, "screener": "B", "decision": "include", "reason_code": null, "reason_text": "符合全部纳入条款"}
+{"record_id": "R03", "round": 1, "screener": "A", "decision": "include", "reason_code": null, "reason_text": "远程康复联合镜像疗法 RCT，符合纳入"}
+{"record_id": "R03", "round": 1, "screener": "B", "decision": "include", "reason_code": null, "reason_text": "符合全部纳入条款"}
+{"record_id": "R04", "round": 1, "screener": "A", "decision": "exclude", "reason_code": "EX-POP", "reason_text": "儿科脑瘫人群，非成年脑卒中患者"}
+{"record_id": "R04", "round": 1, "screener": "B", "decision": "exclude", "reason_code": null, "reason_text": ""}
+{"record_id": "R05", "round": 1, "screener": "A", "decision": "include", "reason_code": null, "reason_text": "远程监测居家训练且报告上肢功能，倾向纳入"}
+{"record_id": "R05", "round": 1, "screener": "B", "decision": "uncertain", "reason_code": null, "reason_text": "单臂队列是否为类随机对照存疑，需仲裁"}
+{"record_id": "R06", "round": 1, "screener": "A", "decision": "include", "reason_code": null, "reason_text": "题录声称 RCT，题录级无法排除，待全文核实"}
+{"record_id": "R06", "round": 1, "screener": "B", "decision": "include", "reason_code": null, "reason_text": "题录级符合，全文级再核实可得性"}
+{"record_id": "R07", "round": 1, "screener": "A", "decision": "exclude", "reason_code": "EX-DESIGN", "reason_text": "叙述性综述，非原始随机对照研究"}
+{"record_id": "R07", "round": 1, "screener": "B", "decision": "exclude", "reason_code": "EX-DESIGN", "reason_text": "综述类文献，违反 IN-DESIGN 条款"}
+{"record_id": "R08", "round": 1, "screener": "A", "decision": "include", "reason_code": null, "reason_text": "多中心 RCT，次要结局含 FMA-UE，题录级纳入"}
+{"record_id": "R08", "round": 1, "screener": "B", "decision": "include", "reason_code": null, "reason_text": "符合纳入条款，全文级核实结局细节"}
+{"record_id": "R09", "round": 1, "screener": "A", "decision": "exclude", "reason_code": "EX-OUTCOME", "reason_text": "结局为下肢步态与平衡，未报告上肢功能"}
+{"record_id": "R09", "round": 1, "screener": "B", "decision": "include", "reason_code": null, "reason_text": "卒中远程康复 RCT，倾向纳入待全文确认结局"}
+{"record_id": "R10", "round": 1, "screener": "A", "decision": "exclude", "reason_code": "EX-TIME", "reason_text": "2012 年发表，早于 2015 年时间窗"}
+{"record_id": "R10", "round": 1, "screener": "B", "decision": "exclude", "reason_code": "EX-TIME", "reason_text": "发表年份超出 IN-TIME 规定范围"}
+{"record_id": "R11", "round": 1, "screener": "A", "decision": "exclude", "reason_code": "EX-LANG", "reason_text": "日文发表，超出中英文语言范围"}
+{"record_id": "R11", "round": 1, "screener": "B", "decision": "exclude", "reason_code": "EX-LANG", "reason_text": "非中英文文献，违反 IN-LANG 条款"}
+{"record_id": "R12", "round": 1, "screener": "A", "decision": "exclude", "reason_code": "EX-FULLTEXT", "reason_text": "仅会议摘要，无全文与完整数据"}
+{"record_id": "R12", "round": 1, "screener": "B", "decision": "exclude", "reason_code": "EX-FULLTEXT", "reason_text": "全文不可得，违反 IN-FT 条款"}

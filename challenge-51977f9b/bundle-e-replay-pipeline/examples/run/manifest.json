@@ -1,0 +1,13 @@
+{
+  "steps": [
+    {"step_id": "dedupe",
+     "cmd": "python3 ../../pipeline/step1_dedupe.py --input ../../input/records.json --output deduped.json",
+     "outputs": ["deduped.json"]},
+    {"step_id": "screen_ta",
+     "cmd": "python3 ../../pipeline/step2_screen_count.py --input deduped.json --output screening.json --decisions decisions.jsonl",
+     "outputs": ["screening.json", "decisions.jsonl"]},
+    {"step_id": "screen_ft",
+     "cmd": "python3 ../../pipeline/step3_freeze.py --records ../../input/records.json --deduped deduped.json --decisions decisions.jsonl --output-decisions decisions.jsonl --output-included included.json --output-flow flow.json",
+     "outputs": ["decisions.jsonl", "included.json", "flow.json"]}
+  ]
+}

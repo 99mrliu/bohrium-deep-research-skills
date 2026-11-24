@@ -1,0 +1,60 @@
+{
+  "schema": "slr-dual-screen/agreement_report/v1",
+  "round": 1,
+  "n_records": 12,
+  "n_agree": 10,
+  "n_disagree": 2,
+  "marginals": {
+    "A_include": 6,
+    "B_include": 6
+  },
+  "po": 0.833333,
+  "pe": 0.5,
+  "kappa": 0.666667,
+  "threshold": 0.6,
+  "meets_threshold": true,
+  "requires_extended_adjudication": false,
+  "agreements": [
+    "R01",
+    "R02",
+    "R03",
+    "R04",
+    "R06",
+    "R07",
+    "R08",
+    "R10",
+    "R11",
+    "R12"
+  ],
+  "disagreements": [
+    {
+      "record_id": "R05",
+      "round": 1,
+      "A": {
+        "decision": "include",
+        "reason_code": null,
+        "reason_text": "远程监测居家训练且报告上肢功能，倾向纳入"
+      },
+      "B": {
+        "decision": "uncertain",
+        "reason_code": null,
+        "reason_text": "单臂队列是否为类随机对照存疑，需仲裁"
+      }
+    },
+    {
+      "record_id": "R09",
+      "round": 1,
+      "A": {
+        "decision": "exclude",
+        "reason_code": "EX-OUTCOME",
+        "reason_text": "结局为下肢步态与平衡，未报告上肢功能"
+      },
+      "B": {
+        "decision": "include",
+        "reason_code": null,
+        "reason_text": "卒中远程康复 RCT，倾向纳入待全文确认结局"
+      }
+    }
+  ],
+  "note": "一致性达标。"
+}

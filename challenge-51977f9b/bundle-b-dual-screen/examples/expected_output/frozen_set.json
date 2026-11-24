@@ -1,0 +1,91 @@
+{
+  "schema": "slr-dual-screen/frozen_set/v1",
+  "hash_algorithm": "sha256",
+  "hash_input": "canonical_json{decisions(sorted),rulings(sorted),included_ids(sorted)}",
+  "content_sha256": "cc454b7b81b6311b51c1a662379e78583bb8cb3c998172e77fd1c9a2f1eb3709",
+  "included_ids": [
+    "R01",
+    "R02",
+    "R03",
+    "R08"
+  ],
+  "counts": {
+    "rounds": {
+      "1": {
+        "screened_records": 12,
+        "decisions": 24
+      },
+      "2": {
+        "screened_records": 5,
+        "decisions": 10
+      }
+    },
+    "total_decisions": 34,
+    "total_rulings": 3,
+    "included": 4,
+    "excluded": 8
+  },
+  "resolution": {
+    "R01": {
+      "round": 2,
+      "final": "include",
+      "source": "consensus"
+    },
+    "R02": {
+      "round": 2,
+      "final": "include",
+      "source": "consensus"
+    },
+    "R03": {
+      "round": 2,
+      "final": "include",
+      "source": "consensus"
+    },
+    "R04": {
+      "round": 1,
+      "final": "exclude",
+      "source": "consensus"
+    },
+    "R05": {
+      "round": 1,
+      "final": "exclude",
+      "source": "adjudication"
+    },
+    "R06": {
+      "round": 2,
+      "final": "exclude",
+      "source": "consensus"
+    },
+    "R07": {
+      "round": 1,
+      "final": "exclude",
+      "source": "consensus"
+    },
+    "R08": {
+      "round": 2,
+      "final": "include",
+      "source": "adjudication"
+    },
+    "R09": {
+      "round": 1,
+      "final": "exclude",
+      "source": "adjudication"
+    },
+    "R10": {
+      "round": 1,
+      "final": "exclude",
+      "source": "consensus"
+    },
+    "R11": {
+      "round": 1,
+      "final": "exclude",
+      "source": "consensus"
+    },
+    "R12": {
+      "round": 1,
+      "final": "exclude",
+      "source": "consensus"
+    }
+  },
+  "note": "冻结后任何对决策/仲裁/纳入集的修改都会使 --verify 失败；确需修改请走解冻流程并写 change_records。"
+}

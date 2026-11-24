@@ -1,0 +1,16 @@
+{
+  "identified": 100,
+  "duplicates_removed": 0,
+  "screened": 100,
+  "excluded_title_abstract": {
+    "非随机对照试验": 70,
+    "人群不符": 15
+  },
+  "fulltext_assessed": 13,
+  "excluded_fulltext": {
+    "全文不可得": 5,
+    "结局指标不符": 6
+  },
+  "included": 2,
+  "_comment": "埋雷负例 / synthetic：F1 与 F3 轧平，但 F2 失衡：screened=100 而 85+13=98，diff=2。"
+}

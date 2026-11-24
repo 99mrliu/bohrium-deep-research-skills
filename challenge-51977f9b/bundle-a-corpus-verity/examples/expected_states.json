@@ -1,0 +1,25 @@
+{
+  "_notice": "合成示例 / synthetic, illustrative：verify_corpus.py 对 examples/input/records.json 的逐条预期状态，供 scripts/selfcheck 断言比对。",
+  "expected_states": {
+    "R01": "verified",
+    "R02": "suspicious",
+    "R03": "suspicious",
+    "R04": "verified",
+    "R05": "duplicate",
+    "R06": "verified",
+    "R07": "probable_duplicate",
+    "R08": "retraction_flagged",
+    "R09": "invalid",
+    "R10": "verified"
+  },
+  "expected_prisma": {
+    "identified": 10,
+    "duplicates_removed": 2,
+    "quarantined": 4,
+    "clean_for_screening": 4
+  },
+  "expected_duplicate_of": {
+    "R05": "R04",
+    "R07": "R06"
+  }
+}

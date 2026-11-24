@@ -1,0 +1,228 @@
+#!/usr/bin/env python3
+# -*- coding: utf-8 -*-
+"""selfcheck — slr-dual-screen 技能自检（合成示例，端到端断言）。
+
+断言内容：
+  正例：parse_case/scaffold exit 0；两轮 screen_check exit 0；
+        kappa 与手算值一致到 3 位小数（round1=0.667，round2=0.545）；
+        分歧清单逐条断言；仲裁后 frozen_set 生成且 --verify 通过；
+        纳入集恰为 [R01, R02, R03, R08]。
+  负例：exclude 缺 reason → exit 3（S3）；
+        冻结后追加决策 → exit 3（S5）；
+        篡改 frozen_set 一个 id → --verify exit 3（V1）；
+        kappa --enforce 低于阈值 → exit 3（K3）；
+        records 缺失 → exit 2。
+  另对全部脚本 py_compile。
+任何断言失败 → exit 3。
+"""
+import json
+import os
+import py_compile
+import shutil
+import subprocess
+import sys
+import tempfile
+
+HERE = os.path.dirname(os.path.abspath(__file__))
+SKILL = os.path.dirname(HERE)
+EX = os.path.join(SKILL, "examples")
+EXPECTED = os.path.join(EX, "expected_output")
+
+FAILURES = []
+
+
+def check(name, cond, detail=""):
+    tag = "PASS" if cond else "FAIL"
+    print(f"  [{tag}] {name}" + (f" — {detail}" if detail and not cond else ""))
+    if not cond:
+        FAILURES.append(name)
+
+
+def run(args, cwd):
+    p = subprocess.run([sys.executable] + args, cwd=cwd,
+                       capture_output=True, text=True)
+    return p.returncode, (p.stdout or "") + (p.stderr or "")
+
+
+def main():
+    print("== slr-dual-screen selfcheck（合成示例）==")
+
+    tmp = tempfile.mkdtemp(prefix="slr_dual_screen_")
+
+    # ---------- 0. py_compile 全部脚本（字节码写临时目录，不污染 bundle） ----------
+    print("[0] py_compile 全部脚本")
+    for fn in sorted(os.listdir(HERE)):
+        path = os.path.join(HERE, fn)
+        if fn.endswith(".py") or fn == "selfcheck":
+            try:
+                py_compile.compile(path, doraise=True,
+                                   cfile=os.path.join(tmp, fn + ".pyc"))
+                check(f"py_compile {fn}", True)
+            except py_compile.PyCompileError as exc:
+                check(f"py_compile {fn}", False, str(exc))
+    os.makedirs(EXPECTED, exist_ok=True)
+    try:
+        scr = lambda name: os.path.join(HERE, name)
+        inp = os.path.join(EX, "input")
+        case_summary = os.path.join(tmp, "case_summary.json")
+        skeleton = os.path.join(EXPECTED, "result_skeleton.json")
+        rep1 = os.path.join(EXPECTED, "agreement_report_round1.json")
+        rep2 = os.path.join(EXPECTED, "agreement_report_round2.json")
+        frozen = os.path.join(EXPECTED, "frozen_set.json")
+        for stale in (rep1, rep2, frozen, skeleton):
+            if os.path.exists(stale):
+                os.remove(stale)
+
+        # ---------- 1. parse_case + scaffold（正例） ----------
+        print("[1] parse_case.py / scaffold_result.py（正例）")
+        rc, out = run([scr("parse_case.py"),
+                       "--case", os.path.join(inp, "case.json"),
+                       "--task", os.path.join(inp, "task.md"),
+                       "--out", case_summary], tmp)
+        check("parse_case exit 0", rc == 0, out)
+        rc, out = run([scr("scaffold_result.py"),
+                       "--case-summary", case_summary,
+                       "--out", skeleton, "--force"], tmp)
+        check("scaffold_result exit 0", rc == 0, out)
+        if rc == 0:
+            sk = json.load(open(skeleton, encoding="utf-8"))
+            need = {"case_id", "skill_name", "status", "product",
+                    "evidence_matrix", "sources", "uncertainty",
+                    "change_records", "counts", "checks"}
+            check("骨架含合同全部字段", need <= set(sk), str(set(sk)))
+            check("骨架 skill_name=slr-dual-screen",
+                  sk.get("skill_name") == "slr-dual-screen")
+
+        # ---------- 2. screen_check 两轮（正例） ----------
+        print("[2] screen_check.py 两轮（正例）")
+        rc, out = run([scr("screen_check.py"),
+                       "--records", os.path.join(inp, "records.json"),
+                       "--decisions", os.path.join(EX, "decisions_round1.jsonl"),
+                       "--round", "1",
+                       "--criteria", os.path.join(inp, "criteria.json")], tmp)
+        check("screen_check round1 exit 0", rc == 0, out)
+        check("screen_check round1 提示 S4 uncertain", "S4" in out, out)
+        rc, out = run([scr("screen_check.py"),
+                       "--records", os.path.join(EX, "records_round2.json"),
+                       "--decisions", os.path.join(EX, "decisions_round2.jsonl"),
+                       "--round", "2",
+                       "--criteria", os.path.join(inp, "criteria.json")], tmp)
+        check("screen_check round2 exit 0", rc == 0, out)
+
+        # ---------- 3. kappa 两轮：与手算值断言（见 examples/README.md） ----------
+        print("[3] kappa.py：脚本值 vs 手算值（3 位小数）")
+        rc, out = run([scr("kappa.py"),
+                       "--decisions", os.path.join(EX, "decisions_round1.jsonl"),
+                       "--round", "1", "--out", rep1], tmp)
+        check("kappa round1 exit 0", rc == 0, out)
+        r1 = json.load(open(rep1, encoding="utf-8"))
+        # 手算：po=10/12=0.8333，pe=0.5，kappa=2/3≈0.667
+        check("round1 po=0.833", round(r1["po"], 3) == 0.833, str(r1["po"]))
+        check("round1 pe=0.500", round(r1["pe"], 3) == 0.500, str(r1["pe"]))
+        check("round1 kappa=0.667", round(r1["kappa"], 3) == 0.667, str(r1["kappa"]))
+        dis1 = sorted(d["record_id"] for d in r1["disagreements"])
+        check("round1 分歧恰为 R05,R09", dis1 == ["R05", "R09"], str(dis1))
+        d_r05 = next(d for d in r1["disagreements"] if d["record_id"] == "R05")
+        check("R05 分歧内容 = A:include / B:uncertain",
+              d_r05["A"]["decision"] == "include" and d_r05["B"]["decision"] == "uncertain")
+        check("round1 达标（>=0.6）", r1["meets_threshold"] is True)
+
+        rc, out = run([scr("kappa.py"),
+                       "--decisions", os.path.join(EX, "decisions_round2.jsonl"),
+                       "--round", "2", "--out", rep2], tmp)
+        check("kappa round2 exit 0（低kappa但未enforce）", rc == 0, out)
+        r2 = json.load(open(rep2, encoding="utf-8"))
+        # 手算：po=4/5=0.8，pe=14/25=0.56，kappa=6/11≈0.545
+        check("round2 po=0.800", round(r2["po"], 3) == 0.800, str(r2["po"]))
+        check("round2 pe=0.560", round(r2["pe"], 3) == 0.560, str(r2["pe"]))
+        check("round2 kappa=0.545", round(r2["kappa"], 3) == 0.545, str(r2["kappa"]))
+        dis2 = sorted(d["record_id"] for d in r2["disagreements"])
+        check("round2 分歧恰为 R08", dis2 == ["R08"], str(dis2))
+        check("round2 requires_extended_adjudication=true",
+              r2["requires_extended_adjudication"] is True)
+
+        # ---------- 4. adjudicate：冻结 + verify（正例） ----------
+        print("[4] adjudicate.py 冻结与验证（正例）")
+        rc, out = run([scr("adjudicate.py"),
+                       "--disagreements", rep1, rep2,
+                       "--rulings", os.path.join(EX, "adjudication.jsonl"),
+                       "--decisions", os.path.join(EX, "decisions_round1.jsonl"),
+                       os.path.join(EX, "decisions_round2.jsonl"),
+                       "--out", frozen], tmp)
+        check("adjudicate freeze exit 0", rc == 0, out)
+        fz = json.load(open(frozen, encoding="utf-8"))
+        check("纳入集恰为 [R01,R02,R03,R08]",
+              fz["included_ids"] == ["R01", "R02", "R03", "R08"],
+              str(fz["included_ids"]))
+        check("counts: rulings=3, included=4",
+              fz["counts"]["total_rulings"] == 3 and fz["counts"]["included"] == 4)
+        check("R08 来源为 adjudication",
+              fz["resolution"]["R08"]["source"] == "adjudication")
+        rc, out = run([scr("adjudicate.py"),
+                       "--verify", frozen,
+                       "--rulings", os.path.join(EX, "adjudication.jsonl"),
+                       "--decisions", os.path.join(EX, "decisions_round1.jsonl"),
+                       os.path.join(EX, "decisions_round2.jsonl")], tmp)
+        check("verify 未篡改 exit 0", rc == 0, out)
+
+        # ---------- 5. 负例 ----------
+        print("[5] 负例断言")
+        rc, out = run([scr("screen_check.py"),
+                       "--records", os.path.join(inp, "records.json"),
+                       "--decisions", os.path.join(EX, "negative", "no_reason.jsonl"),
+                       "--round", "1",
+                       "--criteria", os.path.join(inp, "criteria.json")], tmp)
+        check("负例 exclude缺reason → exit 3", rc == 3, f"rc={rc}")
+        check("负例报出 S3 规则码", "S3" in out, out[:300])
+
+        rc, out = run([scr("screen_check.py"),
+                       "--records", os.path.join(inp, "records.json"),
+                       "--decisions", os.path.join(EX, "negative", "post_freeze_decision.jsonl"),
+                       "--round", "1",
+                       "--criteria", os.path.join(inp, "criteria.json"),
+                       "--freeze-file", frozen], tmp)
+        check("负例 冻结后追加决策 → exit 3（S5）", rc == 3 and "S5" in out,
+              f"rc={rc} {out[:200]}")
+
+        tampered = json.load(open(frozen, encoding="utf-8"))
+        tampered["included_ids"][0] = "R99"
+        tampered_path = os.path.join(tmp, "frozen_tampered.json")
+        json.dump(tampered, open(tampered_path, "w", encoding="utf-8"),
+                  ensure_ascii=False, indent=2)
+        rc, out = run([scr("adjudicate.py"),
+                       "--verify", tampered_path,
+                       "--rulings", os.path.join(EX, "adjudication.jsonl"),
+                       "--decisions", os.path.join(EX, "decisions_round1.jsonl"),
+                       os.path.join(EX, "decisions_round2.jsonl")], tmp)
+        check("负例 篡改included_ids → verify exit 3（V1）",
+              rc == 3 and "included_ids" in out, f"rc={rc} {out[:200]}")
+
+        rc, out = run([scr("kappa.py"),
+                       "--decisions", os.path.join(EX, "decisions_round2.jsonl"),
+                       "--round", "2", "--enforce",
+                       "--out", os.path.join(tmp, "rep_enf.json")], tmp)
+        check("负例 kappa<0.6 且 --enforce → exit 3（K3）", rc == 3, f"rc={rc}")
+
+        rc, out = run([scr("screen_check.py"),
+                       "--records", os.path.join(tmp, "no_such_records.json"),
+                       "--decisions", os.path.join(EX, "decisions_round1.jsonl"),
+                       "--round", "1"], tmp)
+        check("负例 records缺失 → exit 2", rc == 2, f"rc={rc}")
+
+        rc, out = run([scr("parse_case.py"),
+                       "--case", os.path.join(tmp, "no_such_case.json")], tmp)
+        check("负例 case.json缺失 → exit 2", rc == 2, f"rc={rc}")
+
+    finally:
+        shutil.rmtree(tmp, ignore_errors=True)
+
+    print()
+    if FAILURES:
+        print(f"[FAIL] selfcheck 未通过，{len(FAILURES)} 项断言失败：{FAILURES}")
+        return 3
+    print(f"[OK] selfcheck 全部断言通过。真实产物见 {EXPECTED}")
+    return 0
+
+
+if __name__ == "__main__":
+    sys.exit(main())

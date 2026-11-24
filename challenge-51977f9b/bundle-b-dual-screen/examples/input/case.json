@@ -1,0 +1,19 @@
+{
+  "case_id": "syn-telerehab-stroke-001",
+  "synthetic": true,
+  "note": "合成示例 / synthetic, illustrative：所有记录与研究问题均为虚构，仅用于演示 slr-dual-screen 技能流程，不得冒充正式案例结果。",
+  "research_question": "远程康复对脑卒中后上肢功能的效果：随机对照试验的系统综述",
+  "pico": {
+    "P": "成年（≥18岁）脑卒中后患者",
+    "I": "远程康复（telerehabilitation）上肢训练干预",
+    "C": "常规康复或常规护理",
+    "O": "上肢功能结局（如 Fugl-Meyer 上肢评分、ARAT）"
+  },
+  "materials": ["records.json", "criteria.json"],
+  "output_contract": {
+    "required_fields": [
+      "case_id", "skill_name", "status", "product", "evidence_matrix",
+      "sources", "uncertainty", "change_records", "counts", "checks"
+    ]
+  }
+}

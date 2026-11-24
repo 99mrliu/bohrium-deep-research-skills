@@ -1,0 +1,40 @@
+{
+  "schema": "slr-dual-screen/agreement_report/v1",
+  "round": 2,
+  "n_records": 5,
+  "n_agree": 4,
+  "n_disagree": 1,
+  "marginals": {
+    "A_include": 4,
+    "B_include": 3
+  },
+  "po": 0.8,
+  "pe": 0.56,
+  "kappa": 0.545455,
+  "threshold": 0.6,
+  "meets_threshold": false,
+  "requires_extended_adjudication": true,
+  "agreements": [
+    "R01",
+    "R02",
+    "R03",
+    "R06"
+  ],
+  "disagreements": [
+    {
+      "record_id": "R08",
+      "round": 2,
+      "A": {
+        "decision": "include",
+        "reason_code": null,
+        "reason_text": "次要结局含 FMA-UE 且数据可提取，符合 IN-OUT"
+      },
+      "B": {
+        "decision": "exclude",
+        "reason_code": "EX-OUTCOME",
+        "reason_text": "主要结局为步行能力，认为上肢结局不充分"
+      }
+    }
+  ],
+  "note": "kappa 低于阈值：建议澄清纳排条款→加轮筛选→扩大仲裁，并将 kappa 局限性（患病率悖论）写入 uncertainty。"
+}

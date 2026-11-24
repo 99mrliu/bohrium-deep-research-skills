@@ -1,0 +1,17 @@
+{
+  "case_id": "SYNTH-AAD-001",
+  "title": "益生菌对抗生素相关性腹泻的预防效果",
+  "question": "在接受抗生素治疗的患者中，益生菌预防相比安慰剂或不干预能否降低抗生素相关性腹泻（AAD）的发生率？",
+  "pico": {
+    "P": "接受抗生素治疗的患者（成人或儿童）",
+    "I": "益生菌制剂（任何菌种、任何剂型）",
+    "C": "安慰剂或不干预",
+    "O": "抗生素相关性腹泻发生率"
+  },
+  "output_contract": [
+    "case_id", "skill_name", "status", "product", "evidence_matrix",
+    "sources", "uncertainty", "change_records", "counts", "checks"
+  ],
+  "materials": ["records.json"],
+  "note": "合成示例 / synthetic, illustrative；题录为虚构数据，仅用于演示流水线。"
+}

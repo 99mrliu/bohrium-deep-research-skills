@@ -1,0 +1,24 @@
+{
+  "synthetic": true,
+  "note": "合成示例 / synthetic, illustrative。",
+  "version": "v1.0",
+  "question": "远程康复对脑卒中后上肢功能的效果",
+  "version_policy": "筛选启动后修改任何条款必须：升版本号（v1.0→v1.1…）+ 写 change_records + 重筛受影响记录。",
+  "inclusion": [
+    "IN-POP：成年（≥18 岁）脑卒中后患者",
+    "IN-INT：远程康复上肢训练干预",
+    "IN-OUT：报告上肢功能结局（FMA-UE、ARAT 等）",
+    "IN-DESIGN：随机或类随机对照试验",
+    "IN-TIME：2015 年及以后发表",
+    "IN-LANG：中文或英文",
+    "IN-FT：全文可得"
+  ],
+  "exclusion_codes": [
+    {"code": "EX-POP", "desc": "人群不符（非成年脑卒中患者）"},
+    {"code": "EX-DESIGN", "desc": "研究设计不符（非随机/类随机对照试验）"},
+    {"code": "EX-OUTCOME", "desc": "结局指标不符（未报告上肢功能结局）"},
+    {"code": "EX-TIME", "desc": "发表时间超出范围（2015 年以前）"},
+    {"code": "EX-LANG", "desc": "语言不符（非中英文）"},
+    {"code": "EX-FULLTEXT", "desc": "全文不可得或仅为会议摘要"}
+  ]
+}

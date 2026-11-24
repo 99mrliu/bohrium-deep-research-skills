@@ -1,0 +1,178 @@
+#!/usr/bin/env python3
+"""selfcheck —— bundle-c slr-appraisal-engine 自检脚本（无扩展名，python3 可执行）。
+
+断言：
+  正例：rubric_check / appraise / sensitivity / parse_case / scaffold_result exit 0；
+        脚本草算总分与 examples/README.md 手算值一致（3 位小数）；
+        敏感性示例中 C1=stable、C2=weakened、C3=unsupported。
+  负例：缺 basis_quote 的判定 → exit 3；quote 不在源文本 → exit 3；
+        权重和 0.9 的 rubric → exit 3；无支撑 claim → exit 3。
+  降级：sources 目录缺失 → exit 2。
+  并对全部脚本 py_compile。
+任何断言失败，selfcheck 以 exit 3 结束；全部通过 exit 0。
+"""
+import json
+import os
+import py_compile
+import subprocess
+import sys
+import tempfile
+
+ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+SCRIPTS = os.path.join(ROOT, "scripts")
+EXAMPLES = os.path.join(ROOT, "examples")
+
+EXPECTED_TOTALS = {"S1": 1.000, "S2": 0.900, "S3": 0.800,
+                   "S4": 0.700, "S5": 0.300, "S6": 0.200}
+EXPECTED_GRADES = {"S1": "low", "S2": "low", "S3": "low",
+                   "S4": "some_concerns", "S5": "high", "S6": "high"}
+EXPECTED_CLAIMS = {"C1": "stable", "C2": "weakened", "C3": "unsupported"}
+
+failures = []
+# 禁止字节码缓存：契约要求 bundle 无二进制文件，
+# 且 appraise.py 会 import rubric_check，默认会写 __pycache__。
+RUN_ENV = dict(os.environ, PYTHONDONTWRITEBYTECODE="1")
+
+
+def run(script, *argv):
+    cmd = [sys.executable, os.path.join(SCRIPTS, script)] + list(argv)
+    p = subprocess.run(cmd, capture_output=True, text=True, env=RUN_ENV)
+    return p.returncode, (p.stdout or "") + (p.stderr or "")
+
+
+def check(name, cond, detail=""):
+    tag = "PASS" if cond else "FAIL"
+    print(f"[{tag}] {name}" + (f" —— {detail}" if detail and not cond else ""))
+    if not cond:
+        failures.append(name)
+
+
+def main():
+    print(f"[selfcheck] bundle 根目录：{ROOT}")
+
+    with tempfile.TemporaryDirectory() as tmp:
+        # 0. py_compile 全部脚本（cfile 指向临时目录，不污染 bundle）
+        for fn in sorted(os.listdir(SCRIPTS)):
+            path = os.path.join(SCRIPTS, fn)
+            if not os.path.isfile(path):
+                continue
+            try:
+                py_compile.compile(
+                    path, cfile=os.path.join(tmp, fn + ".pyc"), doraise=True)
+                check(f"py_compile {fn}", True)
+            except py_compile.PyCompileError as e:
+                check(f"py_compile {fn}", False, str(e))
+        case_summary = os.path.join(tmp, "case_summary.json")
+        result_json = os.path.join(tmp, "result.json")
+        report = os.path.join(tmp, "appraisal_report.json")
+        sens = os.path.join(tmp, "sensitivity_report.json")
+
+        # 1. parse_case / scaffold_result 正例
+        rc, out = run("parse_case.py", "--case",
+                      os.path.join(EXAMPLES, "input", "case.json"), "--task",
+                      os.path.join(EXAMPLES, "input", "task.md"),
+                      "--out", case_summary)
+        check("parse_case 正例 exit 0", rc == 0, out)
+
+        rc, out = run("scaffold_result.py", "--case-summary", case_summary,
+                      "--out", result_json)
+        ok = rc == 0
+        if ok:
+            with open(result_json, encoding="utf-8") as f:
+                rj = json.load(f)
+            ok = rj.get("skill_name") == "slr-appraisal-engine"
+        check("scaffold_result 正例 exit 0 且 skill_name 正确", ok, out)
+
+        # 2. rubric_check 正例与负例
+        rc, out = run("rubric_check.py", "--rubric",
+                      os.path.join(EXAMPLES, "rubric.json"))
+        check("rubric_check 正例 exit 0", rc == 0, out)
+
+        rc, out = run("rubric_check.py", "--rubric",
+                      os.path.join(EXAMPLES, "negative", "rubric_bad_weight.json"))
+        check("rubric_check 权重和 0.9 → exit 3", rc == 3 and "R1" in out, out)
+
+        # 3. appraise 正例 + 手算对照
+        inc = os.path.join(EXAMPLES, "input", "included.json")
+        src = os.path.join(EXAMPLES, "input", "sources")
+        rc, out = run("appraise.py", "--rubric",
+                      os.path.join(EXAMPLES, "rubric.json"), "--appraisals",
+                      os.path.join(EXAMPLES, "appraisals.jsonl"),
+                      "--sources", src, "--included", inc, "--out", report)
+        check("appraise 正例 exit 0", rc == 0, out)
+        if rc == 0:
+            with open(report, encoding="utf-8") as f:
+                rep = json.load(f)
+            got = {s["record_id"]: s for s in rep["studies"]}
+            for rid, exp in EXPECTED_TOTALS.items():
+                g = got.get(rid, {})
+                check(f"手算对照 {rid} total={exp:.3f}",
+                      round(g.get("total", -1), 3) == exp,
+                      f"脚本={g.get('total')}")
+                check(f"手算对照 {rid} grade={EXPECTED_GRADES[rid]}",
+                      g.get("grade") == EXPECTED_GRADES[rid],
+                      f"脚本={g.get('grade')}")
+
+        # 4. appraise 负例
+        rc, out = run("appraise.py", "--rubric",
+                      os.path.join(EXAMPLES, "rubric.json"), "--appraisals",
+                      os.path.join(EXAMPLES, "negative",
+                                   "appraisal_no_basis.jsonl"),
+                      "--sources", src, "--included", inc,
+                      "--out", os.path.join(tmp, "neg1.json"))
+        check("缺 basis_quote 判定 → exit 3", rc == 3 and "A2" in out, out)
+
+        rc, out = run("appraise.py", "--rubric",
+                      os.path.join(EXAMPLES, "rubric.json"), "--appraisals",
+                      os.path.join(EXAMPLES, "negative",
+                                   "appraisal_bad_quote.jsonl"),
+                      "--sources", src, "--included", inc,
+                      "--out", os.path.join(tmp, "neg2.json"))
+        check("quote 不在源文本 → exit 3（A1/A2）", rc == 3, out)
+
+        # 5. appraise 降级：sources 缺失 → exit 2
+        rc, out = run("appraise.py", "--rubric",
+                      os.path.join(EXAMPLES, "rubric.json"), "--appraisals",
+                      os.path.join(EXAMPLES, "appraisals.jsonl"),
+                      "--sources", os.path.join(tmp, "no_such_dir"),
+                      "--included", inc,
+                      "--out", os.path.join(tmp, "neg3.json"))
+        check("sources 缺失 → exit 2 诚实降级", rc == 2, out)
+
+        # 6. sensitivity 正例
+        if os.path.isfile(report):
+            rc, out = run("sensitivity.py", "--appraisal", report, "--claims",
+                          os.path.join(EXAMPLES, "claims.jsonl"),
+                          "--out", sens)
+            check("sensitivity 正例 exit 0", rc == 0, out)
+            if rc == 0:
+                with open(sens, encoding="utf-8") as f:
+                    sp = json.load(f)
+                got = {c["claim_id"]: c["status"] for c in sp["claims"]}
+                for cid, exp in EXPECTED_CLAIMS.items():
+                    check(f"敏感性 {cid}={exp}", got.get(cid) == exp,
+                          f"脚本={got.get(cid)}")
+                check("sensitivity 产出 markdown 表",
+                      os.path.isfile(os.path.splitext(sens)[0] + ".md"))
+
+            # 7. sensitivity 负例：无支撑 claim → exit 3
+            bad_claims = os.path.join(tmp, "bad_claims.jsonl")
+            with open(bad_claims, "w", encoding="utf-8") as f:
+                f.write(json.dumps({"claim_id": "CX", "text": "无支撑论断",
+                                    "supporting": []}, ensure_ascii=False) + "\n")
+            rc, out = run("sensitivity.py", "--appraisal", report,
+                          "--claims", bad_claims,
+                          "--out", os.path.join(tmp, "neg4.json"))
+            check("无支撑 claim → exit 3（S1）", rc == 3 and "S1" in out, out)
+
+    print(f"\n[selfcheck] 失败断言数：{len(failures)}")
+    if failures:
+        for f_ in failures:
+            print(f"  - {f_}")
+        return 3
+    print("[selfcheck] 全部断言通过。")
+    return 0
+
+
+if __name__ == "__main__":
+    sys.exit(main())

@@ -1,0 +1,195 @@
+#!/usr/bin/env python3
+"""selfcheck — slr-claim-backlink 自检脚本（无扩展名，python3 可执行）。
+
+断言：
+  正例 6 条论断全部通过（exit 0）且 build_matrix 产物生成；
+  埋雷负例逐一 exit 3（C2 错引 quote / C3 悬空 span / C5 断定词 / C4 无证据 fact）；
+  空输入/缺输入降级 exit 2（缺 spans 文件、空材料目录、空 claims）；
+  index_sources 同输入重跑输出逐字节一致；
+  全部脚本 py_compile 通过。
+任何断言失败 → exit 3；全部通过 → exit 0。
+"""
+import json
+import os
+import py_compile
+import subprocess
+import sys
+import tempfile
+
+HERE = os.path.dirname(os.path.abspath(__file__))
+ROOT = os.path.dirname(HERE)
+EX = os.path.join(ROOT, "examples")
+
+SCRIPTS = ["parse_case.py", "scaffold_result.py", "index_sources.py",
+           "audit_claims.py", "build_matrix.py"]
+
+failures = []
+
+
+def ok(name):
+    print(f"[PASS] {name}")
+
+
+def bad(name, detail):
+    failures.append(name)
+    print(f"[FAIL] {name}：{detail}")
+
+
+def run(script, *argv):
+    return subprocess.run([sys.executable, os.path.join(HERE, script), *argv],
+                          capture_output=True, text=True)
+
+
+def expect(name, proc, code, must_contain=None):
+    if proc.returncode != code:
+        bad(name, f"期望 exit {code}，实际 {proc.returncode}；stderr={proc.stderr[-300:]}")
+        return False
+    if must_contain and must_contain not in (proc.stdout + proc.stderr):
+        bad(name, f"输出中未找到 {must_contain!r}；stdout={proc.stdout[-300:]}")
+        return False
+    ok(name)
+    return True
+
+
+def main():
+    print("=== slr-claim-backlink selfcheck 开始 ===")
+
+    # ---- A0 py_compile 全部脚本（含 selfcheck 自身；字节码写入临时目录，不污染 bundle） ----
+    with tempfile.TemporaryDirectory(prefix="slrcb_pyc_") as pyc_dir:
+        for s in SCRIPTS + ["selfcheck"]:
+            try:
+                py_compile.compile(os.path.join(HERE, s),
+                                   cfile=os.path.join(pyc_dir, s + ".pyc"),
+                                   doraise=True)
+                ok(f"py_compile {s}")
+            except py_compile.PyCompileError as e:
+                bad(f"py_compile {s}", str(e))
+
+    with tempfile.TemporaryDirectory(prefix="slrcb_selfcheck_") as tmp:
+        spans = os.path.join(tmp, "spans.json")
+        audit = os.path.join(tmp, "audit_report.json")
+
+        # ---- A1 parse_case 正例 ----
+        p = run("parse_case.py", "--case", os.path.join(EX, "input", "case.json"),
+                "--out", os.path.join(tmp, "case_summary.json"))
+        if expect("parse_case 正例 exit 0", p, 0):
+            cs = json.load(open(os.path.join(tmp, "case_summary.json"), encoding="utf-8"))
+            if cs.get("case_id") == "synthetic-fall-001":
+                ok("case_summary case_id 正确")
+            else:
+                bad("case_summary case_id 正确", str(cs.get("case_id")))
+
+        # ---- A2 scaffold_result ----
+        result_json = os.path.join(tmp, "result.json")
+        p = run("scaffold_result.py", "--case-summary", os.path.join(tmp, "case_summary.json"),
+                "--out", result_json)
+        if expect("scaffold_result exit 0", p, 0):
+            rj = json.load(open(result_json, encoding="utf-8"))
+            if rj.get("skill_name") == "slr-claim-backlink" and rj.get("status") == "partial":
+                ok("result.json 骨架 skill_name/status 正确")
+            else:
+                bad("result.json 骨架 skill_name/status 正确",
+                    f"{rj.get('skill_name')}/{rj.get('status')}")
+
+        # ---- A3 index_sources 正例 + 确定性 ----
+        p = run("index_sources.py", "--sources", os.path.join(EX, "sources"),
+                "--out", spans)
+        expect("index_sources 正例 exit 0", p, 0, "span")
+        spans2 = os.path.join(tmp, "spans_rerun.json")
+        p2 = run("index_sources.py", "--sources", os.path.join(EX, "sources"),
+                 "--out", spans2)
+        if p2.returncode == 0:
+            b1 = open(spans, "rb").read()
+            b2 = open(spans2, "rb").read()
+            if b1 == b2:
+                ok("index_sources 重跑逐字节一致（确定性）")
+            else:
+                bad("index_sources 重跑逐字节一致（确定性）", "两次输出字节不同")
+        else:
+            bad("index_sources 重跑 exit 0", f"实际 {p2.returncode}")
+
+        # ---- A4 audit_claims 正例（含 extractions 与 conflicts） ----
+        p = run("audit_claims.py", "--claims", os.path.join(EX, "claims.jsonl"),
+                "--spans", spans, "--out", audit,
+                "--extractions", os.path.join(EX, "extractions.jsonl"),
+                "--conflicts", os.path.join(EX, "conflicts.jsonl"))
+        if expect("audit_claims 正例 6 条论断 exit 0", p, 0, "审计通过"):
+            rep = json.load(open(audit, encoding="utf-8"))
+            s = rep["summary"]
+            if s["claims_total"] == 6 and s["claims_failed"] == 0:
+                ok("正例 6 条论断全部通过")
+            else:
+                bad("正例 6 条论断全部通过", str(s))
+            orphan_ids = [o["span_id"] for o in rep["orphan_spans"]]
+            if "R003.txt#L10-14" in orphan_ids:
+                ok("C7 孤儿证据警告命中（R003.txt#L10-14 未被引用）")
+            else:
+                bad("C7 孤儿证据警告命中", f"orphans={orphan_ids}")
+            reg = [c for c in rep["conflicts"] if c.get("status") == "registered"]
+            if len(reg) == 1:
+                ok("冲突对登记 1 条（CL-02 × CL-06）")
+            else:
+                bad("冲突对登记 1 条", str(rep["conflicts"]))
+
+        # ---- A5 埋雷负例逐一 exit 3 ----
+        negatives = [
+            ("claim_bad_quote.jsonl", "C2", "quote 不在 span 内（C2）"),
+            ("claim_dangling_span.jsonl", "C3", "悬空 span_id（C3）"),
+            ("claim_firm_inference.jsonl", "C5", "inference 含断定词'证明'（C5）"),
+            ("claim_fact_noevidence.jsonl", "C4", "fact 无证据（C4）"),
+        ]
+        for fname, code, desc in negatives:
+            p = run("audit_claims.py", "--claims", os.path.join(EX, "negative", fname),
+                    "--spans", spans, "--out", os.path.join(tmp, "neg.json"))
+            expect(f"埋雷负例 {desc} exit 3", p, 3, code)
+
+        # ---- A6 空输入/缺输入降级 exit 2 ----
+        p = run("audit_claims.py", "--claims", os.path.join(EX, "claims.jsonl"),
+                "--spans", os.path.join(tmp, "no_such_spans.json"),
+                "--out", os.path.join(tmp, "x.json"))
+        expect("spans 文件缺失 → exit 2", p, 2, "E-INPUT")
+
+        empty_dir = os.path.join(tmp, "empty_sources")
+        os.makedirs(empty_dir)
+        p = run("index_sources.py", "--sources", empty_dir,
+                "--out", os.path.join(tmp, "y.json"))
+        expect("空材料目录 → index_sources exit 2", p, 2, "E-INPUT")
+
+        empty_claims = os.path.join(tmp, "empty_claims.jsonl")
+        open(empty_claims, "w").close()
+        p = run("audit_claims.py", "--claims", empty_claims,
+                "--spans", spans, "--out", os.path.join(tmp, "z.json"))
+        expect("空 claims.jsonl → exit 2", p, 2, "E-INPUT")
+
+        p = run("parse_case.py", "--case", os.path.join(tmp, "no_case.json"),
+                "--out", os.path.join(tmp, "w.json"))
+        expect("case.json 缺失 → parse_case exit 2", p, 2, "E-INPUT")
+
+        # ---- A7 build_matrix 产物生成 ----
+        out_dir = os.path.join(tmp, "products")
+        p = run("build_matrix.py", "--claims", os.path.join(EX, "claims.jsonl"),
+                "--spans", spans, "--audit", audit, "--out-dir", out_dir)
+        if expect("build_matrix exit 0", p, 0):
+            for fn in ("evidence_matrix.csv", "coverage.md", "conflict_matrix.md"):
+                path = os.path.join(out_dir, fn)
+                if os.path.isfile(path) and os.path.getsize(path) > 0:
+                    ok(f"产物生成：{fn}")
+                else:
+                    bad(f"产物生成：{fn}", "文件缺失或为空")
+            with open(os.path.join(out_dir, "evidence_matrix.csv"), encoding="utf-8") as f:
+                csv_text = f.read()
+            if "CL-01" in csv_text and "R001" in csv_text:
+                ok("evidence_matrix.csv 含 claim_id × record_id")
+            else:
+                bad("evidence_matrix.csv 含 claim_id × record_id", csv_text[:200])
+
+    print("=== selfcheck 结束 ===")
+    if failures:
+        print(f"共 {len(failures)} 项断言失败：{failures}")
+        sys.exit(3)
+    print("全部断言通过（exit 0）。")
+    sys.exit(0)
+
+
+if __name__ == "__main__":
+    main()

@@ -1,0 +1,176 @@
+#!/usr/bin/env python3
+# -*- coding: utf-8 -*-
+"""
+selfcheck — slr-corpus-verity 自检脚本（无扩展名，python3 可直接运行）
+
+断言内容：
+  1. 对全部脚本（含本脚本）执行 py_compile；
+  2. verify_corpus.py 跑 examples/ 合成语料：逐条断言 10 条记录落入预期状态
+     （读 examples/expected_states.json 比对），并核对 PRISMA 计数与 duplicate_of；
+  3. --strict 模式下同一语料必须 exit 3（存在 suspicious/retraction_flagged/invalid）；
+  4. 损坏 JSON（examples/negative/broken_records.json）与不存在的文件必须 exit 2；
+  5. parse_case.py 与 scaffold_result.py 对合成案例 exit 0，骨架覆盖合同全部字段。
+
+任一断言失败 → exit 3；全部通过 → exit 0。
+"""
+import json
+import os
+import py_compile
+import subprocess
+import sys
+import tempfile
+
+SCRIPTS_DIR = os.path.dirname(os.path.abspath(__file__))
+SKILL_ROOT = os.path.dirname(SCRIPTS_DIR)
+EXAMPLES = os.path.join(SKILL_ROOT, "examples")
+
+FAILURES = []
+PASSES = 0
+
+
+def check(label, ok, detail=""):
+    global PASSES
+    if ok:
+        PASSES += 1
+        print("[PASS] {}{}".format(label, "：" + detail if detail else ""))
+    else:
+        FAILURES.append(label)
+        print("[FAIL] {}{}".format(label, "：" + detail if detail else ""))
+
+
+def run_script(script, *script_args):
+    cmd = [sys.executable, os.path.join(SCRIPTS_DIR, script)] + list(script_args)
+    proc = subprocess.run(cmd, capture_output=True, text=True)
+    return proc.returncode, proc.stdout, proc.stderr
+
+
+def main():
+    print("=== slr-corpus-verity selfcheck ===")
+    print("SKILL_ROOT = {}".format(SKILL_ROOT))
+
+    # ---- 1. py_compile 全部脚本（编译产物写入临时目录，不污染 skill 目录）
+    scripts = ["parse_case.py", "scaffold_result.py", "verify_corpus.py", "selfcheck"]
+    compile_tmp = tempfile.mkdtemp(prefix="slr-pyc-")
+    for name in scripts:
+        path = os.path.join(SCRIPTS_DIR, name)
+        try:
+            py_compile.compile(path, cfile=os.path.join(compile_tmp, name + ".pyc"),
+                               doraise=True)
+            check("py_compile {}".format(name), True)
+        except py_compile.PyCompileError as e:
+            check("py_compile {}".format(name), False, str(e))
+
+    # ---- --help 可用性
+    for name in scripts[:-1]:
+        code, out, _ = run_script(name, "--help")
+        check("--help {}".format(name), code == 0 and "usage" in out.lower())
+
+    records = os.path.join(EXAMPLES, "input", "records.json")
+    expected_path = os.path.join(EXAMPLES, "expected_states.json")
+    with open(expected_path, "r", encoding="utf-8") as fh:
+        expected = json.load(fh)
+    exp_states = expected["expected_states"]
+
+    with tempfile.TemporaryDirectory() as tmp:
+        # ---- 2. 正例：合成语料核验，exit 0
+        report_path = os.path.join(tmp, "corpus_report.json")
+        code, out, err = run_script("verify_corpus.py", "--records", records,
+                                    "--out", report_path)
+        check("正例 verify_corpus exit 0", code == 0,
+              "实际 exit {}；stderr：{}".format(code, err.strip()[:200]))
+        report = {}
+        if os.path.isfile(report_path):
+            with open(report_path, "r", encoding="utf-8") as fh:
+                report = json.load(fh)
+        check("正例报告已生成", bool(report.get("records")))
+
+        got = {r["id"]: r for r in report.get("records", [])}
+        check("报告记录数为 10", len(got) == 10, "实际 {}".format(len(got)))
+        for rid in sorted(exp_states):
+            actual = got.get(rid, {}).get("state")
+            check("记录 {} 状态 = {}".format(rid, exp_states[rid]),
+                  actual == exp_states[rid],
+                  "实际 {}".format(actual) if actual != exp_states[rid] else "")
+        for rid, dup_of in expected["expected_duplicate_of"].items():
+            check("记录 {} duplicate_of = {}".format(rid, dup_of),
+                  got.get(rid, {}).get("duplicate_of") == dup_of,
+                  "实际 {}".format(got.get(rid, {}).get("duplicate_of")))
+        prisma = report.get("prisma", {})
+        for key, val in expected["expected_prisma"].items():
+            check("PRISMA {} = {}".format(key, val), prisma.get(key) == val,
+                  "实际 {}".format(prisma.get(key)))
+        # 隔离区每条记录必须带机器可复核理由
+        quarantine = report.get("quarantine", [])
+        check("隔离区记录均带理由",
+              all(q.get("reasons") for q in quarantine) and len(quarantine) == 6,
+              "隔离 {} 条".format(len(quarantine)))
+        # 每条记录带语言与文献类型打标（V7）
+        check("V7 语言/类型打标齐全",
+              all(r.get("language") and r.get("doctype") for r in report.get("records", [])))
+
+        # ---- 3. --strict → exit 3
+        code, out, err = run_script("verify_corpus.py", "--records", records,
+                                    "--out", os.path.join(tmp, "strict.json"), "--strict")
+        check("--strict 埋雷语料 exit 3", code == 3, "实际 exit {}".format(code))
+
+        # ---- 4. 损坏 JSON 与缺失文件 → exit 2
+        broken = os.path.join(EXAMPLES, "negative", "broken_records.json")
+        code, out, err = run_script("verify_corpus.py", "--records", broken,
+                                    "--out", os.path.join(tmp, "broken_report.json"))
+        check("损坏 JSON exit 2", code == 2, "实际 exit {}".format(code))
+        code, out, err = run_script("verify_corpus.py", "--records",
+                                    os.path.join(EXAMPLES, "negative", "no_such.json"),
+                                    "--out", os.path.join(tmp, "missing_report.json"))
+        check("缺失文件 exit 2", code == 2, "实际 exit {}".format(code))
+
+        # ---- 5. parse_case + scaffold_result 链路
+        summary_path = os.path.join(tmp, "case_summary.json")
+        code, out, err = run_script("parse_case.py", "--case",
+                                    os.path.join(EXAMPLES, "input", "case.json"),
+                                    "--task",
+                                    os.path.join(EXAMPLES, "input", "task.md"),
+                                    "--out", summary_path)
+        check("parse_case 正例 exit 0", code == 0,
+              "实际 exit {}；stderr：{}".format(code, err.strip()[:200]))
+        summary = {}
+        if os.path.isfile(summary_path):
+            with open(summary_path, "r", encoding="utf-8") as fh:
+                summary = json.load(fh)
+        check("case_summary 含 output_contract", bool(summary.get("output_contract")))
+        check("records 候选非空", bool(summary.get("records_path_candidates")))
+
+        # parse_case 缺失文件 → exit 2
+        code, _, _ = run_script("parse_case.py", "--case", "/nonexistent/case.json",
+                                "--task", "/nonexistent/task.md",
+                                "--out", os.path.join(tmp, "degraded.json"))
+        check("parse_case 缺失输入 exit 2", code == 2, "实际 exit {}".format(code))
+
+        result_path = os.path.join(tmp, "result.json")
+        code, out, err = run_script("scaffold_result.py", "--summary", summary_path,
+                                    "--out", result_path)
+        check("scaffold_result exit 0", code == 0,
+              "实际 exit {}；stderr：{}".format(code, err.strip()[:200]))
+        result = {}
+        if os.path.isfile(result_path):
+            with open(result_path, "r", encoding="utf-8") as fh:
+                result = json.load(fh)
+        missing_fields = [f for f in summary.get("output_contract", []) if f not in result]
+        check("骨架覆盖 output_contract 全部字段", not missing_fields,
+              "缺 {}".format(missing_fields) if missing_fields else "")
+        check("骨架 status=draft 且 skill_name 正确",
+              result.get("status") == "draft" and result.get("skill_name") == "slr-corpus-verity")
+
+    # ---- 汇总
+    total = PASSES + len(FAILURES)
+    print("=== 断言 {} 项：通过 {}，失败 {} ===".format(total, PASSES, len(FAILURES)))
+    if FAILURES:
+        for f in FAILURES:
+            print("  失败：{}".format(f))
+        print("[SELF-CHECK] 自检失败（exit 3）")
+        return 3
+    print("[SELF-CHECK] 全部断言通过（exit 0）")
+    return 0
+
+
+if __name__ == "__main__":
+    sys.exit(main())

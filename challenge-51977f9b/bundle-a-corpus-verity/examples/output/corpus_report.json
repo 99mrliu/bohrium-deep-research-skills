@@ -1,0 +1,280 @@
+{
+  "tool": "verify_corpus.py",
+  "skill": "slr-corpus-verity",
+  "generated_at": "2026-11-24T15:16:29.725486+00:00",
+  "input_records": "/Users/liuhengshen/Desktop/bhr_product/slr-51977f9b/bundles/bundle-a-corpus-verity/examples/input/records.json",
+  "online": false,
+  "online_check": "disabled",
+  "online_errors": [],
+  "thresholds": {
+    "near_duplicate_ratio": 0.92,
+    "year_range": [
+      1450,
+      2027
+    ],
+    "doi_pattern": "^10\\.\\d{4,9}/\\S+$"
+  },
+  "records": [
+    {
+      "index": 0,
+      "id": "R01",
+      "reasons": [],
+      "checks_passed": [
+        "V1",
+        "V2",
+        "V3",
+        "V6",
+        "V7",
+        "V4",
+        "V5"
+      ],
+      "duplicate_of": null,
+      "language": "en",
+      "doctype": "article",
+      "verification_scope": "local",
+      "online_check": "disabled",
+      "state": "verified"
+    },
+    {
+      "index": 1,
+      "id": "R02",
+      "reasons": [
+        "V2: DOI 格式非法（10.999/fake.x），疑似伪造，但仅凭格式不能断言伪造 → suspicious"
+      ],
+      "checks_passed": [
+        "V1",
+        "V3",
+        "V6",
+        "V7",
+        "V4",
+        "V5"
+      ],
+      "duplicate_of": null,
+      "language": "en",
+      "doctype": "article",
+      "verification_scope": "local",
+      "online_check": "disabled",
+      "state": "suspicious"
+    },
+    {
+      "index": 2,
+      "id": "R03",
+      "reasons": [
+        "V3: 年份 2089 超出合理区间 [1450, 2027] → suspicious"
+      ],
+      "checks_passed": [
+        "V1",
+        "V2",
+        "V6",
+        "V7",
+        "V4",
+        "V5"
+      ],
+      "duplicate_of": null,
+      "language": "en",
+      "doctype": "article",
+      "verification_scope": "local",
+      "online_check": "disabled",
+      "state": "suspicious"
+    },
+    {
+      "index": 3,
+      "id": "R04",
+      "reasons": [],
+      "checks_passed": [
+        "V1",
+        "V2",
+        "V3",
+        "V6",
+        "V7",
+        "V4",
+        "V5"
+      ],
+      "duplicate_of": null,
+      "language": "en",
+      "doctype": "article",
+      "verification_scope": "local",
+      "online_check": "disabled",
+      "state": "verified"
+    },
+    {
+      "index": 4,
+      "id": "R05",
+      "reasons": [
+        "V4: 精确重复（规范化 DOI 相同），保留首条 R04 → duplicate"
+      ],
+      "checks_passed": [
+        "V1",
+        "V2",
+        "V3",
+        "V6",
+        "V7"
+      ],
+      "duplicate_of": "R04",
+      "language": "en",
+      "doctype": "article",
+      "verification_scope": "local",
+      "online_check": "disabled",
+      "state": "duplicate"
+    },
+    {
+      "index": 5,
+      "id": "R06",
+      "reasons": [],
+      "checks_passed": [
+        "V1",
+        "V2",
+        "V3",
+        "V6",
+        "V7",
+        "V4",
+        "V5"
+      ],
+      "duplicate_of": null,
+      "language": "en",
+      "doctype": "article",
+      "verification_scope": "local",
+      "online_check": "disabled",
+      "state": "verified"
+    },
+    {
+      "index": 6,
+      "id": "R07",
+      "reasons": [
+        "V5: 近似重复（规范化标题相似度 1.000 ≥ 0.92），疑似 R06 的另一记录 → probable_duplicate（建议人工复核）"
+      ],
+      "checks_passed": [
+        "V1",
+        "V2",
+        "V3",
+        "V6",
+        "V7",
+        "V4"
+      ],
+      "duplicate_of": "R06",
+      "language": "en",
+      "doctype": "article",
+      "verification_scope": "local",
+      "online_check": "disabled",
+      "state": "probable_duplicate"
+    },
+    {
+      "index": 7,
+      "id": "R08",
+      "reasons": [
+        "V6: title/venue/note 含撤稿信号（retracted/retraction/withdrawn/撤稿），需人工确认后隔离 → retraction_flagged"
+      ],
+      "checks_passed": [
+        "V1",
+        "V2",
+        "V3",
+        "V7",
+        "V4",
+        "V5"
+      ],
+      "duplicate_of": null,
+      "language": "en",
+      "doctype": "article",
+      "verification_scope": "local",
+      "online_check": "disabled",
+      "state": "retraction_flagged"
+    },
+    {
+      "index": 8,
+      "id": "R09",
+      "reasons": [
+        "V1: 缺必填字段 title → invalid"
+      ],
+      "checks_passed": [
+        "V2",
+        "V3",
+        "V6",
+        "V7"
+      ],
+      "duplicate_of": null,
+      "language": "en",
+      "doctype": "article",
+      "verification_scope": "local",
+      "online_check": "disabled",
+      "state": "invalid"
+    },
+    {
+      "index": 9,
+      "id": "R10",
+      "reasons": [],
+      "checks_passed": [
+        "V1",
+        "V2",
+        "V3",
+        "V6",
+        "V7",
+        "V4",
+        "V5"
+      ],
+      "duplicate_of": null,
+      "language": "zh",
+      "doctype": "article",
+      "verification_scope": "local",
+      "online_check": "disabled",
+      "state": "verified"
+    }
+  ],
+  "summary": {
+    "invalid": 1,
+    "retraction_flagged": 1,
+    "suspicious": 2,
+    "duplicate": 1,
+    "probable_duplicate": 1,
+    "verified": 4
+  },
+  "quarantine": [
+    {
+      "id": "R02",
+      "state": "suspicious",
+      "reasons": [
+        "V2: DOI 格式非法（10.999/fake.x），疑似伪造，但仅凭格式不能断言伪造 → suspicious"
+      ]
+    },
+    {
+      "id": "R03",
+      "state": "suspicious",
+      "reasons": [
+        "V3: 年份 2089 超出合理区间 [1450, 2027] → suspicious"
+      ]
+    },
+    {
+      "id": "R05",
+      "state": "duplicate",
+      "reasons": [
+        "V4: 精确重复（规范化 DOI 相同），保留首条 R04 → duplicate"
+      ]
+    },
+    {
+      "id": "R07",
+      "state": "probable_duplicate",
+      "reasons": [
+        "V5: 近似重复（规范化标题相似度 1.000 ≥ 0.92），疑似 R06 的另一记录 → probable_duplicate（建议人工复核）"
+      ]
+    },
+    {
+      "id": "R08",
+      "state": "retraction_flagged",
+      "reasons": [
+        "V6: title/venue/note 含撤稿信号（retracted/retraction/withdrawn/撤稿），需人工确认后隔离 → retraction_flagged"
+      ]
+    },
+    {
+      "id": "R09",
+      "state": "invalid",
+      "reasons": [
+        "V1: 缺必填字段 title → invalid"
+      ]
+    }
+  ],
+  "prisma": {
+    "identified": 10,
+    "duplicates_removed": 2,
+    "quarantined": 4,
+    "clean_for_screening": 4
+  }
+}

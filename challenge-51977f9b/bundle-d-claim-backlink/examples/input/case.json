@@ -1,0 +1,24 @@
+{
+  "case_id": "synthetic-fall-001",
+  "title": "运动干预对老年人跌倒风险的效果（合成示例 / synthetic, illustrative）",
+  "question": "运动干预（太极拳、抗阻训练等）能否降低 65 岁以上老年人的跌倒风险？",
+  "materials": [
+    "sources/R001.txt",
+    "sources/R002.txt",
+    "sources/R003.txt",
+    "sources/records.json"
+  ],
+  "output_contract": [
+    "case_id",
+    "skill_name",
+    "status",
+    "product",
+    "evidence_matrix",
+    "sources",
+    "uncertainty",
+    "change_records",
+    "counts",
+    "checks"
+  ],
+  "note": "本案例为合成示例，所有文献与数据均为虚构，仅用于演示 slr-claim-backlink 的论断回链审计流程。"
+}

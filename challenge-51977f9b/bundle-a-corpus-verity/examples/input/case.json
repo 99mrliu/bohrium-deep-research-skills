@@ -1,0 +1,22 @@
+{
+  "_notice": "合成示例 / synthetic, illustrative：本案例为虚构的教学演示数据，不构成真实评测案例结果。",
+  "case_id": "case-synthetic-glp1-001",
+  "research_question": "GLP-1 受体激动剂对 2 型糖尿病患者心血管结局（MACE、心衰住院、心血管死亡）的影响：基于随机对照试验与队列研究的系统综述",
+  "materials": ["records.json"],
+  "records_path": "records.json",
+  "output_contract": [
+    "case_id",
+    "skill_name",
+    "status",
+    "product",
+    "evidence_matrix",
+    "sources",
+    "uncertainty",
+    "change_records",
+    "counts",
+    "checks",
+    "corpus_report",
+    "prisma_flow",
+    "quarantine_list"
+  ]
+}
