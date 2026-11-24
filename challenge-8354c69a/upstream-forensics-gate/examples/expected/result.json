@@ -1,0 +1,24 @@
+{
+  "case_id": "synthetic-forensics-demo-001",
+  "status": "partial",
+  "limitations": [
+    "门禁存在 flags，须逐条处置后方可 success"
+  ],
+  "sources": [
+    "forensics_report.json (F1-F8 取证输出)",
+    "authenticity_brief.md (人读简报)"
+  ],
+  "uncertainty": [
+    "取证检查基于签名启发式，false positive/negative 均可能；finding 须由 Agent 回原始文件确认后再写进结论",
+    "门禁 PASS_WITH_FLAGS：下游结论须逐条声明是否受 findings 影响"
+  ],
+  "change_records": [
+    "run_gate partial-first",
+    "run_gate 完成: verdict=PASS_WITH_FLAGS findings=10 filled=['数据质量评估', '异常点', '复核步骤', '依据与风险', '确认项']"
+  ],
+  "数据质量评估": "门禁结论 PASS_WITH_FLAGS；findings=10 条，详见 authenticity_brief.md",
+  "异常点": "（取证视角）数据级异常对象: [{\"severity\": \"high\", \"kind\": \"identical_files\", \"detail\": [[\"demo/input/batch_a.csv\", \"demo/input/batch_a_copy.csv\"]]}, {\"severity\": \"medium\", \"kind\": \"saturation_suspects\", \"detail\": {\"file\": \"demo/input/batch_a.csv\", \"saturation_suspects\": [{\"col\": 2, \"longest_identical_run\": 30, \"value\": 1.0}]}}, {\"severity\": \"medium\", \"kind\": \"constant_columns\", \"detail\": {\"file\": \"demo/input/batch_a.csv\", \"constant_columns\": [2]}}, {\"severity\": \"medium\", \"kind\": \"saturation_suspects\", \"detail\": {\"file\": \"demo/input/batch_a_copy.csv\", \"saturation_suspects\": [{\"col\": 2, \"longest_identical_run\": 30, \"value\": 1.0}]}}, {\"severity\": \"medium\", \"kind\": \"constant_columns\", \"detail\": {\"file\": \"demo/input/batch_a_copy.csv\", \"constant_columns\": [2]}}, {\"severity\": \"medium\", \"kind\": \"duplicate_data_rows\", \"detail\": {\"file\": \"demo/input/batch_b.csv\", \"duplicate_data_rows\": 2}}, {\"severity\": \"medium\", \"kind\": \"saturation_suspects\", \"detail\": {\"file\": \"demo/input/batch_b.csv\", \"saturation_suspects\": [{\"col\": 1, \"longest_identical_run\": 8, \"value\": null}, {\"col\": 2, \"longest_identical_run\": 30, \"value\": 7.0}]}}, {\"severity\": \"medium\", \"kind\": \"constant_columns\", \"detail\": {\"file\": \"demo/input/batch_b.csv\", \"constant_columns\": [2]}}, {\"severity\": \"medium\", \"kind\": \"unit_ambiguity\", \"detail\": {\"浓度\": [\"mg/mL\", \"ug/mL\"]}}, {\"severity\": \"high\", \"kind\": \"cross_file_overlap\", \"detail\": [[\"demo/input/batch_a.csv\", \"demo/input/batch_a_copy.csv\"]]}]",
+  "复核步骤": "第二人复核: 重跑 run_gate.py 比对 forensics_report.json；对每个 finding 回原始文件按 F1-F8 阈值逐项复算。",
+  "依据与风险": "取证依据: F1-F8 检查（阈值见 forensics_report.json）；风险: 取证只覆盖文件层与数值层签名，不能排除采集端系统性偏差。",
+  "确认项": "需专家确认: 饱和/重复读数是否为设备真实行为；单位歧义的正确约定；隐藏 sheet 是否属于分析范围。"
+}

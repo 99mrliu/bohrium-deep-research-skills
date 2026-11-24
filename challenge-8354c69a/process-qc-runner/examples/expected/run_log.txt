@@ -1,0 +1,36 @@
+[result_kit] scaffold case_id=synthetic-qc-demo-001 fields=2
+[budget] init: 64 requests / 900 s
+=== 第一次运行（预期 B 失败，停在断点）===
+[qc] RUN  A_stats
+[qc] OK   A_stats (0.22s)
+[qc] RUN  B_needs_file
+[qc] FAIL B_needs_file exit=1 stderr_tail=''
+[qc] 停止于阶段 B_needs_file；修复后用同一命令重跑即可从断点续跑
+-> failed as expected
+=== 修复（补上 needed.txt）后原命令续跑（预期 A 被 SKIP）===
+[qc] SKIP A_stats (manifest 一致，幂等恢复)
+[qc] RUN  B_needs_file
+[qc] OK   B_needs_file (0.29s)
+[qc] RUN  C_checkpoint
+[qc] OK   C_checkpoint (0.21s)
+[qc] 全部阶段完成 -> demo/work/qc/manifest.json
+[budget] requests_used=1/64
+[budget] requests_used=2/64
+{
+  "requests_used": 2,
+  "requests_budget": 64,
+  "elapsed_s": 2.0,
+  "seconds_budget": 900,
+  "usage_frac": 0.031,
+  "advice": "正常推进"
+}
+=== status / verify ===
+A_stats              OK             0.22s
+B_needs_file         OK             0.29s
+C_checkpoint         OK             0.21s
+[result_kit] VERIFY OK (2 fields)
+=== 第三次运行（预期全部 SKIP，幂等）===
+[qc] SKIP A_stats (manifest 一致，幂等恢复)
+[qc] SKIP B_needs_file (manifest 一致，幂等恢复)
+[qc] SKIP C_checkpoint (manifest 一致，幂等恢复)
+[qc] 全部阶段完成 -> demo/work/qc/manifest.json

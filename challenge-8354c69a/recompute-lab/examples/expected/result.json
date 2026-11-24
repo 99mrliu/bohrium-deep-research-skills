@@ -1,0 +1,23 @@
+{
+  "case_id": "synthetic-recompute-demo-001",
+  "status": "partial",
+  "limitations": [
+    "存在通道不一致或 claims 未确认，按规则不得 success"
+  ],
+  "sources": [
+    "ledger_index.json",
+    "ledgers/ 目录全部账本",
+    "claims_audit.json"
+  ],
+  "uncertainty": [
+    "双通道一致仅排除实现错误，不排除方法本身不适用（如非线性段做线性拟合）"
+  ],
+  "change_records": [
+    "run_lab partial-first",
+    "run_lab 完成: 复算覆盖 1 个文件 2 个账本；通道不一致账本 0 个。 claims 审计: 1/2 未确认。"
+  ],
+  "结果趋势": "（复算概览）复算覆盖 1 个文件 2 个账本；通道不一致账本 0 个。 claims 审计: 1/2 未确认。 详见 ledger_index.json 与各账本。",
+  "复核步骤": "第二人复核: 重跑 run_lab.py 复算全部账本；逐 claim 对照 claims_audit.json；任何 DISAGREE 项不得写入结论。",
+  "依据与风险": "全部数值结论依据双通道复算账本（/app/work/ledgers/，容差 abs=1e-9, rel=1e-9）；风险: 容差外的有效数字进位差异须由 Agent 判断。",
+  "确认项": "需专家确认: 报告中采用的容差（rel_tol）是否符合领域惯例。"
+}

@@ -1,0 +1,27 @@
+{
+  "claims": [
+    {
+      "claim_id": "C1",
+      "text": "载荷均值",
+      "verdict": "CONFIRMED",
+      "recomputed": 159.1421505375,
+      "claimed": 159.1422,
+      "rel_diff": 3.1080703540041323e-07,
+      "rel_tol": 0.001
+    },
+    {
+      "claim_id": "C2",
+      "text": "峰值载荷（故意写错 +5%）",
+      "verdict": "TOLERANCE_MISS",
+      "recomputed": 239.096706,
+      "claimed": 251.0515,
+      "rel_diff": 0.049999827266545414,
+      "rel_tol": 0.001
+    }
+  ],
+  "summary": {
+    "total": 2,
+    "not_confirmed": 1,
+    "deliverable": false
+  }
+}

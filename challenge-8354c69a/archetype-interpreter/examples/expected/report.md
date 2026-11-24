@@ -1,0 +1,40 @@
+# 实验结果解释与异常分析 — 运行报告
+
+- case_id: `synthetic-bending-demo-001`
+- status: **partial**
+- 原型: `bending_traces`
+
+## 契约字段概览
+
+### limitations
+["以下契约字段需 Agent 阅读锚点与原始材料后撰写（脚本不猜测）: 可能原因, 后续实验建议"]
+
+### sources
+["run_all.py 重算输出: /app/work/archetype_findings.json", "分析锚点: /app/work/analysis_anchors.md"]
+
+### uncertainty
+["原型识别基于文件形态与关键词启发式，存在误识别风险"]
+
+### change_records
+["run_all: partial-first 骨架", "run_all 完成: 原型=bending_traces, 自动填充字段=['结果趋势', '异常点', '复核步骤', '依据与风险', '确认项'], 待撰写字段=['可能原因', '后续实验建议']"]
+
+### 结果趋势
+（脚本锚点）原型=bending_traces；详见 /app/work/analysis_anchors.md 与 archetype_findings.json，趋势判读需 Agent 结合 task.md 完成。
+
+### 异常点
+{"data": {"outliers": ["trace_005.txt", "trace_013.txt", "trace_027.txt"], "saturated": ["trace_005.txt"], "duplicates": [["trace_030.txt", "trace_031.txt"]]}, "iris": {"per_split_diff": null, "sign_consistent": null}, "cefixime": {"cross_hit_count": null}, "generic": []}
+
+### 可能原因
+null
+
+### 复核步骤
+可由第二人执行的复核动作: 重跑 run_all.py 复算全部锚点数值；回查 archetype_findings.json 中列出的具体文件名与阈值；对离群/饱和/重复对象逐一回原始文件核对。
+
+### 后续实验建议
+null
+
+### 依据与风险
+本结果依据: run_all.py 对 /input 的确定性重算 (见 archetype_findings.json 阈值字段)；风险: 原型误识别、单位/方法歧义未消解——须在结论中显式标注。
+
+### 确认项
+需专家确认项: (1) 原型识别是否正确; (2) 单位与量程约定; (3) 饱和/重复读数是否为设备真实行为。

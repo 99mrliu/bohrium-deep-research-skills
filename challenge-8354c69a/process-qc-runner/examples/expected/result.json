@@ -1,0 +1,17 @@
+{
+  "case_id": "synthetic-qc-demo-001",
+  "status": "success",
+  "limitations": [
+    "过程化执行骨架；各阶段 checkpoint 将逐步填充"
+  ],
+  "sources": [
+    "demo/work/stats.json"
+  ],
+  "uncertainty": [],
+  "change_records": [
+    "scaffold: partial-first checkpoint",
+    "checkpoint after stage: C"
+  ],
+  "结果趋势": "y 随 x 单调上升(demo/input/data.csv)",
+  "复核步骤": "重跑 qc_runner 比对 manifest(demo/work/qc/manifest.json)"
+}
