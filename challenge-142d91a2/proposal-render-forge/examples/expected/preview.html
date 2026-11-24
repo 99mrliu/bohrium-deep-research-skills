@@ -1,0 +1,101 @@
+<!doctype html>
+<html lang="zh">
+<head>
+<meta charset="utf-8">
+<title>城市内涝时空预测模型研究——融合雷达定量降水估计与图神经网络的内涝风险预警方法 —— 开题预览</title>
+<style>
+body { font-family: sans-serif; max-width: 780px; margin: 24px auto; color: #222; }
+h1 { font-size: 20px; }
+.meta { color: #555; font-size: 13px; }
+.toc { background: #f4f7fa; border-radius: 8px; padding: 8px 8px 8px 28px; }
+.note { color: #999; font-size: 12px; }
+svg { max-width: 100%; height: auto; border: 1px solid #e2e8f0; border-radius: 8px; }
+</style>
+</head>
+<body>
+<h1>城市内涝时空预测模型研究——融合雷达定量降水估计与图神经网络的内涝风险预警方法</h1>
+<p class="meta">水利工程（城市水务与气象交叉） · 博士研究生 · 申请人 张澜（合成） · 导师 李工（合成） ·
+版本 v1（2026-11-24）</p>
+<h2>章节速览</h2>
+<ol class="toc"><li><b>[1] 研究背景与缺口</b> —— 段落 3，字数 378</li><li><b>[2] 问题定义</b> —— 段落 2，字数 261</li><li><b>[3] 研究目标</b> —— 段落 3，字数 239</li><li><b>[4] 技术路线</b> —— 段落 2，字数 213</li><li><b>[5] 阶段计划</b> —— 段落 1，字数 117</li><li><b>[6] 风险与备选</b> —— 段落 3，字数 255</li><li><b>[7] 预期成果</b> —— 段落 2，字数 116</li></ol>
+<h2>卡片预览（SVG 文本图）</h2>
+<svg xmlns="http://www.w3.org/2000/svg" width="720" height="1022" viewBox="0 0 720 1022" font-family="sans-serif">
+<rect x="0" y="0" width="720" height="1022" fill="#fafbfc"/>
+<text x="20" y="26" font-size="15" font-weight="bold" fill="#222">城市内涝时空预测模型研究——融合雷达定量降水估计与图神经网络的内涝风险预警方法</text>
+<text x="20" y="46" font-size="11" fill="#555">水利工程（城市水务与气象交叉） · 博士研究生 · 周期 2027-03 至 2029-02 · 经费 28 万元 · 版本 v1（2026-11-24）</text>
+<rect x="20" y="62" width="680" height="96" rx="8" fill="white" stroke="#b9c6d4" stroke-width="1.5"/>
+<text x="32" y="84" font-size="13" font-weight="bold" fill="#1d4e89">[1] 研究背景与缺口</text>
+<text x="32" y="104" font-size="11" fill="#333">近年来极端短历时强降雨频发，城市内涝已成为韧性城市建设的核心威胁之一。以 2021 年郑州“7·20”特</text>
+<text x="32" y="119" font-size="11" fill="#333">大暴雨为代表的重大内涝事件表明，面向街区尺度的分钟级内涝预警能力仍存在明显短板，精细化时空预测是内涝防治 …</text>
+<text x="32" y="148" font-size="10" fill="#888">段落 3 · 表格 0 · 字数 378</text>
+<rect x="20" y="170" width="680" height="96" rx="8" fill="white" stroke="#b9c6d4" stroke-width="1.5"/>
+<text x="32" y="192" font-size="13" font-weight="bold" fill="#1d4e89">[2] 问题定义</text>
+<text x="32" y="212" font-size="11" fill="#333">研究对象：某南方城市建成区（合成设定）。输入包括雷达 QPE（1 km / 5 min）、87 个地面雨</text>
+<text x="32" y="227" font-size="11" fill="#333">量站观测、排水管网拓扑（约 1.2 万节点）、30 m DEM 与 2018–2025 年内涝积水台账（ …</text>
+<text x="32" y="256" font-size="10" fill="#888">段落 2 · 表格 0 · 字数 261</text>
+<rect x="20" y="278" width="680" height="96" rx="8" fill="white" stroke="#b9c6d4" stroke-width="1.5"/>
+<text x="32" y="300" font-size="13" font-weight="bold" fill="#1d4e89">[3] 研究目标</text>
+<text x="32" y="320" font-size="11" fill="#333">目标一（数据）：构建覆盖不少于 30 场历史降雨事件的“降雨—管网—积水”耦合数据集，完成积水台账的空间</text>
+<text x="32" y="335" font-size="11" fill="#333">配准与质量分级，形成可复用的标注规范。</text>
+<text x="32" y="364" font-size="10" fill="#888">段落 3 · 表格 0 · 字数 239</text>
+<rect x="20" y="386" width="680" height="96" rx="8" fill="white" stroke="#b9c6d4" stroke-width="1.5"/>
+<text x="32" y="408" font-size="13" font-weight="bold" fill="#1d4e89">[4] 技术路线</text>
+<text x="32" y="428" font-size="11" fill="#333">技术路线分四层：数据层完成 QPE 误差订正、台账配准与图结构构建 [S2]；模型层以图神经网络聚合管网</text>
+<text x="32" y="443" font-size="11" fill="#333">上下游信息、以 ConvLSTM 刻画降雨时空演化，两者通过门控融合 [S3][S4]；物理约束层引入水 …</text>
+<text x="32" y="472" font-size="10" fill="#888">段落 2 · 表格 1 · 字数 213</text>
+<rect x="20" y="494" width="680" height="252" rx="8" fill="white" stroke="#c97b2d" stroke-width="1.5"/>
+<text x="32" y="516" font-size="13" font-weight="bold" fill="#1d4e89">[5] 阶段计划</text>
+<text x="32" y="536" font-size="11" fill="#333">研究周期 2027-03 至 2029-02 共 8 个季度，第 4 季度末进行中期检查。计划分解为 6</text>
+<text x="32" y="551" font-size="11" fill="#333"> 项任务，起止季度与交付物见表 2；人员配置为博士生 1 名全程负责模型与论文，硕士生 2 名在 T2  …</text>
+<text x="32" y="580" font-size="10" fill="#888">段落 1 · 表格 1 · 字数 117</text>
+<line x1="242.0" y1="604" x2="242.0" y2="736" stroke="#ddd"/>
+<text x="245.0" y="600" font-size="9" fill="#888">Q1</text>
+<line x1="295.2" y1="604" x2="295.2" y2="736" stroke="#ddd"/>
+<text x="298.2" y="600" font-size="9" fill="#888">Q2</text>
+<line x1="348.5" y1="604" x2="348.5" y2="736" stroke="#ddd"/>
+<text x="351.5" y="600" font-size="9" fill="#888">Q3</text>
+<line x1="401.8" y1="604" x2="401.8" y2="736" stroke="#ddd"/>
+<text x="404.8" y="600" font-size="9" fill="#888">Q4</text>
+<line x1="455.0" y1="604" x2="455.0" y2="736" stroke="#ddd"/>
+<text x="458.0" y="600" font-size="9" fill="#888">Q5</text>
+<line x1="508.2" y1="604" x2="508.2" y2="736" stroke="#ddd"/>
+<text x="511.2" y="600" font-size="9" fill="#888">Q6</text>
+<line x1="561.5" y1="604" x2="561.5" y2="736" stroke="#ddd"/>
+<text x="564.5" y="600" font-size="9" fill="#888">Q7</text>
+<line x1="614.8" y1="604" x2="614.8" y2="736" stroke="#ddd"/>
+<text x="617.8" y="600" font-size="9" fill="#888">Q8</text>
+<line x1="668.0" y1="604" x2="668.0" y2="736" stroke="#ddd"/>
+<text x="36" y="617" font-size="10" fill="#333">T1 文献调研与数据收集</text>
+<rect x="242.0" y="606" width="106.5" height="13" rx="3" fill="#3a7ca5"/>
+<text x="351.5" y="617" font-size="9" fill="#666">Q1–Q2</text>
+<text x="36" y="639" font-size="10" fill="#333">T2 数据集构建与标注</text>
+<rect x="295.2" y="628" width="106.5" height="13" rx="3" fill="#5c9ead"/>
+<text x="404.8" y="639" font-size="9" fill="#666">Q2–Q3</text>
+<text x="36" y="661" font-size="10" fill="#333">T3 基线模型复现与对比</text>
+<rect x="348.5" y="650" width="106.5" height="13" rx="3" fill="#8fb8c9"/>
+<text x="458.0" y="661" font-size="9" fill="#666">Q3–Q4</text>
+<text x="36" y="683" font-size="10" fill="#333">T4 耦合模型研发与消融</text>
+<rect x="401.8" y="672" width="159.8" height="13" rx="3" fill="#2f6690"/>
+<text x="564.5" y="683" font-size="9" fill="#666">Q4–Q6</text>
+<text x="36" y="705" font-size="10" fill="#333">T5 系统集成与业务化试用</text>
+<rect x="508.2" y="694" width="106.5" height="13" rx="3" fill="#4d8fb1"/>
+<text x="617.8" y="705" font-size="9" fill="#666">Q6–Q7</text>
+<text x="36" y="727" font-size="10" fill="#333">T6 论文撰写与学位论文</text>
+<rect x="561.5" y="716" width="106.5" height="13" rx="3" fill="#79a9c2"/>
+<text x="671.0" y="727" font-size="9" fill="#666">Q7–Q8</text>
+<rect x="20" y="758" width="680" height="96" rx="8" fill="white" stroke="#b9c6d4" stroke-width="1.5"/>
+<text x="32" y="780" font-size="13" font-weight="bold" fill="#1d4e89">[6] 风险与备选</text>
+<text x="32" y="800" font-size="11" fill="#333">风险一（数据）：历史积水台账覆盖不足，可能撑不起模型训练。触发信号：可用降雨事件少于 20 场。备选方案</text>
+<text x="32" y="815" font-size="11" fill="#333">：引入相邻城市公开内涝数据，并用 SWMM 仿真样本做数据增广 [S5]。</text>
+<text x="32" y="844" font-size="10" fill="#888">段落 3 · 表格 0 · 字数 255</text>
+<rect x="20" y="866" width="680" height="96" rx="8" fill="white" stroke="#b9c6d4" stroke-width="1.5"/>
+<text x="32" y="888" font-size="13" font-weight="bold" fill="#1d4e89">[7] 预期成果</text>
+<text x="32" y="908" font-size="11" fill="#333">学术成果：发表学术论文 2 篇（其中 SCI 检索至少 1 篇），公开“降雨—管网—积水”耦合数据集 1</text>
+<text x="32" y="923" font-size="11" fill="#333"> 套与模型源码。</text>
+<text x="32" y="952" font-size="10" fill="#888">段落 2 · 表格 0 · 字数 116</text>
+<text x="20" y="1010" font-size="10" fill="#999">本 SVG 为纯文本预览，由 document JSON 确定性渲染；甘特条数据与 Markdown 交付中的阶段计划表同源。</text>
+</svg>
+<p class="note">本页为自包含 HTML（内嵌样式与 SVG，均为文本）；由 document JSON
+确定性渲染，与 proposal.md 同源。主交付请以可编辑的 proposal.md 为准。</p>
+</body>
+</html>

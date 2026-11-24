@@ -1,0 +1,84 @@
+{
+  "anchor_map": "/Users/liuhengshen/Desktop/bhr_product/writing15-5dir/proposal-anchor-forge/examples/work/anchors/anchor_map.jsonl",
+  "ledger": "/Users/liuhengshen/Desktop/bhr_product/writing15-5dir/proposal-anchor-forge/examples/curated_fact_ledger.jsonl",
+  "total": 8,
+  "ok": 6,
+  "fail": 1,
+  "unverifiable": 1,
+  "all_verified": false,
+  "link_back_rate": 0.75,
+  "link_back_note": "回链率 = 逐字核验通过且带锚点的论断数 / 论断总数",
+  "blocked": [
+    {
+      "claim_id": "C007",
+      "status": "fail",
+      "reason": "quote 非锚点文本逐字子串（归一化后仍不命中）"
+    },
+    {
+      "claim_id": "C008",
+      "status": "unverifiable",
+      "reason": "缺少 anchor 或 quote 字段"
+    }
+  ],
+  "results": [
+    {
+      "claim_id": "C001",
+      "kind": "number",
+      "section": "研究背景与缺口",
+      "anchor": "M3-P001",
+      "status": "ok"
+    },
+    {
+      "claim_id": "C002",
+      "kind": "number",
+      "section": "研究背景与缺口",
+      "anchor": "M3-P002",
+      "status": "ok"
+    },
+    {
+      "claim_id": "C003",
+      "kind": "number",
+      "section": "问题定义",
+      "anchor": "M3-P003",
+      "status": "ok"
+    },
+    {
+      "claim_id": "C004",
+      "kind": "citation",
+      "section": "研究背景与缺口",
+      "anchor": "M2-P001",
+      "status": "ok"
+    },
+    {
+      "claim_id": "C005",
+      "kind": "citation",
+      "section": "技术路线",
+      "anchor": "M2-P002",
+      "status": "ok"
+    },
+    {
+      "claim_id": "C006",
+      "kind": "inference",
+      "section": "问题定义",
+      "anchor": "M3-P004",
+      "status": "ok"
+    },
+    {
+      "claim_id": "C007",
+      "kind": "fact",
+      "section": "预期成果",
+      "anchor": "M3-P005",
+      "status": "fail",
+      "reason": "quote 非锚点文本逐字子串（归一化后仍不命中）",
+      "quote_head": "XRD 显示老化后有大量 PbI2 生成，钙钛矿相已完全分解"
+    },
+    {
+      "claim_id": "C008",
+      "kind": "number",
+      "section": "风险",
+      "anchor": "",
+      "status": "unverifiable",
+      "reason": "缺少 anchor 或 quote 字段"
+    }
+  ]
+}

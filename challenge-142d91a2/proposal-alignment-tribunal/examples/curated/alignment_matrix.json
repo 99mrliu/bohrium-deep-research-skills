@@ -1,0 +1,107 @@
+{
+  "matrix_id": "AMX-SYNTH-QH-001",
+  "note": "预制演示矩阵（合成）。故意含三处违例：OBJ2 无任何 VAL、STEP4 为孤儿步骤、RSK2 缺 trigger_signal，用于演示三类 fail 裁定。",
+  "research_questions": [
+    {
+      "id": "RQ1",
+      "statement": "沿放牧强度梯度，高寒草地地上净初级生产力（ANPP）的下降是否存在可定位的阈值拐点？",
+      "decision_criterion": "断点回归与线性模型比较：ΔAIC≥4 且断点后斜率 95% CI 不含 0，则支持存在拐点；否则按线性剂量-响应结论。"
+    },
+    {
+      "id": "RQ2",
+      "statement": "群落 Shannon 多样性沿放牧梯度是单调下降，还是在中等强度出现峰值（中度干扰假说）？",
+      "decision_criterion": "二次模型与线性模型比较：二次项显著（p<0.05）且拟合峰值落于实测梯度 20%–80% 分位内，则支持中度干扰；否则按单调方向结论。"
+    }
+  ],
+  "objectives": [
+    {
+      "id": "OBJ1",
+      "rq_id": "RQ1",
+      "metric": "ANPP 断点位置（羊单位/公顷）及断点后斜率",
+      "threshold": "重牧区 ANPP 较围栏对照下降 ≥30% 判定显著退化；断点定位精度 ±0.5 羊单位/公顷",
+      "threshold_basis": "2023 年前期 8 样方调查：重牧样地 ANPP 均值较对照下降约 36%（input/prior_survey_2023.csv）",
+      "sample_or_control": "3 强度 × 6 重复样地 + 6 个围栏封育对照",
+      "time_point": "第 14 个月（第二个生长季末收割后判定）"
+    },
+    {
+      "id": "OBJ2",
+      "rq_id": "RQ2",
+      "metric": "Shannon-Wiener 多样性指数沿放牧梯度的拟合曲线形态",
+      "threshold": "若峰值存在，峰值对应放牧强度须落于实测梯度 20%–80% 分位内，且峰值与两端均值差 ≥0.2",
+      "threshold_basis": "前期数据：重牧样地 Shannon 较轻牧下降约 22%，中牧与轻牧差异 <5%（input/prior_survey_2023.csv）",
+      "sample_or_control": "同 OBJ1 样地，每样地 4 个 1m×1m 样方",
+      "time_point": "第 14 个月（与 OBJ1 同步判定）"
+    }
+  ],
+  "steps": [
+    {
+      "id": "STEP1",
+      "name": "样带选址与样地布设",
+      "serves": ["OBJ1", "OBJ2"],
+      "input": "前期 8 样方坐标与载畜率台账",
+      "output": "18 个固定样地 + 6 个围栏对照的布设方案与基线调查数据",
+      "depends_on": []
+    },
+    {
+      "id": "STEP2",
+      "name": "生长季生物量收割与 ANPP 测定",
+      "serves": ["OBJ1"],
+      "input": "STEP1 建成的固定样地",
+      "output": "两个生长季的 ANPP 数据集",
+      "depends_on": ["STEP1"]
+    },
+    {
+      "id": "STEP3",
+      "name": "群落组成调查与多样性计算",
+      "serves": ["OBJ2"],
+      "input": "STEP1 建成的固定样地",
+      "output": "物种-样方矩阵与各样地 Shannon 指数",
+      "depends_on": ["STEP1"]
+    },
+    {
+      "id": "STEP4",
+      "name": "土壤呼吸通量观测",
+      "serves": [],
+      "input": "STEP1 建成的固定样地",
+      "output": "生长季土壤呼吸通量数据集",
+      "depends_on": ["STEP1"]
+    }
+  ],
+  "validations": [
+    {
+      "id": "VAL1",
+      "obj_id": "OBJ1",
+      "control": "围栏封育对照样地（扣除年际降水差异影响）",
+      "statistical_criterion": "断点回归 vs 线性模型 ΔAIC≥4；断点后斜率 95% CI 不含 0；以对照归一化后重检结论稳健"
+    }
+  ],
+  "outcomes": [
+    {
+      "id": "OUT1",
+      "obj_id": "OBJ1",
+      "deliverable": "ANPP-放牧强度剂量-响应数据集与断点估计报告",
+      "acceptance_criterion": "18 样地 × 2 季数据无缺测；断点估计附 95% CI 与模型比较表"
+    },
+    {
+      "id": "OUT2",
+      "obj_id": "OBJ2",
+      "deliverable": "Shannon 多样性-放牧强度关系曲线与模型比较表",
+      "acceptance_criterion": "每样地 4 样方数据完整；线性与二次模型 AIC 比较表齐全，峰值位置附 bootstrap CI"
+    }
+  ],
+  "risks": [
+    {
+      "id": "RSK1",
+      "affects": ["STEP1"],
+      "trigger_signal": "7–8 月降水冲毁便道，车辆连续一周无法抵达 ≥2 个规划样地",
+      "fallback": "启用前期已踏勘的 4 个备选样地（距便道 3 km 内），物资改摩托+徒步转运",
+      "decision_point": "第 2 个月末基线调查启动前"
+    },
+    {
+      "id": "RSK2",
+      "affects": ["STEP2"],
+      "fallback": "向合作单位借用同型号烘干与称重设备，或将测定外包给有资质实验室",
+      "decision_point": "第 13 个月收割季启动前 2 周"
+    }
+  ]
+}

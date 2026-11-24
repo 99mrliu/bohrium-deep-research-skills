@@ -1,0 +1,23 @@
+{
+  "plan_id": "scrna-tme-plan-broken",
+  "constraints": {
+    "period_months": 24,
+    "staff": {"研究生": 2},
+    "total_budget_cny": 300000
+  },
+  "tasks": [
+    {"id": "TA", "name": "任务甲：数据质控",
+     "duration_person_days": 42, "depends_on": ["TC"], "required_role": "研究生",
+     "cost_cny": 10000},
+    {"id": "TB", "name": "任务乙：细胞注释",
+     "duration_person_days": 42, "depends_on": ["TA"], "required_role": "研究生",
+     "cost_cny": 10000},
+    {"id": "TC", "name": "任务丙：下游分析",
+     "duration_person_days": 42, "depends_on": ["TB", "T99"],
+     "required_role": "博士后", "cost_cny": 10000}
+  ],
+  "milestones": [
+    {"id": "MB1", "task_id": "TA", "deliverable": "",
+     "assessment": "口头汇报"}
+  ]
+}

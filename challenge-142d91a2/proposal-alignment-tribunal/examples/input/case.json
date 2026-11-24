@@ -1,0 +1,20 @@
+{
+  "case_id": "SYNTH-ALIGN-QH-001",
+  "note": "合成示例：演示对齐裁定接口与拦截行为，非平台正式案例。数据与文献均为合成。",
+  "genre": "开题报告",
+  "discipline": "草地生态学",
+  "constraints": {
+    "period_months": 24,
+    "budget_wan": 30,
+    "team": "1 名博士生 + 2 名硕士生",
+    "site_access": "样带位于青藏高原腹地，7–8 月雨季便道可能中断"
+  },
+  "materials": ["prior_survey_2023.csv"],
+  "output_contract": {
+    "proposal_draft": "开题报告正文 Markdown，目标句须标注矩阵 id",
+    "alignment_matrix": "RQ-OBJ-STEP-VAL-OUT-RSK 对齐矩阵 JSON",
+    "fact_source_map": "论断-证据映射 JSON",
+    "risk_register": "风险台账 JSON（触发信号/备选方案/决策时点）",
+    "verification_report": "对齐裁定报告 JSON"
+  }
+}

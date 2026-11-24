@@ -1,0 +1,18 @@
+{"anchor": "M1-P001", "material": "M1", "file": "case.json", "para": 1, "char_start": 0, "char_end": 91, "text": "background: \"申请人为本组一年级博士生，拟围绕 FA-Cs 混合阳离子钙钛矿太阳能电池的湿度稳定性开展 24 个月研究，须基于课题组前期数据与所供文献摘录撰写开题报告。\""}
+{"anchor": "M1-P002", "material": "M1", "file": "case.json", "para": 2, "char_start": 93, "char_end": 121, "text": "case_id: \"SYN-PERO-STAB-001\""}
+{"anchor": "M1-P003", "material": "M1", "file": "case.json", "para": 3, "char_start": 123, "char_end": 247, "text": "constraints: {\"budget_wan\": 30, \"equipment\": \"组内已有手套箱、蒸镀机、太阳光模拟器与恒温恒湿箱\", \"period_months\": 24, \"team\": \"1 名博士生（申请人）+ 1 名硕士生\"}"}
+{"anchor": "M1-P004", "material": "M1", "file": "case.json", "para": 4, "char_start": 249, "char_end": 550, "text": "output_contract: {\"claim_verification\": \"论断核验报告 JSON 文件路径\", \"fact_ledger\": \"论断台账 JSONL 文件路径，每行含 claim_id/section/claim_text/anchor/quote/kind\", \"proposal_draft\": \"含七要素（研究背景与缺口/问题定义/目标/技术路线/阶段计划/风险/预期成果）的开题报告草稿，markdown 文件路径\", \"risk_register\": \"风险登记表（风险/触发信号/备选方案）\", \"schedule\": \"24 个月阶段计划（阶段/里程碑/月份）\"}"}
+{"anchor": "M1-P005", "material": "M1", "file": "case.json", "para": 5, "char_start": 552, "char_end": 590, "text": "title: \"钙钛矿太阳能电池湿度稳定性开题报告（合成示例，非正式案例）\""}
+{"anchor": "M2-P001", "material": "M2", "file": "literature_digest.md", "para": 1, "char_start": 0, "char_end": 76, "text": "【合成摘录 L1】某 2023 年综述（本示例虚构）指出，钙钛矿薄膜中的离子迁移被普遍认为是器件效率衰减的主要内在通道之一，其活化能与卤素空位浓度相关。"}
+{"anchor": "M2-P002", "material": "M2", "file": "literature_digest.md", "para": 2, "char_start": 78, "char_end": 155, "text": "【合成摘录 L2】一项 2022 年报道（本示例虚构）通过二维/三维异质结界面钝化，将封装器件在 65°C 下的 T80 寿命延长至 1500 小时以上。"}
+{"anchor": "M2-P003", "material": "M2", "file": "literature_digest.md", "para": 3, "char_start": 157, "char_end": 230, "text": "【合成摘录 L3】ISOS 系列协议（如 ISOS-L 与 ISOS-D）被广泛用于光浸与暗存储稳定性测试的标准化，便于不同实验室结果的横向比较。"}
+{"anchor": "M2-P004", "material": "M2", "file": "literature_digest.md", "para": 4, "char_start": 232, "char_end": 290, "text": "【合成摘录 L4】机器学习辅助的组分筛选近年被用于加速稳定钙钛矿配方的探索，但训练数据的真实性与一致性常被视为瓶颈。"}
+{"anchor": "M3-P001", "material": "M3", "file": "prior_data.md", "para": 1, "char_start": 0, "char_end": 84, "text": "本课题组前期已制备 FA0.85Cs0.15PbI3 组分的钙钛矿太阳能电池，冠军器件初始光电转换效率为 22.4%（反向扫描），12 个器件的标准偏差为 ±0.6%。"}
+{"anchor": "M3-P002", "material": "M3", "file": "prior_data.md", "para": 2, "char_start": 86, "char_end": 139, "text": "未封装器件在氮气手套箱中 65°C 热老化 500 小时后，平均效率保持初始值的 81%（记为 T81）。"}
+{"anchor": "M3-P003", "material": "M3", "file": "prior_data.md", "para": 3, "char_start": 141, "char_end": 195, "text": "在 AM 1.5G 一个太阳连续光照下进行最大功率点跟踪（MPPT）300 小时，器件效率保持率为 74%。"}
+{"anchor": "M3-P004", "material": "M3", "file": "prior_data.md", "para": 4, "char_start": 197, "char_end": 248, "text": "湿度稳定性测试显示，器件在相对湿度 50% 的环境中放置 120 小时后，效率下降至初始值的 62%。"}
+{"anchor": "M3-P005", "material": "M3", "file": "prior_data.md", "para": 5, "char_start": 250, "char_end": 300, "text": "老化后器件的 XRD 图谱中 PbI2 (001) 衍射峰强度明显增强，提示钙钛矿相发生了部分分解。"}
+{"anchor": "M4-P001", "material": "M4", "file": "task.md", "para": 1, "char_start": 0, "char_end": 18, "text": "# 开题任务（合成示例，非正式案例）"}
+{"anchor": "M4-P002", "material": "M4", "file": "task.md", "para": 2, "char_start": 20, "char_end": 61, "text": "请基于本目录提供的全部材料，为「钙钛矿太阳能电池湿度稳定性研究」撰写开题报告草稿。"}
+{"anchor": "M4-P003", "material": "M4", "file": "task.md", "para": 3, "char_start": 63, "char_end": 66, "text": "要求："}
+{"anchor": "M4-P004", "material": "M4", "file": "task.md", "para": 4, "char_start": 68, "char_end": 279, "text": "1. 七要素齐全：研究背景与缺口、问题定义、目标、技术路线、阶段计划、风险、预期成果。\n2. 稿中每一条事实句、数字与文献引用都必须能逐字指回所供材料；材料之外的判断须显式标注「推断」。\n3. 阶段计划不得超过 24 个月，人员与经费不得超出 case.json 的约束。\n4. 风险条目须带触发信号与备选方案；预期成果须给出有材料依据的指标基线。\n5. 交付可编辑的 markdown 草稿与论断台账，并附机器核验报告。"}

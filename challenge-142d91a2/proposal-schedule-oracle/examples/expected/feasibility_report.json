@@ -1,0 +1,455 @@
+{
+  "plan_id": "scrna-tme-plan-v1",
+  "feasible": false,
+  "period_months": 24,
+  "project_duration_months": 26.0,
+  "over_schedule": true,
+  "over_by_months": 2.0,
+  "critical_path": [
+    "T01",
+    "T02",
+    "T03",
+    "T04",
+    "T05",
+    "T06",
+    "T07",
+    "T09"
+  ],
+  "critical_tasks": [
+    "T01",
+    "T02",
+    "T03",
+    "T04",
+    "T05",
+    "T06",
+    "T07",
+    "T09"
+  ],
+  "tasks": [
+    {
+      "id": "T01",
+      "name": "文献调研与研究方案设计",
+      "duration_months": 2.0,
+      "assigned_workers": 1,
+      "es_month": 0,
+      "ef_month": 2.0,
+      "ls_month": 0.0,
+      "lf_month": 2.0,
+      "slack_months": 0.0
+    },
+    {
+      "id": "T02",
+      "name": "伦理审批与样本入组协议",
+      "duration_months": 2.0,
+      "assigned_workers": 1,
+      "es_month": 2.0,
+      "ef_month": 4.0,
+      "ls_month": 2.0,
+      "lf_month": 4.0,
+      "slack_months": 0.0
+    },
+    {
+      "id": "T03",
+      "name": "临床样本采集与单细胞悬液制备",
+      "duration_months": 5.0,
+      "assigned_workers": 1,
+      "es_month": 4.0,
+      "ef_month": 9.0,
+      "ls_month": 4.0,
+      "lf_month": 9.0,
+      "slack_months": 0.0
+    },
+    {
+      "id": "T04",
+      "name": "单细胞测序建库与上机",
+      "duration_months": 3.0,
+      "assigned_workers": 1,
+      "es_month": 9.0,
+      "ef_month": 12.0,
+      "ls_month": 9.0,
+      "lf_month": 12.0,
+      "slack_months": 0.0
+    },
+    {
+      "id": "T05",
+      "name": "数据质控与批次校正",
+      "duration_months": 3.0,
+      "assigned_workers": 1,
+      "es_month": 12.0,
+      "ef_month": 15.0,
+      "ls_month": 12.0,
+      "lf_month": 15.0,
+      "slack_months": 0.0
+    },
+    {
+      "id": "T06",
+      "name": "细胞类型注释与微环境分群",
+      "duration_months": 5.0,
+      "assigned_workers": 1,
+      "es_month": 15.0,
+      "ef_month": 20.0,
+      "ls_month": 15.0,
+      "lf_month": 20.0,
+      "slack_months": 0.0
+    },
+    {
+      "id": "T07",
+      "name": "细胞通讯与轨迹分析",
+      "duration_months": 4.0,
+      "assigned_workers": 1,
+      "es_month": 20.0,
+      "ef_month": 24.0,
+      "ls_month": 20.0,
+      "lf_month": 24.0,
+      "slack_months": 0.0
+    },
+    {
+      "id": "T08",
+      "name": "关键亚群功能验证实验",
+      "duration_months": 3.0,
+      "assigned_workers": 1,
+      "es_month": 20.0,
+      "ef_month": 23.0,
+      "ls_month": 21.0,
+      "lf_month": 24.0,
+      "slack_months": 1.0
+    },
+    {
+      "id": "T09",
+      "name": "论文撰写与开题成果汇总",
+      "duration_months": 2.0,
+      "assigned_workers": 1,
+      "es_month": 24.0,
+      "ef_month": 26.0,
+      "ls_month": 24.0,
+      "lf_month": 26.0,
+      "slack_months": 0.0
+    },
+    {
+      "id": "T10",
+      "name": "公共数据库队列独立验证",
+      "duration_months": 2.0,
+      "assigned_workers": 1,
+      "es_month": 20.0,
+      "ef_month": 22.0,
+      "ls_month": 24.0,
+      "lf_month": 26.0,
+      "slack_months": 4.0
+    }
+  ],
+  "compression_suggestions": [
+    {
+      "task_id": "T01",
+      "kind": "trim_scope",
+      "detail": "范围可裁剪（如缩减样本量/降低指标档位），当前 2.0 月位于关键路径"
+    },
+    {
+      "task_id": "T03",
+      "kind": "trim_scope",
+      "detail": "范围可裁剪（如缩减样本量/降低指标档位），当前 5.0 月位于关键路径"
+    },
+    {
+      "task_id": "T06",
+      "kind": "trim_scope",
+      "detail": "范围可裁剪（如缩减样本量/降低指标档位），当前 5.0 月位于关键路径"
+    },
+    {
+      "task_id": "T07",
+      "kind": "parallelize",
+      "detail": "可由 2 人分摊（研究生 编制 2），工期 4.0 -> 2.0 月；须先消除并行后的人力超载"
+    },
+    {
+      "task_id": "T07",
+      "kind": "trim_scope",
+      "detail": "范围可裁剪（如缩减样本量/降低指标档位），当前 4.0 月位于关键路径"
+    }
+  ],
+  "budget": {
+    "total_planned_cny": 295000,
+    "budget_cny": 300000,
+    "over_budget": false,
+    "monthly": [
+      {
+        "month": 1,
+        "spend_cny": 2500.0,
+        "cumulative_cny": 2500.0
+      },
+      {
+        "month": 2,
+        "spend_cny": 2500.0,
+        "cumulative_cny": 5000.0
+      },
+      {
+        "month": 3,
+        "spend_cny": 5000.0,
+        "cumulative_cny": 10000.0
+      },
+      {
+        "month": 4,
+        "spend_cny": 5000.0,
+        "cumulative_cny": 15000.0
+      },
+      {
+        "month": 5,
+        "spend_cny": 12000.0,
+        "cumulative_cny": 27000.0
+      },
+      {
+        "month": 6,
+        "spend_cny": 12000.0,
+        "cumulative_cny": 39000.0
+      },
+      {
+        "month": 7,
+        "spend_cny": 12000.0,
+        "cumulative_cny": 51000.0
+      },
+      {
+        "month": 8,
+        "spend_cny": 12000.0,
+        "cumulative_cny": 63000.0
+      },
+      {
+        "month": 9,
+        "spend_cny": 12000.0,
+        "cumulative_cny": 75000.0
+      },
+      {
+        "month": 10,
+        "spend_cny": 30000.0,
+        "cumulative_cny": 105000.0
+      },
+      {
+        "month": 11,
+        "spend_cny": 30000.0,
+        "cumulative_cny": 135000.0
+      },
+      {
+        "month": 12,
+        "spend_cny": 30000.0,
+        "cumulative_cny": 165000.0
+      },
+      {
+        "month": 13,
+        "spend_cny": 6666.67,
+        "cumulative_cny": 171666.67
+      },
+      {
+        "month": 14,
+        "spend_cny": 6666.67,
+        "cumulative_cny": 178333.33
+      },
+      {
+        "month": 15,
+        "spend_cny": 6666.67,
+        "cumulative_cny": 185000.0
+      },
+      {
+        "month": 16,
+        "spend_cny": 5000.0,
+        "cumulative_cny": 190000.0
+      },
+      {
+        "month": 17,
+        "spend_cny": 5000.0,
+        "cumulative_cny": 195000.0
+      },
+      {
+        "month": 18,
+        "spend_cny": 5000.0,
+        "cumulative_cny": 200000.0
+      },
+      {
+        "month": 19,
+        "spend_cny": 5000.0,
+        "cumulative_cny": 205000.0
+      },
+      {
+        "month": 20,
+        "spend_cny": 5000.0,
+        "cumulative_cny": 210000.0
+      },
+      {
+        "month": 21,
+        "spend_cny": 26000.0,
+        "cumulative_cny": 236000.0
+      },
+      {
+        "month": 22,
+        "spend_cny": 26000.0,
+        "cumulative_cny": 262000.0
+      },
+      {
+        "month": 23,
+        "spend_cny": 20000.0,
+        "cumulative_cny": 282000.0
+      },
+      {
+        "month": 24,
+        "spend_cny": 5000.0,
+        "cumulative_cny": 287000.0
+      },
+      {
+        "month": 25,
+        "spend_cny": 4000.0,
+        "cumulative_cny": 291000.0
+      },
+      {
+        "month": 26,
+        "spend_cny": 4000.0,
+        "cumulative_cny": 295000.0
+      },
+      {
+        "month": 27,
+        "spend_cny": 0.0,
+        "cumulative_cny": 295000.0
+      }
+    ]
+  },
+  "staffing": {
+    "staff": {
+      "研究生": 2
+    },
+    "monthly": [
+      {
+        "month": 1,
+        "研究生": 1
+      },
+      {
+        "month": 2,
+        "研究生": 1
+      },
+      {
+        "month": 3,
+        "研究生": 1
+      },
+      {
+        "month": 4,
+        "研究生": 1
+      },
+      {
+        "month": 5,
+        "研究生": 1
+      },
+      {
+        "month": 6,
+        "研究生": 1
+      },
+      {
+        "month": 7,
+        "研究生": 1
+      },
+      {
+        "month": 8,
+        "研究生": 1
+      },
+      {
+        "month": 9,
+        "研究生": 1
+      },
+      {
+        "month": 10,
+        "研究生": 1
+      },
+      {
+        "month": 11,
+        "研究生": 1
+      },
+      {
+        "month": 12,
+        "研究生": 1
+      },
+      {
+        "month": 13,
+        "研究生": 1
+      },
+      {
+        "month": 14,
+        "研究生": 1
+      },
+      {
+        "month": 15,
+        "研究生": 1
+      },
+      {
+        "month": 16,
+        "研究生": 1
+      },
+      {
+        "month": 17,
+        "研究生": 1
+      },
+      {
+        "month": 18,
+        "研究生": 1
+      },
+      {
+        "month": 19,
+        "研究生": 1
+      },
+      {
+        "month": 20,
+        "研究生": 1
+      },
+      {
+        "month": 21,
+        "研究生": 3
+      },
+      {
+        "month": 22,
+        "研究生": 3
+      },
+      {
+        "month": 23,
+        "研究生": 2
+      },
+      {
+        "month": 24,
+        "研究生": 1
+      },
+      {
+        "month": 25,
+        "研究生": 1
+      },
+      {
+        "month": 26,
+        "研究生": 1
+      },
+      {
+        "month": 27,
+        "研究生": 0
+      }
+    ],
+    "overloaded_months": [
+      {
+        "month": 21,
+        "role": "研究生",
+        "required": 3,
+        "available": 2
+      },
+      {
+        "month": 22,
+        "role": "研究生",
+        "required": 3,
+        "available": 2
+      }
+    ]
+  },
+  "window_violations": [],
+  "parallel_groups": [
+    {
+      "start_month": 21.0,
+      "tasks": [
+        "T07",
+        "T08",
+        "T10"
+      ]
+    }
+  ],
+  "verdicts": [
+    "超期：总工期 26.0 月 > 周期 24 月，超出 2.0 月",
+    "经费：计划 295000 元 <= 预算 300000 元",
+    "人力超载 2 个月份",
+    "窗口：资源可得性均满足"
+  ]
+}

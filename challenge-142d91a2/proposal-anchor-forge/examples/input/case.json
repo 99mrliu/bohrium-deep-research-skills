@@ -1,0 +1,18 @@
+{
+  "case_id": "SYN-PERO-STAB-001",
+  "title": "钙钛矿太阳能电池湿度稳定性开题报告（合成示例，非正式案例）",
+  "background": "申请人为本组一年级博士生，拟围绕 FA-Cs 混合阳离子钙钛矿太阳能电池的湿度稳定性开展 24 个月研究，须基于课题组前期数据与所供文献摘录撰写开题报告。",
+  "constraints": {
+    "period_months": 24,
+    "budget_wan": 30,
+    "team": "1 名博士生（申请人）+ 1 名硕士生",
+    "equipment": "组内已有手套箱、蒸镀机、太阳光模拟器与恒温恒湿箱"
+  },
+  "output_contract": {
+    "proposal_draft": "含七要素（研究背景与缺口/问题定义/目标/技术路线/阶段计划/风险/预期成果）的开题报告草稿，markdown 文件路径",
+    "fact_ledger": "论断台账 JSONL 文件路径，每行含 claim_id/section/claim_text/anchor/quote/kind",
+    "claim_verification": "论断核验报告 JSON 文件路径",
+    "schedule": "24 个月阶段计划（阶段/里程碑/月份）",
+    "risk_register": "风险登记表（风险/触发信号/备选方案）"
+  }
+}

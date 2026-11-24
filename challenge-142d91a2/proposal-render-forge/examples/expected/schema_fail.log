@@ -1,0 +1,7 @@
+schema 校验失败，拒绝渲染（共 5 处）:
+  - meta 缺少必备字段: budget_wan
+  - sections 必须恰好 7 项（七要素），实际 6 项
+  - 章节 number 必须恰好为 1..7 连续不重，实际: [1, 2, 3, 4, 5, 7]
+  - schedule 节必须含 table（甘特图单一事实源）
+  - 章节 background_gap 存在悬挂引用 [S9]（sources 中无对应条目）
+（坏文档按预期被拒绝，渲染器退出码 2）

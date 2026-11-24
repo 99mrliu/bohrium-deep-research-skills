@@ -1,0 +1,226 @@
+{
+  "matrix": "/Users/liuhengshen/Desktop/bhr_product/writing15-5dir/proposal-alignment-tribunal/examples/curated/alignment_matrix.json",
+  "gate_pass": false,
+  "fail_count": 3,
+  "stats": {
+    "rq_total": 2,
+    "rq_covered": 2,
+    "obj_total": 2,
+    "obj_fields_complete": 2,
+    "obj_with_val": 1,
+    "obj_with_out": 2,
+    "step_total": 4,
+    "step_orphans": 1,
+    "val_total": 1,
+    "out_total": 2,
+    "rsk_total": 2,
+    "rsk_complete": 1,
+    "verdict_pass": 27,
+    "verdict_fail": 3,
+    "obj_val_coverage": 0.5,
+    "obj_out_coverage": 1.0,
+    "step_orphan_rate": 0.25
+  },
+  "verdicts": [
+    {
+      "rule": "REF-INT",
+      "target": "(matrix)",
+      "verdict": "pass",
+      "detail": "无重复 id"
+    },
+    {
+      "rule": "RQ-NUM",
+      "target": "(matrix)",
+      "verdict": "pass",
+      "detail": "研究问题 2 个（要求 1–3）"
+    },
+    {
+      "rule": "RQ-CRIT",
+      "target": "RQ1",
+      "verdict": "pass",
+      "detail": "含判断标准"
+    },
+    {
+      "rule": "RQ-COVER",
+      "target": "RQ1",
+      "verdict": "pass",
+      "detail": "挂有 1 个 OBJ"
+    },
+    {
+      "rule": "RQ-CRIT",
+      "target": "RQ2",
+      "verdict": "pass",
+      "detail": "含判断标准"
+    },
+    {
+      "rule": "RQ-COVER",
+      "target": "RQ2",
+      "verdict": "pass",
+      "detail": "挂有 1 个 OBJ"
+    },
+    {
+      "rule": "OBJ-FIELDS",
+      "target": "OBJ1",
+      "verdict": "pass",
+      "detail": "metric/threshold/threshold_basis/time_point 齐全"
+    },
+    {
+      "rule": "REF-INT",
+      "target": "OBJ1",
+      "verdict": "pass",
+      "detail": "rq_id -> RQ1"
+    },
+    {
+      "rule": "OBJ-FIELDS",
+      "target": "OBJ2",
+      "verdict": "pass",
+      "detail": "metric/threshold/threshold_basis/time_point 齐全"
+    },
+    {
+      "rule": "REF-INT",
+      "target": "OBJ2",
+      "verdict": "pass",
+      "detail": "rq_id -> RQ2"
+    },
+    {
+      "rule": "STEP-SERVE",
+      "target": "STEP1",
+      "verdict": "pass",
+      "detail": "服务 2 个 OBJ: OBJ1, OBJ2"
+    },
+    {
+      "rule": "REF-INT",
+      "target": "STEP1",
+      "verdict": "pass",
+      "detail": "serves/depends_on 引用均可解析"
+    },
+    {
+      "rule": "STEP-SERVE",
+      "target": "STEP2",
+      "verdict": "pass",
+      "detail": "服务 1 个 OBJ: OBJ1"
+    },
+    {
+      "rule": "REF-INT",
+      "target": "STEP2",
+      "verdict": "pass",
+      "detail": "serves/depends_on 引用均可解析"
+    },
+    {
+      "rule": "STEP-SERVE",
+      "target": "STEP3",
+      "verdict": "pass",
+      "detail": "服务 1 个 OBJ: OBJ2"
+    },
+    {
+      "rule": "REF-INT",
+      "target": "STEP3",
+      "verdict": "pass",
+      "detail": "serves/depends_on 引用均可解析"
+    },
+    {
+      "rule": "STEP-SERVE",
+      "target": "STEP4",
+      "verdict": "fail",
+      "detail": "孤儿步骤：不服务任何 OBJ（做了无人考核的工作）"
+    },
+    {
+      "rule": "REF-INT",
+      "target": "STEP4",
+      "verdict": "pass",
+      "detail": "serves/depends_on 引用均可解析"
+    },
+    {
+      "rule": "VAL-FIELDS",
+      "target": "VAL1",
+      "verdict": "pass",
+      "detail": "对照与统计判据齐全"
+    },
+    {
+      "rule": "REF-INT",
+      "target": "VAL1",
+      "verdict": "pass",
+      "detail": "obj_id -> OBJ1"
+    },
+    {
+      "rule": "OUT-FIELDS",
+      "target": "OUT1",
+      "verdict": "pass",
+      "detail": "含验收判据"
+    },
+    {
+      "rule": "REF-INT",
+      "target": "OUT1",
+      "verdict": "pass",
+      "detail": "obj_id -> OBJ1"
+    },
+    {
+      "rule": "OUT-FIELDS",
+      "target": "OUT2",
+      "verdict": "pass",
+      "detail": "含验收判据"
+    },
+    {
+      "rule": "REF-INT",
+      "target": "OUT2",
+      "verdict": "pass",
+      "detail": "obj_id -> OBJ2"
+    },
+    {
+      "rule": "OBJ-COVER",
+      "target": "OBJ1",
+      "verdict": "pass",
+      "detail": "VAL 1 条, OUT 1 个"
+    },
+    {
+      "rule": "OBJ-COVER",
+      "target": "OBJ2",
+      "verdict": "fail",
+      "detail": "覆盖门未过: VAL 0 条, OUT 1 个（各需 >=1）"
+    },
+    {
+      "rule": "RSK-FIELDS",
+      "target": "RSK1",
+      "verdict": "pass",
+      "detail": "触发信号/备选方案/决策时点齐全"
+    },
+    {
+      "rule": "REF-INT",
+      "target": "RSK1",
+      "verdict": "pass",
+      "detail": "affects 引用均可解析"
+    },
+    {
+      "rule": "RSK-FIELDS",
+      "target": "RSK2",
+      "verdict": "fail",
+      "detail": "缺必填字段: trigger_signal"
+    },
+    {
+      "rule": "REF-INT",
+      "target": "RSK2",
+      "verdict": "pass",
+      "detail": "affects 引用均可解析"
+    }
+  ],
+  "fails": [
+    {
+      "rule": "STEP-SERVE",
+      "target": "STEP4",
+      "verdict": "fail",
+      "detail": "孤儿步骤：不服务任何 OBJ（做了无人考核的工作）"
+    },
+    {
+      "rule": "OBJ-COVER",
+      "target": "OBJ2",
+      "verdict": "fail",
+      "detail": "覆盖门未过: VAL 0 条, OUT 1 个（各需 >=1）"
+    },
+    {
+      "rule": "RSK-FIELDS",
+      "target": "RSK2",
+      "verdict": "fail",
+      "detail": "缺必填字段: trigger_signal"
+    }
+  ]
+}

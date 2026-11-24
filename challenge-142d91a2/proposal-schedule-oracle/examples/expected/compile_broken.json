@@ -1,0 +1,40 @@
+{
+  "plan_id": "scrna-tme-plan-broken",
+  "tasks": 3,
+  "milestones": 1,
+  "problem_count": 4,
+  "valid": false,
+  "problems": [
+    {
+      "kind": "role_not_staffed",
+      "task": "TC",
+      "role": "博士后"
+    },
+    {
+      "kind": "dangling_dependency",
+      "task": "TC",
+      "depends_on": "T99"
+    },
+    {
+      "kind": "dependency_cycle",
+      "cycle": [
+        "TA",
+        "TC",
+        "TB",
+        "TA"
+      ]
+    },
+    {
+      "kind": "milestone_no_deliverable",
+      "milestone": "MB1"
+    }
+  ],
+  "cycles": [
+    [
+      "TA",
+      "TC",
+      "TB",
+      "TA"
+    ]
+  ]
+}

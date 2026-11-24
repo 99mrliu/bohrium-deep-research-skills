@@ -1,0 +1,23 @@
+{
+  "note": "合成示例：来源均为合成数据或合成文献占位，非真实文献。",
+  "claims": [
+    {
+      "claim_id": "C1",
+      "claim": "重牧使高寒草地 ANPP 较围栏对照下降约三成（前期 8 样方：约 36%）",
+      "source": "input/prior_survey_2023.csv（合成前期数据）",
+      "used_in": "OBJ1.threshold / OBJ1.threshold_basis"
+    },
+    {
+      "claim_id": "C2",
+      "claim": "重牧样地 Shannon 多样性较轻牧下降约 22%，中牧与轻牧差异 <5%",
+      "source": "input/prior_survey_2023.csv（合成前期数据）",
+      "used_in": "OBJ2.threshold_basis"
+    },
+    {
+      "claim_id": "C3",
+      "claim": "中度干扰下群落多样性可能在中等放牧强度出现峰值",
+      "source": "SYNTH-REF-002（合成文献占位，演示映射格式，非真实文献）",
+      "used_in": "RQ2 立论"
+    }
+  ]
+}

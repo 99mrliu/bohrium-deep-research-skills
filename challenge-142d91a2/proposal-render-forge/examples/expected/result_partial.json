@@ -1,0 +1,26 @@
+{
+  "case_id": "SYNTH-REND-001",
+  "status": "partial",
+  "sources": [],
+  "uncertainty": [
+    "result 骨架已初始化，契约字段尚未填充：proposal_draft、preview_svg、preview_html、diff_report、revision_table",
+    "契约字段未齐备，强制 partial；缺项：proposal_draft、preview_svg、preview_html、diff_report、revision_table"
+  ],
+  "change_records": [
+    {
+      "time": "2026-11-24T13:27:00Z",
+      "op": "init",
+      "detail": "按 output_contract 逐字段抄录生成 partial 骨架"
+    },
+    {
+      "time": "2026-11-24T13:27:01Z",
+      "op": "final",
+      "detail": "契约字段校验：缺项 5 个"
+    }
+  ],
+  "proposal_draft": null,
+  "preview_svg": null,
+  "preview_html": null,
+  "diff_report": null,
+  "revision_table": null
+}

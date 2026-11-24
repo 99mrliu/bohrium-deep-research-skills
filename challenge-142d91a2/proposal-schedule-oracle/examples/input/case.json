@@ -1,0 +1,22 @@
+{
+  "case_id": "syn-scrna-tme-001",
+  "title": "单细胞转录组解析结直肠癌肿瘤微环境的细胞互作网络（合成示例）",
+  "background": "合成任务：以单细胞转录组测序刻画结直肠癌肿瘤微环境的细胞组成与互作，识别潜在治疗靶亚群。",
+  "constraints": {
+    "period_months": 24,
+    "staff": {"研究生": 2},
+    "total_budget_cny": 300000,
+    "resource_windows": {
+      "临床样本采集窗口": [5, 10],
+      "测序平台机时窗口": [9, 13]
+    }
+  },
+  "materials": ["materials_note.md"],
+  "output_contract": [
+    "proposal_draft",
+    "schedule",
+    "feasibility_report",
+    "risk_register",
+    "fact_source_map"
+  ]
+}

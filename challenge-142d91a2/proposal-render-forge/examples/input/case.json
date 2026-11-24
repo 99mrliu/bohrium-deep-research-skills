@@ -1,0 +1,18 @@
+{
+  "case_id": "SYNTH-REND-001",
+  "note": "合成示例：演示渲染工程管线接口，非平台正式案例。",
+  "genre": "博士研究生开题报告",
+  "audience": "开题评审委员会与导师",
+  "constraints": {
+    "period": "2027-03 至 2029-02（8 个季度）",
+    "budget_wan": 28,
+    "team": "博士生 1 名 + 硕士生 2 名（协助数据标注）"
+  },
+  "output_contract": {
+    "proposal_draft": "可编辑 Markdown 开题报告（章节编号 1-7 稳定、GFM 表格、行内 [S#] 标注、文末来源清单）",
+    "preview_svg": "纯文本 SVG 预览（逐节卡片 + 阶段计划横向甘特条）",
+    "preview_html": "自包含 HTML 预览页（内嵌样式与 SVG）",
+    "diff_report": "版本间修订对照报告（逐节新增/删除/改写段落与字数差、表格行级变更）",
+    "revision_table": "修改记录表（由 document JSON 的 revision 数组渲染）"
+  }
+}

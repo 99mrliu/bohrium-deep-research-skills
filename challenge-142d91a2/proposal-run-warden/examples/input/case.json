@@ -1,0 +1,22 @@
+{
+  "case_id": "syn-sslb-interface-001",
+  "title": "固态锂电池界面工程研究计划（合成示例，非正式案例）",
+  "task": "围绕固态锂电池界面工程撰写开题报告与研究计划书",
+  "output_contract": {
+    "proposal_draft": "开题报告正文（Markdown 文本，须覆盖七要素：研究背景与缺口/问题定义与目标/技术路线与阶段计划/风险与备选/预期成果/引用证据/可编辑交付）",
+    "fact_source_map": "论断-来源映射（数组，每项含 claim 与 source_id 两键）",
+    "risk_register": "风险登记表（数组，每项含 risk、trigger_signal、fallback 三键）",
+    "schedule": "阶段计划表（数组，每项含 phase、months、milestone 三键）",
+    "expected_outcomes": "预期成果清单（数组，每项含 deliverable 与 metric 两键）"
+  },
+  "constraints": {
+    "period_months": 24,
+    "budget_cny": 800000,
+    "staff": "1 名博士后 + 2 名博士生",
+    "equipment": "手套箱、磁控溅射、电化学工作站、SEM 可共享使用"
+  },
+  "materials": [
+    "materials/literature_notes.md",
+    "materials/lab_conditions.md"
+  ]
+}

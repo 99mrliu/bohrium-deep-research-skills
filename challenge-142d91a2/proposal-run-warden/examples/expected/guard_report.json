@@ -1,0 +1,95 @@
+{
+  "case_id": "syn-sslb-interface-001",
+  "checked_at": "2026-11-24T13:26:59Z",
+  "overall": "fail",
+  "fail_count": 2,
+  "missing_fields": [
+    "risk_register"
+  ],
+  "missing_elements": [
+    "风险与备选"
+  ],
+  "status_forced_partial": false,
+  "items": [
+    {
+      "id": "contract_field:proposal_draft",
+      "result": "pass",
+      "detail": "字段已填"
+    },
+    {
+      "id": "contract_field:fact_source_map",
+      "result": "pass",
+      "detail": "字段已填"
+    },
+    {
+      "id": "contract_field:risk_register",
+      "result": "fail",
+      "detail": "字段缺失或为空"
+    },
+    {
+      "id": "contract_field:schedule",
+      "result": "pass",
+      "detail": "字段已填"
+    },
+    {
+      "id": "contract_field:expected_outcomes",
+      "result": "pass",
+      "detail": "字段已填"
+    },
+    {
+      "id": "element:background_gap",
+      "result": "pass",
+      "detail": "命中关键词: 研究背景,缺口"
+    },
+    {
+      "id": "element:problem_objective",
+      "result": "pass",
+      "detail": "命中关键词: 问题定义,研究目标"
+    },
+    {
+      "id": "element:technical_route",
+      "result": "pass",
+      "detail": "命中关键词: 技术路线,阶段计划"
+    },
+    {
+      "id": "element:risk_fallback",
+      "result": "fail",
+      "detail": "proposal_draft 缺少「风险与备选」段落（关键词 风险/备选方案 均未命中）"
+    },
+    {
+      "id": "element:expected_results",
+      "result": "pass",
+      "detail": "命中关键词: 预期成果"
+    },
+    {
+      "id": "element:citation_evidence",
+      "result": "pass",
+      "detail": "命中关键词: 引用证据"
+    },
+    {
+      "id": "element:editable_deliverable",
+      "result": "pass",
+      "detail": "命中关键词: 可编辑交付,交付物"
+    },
+    {
+      "id": "sources_nonempty",
+      "result": "pass",
+      "detail": "非空，5 条"
+    },
+    {
+      "id": "change_records_nonempty",
+      "result": "pass",
+      "detail": "非空，3 条"
+    },
+    {
+      "id": "uncertainty_nonempty",
+      "result": "pass",
+      "detail": "非空，1 条"
+    },
+    {
+      "id": "status_consistency",
+      "result": "pass",
+      "detail": "status='partial' 与完整度一致"
+    }
+  ]
+}

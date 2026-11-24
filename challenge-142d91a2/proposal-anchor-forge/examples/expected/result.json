@@ -1,0 +1,54 @@
+{
+  "case_id": "SYN-PERO-STAB-001",
+  "status": "partial",
+  "builder": "proposal-anchor-forge result_forge/1.0",
+  "created_at": "2026-11-24T13:26:51.152249+00:00",
+  "sources": [],
+  "uncertainty": [
+    "契约已读取；锚定抽取与论断核验尚未完成，本文件为诚实的 partial 结果。",
+    "论断核验未全部通过，被拦截论断 C007、C008 已按纪律排除出交付稿；修正并复验通过前状态不得为 ok"
+  ],
+  "change_records": [
+    {
+      "ts": "2026-11-24T13:26:51.152249+00:00",
+      "action": "init",
+      "detail": "synthetic example run: contract read; extraction pending"
+    },
+    {
+      "ts": "2026-11-24T13:26:52.483678+00:00",
+      "action": "final",
+      "detail": "requested=ok enforced=partial"
+    }
+  ],
+  "proposal_draft": "proposal_draft.md",
+  "fact_ledger": "fact_ledger.jsonl",
+  "claim_verification": "claim_verification.json",
+  "schedule": "见 proposal_draft.md 第 5 节阶段计划（M1–M24，受 case.json 24 个月约束）",
+  "risk_register": "见 proposal_draft.md 第 6 节风险登记表（触发信号 + 备选方案）",
+  "verification_audit": {
+    "report": "claim_verification.json",
+    "total": 8,
+    "ok": 6,
+    "fail": 1,
+    "unverifiable": 1,
+    "all_verified": false,
+    "link_back_rate": 0.75,
+    "blocked_claim_ids": [
+      "C007",
+      "C008"
+    ]
+  },
+  "contract_audit": {
+    "required": [
+      "proposal_draft",
+      "fact_ledger",
+      "claim_verification",
+      "schedule",
+      "risk_register"
+    ],
+    "missing": [],
+    "complete": true
+  },
+  "updated_at": "2026-11-24T13:26:52.483678+00:00",
+  "note": "synthetic example: 演示 fail/unverifiable 拦截与强制 partial"
+}

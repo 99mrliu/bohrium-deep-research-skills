@@ -1,0 +1,30 @@
+{
+  "meta": {
+    "title": "坏文档示例（应被 schema 校验拦截）",
+    "discipline": "水利工程",
+    "degree": "博士研究生",
+    "author": "张澜（合成）",
+    "advisor": "李工（合成）",
+    "period": {"start": "2027-03", "end": "2029-02", "quarters": 8},
+    "version": "v0-bad",
+    "date": "2026-11-24"
+  },
+  "sections": [
+    {"number": 1, "id": "background_gap", "title": "研究背景与缺口",
+     "paragraphs": ["背景段落，引用了不存在的来源 [S9]。"]},
+    {"number": 2, "id": "problem_definition", "title": "问题定义",
+     "paragraphs": ["问题定义段落。"]},
+    {"number": 3, "id": "objectives", "title": "研究目标",
+     "paragraphs": ["研究目标段落。"]},
+    {"number": 4, "id": "technical_route", "title": "技术路线",
+     "paragraphs": ["技术路线段落。"]},
+    {"number": 5, "id": "schedule", "title": "阶段计划",
+     "paragraphs": ["阶段计划段落。"]},
+    {"number": 7, "id": "outcomes", "title": "预期成果",
+     "paragraphs": ["预期成果段落。"]}
+  ],
+  "sources": [
+    {"id": "S1", "authors": "王沛", "title": "城市内涝时空预测研究综述", "venue": "城市水科学学报（合成）", "year": 2024}
+  ],
+  "revision": []
+}

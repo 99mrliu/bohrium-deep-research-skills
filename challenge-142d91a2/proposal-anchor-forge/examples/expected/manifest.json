@@ -1,0 +1,58 @@
+{
+  "input_dir": "/Users/liuhengshen/Desktop/bhr_product/writing15-5dir/proposal-anchor-forge/examples/input",
+  "garble_limit": 0.01,
+  "materials": [
+    {
+      "material": "M1",
+      "file": "case.json",
+      "ext": ".json",
+      "bytes": 1121,
+      "paragraphs": 5,
+      "derived_rendering": true,
+      "garble_ratio": 0.0,
+      "garble_suspect": false,
+      "truncation_suspect": false
+    },
+    {
+      "material": "M2",
+      "file": "literature_digest.md",
+      "ext": ".md",
+      "bytes": 736,
+      "paragraphs": 4,
+      "derived_rendering": false,
+      "garble_ratio": 0.0,
+      "garble_suspect": false,
+      "truncation_suspect": false
+    },
+    {
+      "material": "M3",
+      "file": "prior_data.md",
+      "ext": ".md",
+      "bytes": 679,
+      "paragraphs": 5,
+      "derived_rendering": false,
+      "garble_ratio": 0.0,
+      "garble_suspect": false,
+      "truncation_suspect": false
+    },
+    {
+      "material": "M4",
+      "file": "task.md",
+      "ext": ".md",
+      "bytes": 734,
+      "paragraphs": 4,
+      "derived_rendering": false,
+      "garble_ratio": 0.0,
+      "garble_suspect": false,
+      "truncation_suspect": false
+    }
+  ],
+  "unreadable": [],
+  "empty_files": [],
+  "totals": {
+    "materials": 4,
+    "paragraphs": 18,
+    "unreadable": 0,
+    "empty_files": 0
+  }
+}

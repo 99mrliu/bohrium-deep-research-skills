@@ -1,0 +1,62 @@
+{
+  "plan_id": "scrna-tme-plan-v2",
+  "constraints": {
+    "period_months": 24,
+    "staff": {"研究生": 2},
+    "total_budget_cny": 300000,
+    "resource_windows": {
+      "临床样本采集窗口": [5, 10],
+      "测序平台机时窗口": [9, 13]
+    }
+  },
+  "tasks": [
+    {"id": "T01", "name": "文献调研与研究方案设计",
+     "duration_person_days": 42, "depends_on": [], "required_role": "研究生",
+     "cost_cny": 5000, "earliest_start_month": 1,
+     "parallelizable": false, "trimmable": true},
+    {"id": "T02", "name": "伦理审批与样本入组协议",
+     "duration_person_days": 42, "depends_on": ["T01"], "required_role": "研究生",
+     "cost_cny": 10000, "parallelizable": false, "trimmable": false},
+    {"id": "T03", "name": "临床样本采集与单细胞悬液制备",
+     "duration_person_days": 105, "depends_on": ["T02"], "required_role": "研究生",
+     "cost_cny": 60000, "requires_window": "临床样本采集窗口",
+     "parallelizable": false, "trimmable": true},
+    {"id": "T04", "name": "单细胞测序建库与上机",
+     "duration_person_days": 63, "depends_on": ["T03"], "required_role": "研究生",
+     "cost_cny": 90000, "requires_window": "测序平台机时窗口",
+     "parallelizable": false, "trimmable": false},
+    {"id": "T05", "name": "数据质控与批次校正",
+     "duration_person_days": 63, "depends_on": ["T04"], "required_role": "研究生",
+     "cost_cny": 20000, "parallelizable": false, "trimmable": false},
+    {"id": "T06", "name": "细胞类型注释与微环境分群（裁剪至核心亚群）",
+     "duration_person_days": 84, "depends_on": ["T05"], "required_role": "研究生",
+     "cost_cny": 20000, "parallelizable": false, "trimmable": true},
+    {"id": "T07", "name": "细胞通讯与轨迹分析（聚焦主效配受体对）",
+     "duration_person_days": 63, "depends_on": ["T06"], "required_role": "研究生",
+     "cost_cny": 15000, "parallelizable": true, "trimmable": true},
+    {"id": "T08", "name": "关键亚群功能验证实验",
+     "duration_person_days": 63, "depends_on": ["T06"], "required_role": "研究生",
+     "cost_cny": 45000, "parallelizable": false, "trimmable": false},
+    {"id": "T09", "name": "论文撰写与开题成果汇总",
+     "duration_person_days": 42, "depends_on": ["T07", "T08"],
+     "required_role": "研究生", "cost_cny": 8000,
+     "parallelizable": false, "trimmable": false},
+    {"id": "T10", "name": "公共数据库队列独立验证（后置于主分析）",
+     "duration_person_days": 42, "depends_on": ["T07"], "required_role": "研究生",
+     "cost_cny": 12000, "parallelizable": true, "trimmable": true}
+  ],
+  "milestones": [
+    {"id": "M1", "task_id": "T03",
+     "deliverable": "单细胞悬液样本库与采集记录",
+     "assessment": "不少于 30 例样本入库且活率质检合格"},
+    {"id": "M2", "task_id": "T05",
+     "deliverable": "数据质控与批次校正报告",
+     "assessment": "质控指标达标（细胞数/基因检出率）并经导师组评审"},
+    {"id": "M3", "task_id": "T07",
+     "deliverable": "微环境细胞互作分析报告",
+     "assessment": "互作网络与轨迹结果可在公共队列复现"},
+    {"id": "M4", "task_id": "T09",
+     "deliverable": "开题成果汇总与论文初稿",
+     "assessment": "完成开题答辩材料并提交论文初稿"}
+  ]
+}

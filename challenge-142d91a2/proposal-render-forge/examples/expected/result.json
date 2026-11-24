@@ -1,0 +1,72 @@
+{
+  "case_id": "SYNTH-REND-001",
+  "status": "ok",
+  "sources": [
+    "examples/input/case.json",
+    "examples/input/task.md",
+    "examples/input/material_notes.md",
+    "examples/input/advisor_feedback.md",
+    "examples/input/document_v1.json",
+    "examples/input/document_v2.json"
+  ],
+  "uncertainty": [
+    "示例文献与材料均为合成，非真实出版物/数据源；v2 渲染产物存于 examples/work 未列入交付"
+  ],
+  "change_records": [
+    {
+      "time": "2026-11-24T13:27:00Z",
+      "op": "init",
+      "detail": "按 output_contract 逐字段抄录生成 partial 骨架"
+    },
+    {
+      "time": "2026-11-24T13:27:01Z",
+      "op": "final",
+      "detail": "契约字段校验：缺项 5 个"
+    },
+    {
+      "time": "2026-11-24T13:27:04Z",
+      "op": "set",
+      "detail": "填充字段 proposal_draft"
+    },
+    {
+      "time": "2026-11-24T13:27:04Z",
+      "op": "set",
+      "detail": "填充字段 preview_svg"
+    },
+    {
+      "time": "2026-11-24T13:27:05Z",
+      "op": "set",
+      "detail": "填充字段 preview_html"
+    },
+    {
+      "time": "2026-11-24T13:27:06Z",
+      "op": "set",
+      "detail": "填充字段 diff_report"
+    },
+    {
+      "time": "2026-11-24T13:27:06Z",
+      "op": "set",
+      "detail": "填充字段 revision_table"
+    },
+    {
+      "time": "2026-11-24T13:27:07Z",
+      "op": "set",
+      "detail": "填充字段 sources"
+    },
+    {
+      "time": "2026-11-24T13:27:07Z",
+      "op": "set",
+      "detail": "填充字段 uncertainty"
+    },
+    {
+      "time": "2026-11-24T13:27:07Z",
+      "op": "final",
+      "detail": "契约字段校验：缺项 0 个"
+    }
+  ],
+  "proposal_draft": "examples/expected/proposal.md",
+  "preview_svg": "examples/expected/preview.svg",
+  "preview_html": "examples/expected/preview.html",
+  "diff_report": "examples/expected/diff_report.md",
+  "revision_table": "examples/expected/revision_table.md"
+}
