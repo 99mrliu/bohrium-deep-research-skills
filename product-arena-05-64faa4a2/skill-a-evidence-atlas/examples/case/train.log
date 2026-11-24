@@ -1,0 +1,7 @@
+[run] command: python train.py --config config.yaml --epochs 50 --batch-size 32
+[run] environment: python 3.10, torch 2.1, cuda 12.1
+[run] effective config loaded: learning_rate=0.001 weight_decay=0.0001 seed=42
+[run] note: learning_rate overridden on command line, differs from config.yaml
+[epoch 49/50] train_loss=0.213 val_loss=0.305
+[done] final val_acc=0.873
+[done] checkpoint saved to /app/work/ckpt/resnet18_final.pt

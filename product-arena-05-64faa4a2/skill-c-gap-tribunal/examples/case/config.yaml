@@ -1,0 +1,11 @@
+# 合成示例配置（非正式案例结果）
+experiment: demo-clf
+model: resnet18
+dataset: cifar10
+epochs: 300
+lr: 0.001
+batch_size: 64
+seed: 42
+train_ratio: 0.8
+val_ratio: 0.1
+test_ratio: 0.1

@@ -1,0 +1,81 @@
+{
+  "tool": "baseline_mine",
+  "inputs": [
+    "/Users/liuhengshen/Desktop/bhr_product/writing09-5dir/bundles/skill-e-baseline-parity/examples/case"
+  ],
+  "files_scanned": [
+    "/Users/liuhengshen/Desktop/bhr_product/writing09-5dir/bundles/skill-e-baseline-parity/examples/case/config_base.yaml",
+    "/Users/liuhengshen/Desktop/bhr_product/writing09-5dir/bundles/skill-e-baseline-parity/examples/case/config_ours.yaml",
+    "/Users/liuhengshen/Desktop/bhr_product/writing09-5dir/bundles/skill-e-baseline-parity/examples/case/draft.md",
+    "/Users/liuhengshen/Desktop/bhr_product/writing09-5dir/bundles/skill-e-baseline-parity/examples/case/refs.md",
+    "/Users/liuhengshen/Desktop/bhr_product/writing09-5dir/bundles/skill-e-baseline-parity/examples/case/results.log"
+  ],
+  "baseline_count": 2,
+  "baselines": [
+    {
+      "name": "ResNet-50",
+      "normalized": "resnet50",
+      "version": null,
+      "versions_seen": [],
+      "source_type": "自复现",
+      "source_detail": "材料中存在该基线的运行配置或日志证据",
+      "citations": [],
+      "metrics": [
+        {
+          "metric": "accuracy",
+          "value": "91.10",
+          "file": "/Users/liuhengshen/Desktop/bhr_product/writing09-5dir/bundles/skill-e-baseline-parity/examples/case/results.log",
+          "line": 5
+        }
+      ],
+      "evidence": [
+        {
+          "file": "/Users/liuhengshen/Desktop/bhr_product/writing09-5dir/bundles/skill-e-baseline-parity/examples/case/config_base.yaml",
+          "line": 3,
+          "text": "model: ResNet-50"
+        },
+        {
+          "file": "/Users/liuhengshen/Desktop/bhr_product/writing09-5dir/bundles/skill-e-baseline-parity/examples/case/draft.md",
+          "line": 3,
+          "text": "我们与自复现的 ResNet-50 基线在相同数据划分下进行了对比，test accuracy 分别为 92.40 与 91.10。"
+        },
+        {
+          "file": "/Users/liuhengshen/Desktop/bhr_product/writing09-5dir/bundles/skill-e-baseline-parity/examples/case/results.log",
+          "line": 4,
+          "text": "[2026-01-02 00:00:01] run=resnet50 epoch=1/50 train_loss=2.301"
+        },
+        {
+          "file": "/Users/liuhengshen/Desktop/bhr_product/writing09-5dir/bundles/skill-e-baseline-parity/examples/case/results.log",
+          "line": 5,
+          "text": "[2026-01-02 00:30:00] run=resnet50 epoch=50/50 test_accuracy=91.10"
+        }
+      ]
+    },
+    {
+      "name": "VGG-16",
+      "normalized": "vgg16",
+      "version": null,
+      "versions_seen": [],
+      "source_type": "原报",
+      "source_detail": "数值引自原论文/原报值，未在本工作中复现，非同等条件",
+      "citations": [
+        "[1]"
+      ],
+      "metrics": [
+        {
+          "metric": "top-1 accuracy",
+          "value": "71.3",
+          "file": "/Users/liuhengshen/Desktop/bhr_product/writing09-5dir/bundles/skill-e-baseline-parity/examples/case/refs.md",
+          "line": 3
+        }
+      ],
+      "evidence": [
+        {
+          "file": "/Users/liuhengshen/Desktop/bhr_product/writing09-5dir/bundles/skill-e-baseline-parity/examples/case/refs.md",
+          "line": 3,
+          "text": "VGG-16 [1] 在原论文中报告 ImageNet top-1 accuracy 71.3%（该数值为原报值，非同等条件，未在本工作中复现）。"
+        }
+      ]
+    }
+  ]
+}

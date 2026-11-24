@@ -1,0 +1,60 @@
+{
+  "case_id": "SYNTH-DEMO-0001",
+  "contract_source": "$.task.output_contract",
+  "contract_fields": [
+    {
+      "name": "artifact",
+      "type_guess": "file",
+      "required": true,
+      "semantic_guess": "主要产物（章节正文或其文件路径）",
+      "declared": {
+        "type": "file",
+        "description": "章节正文 markdown 路径"
+      }
+    },
+    {
+      "name": "sources",
+      "type_guess": "array",
+      "required": true,
+      "semantic_guess": "来源定位（引用材料的文件与位置）",
+      "declared": {
+        "type": "array",
+        "description": "来源定位清单"
+      }
+    },
+    {
+      "name": "uncertainty",
+      "type_guess": "array",
+      "required": true,
+      "semantic_guess": "不确定性声明",
+      "declared": {
+        "type": "array",
+        "description": "不确定性声明"
+      }
+    },
+    {
+      "name": "status",
+      "type_guess": "string",
+      "required": true,
+      "semantic_guess": "任务完成状态",
+      "declared": {
+        "type": "string",
+        "description": "完成状态"
+      }
+    }
+  ],
+  "task_constraints": {
+    "genre": "学术论文\"方法与实验\"章节",
+    "audience": "领域审稿人",
+    "format": "Markdown 正文，附 SVG 渲染预览；result.json 按 output_contract 交付",
+    "length": "不少于 300 字",
+    "raw_headings": [
+      "任务说明（合成示例，非正式案例结果）",
+      "要求"
+    ]
+  },
+  "materials": [
+    "notes.md"
+  ],
+  "unrecognized": []
+}

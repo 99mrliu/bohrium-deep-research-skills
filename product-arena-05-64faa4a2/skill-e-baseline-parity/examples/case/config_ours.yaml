@@ -1,0 +1,9 @@
+# 合成示例配置：本文方法（合成示例，非正式案例结果）
+run_name: ours
+model: OurNet
+dataset: CIFAR-10
+train_data_size: 50000
+epochs: 200
+batch_size: 128
+lr: 0.01
+optimizer: sgd

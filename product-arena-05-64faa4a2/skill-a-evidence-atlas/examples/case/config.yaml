@@ -1,0 +1,13 @@
+# 合成示例配置文件（合成示例，非正式案例结果）
+# 用于演示 atlas_scan 的参数提取与台账构建。
+model: resnet18
+optimizer: adam
+learning_rate: 0.0003
+weight_decay: 0.0001
+epochs: 50
+batch_size: 32
+seed: 42
+train_split: 0.8
+val_split: 0.1
+test_split: 0.1
+device: cuda:0

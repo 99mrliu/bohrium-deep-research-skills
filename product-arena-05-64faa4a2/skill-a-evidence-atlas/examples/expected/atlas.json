@@ -1,0 +1,373 @@
+{
+  "meta": {
+    "tool": "atlas_scan",
+    "tool_version": "1.0.0",
+    "input_dir": "/Users/liuhengshen/Desktop/bhr_product/writing09-5dir/bundles/skill-a-evidence-atlas/examples/case",
+    "file_count": 4,
+    "parsed_count": 4,
+    "unparsed_count": 0,
+    "parameter_count": 24,
+    "conflict_count": 1,
+    "notes": [
+      "config.yaml: 使用 PyYAML 结构化解析"
+    ]
+  },
+  "files": [
+    {
+      "path": "README.md",
+      "relpath": "README.md",
+      "size_bytes": 678,
+      "sha256": "563256eef2a2f913f7bba27eaf6f16720e971b1ab1a89b0bb4a93e34e4d92292",
+      "type": "markdown",
+      "status": "parsed",
+      "note": "",
+      "lines": 11
+    },
+    {
+      "path": "config.yaml",
+      "relpath": "config.yaml",
+      "size_bytes": 302,
+      "sha256": "80d9cdd4b12d53dfb0820b9a85aa827bbfb1937c40d4bc4d8f120f23860d8c26",
+      "type": "yaml",
+      "status": "parsed",
+      "note": "",
+      "lines": 13
+    },
+    {
+      "path": "draft.md",
+      "relpath": "draft.md",
+      "size_bytes": 622,
+      "sha256": "1413449c84b31041b6597667e42b2550a689938c70e642d2e4a4cb127522b848",
+      "type": "markdown",
+      "status": "parsed",
+      "note": "",
+      "lines": 16
+    },
+    {
+      "path": "train.log",
+      "relpath": "train.log",
+      "size_bytes": 424,
+      "sha256": "620fa19ae2860c9658ac6c4ea0a24fdaed633915944bac9cf1aa9dbd2177abdb",
+      "type": "log",
+      "status": "parsed",
+      "note": "",
+      "lines": 7
+    }
+  ],
+  "parameters": [
+    {
+      "id": "P001",
+      "name": "model",
+      "value": "resnet18",
+      "unit": "",
+      "kind": "parameter",
+      "source": {
+        "file": "config.yaml",
+        "line": 3
+      },
+      "evidence": "model: resnet18"
+    },
+    {
+      "id": "P002",
+      "name": "optimizer",
+      "value": "adam",
+      "unit": "",
+      "kind": "parameter",
+      "source": {
+        "file": "config.yaml",
+        "line": 4
+      },
+      "evidence": "optimizer: adam"
+    },
+    {
+      "id": "P003",
+      "name": "learning_rate",
+      "value": "0.0003",
+      "unit": "",
+      "kind": "parameter",
+      "source": {
+        "file": "config.yaml",
+        "line": 5
+      },
+      "evidence": "learning_rate: 0.0003"
+    },
+    {
+      "id": "P004",
+      "name": "weight_decay",
+      "value": "0.0001",
+      "unit": "",
+      "kind": "parameter",
+      "source": {
+        "file": "config.yaml",
+        "line": 6
+      },
+      "evidence": "weight_decay: 0.0001"
+    },
+    {
+      "id": "P005",
+      "name": "epochs",
+      "value": "50",
+      "unit": "",
+      "kind": "parameter",
+      "source": {
+        "file": "config.yaml",
+        "line": 7
+      },
+      "evidence": "epochs: 50"
+    },
+    {
+      "id": "P006",
+      "name": "batch_size",
+      "value": "32",
+      "unit": "",
+      "kind": "parameter",
+      "source": {
+        "file": "config.yaml",
+        "line": 8
+      },
+      "evidence": "batch_size: 32"
+    },
+    {
+      "id": "P007",
+      "name": "seed",
+      "value": "42",
+      "unit": "",
+      "kind": "parameter",
+      "source": {
+        "file": "config.yaml",
+        "line": 9
+      },
+      "evidence": "seed: 42"
+    },
+    {
+      "id": "P008",
+      "name": "train_split",
+      "value": "0.8",
+      "unit": "",
+      "kind": "parameter",
+      "source": {
+        "file": "config.yaml",
+        "line": 10
+      },
+      "evidence": "train_split: 0.8"
+    },
+    {
+      "id": "P009",
+      "name": "val_split",
+      "value": "0.1",
+      "unit": "",
+      "kind": "parameter",
+      "source": {
+        "file": "config.yaml",
+        "line": 11
+      },
+      "evidence": "val_split: 0.1"
+    },
+    {
+      "id": "P010",
+      "name": "test_split",
+      "value": "0.1",
+      "unit": "",
+      "kind": "parameter",
+      "source": {
+        "file": "config.yaml",
+        "line": 12
+      },
+      "evidence": "test_split: 0.1"
+    },
+    {
+      "id": "P011",
+      "name": "device",
+      "value": "cuda:0",
+      "unit": "",
+      "kind": "parameter",
+      "source": {
+        "file": "config.yaml",
+        "line": 13
+      },
+      "evidence": "device: cuda:0"
+    },
+    {
+      "id": "P012",
+      "name": "flag:config",
+      "value": "config.yaml",
+      "unit": "",
+      "kind": "flag",
+      "source": {
+        "file": "train.log",
+        "line": 1
+      },
+      "evidence": "[run] command: python train.py --config config.yaml --epochs 50 --batch-size 32"
+    },
+    {
+      "id": "P013",
+      "name": "flag:epochs",
+      "value": "50",
+      "unit": "",
+      "kind": "flag",
+      "source": {
+        "file": "train.log",
+        "line": 1
+      },
+      "evidence": "[run] command: python train.py --config config.yaml --epochs 50 --batch-size 32"
+    },
+    {
+      "id": "P014",
+      "name": "flag:batch-size",
+      "value": "32",
+      "unit": "",
+      "kind": "flag",
+      "source": {
+        "file": "train.log",
+        "line": 1
+      },
+      "evidence": "[run] command: python train.py --config config.yaml --epochs 50 --batch-size 32"
+    },
+    {
+      "id": "P015",
+      "name": "python",
+      "value": "3.10",
+      "unit": "",
+      "kind": "version",
+      "source": {
+        "file": "train.log",
+        "line": 2
+      },
+      "evidence": "[run] environment: python 3.10, torch 2.1, cuda 12.1"
+    },
+    {
+      "id": "P016",
+      "name": "torch",
+      "value": "2.1",
+      "unit": "",
+      "kind": "version",
+      "source": {
+        "file": "train.log",
+        "line": 2
+      },
+      "evidence": "[run] environment: python 3.10, torch 2.1, cuda 12.1"
+    },
+    {
+      "id": "P017",
+      "name": "cuda",
+      "value": "12.1",
+      "unit": "",
+      "kind": "version",
+      "source": {
+        "file": "train.log",
+        "line": 2
+      },
+      "evidence": "[run] environment: python 3.10, torch 2.1, cuda 12.1"
+    },
+    {
+      "id": "P018",
+      "name": "learning_rate",
+      "value": "0.001",
+      "unit": "",
+      "kind": "parameter",
+      "source": {
+        "file": "train.log",
+        "line": 3
+      },
+      "evidence": "[run] effective config loaded: learning_rate=0.001 weight_decay=0.0001 seed=42"
+    },
+    {
+      "id": "P019",
+      "name": "weight_decay",
+      "value": "0.0001",
+      "unit": "",
+      "kind": "parameter",
+      "source": {
+        "file": "train.log",
+        "line": 3
+      },
+      "evidence": "[run] effective config loaded: learning_rate=0.001 weight_decay=0.0001 seed=42"
+    },
+    {
+      "id": "P020",
+      "name": "seed",
+      "value": "42",
+      "unit": "",
+      "kind": "parameter",
+      "source": {
+        "file": "train.log",
+        "line": 3
+      },
+      "evidence": "[run] effective config loaded: learning_rate=0.001 weight_decay=0.0001 seed=42"
+    },
+    {
+      "id": "P021",
+      "name": "train_loss",
+      "value": "0.213",
+      "unit": "",
+      "kind": "parameter",
+      "source": {
+        "file": "train.log",
+        "line": 5
+      },
+      "evidence": "[epoch 49/50] train_loss=0.213 val_loss=0.305"
+    },
+    {
+      "id": "P022",
+      "name": "val_loss",
+      "value": "0.305",
+      "unit": "",
+      "kind": "parameter",
+      "source": {
+        "file": "train.log",
+        "line": 5
+      },
+      "evidence": "[epoch 49/50] train_loss=0.213 val_loss=0.305"
+    },
+    {
+      "id": "P023",
+      "name": "val_acc",
+      "value": "0.873",
+      "unit": "",
+      "kind": "parameter",
+      "source": {
+        "file": "train.log",
+        "line": 6
+      },
+      "evidence": "[done] final val_acc=0.873"
+    },
+    {
+      "id": "P024",
+      "name": "path",
+      "value": "/app/work/ckpt/resnet18_final.pt",
+      "unit": "",
+      "kind": "path",
+      "source": {
+        "file": "train.log",
+        "line": 7
+      },
+      "evidence": "[done] checkpoint saved to /app/work/ckpt/resnet18_final.pt"
+    }
+  ],
+  "conflicts": [
+    {
+      "name": "learning_rate",
+      "occurrences": [
+        {
+          "value": "0.0003",
+          "locations": [
+            {
+              "file": "config.yaml",
+              "line": 5
+            }
+          ]
+        },
+        {
+          "value": "0.001",
+          "locations": [
+            {
+              "file": "train.log",
+              "line": 3
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "unparsed": []
+}

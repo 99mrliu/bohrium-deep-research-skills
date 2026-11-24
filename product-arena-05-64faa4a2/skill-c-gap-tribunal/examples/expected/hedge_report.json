@@ -1,0 +1,47 @@
+{
+  "tool": "hedge_scan",
+  "md": "/Users/liuhengshen/Desktop/bhr_product/writing09-5dir/bundles/skill-c-gap-tribunal/examples/case/draft.md",
+  "materials_dir": "/Users/liuhengshen/Desktop/bhr_product/writing09-5dir/bundles/skill-c-gap-tribunal/examples/case",
+  "verdict": "FAIL",
+  "hedge_hits": [
+    {
+      "line": 18,
+      "pattern_id": "ZH01",
+      "lang": "zh",
+      "snippet": "本方法在某些情况下可能不适用，未来工作将进一步验证。",
+      "advice": "请写明在何种数据/条件下不适用、失效表现是什么。"
+    },
+    {
+      "line": 18,
+      "pattern_id": "ZH02",
+      "lang": "zh",
+      "snippet": "本方法在某些情况下可能不适用，未来工作将进一步验证。",
+      "advice": "请把\"某些情况\"替换为具体失效场景。"
+    },
+    {
+      "line": 18,
+      "pattern_id": "ZH05",
+      "lang": "zh",
+      "snippet": "本方法在某些情况下可能不适用，未来工作将进一步验证。",
+      "advice": "限制段应描述当前失效场景，而非用未来工作搪塞。"
+    }
+  ],
+  "unsourced_numbers": [
+    {
+      "line": 14,
+      "number": "91.7",
+      "snippet": "对比基线准确率为 91.7%。",
+      "note": "该数值在材料中找不到来源，疑似静默填平；请提供来源定位（file:line）或改写为“待作者确认”。"
+    }
+  ],
+  "gap_coverage": {
+    "provided": true,
+    "missing_ids": [
+      "G001",
+      "G002",
+      "G003",
+      "G004"
+    ],
+    "ok_ids": []
+  }
+}

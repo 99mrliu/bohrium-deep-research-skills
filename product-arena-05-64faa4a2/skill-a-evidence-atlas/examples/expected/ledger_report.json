@@ -1,0 +1,91 @@
+{
+  "meta": {
+    "tool": "ledger_check",
+    "tool_version": "1.0.0",
+    "chapter": "/Users/liuhengshen/Desktop/bhr_product/writing09-5dir/bundles/skill-a-evidence-atlas/examples/case/draft.md",
+    "token_total": 9,
+    "bound_count": 8,
+    "unsourced_count": 1,
+    "coverage": 0.8888888888888888
+  },
+  "bound": [
+    {
+      "line": 6,
+      "token": "0.0003",
+      "hits": [
+        "P003"
+      ],
+      "context": "使用 Adam 优化器，初始学习率 0.0003，权重衰减 0.0001，共训练 50 个 epoch，"
+    },
+    {
+      "line": 6,
+      "token": "0.0001",
+      "hits": [
+        "P004",
+        "P019"
+      ],
+      "context": "使用 Adam 优化器，初始学习率 0.0003，权重衰减 0.0001，共训练 50 个 epoch，"
+    },
+    {
+      "line": 6,
+      "token": "50",
+      "hits": [
+        "P005",
+        "P013"
+      ],
+      "context": "使用 Adam 优化器，初始学习率 0.0003，权重衰减 0.0001，共训练 50 个 epoch，"
+    },
+    {
+      "line": 7,
+      "token": "32",
+      "hits": [
+        "P006",
+        "P014"
+      ],
+      "context": "批大小为 32。为防止过拟合，dropout 比率设为 0.5。"
+    },
+    {
+      "line": 11,
+      "token": "0.8",
+      "hits": [
+        "P008"
+      ],
+      "context": "数据集按 0.8 / 0.1 / 0.1 划分为训练集、验证集与测试集，随机种子固定为 42。"
+    },
+    {
+      "line": 11,
+      "token": "0.1",
+      "hits": [
+        "P009",
+        "P010"
+      ],
+      "context": "数据集按 0.8 / 0.1 / 0.1 划分为训练集、验证集与测试集，随机种子固定为 42。"
+    },
+    {
+      "line": 11,
+      "token": "0.1",
+      "hits": [
+        "P009",
+        "P010"
+      ],
+      "context": "数据集按 0.8 / 0.1 / 0.1 划分为训练集、验证集与测试集，随机种子固定为 42。"
+    },
+    {
+      "line": 11,
+      "token": "42",
+      "hits": [
+        "P007",
+        "P020"
+      ],
+      "context": "数据集按 0.8 / 0.1 / 0.1 划分为训练集、验证集与测试集，随机种子固定为 42。"
+    }
+  ],
+  "unsourced": [
+    {
+      "line": 7,
+      "token": "0.5",
+      "hits": [],
+      "context": "批大小为 32。为防止过拟合，dropout 比率设为 0.5。"
+    }
+  ]
+}

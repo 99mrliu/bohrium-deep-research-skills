@@ -1,0 +1,58 @@
+{
+  "case_id": "SYNTH-DEMO-0001",
+  "artifact": {
+    "status": "done",
+    "value": "chapter.md",
+    "sources": [
+      {
+        "file": "notes.md",
+        "locator": "全文",
+        "note": "实验记录唯一来源"
+      }
+    ],
+    "uncertainty": [],
+    "assumptions": [],
+    "notes": "合成示例正文"
+  },
+  "sources": {
+    "status": "done",
+    "value": [
+      "notes.md"
+    ],
+    "sources": [
+      {
+        "file": "notes.md",
+        "locator": "全文",
+        "note": "实验记录唯一来源"
+      }
+    ],
+    "uncertainty": [],
+    "assumptions": [],
+    "notes": ""
+  },
+  "uncertainty": {
+    "status": "done",
+    "value": [
+      "未做超参搜索，学习率 0.05 为经验值",
+      "合成数据，外推性有限"
+    ],
+    "sources": [
+      {
+        "file": "notes.md",
+        "locator": "全文",
+        "note": "实验记录唯一来源"
+      }
+    ],
+    "uncertainty": [],
+    "assumptions": [],
+    "notes": ""
+  },
+  "status": {
+    "status": "done",
+    "value": "done",
+    "sources": [],
+    "uncertainty": [],
+    "assumptions": [],
+    "notes": "示例流程全部完成"
+  }
+}

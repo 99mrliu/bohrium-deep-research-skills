@@ -1,0 +1,14 @@
+{
+  "case_id": "SYNTH-DEMO-0001",
+  "note": "合成示例，非正式案例结果。仅用于演示 contract-forge 流程。",
+  "task": {
+    "title": "合成示例：小样本分类实验的方法与实验章节",
+    "output_contract": {
+      "artifact": {"type": "file", "description": "章节正文 markdown 路径"},
+      "sources": {"type": "array", "description": "来源定位清单"},
+      "uncertainty": {"type": "array", "description": "不确定性声明"},
+      "status": {"type": "string", "description": "完成状态"}
+    }
+  },
+  "materials": ["notes.md"]
+}

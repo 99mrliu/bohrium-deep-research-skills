@@ -1,0 +1,8 @@
+[2025-06-01 09:00:03] INFO env: Python 3.10.12, torch 2.1.0+cu121, CUDA 12.1
+[2025-06-01 09:00:03] INFO GPU: NVIDIA A100-SXM4-80GB (1x), CUDA available: True
+[2025-06-01 09:00:04] $ python preprocess.py --input data/raw.csv --output data/clean.csv --min-len 5
+[2025-06-01 09:00:41] INFO preprocess done: 12843 rows -> data/clean.csv
+[2025-06-01 09:00:42] $ python train.py --data data/clean.csv --model bert-base-chinese --lr 2e-5 --epochs 3 --batch-size 16 --seed 42
+[2025-06-01 10:12:57] INFO train done: best dev acc=0.884 -> outputs/best.pt
+[2025-06-01 10:12:58] $ python evaluate.py --data data/clean.csv --ckpt outputs/best.pt --split test
+[2025-06-01 10:13:20] INFO eval done: test acc=0.879

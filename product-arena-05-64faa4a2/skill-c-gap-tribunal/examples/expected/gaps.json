@@ -1,0 +1,270 @@
+{
+  "tool": "gap_audit",
+  "materials_dir": "/Users/liuhengshen/Desktop/bhr_product/writing09-5dir/bundles/skill-c-gap-tribunal/examples/case",
+  "draft": null,
+  "files_scanned": [
+    "config.yaml",
+    "draft.md",
+    "train.log"
+  ],
+  "elements": [
+    {
+      "key": "steps",
+      "label": "步骤",
+      "evidence_status": "thin",
+      "hit_count_capped": 1,
+      "hits": [
+        {
+          "file": "draft.md",
+          "line": 5,
+          "probe": "流程词",
+          "snippet": "首先对图像做预处理，然后训练分类器，最后在测试集上评估。"
+        }
+      ]
+    },
+    {
+      "key": "setup",
+      "label": "实验设置",
+      "evidence_status": "sufficient",
+      "hit_count_capped": 6,
+      "hits": [
+        {
+          "file": "config.yaml",
+          "line": 8,
+          "probe": "随机性控制",
+          "snippet": "seed: 42"
+        },
+        {
+          "file": "draft.md",
+          "line": 9,
+          "probe": "硬件/驱动",
+          "snippet": "硬件环境为 A100。训练 300 轮，批大小 64，学习率 0.001，随机种子 42。"
+        },
+        {
+          "file": "draft.md",
+          "line": 9,
+          "probe": "随机性控制",
+          "snippet": "硬件环境为 A100。训练 300 轮，批大小 64，学习率 0.001，随机种子 42。"
+        },
+        {
+          "file": "train.log",
+          "line": 1,
+          "probe": "随机性控制",
+          "snippet": "2024-05-01 10:00:00 run started with epochs=500 lr=0.001 batch_size=64 seed=42"
+        },
+        {
+          "file": "train.log",
+          "line": 2,
+          "probe": "硬件/驱动",
+          "snippet": "2024-05-01 10:00:01 env cuda=11.8 torch=2.1 python=3.10 gpu=A100"
+        },
+        {
+          "file": "train.log",
+          "line": 2,
+          "probe": "框架与版本",
+          "snippet": "2024-05-01 10:00:01 env cuda=11.8 torch=2.1 python=3.10 gpu=A100"
+        }
+      ]
+    },
+    {
+      "key": "params",
+      "label": "参数与来源",
+      "evidence_status": "sufficient",
+      "hit_count_capped": 12,
+      "hits": [
+        {
+          "file": "config.yaml",
+          "line": 5,
+          "probe": "超参数名",
+          "snippet": "epochs: 300"
+        },
+        {
+          "file": "config.yaml",
+          "line": 6,
+          "probe": "超参数名",
+          "snippet": "lr: 0.001"
+        },
+        {
+          "file": "config.yaml",
+          "line": 7,
+          "probe": "超参数名",
+          "snippet": "batch_size: 64"
+        },
+        {
+          "file": "draft.md",
+          "line": 9,
+          "probe": "超参数名",
+          "snippet": "硬件环境为 A100。训练 300 轮，批大小 64，学习率 0.001，随机种子 42。"
+        },
+        {
+          "file": "draft.md",
+          "line": 10,
+          "probe": "参数赋值",
+          "snippet": "注：训练日志显示实际运行为 500 轮，与配置不一致，待裁决。"
+        },
+        {
+          "file": "draft.md",
+          "line": 14,
+          "probe": "参数赋值",
+          "snippet": "对比基线准确率为 91.7%。"
+        },
+        {
+          "file": "train.log",
+          "line": 1,
+          "probe": "超参数名",
+          "snippet": "2024-05-01 10:00:00 run started with epochs=500 lr=0.001 batch_size=64 seed=42"
+        },
+        {
+          "file": "train.log",
+          "line": 1,
+          "probe": "参数赋值",
+          "snippet": "2024-05-01 10:00:00 run started with epochs=500 lr=0.001 batch_size=64 seed=42"
+        },
+        {
+          "file": "train.log",
+          "line": 2,
+          "probe": "参数赋值",
+          "snippet": "2024-05-01 10:00:01 env cuda=11.8 torch=2.1 python=3.10 gpu=A100"
+        },
+        {
+          "file": "train.log",
+          "line": 3,
+          "probe": "超参数名",
+          "snippet": "2024-05-01 10:00:02 [epoch 1/500] loss=0.912 acc=0.61"
+        },
+        {
+          "file": "train.log",
+          "line": 3,
+          "probe": "参数赋值",
+          "snippet": "2024-05-01 10:00:02 [epoch 1/500] loss=0.912 acc=0.61"
+        },
+        {
+          "file": "train.log",
+          "line": 4,
+          "probe": "超参数名",
+          "snippet": "2024-05-01 10:05:40 [epoch 2/500] loss=0.744 acc=0.70"
+        }
+      ]
+    },
+    {
+      "key": "dataset",
+      "label": "数据集与划分",
+      "evidence_status": "thin",
+      "hit_count_capped": 5,
+      "hits": [
+        {
+          "file": "config.yaml",
+          "line": 4,
+          "probe": "数据集名",
+          "snippet": "dataset: cifar10"
+        },
+        {
+          "file": "config.yaml",
+          "line": 9,
+          "probe": "划分信息",
+          "snippet": "train_ratio: 0.8"
+        },
+        {
+          "file": "config.yaml",
+          "line": 10,
+          "probe": "划分信息",
+          "snippet": "val_ratio: 0.1"
+        },
+        {
+          "file": "config.yaml",
+          "line": 11,
+          "probe": "划分信息",
+          "snippet": "test_ratio: 0.1"
+        },
+        {
+          "file": "draft.md",
+          "line": 5,
+          "probe": "划分信息",
+          "snippet": "首先对图像做预处理，然后训练分类器，最后在测试集上评估。"
+        }
+      ],
+      "must_satisfied": false,
+      "must_hits": []
+    },
+    {
+      "key": "baselines",
+      "label": "对照",
+      "evidence_status": "thin",
+      "hit_count_capped": 1,
+      "hits": [
+        {
+          "file": "draft.md",
+          "line": 14,
+          "probe": "基线词",
+          "snippet": "对比基线准确率为 91.7%。"
+        }
+      ]
+    },
+    {
+      "key": "repro",
+      "label": "复现与限制",
+      "evidence_status": "thin",
+      "hit_count_capped": 2,
+      "hits": [
+        {
+          "file": "draft.md",
+          "line": 16,
+          "probe": "限制词",
+          "snippet": "## 限制"
+        },
+        {
+          "file": "draft.md",
+          "line": 18,
+          "probe": "限制词",
+          "snippet": "本方法在某些情况下可能不适用，未来工作将进一步验证。"
+        }
+      ],
+      "must_satisfied": false,
+      "must_hits": []
+    }
+  ],
+  "gaps": [
+    {
+      "id": "G001",
+      "element": "steps",
+      "element_label": "步骤",
+      "status": "thin",
+      "question": "请补充方法的完整执行步骤（命令行或编号步骤）：当前材料中步骤证据薄弱，章节若直接给出步骤将被视为无来源陈述。"
+    },
+    {
+      "id": "G002",
+      "element": "dataset",
+      "element_label": "数据集与划分",
+      "status": "thin",
+      "question": "请说明数据集的确切版本与获取方式（版本号/下载链接/校验值）：当前材料仅见数据集名称或划分信息，版本证据薄弱。（缺失面向：版本与获取）"
+    },
+    {
+      "id": "G003",
+      "element": "baselines",
+      "element_label": "对照",
+      "status": "thin",
+      "question": "请补充对照设置（基线名称、来源与配置；是否有消融）：当前材料中对照证据薄弱。"
+    },
+    {
+      "id": "G004",
+      "element": "repro",
+      "element_label": "复现与限制",
+      "status": "thin",
+      "question": "请补充复现所需的完整信息（运行命令、依赖清单、数据获取途径）：当前材料中复现证据薄弱。（缺失面向：获取途径）"
+    }
+  ],
+  "summary": {
+    "total_gaps": 4,
+    "missing": [],
+    "thin": [
+      "steps",
+      "dataset",
+      "baselines",
+      "repro"
+    ],
+    "sufficient": [
+      "setup",
+      "params"
+    ]
+  }
+}

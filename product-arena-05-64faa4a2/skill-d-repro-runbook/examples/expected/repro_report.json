@@ -1,0 +1,89 @@
+{
+  "status": "FAIL",
+  "chapter": "examples/case/draft.md",
+  "commands_source": "examples/expected/commands.json",
+  "checklist": [
+    {
+      "id": "G1",
+      "item": "代码版本",
+      "status": "missing",
+      "detail": "章节未写明代码版本（commit/tag/仓库地址）；若材料亦缺失，需标注为人工确认项。"
+    },
+    {
+      "id": "G2",
+      "item": "运行环境（硬件/CUDA/框架/Python 版本）",
+      "status": "missing",
+      "detail": "部分环境线索未被章节覆盖：Python 3.10.12（README.md:5）；CUDA 12.1（README.md:6）；NVIDIA A100-SXM4-80GB（README.md:6）；cu121（README.md:6）；torch 2.1.0+cu121（README.md:6）"
+    },
+    {
+      "id": "G3",
+      "item": "依赖声明",
+      "status": "missing",
+      "detail": "材料有 3 条依赖线索（如 torch==2.1.0），但章节未提及依赖安装方式。"
+    },
+    {
+      "id": "G4",
+      "item": "完整命令",
+      "status": "missing",
+      "detail": "以下真实命令未原样出现在章节中：`python train.py --data data/clean.csv --model bert-base-chinese --lr 2e-5 --epochs 3 --batch-size 16 --seed 42`（pipeline.sh:12）；`python evaluate.py --data data/clean.csv --ckpt outputs/best.pt --split test`（pipeline.sh:15）"
+    },
+    {
+      "id": "G5",
+      "item": "数据获取方式",
+      "status": "present",
+      "detail": "章节覆盖 2 条数据线索。"
+    },
+    {
+      "id": "G6",
+      "item": "随机种子",
+      "status": "missing",
+      "detail": "材料中发现种子 42（如 pipeline.sh:12），但章节未完整写明。"
+    },
+    {
+      "id": "G7",
+      "item": "预期产物与校验方式",
+      "status": "present",
+      "detail": "章节提及预期指标/校验方式。"
+    }
+  ],
+  "command_consistency": {
+    "chapter_commands_found": 2,
+    "compared": 2,
+    "ok": 1,
+    "real_commands_total": 3
+  },
+  "order_check": {
+    "status": "ok",
+    "detail": "章节中 2 条可匹配命令的顺序与日志时间线一致。"
+  },
+  "findings": [
+    {
+      "severity": "FAIL",
+      "kind": "flag_value_mismatch",
+      "line": 3,
+      "chapter_command": "python train.py --data data/clean.csv --model bert-base-chinese --lr 2e-4 --epochs 3 --batch-size 16",
+      "real_command": "python train.py --data data/clean.csv --model bert-base-chinese --lr 2e-5 --epochs 3 --batch-size 16 --seed 42",
+      "real_source": "pipeline.sh:12",
+      "detail": "flag 值被改写：--lr 章节=2e-4 真实=2e-5"
+    },
+    {
+      "severity": "WARN",
+      "kind": "steps_compressed",
+      "line": null,
+      "detail": "同一段落命中 2 条真实命令，且至少一条被压入散文句中（命中：`python preprocess.py --input data/raw.csv --output data/clean.csv --min-len 5`；`python train.py --data data/clean.csv --model bert-base-chinese --lr 2e-5 --epochs 3 --batch-size 16 --seed 42`）；建议拆分为独立步骤并逐条恢复原命令。"
+    },
+    {
+      "severity": "WARN",
+      "kind": "flag_omitted",
+      "line": 3,
+      "chapter_command": "python train.py --data data/clean.csv --model bert-base-chinese --lr 2e-4 --epochs 3 --batch-size 16",
+      "real_command": "python train.py --data data/clean.csv --model bert-base-chinese --lr 2e-5 --epochs 3 --batch-size 16 --seed 42",
+      "real_source": "pipeline.sh:12",
+      "detail": "章节命令省略了真实命令中的 flag：--seed=42"
+    }
+  ],
+  "notes": [
+    "unknown 表示材料本身缺少该信息，章节应如实标注缺口而非编造。",
+    "FAIL 必须修复后方可定稿；WARN 需人工复核。"
+  ]
+}

@@ -1,0 +1,97 @@
+{
+  "tool": "conflict_matrix",
+  "materials_dir": "/Users/liuhengshen/Desktop/bhr_product/writing09-5dir/bundles/skill-c-gap-tribunal/examples/case",
+  "pairs_extracted": 25,
+  "conflicts": [
+    {
+      "parameter": "epochs",
+      "blocking": true,
+      "sources": [
+        {
+          "file": "train.log",
+          "line": 1,
+          "value_raw": "500",
+          "source_type": "运行日志"
+        },
+        {
+          "file": "config.yaml",
+          "line": 5,
+          "value_raw": "300",
+          "source_type": "配置文件"
+        }
+      ],
+      "suggested_rule": "按裁决优先级（运行日志 > 配置文件 > 脚本默认 > 草稿/转述），建议取 train.log:1 的值 500；正文中应双值并陈并注明该裁决依据（见 references/adjudication_rules.md）。",
+      "recommended_value": "500",
+      "recommended_source": "train.log:1"
+    }
+  ],
+  "observations": [
+    {
+      "key": "acc",
+      "file": "train.log",
+      "values": [
+        {
+          "value_raw": "0.61",
+          "lines": [
+            3
+          ]
+        },
+        {
+          "value_raw": "0.70",
+          "lines": [
+            4
+          ]
+        },
+        {
+          "value_raw": "0.74",
+          "lines": [
+            5
+          ]
+        },
+        {
+          "value_raw": "0.77",
+          "lines": [
+            6
+          ]
+        }
+      ],
+      "note": "同一文件内同一键存在多个取值，视为时间序列/计数器观测，不参与冲突判定。"
+    },
+    {
+      "key": "loss",
+      "file": "train.log",
+      "values": [
+        {
+          "value_raw": "0.912",
+          "lines": [
+            3
+          ]
+        },
+        {
+          "value_raw": "0.744",
+          "lines": [
+            4
+          ]
+        },
+        {
+          "value_raw": "0.655",
+          "lines": [
+            5
+          ]
+        },
+        {
+          "value_raw": "0.587",
+          "lines": [
+            6
+          ]
+        }
+      ],
+      "note": "同一文件内同一键存在多个取值，视为时间序列/计数器观测，不参与冲突判定。"
+    }
+  ],
+  "summary": {
+    "conflict_count": 1,
+    "blocking_count": 1,
+    "observation_count": 2
+  }
+}

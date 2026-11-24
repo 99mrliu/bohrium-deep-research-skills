@@ -1,0 +1,68 @@
+{
+  "tool": "parity_check",
+  "inputs": [
+    "/Users/liuhengshen/Desktop/bhr_product/writing09-5dir/bundles/skill-e-baseline-parity/examples/case"
+  ],
+  "draft": "/Users/liuhengshen/Desktop/bhr_product/writing09-5dir/bundles/skill-e-baseline-parity/examples/case/draft.md",
+  "runs": [
+    {
+      "run": "ours",
+      "fields": {
+        "data_size": 50000,
+        "epochs": 200
+      },
+      "evidence": {
+        "data_size": "/Users/liuhengshen/Desktop/bhr_product/writing09-5dir/bundles/skill-e-baseline-parity/examples/case/config_ours.yaml:5",
+        "epochs": "/Users/liuhengshen/Desktop/bhr_product/writing09-5dir/bundles/skill-e-baseline-parity/examples/case/results.log:3"
+      }
+    },
+    {
+      "run": "resnet50",
+      "fields": {
+        "data_size": 50000,
+        "epochs": 50
+      },
+      "evidence": {
+        "data_size": "/Users/liuhengshen/Desktop/bhr_product/writing09-5dir/bundles/skill-e-baseline-parity/examples/case/config_base.yaml:5",
+        "epochs": "/Users/liuhengshen/Desktop/bhr_product/writing09-5dir/bundles/skill-e-baseline-parity/examples/case/results.log:5"
+      }
+    }
+  ],
+  "violation_count": 1,
+  "violations": [
+    {
+      "field": "epochs",
+      "kind": "预算不一致",
+      "values": {
+        "ours": 200,
+        "resnet50": 50
+      },
+      "evidence": {
+        "ours": "/Users/liuhengshen/Desktop/bhr_product/writing09-5dir/bundles/skill-e-baseline-parity/examples/case/results.log:3",
+        "resnet50": "/Users/liuhengshen/Desktop/bhr_product/writing09-5dir/bundles/skill-e-baseline-parity/examples/case/results.log:5"
+      },
+      "action": "必须在对照实验小节中显式声明各组epochs差异及理由，否则不得下可比性结论"
+    }
+  ],
+  "protocol_gap_count": 3,
+  "protocol_gaps": [
+    {
+      "element": "mean_std",
+      "label": "均值±标准差",
+      "status": "缺失",
+      "action": "在统计协议中补充均值±标准差；无法补充时须声明缺口并降级相关论断"
+    },
+    {
+      "element": "repetition",
+      "label": "重复次数（多次独立运行/多种子）",
+      "status": "缺失",
+      "action": "在统计协议中补充重复次数（多次独立运行/多种子）；无法补充时须声明缺口并降级相关论断"
+    },
+    {
+      "element": "significance",
+      "label": "显著性检验与置信水平",
+      "status": "缺失",
+      "action": "在统计协议中补充显著性检验与置信水平；无法补充时须声明缺口并降级相关论断"
+    }
+  ]
+}

@@ -1,0 +1,332 @@
+{
+  "meta": {
+    "root": "examples/case",
+    "scanned_files": 5,
+    "item_count": 35,
+    "by_type": {
+      "env": 15,
+      "command": 6,
+      "data": 9,
+      "seed": 2,
+      "dep": 3
+    },
+    "generated_by": "command_mine.py (stdlib-only, deterministic, offline)"
+  },
+  "items": [
+    {
+      "type": "env",
+      "text": "CUDA_VISIBLE_DEVICES=0",
+      "file": "pipeline.sh",
+      "line": 5,
+      "source_kind": "script",
+      "log_time": null,
+      "id": 1
+    },
+    {
+      "type": "env",
+      "text": "export CUDA_VISIBLE_DEVICES=0",
+      "file": "pipeline.sh",
+      "line": 5,
+      "source_kind": "script",
+      "log_time": null,
+      "id": 2
+    },
+    {
+      "type": "command",
+      "text": "python preprocess.py --input data/raw.csv --output data/clean.csv --min-len 5",
+      "file": "pipeline.sh",
+      "line": 7,
+      "source_kind": "script",
+      "log_time": null,
+      "id": 3
+    },
+    {
+      "type": "data",
+      "text": "data/raw.csv",
+      "file": "pipeline.sh",
+      "line": 7,
+      "source_kind": "script",
+      "log_time": null,
+      "id": 4
+    },
+    {
+      "type": "command",
+      "text": "python train.py --data data/clean.csv --model bert-base-chinese --lr 2e-5 --epochs 3 --batch-size 16 --seed 42",
+      "file": "pipeline.sh",
+      "line": 12,
+      "source_kind": "script",
+      "log_time": null,
+      "id": 5
+    },
+    {
+      "type": "data",
+      "text": "data/clean.csv",
+      "file": "pipeline.sh",
+      "line": 12,
+      "source_kind": "script",
+      "log_time": null,
+      "id": 6
+    },
+    {
+      "type": "seed",
+      "text": "seed=42",
+      "file": "pipeline.sh",
+      "line": 12,
+      "source_kind": "script",
+      "log_time": null,
+      "id": 7
+    },
+    {
+      "type": "command",
+      "text": "python evaluate.py --data data/clean.csv --ckpt outputs/best.pt --split test",
+      "file": "pipeline.sh",
+      "line": 15,
+      "source_kind": "script",
+      "log_time": null,
+      "id": 8
+    },
+    {
+      "type": "data",
+      "text": "data/clean.csv",
+      "file": "pipeline.sh",
+      "line": 15,
+      "source_kind": "script",
+      "log_time": null,
+      "id": 9
+    },
+    {
+      "type": "data",
+      "text": "https://example.org/datasets/raw.csv",
+      "file": "README.md",
+      "line": 1,
+      "source_kind": "doc",
+      "log_time": null,
+      "id": 10
+    },
+    {
+      "type": "data",
+      "text": "wget https://example.org/datasets/raw.csv -O data/raw.csv",
+      "file": "README.md",
+      "line": 1,
+      "source_kind": "doc",
+      "log_time": null,
+      "id": 11
+    },
+    {
+      "type": "env",
+      "text": "Python 3.10.12",
+      "file": "README.md",
+      "line": 5,
+      "source_kind": "doc",
+      "log_time": null,
+      "id": 12
+    },
+    {
+      "type": "env",
+      "text": "A100",
+      "file": "README.md",
+      "line": 6,
+      "source_kind": "doc",
+      "log_time": null,
+      "id": 13
+    },
+    {
+      "type": "env",
+      "text": "CUDA 12.1",
+      "file": "README.md",
+      "line": 6,
+      "source_kind": "doc",
+      "log_time": null,
+      "id": 14
+    },
+    {
+      "type": "env",
+      "text": "NVIDIA A100-SXM4-80GB",
+      "file": "README.md",
+      "line": 6,
+      "source_kind": "doc",
+      "log_time": null,
+      "id": 15
+    },
+    {
+      "type": "env",
+      "text": "cu121",
+      "file": "README.md",
+      "line": 6,
+      "source_kind": "doc",
+      "log_time": null,
+      "id": 16
+    },
+    {
+      "type": "env",
+      "text": "torch 2.1.0+cu121",
+      "file": "README.md",
+      "line": 6,
+      "source_kind": "doc",
+      "log_time": null,
+      "id": 17
+    },
+    {
+      "type": "data",
+      "text": "https://example.org/datasets/raw.csv",
+      "file": "README.md",
+      "line": 12,
+      "source_kind": "doc",
+      "log_time": null,
+      "id": 18
+    },
+    {
+      "type": "env",
+      "text": "A100",
+      "file": "draft.md",
+      "line": 3,
+      "source_kind": "doc",
+      "log_time": null,
+      "id": 19
+    },
+    {
+      "type": "env",
+      "text": "CUDA 12.1",
+      "file": "run.log",
+      "line": 1,
+      "source_kind": "log",
+      "log_time": "2025-06-01 09:00:03",
+      "id": 20
+    },
+    {
+      "type": "env",
+      "text": "Python 3.10.12",
+      "file": "run.log",
+      "line": 1,
+      "source_kind": "log",
+      "log_time": "2025-06-01 09:00:03",
+      "id": 21
+    },
+    {
+      "type": "env",
+      "text": "cu121",
+      "file": "run.log",
+      "line": 1,
+      "source_kind": "log",
+      "log_time": "2025-06-01 09:00:03",
+      "id": 22
+    },
+    {
+      "type": "env",
+      "text": "torch 2.1.0+cu121",
+      "file": "run.log",
+      "line": 1,
+      "source_kind": "log",
+      "log_time": "2025-06-01 09:00:03",
+      "id": 23
+    },
+    {
+      "type": "env",
+      "text": "A100",
+      "file": "run.log",
+      "line": 2,
+      "source_kind": "log",
+      "log_time": "2025-06-01 09:00:03",
+      "id": 24
+    },
+    {
+      "type": "env",
+      "text": "NVIDIA A100-SXM4-80GB",
+      "file": "run.log",
+      "line": 2,
+      "source_kind": "log",
+      "log_time": "2025-06-01 09:00:03",
+      "id": 25
+    },
+    {
+      "type": "command",
+      "text": "python preprocess.py --input data/raw.csv --output data/clean.csv --min-len 5",
+      "file": "run.log",
+      "line": 3,
+      "source_kind": "log",
+      "log_time": "2025-06-01 09:00:04",
+      "id": 26
+    },
+    {
+      "type": "data",
+      "text": "data/raw.csv",
+      "file": "run.log",
+      "line": 3,
+      "source_kind": "log",
+      "log_time": "2025-06-01 09:00:04",
+      "id": 27
+    },
+    {
+      "type": "command",
+      "text": "python train.py --data data/clean.csv --model bert-base-chinese --lr 2e-5 --epochs 3 --batch-size 16 --seed 42",
+      "file": "run.log",
+      "line": 5,
+      "source_kind": "log",
+      "log_time": "2025-06-01 09:00:42",
+      "id": 28
+    },
+    {
+      "type": "data",
+      "text": "data/clean.csv",
+      "file": "run.log",
+      "line": 5,
+      "source_kind": "log",
+      "log_time": "2025-06-01 09:00:42",
+      "id": 29
+    },
+    {
+      "type": "seed",
+      "text": "seed=42",
+      "file": "run.log",
+      "line": 5,
+      "source_kind": "log",
+      "log_time": "2025-06-01 09:00:42",
+      "id": 30
+    },
+    {
+      "type": "command",
+      "text": "python evaluate.py --data data/clean.csv --ckpt outputs/best.pt --split test",
+      "file": "run.log",
+      "line": 7,
+      "source_kind": "log",
+      "log_time": "2025-06-01 10:12:58",
+      "id": 31
+    },
+    {
+      "type": "data",
+      "text": "data/clean.csv",
+      "file": "run.log",
+      "line": 7,
+      "source_kind": "log",
+      "log_time": "2025-06-01 10:12:58",
+      "id": 32
+    },
+    {
+      "type": "dep",
+      "text": "torch==2.1.0",
+      "file": "requirements.txt",
+      "line": 1,
+      "source_kind": "depfile",
+      "log_time": null,
+      "id": 33
+    },
+    {
+      "type": "dep",
+      "text": "transformers==4.38.2",
+      "file": "requirements.txt",
+      "line": 2,
+      "source_kind": "depfile",
+      "log_time": null,
+      "id": 34
+    },
+    {
+      "type": "dep",
+      "text": "numpy>=1.24",
+      "file": "requirements.txt",
+      "line": 3,
+      "source_kind": "depfile",
+      "log_time": null,
+      "id": 35
+    }
+  ]
+}
