@@ -1,0 +1,37 @@
+{
+  "version": 1,
+  "draft": false,
+  "note": "SYNTHETIC EXAMPLE ONLY -- 全部数据为虚构，仅用于演示 figure-render-forge 的绑定、渲染与 QC 流程。fig04 故意绘制无单位的 water 列，用于演示 unit_unknown 与 needs_review。",
+  "meta": {
+    "csv": "concrete_like_syn.csv",
+    "dictionary": "data_dictionary.json"
+  },
+  "figures": [
+    {
+      "id": "fig01",
+      "type": "histogram",
+      "x": "strength",
+      "title": "抗压强度分布直方图（合成示例）"
+    },
+    {
+      "id": "fig02",
+      "type": "box",
+      "y": "strength",
+      "group": "mix_class",
+      "title": "抗压强度按配合比类别分组箱线图（合成示例）"
+    },
+    {
+      "id": "fig03",
+      "type": "scatter",
+      "x": "age",
+      "y": "strength",
+      "title": "养护龄期与抗压强度散点图（合成示例）"
+    },
+    {
+      "id": "fig04",
+      "type": "histogram",
+      "x": "water",
+      "title": "用水量分布直方图（合成示例，单位未知演示）"
+    }
+  ]
+}

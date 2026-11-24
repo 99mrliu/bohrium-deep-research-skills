@@ -1,0 +1,31 @@
+{
+  "source_file": "measurements_syn.csv",
+  "total_rows": 40,
+  "total_missing_cells": 3,
+  "groups": {
+    "control": {
+      "n_rows": 14,
+      "value_a_mean": 12.3429,
+      "value_a_n": 14,
+      "value_b_mean": 100.4385,
+      "value_b_n": 13,
+      "missing_cells": 1
+    },
+    "treat_a": {
+      "n_rows": 13,
+      "value_a_mean": 14.45,
+      "value_a_n": 12,
+      "value_b_mean": 109.2923,
+      "value_b_n": 13,
+      "missing_cells": 1
+    },
+    "treat_b": {
+      "n_rows": 13,
+      "value_a_mean": 16.1,
+      "value_a_n": 13,
+      "value_b_mean": 115.325,
+      "value_b_n": 12,
+      "missing_cells": 1
+    }
+  }
+}

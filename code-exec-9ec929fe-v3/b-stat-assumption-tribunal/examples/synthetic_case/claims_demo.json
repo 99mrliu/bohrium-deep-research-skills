@@ -1,0 +1,50 @@
+[
+  {
+    "id": "c1_mean_A",
+    "kind": "mean",
+    "column": "value",
+    "group": "group:A",
+    "value": 98.24145897435898,
+    "expect": "PASS — 取自 stattool descriptive --group group 的实际输出"
+  },
+  {
+    "id": "c2_std_A_ddof1",
+    "kind": "std",
+    "column": "value",
+    "group": "group:A",
+    "ddof": 1,
+    "value": 15.283743634775341,
+    "expect": "PASS — 取自 stattool descriptive --group group 的 std_ddof1"
+  },
+  {
+    "id": "c3_median_overall",
+    "kind": "median",
+    "column": "value",
+    "value": 102.82745,
+    "expect": "PASS — 取自 stattool descriptive --group group 的 overall.median"
+  },
+  {
+    "id": "c4_mwu_p",
+    "kind": "mwu_p",
+    "column": "value",
+    "group_col": "group",
+    "value": 0.10122673422655973,
+    "expect": "PASS — 取自 stattool compare 改判后的 Mann-Whitney p 值"
+  },
+  {
+    "id": "c5_mean_B_WRONG",
+    "kind": "mean",
+    "column": "value",
+    "group": "group:B",
+    "value": 100.0,
+    "expect": "FAIL — 故意写错：B 组真实均值约 137.64，此处写成 100.0"
+  },
+  {
+    "id": "c6_pearson_r_WRONG",
+    "kind": "pearson_r",
+    "x": "value",
+    "y": "dosage",
+    "value": 0.85,
+    "expect": "FAIL — 故意写错：真实 r 约 -0.052，此处写成 0.85"
+  }
+]

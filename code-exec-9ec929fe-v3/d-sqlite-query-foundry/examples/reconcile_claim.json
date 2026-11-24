@@ -1,0 +1,25 @@
+{
+  "id": "sensors-syn-demo-claims",
+  "description": "对合成示例 q1/q2 的关键行数与聚合进行独立复核；第 3 项检查暴露示例库中故意埋设的重复批次（演示用途）。",
+  "sql_reference": "examples/queries/q1_valid_readings_per_site.sql, examples/queries/q2_region_mean.sql",
+  "checks": [
+    {
+      "kind": "row_count",
+      "sql": "SELECT reading_id FROM readings WHERE status = 'valid' AND value IS NOT NULL",
+      "expect": {"rows": 178},
+      "note": "q1 各站点 valid_readings 之和的独立改写：直接对 readings 过滤计数。"
+    },
+    {
+      "kind": "aggregate",
+      "sql": "SELECT AVG(r.value) FROM readings r WHERE r.status = 'valid' AND r.value IS NOT NULL AND r.site_id IN (SELECT site_id FROM sites WHERE region = 'north')",
+      "expect": {"value": 52.71031746031746, "tolerance": 1e-06},
+      "note": "q2 中 region='north' 的 mean_value：原查询为 JOIN + GROUP BY，此处以 IN 子查询独立改写复核。"
+    },
+    {
+      "kind": "aggregate",
+      "sql": "SELECT (SELECT COUNT(*) FROM readings WHERE status = 'valid' AND value IS NOT NULL) - (SELECT COUNT(*) FROM (SELECT DISTINCT site_id, ts, value FROM readings WHERE status = 'valid' AND value IS NOT NULL))",
+      "expect": {"value": 17, "tolerance": 0},
+      "note": "重复批次检测：朴素计数减去按 (site_id, ts, value) 去重后的计数。结果非 0 即说明存在重复入库，须写入 anomalies。"
+    }
+  ]
+}

@@ -1,0 +1,100 @@
+{
+  "case_id": "SYNTH-GOV-001",
+  "cleaned_table": "cleaned.csv",
+  "statistics": {
+    "source_file": "measurements_syn.csv",
+    "total_rows": 40,
+    "total_missing_cells": 3,
+    "groups": {
+      "control": {
+        "n_rows": 14,
+        "value_a_mean": 12.3429,
+        "value_a_n": 14,
+        "value_b_mean": 100.4385,
+        "value_b_n": 13,
+        "missing_cells": 1
+      },
+      "treat_a": {
+        "n_rows": 13,
+        "value_a_mean": 14.45,
+        "value_a_n": 12,
+        "value_b_mean": 109.2923,
+        "value_b_n": 13,
+        "missing_cells": 1
+      },
+      "treat_b": {
+        "n_rows": 13,
+        "value_a_mean": 16.1,
+        "value_a_n": 13,
+        "value_b_mean": 115.325,
+        "value_b_n": 12,
+        "missing_cells": 1
+      }
+    }
+  },
+  "figures": [
+    "fig_placeholder.txt"
+  ],
+  "notes": "合成演示：全部契约字段均已填充。",
+  "status": "complete",
+  "anomalies": [],
+  "provenance": {
+    "tool": "stagegate 1.0.0",
+    "python_version": "3.12.14",
+    "platform": "darwin",
+    "started_utc": "2026-11-24T15:51:15+00:00",
+    "case_json_sha256": "95497db94c08df8890b6814d2d923cf96b7d2059037f2009b52415741b0c49af",
+    "output_contract_fields": [
+      "case_id",
+      "cleaned_table",
+      "statistics",
+      "figures",
+      "status",
+      "anomalies",
+      "provenance",
+      "notes"
+    ],
+    "budget_seconds": 900
+  },
+  "change_records": [
+    {
+      "ts": "2026-11-24T15:51:15+00:00",
+      "field": null,
+      "action": "init",
+      "evidence": null,
+      "note": "skeleton created from output_contract (8 fields)"
+    },
+    {
+      "ts": "2026-11-24T15:51:17+00:00",
+      "field": "statistics",
+      "action": "set",
+      "evidence": "stats.json"
+    },
+    {
+      "ts": "2026-11-24T15:51:18+00:00",
+      "field": "cleaned_table",
+      "action": "set",
+      "evidence": "cleaned.csv"
+    },
+    {
+      "ts": "2026-11-24T15:51:18+00:00",
+      "field": "figures",
+      "action": "set",
+      "evidence": "figures_manifest.json"
+    },
+    {
+      "ts": "2026-11-24T15:51:19+00:00",
+      "field": "notes",
+      "action": "set",
+      "evidence": null
+    },
+    {
+      "ts": "2026-11-24T15:51:20+00:00",
+      "field": null,
+      "action": "finalize",
+      "evidence": null,
+      "note": "status=complete；未填字段=（无）"
+    }
+  ],
+  "missing_fields": []
+}

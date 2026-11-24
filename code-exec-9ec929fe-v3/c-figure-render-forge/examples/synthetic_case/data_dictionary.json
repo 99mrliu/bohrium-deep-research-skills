@@ -1,0 +1,29 @@
+{
+  "columns": {
+    "cement": {
+      "label": "水泥用量",
+      "unit": "kg/m3",
+      "description": "SYNTHETIC: 每立方米混凝土中的水泥质量（虚构数据）"
+    },
+    "water": {
+      "label": "用水量",
+      "unit": "",
+      "description": "SYNTHETIC: 每立方米混凝土中的用水质量；单位故意留空，用于演示 unit_unknown / needs_review 路径"
+    },
+    "age": {
+      "label": "养护龄期",
+      "unit": "day",
+      "description": "SYNTHETIC: 试件标准养护天数（虚构数据）"
+    },
+    "strength": {
+      "label": "抗压强度",
+      "unit": "MPa",
+      "description": "SYNTHETIC: 立方体抗压强度（虚构数据，含 5 个缺失值）"
+    },
+    "mix_class": {
+      "label": "配合比类别",
+      "unit": "",
+      "description": "SYNTHETIC: 虚构的配合比分组 A/B/C，三组的强度均值略有差异；作为分组轴使用，不要求单位"
+    }
+  }
+}
