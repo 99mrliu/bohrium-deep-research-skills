@@ -1,0 +1,43 @@
+{
+  "description": "指标词表：terms 为 surface term（小写匹配，最长者优先）→ 规范化指标名；dimension_defaults 给出无单位数值的默认量纲（仅这些指标允许无单位归一化，其余无单位数值标 unnormalized）。",
+  "terms": {
+    "recall@10": "recall@10",
+    "recall at ten": "recall@10",
+    "precision@10": "precision@10",
+    "precision at ten": "precision@10",
+    "f1 score": "f1",
+    "f1": "f1",
+    "recall": "recall",
+    "precision": "precision",
+    "accuracy": "accuracy",
+    "auroc": "auc",
+    "auc": "auc",
+    "rmse": "rmse",
+    "bleu": "bleu",
+    "latency": "latency",
+    "runtime": "runtime",
+    "throughput": "throughput",
+    "召回率": "recall",
+    "查全率": "recall",
+    "精确率": "precision",
+    "查准率": "precision",
+    "准确率": "accuracy",
+    "f1值": "f1",
+    "延迟": "latency",
+    "时延": "latency",
+    "运行时间": "runtime",
+    "吞吐量": "throughput"
+  },
+  "dimension_defaults": {
+    "recall": "ratio",
+    "recall@10": "ratio",
+    "precision": "ratio",
+    "precision@10": "ratio",
+    "accuracy": "ratio",
+    "f1": "ratio",
+    "auc": "ratio",
+    "bleu": "ratio",
+    "latency": "time",
+    "runtime": "time"
+  }
+}

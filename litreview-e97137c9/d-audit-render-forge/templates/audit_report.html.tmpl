@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<title>文献综述审计报告 — {{CASE_ID}}</title>
+<style>
+  :root { color-scheme: light; }
+  * { box-sizing: border-box; }
+  body { font-family: -apple-system, "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", sans-serif;
+         margin: 0; color: #1c2330; background: #f5f6f8; line-height: 1.65; }
+  header { background: #1c2330; color: #fff; padding: 24px 32px; }
+  header h1 { margin: 0 0 6px; font-size: 20px; }
+  header .meta { font-size: 13px; opacity: .85; }
+  main { max-width: 1080px; margin: 0 auto; padding: 24px 32px 64px; }
+  h2 { font-size: 17px; border-left: 4px solid #3b6fd4; padding-left: 10px; margin-top: 40px; }
+  .rq { background: #fff; border: 1px solid #dde1e8; border-radius: 8px; padding: 14px 18px; }
+  .stats { display: flex; flex-wrap: wrap; gap: 10px; margin: 16px 0; }
+  .stat { background: #fff; border: 1px solid #dde1e8; border-radius: 8px; padding: 10px 16px; font-size: 13px; }
+  .stat b { display: block; font-size: 20px; }
+  table { border-collapse: collapse; width: 100%; background: #fff; font-size: 13px; }
+  th, td { border: 1px solid #dde1e8; padding: 7px 10px; text-align: left; vertical-align: top; }
+  th { background: #eef1f6; }
+  section.claim { background: #fff; border: 1px solid #dde1e8; border-radius: 8px;
+                  padding: 14px 18px; margin: 14px 0; }
+  section.claim .sentence { font-size: 15px; margin: 0 0 10px; }
+  .mark { background: #dbe7ff; color: #1d4fb8; border-radius: 4px; padding: 1px 5px;
+          font-family: ui-monospace, SFMono-Regular, Menlo, monospace; font-size: 12px;
+          text-decoration: none; }
+  .mark:hover { background: #bfd6ff; }
+  .quote { font-family: ui-monospace, SFMono-Regular, Menlo, monospace; font-size: 12px;
+           background: #f7f8fa; border-radius: 4px; padding: 4px 6px; display: inline-block; }
+  .anchor-loc { font-family: ui-monospace, SFMono-Regular, Menlo, monospace; font-size: 12px; color: #555; }
+  .tag { display: inline-block; border-radius: 4px; padding: 0 6px; font-size: 11px; }
+  .tag-established { background: #dff3e3; color: #177245; }
+  .tag-suggestive  { background: #fdf0d5; color: #9a6a00; }
+  .tag-contested   { background: #fde3e3; color: #b42318; }
+  .zero { background: #fde3e3; color: #b42318; font-weight: 700; }
+  .warn { background: #fdf0d5; border: 1px solid #ecd9a8; border-radius: 8px; padding: 12px 16px; }
+  .ok   { background: #eaf7ee; border: 1px solid #c3e6cd; border-radius: 8px; padding: 12px 16px; }
+  .ev-anchor { display: block; position: relative; top: -10px; }
+  footer { text-align: center; color: #8a93a3; font-size: 12px; padding: 24px; }
+  code { background: #eef1f6; border-radius: 3px; padding: 0 4px; }
+</style>
+</head>
+<body>
+<header>
+  <h1>文献综述审计报告</h1>
+  <div class="meta">case_id：{{CASE_ID}} ｜ 生成时间：{{GENERATED_AT}} ｜ 状态：{{STATUS_HINT}}</div>
+</header>
+<main>
+
+<h2>研究问题</h2>
+<div class="rq">{{RESEARCH_QUESTION}}</div>
+
+<div class="stats">
+  <div class="stat"><b>{{DOC_COUNT}}</b>文献总数</div>
+  <div class="stat"><b>{{EVIDENCE_COUNT}}</b>证据行</div>
+  <div class="stat"><b>{{CLAIM_COUNT}}</b>论断句</div>
+  <div class="stat"><b>{{ORPHAN_COUNT}}</b>未引用证据</div>
+  <div class="stat"><b>{{UNSUPPORTED_COUNT}}</b>无标记实质句</div>
+</div>
+
+<h2>一、论断句 → 证据 → 逐字摘录 → 页锚点</h2>
+<p>点击句中 <span class="mark">[E#]</span> 标记可跳转至下方证据明细。每条摘录均为所声称页文本的逐字子串（仅归一化空白）。</p>
+{{CLAIM_ROWS}}
+
+<h2>二、证据明细（锚点区）</h2>
+{{EVIDENCE_SECTION}}
+
+<h2>三、文档 × 主题覆盖矩阵</h2>
+{{COVERAGE_SECTION}}
+
+<h2>四、未被草稿引用的证据行</h2>
+{{ORPHAN_SECTION}}
+
+<h2>五、无证据标记的实质句</h2>
+{{UNSUPPORTED_SECTION}}
+
+<h2>六、来源清单（SHA-256 留痕）</h2>
+{{SOURCE_ROWS}}
+
+</main>
+<footer>本报告为自包含 HTML，无外部资源依赖；由 audit-render-forge 的 compile_audit.py 生成。</footer>
+</body>
+</html>

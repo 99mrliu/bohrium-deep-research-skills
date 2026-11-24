@@ -1,0 +1,54 @@
+{
+  "version": "1.0",
+  "description": "facet 词表：population/method/metric/outcome 四类，每类 8–12 个中英文关键词。facet_scan.py 用 aliases 在文献全文中打标；value 为规范名。可按学科扩展，但新增值会自动进入 absent/underpowered 检测。",
+  "categories": {
+    "population": [
+      {"value": "成人", "aliases": ["成人", "adult", "adults"]},
+      {"value": "儿童", "aliases": ["儿童", "child", "children", "pediatric", "paediatric"]},
+      {"value": "老年人", "aliases": ["老年人", "老年", "older adults", "elderly"]},
+      {"value": "孕妇", "aliases": ["孕妇", "妊娠", "pregnant", "pregnancy"]},
+      {"value": "运动员", "aliases": ["运动员", "athlete", "athletes"]},
+      {"value": "小鼠", "aliases": ["小鼠", "mice", "mouse"]},
+      {"value": "大鼠", "aliases": ["大鼠", "rat", "rats"]},
+      {"value": "细胞系", "aliases": ["细胞系", "细胞株", "cell line", "cell lines"]},
+      {"value": "患者", "aliases": ["患者", "病人", "patient", "patients"]},
+      {"value": "健康志愿者", "aliases": ["健康志愿者", "健康受试者", "healthy volunteers", "healthy subjects"]}
+    ],
+    "method": [
+      {"value": "随机对照试验", "aliases": ["随机对照试验", "随机对照", "randomized controlled trial", "randomised controlled trial", "randomized", "randomised", "rct"]},
+      {"value": "队列研究", "aliases": ["队列研究", "队列", "cohort"]},
+      {"value": "病例对照", "aliases": ["病例对照", "case-control", "case control"]},
+      {"value": "横断面", "aliases": ["横断面", "cross-sectional", "cross sectional"]},
+      {"value": "体外实验", "aliases": ["体外实验", "体外", "in vitro", "in-vitro"]},
+      {"value": "动物实验", "aliases": ["动物实验", "动物模型", "animal experiment", "animal model"]},
+      {"value": "荟萃分析", "aliases": ["荟萃分析", "元分析", "meta-analysis", "meta analysis"]},
+      {"value": "系统综述", "aliases": ["系统综述", "系统评价", "systematic review"]},
+      {"value": "单臂试验", "aliases": ["单臂试验", "单臂", "single-arm", "single arm"]},
+      {"value": "质性研究", "aliases": ["质性研究", "定性研究", "qualitative"]}
+    ],
+    "metric": [
+      {"value": "样本量", "aliases": ["样本量", "sample size"]},
+      {"value": "p值", "aliases": ["p值", "p-value", "p value"]},
+      {"value": "效应量", "aliases": ["效应量", "effect size"]},
+      {"value": "置信区间", "aliases": ["置信区间", "confidence interval"]},
+      {"value": "召回率", "aliases": ["召回率", "recall"]},
+      {"value": "准确率", "aliases": ["准确率", "accuracy"]},
+      {"value": "风险比", "aliases": ["风险比", "hazard ratio"]},
+      {"value": "优势比", "aliases": ["优势比", "odds ratio"]},
+      {"value": "标准化均数差", "aliases": ["标准化均数差", "standardized mean difference", "standardised mean difference", "smd"]},
+      {"value": "随访时长", "aliases": ["随访时长", "随访", "follow-up", "follow up"]}
+    ],
+    "outcome": [
+      {"value": "症状缓解", "aliases": ["症状缓解", "症状改善", "symptom relief", "symptom improvement"]},
+      {"value": "死亡率", "aliases": ["死亡率", "mortality"]},
+      {"value": "生活质量", "aliases": ["生活质量", "quality of life", "qol"]},
+      {"value": "生物标志物", "aliases": ["生物标志物", "标志物", "biomarker", "biomarkers"]},
+      {"value": "不良事件", "aliases": ["不良事件", "不良反应", "adverse events", "adverse event"]},
+      {"value": "复发率", "aliases": ["复发率", "复发", "recurrence"]},
+      {"value": "依从性", "aliases": ["依从性", "adherence", "compliance"]},
+      {"value": "认知功能", "aliases": ["认知功能", "认知", "cognitive function", "cognition"]},
+      {"value": "炎症指标", "aliases": ["炎症指标", "炎症", "抗炎", "inflammation", "inflammatory"]},
+      {"value": "成本效益", "aliases": ["成本效益", "cost-effectiveness", "cost effectiveness"]}
+    ]
+  }
+}

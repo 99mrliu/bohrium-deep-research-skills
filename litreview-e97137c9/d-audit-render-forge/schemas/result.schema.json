@@ -1,0 +1,79 @@
+{
+  "schema_name": "audit-render-forge.result",
+  "version": "1.0",
+  "description": "result.json 手写校验规约，供 scripts/validate_result.py 读取（不依赖 jsonschema 库）。type 取值：string|number|integer|boolean|array|object|null|any；object 可带 required 与 properties；array 可带 items；string 可带 enum。additional_fields_policy 仅作说明，校验器允许 result 含 schema 未列出的字段。",
+  "type": "object",
+  "required": ["case_id", "status", "uncertainties", "sources", "change_log"],
+  "properties": {
+    "case_id": {"type": "string"},
+    "status": {"type": "string", "enum": ["completed", "partial", "blocked"]},
+    "research_product": {
+      "type": "object",
+      "required": ["question"],
+      "properties": {
+        "question": {"type": "string"},
+        "themes": {"type": "array"},
+        "draft_file": {"type": ["string", "null"]},
+        "bottom_line": {"type": "string"}
+      }
+    },
+    "evidence_matrix": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["evidence_id", "doc_id", "locator", "verbatim_quote", "supports", "theme", "strength"],
+        "properties": {
+          "evidence_id": {"type": "string"},
+          "doc_id": {"type": "string"},
+          "locator": {"type": "string"},
+          "verbatim_quote": {"type": "string"},
+          "supports": {"type": "string"},
+          "theme": {"type": "string"},
+          "strength": {"type": "string", "enum": ["established", "suggestive", "contested"]},
+          "referenced_in_draft": {"type": "boolean"}
+        }
+      }
+    },
+    "audit_artifacts": {
+      "type": "object",
+      "required": ["evidence_matrix_csv", "coverage_map_json", "audit_report_html", "link_check_report"],
+      "properties": {
+        "evidence_matrix_csv": {"type": "string"},
+        "coverage_map_json": {"type": "string"},
+        "audit_report_html": {"type": "string"},
+        "link_check_report": {"type": "string"}
+      }
+    },
+    "link_check": {
+      "type": "object",
+      "required": ["ok"],
+      "properties": {
+        "ok": {"type": "boolean"},
+        "referenced": {"type": "integer"},
+        "unused": {"type": "integer"},
+        "unsupported": {"type": "integer"}
+      }
+    },
+    "uncertainties": {"type": "array", "items": {"type": "string"}},
+    "sources": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["doc_id", "ref", "tier"],
+        "properties": {
+          "doc_id": {"type": "string"},
+          "ref": {"type": "string"},
+          "sha256": {"type": ["string", "null"]},
+          "tier": {"type": "string", "enum": ["fulltext", "abstract_only", "failed", "metadata_only"]},
+          "metadata": {"type": "object"}
+        }
+      }
+    },
+    "change_log": {"type": "array", "items": {"type": "string"}}
+  },
+  "contract_mirror": {
+    "enabled": true,
+    "source": "work/case_profile.json 的 output_contract（list 取元素、dict 取键）",
+    "rule": "output_contract 列出的每个字段名都必须是 result.json 的顶层键；缺失即错误。result.json 的 case_id 必须等于 case_profile.json 的 case_id。"
+  }
+}

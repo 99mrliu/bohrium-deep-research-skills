@@ -1,0 +1,25 @@
+{
+  "description": "单位归一化表：factor 为换算到 canonical 单位的乘系数（value_canonical = value * factor）；dimension 为量纲类别。implicit_ratio 用于无单位但指标默认量纲为 ratio 的数值。",
+  "units": {
+    "ms": {"canonical": "s", "factor": 0.001, "dimension": "time"},
+    "s": {"canonical": "s", "factor": 1.0, "dimension": "time"},
+    "sec": {"canonical": "s", "factor": 1.0, "dimension": "time"},
+    "min": {"canonical": "s", "factor": 60.0, "dimension": "time"},
+    "h": {"canonical": "s", "factor": 3600.0, "dimension": "time"},
+    "mg": {"canonical": "kg", "factor": 1e-06, "dimension": "mass"},
+    "g": {"canonical": "kg", "factor": 0.001, "dimension": "mass"},
+    "kg": {"canonical": "kg", "factor": 1.0, "dimension": "mass"},
+    "mm": {"canonical": "m", "factor": 0.001, "dimension": "length"},
+    "cm": {"canonical": "m", "factor": 0.01, "dimension": "length"},
+    "m": {"canonical": "m", "factor": 1.0, "dimension": "length"},
+    "km": {"canonical": "m", "factor": 1000.0, "dimension": "length"},
+    "%": {"canonical": "ratio", "factor": 0.01, "dimension": "ratio"},
+    "percent": {"canonical": "ratio", "factor": 0.01, "dimension": "ratio"}
+  },
+  "dimension_canonical_unit": {
+    "ratio": "ratio",
+    "time": "s",
+    "mass": "kg",
+    "length": "m"
+  }
+}
