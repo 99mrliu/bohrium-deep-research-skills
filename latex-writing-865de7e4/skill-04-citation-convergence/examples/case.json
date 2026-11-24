@@ -1,0 +1,14 @@
+{
+  "case_id": "synthetic-citation-convergence-001",
+  "note": "合成示例（synthetic example），非正式案例结果",
+  "materials": {
+    "project_dir": "fixed_project",
+    "main": "main.tex"
+  },
+  "output_contract": {
+    "citation_map": {"type": "markdown", "required": true},
+    "citation_report": {"type": "markdown", "required": true},
+    "rounds": {"type": "json", "required": true},
+    "unresolved_citations": {"type": "list", "required": true}
+  }
+}

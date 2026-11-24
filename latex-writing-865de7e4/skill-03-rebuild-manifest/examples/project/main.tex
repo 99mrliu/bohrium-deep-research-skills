@@ -1,0 +1,42 @@
+% 合成示例（synthetic example），非正式案例结果
+\documentclass[11pt]{article}
+\listfiles % project ships \listfiles; capture.py detects and respects it (no re-injection)
+\usepackage{booktabs}
+\usepackage[margin=2.5cm]{geometry}
+
+\title{Synthetic Example: Build Provenance and Rebuild Verification}
+\author{Synthetic Example}
+\date{2026-11-24}
+
+\begin{document}
+\maketitle
+
+\section{Introduction}
+This is a small synthetic project used only to verify the interfaces of the
+latex-rebuild-manifest skill; it does not correspond to any official case.
+Citation demo: see \cite{knuth1984texbook}.
+
+\include{content/methods}
+
+\section{Results}
+Table~\ref{tab:demo} shows a booktabs three-line table, included so that
+\verb|\listfiles| yields a non-trivial package version list.
+
+\begin{table}[htbp]
+  \centering
+  \caption{Synthetic demo data (no scientific meaning)}
+  \label{tab:demo}
+  \begin{tabular}{lcc}
+    \toprule
+    Group & Samples & Mean \\
+    \midrule
+    A & 10 & 1.23 \\
+    B & 12 & 4.56 \\
+    \bottomrule
+  \end{tabular}
+\end{table}
+
+\bibliographystyle{plain}
+\bibliography{refs}
+
+\end{document}

@@ -1,0 +1,104 @@
+{
+  "generated_by": "citebuild.py",
+  "banner": "合成示例（synthetic example），非正式案例结果",
+  "status": "ok",
+  "status_note": "",
+  "engine": "pdflatex",
+  "bib_tool": "bibtex",
+  "build_dir": "/Users/liuhengshen/Desktop/bhr_product/4/arena07/bundles/skill-04-citation-convergence/examples/_run/build_fixed",
+  "converged": true,
+  "rounds": [
+    {
+      "round": 1,
+      "tool": "pdflatex",
+      "returncode": 0,
+      "undefined_citations": [
+        "goodfellow2016deep",
+        "he2016deep",
+        "knuth1984texbook",
+        "lecun2015deep",
+        "vaswani2017attention"
+      ],
+      "undefined_references": [
+        "eq:attn",
+        "sec:intro"
+      ],
+      "multiply_defined_labels": []
+    },
+    {
+      "round": 2,
+      "tool": "bibtex",
+      "returncode": 0,
+      "blg_warnings": [],
+      "blg_errors": []
+    },
+    {
+      "round": 3,
+      "tool": "pdflatex",
+      "returncode": 0,
+      "undefined_citations": [
+        "goodfellow2016deep",
+        "he2016deep",
+        "knuth1984texbook",
+        "lecun2015deep",
+        "vaswani2017attention"
+      ],
+      "undefined_references": [],
+      "multiply_defined_labels": []
+    },
+    {
+      "round": 4,
+      "tool": "pdflatex",
+      "returncode": 0,
+      "undefined_citations": [],
+      "undefined_references": [],
+      "multiply_defined_labels": []
+    },
+    {
+      "round": 5,
+      "tool": "pdflatex",
+      "returncode": 0,
+      "undefined_citations": [],
+      "undefined_references": [],
+      "multiply_defined_labels": []
+    }
+  ],
+  "curve": [
+    {
+      "round": 1,
+      "undefined_citations": 5,
+      "undefined_references": 2,
+      "multiply_defined_labels": 0
+    },
+    {
+      "round": 3,
+      "undefined_citations": 5,
+      "undefined_references": 0,
+      "multiply_defined_labels": 0
+    },
+    {
+      "round": 4,
+      "undefined_citations": 0,
+      "undefined_references": 0,
+      "multiply_defined_labels": 0
+    },
+    {
+      "round": 5,
+      "undefined_citations": 0,
+      "undefined_references": 0,
+      "multiply_defined_labels": 0
+    }
+  ],
+  "final": {
+    "key_status": {
+      "goodfellow2016deep": "resolved",
+      "he2016deep": "resolved",
+      "knuth1984texbook": "resolved",
+      "lecun2015deep": "resolved",
+      "vaswani2017attention": "resolved"
+    },
+    "unresolved_citations": {},
+    "unresolved_references": [],
+    "multiply_defined_labels": []
+  }
+}

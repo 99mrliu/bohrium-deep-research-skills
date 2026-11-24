@@ -1,0 +1,13 @@
+{
+  "case_id": "synthetic-rebuild-001",
+  "note": "合成示例（synthetic example），非正式案例结果",
+  "output_contract": {
+    "build_manifest": {"type": "object", "required": true},
+    "rebuild_verdict": {"type": "string", "required": true},
+    "version_differences": {"type": "array", "required": false}
+  },
+  "materials": {
+    "project_dir": "project",
+    "main_tex": "project/main.tex"
+  }
+}

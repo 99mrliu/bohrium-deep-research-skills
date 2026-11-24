@@ -1,0 +1,19 @@
+% 合成示例（synthetic example），非正式案例结果：broken/ 的修复后副本
+\documentclass[11pt]{article}
+\usepackage{amsmath}
+\usepackage{amssymb}
+% 修复 1：删除未安装的 ghostmath（所需符号由 amssymb 提供）
+\newcommand{\vect}[1]{\mathbf{#1}} % 修复 2：自定义 \vect 替代 esvect
+\title{Synthetic Broken Demo}
+\author{Example Author}
+\date{2026-01-01}
+\begin{document}
+\maketitle
+\section{Introduction}
+This synthetic demo exercises the build-diagnose-fix-verify loop.
+Method details are in Section~2; background references are
+\cite{knuth1984} (key exists) and \cite{lamport1986} (fix 4: known key).
+\include{chapters/methods}
+\bibliographystyle{plain}
+\bibliography{refs}
+\end{document}

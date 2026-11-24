@@ -1,0 +1,14 @@
+{
+  "case_id": "synthetic-latex-build-doctor-001",
+  "note": "合成示例（synthetic example），非正式案例结果",
+  "materials": {
+    "project_broken": "broken",
+    "project_fixed": "fixed"
+  },
+  "output_contract": {
+    "compiled_pdf": {"type": "path", "required": true},
+    "page_count": {"type": "integer", "required": true},
+    "diagnosis_report": {"type": "path", "required": true},
+    "warnings": {"type": "list", "required": false}
+  }
+}

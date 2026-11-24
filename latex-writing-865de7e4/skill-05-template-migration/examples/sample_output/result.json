@@ -1,0 +1,25 @@
+{
+  "_notice": "合成示例（synthetic example），非正式案例结果",
+  "case_id": "synthetic-migration-001",
+  "status": "complete",
+  "contract_dialect": "{type, required} 方言",
+  "compliance_overall": "pass",
+  "blocking_issues": [],
+  "sources": [
+    "<示例运行目录>/input/manuscript.tex",
+    "examples/migrated/manuscript_migrated.tex",
+    "<示例运行目录>/input/mockjournal.cls"
+  ],
+  "uncertainty": [],
+  "artifacts": [
+    "compliance.json",
+    "compliance.md",
+    "intent_diff.md",
+    "manuscript_migrated.tex",
+    "mockjournal.cls"
+  ],
+  "migrated_manuscript": "manuscript_migrated.tex",
+  "compliance_report": "compliance.md",
+  "intent_diff": "intent_diff.md",
+  "compile_ok": true
+}

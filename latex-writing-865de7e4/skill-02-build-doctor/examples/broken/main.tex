@@ -1,0 +1,18 @@
+% 合成示例（synthetic example），非正式案例结果：故意含有 4 处故障的损坏工程
+\documentclass[11pt]{article}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{ghostmath} % 故障 1：引用了未安装的宏包
+\title{Synthetic Broken Demo}
+\author{Example Author}
+\date{2026-01-01}
+\begin{document}
+\maketitle
+\section{Introduction}
+This synthetic demo exercises the build-diagnose-fix-verify loop.
+Method details are in Section~2; background references are
+\cite{knuth1984} (key exists) and \cite{knuth1997} (fault 4: unknown key).
+\include{chapters/methods}
+\bibliographystyle{plain}
+\bibliography{refs}
+\end{document}

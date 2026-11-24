@@ -1,0 +1,9 @@
+% 合成示例（synthetic example），非正式案例结果：由 main.tex 以 \include 引入
+% 故障 2：下一行的 \vect 未定义（应由 esvect 提供，或改用 \mathbf）
+% 故障 3：再下一行数学模式内花括号不配平（\sum_{i=1^{n} 漏右括号）
+\section{Methods}
+Let the input vector be $\vect{x} \in \mathbb{R}^{n}$.
+The prediction is
+$\hat{y} = \sum_{i=1^{n} w_i x_i$.
+All runs follow the standard protocol, and the error is denoted
+$\mathrm{MSE}$.

@@ -1,0 +1,13 @@
+{
+  "_example_notice": "合成示例（synthetic example），非正式案例结果",
+  "case_id": "synthetic-provenance-demo-001",
+  "task": "task.md",
+  "materials": ["notes.md", "data.csv", "refs.bib"],
+  "draft": "draft.tex",
+  "output_contract": {
+    "revised_draft": {"type": "file", "required": true},
+    "source_map": {"type": "file", "required": true},
+    "coverage_report": {"type": "file", "required": true},
+    "change_log": {"type": "file", "required": false}
+  }
+}

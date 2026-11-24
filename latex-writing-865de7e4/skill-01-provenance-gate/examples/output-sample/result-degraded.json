@@ -1,0 +1,35 @@
+{
+  "_example_notice": "合成示例（synthetic example），非正式案例结果；该公告键为留档时添加，非脚本输出字段",
+  "case_id": "synthetic-provenance-degraded-002",
+  "status": "partial",
+  "contract_dialect": "natural_language",
+  "sources": [
+    {
+      "file": "notes.md",
+      "facts": 3
+    }
+  ],
+  "uncertainty": [
+    "未找到任何 .tex 稿件",
+    "change_log.md 为模板，Agent 尚未填写修改记录",
+    "source_map.md 为骨架，Agent 尚未补全确认列",
+    "以下契约字段无对应真实产物，按诚实空值给 null: revised_draft, conflict_memo"
+  ],
+  "gaps": [
+    "task.md 不存在: /Users/liuhengshen/Desktop/bhr_product/4/arena07/bundles/skill-01-provenance-gate/examples/input-degraded/task.md",
+    "matscan: 材料路径不存在（case.json:materials 指向）: /Users/liuhengshen/Desktop/bhr_product/4/arena07/bundles/skill-01-provenance-gate/examples/input-degraded/missing/spectra.pdf",
+    "matscan: 材料路径不存在（case.json:draft 指向）: /Users/liuhengshen/Desktop/bhr_product/4/arena07/bundles/skill-01-provenance-gate/examples/input-degraded/missing/main.tex",
+    "matscan: 材料路径不存在（case.json:task 指向）: /Users/liuhengshen/Desktop/bhr_product/4/arena07/bundles/skill-01-provenance-gate/examples/input-degraded/task.md",
+    "无稿件可交付"
+  ],
+  "artifacts": [
+    "change_log.md",
+    "coverage.json",
+    "coverage.md",
+    "source_map.md",
+    "result.json"
+  ],
+  "revised_draft": null,
+  "source_map": "source_map.md",
+  "conflict_memo": null
+}

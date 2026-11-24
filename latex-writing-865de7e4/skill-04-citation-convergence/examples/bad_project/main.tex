@@ -1,0 +1,36 @@
+% 合成示例（synthetic example），非正式案例结果
+% This project deliberately contains 5 classes of citation problems:
+%   1) 2 undefined \cite: vaswani2017attentoin (typo), zhang2020residual (no entry)
+%   2) 1 @article missing year: he2016deep
+%   3) 1 duplicate \label: sec:intro (defined twice)
+%   4) 1 unreferenced bib entry: knuth1984texbook
+%   5) 3 normal citations: vaswani2017attention, goodfellow2016deep, lecun2015deep
+\documentclass{article}
+\usepackage{amsmath}
+\title{A Mini Survey Fragment on Sequence Modeling}
+\author{Example Author}
+\date{}
+\begin{document}
+\maketitle
+
+\section{Introduction}\label{sec:intro}
+The Transformer architecture~\cite{vaswani2017attentoin} changed sequence
+modeling, and the original paper~\cite{vaswani2017attention} gives full
+details. For deep learning fundamentals see
+\cite{goodfellow2016deep,lecun2015deep}. Another work~\cite{zhang2020residual}
+discusses training stability of very deep networks; the attention computation
+is shown in Eq.~\eqref{eq:attn}.
+
+\section{Background}\label{sec:intro}
+\begin{equation}\label{eq:attn}
+  \mathrm{Attention}(Q,K,V) =
+  \mathrm{softmax}\!\left(\frac{QK^{T}}{\sqrt{d_k}}\right)V
+\end{equation}
+Residual networks~\cite{he2016deep} ease the training of deep models.
+
+\section{Conclusion}
+See Section~\ref{sec:intro} for more background.
+
+\bibliographystyle{plain}
+\bibliography{refs}
+\end{document}

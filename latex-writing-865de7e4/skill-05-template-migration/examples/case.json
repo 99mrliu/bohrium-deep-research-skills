@@ -1,0 +1,11 @@
+{
+  "_notice": "合成示例（synthetic example），非正式案例结果",
+  "case_id": "synthetic-migration-001",
+  "output_contract": {
+    "migrated_manuscript": {"type": "file", "required": true},
+    "compliance_report": {"type": "file", "required": true},
+    "intent_diff": {"type": "file", "required": true},
+    "compile_ok": {"type": "boolean", "required": true}
+  },
+  "materials": ["manuscript.tex", "mockjournal.cls"]
+}

@@ -1,0 +1,40 @@
+% 合成示例（synthetic example），非正式案例结果
+% Repaired version of bad_project (repair decisions made by the Agent;
+% scripts never auto-edit):
+%   1) vaswani2017attentoin -> vaswani2017attention (strong candidate, typo)
+%   2) zhang2020residual has no candidate and no real source: the sentence
+%      actually concerns residual networks, so it now cites the verified
+%      he2016deep entry; the phantom key disappears
+%   3) second \label{sec:intro} -> \label{sec:background}
+%   4) he2016deep gained year = {2016} (see refs.bib)
+%   5) knuth1984texbook was a missing citation: cited once in the text
+%      (entry kept, not deleted)
+\documentclass{article}
+\usepackage{amsmath}
+\title{A Mini Survey Fragment on Sequence Modeling}
+\author{Example Author}
+\date{}
+\begin{document}
+\maketitle
+
+\section{Introduction}\label{sec:intro}
+The Transformer architecture~\cite{vaswani2017attention} changed sequence
+modeling, and the original paper gives full details. For deep learning
+fundamentals see \cite{goodfellow2016deep,lecun2015deep}. Another
+work~\cite{he2016deep} discusses training stability of very deep networks;
+the attention computation is shown in Eq.~\eqref{eq:attn}.
+
+\section{Background}\label{sec:background}
+\begin{equation}\label{eq:attn}
+  \mathrm{Attention}(Q,K,V) =
+  \mathrm{softmax}\!\left(\frac{QK^{T}}{\sqrt{d_k}}\right)V
+\end{equation}
+Residual networks~\cite{he2016deep} ease the training of deep models.
+
+\section{Conclusion}
+See Section~\ref{sec:intro} for more background; the typesetting toolchain
+used here is documented in \cite{knuth1984texbook}.
+
+\bibliographystyle{plain}
+\bibliography{refs}
+\end{document}

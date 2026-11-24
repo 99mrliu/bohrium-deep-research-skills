@@ -1,0 +1,64 @@
+% 合成示例（synthetic example），非正式案例材料：plain article 原稿。
+% 故意埋入两处宏包问题，供 pkgconflict.py 检出：
+%   1) geometry 与目标模板类自带 \RequirePackage[margin=2.5cm]{geometry} 重复且选项冲突；
+%   2) hyperref 未放在稿件宏包清单的最后。
+\documentclass{article}
+\usepackage[margin=3cm]{geometry}
+\usepackage{hyperref}
+\usepackage{booktabs}
+\usepackage{graphicx}
+
+\title{Adaptive Mesh Refinement for Shallow Water Simulations}
+\author{Jane Doe \and John Smith}
+\date{\today}
+
+\begin{document}
+\maketitle
+
+\begin{abstract}
+We present an adaptive mesh refinement strategy for shallow water
+simulations. The method refines cells near steep gradients and keeps the
+coastal zones coarse. Numerical tests show a factor of three speedup
+without loss of accuracy.
+\end{abstract}
+
+\section{Introduction}
+Shallow water equations describe free-surface flows in rivers and coastal
+regions \cite{leveque2002}. Uniform fine grids are expensive, so adaptive
+strategies concentrate resolution where the solution changes rapidly
+\cite{berger1984}.
+
+\section{Numerical Results}
+Table~\ref{tab:speedup} summarizes the measured speedup on two benchmark
+cases. The adaptive grid reduces the cell count while preserving the
+peak wave height.
+
+\begin{table}[htbp]
+  \centering
+  \caption{Speedup of the adaptive grid on two benchmark cases.}
+  \label{tab:speedup}
+  \begin{tabular}{lcc}
+    \toprule
+    Case & Cells & Speedup \\
+    \midrule
+    River bend & 12000 & 2.8 \\
+    Coastal bay & 45000 & 3.1 \\
+    \bottomrule
+  \end{tabular}
+\end{table}
+
+The error in peak wave height stays below one percent in both cases, so
+the refinement criterion is accepted for production runs.
+
+\begin{thebibliography}{9}
+\bibitem{leveque2002}
+R.~J. LeVeque, \emph{Finite Volume Methods for Hyperbolic Problems},
+Cambridge University Press, 2002.
+
+\bibitem{berger1984}
+M.~J. Berger and J.~Oliger, Adaptive mesh refinement for hyperbolic
+partial differential equations, \emph{Journal of Computational Physics}
+53 (1984), 484--512.
+\end{thebibliography}
+
+\end{document}
