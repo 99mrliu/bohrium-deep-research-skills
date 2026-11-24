@@ -1,0 +1,24 @@
+{
+ "case_id": "SYNTH-DEMO-0002",
+ "case_id_field": "case_id",
+ "contract_field": "output_contract",
+ "contract_keys": [
+  {
+   "key": "deliverable",
+   "spec": "成稿 markdown 文本",
+   "required": true,
+   "expected_kind": "markdown"
+  },
+  {
+   "key": "evidence_map",
+   "spec": "证据映射 JSON（可选）",
+   "required": false,
+   "expected_kind": "json"
+  }
+ ],
+ "extra_top_level_keys": [
+  "materials",
+  "task_instruction"
+ ],
+ "warnings": []
+}

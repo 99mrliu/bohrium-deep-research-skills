@@ -1,0 +1,33 @@
+{
+ "case_id": "SYNTH-DEMO-0002",
+ "deliverable": "# 合成示例成稿\n\n本成稿内容全部为虚构合成数据：某合成干预在虚构队列中使指标 X 下降 1.8 个单位（虚构，仅供演示）。\n",
+ "evidence_map": null,
+ "uncertainty": "- 合成示例无真实不确定性项。\n",
+ "change_log": "- 2026-11-24 初始组装（合成示例）。\n",
+ "limits": "- evidence_map 部件缺失：合成示例中刻意留空，用于演示诚实 partial；正式流程应说明缺失原因与补齐条件。\n",
+ "sources": [
+  {
+   "file": "paper_a.txt",
+   "note": "虚构合成来源，仅供演示"
+  }
+ ],
+ "status": "partial",
+ "missing": [
+  {
+   "key": "evidence_map",
+   "required": false
+  }
+ ],
+ "assembly": {
+  "contract_field": "output_contract",
+  "parts_used": [
+   "change_log.md",
+   "deliverable.md",
+   "limits.md",
+   "sources.json",
+   "status.txt",
+   "uncertainty.md"
+  ],
+  "note": "由 assemble_result.py 确定性组装；null 值表示该契约键无对应部件文件，非内容省略。"
+ }
+}

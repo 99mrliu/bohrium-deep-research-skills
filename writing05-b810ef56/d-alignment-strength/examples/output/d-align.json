@@ -1,0 +1,53 @@
+{
+ "claims": [
+  {
+   "id": "C1",
+   "verdict": "supported",
+   "evidence": [
+    {
+     "id": "C1-E1",
+     "source": "paper_b",
+     "page": 1,
+     "verdict": "anchored",
+     "problems": []
+    }
+   ]
+  },
+  {
+   "id": "C2",
+   "verdict": "unsupported",
+   "evidence": [
+    {
+     "id": "C2-E1",
+     "source": "paper_a",
+     "page": 1,
+     "verdict": "failed",
+     "problems": [
+      "NUMERIC-MISMATCH:1.6"
+     ]
+    }
+   ]
+  },
+  {
+   "id": "C3",
+   "verdict": "unsupported",
+   "evidence": [
+    {
+     "id": "C3-E1",
+     "source": "paper_a",
+     "page": 1,
+     "verdict": "failed",
+     "problems": [
+      "DIRECTION-CONFLICT:claim=up,quote=down"
+     ]
+    }
+   ]
+  }
+ ],
+ "summary": {
+  "total": 3,
+  "supported": 1,
+  "partial": 0,
+  "unsupported": 2
+ }
+}

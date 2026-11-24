@@ -1,0 +1,7 @@
+{
+  "fail_on_severity": ["error"],
+  "max_warnings": 10,
+  "rule_overrides": {},
+  "waivers": [],
+  "_comment": "默认门禁策略（合成示例配套）。fail_on_severity：出现即阻断交付的严重度；max_warnings：警告条数上限；rule_overrides：按规则调整严重度或 ignore；waivers：经人工确认的例外，按 规则+行号 精确豁免（line=0 为全篇豁免），必须写 reason。"
+}

@@ -1,0 +1,82 @@
+{
+ "summary": {
+  "input_dir": "/Users/liuhengshen/Desktop/bhr_product/writing05/submit-b810ef56-v2-a-material-forensics/skill/examples/input",
+  "files_total": 5,
+  "materials_total": 3,
+  "usable": 2,
+  "degraded": 1,
+  "unusable": 0,
+  "declared_hints": [
+   {
+    "key": "filename",
+    "value": "paper_a.txt"
+   },
+   {
+    "key": "filename",
+    "value": "paper_b.txt"
+   }
+  ]
+ },
+ "records": [
+  {
+   "file": "case.json",
+   "bytes": 321,
+   "sha256": "e69ce2d66281c54fdf563721e9bb595ce59ad0324e3b612408b43a5eabf80229",
+   "format": "json",
+   "role": "case-metadata",
+   "status": "OK",
+   "reason": "",
+   "text_path": null,
+   "pages": 0,
+   "chars": 0
+  },
+  {
+   "file": "task.md",
+   "bytes": 118,
+   "sha256": "10ceb0d7cb88191508f54327f62987300bac1eeea555bbafe6b1b05c77b13a6e",
+   "format": "md",
+   "role": "case-metadata",
+   "status": "OK",
+   "reason": "",
+   "text_path": null,
+   "pages": 0,
+   "chars": 0
+  },
+  {
+   "file": "sources/paper_a.txt",
+   "bytes": 496,
+   "sha256": "475bc8769a55bda4f2e284eb371beedb773e131779ec4eb698967b8c55a15cff",
+   "format": "txt",
+   "role": "material",
+   "status": "OK",
+   "reason": "",
+   "text_path": "text/sources_paper_a.txt",
+   "pages": 1,
+   "chars": 199
+  },
+  {
+   "file": "sources/paper_b.txt",
+   "bytes": 298,
+   "sha256": "34a1184000665f7be3951e3842b39eae2048f29d3994cf18184042040489f21d",
+   "format": "txt",
+   "role": "material",
+   "status": "OK",
+   "reason": "",
+   "text_path": "text/sources_paper_b.txt",
+   "pages": 1,
+   "chars": 107
+  },
+  {
+   "file": "sources/paper_c_corrupt.txt",
+   "bytes": 987,
+   "sha256": "9c31da973b4103cb2c81681a60385ccbcb853b26e1829f6a692e60827f4e7425",
+   "format": "txt",
+   "role": "material",
+   "status": "DEGRADED",
+   "reason": "文本含异常字符，疑似编码损坏",
+   "text_path": "text/sources_paper_c_corrupt.txt",
+   "pages": 1,
+   "chars": 331
+  }
+ ]
+}

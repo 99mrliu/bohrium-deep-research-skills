@@ -1,0 +1,39 @@
+{
+ "verdicts": {
+  "C1": {
+   "level": "C",
+   "reason": "基础等级 C（cohort）",
+   "allowed": [
+    "一项观察性研究提示",
+    "初步显示"
+   ],
+   "violations": [
+    {
+     "phrase": "证据表明",
+     "sentence": "证据表明，每周运动 150 分钟可使糖化血红蛋白降低 0.4 个百分点〔C1〕。"
+    }
+   ]
+  },
+  "C2": {
+   "level": "B",
+   "reason": "基础等级 B（rct）",
+   "allowed": [
+    "研究显示",
+    "随机对照试验提示"
+   ],
+   "violations": []
+  },
+  "C3": {
+   "level": "B",
+   "reason": "基础等级 B（rct）",
+   "allowed": [
+    "研究显示",
+    "随机对照试验提示"
+   ],
+   "violations": []
+  }
+ },
+ "overstated_claims": [
+  "C1"
+ ]
+}

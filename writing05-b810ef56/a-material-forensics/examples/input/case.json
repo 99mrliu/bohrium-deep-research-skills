@@ -1,0 +1,16 @@
+{
+ "case_id": "SYNTH-DEMO-0001",
+ "task_instruction": "依据所附材料撰写 200 字中文摘要，并附证据表。",
+ "output_contract": {
+  "deliverable": "成稿 markdown",
+  "evidence_table": "证据表 markdown"
+ },
+ "materials": [
+  {
+   "filename": "paper_a.txt"
+  },
+  {
+   "filename": "paper_b.txt"
+  }
+ ]
+}

@@ -1,0 +1,65 @@
+{
+ "manifest_version": "1",
+ "case_id": "SYNTH-DEMO-0005",
+ "status": "complete",
+ "contract_keys": [
+  "change_log",
+  "deliverable",
+  "evidence_table",
+  "limits",
+  "uncertainty"
+ ],
+ "artifacts": [
+  {
+   "path": "deliverable.md",
+   "bytes": 254,
+   "sha256": "2567813b6da4a2d8879bbf90361b40cf2e7cc88c52d628f9a3781f2901de2896"
+  },
+  {
+   "path": "result.json",
+   "bytes": 397,
+   "sha256": "146755069bc1b969d93067d88236123835e68ad9fa3bb18f6833028d4c7277e1"
+  }
+ ],
+ "quotes": [
+  {
+   "id": "E1",
+   "source": "paper_a",
+   "quote": "治疗后 8 周，试验组空腹血糖较基线下降 1.8 mmol/L"
+  },
+  {
+   "id": "E2",
+   "source": "paper_b",
+   "quote": "饮食与运动干预可使糖化血红蛋白下降约 0.5 个百分点"
+  }
+ ],
+ "numbers": [
+  {
+   "id": "N1",
+   "source": "paper_a",
+   "value": "1.8",
+   "context": "空腹血糖下降幅度"
+  },
+  {
+   "id": "N2",
+   "source": "paper_b",
+   "value": "0.5",
+   "context": "糖化血红蛋白下降幅度"
+  }
+ ],
+ "refs": [
+  {
+   "n": 1,
+   "title": "某合成药物对空腹血糖的影响（虚构）",
+   "authors": "张三 等",
+   "year": 2024
+  },
+  {
+   "n": 2,
+   "title": "血糖管理综述（虚构）",
+   "authors": "李四",
+   "year": 2023
+  }
+ ],
+ "note": "本清单由 pack_manifest.py 生成；verify_pack.py 可独立重验全部条目。哈希覆盖除 manifest 自身外的全部产物。"
+}

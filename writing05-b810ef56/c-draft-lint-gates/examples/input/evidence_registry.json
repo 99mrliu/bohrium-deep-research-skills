@@ -1,0 +1,47 @@
+{
+ "claims": [
+  {
+   "id": "C1",
+   "text": "某合成药物 8 周使空腹血糖下降 1.8 mmol/L",
+   "evidence_ids": [
+    "E1"
+   ]
+  },
+  {
+   "id": "C2",
+   "text": "饮食运动干预与糖化血红蛋白下降相关",
+   "evidence_ids": [
+    "E2"
+   ]
+  }
+ ],
+ "evidence": [
+  {
+   "id": "E1",
+   "source": "paper_a.txt",
+   "strength": "moderate",
+   "quote": "治疗后 8 周，试验组空腹血糖较基线下降 1.8 mmol/L，对照组下降 0.3 mmol/L"
+  },
+  {
+   "id": "E2",
+   "source": "paper_b.txt",
+   "strength": "low",
+   "quote": "观察性数据提示，饮食与运动干预与糖化血红蛋白下降约 0.5 个百分点相关"
+  }
+ ],
+ "refs": [
+  {
+   "n": 1,
+   "title": "某合成药物对空腹血糖的影响（虚构）",
+   "authors": "张三 等",
+   "year": 2024
+  },
+  {
+   "n": 2,
+   "title": "血糖管理综述（虚构）",
+   "authors": "李四",
+   "year": 2023
+  }
+ ],
+ "number_allowlist": []
+}
