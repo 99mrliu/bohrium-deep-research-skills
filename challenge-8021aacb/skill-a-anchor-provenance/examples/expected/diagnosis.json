@@ -1,0 +1,70 @@
+{
+  "case_id": "SYNTH-A-001",
+  "note": "合成示例：演示用预制诊断；真实运行中由 Agent 精读锚定文本产出。F099 故意含失真引文以演示核验器拦截。",
+  "findings": [
+    {
+      "id": "F001",
+      "dimension": "研究问题",
+      "anchor": "S1-P004",
+      "quote": "本文旨在开发一种高活性锰基催化剂。",
+      "defect_class": "贡献主张无对照支撑",
+      "action": "将『优于所有已报道体系』收窄为与本文实际对照的两个样品一致的范围",
+      "severity": "medium"
+    },
+    {
+      "id": "F002",
+      "dimension": "章节结构",
+      "anchor": "S1-P010",
+      "quote": "图 1 给出两个样品的转化率随温度变化曲线。",
+      "defect_class": "结果章仅一段数据描述、无图表系统性组织",
+      "action": "把图 1 引用句前移至数据段并补图注；结果按样品分小节",
+      "severity": "low"
+    },
+    {
+      "id": "F003",
+      "dimension": "论证链",
+      "anchor": "S1-P012",
+      "quote": "样品 B 是最优催化剂。",
+      "defect_class": "论断缺论据（最优的比较对象与判据未在结果中给出）",
+      "action": "在结论前补对照实验或把论断收窄为『本文两样品中较优』",
+      "severity": "high"
+    },
+    {
+      "id": "F004",
+      "dimension": "段落关系",
+      "anchor": "S1-P006",
+      "quote": "以固定床反应器评价 CO 氧化活性，空速 30000 h-1。",
+      "defect_class": "方法与结果之间缺评价指标定义的过渡",
+      "action": "在方法末补转化率定义句，承接结果首段",
+      "severity": "low"
+    },
+    {
+      "id": "F005",
+      "dimension": "重复内容",
+      "anchor": "S1-P009",
+      "quote": "样品 A 在 25 C 实现 50% CO 转化率。样品 B 在 25 C 实现 90% CO 转化率。",
+      "defect_class": "整段与上一段逐字重复",
+      "action": "删除 S1-P009 整段",
+      "severity": "medium"
+    },
+    {
+      "id": "F006",
+      "dimension": "结论边界",
+      "anchor": "S1-P012",
+      "quote": "该体系可直接用于工业尾气处理，无需进一步优化。",
+      "defect_class": "结论超出数据范围（仅 25 C 单点活性，无稳定性/工况数据）",
+      "action": "删除该句或改写为待验证假设并补限制说明段",
+      "severity": "high"
+    },
+    {
+      "id": "F099",
+      "dimension": "结论边界",
+      "anchor": "S1-P012",
+      "quote": "该体系可直接用于工业尾气处理，无需进一步优化，具有广阔应用前景。",
+      "defect_class": "演示用失真引文（尾部六字为凭记忆补写）",
+      "action": "核验器应判 fail；演示后删除",
+      "severity": "low"
+    }
+  ],
+  "dimension_clearance": {}
+}

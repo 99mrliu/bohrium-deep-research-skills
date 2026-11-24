@@ -1,0 +1,14 @@
+{
+  "case_id": "SYNTH-C-001",
+  "note": "合成示例：故意含两类错误（坏块引用、非逐字重复强删），演示 editop_check 拦截。",
+  "ops": [
+    {
+      "id": "OP901", "op": "move", "target": "B999", "after": "B003",
+      "finding_id": "F-demo-bad-ref", "rationale": "B999 不存在，校验应报 bad_block_ref"
+    },
+    {
+      "id": "OP902", "op": "delete_duplicate", "target": "B007", "duplicate_of": "B005",
+      "finding_id": "F-demo-bad-dup", "rationale": "B007 与 B005 并非逐字重复，模拟器应拒绝强删"
+    }
+  ]
+}

@@ -1,0 +1,57 @@
+{
+  "case_id": "SYNTH-E-001",
+  "note": "合成示例：演示用预制 Skill 一程诊断；真实运行由 Agent 精读产出。",
+  "findings": [
+    {
+      "id": "F001",
+      "dimension": "论证链",
+      "location": "结果 第2段",
+      "quote": "因此，生物炭是解决湖泊富营养化的关键材料。",
+      "defect_class": "跳跃 + 强度不足",
+      "action": "收窄为『生物炭在本实验条件下对磷酸盐有良好吸附能力』，并把治理层面的讨论移入限制说明",
+      "severity": "high"
+    },
+    {
+      "id": "F002",
+      "dimension": "结论边界",
+      "location": "结论 第1段",
+      "quote": "生物炭完全适用于所有富营养化水体的治理。",
+      "defect_class": "绝对化 + 结论超界",
+      "action": "删除『完全』『所有』，改写为受实验条件限定的适用范围并补限制段",
+      "severity": "high"
+    },
+    {
+      "id": "F003",
+      "dimension": "研究问题",
+      "location": "引言 第1段",
+      "quote": "本文旨在评估生物炭对磷酸盐的吸附性能。",
+      "defect_class": "RQ 回收方式不当",
+      "action": "结论首句先直接回答吸附性能评估结果，再谈应用",
+      "severity": "medium"
+    },
+    {
+      "id": "F004",
+      "dimension": "章节结构",
+      "location": "结果 第1段",
+      "quote": "图 1 给出吸附动力学曲线。",
+      "defect_class": "该合未合",
+      "action": "把图 1 引用句与去除率句合并为一个结果段并补图注",
+      "severity": "low"
+    },
+    {
+      "id": "F005",
+      "dimension": "段落关系",
+      "location": "结果 第1-2段之间",
+      "quote": "吸附 120 min 后去除率达 87%。",
+      "defect_class": "过渡缺失",
+      "action": "在论断段前插入过渡句，说明由吸附数据外推治理意义的推理路径",
+      "severity": "low"
+    }
+  ],
+  "dimension_clearance": {
+    "重复内容": {
+      "how_checked": "全文通读 + 基线线索 0 命中复核，未发现逐字或同义复述",
+      "candidates_reviewed": 0
+    }
+  }
+}

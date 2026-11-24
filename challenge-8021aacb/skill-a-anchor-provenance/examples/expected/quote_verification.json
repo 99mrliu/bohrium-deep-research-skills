@@ -1,0 +1,48 @@
+{
+  "diagnosis": "/Users/liuhengshen/Desktop/bhr_product/8021-five-v2/skill-a-anchor-provenance/examples/curated_diagnosis.json",
+  "anchor_map": "/Users/liuhengshen/Desktop/bhr_product/8021-five-v2/skill-a-anchor-provenance/examples/work/anchors/anchor_map.jsonl",
+  "total": 7,
+  "ok": 6,
+  "fail": 1,
+  "unverifiable": 0,
+  "all_verified": false,
+  "results": [
+    {
+      "id": "F001",
+      "anchor": "S1-P004",
+      "status": "ok"
+    },
+    {
+      "id": "F002",
+      "anchor": "S1-P010",
+      "status": "ok"
+    },
+    {
+      "id": "F003",
+      "anchor": "S1-P012",
+      "status": "ok"
+    },
+    {
+      "id": "F004",
+      "anchor": "S1-P006",
+      "status": "ok"
+    },
+    {
+      "id": "F005",
+      "anchor": "S1-P009",
+      "status": "ok"
+    },
+    {
+      "id": "F006",
+      "anchor": "S1-P012",
+      "status": "ok"
+    },
+    {
+      "id": "F099",
+      "anchor": "S1-P012",
+      "status": "fail",
+      "reason": "quote not verbatim in anchor text",
+      "quote_head": "该体系可直接用于工业尾气处理，无需进一步优化，具有广阔应用前景。"
+    }
+  ]
+}

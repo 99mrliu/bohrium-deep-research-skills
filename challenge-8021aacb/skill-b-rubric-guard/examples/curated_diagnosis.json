@@ -1,0 +1,74 @@
+{
+  "case_id": "SYNTH-B-001",
+  "note": "合成示例：演示用预制诊断；真实运行由 Agent 按判据裁定。故意含 1 条空话 action 与 1 个缺维（重复内容无 finding 也无 clearance），用于演示覆盖门拦截。",
+  "findings": [
+    {
+      "id": "F001",
+      "dimension": "研究问题",
+      "location": "一、引言 第1段",
+      "quote": "本文旨在综述稳定性研究的最新进展。",
+      "defect_class": "RQ 悬空",
+      "action": "删除『二、效率记录』或将其改写为稳定性讨论的铺垫小节",
+      "severity": "high",
+      "rationale": "引言声明主线为稳定性，但正文插入与主线无关的效率记录节，RQ 未被持续回收"
+    },
+    {
+      "id": "F002",
+      "dimension": "论证链",
+      "location": "三、封装方法 第1段",
+      "quote": "这表明封装是解决稳定性的关键。",
+      "defect_class": "强度不足",
+      "action": "把论断收窄为『封装是延长寿命的途径之一』，或补与其他途径的对照论据",
+      "severity": "medium",
+      "rationale": "单一现象陈述撑不起『关键』这一排他性论断"
+    },
+    {
+      "id": "F003",
+      "dimension": "结论边界",
+      "location": "四、结论 第1段",
+      "quote": "稳定性问题已经完全解决，所有器件均可直接商用。",
+      "defect_class": "绝对化 + 结论超界",
+      "action": "删除该句；改写为『封装等途径显著改善了寿命，但工况稳定性仍待验证』并补限制说明",
+      "severity": "high",
+      "rationale": "综述自身材料未覆盖『所有器件』，全称断言无全覆盖证据"
+    },
+    {
+      "id": "F004",
+      "dimension": "章节结构",
+      "location": "二、效率记录",
+      "quote": "然而效率并非本文主线。",
+      "defect_class": "该合未合",
+      "action": "将该节压缩为两句并入引言背景段",
+      "severity": "low",
+      "rationale": "作者自述非主线，独立成节打断叙事"
+    },
+    {
+      "id": "F005",
+      "dimension": "段落关系",
+      "location": "三、封装方法 第1段",
+      "quote": "封装可显著延长器件寿命。",
+      "defect_class": "过渡缺失",
+      "action": "在段首补承接句『针对上述稳定性瓶颈，工程上最先落地的是封装』",
+      "severity": "low",
+      "rationale": "从效率节直接跳到封装，读者无法推出为何相邻"
+    },
+    {
+      "id": "F006",
+      "dimension": "研究问题",
+      "location": "四、结论 第1段",
+      "quote": "稳定性问题已经完全解决",
+      "defect_class": "贡献超界（演示空话拦截）",
+      "action": "建议作者注意结论措辞",
+      "severity": "medium",
+      "rationale": "此条故意使用黑名单空话，覆盖门应拦截并要求改写"
+    }
+  ],
+  "dimension_clearance": {
+    "研究问题": null,
+    "章节结构": null,
+    "论证链": null,
+    "段落关系": null,
+    "重复内容": null,
+    "结论边界": null
+  }
+}

@@ -1,0 +1,77 @@
+{
+  "manuscript": "/Users/liuhengshen/Desktop/bhr_product/8021-five-v2/skill-e-ablation-renderer/examples/input/ms.md",
+  "nodes": [
+    {
+      "id": "SEC01",
+      "kind": "section",
+      "title": "生物炭吸附水体磷酸盐的性能研究（合成示例稿件）"
+    },
+    {
+      "id": "SEC02",
+      "kind": "section",
+      "title": "引言"
+    },
+    {
+      "id": "SEC03",
+      "kind": "section",
+      "title": "材料与方法"
+    },
+    {
+      "id": "SEC04",
+      "kind": "section",
+      "title": "结果"
+    },
+    {
+      "id": "N005",
+      "kind": "evidence",
+      "section": "SEC04",
+      "text": "吸附 120 min 后去除率达 87%。"
+    },
+    {
+      "id": "N006",
+      "kind": "evidence",
+      "section": "SEC04",
+      "text": "图 1 给出吸附动力学曲线。"
+    },
+    {
+      "id": "N007",
+      "kind": "claim",
+      "section": "SEC04",
+      "text": "因此，生物炭是解决湖泊富营养化的关键材料。"
+    },
+    {
+      "id": "SEC05",
+      "kind": "section",
+      "title": "结论"
+    }
+  ],
+  "edges": [
+    {
+      "from": "SEC04",
+      "to": "N005",
+      "rel": "contains"
+    },
+    {
+      "from": "SEC04",
+      "to": "N006",
+      "rel": "contains"
+    },
+    {
+      "from": "SEC04",
+      "to": "N007",
+      "rel": "contains"
+    },
+    {
+      "from": "N006",
+      "to": "N007",
+      "rel": "supports?"
+    }
+  ],
+  "stats": {
+    "sections": 5,
+    "claims": 1,
+    "evidence": 2,
+    "orphan_claims_visual": []
+  },
+  "note": "supports? 边为可视化近似, 不代表人工判定的论证关系"
+}

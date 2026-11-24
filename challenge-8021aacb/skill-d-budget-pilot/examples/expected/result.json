@@ -1,0 +1,67 @@
+{
+  "case_id": "SYNTH-D-001",
+  "status": "ok",
+  "generated_by": "skill-d-budget-pilot (budgeted orchestration)",
+  "created_at": "2026-11-24T11:06:51.759843+00:00",
+  "checkpoints": [
+    {
+      "phase": "contract_and_inventory",
+      "at": "2026-11-24T11:06:52.210526+00:00",
+      "note": "契约两字段已抄录",
+      "requests_used": 2,
+      "seconds_used": 30
+    },
+    {
+      "phase": "extraction",
+      "at": "2026-11-24T11:06:52.649013+00:00",
+      "note": "合成稿件 4 段可读",
+      "requests_used": 3,
+      "seconds_used": 90
+    },
+    {
+      "phase": "diagnosis_core",
+      "at": "2026-11-24T11:06:53.103042+00:00",
+      "note": "演示：跳过真实诊断",
+      "requests_used": 20,
+      "seconds_used": 400
+    },
+    {
+      "phase": "deliverables",
+      "at": "2026-11-24T11:06:53.540659+00:00",
+      "note": "演示产物已写",
+      "requests_used": 24,
+      "seconds_used": 500
+    },
+    {
+      "phase": "finalize",
+      "at": "2026-11-24T11:06:54.784761+00:00",
+      "note": "契约字段已填，status=ok",
+      "requests_used": 26,
+      "seconds_used": 560
+    }
+  ],
+  "degradation_log": [
+    {
+      "phase": "diagnosis_core",
+      "at": "2026-11-24T11:06:53.103199+00:00",
+      "reason": "演示降级打点：诊断内容非本示例目的"
+    }
+  ],
+  "uncertainty": [
+    "checkpoint out-of-order: expected deliverables got finalize"
+  ],
+  "sources": [],
+  "change_record": [
+    {
+      "action": "fill contract fields",
+      "by": "example script"
+    }
+  ],
+  "diagnosis": "diagnosis.md",
+  "editing_plan": "editing_plan.md",
+  "_contract_fields": [
+    "diagnosis",
+    "editing_plan"
+  ],
+  "updated_at": "2026-11-24T11:06:54.784889+00:00"
+}

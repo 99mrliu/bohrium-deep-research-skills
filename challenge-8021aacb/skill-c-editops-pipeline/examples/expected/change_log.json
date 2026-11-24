@@ -1,0 +1,32 @@
+{
+  "total": 5,
+  "applied": 5,
+  "skipped": 0,
+  "log": [
+    {
+      "id": "OP001",
+      "op": "reorder_section",
+      "status": "applied"
+    },
+    {
+      "id": "OP002",
+      "op": "delete_duplicate",
+      "status": "applied"
+    },
+    {
+      "id": "OP003",
+      "op": "narrow",
+      "status": "applied"
+    },
+    {
+      "id": "OP004",
+      "op": "insert_transition",
+      "status": "applied"
+    },
+    {
+      "id": "OP005",
+      "op": "add_limitation",
+      "status": "applied"
+    }
+  ]
+}

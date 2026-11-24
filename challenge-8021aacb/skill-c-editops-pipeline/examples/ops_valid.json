@@ -1,0 +1,35 @@
+{
+  "case_id": "SYNTH-C-001",
+  "note": "合成示例：演示用预制编辑操作；真实运行由 Agent 从诊断 finding 翻译。",
+  "ops": [
+    {
+      "id": "OP001", "op": "reorder_section", "target": "B008", "after": "B003",
+      "finding_id": "F-str-01",
+      "rationale": "实验方法出现在结果之后，读者无法在阅读结果时核对条件；整节前移至引言之后"
+    },
+    {
+      "id": "OP002", "op": "delete_duplicate", "target": "B006", "duplicate_of": "B005",
+      "finding_id": "F-dup-01",
+      "rationale": "B006 与 B005 逐字重复，删除整段"
+    },
+    {
+      "id": "OP003", "op": "narrow", "target": "B007",
+      "quote": "该催化剂在所有染料废水处理中均为最佳选择。",
+      "replacement": "在本文考察的亚甲基蓝模型废水体系中，该催化剂 60 min 降解率达 95%，优于同条件空白对照。",
+      "finding_id": "F-bnd-01",
+      "rationale": "单一模型污染物数据撑不起『所有…最佳』的全称断言，收窄到实验条件允许的范围"
+    },
+    {
+      "id": "OP004", "op": "insert_transition", "before": "B005",
+      "sentence": "在上述方法所述制备与评价条件下，得到如下结果。",
+      "finding_id": "F-lnk-01",
+      "rationale": "方法前移后，结果章首段需要承接句点明条件来源"
+    },
+    {
+      "id": "OP005", "op": "add_limitation", "after": "B011",
+      "sentence": "需要说明的是，本研究仅考察单一模型污染物与实验室规模条件，结论外推至实际工业废水前仍需稳定性与工况验证。",
+      "finding_id": "F-bnd-02",
+      "rationale": "结论『工业应用价值』缺必要的限制说明"
+    }
+  ]
+}

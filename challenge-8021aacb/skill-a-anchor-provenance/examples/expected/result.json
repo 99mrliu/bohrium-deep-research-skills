@@ -1,0 +1,32 @@
+{
+  "case_id": "SYNTH-A-001",
+  "status": "partial",
+  "generated_by": "skill-a-anchor-provenance (anchor fidelity pipeline)",
+  "updated_at": "2026-11-24T10:57:21.305306+00:00",
+  "note": "synthetic example: machine pipeline demo; contract fields diagnosis/editing_plan/fact_source_map intentionally left null to show honest partial",
+  "uncertainty": [
+    "result.json 尚在构建; 本文件为诚实的 partial 结果"
+  ],
+  "sources": [],
+  "change_record": [],
+  "diagnosis": null,
+  "editing_plan": null,
+  "fact_source_map": null,
+  "contract_check": {
+    "fields": [
+      "diagnosis",
+      "editing_plan",
+      "fact_source_map"
+    ],
+    "unfilled": [
+      "diagnosis",
+      "editing_plan",
+      "fact_source_map"
+    ],
+    "complete": false
+  },
+  "quote_verification": {
+    "verified_fraction": 1.0,
+    "findings": 6
+  }
+}

@@ -1,0 +1,62 @@
+{
+  "budget": {
+    "requests": 64,
+    "seconds": 900,
+    "tokens_per_response": 16384
+  },
+  "input_inventory": [
+    {
+      "file": "case.json",
+      "bytes": 258
+    },
+    {
+      "file": "manuscript.md",
+      "bytes": 238
+    }
+  ],
+  "input_bytes": 496,
+  "large_input": false,
+  "phases": [
+    {
+      "phase": "contract_and_inventory",
+      "request_budget": 3,
+      "second_budget": 45,
+      "exit_gate": "partial result.json 已写, 契约字段抄录完毕"
+    },
+    {
+      "phase": "extraction",
+      "request_budget": 6,
+      "second_budget": 180,
+      "exit_gate": "稿件文本与锚点/块库就位, 抽取异常已记 uncertainty"
+    },
+    {
+      "phase": "diagnosis_core",
+      "request_budget": 29,
+      "second_budget": 360,
+      "exit_gate": "六维诊断初稿完成, high 子类优先"
+    },
+    {
+      "phase": "verification",
+      "request_budget": 10,
+      "second_budget": 135,
+      "exit_gate": "引文/字段机器校验通过, 误报已排除"
+    },
+    {
+      "phase": "deliverables",
+      "request_budget": 13,
+      "second_budget": 135,
+      "exit_gate": "编辑计划/决策表等产物生成并目检"
+    },
+    {
+      "phase": "finalize",
+      "request_budget": 3,
+      "second_budget": 45,
+      "exit_gate": "result.json 收尾, 状态诚实, 自查清单过"
+    }
+  ],
+  "rules": [
+    "每阶段出口必须满足 exit_gate 才进入下一阶段",
+    "任一时刻 /app/output/result.json 都是有效 JSON",
+    "实际请求数超过该阶段预算 150% 时触发 degradation_ladder.md"
+  ]
+}

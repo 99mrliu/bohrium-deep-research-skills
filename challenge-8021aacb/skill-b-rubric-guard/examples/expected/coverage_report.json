@@ -1,0 +1,29 @@
+{
+  "diagnosis": "/Users/liuhengshen/Desktop/bhr_product/8021-five-v2/skill-b-rubric-guard/examples/work/diagnosis.json",
+  "dimensions_covered": [
+    "段落关系",
+    "研究问题",
+    "章节结构",
+    "结论边界",
+    "论证链"
+  ],
+  "dimensions_missing": [
+    "重复内容"
+  ],
+  "problem_count": 2,
+  "gate_pass": false,
+  "problems": [
+    {
+      "kind": "missing_dimension",
+      "dimension": "重复内容",
+      "detail": "既无 finding 也无带 how_checked 的 clearance"
+    },
+    {
+      "kind": "generic_advice",
+      "id": "F006",
+      "field": "action",
+      "phrase": "建议作者注意",
+      "detail": "空话须改写为移动/合并/拆分/收窄/删重/补过渡类动作"
+    }
+  ]
+}
