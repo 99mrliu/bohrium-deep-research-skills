@@ -20,7 +20,8 @@ LIB_KEYS = ["library", "library_root", "data_dir", "files_dir", "root",
             "documents_dir", "doc_root", "materials", "corpus"]
 TOKEN = re.compile(r"[A-Za-z0-9][A-Za-z0-9_.\-]{1,}|[一-鿿]+")
 STOP = set("的了和是在有与及或其对这那中上个一为以于哪些哪个什么哪份")
-VERSION_WORDS = ["终稿", "正式版", "定稿", "修订", "初稿", "草稿"]
+VERSION_WORDS = ["终稿", "正式版", "定稿", "修订", "初稿", "草稿",
+                 "final", "revised", "draft"]
 VNUM = re.compile(r"[vV](\d+)")
 
 

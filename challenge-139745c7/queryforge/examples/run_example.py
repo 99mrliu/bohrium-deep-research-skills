@@ -34,7 +34,7 @@ qr = json.load(open(os.path.join(WORK, "query_results.json"), encoding="utf-8"))
 result = json.load(open(os.path.join(OUT, "result.json"), encoding="utf-8"))
 r1, r2, r3 = qr["results"]
 assert r1["status"] == "matched", r1
-assert "终稿" in r1["hits"][0]["file"], r1["hits"]
+assert "final" in r1["hits"][0]["file"], r1["hits"]
 assert r1["filter_trace"]["version"]["dropped"] >= 1, r1["filter_trace"]
 assert r2["status"] == "matched" and "B2023-014" in r2["hits"][0]["file"], r2
 assert r3["status"] == "no_match", r3

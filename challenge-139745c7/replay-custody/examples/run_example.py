@@ -34,11 +34,11 @@ run([os.path.join(SCRIPTS, "custody_run.py"), CASE, WORK])
 # inject a forged card: paraphrased quote that is NOT verbatim
 cards_p = os.path.join(WORK, "evidence_cards.json")
 data = json.load(open(cards_p, encoding="utf-8"))
-lib_file = os.path.join(HERE, "library", "实验记录_B2023-014.md")
+lib_file = os.path.join(HERE, "library", "exp_record_B2023-014.md")
 digest = hashlib.sha256(open(lib_file, "rb").read()).hexdigest()
 data["cards"].append({
     "question_id": "q1", "question": "（注入的伪卡）",
-    "claim": "缓冲液为 0.05 M Tris", "file": "实验记录_B2023-014.md",
+    "claim": "缓冲液为 0.05 M Tris", "file": "exp_record_B2023-014.md",
     "sha256": digest, "quote": "缓冲液为 0.05 M Tris 缓冲液（改写，非原文）",
     "char_start": 0, "char_end": 20})
 json.dump(data, open(cards_p, "w", encoding="utf-8"), ensure_ascii=False, indent=2)

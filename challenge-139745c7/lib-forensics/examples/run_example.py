@@ -40,7 +40,7 @@ inv = json.load(open(os.path.join(WORK, "inventory.json"), encoding="utf-8"))
 result = json.load(open(os.path.join(OUT, "result.json"), encoding="utf-8"))
 dup = [f for f in inv["files"] if f["status"] == "duplicate"]
 suspect = [f for f in inv["files"] if f["status"] == "suspect"]
-assert dup and dup[0]["path"].endswith("_副本.md"), "duplicate not detected"
+assert dup and dup[0]["path"].endswith("_copy.md"), "duplicate not detected"
 assert suspect and suspect[0]["path"].endswith(".pdf"), "type_mismatch not detected"
 contract = json.load(open(CASE, encoding="utf-8"))["output_contract"]
 missing = [f for f in contract if f not in result]

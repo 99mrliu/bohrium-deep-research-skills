@@ -20,7 +20,8 @@ YEAR_IN_NAME = re.compile(r"(19\d{2}|20\d{2})")
 DATE_IN_NAME = re.compile(r"(19|20)\d{2}[-_.年]\d{1,2}[-_.月]\d{1,2}")
 VERSION_TAGS = [("终稿", "final"), ("正式版", "final"), ("定稿", "final"),
                 ("初稿", "draft"), ("草稿", "draft"),
-                ("修订", "revised"), ("修改", "revised")]
+                ("修订", "revised"), ("修改", "revised"),
+                ("final", "final"), ("draft", "draft"), ("revised", "revised")]
 VNUM = re.compile(r"[vV](\d+)")
 
 

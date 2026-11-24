@@ -2,9 +2,9 @@
 
 **本目录是合成示例，用于说明接口与流程，不是正式案例结果。**
 
-`library/` 内含 4 个合成文件：`开题报告_v1_2023-03-01.md`、
-`开题报告_终稿_2023-06-15.md`（同一报告的两个版本，演示版本族）、
-`HPLC数据_B2023-014.csv`、`notes.txt`。`case.json` 两个提问：
+`library/` 内含 4 个合成文件：`proposal_v1_2023-03-01.md`、
+`proposal_final_2023-06-15.md`（同一报告的两个版本，演示版本族）、
+`hplc_B2023-014.csv`、`notes.txt`。`case.json` 两个提问：
 一个命中终稿，一个无命中（演示 no_match 写入 INDEX 与 answers.json）。
 
 ## 运行

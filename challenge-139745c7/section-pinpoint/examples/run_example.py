@@ -35,7 +35,7 @@ result = json.load(open(os.path.join(OUT, "result.json"), encoding="utf-8"))
 r1, r2 = hits["results"]
 assert r1["status"] == "located", r1
 top = r1["hits"][0]
-assert "终稿" in top["locator"] and "2.1" in (top["heading"] or ""), top
+assert "final" in top["locator"] and "2.1" in (top["heading"] or ""), top
 assert "HEPES" in top["quote"], top
 assert r2["status"] == "no_match", r2
 contract = json.load(open(CASE, encoding="utf-8"))["output_contract"]

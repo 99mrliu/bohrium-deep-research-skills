@@ -86,7 +86,8 @@ def main():
     for e in files:
         base = os.path.splitext(os.path.basename(e["path"]))[0]
         for w in ("终稿", "正式版", "定稿", "修订", "初稿", "草稿",
-                  "_副本", "副本", "备份"):
+                  "final", "revised", "draft",
+                  "_副本", "副本", "备份", "_copy", "copy"):
             base = base.replace(w, "")
         import re as _re
         base = _re.sub(r"[vV]\d+", "", base).strip("_- .")
