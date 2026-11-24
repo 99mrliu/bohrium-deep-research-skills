@@ -1,0 +1,23 @@
+{
+  "_comment": "合成示例：本文件代替运行时的模型覆盖步骤；只写提案错误/需补充之处。演示数据，非正式案例结果。",
+  "overrides": [
+    {"fid": "F003", "new_name": "Smith-2022-SI for GNN Screening of Perovskite Catalysts",
+     "reason": "提案名称过长，缩短但保留可检索关键词"},
+    {"fid": "F006", "doc_type": "datasets", "category": "datasets",
+     "reason": "data-perovskite-bandgaps.csv 是实验数据集而非管理说明，应入 datasets/ 而非 00-admin/"}
+  ],
+  "version_relations": [
+    {"group": ["F004", "F002", "F003"],
+     "relation": "preprint_of / published_version / supplementary_of",
+     "canonical": "F002",
+     "evidence": "标题一致；F002 正文 'Published version of the arXiv preprint 2201.00001'；notes-版本说明.md 明确正式版为准"}
+  ],
+  "answers": [
+    {"qid": "Q1", "answer": "正式版是 Nature-Energy-2022-GNN-perovskite.pdf（见 catalog.md journal-articles/2022 组）",
+     "evidence": "F002 抽取文本含 DOI 10.1038/s41560-022-0001-x 与 'Published version of the arXiv preprint 2201.00001'"},
+    {"qid": "Q2", "answer": "两组字节级重复下载：quantum dots review final.pdf=01-quantum-dots-review.pdf；thesis-copy-again.pdf=thesis-final-v3.pdf",
+     "evidence": "aliases.json 两个 SHA-256 分组 [F001,F011]、[F012,F013]；catalog.csv 中 disposition=archive_dup 两行"},
+    {"qid": "Q3", "answer": "corrupt-scan.pdf（损坏）、old-scanned-article.pdf（无文本层）、no-permission.pdf（无权限）",
+     "evidence": "catalog.md 未归档节与 files.jsonl 的 extract_status"}
+  ]
+}

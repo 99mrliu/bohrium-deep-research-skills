@@ -1,0 +1,14 @@
+{
+  "_comment": "合成示例：代替运行时的模型裁决步骤；本夹具的自动图谱已正确，故 confirm/reject/overrides 为空，仅提供检索回答。演示数据，非正式案例结果。",
+  "confirm": [],
+  "reject": [],
+  "canonical_overrides": [],
+  "answers": [
+    {"qid": "Q1", "answer": "正式版是 Nature-Energy-2022-GNN-perovskite.pdf（图谱 C 簇 canonical，归档于 journal-articles/2022/）",
+     "evidence": "version_graph.json：F002 打分最高（含 DOI +3、published version 自述 +2）；arbitration_log.json 记录完整打分；graph.md C 簇"},
+    {"qid": "Q2", "answer": "两组字节级重复：quantum dots review final.pdf=01-quantum-dots-review.pdf；thesis-copy-again.pdf=thesis-final-v3.pdf",
+     "evidence": "version_graph.json 两条 duplicate_of 边，信号 sha256_equal"},
+    {"qid": "Q3", "answer": "corrupt-scan.pdf（损坏）、old-scanned-article.pdf（无文本层）、no-permission.pdf（无权限）；三者仅以文件名/哈希节点入图并标注内容不可用",
+     "evidence": "files.jsonl extract_status；version_graph.json nodes[].content_available=false"}
+  ]
+}

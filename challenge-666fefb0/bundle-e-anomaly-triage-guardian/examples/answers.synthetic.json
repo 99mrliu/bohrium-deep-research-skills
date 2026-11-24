@@ -1,0 +1,11 @@
+{
+  "_comment": "合成示例：代替运行时的模型检索回答步骤。演示数据，非正式案例结果。",
+  "answers": [
+    {"qid": "Q1", "answer": "正式版是 Nature-Energy-2022-GNN-perovskite.pdf（健康文件，归档于 journal-articles/2022/）",
+     "evidence": "抽取文本含 'Nature Energy, 2022. DOI 10.1038/s41560-022-0001-x' 与 'Published version of the arXiv preprint 2201.00001'；notes-版本说明.md 明确正式版为准"},
+    {"qid": "Q2", "answer": "两组字节级重复下载：quantum dots review final.pdf=01-quantum-dots-review.pdf；thesis-copy-again.pdf=thesis-final-v3.pdf",
+     "evidence": "triage.jsonl 中两条 duplicate_bytes 记录（SHA-256 相同）"},
+    {"qid": "Q3", "answer": "corrupt-scan.pdf（损坏）、encrypted-report.pdf（加密）、old-scanned-article.pdf（无文本层）、no-permission.pdf（无权限）、empty-download.pdf（零字节）；另有 legacy-gbk-notes.txt 为 GBK 乱码。全部隔离保留于 _quarantine/ 并附恢复建议",
+     "evidence": "triage_report.md 与 quarantine_manifest.json 逐条记录"}
+  ]
+}
