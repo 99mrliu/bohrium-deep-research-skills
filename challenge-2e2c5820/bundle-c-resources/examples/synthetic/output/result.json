@@ -1,0 +1,234 @@
+{
+  "case_id": "synthetic-protein-01",
+  "status": "complete",
+  "feasibility_by_version": {
+    "v1": {
+      "verdict": "不可行（或需改方案）",
+      "reasons": [
+        "关键项不具备: 高速冷冻离心机",
+        "预订冲突: 蛋白纯化系统（重叠 48 小时）",
+        "样本不满足: 人血清样本"
+      ]
+    },
+    "v2": {
+      "verdict": "不可行（或需改方案）",
+      "reasons": [
+        "货期赶不上: Ni-NTA 填料（slack_days=-2）"
+      ]
+    },
+    "v3": {
+      "verdict": "有条件可行",
+      "conditions": [
+        "采购 Ni-NTA 填料: 供应商 华科试剂（合成），单价 120 CNY/mL，货期 30 天，下单日 2026-02-01",
+        "采购 卡那霉素: 供应商 华科试剂（合成），单价 80 CNY/g，货期 5 天，下单日 2026-02-01",
+        "外协 基因测序: 单位 华序生物（合成），货期 3 天，单价 30 CNY/反应"
+      ]
+    }
+  },
+  "blocking_items": [
+    {
+      "version": "v1",
+      "type": "不具备",
+      "item": "高速冷冻离心机",
+      "gating": true,
+      "detail": "库存命中但规格不兼容: max_rpm: 需求=20000 库存=15000（规则: 库存能力须 ≥ 需求值）→ 不满足；且无外协/采购合同覆盖"
+    },
+    {
+      "version": "v1",
+      "type": "预订冲突",
+      "item": "蛋白纯化系统",
+      "gating": true,
+      "detail": "窗口 ['2026-03-12', '2026-03-15'] 与 王老师课题组（合成） 的既有预订重叠 48 小时"
+    },
+    {
+      "version": "v1",
+      "type": "样本不满足",
+      "item": "人血清样本",
+      "gating": true,
+      "detail": "存储温度不满足: 台账 -20°C（-20.0°C）高于需求 -80°C（-80.0°C）"
+    },
+    {
+      "version": "v1",
+      "type": "伦理待确认",
+      "item": "人血清样本",
+      "detail": "伦理状态为 pending，属阻断性确认项: 须取得批件/完成确认后方可使用，绝不视为已批准"
+    },
+    {
+      "version": "v2",
+      "type": "货期赶不上",
+      "item": "Ni-NTA 填料",
+      "gating": true,
+      "detail": "到货 2026-03-03 晚于需要 2026-03-01，缺口 2 天"
+    }
+  ],
+  "conditions_list": [
+    {
+      "version": "v1",
+      "action": "采购 Ni-NTA 填料: 供应商 华科试剂（合成），单价 120 CNY/mL，货期 30 天，下单日 2026-02-01"
+    },
+    {
+      "version": "v1",
+      "action": "伦理确认: 人血清样本（当前状态 pending，取得批件后方可使用）"
+    },
+    {
+      "version": "v2",
+      "action": "采购 Ni-NTA 填料: 供应商 华科试剂（合成），单价 120 CNY/mL，货期 30 天，下单日 2026-02-01"
+    },
+    {
+      "version": "v3",
+      "action": "采购 Ni-NTA 填料: 供应商 华科试剂（合成），单价 120 CNY/mL，货期 30 天，下单日 2026-02-01"
+    },
+    {
+      "version": "v3",
+      "action": "采购 卡那霉素: 供应商 华科试剂（合成），单价 80 CNY/g，货期 5 天，下单日 2026-02-01"
+    },
+    {
+      "version": "v3",
+      "action": "外协 基因测序: 单位 华序生物（合成），货期 3 天，单价 30 CNY/反应"
+    }
+  ],
+  "four_state_summary": {
+    "v1": {
+      "已具备": 3,
+      "可外协": 0,
+      "需采购": 1,
+      "不具备": 1,
+      "无法核验": 0
+    },
+    "v2": {
+      "已具备": 4,
+      "可外协": 0,
+      "需采购": 1,
+      "不具备": 0,
+      "无法核验": 0
+    },
+    "v3": {
+      "已具备": 5,
+      "可外协": 1,
+      "需采购": 2,
+      "不具备": 0,
+      "无法核验": 0
+    }
+  },
+  "booking_conflicts": [
+    {
+      "version": "v1",
+      "resource": "蛋白纯化系统",
+      "plan_window": [
+        "2026-03-12",
+        "2026-03-15"
+      ],
+      "existing_booking": {
+        "resource": "蛋白纯化系统",
+        "booked_by": "王老师课题组（合成）",
+        "start": "2026-03-10",
+        "end": "2026-03-14",
+        "note": "共用平台维护与已约实验"
+      },
+      "overlap_days": 2,
+      "overlap_hours": 48
+    }
+  ],
+  "sample_verdicts": [
+    {
+      "version": "v1",
+      "id": "sam-01",
+      "name": "人血清样本",
+      "verdict": "不满足",
+      "issues": [
+        "存储温度不满足: 台账 -20°C（-20.0°C）高于需求 -80°C（-80.0°C）"
+      ],
+      "checks": {
+        "source": {
+          "required": "附属医院合作",
+          "registry": "附属医院合作",
+          "ok": true
+        },
+        "quantity": {
+          "demand": 3.0,
+          "available": 5.0,
+          "remaining": 2.0,
+          "unit": "mL",
+          "ok": true,
+          "detail": "可用 5.0 - 需求 3.0 = 余量 2.0 mL"
+        },
+        "storage": {
+          "required": "-80°C",
+          "registry": "-20°C",
+          "required_c": -80.0,
+          "registry_c": -20.0,
+          "ok": false,
+          "detail": "台账 -20.0°C > 需求 -80.0°C（规则: 台账温度须 ≤ 需求温度）"
+        },
+        "ethics": {
+          "registry": "pending",
+          "ok": false
+        }
+      }
+    },
+    {
+      "version": "v3",
+      "id": "sam-01",
+      "name": "HEK293T细胞",
+      "verdict": "满足",
+      "issues": [],
+      "checks": {
+        "source": {
+          "required": "实验室冻存",
+          "registry": "实验室冻存",
+          "ok": true
+        },
+        "quantity": {
+          "demand": 2.0,
+          "available": 10.0,
+          "remaining": 8.0,
+          "unit": "支",
+          "ok": true,
+          "detail": "可用 10.0 - 需求 2.0 = 余量 8.0 支"
+        },
+        "storage": {
+          "required": "-80°C",
+          "registry": "-80°C",
+          "required_c": -80.0,
+          "registry_c": -80.0,
+          "ok": true,
+          "detail": "台账 -80.0°C ≤ 需求 -80.0°C（规则: 台账温度须 ≤ 需求温度）"
+        },
+        "ethics": {
+          "registry": "approved",
+          "ok": true
+        }
+      }
+    }
+  ],
+  "sources": [
+    "/Users/liuhengshen/Desktop/bhr_product/2e2c-five/bundle-c-resources/outputs/examples/synthetic/case.json",
+    "/Users/liuhengshen/Desktop/bhr_product/2e2c-five/bundle-c-resources/outputs/examples/synthetic/output/booking_v1.json",
+    "/Users/liuhengshen/Desktop/bhr_product/2e2c-five/bundle-c-resources/outputs/examples/synthetic/output/booking_v2.json",
+    "/Users/liuhengshen/Desktop/bhr_product/2e2c-five/bundle-c-resources/outputs/examples/synthetic/output/booking_v3.json",
+    "/Users/liuhengshen/Desktop/bhr_product/2e2c-five/bundle-c-resources/outputs/examples/synthetic/output/inspect_case_map.json",
+    "/Users/liuhengshen/Desktop/bhr_product/2e2c-five/bundle-c-resources/outputs/examples/synthetic/output/match_v1.json",
+    "/Users/liuhengshen/Desktop/bhr_product/2e2c-five/bundle-c-resources/outputs/examples/synthetic/output/match_v2.json",
+    "/Users/liuhengshen/Desktop/bhr_product/2e2c-five/bundle-c-resources/outputs/examples/synthetic/output/match_v3.json",
+    "/Users/liuhengshen/Desktop/bhr_product/2e2c-five/bundle-c-resources/outputs/examples/synthetic/output/requirements_v1_normalized.json",
+    "/Users/liuhengshen/Desktop/bhr_product/2e2c-five/bundle-c-resources/outputs/examples/synthetic/output/requirements_v2_normalized.json",
+    "/Users/liuhengshen/Desktop/bhr_product/2e2c-five/bundle-c-resources/outputs/examples/synthetic/output/requirements_v3_normalized.json",
+    "/Users/liuhengshen/Desktop/bhr_product/2e2c-five/bundle-c-resources/outputs/examples/synthetic/output/samples_v1.json",
+    "/Users/liuhengshen/Desktop/bhr_product/2e2c-five/bundle-c-resources/outputs/examples/synthetic/output/samples_v2.json",
+    "/Users/liuhengshen/Desktop/bhr_product/2e2c-five/bundle-c-resources/outputs/examples/synthetic/output/samples_v3.json",
+    "/Users/liuhengshen/Desktop/bhr_product/2e2c-five/bundle-c-resources/outputs/examples/synthetic/output/result.json"
+  ],
+  "uncertainty": [],
+  "change_record": [
+    {
+      "timestamp": "2026-11-24T22:26:36",
+      "status": "complete",
+      "note": "run_example.sh 全流程运行（合成示例 v1/v2/v3）"
+    },
+    {
+      "timestamp": "2026-11-24T22:29:21",
+      "status": "complete",
+      "note": "run_example.sh 全流程运行（合成示例 v1/v2/v3）"
+    }
+  ]
+}

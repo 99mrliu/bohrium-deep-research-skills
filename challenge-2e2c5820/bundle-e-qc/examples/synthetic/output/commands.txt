@@ -1,0 +1,9 @@
+python3 ../../scripts/parse_contract.py case.json output
+cp output/result.skeleton.json output/result.json
+python3 - output/result.json    # heredoc：merge 审查结论（见 run_example.sh）
+cp review_report.md output/review_report.md
+python3 ../../scripts/lint_review.py output/review_report.md --strict
+python3 ../../scripts/validate_result.py case.json output/result.json
+python3 ../../scripts/render_report.py output/review_report.md output/result.json output/review_report.html
+python3 ../../scripts/make_manifest.py case.json task.md review_report.md output -o output --commands output/commands.txt
+python3 ../../scripts/selfcheck.py output case.json

@@ -1,0 +1,73 @@
+{
+  "case_id": "SYNTH-QC-001",
+  "contract_key": "output_contract",
+  "generated_at": "2026-11-24T22:29:23",
+  "fields": [
+    {
+      "field": "verdict_summary",
+      "expected_type": "string",
+      "required": true,
+      "shape": "properties",
+      "items_type": null
+    },
+    {
+      "field": "per_plan_verdicts",
+      "expected_type": "array",
+      "required": true,
+      "shape": "array<object>",
+      "items_type": "object"
+    },
+    {
+      "field": "resource_check",
+      "expected_type": "object",
+      "required": true,
+      "shape": "properties",
+      "items_type": null
+    },
+    {
+      "field": "budget_estimate_cny",
+      "expected_type": "number",
+      "required": true,
+      "shape": "properties",
+      "items_type": null
+    },
+    {
+      "field": "timeline_feasible",
+      "expected_type": "boolean",
+      "required": true,
+      "shape": "properties",
+      "items_type": null
+    },
+    {
+      "field": "risks",
+      "expected_type": "array",
+      "required": true,
+      "shape": "array<string>",
+      "items_type": "string"
+    },
+    {
+      "field": "recommended_plan_version",
+      "expected_type": "string",
+      "required": true,
+      "shape": "properties",
+      "items_type": null
+    },
+    {
+      "field": "review_notes",
+      "expected_type": "string",
+      "required": false,
+      "shape": "properties",
+      "items_type": null
+    }
+  ],
+  "input_hashes": {
+    "case.json": {
+      "path": "/Users/liuhengshen/Desktop/bhr_product/2e2c-five/bundle-e-qc/outputs/examples/synthetic/case.json",
+      "sha256": "354792c935fde610cec5ee229d75537e9c43b4d1cac774aa860aad7c9beb7c4f"
+    },
+    "task.md": {
+      "path": "/Users/liuhengshen/Desktop/bhr_product/2e2c-five/bundle-e-qc/outputs/examples/synthetic/task.md",
+      "sha256": "a06c05d8342ce848ce39268c60de67d412199406ec51c9951a05a174485cbf1d"
+    }
+  }
+}

@@ -1,0 +1,102 @@
+{
+  "kind": "schedule",
+  "plan_id": "PLAN-V3",
+  "steps": [
+    {
+      "id": "S1",
+      "name": "细胞复苏",
+      "duration_hours": "24",
+      "depends_on": [],
+      "resource": "CO2培养箱",
+      "es": "0",
+      "ef": "24"
+    },
+    {
+      "id": "S2",
+      "name": "扩大培养",
+      "duration_hours": "72",
+      "depends_on": [
+        "S1"
+      ],
+      "resource": "CO2培养箱",
+      "es": "24",
+      "ef": "96"
+    },
+    {
+      "id": "S3",
+      "name": "铺板与处理",
+      "duration_hours": "8",
+      "depends_on": [
+        "S2"
+      ],
+      "resource": "超净台",
+      "es": "96",
+      "ef": "104"
+    },
+    {
+      "id": "S3b",
+      "name": "标准品配制",
+      "duration_hours": "3",
+      "depends_on": [
+        "S1"
+      ],
+      "resource": "超净台",
+      "es": "24",
+      "ef": "27"
+    },
+    {
+      "id": "S4",
+      "name": "收集细胞上清",
+      "duration_hours": "4",
+      "depends_on": [
+        "S3"
+      ],
+      "resource": "超净台",
+      "es": "104",
+      "ef": "108"
+    },
+    {
+      "id": "S5",
+      "name": "ELISA检测",
+      "duration_hours": "6",
+      "depends_on": [
+        "S4",
+        "S3b"
+      ],
+      "resource": "酶标仪",
+      "es": "108",
+      "ef": "114"
+    },
+    {
+      "id": "S6",
+      "name": "数据分析",
+      "duration_hours": "4",
+      "depends_on": [
+        "S5"
+      ],
+      "resource": "分析电脑",
+      "es": "114",
+      "ef": "118"
+    }
+  ],
+  "critical_path": [
+    "S1",
+    "S2",
+    "S3",
+    "S4",
+    "S5",
+    "S6"
+  ],
+  "critical_path_str": "S1(0→24) → S2(24→96) → S3(96→104) → S4(104→108) → S5(108→114) → S6(114→118)",
+  "total_hours": "118",
+  "resource_busy_hours": {
+    "CO2培养箱": "96",
+    "超净台": "15",
+    "酶标仪": "6",
+    "分析电脑": "4"
+  },
+  "deadline_hours": "96",
+  "deadline_source": "contracts.booking_contract.deadline_hours",
+  "verdict": "超出",
+  "delta_hours": "22"
+}

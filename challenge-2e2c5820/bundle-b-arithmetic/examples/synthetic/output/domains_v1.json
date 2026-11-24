@@ -1,0 +1,69 @@
+{
+  "kind": "domains",
+  "plan_id": "PLAN-V1",
+  "domain_source": "parameter_domains",
+  "parameters": [
+    {
+      "name": "培养温度",
+      "value": 37,
+      "unit": "°C",
+      "locator": "PLAN-V1#参数表#行1",
+      "domain": {
+        "name": "培养温度",
+        "unit": "°C",
+        "values": [
+          35,
+          36,
+          37
+        ],
+        "min": null,
+        "max": null,
+        "match": "exact"
+      },
+      "value_in_domain_unit": "37",
+      "verdict": "in_domain",
+      "detail": "37 ∈ [35, 36, 37] ? 是"
+    },
+    {
+      "name": "培养时间",
+      "value": 2880,
+      "unit": "min",
+      "locator": "PLAN-V1#参数表#行2",
+      "domain": {
+        "name": "培养时间",
+        "unit": "h",
+        "values": null,
+        "min": 24,
+        "max": 72,
+        "match": "exact"
+      },
+      "value_in_domain_unit": "48",
+      "verdict": "in_domain",
+      "detail": "24 ≤ 48 ≤ 72 ? 是"
+    },
+    {
+      "name": "单孔加样量",
+      "value": 100,
+      "unit": "µL",
+      "locator": "PLAN-V1#参数表#行3",
+      "domain": {
+        "name": "单孔加样量",
+        "unit": "mL",
+        "values": null,
+        "min": 0.05,
+        "max": 0.2,
+        "match": "exact"
+      },
+      "value_in_domain_unit": "0.100",
+      "verdict": "in_domain",
+      "detail": "0.05 ≤ 0.100 ≤ 0.2 ? 是"
+    }
+  ],
+  "counts": {
+    "in_domain": 3,
+    "out_of_domain": 0,
+    "no_domain_found": 0,
+    "unit_unconvertible": 0
+  },
+  "unverified": []
+}

@@ -1,0 +1,85 @@
+{
+  "版本排序": [
+    {
+      "rank": 1,
+      "plan": "v1",
+      "weighted_total": 3.4
+    },
+    {
+      "rank": 2,
+      "plan": "v2",
+      "weighted_total": 3.35
+    },
+    {
+      "rank": 3,
+      "plan": "v3",
+      "weighted_total": 2.9
+    }
+  ],
+  "weights": {
+    "hypothesis_variables": 0.2,
+    "controls": 0.15,
+    "equipment_materials": 0.15,
+    "time_cost": 0.15,
+    "parameter_ranges": 0.1,
+    "risk_anomaly": 0.15,
+    "ethics_safety": 0.1
+  },
+  "totals": {
+    "v1": 3.4,
+    "v2": 3.35,
+    "v3": 2.9
+  },
+  "unscorable": {},
+  "sensitivity": {
+    "scenarios_run": 14,
+    "stability": {
+      "v1": {
+        "baseline_rank": 1,
+        "best_rank": 1,
+        "worst_rank": 2,
+        "rank_counts": {
+          "1": 13,
+          "2": 1
+        }
+      },
+      "v2": {
+        "baseline_rank": 2,
+        "best_rank": 1,
+        "worst_rank": 2,
+        "rank_counts": {
+          "1": 1,
+          "2": 13
+        }
+      },
+      "v3": {
+        "baseline_rank": 3,
+        "best_rank": 3,
+        "worst_rank": 3,
+        "rank_counts": {
+          "3": 14
+        }
+      }
+    },
+    "rank_flips": [
+      {
+        "scenario": "假设与变量 +20%",
+        "new_order": [
+          "v2",
+          "v1",
+          "v3"
+        ],
+        "changed_ranks": {
+          "v1": {
+            "baseline": 1,
+            "scenario": 2
+          },
+          "v2": {
+            "baseline": 2,
+            "scenario": 1
+          }
+        }
+      }
+    ]
+  }
+}

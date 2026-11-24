@@ -1,0 +1,54 @@
+{
+  "case_id": "synthetic-protein-01",
+  "plan_version": "v3",
+  "verdicts": [
+    {
+      "id": "sam-01",
+      "name": "HEK293T细胞",
+      "gating": false,
+      "locator": "task.md §2.2",
+      "checks": {
+        "source": {
+          "required": "实验室冻存",
+          "registry": "实验室冻存",
+          "ok": true
+        },
+        "quantity": {
+          "demand": 2.0,
+          "available": 10.0,
+          "remaining": 8.0,
+          "unit": "支",
+          "ok": true,
+          "detail": "可用 10.0 - 需求 2.0 = 余量 8.0 支"
+        },
+        "storage": {
+          "required": "-80°C",
+          "registry": "-80°C",
+          "required_c": -80.0,
+          "registry_c": -80.0,
+          "ok": true,
+          "detail": "台账 -80.0°C ≤ 需求 -80.0°C（规则: 台账温度须 ≤ 需求温度）"
+        },
+        "ethics": {
+          "registry": "approved",
+          "ok": true
+        }
+      },
+      "issues": [],
+      "confirmation_items": [],
+      "matched_row": {
+        "id": "REG-S-02",
+        "name": "HEK293T细胞",
+        "quantity": 10,
+        "unit": "支",
+        "storage": "-80°C",
+        "source": "实验室冻存",
+        "ethics_status": "approved"
+      },
+      "verdict": "满足"
+    }
+  ],
+  "confirmation_items": [],
+  "ethics_rule": "ethics_status ∈ {approved, pending, none}; pending/none/未知 → 阻断性确认项，绝不视为已批准",
+  "notes": []
+}

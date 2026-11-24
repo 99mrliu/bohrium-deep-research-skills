@@ -1,0 +1,14 @@
+{"item_id": "E01", "category": "假设与变量", "plan_id": "v1", "status": "pass", "quote": "自变量为引物探针组合（P1/P2 两套），因变量为 Ct 值", "basis": "SOP", "note": "自变量与因变量定义明确，可检验。"}
+{"item_id": "E02", "category": "假设与变量", "plan_id": "v1", "status": "pass", "quote": "检测限目标 50 copies/反应", "basis": "SOP", "note": "检测限目标量化写明。"}
+{"item_id": "E03", "category": "对照组", "plan_id": "v1", "status": "pass", "quote": "每板设阳性对照（标准品 1000 copies/反应）、阴性对照（无模板）各 2 孔", "basis": "SOP", "note": "阳性/阴性对照齐备，每板各 2 孔，满足质控最低要求。"}
+{"item_id": "E04", "category": "参数范围", "plan_id": "v1", "status": "fail", "quote": "退火延伸 58 °C 30 s", "basis": "计算", "note": "3.2 节退火温度 58 °C 虽在参数域 [55,65] 内，但与第 5 节 60 °C 矛盾（见矛盾扫描报告），同方案口径不一致。"}
+{"item_id": "E05", "category": "参数范围", "plan_id": "v1", "status": "fail", "quote": "以退火温度 60 °C 下的标准曲线评估扩增效率", "basis": "计算", "note": "第 5 节写 60 °C，与 3.2 节 58 °C 矛盾；按协议只记录不调和，记 fail。"}
+{"item_id": "E06", "category": "设备材料", "plan_id": "v1", "status": "pass", "quote": "qPCR 预混液 2 盒（每盒 1200 元）；八联管 5 包（每包 180 元）", "basis": "合同+计算", "note": "算术核算：2×1200+5×180=3300 元 ≤ 合同硬顶 5000 元；单价与合同价格表一致。"}
+{"item_id": "E07", "category": "设备材料", "plan_id": "v1", "status": "pass", "quote": "ABI 7500 荧光定量 PCR 仪 1 台", "basis": "合同", "note": "设备在合同可预约清单内（第 1-4 周，每周 20 机时）。"}
+{"item_id": "E08", "category": "时间成本", "plan_id": "v1", "status": "pass", "quote": "第 1 周完成预实验，第 2-3 周完成全部 120 份样本检测", "basis": "合同", "note": "周期 3 周落在合同预约窗口第 1-4 周内。"}
+{"item_id": "E09", "category": "风险与异常", "plan_id": "v1", "status": "pass", "quote": "若 Ct 值均偏高，检查引物批次；设备故障时使用备用仪器。", "basis": "SOP", "note": "有失败预案与设备替代路径。"}
+{"item_id": "E10", "category": "伦理与安全", "plan_id": "v1", "status": "missing", "quote": "样本为临床咽拭子洗脱液，计划样本量 n=120。", "basis": "伦理规范", "note": "涉及人体临床样本，按铁律方案未写明伦理审批即按未满足计入门槛。", "absence_scope": "已逐节通读 v1 全文（第 1-8 节，含标题），检索词：伦理 / 知情同意 / IRB / 审批 / 生物安全，未见任何相关表述。"}
+{"item_id": "E11", "category": "伦理与安全", "plan_id": "v2", "status": "missing", "quote": "样本为临床咽拭子洗脱液，计划样本量 n=96。", "basis": "伦理规范", "note": "同 E10：人体样本无伦理审批表述，按未满足计入门槛。", "absence_scope": "已逐节通读 v2 全文（第 1-8 节，含标题），检索词：伦理 / 知情同意 / IRB / 审批 / 生物安全，未见任何相关表述。"}
+{"item_id": "E12", "category": "设备材料", "plan_id": "v2", "status": "unknown", "quote": "ABI 7500 荧光定量 PCR 仪 1 台", "basis": "合同", "note": "设备在合同清单内，但方案未写明机时需求量，无法确认每周 20 机时是否足够，记 unknown。"}
+{"item_id": "E13", "category": "时间成本", "plan_id": "v2", "status": "pass", "quote": "qPCR 预混液 3 盒（每盒 1200 元）；八联管 4 包（每包 180 元）", "basis": "合同+计算", "note": "算术核算：3×1200+4×180=4320 元 ≤ 合同硬顶 5000 元；单价与合同一致。"}
+{"item_id": "E14", "category": "风险与异常", "plan_id": "v2", "status": "pass", "quote": "若出现非特异扩增，重新优化退火温度梯度。", "basis": "SOP", "note": "有非特异扩增的处置预案。"}

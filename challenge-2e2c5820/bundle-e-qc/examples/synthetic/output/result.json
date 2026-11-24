@@ -1,0 +1,66 @@
+{
+  "case_id": "SYNTH-QC-001",
+  "verdict_summary": "plan_v1 可行；plan_v2 有条件可行（压缩表征轮次并确认周末机时）；plan_v3 不可行。推荐 plan_v2。",
+  "per_plan_verdicts": [
+    {
+      "plan_id": "plan_v1",
+      "verdict": "可行",
+      "conditions": []
+    },
+    {
+      "plan_id": "plan_v2",
+      "verdict": "有条件可行",
+      "conditions": [
+        "XRD 表征由 4 轮压缩为 2 轮（机时 36h→30h）",
+        "确认手套箱周末时段可预订后再锁定第 3 周排期"
+      ]
+    },
+    {
+      "plan_id": "plan_v3",
+      "verdict": "不可行",
+      "conditions": []
+    }
+  ],
+  "resource_check": {
+    "手套箱机时_小时": {
+      "需求": 30,
+      "合同上限": 32,
+      "满足": true
+    },
+    "预算_元": {
+      "需求": 18600,
+      "合同上限": 20000,
+      "满足": true
+    },
+    "核算": "手套箱 30h x 500 元/h = 15000 元；XRD 8h x 450 元/h = 3600 元；合计 18600 元"
+  },
+  "budget_estimate_cny": 18600.0,
+  "timeline_feasible": true,
+  "risks": [
+    "周末机时不可预订则 plan_v2 排期顺延一周",
+    "表征轮次压缩后统计功效下降，需在正式报告中声明"
+  ],
+  "recommended_plan_version": "plan_v2",
+  "review_notes": "合成示例，非正式案例数据。详细论证见 review_report.md。",
+  "status": "complete",
+  "sources": [
+    "case.json",
+    "task.md",
+    "review_report.md"
+  ],
+  "uncertainty": [],
+  "change_record": [
+    {
+      "ts": "2026-11-24T22:29:23",
+      "actor": "parse_contract.py",
+      "action": "scaffold",
+      "detail": "契约脚手架：全部契约字段置 null，状态置 partial（诚实起点）。"
+    },
+    {
+      "ts": "2026-11-24T22:29:24",
+      "actor": "run_example.sh(模拟模型merge)",
+      "action": "merge_findings",
+      "detail": "七类约束审查完成，填入全部契约字段并将状态置为 complete。"
+    }
+  ]
+}

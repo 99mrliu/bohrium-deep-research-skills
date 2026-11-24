@@ -1,0 +1,95 @@
+{
+  "kind": "domains",
+  "plan_id": "PLAN-V3",
+  "domain_source": "parameter_domains",
+  "parameters": [
+    {
+      "name": "培养温度",
+      "value": 36,
+      "unit": "°C",
+      "locator": "PLAN-V3#参数表#行1",
+      "domain": {
+        "name": "培养温度",
+        "unit": "°C",
+        "values": [
+          35,
+          36,
+          37
+        ],
+        "min": null,
+        "max": null,
+        "match": "exact"
+      },
+      "value_in_domain_unit": "36",
+      "verdict": "in_domain",
+      "detail": "36 ∈ [35, 36, 37] ? 是"
+    },
+    {
+      "name": "培养时间",
+      "value": 72,
+      "unit": "h",
+      "locator": "PLAN-V3#参数表#行2",
+      "domain": {
+        "name": "培养时间",
+        "unit": "h",
+        "values": null,
+        "min": 24,
+        "max": 72,
+        "match": "exact"
+      },
+      "value_in_domain_unit": "72",
+      "verdict": "in_domain",
+      "detail": "24 ≤ 72 ≤ 72 ? 是"
+    },
+    {
+      "name": "单孔加样量",
+      "value": 150,
+      "unit": "µL",
+      "locator": "PLAN-V3#参数表#行3",
+      "domain": {
+        "name": "单孔加样量",
+        "unit": "mL",
+        "values": null,
+        "min": 0.05,
+        "max": 0.2,
+        "match": "exact"
+      },
+      "value_in_domain_unit": "0.150",
+      "verdict": "in_domain",
+      "detail": "0.05 ≤ 0.150 ≤ 0.2 ? 是"
+    },
+    {
+      "name": "离心转速",
+      "value": 300,
+      "unit": "g",
+      "locator": "PLAN-V3#参数表#行4",
+      "domain": {
+        "name": "离心转速",
+        "unit": "rpm",
+        "values": null,
+        "min": 2000,
+        "max": 5000,
+        "match": "exact"
+      },
+      "verdict": "unit_unconvertible",
+      "note": "单位 g ↔ rpm 不可自动换算，请专家复核（rpm↔g 依赖转子半径，绝不猜测）"
+    },
+    {
+      "name": "摇床转速",
+      "value": 120,
+      "unit": "rpm",
+      "locator": "PLAN-V3#参数表#行5",
+      "verdict": "no_domain_found"
+    }
+  ],
+  "counts": {
+    "in_domain": 3,
+    "out_of_domain": 0,
+    "no_domain_found": 1,
+    "unit_unconvertible": 1
+  },
+  "unverified": [
+    "离心转速: 单位 g↔rpm 不可自动换算（locator: PLAN-V3#参数表#行4）",
+    "摇床转速: 未找到对应参数域（locator: PLAN-V3#参数表#行5）"
+  ]
+}

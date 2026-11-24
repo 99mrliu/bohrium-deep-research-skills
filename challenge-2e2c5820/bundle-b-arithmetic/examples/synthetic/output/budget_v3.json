@@ -1,0 +1,87 @@
+{
+  "kind": "budget",
+  "plan_id": "PLAN-V3",
+  "lines": [
+    {
+      "name": "离心管(50mL)",
+      "unit_price": "2.50",
+      "quantity": "200",
+      "computed_subtotal": "500.00",
+      "currency": "CNY",
+      "formula": "离心管(50mL) 2.50 × 200 = 500.00 CNY",
+      "locator": "PLAN-V3#预算表#行1",
+      "flagged": false
+    },
+    {
+      "name": "胎牛血清FBS(500mL)",
+      "unit_price": "800.00",
+      "quantity": "2",
+      "computed_subtotal": "1600.00",
+      "currency": "CNY",
+      "formula": "胎牛血清FBS(500mL) 800.00 × 2 = 1600.00 CNY",
+      "locator": "PLAN-V3#预算表#行2",
+      "flagged": false,
+      "stated_subtotal": "1600.00",
+      "drift_pct": "0.000"
+    },
+    {
+      "name": "DMEM培养基(500mL)",
+      "unit_price": "180.00",
+      "quantity": "5",
+      "computed_subtotal": "900.00",
+      "currency": "CNY",
+      "formula": "DMEM培养基(500mL) 180.00 × 5 = 900.00 CNY",
+      "locator": "PLAN-V3#预算表#行3",
+      "flagged": false
+    },
+    {
+      "name": "ELISA试剂盒(96T)",
+      "unit_price": "3200.00",
+      "quantity": "1",
+      "computed_subtotal": "3200.00",
+      "currency": "CNY",
+      "formula": "ELISA试剂盒(96T) 3200.00 × 1 = 3200.00 CNY",
+      "locator": "PLAN-V3#预算表#行4",
+      "flagged": false
+    },
+    {
+      "name": "96孔细胞培养板",
+      "unit_price": "45.00",
+      "quantity": "10",
+      "computed_subtotal": "450.00",
+      "currency": "CNY",
+      "formula": "96孔细胞培养板 45.00 × 10 = 450.00 CNY",
+      "locator": "PLAN-V3#预算表#行5",
+      "flagged": false
+    },
+    {
+      "name": "移液枪头(盒)",
+      "unit_price": "120.00",
+      "quantity": "3",
+      "computed_subtotal": "360.00",
+      "currency": "CNY",
+      "formula": "移液枪头(盒) 120.00 × 3 = 360.00 CNY",
+      "locator": "PLAN-V3#预算表#行6",
+      "flagged": false
+    },
+    {
+      "name": "HEK293细胞株",
+      "unit_price": "1500.00",
+      "quantity": "1",
+      "computed_subtotal": "1500.00",
+      "currency": "CNY",
+      "formula": "HEK293细胞株 1500.00 × 1 = 1500.00 CNY",
+      "locator": "PLAN-V3#预算表#行7",
+      "flagged": false
+    }
+  ],
+  "total": "8510.00",
+  "currencies": [
+    "CNY"
+  ],
+  "cap": "10000.00",
+  "cap_source": "contracts.budget.cap_amount",
+  "verdict": "结余",
+  "delta": "-1490.00",
+  "unverified": []
+}

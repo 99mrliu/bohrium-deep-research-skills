@@ -1,0 +1,55 @@
+{
+  "case_id": "synthetic-protein-01",
+  "plan_version": "v1",
+  "booking_windows": [
+    {
+      "need_id": "bk-01",
+      "resource": "蛋白纯化系统",
+      "gating": true,
+      "locator": "task.md §3.1",
+      "plan_window": [
+        "2026-03-12",
+        "2026-03-15"
+      ],
+      "conflicts": [
+        {
+          "existing_booking": {
+            "resource": "蛋白纯化系统",
+            "booked_by": "王老师课题组（合成）",
+            "start": "2026-03-10",
+            "end": "2026-03-14",
+            "note": "共用平台维护与已约实验"
+          },
+          "overlap_days": 2,
+          "overlap_hours": 48
+        }
+      ],
+      "verdict": "冲突"
+    }
+  ],
+  "lead_times": [
+    {
+      "material": "Ni-NTA 填料",
+      "gating": true,
+      "needed_by": "2026-03-08",
+      "contract": {
+        "item": "Ni-NTA 填料",
+        "vendor": "华科试剂（合成）",
+        "unit_price": 120,
+        "currency": "CNY",
+        "unit": "mL",
+        "lead_time_days": 30,
+        "order_by": "2026-02-01"
+      },
+      "locator": "task.md §3.1",
+      "order_by": "2026-02-01",
+      "lead_time_days": 30,
+      "arrival": "2026-03-03",
+      "slack_days": 5,
+      "verdict": "赶得上"
+    }
+  ],
+  "conflict_count": 1,
+  "late_count": 0,
+  "notes": []
+}

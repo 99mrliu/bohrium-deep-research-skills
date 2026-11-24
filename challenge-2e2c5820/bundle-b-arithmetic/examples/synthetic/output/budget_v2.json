@@ -1,0 +1,75 @@
+{
+  "kind": "budget",
+  "plan_id": "PLAN-V2",
+  "lines": [
+    {
+      "name": "离心管(50mL)",
+      "unit_price": "2.50",
+      "quantity": "200",
+      "computed_subtotal": "500.00",
+      "currency": "CNY",
+      "formula": "离心管(50mL) 2.50 × 200 = 500.00 CNY",
+      "locator": "PLAN-V2#预算表#行1",
+      "flagged": false
+    },
+    {
+      "name": "胎牛血清FBS(500mL)",
+      "unit_price": "800.00",
+      "quantity": "3",
+      "computed_subtotal": "2400.00",
+      "currency": "CNY",
+      "formula": "胎牛血清FBS(500mL) 800.00 × 3 = 2400.00 CNY",
+      "locator": "PLAN-V2#预算表#行2",
+      "flagged": false
+    },
+    {
+      "name": "DMEM培养基(500mL)",
+      "unit_price": "180.00",
+      "quantity": "6",
+      "computed_subtotal": "1080.00",
+      "currency": "CNY",
+      "formula": "DMEM培养基(500mL) 180.00 × 6 = 1080.00 CNY",
+      "locator": "PLAN-V2#预算表#行3",
+      "flagged": false
+    },
+    {
+      "name": "ELISA试剂盒(96T)",
+      "unit_price": "3200.00",
+      "quantity": "2",
+      "computed_subtotal": "6400.00",
+      "currency": "CNY",
+      "formula": "ELISA试剂盒(96T) 3200.00 × 2 = 6400.00 CNY",
+      "locator": "PLAN-V2#预算表#行4",
+      "flagged": false
+    },
+    {
+      "name": "96孔细胞培养板",
+      "unit_price": "45.00",
+      "quantity": "20",
+      "computed_subtotal": "900.00",
+      "currency": "CNY",
+      "formula": "96孔细胞培养板 45.00 × 20 = 900.00 CNY",
+      "locator": "PLAN-V2#预算表#行5",
+      "flagged": false
+    },
+    {
+      "name": "移液枪头(盒)",
+      "unit_price": "120.00",
+      "quantity": "4",
+      "computed_subtotal": "480.00",
+      "currency": "CNY",
+      "formula": "移液枪头(盒) 120.00 × 4 = 480.00 CNY",
+      "locator": "PLAN-V2#预算表#行6",
+      "flagged": false
+    }
+  ],
+  "total": "11760.00",
+  "currencies": [
+    "CNY"
+  ],
+  "cap": "10000.00",
+  "cap_source": "contracts.budget.cap_amount",
+  "verdict": "超支",
+  "delta": "1760.00",
+  "unverified": []
+}

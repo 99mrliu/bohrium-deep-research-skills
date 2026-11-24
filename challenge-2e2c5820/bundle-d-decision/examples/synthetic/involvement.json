@@ -1,0 +1,8 @@
+{
+  "_声明": "合成示例，非正式案例数据。v2 的动物实验状态为 undetermined，用于演示“确认项”语义。",
+  "plans": {
+    "v1": {"动物实验": false, "人体样本": false, "危险试剂": true, "个人数据": false},
+    "v2": {"动物实验": "undetermined", "人体样本": false, "危险试剂": false, "个人数据": false},
+    "v3": {"动物实验": true, "人体样本": false, "危险试剂": true, "个人数据": false}
+  }
+}

@@ -1,0 +1,212 @@
+{
+  "probe": "inspect_case.py",
+  "case_file": "/Users/liuhengshen/Desktop/bhr_product/2e2c-five/bundle-b-arithmetic/outputs/examples/synthetic/case.json",
+  "top_level_keys": [
+    "case_id",
+    "label",
+    "title",
+    "source_materials",
+    "contracts",
+    "parameter_domains",
+    "candidate_plans",
+    "output_contract"
+  ],
+  "case_id": "SYNTH-CELL-ELISA-001",
+  "case_id_path": "case_id",
+  "candidates": {
+    "contracts": [
+      {
+        "path": "contracts",
+        "kind": "dict",
+        "preview": "dict{budget, price_contract, booking_contract}"
+      },
+      {
+        "path": "contracts.price_contract",
+        "kind": "dict",
+        "preview": "dict{currency, vendor, items}"
+      },
+      {
+        "path": "contracts.price_contract.items[0].unit_price",
+        "kind": "float",
+        "preview": "2.5"
+      },
+      {
+        "path": "contracts.price_contract.items[1].unit_price",
+        "kind": "float",
+        "preview": "800.0"
+      },
+      {
+        "path": "contracts.price_contract.items[2].unit_price",
+        "kind": "float",
+        "preview": "180.0"
+      },
+      {
+        "path": "contracts.price_contract.items[3].unit_price",
+        "kind": "float",
+        "preview": "3200.0"
+      },
+      {
+        "path": "contracts.price_contract.items[4].unit_price",
+        "kind": "float",
+        "preview": "45.0"
+      },
+      {
+        "path": "contracts.price_contract.items[5].unit_price",
+        "kind": "float",
+        "preview": "120.0"
+      },
+      {
+        "path": "contracts.price_contract.items[6].unit_price",
+        "kind": "float",
+        "preview": "1500.0"
+      },
+      {
+        "path": "contracts.price_contract.items[7].unit_price",
+        "kind": "float",
+        "preview": "60.0"
+      },
+      {
+        "path": "contracts.price_contract.items[8].unit_price",
+        "kind": "float",
+        "preview": "90.0"
+      },
+      {
+        "path": "contracts.booking_contract",
+        "kind": "dict",
+        "preview": "dict{resource, deadline_hours, note}"
+      },
+      {
+        "path": "output_contract",
+        "kind": "dict",
+        "preview": "dict{type, properties}"
+      }
+    ],
+    "caps": [
+      {
+        "path": "contracts.budget",
+        "kind": "dict",
+        "preview": "dict{cap_amount, currency, note}"
+      },
+      {
+        "path": "contracts.budget.cap_amount",
+        "kind": "float",
+        "preview": "10000.0"
+      },
+      {
+        "path": "candidate_plans[0].预算表",
+        "kind": "list",
+        "preview": "list[7]"
+      },
+      {
+        "path": "candidate_plans[1].预算表",
+        "kind": "list",
+        "preview": "list[6]"
+      },
+      {
+        "path": "candidate_plans[2].预算表",
+        "kind": "list",
+        "preview": "list[7]"
+      },
+      {
+        "path": "output_contract.properties.budget_verdict",
+        "kind": "dict",
+        "preview": "dict{type, desc}"
+      },
+      {
+        "path": "output_contract.properties.budget_total_cny",
+        "kind": "dict",
+        "preview": "dict{type}"
+      },
+      {
+        "path": "output_contract.properties.budget_delta_cny",
+        "kind": "dict",
+        "preview": "dict{type, desc}"
+      }
+    ],
+    "deadlines": [
+      {
+        "path": "contracts.booking_contract.deadline_hours",
+        "kind": "int",
+        "preview": "96"
+      }
+    ],
+    "domains": [
+      {
+        "path": "parameter_domains",
+        "kind": "list",
+        "preview": "list[4] ids=培养温度,培养时间,单孔加样量,离心转速"
+      },
+      {
+        "path": "output_contract.properties.domain_verdict",
+        "kind": "dict",
+        "preview": "dict{type, desc}"
+      }
+    ],
+    "plans": [
+      {
+        "path": "candidate_plans",
+        "kind": "list",
+        "preview": "list[3] ids=PLAN-V1,PLAN-V2,PLAN-V3"
+      },
+      {
+        "path": "candidate_plans[0].plan_id",
+        "kind": "str",
+        "preview": "PLAN-V1"
+      },
+      {
+        "path": "candidate_plans[1].plan_id",
+        "kind": "str",
+        "preview": "PLAN-V2"
+      },
+      {
+        "path": "candidate_plans[2].plan_id",
+        "kind": "str",
+        "preview": "PLAN-V3"
+      },
+      {
+        "path": "output_contract.properties.chosen_plan_id",
+        "kind": "dict",
+        "preview": "dict{type, desc}"
+      },
+      {
+        "path": "output_contract.properties.per_plan_summary",
+        "kind": "dict",
+        "preview": "dict{type}"
+      }
+    ],
+    "output_contract": [
+      {
+        "path": "output_contract",
+        "kind": "dict",
+        "preview": "dict{type, properties}",
+        "fields": [
+          "chosen_plan_id",
+          "chosen_reason",
+          "budget_verdict",
+          "budget_total_cny",
+          "budget_delta_cny",
+          "schedule_verdict",
+          "schedule_total_hours",
+          "schedule_delta_hours",
+          "domain_verdict",
+          "per_plan_summary",
+          "unverified_items"
+        ]
+      }
+    ]
+  },
+  "output_contract_fields": [
+    "chosen_plan_id",
+    "chosen_reason",
+    "budget_verdict",
+    "budget_total_cny",
+    "budget_delta_cny",
+    "schedule_verdict",
+    "schedule_total_hours",
+    "schedule_delta_hours",
+    "domain_verdict",
+    "per_plan_summary",
+    "unverified_items"
+  ],
+  "note": "所有 path 均为 case.json 内的真实 JSON 路径；模型必须按这些路径定位后再抽取。"
+}

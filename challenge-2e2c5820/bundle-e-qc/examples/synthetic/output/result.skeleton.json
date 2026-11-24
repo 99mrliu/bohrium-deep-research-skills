@@ -1,0 +1,24 @@
+{
+  "case_id": "SYNTH-QC-001",
+  "verdict_summary": null,
+  "per_plan_verdicts": null,
+  "resource_check": null,
+  "budget_estimate_cny": null,
+  "timeline_feasible": null,
+  "risks": null,
+  "recommended_plan_version": null,
+  "review_notes": null,
+  "status": "partial",
+  "sources": [],
+  "uncertainty": [
+    "骨架文件：实质审查尚未完成，全部契约字段待填充（步骤 0 脚手架）。"
+  ],
+  "change_record": [
+    {
+      "ts": "2026-11-24T22:29:23",
+      "actor": "parse_contract.py",
+      "action": "scaffold",
+      "detail": "契约脚手架：全部契约字段置 null，状态置 partial（诚实起点）。"
+    }
+  ]
+}

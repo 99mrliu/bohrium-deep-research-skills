@@ -1,0 +1,162 @@
+{
+  "case_id": "synthetic-protein-01",
+  "plan_version": "v2",
+  "items": [
+    {
+      "id": "eq-01",
+      "kind": "equipment",
+      "name": "高速冷冻离心机",
+      "normalized_name": "高速冷冻离心机",
+      "gating": true,
+      "needed_by": null,
+      "needed_window": {
+        "start": "2026-03-05",
+        "end": "2026-03-06"
+      },
+      "locator": "task.md §3.2",
+      "state": "已具备",
+      "matched_row": {
+        "id": "INV-EQ-01",
+        "name": "高速冷冻离心机",
+        "model": "CF-15K（虚构）",
+        "specs": {
+          "max_rpm": 15000,
+          "capacity_ml": 2000,
+          "min_temperature_c": 4
+        },
+        "location": "三楼公共平台",
+        "status": "available"
+      },
+      "spec_checks": [
+        {
+          "spec": "max_rpm",
+          "required": 14000,
+          "inventory": 15000,
+          "ok": true,
+          "detail": "max_rpm: 需求=14000 库存=15000（规则: 库存能力须 ≥ 需求值）→ 满足"
+        }
+      ],
+      "reason": "库存命中（高速冷冻离心机），全部规格兼容"
+    },
+    {
+      "id": "eq-02",
+      "kind": "equipment",
+      "name": "蛋白纯化系统",
+      "normalized_name": "蛋白纯化系统",
+      "gating": true,
+      "needed_by": null,
+      "needed_window": {
+        "start": "2026-03-15",
+        "end": "2026-03-17"
+      },
+      "locator": "task.md §3.2",
+      "state": "已具备",
+      "matched_row": {
+        "id": "INV-EQ-02",
+        "name": "蛋白纯化系统",
+        "model": "AKTA pure 25",
+        "specs": {
+          "max_flow_ml_min": 25
+        },
+        "location": "三楼公共平台",
+        "status": "available"
+      },
+      "spec_checks": [
+        {
+          "spec": "max_flow_ml_min",
+          "required": 10,
+          "inventory": 25,
+          "ok": true,
+          "detail": "max_flow_ml_min: 需求=10 库存=25（规则: 库存能力须 ≥ 需求值）→ 满足"
+        }
+      ],
+      "reason": "库存命中（蛋白纯化系统），全部规格兼容"
+    },
+    {
+      "id": "mat-01",
+      "kind": "material",
+      "name": "LB培养基",
+      "normalized_name": "LB培养基",
+      "gating": false,
+      "needed_by": "2026-03-04",
+      "needed_window": null,
+      "locator": "task.md §2.1",
+      "state": "已具备",
+      "matched_row": {
+        "id": "INV-MT-01",
+        "name": "LB培养基",
+        "quantity": 2000,
+        "unit": "mL"
+      },
+      "spec_checks": [
+        {
+          "spec": "quantity",
+          "required": 500,
+          "inventory": 2000,
+          "ok": true,
+          "detail": "quantity: 需求 500.0mL vs 库存 2000.0mL，余量 1500.0mL"
+        }
+      ],
+      "reason": "库存命中（LB培养基），全部规格兼容"
+    },
+    {
+      "id": "mat-02",
+      "kind": "material",
+      "name": "IPTG",
+      "normalized_name": "IPTG",
+      "gating": false,
+      "needed_by": "2026-03-05",
+      "needed_window": null,
+      "locator": "task.md §2.1",
+      "state": "已具备",
+      "matched_row": {
+        "id": "INV-MT-02",
+        "name": "IPTG",
+        "quantity": 50,
+        "unit": "g"
+      },
+      "spec_checks": [
+        {
+          "spec": "quantity",
+          "required": 10,
+          "inventory": 50,
+          "ok": true,
+          "detail": "quantity: 需求 10.0g vs 库存 50.0g，余量 40.0g"
+        }
+      ],
+      "reason": "库存命中（IPTG），全部规格兼容"
+    },
+    {
+      "id": "mat-03",
+      "kind": "material",
+      "name": "Ni-NTA 填料",
+      "normalized_name": "Ni-NTA 填料",
+      "gating": true,
+      "needed_by": "2026-03-01",
+      "needed_window": null,
+      "locator": "task.md §3.2",
+      "state": "需采购",
+      "matched_row": {
+        "item": "Ni-NTA 填料",
+        "vendor": "华科试剂（合成）",
+        "unit_price": 120,
+        "currency": "CNY",
+        "unit": "mL",
+        "lead_time_days": 30,
+        "order_by": "2026-02-01"
+      },
+      "spec_checks": [],
+      "reason": "采购合同命中: Ni-NTA 填料（供应商 华科试剂（合成），单价 120 CNY/mL，货期 30 天，下单日 2026-02-01；多份合同时取单价最低、其次货期最短）"
+    }
+  ],
+  "summary": {
+    "已具备": 4,
+    "可外协": 0,
+    "需采购": 1,
+    "不具备": 0,
+    "无法核验": 0
+  },
+  "gating_failures": [],
+  "gating_rule": "关键(gating)条目为 不具备/无法核验 ⇒ 该版本不可行（或需改方案）",
+  "notes": []
+}

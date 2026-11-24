@@ -1,0 +1,113 @@
+{
+  "_notice": "合成示例，非正式案例数据",
+  "case_id": "synthetic-protein-01",
+  "plan_version": "v1",
+  "extracted_by": "handcrafted-synthetic",
+  "equipment": [
+    {
+      "id": "eq-01",
+      "name": "高速冷冻离心机",
+      "raw_name": "20000rpm高速冷冻离心机",
+      "specs": {
+        "max_rpm": 20000
+      },
+      "needed_window": {
+        "start": "2026-03-05",
+        "end": "2026-03-06"
+      },
+      "gating": true,
+      "locator": "task.md §3.1",
+      "normalized_name": "高速冷冻离心机",
+      "alias_resolved": false,
+      "is_new_entity": true
+    },
+    {
+      "id": "eq-02",
+      "name": "蛋白纯化系统",
+      "raw_name": "蛋白纯化系统（AKTA）",
+      "specs": {
+        "max_flow_ml_min": 10
+      },
+      "needed_window": {
+        "start": "2026-03-12",
+        "end": "2026-03-15"
+      },
+      "gating": true,
+      "locator": "task.md §3.1",
+      "normalized_name": "蛋白纯化系统",
+      "alias_resolved": true,
+      "is_new_entity": false
+    }
+  ],
+  "materials": [
+    {
+      "id": "mat-01",
+      "name": "LB培养基",
+      "quantity": 500,
+      "unit": "mL",
+      "needed_by": "2026-03-04",
+      "gating": false,
+      "locator": "task.md §2.1",
+      "normalized_name": "LB培养基",
+      "alias_resolved": false,
+      "is_new_entity": true
+    },
+    {
+      "id": "mat-02",
+      "name": "IPTG",
+      "quantity": 10,
+      "unit": "g",
+      "needed_by": "2026-03-05",
+      "gating": false,
+      "locator": "task.md §2.1",
+      "normalized_name": "IPTG",
+      "alias_resolved": false,
+      "is_new_entity": true
+    },
+    {
+      "id": "mat-03",
+      "name": "Ni-NTA 填料",
+      "quantity": 100,
+      "unit": "mL",
+      "needed_by": "2026-03-08",
+      "gating": true,
+      "locator": "task.md §3.1",
+      "normalized_name": "Ni-NTA 填料",
+      "alias_resolved": true,
+      "is_new_entity": false
+    }
+  ],
+  "samples": [
+    {
+      "id": "sam-01",
+      "name": "人血清样本",
+      "quantity": 3,
+      "unit": "mL",
+      "storage": "-80°C",
+      "source": "附属医院合作",
+      "needs_ethics": true,
+      "gating": true,
+      "locator": "task.md §2.2",
+      "normalized_name": "人血清样本",
+      "alias_resolved": false,
+      "is_new_entity": true
+    }
+  ],
+  "booking_needs": [
+    {
+      "id": "bk-01",
+      "resource": "蛋白纯化系统",
+      "start": "2026-03-12",
+      "end": "2026-03-15",
+      "gating": true,
+      "locator": "task.md §3.1",
+      "normalized_resource": "蛋白纯化系统",
+      "alias_resolved": true,
+      "is_new_entity": false
+    }
+  ],
+  "normalization": {
+    "alias_table": "/Users/liuhengshen/Desktop/bhr_product/2e2c-five/bundle-c-resources/outputs/references/alias_table.json",
+    "rule": "casefold + 去分隔符 + 别名表; 未命中别名的标记 is_new_entity，绝不静默合并"
+  }
+}

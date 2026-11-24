@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>实验方案可行性审查报告 — SYNTH-QC-001</title>
+<style>
+body{font-family:-apple-system,"PingFang SC","Microsoft YaHei",sans-serif;margin:0;
+ background:#f6f8fa;color:#1f2328;line-height:1.65}
+.wrap{max-width:920px;margin:24px auto;background:#fff;padding:32px 40px;
+ border:1px solid #d0d7de;border-radius:8px}
+h1{border-bottom:2px solid #d0d7de;padding-bottom:.3em}
+h2{border-bottom:1px solid #d8dee4;padding-bottom:.2em;margin-top:1.6em}
+table{border-collapse:collapse;margin:12px 0;width:100%}
+th,td{border:1px solid #d0d7de;padding:6px 10px;text-align:left;font-size:14px}
+th{background:#f6f8fa}
+code{background:#eff1f3;padding:1px 5px;border-radius:4px;font-size:90%}
+blockquote{border-left:4px solid #d0d7de;margin:12px 0;padding:4px 14px;color:#57606a}
+.badge{display:inline-block;color:#fff;font-weight:600;padding:4px 14px;
+ border-radius:14px;font-size:14px}
+.banner{background:#fff8c5;border:1px solid #d4a72c;color:#7d4e00;padding:8px 14px;
+ border-radius:6px;font-weight:600;margin:12px 0}
+.toc{background:#f6f8fa;border:1px solid #d0d7de;border-radius:6px;padding:12px 18px;
+ margin:16px 0}
+.toc ul{margin:6px 0}.toc .l3{margin-left:18px;list-style:circle}
+footer{margin-top:32px;padding-top:12px;border-top:1px solid #d8dee4;color:#57606a;
+ font-size:13px}
+</style></head>
+<body><div class="wrap">
+<div class="banner">合成示例，非正式案例数据</div>
+<p><span class="badge" style="background:#1a7f37">审查完成</span></p>
+<p><strong>结论摘要：</strong>plan_v1 可行；plan_v2 有条件可行（压缩表征轮次并确认周末机时）；plan_v3 不可行。推荐 plan_v2。</p>
+<nav class="toc"><strong>目录</strong><ul>
+<li><a href="#sec-2">总体结论</a></li>
+<li><a href="#sec-3">分方案结论与理由</a></li>
+<li class="l3"><a href="#sec-4">plan_v1：可行</a></li>
+<li class="l3"><a href="#sec-5">plan_v2：有条件可行</a></li>
+<li class="l3"><a href="#sec-6">plan_v3：不可行</a></li>
+<li><a href="#sec-7">资源与预算核查</a></li>
+<li><a href="#sec-8">风险</a></li>
+<li><a href="#sec-9">证据锚点索引</a></li>
+<li><a href="#sec-10">交付与复核说明</a></li>
+</ul></nav>
+<h1 id="sec-1">实验方案可行性审查报告（合成示例）</h1>
+<blockquote>合成示例，非正式案例数据。本报告是 bundle-e-qc 的正例输入，用于演示<br>parse_contract → lint → validate → render → manifest → selfcheck 全链路。</blockquote>
+<h2 id="sec-2">总体结论</h2>
+<ul><li>plan_v1：可行。理由：退火温度 120°C 落在设备稳定控温区间，工艺窗口宽（依据 [L12]，（第2节））。</li><li>plan_v2：有条件可行。条件如下（理由概述见 [L27]）：</li></ul>
+<ol><li>将 XRD 表征由 4 轮压缩为 2 轮，使表征机时由 36 小时降至 30 小时，不超过合同上限 32 小时（依据 [L27]）。</li><li>建议进一步确认手套箱周末时段可预订后，再锁定第 3 周排期；若不可预订则整体顺延一周（依据 [L32]，（第3节））。</li></ol>
+<ul><li>plan_v3：不可行。理由：单场预算 26800 元与机时 44 小时均超过合同上限（依据 [L31]，（第3节））。</li></ul>
+<p>综合理由：三版方案中 plan_v2 在满足科学目标的前提下资源占用可控，推荐作为执行版本；分方案结论分布如下表。</p>
+<table><tr><th>方案</th><th>结论</th><th>依据</th></tr><tr><td>plan_v1</td><td>可行</td><td>理由：[L12]（第2节）工艺窗口与设备精度匹配</td></tr><tr><td>plan_v2</td><td>有条件可行</td><td>条件：压缩表征轮次并确认周末机时（[L27]、[L32]）</td></tr><tr><td>plan_v3</td><td>不可行</td><td>理由：[L31]（第3节）预算与机时双超合同上限</td></tr></table>
+<h2 id="sec-3">分方案结论与理由</h2>
+<h3 id="sec-4">plan_v1：可行</h3>
+<p>理由：方案一采用 120°C 常规退火；材料 M1 指出 110-130°C 区间薄膜 PL 强度稳定（[L12]），<br>且（第2节）给出的热板温控精度 ±1°C 足以覆盖该窗口；单批次表征机时约 22 小时（[L14]），<br>低于合同上限。</p>
+<p>风险：表征数据量偏少，统计说服力一般；该风险不改变上述结论，已在风险清单登记。</p>
+<h3 id="sec-5">plan_v2：有条件可行</h3>
+<p>理由：方案二采用两段式退火（[L25]），材料 M2 显示器件效率中位数提升约 8%（[L27]），<br>但完整表征需 36 小时机时，超出合同上限 32 小时（（第3节），[L30]），须按下列条件压缩后方可执行。</p>
+<p>条件：</p>
+<ol><li>将 XRD 表征由 4 轮压缩为 2 轮，使机时由 36 小时降至 30 小时（依据 [L27]）。</li><li>建议进一步确认手套箱周末时段可预订后，再锁定第 3 周排期；若不可预订则顺延一周（依据 [L32]）。</li></ol>
+<p>满足上述两条条件后，plan_v2 的预算核算为 18600 元、机时 30 小时，均回到合同上限以内（核算见下节）。</p>
+<h3 id="sec-6">plan_v3：不可行</h3>
+<p>理由：方案三采用闪蒸退火加原位 XRD 联用，[L31] 指出其单场预算 26800 元、机时需求 44 小时；<br>而（第3节）合同预算上限为 20000 元、机时上限 32 小时（[L30]），两项均超上限且无可压缩项。</p>
+<h2 id="sec-7">资源与预算核查</h2>
+<p>预算按组织方合同单价真实核算（依据 [L28]）：手套箱 30h x 500 元/h = 15000 元，<br>XRD 8h x 450 元/h = 3600 元，合计 15000 + 3600 = 18600 元，低于预算上限 20000 元。</p>
+<table><tr><th>项目</th><th>plan_v1</th><th>plan_v2（压缩后）</th><th>plan_v3</th></tr><tr><td>预算（元）</td><td>12400</td><td>18600</td><td>26800</td></tr><tr><td>表征机时（小时）</td><td>22</td><td>30</td><td>44</td></tr><tr><td>是否满足合同上限</td><td>满足</td><td>满足（附条件）</td><td>不满足</td></tr></table>
+<h2 id="sec-8">风险</h2>
+<ul><li>风险一：手套箱周末时段未经确认，plan_v2 排期可能顺延一周（已被条件 2 覆盖，依据 [L32]）。</li><li>风险二：表征轮次压缩后统计功效下降，须在正式报告中声明数据局限（依据 [L27]）。</li></ul>
+<h2 id="sec-9">证据锚点索引</h2>
+<table><tr><th>锚点</th><th>出处</th><th>支撑内容</th></tr><tr><td>[L12]</td><td>材料 M1</td><td>110-130°C 工艺窗口内 PL 强度稳定</td></tr><tr><td>[L14]</td><td>材料 M1</td><td>常规退火单批次表征机时约 22 小时</td></tr><tr><td>[L27]</td><td>材料 M2</td><td>两段式退火效率提升约 8%，机时 36h→30h</td></tr><tr><td>[L30]</td><td>材料 M3（第3节）</td><td>合同预算上限 20000 元、机时上限 32 小时</td></tr><tr><td>[L31]</td><td>材料 M3</td><td>闪蒸退火单场预算 26800 元、机时 44 小时</td></tr><tr><td>[L32]</td><td>材料 M3</td><td>周末时段须提前 5 个工作日确认预订</td></tr></table>
+<h2 id="sec-10">交付与复核说明</h2>
+<p>本报告对应的机器可读结论见 result.json；全部输入输出文件的 SHA-256 见<br>manifest.json / manifest.md，第三方可按 manifest.md 中的命令行重跑并核验字节一致性；<br>质控门结果见 qc_report.md。</p>
+<h2 id="anchors-auto">证据锚点索引（自动提取）</h2><table><tr><th>锚点</th><th>出现次数</th><th>首次行号</th></tr><tr><td><code>[L12]</code></td><td>4</td><td>第 8 行</td></tr><tr><td><code>[L14]</code></td><td>2</td><td>第 27 行</td></tr><tr><td><code>[L25]</code></td><td>1</td><td>第 34 行</td></tr><tr><td><code>[L27]</code></td><td>7</td><td>第 9 行</td></tr><tr><td><code>[L28]</code></td><td>1</td><td>第 51 行</td></tr><tr><td><code>[L30]</code></td><td>3</td><td>第 35 行</td></tr><tr><td><code>[L31]</code></td><td>4</td><td>第 12 行</td></tr><tr><td><code>[L32]</code></td><td>5</td><td>第 11 行</td></tr><tr><td><code>（第2节）</code></td><td>3</td><td>第 8 行</td></tr><tr><td><code>（第3节）</code></td><td>6</td><td>第 11 行</td></tr></table>
+<footer>case_id：<code>SYNTH-QC-001</code> ｜ 生成时间：2026-11-24T22:29:25 ｜ render_report.py（stdlib-only，无外部依赖）</footer>
+</div></body></html>

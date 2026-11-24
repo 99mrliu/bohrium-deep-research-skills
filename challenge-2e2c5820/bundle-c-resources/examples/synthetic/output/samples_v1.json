@@ -1,0 +1,68 @@
+{
+  "case_id": "synthetic-protein-01",
+  "plan_version": "v1",
+  "verdicts": [
+    {
+      "id": "sam-01",
+      "name": "人血清样本",
+      "gating": true,
+      "locator": "task.md §2.2",
+      "checks": {
+        "source": {
+          "required": "附属医院合作",
+          "registry": "附属医院合作",
+          "ok": true
+        },
+        "quantity": {
+          "demand": 3.0,
+          "available": 5.0,
+          "remaining": 2.0,
+          "unit": "mL",
+          "ok": true,
+          "detail": "可用 5.0 - 需求 3.0 = 余量 2.0 mL"
+        },
+        "storage": {
+          "required": "-80°C",
+          "registry": "-20°C",
+          "required_c": -80.0,
+          "registry_c": -20.0,
+          "ok": false,
+          "detail": "台账 -20.0°C > 需求 -80.0°C（规则: 台账温度须 ≤ 需求温度）"
+        },
+        "ethics": {
+          "registry": "pending",
+          "ok": false
+        }
+      },
+      "issues": [
+        "存储温度不满足: 台账 -20°C（-20.0°C）高于需求 -80°C（-80.0°C）"
+      ],
+      "confirmation_items": [
+        {
+          "sample": "人血清样本",
+          "ethics_status": "pending",
+          "action": "伦理状态为 pending，属阻断性确认项: 须取得批件/完成确认后方可使用，绝不视为已批准"
+        }
+      ],
+      "matched_row": {
+        "id": "REG-S-01",
+        "name": "人血清样本",
+        "quantity": 5,
+        "unit": "mL",
+        "storage": "-20°C",
+        "source": "附属医院合作",
+        "ethics_status": "pending"
+      },
+      "verdict": "不满足"
+    }
+  ],
+  "confirmation_items": [
+    {
+      "sample": "人血清样本",
+      "ethics_status": "pending",
+      "action": "伦理状态为 pending，属阻断性确认项: 须取得批件/完成确认后方可使用，绝不视为已批准"
+    }
+  ],
+  "ethics_rule": "ethics_status ∈ {approved, pending, none}; pending/none/未知 → 阻断性确认项，绝不视为已批准",
+  "notes": []
+}

@@ -1,0 +1,63 @@
+{
+  "case_id": "synthetic-protein-01",
+  "plan_version": "v3",
+  "booking_windows": [
+    {
+      "need_id": "bk-01",
+      "resource": "蛋白纯化系统",
+      "gating": true,
+      "locator": "task.md §3.3 排期表",
+      "plan_window": [
+        "2026-03-15",
+        "2026-03-17"
+      ],
+      "conflicts": [],
+      "verdict": "无冲突"
+    }
+  ],
+  "lead_times": [
+    {
+      "material": "Ni-NTA 填料",
+      "gating": true,
+      "needed_by": "2026-03-10",
+      "contract": {
+        "item": "Ni-NTA 填料",
+        "vendor": "华科试剂（合成）",
+        "unit_price": 120,
+        "currency": "CNY",
+        "unit": "mL",
+        "lead_time_days": 30,
+        "order_by": "2026-02-01"
+      },
+      "locator": "task.md §3.3",
+      "order_by": "2026-02-01",
+      "lead_time_days": 30,
+      "arrival": "2026-03-03",
+      "slack_days": 7,
+      "verdict": "赶得上"
+    },
+    {
+      "material": "卡那霉素",
+      "gating": false,
+      "needed_by": "2026-03-05",
+      "contract": {
+        "item": "卡那霉素",
+        "vendor": "华科试剂（合成）",
+        "unit_price": 80,
+        "currency": "CNY",
+        "unit": "g",
+        "lead_time_days": 5,
+        "order_by": "2026-02-01"
+      },
+      "locator": "task.md §3.3",
+      "order_by": "2026-02-01",
+      "lead_time_days": 5,
+      "arrival": "2026-02-06",
+      "slack_days": 27,
+      "verdict": "赶得上"
+    }
+  ],
+  "conflict_count": 0,
+  "late_count": 0,
+  "notes": []
+}

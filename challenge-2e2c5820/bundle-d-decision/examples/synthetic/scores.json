@@ -1,0 +1,38 @@
+{
+  "_声明": "合成示例，非正式案例数据。分数为手工构造，用于演示敏感性分析：基准排名 v1>v2，但二者仅差 0.05，在“假设与变量 +20%”情景下会发生排名翻转。",
+  "plans": {
+    "v1": {
+      "dimensions": {
+        "hypothesis_variables": {"score": 3, "evidence": {"locator": "plans[0].sections.假设与变量", "quote": "本版以神经母细胞瘤细胞系 Neuro-2a 的糖皮质激素处理模型加公开转录组数据集 GSE102556 进行间接验证，不直接检验整体动物层面的因果链。"}},
+        "controls": {"score": 3, "evidence": {"locator": "plans[0].sections.对照组", "quote": "细胞实验设载体对照（0.1% DMSO）与阳性对照（地塞米松 1 μM）"}},
+        "equipment_materials": {"score": 4, "evidence": {"locator": "plans[0].sections.设备材料", "quote": "使用本实验室现有 CO2 培养箱与倒置荧光显微镜；Neuro-2a 细胞系库存 3 管（2026-08 冻存）"}},
+        "time_cost": {"score": 4, "evidence": {"locator": "plans[0].sections.时间成本", "quote": "细胞实验 3 周，数据集重分析 2 周，合计 5 周；试剂耗材约 0.4 万元，无设备机时费。"}},
+        "parameter_ranges": {"score": 3, "evidence": {"locator": "plans[0].sections.参数范围", "quote": "糖皮质激素处理浓度 0.1–10 μM（在细胞系文献常用域内）；处理时长 24–48 h；复孔数 n=3。"}},
+        "risk_anomaly": {"score": 3, "evidence": {"locator": "plans[0].sections.风险与异常", "quote": "主要风险为公开数据集许可限制与细胞系污染；未给出设备故障的降级路径。"}},
+        "ethics_safety": {"score": 4, "evidence": {"locator": "plans[0].sections.伦理与安全", "quote": "不涉及活体动物与人体样本；涉及多聚甲醛（4% PFA）固定液等危化品，需按机构 EHS 要求备案。"}}
+      }
+    },
+    "v2": {
+      "dimensions": {
+        "hypothesis_variables": {"score": 4, "evidence": {"locator": "plans[1].sections.假设与变量", "quote": "自变量为应激暴露，因变量为社交互动时间、理毛时长与活动度，并预设易感和不易感亚组划分标准。"}},
+        "controls": {"score": 4, "evidence": {"locator": "plans[1].sections.对照组", "quote": "行为学评分由两名不知分组信息的观察者独立完成。"}},
+        "equipment_materials": {"score": 3, "evidence": {"locator": "plans[1].sections.设备材料", "quote": "使用共享平台的小动物行为学视频跟踪系统（EthoVision 兼容），合同含每周 20 小时机时"}},
+        "time_cost": {"score": 3, "evidence": {"locator": "plans[1].sections.时间成本", "quote": "机时费按合同价 80 元/小时、共约 0.96 万元；但未计入任何伦理审批等待时间。"}},
+        "parameter_ranges": {"score": 4, "evidence": {"locator": "plans[1].sections.参数范围", "quote": "CSDS 单次接触时长 5–10 min/天、连续 10 天；旷场测试 10 min"}},
+        "risk_anomaly": {"score": 3, "evidence": {"locator": "plans[1].sections.风险与异常", "quote": "识别了设备档期与观察者一致性风险；未给出样本量不足时的降级路径。"}},
+        "ethics_safety": {"score": 2, "evidence": {"locator": "plans[1].sections.伦理与安全", "quote": "方案写明使用平台既有小鼠资源，但未说明是否涉及新增活体动物实验操作，动物伦理审批状态未确认。"}}
+      }
+    },
+    "v3": {
+      "dimensions": {
+        "hypothesis_variables": {"score": 4, "evidence": {"locator": "plans[2].sections.假设与变量", "quote": "统计上预设相关分析与组间比较两条检验链。"}},
+        "controls": {"score": 4, "evidence": {"locator": "plans[2].sections.对照组", "quote": "免疫荧光染色设 omission 对照（去一抗）与已知阳性脑片对照。"}},
+        "equipment_materials": {"score": 2, "evidence": {"locator": "plans[2].sections.设备材料", "quote": "组织学部分需使用组织学平台冰冻切片机（合同档期每周 8 小时）与荧光显微镜；需采购 c-Fos 一抗与 4% 多聚甲醛固定液。"}},
+        "time_cost": {"score": 2, "evidence": {"locator": "plans[2].sections.时间成本", "quote": "时间表注明 IACUC 审批需 4–8 周但未纳入关键路径。"}},
+        "parameter_ranges": {"score": 4, "evidence": {"locator": "plans[2].sections.参数范围", "quote": "灌流固定用 4% PFA；切片厚度 30 μm；每组计划 n=12，考虑了 10% 损耗。"}},
+        "risk_anomaly": {"score": 2, "evidence": {"locator": "plans[2].sections.风险与异常", "quote": "识别动物损耗、抗体批次差异、染色失败等风险，并提出部分降级思路，但缺转人工节点的明确条件。"}},
+        "ethics_safety": {"score": 2, "evidence": {"locator": "plans[2].sections.伦理与安全", "quote": "方案称伦理材料在准备中，尚未提交 IACUC。"}}
+      }
+    }
+  }
+}

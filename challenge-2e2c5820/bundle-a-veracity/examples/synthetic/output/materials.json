@@ -1,0 +1,38 @@
+{
+  "materials": [
+    {
+      "source_path": "organizer_contract",
+      "content": {
+        "label": "组织方资源与价格合同（合成示例，非正式案例数据）",
+        "budget_cap_yuan": 5000,
+        "booking": {
+          "instrument": "ABI 7500 荧光定量 PCR 仪",
+          "available_window": "第 1-4 周，每周可约 20 机时"
+        },
+        "price_list": {
+          "qPCR 预混液": "1200 元/盒",
+          "八联管": "180 元/包"
+        },
+        "biosafety_level_allowed": "BSL-2"
+      }
+    },
+    {
+      "source_path": "parameter_domain",
+      "content": {
+        "label": "参数域（合成示例，非正式案例数据）",
+        "annealing_temperature_C": [
+          55,
+          65
+        ],
+        "cycles": [
+          30,
+          45
+        ],
+        "sample_volume_uL": [
+          100,
+          400
+        ]
+      }
+    }
+  ]
+}

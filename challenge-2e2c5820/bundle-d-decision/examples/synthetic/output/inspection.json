@@ -1,0 +1,152 @@
+{
+  "case_id": "synthetic-csds-001",
+  "output_contract_fields": [
+    "版本排序",
+    "风险登记表",
+    "伦理审批路径",
+    "条件清单",
+    "总体裁决"
+  ],
+  "candidates": {
+    "plans": [
+      {
+        "path": "$.plans",
+        "preview": "[{\"version_id\": \"v1\", \"标题\": \"v1 离体细胞系+公开数据集替代版\", \"sections\": {\"假设与变量\": \"假设：CSDS 诱导的社交回避与海马齿状回神经元活性下降相关。自变量为应激暴露（是/否），因变量为社交互动时间与 c-Fos 阳性细胞比例；本版以神经母细胞瘤细胞系 Neuro…"
+      },
+      {
+        "path": "$.plans[0].version_id",
+        "preview": "\"v1\""
+      },
+      {
+        "path": "$.plans[1].version_id",
+        "preview": "\"v2\""
+      },
+      {
+        "path": "$.plans[2].version_id",
+        "preview": "\"v3\""
+      },
+      {
+        "path": "$.output_contract.版本排序",
+        "preview": "\"各候选版本的加权总分、排名与敏感性结论\""
+      }
+    ],
+    "contracts": [
+      {
+        "path": "$.contracts",
+        "preview": "{\"行为学平台预约合同\": {\"设备\": \"小动物行为学视频跟踪系统（EthoVision 兼容）\", \"机时\": \"每周 20 小时，需提前 7 天预约\", \"价格\": \"80 元/小时\"}, \"组织学平台预约合同\": {\"设备\": \"冰冻切片机 + 荧光显微镜\", \"机时\": \"每周 8 小时，需提前 14 天预约…"
+      },
+      {
+        "path": "$.contracts.行为学平台预约合同",
+        "preview": "{\"设备\": \"小动物行为学视频跟踪系统（EthoVision 兼容）\", \"机时\": \"每周 20 小时，需提前 7 天预约\", \"价格\": \"80 元/小时\"}"
+      },
+      {
+        "path": "$.contracts.行为学平台预约合同.价格",
+        "preview": "\"80 元/小时\""
+      },
+      {
+        "path": "$.contracts.组织学平台预约合同",
+        "preview": "{\"设备\": \"冰冻切片机 + 荧光显微镜\", \"机时\": \"每周 8 小时，需提前 14 天预约\", \"价格\": \"120 元/小时\"}"
+      },
+      {
+        "path": "$.contracts.组织学平台预约合同.价格",
+        "preview": "\"120 元/小时\""
+      },
+      {
+        "path": "$.contracts.试剂报价单",
+        "preview": "{\"c-Fos 一抗\": \"3800 元/支（货期 2–3 周）\", \"4% 多聚甲醛固定液\": \"260 元/瓶（危化品，需备案后采购）\"}"
+      }
+    ],
+    "ethics": [
+      {
+        "path": "$.plans[0].sections.伦理与安全",
+        "preview": "\"不涉及活体动物与人体样本；涉及多聚甲醛（4% PFA）固定液等危化品，需按机构 EHS 要求备案。\""
+      },
+      {
+        "path": "$.plans[1].sections.伦理与安全",
+        "preview": "\"方案写明使用平台既有小鼠资源，但未说明是否涉及新增活体动物实验操作，动物伦理审批状态未确认。\""
+      },
+      {
+        "path": "$.plans[2].sections.伦理与安全",
+        "preview": "\"明确涉及 C57BL/6J 小鼠活体实验与 4% 多聚甲醛等危化品；方案称伦理材料在准备中，尚未提交 IACUC。\""
+      },
+      {
+        "path": "$.contracts.动物房协议",
+        "preview": "{\"C57BL/6J\": \"45 元/只，饲养费 1.2 元/只/天\", \"要求\": \"凭有效 IACUC 批件方可订购与入笼\"}"
+      },
+      {
+        "path": "$.ethics_involvement_hint",
+        "preview": "{\"v1\": {\"动物实验\": false, \"人体样本\": false, \"危险试剂\": true, \"个人数据\": false}, \"v2\": {\"动物实验\": \"undetermined\", \"人体样本\": false, \"危险试剂\": false, \"个人数据\": false}, \"v3\": {\"动物实验\": …"
+      },
+      {
+        "path": "$.ethics_involvement_hint.v1.动物实验",
+        "preview": "false"
+      },
+      {
+        "path": "$.ethics_involvement_hint.v1.人体样本",
+        "preview": "false"
+      },
+      {
+        "path": "$.ethics_involvement_hint.v1.危险试剂",
+        "preview": "true"
+      },
+      {
+        "path": "$.ethics_involvement_hint.v1.个人数据",
+        "preview": "false"
+      },
+      {
+        "path": "$.ethics_involvement_hint.v2.动物实验",
+        "preview": "\"undetermined\""
+      },
+      {
+        "path": "$.ethics_involvement_hint.v2.人体样本",
+        "preview": "false"
+      },
+      {
+        "path": "$.ethics_involvement_hint.v2.危险试剂",
+        "preview": "false"
+      },
+      {
+        "path": "$.ethics_involvement_hint.v2.个人数据",
+        "preview": "false"
+      },
+      {
+        "path": "$.ethics_involvement_hint.v3.动物实验",
+        "preview": "true"
+      },
+      {
+        "path": "$.ethics_involvement_hint.v3.人体样本",
+        "preview": "false"
+      },
+      {
+        "path": "$.ethics_involvement_hint.v3.危险试剂",
+        "preview": "true"
+      },
+      {
+        "path": "$.ethics_involvement_hint.v3.个人数据",
+        "preview": "false"
+      },
+      {
+        "path": "$.output_contract.伦理审批路径",
+        "preview": "\"逐版本的伦理/安全审批要求与确认项\""
+      }
+    ],
+    "output_contract": [
+      {
+        "path": "$.output_contract",
+        "preview": "{\"版本排序\": \"各候选版本的加权总分、排名与敏感性结论\", \"风险登记表\": \"全案风险清单（5 字段齐全，按 severity 排序）\", \"伦理审批路径\": \"逐版本的伦理/安全审批要求与确认项\", \"条件清单\": \"逐版裁决与可执行条件（责任方/验证方法/阻断性）\", \"总体裁决\": \"全案裁决（可行/有条件…"
+      }
+    ]
+  },
+  "top_level_keys": [
+    "_声明",
+    "case_id",
+    "课题",
+    "背景",
+    "plans",
+    "contracts",
+    "有限参数域",
+    "ethics_involvement_hint",
+    "output_contract"
+  ],
+  "note": "启发式探测结果，字段名不固定，使用前请人工核对命中路径。"
+}

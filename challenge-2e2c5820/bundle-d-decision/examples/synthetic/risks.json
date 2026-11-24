@@ -1,0 +1,98 @@
+{
+  "_声明": "合成示例，非正式案例数据。其中第 1、2 条的触发信号为有意构造的近似重复，用于演示 lint 警告。",
+  "plan_ids": [
+    "v1",
+    "v2",
+    "v3"
+  ],
+  "risks": [
+    {
+      "risk": "行为学视频跟踪系统故障",
+      "category": "设备故障",
+      "trigger_signal": "小动物行为学视频采集设备故障导致采集中断",
+      "consequence": "v2/v3 行为学数据采集中断，6–8 周时间表整体后移，机时费损失",
+      "degradation_path": "切换平台备用采集站 → 改用人工录像+离线盲评 → 缩减行为学测试项目数，保住社交互动主测试",
+      "escalation": "替代采集方式的帧率/分辨率与原系统不一致时，须 PI 确认数据可比性后方可继续",
+      "plan_locator": "plans[2](v3).sections.设备材料",
+      "likelihood": 3,
+      "impact": 4
+    },
+    {
+      "risk": "共享平台行为学设备档期被取消",
+      "category": "设备故障",
+      "trigger_signal": "小动物行为学视频采集设备发生故障导致采集中断",
+      "consequence": "已预约机时作废，重新排队至少 2 周，CSDS 时间窗错过需重做范式",
+      "degradation_path": "启用合同外应急档期条款 → 改为夜间/周末时段 → 分批次进行行为学测试",
+      "escalation": "重排档期导致 CSDS 与行为学测试间隔超过 72 h 时转 PI 决定是否重启范式",
+      "plan_locator": "plans[1](v2).sections.设备材料",
+      "likelihood": 2,
+      "impact": 4
+    },
+    {
+      "risk": "多聚甲醛固定液批次变更",
+      "category": "材料批次",
+      "trigger_signal": "固定液批次号变更且 COA 指标偏离历史批次",
+      "consequence": "组织固定质量下降，c-Fos 免疫荧光信噪比降低，组织学数据不可用",
+      "degradation_path": "先用废弃脑片做小批量预实验验证新批次 → 更换备选供应商同规格产品 → 延后灌流节点",
+      "escalation": "备选批次固定时间需超出方案窗口时，转 PI 与组织学平台共同确认",
+      "plan_locator": "plans[2](v3).sections.设备材料",
+      "likelihood": 2,
+      "impact": 3
+    },
+    {
+      "risk": "小鼠数量不足以支撑分组",
+      "category": "样本量不足",
+      "trigger_signal": "到动物数量低于分组需求或应激期损耗超过 10%",
+      "consequence": "每组 n=12 无法达到，主要终点统计功效跌破 80%",
+      "degradation_path": "延长入组窗口补购动物 → 合并批次并将批次作为协变量 → 缩减次要终点（CA3 分区分析），保住齿状回主终点",
+      "escalation": "主终点功效跌破 80% 时是否继续由 PI 决定，禁止自动缩小组别继续",
+      "plan_locator": "plans[2](v3).sections.参数范围",
+      "likelihood": 3,
+      "impact": 4
+    },
+    {
+      "risk": "CSDS 应激参数越界",
+      "category": "参数越界",
+      "trigger_signal": "单次应激接触时长超出有限域 5–10 min 或伦理批件允许上限",
+      "consequence": "违反伦理批件，动物福利事件，批件可能被暂停",
+      "degradation_path": "立即回退到域内最近可行点（5 min）→ 以连续天数补偿强度 → 记录越界点但不用于结论",
+      "escalation": "任何越界发生即停止当次实验并转 PI 与 IACUC 报告，无自动继续选项",
+      "plan_locator": "plans[2](v3).sections.参数范围",
+      "likelihood": 2,
+      "impact": 5
+    },
+    {
+      "risk": "IACUC 审批超期或补件",
+      "category": "伦理安全",
+      "trigger_signal": "提交后 4 周内未获批复或被要求补充材料",
+      "consequence": "v3 动物采购与入笼被冻结（动物房协议要求凭有效批件订购），整体延后 4–8 周",
+      "degradation_path": "先执行不依赖批件的离体/数据分析部分（v1 内容）→ 动物实验整体顺延 → 重排机时合同",
+      "escalation": "审批状态任何变化立即转 PI；补件要求由 PI 与机构伦理办公室对接",
+      "plan_locator": "plans[2](v3).sections.伦理与安全",
+      "likelihood": 3,
+      "impact": 4
+    },
+    {
+      "risk": "v2 动物涉及状态判定未确认",
+      "category": "伦理安全",
+      "trigger_signal": "平台无法书面确认既有小鼠资源是否需新增伦理审批",
+      "consequence": "v2 可能在无批件状态下构成活体动物实验，存在合规叫停风险",
+      "degradation_path": "确认前 v2 全部动物相关操作冻结 → 若确认涉及，并入 IACUC 申请 → 若确认不涉及，取得书面豁免后解冻",
+      "escalation": "确认项只能由机构动物设施主管/伦理办公室书面关闭，任何口头答复不生效",
+      "plan_locator": "plans[1](v2).sections.伦理与安全",
+      "likelihood": 3,
+      "impact": 3
+    },
+    {
+      "risk": "公开数据集使用条款限制",
+      "category": "其他",
+      "trigger_signal": "GSE102556 许可条款禁止用于衍生发表或要求额外授权",
+      "consequence": "v1 的数据集重分析结果不可发表，离体版结论支撑减弱",
+      "degradation_path": "改用其他许可兼容的公开应激转录组数据集 → 仅保留细胞实验结论并下调外推强度",
+      "escalation": "许可解释存在歧义时转机构成果转化/法务部门确认",
+      "plan_locator": "plans[0](v1).sections.设备材料",
+      "likelihood": 2,
+      "impact": 3
+    }
+  ]
+}

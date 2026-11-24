@@ -1,0 +1,54 @@
+{
+  "case_id": "SYNTH-QC-001",
+  "title": "钙钛矿薄膜退火工艺优化实验方案可行性评估（合成示例）",
+  "notice": "合成示例，非正式案例数据。仅用于演示 bundle-e-qc 质控流水线，字段名与数值均为虚构。",
+  "background": {
+    "goal": "在三版候选退火工艺方案中评估可行性并推荐一版执行",
+    "deadline_weeks": 4
+  },
+  "materials": [
+    {
+      "id": "M1",
+      "kind": "paper_excerpt",
+      "title": "常规热退火工艺窗口（节选，带行号定位符）",
+      "content": "[L10] 实验目的：评估甲脒铅碘钙钛矿薄膜的退火温度窗口。\n[L11] 第1节 样品制备：旋涂法制膜，转速 4000 rpm。\n[L12] 退火温度在 110-130°C 区间时，薄膜 PL 强度保持稳定；超过 135°C 后出现明显分解。\n[L13] 第2节 设备参数：热板温控精度 ±1°C，稳定控温范围室温至 200°C。\n[L14] 常规退火单批次表征机时约 22 小时。"
+    },
+    {
+      "id": "M2",
+      "kind": "paper_excerpt",
+      "title": "两段式退火工艺（节选，带行号定位符）",
+      "content": "[L25] 第1节 工艺描述：100°C 预退火 10 min 后 150°C 主退火 5 min。\n[L26] 两段式退火对环境湿度敏感，需在手套箱内完成。\n[L27] 与常规退火相比，两段式退火器件效率中位数提升约 8%；完整表征（4 轮 XRD）需 36 小时机时，压缩为 2 轮后需 30 小时。\n[L28] 单场预算核算：手套箱 30h x 500 元/h = 15000 元，XRD 8h x 450 元/h = 3600 元，合计 18600 元。"
+    },
+    {
+      "id": "M3",
+      "kind": "contract_excerpt",
+      "title": "组织方资源/价格/预订合同（节选）",
+      "content": "[L30] 第3节 资源与价格合同：本批次合同预算上限 20000 元，表征机时上限 32 小时。\n[L31] 闪蒸退火+原位 XRD 联用单场实验预算 26800 元、机时需求 44 小时，均超合同上限。\n[L32] 手套箱工作日时段可随时预订；周末时段须提前 5 个工作日确认，未确认前不得锁定排期。"
+    }
+  ],
+  "candidate_plans": [
+    {"plan_id": "plan_v1", "version": "v1", "summary": "常规 120°C 热退火，工艺窗口宽，数据量偏少"},
+    {"plan_id": "plan_v2", "version": "v2", "summary": "两段式退火，效率更高但表征机时超出合同上限，需压缩"},
+    {"plan_id": "plan_v3", "version": "v3", "summary": "闪蒸退火+原位 XRD 联用，数据最全但预算与机时双超"}
+  ],
+  "parameter_domains": {
+    "anneal_temp_c": [100, 200],
+    "xrd_rounds": [1, 4],
+    "budget_cny_max": 20000,
+    "machine_hours_max": 32
+  },
+  "output_contract": {
+    "type": "object",
+    "required": ["verdict_summary", "per_plan_verdicts", "resource_check", "budget_estimate_cny", "timeline_feasible", "risks", "recommended_plan_version"],
+    "properties": {
+      "verdict_summary": {"type": "string", "description": "总体结论摘要"},
+      "per_plan_verdicts": {"type": "array", "items": {"type": "object"}, "description": "每个方案的结论、条件清单"},
+      "resource_check": {"type": "object", "description": "资源/机时/合同核查明细"},
+      "budget_estimate_cny": {"type": "number", "description": "推荐方案预算核算（元）"},
+      "timeline_feasible": {"type": "boolean", "description": "排期是否可行"},
+      "risks": {"type": "array", "items": {"type": "string"}, "description": "风险清单"},
+      "recommended_plan_version": {"type": "string", "description": "推荐执行的 plan_id"},
+      "review_notes": {"type": "string", "description": "备注（可选）"}
+    }
+  }
+}

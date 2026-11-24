@@ -1,0 +1,151 @@
+{
+  "case_id": "synthetic-protein-01",
+  "candidates": {
+    "plans": [
+      {
+        "path": "$.plans",
+        "type": "list",
+        "length": 3
+      }
+    ],
+    "inventory": [
+      {
+        "path": "$.inventory",
+        "type": "dict",
+        "length": 2
+      },
+      {
+        "path": "$.inventory.equipment",
+        "type": "list",
+        "length": 5
+      },
+      {
+        "path": "$.inventory.materials",
+        "type": "list",
+        "length": 2
+      }
+    ],
+    "contracts": [
+      {
+        "path": "$.contracts",
+        "type": "dict",
+        "length": 2
+      },
+      {
+        "path": "$.contracts.supplier_outsource",
+        "type": "list",
+        "length": 1
+      },
+      {
+        "path": "$.contracts.supplier_outsource[0].vendor",
+        "type": "str",
+        "length": null
+      },
+      {
+        "path": "$.contracts.supplier_outsource[0].unit_price",
+        "type": "int",
+        "length": null
+      },
+      {
+        "path": "$.contracts.purchase[0].vendor",
+        "type": "str",
+        "length": null
+      },
+      {
+        "path": "$.contracts.purchase[0].unit_price",
+        "type": "int",
+        "length": null
+      },
+      {
+        "path": "$.contracts.purchase[1].vendor",
+        "type": "str",
+        "length": null
+      },
+      {
+        "path": "$.contracts.purchase[1].unit_price",
+        "type": "int",
+        "length": null
+      },
+      {
+        "path": "$.contracts.purchase[2].vendor",
+        "type": "str",
+        "length": null
+      },
+      {
+        "path": "$.contracts.purchase[2].unit_price",
+        "type": "int",
+        "length": null
+      },
+      {
+        "path": "$.output_contract",
+        "type": "dict",
+        "length": 6
+      }
+    ],
+    "booking": [
+      {
+        "path": "$.booking_calendar",
+        "type": "list",
+        "length": 1
+      },
+      {
+        "path": "$.output_contract.booking_conflicts",
+        "type": "str",
+        "length": null
+      }
+    ],
+    "samples": [
+      {
+        "path": "$.sample_registry",
+        "type": "list",
+        "length": 2
+      },
+      {
+        "path": "$.output_contract.sample_verdicts",
+        "type": "str",
+        "length": null
+      }
+    ],
+    "ethics": [
+      {
+        "path": "$.sample_registry[0].ethics_status",
+        "type": "str",
+        "length": null
+      },
+      {
+        "path": "$.sample_registry[1].ethics_status",
+        "type": "str",
+        "length": null
+      }
+    ],
+    "output_contract": [
+      {
+        "path": "$.output_contract",
+        "type": "dict",
+        "length": 6
+      }
+    ]
+  },
+  "ethics_fields": [
+    {
+      "path": "$.sample_registry[0].ethics_status",
+      "value": "pending"
+    },
+    {
+      "path": "$.sample_registry[1].ethics_status",
+      "value": "approved"
+    }
+  ],
+  "output_contract": {
+    "path": "$.output_contract",
+    "fields": [
+      "blocking_items",
+      "booking_conflicts",
+      "conditions_list",
+      "feasibility_by_version",
+      "four_state_summary",
+      "sample_verdicts"
+    ]
+  },
+  "note": "候选路径由键名模式匹配得到，使用前须由模型/人工确认语义，不得仅凭键名直接采信。"
+}

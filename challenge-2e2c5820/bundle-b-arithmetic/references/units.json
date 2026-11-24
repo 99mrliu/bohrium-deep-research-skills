@@ -1,0 +1,72 @@
+{
+  "version": "1.0",
+  "description": "单位归一化表。factor 表示 1 单位 = factor 个 base 单位。仅在同一 dimension 内且 convertible=true 时自动换算；否则 check_domains.py 判 unit_unconvertible 并请专家复核，绝不猜换算。",
+  "dimensions": [
+    {
+      "name": "volume",
+      "base": "L",
+      "convertible": true,
+      "units": {
+        "L": "1",
+        "l": "1",
+        "mL": "0.001",
+        "ml": "0.001",
+        "µL": "0.000001",
+        "μL": "0.000001",
+        "uL": "0.000001"
+      }
+    },
+    {
+      "name": "time",
+      "base": "s",
+      "convertible": true,
+      "units": {
+        "s": "1",
+        "sec": "1",
+        "min": "60",
+        "h": "3600",
+        "hr": "3600",
+        "hour": "3600",
+        "hours": "3600",
+        "d": "86400",
+        "day": "86400"
+      }
+    },
+    {
+      "name": "mass",
+      "base": "g",
+      "convertible": true,
+      "units": {
+        "kg": "1000",
+        "g": "1",
+        "mg": "0.001",
+        "µg": "0.000001",
+        "ug": "0.000001",
+        "ng": "0.000000001"
+      }
+    },
+    {
+      "name": "temperature",
+      "base": "°C",
+      "convertible": true,
+      "units": {
+        "°C": "1",
+        "℃": "1"
+      },
+      "notes": "仅支持同温标（°C）比较。K↔°C 是仿射换算（偏移 273.15），本表不做；出现 K 即判 unit_unconvertible 并请专家复核。"
+    },
+    {
+      "name": "speed",
+      "base": null,
+      "convertible": false,
+      "units": {
+        "rpm": "1",
+        "g": "1",
+        "×g": "1",
+        "xg": "1",
+        "rcf": "1"
+      },
+      "notes": "rpm ↔ g(RCF) 取决于转子半径（g = 1.118e-5 × r(cm) × rpm²），不做自动换算。参数与域单位不同即判 unit_unconvertible，必须由专家按实际转子复核，绝不猜测。"
+    }
+  ]
+}

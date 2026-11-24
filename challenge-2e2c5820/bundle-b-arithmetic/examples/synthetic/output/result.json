@@ -1,0 +1,123 @@
+{
+  "case_id": "SYNTH-CELL-ELISA-001",
+  "chosen_plan_id": "PLAN-V1",
+  "chosen_reason": "首个无 gating fail（未超支/未超期/未越域）的候选方案；其余方案见 per_plan_summary",
+  "budget_verdict": "结余",
+  "budget_total_cny": 8510.0,
+  "budget_delta_cny": -1490.0,
+  "schedule_verdict": "满足",
+  "schedule_total_hours": 94.0,
+  "schedule_delta_hours": -2.0,
+  "domain_verdict": "all_in_domain",
+  "per_plan_summary": [
+    {
+      "plan_id": "PLAN-V1",
+      "budget_verdict": "结余",
+      "budget_total": "8510.00",
+      "budget_delta": "-1490.00",
+      "schedule_verdict": "满足",
+      "schedule_total_hours": "94",
+      "schedule_delta_hours": "-2",
+      "critical_path": [
+        "S1",
+        "S2",
+        "S3",
+        "S4",
+        "S5",
+        "S6"
+      ],
+      "domain_counts": {
+        "in_domain": 3,
+        "out_of_domain": 0,
+        "no_domain_found": 0,
+        "unit_unconvertible": 0
+      },
+      "gating_fail": false,
+      "gating_reasons": []
+    },
+    {
+      "plan_id": "PLAN-V2",
+      "budget_verdict": "超支",
+      "budget_total": "11760.00",
+      "budget_delta": "1760.00",
+      "schedule_verdict": "满足",
+      "schedule_total_hours": "94",
+      "schedule_delta_hours": "-2",
+      "critical_path": [
+        "S1",
+        "S2",
+        "S3",
+        "S4",
+        "S5",
+        "S6"
+      ],
+      "domain_counts": {
+        "in_domain": 2,
+        "out_of_domain": 1,
+        "no_domain_found": 0,
+        "unit_unconvertible": 0
+      },
+      "gating_fail": true,
+      "gating_reasons": [
+        "budget:超支",
+        "domains:out_of_domain×1"
+      ]
+    },
+    {
+      "plan_id": "PLAN-V3",
+      "budget_verdict": "结余",
+      "budget_total": "8510.00",
+      "budget_delta": "-1490.00",
+      "schedule_verdict": "超出",
+      "schedule_total_hours": "118",
+      "schedule_delta_hours": "22",
+      "critical_path": [
+        "S1",
+        "S2",
+        "S3",
+        "S4",
+        "S5",
+        "S6"
+      ],
+      "domain_counts": {
+        "in_domain": 3,
+        "out_of_domain": 0,
+        "no_domain_found": 1,
+        "unit_unconvertible": 1
+      },
+      "gating_fail": true,
+      "gating_reasons": [
+        "schedule:超出"
+      ]
+    }
+  ],
+  "unverified_items": [
+    "[PLAN-V1] 胎牛血清FBS(500mL): stated_subtotal=1650.00 与复算 1600.00 漂移 3.125%（locator: PLAN-V1#预算表#行2）",
+    "[PLAN-V3] 离心转速: 单位 g↔rpm 不可自动换算（locator: PLAN-V3#参数表#行4）",
+    "[PLAN-V3] 摇床转速: 未找到对应参数域（locator: PLAN-V3#参数表#行5）"
+  ],
+  "status": "complete",
+  "sources": [
+    "materials/brief.md（课题简报：HEK293 细胞培养后收集上清，ELISA 定量目标蛋白）",
+    "materials/vendor_quote.md（供应商报价单，见 contracts.price_contract 结构化版）"
+  ],
+  "uncertainty": [
+    "合成示例全流水线运行：3 版抽取均通过校验，全部结论由脚本实算"
+  ],
+  "change_record": [
+    {
+      "timestamp": "2026-11-24T14:22:52+00:00",
+      "actor": "assemble_result.py",
+      "note": "合成示例全流水线运行：3 版抽取均通过校验，全部结论由脚本实算",
+      "status": "complete",
+      "chosen_plan_id": "PLAN-V1"
+    },
+    {
+      "timestamp": "2026-11-24T14:29:16+00:00",
+      "actor": "assemble_result.py",
+      "note": "合成示例全流水线运行：3 版抽取均通过校验，全部结论由脚本实算",
+      "status": "complete",
+      "chosen_plan_id": "PLAN-V1"
+    }
+  ]
+}

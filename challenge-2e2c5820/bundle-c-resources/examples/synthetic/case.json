@@ -1,0 +1,61 @@
+{
+  "_notice": "合成示例，非正式案例数据。所有人名、单位名、价格、合同均为虚构，仅用于验证脚本行为。",
+  "case_id": "synthetic-protein-01",
+  "title": "蛋白表达与纯化课题（合成示例）",
+  "plans": [
+    {"version": "v1", "title": "原方案", "summary": "20000rpm 高速冷冻离心 + -80°C 人血清 + 纯化仪 2026-03-12~15"},
+    {"version": "v2", "title": "降速方案", "summary": "14000rpm 离心规避转速问题，但 Ni-NTA 要求 2026-03-01 前到位"},
+    {"version": "v3", "title": "修订方案", "summary": "排期避开占用、采购计划留足货期、测序外协、换用合规细胞样本"}
+  ],
+  "inventory": {
+    "equipment": [
+      {"id": "INV-EQ-01", "name": "高速冷冻离心机", "model": "CF-15K（虚构）",
+       "specs": {"max_rpm": 15000, "capacity_ml": 2000, "min_temperature_c": 4},
+       "location": "三楼公共平台", "status": "available"},
+      {"id": "INV-EQ-02", "name": "蛋白纯化系统", "model": "AKTA pure 25",
+       "specs": {"max_flow_ml_min": 25}, "location": "三楼公共平台", "status": "available"},
+      {"id": "INV-EQ-03", "name": "实时荧光定量PCR仪", "model": "QS-4（虚构）",
+       "specs": {"channels": 4}, "location": "二楼分子室", "status": "available"},
+      {"id": "INV-EQ-04", "name": "-80°C冰箱", "specs": {"min_temperature_c": -86},
+       "location": "二楼样本间", "status": "available"},
+      {"id": "INV-EQ-05", "name": "-20°C冰箱", "specs": {"min_temperature_c": -20},
+       "location": "二楼样本间", "status": "available"}
+    ],
+    "materials": [
+      {"id": "INV-MT-01", "name": "LB培养基", "quantity": 2000, "unit": "mL"},
+      {"id": "INV-MT-02", "name": "IPTG", "quantity": 50, "unit": "g"}
+    ]
+  },
+  "contracts": {
+    "supplier_outsource": [
+      {"service": "基因测序", "vendor": "华序生物（合成）", "unit_price": 30,
+       "currency": "CNY", "unit": "反应", "lead_time_days": 3}
+    ],
+    "purchase": [
+      {"item": "Ni-NTA 填料", "vendor": "快生生物（合成）", "unit_price": 150,
+       "currency": "CNY", "unit": "mL", "lead_time_days": 14, "order_by": "2026-02-01"},
+      {"item": "Ni-NTA 填料", "vendor": "华科试剂（合成）", "unit_price": 120,
+       "currency": "CNY", "unit": "mL", "lead_time_days": 30, "order_by": "2026-02-01"},
+      {"item": "卡那霉素", "vendor": "华科试剂（合成）", "unit_price": 80,
+       "currency": "CNY", "unit": "g", "lead_time_days": 5, "order_by": "2026-02-01"}
+    ]
+  },
+  "booking_calendar": [
+    {"resource": "蛋白纯化系统", "booked_by": "王老师课题组（合成）",
+     "start": "2026-03-10", "end": "2026-03-14", "note": "共用平台维护与已约实验"}
+  ],
+  "sample_registry": [
+    {"id": "REG-S-01", "name": "人血清样本", "quantity": 5, "unit": "mL",
+     "storage": "-20°C", "source": "附属医院合作", "ethics_status": "pending"},
+    {"id": "REG-S-02", "name": "HEK293T细胞", "quantity": 10, "unit": "支",
+     "storage": "-80°C", "source": "实验室冻存", "ethics_status": "approved"}
+  ],
+  "output_contract": {
+    "feasibility_by_version": "每个方案版本的总体可行性结论（可行/有条件可行/不可行）",
+    "blocking_items": "阻断项清单（不具备/无法核验/货期赶不上/预订冲突/样本不合规/伦理待批）",
+    "conditions_list": "有条件可行时需满足的条件（下单动作/外协单位/预订调整/伦理确认）",
+    "four_state_summary": "四状态分类汇总（已具备/可外协/需采购/不具备/无法核验 计数）",
+    "booking_conflicts": "预订冲突表（资源、窗口、重叠小时数）",
+    "sample_verdicts": "样本核验结论"
+  }
+}

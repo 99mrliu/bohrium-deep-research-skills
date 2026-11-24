@@ -1,0 +1,65 @@
+{
+  "_声明": "合成示例，非正式案例数据。三版均为有条件可行（凡有“需办理”审批前置项的版本最高只能有条件可行），条件均含责任方/验证方法/阻断性/关联项。",
+  "plans": {
+    "v1": {
+      "verdict": "有条件可行",
+      "conditions": [
+        {
+          "description": "完成 4% 多聚甲醛固定液的危化品 EHS 备案后采购",
+          "owner": "实验室安全员",
+          "verification_method": "机构 EHS 备案回执与采购台账一致",
+          "blocking": true,
+          "linked_item": "伦理审批路径/v1 危险试剂需办理项"
+        }
+      ],
+      "gating_reasons": []
+    },
+    "v2": {
+      "verdict": "有条件可行",
+      "conditions": [
+        {
+          "description": "书面确认平台既有小鼠资源是否涉及新增活体动物实验操作（伦理涉及判定确认项）",
+          "owner": "共享平台动物设施主管",
+          "verification_method": "取得机构动物设施/伦理办公室出具的书面确认函；若判定涉及，须补 IACUC 备案回执",
+          "blocking": true,
+          "linked_item": "伦理审批路径/v2 动物实验确认项"
+        },
+        {
+          "description": "锁定行为学视频跟踪系统应急档期条款，避免档期取消导致 CSDS 时间窗错过",
+          "owner": "课题 PI + 平台设备管理员",
+          "verification_method": "预约系统中的确认单与合同应急条款页归档",
+          "blocking": true,
+          "linked_item": "风险登记表/共享平台行为学设备档期被取消"
+        },
+        {
+          "description": "行为学分析流程（亚组划分标准、统计检验链）做内部预注册",
+          "owner": "课题 PI",
+          "verification_method": "预注册文档归档记录，两名观察者签字确认盲评流程",
+          "blocking": false,
+          "linked_item": "决策矩阵/对照组维度"
+        }
+      ],
+      "gating_reasons": []
+    },
+    "v3": {
+      "verdict": "有条件可行",
+      "conditions": [
+        {
+          "description": "办理 IACUC 审批（动物实验伦理审查），取得批件编号后方可采购动物与启动 CSDS",
+          "owner": "课题 PI + 机构实验动物伦理委员会",
+          "verification_method": "IACUC 批件编号与批件全文归档；动物房凭批件放行订购",
+          "blocking": true,
+          "linked_item": "伦理审批路径/v3 动物实验需办理项"
+        },
+        {
+          "description": "完成 4% 多聚甲醛等危化品的 EHS 备案后采购",
+          "owner": "实验室安全员",
+          "verification_method": "机构 EHS 备案回执与采购台账一致",
+          "blocking": true,
+          "linked_item": "伦理审批路径/v3 危险试剂需办理项"
+        }
+      ],
+      "gating_reasons": []
+    }
+  }
+}
