@@ -1,0 +1,21 @@
+{
+  "question_id": "rq-synth-glp1",
+  "search_date": "2026-11-24",
+  "snapshot_policy": "有限快照：检索式按 search_date 限定覆盖范围，不声称实时或全局召回。",
+  "queries": [
+    {
+      "database": "pubmed",
+      "query": "(\"type 2 diabetes\"[tiab] OR \"T2DM\"[tiab]) AND (\"GLP-1 receptor agonist\"[tiab])",
+      "field_scope": "title/abstract [tiab]；日期 [dp]",
+      "date_limit": {"from": "2015-01-01", "to": "2026-12-31"},
+      "language_limit": ["en"]
+    },
+    {
+      "database": "scopus",
+      "query": "TITLE-ABS-KEY(\"type 2 diabetes\") AND TITLE-ABS-KEY(\"GLP-1 receptor agonist\")",
+      "field_scope": "TITLE-ABS-KEY；PUBYEAR",
+      "date_limit": {"from": "2015-01-01", "to": "2026-12-31"},
+      "language_limit": ["en"]
+    }
+  ]
+}

@@ -1,0 +1,41 @@
+{
+  "overall": "PASS",
+  "checks": [
+    {
+      "check": "A1-per-file-closure",
+      "status": "PASS",
+      "detail": "每文件 items_found = parsed + quarantined；异常文件：无"
+    },
+    {
+      "check": "A2-total-closure",
+      "status": "PASS",
+      "detail": "ledger={'files': 3, 'records_parsed': 11, 'items_quarantined': 2, 'duplicate_hints': 3} payload={'files': 3, 'records_parsed': 11, 'items_quarantined': 2, 'duplicate_hints': 3} actual=11/2"
+    },
+    {
+      "check": "A3-provenance-coordinates",
+      "status": "PASS",
+      "detail": "缺来源坐标的记录：无"
+    },
+    {
+      "check": "A4-field-status",
+      "status": "PASS",
+      "detail": "field_status 缺失：无；missing-abstract=1 missing-title=0"
+    },
+    {
+      "check": "A5-encoding-trace",
+      "status": "PASS",
+      "detail": "非 utf-8 或有替换字符但无 decode_notes：无"
+    },
+    {
+      "check": "A6-dup-hint-integrity",
+      "status": "PASS",
+      "detail": "重复提示 3 条；悬空引用：无"
+    }
+  ],
+  "totals": {
+    "files": 3,
+    "records_parsed": 11,
+    "items_quarantined": 2,
+    "duplicate_hints": 3
+  }
+}

@@ -1,0 +1,26 @@
+{
+  "question_id": "rq-synth-glp1",
+  "question_text": "In adults with type 2 diabetes, do GLP-1 receptor agonists reduce major adverse cardiovascular events compared with placebo or standard care? (SYNTHETIC example question)",
+  "concept_blocks": [
+    {
+      "block_id": "P",
+      "label": "population: adults with type 2 diabetes",
+      "terms": ["type 2 diabetes", "T2DM", "non-insulin dependent diabetes"]
+    },
+    {
+      "block_id": "I",
+      "label": "intervention: GLP-1 receptor agonists",
+      "terms": ["GLP-1 receptor agonist", "glucagon-like peptide-1", "liraglutide", "semaglutide", "dulaglutide"]
+    },
+    {
+      "block_id": "O",
+      "label": "outcome: major adverse cardiovascular events",
+      "terms": ["major adverse cardiovascular events", "MACE", "cardiovascular death", "myocardial infarction", "stroke"]
+    }
+  ],
+  "databases": ["pubmed", "scopus", "wos"],
+  "date_from": "2015-01-01",
+  "date_to": "2026-12-31",
+  "languages": ["en"],
+  "search_date": "2026-11-24"
+}

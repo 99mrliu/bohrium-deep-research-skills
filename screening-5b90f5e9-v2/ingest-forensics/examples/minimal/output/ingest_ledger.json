@@ -1,0 +1,46 @@
+{
+  "files": [
+    {
+      "source_file": "pubmed_export.csv",
+      "bytes": 1552,
+      "lines": 6,
+      "encoding": "utf-8",
+      "replaced_chars": 0,
+      "decode_notes": [],
+      "format": "csv",
+      "records_parsed": 5,
+      "items_quarantined": 0,
+      "items_found": 5
+    },
+    {
+      "source_file": "scopus_export.json",
+      "bytes": 1427,
+      "lines": 26,
+      "encoding": "utf-8",
+      "replaced_chars": 0,
+      "decode_notes": [],
+      "format": "json-array",
+      "records_parsed": 3,
+      "items_quarantined": 1,
+      "items_found": 4
+    },
+    {
+      "source_file": "wos_export.txt",
+      "bytes": 1273,
+      "lines": 36,
+      "encoding": "utf-8",
+      "replaced_chars": 0,
+      "decode_notes": [],
+      "format": "ris",
+      "records_parsed": 3,
+      "items_quarantined": 1,
+      "items_found": 4
+    }
+  ],
+  "totals": {
+    "files": 3,
+    "records_parsed": 11,
+    "items_quarantined": 2,
+    "duplicate_hints": 3
+  }
+}

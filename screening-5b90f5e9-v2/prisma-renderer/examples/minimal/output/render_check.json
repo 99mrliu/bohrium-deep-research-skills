@@ -1,0 +1,28 @@
+{
+  "overall": "PASS",
+  "checks": [
+    {
+      "check": "R1-identification-closure",
+      "status": "PASS",
+      "detail": "200 - 23 = 177 vs screened=177"
+    },
+    {
+      "check": "R2-screening-closure",
+      "status": "PASS",
+      "detail": "screened=177 vs 160+12+5=177"
+    },
+    {
+      "check": "R3-reason-breakdown-closure",
+      "status": "PASS",
+      "detail": "理由合计=160 vs excluded=160"
+    },
+    {
+      "check": "R4-svg-wellformed",
+      "status": "PASS",
+      "detail": "xml.dom.minidom 解析成功"
+    }
+  ],
+  "svg_bytes": 3418,
+  "boxes": 4,
+  "arrows": 3
+}

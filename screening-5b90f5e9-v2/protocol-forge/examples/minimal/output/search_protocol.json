@@ -1,0 +1,96 @@
+{
+  "question_id": "rq-synth-glp1",
+  "question_text": "In adults with type 2 diabetes, do GLP-1 receptor agonists reduce major adverse cardiovascular events compared with placebo or standard care? (SYNTHETIC example question)",
+  "search_date": "2026-11-24",
+  "snapshot_policy": "有限快照：检索式按 search_date 限定覆盖范围，不声称实时或全局召回。",
+  "queries": [
+    {
+      "database": "pubmed",
+      "query": "(\"type 2 diabetes\"[tiab] OR \"T2DM\"[tiab] OR \"non-insulin dependent diabetes\"[tiab]) AND (\"GLP-1 receptor agonist\"[tiab] OR \"glucagon-like peptide-1\"[tiab] OR \"liraglutide\"[tiab] OR \"semaglutide\"[tiab] OR \"dulaglutide\"[tiab]) AND (\"major adverse cardiovascular events\"[tiab] OR \"MACE\"[tiab] OR \"cardiovascular death\"[tiab] OR \"myocardial infarction\"[tiab] OR \"stroke\"[tiab]) AND (\"2015/01/01\"[Date - Publication] : \"2026/12/31\"[Date - Publication])",
+      "field_scope": "title/abstract [tiab]；日期 [dp]",
+      "date_limit": {
+        "from": "2015-01-01",
+        "to": "2026-12-31"
+      },
+      "language_limit": [
+        "en"
+      ],
+      "block_trace": [
+        {
+          "block_id": "P",
+          "label": "population: adults with type 2 diabetes",
+          "clause": "(\"type 2 diabetes\"[tiab] OR \"T2DM\"[tiab] OR \"non-insulin dependent diabetes\"[tiab])"
+        },
+        {
+          "block_id": "I",
+          "label": "intervention: GLP-1 receptor agonists",
+          "clause": "(\"GLP-1 receptor agonist\"[tiab] OR \"glucagon-like peptide-1\"[tiab] OR \"liraglutide\"[tiab] OR \"semaglutide\"[tiab] OR \"dulaglutide\"[tiab])"
+        },
+        {
+          "block_id": "O",
+          "label": "outcome: major adverse cardiovascular events",
+          "clause": "(\"major adverse cardiovascular events\"[tiab] OR \"MACE\"[tiab] OR \"cardiovascular death\"[tiab] OR \"myocardial infarction\"[tiab] OR \"stroke\"[tiab])"
+        }
+      ]
+    },
+    {
+      "database": "scopus",
+      "query": "(TITLE-ABS-KEY(\"type 2 diabetes\") OR TITLE-ABS-KEY(\"T2DM\") OR TITLE-ABS-KEY(\"non-insulin dependent diabetes\")) AND (TITLE-ABS-KEY(\"GLP-1 receptor agonist\") OR TITLE-ABS-KEY(\"glucagon-like peptide-1\") OR TITLE-ABS-KEY(\"liraglutide\") OR TITLE-ABS-KEY(\"semaglutide\") OR TITLE-ABS-KEY(\"dulaglutide\")) AND (TITLE-ABS-KEY(\"major adverse cardiovascular events\") OR TITLE-ABS-KEY(\"MACE\") OR TITLE-ABS-KEY(\"cardiovascular death\") OR TITLE-ABS-KEY(\"myocardial infarction\") OR TITLE-ABS-KEY(\"stroke\")) AND PUBYEAR > 2014 AND PUBYEAR < 2027",
+      "field_scope": "TITLE-ABS-KEY；PUBYEAR",
+      "date_limit": {
+        "from": "2015-01-01",
+        "to": "2026-12-31"
+      },
+      "language_limit": [
+        "en"
+      ],
+      "block_trace": [
+        {
+          "block_id": "P",
+          "label": "population: adults with type 2 diabetes",
+          "clause": "(TITLE-ABS-KEY(\"type 2 diabetes\") OR TITLE-ABS-KEY(\"T2DM\") OR TITLE-ABS-KEY(\"non-insulin dependent diabetes\"))"
+        },
+        {
+          "block_id": "I",
+          "label": "intervention: GLP-1 receptor agonists",
+          "clause": "(TITLE-ABS-KEY(\"GLP-1 receptor agonist\") OR TITLE-ABS-KEY(\"glucagon-like peptide-1\") OR TITLE-ABS-KEY(\"liraglutide\") OR TITLE-ABS-KEY(\"semaglutide\") OR TITLE-ABS-KEY(\"dulaglutide\"))"
+        },
+        {
+          "block_id": "O",
+          "label": "outcome: major adverse cardiovascular events",
+          "clause": "(TITLE-ABS-KEY(\"major adverse cardiovascular events\") OR TITLE-ABS-KEY(\"MACE\") OR TITLE-ABS-KEY(\"cardiovascular death\") OR TITLE-ABS-KEY(\"myocardial infarction\") OR TITLE-ABS-KEY(\"stroke\"))"
+        }
+      ]
+    },
+    {
+      "database": "wos",
+      "query": "(TS=(\"type 2 diabetes\") OR TS=(\"T2DM\") OR TS=(\"non-insulin dependent diabetes\")) AND (TS=(\"GLP-1 receptor agonist\") OR TS=(\"glucagon-like peptide-1\") OR TS=(\"liraglutide\") OR TS=(\"semaglutide\") OR TS=(\"dulaglutide\")) AND (TS=(\"major adverse cardiovascular events\") OR TS=(\"MACE\") OR TS=(\"cardiovascular death\") OR TS=(\"myocardial infarction\") OR TS=(\"stroke\")) AND DOP=(2015-01-01/2026-12-31)",
+      "field_scope": "TS= 主题字段；DOP= 出版日期",
+      "date_limit": {
+        "from": "2015-01-01",
+        "to": "2026-12-31"
+      },
+      "language_limit": [
+        "en"
+      ],
+      "block_trace": [
+        {
+          "block_id": "P",
+          "label": "population: adults with type 2 diabetes",
+          "clause": "(TS=(\"type 2 diabetes\") OR TS=(\"T2DM\") OR TS=(\"non-insulin dependent diabetes\"))"
+        },
+        {
+          "block_id": "I",
+          "label": "intervention: GLP-1 receptor agonists",
+          "clause": "(TS=(\"GLP-1 receptor agonist\") OR TS=(\"glucagon-like peptide-1\") OR TS=(\"liraglutide\") OR TS=(\"semaglutide\") OR TS=(\"dulaglutide\"))"
+        },
+        {
+          "block_id": "O",
+          "label": "outcome: major adverse cardiovascular events",
+          "clause": "(TS=(\"major adverse cardiovascular events\") OR TS=(\"MACE\") OR TS=(\"cardiovascular death\") OR TS=(\"myocardial infarction\") OR TS=(\"stroke\"))"
+        }
+      ]
+    }
+  ],
+  "assembly_note": "概念块内 OR、块间 AND；日期/语种限定单独登记，语种限定在执行侧落实。"
+}

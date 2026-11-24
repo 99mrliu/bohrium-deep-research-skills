@@ -1,0 +1,30 @@
+{
+  "overall": "FAIL",
+  "queries": [
+    {
+      "database": "pubmed",
+      "status": "FAIL",
+      "issues": [
+        {
+          "rule": "L1",
+          "severity": "ERROR",
+          "span": 60,
+          "message": "括号不配平（最终深度 1）"
+        },
+        {
+          "rule": "L5",
+          "severity": "ERROR",
+          "span": 57,
+          "message": "字段标签 [xx] 不在 pubmed 白名单"
+        },
+        {
+          "rule": "L9",
+          "severity": "ERROR",
+          "span": 47,
+          "message": "运算符 OR 后紧跟右括号"
+        }
+      ],
+      "query_preview": "(\"metformin\"[tiab] AND (\"prediabetes\"[tiab] OR ) AND NOT [xx]"
+    }
+  ]
+}

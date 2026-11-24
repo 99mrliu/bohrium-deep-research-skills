@@ -1,0 +1,12 @@
+[
+  {"record_id": "rec-001", "decision": "included", "reason_code": "IN-RCT", "evidence_snippet": "We randomized 180 adults", "abstract_present": true},
+  {"record_id": "rec-002", "decision": "excluded", "reason_code": "EX-DESIGN", "evidence_snippet": "a narrative review", "abstract_present": true},
+  {"record_id": "rec-003", "decision": "included", "reason_code": "IN-RCT", "evidence_snippet": "412 adults with prediabetes received metformin or placebo", "abstract_present": true},
+  {"record_id": "rec-004", "decision": "excluded", "reason_code": "EX-POPULATION", "evidence_snippet": "adolescents aged 12-17 with type 2 diabetes", "abstract_present": true, "boundary_flags": ["partial_overlap"]},
+  {"record_id": "rec-005", "decision": "needs_human", "reason_code": "BND-NO-ABSTRACT", "abstract_present": false},
+  {"record_id": "rec-006", "decision": "excluded", "reason_code": "EX-LANGUAGE", "evidence_snippet": "artículo en español", "abstract_present": true, "boundary_flags": ["language_mismatch"]},
+  {"record_id": "rec-007", "decision": "included", "reason_code": "IN-OUTCOME", "evidence_snippet": null, "abstract_present": true},
+  {"record_id": "rec-008", "decision": "included", "reason_code": "IN-RCT", "evidence_snippet": "cluster randomized trial", "abstract_present": true, "screener_labels": {"screener_a": "included", "screener_b": "excluded"}},
+  {"record_id": "rec-009", "decision": "excluded", "reason_code": "EX-INTERVENTION", "evidence_snippet": "continuous glucose monitoring", "abstract_present": true, "boundary_flags": ["criteria_ambiguous"]},
+  {"record_id": "rec-010", "decision": "included", "reason_code": "IN-COHORT", "evidence_snippet": "followed 940 patients for 3 years", "abstract_present": true}
+]

@@ -1,0 +1,12 @@
+{
+  "inclusion": [
+    {"criterion_id": "I1", "text": "成人 2 型糖尿病患者（≥18 岁）", "blocks": ["P"]},
+    {"criterion_id": "I2", "text": "干预为 GLP-1 受体激动剂，对照为安慰剂或标准治疗", "blocks": ["I"]},
+    {"criterion_id": "I3", "text": "报告主要不良心血管事件（MACE）或其组分", "blocks": ["O"]},
+    {"criterion_id": "I4", "text": "随机对照试验", "blocks": []}
+  ],
+  "exclusion": [
+    {"criterion_id": "E1", "text": "仅动物或体外实验", "blocks": []},
+    {"criterion_id": "E2", "text": "非英文文献", "blocks": []}
+  ]
+}

@@ -1,0 +1,79 @@
+{
+  "overall": "WARN",
+  "mapping": [
+    {
+      "criterion_id": "I1",
+      "kind": "inclusion",
+      "text": "成人 2 型糖尿病患者（≥18 岁）",
+      "blocks": [
+        "P"
+      ],
+      "block_status": {
+        "P": "ok"
+      }
+    },
+    {
+      "criterion_id": "I2",
+      "kind": "inclusion",
+      "text": "干预为 GLP-1 受体激动剂，对照为安慰剂或标准治疗",
+      "blocks": [
+        "I"
+      ],
+      "block_status": {
+        "I": "ok"
+      }
+    },
+    {
+      "criterion_id": "I3",
+      "kind": "inclusion",
+      "text": "报告主要不良心血管事件（MACE）或其组分",
+      "blocks": [
+        "O"
+      ],
+      "block_status": {
+        "O": "ok"
+      }
+    },
+    {
+      "criterion_id": "I4",
+      "kind": "inclusion",
+      "text": "随机对照试验",
+      "blocks": [],
+      "block_status": {}
+    },
+    {
+      "criterion_id": "E1",
+      "kind": "exclusion",
+      "text": "仅动物或体外实验",
+      "blocks": [],
+      "block_status": {}
+    },
+    {
+      "criterion_id": "E2",
+      "kind": "exclusion",
+      "text": "非英文文献",
+      "blocks": [],
+      "block_status": {}
+    }
+  ],
+  "issues": [
+    {
+      "rule": "M2",
+      "severity": "WARN",
+      "where": "I4",
+      "message": "标准未引用概念块，检索式层面对应关系缺失"
+    },
+    {
+      "rule": "M2",
+      "severity": "WARN",
+      "where": "E1",
+      "message": "标准未引用概念块，检索式层面对应关系缺失"
+    },
+    {
+      "rule": "M2",
+      "severity": "WARN",
+      "where": "E2",
+      "message": "标准未引用概念块，检索式层面对应关系缺失"
+    }
+  ]
+}

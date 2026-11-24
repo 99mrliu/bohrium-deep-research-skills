@@ -1,0 +1,74 @@
+[
+  {
+    "record_id": "rec-001",
+    "final_label": "included",
+    "reason_code": "IN-RCT",
+    "confirmation_status": "auto_accepted_below_gate"
+  },
+  {
+    "record_id": "rec-002",
+    "final_label": "excluded",
+    "reason_code": "EX-DESIGN",
+    "confirmation_status": "auto_accepted_below_gate"
+  },
+  {
+    "record_id": "rec-003",
+    "final_label": "included",
+    "reason_code": "IN-RCT",
+    "confirmation_status": "auto_accepted_below_gate"
+  },
+  {
+    "record_id": "rec-004",
+    "final_label": "excluded",
+    "reviewer_id": "reviewer-chen",
+    "rationale": "",
+    "model_suggestion": "excluded",
+    "confirmation_status": "human_confirmed"
+  },
+  {
+    "record_id": "rec-005",
+    "final_label": "needs_fulltext",
+    "reviewer_id": "reviewer-chen",
+    "rationale": "标题提示符合人群但无摘要无法确认研究设计",
+    "model_suggestion": "needs_human",
+    "confirmation_status": "human_overridden"
+  },
+  {
+    "record_id": "rec-006",
+    "final_label": "excluded",
+    "reviewer_id": "reviewer-liu",
+    "rationale": "",
+    "model_suggestion": "excluded",
+    "confirmation_status": "human_confirmed"
+  },
+  {
+    "record_id": "rec-007",
+    "final_label": "excluded",
+    "reviewer_id": "reviewer-liu",
+    "rationale": "通读摘要后未见预设结局指标故推翻纳入建议",
+    "model_suggestion": "included",
+    "confirmation_status": "human_overridden"
+  },
+  {
+    "record_id": "rec-008",
+    "final_label": "included",
+    "reviewer_id": "reviewer-chen",
+    "rationale": "第三人仲裁：整群随机仍属 RCT 范畴维持纳入",
+    "model_suggestion": "included",
+    "confirmation_status": "human_confirmed"
+  },
+  {
+    "record_id": "rec-009",
+    "final_label": "excluded",
+    "reviewer_id": "reviewer-liu",
+    "rationale": "",
+    "model_suggestion": "excluded",
+    "confirmation_status": "human_confirmed"
+  },
+  {
+    "record_id": "rec-010",
+    "final_label": "included",
+    "reason_code": "IN-COHORT",
+    "confirmation_status": "auto_accepted_below_gate"
+  }
+]

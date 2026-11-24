@@ -1,0 +1,26 @@
+{
+  "overall": "PASS",
+  "checks": [
+    {
+      "check": "C4-stage-completeness",
+      "status": "PASS",
+      "detail": "缺失阶段：无"
+    },
+    {
+      "check": "C3-entry-sanity",
+      "status": "PASS",
+      "detail": "非法计数条目 seq：无"
+    },
+    {
+      "check": "C1-identification-closure",
+      "status": "PASS",
+      "detail": "identified(200) - duplicates_removed(23) = 177；screened=177；差额=0"
+    },
+    {
+      "check": "C2-screening-closure",
+      "status": "PASS",
+      "detail": "screened=177；included+excluded+needs_human+unprocessed=12+160+5+0=177；差额=0"
+    }
+  ],
+  "ledger": "/Users/liuhengshen/Desktop/bhr_product/screening-v2/gh-repo/screening-5b90f5e9-v2/audit-closure/examples/minimal/output/audit_ledger.json"
+}

@@ -1,0 +1,23 @@
+{
+  "overall": "PASS",
+  "queries": [
+    {
+      "database": "pubmed",
+      "status": "PASS",
+      "issues": [],
+      "query_preview": "(\"type 2 diabetes\"[tiab] OR \"T2DM\"[tiab] OR \"non-insulin dependent diabetes\"[tiab]) AND (\"GLP-1 receptor agonist\"[tiab] "
+    },
+    {
+      "database": "scopus",
+      "status": "PASS",
+      "issues": [],
+      "query_preview": "(TITLE-ABS-KEY(\"type 2 diabetes\") OR TITLE-ABS-KEY(\"T2DM\") OR TITLE-ABS-KEY(\"non-insulin dependent diabetes\")) AND (TITL"
+    },
+    {
+      "database": "wos",
+      "status": "PASS",
+      "issues": [],
+      "query_preview": "(TS=(\"type 2 diabetes\") OR TS=(\"T2DM\") OR TS=(\"non-insulin dependent diabetes\")) AND (TS=(\"GLP-1 receptor agonist\") OR T"
+    }
+  ]
+}

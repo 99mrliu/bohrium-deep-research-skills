@@ -1,0 +1,16 @@
+{
+  "deterministic": true,
+  "counts": {
+    "a": 6,
+    "b": 6,
+    "common": 6
+  },
+  "diffs": {
+    "missing_in_b": [],
+    "missing_in_a": [],
+    "label_flips": [],
+    "reason_changes": [],
+    "evidence_changes": []
+  },
+  "note": "evidence_changes 不单独判定非确定性（模型措辞可微调），但须人工过目。"
+}

@@ -1,0 +1,24 @@
+{
+  "queue_size": 6,
+  "human_decisions_accepted": 4,
+  "confirmed": 3,
+  "overridden": 1,
+  "override_rate": 0.25,
+  "unresolved": [
+    "rec-007",
+    "rec-009"
+  ],
+  "rejected_rows": [
+    {
+      "line": 5,
+      "record_id": "rec-007",
+      "reason": "V4-override-without-rationale"
+    },
+    {
+      "line": 7,
+      "record_id": "rec-003",
+      "reason": "V1-record-not-in-queue"
+    }
+  ],
+  "honesty_note": "unresolved 非空或 rejected 非空时 exit 3：人工复核未完成，不得声称 completed。"
+}

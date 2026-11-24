@@ -1,0 +1,133 @@
+{
+  "queue": [
+    {
+      "record_id": "rec-005",
+      "model_suggestion": "needs_human",
+      "suggestion_status": "pending_human_confirmation",
+      "queue_reasons": [
+        "T1"
+      ],
+      "reason_flags": [
+        "no_abstract"
+      ],
+      "unmapped_flags": [],
+      "priority": "P1",
+      "reason_code": "BND-NO-ABSTRACT"
+    },
+    {
+      "record_id": "rec-008",
+      "model_suggestion": "included",
+      "suggestion_status": "pending_human_confirmation",
+      "queue_reasons": [
+        "T4"
+      ],
+      "reason_flags": [
+        "screener_disagreement"
+      ],
+      "unmapped_flags": [],
+      "priority": "P1",
+      "reason_code": "IN-RCT"
+    },
+    {
+      "record_id": "rec-004",
+      "model_suggestion": "excluded",
+      "suggestion_status": "pending_human_confirmation",
+      "queue_reasons": [
+        "T3"
+      ],
+      "reason_flags": [
+        "partial_overlap"
+      ],
+      "unmapped_flags": [],
+      "priority": "P2",
+      "reason_code": "EX-POPULATION"
+    },
+    {
+      "record_id": "rec-006",
+      "model_suggestion": "excluded",
+      "suggestion_status": "pending_human_confirmation",
+      "queue_reasons": [
+        "T2"
+      ],
+      "reason_flags": [
+        "language_mismatch"
+      ],
+      "unmapped_flags": [],
+      "priority": "P2",
+      "reason_code": "EX-LANGUAGE"
+    },
+    {
+      "record_id": "rec-007",
+      "model_suggestion": "included",
+      "suggestion_status": "pending_human_confirmation",
+      "queue_reasons": [
+        "T5"
+      ],
+      "reason_flags": [
+        "low_evidence"
+      ],
+      "unmapped_flags": [],
+      "priority": "P3",
+      "reason_code": "IN-OUTCOME"
+    },
+    {
+      "record_id": "rec-009",
+      "model_suggestion": "excluded",
+      "suggestion_status": "pending_human_confirmation",
+      "queue_reasons": [
+        "T6"
+      ],
+      "reason_flags": [
+        "criteria_ambiguous"
+      ],
+      "unmapped_flags": [],
+      "priority": "P3",
+      "reason_code": "EX-INTERVENTION"
+    }
+  ],
+  "auto_accepted": [
+    {
+      "record_id": "rec-001",
+      "decision": "included",
+      "reason_code": "IN-RCT",
+      "confirmation_status": "auto_accepted_below_gate"
+    },
+    {
+      "record_id": "rec-002",
+      "decision": "excluded",
+      "reason_code": "EX-DESIGN",
+      "confirmation_status": "auto_accepted_below_gate"
+    },
+    {
+      "record_id": "rec-003",
+      "decision": "included",
+      "reason_code": "IN-RCT",
+      "confirmation_status": "auto_accepted_below_gate"
+    },
+    {
+      "record_id": "rec-010",
+      "decision": "included",
+      "reason_code": "IN-COHORT",
+      "confirmation_status": "auto_accepted_below_gate"
+    }
+  ],
+  "stats": {
+    "total": 10,
+    "queued": 6,
+    "auto_accepted": 4,
+    "by_priority": {
+      "P1": 2,
+      "P2": 2,
+      "P3": 2
+    },
+    "by_trigger": {
+      "T1": 1,
+      "T2": 1,
+      "T3": 1,
+      "T4": 1,
+      "T5": 1,
+      "T6": 1
+    }
+  },
+  "contract": "队列内记录的模型判定一律为 pending_human_confirmation；禁止把队列内建议当作最终结论交付。"
+}

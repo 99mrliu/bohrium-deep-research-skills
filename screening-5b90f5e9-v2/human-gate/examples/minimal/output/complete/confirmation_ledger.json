@@ -1,0 +1,10 @@
+{
+  "queue_size": 6,
+  "human_decisions_accepted": 6,
+  "confirmed": 4,
+  "overridden": 2,
+  "override_rate": 0.3333333333333333,
+  "unresolved": [],
+  "rejected_rows": [],
+  "honesty_note": "unresolved 非空或 rejected 非空时 exit 3：人工复核未完成，不得声称 completed。"
+}

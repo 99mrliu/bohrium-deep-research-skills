@@ -1,0 +1,65 @@
+{
+  "ledger_version": "1.0",
+  "entries": [
+    {
+      "seq": 1,
+      "stage": "identified",
+      "input_count": 200,
+      "output_count": 200,
+      "operator": "example-driver",
+      "timestamp_utc": "2026-11-24T00:00:00Z",
+      "basis": "examples/minimal",
+      "notes": "两个库导出合计"
+    },
+    {
+      "seq": 2,
+      "stage": "dedup",
+      "input_count": 200,
+      "output_count": 177,
+      "operator": "example-driver",
+      "timestamp_utc": "2026-11-24T00:00:00Z",
+      "basis": "examples/minimal",
+      "notes": "精确重复合并 23 条"
+    },
+    {
+      "seq": 3,
+      "stage": "screened",
+      "input_count": 177,
+      "output_count": 177,
+      "operator": "example-driver",
+      "timestamp_utc": "2026-11-24T00:00:00Z",
+      "basis": "examples/minimal",
+      "notes": "全量标题摘要筛选"
+    },
+    {
+      "seq": 4,
+      "stage": "included",
+      "input_count": 177,
+      "output_count": 12,
+      "operator": "example-driver",
+      "timestamp_utc": "2026-11-24T00:00:00Z",
+      "basis": "examples/minimal",
+      "notes": ""
+    },
+    {
+      "seq": 5,
+      "stage": "excluded",
+      "input_count": 177,
+      "output_count": 160,
+      "operator": "example-driver",
+      "timestamp_utc": "2026-11-24T00:00:00Z",
+      "basis": "examples/minimal",
+      "notes": ""
+    },
+    {
+      "seq": 6,
+      "stage": "needs_human",
+      "input_count": 177,
+      "output_count": 5,
+      "operator": "example-driver",
+      "timestamp_utc": "2026-11-24T00:00:00Z",
+      "basis": "examples/minimal",
+      "notes": ""
+    }
+  ]
+}
