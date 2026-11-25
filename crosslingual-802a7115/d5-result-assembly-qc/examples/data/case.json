@@ -1,0 +1,13 @@
+{
+  "case_id": "synthetic-demo-001",
+  "task": "Find the pyroptosis NLRP3 study across pt/en views (SYNTHETIC demo case, not an official test case).",
+  "output_contract": {
+    "research_question": "string",
+    "hits": "array",
+    "coverage": "object",
+    "evidence_records": "array",
+    "sources": "array",
+    "uncertainty": "array",
+    "status": "string"
+  }
+}

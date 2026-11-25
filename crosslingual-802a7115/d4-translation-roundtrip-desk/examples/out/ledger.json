@@ -1,0 +1,118 @@
+{
+  "status": "ok",
+  "entries": [
+    {
+      "entry_id": "E001",
+      "concept_id": "C1",
+      "target_lang": "pt",
+      "term": "piroptose",
+      "back_translation": "pyroptosis",
+      "service": "synthetic-translator",
+      "service_version": "v0-synthetic",
+      "evidence": "synthetic example, not a real translation service",
+      "roundtrip_score": 1.0,
+      "status": "verified",
+      "usage": "full-weight",
+      "reason": "back-translation overlaps concept label or same-language variant"
+    },
+    {
+      "entry_id": "E002",
+      "concept_id": "C1",
+      "target_lang": "de",
+      "term": "Pyroptose",
+      "back_translation": "",
+      "service": "synthetic-translator",
+      "service_version": "v0-synthetic",
+      "evidence": null,
+      "status": "no-evidence",
+      "usage": "half-weight",
+      "roundtrip_score": null,
+      "reason": "no back_translation supplied; keep source-declared confidence and mark round-trip:no-evidence"
+    },
+    {
+      "entry_id": "E003",
+      "concept_id": "C1",
+      "target_lang": "es",
+      "term": "piroptosis",
+      "back_translation": "cell death",
+      "service": "synthetic-translator",
+      "service_version": "v0-synthetic",
+      "evidence": null,
+      "roundtrip_score": 0.0,
+      "status": "degraded",
+      "usage": "half-weight",
+      "risk": "roundtrip-mismatch",
+      "reason": "back-translation 'cell death' does not overlap label 'pyroptosis' (score 0.00)"
+    },
+    {
+      "entry_id": "E004",
+      "concept_id": "C2",
+      "target_lang": "pt",
+      "term": "inflamassoma NLRP3",
+      "back_translation": "NLRP3 inflammasome",
+      "service": "synthetic-translator",
+      "service_version": "v0-synthetic",
+      "evidence": null,
+      "roundtrip_score": 1.0,
+      "status": "verified",
+      "usage": "full-weight",
+      "reason": "back-translation overlaps concept label or same-language variant"
+    },
+    {
+      "entry_id": "E005",
+      "concept_id": "C2",
+      "target_lang": "de",
+      "term": null,
+      "back_translation": null,
+      "service": null,
+      "service_version": null,
+      "evidence": null,
+      "status": "invalid",
+      "usage": "hold-for-review",
+      "reason": "missing required fields: term"
+    }
+  ],
+  "to_translate": [
+    {
+      "concept_id": "C1",
+      "label": "pyroptosis",
+      "missing_lang": "ja"
+    },
+    {
+      "concept_id": "C1",
+      "label": "pyroptosis",
+      "missing_lang": "zh"
+    },
+    {
+      "concept_id": "C2",
+      "label": "NLRP3 inflammasome",
+      "missing_lang": "es"
+    },
+    {
+      "concept_id": "C2",
+      "label": "NLRP3 inflammasome",
+      "missing_lang": "de"
+    },
+    {
+      "concept_id": "C2",
+      "label": "NLRP3 inflammasome",
+      "missing_lang": "ja"
+    },
+    {
+      "concept_id": "C2",
+      "label": "NLRP3 inflammasome",
+      "missing_lang": "zh"
+    }
+  ],
+  "counts": {
+    "entries": 5,
+    "by_status": {
+      "verified": 2,
+      "no-evidence": 1,
+      "degraded": 1,
+      "invalid": 1
+    },
+    "gaps": 6
+  },
+  "parse_notes": []
+}

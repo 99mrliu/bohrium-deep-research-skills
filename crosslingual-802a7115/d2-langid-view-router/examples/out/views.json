@@ -1,0 +1,210 @@
+{
+  "status": "ok",
+  "works": [
+    {
+      "work_id": "W001",
+      "doi": "10.0000/synth.w1",
+      "title": "Piroptose em macrófagos infectados por dengue",
+      "members": [
+        {
+          "record_id": "w1-pt-full",
+          "source_file": "/Users/liuhengshen/Desktop/bhr_product/xlang802-5dir/bundles/d2-langid-view-router/examples/data/views.jsonl",
+          "title": "Piroptose em macrófagos infectados por dengue",
+          "declared_language": "pt",
+          "detected_language": "pt",
+          "lang_confidence": 0.941,
+          "lang_evidence": {
+            "scores": {
+              "en": 0,
+              "pt": 162,
+              "es": 13,
+              "de": 0,
+              "fr": 15
+            },
+            "margin": 147
+          },
+          "doi": "10.0000/synth.w1",
+          "has_abstract": true,
+          "body_chars": 4188,
+          "declared_type": "original",
+          "view_type": "original",
+          "view_evidence": "fullest body of its language in the work cluster"
+        },
+        {
+          "record_id": "w1-en-trans",
+          "source_file": "/Users/liuhengshen/Desktop/bhr_product/xlang802-5dir/bundles/d2-langid-view-router/examples/data/views.jsonl",
+          "title": "Pyroptosis in macrophages infected by dengue",
+          "declared_language": "en",
+          "detected_language": "en",
+          "lang_confidence": 0.99,
+          "lang_evidence": {
+            "scores": {
+              "en": 162,
+              "pt": 0,
+              "es": 0,
+              "de": 0,
+              "fr": 0
+            },
+            "margin": 162
+          },
+          "doi": "10.0000/synth.w1",
+          "has_abstract": true,
+          "body_chars": 3845,
+          "declared_type": null,
+          "view_type": "translation",
+          "view_evidence": "explicit marker: translated from"
+        },
+        {
+          "record_id": "w1-en-abs",
+          "source_file": "/Users/liuhengshen/Desktop/bhr_product/xlang802-5dir/bundles/d2-langid-view-router/examples/data/views.jsonl",
+          "title": "Pyroptosis in macrophages infected by dengue",
+          "declared_language": "en",
+          "detected_language": "en",
+          "lang_confidence": 0.933,
+          "lang_evidence": {
+            "scores": {
+              "en": 8,
+              "pt": 0,
+              "es": 0,
+              "de": 0,
+              "fr": 0
+            },
+            "margin": 8
+          },
+          "doi": "10.0000/synth.w1",
+          "has_abstract": true,
+          "body_chars": 0,
+          "declared_type": null,
+          "view_type": "abstract_only",
+          "view_evidence": "no full body (0 chars) but abstract present"
+        },
+        {
+          "record_id": "w1-en-dup",
+          "source_file": "/Users/liuhengshen/Desktop/bhr_product/xlang802-5dir/bundles/d2-langid-view-router/examples/data/views.jsonl",
+          "title": "Pyroptosis in macrophages infected by dengue",
+          "declared_language": "en",
+          "detected_language": "en",
+          "lang_confidence": 0.99,
+          "lang_evidence": {
+            "scores": {
+              "en": 162,
+              "pt": 0,
+              "es": 0,
+              "de": 0,
+              "fr": 0
+            },
+            "margin": 162
+          },
+          "doi": "10.0000/synth.w1",
+          "has_abstract": true,
+          "body_chars": 3845,
+          "declared_type": null,
+          "view_type": "duplicate",
+          "view_evidence": "near-identical text to w1-en-trans (Jaccard≥0.9)"
+        }
+      ]
+    },
+    {
+      "work_id": "W002",
+      "doi": "10.0000/synth.w2",
+      "title": "Caspase-11 driven pyroptosis in murine models",
+      "members": [
+        {
+          "record_id": "w2-en-full",
+          "source_file": "/Users/liuhengshen/Desktop/bhr_product/xlang802-5dir/bundles/d2-langid-view-router/examples/data/views.jsonl",
+          "title": "Caspase-11 driven pyroptosis in murine models",
+          "declared_language": "en",
+          "detected_language": "en",
+          "lang_confidence": 0.99,
+          "lang_evidence": {
+            "scores": {
+              "en": 81,
+              "pt": 0,
+              "es": 0,
+              "de": 0,
+              "fr": 0
+            },
+            "margin": 81
+          },
+          "doi": "10.0000/synth.w2",
+          "has_abstract": true,
+          "body_chars": 2120,
+          "declared_type": "original",
+          "view_type": "original",
+          "view_evidence": "fullest body of its language in the work cluster"
+        }
+      ]
+    }
+  ],
+  "routing": [
+    {
+      "work_id": "W001",
+      "record_id": "w1-pt-full",
+      "detected_language": "pt",
+      "view_type": "original",
+      "query_languages": [
+        "en",
+        "pt"
+      ],
+      "countable": true,
+      "count_note": "count once per work across language views",
+      "evidence": "fullest body of its language in the work cluster"
+    },
+    {
+      "work_id": "W001",
+      "record_id": "w1-en-trans",
+      "detected_language": "en",
+      "view_type": "translation",
+      "query_languages": [
+        "en",
+        "pt"
+      ],
+      "countable": true,
+      "count_note": "count once per work across language views",
+      "evidence": "explicit marker: translated from"
+    },
+    {
+      "work_id": "W001",
+      "record_id": "w1-en-abs",
+      "detected_language": "en",
+      "view_type": "abstract_only",
+      "query_languages": [
+        "en",
+        "pt"
+      ],
+      "countable": true,
+      "count_note": "count once per work across language views",
+      "evidence": "no full body (0 chars) but abstract present"
+    },
+    {
+      "work_id": "W001",
+      "record_id": "w1-en-dup",
+      "detected_language": "en",
+      "view_type": "duplicate",
+      "query_languages": [
+        "en",
+        "pt"
+      ],
+      "countable": false,
+      "count_note": "count once per work across language views",
+      "evidence": "near-identical text to w1-en-trans (Jaccard≥0.9)"
+    },
+    {
+      "work_id": "W002",
+      "record_id": "w2-en-full",
+      "detected_language": "en",
+      "view_type": "original",
+      "query_languages": [
+        "en"
+      ],
+      "countable": true,
+      "count_note": "single view",
+      "evidence": "fullest body of its language in the work cluster"
+    }
+  ],
+  "parse_notes": [],
+  "counts": {
+    "records": 5,
+    "works": 2
+  }
+}

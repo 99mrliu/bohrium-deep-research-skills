@@ -1,0 +1,44 @@
+{
+  "status": "ok",
+  "research_question": "NLRP3-driven pyroptosis in dengue-infected macrophages (synthetic demo)",
+  "hits": [
+    {
+      "record_id": "w1-pt-full",
+      "title": "Piroptose em macrófagos infectados por dengue",
+      "source": "synthetic-corpus",
+      "doi": "10.0000/synth.w1",
+      "language": "pt",
+      "version": "original",
+      "view_type": "original",
+      "locator": "examples/data/case.json#synthetic-demo-001/w1-pt-full"
+    },
+    {
+      "record_id": "w1-en-trans",
+      "title": "Pyroptosis in macrophages infected by dengue",
+      "source": "synthetic-corpus",
+      "doi": "10.0000/synth.w1",
+      "language": "en",
+      "version": "translation",
+      "view_type": "translation",
+      "locator": "examples/data/case.json#synthetic-demo-001/w1-en-trans",
+      "attribution_note": "publisher field absent in synthetic record; version inferred from explicit 'Translated from' marker, marker quoted in evidence"
+    }
+  ],
+  "coverage": {
+    "pt": {"count": 1, "hits": ["w1-pt-full"]},
+    "en": {"count": 1, "hits": ["w1-en-trans"], "note": "translation view; same work counted once across pt/en"},
+    "es": {"status": "missing", "note": "no-record-matched: no es variant in term table and no es record in corpus"}
+  },
+  "sources": [
+    {"path": "examples/data/case.json", "role": "case definition"},
+    {"path": "examples/data/values.json", "role": "assembled values"}
+  ],
+  "uncertainty": [
+    "es coverage missing by design of this synthetic corpus",
+    "output_contract field 'evidence_records' has no value (null); not fabricated"
+  ],
+  "change_records": [
+    "dedup: work W1 counted once across pt original + en translation views",
+    "output_contract field 'evidence_records' not supplied; written as null"
+  ]
+}

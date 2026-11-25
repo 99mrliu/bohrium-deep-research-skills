@@ -1,0 +1,46 @@
+{
+  "overall": "pass",
+  "case_id": "synthetic-demo-001",
+  "checks": [
+    {
+      "check": "C1 case_id match",
+      "verdict": "pass",
+      "detail": "case.json='synthetic-demo-001' result='synthetic-demo-001'"
+    },
+    {
+      "check": "C2 output_contract fields",
+      "verdict": "pass",
+      "detail": "7 contract fields present and acknowledged"
+    },
+    {
+      "check": "C3 status consistency",
+      "verdict": "pass",
+      "detail": "status=ok"
+    },
+    {
+      "check": "C4 hit locator & attribution",
+      "verdict": "pass",
+      "detail": "2 hits checked; problems: []"
+    },
+    {
+      "check": "C5 language coverage honesty",
+      "verdict": "pass",
+      "detail": "3 languages accounted"
+    },
+    {
+      "check": "C6 dedupe honesty",
+      "verdict": "pass",
+      "detail": "version/duplicate views present; dedupe rule documented"
+    },
+    {
+      "check": "C7 sources",
+      "verdict": "pass",
+      "detail": "2 sources; unresolvable: []"
+    },
+    {
+      "check": "C8 no placeholders",
+      "verdict": "pass",
+      "detail": "placeholder-like strings at: []"
+    }
+  ]
+}

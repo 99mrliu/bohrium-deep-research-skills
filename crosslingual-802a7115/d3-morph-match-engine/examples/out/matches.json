@@ -1,0 +1,249 @@
+{
+  "status": "ok",
+  "hits": [
+    {
+      "record_id": "doc-pt",
+      "source_file": "/Users/liuhengshen/Desktop/bhr_product/xlang802-5dir/bundles/d3-morph-match-engine/examples/data/corpus.jsonl",
+      "doi": "10.0000/synth.pt",
+      "declared_language": "pt",
+      "matched_fields": [
+        "title",
+        "abstract"
+      ],
+      "concepts": [
+        {
+          "concept_id": "C1",
+          "label": "pyroptosis",
+          "matches": [
+            {
+              "lang": "pt",
+              "term": "piroptose",
+              "verified": true,
+              "rule": "nfkd_fold",
+              "matched_form": "piroptose",
+              "offset": [
+                0,
+                9
+              ],
+              "context": "piroptose e inflamassoma em macrofagos\na piroptose e induzida pela at"
+            },
+            {
+              "lang": "pt",
+              "term": "piroptose",
+              "verified": true,
+              "rule": "nfkd_fold",
+              "matched_form": "piroptose",
+              "offset": [
+                41,
+                50
+              ],
+              "context": "piroptose e inflamassoma em macrofagos\na piroptose e induzida pela ativacao do inflamassoma nlrp3 em macrofago"
+            }
+          ]
+        },
+        {
+          "concept_id": "C2",
+          "label": "inflammasome",
+          "matches": [
+            {
+              "lang": "pt",
+              "term": "inflamassoma",
+              "verified": true,
+              "rule": "nfkd_fold",
+              "matched_form": "inflamassoma",
+              "offset": [
+                12,
+                24
+              ],
+              "context": "piroptose e inflamassoma em macrofagos\na piroptose e induzida pela ativacao do infla"
+            },
+            {
+              "lang": "pt",
+              "term": "inflamassoma",
+              "verified": true,
+              "rule": "nfkd_fold",
+              "matched_form": "inflamassoma",
+              "offset": [
+                79,
+                91
+              ],
+              "context": "ssoma em macrofagos\na piroptose e induzida pela ativacao do inflamassoma nlrp3 em macrofagos de sao paulo."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "record_id": "doc-de",
+      "source_file": "/Users/liuhengshen/Desktop/bhr_product/xlang802-5dir/bundles/d3-morph-match-engine/examples/data/corpus.jsonl",
+      "doi": "10.0000/synth.de",
+      "declared_language": "de",
+      "matched_fields": [
+        "title",
+        "abstract"
+      ],
+      "concepts": [
+        {
+          "concept_id": "C1",
+          "label": "pyroptosis",
+          "matches": [
+            {
+              "lang": "de",
+              "term": "Pyroptose",
+              "verified": true,
+              "rule": "nfkd_fold",
+              "matched_form": "pyroptose",
+              "offset": [
+                34,
+                43
+              ],
+              "context": "zellpyroptose bei makrophagen\ndie pyroptose wird durch das inflammasom ausgelost. zellpyroptose wurde i"
+            },
+            {
+              "lang": "de",
+              "term": "Pyroptose",
+              "verified": true,
+              "rule": "compound_match",
+              "matched_form": "pyroptose",
+              "offset": [
+                4,
+                13
+              ],
+              "context": "zellpyroptose bei makrophagen\ndie pyroptose wird durch das inflammasom au"
+            },
+            {
+              "lang": "de",
+              "term": "Pyroptose",
+              "verified": true,
+              "rule": "compound_match",
+              "matched_form": "pyroptose",
+              "offset": [
+                86,
+                95
+              ],
+              "context": "gen\ndie pyroptose wird durch das inflammasom ausgelost. zellpyroptose wurde in makrophagen beobachtet."
+            }
+          ]
+        },
+        {
+          "concept_id": "C2",
+          "label": "inflammasome",
+          "matches": [
+            {
+              "lang": "de",
+              "term": "Inflammasom",
+              "verified": true,
+              "rule": "nfkd_fold",
+              "matched_form": "inflammasom",
+              "offset": [
+                59,
+                70
+              ],
+              "context": "zellpyroptose bei makrophagen\ndie pyroptose wird durch das inflammasom ausgelost. zellpyroptose wurde in makrophagen beobachtet."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "record_id": "doc-mixed",
+      "source_file": "/Users/liuhengshen/Desktop/bhr_product/xlang802-5dir/bundles/d3-morph-match-engine/examples/data/corpus.jsonl",
+      "doi": "10.0000/synth.zh",
+      "declared_language": "zh",
+      "matched_fields": [
+        "title",
+        "abstract"
+      ],
+      "concepts": [
+        {
+          "concept_id": "C1",
+          "label": "pyroptosis",
+          "matches": [
+            {
+              "lang": "en",
+              "term": "pyroptosis",
+              "verified": true,
+              "rule": "nfkd_fold",
+              "matched_form": "pyroptosis",
+              "offset": [
+                5,
+                15
+              ],
+              "context": "细胞焦亡 pyroptosis 与炎症小体\n细胞焦亡是一种程序性细胞死亡。日本語の文献てはハイロトーシスと呼はれる。"
+            },
+            {
+              "lang": "ja",
+              "term": "パイロトーシス",
+              "verified": true,
+              "rule": "nfkd_fold",
+              "matched_form": "ハイロトーシス",
+              "offset": [
+                45,
+                52
+              ],
+              "context": "细胞焦亡 pyroptosis 与炎症小体\n细胞焦亡是一种程序性细胞死亡。日本語の文献てはハイロトーシスと呼はれる。"
+            },
+            {
+              "lang": "ja",
+              "term": "パイロトーシス",
+              "verified": true,
+              "rule": "kana_romaji",
+              "matched_form": "pairotoshisu",
+              "offset": [
+                45,
+                57
+              ],
+              "context": "细胞焦亡 pyroptosis 与炎症小体\n细胞焦亡是一种程序性细胞死亡。日本語の文献てはハイロトーシスと呼はれる。"
+            },
+            {
+              "lang": "zh",
+              "term": "细胞焦亡",
+              "verified": false,
+              "rule": "nfkd_fold",
+              "matched_form": "细胞焦亡",
+              "offset": [
+                0,
+                4
+              ],
+              "context": "细胞焦亡 pyroptosis 与炎症小体\n细胞焦亡是一种程序性细胞死亡。日本語の文献てはハイロトーシスと呼はれる。"
+            },
+            {
+              "lang": "zh",
+              "term": "细胞焦亡",
+              "verified": false,
+              "rule": "nfkd_fold",
+              "matched_form": "细胞焦亡",
+              "offset": [
+                22,
+                26
+              ],
+              "context": "细胞焦亡 pyroptosis 与炎症小体\n细胞焦亡是一种程序性细胞死亡。日本語の文献てはハイロトーシスと呼はれる。"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "coverage_by_lang": {
+    "pt": [
+      "doc-pt"
+    ],
+    "de": [
+      "doc-de"
+    ],
+    "en": [
+      "doc-mixed"
+    ],
+    "ja": [
+      "doc-mixed"
+    ],
+    "zh": [
+      "doc-mixed"
+    ]
+  },
+  "counts": {
+    "records_with_hits": 3,
+    "concepts": 2
+  },
+  "parse_notes": []
+}

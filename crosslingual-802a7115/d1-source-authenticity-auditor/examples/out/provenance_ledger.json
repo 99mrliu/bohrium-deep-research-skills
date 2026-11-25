@@ -1,0 +1,194 @@
+{
+  "status": "ok_with_findings",
+  "documents": [
+    {
+      "record_id": "copy_of_en003.txt",
+      "source_file": "/Users/liuhengshen/Desktop/bhr_product/xlang802-5dir/bundles/d1-source-authenticity-auditor/examples/data/copy_of_en003.txt",
+      "title": "",
+      "declared_language": null,
+      "detected_language": "en",
+      "lang_confidence": 0.957,
+      "lang_evidence": {
+        "scores": {
+          "en": 13,
+          "pt": 0,
+          "es": 0,
+          "de": 0,
+          "fr": 0
+        },
+        "top": "en",
+        "margin": 13
+      },
+      "doi": null,
+      "has_abstract": false,
+      "has_body": true,
+      "body_chars": 311,
+      "declared_fields": [],
+      "content_sha256": "14c15d280b85d4da46eb944e7f342761bad7fbec0009a0981f9840e3233d99a5"
+    },
+    {
+      "record_id": "rec-pt-001",
+      "source_file": "/Users/liuhengshen/Desktop/bhr_product/xlang802-5dir/bundles/d1-source-authenticity-auditor/examples/data/records.jsonl",
+      "title": "Piroptose em macrófagos infectados por dengue",
+      "declared_language": "pt",
+      "detected_language": "pt",
+      "lang_confidence": 0.842,
+      "lang_evidence": {
+        "scores": {
+          "en": 0,
+          "pt": 18,
+          "es": 3,
+          "de": 0,
+          "fr": 4
+        },
+        "top": "pt",
+        "margin": 14
+      },
+      "doi": "10.0000/synth.pt.001",
+      "has_abstract": true,
+      "has_body": false,
+      "body_chars": 0,
+      "declared_fields": [
+        "abstract",
+        "doi",
+        "id",
+        "language",
+        "source",
+        "title"
+      ],
+      "content_sha256": "e7052412e133253d6c5121e581e3a097e0adc3915bf9f7c0210e1e9e5af53322"
+    },
+    {
+      "record_id": "rec-mislabeled-002",
+      "source_file": "/Users/liuhengshen/Desktop/bhr_product/xlang802-5dir/bundles/d1-source-authenticity-auditor/examples/data/records.jsonl",
+      "title": "Ativação do inflamassoma em células dendríticas",
+      "declared_language": "en",
+      "detected_language": "pt",
+      "lang_confidence": 0.7,
+      "lang_evidence": {
+        "scores": {
+          "en": 0,
+          "pt": 19,
+          "es": 5,
+          "de": 0,
+          "fr": 9
+        },
+        "top": "pt",
+        "margin": 10
+      },
+      "doi": null,
+      "has_abstract": true,
+      "has_body": false,
+      "body_chars": 0,
+      "declared_fields": [
+        "abstract",
+        "id",
+        "language",
+        "source",
+        "title"
+      ],
+      "content_sha256": "36ce45cc2ee0aaf47df0917b472687d92c4ed8f04c046d105690a2a7a5ad08c2"
+    },
+    {
+      "record_id": "rec-en-003",
+      "source_file": "/Users/liuhengshen/Desktop/bhr_product/xlang802-5dir/bundles/d1-source-authenticity-auditor/examples/data/records.jsonl",
+      "title": "Gasdermin D cleavage in pyroptotic macrophages",
+      "declared_language": "en",
+      "detected_language": "en",
+      "lang_confidence": 0.957,
+      "lang_evidence": {
+        "scores": {
+          "en": 13,
+          "pt": 0,
+          "es": 0,
+          "de": 0,
+          "fr": 0
+        },
+        "top": "en",
+        "margin": 13
+      },
+      "doi": "10.0000/synth.en.003",
+      "has_abstract": true,
+      "has_body": false,
+      "body_chars": 0,
+      "declared_fields": [
+        "abstract",
+        "doi",
+        "id",
+        "language",
+        "source",
+        "title"
+      ],
+      "content_sha256": "14c15d280b85d4da46eb944e7f342761bad7fbec0009a0981f9840e3233d99a5"
+    },
+    {
+      "record_id": "short_note.txt",
+      "source_file": "/Users/liuhengshen/Desktop/bhr_product/xlang802-5dir/bundles/d1-source-authenticity-auditor/examples/data/short_note.txt",
+      "title": "",
+      "declared_language": null,
+      "detected_language": "und",
+      "lang_confidence": 0.0,
+      "lang_evidence": {
+        "reason": "text too short (<20 chars)"
+      },
+      "doi": null,
+      "has_abstract": false,
+      "has_body": true,
+      "body_chars": 13,
+      "declared_fields": [],
+      "content_sha256": "1e118e51aaf9a0ee05197d8b8d136ea3b39e5ac78508aece659c82d4af6bb0df"
+    }
+  ],
+  "findings": [
+    {
+      "kind": "missing_doi",
+      "record_id": "copy_of_en003.txt",
+      "source_file": "/Users/liuhengshen/Desktop/bhr_product/xlang802-5dir/bundles/d1-source-authenticity-auditor/examples/data/copy_of_en003.txt",
+      "action": "do not fabricate; mark DOI as unavailable"
+    },
+    {
+      "kind": "language_label_mismatch",
+      "record_id": "rec-mislabeled-002",
+      "source_file": "/Users/liuhengshen/Desktop/bhr_product/xlang802-5dir/bundles/d1-source-authenticity-auditor/examples/data/records.jsonl",
+      "declared": "en",
+      "detected": "pt",
+      "confidence": 0.7,
+      "action": "trust body text over label; record both"
+    },
+    {
+      "kind": "missing_doi",
+      "record_id": "rec-mislabeled-002",
+      "source_file": "/Users/liuhengshen/Desktop/bhr_product/xlang802-5dir/bundles/d1-source-authenticity-auditor/examples/data/records.jsonl",
+      "action": "do not fabricate; mark DOI as unavailable"
+    },
+    {
+      "kind": "missing_doi",
+      "record_id": "short_note.txt",
+      "source_file": "/Users/liuhengshen/Desktop/bhr_product/xlang802-5dir/bundles/d1-source-authenticity-auditor/examples/data/short_note.txt",
+      "action": "do not fabricate; mark DOI as unavailable"
+    },
+    {
+      "kind": "language_undetermined",
+      "record_id": "short_note.txt",
+      "source_file": "/Users/liuhengshen/Desktop/bhr_product/xlang802-5dir/bundles/d1-source-authenticity-auditor/examples/data/short_note.txt",
+      "action": "flag for manual inspection; exclude from per-language counts"
+    }
+  ],
+  "duplicate_pairs": [
+    {
+      "kind": "near_duplicate",
+      "record_a": "copy_of_en003.txt",
+      "record_b": "rec-en-003",
+      "file_a": "/Users/liuhengshen/Desktop/bhr_product/xlang802-5dir/bundles/d1-source-authenticity-auditor/examples/data/copy_of_en003.txt",
+      "file_b": "/Users/liuhengshen/Desktop/bhr_product/xlang802-5dir/bundles/d1-source-authenticity-auditor/examples/data/records.jsonl",
+      "similarity": 1.0,
+      "action": "count once; keep both attributions"
+    }
+  ],
+  "counts": {
+    "documents": 5,
+    "findings": 5,
+    "duplicate_pairs": 1
+  },
+  "parse_notes": []
+}
