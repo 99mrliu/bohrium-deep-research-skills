@@ -1,0 +1,17 @@
+{
+  "_comment": "SYNTHETIC EXAMPLE judgments for the synthetic demo case only — not a real screening result.",
+  "judgments": [
+    {"record_id": "S1", "label": "keep", "relevance": "direct", "score": 92,
+     "rationale": "C1/C2/C3 all met: RCT of mindful breathing in undergraduates with acute stress outcomes.",
+     "evidence": "randomized 120 undergraduates to mindful breathing or waitlist and measured salivary cortisol and perceived stress"},
+    {"record_id": "S2", "label": "exclude", "relevance": "none", "score": 12,
+     "rationale": "Fails C1 (older adults, not college students) and C3 (chronic anxiety, not acute stress).",
+     "evidence": "adults over 65 with chronic anxiety disorders"},
+    {"record_id": "S3", "label": "pending", "relevance": "indirect", "score": 45,
+     "rationale": "Meets C1 and C3 (population and acute stress physiology) but has no breathing intervention (fails C2); background evidence.",
+     "evidence": "measured cortisol awakening response during exam weeks in 40 college students; no intervention was applied"},
+    {"record_id": "S4", "label": "exclude", "relevance": "duplicate", "score": 90,
+     "rationale": "Duplicate export of S1 (preprint version; input fixture_note marks it). Canonical record is S1 (published version).",
+     "evidence": "SYNTHETIC duplicate export of S1 (preprint version)"}
+  ]
+}

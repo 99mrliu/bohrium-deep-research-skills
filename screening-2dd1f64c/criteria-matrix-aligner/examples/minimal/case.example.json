@@ -1,0 +1,61 @@
+{
+  "case_id": "demo-criteria-01",
+  "research_question": "SYNTHETIC EXAMPLE（合成演示，非真实案例）——在确诊2型糖尿病的成人患者中，SGLT2抑制剂相较安慰剂或常规治疗能否改善心血管结局？仅考察经同行评议发表的随机对照试验证据。",
+  "queries": [
+    "SGLT2 inhibitor type 2 diabetes cardiovascular outcomes randomized trial",
+    "empagliflozin placebo cardiovascular outcome adults T2DM RCT"
+  ],
+  "annotation_standard": {
+    "version": "demo-v1",
+    "inclusion": [
+      "纳入确诊2型糖尿病的成人患者（年龄≥18岁）的临床研究。",
+      "干预措施为SGLT2抑制剂单用或联合用药，对照为安慰剂或常规治疗。",
+      "研究设计为随机对照试验（RCT），发表于经同行评议的期刊，并报告至少一项心血管结局。"
+    ]
+  },
+  "candidates": [
+    {
+      "record_id": "S1",
+      "title": "Empagliflozin and cardiovascular outcomes in adults with type 2 diabetes: a randomized controlled trial",
+      "authors": ["Demo, A.", "Example, B."],
+      "year": 2023,
+      "venue": "Journal of Synthetic Cardiology",
+      "doi": "10.0000/synth.2023.001",
+      "abstract": "In this double-blind, randomized controlled trial, 1,208 adults (aged 45 to 79 years) with type 2 diabetes were assigned to empagliflozin 10 mg daily or placebo. The primary composite cardiovascular outcome (cardiovascular death, nonfatal myocardial infarction, or nonfatal stroke) occurred in 8.1% of the empagliflozin group and 10.4% of the placebo group over a median follow-up of 3.1 years."
+    },
+    {
+      "record_id": "S2",
+      "title": "Empagliflozin versus placebo in adolescents with type 2 diabetes: a randomized trial",
+      "authors": ["Demo, C.", "Example, D."],
+      "year": 2022,
+      "venue": "Pediatric Synthetic Endocrinology",
+      "doi": "10.0000/synth.2022.014",
+      "abstract": "We randomly assigned 214 adolescents (aged 12 to 17 years) with type 2 diabetes to receive once-daily empagliflozin or placebo for 52 weeks. Glycemic control improved, and exploratory cardiovascular endpoints were similar between groups."
+    },
+    {
+      "record_id": "S3",
+      "title": "Dapagliflozin and cardiovascular outcomes in type 2 diabetes: trial design and baseline considerations",
+      "authors": ["Demo, E."],
+      "year": 2021,
+      "venue": "Synthetic Trial Design Letters",
+      "doi": "10.0000/synth.2021.007"
+    },
+    {
+      "record_id": "S4",
+      "title": "Empagliflozin and cardiovascular outcomes in adults with type 2 diabetes: a randomized controlled trial (preprint)",
+      "authors": ["Demo, A.", "Example, B."],
+      "year": 2022,
+      "venue": "SynthRxiv (preprint server)",
+      "abstract": "In this double-blind, randomized controlled trial, 1,208 adults with type 2 diabetes were assigned to empagliflozin 10 mg daily or placebo; the primary composite cardiovascular outcome favored empagliflozin. This article is a preprint and has not been peer reviewed.",
+      "fixture_note": "合成夹具：本记录为 S1 的预印本重复导出，仅作 provenance 标注，不得作为判定依据或预期答案。"
+    }
+  ],
+  "output_contract": {
+    "case_id": "string, echoed from input",
+    "criteria": "verbatim criterion registry with source pointers",
+    "screened_records": "all records, per-criterion verdict matrix with quotes",
+    "ranking": "deterministic rank list",
+    "evidence_records": "verbatim quotes supporting each decision",
+    "status": "honest state with incomplete and limits"
+  }
+}

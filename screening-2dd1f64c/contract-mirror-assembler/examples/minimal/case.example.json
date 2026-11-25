@@ -1,0 +1,40 @@
+{
+  "case_id": "demo-contract-01",
+  "research_question": "SYNTHETIC EXAMPLE — Does mindful breathing reduce acute stress in college students?",
+  "retrieval_scope": {"years": "2018-2024", "population": "college students", "design": "RCT preferred"},
+  "queries": ["mindful breathing stress college students", "breathing exercise acute stress RCT"],
+  "annotation_standard": {
+    "criteria": [
+      {"id": "C1", "rule": "population is college/undergraduate students"},
+      {"id": "C2", "rule": "intervention involves mindful or paced breathing"},
+      {"id": "C3", "rule": "outcome measures acute stress"}
+    ]
+  },
+  "candidates": [
+    {"record_id": "S1", "title": "Mindful breathing lowers exam stress in undergraduates: a randomized trial",
+     "authors": ["Demo A", "Demo B"], "year": 2022, "venue": "Journal of Synthetic Studies",
+     "doi": "10.0000/synth.1", "source": "query:1",
+     "abstract": "We randomized 120 undergraduates to mindful breathing or waitlist and measured salivary cortisol and perceived stress before examinations. The breathing group showed lower acute stress."},
+    {"record_id": "S2", "title": "Breathing exercises in older adults with chronic anxiety",
+     "authors": ["Demo C"], "year": 2020, "venue": "Synthetic Aging Review",
+     "doi": "10.0000/synth.2", "source": "query:2",
+     "abstract": "A cohort study of breathing exercises in adults over 65 with chronic anxiety disorders."},
+    {"record_id": "S3", "title": "Exam stress physiology in college students",
+     "authors": ["Demo D", "Demo E"], "year": 2019, "venue": "Synthetic Physiology Letters",
+     "source": "query:1",
+     "abstract": "We measured cortisol awakening response during exam weeks in 40 college students; no intervention was applied."},
+    {"record_id": "S4", "title": "Mindful breathing lowers exam stress in undergraduates: a randomized trial",
+     "authors": ["Demo A", "Demo B"], "year": 2021, "venue": "arXiv (synthetic preprint)",
+     "source": "query:2", "fixture_note": "SYNTHETIC duplicate export of S1 (preprint version) for dedup testing",
+     "abstract": "Preprint version. We randomized 120 undergraduates to mindful breathing or waitlist and measured salivary cortisol and perceived stress before examinations."}
+  ],
+  "output_contract": {
+    "case_id": "string, echo of the case identifier",
+    "research_question": "string",
+    "screened_records": "array of per-record decisions with label, score, rank",
+    "ranking": "array of {rank, record_id}",
+    "evidence_records": "array of per-decision evidence",
+    "status": "object with state complete|partial",
+    "omission_note": "string describing coverage gaps"
+  }
+}

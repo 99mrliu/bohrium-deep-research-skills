@@ -1,0 +1,32 @@
+{
+  "case_id": "demo-criteria-01",
+  "cells": [
+    {"record_id": "S1", "criterion_id": "c1", "verdict": "met",
+     "quote": "adults (aged 45 to 79 years) with type 2 diabetes"},
+    {"record_id": "S1", "criterion_id": "c2", "verdict": "met",
+     "quote": "empagliflozin 10 mg daily or placebo"},
+    {"record_id": "S1", "criterion_id": "c3", "verdict": "met",
+     "quote": "randomized controlled trial"},
+
+    {"record_id": "S2", "criterion_id": "c1", "verdict": "unmet",
+     "quote": "adolescents (aged 12 to 17 years)"},
+    {"record_id": "S2", "criterion_id": "c2", "verdict": "met",
+     "quote": "once-daily empagliflozin or placebo"},
+    {"record_id": "S2", "criterion_id": "c3", "verdict": "met",
+     "quote": "a randomized trial"},
+
+    {"record_id": "S3", "criterion_id": "c1", "verdict": "unknown",
+     "quote": null},
+    {"record_id": "S3", "criterion_id": "c2", "verdict": "unknown",
+     "quote": null},
+    {"record_id": "S3", "criterion_id": "c3", "verdict": "unknown",
+     "quote": null},
+
+    {"record_id": "S4", "criterion_id": "c1", "verdict": "met",
+     "quote": "adults with type 2 diabetes"},
+    {"record_id": "S4", "criterion_id": "c2", "verdict": "met",
+     "quote": "empagliflozin 10 mg daily or placebo"},
+    {"record_id": "S4", "criterion_id": "c3", "verdict": "unmet",
+     "quote": "has not been peer reviewed"}
+  ]
+}

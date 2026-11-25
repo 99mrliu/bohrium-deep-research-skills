@@ -1,0 +1,54 @@
+{
+  "case_id": "demo-stability-01",
+  "SYNTHETIC_EXAMPLE": "SYNTHETIC EXAMPLE — research question, records, DOIs and venues are fictional; for interface demonstration only, not a real case result.",
+  "research_question": "Do GLP-1 receptor agonists reduce major adverse cardiovascular events in adults with type 2 diabetes?",
+  "queries": [
+    "GLP-1 receptor agonist cardiovascular outcomes type 2 diabetes",
+    "semaglutide liraglutide MACE randomized trial",
+    "incretin therapy cardiovascular safety meta-analysis"
+  ],
+  "retrieval_scope": {"start_year": 2018, "end_year": 2026, "databases": "synthetic demo snapshot"},
+  "records": [
+    {
+      "record_id": "D1",
+      "title": "Major adverse cardiovascular events in type 2 diabetes: a randomized trial of a GLP-1 receptor agonist",
+      "abstract": "In this randomized trial, adults with type 2 diabetes receiving the GLP-1 receptor agonist showed fewer major adverse cardiovascular events than placebo.",
+      "year": 2024,
+      "venue": "Journal of Synthetic Cardiometabolic Research",
+      "doi": "10.0000/synth.demo.d1"
+    },
+    {
+      "record_id": "D2",
+      "title": "GLP-1 receptor agonists and major adverse cardiovascular events in type 2 diabetes: a meta-analysis of randomized trial data",
+      "abstract": "This meta-analysis pools randomized trials of GLP-1 receptor agonists (semaglutide, liraglutide) and estimates effects on major adverse cardiovascular events, trial-level cardiovascular outcomes, and cardiovascular safety in type 2 diabetes.",
+      "year": 2021,
+      "venue": "synthetic preprint server (arXiv demo mirror)",
+      "doi": "10.0000/synth.demo.d2"
+    },
+    {
+      "record_id": "D3",
+      "title": "Cardiovascular outcomes with GLP-1 receptor agonists in type 2 diabetes: pooled randomized trial analysis of major events",
+      "abstract": "Pooled analysis of randomized trials reporting cardiovascular outcomes for GLP-1 receptor agonist therapy in adults with type 2 diabetes, including MACE endpoints, major adverse cardiovascular events, and cardiovascular safety.",
+      "year": 2022,
+      "venue": "Annals of Demonstration Metabolism",
+      "doi": null
+    },
+    {
+      "record_id": "D4",
+      "title": "Incretin therapy and cardiovascular safety in type 2 diabetes: adverse outcomes from randomized trials of GLP-1 receptor agonists",
+      "abstract": "Review of randomized trial evidence on incretin therapy cardiovascular safety, covering GLP-1 receptor agonist outcomes and major adverse cardiovascular events in type 2 diabetes.",
+      "year": 2023,
+      "venue": "Quarterly of Synthetic Endocrine Studies",
+      "doi": null
+    },
+    {
+      "record_id": "D5",
+      "title": "Soil microbiome diversity under long-term organic fertilization",
+      "abstract": "We surveyed soil microbiome diversity across fertilization regimes in temperate cropland plots.",
+      "year": 2015,
+      "venue": "synthetic preprint server (arXiv demo mirror)",
+      "doi": null
+    }
+  ],
+  "output_contract": ["case_id", "screened_records", "ranking", "stability_report", "status"]
+}

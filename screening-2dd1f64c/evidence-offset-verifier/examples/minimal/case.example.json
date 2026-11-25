@@ -1,0 +1,55 @@
+{
+  "case_id": "demo-evidence-01",
+  "notice": "SYNTHETIC EXAMPLE — all records, abstracts, DOIs and notes below are fabricated for interface demonstration only; this is not a real screening case and must not be cited as one.",
+  "research_question": "Which machine-learning methods have been applied to computer-aided retrosynthesis prediction in organic chemistry?",
+  "queries": [
+    "machine learning retrosynthesis prediction",
+    "graph neural network reaction template extraction"
+  ],
+  "candidates": [
+    {
+      "record_id": "S1",
+      "title": "Graph neural networks for data-driven retrosynthesis planning",
+      "abstract": "We present a graph neural network framework that learns retrosynthetic disconnections directly from reaction databases. On the USPTO-50k benchmark the model recovers the reported disconnection in 72 percent of test cases, and a downstream Monte Carlo tree search uses the learned policy to plan multi-step routes. The approach requires no hand-coded reaction templates.",
+      "authors": ["Demo Author A", "Demo Author B"],
+      "year": 2021,
+      "doi": "10.0000/synthetic.demo.s1",
+      "venue": "Journal of Synthetic Demonstrations"
+    },
+    {
+      "record_id": "S2",
+      "title": "A curated benchmark of solubility measurements for small organic molecules",
+      "abstract": "We release a curated dataset of aqueous solubility measurements for 4200 small organic molecules, harmonized from four public sources with explicit uncertainty estimates. Baseline random forest and kernel ridge models are provided to support reproducible comparison. No reaction prediction or synthesis planning task is considered in this work.",
+      "authors": ["Demo Author C"],
+      "year": 2020,
+      "doi": "10.0000/synthetic.demo.s2",
+      "venue": "Demo Data Journal"
+    },
+    {
+      "record_id": "S3",
+      "title": "Transformer models translate reactants into products for reaction outcome prediction",
+      "abstract": "Treating reaction prediction as a machine translation problem, we train an attention-based transformer that maps SMILES strings of reactants and reagents to products. The model reaches 90 percent top-1 accuracy on a public benchmark and generalizes to stereochemically annotated reactions without explicit atom mapping.",
+      "authors": ["Demo Author D", "Demo Author E", "Demo Author F"],
+      "year": 2019,
+      "doi": "10.0000/synthetic.demo.s3",
+      "venue": "Annals of Synthetic Examples"
+    },
+    {
+      "record_id": "S4",
+      "title": "Graph neural networks for data-driven retrosynthesis planning (preprint export)",
+      "abstract": "We present a graph neural network framework that learns retrosynthetic disconnections directly from reaction databases. On the USPTO-50k benchmark the model recovers the reported disconnection in 72 percent of test cases, and a downstream Monte Carlo tree search uses the learned policy to plan multi-step routes.",
+      "authors": ["Demo Author A", "Demo Author B"],
+      "year": 2021,
+      "doi": "10.0000/synthetic.demo.s4",
+      "venue": "Demo Preprint Server",
+      "fixture_note": "SYNTHETIC fixture: labelled duplicate export of S1 injected by the case author to test deduplication handling; provenance only, never ground truth."
+    }
+  ],
+  "output_contract": {
+    "case_id": "echo of the case identifier",
+    "screened_records": "every candidate exactly once, with label, relevance, confidence, criterion_hit and the verified evidence anchor",
+    "ranking": "deterministic ranked order of all records",
+    "verification_report": "anchor verification statistics including verification_rate",
+    "status": "honest completion state (complete only when verification_rate == 1.0 and nothing is unfilled)"
+  }
+}

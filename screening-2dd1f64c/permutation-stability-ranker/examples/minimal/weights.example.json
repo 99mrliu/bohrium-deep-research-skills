@@ -1,0 +1,23 @@
+{
+  "_comment": "SYNTHETIC EXAMPLE weights. Keys must match feature names in features.json meta.feature_definitions. Weights are normalized by their sum inside the engine, so only ratios matter. Any weight may be set to 0 to disable a feature.",
+  "_rationale": {
+    "title_overlap": "highest weight: title is the densest deliberate signal of topical relevance",
+    "abstract_overlap": "second: abstracts confirm relevance but are noisier lexically",
+    "year_in_scope": "small hard constraint: out-of-scope years should hurt but not dominate",
+    "has_abstract": "small metadata-completeness signal",
+    "has_doi": "small metadata-completeness / traceability signal",
+    "venue_tier": "moderate: heuristic venue proxy (heuristic:true), deliberately not dominant",
+    "recency_norm": "moderate: newer work preferred within scope",
+    "semantic_score": "OPTIONAL: filled only when a judgments file (one batched model call) supplies per-record semantic relevance; absent -> feature skipped"
+  },
+  "weights": {
+    "title_overlap": 0.35,
+    "abstract_overlap": 0.30,
+    "year_in_scope": 0.05,
+    "has_abstract": 0.05,
+    "has_doi": 0.05,
+    "venue_tier": 0.10,
+    "recency_norm": 0.10,
+    "semantic_score": 0.15
+  }
+}

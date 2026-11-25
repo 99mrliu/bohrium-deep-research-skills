@@ -1,0 +1,65 @@
+{
+  "case_id": "demo-coverage-01",
+  "example_note": "SYNTHETIC EXAMPLE — research question, queries, records, DOIs and the fixture note are all fabricated for demonstration of the interface and full pipeline only; this is not a real platform case and not real literature.",
+  "research_question": "SYNTHETIC EXAMPLE: 白天小睡（daytime napping）是否促进成年人的陈述性记忆巩固？",
+  "queries": [
+    "daytime napping memory consolidation adults",
+    "sleep spindle density declarative memory nap"
+  ],
+  "candidates": [
+    {
+      "record_id": "S1",
+      "title": "Daytime naps consolidate declarative memory in healthy adults",
+      "abstract": "In a randomized crossover design, 34 healthy adults showed improved word-pair recall after a 90-minute daytime nap compared with wake. Nap sleep spindles correlated with memory consolidation gains.",
+      "authors": ["Demo, A.", "Example, B."],
+      "year": 2021,
+      "doi": "10.0000/synth.demo.001",
+      "venue": "Journal of Synthetic Sleep Research",
+      "source_query": "daytime napping memory consolidation adults"
+    },
+    {
+      "record_id": "S2",
+      "title": "Sleep spindle density predicts declarative memory retention after napping",
+      "abstract": "Spindle density during afternoon naps predicted retention of declarative but not procedural memory in 28 volunteers.",
+      "authors": ["Fixture, C."],
+      "year": 2019,
+      "doi": "10.0000/synth.demo.002",
+      "venue": "Synthetic Neuroscience Letters",
+      "retrieved_by": "sleep spindle density declarative memory nap"
+    },
+    {
+      "record_id": "S3",
+      "title": "Brief napping improves episodic memory in older adults",
+      "abstract": "A short daytime nap improved episodic memory performance in adults aged 60-75, supporting a role for napping in memory consolidation.",
+      "authors": ["Sample, D."],
+      "year": 2022,
+      "doi": "10.0000/synth.demo.003",
+      "venue": "Synthetic Aging Reports"
+    },
+    {
+      "record_id": "S4",
+      "title": "Daytime naps consolidate declarative memory in healthy adults",
+      "abstract": "Preprint version. In a randomized crossover design, 34 healthy adults showed improved word-pair recall after a 90-minute daytime nap compared with wake.",
+      "authors": ["Demo, A.", "Example, B."],
+      "year": 2020,
+      "doi": "10.0000/synth.demo.001pre",
+      "venue": "bioRxiv (preprint)",
+      "fixture_note": "SYNTHETIC FIXTURE: duplicate export — this is the preprint version of record S1 (same work); this label is input provenance only, not ground truth."
+    },
+    {
+      "record_id": "S5",
+      "title": "Microbial diversity of coral reef sediments under thermal stress",
+      "abstract": "Sediment cores from three reefs were sequenced to assess shifts in microbial diversity under thermal stress.",
+      "authors": ["Unrelated, E."],
+      "venue": "Synthetic Marine Biology"
+    }
+  ],
+  "output_contract": {
+    "case_id": "echo of the case identifier",
+    "screened_records": "every input record exactly once, each with bucket keep|pending|exclude, rationale, verbatim quote, and source-query attribution",
+    "query_coverage": "per-query yield over the actual query inputs, plus the unattributed register",
+    "duplicate_register": "conservative duplicate/version register (exact merges, fixture provenance)",
+    "omission_statement": "finite-snapshot disclaimer, missing metadata, suspected-duplicate review queue",
+    "status": "honest completion status"
+  }
+}

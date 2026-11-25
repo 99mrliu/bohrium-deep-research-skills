@@ -1,0 +1,35 @@
+{
+  "note": "SYNTHETIC EXAMPLE — hand-written demo decisions for the synthetic case; in a real run this file is produced by ONE batched model call over all records.",
+  "decisions": [
+    {
+      "record_id": "S1",
+      "bucket": "keep",
+      "rationale": "直接考察白天小睡对成年人陈述性记忆巩固的作用（合成演示判定）。",
+      "quote": "improved word-pair recall after a 90-minute daytime nap"
+    },
+    {
+      "record_id": "S2",
+      "bucket": "keep",
+      "rationale": "纺锤波密度预测小睡后的陈述性记忆保持，与机制问题直接相关（合成演示判定）。",
+      "quote": "Spindle density during afternoon naps predicted retention of declarative"
+    },
+    {
+      "record_id": "S3",
+      "bucket": "pending",
+      "rationale": "样本人群为 60-75 岁老年人，是否纳入'成年人'范围需人工复核（合成演示判定）。",
+      "quote": "episodic memory performance in adults aged 60-75"
+    },
+    {
+      "record_id": "S4",
+      "bucket": "exclude",
+      "rationale": "与 S1 为同一工作的预印本重复导出（fixture_note 仅作 provenance 引用），保留正式发表版 S1（合成演示判定）。",
+      "quote": "Daytime naps consolidate declarative memory in healthy adults"
+    },
+    {
+      "record_id": "S5",
+      "bucket": "exclude",
+      "rationale": "主题为珊瑚礁沉积物微生物多样性，与研究问题无关；且无法归因到任何实际查询（合成演示判定）。",
+      "quote": "Microbial diversity of coral reef sediments"
+    }
+  ]
+}

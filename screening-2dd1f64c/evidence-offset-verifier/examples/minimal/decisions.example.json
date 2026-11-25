@@ -1,0 +1,37 @@
+{
+  "notice": "SYNTHETIC EXAMPLE — hand-written demo decisions; every evidence_quote is a verbatim substring of the matching record's title or abstract in case.example.json.",
+  "decisions": [
+    {
+      "record_id": "S1",
+      "label": "keep",
+      "relevance": "direct",
+      "confidence": 0.93,
+      "criterion_hit": "ML method applied to retrosynthesis planning",
+      "evidence_quote": "learns retrosynthetic disconnections directly from reaction databases"
+    },
+    {
+      "record_id": "S2",
+      "label": "exclude",
+      "relevance": "none",
+      "confidence": 0.88,
+      "criterion_hit": "out of scope: solubility dataset, no synthesis planning",
+      "evidence_quote": "No reaction prediction or synthesis planning task is considered in this work."
+    },
+    {
+      "record_id": "S3",
+      "label": "pending",
+      "relevance": "indirect",
+      "confidence": 0.55,
+      "criterion_hit": "forward reaction prediction, adjacent to retrosynthesis; title/abstract only",
+      "evidence_quote": "maps SMILES strings of reactants and reagents to products"
+    },
+    {
+      "record_id": "S4",
+      "label": "exclude",
+      "relevance": "direct",
+      "confidence": 0.8,
+      "criterion_hit": "duplicate export of S1 per input fixture_note (provenance only); deduplicated",
+      "evidence_quote": "a downstream Monte Carlo tree search uses the learned policy to plan multi-step routes."
+    }
+  ]
+}
