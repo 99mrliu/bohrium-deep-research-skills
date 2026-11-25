@@ -1,0 +1,118 @@
+{
+ "question": "Find literature on moisture-induced degradation and defect passivation of halide perovskite solar cells.",
+ "ranked": [
+  {
+   "title": "Moisture-induced degradation pathways in halide perovskite solar cells",
+   "authors": [
+    "Lin Wei",
+    "Ana Torres"
+   ],
+   "year": 2021,
+   "venue": "Journal of Synthetic Photovoltaics",
+   "doi": "10.0000/synth.a.001",
+   "abstract": "We show that moisture initiates halide migration in perovskite films, accelerating degradation of solar cells, and evaluate barrier strategies.",
+   "provenance": {
+    "file": "snapshots/crossref_page1.json",
+    "root": "examples/synthetic-case",
+    "json_index": 0,
+    "source_type": "crossref",
+    "sha256_12": "d1ed4d22424a"
+   },
+   "record_flags": [],
+   "relevance_score": 18.0,
+   "matched_terms": [
+    "cells",
+    "degradation",
+    "halide",
+    "moisture-induced",
+    "perovskite",
+    "solar"
+   ]
+  },
+  {
+   "title": "Defect passivation strategies for stable perovskite photovoltaics",
+   "authors": [
+    "Maria Chen"
+   ],
+   "year": 2023,
+   "venue": "Synthetic Energy Letters",
+   "doi": "10.0000/synth.a.002",
+   "abstract": "A review of defect passivation, including Lewis-base additives, that improves the operational stability of halide perovskite devices.",
+   "provenance": {
+    "file": "snapshots/crossref_page1.json",
+    "root": "examples/synthetic-case",
+    "json_index": 1,
+    "source_type": "crossref",
+    "sha256_12": "d1ed4d22424a"
+   },
+   "record_flags": [],
+   "also_in": [
+    {
+     "file": "snapshots/europepmc_page1.json",
+     "root": "examples/synthetic-case",
+     "json_index": 0,
+     "source_type": "europepmc",
+     "sha256_12": "324198ea1eb8"
+    }
+   ],
+   "relevance_score": 10.0,
+   "matched_terms": [
+    "defect",
+    "halide",
+    "passivation",
+    "perovskite"
+   ]
+  },
+  {
+   "title": "Interface engineering slows moisture ingress in perovskite solar modules",
+   "authors": [
+    "Garcia P",
+    "Wu H"
+   ],
+   "year": 2022,
+   "venue": "Journal of Synthetic Photovoltaics",
+   "doi": "10.0000/synth.a.003",
+   "abstract": "Hydrophobic interface layers reduce moisture-induced degradation of perovskite solar modules under damp-heat stress.",
+   "provenance": {
+    "file": "snapshots/europepmc_page1.json",
+    "root": "examples/synthetic-case",
+    "json_index": 1,
+    "source_type": "europepmc",
+    "sha256_12": "324198ea1eb8"
+   },
+   "record_flags": [],
+   "relevance_score": 8.0,
+   "matched_terms": [
+    "degradation",
+    "moisture-induced",
+    "perovskite",
+    "solar"
+   ]
+  },
+  {
+   "title": null,
+   "authors": [
+    "Bo Li"
+   ],
+   "year": 20999,
+   "venue": "Annals of Broken Metadata",
+   "doi": "10.0000/synth.a.bad",
+   "abstract": "Record with deliberately defective metadata (empty title, implausible year) to exercise record-level flags.",
+   "provenance": {
+    "file": "snapshots/crossref_page1.json",
+    "root": "examples/synthetic-case",
+    "json_index": 2,
+    "source_type": "crossref",
+    "sha256_12": "d1ed4d22424a"
+   },
+   "record_flags": [
+    "TITLE_MISSING",
+    "YEAR_IMPLAUSIBLE"
+   ],
+   "relevance_score": 1.0,
+   "matched_terms": [
+    "defect"
+   ]
+  }
+ ]
+}

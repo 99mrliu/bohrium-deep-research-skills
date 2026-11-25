@@ -1,0 +1,11 @@
+{
+ "case_id": "SYNTH-C-001",
+ "research_question": "Which publications report defect passivation strategies that improve the moisture stability of halide perovskite solar cells?",
+ "output_contract": {
+  "graded_candidates": "Ranked candidate records with 0-3 graded relevance labels and full per-facet score decomposition",
+  "borderline_queue": "Borderline records routed to the adjudicating agent, each with the specific question to answer",
+  "ranking_report": "Ranking report: pool size, grade histogram, tier counts, zero-hit facets, nDCG if adjudicated",
+  "evidence_manifest": "SHA-256 manifest of every consulted file"
+ },
+ "_note": "SYNTHETIC fixture for graded-relevance-bench examples. All records, authors, venues and DOIs are fictional; DOIs use the reserved 10.0000 prefix. This is not a formal organizer case."
+}

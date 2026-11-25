@@ -1,0 +1,33 @@
+{
+  "status": "ok",
+  "message-type": "work-list",
+  "message": {
+    "total-results": 2,
+    "items": [
+      {
+        "DOI": "10.0000/synth.b.d01",
+        "title": ["Operational stability of large-area coated perovskite absorbers"],
+        "container-title": ["Synthetic Photovoltaics Letters"],
+        "issued": {"date-parts": [[2023]]},
+        "author": [
+          {"given": "Noor", "family": "Erdem"}
+        ],
+        "abstract": "Large-area coated perovskite absorbers retain stability over 1000 h of damp-heat testing.",
+        "reference": [
+          {"key": "ref1", "DOI": "https://doi.org/10.0000/synth.b.s01"}
+        ]
+      },
+      {
+        "DOI": "10.0000/synth.b.e01",
+        "title": ["Traffic flow modeling with cellular automata on urban grids"],
+        "container-title": ["Journal of Synthetic Logistics"],
+        "issued": {"date-parts": [[2021]]},
+        "author": [
+          {"given": "Theo", "family": "Anand"}
+        ],
+        "abstract": "A cellular automata model of urban traffic flow with adaptive signal control.",
+        "reference": []
+      }
+    ]
+  }
+}

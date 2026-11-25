@@ -1,0 +1,136 @@
+{
+ "generated_at": "2026-11-25T07:39:26Z",
+ "question": "Map the citation neighbourhood around the seed study on humidity-controlled crystallization of perovskite films: stability, moisture and passivation work.",
+ "seed_origin": "explicit-case",
+ "nodes": [
+  {
+   "key": "doi:10.0000/synth.b.a01",
+   "doi": "10.0000/synth.b.a01",
+   "title": "Grain-boundary passivation of perovskite films with alkylammonium salts",
+   "year": 2020,
+   "venue": "Synthetic Photovoltaics Letters",
+   "is_seed": false,
+   "hop_backward": 1,
+   "hop_forward": null,
+   "provenance": {
+    "file": "snapshots/crossref_cluster.json",
+    "root": "examples/synthetic-case",
+    "json_index": 0,
+    "source_type": "crossref",
+    "sha256_12": "6e4df194c7f1"
+   }
+  },
+  {
+   "key": "doi:10.0000/synth.b.b01",
+   "doi": "10.0000/synth.b.b01",
+   "title": "Halide segregation dynamics in mixed-cation perovskite films",
+   "year": 2019,
+   "venue": "Journal of Synthetic Materials",
+   "is_seed": false,
+   "hop_backward": 1,
+   "hop_forward": null,
+   "provenance": {
+    "file": "snapshots/crossref_cluster.json",
+    "root": "examples/synthetic-case",
+    "json_index": 1,
+    "source_type": "crossref",
+    "sha256_12": "6e4df194c7f1"
+   }
+  },
+  {
+   "key": "doi:10.0000/synth.b.c01",
+   "doi": "10.0000/synth.b.c01",
+   "title": "Moisture ingress pathways in photovoltaic encapsulation layers",
+   "year": 2018,
+   "venue": "Encapsulation Science Reports",
+   "is_seed": false,
+   "hop_backward": 2,
+   "hop_forward": null,
+   "provenance": {
+    "file": "snapshots/crossref_cluster.json",
+    "root": "examples/synthetic-case",
+    "json_index": 2,
+    "source_type": "crossref",
+    "sha256_12": "6e4df194c7f1"
+   }
+  },
+  {
+   "key": "doi:10.0000/synth.b.d01",
+   "doi": "10.0000/synth.b.d01",
+   "title": "Operational stability of large-area coated perovskite absorbers",
+   "year": 2023,
+   "venue": "Synthetic Photovoltaics Letters",
+   "is_seed": false,
+   "hop_backward": null,
+   "hop_forward": 1,
+   "provenance": {
+    "file": "snapshots/crossref_forward.json",
+    "root": "examples/synthetic-case",
+    "json_index": 0,
+    "source_type": "crossref",
+    "sha256_12": "44598bcc09b0"
+   }
+  },
+  {
+   "key": "doi:10.0000/synth.b.e01",
+   "doi": "10.0000/synth.b.e01",
+   "title": "Traffic flow modeling with cellular automata on urban grids",
+   "year": 2021,
+   "venue": "Journal of Synthetic Logistics",
+   "is_seed": false,
+   "hop_backward": null,
+   "hop_forward": null,
+   "provenance": {
+    "file": "snapshots/crossref_forward.json",
+    "root": "examples/synthetic-case",
+    "json_index": 1,
+    "source_type": "crossref",
+    "sha256_12": "44598bcc09b0"
+   }
+  },
+  {
+   "key": "doi:10.0000/synth.b.s01",
+   "doi": "10.0000/synth.b.s01",
+   "title": "Solvent-free crystallization of perovskite films under controlled humidity",
+   "year": 2022,
+   "venue": "Journal of Synthetic Materials",
+   "is_seed": true,
+   "hop_backward": null,
+   "hop_forward": null,
+   "provenance": {
+    "file": "snapshots/crossref_seed_s.json",
+    "root": "examples/synthetic-case",
+    "json_index": 0,
+    "source_type": "crossref",
+    "sha256_12": "9eb7d54528e2"
+   }
+  }
+ ],
+ "edges": [
+  {
+   "from": "doi:10.0000/synth.b.a01",
+   "to": "doi:10.0000/synth.b.b01",
+   "via": "doi"
+  },
+  {
+   "from": "doi:10.0000/synth.b.a01",
+   "to": "doi:10.0000/synth.b.c01",
+   "via": "title-fuzzy"
+  },
+  {
+   "from": "doi:10.0000/synth.b.d01",
+   "to": "doi:10.0000/synth.b.s01",
+   "via": "doi"
+  },
+  {
+   "from": "doi:10.0000/synth.b.s01",
+   "to": "doi:10.0000/synth.b.a01",
+   "via": "doi"
+  },
+  {
+   "from": "doi:10.0000/synth.b.s01",
+   "to": "doi:10.0000/synth.b.b01",
+   "via": "doi"
+  }
+ ]
+}

@@ -1,0 +1,63 @@
+{
+ "generated_by": "retrieval-run-warden warden.py (offline, stdlib)",
+ "ts": "2026-11-25T07:41:54.265783+00:00",
+ "case_id": "SYNTH-E-001",
+ "run_dir": "/Users/liuhengshen/Desktop/bhr_product/a2909a72-v2/bundles/e-retrieval-run-warden/examples/synthetic-output/tampered/run",
+ "overall_gate": "FAIL",
+ "errors": 3,
+ "warnings": 2,
+ "gate_status": {
+  "ANTI-FABRICATION": "FAIL",
+  "FLOW": "FAIL",
+  "CONTRACT": "PASS",
+  "ANOMALY": "PASS"
+ },
+ "recomputed_counts": {
+  "identified": 4,
+  "after_dedup": 3,
+  "included": 3
+ },
+ "evidence_files": {
+  "faad68f10bc0__crossref_page1.json": {
+   "sha256_12": "faad68f10bc0",
+   "bytes": 2319
+  }
+ },
+ "findings": [
+  {
+   "gate": "ANTI-FABRICATION",
+   "severity": "ERROR",
+   "code": "FABRICATION_SUSPECT",
+   "message": "DOI 10.0000/synth.e.phantom claimed by candidates.json rank=3 appears in NO evidence copy -- this identifier cannot be verified and must not ship",
+   "how_to_recheck": "grep -riF '10.0000/synth.e.phantom' examples/synthetic-output/tampered/run/evidence  (expect zero matches)"
+  },
+  {
+   "gate": "ANTI-FABRICATION",
+   "severity": "ERROR",
+   "code": "FABRICATION_SUSPECT",
+   "message": "title 'Phantom field trial of CRISPR gene drive eliminating malaria vectors entirely' claimed by candidates.json rank=3 appears in NO evidence copy -- this identifier cannot be verified and must not ship",
+   "how_to_recheck": "grep -riF 'Phantom field trial of' examples/synthetic-output/tampered/run/evidence  (expect zero matches; the warden checks the title with all punctuation/case removed)"
+  },
+  {
+   "gate": "FLOW",
+   "severity": "ERROR",
+   "code": "COUNT_MISMATCH",
+   "message": "run_log reports included=2 but independent recomputation from the evidence copies gives 3",
+   "how_to_recheck": "re-parse every file in examples/synthetic-output/tampered/run/evidence and count records / unique dedup keys / candidates by hand"
+  },
+  {
+   "gate": "ANOMALY",
+   "severity": "WARN",
+   "code": "ZERO_HIT_TERMS",
+   "message": "query term(s) matched no record: mosquitoes, systems -- honest coverage gap, belongs in uncertainty",
+   "how_to_recheck": "grep each term across examples/synthetic-output/tampered/run/evidence"
+  },
+  {
+   "gate": "ANOMALY",
+   "severity": "WARN",
+   "code": "SINGLE_SOURCE_POOL",
+   "message": "evidence pool has 1 file(s) / 1 source type(s) -- results rest on a single source",
+   "how_to_recheck": "ls examples/synthetic-output/tampered/run/evidence and note the source_type of each snapshot"
+  }
+ ]
+}

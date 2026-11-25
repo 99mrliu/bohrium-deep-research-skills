@@ -1,0 +1,41 @@
+{
+  "status": "ok",
+  "message-type": "work-list",
+  "message": {
+    "total-results": 4,
+    "items": [
+      {
+        "DOI": "10.0000/synth.e.001",
+        "title": ["CRISPR gene drive suppression of Anopheles gambiae populations in large indoor cages"],
+        "author": [{"given": "Adaeze", "family": "Okonkwo"}, {"given": "Marco", "family": "Bellini"}],
+        "issued": {"date-parts": [[2023]]},
+        "container-title": ["Journal of Synthetic Vector Biology"],
+        "abstract": "We demonstrate a CRISPR-based gene drive that spreads a female-sterility allele through caged Anopheles gambiae populations, collapsing them within 8 generations. The system is a candidate tool for malaria vector control."
+      },
+      {
+        "DOI": "10.0000/synth.e.002",
+        "title": ["CRISPR-Cas9 editing of antimalarial resistance loci in Plasmodium falciparum"],
+        "author": [{"given": "Yuki", "family": "Tanabe"}],
+        "issued": {"date-parts": [[2022]]},
+        "container-title": ["Fictional Parasitology Letters"],
+        "abstract": "A CRISPR-Cas9 protocol for editing kelch13 and crt resistance loci in Plasmodium falciparum, the malaria parasite, with implications for drug resistance surveillance rather than vector control."
+      },
+      {
+        "DOI": "10.0000/synth.e.003",
+        "title": ["Soil microbiome responses to drought in alpine grasslands"],
+        "author": [{"given": "Petra", "family": "Lindqvist"}],
+        "issued": {"date-parts": [[2024]]},
+        "container-title": ["Nordic Ecology Reports"],
+        "abstract": "Amplicon sequencing of alpine grassland soils before and after experimental drought reveals shifts in Actinobacteria abundance and overall metabolic potential."
+      },
+      {
+        "DOI": "10.0000/synth.e.001",
+        "title": ["CRISPR gene drive suppression of Anopheles gambiae populations in large indoor cages (author preprint)"],
+        "author": [{"given": "Adaeze", "family": "Okonkwo"}, {"given": "Marco", "family": "Bellini"}],
+        "issued": {"date-parts": [[2022]]},
+        "container-title": ["Synthetic Preprint Server"],
+        "abstract": "Preprint of the caged-population CRISPR gene drive study later published in the Journal of Synthetic Vector Biology; same DOI minted for the version of record."
+      }
+    ]
+  }
+}

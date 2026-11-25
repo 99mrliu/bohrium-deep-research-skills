@@ -1,0 +1,34 @@
+{
+ "case_id": "SYNTH-D-001",
+ "status": "partial",
+ "import_manifest": "/Users/liuhengshen/Desktop/bhr_product/a2909a72-v2/bundles/d-incremental-import-reconciler/examples/synthetic-output/import_manifest.json",
+ "updated_import_state": "/Users/liuhengshen/Desktop/bhr_product/a2909a72-v2/bundles/d-incremental-import-reconciler/examples/synthetic-output/updated_state.json",
+ "reconciliation_report": "/Users/liuhengshen/Desktop/bhr_product/a2909a72-v2/bundles/d-incremental-import-reconciler/examples/synthetic-output/reconciliation_report.md",
+ "change_records": "/Users/liuhengshen/Desktop/bhr_product/a2909a72-v2/bundles/d-incremental-import-reconciler/examples/synthetic-output/change_records.jsonl",
+ "sources": [
+  {
+   "path": "/Users/liuhengshen/Desktop/bhr_product/a2909a72-v2/bundles/d-incremental-import-reconciler/examples/synthetic-case/case.json",
+   "sha256_12": "48ed8d8ce2c5",
+   "bytes": 945
+  },
+  {
+   "path": "/Users/liuhengshen/Desktop/bhr_product/a2909a72-v2/bundles/d-incremental-import-reconciler/examples/synthetic-case/import_state.json",
+   "sha256_12": "d857321a7087",
+   "bytes": 1240
+  },
+  {
+   "path": "/Users/liuhengshen/Desktop/bhr_product/a2909a72-v2/bundles/d-incremental-import-reconciler/examples/synthetic-case/task.md",
+   "sha256_12": "80b240da570f",
+   "bytes": 562
+  },
+  {
+   "path": "/Users/liuhengshen/Desktop/bhr_product/a2909a72-v2/bundles/d-incremental-import-reconciler/examples/synthetic-case/snapshots/crossref_page1.json",
+   "sha256_12": "35288c4cc416",
+   "bytes": 2707
+  }
+ ],
+ "uncertainty": [
+  "2 identity conflicts queued (not auto-merged); 1 record updated in place; run is offline against organizer-local state only"
+ ],
+ "generated_by": "incremental-import-reconciler make_result.py (offline, stdlib)"
+}

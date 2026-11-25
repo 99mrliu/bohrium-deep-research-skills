@@ -1,0 +1,40 @@
+{
+ "case_id": "SYNTH-B-001",
+ "status": "partial",
+ "candidate_literature": "/Users/liuhengshen/Desktop/bhr_product/a2909a72-v2/bundles/b-refgraph-snowball/examples/synthetic-output/candidates.md",
+ "citation_graph": "/Users/liuhengshen/Desktop/bhr_product/a2909a72-v2/bundles/b-refgraph-snowball/examples/synthetic-output/graph.json",
+ "unresolved_references": "/Users/liuhengshen/Desktop/bhr_product/a2909a72-v2/bundles/b-refgraph-snowball/examples/synthetic-output/unresolved_references.md",
+ "status_report": "/Users/liuhengshen/Desktop/bhr_product/a2909a72-v2/bundles/b-refgraph-snowball/examples/synthetic-output/search_report.md",
+ "sources": [
+  {
+   "path": "/Users/liuhengshen/Desktop/bhr_product/a2909a72-v2/bundles/b-refgraph-snowball/examples/synthetic-case/case.json",
+   "sha256_12": "4d06c00e3144",
+   "bytes": 904
+  },
+  {
+   "path": "/Users/liuhengshen/Desktop/bhr_product/a2909a72-v2/bundles/b-refgraph-snowball/examples/synthetic-case/task.md",
+   "sha256_12": "672bd1fe6dcd",
+   "bytes": 478
+  },
+  {
+   "path": "/Users/liuhengshen/Desktop/bhr_product/a2909a72-v2/bundles/b-refgraph-snowball/examples/synthetic-case/snapshots/crossref_cluster.json",
+   "sha256_12": "6e4df194c7f1",
+   "bytes": 1775
+  },
+  {
+   "path": "/Users/liuhengshen/Desktop/bhr_product/a2909a72-v2/bundles/b-refgraph-snowball/examples/synthetic-case/snapshots/crossref_forward.json",
+   "sha256_12": "44598bcc09b0",
+   "bytes": 1108
+  },
+  {
+   "path": "/Users/liuhengshen/Desktop/bhr_product/a2909a72-v2/bundles/b-refgraph-snowball/examples/synthetic-case/snapshots/crossref_seed_s.json",
+   "sha256_12": "9eb7d54528e2",
+   "bytes": 1195
+  }
+ ],
+ "uncertainty": [
+  "SYNTHETIC demonstration run on fictional records (reserved 10.0000 DOIs); not a formal case result.",
+  "2 references unresolved locally (1 doi-not-in-corpus, 1 no-identifier) - genuine coverage gaps of the synthetic corpus."
+ ],
+ "generated_by": "refgraph-snowball make_result.py (offline, stdlib)"
+}

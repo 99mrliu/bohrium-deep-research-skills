@@ -1,0 +1,203 @@
+{
+ "question": "Map the citation neighbourhood around the seed study on humidity-controlled crystallization of perovskite films: stability, moisture and passivation work.",
+ "seed_origin": "explicit-case",
+ "ranked": [
+  {
+   "key": "doi:10.0000/synth.b.s01",
+   "doi": "10.0000/synth.b.s01",
+   "title": "Solvent-free crystallization of perovskite films under controlled humidity",
+   "authors": [
+    "Mira Talen",
+    "Osei Brandt"
+   ],
+   "year": 2022,
+   "venue": "Journal of Synthetic Materials",
+   "is_seed": true,
+   "hop": 0,
+   "direction": "seed",
+   "seeds_connected": [],
+   "matched_terms_title": [
+    "crystallization",
+    "films",
+    "perovskite"
+   ],
+   "matched_terms_abstract": [
+    "crystallization",
+    "films",
+    "moisture",
+    "perovskite",
+    "stability"
+   ],
+   "score_breakdown": {
+    "seed_base": 10.0,
+    "backward_reach": 0.0,
+    "forward_reach": 0.0,
+    "cocitation_bonus": 0.0,
+    "relevance_bonus": 8.5,
+    "total": 18.5
+   },
+   "provenance": {
+    "file": "snapshots/crossref_seed_s.json",
+    "root": "examples/synthetic-case",
+    "json_index": 0,
+    "source_type": "crossref",
+    "sha256_12": "9eb7d54528e2"
+   }
+  },
+  {
+   "key": "doi:10.0000/synth.b.a01",
+   "doi": "10.0000/synth.b.a01",
+   "title": "Grain-boundary passivation of perovskite films with alkylammonium salts",
+   "authors": [
+    "Hana Vrba"
+   ],
+   "year": 2020,
+   "venue": "Synthetic Photovoltaics Letters",
+   "is_seed": false,
+   "hop": 1,
+   "direction": "backward",
+   "seeds_connected": [
+    "doi:10.0000/synth.b.s01"
+   ],
+   "matched_terms_title": [
+    "films",
+    "passivation",
+    "perovskite"
+   ],
+   "matched_terms_abstract": [
+    "films",
+    "moisture",
+    "perovskite"
+   ],
+   "score_breakdown": {
+    "seed_base": 0.0,
+    "backward_reach": 4.0,
+    "forward_reach": 0.0,
+    "cocitation_bonus": 0.0,
+    "relevance_bonus": 7.5,
+    "total": 11.5
+   },
+   "provenance": {
+    "file": "snapshots/crossref_cluster.json",
+    "root": "examples/synthetic-case",
+    "json_index": 0,
+    "source_type": "crossref",
+    "sha256_12": "6e4df194c7f1"
+   }
+  },
+  {
+   "key": "doi:10.0000/synth.b.d01",
+   "doi": "10.0000/synth.b.d01",
+   "title": "Operational stability of large-area coated perovskite absorbers",
+   "authors": [
+    "Noor Erdem"
+   ],
+   "year": 2023,
+   "venue": "Synthetic Photovoltaics Letters",
+   "is_seed": false,
+   "hop": 1,
+   "direction": "forward",
+   "seeds_connected": [
+    "doi:10.0000/synth.b.s01"
+   ],
+   "matched_terms_title": [
+    "perovskite",
+    "stability"
+   ],
+   "matched_terms_abstract": [
+    "perovskite",
+    "stability"
+   ],
+   "score_breakdown": {
+    "seed_base": 0.0,
+    "backward_reach": 0.0,
+    "forward_reach": 4.0,
+    "cocitation_bonus": 0.0,
+    "relevance_bonus": 5.0,
+    "total": 9.0
+   },
+   "provenance": {
+    "file": "snapshots/crossref_forward.json",
+    "root": "examples/synthetic-case",
+    "json_index": 0,
+    "source_type": "crossref",
+    "sha256_12": "44598bcc09b0"
+   }
+  },
+  {
+   "key": "doi:10.0000/synth.b.b01",
+   "doi": "10.0000/synth.b.b01",
+   "title": "Halide segregation dynamics in mixed-cation perovskite films",
+   "authors": [
+    "Petar Lindqvist",
+    "Ayo Falana"
+   ],
+   "year": 2019,
+   "venue": "Journal of Synthetic Materials",
+   "is_seed": false,
+   "hop": 1,
+   "direction": "backward",
+   "seeds_connected": [
+    "doi:10.0000/synth.b.s01"
+   ],
+   "matched_terms_title": [
+    "films",
+    "perovskite"
+   ],
+   "matched_terms_abstract": [
+    "films",
+    "perovskite"
+   ],
+   "score_breakdown": {
+    "seed_base": 0.0,
+    "backward_reach": 4.0,
+    "forward_reach": 0.0,
+    "cocitation_bonus": 0.0,
+    "relevance_bonus": 5.0,
+    "total": 9.0
+   },
+   "provenance": {
+    "file": "snapshots/crossref_cluster.json",
+    "root": "examples/synthetic-case",
+    "json_index": 1,
+    "source_type": "crossref",
+    "sha256_12": "6e4df194c7f1"
+   }
+  },
+  {
+   "key": "doi:10.0000/synth.b.c01",
+   "doi": "10.0000/synth.b.c01",
+   "title": "Moisture ingress pathways in photovoltaic encapsulation layers",
+   "authors": [
+    "Lena Marchetti"
+   ],
+   "year": 2018,
+   "venue": "Encapsulation Science Reports",
+   "is_seed": false,
+   "hop": 2,
+   "direction": "backward",
+   "seeds_connected": [],
+   "matched_terms_title": [
+    "moisture"
+   ],
+   "matched_terms_abstract": [
+    "moisture"
+   ],
+   "score_breakdown": {
+    "seed_base": 0.0,
+    "backward_reach": 2.0,
+    "forward_reach": 0.0,
+    "cocitation_bonus": 0.0,
+    "relevance_bonus": 2.5,
+    "total": 4.5
+   },
+   "provenance": {
+    "file": "snapshots/crossref_cluster.json",
+    "root": "examples/synthetic-case",
+    "json_index": 2,
+    "source_type": "crossref",
+    "sha256_12": "6e4df194c7f1"
+   }
+  }
+ ]
+}

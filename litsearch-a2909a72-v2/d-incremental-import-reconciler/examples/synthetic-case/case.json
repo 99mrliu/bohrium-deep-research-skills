@@ -1,0 +1,11 @@
+{
+  "case_id": "SYNTH-D-001",
+  "research_question": "Reconcile a newly arrived Crossref snapshot page against the organizer-local import state of a living literature library on offline scholarly-import workflows.",
+  "output_contract": {
+    "import_manifest": "Ordered classification of every candidate record (adds, updates, skips, conflicts, suspects) with reason codes and content fingerprints.",
+    "updated_import_state": "The reconciled local import state after applying all adds and updates.",
+    "reconciliation_report": "Human-readable reconciliation report with field-level diffs, the conflict queue and honest notes.",
+    "change_records": "One JSONL record per applied change, sufficient for an independent audit."
+  },
+  "_note": "SYNTHETIC fixture for the minimal example of the incremental-import-reconciler skill. All records below are fictional; DOIs use the reserved 10.0000 prefix. This is not an organizer test case."
+}

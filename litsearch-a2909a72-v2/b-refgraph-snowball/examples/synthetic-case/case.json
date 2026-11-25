@@ -1,0 +1,12 @@
+{
+  "case_id": "SYNTH-B-001",
+  "research_question": "Map the citation neighbourhood around the seed study on humidity-controlled crystallization of perovskite films: stability, moisture and passivation work.",
+  "seed_dois": ["10.0000/synth.b.s01"],
+  "output_contract": {
+    "candidate_literature": "Ranked candidate literature found by citation-graph snowballing, with per-candidate score breakdowns and provenance.",
+    "citation_graph": "The reconstructed local citation graph (nodes and resolved edges).",
+    "unresolved_references": "Ledger of references that could not be resolved against the local corpus, with reason codes.",
+    "status_report": "Run status, honest gaps and uncertainty."
+  },
+  "_note": "SYNTHETIC fixture for the minimal example of the refgraph-snowball skill. All records below are fictional; DOIs use the reserved 10.0000 prefix. This is not an organizer test case."
+}

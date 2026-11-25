@@ -1,0 +1,11 @@
+{
+  "case_id": "SYNTH-E-001",
+  "research_question": "Find literature on CRISPR gene drive systems for malaria vector control in Anopheles mosquitoes.",
+  "output_contract": {
+    "candidate_literature": "Ranked candidate literature file with per-record provenance.",
+    "retrieval_run_log": "Machine-readable pipeline ledger (PRISMA-style flow).",
+    "warden_audit": "Audit report showing every gate's verdict and findings.",
+    "status_report": "Human-readable summary of status and limitations."
+  },
+  "_note": "SYNTHETIC fixture for the retrieval-run-warden skill. All records are fictional; DOIs use the reserved 10.0000 prefix. Not a formal evaluation case."
+}

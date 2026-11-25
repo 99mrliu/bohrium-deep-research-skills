@@ -1,0 +1,50 @@
+{
+  "status": "ok",
+  "message-type": "work-list",
+  "message": {
+    "total-results": 5,
+    "query": {"search-terms": "offline scholarly import workflows"},
+    "items": [
+      {
+        "DOI": "10.0000/synth.d.001",
+        "title": ["Incremental import reconciliation for scholarly knowledge bases"],
+        "author": [{"given": "Hana", "family": "Iwate"}, {"given": "Yusuf", "family": "Adeyemi"}],
+        "issued": {"date-parts": [[2022]]},
+        "container-title": ["Journal of Synthetic Bibliometrics"],
+        "abstract": "We formalize incremental import as a state reconciliation problem and show that fingerprint-based classification prevents silent re-imports in scholarly knowledge bases."
+      },
+      {
+        "DOI": "10.0000/synth.d.002",
+        "title": ["Provenance-aware deduplication in systematic literature pipelines"],
+        "author": [{"given": "Carlos", "family": "Mendes"}],
+        "issued": {"date-parts": [[2020]]},
+        "container-title": ["Synthetic Review of Information Systems"],
+        "abstract": "A survey of deduplication strategies that preserve provenance chains when systematic review pipelines merge records from heterogeneous sources."
+      },
+      {
+        "DOI": "10.0000/synth.d.003",
+        "title": ["Idempotent upsert semantics for offline corpus snapshots"],
+        "author": [{"given": "Petra", "family": "Novak"}, {"given": "Lin", "family": "Qiao"}],
+        "issued": {"date-parts": [[2024]]},
+        "container-title": ["Transactions on Synthetic Data Engineering"],
+        "abstract": "We define upsert semantics under which re-applying the same offline corpus snapshot leaves the import state byte-identical, and prove a convergence lemma."
+      },
+      {
+        "DOI": "10.0000/synth.d.001",
+        "title": ["Incremental ingest harmonisation for scholarly knowledge bases"],
+        "author": [{"given": "Hana", "family": "Iwate"}],
+        "issued": {"date-parts": [[2022]]},
+        "container-title": ["Journal of Synthetic Bibliometrics"],
+        "abstract": "A record carrying a DOI that already exists in the local state but a contradictory title, to exercise the identity-conflict queue."
+      },
+      {
+        "DOI": "10.0000/synth.d.777",
+        "title": ["Provenance-aware deduplication in systematic literature pipelines"],
+        "author": [{"given": "Carlos", "family": "Mendes"}, {"given": "Ruth", "family": "Okafor"}],
+        "issued": {"date-parts": [[2021]]},
+        "container-title": ["Synthetic Review of Information Systems"],
+        "abstract": "A record whose title collides with an imported entry but whose DOI differs, to exercise the second identity-conflict branch."
+      }
+    ]
+  }
+}

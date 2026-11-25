@@ -1,0 +1,47 @@
+{
+  "status": "ok",
+  "message-type": "work-list",
+  "message": {
+    "total-results": 3,
+    "items": [
+      {
+        "DOI": "10.0000/synth.b.a01",
+        "title": ["Grain-boundary passivation of perovskite films with alkylammonium salts"],
+        "container-title": ["Synthetic Photovoltaics Letters"],
+        "issued": {"date-parts": [[2020]]},
+        "author": [
+          {"given": "Hana", "family": "Vrba"}
+        ],
+        "abstract": "Alkylammonium salts passivate grain boundaries in perovskite films, suppressing moisture-induced degradation.",
+        "reference": [
+          {"key": "ref1", "DOI": "10.0000/synth.b.b01"},
+          {"key": "ref2",
+           "article-title": "Moisture ingress pathways in photovoltaic encapsulation layers"}
+        ]
+      },
+      {
+        "DOI": "10.0000/synth.b.b01",
+        "title": ["Halide segregation dynamics in mixed-cation perovskite films"],
+        "container-title": ["Journal of Synthetic Materials"],
+        "issued": {"date-parts": [[2019]]},
+        "author": [
+          {"given": "Petar", "family": "Lindqvist"},
+          {"given": "Ayo", "family": "Falana"}
+        ],
+        "abstract": "In-situ probing of halide segregation in mixed-cation perovskite films under illumination.",
+        "reference": []
+      },
+      {
+        "DOI": "10.0000/synth.b.c01",
+        "title": ["Moisture ingress pathways in photovoltaic encapsulation layers"],
+        "container-title": ["Encapsulation Science Reports"],
+        "issued": {"date-parts": [[2018]]},
+        "author": [
+          {"given": "Lena", "family": "Marchetti"}
+        ],
+        "abstract": "We measure water and moisture ingress through encapsulation layers for photovoltaic modules.",
+        "reference": []
+      }
+    ]
+  }
+}

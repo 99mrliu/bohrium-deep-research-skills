@@ -1,0 +1,355 @@
+{
+ "question": "Which publications report defect passivation strategies that improve the moisture stability of halide perovskite solar cells?",
+ "facets": [
+  {
+   "name": "material",
+   "terms": [
+    "halide perovskite",
+    "perovskite",
+    "perovskite solar cell"
+   ]
+  },
+  {
+   "name": "problem",
+   "terms": [
+    "humidity",
+    "moisture",
+    "stability",
+    "water-induced degradation"
+   ]
+  },
+  {
+   "name": "method",
+   "terms": [
+    "defect healing",
+    "defect passivation",
+    "passivation",
+    "surface treatment"
+   ]
+  }
+ ],
+ "facets_source": "agent-file:examples/synthetic-case/facets.json",
+ "unique_records": 4,
+ "duplicates_merged": 1,
+ "records": [
+  {
+   "id": "doi:10.0000/synth.c.001",
+   "doi": "10.0000/synth.c.001",
+   "title": "Defect passivation for moisture-stable halide perovskite solar cells",
+   "authors": [
+    "Lena Fossheim",
+    "Ravi Okafor"
+   ],
+   "year": 2023,
+   "venue": "Journal of Synthetic Photovoltaics",
+   "abstract": "We introduce a molecular defect passivation layer that heals undercoordinated lead sites at the halide perovskite surface. Devices retain 94% of initial efficiency after 1000 h at 85% relative humidity, demonstrating that defect passivation directly improves the moisture stability of perovskite solar cells.",
+   "engine_grade": 3,
+   "final_grade": 3,
+   "tier": "clear-include",
+   "score_decomposition": [
+    {
+     "facet": "material",
+     "matched_terms": {
+      "title": [
+       "halide perovskite",
+       "perovskite",
+       "perovskite solar cell"
+      ],
+      "abstract": [
+       "halide perovskite",
+       "perovskite",
+       "perovskite solar cell"
+      ]
+     },
+     "fields": [
+      "title",
+      "abstract"
+     ],
+     "status": "hit",
+     "contribution": 1.0,
+     "evidence": [
+      "title: Defect passivation for moisture-stable halide perovskite solar cells",
+      "abstract: We introduce a molecular defect passivation layer that heals undercoordinated lead sites at the halide perovskite surface.",
+      "abstract: Devices retain 94% of initial efficiency after 1000 h at 85% relative humidity, demonstrating that defect passivation directly improves the moisture stability of perovskite solar cells."
+     ]
+    },
+    {
+     "facet": "problem",
+     "matched_terms": {
+      "title": [
+       "moisture"
+      ],
+      "abstract": [
+       "humidity",
+       "moisture",
+       "stability"
+      ]
+     },
+     "fields": [
+      "title",
+      "abstract"
+     ],
+     "status": "hit",
+     "contribution": 1.0,
+     "evidence": [
+      "title: Defect passivation for moisture-stable halide perovskite solar cells",
+      "abstract: Devices retain 94% of initial efficiency after 1000 h at 85% relative humidity, demonstrating that defect passivation directly improves the moisture stability of perovskite solar cells."
+     ]
+    },
+    {
+     "facet": "method",
+     "matched_terms": {
+      "title": [
+       "defect passivation",
+       "passivation"
+      ],
+      "abstract": [
+       "defect passivation",
+       "passivation"
+      ]
+     },
+     "fields": [
+      "title",
+      "abstract"
+     ],
+     "status": "hit",
+     "contribution": 1.0,
+     "evidence": [
+      "title: Defect passivation for moisture-stable halide perovskite solar cells",
+      "abstract: We introduce a molecular defect passivation layer that heals undercoordinated lead sites at the halide perovskite surface."
+     ]
+    }
+   ],
+   "provenance": {
+    "file": "examples/synthetic-case/snapshots/crossref_page1.json",
+    "json_index": 0,
+    "shape": "crossref",
+    "sha256_12": "34a54a1be34f"
+   },
+   "also_in": [
+    {
+     "file": "examples/synthetic-case/snapshots/crossref_page1.json",
+     "json_index": 4,
+     "shape": "crossref",
+     "sha256_12": "34a54a1be34f"
+    }
+   ],
+   "facet_hits": 3,
+   "weak_hits": 0,
+   "title_hit_facets": 3,
+   "coverage": 1.0
+  },
+  {
+   "id": "doi:10.0000/synth.c.002",
+   "doi": "10.0000/synth.c.002",
+   "title": "Moisture-induced degradation mechanisms in halide perovskite films",
+   "authors": [
+    "Petra Lindqvist",
+    "Tomas Baek",
+    "Aisha Rahmani"
+   ],
+   "year": 2021,
+   "venue": "Fictional Materials Degradation Letters",
+   "abstract": "Operando spectroscopy reveals how moisture ingress drives hydrate formation and lattice collapse in halide perovskite thin films under elevated humidity. The degradation pathway is mapped as a function of film composition and grain size.",
+   "engine_grade": 2,
+   "final_grade": 2,
+   "tier": "clear-include",
+   "score_decomposition": [
+    {
+     "facet": "material",
+     "matched_terms": {
+      "title": [
+       "halide perovskite",
+       "perovskite"
+      ],
+      "abstract": [
+       "halide perovskite",
+       "perovskite"
+      ]
+     },
+     "fields": [
+      "title",
+      "abstract"
+     ],
+     "status": "hit",
+     "contribution": 1.0,
+     "evidence": [
+      "title: Moisture-induced degradation mechanisms in halide perovskite films",
+      "abstract: Operando spectroscopy reveals how moisture ingress drives hydrate formation and lattice collapse in halide perovskite thin films under elevated humidity."
+     ]
+    },
+    {
+     "facet": "problem",
+     "matched_terms": {
+      "title": [
+       "moisture"
+      ],
+      "abstract": [
+       "humidity",
+       "moisture"
+      ]
+     },
+     "fields": [
+      "title",
+      "abstract"
+     ],
+     "status": "hit",
+     "contribution": 1.0,
+     "evidence": [
+      "title: Moisture-induced degradation mechanisms in halide perovskite films",
+      "abstract: Operando spectroscopy reveals how moisture ingress drives hydrate formation and lattice collapse in halide perovskite thin films under elevated humidity."
+     ]
+    },
+    {
+     "facet": "method",
+     "matched_terms": {
+      "title": [],
+      "abstract": []
+     },
+     "fields": [],
+     "status": "miss",
+     "contribution": 0.0,
+     "evidence": []
+    }
+   ],
+   "provenance": {
+    "file": "examples/synthetic-case/snapshots/crossref_page1.json",
+    "json_index": 1,
+    "shape": "crossref",
+    "sha256_12": "34a54a1be34f"
+   },
+   "also_in": [],
+   "facet_hits": 2,
+   "weak_hits": 0,
+   "title_hit_facets": 2,
+   "coverage": 0.6667
+  },
+  {
+   "id": "doi:10.0000/synth.c.003",
+   "doi": "10.0000/synth.c.003",
+   "title": "Ion migration hysteresis in mixed-cation thin-film photovoltaic devices",
+   "authors": [
+    "Greta Halvorsen"
+   ],
+   "year": 2022,
+   "venue": "Annals of Applied Device Physics (Synthetic)",
+   "abstract": "We combine drift-diffusion modelling and impedance spectroscopy to show that grain-boundary passivation of mobile ionic defects suppresses current-voltage hysteresis in mixed-cation thin-film photovoltaic devices over a wide temperature range.",
+   "engine_grade": 1,
+   "final_grade": 1,
+   "tier": "borderline",
+   "score_decomposition": [
+    {
+     "facet": "material",
+     "matched_terms": {
+      "title": [],
+      "abstract": []
+     },
+     "fields": [],
+     "status": "miss",
+     "contribution": 0.0,
+     "evidence": []
+    },
+    {
+     "facet": "problem",
+     "matched_terms": {
+      "title": [],
+      "abstract": []
+     },
+     "fields": [],
+     "status": "miss",
+     "contribution": 0.0,
+     "evidence": []
+    },
+    {
+     "facet": "method",
+     "matched_terms": {
+      "title": [],
+      "abstract": [
+       "passivation"
+      ]
+     },
+     "fields": [
+      "abstract"
+     ],
+     "status": "weak",
+     "contribution": 0.2,
+     "evidence": [
+      "abstract: We combine drift-diffusion modelling and impedance spectroscopy to show that grain-boundary passivation of mobile ionic defects suppresses current-voltage hysteresis in mixed-cation thin-film photovoltai..."
+     ]
+    }
+   ],
+   "provenance": {
+    "file": "examples/synthetic-case/snapshots/crossref_page1.json",
+    "json_index": 2,
+    "shape": "crossref",
+    "sha256_12": "34a54a1be34f"
+   },
+   "also_in": [],
+   "facet_hits": 0,
+   "weak_hits": 1,
+   "title_hit_facets": 0,
+   "coverage": 0.0
+  },
+  {
+   "id": "doi:10.0000/synth.c.004",
+   "doi": "10.0000/synth.c.004",
+   "title": "Kinetic study of methane dry reforming over nickel-ceria catalysts",
+   "authors": [
+    "Bruno Castellanos",
+    "Mei Fujikawa"
+   ],
+   "year": 2020,
+   "venue": "Synthetic Catalysis Reports",
+   "abstract": "Reaction rates and carbon deposition were measured for co-precipitated Ni/CeO2 catalysts between 873 and 973 K in a fixed-bed reactor. A Langmuir-Hinshelwood model fits the measured kinetics across the full temperature range.",
+   "engine_grade": 0,
+   "final_grade": 0,
+   "tier": "clear-exclude",
+   "score_decomposition": [
+    {
+     "facet": "material",
+     "matched_terms": {
+      "title": [],
+      "abstract": []
+     },
+     "fields": [],
+     "status": "miss",
+     "contribution": 0.0,
+     "evidence": []
+    },
+    {
+     "facet": "problem",
+     "matched_terms": {
+      "title": [],
+      "abstract": []
+     },
+     "fields": [],
+     "status": "miss",
+     "contribution": 0.0,
+     "evidence": []
+    },
+    {
+     "facet": "method",
+     "matched_terms": {
+      "title": [],
+      "abstract": []
+     },
+     "fields": [],
+     "status": "miss",
+     "contribution": 0.0,
+     "evidence": []
+    }
+   ],
+   "provenance": {
+    "file": "examples/synthetic-case/snapshots/crossref_page1.json",
+    "json_index": 3,
+    "shape": "crossref",
+    "sha256_12": "34a54a1be34f"
+   },
+   "also_in": [],
+   "facet_hits": 0,
+   "weak_hits": 0,
+   "title_hit_facets": 0,
+   "coverage": 0.0
+  }
+ ]
+}

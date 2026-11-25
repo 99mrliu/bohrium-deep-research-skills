@@ -1,0 +1,86 @@
+# Minimal invocation example — SYNTHETIC, not a formal case result
+
+The outputs below were produced by **actually running this exact skill version**
+on the synthetic fixture in `examples/synthetic-case/` (all records fictional,
+DOIs under the reserved `10.0000` prefix). They demonstrate the interface
+end-to-end; they are **not** results of any organizer test case. The real
+artifacts are kept under `examples/synthetic-output/` so a reviewer can diff
+them against a fresh run.
+
+## Input
+
+`examples/synthetic-case/case.json` (excerpt):
+
+```json
+{"case_id": "SYNTH-B-001",
+ "research_question": "Map the citation neighbourhood around the seed study on humidity-controlled crystallization of perovskite films: stability, moisture and passivation work.",
+ "seed_dois": ["10.0000/synth.b.s01"],
+ "output_contract": {"candidate_literature": "...", "citation_graph": "...", "unresolved_references": "...", "status_report": "..."}}
+```
+
+`examples/synthetic-case/snapshots/` ships three Crossref-shaped files whose
+`reference` arrays form a real small graph:
+
+| record | role | references |
+|-|-|-|
+| S `10.0000/synth.b.s01` | **seed** (in `crossref_seed_s.json`) | cites A, B, an absent DOI `10.0000/synth.b.x99`, and one unstructured entry with no identifier |
+| A `10.0000/synth.b.a01` | backward hop 1 | cites B (DOI) and C (article-title only → fuzzy resolution) |
+| B `10.0000/synth.b.b01` | backward hop 1 | none |
+| C `10.0000/synth.b.c01` | backward hop 2 (via A) | none |
+| D `10.0000/synth.b.d01` | **forward hop 1** — cites S via a `https://doi.org/`-prefixed DOI | cites S |
+| E `10.0000/synth.b.e01` | unrelated record | none — must NOT appear in candidates |
+
+## Invocation (exactly what was run)
+
+```
+python3 scripts/make_result.py --case examples/synthetic-case/case.json \
+    --out examples/synthetic-output/result.json --status partial
+python3 scripts/refgraph.py --case examples/synthetic-case/case.json \
+    --input examples/synthetic-case --work /tmp/b-work --out examples/synthetic-output
+python3 scripts/make_result.py --case examples/synthetic-case/case.json \
+    --out examples/synthetic-output/result.json --status partial \
+    --uncertainty "SYNTHETIC demonstration run on fictional records (reserved 10.0000 DOIs); not a formal case result." \
+    --uncertainty "2 references unresolved locally (1 doi-not-in-corpus, 1 no-identifier) - genuine coverage gaps of the synthetic corpus."
+python3 scripts/make_result.py --case examples/synthetic-case/case.json \
+    --out examples/synthetic-output/result.json --validate
+```
+
+## Actual engine digest (stdout of the run kept in synthetic-output)
+
+```json
+{"ENGINE_STATUS": "success", "question": "Map the citation neighbourhood around the seed study on humidity-controlled crystallization of perovskite films: stability, moisture and passivation work.", "query_terms": ["citation", "crystallization", "films", "humidity-controlled", "moisture", "neighbourhood", "passivation", "perovskite", "seed", "stability"], "snapshots_seen": 3, "reference_files_seen": 0, "records_loaded": 6, "unique_records": 6, "seed_origin": "explicit-case", "seeds_matched": [{"key": "doi:10.0000/synth.b.s01", "doi": "10.0000/synth.b.s01", "title": "Solvent-free crystallization of perovskite films under controlled humidity"}], "seeds_unmatched": [], "references_extracted": 7, "references_resolved": 5, "references_unresolved": 2, "unresolved_by_reason": {"doi-not-in-corpus": 1, "no-identifier": 1}, "graph_edges": 5, "graph_density": 0.1667, "candidates": 5, "seeds_without_resolvable_refs": [], "max_hops": 2}
+```
+
+Validator output: `VALIDATE OK: 4 contract fields, case_id=SYNTH-B-001, status=partial`.
+
+## What the run demonstrates
+
+- **Graph reconstruction**: 7 references extracted from the Crossref
+  `reference` arrays; 5 resolved into edges — S→A, S→B (DOI), A→B (DOI),
+  A→C (**title-fuzzy**, the reference carried only an `article-title`),
+  D→S (DOI with `https://doi.org/` prefix normalized).
+- **Backward + forward snowball**: A and B found at hop 1 backward, C at
+  hop 2 backward (S→A→C), D at hop 1 **forward** (its reference list cites
+  the seed). E is correctly excluded: no citation path to the seed.
+- **Unresolved ledger has exactly 2 entries**: `10.0000/synth.b.x99`
+  (`doi-not-in-corpus`) and the unstructured workshop-talk reference
+  (`no-identifier`) — see `synthetic-output/unresolved_references.md`.
+- **Transparent scoring**: seed S = 10 (seed_base) + 8.5 (relevance) = 18.5;
+  A = 4.0 (hop 1 backward) + 7.5 = 11.5; D and B tie at 9.0 (broken by year
+  desc); C = 4.0/2 + 2.5 = 4.5. Every component is listed per candidate in
+  `candidates.md`.
+- **Contract**: `result.json` validates with all 4 contract fields filled by
+  the heuristic field-name mapping; status stays `partial` because the run is
+  synthetic and carries unresolved-reference gaps — exactly the behavior
+  expected on a real case with an incomplete local corpus.
+
+## Output files (real, regenerated by the commands above)
+
+- `synthetic-output/graph.json` — nodes (with hop distances) + resolved edges
+- `synthetic-output/candidates.md` / `candidates.json` — ranked, with
+  `score_breakdown` and provenance per candidate
+- `synthetic-output/unresolved_references.md` — ledger + reason counts
+- `synthetic-output/search_report.md` — digest + interpretation + honest gaps
+- `synthetic-output/evidence/evidence_index.json` — hash manifest of every
+  consulted file
+- `synthetic-output/result.json` — contract-filled, validated

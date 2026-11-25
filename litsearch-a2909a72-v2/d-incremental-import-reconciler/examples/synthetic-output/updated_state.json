@@ -1,0 +1,61 @@
+{
+ "schema": "incremental-import-reconciler/state/v1",
+ "mode": "incremental",
+ "prior_state_origin": "file:/Users/liuhengshen/Desktop/bhr_product/a2909a72-v2/bundles/d-incremental-import-reconciler/examples/synthetic-case/import_state.json",
+ "generated_at": "2026-11-25T07:41:04Z",
+ "imported": {
+  "doi:10.0000/synth.d.001": {
+   "doi": "10.0000/synth.d.001",
+   "title": "Incremental import reconciliation for scholarly knowledge bases",
+   "year": 2022,
+   "venue": "Journal of Synthetic Bibliometrics",
+   "authors": [
+    "Hana Iwate",
+    "Yusuf Adeyemi"
+   ],
+   "abstract": "We formalize incremental import as a state reconciliation problem and show that fingerprint-based classification prevents silent re-imports in scholarly knowledge bases.",
+   "imported_at": "2025-08-14T09:30:11Z",
+   "source": "crossref-snapshot-2025-08",
+   "provenance": null,
+   "fingerprint": "80e819bef090"
+  },
+  "doi:10.0000/synth.d.002": {
+   "doi": "10.0000/synth.d.002",
+   "title": "Provenance-aware deduplication in systematic literature pipelines",
+   "year": 2020,
+   "venue": "Synthetic Review of Information Systems",
+   "authors": [
+    "Carlos Mendes"
+   ],
+   "abstract": "A survey of deduplication strategies that preserve provenance chains when systematic review pipelines merge records from heterogeneous sources.",
+   "imported_at": "2025-08-14T09:31:02Z",
+   "source": "reconcile:update",
+   "provenance": {
+    "file": "/Users/liuhengshen/Desktop/bhr_product/a2909a72-v2/bundles/d-incremental-import-reconciler/examples/synthetic-case/snapshots/crossref_page1.json",
+    "json_index": 1
+   },
+   "fingerprint": "66424527fcbc",
+   "updated_at": "2026-11-25T07:41:04Z",
+   "previous_fingerprint": "95319c5d9ce8"
+  },
+  "doi:10.0000/synth.d.003": {
+   "doi": "10.0000/synth.d.003",
+   "title": "Idempotent upsert semantics for offline corpus snapshots",
+   "year": 2024,
+   "venue": "Transactions on Synthetic Data Engineering",
+   "authors": [
+    "Petra Novak",
+    "Lin Qiao"
+   ],
+   "abstract": "We define upsert semantics under which re-applying the same offline corpus snapshot leaves the import state byte-identical, and prove a convergence lemma.",
+   "fingerprint": "af6874cd7d90",
+   "imported_at": "2026-11-25T07:41:04Z",
+   "updated_at": null,
+   "source": "reconcile:add",
+   "provenance": {
+    "file": "/Users/liuhengshen/Desktop/bhr_product/a2909a72-v2/bundles/d-incremental-import-reconciler/examples/synthetic-case/snapshots/crossref_page1.json",
+    "json_index": 2
+   }
+  }
+ }
+}

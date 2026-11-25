@@ -1,0 +1,58 @@
+{
+ "question": "Which publications report defect passivation strategies that improve the moisture stability of halide perovskite solar cells?",
+ "borderline_count": 1,
+ "records": [
+  {
+   "id": "doi:10.0000/synth.c.003",
+   "doi": "10.0000/synth.c.003",
+   "title": "Ion migration hysteresis in mixed-cation thin-film photovoltaic devices",
+   "year": 2022,
+   "engine_grade": 1,
+   "final_grade": 1,
+   "score_decomposition": [
+    {
+     "facet": "material",
+     "matched_terms": {
+      "title": [],
+      "abstract": []
+     },
+     "fields": [],
+     "status": "miss",
+     "contribution": 0.0,
+     "evidence": []
+    },
+    {
+     "facet": "problem",
+     "matched_terms": {
+      "title": [],
+      "abstract": []
+     },
+     "fields": [],
+     "status": "miss",
+     "contribution": 0.0,
+     "evidence": []
+    },
+    {
+     "facet": "method",
+     "matched_terms": {
+      "title": [],
+      "abstract": [
+       "passivation"
+      ]
+     },
+     "fields": [
+      "abstract"
+     ],
+     "status": "weak",
+     "contribution": 0.2,
+     "evidence": [
+      "abstract: We combine drift-diffusion modelling and impedance spectroscopy to show that grain-boundary passivation of mobile ionic defects suppresses current-voltage hysteresis in mixed-cation thin-film photovoltai..."
+     ]
+    }
+   ],
+   "questions_for_adjudicator": [
+    "Does the term 'passivation' appearing only in the abstract satisfy facet 'method' for the research question: Which publications report defect passivation strategies that improve the moisture stability of halide perovskite solar cells?"
+   ]
+  }
+ ]
+}

@@ -1,0 +1,29 @@
+{
+  "status": "ok",
+  "message-type": "work-list",
+  "message": {
+    "total-results": 1,
+    "items": [
+      {
+        "DOI": "10.0000/synth.b.s01",
+        "title": ["Solvent-free crystallization of perovskite films under controlled humidity"],
+        "container-title": ["Journal of Synthetic Materials"],
+        "issued": {"date-parts": [[2022]]},
+        "author": [
+          {"given": "Mira", "family": "Talen"},
+          {"given": "Osei", "family": "Brandt"}
+        ],
+        "abstract": "We demonstrate solvent-free crystallization of perovskite films under controlled humidity, improving moisture tolerance and operational stability.",
+        "reference": [
+          {"key": "ref1", "DOI": "10.0000/synth.b.a01",
+           "article-title": "Grain-boundary passivation of perovskite films with alkylammonium salts"},
+          {"key": "ref2", "DOI": "10.0000/synth.b.b01"},
+          {"key": "ref3", "DOI": "10.0000/synth.b.x99",
+           "article-title": "Fictional work deliberately absent from the local corpus"},
+          {"key": "ref4",
+           "unstructured": "R. Quill, Humidity control in pilot coating lines, workshop talk, 2018."}
+        ]
+      }
+    ]
+  }
+}

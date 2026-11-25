@@ -1,0 +1,42 @@
+{
+ "generated_by": "retrieval-run-warden warden.py (offline, stdlib)",
+ "ts": "2026-11-25T07:41:38.314479+00:00",
+ "case_id": "SYNTH-E-001",
+ "run_dir": "/Users/liuhengshen/Desktop/bhr_product/a2909a72-v2/bundles/e-retrieval-run-warden/examples/synthetic-output/clean/run",
+ "overall_gate": "PASS",
+ "errors": 0,
+ "warnings": 2,
+ "gate_status": {
+  "ANTI-FABRICATION": "PASS",
+  "FLOW": "PASS",
+  "CONTRACT": "PASS",
+  "ANOMALY": "PASS"
+ },
+ "recomputed_counts": {
+  "identified": 4,
+  "after_dedup": 3,
+  "included": 2
+ },
+ "evidence_files": {
+  "faad68f10bc0__crossref_page1.json": {
+   "sha256_12": "faad68f10bc0",
+   "bytes": 2319
+  }
+ },
+ "findings": [
+  {
+   "gate": "ANOMALY",
+   "severity": "WARN",
+   "code": "ZERO_HIT_TERMS",
+   "message": "query term(s) matched no record: mosquitoes, systems -- honest coverage gap, belongs in uncertainty",
+   "how_to_recheck": "grep each term across examples/synthetic-output/clean/run/evidence"
+  },
+  {
+   "gate": "ANOMALY",
+   "severity": "WARN",
+   "code": "SINGLE_SOURCE_POOL",
+   "message": "evidence pool has 1 file(s) / 1 source type(s) -- results rest on a single source",
+   "how_to_recheck": "ls examples/synthetic-output/clean/run/evidence and note the source_type of each snapshot"
+  }
+ ]
+}

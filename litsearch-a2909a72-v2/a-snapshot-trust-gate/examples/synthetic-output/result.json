@@ -1,0 +1,48 @@
+{
+ "case_id": "SYNTH-A-001",
+ "status": "partial",
+ "candidate_literature": "/Users/liuhengshen/Desktop/bhr_product/a2909a72-v2/bundles/a-snapshot-trust-gate/examples/synthetic-output/candidates.md",
+ "screening_evidence": "/Users/liuhengshen/Desktop/bhr_product/a2909a72-v2/bundles/a-snapshot-trust-gate/examples/synthetic-output/search_report.md",
+ "status_report": "/Users/liuhengshen/Desktop/bhr_product/a2909a72-v2/bundles/a-snapshot-trust-gate/examples/synthetic-output/search_report.md",
+ "sources": [
+  {
+   "path": "/Users/liuhengshen/Desktop/bhr_product/a2909a72-v2/bundles/a-snapshot-trust-gate/examples/synthetic-case/case.json",
+   "sha256_12": "426ce861c639",
+   "bytes": 680
+  },
+  {
+   "path": "/Users/liuhengshen/Desktop/bhr_product/a2909a72-v2/bundles/a-snapshot-trust-gate/examples/synthetic-case/task.md",
+   "sha256_12": "8583defcc869",
+   "bytes": 286
+  },
+  {
+   "path": "/Users/liuhengshen/Desktop/bhr_product/a2909a72-v2/bundles/a-snapshot-trust-gate/examples/synthetic-case/snapshots/crossref_page1.json",
+   "sha256_12": "d1ed4d22424a",
+   "bytes": 1530
+  },
+  {
+   "path": "/Users/liuhengshen/Desktop/bhr_product/a2909a72-v2/bundles/a-snapshot-trust-gate/examples/synthetic-case/snapshots/crossref_page1_duplicate.json",
+   "sha256_12": "d1ed4d22424a",
+   "bytes": 1530
+  },
+  {
+   "path": "/Users/liuhengshen/Desktop/bhr_product/a2909a72-v2/bundles/a-snapshot-trust-gate/examples/synthetic-case/snapshots/europepmc_page1.json",
+   "sha256_12": "324198ea1eb8",
+   "bytes": 994
+  },
+  {
+   "path": "/Users/liuhengshen/Desktop/bhr_product/a2909a72-v2/bundles/a-snapshot-trust-gate/examples/synthetic-case/snapshots/mystery.json",
+   "sha256_12": "657a07fc2e41",
+   "bytes": 57
+  },
+  {
+   "path": "/Users/liuhengshen/Desktop/bhr_product/a2909a72-v2/bundles/a-snapshot-trust-gate/examples/synthetic-case/snapshots/truncated_response.json",
+   "sha256_12": "a72826c003c6",
+   "bytes": 107
+  }
+ ],
+ "uncertainty": [
+  "SYNTHETIC example run: truncated_response.json and mystery.json quarantined (PARSE_ERROR / SCHEMA_UNRECOGNIZED); crossref_page1_duplicate.json quarantined as DUPLICATE_PAYLOAD. Fixture only - not a formal case result."
+ ],
+ "generated_by": "snapshot-trust-gate make_result.py (offline, stdlib)"
+}

@@ -1,0 +1,32 @@
+{
+ "case_id": "SYNTH-E-001",
+ "status": "partial",
+ "candidate_literature": "/Users/liuhengshen/Desktop/bhr_product/a2909a72-v2/bundles/e-retrieval-run-warden/examples/synthetic-output/clean/candidates.md",
+ "retrieval_run_log": "/Users/liuhengshen/Desktop/bhr_product/a2909a72-v2/bundles/e-retrieval-run-warden/examples/synthetic-output/clean/run/run_log.jsonl",
+ "warden_audit": "/Users/liuhengshen/Desktop/bhr_product/a2909a72-v2/bundles/e-retrieval-run-warden/examples/synthetic-output/clean/audit_report.md",
+ "status_report": "/Users/liuhengshen/Desktop/bhr_product/a2909a72-v2/bundles/e-retrieval-run-warden/examples/synthetic-output/clean/audit_report.md",
+ "sources": [
+  {
+   "path": "/Users/liuhengshen/Desktop/bhr_product/a2909a72-v2/bundles/e-retrieval-run-warden/examples/synthetic-case/case.json",
+   "sha256_12": "35b13e24c2dd",
+   "bytes": 671
+  },
+  {
+   "path": "/Users/liuhengshen/Desktop/bhr_product/a2909a72-v2/bundles/e-retrieval-run-warden/examples/synthetic-case/task.md",
+   "sha256_12": "9820ac2c0f2d",
+   "bytes": 601
+  },
+  {
+   "path": "/Users/liuhengshen/Desktop/bhr_product/a2909a72-v2/bundles/e-retrieval-run-warden/examples/synthetic-case/snapshots/crossref_page1.json",
+   "sha256_12": "faad68f10bc0",
+   "bytes": 2319
+  }
+ ],
+ "uncertainty": [
+  "run not started yet",
+  "SYNTHETIC demonstration run on fictional records (reserved 10.0000 DOIs); not a formal case result",
+  "coverage gap: query terms 'mosquitoes' and 'systems' matched no snapshot record",
+  "evidence pool is a single Crossref-shaped snapshot (single source type)"
+ ],
+ "generated_by": "retrieval-run-warden make_result.py (offline, stdlib)"
+}

@@ -1,0 +1,100 @@
+{
+ "case_id": "SYNTH-E-001",
+ "question": "Find literature on CRISPR gene drive systems for malaria vector control in Anopheles mosquitoes.",
+ "query_terms": [
+  "crispr",
+  "gene",
+  "drive",
+  "systems",
+  "malaria",
+  "vector",
+  "control",
+  "anopheles",
+  "mosquitoes"
+ ],
+ "generated_by": "retrieval-run-warden lite_search.py (offline, stdlib)",
+ "counts": {
+  "identified": 4,
+  "after_dedup": 3,
+  "included": 3,
+  "excluded": 2
+ },
+ "candidates": [
+  {
+   "rank": 1,
+   "score": 11,
+   "doi": "10.0000/synth.e.001",
+   "title": "CRISPR gene drive suppression of Anopheles gambiae populations in large indoor cages",
+   "year": "2023",
+   "source_type": "crossref",
+   "matched_terms": [
+    "crispr",
+    "gene",
+    "drive",
+    "malaria",
+    "vector",
+    "control",
+    "anopheles"
+   ],
+   "evidence": {
+    "original_path": "/Users/liuhengshen/Desktop/bhr_product/a2909a72-v2/bundles/e-retrieval-run-warden/examples/synthetic-case/snapshots/crossref_page1.json",
+    "copy_name": "faad68f10bc0__crossref_page1.json",
+    "sha256_12": "faad68f10bc0",
+    "bytes": 2319,
+    "json_index": 0
+   },
+   "dedup_key": "doi:10.0000/synth.e.001",
+   "also_in": [
+    {
+     "copy_name": "faad68f10bc0__crossref_page1.json",
+     "json_index": 3
+    }
+   ]
+  },
+  {
+   "rank": 2,
+   "score": 6,
+   "doi": "10.0000/synth.e.002",
+   "title": "CRISPR-Cas9 editing of antimalarial resistance loci in Plasmodium falciparum",
+   "year": "2022",
+   "source_type": "crossref",
+   "matched_terms": [
+    "crispr",
+    "malaria",
+    "vector",
+    "control"
+   ],
+   "evidence": {
+    "original_path": "/Users/liuhengshen/Desktop/bhr_product/a2909a72-v2/bundles/e-retrieval-run-warden/examples/synthetic-case/snapshots/crossref_page1.json",
+    "copy_name": "faad68f10bc0__crossref_page1.json",
+    "sha256_12": "faad68f10bc0",
+    "bytes": 2319,
+    "json_index": 1
+   },
+   "dedup_key": "doi:10.0000/synth.e.002",
+   "also_in": []
+  },
+  {
+   "rank": 3,
+   "score": 9,
+   "doi": "10.0000/synth.e.phantom",
+   "title": "Phantom field trial of CRISPR gene drive eliminating malaria vectors entirely",
+   "year": "2025",
+   "source_type": "crossref",
+   "matched_terms": [
+    "crispr",
+    "malaria",
+    "vector"
+   ],
+   "evidence": {
+    "original_path": "/Users/liuhengshen/Desktop/bhr_product/a2909a72-v2/bundles/e-retrieval-run-warden/examples/synthetic-case/snapshots/crossref_page1.json",
+    "copy_name": "faad68f10bc0__crossref_page1.json",
+    "sha256_12": "faad68f10bc0",
+    "bytes": 2319,
+    "json_index": 0
+   },
+   "dedup_key": "doi:10.0000/synth.e.phantom",
+   "also_in": []
+  }
+ ]
+}

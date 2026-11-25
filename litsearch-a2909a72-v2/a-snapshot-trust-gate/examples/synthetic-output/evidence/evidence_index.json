@@ -1,0 +1,52 @@
+{
+ "generated_at": "2026-11-25T07:27:06Z",
+ "files": [
+  {
+   "file": "snapshots/crossref_page1.json",
+   "root": "examples/synthetic-case",
+   "sha256_12": "d1ed4d22424a",
+   "bytes": 1530,
+   "source_type": "crossref",
+   "notes": [],
+   "records": 3,
+   "record_flags": 1,
+   "trust_tier": "T2-flagged-records"
+  },
+  {
+   "file": "snapshots/crossref_page1_duplicate.json",
+   "root": "examples/synthetic-case",
+   "sha256_12": "d1ed4d22424a",
+   "bytes": 1530,
+   "quarantine": "DUPLICATE_PAYLOAD",
+   "duplicate_of": "snapshots/crossref_page1.json"
+  },
+  {
+   "file": "snapshots/europepmc_page1.json",
+   "root": "examples/synthetic-case",
+   "sha256_12": "324198ea1eb8",
+   "bytes": 994,
+   "source_type": "europepmc",
+   "notes": [],
+   "records": 2,
+   "record_flags": 0,
+   "trust_tier": "T1-verified"
+  },
+  {
+   "file": "snapshots/mystery.json",
+   "root": "examples/synthetic-case",
+   "sha256_12": "657a07fc2e41",
+   "bytes": 57,
+   "source_type": null,
+   "notes": [],
+   "quarantine": "SCHEMA_UNRECOGNIZED"
+  },
+  {
+   "file": "snapshots/truncated_response.json",
+   "root": "examples/synthetic-case",
+   "sha256_12": "a72826c003c6",
+   "bytes": 107,
+   "quarantine": "PARSE_ERROR",
+   "detail": "Unterminated string starting at: line 5 column 48 (char 97)"
+  }
+ ]
+}

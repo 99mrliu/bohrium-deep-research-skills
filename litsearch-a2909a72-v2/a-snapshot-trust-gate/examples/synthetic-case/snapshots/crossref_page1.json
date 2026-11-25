@@ -1,0 +1,34 @@
+{
+  "status": "ok",
+  "message-type": "work-list",
+  "message": {
+    "total-results": 3,
+    "query": {"search-terms": "halide perovskite degradation passivation"},
+    "items": [
+      {
+        "DOI": "10.0000/synth.a.001",
+        "title": ["Moisture-induced degradation pathways in halide perovskite solar cells"],
+        "author": [{"given": "Lin", "family": "Wei"}, {"given": "Ana", "family": "Torres"}],
+        "issued": {"date-parts": [[2021]]},
+        "container-title": ["Journal of Synthetic Photovoltaics"],
+        "abstract": "We show that moisture initiates halide migration in perovskite films, accelerating degradation of solar cells, and evaluate barrier strategies."
+      },
+      {
+        "DOI": "10.0000/synth.a.002",
+        "title": ["Defect passivation strategies for stable perovskite photovoltaics"],
+        "author": [{"given": "Maria", "family": "Chen"}],
+        "issued": {"date-parts": [[2023]]},
+        "container-title": ["Synthetic Energy Letters"],
+        "abstract": "A review of defect passivation, including Lewis-base additives, that improves the operational stability of halide perovskite devices."
+      },
+      {
+        "DOI": "10.0000/synth.a.bad",
+        "title": [],
+        "author": [{"given": "Bo", "family": "Li"}],
+        "issued": {"date-parts": [[20999]]},
+        "container-title": ["Annals of Broken Metadata"],
+        "abstract": "Record with deliberately defective metadata (empty title, implausible year) to exercise record-level flags."
+      }
+    ]
+  }
+}

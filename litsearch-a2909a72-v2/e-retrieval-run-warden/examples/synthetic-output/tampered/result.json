@@ -1,0 +1,24 @@
+{
+ "case_id": "SYNTH-E-001",
+ "candidate_literature": "examples/synthetic-output/tampered/candidates.md",
+ "retrieval_run_log": "examples/synthetic-output/tampered/run_log.jsonl",
+ "warden_audit": "examples/synthetic-output/tampered/audit_report.md",
+ "status_report": "examples/synthetic-output/tampered/audit_report.md",
+ "status": "partial",
+ "uncertainty": [
+  "[ANTI-FABRICATION FABRICATION_SUSPECT] DOI 10.0000/synth.e.phantom claimed by candidates.json rank=3 appears in NO evidence copy -- this identifier cannot be verified and must not ship",
+  "[ANTI-FABRICATION FABRICATION_SUSPECT] title 'Phantom field trial of CRISPR gene drive eliminating malaria vectors entirely' claimed by candidates.json rank=3 appears in NO evidence copy -- this identifier cannot be verified and must not ship",
+  "[FLOW COUNT_MISMATCH] run_log reports included=2 but independent recomputation from the evidence copies gives 3",
+  "[CONTRACT RESULT_MISSING] no result.json at examples/synthetic-output/tampered/result.json",
+  "[ANOMALY ZERO_HIT_TERMS] query term(s) matched no record: mosquitoes, systems -- honest coverage gap, belongs in uncertainty",
+  "[ANOMALY SINGLE_SOURCE_POOL] evidence pool has 1 file(s) / 1 source type(s) -- results rest on a single source"
+ ],
+ "sources": [
+  {
+   "path": "examples/synthetic-output/tampered/run/evidence/faad68f10bc0__crossref_page1.json",
+   "sha256_12": "faad68f10bc0",
+   "bytes": 2319
+  }
+ ],
+ "repaired_by": "retrieval-run-warden warden.py --fix-result (candidates/evidence never edited)"
+}

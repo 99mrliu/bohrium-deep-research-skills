@@ -1,0 +1,32 @@
+{
+ "case_id": "SYNTH-C-001",
+ "status": "success",
+ "graded_candidates": "/Users/liuhengshen/Desktop/bhr_product/a2909a72-v2/bundles/c-graded-relevance-bench/examples/synthetic-output/graded_candidates.md",
+ "borderline_queue": "/Users/liuhengshen/Desktop/bhr_product/a2909a72-v2/bundles/c-graded-relevance-bench/examples/synthetic-output/borderline_queue.json",
+ "ranking_report": "/Users/liuhengshen/Desktop/bhr_product/a2909a72-v2/bundles/c-graded-relevance-bench/examples/synthetic-output/ranking_report.md",
+ "evidence_manifest": "/Users/liuhengshen/Desktop/bhr_product/a2909a72-v2/bundles/c-graded-relevance-bench/examples/synthetic-output/evidence/evidence_index.json",
+ "sources": [
+  {
+   "path": "/Users/liuhengshen/Desktop/bhr_product/a2909a72-v2/bundles/c-graded-relevance-bench/examples/synthetic-case/case.json",
+   "sha256_12": "c83145ccfe8e",
+   "bytes": 829
+  },
+  {
+   "path": "/Users/liuhengshen/Desktop/bhr_product/a2909a72-v2/bundles/c-graded-relevance-bench/examples/synthetic-case/facets.json",
+   "sha256_12": "43501f56f88f",
+   "bytes": 541
+  },
+  {
+   "path": "/Users/liuhengshen/Desktop/bhr_product/a2909a72-v2/bundles/c-graded-relevance-bench/examples/synthetic-case/task.md",
+   "sha256_12": "dd5dc01a290b",
+   "bytes": 1061
+  },
+  {
+   "path": "/Users/liuhengshen/Desktop/bhr_product/a2909a72-v2/bundles/c-graded-relevance-bench/examples/synthetic-case/snapshots/crossref_page1.json",
+   "sha256_12": "34a54a1be34f",
+   "bytes": 3360
+  }
+ ],
+ "uncertainty": [],
+ "generated_by": "graded-relevance-bench make_result.py (offline, stdlib)"
+}
