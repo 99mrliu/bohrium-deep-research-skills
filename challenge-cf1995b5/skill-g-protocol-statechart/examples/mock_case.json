@@ -1,0 +1,130 @@
+{
+  "case_id": "synthetic-nitrate-statechart-001",
+  "source": "Synthetic organizer-schema compatibility fixture; not a real assessment case",
+  "task": "Compile the synthetic nitrate colorimetry plan into a bounded QC statechart and audit three candidates.",
+  "research_goal": "合成水样比色硝酸盐测定方案的有限域优化与可执行 QC 状态图",
+  "case_kind": "合成示意案例",
+  "synthetic": true,
+  "resource_contract": {
+    "disclaimer": "All resources, prices and booking fields are synthetic planning inputs, not quotes or reservations.",
+    "currency": "CNY",
+    "budget_cap": "80",
+    "deadline_days": "1",
+    "equipment": [
+      {
+        "id": "EQ_BALANCE",
+        "name": "合成分析天平",
+        "model": "synthetic-balance",
+        "spec": "实际量程/校准状态待确认",
+        "price_per_hour": "2",
+        "booking": {"window_days": 1, "slots_per_week": 5, "slot_hours": 1}
+      },
+      {
+        "id": "EQ_PIPETTE",
+        "name": "合成移液设备",
+        "model": "synthetic-pipette",
+        "spec": "实际规格与 SOP 待确认",
+        "price_per_hour": "1",
+        "booking": {"window_days": 1, "slots_per_week": 5, "slot_hours": 1}
+      },
+      {
+        "id": "EQ_THERMOSTAT",
+        "name": "合成恒温反应设备",
+        "model": "synthetic-thermostat",
+        "spec": "30 degC 设定仅用于合成案例",
+        "price_per_hour": "3",
+        "booking": {"window_days": 1, "slots_per_week": 5, "slot_hours": 1}
+      }
+    ],
+    "reagents": [
+      {"id": "MAT_REAGENT", "name": "合成硝酸盐显色试剂", "spec": "synthetic planning lot", "unit_price": "11", "unit": "planning_lot", "pack_size": "1"},
+      {"id": "MAT_WATER", "name": "合成无硝酸盐水", "spec": "synthetic blank preparation", "unit_price": "0.5", "unit": "blank_preparation", "pack_size": "2"},
+      {"id": "MAT_STANDARD", "name": "合成硝酸盐校准标准液", "spec": "synthetic calibration series", "unit_price": "4.5", "unit": "planning_series", "pack_size": "1"},
+      {"id": "MAT_SAMPLE", "name": "合成淡水样", "spec": "no real sample or measured result", "unit_price": "0", "unit": "synthetic_aliquot", "pack_size": "1"}
+    ]
+  },
+  "equipment_domain_note": "Additional synthetic device: {\"equipment\":[{\"id\":\"EQ_COLORIMETER\",\"name\":\"合成比色检测器\",\"model\":\"note-only-colorimeter\",\"spec\":\"波长等现实方法参数未提供，不得补造\",\"price_per_hour\":\"2\",\"booking\":{\"window_days\":1,\"slots_per_week\":4,\"slot_hours\":1}}]}. Duplicate object must deduplicate: {\"equipment\":[{\"id\":\"EQ_COLORIMETER\",\"name\":\"合成比色检测器\",\"model\":\"note-only-colorimeter\",\"spec\":\"波长等现实方法参数未提供，不得补造\",\"price_per_hour\":\"2\",\"booking\":{\"window_days\":1,\"slots_per_week\":4,\"slot_hours\":1}}]}.",
+  "parameter_domains": {
+    "reaction_temperature": {
+      "type": "range",
+      "min": "20",
+      "max": "40",
+      "step": "5",
+      "unit": "degC",
+      "description": "合成案例给定有限域；不是现实方法推荐范围"
+    },
+    "reaction_time": {
+      "type": "range",
+      "min": "10",
+      "max": "30",
+      "step": "10",
+      "unit": "min",
+      "description": "合成案例给定有限域；不是现实方法推荐范围"
+    },
+    "sample_matrix": {
+      "type": "enum",
+      "values": ["synthetic_freshwater"],
+      "unit": "category"
+    }
+  },
+  "candidate_plans": [
+    {
+      "version": "C1_ARITHMETIC_ERROR",
+      "summary": "域内温度/时间，但条目 subtotal 与总成本申报加总错误",
+      "parameters": {
+        "reaction_temperature": "30",
+        "reaction_time": "20",
+        "sample_matrix": "synthetic_freshwater"
+      },
+      "cost_items": [
+        {"item": "preparation", "unit_price": "10", "quantity": "1", "subtotal": "10"},
+        {"item": "calibration", "unit_price": "4.5", "quantity": "1", "subtotal": "4.5"},
+        {"item": "measurement", "unit_price": "1.9", "quantity": "1", "subtotal": "1.8"}
+      ],
+      "total_cost": "15",
+      "est_days": "0.05"
+    },
+    {
+      "version": "C2_DOMAIN_ERROR",
+      "summary": "温度 33 degC 落在 5 degC 步长网格外；算术本身一致",
+      "parameters": {
+        "reaction_temperature": "33",
+        "reaction_time": "20",
+        "sample_matrix": "synthetic_freshwater"
+      },
+      "cost_items": [
+        {"item": "all_steps", "unit_price": "16.4", "quantity": "1", "subtotal": "16.4"}
+      ],
+      "total_cost": "16.4",
+      "est_days": "0.05"
+    },
+    {
+      "version": "C3_DOMAIN_AND_BUDGET_ERRORS",
+      "summary": "温度和时间越域，成本申报错误并超预算，est_days 超期限",
+      "parameters": {
+        "reaction_temperature": "45",
+        "reaction_time": "35",
+        "sample_matrix": "synthetic_freshwater"
+      },
+      "cost_items": [
+        {"item": "reagent", "unit_price": "70", "quantity": "1", "subtotal": "70"},
+        {"item": "instrument", "unit_price": "20", "quantity": "1", "subtotal": "20"}
+      ],
+      "total_cost": "80",
+      "est_days": "2"
+    }
+  ],
+  "output_contract": {
+    "required_fields": [
+      "case_id",
+      "revised_plan",
+      "candidate_assessment",
+      "validation",
+      "status",
+      "uncertainty",
+      "sources",
+      "change_log",
+      "confirmation_items"
+    ]
+  }
+}

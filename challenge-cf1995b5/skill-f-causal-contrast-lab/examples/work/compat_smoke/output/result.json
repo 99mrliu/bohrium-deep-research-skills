@@ -1,0 +1,121 @@
+{
+  "_header": "前瞻性实验方案与机器校验输出；不是实测实验结果",
+  "_metadata": {
+    "generator": "causal_contrast.py/1.1",
+    "case_sha256": "9219bb6ca5590734de1ec2be72531f72140fd171c7b68bffc92b6c1cdc2a6ca6",
+    "stage": "inspect",
+    "artifacts": [
+      "inspect.json",
+      "design_spec.template.json",
+      "result.json"
+    ]
+  },
+  "case_id": "canonical-nonsynthetic-smoke",
+  "status": "partial",
+  "revised_plan": {
+    "status": "not_generated",
+    "reason": "inspect stage has no authored design yet."
+  },
+  "candidate_assessment": {
+    "audit_basis": "Actual case candidate_plans; Decimal arithmetic and declared range/enum parameter_domains only. Billable quantity is used as declared, without inferred pack rounding.",
+    "schema_aliases": {
+      "candidate_id": [
+        "version",
+        "id",
+        "candidate_id"
+      ],
+      "cost_items": [
+        "cost_items",
+        "costs"
+      ],
+      "duration_days": [
+        "est_days",
+        "duration_days"
+      ],
+      "budget_cap": [
+        "budget_cap",
+        "budget_limit"
+      ],
+      "numeric_domain": [
+        "range",
+        "number",
+        "integer"
+      ],
+      "enum_domain": [
+        "values",
+        "enum"
+      ]
+    },
+    "currency": "CNY",
+    "budget_cap": 10,
+    "budget_limit": null,
+    "deadline_days": 2,
+    "candidate_count": 1,
+    "failed_candidate_count": 1,
+    "candidates": [
+      {
+        "candidate_id": "smoke-v1",
+        "version": "smoke-v1",
+        "input_id": null,
+        "legacy_candidate_id": null,
+        "aliases": {
+          "identifier_field": "version",
+          "cost_items_field": "cost_items",
+          "duration_field": "est_days"
+        },
+        "status": "FAIL",
+        "declared_cost_subtotal": null,
+        "declared_total_cost": 5,
+        "recomputed_cost": "6",
+        "cost_items": [
+          {
+            "item": "EQ_MAIN",
+            "resource_id": null,
+            "unit_price": "2",
+            "quantity": "3",
+            "declared_subtotal": 5,
+            "computed_subtotal": "6"
+          }
+        ],
+        "est_days": 1,
+        "duration_days": null,
+        "parameter_domain_violations": [
+          "dose: 0.15 is off step 0.1 from 0.1"
+        ],
+        "errors": [
+          "total_cost 5 != recomputed 6",
+          "dose: 0.15 is off step 0.1 from 0.1",
+          "cost_items[0].subtotal 5 != unit_price × quantity 6"
+        ],
+        "warnings": [
+          "cost_subtotal is absent; recomputed value is 6"
+        ]
+      }
+    ]
+  },
+  "validation": {
+    "status": "FAIL",
+    "errors": [
+      "Design has not been compiled."
+    ],
+    "warnings": []
+  },
+  "uncertainty": [
+    "File labels and extracted text are observations, not confirmed scientific evidence. No PDF inference is made when content is unavailable.",
+    "No revised plan has yet been authored or scientifically audited."
+  ],
+  "sources": [
+    {
+      "source_class": "actual_input_inventory",
+      "locator": "case.json",
+      "supports": [
+        "input_inventory"
+      ]
+    }
+  ],
+  "change_log": [],
+  "confirmation_items": [
+    "Confirm equipment capability, availability, bookings and prices before execution.",
+    "Author design_spec.json and run compile."
+  ]
+}

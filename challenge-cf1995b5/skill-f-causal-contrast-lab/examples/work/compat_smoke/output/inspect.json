@@ -1,0 +1,249 @@
+{
+  "_header": "前瞻性实验方案与机器校验输出；不是实测实验结果",
+  "_metadata": {
+    "generator": "causal_contrast.py/1.1",
+    "case_sha256": "9219bb6ca5590734de1ec2be72531f72140fd171c7b68bffc92b6c1cdc2a6ca6",
+    "case_path": "/Users/liuhengshen/Desktop/bhr_product/bohrium/challenge-cf1995b5-v3/skill-f-causal-contrast-lab/examples/work/compat_smoke/input/case.json"
+  },
+  "facts": {
+    "case_id": "canonical-nonsynthetic-smoke",
+    "title": null,
+    "task_text_observed": false,
+    "parameter_domains": {
+      "dose": {
+        "type": "range",
+        "min": 0.1,
+        "max": 1,
+        "step": 0.1,
+        "basis": "Declared test grid",
+        "source": "case"
+      }
+    },
+    "resource_contract": {
+      "disclaimer": "Planning values only.",
+      "currency": "CNY",
+      "budget_cap": 10,
+      "deadline_days": 2,
+      "equipment": [
+        {
+          "id": "EQ_MAIN",
+          "name": "Main device",
+          "model": null,
+          "spec": "Declared capability",
+          "price_per_hour": 2,
+          "booking": {
+            "window_days": 2,
+            "slots_per_week": 1,
+            "slot_hours": 1
+          }
+        }
+      ],
+      "reagents": [
+        {
+          "id": "RS_MAIN",
+          "name": "Declared reagent",
+          "spec": "Declared specification",
+          "unit_price": 1,
+          "unit": "tube",
+          "pack_size": 1
+        }
+      ]
+    },
+    "resource_register": {
+      "resources": [
+        {
+          "id": "EQ_MAIN",
+          "resource_class": "equipment",
+          "name": "Main device",
+          "model": null,
+          "spec": "Declared capability",
+          "planning_unit_price": null,
+          "price_per_hour": 2,
+          "unit_price": null,
+          "unit": null,
+          "pack_size": null,
+          "definition": {
+            "id": "EQ_MAIN",
+            "name": "Main device",
+            "model": null,
+            "spec": "Declared capability",
+            "price_per_hour": 2,
+            "booking": {
+              "window_days": 2,
+              "slots_per_week": 1,
+              "slot_hours": 1
+            }
+          },
+          "origins": [
+            "resource_contract.equipment[0]"
+          ],
+          "conflicting_definitions": false
+        },
+        {
+          "id": "EQ_NOTE_ONLY",
+          "resource_class": "equipment",
+          "name": "Note device",
+          "model": null,
+          "spec": "Note-only declared capability",
+          "planning_unit_price": null,
+          "price_per_hour": 0,
+          "unit_price": null,
+          "unit": null,
+          "pack_size": null,
+          "definition": {
+            "id": "EQ_NOTE_ONLY",
+            "name": "Note device",
+            "model": null,
+            "spec": "Note-only declared capability",
+            "price_per_hour": 0,
+            "booking": {
+              "window_days": 2,
+              "slots_per_week": 1,
+              "slot_hours": 1
+            }
+          },
+          "origins": [
+            "equipment_domain_note@char31.equipment[0]"
+          ],
+          "conflicting_definitions": false
+        },
+        {
+          "id": "RS_MAIN",
+          "resource_class": "reagent",
+          "name": "Declared reagent",
+          "model": null,
+          "spec": "Declared specification",
+          "planning_unit_price": null,
+          "price_per_hour": null,
+          "unit_price": 1,
+          "unit": "tube",
+          "pack_size": 1,
+          "definition": {
+            "id": "RS_MAIN",
+            "name": "Declared reagent",
+            "spec": "Declared specification",
+            "unit_price": 1,
+            "unit": "tube",
+            "pack_size": 1
+          },
+          "origins": [
+            "resource_contract.reagents[0]"
+          ],
+          "conflicting_definitions": false
+        }
+      ],
+      "resource_ids": [
+        "EQ_MAIN",
+        "EQ_NOTE_ONLY",
+        "RS_MAIN"
+      ],
+      "origins": {
+        "EQ_MAIN": [
+          "resource_contract.equipment[0]"
+        ],
+        "EQ_NOTE_ONLY": [
+          "equipment_domain_note@char31.equipment[0]"
+        ],
+        "RS_MAIN": [
+          "resource_contract.reagents[0]"
+        ]
+      },
+      "conflicts": [],
+      "parser": "json.JSONDecoder.raw_decode over embedded objects in equipment_domain_note"
+    },
+    "materials": [
+      {
+        "path": "case.json",
+        "size_bytes": 1921,
+        "sha256": "9219bb6ca5590734de1ec2be72531f72140fd171c7b68bffc92b6c1cdc2a6ca6",
+        "status": "read_unverified",
+        "text_excerpt": "{\n  \"case_id\": \"canonical-nonsynthetic-smoke\",\n  \"source\": {\n    \"paper_pdf\": null,\n    \"citation\": null,\n    \"key_claim\": \"Canonical compatibility smoke only.\"\n  },\n  \"resource_contract\": {\n    \"disclaimer\": \"Planning values only.\",\n    \"currency\": \"CNY\",\n    \"budget_cap\": 10,\n    \"deadline_days\": 2,\n    \"equipment\": [\n      {\n        \"id\": \"EQ_MAIN\",\n        \"name\": \"Main device\",\n        \"model\": null,\n        \"spec\": \"Declared capability\",\n        \"price_per_hour\": 2,\n        \"booking\": {\n          \"window_days\": 2,\n          \"slots_per_week\": 1,\n          \"slot_hours\": 1\n        }\n      }\n    ],\n    \"reagents\": [\n      {\n        \"id\": \"RS_MAIN\",\n        \"name\": \"Declared reagent\",\n        \"spec\": \"Declared specification\",\n        \"unit_price\": 1,\n        \"unit\": \"tube\",\n        \"pack_size\": 1\n      }\n    ]\n  },\n  \"parameter_domains\": {\n    \"dose\": {\n      \"type\": \"range\",\n      \"min\": 0.1,\n      \"max\": 1,\n      \"step\": 0.1,\n      \"basis\": \"Declared test grid\",\n      \"source\": \"case\"\n    }\n  },\n  \"equipment_domain_note\": \"Additional declared equipment: {\\\"equipment\\\":[{\\\"id\\\":\\\"EQ_NOTE_ONLY\\\",\\\"name\\\":\\\"Note device\\\",\\\"model\\\":null,\\\"spec\\\":\\\"Note-only declared capability\\\",\\\"price_per_hour\\\":0,\\\"booking\\\":{\\\"window_days\\\":2,\\\"slots_per_week\\\":1,\\\"slot_hours\\\":1}}]}\",\n  \"candidate_plans\": [\n    {\n      \"version\": \"smoke-v1\",\n      \"summary\": \"Intentional arithmetic/domain defects\",\n      \"parameters\": {\n        \"dose\": 0.15\n      },\n      \"cost_items\": [\n        {\n          \"item\": \"EQ_MAIN\",\n          \"unit_price\": 2,\n          \"quantity\": 3,\n          \"subtotal\": 5\n        }\n      ],\n      \"total_cost\": 5,\n      \"est_days\": 1\n    }\n  ],\n  \"output_contract\": {\n    \"required_fields\": [\n      \"case_id\",\n      \"revised_plan\",\n      \"candidate_assessment\",\n      \"validation\",\n      \"status\",\n      \"uncertainty\",\n      \"sources\",\n      \"change_log\",\n      \"confirmation_items\"\n    ]\n  }\n}\n",
+        "truncated": false
+      }
+    ],
+    "pdf_inventory": [],
+    "facts_status": "Observed input and mechanical audits only; inferred scientific facts are not confirmations.",
+    "pdf_limitation": "File labels and extracted text are observations, not confirmed scientific evidence. No PDF inference is made when content is unavailable."
+  },
+  "candidate_assessment": {
+    "audit_basis": "Actual case candidate_plans; Decimal arithmetic and declared range/enum parameter_domains only. Billable quantity is used as declared, without inferred pack rounding.",
+    "schema_aliases": {
+      "candidate_id": [
+        "version",
+        "id",
+        "candidate_id"
+      ],
+      "cost_items": [
+        "cost_items",
+        "costs"
+      ],
+      "duration_days": [
+        "est_days",
+        "duration_days"
+      ],
+      "budget_cap": [
+        "budget_cap",
+        "budget_limit"
+      ],
+      "numeric_domain": [
+        "range",
+        "number",
+        "integer"
+      ],
+      "enum_domain": [
+        "values",
+        "enum"
+      ]
+    },
+    "currency": "CNY",
+    "budget_cap": 10,
+    "budget_limit": null,
+    "deadline_days": 2,
+    "candidate_count": 1,
+    "failed_candidate_count": 1,
+    "candidates": [
+      {
+        "candidate_id": "smoke-v1",
+        "version": "smoke-v1",
+        "input_id": null,
+        "legacy_candidate_id": null,
+        "aliases": {
+          "identifier_field": "version",
+          "cost_items_field": "cost_items",
+          "duration_field": "est_days"
+        },
+        "status": "FAIL",
+        "declared_cost_subtotal": null,
+        "declared_total_cost": 5,
+        "recomputed_cost": "6",
+        "cost_items": [
+          {
+            "item": "EQ_MAIN",
+            "resource_id": null,
+            "unit_price": "2",
+            "quantity": "3",
+            "declared_subtotal": 5,
+            "computed_subtotal": "6"
+          }
+        ],
+        "est_days": 1,
+        "duration_days": null,
+        "parameter_domain_violations": [
+          "dose: 0.15 is off step 0.1 from 0.1"
+        ],
+        "errors": [
+          "total_cost 5 != recomputed 6",
+          "dose: 0.15 is off step 0.1 from 0.1",
+          "cost_items[0].subtotal 5 != unit_price × quantity 6"
+        ],
+        "warnings": [
+          "cost_subtotal is absent; recomputed value is 6"
+        ]
+      }
+    ]
+  },
+  "limitations": [
+    "Candidate PASS does not establish causal validity or feasibility.",
+    "Prospective resources, prices and bookings are not vendor quotes or approvals."
+  ]
+}

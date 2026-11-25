@@ -1,0 +1,349 @@
+{
+  "_header": "合成示例输出，非正式测评结果",
+  "_metadata": {
+    "generator": "causal_contrast.py/1.1",
+    "case_sha256": "21bae706def796de822b56f9a41ef145a0ef95386cf2e038d31e4b272c3ff964",
+    "stage": "compiled",
+    "artifacts": [
+      "plan.json",
+      "plan.md",
+      "contrast_map.svg",
+      "validation.json",
+      "result.json"
+    ]
+  },
+  "case_id": "synthetic-enzyme-contrast-001",
+  "status": "complete",
+  "revised_plan": {
+    "status": "generated",
+    "artifacts": [
+      "plan.json",
+      "plan.md",
+      "contrast_map.svg"
+    ],
+    "design_summary": "以同一独立制备批次内的配对因果对照区分三种可竞争解释：催化初速的真实下降、化合物自身荧光造成的表观信号变化，以及对洗涤剂敏感的聚集型抑制。先做光学背景判读，再解释扣除匹配背景后的酶反应初速；不以单一表观IC50下结论。",
+    "total_cost": "436",
+    "currency": "CNY synthetic scenario units",
+    "single_pass_step_minutes": "150",
+    "total_work_minutes": "350",
+    "instrument_booking_minutes": 480,
+    "total_days": 4,
+    "execution_contract": "Bookmarked/planned only; obtain actual prices, equipment approval and bookings before execution."
+  },
+  "candidate_assessment": {
+    "audit_basis": "Actual case candidate_plans; Decimal arithmetic and declared range/enum parameter_domains only. Billable quantity is used as declared, without inferred pack rounding.",
+    "schema_aliases": {
+      "candidate_id": [
+        "version",
+        "id",
+        "candidate_id"
+      ],
+      "cost_items": [
+        "cost_items",
+        "costs"
+      ],
+      "duration_days": [
+        "est_days",
+        "duration_days"
+      ],
+      "budget_cap": [
+        "budget_cap",
+        "budget_limit"
+      ],
+      "numeric_domain": [
+        "range",
+        "number",
+        "integer"
+      ],
+      "enum_domain": [
+        "values",
+        "enum"
+      ]
+    },
+    "currency": "CNY synthetic scenario units",
+    "budget_cap": 800,
+    "budget_limit": null,
+    "deadline_days": 7,
+    "candidate_count": 3,
+    "failed_candidate_count": 3,
+    "candidates": [
+      {
+        "candidate_id": "CAND_A_PARTIAL",
+        "version": "CAND_A_PARTIAL",
+        "input_id": null,
+        "legacy_candidate_id": null,
+        "aliases": {
+          "identifier_field": "version",
+          "cost_items_field": "cost_items",
+          "duration_field": "est_days"
+        },
+        "status": "FAIL",
+        "declared_cost_subtotal": 174,
+        "declared_total_cost": 184,
+        "recomputed_cost": "184",
+        "cost_items": [
+          {
+            "item": "reader",
+            "resource_id": "EQ_READER",
+            "unit_price": "20",
+            "quantity": "4",
+            "declared_subtotal": 80,
+            "computed_subtotal": "80"
+          },
+          {
+            "item": "plates",
+            "resource_id": "RS_PLATE",
+            "unit_price": "12",
+            "quantity": "2",
+            "declared_subtotal": 24,
+            "computed_subtotal": "24"
+          },
+          {
+            "item": "enzyme",
+            "resource_id": "RS_ENZYME",
+            "unit_price": "40",
+            "quantity": "2",
+            "declared_subtotal": 80,
+            "computed_subtotal": "80"
+          }
+        ],
+        "est_days": 3,
+        "duration_days": null,
+        "parameter_domain_violations": [
+          "enzyme_nM: 0.15 is off step 0.1 from 0.1"
+        ],
+        "errors": [
+          "cost_subtotal 174 != recomputed 184",
+          "enzyme_nM: 0.15 is off step 0.1 from 0.1"
+        ],
+        "warnings": []
+      },
+      {
+        "candidate_id": "CAND_B_OPTICAL_GAP",
+        "version": "CAND_B_OPTICAL_GAP",
+        "input_id": null,
+        "legacy_candidate_id": null,
+        "aliases": {
+          "identifier_field": "version",
+          "cost_items_field": "cost_items",
+          "duration_field": "est_days"
+        },
+        "status": "FAIL",
+        "declared_cost_subtotal": 276,
+        "declared_total_cost": 266,
+        "recomputed_cost": "276",
+        "cost_items": [
+          {
+            "item": "reader",
+            "resource_id": "EQ_READER",
+            "unit_price": "20",
+            "quantity": "6",
+            "declared_subtotal": 120,
+            "computed_subtotal": "120"
+          },
+          {
+            "item": "plates",
+            "resource_id": "RS_PLATE",
+            "unit_price": "12",
+            "quantity": "3",
+            "declared_subtotal": 36,
+            "computed_subtotal": "36"
+          },
+          {
+            "item": "enzyme",
+            "resource_id": "RS_ENZYME",
+            "unit_price": "40",
+            "quantity": "3",
+            "declared_subtotal": 120,
+            "computed_subtotal": "120"
+          }
+        ],
+        "est_days": 4,
+        "duration_days": null,
+        "parameter_domain_violations": [
+          "compound_uM: 0.005 is below min 0.01",
+          "compound_uM: 0.005 is off step 0.01 from 0.01",
+          "technical_wells: 8 is above max 6"
+        ],
+        "errors": [
+          "total_cost 266 != recomputed 276",
+          "compound_uM: 0.005 is below min 0.01",
+          "compound_uM: 0.005 is off step 0.01 from 0.01",
+          "technical_wells: 8 is above max 6"
+        ],
+        "warnings": []
+      },
+      {
+        "candidate_id": "CAND_C_FULL_OVERDUE",
+        "version": "CAND_C_FULL_OVERDUE",
+        "input_id": null,
+        "legacy_candidate_id": null,
+        "aliases": {
+          "identifier_field": "version",
+          "cost_items_field": "cost_items",
+          "duration_field": "est_days"
+        },
+        "status": "FAIL",
+        "declared_cost_subtotal": 333,
+        "declared_total_cost": 333,
+        "recomputed_cost": "333",
+        "cost_items": [
+          {
+            "item": "reader",
+            "resource_id": "EQ_READER",
+            "unit_price": "20",
+            "quantity": "8",
+            "declared_subtotal": 160,
+            "computed_subtotal": "160"
+          },
+          {
+            "item": "plates",
+            "resource_id": "RS_PLATE",
+            "unit_price": "12",
+            "quantity": "4",
+            "declared_subtotal": 48,
+            "computed_subtotal": "48"
+          },
+          {
+            "item": "enzyme",
+            "resource_id": "RS_ENZYME",
+            "unit_price": "40",
+            "quantity": "3",
+            "declared_subtotal": 120,
+            "computed_subtotal": "120"
+          },
+          {
+            "item": "detergent",
+            "resource_id": "RS_DETERGENT",
+            "unit_price": "5",
+            "quantity": "1",
+            "declared_subtotal": 5,
+            "computed_subtotal": "5"
+          }
+        ],
+        "est_days": 10,
+        "duration_days": null,
+        "parameter_domain_violations": [
+          "detergent_percent: 0.015 is off step 0.01 from 0"
+        ],
+        "errors": [
+          "est_days 10 days exceeds deadline 7 days",
+          "detergent_percent: 0.015 is off step 0.01 from 0"
+        ],
+        "warnings": []
+      }
+    ],
+    "provenance": "Fresh internal rerun of inspect candidate audit; compile is standalone."
+  },
+  "validation": {
+    "status": "PASS",
+    "errors": [],
+    "warnings": [],
+    "artifact": "validation.json"
+  },
+  "uncertainty": [
+    "所有浓度、光学/洗涤剂判据和费用都是合成协议假设，不是文献值、实测结果或针对真实分子的有效性声明。",
+    "3–8 min线性、底物/酶相容性与X浓度可用性必须先用原始轨迹和QC确认；不可判定时不能自动宣布阴性。",
+    "洗涤剂敏感性只提供聚集相关解释的支持，不能单独证明聚集、直接结合、可逆性或选择性。",
+    "当前示例没有真实PDF或外部论文输入；没有PDF内容可供推断。",
+    "Prices, availability, bookings and prospective parameters require confirmation; no measured results are present.",
+    "If PDFs or extraction tools were unavailable, inspect.json records that limitation; no PDF content is inferred."
+  ],
+  "sources": [
+    {
+      "id": "E1",
+      "source_class": "case_json",
+      "locator": "$.protocol_assumptions.initial_rate_window_min",
+      "supports": [
+        "H1",
+        "DV_RATE",
+        "R1",
+        "S5"
+      ],
+      "quote": "[3,8]"
+    },
+    {
+      "id": "E2",
+      "source_class": "case_json",
+      "locator": "$.protocol_assumptions.decision_assumptions.inhibition_threshold_percent",
+      "supports": [
+        "H1",
+        "R1"
+      ],
+      "quote": "30"
+    },
+    {
+      "id": "E3",
+      "source_class": "provided_markdown",
+      "locator": "source_note.md#synthetic-assumptions",
+      "supports": [
+        "H1",
+        "H2",
+        "H3",
+        "R1",
+        "R2",
+        "R3"
+      ],
+      "quote": "协议规划假设：先在内源背景与化合物背景扣除后评估初速变化，再联合无酶、化合物单独荧光和洗涤剂反筛结果作出机制分流。"
+    },
+    {
+      "id": "E4",
+      "source_class": "case_json",
+      "locator": "$.mechanism_context.interference_concern",
+      "supports": [
+        "H2",
+        "C_NO_ENZYME",
+        "C_COMPOUND_ONLY",
+        "R2"
+      ],
+      "quote": "\"化合物X的荧光可能冒充产物信号；无酶和化合物单独对照用于识别此替代解释。\""
+    },
+    {
+      "id": "E5",
+      "source_class": "case_json",
+      "locator": "$.mechanism_context.aggregation_concern",
+      "supports": [
+        "H3",
+        "C_DETERGENT",
+        "R3"
+      ],
+      "quote": "\"化合物聚集可造成非特异性抑制；低浓度非离子洗涤剂反筛用于检验该替代解释，但不把洗涤剂敏感性视为唯一机制证明。\""
+    },
+    {
+      "id": "E6",
+      "source_class": "case_json",
+      "locator": "$.resource_contract.disclaimer",
+      "supports": [
+        "resource_contract",
+        "confirmation_items"
+      ],
+      "quote": "\"仅为合成情景的前瞻资源/价格/预订合同，不是供应商报价、库存确认或采购批准。\""
+    }
+  ],
+  "change_log": [
+    {
+      "id": "CL1",
+      "change": "从CAND_C的10日改为4日并将洗涤剂浓度修正为0.01。",
+      "reason": "满足case资源合同与参数域。"
+    },
+    {
+      "id": "CL2",
+      "change": "增加C_COMPOUND_ONLY、C_NO_ENZYME及配对±洗涤剂条件，费用从333增至436。",
+      "reason": "显式检验荧光和聚集替代解释，而非只优化表观剂量曲线。"
+    },
+    {
+      "id": "CL3",
+      "change": "把三个独立制备/日期与每条件三个技术孔分层，加入随机化、区组和盲态QC。",
+      "reason": "避免伪重复并降低位置/操作者偏倚。"
+    }
+  ],
+  "confirmation_items": [
+    "这是一份合成示意案例；实际执行前必须以真实[input]/材料和本地SOP替换全部合成参数与判据。",
+    "确认实际读板机型号、滤光片、温控、动力学历程与原始时间序列导出能力；型号目前未知。",
+    "确认EQ_READER共8小时的可用预订；当前状态为未预订，且不构成批准。",
+    "确认所有耗材价格、供应、化学品安全资料和酶/底物/洗涤剂相容性；资源价格非供应商报价。",
+    "确认合成已知抑制剂K在真实体系中是否适用；若不存在合适阳性对照，应把相关系统性假阴性列为未解决威胁。",
+    "Confirm current vendor price and availability; prospective resource contract is not a vendor quote.",
+    "Confirm equipment model/capability and booking approval before any experiment."
+  ]
+}

@@ -1,0 +1,59 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1240" height="735" viewBox="0 0 1240 735">
+<!-- 合成示例输出，非正式测评结果 -->
+<metadata>合成示例输出，非正式测评结果</metadata>
+<defs><marker id="arrow" markerWidth="10" markerHeight="10" refX="9" refY="3" orient="auto"><path d="M0,0 L0,6 L9,3 z" fill="#44546a"/></marker>
+<style>text{font-family:Arial,"Noto Sans CJK SC",sans-serif;fill:#172b4d}.title{font-size:22px;font-weight:bold}.head{font-size:16px;font-weight:bold}.body{font-size:12px}.link{stroke:#44546a;stroke-width:1.5;fill:none;marker-end:url(#arrow)}.h{fill:#e8f1fb;stroke:#3572b0}.c{fill:#fff3d6;stroke:#b47b00}.r{fill:#e7f5e9;stroke:#398447}</style></defs>
+<rect width="100%" height="100%" fill="#ffffff"/>
+<text class="title" x="40" y="35">Causal contrast map: hypotheses ↔ controls ↔ readouts</text>
+<text class="body" x="40" y="58">合成示例输出，非正式测评结果</text>
+<text class="head" x="40" y="82">Hypotheses</text><text class="head" x="430" y="82">Controls / excluded alternatives</text><text class="head" x="920" y="82">Decision readouts</text>
+<path class="link" d="M430,139 C375,139 370,139 340,139"/>
+<path class="link" d="M430,139 C375,139 370,389 340,389"/>
+<path class="link" d="M430,264 C375,264 370,139 340,139"/>
+<path class="link" d="M430,264 C375,264 370,264 340,264"/>
+<path class="link" d="M430,389 C375,389 370,139 340,139"/>
+<path class="link" d="M430,514 C375,514 370,264 340,264"/>
+<path class="link" d="M430,639 C375,639 370,139 340,139"/>
+<path class="link" d="M430,639 C375,639 370,389 340,389"/>
+<path class="link" d="M770,139 C820,139 870,145 920,145"/>
+<path class="link" d="M770,264 C820,264 870,145 920,145"/>
+<path class="link" d="M770,389 C820,389 870,145 920,145"/>
+<path class="link" d="M770,514 C820,514 870,270 920,270"/>
+<path class="link" d="M770,264 C820,264 870,270 920,270"/>
+<path class="link" d="M770,639 C820,639 870,395 920,395"/>
+<path class="link" d="M770,139 C820,139 870,395 920,395"/>
+<path class="link" d="M770,389 C820,389 870,395 920,395"/>
+<rect class="h" x="40" y="95" width="300" height="90" rx="8"/>
+<text class="head" x="52" y="118">H1</text>
+<text class="body" x="52" y="137">在本合成协议条件下，化合物X降低酶E的催化初速，</text><text class="body" x="52" y="153">且该效应不能仅由光学背景解释。</text>
+<rect class="h" x="40" y="220" width="300" height="90" rx="8"/>
+<text class="head" x="52" y="243">H2</text>
+<text class="body" x="52" y="262">X的化合物自身荧光或无酶信号变化可产生类似抑制</text><text class="body" x="52" y="278">的表观读数。</text>
+<rect class="h" x="40" y="345" width="300" height="90" rx="8"/>
+<text class="head" x="52" y="368">H3</text>
+<text class="body" x="52" y="387">X的至少部分表观抑制对低浓度非离子洗涤剂敏感，</text><text class="body" x="52" y="403">符合聚集相关替代解释。</text>
+<rect class="c" x="430" y="95" width="340" height="90" rx="8"/>
+<text class="head" x="442" y="118">C_VEHICLE</text>
+<text class="body" x="442" y="137">vehicle: 载体、蒸发、板内位置或当日制备差异造成的表</text><text class="body" x="442" y="153">观抑制。</text>
+<rect class="c" x="430" y="220" width="340" height="90" rx="8"/>
+<text class="head" x="442" y="243">C_NO_ENZYME</text>
+<text class="body" x="442" y="262">no_enzyme: 底物自发转化、非酶催化和X依赖的底物光学变</text><text class="body" x="442" y="278">化被误认为酶抑制。</text>
+<rect class="c" x="430" y="345" width="340" height="90" rx="8"/>
+<text class="head" x="442" y="368">C_KNOWN_INHIBITOR</text>
+<text class="body" x="442" y="387">known_inhibitor: 酶失活、底物失效或读数窗口不敏感导</text><text class="body" x="442" y="403">致假阴性。</text>
+<rect class="c" x="430" y="470" width="340" height="90" rx="8"/>
+<text class="head" x="442" y="493">C_COMPOUND_ONLY</text>
+<text class="body" x="442" y="512">compound_only_fluorescence: X自身荧光、荧光淬灭或光</text><text class="body" x="442" y="528">散射被当成产物形成变化。</text>
+<rect class="c" x="430" y="595" width="340" height="90" rx="8"/>
+<text class="head" x="442" y="618">C_DETERGENT</text>
+<text class="body" x="442" y="637">detergent_counter_screen: 对洗涤剂敏感的聚集相关非特</text><text class="body" x="442" y="653">异抑制被解释为直接催化抑制。</text>
+<rect class="r" x="920" y="95" width="280" height="100" rx="8"/>
+<text class="head" x="932" y="118">R1</text>
+<text class="body" x="932" y="137">3–8 min线性RFU斜率，经匹配无酶和化合物背</text><text class="body" x="932" y="153">景校正后归一化至载体 | 至少两个相邻X浓度均</text><text class="body" x="932" y="169">达到≥30%下降，三个独立生物学重复方向一致</text><text class="body" x="932" y="185">，且相关载体技术复孔CV≤10%；先通过R2干…</text>
+<rect class="r" x="920" y="220" width="280" height="100" rx="8"/>
+<text class="head" x="932" y="243">R2</text>
+<text class="body" x="932" y="262">每µM X的背景RFU斜率增量与完整反应和无酶孔</text><text class="body" x="932" y="278">之间的斜率差 | 任一X浓度对应匹配背景超过10</text><text class="body" x="932" y="294">0 RFU/µM的合成预警阈值，或背景校正使R1结果</text><text class="body" x="932" y="310">跨越30%决策点。</text>
+<rect class="r" x="920" y="345" width="280" height="100" rx="8"/>
+<text class="head" x="932" y="368">R3</text>
+<text class="body" x="932" y="387">同一独立批次内无洗涤剂抑制率减有洗涤剂抑制</text><text class="body" x="932" y="403">率 | 在0.01%洗涤剂自身载体QC通过时，同一X</text><text class="body" x="932" y="419">浓度的配对差≥20个百分点且三个独立重复同向</text><text class="body" x="932" y="435">。</text>
+</svg>

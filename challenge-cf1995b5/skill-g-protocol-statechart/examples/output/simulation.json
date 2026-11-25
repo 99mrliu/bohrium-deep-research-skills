@@ -1,0 +1,639 @@
+{
+  "budget_deadline_audit": {
+    "calendar_confirmation_required": true,
+    "calendar_note": "For deadline_days, conservative graph minutes are divided by 1440 for an elapsed-time comparison only; equipment booking windows, queues and calendar time may be longer and require confirmation.",
+    "cost": {
+      "currency": "CNY",
+      "limit": "80",
+      "upper_bound": "17.1",
+      "within": true
+    },
+    "currency": "CNY",
+    "deadline": {
+      "booking_calendar_time_may_be_longer": true,
+      "comparison_basis": "Compare graph minutes with deadline_days * 1440; no minutes are inferred for candidate est_days.",
+      "confirmation_required": true,
+      "conversion": "elapsed_days = graph_duration_minutes / 1440",
+      "limit_days": "1",
+      "unit": "days",
+      "upper_bound_days": "0.04583333333333333333333333333",
+      "upper_bound_minutes": "66",
+      "within": true
+    },
+    "prospective": true
+  },
+  "case_id": "synthetic-nitrate-statechart-001",
+  "decision_branch_coverage": {
+    "complete": true,
+    "interpretation": "Coverage means an injected planning path selected a branch; it is not experimental evidence.",
+    "tested_decision_branches": [
+      {
+        "decision_id": "D30_BLANK_QC",
+        "label": "else"
+      },
+      {
+        "decision_id": "D30_BLANK_QC",
+        "label": "high_blank"
+      },
+      {
+        "decision_id": "D30_BLANK_QC",
+        "label": "retries_exhausted"
+      }
+    ],
+    "untested_decision_branches": []
+  },
+  "envelope": {
+    "conservative_graph_upper_bound": {
+      "cost": "17.1",
+      "duration_minutes": "66",
+      "max_state_entries": 13,
+      "method": "Conservative sum over every reachable state of max_visits times exact state cost/duration; may include mutually exclusive terminals, so it is a safe upper bound, not a claimed attainable path.",
+      "per_state": {
+        "D30_BLANK_QC": {
+          "cost": "0",
+          "duration_minutes": "0",
+          "max_visits": 2
+        },
+        "S00_START": {
+          "cost": "0",
+          "duration_minutes": "0",
+          "max_visits": 1
+        },
+        "S10_PREPARE_REAGENTS": {
+          "cost": "5",
+          "duration_minutes": "10",
+          "max_visits": 1
+        },
+        "S20_PREPARE_BLANK": {
+          "cost": "0.5",
+          "duration_minutes": "5",
+          "max_visits": 1
+        },
+        "S30_MEASURE_BLANK": {
+          "cost": "0.4",
+          "duration_minutes": "6",
+          "max_visits": 2
+        },
+        "S35_REBLANK": {
+          "cost": "0.5",
+          "duration_minutes": "5",
+          "max_visits": 1
+        },
+        "S40_PREPARE_CALIBRATION": {
+          "cost": "4.5",
+          "duration_minutes": "15",
+          "max_visits": 1
+        },
+        "S50_REACT_SAMPLES": {
+          "cost": "6",
+          "duration_minutes": "20",
+          "max_visits": 1
+        },
+        "S60_MEASURE_SAMPLES": {
+          "cost": "0.2",
+          "duration_minutes": "5",
+          "max_visits": 1
+        },
+        "T_QC_FAIL": {
+          "cost": "0",
+          "duration_minutes": "0",
+          "max_visits": 1
+        },
+        "T_SUCCESS": {
+          "cost": "0",
+          "duration_minutes": "0",
+          "max_visits": 1
+        }
+      }
+    },
+    "currency": "CNY",
+    "measured": false,
+    "nominal": {
+      "cost": "16.4",
+      "duration_minutes": "58",
+      "state_visits": 9
+    },
+    "worst_case_supplied_scenario_envelope": {
+      "max_cost": "17.1",
+      "max_duration_minutes": "66",
+      "note": "Max cost and max duration are component-wise maxima over supplied scenarios and need not belong to one path."
+    }
+  },
+  "outcome_warning": "All branch labels and injected outcomes are planning hypotheses. No scenario is a measured experimental outcome.",
+  "output_notice": "合成示例输出，非正式测评结果",
+  "protocol_id": "SYN-NO3-COLOR-STATECHART-01",
+  "scenario_results": [
+    {
+      "description": "假设试剂准备后初次空白 QC 通过；不是实测正常结果",
+      "events": [
+        {
+          "cumulative_cost": "0",
+          "cumulative_duration_minutes": "0",
+          "event": "state_visit",
+          "state_cost": "0",
+          "state_duration_minutes": "0",
+          "state_id": "S00_START",
+          "step": 1,
+          "visit": 1
+        },
+        {
+          "cumulative_cost": "5",
+          "cumulative_duration_minutes": "10",
+          "event": "state_visit",
+          "state_cost": "5",
+          "state_duration_minutes": "10",
+          "state_id": "S10_PREPARE_REAGENTS",
+          "step": 2,
+          "visit": 1
+        },
+        {
+          "cumulative_cost": "5.5",
+          "cumulative_duration_minutes": "15",
+          "event": "state_visit",
+          "state_cost": "0.5",
+          "state_duration_minutes": "5",
+          "state_id": "S20_PREPARE_BLANK",
+          "step": 3,
+          "visit": 1
+        },
+        {
+          "cumulative_cost": "5.7",
+          "cumulative_duration_minutes": "18",
+          "event": "state_visit",
+          "state_cost": "0.2",
+          "state_duration_minutes": "3",
+          "state_id": "S30_MEASURE_BLANK",
+          "step": 4,
+          "visit": 1
+        },
+        {
+          "cumulative_cost": "5.7",
+          "cumulative_duration_minutes": "18",
+          "event": "state_visit",
+          "state_cost": "0",
+          "state_duration_minutes": "0",
+          "state_id": "D30_BLANK_QC",
+          "step": 5,
+          "visit": 1
+        },
+        {
+          "event": "decision",
+          "guard": null,
+          "next": "S40_PREPARE_CALIBRATION",
+          "outcome_basis": "injected_planning_hypothesis_not_measurement",
+          "selected_label": "else",
+          "state_id": "D30_BLANK_QC",
+          "visit": 1
+        },
+        {
+          "cumulative_cost": "10.2",
+          "cumulative_duration_minutes": "33",
+          "event": "state_visit",
+          "state_cost": "4.5",
+          "state_duration_minutes": "15",
+          "state_id": "S40_PREPARE_CALIBRATION",
+          "step": 6,
+          "visit": 1
+        },
+        {
+          "cumulative_cost": "16.2",
+          "cumulative_duration_minutes": "53",
+          "event": "state_visit",
+          "state_cost": "6",
+          "state_duration_minutes": "20",
+          "state_id": "S50_REACT_SAMPLES",
+          "step": 7,
+          "visit": 1
+        },
+        {
+          "cumulative_cost": "16.4",
+          "cumulative_duration_minutes": "58",
+          "event": "state_visit",
+          "state_cost": "0.2",
+          "state_duration_minutes": "5",
+          "state_id": "S60_MEASURE_SAMPLES",
+          "step": 8,
+          "visit": 1
+        },
+        {
+          "cumulative_cost": "16.4",
+          "cumulative_duration_minutes": "58",
+          "event": "state_visit",
+          "state_cost": "0",
+          "state_duration_minutes": "0",
+          "state_id": "T_SUCCESS",
+          "step": 9,
+          "visit": 1
+        },
+        {
+          "event": "terminal",
+          "outcome": "success",
+          "state_id": "T_SUCCESS"
+        }
+      ],
+      "fault_injection": null,
+      "outcome_basis": "synthetic_what_if_all_outcomes_unmeasured",
+      "path": [
+        "S00_START",
+        "S10_PREPARE_REAGENTS",
+        "S20_PREPARE_BLANK",
+        "S30_MEASURE_BLANK",
+        "D30_BLANK_QC",
+        "S40_PREPARE_CALIBRATION",
+        "S50_REACT_SAMPLES",
+        "S60_MEASURE_SAMPLES",
+        "T_SUCCESS"
+      ],
+      "scenario_id": "nominal",
+      "state_visits": {
+        "D30_BLANK_QC": 1,
+        "S00_START": 1,
+        "S10_PREPARE_REAGENTS": 1,
+        "S20_PREPARE_BLANK": 1,
+        "S30_MEASURE_BLANK": 1,
+        "S40_PREPARE_CALIBRATION": 1,
+        "S50_REACT_SAMPLES": 1,
+        "S60_MEASURE_SAMPLES": 1,
+        "T_SUCCESS": 1
+      },
+      "terminal_id": "T_SUCCESS",
+      "termination": {
+        "outcome": "success",
+        "terminal_id": "T_SUCCESS",
+        "type": "explicit_terminal"
+      },
+      "totals": {
+        "cost": "16.4",
+        "duration_minutes": "58",
+        "state_visits": 9
+      }
+    },
+    {
+      "description": "注入一次高空白，重新空白后假设通过；验证恢复路径的成本/时间与重试界",
+      "events": [
+        {
+          "cumulative_cost": "0",
+          "cumulative_duration_minutes": "0",
+          "event": "state_visit",
+          "state_cost": "0",
+          "state_duration_minutes": "0",
+          "state_id": "S00_START",
+          "step": 1,
+          "visit": 1
+        },
+        {
+          "cumulative_cost": "5",
+          "cumulative_duration_minutes": "10",
+          "event": "state_visit",
+          "state_cost": "5",
+          "state_duration_minutes": "10",
+          "state_id": "S10_PREPARE_REAGENTS",
+          "step": 2,
+          "visit": 1
+        },
+        {
+          "cumulative_cost": "5.5",
+          "cumulative_duration_minutes": "15",
+          "event": "state_visit",
+          "state_cost": "0.5",
+          "state_duration_minutes": "5",
+          "state_id": "S20_PREPARE_BLANK",
+          "step": 3,
+          "visit": 1
+        },
+        {
+          "cumulative_cost": "5.7",
+          "cumulative_duration_minutes": "18",
+          "event": "state_visit",
+          "state_cost": "0.2",
+          "state_duration_minutes": "3",
+          "state_id": "S30_MEASURE_BLANK",
+          "step": 4,
+          "visit": 1
+        },
+        {
+          "cumulative_cost": "5.7",
+          "cumulative_duration_minutes": "18",
+          "event": "state_visit",
+          "state_cost": "0",
+          "state_duration_minutes": "0",
+          "state_id": "D30_BLANK_QC",
+          "step": 5,
+          "visit": 1
+        },
+        {
+          "event": "decision",
+          "guard": {
+            "metric": "calibration_blank_recovery_percent",
+            "operator": ">",
+            "record": "run_log.blank_qc.recovery_percent",
+            "threshold": "105",
+            "unit": "%"
+          },
+          "next": "S35_REBLANK",
+          "outcome_basis": "injected_planning_hypothesis_not_measurement",
+          "selected_label": "high_blank",
+          "state_id": "D30_BLANK_QC",
+          "visit": 1
+        },
+        {
+          "cumulative_cost": "6.2",
+          "cumulative_duration_minutes": "23",
+          "event": "state_visit",
+          "state_cost": "0.5",
+          "state_duration_minutes": "5",
+          "state_id": "S35_REBLANK",
+          "step": 6,
+          "visit": 1
+        },
+        {
+          "cumulative_cost": "6.4",
+          "cumulative_duration_minutes": "26",
+          "event": "state_visit",
+          "state_cost": "0.2",
+          "state_duration_minutes": "3",
+          "state_id": "S30_MEASURE_BLANK",
+          "step": 7,
+          "visit": 2
+        },
+        {
+          "cumulative_cost": "6.4",
+          "cumulative_duration_minutes": "26",
+          "event": "state_visit",
+          "state_cost": "0",
+          "state_duration_minutes": "0",
+          "state_id": "D30_BLANK_QC",
+          "step": 8,
+          "visit": 2
+        },
+        {
+          "event": "decision",
+          "guard": null,
+          "next": "S40_PREPARE_CALIBRATION",
+          "outcome_basis": "injected_planning_hypothesis_not_measurement",
+          "selected_label": "else",
+          "state_id": "D30_BLANK_QC",
+          "visit": 2
+        },
+        {
+          "cumulative_cost": "10.9",
+          "cumulative_duration_minutes": "41",
+          "event": "state_visit",
+          "state_cost": "4.5",
+          "state_duration_minutes": "15",
+          "state_id": "S40_PREPARE_CALIBRATION",
+          "step": 9,
+          "visit": 1
+        },
+        {
+          "cumulative_cost": "16.9",
+          "cumulative_duration_minutes": "61",
+          "event": "state_visit",
+          "state_cost": "6",
+          "state_duration_minutes": "20",
+          "state_id": "S50_REACT_SAMPLES",
+          "step": 10,
+          "visit": 1
+        },
+        {
+          "cumulative_cost": "17.1",
+          "cumulative_duration_minutes": "66",
+          "event": "state_visit",
+          "state_cost": "0.2",
+          "state_duration_minutes": "5",
+          "state_id": "S60_MEASURE_SAMPLES",
+          "step": 11,
+          "visit": 1
+        },
+        {
+          "cumulative_cost": "17.1",
+          "cumulative_duration_minutes": "66",
+          "event": "state_visit",
+          "state_cost": "0",
+          "state_duration_minutes": "0",
+          "state_id": "T_SUCCESS",
+          "step": 12,
+          "visit": 1
+        },
+        {
+          "event": "terminal",
+          "outcome": "success",
+          "state_id": "T_SUCCESS"
+        }
+      ],
+      "fault_injection": {
+        "measured": false,
+        "target_decision": "D30_BLANK_QC",
+        "type": "transient_high_blank"
+      },
+      "outcome_basis": "synthetic_what_if_all_outcomes_unmeasured",
+      "path": [
+        "S00_START",
+        "S10_PREPARE_REAGENTS",
+        "S20_PREPARE_BLANK",
+        "S30_MEASURE_BLANK",
+        "D30_BLANK_QC",
+        "S35_REBLANK",
+        "S30_MEASURE_BLANK",
+        "D30_BLANK_QC",
+        "S40_PREPARE_CALIBRATION",
+        "S50_REACT_SAMPLES",
+        "S60_MEASURE_SAMPLES",
+        "T_SUCCESS"
+      ],
+      "scenario_id": "recoverable_high_blank",
+      "state_visits": {
+        "D30_BLANK_QC": 2,
+        "S00_START": 1,
+        "S10_PREPARE_REAGENTS": 1,
+        "S20_PREPARE_BLANK": 1,
+        "S30_MEASURE_BLANK": 2,
+        "S35_REBLANK": 1,
+        "S40_PREPARE_CALIBRATION": 1,
+        "S50_REACT_SAMPLES": 1,
+        "S60_MEASURE_SAMPLES": 1,
+        "T_SUCCESS": 1
+      },
+      "terminal_id": "T_SUCCESS",
+      "termination": {
+        "outcome": "success",
+        "terminal_id": "T_SUCCESS",
+        "type": "explicit_terminal"
+      },
+      "totals": {
+        "cost": "17.1",
+        "duration_minutes": "66",
+        "state_visits": 12
+      }
+    },
+    {
+      "description": "注入高空白并在重试预算耗尽时进入显式 QC_FAIL；不生成恢复概率或实测值",
+      "events": [
+        {
+          "cumulative_cost": "0",
+          "cumulative_duration_minutes": "0",
+          "event": "state_visit",
+          "state_cost": "0",
+          "state_duration_minutes": "0",
+          "state_id": "S00_START",
+          "step": 1,
+          "visit": 1
+        },
+        {
+          "cumulative_cost": "5",
+          "cumulative_duration_minutes": "10",
+          "event": "state_visit",
+          "state_cost": "5",
+          "state_duration_minutes": "10",
+          "state_id": "S10_PREPARE_REAGENTS",
+          "step": 2,
+          "visit": 1
+        },
+        {
+          "cumulative_cost": "5.5",
+          "cumulative_duration_minutes": "15",
+          "event": "state_visit",
+          "state_cost": "0.5",
+          "state_duration_minutes": "5",
+          "state_id": "S20_PREPARE_BLANK",
+          "step": 3,
+          "visit": 1
+        },
+        {
+          "cumulative_cost": "5.7",
+          "cumulative_duration_minutes": "18",
+          "event": "state_visit",
+          "state_cost": "0.2",
+          "state_duration_minutes": "3",
+          "state_id": "S30_MEASURE_BLANK",
+          "step": 4,
+          "visit": 1
+        },
+        {
+          "cumulative_cost": "5.7",
+          "cumulative_duration_minutes": "18",
+          "event": "state_visit",
+          "state_cost": "0",
+          "state_duration_minutes": "0",
+          "state_id": "D30_BLANK_QC",
+          "step": 5,
+          "visit": 1
+        },
+        {
+          "event": "decision",
+          "guard": {
+            "metric": "calibration_blank_recovery_percent",
+            "operator": ">",
+            "record": "run_log.blank_qc.recovery_percent",
+            "threshold": "105",
+            "unit": "%"
+          },
+          "next": "S35_REBLANK",
+          "outcome_basis": "injected_planning_hypothesis_not_measurement",
+          "selected_label": "high_blank",
+          "state_id": "D30_BLANK_QC",
+          "visit": 1
+        },
+        {
+          "cumulative_cost": "6.2",
+          "cumulative_duration_minutes": "23",
+          "event": "state_visit",
+          "state_cost": "0.5",
+          "state_duration_minutes": "5",
+          "state_id": "S35_REBLANK",
+          "step": 6,
+          "visit": 1
+        },
+        {
+          "cumulative_cost": "6.4",
+          "cumulative_duration_minutes": "26",
+          "event": "state_visit",
+          "state_cost": "0.2",
+          "state_duration_minutes": "3",
+          "state_id": "S30_MEASURE_BLANK",
+          "step": 7,
+          "visit": 2
+        },
+        {
+          "cumulative_cost": "6.4",
+          "cumulative_duration_minutes": "26",
+          "event": "state_visit",
+          "state_cost": "0",
+          "state_duration_minutes": "0",
+          "state_id": "D30_BLANK_QC",
+          "step": 8,
+          "visit": 2
+        },
+        {
+          "event": "decision",
+          "guard": {
+            "metric": "reblank_attempt_count",
+            "operator": ">=",
+            "record": "run_log.blank_qc.reblank_attempt_count",
+            "threshold": "1",
+            "unit": "count"
+          },
+          "next": "T_QC_FAIL",
+          "outcome_basis": "injected_planning_hypothesis_not_measurement",
+          "selected_label": "retries_exhausted",
+          "state_id": "D30_BLANK_QC",
+          "visit": 2
+        },
+        {
+          "cumulative_cost": "6.4",
+          "cumulative_duration_minutes": "26",
+          "event": "state_visit",
+          "state_cost": "0",
+          "state_duration_minutes": "0",
+          "state_id": "T_QC_FAIL",
+          "step": 9,
+          "visit": 1
+        },
+        {
+          "event": "terminal",
+          "outcome": "failure",
+          "state_id": "T_QC_FAIL"
+        }
+      ],
+      "fault_injection": {
+        "measured": false,
+        "target_decision": "D30_BLANK_QC",
+        "type": "persistent_high_blank_with_retry_budget_exhausted"
+      },
+      "outcome_basis": "synthetic_what_if_all_outcomes_unmeasured",
+      "path": [
+        "S00_START",
+        "S10_PREPARE_REAGENTS",
+        "S20_PREPARE_BLANK",
+        "S30_MEASURE_BLANK",
+        "D30_BLANK_QC",
+        "S35_REBLANK",
+        "S30_MEASURE_BLANK",
+        "D30_BLANK_QC",
+        "T_QC_FAIL"
+      ],
+      "scenario_id": "persistent_qc_failure",
+      "state_visits": {
+        "D30_BLANK_QC": 2,
+        "S00_START": 1,
+        "S10_PREPARE_REAGENTS": 1,
+        "S20_PREPARE_BLANK": 1,
+        "S30_MEASURE_BLANK": 2,
+        "S35_REBLANK": 1,
+        "T_QC_FAIL": 1
+      },
+      "terminal_id": "T_QC_FAIL",
+      "termination": {
+        "outcome": "failure",
+        "terminal_id": "T_QC_FAIL",
+        "type": "explicit_terminal"
+      },
+      "totals": {
+        "cost": "6.4",
+        "duration_minutes": "26",
+        "state_visits": 9
+      }
+    }
+  ],
+  "simulation_type": "deterministic_structured_fault_injection"
+}

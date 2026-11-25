@@ -1,0 +1,431 @@
+{
+  "arithmetic": "Decimal range/enum domains; exact item subtotal, total cost, canonical est_days, and optional legacy minutes recomputation",
+  "budget": {
+    "budget_cap": "80",
+    "currency": "CNY",
+    "deadline_days": "1",
+    "legacy_deadline_minutes": null
+  },
+  "candidate_assessment": [
+    {
+      "assessment": "rejected_or_requires_revision",
+      "candidate_id": "C1_ARITHMETIC_ERROR",
+      "claimed_total_cost": "15",
+      "claimed_total_duration_minutes": null,
+      "cost_item_audits": [
+        {
+          "basis": "unit_price*quantity",
+          "declared_subtotal": "10",
+          "item": "preparation",
+          "recomputed_amount": "10"
+        },
+        {
+          "basis": "unit_price*quantity",
+          "declared_subtotal": "4.5",
+          "item": "calibration",
+          "recomputed_amount": "4.5"
+        },
+        {
+          "basis": "unit_price*quantity",
+          "declared_subtotal": "1.8",
+          "item": "measurement",
+          "recomputed_amount": "1.9"
+        }
+      ],
+      "cost_recomputation_complete": true,
+      "currency": "CNY",
+      "deadline_unit": "days",
+      "declared_est_days": "0.05",
+      "declared_total_cost": "15",
+      "declared_total_cost_fields": {
+        "total_cost": "15"
+      },
+      "duration_recomputation_complete": null,
+      "duration_unit_note": "est_days is kept in days; no minutes are inferred from it. duration_items is a legacy minutes-only alias.",
+      "errors": [
+        "Cost item measurement: declared subtotal 1.8 != recomputed 1.9.",
+        "Cost arithmetic mismatch: total_cost=15, recomputed 16.4."
+      ],
+      "est_days": "0.05",
+      "evidence_status": "candidate_claims_audited_not_measured",
+      "over_budget": false,
+      "over_deadline": false,
+      "over_deadline_days": false,
+      "over_deadline_minutes": null,
+      "recomputed_total_cost": "16.4",
+      "recomputed_total_duration_minutes": null,
+      "summary": "域内温度/时间，但条目 subtotal 与总成本申报加总错误"
+    },
+    {
+      "assessment": "rejected_or_requires_revision",
+      "candidate_id": "C2_DOMAIN_ERROR",
+      "claimed_total_cost": "16.4",
+      "claimed_total_duration_minutes": null,
+      "cost_item_audits": [
+        {
+          "basis": "unit_price*quantity",
+          "declared_subtotal": "16.4",
+          "item": "all_steps",
+          "recomputed_amount": "16.4"
+        }
+      ],
+      "cost_recomputation_complete": true,
+      "currency": "CNY",
+      "deadline_unit": "days",
+      "declared_est_days": "0.05",
+      "declared_total_cost": "16.4",
+      "declared_total_cost_fields": {
+        "total_cost": "16.4"
+      },
+      "duration_recomputation_complete": null,
+      "duration_unit_note": "est_days is kept in days; no minutes are inferred from it. duration_items is a legacy minutes-only alias.",
+      "errors": [
+        "Parameter reaction_temperature: 33 is off the Decimal step grid 5 from 20."
+      ],
+      "est_days": "0.05",
+      "evidence_status": "candidate_claims_audited_not_measured",
+      "over_budget": false,
+      "over_deadline": false,
+      "over_deadline_days": false,
+      "over_deadline_minutes": null,
+      "recomputed_total_cost": "16.4",
+      "recomputed_total_duration_minutes": null,
+      "summary": "温度 33 degC 落在 5 degC 步长网格外；算术本身一致"
+    },
+    {
+      "assessment": "rejected_or_requires_revision",
+      "candidate_id": "C3_DOMAIN_AND_BUDGET_ERRORS",
+      "claimed_total_cost": "80",
+      "claimed_total_duration_minutes": null,
+      "cost_item_audits": [
+        {
+          "basis": "unit_price*quantity",
+          "declared_subtotal": "70",
+          "item": "reagent",
+          "recomputed_amount": "70"
+        },
+        {
+          "basis": "unit_price*quantity",
+          "declared_subtotal": "20",
+          "item": "instrument",
+          "recomputed_amount": "20"
+        }
+      ],
+      "cost_recomputation_complete": true,
+      "currency": "CNY",
+      "deadline_unit": "days",
+      "declared_est_days": "2",
+      "declared_total_cost": "80",
+      "declared_total_cost_fields": {
+        "total_cost": "80"
+      },
+      "duration_recomputation_complete": null,
+      "duration_unit_note": "est_days is kept in days; no minutes are inferred from it. duration_items is a legacy minutes-only alias.",
+      "errors": [
+        "Cost arithmetic mismatch: total_cost=80, recomputed 90.",
+        "Parameter reaction_temperature: 45 outside [20, 40].",
+        "Parameter reaction_time: 35 outside [10, 30].",
+        "Parameter reaction_time: 35 is off the Decimal step grid 10 from 10.",
+        "Recomputed cost 90 exceeds budget_cap 80 CNY.",
+        "Candidate est_days 2 exceeds deadline_days 1."
+      ],
+      "est_days": "2",
+      "evidence_status": "candidate_claims_audited_not_measured",
+      "over_budget": true,
+      "over_deadline": true,
+      "over_deadline_days": true,
+      "over_deadline_minutes": null,
+      "recomputed_total_cost": "90",
+      "recomputed_total_duration_minutes": null,
+      "summary": "温度和时间越域，成本申报错误并超预算，est_days 超期限"
+    }
+  ],
+  "case_id": "synthetic-nitrate-statechart-001",
+  "interpretation": "Candidate errors identify required revision; this audit is not experimental validation. Case/task records are provenance, not external scientific evidence.",
+  "material_warnings": [],
+  "materials": [
+    {
+      "characters_read": 328,
+      "evidence_scope": "Supplied material provenance; not independently verified scientific evidence.",
+      "excerpt": "合成示意材料记录（非实验报告、非标准方法）\n\n1. 本记录只服务于软件演示，材料、仪器、参数和 QC 数值均为合成规划输入。\n2. 方法负责人须在现实执行前核对适用的标准方法、试剂兼容性、比色仪器 SOP、干扰、安全防护和废液处置。\n3. 校准空白回收率记录位置为 run_log.blank_qc.recovery_percent；重新空白次数记录位置为 run_log.blank_qc.reblank_attempt_count。\n4. 合成规划守卫：空白回收率 > 105% 且尚有重试预算时进入重新空白；重试次数 >= 1 后再次失败则进入 QC_FAIL；else 为通过分支。\n5. 本记录没有实测吸光度、实测回收率、供应商报价或资源批准。\n",
+      "extraction": "read_utf8_text",
+      "path": "/Users/liuhengshen/Desktop/bhr_product/bohrium/challenge-cf1995b5-v3/skill-g-protocol-statechart/examples/materials/assay_notes.txt",
+      "relative_path": "assay_notes.txt",
+      "role": "material",
+      "sha256": "9c19263e5478ac71f265621d7d3da1f552e4b072d955210649c76dd3b200d8e1"
+    }
+  ],
+  "output_notice": "合成示例输出，非正式测评结果",
+  "resource_contract": {
+    "budget_cap": "80",
+    "currency": "CNY",
+    "deadline_days": "1",
+    "disclaimer": "All resources, prices and booking fields are synthetic planning inputs, not quotes or reservations.",
+    "equipment": [
+      {
+        "booking": {
+          "slot_hours": 1,
+          "slots_per_week": 5,
+          "window_days": 1
+        },
+        "id": "EQ_BALANCE",
+        "model": "synthetic-balance",
+        "name": "合成分析天平",
+        "price_per_hour": "2",
+        "spec": "实际量程/校准状态待确认"
+      },
+      {
+        "booking": {
+          "slot_hours": 1,
+          "slots_per_week": 5,
+          "window_days": 1
+        },
+        "id": "EQ_PIPETTE",
+        "model": "synthetic-pipette",
+        "name": "合成移液设备",
+        "price_per_hour": "1",
+        "spec": "实际规格与 SOP 待确认"
+      },
+      {
+        "booking": {
+          "slot_hours": 1,
+          "slots_per_week": 5,
+          "window_days": 1
+        },
+        "id": "EQ_THERMOSTAT",
+        "model": "synthetic-thermostat",
+        "name": "合成恒温反应设备",
+        "price_per_hour": "3",
+        "spec": "30 degC 设定仅用于合成案例"
+      }
+    ],
+    "reagents": [
+      {
+        "id": "MAT_REAGENT",
+        "name": "合成硝酸盐显色试剂",
+        "pack_size": "1",
+        "spec": "synthetic planning lot",
+        "unit": "planning_lot",
+        "unit_price": "11"
+      },
+      {
+        "id": "MAT_WATER",
+        "name": "合成无硝酸盐水",
+        "pack_size": "2",
+        "spec": "synthetic blank preparation",
+        "unit": "blank_preparation",
+        "unit_price": "0.5"
+      },
+      {
+        "id": "MAT_STANDARD",
+        "name": "合成硝酸盐校准标准液",
+        "pack_size": "1",
+        "spec": "synthetic calibration series",
+        "unit": "planning_series",
+        "unit_price": "4.5"
+      },
+      {
+        "id": "MAT_SAMPLE",
+        "name": "合成淡水样",
+        "pack_size": "1",
+        "spec": "no real sample or measured result",
+        "unit": "synthetic_aliquot",
+        "unit_price": "0"
+      }
+    ]
+  },
+  "resource_register": {
+    "conflicts": [],
+    "contract_present": true,
+    "deduplicated_counts": {
+      "equipment": 4,
+      "materials": 0,
+      "reagents": 4
+    },
+    "equipment": [
+      {
+        "booking": {
+          "slot_hours": 1,
+          "slots_per_week": 5,
+          "window_days": 1
+        },
+        "id": "EQ_BALANCE",
+        "model": "synthetic-balance",
+        "name": "合成分析天平",
+        "note_only": false,
+        "origins": [
+          "resource_contract.equipment"
+        ],
+        "price_per_hour": "2",
+        "resource_kind": "equipment",
+        "spec": "实际量程/校准状态待确认"
+      },
+      {
+        "booking": {
+          "slot_hours": 1,
+          "slots_per_week": 5,
+          "window_days": 1
+        },
+        "id": "EQ_PIPETTE",
+        "model": "synthetic-pipette",
+        "name": "合成移液设备",
+        "note_only": false,
+        "origins": [
+          "resource_contract.equipment"
+        ],
+        "price_per_hour": "1",
+        "resource_kind": "equipment",
+        "spec": "实际规格与 SOP 待确认"
+      },
+      {
+        "booking": {
+          "slot_hours": 1,
+          "slots_per_week": 5,
+          "window_days": 1
+        },
+        "id": "EQ_THERMOSTAT",
+        "model": "synthetic-thermostat",
+        "name": "合成恒温反应设备",
+        "note_only": false,
+        "origins": [
+          "resource_contract.equipment"
+        ],
+        "price_per_hour": "3",
+        "resource_kind": "equipment",
+        "spec": "30 degC 设定仅用于合成案例"
+      },
+      {
+        "booking": {
+          "slot_hours": 1,
+          "slots_per_week": 4,
+          "window_days": 1
+        },
+        "id": "EQ_COLORIMETER",
+        "model": "note-only-colorimeter",
+        "name": "合成比色检测器",
+        "note_only": true,
+        "origins": [
+          "equipment_domain_note"
+        ],
+        "price_per_hour": "2",
+        "resource_kind": "equipment",
+        "spec": "波长等现实方法参数未提供，不得补造"
+      }
+    ],
+    "errors": [],
+    "known_ids": {
+      "equipment": [
+        "EQ_BALANCE",
+        "EQ_COLORIMETER",
+        "EQ_PIPETTE",
+        "EQ_THERMOSTAT"
+      ],
+      "materials": [
+        "MAT_REAGENT",
+        "MAT_SAMPLE",
+        "MAT_STANDARD",
+        "MAT_WATER"
+      ]
+    },
+    "materials": [],
+    "note_objects": [
+      {
+        "equipment": [
+          {
+            "booking": {
+              "slot_hours": 1,
+              "slots_per_week": 4,
+              "window_days": 1
+            },
+            "id": "EQ_COLORIMETER",
+            "model": "note-only-colorimeter",
+            "name": "合成比色检测器",
+            "price_per_hour": "2",
+            "spec": "波长等现实方法参数未提供，不得补造"
+          }
+        ]
+      },
+      {
+        "equipment": [
+          {
+            "booking": {
+              "slot_hours": 1,
+              "slots_per_week": 4,
+              "window_days": 1
+            },
+            "id": "EQ_COLORIMETER",
+            "model": "note-only-colorimeter",
+            "name": "合成比色检测器",
+            "price_per_hour": "2",
+            "spec": "波长等现实方法参数未提供，不得补造"
+          }
+        ]
+      }
+    ],
+    "note_only_equipment_ids": [
+      "EQ_COLORIMETER"
+    ],
+    "reagents": [
+      {
+        "id": "MAT_REAGENT",
+        "name": "合成硝酸盐显色试剂",
+        "note_only": false,
+        "origins": [
+          "resource_contract.reagents"
+        ],
+        "pack_size": "1",
+        "resource_kind": "reagent",
+        "spec": "synthetic planning lot",
+        "unit": "planning_lot",
+        "unit_price": "11"
+      },
+      {
+        "id": "MAT_WATER",
+        "name": "合成无硝酸盐水",
+        "note_only": false,
+        "origins": [
+          "resource_contract.reagents"
+        ],
+        "pack_size": "2",
+        "resource_kind": "reagent",
+        "spec": "synthetic blank preparation",
+        "unit": "blank_preparation",
+        "unit_price": "0.5"
+      },
+      {
+        "id": "MAT_STANDARD",
+        "name": "合成硝酸盐校准标准液",
+        "note_only": false,
+        "origins": [
+          "resource_contract.reagents"
+        ],
+        "pack_size": "1",
+        "resource_kind": "reagent",
+        "spec": "synthetic calibration series",
+        "unit": "planning_series",
+        "unit_price": "4.5"
+      },
+      {
+        "id": "MAT_SAMPLE",
+        "name": "合成淡水样",
+        "note_only": false,
+        "origins": [
+          "resource_contract.reagents"
+        ],
+        "pack_size": "1",
+        "resource_kind": "reagent",
+        "spec": "no real sample or measured result",
+        "unit": "synthetic_aliquot",
+        "unit_price": "0"
+      }
+    ]
+  },
+  "status": "partial",
+  "task": {
+    "characters_read": 259,
+    "path": "/Users/liuhengshen/Desktop/bhr_product/bohrium/challenge-cf1995b5-v3/skill-g-protocol-statechart/examples/task.md",
+    "role": "task",
+    "sha256": "cfde7b1a50215ba2bcb9d4fefd2ac3babc24110d0100fe52a16927e700255a47"
+  },
+  "task_excerpt": "# 合成示意案例任务\n\n这是**合成示意案例**，不是正式测评输入，也没有开展任何湿实验。\n\n目标：将合成水样比色硝酸盐测定优化方案编译为有限状态决策图。反应温度与时间只能取 `mock_case.json` 给定的有限域。流程必须包含校准空白、可观测 QC 回收率守卫、最多一次恢复性重新空白，以及持续 QC 失败时的显式失败终态。需要审计三个候选方案的算术和有限域错误。\n\n所有成本、时间、回收率阈值和情景分支均为合成规划输入；仿真仅说明“若注入该分支则执行何路径”，不是方法性能声明、实测回收率或正式测评结果。\n"
+}

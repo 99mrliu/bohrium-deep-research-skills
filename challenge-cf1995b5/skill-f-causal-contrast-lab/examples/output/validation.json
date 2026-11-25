@@ -1,0 +1,136 @@
+{
+  "_header": "合成示例输出，非正式测评结果",
+  "_metadata": {
+    "generator": "causal_contrast.py/1.1",
+    "case_sha256": "21bae706def796de822b56f9a41ef145a0ef95386cf2e038d31e4b272c3ff964"
+  },
+  "status": "PASS",
+  "errors": [],
+  "warnings": [],
+  "fail_semantics": "Any FAIL makes result.status partial; scientific completion is never auto-claimed.",
+  "checks": [
+    {
+      "id": "scientific_structure_and_arithmetic",
+      "status": "PASS",
+      "error_count": 0
+    },
+    {
+      "id": "candidate_audit",
+      "status": "OBSERVED",
+      "failed_candidates": 3,
+      "detail": "Candidate defects are reported separately from revised-plan validity."
+    },
+    {
+      "id": "dynamic_required_fields",
+      "status": "PASS",
+      "unknown_fields": []
+    }
+  ],
+  "evidence_checks": [
+    {
+      "id": "E1",
+      "locator": "$.protocol_assumptions.initial_rate_window_min",
+      "status": "PASS",
+      "detail": "case JSONPath and canonical quote match exactly"
+    },
+    {
+      "id": "E2",
+      "locator": "$.protocol_assumptions.decision_assumptions.inhibition_threshold_percent",
+      "status": "PASS",
+      "detail": "case JSONPath and canonical quote match exactly"
+    },
+    {
+      "id": "E3",
+      "locator": "source_note.md#synthetic-assumptions",
+      "status": "PASS",
+      "detail": "exact quote found in /Users/liuhengshen/Desktop/bhr_product/bohrium/challenge-cf1995b5-v3/skill-f-causal-contrast-lab/examples/work/input/source_note.md"
+    },
+    {
+      "id": "E4",
+      "locator": "$.mechanism_context.interference_concern",
+      "status": "PASS",
+      "detail": "case JSONPath and canonical quote match exactly"
+    },
+    {
+      "id": "E5",
+      "locator": "$.mechanism_context.aggregation_concern",
+      "status": "PASS",
+      "detail": "case JSONPath and canonical quote match exactly"
+    },
+    {
+      "id": "E6",
+      "locator": "$.resource_contract.disclaimer",
+      "status": "PASS",
+      "detail": "case JSONPath and canonical quote match exactly"
+    }
+  ],
+  "cost_recompute": {
+    "computed_total": "436",
+    "items": [
+      {
+        "item": "荧光读板机8小时",
+        "resource_id": "EQ_READER",
+        "unit_price": "20",
+        "quantity": "8",
+        "declared_subtotal": null,
+        "computed_subtotal": "160"
+      },
+      {
+        "item": "黑色384孔板",
+        "resource_id": "RS_PLATE",
+        "unit_price": "12",
+        "quantity": "4",
+        "declared_subtotal": null,
+        "computed_subtotal": "48"
+      },
+      {
+        "item": "底物工作液",
+        "resource_id": "RS_SUBSTRATE",
+        "unit_price": "30",
+        "quantity": "2",
+        "declared_subtotal": null,
+        "computed_subtotal": "60"
+      },
+      {
+        "item": "酶独立制备",
+        "resource_id": "RS_ENZYME",
+        "unit_price": "40",
+        "quantity": "3",
+        "declared_subtotal": null,
+        "computed_subtotal": "120"
+      },
+      {
+        "item": "已知抑制剂K",
+        "resource_id": "RS_INHIBITOR",
+        "unit_price": "18",
+        "quantity": "1",
+        "declared_subtotal": null,
+        "computed_subtotal": "18"
+      },
+      {
+        "item": "化合物X",
+        "resource_id": "RS_COMPOUND",
+        "unit_price": "25",
+        "quantity": "1",
+        "declared_subtotal": null,
+        "computed_subtotal": "25"
+      },
+      {
+        "item": "洗涤剂反筛",
+        "resource_id": "RS_DETERGENT",
+        "unit_price": "5",
+        "quantity": "1",
+        "declared_subtotal": null,
+        "computed_subtotal": "5"
+      }
+    ],
+    "errors": [],
+    "quantity_semantics": "Design quantity must already be the billable quantity after any pack-size rules; the compiler never infers quantities or pack rounding.",
+    "time_recompute": {
+      "total_work_minutes": "350",
+      "one_time_minutes": "50",
+      "per_repeat_minutes": "100",
+      "repeats": "3"
+    }
+  }
+}

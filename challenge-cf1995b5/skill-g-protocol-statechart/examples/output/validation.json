@@ -1,0 +1,526 @@
+{
+  "budget_deadline_audit": {
+    "calendar_confirmation_required": true,
+    "calendar_note": "For deadline_days, conservative graph minutes are divided by 1440 for an elapsed-time comparison only; equipment booking windows, queues and calendar time may be longer and require confirmation.",
+    "cost": {
+      "currency": "CNY",
+      "limit": "80",
+      "upper_bound": "17.1",
+      "within": true
+    },
+    "currency": "CNY",
+    "deadline": {
+      "booking_calendar_time_may_be_longer": true,
+      "comparison_basis": "Compare graph minutes with deadline_days * 1440; no minutes are inferred for candidate est_days.",
+      "confirmation_required": true,
+      "conversion": "elapsed_days = graph_duration_minutes / 1440",
+      "limit_days": "1",
+      "unit": "days",
+      "upper_bound_days": "0.04583333333333333333333333333",
+      "upper_bound_minutes": "66",
+      "within": true
+    },
+    "prospective": true
+  },
+  "candidate_assessment": [
+    {
+      "assessment": "rejected_or_requires_revision",
+      "candidate_id": "C1_ARITHMETIC_ERROR",
+      "claimed_total_cost": "15",
+      "claimed_total_duration_minutes": null,
+      "cost_item_audits": [
+        {
+          "basis": "unit_price*quantity",
+          "declared_subtotal": "10",
+          "item": "preparation",
+          "recomputed_amount": "10"
+        },
+        {
+          "basis": "unit_price*quantity",
+          "declared_subtotal": "4.5",
+          "item": "calibration",
+          "recomputed_amount": "4.5"
+        },
+        {
+          "basis": "unit_price*quantity",
+          "declared_subtotal": "1.8",
+          "item": "measurement",
+          "recomputed_amount": "1.9"
+        }
+      ],
+      "cost_recomputation_complete": true,
+      "currency": "CNY",
+      "deadline_unit": "days",
+      "declared_est_days": "0.05",
+      "declared_total_cost": "15",
+      "declared_total_cost_fields": {
+        "total_cost": "15"
+      },
+      "duration_recomputation_complete": null,
+      "duration_unit_note": "est_days is kept in days; no minutes are inferred from it. duration_items is a legacy minutes-only alias.",
+      "errors": [
+        "Cost item measurement: declared subtotal 1.8 != recomputed 1.9.",
+        "Cost arithmetic mismatch: total_cost=15, recomputed 16.4."
+      ],
+      "est_days": "0.05",
+      "evidence_status": "candidate_claims_audited_not_measured",
+      "over_budget": false,
+      "over_deadline": false,
+      "over_deadline_days": false,
+      "over_deadline_minutes": null,
+      "recomputed_total_cost": "16.4",
+      "recomputed_total_duration_minutes": null,
+      "summary": "域内温度/时间，但条目 subtotal 与总成本申报加总错误"
+    },
+    {
+      "assessment": "rejected_or_requires_revision",
+      "candidate_id": "C2_DOMAIN_ERROR",
+      "claimed_total_cost": "16.4",
+      "claimed_total_duration_minutes": null,
+      "cost_item_audits": [
+        {
+          "basis": "unit_price*quantity",
+          "declared_subtotal": "16.4",
+          "item": "all_steps",
+          "recomputed_amount": "16.4"
+        }
+      ],
+      "cost_recomputation_complete": true,
+      "currency": "CNY",
+      "deadline_unit": "days",
+      "declared_est_days": "0.05",
+      "declared_total_cost": "16.4",
+      "declared_total_cost_fields": {
+        "total_cost": "16.4"
+      },
+      "duration_recomputation_complete": null,
+      "duration_unit_note": "est_days is kept in days; no minutes are inferred from it. duration_items is a legacy minutes-only alias.",
+      "errors": [
+        "Parameter reaction_temperature: 33 is off the Decimal step grid 5 from 20."
+      ],
+      "est_days": "0.05",
+      "evidence_status": "candidate_claims_audited_not_measured",
+      "over_budget": false,
+      "over_deadline": false,
+      "over_deadline_days": false,
+      "over_deadline_minutes": null,
+      "recomputed_total_cost": "16.4",
+      "recomputed_total_duration_minutes": null,
+      "summary": "温度 33 degC 落在 5 degC 步长网格外；算术本身一致"
+    },
+    {
+      "assessment": "rejected_or_requires_revision",
+      "candidate_id": "C3_DOMAIN_AND_BUDGET_ERRORS",
+      "claimed_total_cost": "80",
+      "claimed_total_duration_minutes": null,
+      "cost_item_audits": [
+        {
+          "basis": "unit_price*quantity",
+          "declared_subtotal": "70",
+          "item": "reagent",
+          "recomputed_amount": "70"
+        },
+        {
+          "basis": "unit_price*quantity",
+          "declared_subtotal": "20",
+          "item": "instrument",
+          "recomputed_amount": "20"
+        }
+      ],
+      "cost_recomputation_complete": true,
+      "currency": "CNY",
+      "deadline_unit": "days",
+      "declared_est_days": "2",
+      "declared_total_cost": "80",
+      "declared_total_cost_fields": {
+        "total_cost": "80"
+      },
+      "duration_recomputation_complete": null,
+      "duration_unit_note": "est_days is kept in days; no minutes are inferred from it. duration_items is a legacy minutes-only alias.",
+      "errors": [
+        "Cost arithmetic mismatch: total_cost=80, recomputed 90.",
+        "Parameter reaction_temperature: 45 outside [20, 40].",
+        "Parameter reaction_time: 35 outside [10, 30].",
+        "Parameter reaction_time: 35 is off the Decimal step grid 10 from 10.",
+        "Recomputed cost 90 exceeds budget_cap 80 CNY.",
+        "Candidate est_days 2 exceeds deadline_days 1."
+      ],
+      "est_days": "2",
+      "evidence_status": "candidate_claims_audited_not_measured",
+      "over_budget": true,
+      "over_deadline": true,
+      "over_deadline_days": true,
+      "over_deadline_minutes": null,
+      "recomputed_total_cost": "90",
+      "recomputed_total_duration_minutes": null,
+      "summary": "温度和时间越域，成本申报错误并超预算，est_days 超期限"
+    }
+  ],
+  "case_id": "synthetic-nitrate-statechart-001",
+  "checks": [
+    {
+      "check": "schema_version",
+      "detail": "Expected 1.0.",
+      "passed": true
+    },
+    {
+      "check": "outcome_status",
+      "detail": "Protocol outcomes must be explicitly hypothetical_unmeasured.",
+      "passed": true
+    },
+    {
+      "check": "authored_candidate_revisions_container",
+      "detail": "Optional candidate_revisions must be an array or object so it can be merged without loss.",
+      "passed": true
+    },
+    {
+      "check": "authored_uncertainty_container",
+      "detail": "Optional uncertainty must be an array or object so it can be merged without loss.",
+      "passed": true
+    },
+    {
+      "check": "authored_change_log_container",
+      "detail": "Optional change_log must be an array or object so it can be merged without loss.",
+      "passed": true
+    },
+    {
+      "check": "authored_confirmation_items_container",
+      "detail": "Optional confirmation_items must be an array or object so it can be merged without loss.",
+      "passed": true
+    },
+    {
+      "check": "scientific_plan_object",
+      "detail": "scientific_plan object is required.",
+      "passed": true
+    },
+    {
+      "check": "scientific_section_hypotheses",
+      "detail": "Non-empty hypotheses is required.",
+      "passed": true
+    },
+    {
+      "check": "scientific_section_variables",
+      "detail": "Non-empty variables is required.",
+      "passed": true
+    },
+    {
+      "check": "scientific_section_controls",
+      "detail": "Non-empty controls is required.",
+      "passed": true
+    },
+    {
+      "check": "scientific_section_acceptance_criteria",
+      "detail": "Non-empty acceptance_criteria is required.",
+      "passed": true
+    },
+    {
+      "check": "scientific_section_risk_and_revisions",
+      "detail": "Non-empty risk_and_revisions is required.",
+      "passed": true
+    },
+    {
+      "check": "scientific_section_planning_evidence",
+      "detail": "Non-empty planning_evidence is required.",
+      "passed": true
+    },
+    {
+      "check": "selected_parameters_object",
+      "detail": "Top-level selected parameters object is required.",
+      "passed": true
+    },
+    {
+      "check": "unique_equipment_ids",
+      "detail": "Equipment IDs must be unique and nonempty.",
+      "passed": true
+    },
+    {
+      "check": "unique_material_ids",
+      "detail": "Material IDs must be unique and nonempty.",
+      "passed": true
+    },
+    {
+      "check": "states_list",
+      "detail": "At least one state is required.",
+      "passed": true
+    },
+    {
+      "check": "unique_state_ids",
+      "detail": "Every state needs a unique nonempty string ID.",
+      "passed": true
+    },
+    {
+      "check": "exactly_one_start",
+      "detail": "Found 1 start states.",
+      "passed": true
+    },
+    {
+      "check": "no_unreachable_states",
+      "detail": "Unreachable states: [].",
+      "passed": true
+    },
+    {
+      "check": "success_terminal_reachable",
+      "detail": "Reachable success terminals: ['T_SUCCESS'].",
+      "passed": true
+    },
+    {
+      "check": "failure_terminal_reachable",
+      "detail": "Reachable failure terminals: ['T_QC_FAIL'].",
+      "passed": true
+    },
+    {
+      "check": "cycle_has_exit",
+      "detail": "Cycle ['D30_BLANK_QC', 'S30_MEASURE_BLANK', 'S35_REBLANK'] has exits ['S40_PREPARE_CALIBRATION', 'T_QC_FAIL'].",
+      "passed": true
+    },
+    {
+      "check": "cycle_explicit_bounded_retry",
+      "detail": "Cycle ['D30_BLANK_QC', 'S30_MEASURE_BLANK', 'S35_REBLANK'] states missing explicit max_visits: [].",
+      "passed": true
+    },
+    {
+      "check": "scenarios_list",
+      "detail": "At least nominal scenario is required.",
+      "passed": true
+    },
+    {
+      "check": "nominal_scenario",
+      "detail": "Expected exactly one nominal scenario; found 1.",
+      "passed": true
+    },
+    {
+      "check": "unique_scenario_ids",
+      "detail": "Scenario IDs must be unique and nonempty.",
+      "passed": true
+    }
+  ],
+  "decision_branch_coverage": {
+    "complete": true,
+    "interpretation": "Coverage means an injected planning path selected a branch; it is not experimental evidence.",
+    "tested_decision_branches": [
+      {
+        "decision_id": "D30_BLANK_QC",
+        "label": "else"
+      },
+      {
+        "decision_id": "D30_BLANK_QC",
+        "label": "high_blank"
+      },
+      {
+        "decision_id": "D30_BLANK_QC",
+        "label": "retries_exhausted"
+      }
+    ],
+    "untested_decision_branches": []
+  },
+  "errors": [],
+  "graph": {
+    "cyclic_components": [
+      [
+        "D30_BLANK_QC",
+        "S30_MEASURE_BLANK",
+        "S35_REBLANK"
+      ]
+    ],
+    "decision_count": 1,
+    "reachable_state_count": 11,
+    "state_count": 11,
+    "terminal_failure_ids": [
+      "T_QC_FAIL"
+    ],
+    "terminal_success_ids": [
+      "T_SUCCESS"
+    ]
+  },
+  "interpretation": "Pass verifies machine-checkable planning properties only. Injected scenario branches are hypotheses and not experimental measurements.",
+  "output_notice": "合成示例输出，非正式测评结果",
+  "protocol_id": "SYN-NO3-COLOR-STATECHART-01",
+  "resource_register": {
+    "conflicts": [],
+    "contract_present": true,
+    "deduplicated_counts": {
+      "equipment": 4,
+      "materials": 0,
+      "reagents": 4
+    },
+    "equipment": [
+      {
+        "booking": {
+          "slot_hours": 1,
+          "slots_per_week": 5,
+          "window_days": 1
+        },
+        "id": "EQ_BALANCE",
+        "model": "synthetic-balance",
+        "name": "合成分析天平",
+        "note_only": false,
+        "origins": [
+          "resource_contract.equipment"
+        ],
+        "price_per_hour": "2",
+        "resource_kind": "equipment",
+        "spec": "实际量程/校准状态待确认"
+      },
+      {
+        "booking": {
+          "slot_hours": 1,
+          "slots_per_week": 5,
+          "window_days": 1
+        },
+        "id": "EQ_PIPETTE",
+        "model": "synthetic-pipette",
+        "name": "合成移液设备",
+        "note_only": false,
+        "origins": [
+          "resource_contract.equipment"
+        ],
+        "price_per_hour": "1",
+        "resource_kind": "equipment",
+        "spec": "实际规格与 SOP 待确认"
+      },
+      {
+        "booking": {
+          "slot_hours": 1,
+          "slots_per_week": 5,
+          "window_days": 1
+        },
+        "id": "EQ_THERMOSTAT",
+        "model": "synthetic-thermostat",
+        "name": "合成恒温反应设备",
+        "note_only": false,
+        "origins": [
+          "resource_contract.equipment"
+        ],
+        "price_per_hour": "3",
+        "resource_kind": "equipment",
+        "spec": "30 degC 设定仅用于合成案例"
+      },
+      {
+        "booking": {
+          "slot_hours": 1,
+          "slots_per_week": 4,
+          "window_days": 1
+        },
+        "id": "EQ_COLORIMETER",
+        "model": "note-only-colorimeter",
+        "name": "合成比色检测器",
+        "note_only": true,
+        "origins": [
+          "equipment_domain_note"
+        ],
+        "price_per_hour": "2",
+        "resource_kind": "equipment",
+        "spec": "波长等现实方法参数未提供，不得补造"
+      }
+    ],
+    "errors": [],
+    "known_ids": {
+      "equipment": [
+        "EQ_BALANCE",
+        "EQ_COLORIMETER",
+        "EQ_PIPETTE",
+        "EQ_THERMOSTAT"
+      ],
+      "materials": [
+        "MAT_REAGENT",
+        "MAT_SAMPLE",
+        "MAT_STANDARD",
+        "MAT_WATER"
+      ]
+    },
+    "materials": [],
+    "note_objects": [
+      {
+        "equipment": [
+          {
+            "booking": {
+              "slot_hours": 1,
+              "slots_per_week": 4,
+              "window_days": 1
+            },
+            "id": "EQ_COLORIMETER",
+            "model": "note-only-colorimeter",
+            "name": "合成比色检测器",
+            "price_per_hour": "2",
+            "spec": "波长等现实方法参数未提供，不得补造"
+          }
+        ]
+      },
+      {
+        "equipment": [
+          {
+            "booking": {
+              "slot_hours": 1,
+              "slots_per_week": 4,
+              "window_days": 1
+            },
+            "id": "EQ_COLORIMETER",
+            "model": "note-only-colorimeter",
+            "name": "合成比色检测器",
+            "price_per_hour": "2",
+            "spec": "波长等现实方法参数未提供，不得补造"
+          }
+        ]
+      }
+    ],
+    "note_only_equipment_ids": [
+      "EQ_COLORIMETER"
+    ],
+    "reagents": [
+      {
+        "id": "MAT_REAGENT",
+        "name": "合成硝酸盐显色试剂",
+        "note_only": false,
+        "origins": [
+          "resource_contract.reagents"
+        ],
+        "pack_size": "1",
+        "resource_kind": "reagent",
+        "spec": "synthetic planning lot",
+        "unit": "planning_lot",
+        "unit_price": "11"
+      },
+      {
+        "id": "MAT_WATER",
+        "name": "合成无硝酸盐水",
+        "note_only": false,
+        "origins": [
+          "resource_contract.reagents"
+        ],
+        "pack_size": "2",
+        "resource_kind": "reagent",
+        "spec": "synthetic blank preparation",
+        "unit": "blank_preparation",
+        "unit_price": "0.5"
+      },
+      {
+        "id": "MAT_STANDARD",
+        "name": "合成硝酸盐校准标准液",
+        "note_only": false,
+        "origins": [
+          "resource_contract.reagents"
+        ],
+        "pack_size": "1",
+        "resource_kind": "reagent",
+        "spec": "synthetic calibration series",
+        "unit": "planning_series",
+        "unit_price": "4.5"
+      },
+      {
+        "id": "MAT_SAMPLE",
+        "name": "合成淡水样",
+        "note_only": false,
+        "origins": [
+          "resource_contract.reagents"
+        ],
+        "pack_size": "1",
+        "resource_kind": "reagent",
+        "spec": "no real sample or measured result",
+        "unit": "synthetic_aliquot",
+        "unit_price": "0"
+      }
+    ]
+  },
+  "status": "pass",
+  "warnings": []
+}

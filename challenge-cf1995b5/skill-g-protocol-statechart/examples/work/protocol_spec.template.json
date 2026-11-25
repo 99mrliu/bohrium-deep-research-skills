@@ -1,0 +1,168 @@
+{
+  "candidate_revisions": [
+    {
+      "action": "revise",
+      "candidate_id": "REPLACE_WITH_VERSION_OR_ID",
+      "changes": [],
+      "reason": "link defects to the actual revised parameters/cost/time"
+    }
+  ],
+  "change_log": [
+    {
+      "action": "authored_protocol_spec",
+      "details": "Describe actual candidate revisions and graph decisions."
+    }
+  ],
+  "confirmation_items": [
+    "Add case-specific items requiring human confirmation."
+  ],
+  "outcome_status": "hypothetical_unmeasured",
+  "parameters": {
+    "reaction_temperature": "REPLACE_WITH_VALUE_IN_CASE_DOMAIN",
+    "reaction_time": "REPLACE_WITH_VALUE_IN_CASE_DOMAIN",
+    "sample_matrix": "REPLACE_WITH_VALUE_IN_CASE_DOMAIN"
+  },
+  "protocol_id": "replace_me",
+  "resources": {
+    "equipment": [
+      {
+        "id": "EQ_BALANCE",
+        "name": "replace equipment details without changing a contract ID"
+      }
+    ],
+    "materials": [
+      {
+        "cost": "0",
+        "id": "MAT_REAGENT",
+        "name": "replace material details without changing a contract ID",
+        "quantity": "1",
+        "unit": "unit"
+      }
+    ]
+  },
+  "scenarios": [
+    {
+      "decision_outcomes": {
+        "D_QC": [
+          "else"
+        ]
+      },
+      "outcome_basis": "synthetic_what_if",
+      "scenario_id": "nominal"
+    }
+  ],
+  "schema_version": "1.0",
+  "scientific_plan": {
+    "acceptance_criteria": [
+      {
+        "metric": "qc_metric",
+        "operator": "<=",
+        "record": "run_log.qc",
+        "threshold": "REPLACE",
+        "unit": "%"
+      }
+    ],
+    "controls": [
+      {
+        "id": "C1",
+        "procedure_state": "S_BLANK",
+        "purpose": "calibration blank"
+      }
+    ],
+    "hypotheses": [
+      {
+        "falsification": "observable result that rejects H1",
+        "id": "H1",
+        "statement": "falsifiable statement"
+      }
+    ],
+    "planning_evidence": [
+      {
+        "claim": "planning assumption only",
+        "measured": false,
+        "source_type": "synthetic_planning_assumption"
+      }
+    ],
+    "risk_and_revisions": [
+      {
+        "revision": "bounded repeat or fail-safe terminal",
+        "risk": "QC failure",
+        "trigger": "guard fails"
+      }
+    ],
+    "variables": {
+      "controlled": [],
+      "dependent": [],
+      "independent": []
+    }
+  },
+  "settings": {
+    "global_step_cap": 100
+  },
+  "states": [
+    {
+      "cost": "0",
+      "duration_minutes": "0",
+      "id": "S_START",
+      "kind": "start",
+      "max_visits": 1,
+      "next": "S_BLANK"
+    },
+    {
+      "cost": "0",
+      "duration_minutes": "5",
+      "equipment": [
+        "EQ_BALANCE"
+      ],
+      "id": "S_BLANK",
+      "kind": "action",
+      "materials": [
+        "MAT_REAGENT"
+      ],
+      "max_visits": 1,
+      "next": "D_QC",
+      "parameters": {}
+    },
+    {
+      "branches": [
+        {
+          "guard": {
+            "metric": "qc_metric",
+            "operator": ">",
+            "record": "run_log.qc",
+            "threshold": "REPLACE",
+            "unit": "%"
+          },
+          "label": "qc_fail",
+          "next": "T_FAIL"
+        }
+      ],
+      "cost": "0",
+      "duration_minutes": "0",
+      "else": "T_SUCCESS",
+      "id": "D_QC",
+      "kind": "decision",
+      "max_visits": 1
+    },
+    {
+      "cost": "0",
+      "duration_minutes": "0",
+      "id": "T_SUCCESS",
+      "kind": "terminal",
+      "max_visits": 1,
+      "outcome": "success"
+    },
+    {
+      "cost": "0",
+      "duration_minutes": "0",
+      "id": "T_FAIL",
+      "kind": "terminal",
+      "max_visits": 1,
+      "outcome": "failure"
+    }
+  ],
+  "title": "replace_with_protocol_title",
+  "uncertainty": [
+    "Add agent-authored limitations that must survive compilation."
+  ]
+}

@@ -1,0 +1,81 @@
+{
+  "case_id": "canonical-nonsynthetic-smoke",
+  "source": {
+    "paper_pdf": null,
+    "citation": null,
+    "key_claim": "Canonical compatibility smoke only."
+  },
+  "resource_contract": {
+    "disclaimer": "Planning values only.",
+    "currency": "CNY",
+    "budget_cap": 10,
+    "deadline_days": 2,
+    "equipment": [
+      {
+        "id": "EQ_MAIN",
+        "name": "Main device",
+        "model": null,
+        "spec": "Declared capability",
+        "price_per_hour": 2,
+        "booking": {
+          "window_days": 2,
+          "slots_per_week": 1,
+          "slot_hours": 1
+        }
+      }
+    ],
+    "reagents": [
+      {
+        "id": "RS_MAIN",
+        "name": "Declared reagent",
+        "spec": "Declared specification",
+        "unit_price": 1,
+        "unit": "tube",
+        "pack_size": 1
+      }
+    ]
+  },
+  "parameter_domains": {
+    "dose": {
+      "type": "range",
+      "min": 0.1,
+      "max": 1,
+      "step": 0.1,
+      "basis": "Declared test grid",
+      "source": "case"
+    }
+  },
+  "equipment_domain_note": "Additional declared equipment: {\"equipment\":[{\"id\":\"EQ_NOTE_ONLY\",\"name\":\"Note device\",\"model\":null,\"spec\":\"Note-only declared capability\",\"price_per_hour\":0,\"booking\":{\"window_days\":2,\"slots_per_week\":1,\"slot_hours\":1}}]}",
+  "candidate_plans": [
+    {
+      "version": "smoke-v1",
+      "summary": "Intentional arithmetic/domain defects",
+      "parameters": {
+        "dose": 0.15
+      },
+      "cost_items": [
+        {
+          "item": "EQ_MAIN",
+          "unit_price": 2,
+          "quantity": 3,
+          "subtotal": 5
+        }
+      ],
+      "total_cost": 5,
+      "est_days": 1
+    }
+  ],
+  "output_contract": {
+    "required_fields": [
+      "case_id",
+      "revised_plan",
+      "candidate_assessment",
+      "validation",
+      "status",
+      "uncertainty",
+      "sources",
+      "change_log",
+      "confirmation_items"
+    ]
+  }
+}

@@ -1,0 +1,365 @@
+{
+  "schema_version": "1.0",
+  "protocol_id": "SYN-NO3-COLOR-STATECHART-01",
+  "title": "合成水样比色硝酸盐测定：有限域优化与有界 QC 重试",
+  "outcome_status": "hypothetical_unmeasured",
+  "parameters": {
+    "reaction_temperature": "30",
+    "reaction_time": "20",
+    "sample_matrix": "synthetic_freshwater"
+  },
+  "scientific_plan": {
+    "hypotheses": [
+      {
+        "id": "H1",
+        "statement": "在本合成方案中，选择 30 degC、20 min 的规划组合可在有效校准空白之后进入样品测定；该句仅描述可检验计划，不断言现实方法性能。",
+        "falsification": "若现实经批准实验在空白有效后仍不满足预先登记的样品 QC 验收标准，则拒绝此规划组合的适用性假设并修订方案。"
+      },
+      {
+        "id": "H2",
+        "statement": "一次重新空白可能使合成高空白故障恢复到空白 QC 通过分支。",
+        "falsification": "若重新空白后的受控实测仍不满足空白回收率守卫，则 H2 被该次故障处置路径证伪，流程必须进入 QC_FAIL，不得继续消耗样品。"
+      }
+    ],
+    "variables": {
+      "independent": [
+        {"name": "reaction_temperature", "unit": "degC", "domain": "20..40 step 5"},
+        {"name": "reaction_time", "unit": "min", "domain": "10..30 step 10"}
+      ],
+      "dependent": [
+        {"name": "calibration_blank_recovery_percent", "unit": "%", "record": "run_log.blank_qc.recovery_percent"},
+        {"name": "sample_response", "unit": "instrument_defined", "record": "run_log.sample.response"}
+      ],
+      "controlled": [
+        "sample_matrix=synthetic_freshwater",
+        "reagent lot and actual expiry to be recorded before execution",
+        "calibration sequence and pipette SOP to be confirmed by method owner"
+      ]
+    },
+    "controls": [
+      {
+        "id": "CTRL_BLANK",
+        "type": "calibration_blank",
+        "purpose": "在消耗样品前隔离高空白/背景故障",
+        "procedure_states": ["S20_PREPARE_BLANK", "S30_MEASURE_BLANK", "D30_BLANK_QC"],
+        "unmeasured": true
+      },
+      {
+        "id": "CTRL_CALIBRATION",
+        "type": "calibration_series",
+        "purpose": "建立并记录合成规划中的校准系列；现实点数以批准 SOP 为准",
+        "procedure_states": ["S40_PREPARE_CALIBRATION"],
+        "unmeasured": true
+      },
+      {
+        "id": "CTRL_FAIL_SAFE",
+        "type": "negative_process_control",
+        "purpose": "持续 QC 故障时阻止样品反应并终止",
+        "procedure_states": ["T_QC_FAIL"],
+        "unmeasured": true
+      }
+    ],
+    "acceptance_criteria": [
+      {
+        "id": "AC_BLANK_RECOVERY",
+        "metric": "calibration_blank_recovery_percent",
+        "operator": "<=",
+        "threshold": "105",
+        "unit": "%",
+        "record": "run_log.blank_qc.recovery_percent",
+        "meaning": "合成规划阈值；不是从现实标准或实验数据取得的性能限值"
+      },
+      {
+        "id": "AC_SAMPLE_RECORD",
+        "metric": "sample_response_within_approved_calibration_range",
+        "operator": "==",
+        "threshold": "true",
+        "unit": "boolean",
+        "record": "run_log.sample.within_calibration_range",
+        "meaning": "实际执行时的记录要求；本例没有注入样品测量结果，也不声称通过"
+      }
+    ],
+    "risk_and_revisions": [
+      {
+        "risk": "高空白或背景异常",
+        "detection": "D30_BLANK_QC 的 recovery_percent 与 reblank_attempt_count 记录",
+        "revision": "允许一次 S35_REBLANK；持续故障进入 T_QC_FAIL，禁止绕过 QC",
+        "residual_uncertainty": "未实测故障原因和恢复概率"
+      },
+      {
+        "risk": "温度/时间候选越出有限域",
+        "detection": "bootstrap 与 compile 的 Decimal min/max/step 审计",
+        "revision": "拒绝候选并从 case 声明网格重选；不得用四舍五入掩盖越域",
+        "residual_uncertainty": "有限域本身是合成输入，并非现实方法推荐"
+      },
+      {
+        "risk": "试剂、仪器或人员资源与现实不符",
+        "detection": "执行前资源负责人核对",
+        "revision": "暂停执行并重新规划；当前状态成本/时长不是报价、预约或批准",
+        "residual_uncertainty": "未确认实际库存、校准状态和价格"
+      }
+    ],
+    "planning_evidence": [
+      {
+        "evidence_id": "PE1",
+        "claim": "30 degC、20 min 和 105% 仅用于演示有限域与守卫执行",
+        "source_type": "synthetic_planning_assumption",
+        "citation": "examples/mock_case.json and examples/materials/assay_notes.txt",
+        "measured": false
+      },
+      {
+        "evidence_id": "PE2",
+        "claim": "nominal、recoverable_high_blank、persistent_qc_failure 的决策序列全部是注入的 what-if 标签",
+        "source_type": "synthetic_fault_injection",
+        "citation": "examples/protocol_spec.json scenarios",
+        "measured": false
+      }
+    ]
+  },
+  "resources": {
+    "equipment": [
+      {"id": "EQ_BALANCE", "name": "合成分析天平", "specification": "实际量程/校准状态待确认"},
+      {"id": "EQ_PIPETTE", "name": "合成移液设备", "specification": "实际规格与 SOP 待确认"},
+      {"id": "EQ_THERMOSTAT", "name": "合成恒温反应设备", "specification": "30 degC 设定仅用于合成案例"},
+      {"id": "EQ_COLORIMETER", "name": "合成比色检测器", "specification": "波长等现实方法参数未提供，不得补造"}
+    ],
+    "materials": [
+      {"id": "MAT_REAGENT", "name": "合成硝酸盐显色试剂", "quantity": "1", "unit": "planning_lot", "cost": "11.00", "cost_note": "分摊到 S10/S50 的 state.cost；不再额外相加"},
+      {"id": "MAT_WATER", "name": "合成无硝酸盐水", "quantity": "2", "unit": "blank_preparation", "cost": "1.00", "cost_note": "分摊到空白状态成本；不再额外相加"},
+      {"id": "MAT_STANDARD", "name": "合成硝酸盐校准标准液", "quantity": "1", "unit": "planning_series", "cost": "4.50", "cost_note": "与 S40 state.cost 对应；不是报价"},
+      {"id": "MAT_SAMPLE", "name": "合成淡水样", "quantity": "1", "unit": "synthetic_aliquot", "cost": "0", "cost_note": "无真实样品或实测结果"}
+    ]
+  },
+  "candidate_revisions": [
+    {
+      "candidate_id": "C1_ARITHMETIC_ERROR",
+      "action": "revised_and_adapted",
+      "changes": [
+        {"field": "cost_items[measurement].subtotal", "from": "1.8", "to": "1.9"},
+        {"field": "total_cost", "from": "15", "to": "16.4"}
+      ],
+      "resulting_nominal_cost": "16.4",
+      "reason": "保留域内 30 degC / 20 min，并按 unit_price*quantity 修正申报算术。"
+    },
+    {
+      "candidate_id": "C2_DOMAIN_ERROR",
+      "action": "revised",
+      "changes": [{"field": "parameters.reaction_temperature", "from": "33", "to": "30"}],
+      "reason": "33 不在 20 起步、步长 5 的网格；30 是 case 明确允许的值。"
+    },
+    {
+      "candidate_id": "C3_DOMAIN_AND_BUDGET_ERRORS",
+      "action": "rejected_and_replaced_by_bounded_graph",
+      "changes": [
+        {"field": "parameters", "to": {"reaction_temperature": "30", "reaction_time": "20", "sample_matrix": "synthetic_freshwater"}},
+        {"field": "planning_envelope", "to": {"conservative_cost": "17.1", "conservative_minutes": "66"}}
+      ],
+      "reason": "原候选越域、重算 90 超 budget_cap 80，且 est_days=2 超 deadline_days=1；不得仅修改申报值掩盖问题。"
+    }
+  ],
+  "uncertainty": [
+    {"topic": "calendar_time", "statement": "66 分钟仅为图上有界 elapsed-time 上界；预约窗口、排队和现实日历时间未知，可能超过该值。"},
+    "设备 Domain Note 仅提供合成合同条目，不证明现实设备存在或可用。"
+  ],
+  "change_log": [
+    {"action": "bound_protocol_to_actual_resource_ids", "resource_ids": ["EQ_BALANCE", "EQ_PIPETTE", "EQ_THERMOSTAT", "EQ_COLORIMETER", "MAT_REAGENT", "MAT_WATER", "MAT_STANDARD", "MAT_SAMPLE"]},
+    {"action": "retained_expected_path_totals", "nominal": "58 min / 16.4 CNY", "recoverable": "66 min / 17.1 CNY", "persistent_failure": "26 min / 6.4 CNY"}
+  ],
+  "confirmation_items": [
+    {"owner": "resource_owner", "item": "确认 note-only EQ_COLORIMETER 的真实存在、SOP、预约窗口和日历排期；解析成功不等于资源批准。"}
+  ],
+  "settings": {
+    "global_step_cap": 40,
+    "cost_accounting": "Only each visited state's exact Decimal cost is summed. Resource cost fields are allocation notes and are not added again.",
+    "retry_semantics": "D30_BLANK_QC permits two visits total: initial check plus one post-reblank check."
+  },
+  "states": [
+    {
+      "id": "S00_START",
+      "kind": "start",
+      "next": "S10_PREPARE_REAGENTS",
+      "duration_minutes": "0",
+      "cost": "0",
+      "max_visits": 1
+    },
+    {
+      "id": "S10_PREPARE_REAGENTS",
+      "kind": "action",
+      "description": "按待确认 SOP 准备合成试剂并记录批号/有效期",
+      "equipment": ["EQ_BALANCE", "EQ_PIPETTE"],
+      "materials": ["MAT_REAGENT"],
+      "parameters": {"sample_matrix": "synthetic_freshwater"},
+      "record": "run_log.reagent_preparation",
+      "duration_minutes": "10",
+      "cost": "5.00",
+      "next": "S20_PREPARE_BLANK",
+      "max_visits": 1
+    },
+    {
+      "id": "S20_PREPARE_BLANK",
+      "kind": "action",
+      "description": "制备校准空白，先于任何样品反应执行",
+      "equipment": ["EQ_PIPETTE"],
+      "materials": ["MAT_WATER", "MAT_REAGENT"],
+      "parameters": {"sample_matrix": "synthetic_freshwater"},
+      "record": "run_log.blank.preparation",
+      "duration_minutes": "5",
+      "cost": "0.50",
+      "next": "S30_MEASURE_BLANK",
+      "max_visits": 1
+    },
+    {
+      "id": "S30_MEASURE_BLANK",
+      "kind": "action",
+      "description": "读取并记录校准空白回收率；仿真不生成该测量值",
+      "equipment": ["EQ_COLORIMETER"],
+      "materials": ["MAT_WATER"],
+      "parameters": {},
+      "record": "run_log.blank_qc.recovery_percent",
+      "duration_minutes": "3",
+      "cost": "0.20",
+      "next": "D30_BLANK_QC",
+      "max_visits": 2
+    },
+    {
+      "id": "D30_BLANK_QC",
+      "kind": "decision",
+      "description": "可观测空白 QC 与重试预算联合决策；执行时读取记录，仿真时只读取注入标签",
+      "duration_minutes": "0",
+      "cost": "0",
+      "max_visits": 2,
+      "branches": [
+        {
+          "label": "high_blank",
+          "guard": {
+            "metric": "calibration_blank_recovery_percent",
+            "operator": ">",
+            "threshold": "105",
+            "unit": "%",
+            "record": "run_log.blank_qc.recovery_percent"
+          },
+          "next": "S35_REBLANK"
+        },
+        {
+          "label": "retries_exhausted",
+          "guard": {
+            "metric": "reblank_attempt_count",
+            "operator": ">=",
+            "threshold": "1",
+            "unit": "count",
+            "record": "run_log.blank_qc.reblank_attempt_count"
+          },
+          "next": "T_QC_FAIL"
+        }
+      ],
+      "else": "S40_PREPARE_CALIBRATION"
+    },
+    {
+      "id": "S35_REBLANK",
+      "kind": "action",
+      "description": "有界恢复动作：重新制备/测量空白；不得无限重试",
+      "equipment": ["EQ_PIPETTE"],
+      "materials": ["MAT_WATER", "MAT_REAGENT"],
+      "parameters": {},
+      "record": "run_log.blank_qc.reblank_attempt_count",
+      "duration_minutes": "5",
+      "cost": "0.50",
+      "next": "S30_MEASURE_BLANK",
+      "max_visits": 1
+    },
+    {
+      "id": "S40_PREPARE_CALIBRATION",
+      "kind": "action",
+      "description": "空白 QC 通过后准备校准系列；现实点数和浓度待批准 SOP 给出",
+      "equipment": ["EQ_PIPETTE"],
+      "materials": ["MAT_STANDARD"],
+      "parameters": {"sample_matrix": "synthetic_freshwater"},
+      "record": "run_log.calibration.series",
+      "duration_minutes": "15",
+      "cost": "4.50",
+      "next": "S50_REACT_SAMPLES",
+      "max_visits": 1
+    },
+    {
+      "id": "S50_REACT_SAMPLES",
+      "kind": "action",
+      "description": "在有限域选定温度/时间下进行合成显色反应",
+      "equipment": ["EQ_THERMOSTAT", "EQ_PIPETTE"],
+      "materials": ["MAT_SAMPLE", "MAT_REAGENT"],
+      "parameters": {"reaction_temperature": "30", "reaction_time": "20", "sample_matrix": "synthetic_freshwater"},
+      "record": "run_log.reaction.settings",
+      "duration_minutes": "20",
+      "cost": "6.00",
+      "next": "S60_MEASURE_SAMPLES",
+      "max_visits": 1
+    },
+    {
+      "id": "S60_MEASURE_SAMPLES",
+      "kind": "action",
+      "description": "记录样品响应；本例不伪造样品 QC 或浓度结局",
+      "equipment": ["EQ_COLORIMETER"],
+      "materials": ["MAT_SAMPLE"],
+      "parameters": {},
+      "record": "run_log.sample.response",
+      "duration_minutes": "5",
+      "cost": "0.20",
+      "next": "T_SUCCESS",
+      "max_visits": 1
+    },
+    {
+      "id": "T_SUCCESS",
+      "kind": "terminal",
+      "outcome": "success",
+      "description": "流程完成终态，仅表示状态路径结束，不表示科学假设已证实",
+      "duration_minutes": "0",
+      "cost": "0",
+      "max_visits": 1
+    },
+    {
+      "id": "T_QC_FAIL",
+      "kind": "terminal",
+      "outcome": "failure",
+      "description": "持续空白 QC 失败的 fail-safe：停止，不消耗样品，不伪造恢复",
+      "duration_minutes": "0",
+      "cost": "0",
+      "max_visits": 1
+    }
+  ],
+  "scenarios": [
+    {
+      "scenario_id": "nominal",
+      "description": "假设试剂准备后初次空白 QC 通过；不是实测正常结果",
+      "fault_injection": null,
+      "outcome_basis": "synthetic_what_if",
+      "decision_outcomes": {
+        "D30_BLANK_QC": ["else"]
+      }
+    },
+    {
+      "scenario_id": "recoverable_high_blank",
+      "description": "注入一次高空白，重新空白后假设通过；验证恢复路径的成本/时间与重试界",
+      "fault_injection": {
+        "target_decision": "D30_BLANK_QC",
+        "type": "transient_high_blank",
+        "measured": false
+      },
+      "outcome_basis": "synthetic_what_if",
+      "decision_outcomes": {
+        "D30_BLANK_QC": ["high_blank", "else"]
+      }
+    },
+    {
+      "scenario_id": "persistent_qc_failure",
+      "description": "注入高空白并在重试预算耗尽时进入显式 QC_FAIL；不生成恢复概率或实测值",
+      "fault_injection": {
+        "target_decision": "D30_BLANK_QC",
+        "type": "persistent_high_blank_with_retry_budget_exhausted",
+        "measured": false
+      },
+      "outcome_basis": "synthetic_what_if",
+      "decision_outcomes": {
+        "D30_BLANK_QC": ["high_blank", "retries_exhausted"]
+      }
+    }
+  ]
+}

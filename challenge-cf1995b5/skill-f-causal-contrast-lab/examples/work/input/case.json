@@ -1,0 +1,219 @@
+{
+  "case_id": "synthetic-enzyme-contrast-001",
+  "synthetic": true,
+  "case_kind": "synthetic_demonstration",
+  "scenario_label": "合成示意案例",
+  "title": "区分真实直接酶抑制、化合物荧光干扰与聚集效应",
+  "source": {
+    "paper_pdf": null,
+    "citation": null,
+    "key_claim": "设计可证伪实验，判断合成化合物X是否直接抑制合成酶E，而非仅产生光学假象或聚集型抑制。"
+  },
+  "mechanism_context": {
+    "objective": "设计可证伪实验，判断合成化合物X是否直接抑制合成酶E，而非仅产生光学假象或聚集型抑制。",
+    "interference_concern": "化合物X的荧光可能冒充产物信号；无酶和化合物单独对照用于识别此替代解释。",
+    "aggregation_concern": "化合物聚集可造成非特异性抑制；低浓度非离子洗涤剂反筛用于检验该替代解释，但不把洗涤剂敏感性视为唯一机制证明。",
+    "known_direct_inhibition_is_not_preconfirmed": true
+  },
+  "protocol_assumptions": {
+    "synthetic_only": "所有参数、阈值、资源价格和时间均为合成协议的规划假设，不是文献参数或实测结果。",
+    "initial_rate_window_min": [3, 8],
+    "initial_rate_metric": "在线性初速窗口内对产物RFU与时间作斜率估计",
+    "decision_assumptions": {
+      "inhibition_threshold_percent": 30,
+      "interference_threshold_rfu_per_uM": 100,
+      "rez_qc_max_cv_percent": 10
+    }
+  },
+  "resource_contract": {
+    "disclaimer": "仅为合成情景的前瞻资源/价格/预订合同，不是供应商报价、库存确认或采购批准。",
+    "currency": "CNY synthetic scenario units",
+    "budget_cap": 800,
+    "deadline_days": 7,
+    "equipment": [
+      {
+        "id": "EQ_READER",
+        "name": "通用荧光读板机",
+        "model": null,
+        "spec": "具备温度控制、动力学荧光读数和原始时间序列导出能力",
+        "price_per_hour": 20,
+        "booking": {
+          "window_days": 7,
+          "slots_per_week": 7,
+          "slot_hours": 1
+        }
+      }
+    ],
+    "reagents": [
+      {
+        "id": "RS_PLATE",
+        "name": "低自发荧光黑色微孔板",
+        "spec": "适配所选板型的低自发荧光黑色微孔板",
+        "unit_price": 12,
+        "unit": "plate",
+        "pack_size": 1
+      },
+      {
+        "id": "RS_SUBSTRATE",
+        "name": "合成荧光底物工作液",
+        "spec": "用于合成酶E的通用荧光底物工作液",
+        "unit_price": 30,
+        "unit": "batch",
+        "pack_size": 1
+      },
+      {
+        "id": "RS_ENZYME",
+        "name": "合成酶E独立制备批次",
+        "spec": "每个独立生物学重复使用独立制备批次",
+        "unit_price": 40,
+        "unit": "preparation",
+        "pack_size": 1
+      },
+      {
+        "id": "RS_INHIBITOR",
+        "name": "已知抑制剂K",
+        "spec": "仅作为合成阳性对照",
+        "unit_price": 18,
+        "unit": "aliquot",
+        "pack_size": 1
+      },
+      {
+        "id": "RS_COMPOUND",
+        "name": "合成化合物X分装",
+        "spec": "用于梯度和光学背景对照的化合物分装",
+        "unit_price": 25,
+        "unit": "aliquot",
+        "pack_size": 1
+      },
+      {
+        "id": "RS_DETERGENT",
+        "name": "合成非离子洗涤剂反筛工作液",
+        "spec": "低浓度非离子洗涤剂反筛工作液",
+        "unit_price": 5,
+        "unit": "aliquot",
+        "pack_size": 1
+      }
+    ]
+  },
+  "parameter_domains": {
+    "enzyme_nM": {
+      "type": "range", "min": 0.1, "max": 10, "step": 0.1,
+      "basis": "合成协议规划假设", "source": "source_note.md#synthetic-assumptions", "unit": "nM"
+    },
+    "substrate_uM": {
+      "type": "range", "min": 1, "max": 100, "step": 1,
+      "basis": "合成协议规划假设", "source": "source_note.md#synthetic-assumptions", "unit": "µM"
+    },
+    "compound_uM": {
+      "type": "range", "min": 0.01, "max": 20, "step": 0.01,
+      "basis": "合成协议规划假设", "source": "source_note.md#synthetic-assumptions", "unit": "µM"
+    },
+    "known_inhibitor_uM": {
+      "type": "range", "min": 0.01, "max": 10, "step": 0.01,
+      "basis": "合成协议规划假设", "source": "source_note.md#synthetic-assumptions", "unit": "µM"
+    },
+    "detergent_percent": {
+      "type": "range", "min": 0, "max": 0.1, "step": 0.01,
+      "basis": "合成协议规划假设", "source": "source_note.md#synthetic-assumptions", "unit": "% v/v"
+    },
+    "incubation_min": {
+      "type": "range", "min": 1, "max": 30, "step": 1,
+      "basis": "合成协议规划假设", "source": "source_note.md#synthetic-assumptions", "unit": "min"
+    },
+    "readout_temp_C": {
+      "type": "range", "min": 20, "max": 37, "step": 0.5,
+      "basis": "合成协议规划假设", "source": "source_note.md#synthetic-assumptions", "unit": "°C"
+    },
+    "biological_repeats": {
+      "type": "range", "min": 1, "max": 6, "step": 1,
+      "basis": "合成协议规划假设", "source": "source_note.md#synthetic-assumptions", "unit": "independent preparations/days"
+    },
+    "technical_wells": {
+      "type": "range", "min": 1, "max": 6, "step": 1,
+      "basis": "合成协议规划假设", "source": "source_note.md#synthetic-assumptions", "unit": "wells per condition per repeat"
+    },
+    "plate_type": {
+      "type": "enum", "values": ["black_384", "black_96"],
+      "basis": "合成协议规划假设", "source": "source_note.md#synthetic-assumptions"
+    },
+    "duration_min": {
+      "type": "range", "min": 1, "max": 240, "step": 1,
+      "basis": "合成协议规划假设", "source": "source_note.md#synthetic-assumptions", "unit": "min"
+    }
+  },
+  "equipment_domain_note": "案例仅声明通用设备能力；具体设备型号未提供，必须由执行方核验，不能自行杜撰。额外设备合同：{\"equipment\":[{\"id\":\"EQ_MULTICHANNEL\",\"name\":\"通用多道移液器\",\"model\":null,\"spec\":\"适配所选板型的通用多道移液器\",\"price_per_hour\":0,\"booking\":{\"window_days\":7,\"slots_per_week\":7,\"slot_hours\":1}}]}",
+  "candidate_plans": [
+    {
+      "version": "CAND_A_PARTIAL",
+      "summary": "只有化合物浓度梯度和酶反应的简版",
+      "est_days": 3,
+      "parameters": {
+        "enzyme_nM": 0.15,
+        "compound_uM": [0.1, 1, 10],
+        "biological_repeats": 2,
+        "technical_wells": 2,
+        "plate_type": "black_384"
+      },
+      "cost_items": [
+        {"item": "reader", "resource_id": "EQ_READER", "unit_price": 20, "quantity": 4, "subtotal": 80},
+        {"item": "plates", "resource_id": "RS_PLATE", "unit_price": 12, "quantity": 2, "subtotal": 24},
+        {"item": "enzyme", "resource_id": "RS_ENZYME", "unit_price": 40, "quantity": 2, "subtotal": 80}
+      ],
+      "cost_subtotal": 174,
+      "total_cost": 184
+    },
+    {
+      "version": "CAND_B_OPTICAL_GAP",
+      "summary": "增加无酶对照但漏掉化合物单独荧光背景",
+      "est_days": 4,
+      "parameters": {
+        "enzyme_nM": 1,
+        "compound_uM": 0.005,
+        "biological_repeats": 2,
+        "technical_wells": 8,
+        "plate_type": "black_384"
+      },
+      "cost_items": [
+        {"item": "reader", "resource_id": "EQ_READER", "unit_price": 20, "quantity": 6, "subtotal": 120},
+        {"item": "plates", "resource_id": "RS_PLATE", "unit_price": 12, "quantity": 3, "subtotal": 36},
+        {"item": "enzyme", "resource_id": "RS_ENZYME", "unit_price": 40, "quantity": 3, "subtotal": 120}
+      ],
+      "cost_subtotal": 276,
+      "total_cost": 266
+    },
+    {
+      "version": "CAND_C_FULL_OVERDUE",
+      "summary": "对照较完整但步骤与排程超期",
+      "est_days": 10,
+      "parameters": {
+        "enzyme_nM": 1,
+        "compound_uM": [0.03, 0.1, 0.3, 1, 3, 10],
+        "detergent_percent": 0.015,
+        "biological_repeats": 3,
+        "technical_wells": 3,
+        "plate_type": "black_384"
+      },
+      "cost_items": [
+        {"item": "reader", "resource_id": "EQ_READER", "unit_price": 20, "quantity": 8, "subtotal": 160},
+        {"item": "plates", "resource_id": "RS_PLATE", "unit_price": 12, "quantity": 4, "subtotal": 48},
+        {"item": "enzyme", "resource_id": "RS_ENZYME", "unit_price": 40, "quantity": 3, "subtotal": 120},
+        {"item": "detergent", "resource_id": "RS_DETERGENT", "unit_price": 5, "quantity": 1, "subtotal": 5}
+      ],
+      "cost_subtotal": 333,
+      "total_cost": 333
+    }
+  ],
+  "output_contract": {
+    "required_fields": [
+      "case_id",
+      "revised_plan",
+      "candidate_assessment",
+      "validation",
+      "status",
+      "uncertainty",
+      "sources",
+      "change_log",
+      "confirmation_items"
+    ]
+  }
+}

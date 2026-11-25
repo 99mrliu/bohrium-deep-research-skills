@@ -1,0 +1,915 @@
+{
+  "candidate_assessment": [
+    {
+      "assessment": "rejected_or_requires_revision",
+      "candidate_id": "C1_ARITHMETIC_ERROR",
+      "claimed_total_cost": "15",
+      "claimed_total_duration_minutes": null,
+      "cost_item_audits": [
+        {
+          "basis": "unit_price*quantity",
+          "declared_subtotal": "10",
+          "item": "preparation",
+          "recomputed_amount": "10"
+        },
+        {
+          "basis": "unit_price*quantity",
+          "declared_subtotal": "4.5",
+          "item": "calibration",
+          "recomputed_amount": "4.5"
+        },
+        {
+          "basis": "unit_price*quantity",
+          "declared_subtotal": "1.8",
+          "item": "measurement",
+          "recomputed_amount": "1.9"
+        }
+      ],
+      "cost_recomputation_complete": true,
+      "currency": "CNY",
+      "deadline_unit": "days",
+      "declared_est_days": "0.05",
+      "declared_total_cost": "15",
+      "declared_total_cost_fields": {
+        "total_cost": "15"
+      },
+      "duration_recomputation_complete": null,
+      "duration_unit_note": "est_days is kept in days; no minutes are inferred from it. duration_items is a legacy minutes-only alias.",
+      "errors": [
+        "Cost item measurement: declared subtotal 1.8 != recomputed 1.9.",
+        "Cost arithmetic mismatch: total_cost=15, recomputed 16.4."
+      ],
+      "est_days": "0.05",
+      "evidence_status": "candidate_claims_audited_not_measured",
+      "over_budget": false,
+      "over_deadline": false,
+      "over_deadline_days": false,
+      "over_deadline_minutes": null,
+      "recomputed_total_cost": "16.4",
+      "recomputed_total_duration_minutes": null,
+      "revision_records": [
+        {
+          "action": "revised_and_adapted",
+          "candidate_id": "C1_ARITHMETIC_ERROR",
+          "changes": [
+            {
+              "field": "cost_items[measurement].subtotal",
+              "from": "1.8",
+              "to": "1.9"
+            },
+            {
+              "field": "total_cost",
+              "from": "15",
+              "to": "16.4"
+            }
+          ],
+          "reason": "保留域内 30 degC / 20 min，并按 unit_price*quantity 修正申报算术。",
+          "resulting_nominal_cost": "16.4"
+        }
+      ],
+      "summary": "域内温度/时间，但条目 subtotal 与总成本申报加总错误"
+    },
+    {
+      "assessment": "rejected_or_requires_revision",
+      "candidate_id": "C2_DOMAIN_ERROR",
+      "claimed_total_cost": "16.4",
+      "claimed_total_duration_minutes": null,
+      "cost_item_audits": [
+        {
+          "basis": "unit_price*quantity",
+          "declared_subtotal": "16.4",
+          "item": "all_steps",
+          "recomputed_amount": "16.4"
+        }
+      ],
+      "cost_recomputation_complete": true,
+      "currency": "CNY",
+      "deadline_unit": "days",
+      "declared_est_days": "0.05",
+      "declared_total_cost": "16.4",
+      "declared_total_cost_fields": {
+        "total_cost": "16.4"
+      },
+      "duration_recomputation_complete": null,
+      "duration_unit_note": "est_days is kept in days; no minutes are inferred from it. duration_items is a legacy minutes-only alias.",
+      "errors": [
+        "Parameter reaction_temperature: 33 is off the Decimal step grid 5 from 20."
+      ],
+      "est_days": "0.05",
+      "evidence_status": "candidate_claims_audited_not_measured",
+      "over_budget": false,
+      "over_deadline": false,
+      "over_deadline_days": false,
+      "over_deadline_minutes": null,
+      "recomputed_total_cost": "16.4",
+      "recomputed_total_duration_minutes": null,
+      "revision_records": [
+        {
+          "action": "revised",
+          "candidate_id": "C2_DOMAIN_ERROR",
+          "changes": [
+            {
+              "field": "parameters.reaction_temperature",
+              "from": "33",
+              "to": "30"
+            }
+          ],
+          "reason": "33 不在 20 起步、步长 5 的网格；30 是 case 明确允许的值。"
+        }
+      ],
+      "summary": "温度 33 degC 落在 5 degC 步长网格外；算术本身一致"
+    },
+    {
+      "assessment": "rejected_or_requires_revision",
+      "candidate_id": "C3_DOMAIN_AND_BUDGET_ERRORS",
+      "claimed_total_cost": "80",
+      "claimed_total_duration_minutes": null,
+      "cost_item_audits": [
+        {
+          "basis": "unit_price*quantity",
+          "declared_subtotal": "70",
+          "item": "reagent",
+          "recomputed_amount": "70"
+        },
+        {
+          "basis": "unit_price*quantity",
+          "declared_subtotal": "20",
+          "item": "instrument",
+          "recomputed_amount": "20"
+        }
+      ],
+      "cost_recomputation_complete": true,
+      "currency": "CNY",
+      "deadline_unit": "days",
+      "declared_est_days": "2",
+      "declared_total_cost": "80",
+      "declared_total_cost_fields": {
+        "total_cost": "80"
+      },
+      "duration_recomputation_complete": null,
+      "duration_unit_note": "est_days is kept in days; no minutes are inferred from it. duration_items is a legacy minutes-only alias.",
+      "errors": [
+        "Cost arithmetic mismatch: total_cost=80, recomputed 90.",
+        "Parameter reaction_temperature: 45 outside [20, 40].",
+        "Parameter reaction_time: 35 outside [10, 30].",
+        "Parameter reaction_time: 35 is off the Decimal step grid 10 from 10.",
+        "Recomputed cost 90 exceeds budget_cap 80 CNY.",
+        "Candidate est_days 2 exceeds deadline_days 1."
+      ],
+      "est_days": "2",
+      "evidence_status": "candidate_claims_audited_not_measured",
+      "over_budget": true,
+      "over_deadline": true,
+      "over_deadline_days": true,
+      "over_deadline_minutes": null,
+      "recomputed_total_cost": "90",
+      "recomputed_total_duration_minutes": null,
+      "revision_records": [
+        {
+          "action": "rejected_and_replaced_by_bounded_graph",
+          "candidate_id": "C3_DOMAIN_AND_BUDGET_ERRORS",
+          "changes": [
+            {
+              "field": "parameters",
+              "to": {
+                "reaction_temperature": "30",
+                "reaction_time": "20",
+                "sample_matrix": "synthetic_freshwater"
+              }
+            },
+            {
+              "field": "planning_envelope",
+              "to": {
+                "conservative_cost": "17.1",
+                "conservative_minutes": "66"
+              }
+            }
+          ],
+          "reason": "原候选越域、重算 90 超 budget_cap 80，且 est_days=2 超 deadline_days=1；不得仅修改申报值掩盖问题。"
+        }
+      ],
+      "summary": "温度和时间越域，成本申报错误并超预算，est_days 超期限"
+    }
+  ],
+  "candidate_revisions": [
+    {
+      "action": "revised_and_adapted",
+      "candidate_id": "C1_ARITHMETIC_ERROR",
+      "changes": [
+        {
+          "field": "cost_items[measurement].subtotal",
+          "from": "1.8",
+          "to": "1.9"
+        },
+        {
+          "field": "total_cost",
+          "from": "15",
+          "to": "16.4"
+        }
+      ],
+      "reason": "保留域内 30 degC / 20 min，并按 unit_price*quantity 修正申报算术。",
+      "resulting_nominal_cost": "16.4"
+    },
+    {
+      "action": "revised",
+      "candidate_id": "C2_DOMAIN_ERROR",
+      "changes": [
+        {
+          "field": "parameters.reaction_temperature",
+          "from": "33",
+          "to": "30"
+        }
+      ],
+      "reason": "33 不在 20 起步、步长 5 的网格；30 是 case 明确允许的值。"
+    },
+    {
+      "action": "rejected_and_replaced_by_bounded_graph",
+      "candidate_id": "C3_DOMAIN_AND_BUDGET_ERRORS",
+      "changes": [
+        {
+          "field": "parameters",
+          "to": {
+            "reaction_temperature": "30",
+            "reaction_time": "20",
+            "sample_matrix": "synthetic_freshwater"
+          }
+        },
+        {
+          "field": "planning_envelope",
+          "to": {
+            "conservative_cost": "17.1",
+            "conservative_minutes": "66"
+          }
+        }
+      ],
+      "reason": "原候选越域、重算 90 超 budget_cap 80，且 est_days=2 超 deadline_days=1；不得仅修改申报值掩盖问题。"
+    }
+  ],
+  "case_id": "synthetic-nitrate-statechart-001",
+  "change_log": [
+    "Replaced bootstrap placeholder with agent-authored protocol statechart.",
+    "Audited graph, domains, Decimal costs, resource bindings, terminals and bounded cycles.",
+    "Executed deterministic nominal/fault-injection what-if scenarios; no measured experiment was run.",
+    {
+      "action": "bound_protocol_to_actual_resource_ids",
+      "resource_ids": [
+        "EQ_BALANCE",
+        "EQ_PIPETTE",
+        "EQ_THERMOSTAT",
+        "EQ_COLORIMETER",
+        "MAT_REAGENT",
+        "MAT_WATER",
+        "MAT_STANDARD",
+        "MAT_SAMPLE"
+      ]
+    },
+    {
+      "action": "retained_expected_path_totals",
+      "nominal": "58 min / 16.4 CNY",
+      "persistent_failure": "26 min / 6.4 CNY",
+      "recoverable": "66 min / 17.1 CNY"
+    }
+  ],
+  "completion_scope": "planning_artifacts_and_simulation_only_not_experimental_validation",
+  "confirmation_items": [
+    "Method owner must confirm scientific suitability, calibration/QC limits and instrument/reagent SOPs.",
+    "Safety officer must confirm hazards, waste handling and fail-safe actions before wet execution.",
+    "Resource owner must confirm actual availability, prices and schedule; planning values are not quotes or bookings.",
+    "For deadline_days, minutes/1440 is an elapsed-time comparison only; booking/calendar time may be longer and requires confirmation.",
+    {
+      "item": "确认 note-only EQ_COLORIMETER 的真实存在、SOP、预约窗口和日历排期；解析成功不等于资源批准。",
+      "owner": "resource_owner"
+    }
+  ],
+  "output_contract_unknown_fields": [],
+  "output_notice": "合成示例输出，非正式测评结果",
+  "prospective_notice": "Resource/cost/deadline values are planning estimates, not quotes, bookings, approvals, or commitments.",
+  "revised_plan": {
+    "acceptance_criteria": [
+      {
+        "id": "AC_BLANK_RECOVERY",
+        "meaning": "合成规划阈值；不是从现实标准或实验数据取得的性能限值",
+        "metric": "calibration_blank_recovery_percent",
+        "operator": "<=",
+        "record": "run_log.blank_qc.recovery_percent",
+        "threshold": "105",
+        "unit": "%"
+      },
+      {
+        "id": "AC_SAMPLE_RECORD",
+        "meaning": "实际执行时的记录要求；本例没有注入样品测量结果，也不声称通过",
+        "metric": "sample_response_within_approved_calibration_range",
+        "operator": "==",
+        "record": "run_log.sample.within_calibration_range",
+        "threshold": "true",
+        "unit": "boolean"
+      }
+    ],
+    "candidate_revisions": [
+      {
+        "action": "revised_and_adapted",
+        "candidate_id": "C1_ARITHMETIC_ERROR",
+        "changes": [
+          {
+            "field": "cost_items[measurement].subtotal",
+            "from": "1.8",
+            "to": "1.9"
+          },
+          {
+            "field": "total_cost",
+            "from": "15",
+            "to": "16.4"
+          }
+        ],
+        "reason": "保留域内 30 degC / 20 min，并按 unit_price*quantity 修正申报算术。",
+        "resulting_nominal_cost": "16.4"
+      },
+      {
+        "action": "revised",
+        "candidate_id": "C2_DOMAIN_ERROR",
+        "changes": [
+          {
+            "field": "parameters.reaction_temperature",
+            "from": "33",
+            "to": "30"
+          }
+        ],
+        "reason": "33 不在 20 起步、步长 5 的网格；30 是 case 明确允许的值。"
+      },
+      {
+        "action": "rejected_and_replaced_by_bounded_graph",
+        "candidate_id": "C3_DOMAIN_AND_BUDGET_ERRORS",
+        "changes": [
+          {
+            "field": "parameters",
+            "to": {
+              "reaction_temperature": "30",
+              "reaction_time": "20",
+              "sample_matrix": "synthetic_freshwater"
+            }
+          },
+          {
+            "field": "planning_envelope",
+            "to": {
+              "conservative_cost": "17.1",
+              "conservative_minutes": "66"
+            }
+          }
+        ],
+        "reason": "原候选越域、重算 90 超 budget_cap 80，且 est_days=2 超 deadline_days=1；不得仅修改申报值掩盖问题。"
+      }
+    ],
+    "controls": [
+      {
+        "id": "CTRL_BLANK",
+        "procedure_states": [
+          "S20_PREPARE_BLANK",
+          "S30_MEASURE_BLANK",
+          "D30_BLANK_QC"
+        ],
+        "purpose": "在消耗样品前隔离高空白/背景故障",
+        "type": "calibration_blank",
+        "unmeasured": true
+      },
+      {
+        "id": "CTRL_CALIBRATION",
+        "procedure_states": [
+          "S40_PREPARE_CALIBRATION"
+        ],
+        "purpose": "建立并记录合成规划中的校准系列；现实点数以批准 SOP 为准",
+        "type": "calibration_series",
+        "unmeasured": true
+      },
+      {
+        "id": "CTRL_FAIL_SAFE",
+        "procedure_states": [
+          "T_QC_FAIL"
+        ],
+        "purpose": "持续 QC 故障时阻止样品反应并终止",
+        "type": "negative_process_control",
+        "unmeasured": true
+      }
+    ],
+    "cost_time_envelope": {
+      "conservative_graph_upper_bound": {
+        "cost": "17.1",
+        "duration_minutes": "66",
+        "max_state_entries": 13,
+        "method": "Conservative sum over every reachable state of max_visits times exact state cost/duration; may include mutually exclusive terminals, so it is a safe upper bound, not a claimed attainable path.",
+        "per_state": {
+          "D30_BLANK_QC": {
+            "cost": "0",
+            "duration_minutes": "0",
+            "max_visits": 2
+          },
+          "S00_START": {
+            "cost": "0",
+            "duration_minutes": "0",
+            "max_visits": 1
+          },
+          "S10_PREPARE_REAGENTS": {
+            "cost": "5",
+            "duration_minutes": "10",
+            "max_visits": 1
+          },
+          "S20_PREPARE_BLANK": {
+            "cost": "0.5",
+            "duration_minutes": "5",
+            "max_visits": 1
+          },
+          "S30_MEASURE_BLANK": {
+            "cost": "0.4",
+            "duration_minutes": "6",
+            "max_visits": 2
+          },
+          "S35_REBLANK": {
+            "cost": "0.5",
+            "duration_minutes": "5",
+            "max_visits": 1
+          },
+          "S40_PREPARE_CALIBRATION": {
+            "cost": "4.5",
+            "duration_minutes": "15",
+            "max_visits": 1
+          },
+          "S50_REACT_SAMPLES": {
+            "cost": "6",
+            "duration_minutes": "20",
+            "max_visits": 1
+          },
+          "S60_MEASURE_SAMPLES": {
+            "cost": "0.2",
+            "duration_minutes": "5",
+            "max_visits": 1
+          },
+          "T_QC_FAIL": {
+            "cost": "0",
+            "duration_minutes": "0",
+            "max_visits": 1
+          },
+          "T_SUCCESS": {
+            "cost": "0",
+            "duration_minutes": "0",
+            "max_visits": 1
+          }
+        }
+      },
+      "currency": "CNY",
+      "measured": false,
+      "nominal": {
+        "cost": "16.4",
+        "duration_minutes": "58",
+        "state_visits": 9
+      },
+      "worst_case_supplied_scenario_envelope": {
+        "max_cost": "17.1",
+        "max_duration_minutes": "66",
+        "note": "Max cost and max duration are component-wise maxima over supplied scenarios and need not belong to one path."
+      }
+    },
+    "hypotheses": [
+      {
+        "falsification": "若现实经批准实验在空白有效后仍不满足预先登记的样品 QC 验收标准，则拒绝此规划组合的适用性假设并修订方案。",
+        "id": "H1",
+        "statement": "在本合成方案中，选择 30 degC、20 min 的规划组合可在有效校准空白之后进入样品测定；该句仅描述可检验计划，不断言现实方法性能。"
+      },
+      {
+        "falsification": "若重新空白后的受控实测仍不满足空白回收率守卫，则 H2 被该次故障处置路径证伪，流程必须进入 QC_FAIL，不得继续消耗样品。",
+        "id": "H2",
+        "statement": "一次重新空白可能使合成高空白故障恢复到空白 QC 通过分支。"
+      }
+    ],
+    "materials": {
+      "equipment": [
+        {
+          "id": "EQ_BALANCE",
+          "name": "合成分析天平",
+          "specification": "实际量程/校准状态待确认"
+        },
+        {
+          "id": "EQ_PIPETTE",
+          "name": "合成移液设备",
+          "specification": "实际规格与 SOP 待确认"
+        },
+        {
+          "id": "EQ_THERMOSTAT",
+          "name": "合成恒温反应设备",
+          "specification": "30 degC 设定仅用于合成案例"
+        },
+        {
+          "id": "EQ_COLORIMETER",
+          "name": "合成比色检测器",
+          "specification": "波长等现实方法参数未提供，不得补造"
+        }
+      ],
+      "materials": [
+        {
+          "cost": "11.00",
+          "cost_note": "分摊到 S10/S50 的 state.cost；不再额外相加",
+          "id": "MAT_REAGENT",
+          "name": "合成硝酸盐显色试剂",
+          "quantity": "1",
+          "unit": "planning_lot"
+        },
+        {
+          "cost": "1.00",
+          "cost_note": "分摊到空白状态成本；不再额外相加",
+          "id": "MAT_WATER",
+          "name": "合成无硝酸盐水",
+          "quantity": "2",
+          "unit": "blank_preparation"
+        },
+        {
+          "cost": "4.50",
+          "cost_note": "与 S40 state.cost 对应；不是报价",
+          "id": "MAT_STANDARD",
+          "name": "合成硝酸盐校准标准液",
+          "quantity": "1",
+          "unit": "planning_series"
+        },
+        {
+          "cost": "0",
+          "cost_note": "无真实样品或实测结果",
+          "id": "MAT_SAMPLE",
+          "name": "合成淡水样",
+          "quantity": "1",
+          "unit": "synthetic_aliquot"
+        }
+      ]
+    },
+    "parameters": {
+      "reaction_temperature": "30",
+      "reaction_time": "20",
+      "sample_matrix": "synthetic_freshwater"
+    },
+    "planning_evidence": [
+      {
+        "citation": "examples/mock_case.json and examples/materials/assay_notes.txt",
+        "claim": "30 degC、20 min 和 105% 仅用于演示有限域与守卫执行",
+        "evidence_id": "PE1",
+        "measured": false,
+        "source_type": "synthetic_planning_assumption"
+      },
+      {
+        "citation": "examples/protocol_spec.json scenarios",
+        "claim": "nominal、recoverable_high_blank、persistent_qc_failure 的决策序列全部是注入的 what-if 标签",
+        "evidence_id": "PE2",
+        "measured": false,
+        "source_type": "synthetic_fault_injection"
+      }
+    ],
+    "procedures": [
+      {
+        "cost": "0",
+        "duration_minutes": "0",
+        "id": "S00_START",
+        "kind": "start",
+        "max_visits": 1,
+        "next": "S10_PREPARE_REAGENTS"
+      },
+      {
+        "cost": "5.00",
+        "description": "按待确认 SOP 准备合成试剂并记录批号/有效期",
+        "duration_minutes": "10",
+        "equipment": [
+          "EQ_BALANCE",
+          "EQ_PIPETTE"
+        ],
+        "id": "S10_PREPARE_REAGENTS",
+        "kind": "action",
+        "materials": [
+          "MAT_REAGENT"
+        ],
+        "max_visits": 1,
+        "next": "S20_PREPARE_BLANK",
+        "parameters": {
+          "sample_matrix": "synthetic_freshwater"
+        },
+        "record": "run_log.reagent_preparation"
+      },
+      {
+        "cost": "0.50",
+        "description": "制备校准空白，先于任何样品反应执行",
+        "duration_minutes": "5",
+        "equipment": [
+          "EQ_PIPETTE"
+        ],
+        "id": "S20_PREPARE_BLANK",
+        "kind": "action",
+        "materials": [
+          "MAT_WATER",
+          "MAT_REAGENT"
+        ],
+        "max_visits": 1,
+        "next": "S30_MEASURE_BLANK",
+        "parameters": {
+          "sample_matrix": "synthetic_freshwater"
+        },
+        "record": "run_log.blank.preparation"
+      },
+      {
+        "cost": "0.20",
+        "description": "读取并记录校准空白回收率；仿真不生成该测量值",
+        "duration_minutes": "3",
+        "equipment": [
+          "EQ_COLORIMETER"
+        ],
+        "id": "S30_MEASURE_BLANK",
+        "kind": "action",
+        "materials": [
+          "MAT_WATER"
+        ],
+        "max_visits": 2,
+        "next": "D30_BLANK_QC",
+        "parameters": {},
+        "record": "run_log.blank_qc.recovery_percent"
+      },
+      {
+        "branches": [
+          {
+            "guard": {
+              "metric": "calibration_blank_recovery_percent",
+              "operator": ">",
+              "record": "run_log.blank_qc.recovery_percent",
+              "threshold": "105",
+              "unit": "%"
+            },
+            "label": "high_blank",
+            "next": "S35_REBLANK"
+          },
+          {
+            "guard": {
+              "metric": "reblank_attempt_count",
+              "operator": ">=",
+              "record": "run_log.blank_qc.reblank_attempt_count",
+              "threshold": "1",
+              "unit": "count"
+            },
+            "label": "retries_exhausted",
+            "next": "T_QC_FAIL"
+          }
+        ],
+        "cost": "0",
+        "description": "可观测空白 QC 与重试预算联合决策；执行时读取记录，仿真时只读取注入标签",
+        "duration_minutes": "0",
+        "else": "S40_PREPARE_CALIBRATION",
+        "id": "D30_BLANK_QC",
+        "kind": "decision",
+        "max_visits": 2
+      },
+      {
+        "cost": "0.50",
+        "description": "有界恢复动作：重新制备/测量空白；不得无限重试",
+        "duration_minutes": "5",
+        "equipment": [
+          "EQ_PIPETTE"
+        ],
+        "id": "S35_REBLANK",
+        "kind": "action",
+        "materials": [
+          "MAT_WATER",
+          "MAT_REAGENT"
+        ],
+        "max_visits": 1,
+        "next": "S30_MEASURE_BLANK",
+        "parameters": {},
+        "record": "run_log.blank_qc.reblank_attempt_count"
+      },
+      {
+        "cost": "4.50",
+        "description": "空白 QC 通过后准备校准系列；现实点数和浓度待批准 SOP 给出",
+        "duration_minutes": "15",
+        "equipment": [
+          "EQ_PIPETTE"
+        ],
+        "id": "S40_PREPARE_CALIBRATION",
+        "kind": "action",
+        "materials": [
+          "MAT_STANDARD"
+        ],
+        "max_visits": 1,
+        "next": "S50_REACT_SAMPLES",
+        "parameters": {
+          "sample_matrix": "synthetic_freshwater"
+        },
+        "record": "run_log.calibration.series"
+      },
+      {
+        "cost": "6.00",
+        "description": "在有限域选定温度/时间下进行合成显色反应",
+        "duration_minutes": "20",
+        "equipment": [
+          "EQ_THERMOSTAT",
+          "EQ_PIPETTE"
+        ],
+        "id": "S50_REACT_SAMPLES",
+        "kind": "action",
+        "materials": [
+          "MAT_SAMPLE",
+          "MAT_REAGENT"
+        ],
+        "max_visits": 1,
+        "next": "S60_MEASURE_SAMPLES",
+        "parameters": {
+          "reaction_temperature": "30",
+          "reaction_time": "20",
+          "sample_matrix": "synthetic_freshwater"
+        },
+        "record": "run_log.reaction.settings"
+      },
+      {
+        "cost": "0.20",
+        "description": "记录样品响应；本例不伪造样品 QC 或浓度结局",
+        "duration_minutes": "5",
+        "equipment": [
+          "EQ_COLORIMETER"
+        ],
+        "id": "S60_MEASURE_SAMPLES",
+        "kind": "action",
+        "materials": [
+          "MAT_SAMPLE"
+        ],
+        "max_visits": 1,
+        "next": "T_SUCCESS",
+        "parameters": {},
+        "record": "run_log.sample.response"
+      },
+      {
+        "cost": "0",
+        "description": "流程完成终态，仅表示状态路径结束，不表示科学假设已证实",
+        "duration_minutes": "0",
+        "id": "T_SUCCESS",
+        "kind": "terminal",
+        "max_visits": 1,
+        "outcome": "success"
+      },
+      {
+        "cost": "0",
+        "description": "持续空白 QC 失败的 fail-safe：停止，不消耗样品，不伪造恢复",
+        "duration_minutes": "0",
+        "id": "T_QC_FAIL",
+        "kind": "terminal",
+        "max_visits": 1,
+        "outcome": "failure"
+      }
+    ],
+    "prospective_not_quote_or_approval": true,
+    "protocol_id": "SYN-NO3-COLOR-STATECHART-01",
+    "risk_and_revisions": [
+      {
+        "detection": "D30_BLANK_QC 的 recovery_percent 与 reblank_attempt_count 记录",
+        "residual_uncertainty": "未实测故障原因和恢复概率",
+        "revision": "允许一次 S35_REBLANK；持续故障进入 T_QC_FAIL，禁止绕过 QC",
+        "risk": "高空白或背景异常"
+      },
+      {
+        "detection": "bootstrap 与 compile 的 Decimal min/max/step 审计",
+        "residual_uncertainty": "有限域本身是合成输入，并非现实方法推荐",
+        "revision": "拒绝候选并从 case 声明网格重选；不得用四舍五入掩盖越域",
+        "risk": "温度/时间候选越出有限域"
+      },
+      {
+        "detection": "执行前资源负责人核对",
+        "residual_uncertainty": "未确认实际库存、校准状态和价格",
+        "revision": "暂停执行并重新规划；当前状态成本/时长不是报价、预约或批准",
+        "risk": "试剂、仪器或人员资源与现实不符"
+      }
+    ],
+    "statechart": {
+      "file": "statechart.svg",
+      "state_count": 11
+    },
+    "title": "合成水样比色硝酸盐测定：有限域优化与有界 QC 重试",
+    "variables": {
+      "controlled": [
+        "sample_matrix=synthetic_freshwater",
+        "reagent lot and actual expiry to be recorded before execution",
+        "calibration sequence and pipette SOP to be confirmed by method owner"
+      ],
+      "dependent": [
+        {
+          "name": "calibration_blank_recovery_percent",
+          "record": "run_log.blank_qc.recovery_percent",
+          "unit": "%"
+        },
+        {
+          "name": "sample_response",
+          "record": "run_log.sample.response",
+          "unit": "instrument_defined"
+        }
+      ],
+      "independent": [
+        {
+          "domain": "20..40 step 5",
+          "name": "reaction_temperature",
+          "unit": "degC"
+        },
+        {
+          "domain": "10..30 step 10",
+          "name": "reaction_time",
+          "unit": "min"
+        }
+      ]
+    }
+  },
+  "simulation_interpretation": "Synthetic what-if paths only; injected outcomes and branch labels are hypotheses, never measured outcomes.",
+  "simulation_summary": {
+    "file": "simulation.json",
+    "measured": false,
+    "scenario_count": 3
+  },
+  "sources": [
+    {
+      "evidence_scope": "Organizer input provenance, not external scientific evidence.",
+      "path": "/Users/liuhengshen/Desktop/bhr_product/bohrium/challenge-cf1995b5-v3/skill-g-protocol-statechart/examples/mock_case.json",
+      "role": "case",
+      "sha256": "3c635b8bfcbe747cc0a46bb091022a876ce3038400d97848eb8a0725e31b76a4"
+    },
+    {
+      "characters_read": 259,
+      "evidence_scope": "Task provenance, not external scientific evidence.",
+      "path": "/Users/liuhengshen/Desktop/bhr_product/bohrium/challenge-cf1995b5-v3/skill-g-protocol-statechart/examples/task.md",
+      "role": "task",
+      "sha256": "cfde7b1a50215ba2bcb9d4fefd2ac3babc24110d0100fe52a16927e700255a47"
+    },
+    {
+      "characters_read": 328,
+      "evidence_scope": "Supplied material provenance; not independently verified scientific evidence.",
+      "extraction": "read_utf8_text",
+      "path": "/Users/liuhengshen/Desktop/bhr_product/bohrium/challenge-cf1995b5-v3/skill-g-protocol-statechart/examples/materials/assay_notes.txt",
+      "relative_path": "assay_notes.txt",
+      "role": "material",
+      "sha256": "9c19263e5478ac71f265621d7d3da1f552e4b072d955210649c76dd3b200d8e1"
+    },
+    {
+      "evidence_scope": "Authorship provenance only; the spec itself is not scientific proof.",
+      "path": "/Users/liuhengshen/Desktop/bhr_product/bohrium/challenge-cf1995b5-v3/skill-g-protocol-statechart/examples/protocol_spec.json",
+      "role": "agent_authored_protocol_spec",
+      "sha256": "683ec07dead1529b23e2ebc92f5b76011939aaac0752f4872cc95462adecf32d"
+    },
+    {
+      "claim": "30 degC、20 min 和 105% 仅用于演示有限域与守卫执行",
+      "evidence_id": "PE1",
+      "evidence_scope": "Agent-registered planning evidence; not made scientifically valid merely by inclusion in the spec.",
+      "measured": false,
+      "role": "agent_authored_planning_evidence",
+      "source_locators": {
+        "citation": "examples/mock_case.json and examples/materials/assay_notes.txt"
+      },
+      "source_type": "synthetic_planning_assumption"
+    },
+    {
+      "claim": "nominal、recoverable_high_blank、persistent_qc_failure 的决策序列全部是注入的 what-if 标签",
+      "evidence_id": "PE2",
+      "evidence_scope": "Agent-registered planning evidence; not made scientifically valid merely by inclusion in the spec.",
+      "measured": false,
+      "role": "agent_authored_planning_evidence",
+      "source_locators": {
+        "citation": "examples/protocol_spec.json scenarios"
+      },
+      "source_type": "synthetic_fault_injection"
+    }
+  ],
+  "status": "complete",
+  "uncertainty": [
+    "All scenario labels and fault injections are unmeasured planning hypotheses.",
+    "Graph/static validation does not establish scientific validity, safety, or experimental success.",
+    {
+      "statement": "66 分钟仅为图上有界 elapsed-time 上界；预约窗口、排队和现实日历时间未知，可能超过该值。",
+      "topic": "calendar_time"
+    },
+    "设备 Domain Note 仅提供合成合同条目，不证明现实设备存在或可用。"
+  ],
+  "validation": {
+    "branch_coverage": {
+      "complete": true,
+      "interpretation": "Coverage means an injected planning path selected a branch; it is not experimental evidence.",
+      "tested_decision_branches": [
+        {
+          "decision_id": "D30_BLANK_QC",
+          "label": "else"
+        },
+        {
+          "decision_id": "D30_BLANK_QC",
+          "label": "high_blank"
+        },
+        {
+          "decision_id": "D30_BLANK_QC",
+          "label": "retries_exhausted"
+        }
+      ],
+      "untested_decision_branches": []
+    },
+    "errors": [],
+    "files": [
+      "plan.json",
+      "plan.md",
+      "validation.json",
+      "simulation.json",
+      "statechart.svg",
+      "path_report.md"
+    ],
+    "status": "pass",
+    "warnings": []
+  }
+}
