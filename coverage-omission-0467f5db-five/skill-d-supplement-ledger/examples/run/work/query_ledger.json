@@ -1,0 +1,89 @@
+[
+  {
+    "row": 1,
+    "query_id": "Q1",
+    "round": 1,
+    "query_string": "CRISPR off-target GUIDE-seq CIRCLE-seq",
+    "source": "Crossref",
+    "hit_records": 2,
+    "ref_matched": [
+      "R001",
+      "R002"
+    ],
+    "new_recovered": [
+      "R001",
+      "R002"
+    ],
+    "marginal_yield": 2,
+    "zero_gain": false
+  },
+  {
+    "row": 2,
+    "query_id": "Q2",
+    "round": 1,
+    "query_string": "off-target analysis machine learning guide RNA",
+    "source": "EuropePMC",
+    "hit_records": 3,
+    "ref_matched": [
+      "R001",
+      "R003",
+      "R004"
+    ],
+    "new_recovered": [
+      "R003",
+      "R004"
+    ],
+    "marginal_yield": 2,
+    "zero_gain": false
+  },
+  {
+    "row": 3,
+    "query_id": "Q3",
+    "round": 2,
+    "query_string": "CHANGE-seq prime editing off-target",
+    "source": "Crossref",
+    "hit_records": 2,
+    "ref_matched": [
+      "R005",
+      "R009"
+    ],
+    "new_recovered": [
+      "R005",
+      "R009"
+    ],
+    "marginal_yield": 2,
+    "zero_gain": false
+  },
+  {
+    "row": 4,
+    "query_id": "Q4",
+    "round": 2,
+    "query_string": "SITE-seq biochemical profiling off-target",
+    "source": "EuropePMC",
+    "hit_records": 2,
+    "ref_matched": [
+      "R006",
+      "R009"
+    ],
+    "new_recovered": [
+      "R006"
+    ],
+    "marginal_yield": 1,
+    "zero_gain": false
+  },
+  {
+    "row": 5,
+    "query_id": "Q5",
+    "round": 3,
+    "query_string": "CRISPR genome-wide off-target detection methods",
+    "source": "Crossref",
+    "hit_records": 2,
+    "ref_matched": [
+      "R001",
+      "R002"
+    ],
+    "new_recovered": [],
+    "marginal_yield": 0,
+    "zero_gain": true
+  }
+]

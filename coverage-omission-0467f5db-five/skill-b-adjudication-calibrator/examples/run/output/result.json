@@ -1,0 +1,326 @@
+{
+  "case_id": "synthetic-demo-calibrator-001",
+  "status": "complete",
+  "sources": [
+    {
+      "path": "examples/input/case.json"
+    },
+    {
+      "path": "examples/input/task.md"
+    },
+    {
+      "path": "examples/input/materials/calibration_fragment.json"
+    },
+    {
+      "path": "examples/input/materials/reference_list.csv"
+    },
+    {
+      "path": "examples/input/materials/search_results.json"
+    }
+  ],
+  "uncertainty": [],
+  "change_log": [],
+  "skill": "adjudication-instrument-calibrator",
+  "skill_version": "1.0.0",
+  "rule_spec": {
+    "spec_version": "2026.11",
+    "L1": {
+      "kind": "identifier_exact",
+      "fields": [
+        "doi",
+        "pmid"
+      ],
+      "decision": "hit"
+    },
+    "L2": {
+      "kind": "title_year_fuzzy",
+      "jaccard_threshold": 0.8,
+      "gray_zone": [
+        0.65,
+        0.8
+      ],
+      "year_must_match": true,
+      "decision": "hit if >= threshold; L3 queue if in gray zone"
+    },
+    "L3": {
+      "kind": "manual_queue",
+      "decision": "defer; never auto-judge"
+    }
+  },
+  "calibration": {
+    "fragment": "examples/input/materials/calibration_fragment.json",
+    "n_labeled": 8,
+    "spec_version": "2026.11",
+    "default_threshold": 0.8,
+    "confusion_at_default": {
+      "threshold": 0.8,
+      "tp": 5,
+      "fp": 0,
+      "fn": 0,
+      "tn": 2,
+      "deferred": 1,
+      "precision": 1.0,
+      "recall": 1.0,
+      "precision_wilson95": [
+        0.5655,
+        1.0
+      ],
+      "recall_wilson95": [
+        0.5655,
+        1.0
+      ]
+    },
+    "threshold_sweep": [
+      {
+        "threshold": 0.6,
+        "tp": 5,
+        "fp": 1,
+        "fn": 0,
+        "tn": 2,
+        "deferred": 0,
+        "precision": 0.8333,
+        "recall": 1.0,
+        "precision_wilson95": [
+          0.4365,
+          0.9699
+        ],
+        "recall_wilson95": [
+          0.5655,
+          1.0
+        ]
+      },
+      {
+        "threshold": 0.65,
+        "tp": 5,
+        "fp": 1,
+        "fn": 0,
+        "tn": 2,
+        "deferred": 0,
+        "precision": 0.8333,
+        "recall": 1.0,
+        "precision_wilson95": [
+          0.4365,
+          0.9699
+        ],
+        "recall_wilson95": [
+          0.5655,
+          1.0
+        ]
+      },
+      {
+        "threshold": 0.7,
+        "tp": 5,
+        "fp": 1,
+        "fn": 0,
+        "tn": 2,
+        "deferred": 0,
+        "precision": 0.8333,
+        "recall": 1.0,
+        "precision_wilson95": [
+          0.4365,
+          0.9699
+        ],
+        "recall_wilson95": [
+          0.5655,
+          1.0
+        ]
+      },
+      {
+        "threshold": 0.75,
+        "tp": 5,
+        "fp": 0,
+        "fn": 0,
+        "tn": 2,
+        "deferred": 1,
+        "precision": 1.0,
+        "recall": 1.0,
+        "precision_wilson95": [
+          0.5655,
+          1.0
+        ],
+        "recall_wilson95": [
+          0.5655,
+          1.0
+        ]
+      },
+      {
+        "threshold": 0.8,
+        "tp": 5,
+        "fp": 0,
+        "fn": 0,
+        "tn": 2,
+        "deferred": 1,
+        "precision": 1.0,
+        "recall": 1.0,
+        "precision_wilson95": [
+          0.5655,
+          1.0
+        ],
+        "recall_wilson95": [
+          0.5655,
+          1.0
+        ]
+      },
+      {
+        "threshold": 0.85,
+        "tp": 3,
+        "fp": 0,
+        "fn": 2,
+        "tn": 2,
+        "deferred": 1,
+        "precision": 1.0,
+        "recall": 0.6,
+        "precision_wilson95": [
+          0.4385,
+          1.0
+        ],
+        "recall_wilson95": [
+          0.2307,
+          0.8824
+        ]
+      },
+      {
+        "threshold": 0.9,
+        "tp": 3,
+        "fp": 0,
+        "fn": 2,
+        "tn": 2,
+        "deferred": 1,
+        "precision": 1.0,
+        "recall": 0.6,
+        "precision_wilson95": [
+          0.4385,
+          1.0
+        ],
+        "recall_wilson95": [
+          0.2307,
+          0.8824
+        ]
+      },
+      {
+        "threshold": 0.95,
+        "tp": 3,
+        "fp": 0,
+        "fn": 2,
+        "tn": 2,
+        "deferred": 1,
+        "precision": 1.0,
+        "recall": 0.6,
+        "precision_wilson95": [
+          0.4385,
+          1.0
+        ],
+        "recall_wilson95": [
+          0.2307,
+          0.8824
+        ]
+      }
+    ],
+    "recommended_threshold": 0.8,
+    "recommendation_note": "keep default 0.80: no threshold strictly dominates (or fragment < 30 pairs)"
+  },
+  "coverage": {
+    "denominator": 10,
+    "hit": 6,
+    "miss": 4,
+    "coverage_ratio": 0.6,
+    "coverage_ratio_wilson95": [
+      0.3127,
+      0.8318
+    ],
+    "instrument": {
+      "spec_version": "2026.11",
+      "threshold": 0.8,
+      "calibrated": true
+    }
+  },
+  "miss_list": [
+    {
+      "ref_id": "R007",
+      "title": "Membrane electrode assemblies for CO2 electrolysis",
+      "causes": [
+        {
+          "category": "query_term_missing",
+          "evidence": "tokens absent from queries: membrane, assemblies"
+        },
+        {
+          "category": "adjudication_uncertain",
+          "evidence": "deferred to L3; counted as miss pending adjudication"
+        }
+      ]
+    },
+    {
+      "ref_id": "R008",
+      "title": "Formate production from CO2 on tin catalysts",
+      "causes": [
+        {
+          "category": "query_term_missing",
+          "evidence": "tokens absent from queries: formate, production, catalysts"
+        },
+        {
+          "category": "time_window_cutoff",
+          "evidence": "year 2018 outside 2019-2024"
+        }
+      ]
+    },
+    {
+      "ref_id": "R009",
+      "title": "Conference abstract without identifier",
+      "causes": [
+        {
+          "category": "query_term_missing",
+          "evidence": "tokens absent from queries: conference, abstract, without, identifier"
+        },
+        {
+          "category": "identifier_anomaly",
+          "evidence": "no resolvable identifier"
+        }
+      ]
+    },
+    {
+      "ref_id": "R010",
+      "title": "Zinc oxide interfaces for CO2 activation",
+      "causes": [
+        {
+          "category": "query_term_missing",
+          "evidence": "tokens absent from queries: interfaces, activation"
+        }
+      ]
+    }
+  ],
+  "supplement_log": {
+    "executed": false,
+    "suggestions": [
+      {
+        "target_ref": "R007",
+        "action": "new_query",
+        "rationale": "tokens absent from queries: membrane, assemblies"
+      },
+      {
+        "target_ref": "R008",
+        "action": "new_query",
+        "rationale": "tokens absent from queries: formate, production, catalysts"
+      },
+      {
+        "target_ref": "R009",
+        "action": "new_query",
+        "rationale": "tokens absent from queries: conference, abstract, without, identifier"
+      },
+      {
+        "target_ref": "R010",
+        "action": "new_query",
+        "rationale": "tokens absent from queries: interfaces, activation"
+      }
+    ],
+    "note": "suggestions only; rerun with supplemental results to verify omission reduction"
+  },
+  "coverage_report": "examples/run/output/coverage_report.md",
+  "l3_queue": [
+    {
+      "ref_id": "R007",
+      "best_candidate_title": "Membrane electrode assemblies for CO2 electrolysis cells and stacks",
+      "score": 0.7143,
+      "note": "gray-zone similarity; requires human adjudication"
+    }
+  ]
+}

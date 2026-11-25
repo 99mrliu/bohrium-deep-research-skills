@@ -1,0 +1,172 @@
+{
+  "fragment": "examples/input/materials/calibration_fragment.json",
+  "n_labeled": 8,
+  "spec_version": "2026.11",
+  "default_threshold": 0.8,
+  "confusion_at_default": {
+    "threshold": 0.8,
+    "tp": 5,
+    "fp": 0,
+    "fn": 0,
+    "tn": 2,
+    "deferred": 1,
+    "precision": 1.0,
+    "recall": 1.0,
+    "precision_wilson95": [
+      0.5655,
+      1.0
+    ],
+    "recall_wilson95": [
+      0.5655,
+      1.0
+    ]
+  },
+  "threshold_sweep": [
+    {
+      "threshold": 0.6,
+      "tp": 5,
+      "fp": 1,
+      "fn": 0,
+      "tn": 2,
+      "deferred": 0,
+      "precision": 0.8333,
+      "recall": 1.0,
+      "precision_wilson95": [
+        0.4365,
+        0.9699
+      ],
+      "recall_wilson95": [
+        0.5655,
+        1.0
+      ]
+    },
+    {
+      "threshold": 0.65,
+      "tp": 5,
+      "fp": 1,
+      "fn": 0,
+      "tn": 2,
+      "deferred": 0,
+      "precision": 0.8333,
+      "recall": 1.0,
+      "precision_wilson95": [
+        0.4365,
+        0.9699
+      ],
+      "recall_wilson95": [
+        0.5655,
+        1.0
+      ]
+    },
+    {
+      "threshold": 0.7,
+      "tp": 5,
+      "fp": 1,
+      "fn": 0,
+      "tn": 2,
+      "deferred": 0,
+      "precision": 0.8333,
+      "recall": 1.0,
+      "precision_wilson95": [
+        0.4365,
+        0.9699
+      ],
+      "recall_wilson95": [
+        0.5655,
+        1.0
+      ]
+    },
+    {
+      "threshold": 0.75,
+      "tp": 5,
+      "fp": 0,
+      "fn": 0,
+      "tn": 2,
+      "deferred": 1,
+      "precision": 1.0,
+      "recall": 1.0,
+      "precision_wilson95": [
+        0.5655,
+        1.0
+      ],
+      "recall_wilson95": [
+        0.5655,
+        1.0
+      ]
+    },
+    {
+      "threshold": 0.8,
+      "tp": 5,
+      "fp": 0,
+      "fn": 0,
+      "tn": 2,
+      "deferred": 1,
+      "precision": 1.0,
+      "recall": 1.0,
+      "precision_wilson95": [
+        0.5655,
+        1.0
+      ],
+      "recall_wilson95": [
+        0.5655,
+        1.0
+      ]
+    },
+    {
+      "threshold": 0.85,
+      "tp": 3,
+      "fp": 0,
+      "fn": 2,
+      "tn": 2,
+      "deferred": 1,
+      "precision": 1.0,
+      "recall": 0.6,
+      "precision_wilson95": [
+        0.4385,
+        1.0
+      ],
+      "recall_wilson95": [
+        0.2307,
+        0.8824
+      ]
+    },
+    {
+      "threshold": 0.9,
+      "tp": 3,
+      "fp": 0,
+      "fn": 2,
+      "tn": 2,
+      "deferred": 1,
+      "precision": 1.0,
+      "recall": 0.6,
+      "precision_wilson95": [
+        0.4385,
+        1.0
+      ],
+      "recall_wilson95": [
+        0.2307,
+        0.8824
+      ]
+    },
+    {
+      "threshold": 0.95,
+      "tp": 3,
+      "fp": 0,
+      "fn": 2,
+      "tn": 2,
+      "deferred": 1,
+      "precision": 1.0,
+      "recall": 0.6,
+      "precision_wilson95": [
+        0.4385,
+        1.0
+      ],
+      "recall_wilson95": [
+        0.2307,
+        0.8824
+      ]
+    }
+  ],
+  "recommended_threshold": 0.8,
+  "recommendation_note": "keep default 0.80: no threshold strictly dominates (or fragment < 30 pairs)"
+}

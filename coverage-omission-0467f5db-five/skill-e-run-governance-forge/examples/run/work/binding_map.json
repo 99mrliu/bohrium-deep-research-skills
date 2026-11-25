@@ -1,0 +1,26 @@
+{
+  "B1_denominator": {
+    "value": 7,
+    "source": "coverage_ledger.json#/denominator"
+  },
+  "B2_hit": {
+    "value": 5,
+    "source": "coverage_ledger.json#/hit"
+  },
+  "B3_miss": {
+    "value": 2,
+    "source": "coverage_ledger.json#/miss"
+  },
+  "B4_coverage_ratio": {
+    "value": 0.7143,
+    "source": "coverage_ledger.json#/coverage_ratio"
+  },
+  "B5_audit_agreement": {
+    "value": 1.0,
+    "source": "audit_report.json#/agreement"
+  },
+  "B6_audit_sampled": {
+    "value": 3,
+    "source": "audit_report.json#/sampled"
+  }
+}

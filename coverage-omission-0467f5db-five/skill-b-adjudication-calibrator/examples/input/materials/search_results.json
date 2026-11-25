@@ -1,0 +1,39 @@
+{
+  "note": "SYNTHETIC search results for the example only",
+  "queries": [
+    {
+      "query_id": "Q1",
+      "query_string": "copper CO2 reduction ethylene selectivity",
+      "source": "Crossref",
+      "fields": "title,abstract",
+      "time_window": "2019-2024",
+      "hits": [
+        {"doi": "10.7777/synth.c001", "title": "Copper oxide catalysts for CO2 reduction to ethylene", "year": 2021},
+        {"doi": "10.7777/synth.c002", "title": "Tandem catalysis for CO2 electroreduction", "year": 2022},
+        {"doi": "10.7777/synth.c005", "title": "Selectivity trends in CO2 reduction on copper", "year": 2019}
+      ]
+    },
+    {
+      "query_id": "Q2",
+      "query_string": "CO2 electrolysis gas diffusion electrode",
+      "source": "EuropePMC",
+      "fields": "title,abstract",
+      "time_window": "2019-2024",
+      "hits": [
+        {"doi": "10.7777/synth.c004", "title": "Gas diffusion electrodes for CO2 electrolysis", "year": 2021},
+        {"title": "Operando spectroscopy of CO2 reduction intermediates", "year": 2022},
+        {"title": "Membrane electrode assemblies for CO2 electrolysis cells and stacks", "year": 2023}
+      ]
+    },
+    {
+      "query_id": "Q3",
+      "query_string": "single atom CO2 conversion alloy",
+      "source": "Crossref",
+      "fields": "title",
+      "time_window": "2019-2024",
+      "hits": [
+        {"doi": "10.7777/synth.c003", "title": "Single atom alloys in CO2 conversion", "year": 2020}
+      ]
+    }
+  ]
+}

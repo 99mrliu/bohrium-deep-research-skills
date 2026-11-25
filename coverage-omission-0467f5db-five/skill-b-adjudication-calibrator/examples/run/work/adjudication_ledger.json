@@ -1,0 +1,144 @@
+{
+  "denominator": 10,
+  "hit": 6,
+  "miss": 4,
+  "coverage_ratio": 0.6,
+  "coverage_ratio_wilson95": [
+    0.3127,
+    0.8318
+  ],
+  "instrument": {
+    "spec_version": "2026.11",
+    "threshold": 0.8,
+    "calibrated": true
+  },
+  "per_record": [
+    {
+      "ref_id": "R001",
+      "doi": "10.7777/synth.c001",
+      "title": "Copper oxide catalysts for CO2 reduction to ethylene",
+      "status": "hit",
+      "match_level": "L1_doi",
+      "score": 1.0,
+      "evidence": {
+        "query_id": "Q1",
+        "source": "Crossref",
+        "matched_title": "Copper oxide catalysts for CO2 reduction to ethylene"
+      }
+    },
+    {
+      "ref_id": "R002",
+      "doi": "10.7777/synth.c002",
+      "title": "Tandem catalysis for CO2 electroreduction",
+      "status": "hit",
+      "match_level": "L1_doi",
+      "score": 1.0,
+      "evidence": {
+        "query_id": "Q1",
+        "source": "Crossref",
+        "matched_title": "Tandem catalysis for CO2 electroreduction"
+      }
+    },
+    {
+      "ref_id": "R003",
+      "doi": "10.7777/synth.c003",
+      "title": "Single atom alloys in CO2 conversion",
+      "status": "hit",
+      "match_level": "L1_doi",
+      "score": 1.0,
+      "evidence": {
+        "query_id": "Q3",
+        "source": "Crossref",
+        "matched_title": "Single atom alloys in CO2 conversion"
+      }
+    },
+    {
+      "ref_id": "R004",
+      "doi": "10.7777/synth.c004",
+      "title": "Gas diffusion electrodes for CO2 electrolysis",
+      "status": "hit",
+      "match_level": "L1_doi",
+      "score": 1.0,
+      "evidence": {
+        "query_id": "Q2",
+        "source": "EuropePMC",
+        "matched_title": "Gas diffusion electrodes for CO2 electrolysis"
+      }
+    },
+    {
+      "ref_id": "R005",
+      "doi": "10.7777/synth.c005",
+      "title": "Selectivity trends in CO2 reduction on copper",
+      "status": "hit",
+      "match_level": "L1_doi",
+      "score": 1.0,
+      "evidence": {
+        "query_id": "Q1",
+        "source": "Crossref",
+        "matched_title": "Selectivity trends in CO2 reduction on copper"
+      }
+    },
+    {
+      "ref_id": "R006",
+      "doi": "10.7777/synth.c006",
+      "title": "Operando spectroscopy of CO2 reduction intermediates",
+      "status": "hit",
+      "match_level": "L2_title_year",
+      "score": 1.0,
+      "evidence": {
+        "query_id": "Q2",
+        "source": "EuropePMC",
+        "matched_title": "Operando spectroscopy of CO2 reduction intermediates"
+      }
+    },
+    {
+      "ref_id": "R007",
+      "doi": "10.7777/synth.c007",
+      "title": "Membrane electrode assemblies for CO2 electrolysis",
+      "status": "miss",
+      "match_level": "L2_gray_zone",
+      "score": 0.7143,
+      "evidence": {
+        "query_id": "Q2",
+        "source": "EuropePMC",
+        "matched_title": "Membrane electrode assemblies for CO2 electrolysis cells and stacks"
+      },
+      "conservative_note": "deferred to L3; counted as miss pending adjudication"
+    },
+    {
+      "ref_id": "R008",
+      "doi": "10.7777/synth.c008",
+      "title": "Formate production from CO2 on tin catalysts",
+      "status": "miss",
+      "match_level": "L2_below",
+      "score": 0.1,
+      "evidence": null
+    },
+    {
+      "ref_id": "R009",
+      "doi": "",
+      "title": "Conference abstract without identifier",
+      "status": "miss",
+      "match_level": "L2_below",
+      "score": 0.0,
+      "evidence": null
+    },
+    {
+      "ref_id": "R010",
+      "doi": "10.7777/synth.c009",
+      "title": "Zinc oxide interfaces for CO2 activation",
+      "status": "miss",
+      "match_level": "L2_below",
+      "score": 0.1111,
+      "evidence": null
+    }
+  ],
+  "l3_queue": [
+    {
+      "ref_id": "R007",
+      "best_candidate_title": "Membrane electrode assemblies for CO2 electrolysis cells and stacks",
+      "score": 0.7143,
+      "note": "gray-zone similarity; requires human adjudication"
+    }
+  ]
+}

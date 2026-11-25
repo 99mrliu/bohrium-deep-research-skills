@@ -1,0 +1,32 @@
+{
+  "stop_recommended": true,
+  "fired_rules": [
+    "S1_zero_gain_round"
+  ],
+  "rules": [
+    {
+      "rule": "S1_zero_gain_round",
+      "fired": true,
+      "evidence_rows": [
+        5
+      ],
+      "statement": "latest round 3 produced zero new recovered references"
+    },
+    {
+      "rule": "S2_low_marginal_yield",
+      "fired": false,
+      "evidence_rows": [
+        3,
+        4,
+        5
+      ],
+      "statement": "marginal yield above floor (1.00)"
+    },
+    {
+      "rule": "S3_budget_exhausted",
+      "fired": false,
+      "evidence_rows": [],
+      "statement": "no budget field in case materials; rule not evaluable — declared, not assumed"
+    }
+  ]
+}

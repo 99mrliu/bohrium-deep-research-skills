@@ -1,0 +1,62 @@
+{
+  "executed": false,
+  "new_queries": [
+    {
+      "target_ref": "R005",
+      "cause": "query_term_missing",
+      "new_query": "halide OR electrolytes OR voltage OR cathodes",
+      "new_source": null,
+      "expected_gain": "retrieve record via distinctive title tokens"
+    },
+    {
+      "target_ref": "R005",
+      "cause": "source_not_covered",
+      "new_query": null,
+      "new_source": "source indexing 'J. Synth. Solid State'",
+      "expected_gain": "cover venue not present in searched sources"
+    },
+    {
+      "target_ref": "R006",
+      "cause": "query_term_missing",
+      "new_query": "polymer OR ceramic OR composite OR separators",
+      "new_source": null,
+      "expected_gain": "retrieve record via distinctive title tokens"
+    },
+    {
+      "target_ref": "R006",
+      "cause": "time_window_cutoff",
+      "new_query": "(same terms) AND year:2017",
+      "new_source": null,
+      "expected_gain": "lift window boundary to include record year"
+    },
+    {
+      "target_ref": "R006",
+      "cause": "source_not_covered",
+      "new_query": null,
+      "new_source": "source indexing 'Old Synth. Mater.'",
+      "expected_gain": "cover venue not present in searched sources"
+    },
+    {
+      "target_ref": "R007",
+      "cause": "query_term_missing",
+      "new_query": "preprint OR argyrodite OR moisture OR sensitivity",
+      "new_source": null,
+      "expected_gain": "retrieve record via distinctive title tokens"
+    },
+    {
+      "target_ref": "R007",
+      "cause": "source_not_covered",
+      "new_query": null,
+      "new_source": "source indexing 'SynthRxiv'",
+      "expected_gain": "cover venue not present in searched sources"
+    },
+    {
+      "target_ref": "R007",
+      "cause": "identifier_anomaly",
+      "new_query": "title-fragment manual lookup",
+      "new_source": null,
+      "expected_gain": "repair identifier before machine matching"
+    }
+  ],
+  "note": "queries are diagnosis-driven; execute via the case search interface and rerun this engine with supplemental results to measure omission delta"
+}

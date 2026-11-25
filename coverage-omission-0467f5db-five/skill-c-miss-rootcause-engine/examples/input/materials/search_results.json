@@ -1,0 +1,28 @@
+{
+  "note": "SYNTHETIC search results for the example only",
+  "queries": [
+    {
+      "query_id": "Q1",
+      "query_string": "sulfide solid electrolyte lithium battery",
+      "source": "Crossref",
+      "fields": "title,abstract",
+      "time_window": "2019-2024",
+      "hits": [
+        {"doi": "10.8888/synth.s001", "title": "Sulfide solid electrolytes for all solid state batteries", "year": 2021},
+        {"doi": "10.8888/synth.s003", "title": "Dendrite suppression at lithium metal interfaces", "year": 2020}
+      ]
+    },
+    {
+      "query_id": "Q2",
+      "query_string": "interface stability solid state cell oxide garnet",
+      "source": "EuropePMC",
+      "fields": "title",
+      "time_window": "2019-2024",
+      "hits": [
+        {"doi": "10.8888/synth.s002", "title": "Interface stability in solid state lithium cells", "year": 2022},
+        {"doi": "10.8888/synth.s004", "title": "Oxide electrolyte sintering and densification", "year": 2021},
+        {"doi": "10.8888/synth.s007", "title": "Grain boundary resistance in garnet electrolytes", "year": 2021}
+      ]
+    }
+  ]
+}

@@ -1,0 +1,66 @@
+{
+  "executed": false,
+  "note": "supplementary search suggestions generated from miss attribution; execution requires the case's own search interface. If the case provides supplemental query results, rerun this pipeline with them included.",
+  "suggestions": [
+    {
+      "target_ref": "R008",
+      "action": "new_source",
+      "query": "",
+      "rationale": "record venue 'J. Synth. Mater.'; searched sources: Crossref,EuropePMC"
+    },
+    {
+      "target_ref": "R008",
+      "action": "new_query",
+      "query": "migration OR hysteresis",
+      "rationale": "add missing distinctive title tokens"
+    },
+    {
+      "target_ref": "R009",
+      "action": "extend_window",
+      "query": "",
+      "rationale": "record year 2015 outside declared window 2019-2024"
+    },
+    {
+      "target_ref": "R009",
+      "action": "new_source",
+      "query": "",
+      "rationale": "record venue 'Thin Synth. Films'; searched sources: Crossref,EuropePMC"
+    },
+    {
+      "target_ref": "R009",
+      "action": "new_query",
+      "query": "moisture OR ingress",
+      "rationale": "add missing distinctive title tokens"
+    },
+    {
+      "target_ref": "R010",
+      "action": "new_source",
+      "query": "",
+      "rationale": "record venue 'J. Obscure Mater.'; searched sources: Crossref,EuropePMC"
+    },
+    {
+      "target_ref": "R010",
+      "action": "new_query",
+      "query": "boundary OR chemistry OR halide",
+      "rationale": "add missing distinctive title tokens"
+    },
+    {
+      "target_ref": "R011",
+      "action": "new_source",
+      "query": "",
+      "rationale": "record venue 'Unknown Venue'; searched sources: Crossref,EuropePMC"
+    },
+    {
+      "target_ref": "R011",
+      "action": "new_query",
+      "query": "bibliographic OR without OR identifier",
+      "rationale": "add missing distinctive title tokens"
+    },
+    {
+      "target_ref": "R011",
+      "action": "manual_identifier_repair",
+      "query": "",
+      "rationale": "record lacks resolvable identifier in reference material"
+    }
+  ]
+}

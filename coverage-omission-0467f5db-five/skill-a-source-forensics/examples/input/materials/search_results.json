@@ -1,0 +1,38 @@
+{
+  "note": "SYNTHETIC search results for the example only",
+  "queries": [
+    {
+      "query_id": "Q1",
+      "query_string": "perovskite stability humid heat",
+      "source": "Crossref",
+      "fields": "title,abstract",
+      "time_window": "2019-2024",
+      "hits": [
+        {"doi": "10.5555/synth.0001", "title": "Perovskite stability under humid heat cycling", "year": 2021},
+        {"doi": "10.5555/synth.0002", "title": "Defect passivation in halide perovskite films", "year": 2020}
+      ]
+    },
+    {
+      "query_id": "Q2",
+      "query_string": "perovskite encapsulation lifetime module",
+      "source": "EuropePMC",
+      "fields": "title,abstract",
+      "time_window": "2019-2024",
+      "hits": [
+        {"doi": "10.5555/synth.0004", "title": "Encapsulation strategies for moisture barriers", "year": 2022},
+        {"doi": "10.5555/synth.0005", "title": "Operational lifetime of perovskite modules", "year": 2023}
+      ]
+    },
+    {
+      "query_id": "Q3",
+      "query_string": "perovskite ageing interface durability",
+      "source": "Crossref",
+      "fields": "title",
+      "time_window": "2019-2024",
+      "hits": [
+        {"doi": "10.5555/synth.0006", "title": "Accelerated ageing protocols for solar films", "year": 2021},
+        {"title": "Interfacial engineering for durable devices", "year": 2022}
+      ]
+    }
+  ]
+}

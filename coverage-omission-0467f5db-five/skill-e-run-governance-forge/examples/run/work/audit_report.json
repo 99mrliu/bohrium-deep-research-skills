@@ -1,0 +1,26 @@
+{
+  "method": "deterministic stride sample (every 3th record) re-adjudicated by an independent containment-based matcher",
+  "sampled": 3,
+  "agreement": 1.0,
+  "rows": [
+    {
+      "ref_id": "R001",
+      "primary": "hit",
+      "audit": "hit",
+      "agree": true
+    },
+    {
+      "ref_id": "R004",
+      "primary": "hit",
+      "audit": "hit",
+      "agree": true
+    },
+    {
+      "ref_id": "R007",
+      "primary": "miss",
+      "audit": "miss",
+      "agree": true
+    }
+  ],
+  "discrepancies": []
+}

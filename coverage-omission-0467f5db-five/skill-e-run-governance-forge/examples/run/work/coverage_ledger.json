@@ -1,0 +1,57 @@
+{
+  "denominator": 7,
+  "hit": 5,
+  "miss": 2,
+  "coverage_ratio": 0.7143,
+  "per_record": [
+    {
+      "ref_id": "R001",
+      "doi": "10.6666/synth.e001",
+      "title": "Graph neural networks for retrosynthesis prediction",
+      "status": "hit",
+      "match_level": "L1"
+    },
+    {
+      "ref_id": "R002",
+      "doi": "10.6666/synth.e002",
+      "title": "Transformer models for reaction outcome prediction",
+      "status": "hit",
+      "match_level": "L1"
+    },
+    {
+      "ref_id": "R003",
+      "doi": "10.6666/synth.e003",
+      "title": "Molecular fingerprints revisited for similarity search",
+      "status": "miss",
+      "match_level": null
+    },
+    {
+      "ref_id": "R004",
+      "doi": "10.6666/synth.e004",
+      "title": "Self-supervised learning on molecular graphs",
+      "status": "hit",
+      "match_level": "L1"
+    },
+    {
+      "ref_id": "R005",
+      "doi": "10.6666/synth.e005",
+      "title": "Benchmarking docking scores on fragment libraries",
+      "status": "hit",
+      "match_level": "L1"
+    },
+    {
+      "ref_id": "R006",
+      "doi": "10.6666/synth.e006",
+      "title": "Active learning for virtual screening campaigns",
+      "status": "hit",
+      "match_level": "L1"
+    },
+    {
+      "ref_id": "R007",
+      "doi": "10.6666/synth.e007",
+      "title": "Uncertainty estimation in property prediction",
+      "status": "miss",
+      "match_level": null
+    }
+  ]
+}

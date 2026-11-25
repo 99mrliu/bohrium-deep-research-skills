@@ -1,0 +1,278 @@
+{
+  "case_id": "synthetic-demo-rootcause-001",
+  "status": "complete",
+  "sources": [
+    {
+      "path": "examples/input/materials/crossref_ssb.jsonl"
+    },
+    {
+      "path": "examples/input/materials/reference_list.csv"
+    },
+    {
+      "path": "examples/input/materials/search_results.json"
+    },
+    {
+      "path": "examples/input/materials/supplement_round.json"
+    }
+  ],
+  "uncertainty": [],
+  "change_log": [],
+  "skill": "miss-rootcause-engine",
+  "skill_version": "1.0.0",
+  "coverage": {
+    "denominator": 8,
+    "hit": 5,
+    "miss": 3,
+    "coverage_ratio": 0.625
+  },
+  "miss_diagnosis": [
+    {
+      "ref_id": "R005",
+      "title": "Halide electrolytes with high voltage cathodes",
+      "findings": [
+        {
+          "category": "query_term_missing",
+          "probe": "P1_vocabulary",
+          "evidence": [
+            {
+              "claim": "distinctive token 'halide' absent from all query strings",
+              "corpus_occurrence": {
+                "file": "examples/input/materials/crossref_ssb.jsonl",
+                "locator": "line 2",
+                "excerpt": "{\"status\": \"ok\", \"message\": {\"DOI\": \"10.8888/synth.s005\", \"title\": [\"Halide electrolytes with high voltage cathodes\"], \"container-title\": [\"J. Synth. Solid State\"], \"issued\": {\"date-parts\": [[2022]]},"
+              }
+            },
+            {
+              "claim": "distinctive token 'electrolytes' absent from all query strings",
+              "corpus_occurrence": {
+                "file": "examples/input/materials/crossref_ssb.jsonl",
+                "locator": "line 1",
+                "excerpt": "{\"status\": \"ok\", \"message\": {\"DOI\": \"10.8888/synth.s001\", \"title\": [\"Sulfide solid electrolytes for all solid state batteries\"], \"container-title\": [\"J. Synth. Solid State\"], \"issued\": {\"date-parts\": "
+              }
+            },
+            {
+              "claim": "distinctive token 'voltage' absent from all query strings",
+              "corpus_occurrence": {
+                "file": "examples/input/materials/crossref_ssb.jsonl",
+                "locator": "line 2",
+                "excerpt": "{\"status\": \"ok\", \"message\": {\"DOI\": \"10.8888/synth.s005\", \"title\": [\"Halide electrolytes with high voltage cathodes\"], \"container-title\": [\"J. Synth. Solid State\"], \"issued\": {\"date-parts\": [[2022]]},"
+              }
+            }
+          ]
+        },
+        {
+          "category": "source_not_covered",
+          "probe": "P4_source",
+          "evidence": [
+            {
+              "claim": "venue 'J. Synth. Solid State' not observed in searched-source material; searched sources: Crossref, EuropePMC",
+              "venue_occurrence": {
+                "file": "examples/input/materials/crossref_ssb.jsonl",
+                "locator": "line 1",
+                "excerpt": "{\"status\": \"ok\", \"message\": {\"DOI\": \"10.8888/synth.s001\", \"title\": [\"Sulfide solid electrolytes for all solid state batteries\"], \"container-title\": [\"J. Synth. Solid State\"], \"issued\": {\"date-parts\": "
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "ref_id": "R006",
+      "title": "Polymer ceramic composite separators",
+      "findings": [
+        {
+          "category": "query_term_missing",
+          "probe": "P1_vocabulary",
+          "evidence": [
+            {
+              "claim": "distinctive token 'polymer' absent from all query strings",
+              "corpus_occurrence": {
+                "file": "examples/input/materials/crossref_ssb.jsonl",
+                "locator": "line 3",
+                "excerpt": "{\"status\": \"ok\", \"message\": {\"DOI\": \"10.8888/synth.s006\", \"title\": [\"Polymer ceramic composite separators\"], \"container-title\": [\"Old Synth. Mater.\"], \"issued\": {\"date-parts\": [[2017]]}, \"abstract\": \""
+              }
+            },
+            {
+              "claim": "distinctive token 'ceramic' absent from all query strings",
+              "corpus_occurrence": {
+                "file": "examples/input/materials/crossref_ssb.jsonl",
+                "locator": "line 3",
+                "excerpt": "{\"status\": \"ok\", \"message\": {\"DOI\": \"10.8888/synth.s006\", \"title\": [\"Polymer ceramic composite separators\"], \"container-title\": [\"Old Synth. Mater.\"], \"issued\": {\"date-parts\": [[2017]]}, \"abstract\": \""
+              }
+            },
+            {
+              "claim": "distinctive token 'composite' absent from all query strings",
+              "corpus_occurrence": {
+                "file": "examples/input/materials/crossref_ssb.jsonl",
+                "locator": "line 3",
+                "excerpt": "{\"status\": \"ok\", \"message\": {\"DOI\": \"10.8888/synth.s006\", \"title\": [\"Polymer ceramic composite separators\"], \"container-title\": [\"Old Synth. Mater.\"], \"issued\": {\"date-parts\": [[2017]]}, \"abstract\": \""
+              }
+            }
+          ]
+        },
+        {
+          "category": "time_window_cutoff",
+          "probe": "P3_time_window",
+          "evidence": [
+            {
+              "claim": "record year 2017 outside window [2019,2024] of query Q1",
+              "query_ref": {
+                "file": "examples/input/materials/search_results.json",
+                "locator": "query_id:Q1",
+                "excerpt": "sulfide solid electrolyte lithium battery"
+              }
+            }
+          ]
+        },
+        {
+          "category": "source_not_covered",
+          "probe": "P4_source",
+          "evidence": [
+            {
+              "claim": "venue 'Old Synth. Mater.' not observed in searched-source material; searched sources: Crossref, EuropePMC",
+              "venue_occurrence": {
+                "file": "examples/input/materials/crossref_ssb.jsonl",
+                "locator": "line 3",
+                "excerpt": "{\"status\": \"ok\", \"message\": {\"DOI\": \"10.8888/synth.s006\", \"title\": [\"Polymer ceramic composite separators\"], \"container-title\": [\"Old Synth. Mater.\"], \"issued\": {\"date-parts\": [[2017]]}, \"abstract\": \""
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "ref_id": "R007",
+      "title": "Preprint note on argyrodite moisture sensitivity",
+      "findings": [
+        {
+          "category": "query_term_missing",
+          "probe": "P1_vocabulary",
+          "evidence": [
+            {
+              "claim": "distinctive token 'preprint' absent from all query strings",
+              "corpus_occurrence": {
+                "file": "examples/input/materials/reference_list.csv",
+                "locator": "line 8",
+                "excerpt": ",Preprint note on argyrodite moisture sensitivity,2023,SynthRxiv"
+              }
+            },
+            {
+              "claim": "distinctive token 'argyrodite' absent from all query strings",
+              "corpus_occurrence": {
+                "file": "examples/input/materials/reference_list.csv",
+                "locator": "line 8",
+                "excerpt": ",Preprint note on argyrodite moisture sensitivity,2023,SynthRxiv"
+              }
+            },
+            {
+              "claim": "distinctive token 'moisture' absent from all query strings",
+              "corpus_occurrence": {
+                "file": "examples/input/materials/reference_list.csv",
+                "locator": "line 8",
+                "excerpt": ",Preprint note on argyrodite moisture sensitivity,2023,SynthRxiv"
+              }
+            }
+          ]
+        },
+        {
+          "category": "source_not_covered",
+          "probe": "P4_source",
+          "evidence": [
+            {
+              "claim": "venue 'SynthRxiv' not observed in searched-source material; searched sources: Crossref, EuropePMC",
+              "venue_occurrence": {
+                "file": "examples/input/materials/reference_list.csv",
+                "locator": "line 8",
+                "excerpt": ",Preprint note on argyrodite moisture sensitivity,2023,SynthRxiv"
+              }
+            }
+          ]
+        },
+        {
+          "category": "identifier_missing",
+          "probe": "P5_identifier",
+          "evidence": [
+            {
+              "claim": "reference record carries neither DOI nor PMID; cannot be resolved or matched by identifier"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "supplement_queries": {
+    "executed": false,
+    "new_queries": [
+      {
+        "target_ref": "R005",
+        "cause": "query_term_missing",
+        "new_query": "halide OR electrolytes OR voltage OR cathodes",
+        "new_source": null,
+        "expected_gain": "retrieve record via distinctive title tokens"
+      },
+      {
+        "target_ref": "R005",
+        "cause": "source_not_covered",
+        "new_query": null,
+        "new_source": "source indexing 'J. Synth. Solid State'",
+        "expected_gain": "cover venue not present in searched sources"
+      },
+      {
+        "target_ref": "R006",
+        "cause": "query_term_missing",
+        "new_query": "polymer OR ceramic OR composite OR separators",
+        "new_source": null,
+        "expected_gain": "retrieve record via distinctive title tokens"
+      },
+      {
+        "target_ref": "R006",
+        "cause": "time_window_cutoff",
+        "new_query": "(same terms) AND year:2017",
+        "new_source": null,
+        "expected_gain": "lift window boundary to include record year"
+      },
+      {
+        "target_ref": "R006",
+        "cause": "source_not_covered",
+        "new_query": null,
+        "new_source": "source indexing 'Old Synth. Mater.'",
+        "expected_gain": "cover venue not present in searched sources"
+      },
+      {
+        "target_ref": "R007",
+        "cause": "query_term_missing",
+        "new_query": "preprint OR argyrodite OR moisture OR sensitivity",
+        "new_source": null,
+        "expected_gain": "retrieve record via distinctive title tokens"
+      },
+      {
+        "target_ref": "R007",
+        "cause": "source_not_covered",
+        "new_query": null,
+        "new_source": "source indexing 'SynthRxiv'",
+        "expected_gain": "cover venue not present in searched sources"
+      },
+      {
+        "target_ref": "R007",
+        "cause": "identifier_anomaly",
+        "new_query": "title-fragment manual lookup",
+        "new_source": null,
+        "expected_gain": "repair identifier before machine matching"
+      }
+    ],
+    "note": "queries are diagnosis-driven; execute via the case search interface and rerun this engine with supplemental results to measure omission delta"
+  },
+  "omission_delta": {
+    "measured": true,
+    "supplement_file": "examples/input/materials/supplement_round.json",
+    "miss_before": 3,
+    "recovered": 2,
+    "miss_after": 1,
+    "recovered_refs": [
+      "R005",
+      "R006"
+    ],
+    "residual_explanation": "residual misses retain their diagnosis above"
+  },
+  "coverage_report": "examples/run/output/coverage_report.md"
+}

@@ -1,0 +1,32 @@
+{
+  "skill": "run-governance-forge",
+  "skill_version": "1.0.0",
+  "generated_at": "2026-11-25T09:04:17Z",
+  "case_id": "synthetic-demo-governance-001",
+  "script_sha256": "e38f5ed9a4f1ca9691e3e4fc84bf49d21cc5ed76e1ef100868c1d96efee80c9f",
+  "inputs": [
+    {
+      "path": "examples/input/case.json",
+      "sha256": "cdc640d75f218b27b06148c9961b81f4084b9163739914c4152aa1b12614654d"
+    },
+    {
+      "path": "examples/input/task.md",
+      "sha256": "7a803288f7f78e29eda264d2b5c324788bd1b9e8d93c6449f94686b1f78f5770"
+    },
+    {
+      "path": "examples/input/materials/reference_list.csv",
+      "sha256": "c47a3a0f83e866233f0604b499d98942347340553842925a479e9df09eec257f"
+    },
+    {
+      "path": "examples/input/materials/search_results.json",
+      "sha256": "48eeb5eddb7680fa2600e8aebb601cfb9d8d3fbcdb9c55e97fc56e765e8218f0"
+    }
+  ],
+  "stage_hashes": {
+    "coverage_ledger": "1e4ebef93cd251f66333eab9ac2d2dfbe71f4f09324d2a8eae04b8ff23d32e49",
+    "audit_report": "1d9b2bccc04976b44dc56f9bb9ae4e7d64a508b81869e75b2c6fe021d469a695",
+    "binding_map": "75da4ee063e4fbb917e96d9ef96ac24e7acfc15d546b21315a19510a41c30dfe",
+    "report_md": "89236245083164c4de798a53fd9c7bf7645171690ea8b70cc607dc31a9147a12"
+  },
+  "determinism_note": "hashes computed on canonical JSON with timestamps stripped; --replay recomputes and compares"
+}

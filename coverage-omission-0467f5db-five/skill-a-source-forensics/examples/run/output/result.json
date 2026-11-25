@@ -1,0 +1,347 @@
+{
+  "case_id": "synthetic-demo-forensics-001",
+  "status": "complete",
+  "sources": [
+    {
+      "path": "examples/input/materials/crossref_responses.jsonl",
+      "sha256": "0b20e62a51aa594690c16eaf588f79adf2d55842ffd2def99ce50b8b2656ca43"
+    },
+    {
+      "path": "examples/input/materials/review_bibliography.csv",
+      "sha256": "281a95b229a687908a2b2036b881c468c8aceb91414e1f7b12b32cabc14f3637"
+    },
+    {
+      "path": "examples/input/materials/search_results.json",
+      "sha256": "1678e2f7073e64e2ba46418c35f80aebff48c5b9427147925bf906ba238e603d"
+    }
+  ],
+  "uncertainty": [],
+  "change_log": [
+    {
+      "ts": "2026-11-25T08:49:14Z",
+      "event": "dedup_merge",
+      "merged": "examples/input/materials/review_bibliography.csv:row13",
+      "kept": "R001",
+      "reason": "identifier or high title similarity"
+    }
+  ],
+  "skill": "source-forensics-denominator",
+  "skill_version": "1.0.0",
+  "reference_set": {
+    "refset_version": "v1.0.0",
+    "frozen_at": "2026-11-25T08:49:14Z",
+    "records": [
+      {
+        "ref_id": "R001",
+        "doi": "10.5555/synth.0001",
+        "pmid": null,
+        "title": "Perovskite stability under humid heat cycling",
+        "year": 2021,
+        "container": "J. Synth. Mater.",
+        "authors": "Zhang; Li",
+        "origin": "examples/input/materials/review_bibliography.csv:row2",
+        "inclusion_reason": "listed in organizer-provided material (examples/input/materials/review_bibliography.csv:row2)",
+        "verification_status": "verified_local",
+        "verification_source": "examples/input/materials/crossref_responses.jsonl",
+        "usable": true,
+        "disposition": "include"
+      },
+      {
+        "ref_id": "R002",
+        "doi": "10.5555/synth.0002",
+        "pmid": null,
+        "title": "Defect passivation in halide perovskite films",
+        "year": 2020,
+        "container": "J. Synth. Mater.",
+        "authors": "Wang; Chen",
+        "origin": "examples/input/materials/review_bibliography.csv:row3",
+        "inclusion_reason": "listed in organizer-provided material (examples/input/materials/review_bibliography.csv:row3)",
+        "verification_status": "verified_local",
+        "verification_source": "examples/input/materials/crossref_responses.jsonl",
+        "usable": true,
+        "disposition": "include"
+      },
+      {
+        "ref_id": "R003",
+        "doi": "10.5555/synth.0003",
+        "pmid": null,
+        "title": "Fake breakthrough in perovskite lasing",
+        "year": 2019,
+        "container": "Nano Synth. Lett.",
+        "authors": "Hu; Liu",
+        "origin": "examples/input/materials/review_bibliography.csv:row4",
+        "inclusion_reason": "listed in organizer-provided material (examples/input/materials/review_bibliography.csv:row4)",
+        "verification_status": "verified_local",
+        "verification_source": "examples/input/materials/crossref_responses.jsonl",
+        "usable": false,
+        "disposition": "exclude_retracted"
+      },
+      {
+        "ref_id": "R004",
+        "doi": "10.5555/synth.0004",
+        "pmid": null,
+        "title": "Encapsulation strategies for moisture barriers",
+        "year": 2022,
+        "container": "Synth. Energy J.",
+        "authors": "Kumar; Zhou",
+        "origin": "examples/input/materials/review_bibliography.csv:row5",
+        "inclusion_reason": "listed in organizer-provided material (examples/input/materials/review_bibliography.csv:row5)",
+        "verification_status": "verified_local",
+        "verification_source": "examples/input/materials/crossref_responses.jsonl",
+        "usable": true,
+        "disposition": "include"
+      },
+      {
+        "ref_id": "R005",
+        "doi": "10.5555/synth.0005",
+        "pmid": null,
+        "title": "Operational lifetime of perovskite modules",
+        "year": 2023,
+        "container": "Synth. Energy J.",
+        "authors": "Garcia; Wu",
+        "origin": "examples/input/materials/review_bibliography.csv:row6",
+        "inclusion_reason": "listed in organizer-provided material (examples/input/materials/review_bibliography.csv:row6)",
+        "verification_status": "verified_local",
+        "verification_source": "examples/input/materials/crossref_responses.jsonl",
+        "usable": true,
+        "disposition": "include"
+      },
+      {
+        "ref_id": "R006",
+        "doi": "10.5555/synth.0006",
+        "pmid": null,
+        "title": "Accelerated ageing protocols for solar films",
+        "year": 2021,
+        "container": "Reliab. Synth.",
+        "authors": "Brown; Tang",
+        "origin": "examples/input/materials/review_bibliography.csv:row7",
+        "inclusion_reason": "listed in organizer-provided material (examples/input/materials/review_bibliography.csv:row7)",
+        "verification_status": "verified_local",
+        "verification_source": "examples/input/materials/crossref_responses.jsonl",
+        "usable": true,
+        "disposition": "include"
+      },
+      {
+        "ref_id": "R007",
+        "doi": "10.5555/synth.0007",
+        "pmid": null,
+        "title": "Interfacial engineering for durable devices",
+        "year": 2022,
+        "container": "Adv. Synth. Interfaces",
+        "authors": "Muller; Zhao",
+        "origin": "examples/input/materials/review_bibliography.csv:row8",
+        "inclusion_reason": "listed in organizer-provided material (examples/input/materials/review_bibliography.csv:row8)",
+        "verification_status": "verified_local",
+        "verification_source": "examples/input/materials/crossref_responses.jsonl",
+        "usable": true,
+        "disposition": "include"
+      },
+      {
+        "ref_id": "R008",
+        "doi": "10.5555/synth.0008",
+        "pmid": null,
+        "title": "Ion migration hysteresis under damp heat",
+        "year": 2020,
+        "container": "J. Synth. Mater.",
+        "authors": "Ito; Smith",
+        "origin": "examples/input/materials/review_bibliography.csv:row9",
+        "inclusion_reason": "listed in organizer-provided material (examples/input/materials/review_bibliography.csv:row9)",
+        "verification_status": "verified_local",
+        "verification_source": "examples/input/materials/crossref_responses.jsonl",
+        "usable": true,
+        "disposition": "include"
+      },
+      {
+        "ref_id": "R009",
+        "doi": "10.5555/synth.0009",
+        "pmid": null,
+        "title": "Early study of moisture ingress in films",
+        "year": 2015,
+        "container": "Thin Synth. Films",
+        "authors": "Sato; Lee",
+        "origin": "examples/input/materials/review_bibliography.csv:row10",
+        "inclusion_reason": "listed in organizer-provided material (examples/input/materials/review_bibliography.csv:row10)",
+        "verification_status": "verified_local",
+        "verification_source": "examples/input/materials/crossref_responses.jsonl",
+        "usable": true,
+        "disposition": "include"
+      },
+      {
+        "ref_id": "R010",
+        "doi": "10.5555/synth.0010",
+        "pmid": null,
+        "title": "Grain boundary chemistry of halide films",
+        "year": 2021,
+        "container": "J. Obscure Mater.",
+        "authors": "Novak; Petrov",
+        "origin": "examples/input/materials/review_bibliography.csv:row11",
+        "inclusion_reason": "listed in organizer-provided material (examples/input/materials/review_bibliography.csv:row11)",
+        "verification_status": "verified_local",
+        "verification_source": "examples/input/materials/crossref_responses.jsonl",
+        "usable": false,
+        "disposition": "identifier_conflict",
+        "conflict_detail": "identifier resolves to different title in examples/input/materials/crossref_responses.jsonl: Unrelated catalogue record about polymer rheology"
+      },
+      {
+        "ref_id": "R011",
+        "doi": null,
+        "pmid": null,
+        "title": "Bibliographic entry without any identifier",
+        "year": 2020,
+        "container": "Unknown Venue",
+        "authors": "Anon",
+        "origin": "examples/input/materials/review_bibliography.csv:row12",
+        "inclusion_reason": "listed in organizer-provided material (examples/input/materials/review_bibliography.csv:row12)",
+        "verification_status": "unverified_no_local_response",
+        "verification_source": null,
+        "usable": true,
+        "disposition": "flag_keep_unverified"
+      }
+    ],
+    "content_sha256": "7a298535a453abf79290f4152137e946b58b419db0e1485c114792aed6da8d34"
+  },
+  "coverage": {
+    "denominator": 10,
+    "hit": 6,
+    "miss": 4,
+    "coverage_ratio": 0.6,
+    "denominator_source": "frozen reference_set.json v1.0.0 (sha256:7a298535a453)"
+  },
+  "miss_list": [
+    {
+      "ref_id": "R008",
+      "doi": "10.5555/synth.0008",
+      "title": "Ion migration hysteresis under damp heat",
+      "causes": [
+        {
+          "category": "source_not_covered_check",
+          "evidence": "record venue 'J. Synth. Mater.'; searched sources: Crossref,EuropePMC"
+        },
+        {
+          "category": "query_term_missing",
+          "evidence": "distinctive title tokens absent from all queries: migration, hysteresis"
+        }
+      ]
+    },
+    {
+      "ref_id": "R009",
+      "doi": "10.5555/synth.0009",
+      "title": "Early study of moisture ingress in films",
+      "causes": [
+        {
+          "category": "time_window_cutoff",
+          "evidence": "record year 2015 outside declared window 2019-2024"
+        },
+        {
+          "category": "source_not_covered_check",
+          "evidence": "record venue 'Thin Synth. Films'; searched sources: Crossref,EuropePMC"
+        },
+        {
+          "category": "query_term_missing",
+          "evidence": "distinctive title tokens absent from all queries: moisture, ingress"
+        }
+      ]
+    },
+    {
+      "ref_id": "R010",
+      "doi": "10.5555/synth.0010",
+      "title": "Grain boundary chemistry of halide films",
+      "causes": [
+        {
+          "category": "source_not_covered_check",
+          "evidence": "record venue 'J. Obscure Mater.'; searched sources: Crossref,EuropePMC"
+        },
+        {
+          "category": "query_term_missing",
+          "evidence": "distinctive title tokens absent from all queries: boundary, chemistry, halide"
+        }
+      ]
+    },
+    {
+      "ref_id": "R011",
+      "doi": null,
+      "title": "Bibliographic entry without any identifier",
+      "causes": [
+        {
+          "category": "source_not_covered_check",
+          "evidence": "record venue 'Unknown Venue'; searched sources: Crossref,EuropePMC"
+        },
+        {
+          "category": "query_term_missing",
+          "evidence": "distinctive title tokens absent from all queries: bibliographic, without, identifier"
+        },
+        {
+          "category": "identifier_anomaly",
+          "evidence": "record lacks resolvable identifier in reference material"
+        }
+      ]
+    }
+  ],
+  "supplement_log": {
+    "executed": false,
+    "note": "supplementary search suggestions generated from miss attribution; execution requires the case's own search interface. If the case provides supplemental query results, rerun this pipeline with them included.",
+    "suggestions": [
+      {
+        "target_ref": "R008",
+        "action": "new_source",
+        "query": "",
+        "rationale": "record venue 'J. Synth. Mater.'; searched sources: Crossref,EuropePMC"
+      },
+      {
+        "target_ref": "R008",
+        "action": "new_query",
+        "query": "migration OR hysteresis",
+        "rationale": "add missing distinctive title tokens"
+      },
+      {
+        "target_ref": "R009",
+        "action": "extend_window",
+        "query": "",
+        "rationale": "record year 2015 outside declared window 2019-2024"
+      },
+      {
+        "target_ref": "R009",
+        "action": "new_source",
+        "query": "",
+        "rationale": "record venue 'Thin Synth. Films'; searched sources: Crossref,EuropePMC"
+      },
+      {
+        "target_ref": "R009",
+        "action": "new_query",
+        "query": "moisture OR ingress",
+        "rationale": "add missing distinctive title tokens"
+      },
+      {
+        "target_ref": "R010",
+        "action": "new_source",
+        "query": "",
+        "rationale": "record venue 'J. Obscure Mater.'; searched sources: Crossref,EuropePMC"
+      },
+      {
+        "target_ref": "R010",
+        "action": "new_query",
+        "query": "boundary OR chemistry OR halide",
+        "rationale": "add missing distinctive title tokens"
+      },
+      {
+        "target_ref": "R011",
+        "action": "new_source",
+        "query": "",
+        "rationale": "record venue 'Unknown Venue'; searched sources: Crossref,EuropePMC"
+      },
+      {
+        "target_ref": "R011",
+        "action": "new_query",
+        "query": "bibliographic OR without OR identifier",
+        "rationale": "add missing distinctive title tokens"
+      },
+      {
+        "target_ref": "R011",
+        "action": "manual_identifier_repair",
+        "query": "",
+        "rationale": "record lacks resolvable identifier in reference material"
+      }
+    ]
+  },
+  "coverage_report": "examples/run/output/coverage_report.md"
+}

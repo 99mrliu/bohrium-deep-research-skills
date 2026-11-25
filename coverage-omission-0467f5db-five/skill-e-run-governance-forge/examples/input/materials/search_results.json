@@ -1,0 +1,24 @@
+{
+  "note": "SYNTHETIC search results for the example only",
+  "queries": [
+    {
+      "query_id": "Q1",
+      "query_string": "graph neural network retrosynthesis reaction prediction",
+      "source": "Crossref", "fields": "title,abstract", "time_window": "2019-2024",
+      "hits": [
+        {"doi": "10.6666/synth.e001", "title": "Graph neural networks for retrosynthesis prediction", "year": 2021},
+        {"doi": "10.6666/synth.e002", "title": "Transformer models for reaction outcome prediction", "year": 2022},
+        {"doi": "10.6666/synth.e004", "title": "Self-supervised learning on molecular graphs", "year": 2023}
+      ]
+    },
+    {
+      "query_id": "Q2",
+      "query_string": "virtual screening docking active learning",
+      "source": "EuropePMC", "fields": "title", "time_window": "2019-2024",
+      "hits": [
+        {"doi": "10.6666/synth.e005", "title": "Benchmarking docking scores on fragment libraries", "year": 2021},
+        {"doi": "10.6666/synth.e006", "title": "Active learning for virtual screening campaigns", "year": 2022}
+      ]
+    }
+  ]
+}

@@ -1,0 +1,51 @@
+{
+  "note": "SYNTHETIC search results for the example only; rounds 2 and 3 are supplemental",
+  "queries": [
+    {
+      "query_id": "Q1", "round": 1,
+      "query_string": "CRISPR off-target GUIDE-seq CIRCLE-seq",
+      "source": "Crossref", "fields": "title,abstract", "time_window": "2019-2024",
+      "hits": [
+        {"doi": "10.9999/synth.d001", "title": "CRISPR off-target detection by GUIDE-seq", "year": 2021},
+        {"doi": "10.9999/synth.d002", "title": "CIRCLE-seq for genome-wide off-target mapping", "year": 2020}
+      ]
+    },
+    {
+      "query_id": "Q2", "round": 1,
+      "query_string": "off-target analysis machine learning guide RNA",
+      "source": "EuropePMC", "fields": "title,abstract", "time_window": "2019-2024",
+      "hits": [
+        {"doi": "10.9999/synth.d003", "title": "DISCOVER-seq in vivo off-target analysis", "year": 2021},
+        {"doi": "10.9999/synth.d004", "title": "Machine learning prediction of CRISPR off-targets", "year": 2022},
+        {"doi": "10.9999/synth.d001", "title": "CRISPR off-target detection by GUIDE-seq", "year": 2021}
+      ]
+    },
+    {
+      "query_id": "Q3", "round": 2,
+      "query_string": "CHANGE-seq prime editing off-target",
+      "source": "Crossref", "fields": "title,abstract", "time_window": "2019-2024",
+      "hits": [
+        {"doi": "10.9999/synth.d005", "title": "CHANGE-seq for therapeutic guide evaluation", "year": 2022},
+        {"doi": "10.9999/synth.d008", "title": "Prime editing off-target characterization", "year": 2023}
+      ]
+    },
+    {
+      "query_id": "Q4", "round": 2,
+      "query_string": "SITE-seq biochemical profiling off-target",
+      "source": "EuropePMC", "fields": "title", "time_window": "2019-2024",
+      "hits": [
+        {"doi": "10.9999/synth.d006", "title": "SITE-seq biochemical off-target profiling", "year": 2021},
+        {"doi": "10.9999/synth.d008", "title": "Prime editing off-target characterization", "year": 2023}
+      ]
+    },
+    {
+      "query_id": "Q5", "round": 3,
+      "query_string": "CRISPR genome-wide off-target detection methods",
+      "source": "Crossref", "fields": "title,abstract", "time_window": "2019-2024",
+      "hits": [
+        {"doi": "10.9999/synth.d001", "title": "CRISPR off-target detection by GUIDE-seq", "year": 2021},
+        {"doi": "10.9999/synth.d002", "title": "CIRCLE-seq for genome-wide off-target mapping", "year": 2020}
+      ]
+    }
+  ]
+}

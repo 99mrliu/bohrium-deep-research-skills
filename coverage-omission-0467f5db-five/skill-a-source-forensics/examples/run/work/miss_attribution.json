@@ -1,0 +1,70 @@
+[
+  {
+    "ref_id": "R008",
+    "doi": "10.5555/synth.0008",
+    "title": "Ion migration hysteresis under damp heat",
+    "causes": [
+      {
+        "category": "source_not_covered_check",
+        "evidence": "record venue 'J. Synth. Mater.'; searched sources: Crossref,EuropePMC"
+      },
+      {
+        "category": "query_term_missing",
+        "evidence": "distinctive title tokens absent from all queries: migration, hysteresis"
+      }
+    ]
+  },
+  {
+    "ref_id": "R009",
+    "doi": "10.5555/synth.0009",
+    "title": "Early study of moisture ingress in films",
+    "causes": [
+      {
+        "category": "time_window_cutoff",
+        "evidence": "record year 2015 outside declared window 2019-2024"
+      },
+      {
+        "category": "source_not_covered_check",
+        "evidence": "record venue 'Thin Synth. Films'; searched sources: Crossref,EuropePMC"
+      },
+      {
+        "category": "query_term_missing",
+        "evidence": "distinctive title tokens absent from all queries: moisture, ingress"
+      }
+    ]
+  },
+  {
+    "ref_id": "R010",
+    "doi": "10.5555/synth.0010",
+    "title": "Grain boundary chemistry of halide films",
+    "causes": [
+      {
+        "category": "source_not_covered_check",
+        "evidence": "record venue 'J. Obscure Mater.'; searched sources: Crossref,EuropePMC"
+      },
+      {
+        "category": "query_term_missing",
+        "evidence": "distinctive title tokens absent from all queries: boundary, chemistry, halide"
+      }
+    ]
+  },
+  {
+    "ref_id": "R011",
+    "doi": null,
+    "title": "Bibliographic entry without any identifier",
+    "causes": [
+      {
+        "category": "source_not_covered_check",
+        "evidence": "record venue 'Unknown Venue'; searched sources: Crossref,EuropePMC"
+      },
+      {
+        "category": "query_term_missing",
+        "evidence": "distinctive title tokens absent from all queries: bibliographic, without, identifier"
+      },
+      {
+        "category": "identifier_anomaly",
+        "evidence": "record lacks resolvable identifier in reference material"
+      }
+    ]
+  }
+]

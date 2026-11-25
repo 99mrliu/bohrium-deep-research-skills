@@ -1,0 +1,120 @@
+{
+  "denominator": 10,
+  "hit": 6,
+  "miss": 4,
+  "coverage_ratio": 0.6,
+  "denominator_source": "frozen reference_set.json v1.0.0 (sha256:7a298535a453)",
+  "per_record": [
+    {
+      "ref_id": "R001",
+      "doi": "10.5555/synth.0001",
+      "title": "Perovskite stability under humid heat cycling",
+      "status": "hit",
+      "match_level": "L1_identifier",
+      "evidence": {
+        "query_id": "Q1",
+        "source": "Crossref",
+        "matched_title": "Perovskite stability under humid heat cycling"
+      }
+    },
+    {
+      "ref_id": "R002",
+      "doi": "10.5555/synth.0002",
+      "title": "Defect passivation in halide perovskite films",
+      "status": "hit",
+      "match_level": "L1_identifier",
+      "evidence": {
+        "query_id": "Q1",
+        "source": "Crossref",
+        "matched_title": "Defect passivation in halide perovskite films"
+      }
+    },
+    {
+      "ref_id": "R003",
+      "doi": "10.5555/synth.0003",
+      "title": "Fake breakthrough in perovskite lasing",
+      "status": "excluded",
+      "reason": "retracted"
+    },
+    {
+      "ref_id": "R004",
+      "doi": "10.5555/synth.0004",
+      "title": "Encapsulation strategies for moisture barriers",
+      "status": "hit",
+      "match_level": "L1_identifier",
+      "evidence": {
+        "query_id": "Q2",
+        "source": "EuropePMC",
+        "matched_title": "Encapsulation strategies for moisture barriers"
+      }
+    },
+    {
+      "ref_id": "R005",
+      "doi": "10.5555/synth.0005",
+      "title": "Operational lifetime of perovskite modules",
+      "status": "hit",
+      "match_level": "L1_identifier",
+      "evidence": {
+        "query_id": "Q2",
+        "source": "EuropePMC",
+        "matched_title": "Operational lifetime of perovskite modules"
+      }
+    },
+    {
+      "ref_id": "R006",
+      "doi": "10.5555/synth.0006",
+      "title": "Accelerated ageing protocols for solar films",
+      "status": "hit",
+      "match_level": "L1_identifier",
+      "evidence": {
+        "query_id": "Q3",
+        "source": "Crossref",
+        "matched_title": "Accelerated ageing protocols for solar films"
+      }
+    },
+    {
+      "ref_id": "R007",
+      "doi": "10.5555/synth.0007",
+      "title": "Interfacial engineering for durable devices",
+      "status": "hit",
+      "match_level": "L2_title_year",
+      "evidence": {
+        "query_id": "Q3",
+        "source": "Crossref",
+        "matched_title": "Interfacial engineering for durable devices"
+      }
+    },
+    {
+      "ref_id": "R008",
+      "doi": "10.5555/synth.0008",
+      "title": "Ion migration hysteresis under damp heat",
+      "status": "miss",
+      "match_level": null,
+      "evidence": null
+    },
+    {
+      "ref_id": "R009",
+      "doi": "10.5555/synth.0009",
+      "title": "Early study of moisture ingress in films",
+      "status": "miss",
+      "match_level": null,
+      "evidence": null
+    },
+    {
+      "ref_id": "R010",
+      "doi": "10.5555/synth.0010",
+      "title": "Grain boundary chemistry of halide films",
+      "status": "miss",
+      "match_level": null,
+      "evidence": null
+    },
+    {
+      "ref_id": "R011",
+      "doi": null,
+      "title": "Bibliographic entry without any identifier",
+      "status": "miss",
+      "match_level": null,
+      "evidence": null
+    }
+  ]
+}
