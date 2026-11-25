@@ -1,0 +1,60 @@
+{
+  "candidate_readback": "passed",
+  "exact_top_level_keys": [
+    "case_id",
+    "claims",
+    "evidence",
+    "sources",
+    "uncertainty",
+    "change_records",
+    "publications"
+  ],
+  "case_id_preserved": true,
+  "candidate_reference_checks": {
+    "claims": 20,
+    "evidence": 20,
+    "sources": 4,
+    "references_complete": true
+  },
+  "request_format": "rdf",
+  "network_requests": 0,
+  "elapsed_seconds": 0.014891,
+  "artifact_scope": "JSON base result; JSONL only when requested; both RDF files only for request_format=rdf",
+  "rdf_candidate": {
+    "structural_self_check": "passed",
+    "trig_subset_round_trip": "passed",
+    "jsonld_subset_round_trip": "passed",
+    "named_graph_count": 4,
+    "graph_quad_counts": {
+      "urn:contract-graph-publisher:local:SYNTHETIC-RDF-020:Head": 4,
+      "urn:contract-graph-publisher:local:SYNTHETIC-RDF-020:assertion": 155,
+      "urn:contract-graph-publisher:local:SYNTHETIC-RDF-020:provenance": 93,
+      "urn:contract-graph-publisher:local:SYNTHETIC-RDF-020:pubinfo": 3
+    },
+    "reified_claim_count": 20,
+    "qualified_direct_triple_leaks": 0,
+    "limitation": "Strict generated-subset parsing and structural checks only; not complete W3C syntax/conformance validation. Local IRIs are neither registered nor Trusty URIs."
+  },
+  "result_readback": "passed",
+  "reference_checks": {
+    "claims": 20,
+    "evidence": 20,
+    "sources": 4,
+    "references_complete": true
+  },
+  "rdf": {
+    "structural_self_check": "passed",
+    "trig_subset_round_trip": "passed",
+    "jsonld_subset_round_trip": "passed",
+    "named_graph_count": 4,
+    "graph_quad_counts": {
+      "urn:contract-graph-publisher:local:SYNTHETIC-RDF-020:Head": 4,
+      "urn:contract-graph-publisher:local:SYNTHETIC-RDF-020:assertion": 155,
+      "urn:contract-graph-publisher:local:SYNTHETIC-RDF-020:provenance": 93,
+      "urn:contract-graph-publisher:local:SYNTHETIC-RDF-020:pubinfo": 3
+    },
+    "reified_claim_count": 20,
+    "qualified_direct_triple_leaks": 0,
+    "limitation": "Strict generated-subset parsing and structural checks only; not complete W3C syntax/conformance validation. Local IRIs are neither registered nor Trusty URIs."
+  }
+}

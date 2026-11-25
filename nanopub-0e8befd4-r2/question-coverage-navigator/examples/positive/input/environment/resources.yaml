@@ -1,0 +1,12 @@
+runtime:
+  python: "3.9+"
+  filesystem:
+    work: /app/work
+    output: /app/output
+  limits:
+    requests: 64
+    seconds: 900
+resources:
+  sources_are_local: true
+  network_required: false
+case_specific_note: "In a real case, replace this example with actual mounted papers and indexes; do not assume this YAML's keys are universal."

@@ -1,0 +1,150 @@
+{
+  "schema_version": "layout-evidence-index/v1",
+  "tool": "layout_evidence.py",
+  "tool_version": "1.0.0",
+  "document_id": "markdown",
+  "synthetic": true,
+  "formal_result": false,
+  "source": {
+    "source_id": "markdown",
+    "path": "examples/synthetic/markdown.md",
+    "sha256": "72b94a4726f118570649da73410810befb0ba8bf15599aed0c2d0dd6e9038ea1",
+    "media_type": "text/markdown",
+    "extraction": "direct UTF-8 text; LF normalization; form-feed pagination plus standalone Markdown page markers"
+  },
+  "included_roles": [
+    "body"
+  ],
+  "pages": [
+    {
+      "page": 1,
+      "width": null,
+      "height": null,
+      "extraction_status": "text",
+      "block_order": [
+        "p1-b1"
+      ],
+      "page_char_start": 0,
+      "page_char_end": 39,
+      "blocks": [
+        {
+          "block_id": "p1-b1",
+          "role": "body",
+          "column": 1,
+          "bbox": null,
+          "input_index": 0,
+          "reading_index": 0,
+          "included": true,
+          "block_char_start": 0,
+          "block_char_end": 39,
+          "text": "SYNTHETIC markdown\ndehyphen-\nation test",
+          "lines": [
+            {
+              "line": 1,
+              "text": "SYNTHETIC markdown",
+              "line_char_start": 0,
+              "line_char_end": 18,
+              "document_char_start": 0,
+              "document_char_end": 18,
+              "page_char_start": 0,
+              "page_char_end": 18
+            },
+            {
+              "line": 2,
+              "text": "dehyphen-",
+              "line_char_start": 0,
+              "line_char_end": 9,
+              "document_char_start": 19,
+              "document_char_end": 28,
+              "page_char_start": 19,
+              "page_char_end": 28
+            },
+            {
+              "line": 3,
+              "text": "ation test",
+              "line_char_start": 0,
+              "line_char_end": 10,
+              "document_char_start": 29,
+              "document_char_end": 39,
+              "page_char_start": 29,
+              "page_char_end": 39
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "page": 2,
+      "width": null,
+      "height": null,
+      "extraction_status": "text",
+      "block_order": [
+        "p2-b1"
+      ],
+      "page_char_start": 42,
+      "page_char_end": 65,
+      "blocks": [
+        {
+          "block_id": "p2-b1",
+          "role": "body",
+          "column": 1,
+          "bbox": null,
+          "input_index": 0,
+          "reading_index": 0,
+          "included": true,
+          "block_char_start": 42,
+          "block_char_end": 65,
+          "text": "last page\nrepeat repeat",
+          "lines": [
+            {
+              "line": 1,
+              "text": "last page",
+              "line_char_start": 0,
+              "line_char_end": 9,
+              "document_char_start": 42,
+              "document_char_end": 51,
+              "page_char_start": 0,
+              "page_char_end": 9
+            },
+            {
+              "line": 2,
+              "text": "repeat repeat",
+              "line_char_start": 0,
+              "line_char_end": 13,
+              "document_char_start": 52,
+              "document_char_end": 65,
+              "page_char_start": 10,
+              "page_char_end": 23
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "text": "SYNTHETIC markdown\ndehyphen-\nation test\n\f\nlast page\nrepeat repeat",
+  "issues": [],
+  "sources": [
+    {
+      "source_id": "markdown",
+      "path": "examples/synthetic/markdown.md",
+      "sha256": "72b94a4726f118570649da73410810befb0ba8bf15599aed0c2d0dd6e9038ea1",
+      "media_type": "text/markdown",
+      "extraction": "direct UTF-8 text; LF normalization; form-feed pagination plus standalone Markdown page markers"
+    }
+  ],
+  "uncertainty": [],
+  "change_records": [
+    {
+      "operation": "index",
+      "source_modified": false,
+      "details": "Normalized indexing only; no source text was overwritten."
+    }
+  ],
+  "semantic_entailment": "not_evaluated",
+  "page_count": 2,
+  "status": "ok",
+  "pagination": {
+    "kind": "markdown-page-markers-and-form-feeds",
+    "last_declared_page": 2
+  }
+}

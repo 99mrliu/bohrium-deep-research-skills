@@ -1,0 +1,51 @@
+{
+  "case_id": "SYNTHETIC-ADJUDICATION-020",
+  "status": "partial",
+  "adjudication_report": "adjudication-report.json",
+  "adjudication_ledger": "adjudication-ledger.json",
+  "input_count": 20,
+  "adjudicated_count": 1,
+  "verdict_counts": {
+    "supported": 1,
+    "contradicted": 0,
+    "not_established": 0,
+    "mixed": 0
+  },
+  "sources": [
+    "S1",
+    "S2",
+    "S3",
+    "S4",
+    "S5",
+    "S6"
+  ],
+  "uncertainty": [
+    {
+      "uncertainty_id": "U-PARTIAL",
+      "input_ids": [
+        "C002",
+        "C003",
+        "C004",
+        "C005",
+        "C006",
+        "C007",
+        "C008",
+        "C009",
+        "C010",
+        "C011",
+        "C012",
+        "C013",
+        "C014",
+        "C015",
+        "C016",
+        "C017",
+        "C018",
+        "C019",
+        "C020"
+      ],
+      "topic": "early_checkpoint",
+      "text": "诚实early partial：已登记全部20个ID和原文，仅C001完成，其余均pending。"
+    }
+  ],
+  "change_records": []
+}

@@ -1,0 +1,22 @@
+{
+  "calculations": [],
+  "case_id": "SYNTHETIC-NEG-UNBALANCED-001",
+  "direct_assertions": [],
+  "qualitative_assertions": [],
+  "status": "failed",
+  "summary": {
+    "calculated_assertions": 0,
+    "completed_assertions": 0,
+    "direct_assertions": 0,
+    "pending_assertions": 1,
+    "qualitative_assertions": 0,
+    "total_assertions": 1
+  },
+  "unresolved": [
+    {
+      "assertion_id": "NEG-SUM",
+      "reason": "NEG-SUM sum reconciliation is unbalanced; residual=1/1 events",
+      "value": null
+    }
+  ]
+}

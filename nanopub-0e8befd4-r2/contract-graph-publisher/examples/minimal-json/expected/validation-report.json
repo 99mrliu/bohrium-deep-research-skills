@@ -1,0 +1,29 @@
+{
+  "candidate_readback": "passed",
+  "exact_top_level_keys": [
+    "case_id",
+    "claims",
+    "evidence",
+    "sources",
+    "uncertainty",
+    "change_records"
+  ],
+  "case_id_preserved": true,
+  "candidate_reference_checks": {
+    "claims": 2,
+    "evidence": 2,
+    "sources": 1,
+    "references_complete": true
+  },
+  "request_format": "json",
+  "network_requests": 0,
+  "elapsed_seconds": 0.002476,
+  "artifact_scope": "JSON base result; JSONL only when requested; both RDF files only for request_format=rdf",
+  "result_readback": "passed",
+  "reference_checks": {
+    "claims": 2,
+    "evidence": 2,
+    "sources": 1,
+    "references_complete": true
+  }
+}

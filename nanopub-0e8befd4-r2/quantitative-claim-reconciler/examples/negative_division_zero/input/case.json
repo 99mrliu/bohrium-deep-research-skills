@@ -1,0 +1,29 @@
+{
+  "case_id":"SYNTHETIC-NEG-ZERO-001",
+  "dataset_status":"SYNTHETIC negative fixture; not an official result",
+  "sources":[{
+    "source_id":"T-NEG-ZERO","source_type":"table",
+    "title":"SYNTHETIC table with an explicitly zero denominator",
+    "caption":"Zero is source data, not a missing-value placeholder. Division must fail.",
+    "row_header":{"label":"Subset / population","unit":"identifier"},
+    "columns":[{"column_id":"mentions","label":"Raw mentions (mentions)","unit":"mentions"}],
+    "rows":[
+      {"row_id":"subset","label":"Subset","cells":{"mentions":"10"}},
+      {"row_id":"population","label":"Explicitly empty population","cells":{"mentions":"0"}}
+    ]
+  }],
+  "evidence":[
+    {"evidence_id":"EZ-N","source_id":"T-NEG-ZERO","locator":{"row_id":"subset","column_id":"mentions"},"value":"10","unit":"mentions","quantity_kind":"mentions","statistical_unit":"one raw mention","population_scope":"Subset raw mentions"},
+    {"evidence_id":"EZ-D","source_id":"T-NEG-ZERO","locator":{"row_id":"population","column_id":"mentions"},"value":"0","unit":"mentions","quantity_kind":"mentions","statistical_unit":"one raw mention","population_scope":"Explicitly empty population"}
+  ],
+  "assertions":[{
+    "assertion_id":"NEG-ZERO","kind":"calculated","operation":"share",
+    "operands":{"numerator":"10","denominator":"0"},
+    "operand_units":{"numerator":"mentions","denominator":"mentions"},
+    "operand_kinds":{"numerator":"mentions","denominator":"mentions"},
+    "operand_evidence_ids":{"numerator":["EZ-N"],"denominator":["EZ-D"]},
+    "scope":{"numerator":"Subset raw mentions","denominator":"Explicitly empty population","compatible":true},
+    "rounding":{"places":1,"mode":"half_up"},
+    "evidence_ids":["EZ-N","EZ-D"]
+  }]
+}

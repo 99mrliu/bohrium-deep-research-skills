@@ -1,0 +1,646 @@
+{
+  "case_id": "SYNTHETIC-RDF-020",
+  "claims": [
+    {
+      "claim_id": "c01",
+      "subject": {
+        "iri": "https://example.org/synthetic/Material01"
+      },
+      "predicate": {
+        "iri": "https://example.org/synthetic/hasProperty"
+      },
+      "object": {
+        "iri": "https://example.org/synthetic/Stability"
+      },
+      "evidence_ids": [
+        "e01"
+      ],
+      "polarity": "positive",
+      "hedged": false
+    },
+    {
+      "claim_id": "c02",
+      "subject": {
+        "iri": "https://example.org/synthetic/Material02"
+      },
+      "predicate": {
+        "iri": "https://example.org/synthetic/causes"
+      },
+      "object": {
+        "iri": "https://example.org/synthetic/Outcome02"
+      },
+      "evidence_ids": [
+        "e02"
+      ],
+      "polarity": "negative",
+      "hedged": false
+    },
+    {
+      "claim_id": "c03",
+      "subject": {
+        "iri": "https://example.org/synthetic/Material03"
+      },
+      "predicate": {
+        "iri": "https://example.org/synthetic/improves"
+      },
+      "object": {
+        "iri": "https://example.org/synthetic/Metric03"
+      },
+      "evidence_ids": [
+        "e03"
+      ],
+      "polarity": "positive",
+      "hedged": true,
+      "hedge": "May improve the synthetic metric."
+    },
+    {
+      "claim_id": "c04",
+      "subject": {
+        "iri": "https://example.org/synthetic/Material04"
+      },
+      "predicate": {
+        "iri": "https://example.org/synthetic/enables"
+      },
+      "object": {
+        "iri": "https://example.org/synthetic/Process04"
+      },
+      "evidence_ids": [
+        "e04"
+      ],
+      "polarity": "positive",
+      "hedged": false,
+      "condition": "Only under synthetic condition K04."
+    },
+    {
+      "claim_id": "c05",
+      "subject": {
+        "iri": "https://example.org/synthetic/Material05"
+      },
+      "predicate": {
+        "iri": "https://example.org/synthetic/inhibits"
+      },
+      "object": {
+        "iri": "https://example.org/synthetic/Process05"
+      },
+      "evidence_ids": [
+        "e05"
+      ],
+      "polarity": "negative",
+      "hedged": true,
+      "hedge": "Probably does not inhibit the synthetic process."
+    },
+    {
+      "claim_id": "c06",
+      "subject": {
+        "iri": "https://example.org/synthetic/Material06"
+      },
+      "predicate": {
+        "iri": "https://example.org/synthetic/hasLabel"
+      },
+      "object": {
+        "value": "synthetic label six",
+        "language": "en"
+      },
+      "evidence_ids": [
+        "e06"
+      ],
+      "polarity": "positive",
+      "hedged": false
+    },
+    {
+      "claim_id": "c07",
+      "subject": {
+        "iri": "https://example.org/synthetic/Material07"
+      },
+      "predicate": {
+        "iri": "https://example.org/synthetic/associatedWith"
+      },
+      "object": {
+        "iri": "https://example.org/synthetic/Phenomenon07"
+      },
+      "evidence_ids": [
+        "e07"
+      ],
+      "polarity": "positive",
+      "hedged": false,
+      "uncertainty": "Source wording is ambiguous in this synthetic example."
+    },
+    {
+      "claim_id": "c08",
+      "subject": {
+        "iri": "https://example.org/synthetic/Material08"
+      },
+      "predicate": {
+        "iri": "https://example.org/synthetic/requires"
+      },
+      "object": {
+        "iri": "https://example.org/synthetic/Reagent08"
+      },
+      "evidence_ids": [
+        "e08"
+      ],
+      "polarity": "positive",
+      "hedged": false,
+      "condition": "Only in synthetic protocol P08."
+    },
+    {
+      "claim_id": "c09",
+      "subject": {
+        "iri": "https://example.org/synthetic/Material09"
+      },
+      "predicate": {
+        "iri": "https://example.org/synthetic/contains"
+      },
+      "object": {
+        "iri": "https://example.org/synthetic/Component09"
+      },
+      "evidence_ids": [
+        "e09"
+      ],
+      "polarity": "positive",
+      "hedged": false
+    },
+    {
+      "claim_id": "c10",
+      "subject": {
+        "iri": "https://example.org/synthetic/Material10"
+      },
+      "predicate": {
+        "iri": "https://example.org/synthetic/compatibleWith"
+      },
+      "object": {
+        "iri": "https://example.org/synthetic/Substrate10"
+      },
+      "evidence_ids": [
+        "e10"
+      ],
+      "polarity": "negative",
+      "hedged": false,
+      "condition": "Only for the synthetic humid environment."
+    },
+    {
+      "claim_id": "c11",
+      "subject": {
+        "iri": "https://example.org/synthetic/Material11"
+      },
+      "predicate": {
+        "iri": "https://example.org/synthetic/modulates"
+      },
+      "object": {
+        "iri": "https://example.org/synthetic/Signal11"
+      },
+      "evidence_ids": [
+        "e11"
+      ],
+      "polarity": "positive",
+      "hedged": true,
+      "hedge": "Appears to modulate the synthetic signal."
+    },
+    {
+      "claim_id": "c12",
+      "subject": {
+        "iri": "https://example.org/synthetic/Material12"
+      },
+      "predicate": {
+        "iri": "https://example.org/synthetic/hasCode"
+      },
+      "object": {
+        "value": "012",
+        "datatype": "http://www.w3.org/2001/XMLSchema#string"
+      },
+      "evidence_ids": [
+        "e12"
+      ],
+      "polarity": "positive",
+      "hedged": false
+    },
+    {
+      "claim_id": "c13",
+      "subject": {
+        "iri": "https://example.org/synthetic/Material13"
+      },
+      "predicate": {
+        "iri": "https://example.org/synthetic/produces"
+      },
+      "object": {
+        "iri": "https://example.org/synthetic/Product13"
+      },
+      "evidence_ids": [
+        "e13"
+      ],
+      "polarity": "positive",
+      "hedged": false
+    },
+    {
+      "claim_id": "c14",
+      "subject": {
+        "iri": "https://example.org/synthetic/Material14"
+      },
+      "predicate": {
+        "iri": "https://example.org/synthetic/degrades"
+      },
+      "object": {
+        "iri": "https://example.org/synthetic/Component14"
+      },
+      "evidence_ids": [
+        "e14"
+      ],
+      "polarity": "negative",
+      "hedged": true,
+      "condition": "Only at the specified synthetic storage state.",
+      "hedge": "Unlikely to degrade the synthetic component."
+    },
+    {
+      "claim_id": "c15",
+      "subject": {
+        "iri": "https://example.org/synthetic/Material15"
+      },
+      "predicate": {
+        "iri": "https://example.org/synthetic/binds"
+      },
+      "object": {
+        "iri": "https://example.org/synthetic/Target15"
+      },
+      "evidence_ids": [
+        "e15"
+      ],
+      "polarity": "positive",
+      "hedged": false,
+      "condition": "Only in the synthetic buffered preparation."
+    },
+    {
+      "claim_id": "c16",
+      "subject": {
+        "iri": "https://example.org/synthetic/Material16"
+      },
+      "predicate": {
+        "iri": "https://example.org/synthetic/resembles"
+      },
+      "object": {
+        "iri": "https://example.org/synthetic/Structure16"
+      },
+      "evidence_ids": [
+        "e16"
+      ],
+      "polarity": "positive",
+      "hedged": true,
+      "hedge": "Provisionally resembles the synthetic structure."
+    },
+    {
+      "claim_id": "c17",
+      "subject": {
+        "iri": "https://example.org/synthetic/Material17"
+      },
+      "predicate": {
+        "iri": "https://example.org/synthetic/precedes"
+      },
+      "object": {
+        "iri": "https://example.org/synthetic/Event17"
+      },
+      "evidence_ids": [
+        "e17"
+      ],
+      "polarity": "positive",
+      "hedged": false
+    },
+    {
+      "claim_id": "c18",
+      "subject": {
+        "iri": "https://example.org/synthetic/Material18"
+      },
+      "predicate": {
+        "iri": "https://example.org/synthetic/interactsWith"
+      },
+      "object": {
+        "iri": "https://example.org/synthetic/Agent18"
+      },
+      "evidence_ids": [
+        "e18"
+      ],
+      "polarity": "negative",
+      "hedged": false
+    },
+    {
+      "claim_id": "c19",
+      "subject": {
+        "iri": "https://example.org/synthetic/Material19"
+      },
+      "predicate": {
+        "iri": "https://example.org/synthetic/supports"
+      },
+      "object": {
+        "iri": "https://example.org/synthetic/Function19"
+      },
+      "evidence_ids": [
+        "e19"
+      ],
+      "polarity": "positive",
+      "hedged": false,
+      "uncertainty": "The synthetic evidence does not resolve mechanism."
+    },
+    {
+      "claim_id": "c20",
+      "subject": {
+        "iri": "https://example.org/synthetic/Material20"
+      },
+      "predicate": {
+        "iri": "https://example.org/synthetic/changes"
+      },
+      "object": {
+        "iri": "https://example.org/synthetic/State20"
+      },
+      "evidence_ids": [
+        "e20"
+      ],
+      "polarity": "negative",
+      "hedged": true,
+      "condition": "Only for synthetic batch B20.",
+      "hedge": "May not change the synthetic state.",
+      "uncertainty": "Synthetic batch annotation is incomplete."
+    }
+  ],
+  "evidence": [
+    {
+      "evidence_id": "e01",
+      "source_ids": [
+        "s1"
+      ],
+      "text": "Synthetic evidence sentence 01."
+    },
+    {
+      "evidence_id": "e02",
+      "source_ids": [
+        "s2"
+      ],
+      "text": "Synthetic negative evidence sentence 02."
+    },
+    {
+      "evidence_id": "e03",
+      "source_ids": [
+        "s3"
+      ],
+      "text": "Synthetic hedged evidence sentence 03."
+    },
+    {
+      "evidence_id": "e04",
+      "source_ids": [
+        "s4"
+      ],
+      "text": "Synthetic conditional evidence sentence 04."
+    },
+    {
+      "evidence_id": "e05",
+      "source_ids": [
+        "s1"
+      ],
+      "text": "Synthetic qualified evidence sentence 05."
+    },
+    {
+      "evidence_id": "e06",
+      "source_ids": [
+        "s2"
+      ],
+      "text": "Synthetic evidence sentence 06."
+    },
+    {
+      "evidence_id": "e07",
+      "source_ids": [
+        "s3"
+      ],
+      "text": "Synthetic uncertain evidence sentence 07."
+    },
+    {
+      "evidence_id": "e08",
+      "source_ids": [
+        "s4"
+      ],
+      "text": "Synthetic conditional evidence sentence 08."
+    },
+    {
+      "evidence_id": "e09",
+      "source_ids": [
+        "s1"
+      ],
+      "text": "Synthetic evidence sentence 09."
+    },
+    {
+      "evidence_id": "e10",
+      "source_ids": [
+        "s2"
+      ],
+      "text": "Synthetic negative conditional evidence sentence 10."
+    },
+    {
+      "evidence_id": "e11",
+      "source_ids": [
+        "s3"
+      ],
+      "text": "Synthetic hedged evidence sentence 11."
+    },
+    {
+      "evidence_id": "e12",
+      "source_ids": [
+        "s4"
+      ],
+      "text": "Synthetic evidence sentence 12."
+    },
+    {
+      "evidence_id": "e13",
+      "source_ids": [
+        "s1"
+      ],
+      "text": "Synthetic evidence sentence 13."
+    },
+    {
+      "evidence_id": "e14",
+      "source_ids": [
+        "s2"
+      ],
+      "text": "Synthetic qualified evidence sentence 14."
+    },
+    {
+      "evidence_id": "e15",
+      "source_ids": [
+        "s3"
+      ],
+      "text": "Synthetic conditional evidence sentence 15."
+    },
+    {
+      "evidence_id": "e16",
+      "source_ids": [
+        "s4"
+      ],
+      "text": "Synthetic hedged evidence sentence 16."
+    },
+    {
+      "evidence_id": "e17",
+      "source_ids": [
+        "s1"
+      ],
+      "text": "Synthetic evidence sentence 17."
+    },
+    {
+      "evidence_id": "e18",
+      "source_ids": [
+        "s2"
+      ],
+      "text": "Synthetic negative evidence sentence 18."
+    },
+    {
+      "evidence_id": "e19",
+      "source_ids": [
+        "s3"
+      ],
+      "text": "Synthetic uncertain evidence sentence 19."
+    },
+    {
+      "evidence_id": "e20",
+      "source_ids": [
+        "s4"
+      ],
+      "text": "Synthetic fully qualified evidence sentence 20."
+    }
+  ],
+  "sources": [
+    {
+      "source_id": "s1",
+      "title": "Synthetic corpus part 1",
+      "locator": "synthetic://rdf-example/source/1"
+    },
+    {
+      "source_id": "s2",
+      "title": "Synthetic corpus part 2",
+      "locator": "synthetic://rdf-example/source/2"
+    },
+    {
+      "source_id": "s3",
+      "title": "Synthetic corpus part 3",
+      "locator": "synthetic://rdf-example/source/3"
+    },
+    {
+      "source_id": "s4",
+      "title": "Synthetic corpus part 4",
+      "locator": "synthetic://rdf-example/source/4"
+    }
+  ],
+  "uncertainty": [
+    {
+      "claim_id": "c02",
+      "kind": "negative",
+      "text": "Assertion is explicitly negative and reified."
+    },
+    {
+      "claim_id": "c03",
+      "kind": "hedged",
+      "text": "May improve the synthetic metric."
+    },
+    {
+      "claim_id": "c04",
+      "kind": "conditional",
+      "text": "Only under synthetic condition K04."
+    },
+    {
+      "claim_id": "c05",
+      "kind": "negative",
+      "text": "Assertion is explicitly negative and reified."
+    },
+    {
+      "claim_id": "c05",
+      "kind": "hedged",
+      "text": "Probably does not inhibit the synthetic process."
+    },
+    {
+      "claim_id": "c07",
+      "kind": "declared",
+      "text": "Source wording is ambiguous in this synthetic example."
+    },
+    {
+      "claim_id": "c08",
+      "kind": "conditional",
+      "text": "Only in synthetic protocol P08."
+    },
+    {
+      "claim_id": "c10",
+      "kind": "negative",
+      "text": "Assertion is explicitly negative and reified."
+    },
+    {
+      "claim_id": "c10",
+      "kind": "conditional",
+      "text": "Only for the synthetic humid environment."
+    },
+    {
+      "claim_id": "c11",
+      "kind": "hedged",
+      "text": "Appears to modulate the synthetic signal."
+    },
+    {
+      "claim_id": "c14",
+      "kind": "negative",
+      "text": "Assertion is explicitly negative and reified."
+    },
+    {
+      "claim_id": "c14",
+      "kind": "conditional",
+      "text": "Only at the specified synthetic storage state."
+    },
+    {
+      "claim_id": "c14",
+      "kind": "hedged",
+      "text": "Unlikely to degrade the synthetic component."
+    },
+    {
+      "claim_id": "c15",
+      "kind": "conditional",
+      "text": "Only in the synthetic buffered preparation."
+    },
+    {
+      "claim_id": "c16",
+      "kind": "hedged",
+      "text": "Provisionally resembles the synthetic structure."
+    },
+    {
+      "claim_id": "c18",
+      "kind": "negative",
+      "text": "Assertion is explicitly negative and reified."
+    },
+    {
+      "claim_id": "c19",
+      "kind": "declared",
+      "text": "The synthetic evidence does not resolve mechanism."
+    },
+    {
+      "claim_id": "c20",
+      "kind": "negative",
+      "text": "Assertion is explicitly negative and reified."
+    },
+    {
+      "claim_id": "c20",
+      "kind": "conditional",
+      "text": "Only for synthetic batch B20."
+    },
+    {
+      "claim_id": "c20",
+      "kind": "hedged",
+      "text": "May not change the synthetic state."
+    },
+    {
+      "claim_id": "c20",
+      "kind": "declared",
+      "text": "Synthetic batch annotation is incomplete."
+    }
+  ],
+  "change_records": [
+    {
+      "sequence": 0,
+      "status": "partial",
+      "action": "Contract accepted before claim normalization."
+    },
+    {
+      "sequence": 1,
+      "status": "partial",
+      "action": "Normalized claims, evidence, sources, and checked original references."
+    }
+  ],
+  "publications": []
+}

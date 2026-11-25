@@ -1,0 +1,144 @@
+{
+  "schema_version": "1.0",
+  "synthetic": true,
+  "notice": "SYNTHETIC / 合成草稿与合成原始源文；非正式科研结果，不可作为真实证据引用。",
+  "case_id": "SYNTHETIC-ADJUDICATION-020",
+  "draft": {
+    "title": "虚构材料M7与处理PT的已有科研草稿",
+    "description": "assertions数组就是待逐ID裁决的既有草稿；不得重新抽取或改写。"
+  },
+  "assertions": [
+    {
+      "input_id": "C001",
+      "claim": "S1在2024年直接测得：25 °C下M7电导率为12 mS/cm。",
+      "compound": false
+    },
+    {
+      "input_id": "C002",
+      "claim": "S1证明PT必然提高电导率。",
+      "compound": false
+    },
+    {
+      "input_id": "C003",
+      "claim": "S2在2024年测得M7电导率为9 mS/cm。",
+      "compound": false
+    },
+    {
+      "input_id": "C004",
+      "claim": "S1与S2均在25 °C下测得M7电导率为12 mS/cm。",
+      "compound": true
+    },
+    {
+      "input_id": "C005",
+      "claim": "S3直接测量了离子迁移数，并证实PT提高了该数值。",
+      "compound": true
+    },
+    {
+      "input_id": "C006",
+      "claim": "S3作者推断PT可能改善离子迁移数。",
+      "compound": false
+    },
+    {
+      "input_id": "C007",
+      "claim": "应当立即将PT用于临床，因为PT的人体安全性已经验证。",
+      "compound": true
+    },
+    {
+      "input_id": "C008",
+      "claim": "S4中所有培养样本均未出现细胞毒性。",
+      "compound": false
+    },
+    {
+      "input_id": "C009",
+      "claim": "S4报告5个样本中的2个出现毒性，并提出未来研究低剂量PT。",
+      "compound": true
+    },
+    {
+      "input_id": "C010",
+      "claim": "S4的低剂量PT提议已有疗效数据支撑。",
+      "compound": false
+    },
+    {
+      "input_id": "C011",
+      "claim": "S1中，沉积盐D溶解了M7样品。",
+      "compound": false
+    },
+    {
+      "input_id": "C012",
+      "claim": "S1中，M7样品被Lamp-L加热至80 °C。",
+      "compound": false
+    },
+    {
+      "input_id": "C013",
+      "claim": "S1中，涂层C阻止了离子穿透。",
+      "compound": false
+    },
+    {
+      "input_id": "C014",
+      "claim": "S2证实PT提高了电导率。",
+      "compound": false
+    },
+    {
+      "input_id": "C015",
+      "claim": "S1直接测得晶界电阻降低，且作者推断PT可能降低晶界电阻。",
+      "compound": true
+    },
+    {
+      "input_id": "C016",
+      "claim": "S5规定通过四探针法直接测量电导率，并通过等效电路拟合估计晶界电阻。",
+      "compound": true
+    },
+    {
+      "input_id": "C017",
+      "claim": "S5证明M7具备一年长期稳定性。",
+      "compound": false
+    },
+    {
+      "input_id": "C018",
+      "claim": "S6证明M7不能保持一年稳定性。",
+      "compound": false
+    },
+    {
+      "input_id": "C019",
+      "claim": "S6完成24小时测试，并完成高温循环测试。",
+      "compound": true
+    },
+    {
+      "input_id": "C020",
+      "claim": "S1的2024年结果代表S2的2025年复测，并且S2在25 °C下测得9 mS/cm。",
+      "compound": true
+    }
+  ],
+  "sources": [
+    {
+      "source_id": "S1",
+      "time_layer": "2024直接实验",
+      "text": "S1-2024 直接测量记录：在25 °C下，M7的电导率为12 mS/cm（n=3）。Lamp-L将样品加热至80 °C。涂层C并未阻止离子穿透；离子穿过了涂层C。PT处理组的平均电导率为15 mS/cm。作者推断，PT可能通过降低晶界电阻提高电导率，但本研究没有直接测量晶界电阻。在S1中，M7样品溶解了沉积盐D，而不是沉积盐D溶解M7样品。本研究在2024年完成，不代表2025年的复测结果。"
+    },
+    {
+      "source_id": "S2",
+      "time_layer": "2025直接复测",
+      "text": "S2-2025 直接复测：在25 °C下，M7的电导率为9 mS/cm（n=3）。与S1相比，2025年的样品储存时间更长。S2没有测量晶界电阻。PT组与对照组的差异区间跨越零，因此PT提高电导率在本数据集中未成立。观察到离子穿过了涂层C。本复测不涉及人体安全性。"
+    },
+    {
+      "source_id": "S3",
+      "time_layer": "2024综述与作者推断",
+      "text": "S3-2024 综述：作者推断PT可能改善离子迁移数；该判断来自阻抗谱拟合，不是对离子迁移数的直接测量。综述没有报告M7的人体试验。综述引用的S1电导率是在2024年测得。作者建议未来评估PT在柔性器件中的应用，这是一项研究建议而非性能证明。"
+    },
+    {
+      "source_id": "S4",
+      "time_layer": "2025细胞实验与研究提议",
+      "text": "S4-2025 细胞实验：5个培养样本中有2个在PT暴露后出现明显细胞毒性。实验没有评估人体安全性，也没有支持立即临床使用。作者提出未来可研究低剂量PT，但该提议没有疗效数据支撑。在本实验条件下，PT没有使所有样本免于毒性。"
+    },
+    {
+      "source_id": "S5",
+      "time_layer": "2023方法文档",
+      "text": "S5-2023 方法文档：电导率以四探针法直接测量；晶界电阻通过等效电路拟合估计。被动句“样品被Lamp-L加热”与主动句“Lamp-L加热样品”描述同一事件。未测量长期稳定性。"
+    },
+    {
+      "source_id": "S6",
+      "time_layer": "2025短期稳定性简报",
+      "text": "S6-2025 稳定性简报：仅完成24小时测试。不能据此确定一年的稳定性。未测试高温循环。"
+    }
+  ]
+}

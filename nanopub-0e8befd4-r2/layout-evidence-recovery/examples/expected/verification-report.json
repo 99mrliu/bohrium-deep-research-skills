@@ -1,0 +1,1646 @@
+{
+  "schema_version": "layout-evidence-verification/v1",
+  "suite_id": "SYNTHETIC-EVIDENCE-RECOVERY-TESTS",
+  "synthetic": true,
+  "formal_result": false,
+  "status": "passed",
+  "assertion_count": 33,
+  "passed_count": 33,
+  "failed_count": 0,
+  "suite_sha256": "52e6733005e326733c58c91e1bb0420ba3f2902b3432c8b1cc55eac64f2ce1f8",
+  "tests": [
+    {
+      "id": "L01-exact-line-offset",
+      "group": "two-column-layout",
+      "input": "examples/synthetic/layout.json",
+      "passed": true,
+      "assertion_errors": [],
+      "actual": {
+        "query_id": "L01-exact-line-offset",
+        "query": "Evidence recovery",
+        "mode": "exact",
+        "semantic_entailment": "not_evaluated",
+        "status": "matched",
+        "match_count": 1,
+        "normalized_query": "Evidence recovery",
+        "normalized_queries": {
+          "exact": "Evidence recovery"
+        },
+        "matches": [
+          {
+            "page": 1,
+            "block_id": "p1-left-intro",
+            "line": 1,
+            "line_offset_start": 0,
+            "line_offset_end": 17,
+            "offset": {
+              "start": 0,
+              "end": 17,
+              "unit": "unicode_codepoint",
+              "base": 0,
+              "interval": "half_open",
+              "scope": "original_supplied_line"
+            },
+            "document_char_start": 0,
+            "document_char_end": 17,
+            "page_char_start": 0,
+            "page_char_end": 17,
+            "source_excerpt": "Evidence recovery",
+            "segments": [
+              {
+                "page": 1,
+                "block_id": "p1-left-intro",
+                "reading_index": 0,
+                "line": 1,
+                "line_offset_start": 0,
+                "line_offset_end": 17,
+                "document_char_start": 0,
+                "document_char_end": 17,
+                "page_char_start": 0,
+                "page_char_end": 17,
+                "text": "Evidence recovery"
+              }
+            ],
+            "spans_pages": [
+              1
+            ],
+            "spans_blocks": [
+              "p1-left-intro"
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "id": "L02-fidelity-dehyphenation",
+      "group": "two-column-layout",
+      "input": "examples/synthetic/layout.json",
+      "passed": true,
+      "assertion_errors": [],
+      "actual": {
+        "query_id": "L02-fidelity-dehyphenation",
+        "query": "cross-column order explicit",
+        "mode": "fidelity",
+        "semantic_entailment": "not_evaluated",
+        "status": "matched",
+        "match_count": 1,
+        "normalized_query": "cross-column order explicit",
+        "normalized_queries": {
+          "hyphen_removed": "cross-column order explicit",
+          "hyphen_retained": "cross-column order explicit"
+        },
+        "matches": [
+          {
+            "page": 1,
+            "block_id": "p1-left-intro",
+            "line": 2,
+            "line_offset_start": 0,
+            "line_offset_end": 6,
+            "offset": {
+              "start": 0,
+              "end": 6,
+              "unit": "unicode_codepoint",
+              "base": 0,
+              "interval": "half_open",
+              "scope": "original_supplied_line"
+            },
+            "document_char_start": 24,
+            "document_char_end": 52,
+            "page_char_start": 24,
+            "page_char_end": 52,
+            "source_excerpt": "cross-\ncolumn order explicit",
+            "segments": [
+              {
+                "page": 1,
+                "block_id": "p1-left-intro",
+                "reading_index": 0,
+                "line": 2,
+                "line_offset_start": 0,
+                "line_offset_end": 6,
+                "document_char_start": 24,
+                "document_char_end": 30,
+                "page_char_start": 24,
+                "page_char_end": 30,
+                "text": "cross-"
+              },
+              {
+                "page": 1,
+                "block_id": "p1-left-intro",
+                "reading_index": 0,
+                "line": 3,
+                "line_offset_start": 0,
+                "line_offset_end": 21,
+                "document_char_start": 31,
+                "document_char_end": 52,
+                "page_char_start": 31,
+                "page_char_end": 52,
+                "text": "column order explicit"
+              }
+            ],
+            "spans_pages": [
+              1
+            ],
+            "spans_blocks": [
+              "p1-left-intro"
+            ],
+            "fidelity_variant": "hyphen_retained"
+          }
+        ]
+      }
+    },
+    {
+      "id": "L03-exact-does-not-fold-hyphen",
+      "group": "two-column-layout",
+      "input": "examples/synthetic/layout.json",
+      "passed": true,
+      "assertion_errors": [],
+      "actual": {
+        "query_id": "L03-exact-does-not-fold-hyphen",
+        "query": "cross-column order explicit",
+        "mode": "exact",
+        "semantic_entailment": "not_evaluated",
+        "status": "not_found",
+        "match_count": 0,
+        "normalized_query": "cross-column order explicit",
+        "normalized_queries": {
+          "exact": "cross-column order explicit"
+        },
+        "matches": []
+      }
+    },
+    {
+      "id": "L04-exact-raw-newline-hyphen",
+      "group": "two-column-layout",
+      "input": "examples/synthetic/layout.json",
+      "passed": true,
+      "assertion_errors": [],
+      "actual": {
+        "query_id": "L04-exact-raw-newline-hyphen",
+        "query": "cross-\ncolumn order explicit",
+        "mode": "exact",
+        "semantic_entailment": "not_evaluated",
+        "status": "matched",
+        "match_count": 1,
+        "normalized_query": "cross-\ncolumn order explicit",
+        "normalized_queries": {
+          "exact": "cross-\ncolumn order explicit"
+        },
+        "matches": [
+          {
+            "page": 1,
+            "block_id": "p1-left-intro",
+            "line": 2,
+            "line_offset_start": 0,
+            "line_offset_end": 6,
+            "offset": {
+              "start": 0,
+              "end": 6,
+              "unit": "unicode_codepoint",
+              "base": 0,
+              "interval": "half_open",
+              "scope": "original_supplied_line"
+            },
+            "document_char_start": 24,
+            "document_char_end": 52,
+            "page_char_start": 24,
+            "page_char_end": 52,
+            "source_excerpt": "cross-\ncolumn order explicit",
+            "segments": [
+              {
+                "page": 1,
+                "block_id": "p1-left-intro",
+                "reading_index": 0,
+                "line": 2,
+                "line_offset_start": 0,
+                "line_offset_end": 6,
+                "document_char_start": 24,
+                "document_char_end": 30,
+                "page_char_start": 24,
+                "page_char_end": 30,
+                "text": "cross-"
+              },
+              {
+                "page": 1,
+                "block_id": "p1-left-intro",
+                "reading_index": 0,
+                "line": 3,
+                "line_offset_start": 0,
+                "line_offset_end": 21,
+                "document_char_start": 31,
+                "document_char_end": 52,
+                "page_char_start": 31,
+                "page_char_end": 52,
+                "text": "column order explicit"
+              }
+            ],
+            "spans_pages": [
+              1
+            ],
+            "spans_blocks": [
+              "p1-left-intro"
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "id": "L05-repeated-phrase-is-ambiguous",
+      "group": "two-column-layout",
+      "input": "examples/synthetic/layout.json",
+      "passed": true,
+      "assertion_errors": [],
+      "actual": {
+        "query_id": "L05-repeated-phrase-is-ambiguous",
+        "query": "Repeated phrase appears here.",
+        "mode": "exact",
+        "semantic_entailment": "not_evaluated",
+        "status": "ambiguous",
+        "match_count": 2,
+        "normalized_query": "Repeated phrase appears here.",
+        "normalized_queries": {
+          "exact": "Repeated phrase appears here."
+        },
+        "matches": [
+          {
+            "page": 1,
+            "block_id": "p1-left-detail",
+            "line": 1,
+            "line_offset_start": 0,
+            "line_offset_end": 29,
+            "offset": {
+              "start": 0,
+              "end": 29,
+              "unit": "unicode_codepoint",
+              "base": 0,
+              "interval": "half_open",
+              "scope": "original_supplied_line"
+            },
+            "document_char_start": 54,
+            "document_char_end": 83,
+            "page_char_start": 54,
+            "page_char_end": 83,
+            "source_excerpt": "Repeated phrase appears here.",
+            "segments": [
+              {
+                "page": 1,
+                "block_id": "p1-left-detail",
+                "reading_index": 1,
+                "line": 1,
+                "line_offset_start": 0,
+                "line_offset_end": 29,
+                "document_char_start": 54,
+                "document_char_end": 83,
+                "page_char_start": 54,
+                "page_char_end": 83,
+                "text": "Repeated phrase appears here."
+              }
+            ],
+            "spans_pages": [
+              1
+            ],
+            "spans_blocks": [
+              "p1-left-detail"
+            ]
+          },
+          {
+            "page": 1,
+            "block_id": "p1-right-main",
+            "line": 2,
+            "line_offset_start": 0,
+            "line_offset_end": 29,
+            "offset": {
+              "start": 0,
+              "end": 29,
+              "unit": "unicode_codepoint",
+              "base": 0,
+              "interval": "half_open",
+              "scope": "original_supplied_line"
+            },
+            "document_char_start": 155,
+            "document_char_end": 184,
+            "page_char_start": 155,
+            "page_char_end": 184,
+            "source_excerpt": "Repeated phrase appears here.",
+            "segments": [
+              {
+                "page": 1,
+                "block_id": "p1-right-main",
+                "reading_index": 2,
+                "line": 2,
+                "line_offset_start": 0,
+                "line_offset_end": 29,
+                "document_char_start": 155,
+                "document_char_end": 184,
+                "page_char_start": 155,
+                "page_char_end": 184,
+                "text": "Repeated phrase appears here."
+              }
+            ],
+            "spans_pages": [
+              1
+            ],
+            "spans_blocks": [
+              "p1-right-main"
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "id": "L06-disambiguate-left-repeat",
+      "group": "two-column-layout",
+      "input": "examples/synthetic/layout.json",
+      "passed": true,
+      "assertion_errors": [],
+      "actual": {
+        "query_id": "L06-disambiguate-left-repeat",
+        "query": "Repeated phrase appears here.\nOffsets use zero based",
+        "mode": "exact",
+        "semantic_entailment": "not_evaluated",
+        "status": "matched",
+        "match_count": 1,
+        "normalized_query": "Repeated phrase appears here.\nOffsets use zero based",
+        "normalized_queries": {
+          "exact": "Repeated phrase appears here.\nOffsets use zero based"
+        },
+        "matches": [
+          {
+            "page": 1,
+            "block_id": "p1-left-detail",
+            "line": 1,
+            "line_offset_start": 0,
+            "line_offset_end": 29,
+            "offset": {
+              "start": 0,
+              "end": 29,
+              "unit": "unicode_codepoint",
+              "base": 0,
+              "interval": "half_open",
+              "scope": "original_supplied_line"
+            },
+            "document_char_start": 54,
+            "document_char_end": 106,
+            "page_char_start": 54,
+            "page_char_end": 106,
+            "source_excerpt": "Repeated phrase appears here.\nOffsets use zero based",
+            "segments": [
+              {
+                "page": 1,
+                "block_id": "p1-left-detail",
+                "reading_index": 1,
+                "line": 1,
+                "line_offset_start": 0,
+                "line_offset_end": 29,
+                "document_char_start": 54,
+                "document_char_end": 83,
+                "page_char_start": 54,
+                "page_char_end": 83,
+                "text": "Repeated phrase appears here."
+              },
+              {
+                "page": 1,
+                "block_id": "p1-left-detail",
+                "reading_index": 1,
+                "line": 2,
+                "line_offset_start": 0,
+                "line_offset_end": 22,
+                "document_char_start": 84,
+                "document_char_end": 106,
+                "page_char_start": 84,
+                "page_char_end": 106,
+                "text": "Offsets use zero based"
+              }
+            ],
+            "spans_pages": [
+              1
+            ],
+            "spans_blocks": [
+              "p1-left-detail"
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "id": "L07-disambiguate-right-repeat",
+      "group": "two-column-layout",
+      "input": "examples/synthetic/layout.json",
+      "passed": true,
+      "assertion_errors": [],
+      "actual": {
+        "query_id": "L07-disambiguate-right-repeat",
+        "query": "Repeated phrase appears here.\nFigure legends",
+        "mode": "exact",
+        "semantic_entailment": "not_evaluated",
+        "status": "matched",
+        "match_count": 1,
+        "normalized_query": "Repeated phrase appears here.\nFigure legends",
+        "normalized_queries": {
+          "exact": "Repeated phrase appears here.\nFigure legends"
+        },
+        "matches": [
+          {
+            "page": 1,
+            "block_id": "p1-right-main",
+            "line": 2,
+            "line_offset_start": 0,
+            "line_offset_end": 29,
+            "offset": {
+              "start": 0,
+              "end": 29,
+              "unit": "unicode_codepoint",
+              "base": 0,
+              "interval": "half_open",
+              "scope": "original_supplied_line"
+            },
+            "document_char_start": 155,
+            "document_char_end": 199,
+            "page_char_start": 155,
+            "page_char_end": 199,
+            "source_excerpt": "Repeated phrase appears here.\nFigure legends",
+            "segments": [
+              {
+                "page": 1,
+                "block_id": "p1-right-main",
+                "reading_index": 2,
+                "line": 2,
+                "line_offset_start": 0,
+                "line_offset_end": 29,
+                "document_char_start": 155,
+                "document_char_end": 184,
+                "page_char_start": 155,
+                "page_char_end": 184,
+                "text": "Repeated phrase appears here."
+              },
+              {
+                "page": 1,
+                "block_id": "p1-right-main",
+                "reading_index": 2,
+                "line": 3,
+                "line_offset_start": 0,
+                "line_offset_end": 14,
+                "document_char_start": 185,
+                "document_char_end": 199,
+                "page_char_start": 185,
+                "page_char_end": 199,
+                "text": "Figure legends"
+              }
+            ],
+            "spans_pages": [
+              1
+            ],
+            "spans_blocks": [
+              "p1-right-main"
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "id": "L08-header-excluded",
+      "group": "two-column-layout",
+      "input": "examples/synthetic/layout.json",
+      "passed": true,
+      "assertion_errors": [],
+      "actual": {
+        "query_id": "L08-header-excluded",
+        "query": "SYNTHETIC JOURNAL",
+        "mode": "exact",
+        "semantic_entailment": "not_evaluated",
+        "status": "not_found",
+        "match_count": 0,
+        "normalized_query": "SYNTHETIC JOURNAL",
+        "normalized_queries": {
+          "exact": "SYNTHETIC JOURNAL"
+        },
+        "matches": []
+      }
+    },
+    {
+      "id": "L09-footer-excluded",
+      "group": "two-column-layout",
+      "input": "examples/synthetic/layout.json",
+      "passed": true,
+      "assertion_errors": [],
+      "actual": {
+        "query_id": "L09-footer-excluded",
+        "query": "SYNTHETIC PAGE 1",
+        "mode": "exact",
+        "semantic_entailment": "not_evaluated",
+        "status": "not_found",
+        "match_count": 0,
+        "normalized_query": "SYNTHETIC PAGE 1",
+        "normalized_queries": {
+          "exact": "SYNTHETIC PAGE 1"
+        },
+        "matches": []
+      }
+    },
+    {
+      "id": "L10-figure-text-excluded",
+      "group": "two-column-layout",
+      "input": "examples/synthetic/layout.json",
+      "passed": true,
+      "assertion_errors": [],
+      "actual": {
+        "query_id": "L10-figure-text-excluded",
+        "query": "FIGURE 1 repeated phrase",
+        "mode": "exact",
+        "semantic_entailment": "not_evaluated",
+        "status": "not_found",
+        "match_count": 0,
+        "normalized_query": "FIGURE 1 repeated phrase",
+        "normalized_queries": {
+          "exact": "FIGURE 1 repeated phrase"
+        },
+        "matches": []
+      }
+    },
+    {
+      "id": "L11-exact-cross-line-right-column",
+      "group": "two-column-layout",
+      "input": "examples/synthetic/layout.json",
+      "passed": true,
+      "assertion_errors": [],
+      "actual": {
+        "query_id": "L11-exact-cross-line-right-column",
+        "query": "Right column follows left.\nRepeated phrase appears here.",
+        "mode": "exact",
+        "semantic_entailment": "not_evaluated",
+        "status": "matched",
+        "match_count": 1,
+        "normalized_query": "Right column follows left.\nRepeated phrase appears here.",
+        "normalized_queries": {
+          "exact": "Right column follows left.\nRepeated phrase appears here."
+        },
+        "matches": [
+          {
+            "page": 1,
+            "block_id": "p1-right-main",
+            "line": 1,
+            "line_offset_start": 0,
+            "line_offset_end": 26,
+            "offset": {
+              "start": 0,
+              "end": 26,
+              "unit": "unicode_codepoint",
+              "base": 0,
+              "interval": "half_open",
+              "scope": "original_supplied_line"
+            },
+            "document_char_start": 128,
+            "document_char_end": 184,
+            "page_char_start": 128,
+            "page_char_end": 184,
+            "source_excerpt": "Right column follows left.\nRepeated phrase appears here.",
+            "segments": [
+              {
+                "page": 1,
+                "block_id": "p1-right-main",
+                "reading_index": 2,
+                "line": 1,
+                "line_offset_start": 0,
+                "line_offset_end": 26,
+                "document_char_start": 128,
+                "document_char_end": 154,
+                "page_char_start": 128,
+                "page_char_end": 154,
+                "text": "Right column follows left."
+              },
+              {
+                "page": 1,
+                "block_id": "p1-right-main",
+                "reading_index": 2,
+                "line": 2,
+                "line_offset_start": 0,
+                "line_offset_end": 29,
+                "document_char_start": 155,
+                "document_char_end": 184,
+                "page_char_start": 155,
+                "page_char_end": 184,
+                "text": "Repeated phrase appears here."
+              }
+            ],
+            "spans_pages": [
+              1
+            ],
+            "spans_blocks": [
+              "p1-right-main"
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "id": "L12-fidelity-cross-line-right-column",
+      "group": "two-column-layout",
+      "input": "examples/synthetic/layout.json",
+      "passed": true,
+      "assertion_errors": [],
+      "actual": {
+        "query_id": "L12-fidelity-cross-line-right-column",
+        "query": "Right column follows left. Repeated phrase appears here.",
+        "mode": "fidelity",
+        "semantic_entailment": "not_evaluated",
+        "status": "matched",
+        "match_count": 1,
+        "normalized_query": "Right column follows left. Repeated phrase appears here.",
+        "normalized_queries": {
+          "hyphen_removed": "Right column follows left. Repeated phrase appears here.",
+          "hyphen_retained": "Right column follows left. Repeated phrase appears here."
+        },
+        "matches": [
+          {
+            "page": 1,
+            "block_id": "p1-right-main",
+            "line": 1,
+            "line_offset_start": 0,
+            "line_offset_end": 26,
+            "offset": {
+              "start": 0,
+              "end": 26,
+              "unit": "unicode_codepoint",
+              "base": 0,
+              "interval": "half_open",
+              "scope": "original_supplied_line"
+            },
+            "document_char_start": 128,
+            "document_char_end": 184,
+            "page_char_start": 128,
+            "page_char_end": 184,
+            "source_excerpt": "Right column follows left.\nRepeated phrase appears here.",
+            "segments": [
+              {
+                "page": 1,
+                "block_id": "p1-right-main",
+                "reading_index": 2,
+                "line": 1,
+                "line_offset_start": 0,
+                "line_offset_end": 26,
+                "document_char_start": 128,
+                "document_char_end": 154,
+                "page_char_start": 128,
+                "page_char_end": 154,
+                "text": "Right column follows left."
+              },
+              {
+                "page": 1,
+                "block_id": "p1-right-main",
+                "reading_index": 2,
+                "line": 2,
+                "line_offset_start": 0,
+                "line_offset_end": 29,
+                "document_char_start": 155,
+                "document_char_end": 184,
+                "page_char_start": 155,
+                "page_char_end": 184,
+                "text": "Repeated phrase appears here."
+              }
+            ],
+            "spans_pages": [
+              1
+            ],
+            "spans_blocks": [
+              "p1-right-main"
+            ],
+            "fidelity_variant": "hyphen_removed"
+          }
+        ]
+      }
+    },
+    {
+      "id": "L13-page-two-line-offset",
+      "group": "two-column-layout",
+      "input": "examples/synthetic/layout.json",
+      "passed": true,
+      "assertion_errors": [],
+      "actual": {
+        "query_id": "L13-page-two-line-offset",
+        "query": "offsets stable",
+        "mode": "exact",
+        "semantic_entailment": "not_evaluated",
+        "status": "matched",
+        "match_count": 1,
+        "normalized_query": "offsets stable",
+        "normalized_queries": {
+          "exact": "offsets stable"
+        },
+        "matches": [
+          {
+            "page": 2,
+            "block_id": "p2-left",
+            "line": 2,
+            "line_offset_start": 5,
+            "line_offset_end": 19,
+            "offset": {
+              "start": 5,
+              "end": 19,
+              "unit": "unicode_codepoint",
+              "base": 0,
+              "interval": "half_open",
+              "scope": "original_supplied_line"
+            },
+            "document_char_start": 244,
+            "document_char_end": 258,
+            "page_char_start": 27,
+            "page_char_end": 41,
+            "source_excerpt": "offsets stable",
+            "segments": [
+              {
+                "page": 2,
+                "block_id": "p2-left",
+                "reading_index": 0,
+                "line": 2,
+                "line_offset_start": 5,
+                "line_offset_end": 19,
+                "document_char_start": 244,
+                "document_char_end": 258,
+                "page_char_start": 27,
+                "page_char_end": 41,
+                "text": "offsets stable"
+              }
+            ],
+            "spans_pages": [
+              2
+            ],
+            "spans_blocks": [
+              "p2-left"
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "id": "L14-half-open-offset",
+      "group": "two-column-layout",
+      "input": "examples/synthetic/layout.json",
+      "passed": true,
+      "assertion_errors": [],
+      "actual": {
+        "query_id": "L14-half-open-offset",
+        "query": "Offsets",
+        "mode": "exact",
+        "semantic_entailment": "not_evaluated",
+        "status": "matched",
+        "match_count": 1,
+        "normalized_query": "Offsets",
+        "normalized_queries": {
+          "exact": "Offsets"
+        },
+        "matches": [
+          {
+            "page": 1,
+            "block_id": "p1-left-detail",
+            "line": 2,
+            "line_offset_start": 0,
+            "line_offset_end": 7,
+            "offset": {
+              "start": 0,
+              "end": 7,
+              "unit": "unicode_codepoint",
+              "base": 0,
+              "interval": "half_open",
+              "scope": "original_supplied_line"
+            },
+            "document_char_start": 84,
+            "document_char_end": 91,
+            "page_char_start": 84,
+            "page_char_end": 91,
+            "source_excerpt": "Offsets",
+            "segments": [
+              {
+                "page": 1,
+                "block_id": "p1-left-detail",
+                "reading_index": 1,
+                "line": 2,
+                "line_offset_start": 0,
+                "line_offset_end": 7,
+                "document_char_start": 84,
+                "document_char_end": 91,
+                "page_char_start": 84,
+                "page_char_end": 91,
+                "text": "Offsets"
+              }
+            ],
+            "spans_pages": [
+              1
+            ],
+            "spans_blocks": [
+              "p1-left-detail"
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "id": "L15-declared-order-across-blocks",
+      "group": "two-column-layout",
+      "input": "examples/synthetic/layout.json",
+      "passed": true,
+      "assertion_errors": [],
+      "actual": {
+        "query_id": "L15-declared-order-across-blocks",
+        "query": "half open intervals. Right column follows left.",
+        "mode": "fidelity",
+        "semantic_entailment": "not_evaluated",
+        "status": "matched",
+        "match_count": 1,
+        "normalized_query": "half open intervals. Right column follows left.",
+        "normalized_queries": {
+          "hyphen_removed": "half open intervals. Right column follows left.",
+          "hyphen_retained": "half open intervals. Right column follows left."
+        },
+        "matches": [
+          {
+            "page": 1,
+            "block_id": "p1-left-detail",
+            "line": 3,
+            "line_offset_start": 0,
+            "line_offset_end": 20,
+            "offset": {
+              "start": 0,
+              "end": 20,
+              "unit": "unicode_codepoint",
+              "base": 0,
+              "interval": "half_open",
+              "scope": "original_supplied_line"
+            },
+            "document_char_start": 107,
+            "document_char_end": 154,
+            "page_char_start": 107,
+            "page_char_end": 154,
+            "source_excerpt": "half open intervals.\nRight column follows left.",
+            "segments": [
+              {
+                "page": 1,
+                "block_id": "p1-left-detail",
+                "reading_index": 1,
+                "line": 3,
+                "line_offset_start": 0,
+                "line_offset_end": 20,
+                "document_char_start": 107,
+                "document_char_end": 127,
+                "page_char_start": 107,
+                "page_char_end": 127,
+                "text": "half open intervals."
+              },
+              {
+                "page": 1,
+                "block_id": "p1-right-main",
+                "reading_index": 2,
+                "line": 1,
+                "line_offset_start": 0,
+                "line_offset_end": 26,
+                "document_char_start": 128,
+                "document_char_end": 154,
+                "page_char_start": 128,
+                "page_char_end": 154,
+                "text": "Right column follows left."
+              }
+            ],
+            "spans_pages": [
+              1
+            ],
+            "spans_blocks": [
+              "p1-left-detail",
+              "p1-right-main"
+            ],
+            "fidelity_variant": "hyphen_removed"
+          }
+        ]
+      }
+    },
+    {
+      "id": "L16-wrong-geometric-order-not-invented",
+      "group": "two-column-layout",
+      "input": "examples/synthetic/layout.json",
+      "passed": true,
+      "assertion_errors": [],
+      "actual": {
+        "query_id": "L16-wrong-geometric-order-not-invented",
+        "query": "Right column follows left. Offsets use zero based",
+        "mode": "fidelity",
+        "semantic_entailment": "not_evaluated",
+        "status": "not_found",
+        "match_count": 0,
+        "normalized_query": "Right column follows left. Offsets use zero based",
+        "normalized_queries": {
+          "hyphen_removed": "Right column follows left. Offsets use zero based",
+          "hyphen_retained": "Right column follows left. Offsets use zero based"
+        },
+        "matches": []
+      }
+    },
+    {
+      "id": "L17-case-sensitive-exact",
+      "group": "two-column-layout",
+      "input": "examples/synthetic/layout.json",
+      "passed": true,
+      "assertion_errors": [],
+      "actual": {
+        "query_id": "L17-case-sensitive-exact",
+        "query": "evidence recovery",
+        "mode": "exact",
+        "semantic_entailment": "not_evaluated",
+        "status": "not_found",
+        "match_count": 0,
+        "normalized_query": "evidence recovery",
+        "normalized_queries": {
+          "exact": "evidence recovery"
+        },
+        "matches": []
+      }
+    },
+    {
+      "id": "L18-exact-whitespace-mismatch",
+      "group": "two-column-layout",
+      "input": "examples/synthetic/layout.json",
+      "passed": true,
+      "assertion_errors": [],
+      "actual": {
+        "query_id": "L18-exact-whitespace-mismatch",
+        "query": "Evidence  recovery",
+        "mode": "exact",
+        "semantic_entailment": "not_evaluated",
+        "status": "not_found",
+        "match_count": 0,
+        "normalized_query": "Evidence  recovery",
+        "normalized_queries": {
+          "exact": "Evidence  recovery"
+        },
+        "matches": []
+      }
+    },
+    {
+      "id": "L19-fidelity-whitespace-fold",
+      "group": "two-column-layout",
+      "input": "examples/synthetic/layout.json",
+      "passed": true,
+      "assertion_errors": [],
+      "actual": {
+        "query_id": "L19-fidelity-whitespace-fold",
+        "query": "Evidence   recovery",
+        "mode": "fidelity",
+        "semantic_entailment": "not_evaluated",
+        "status": "matched",
+        "match_count": 1,
+        "normalized_query": "Evidence recovery",
+        "normalized_queries": {
+          "hyphen_removed": "Evidence recovery",
+          "hyphen_retained": "Evidence recovery"
+        },
+        "matches": [
+          {
+            "page": 1,
+            "block_id": "p1-left-intro",
+            "line": 1,
+            "line_offset_start": 0,
+            "line_offset_end": 17,
+            "offset": {
+              "start": 0,
+              "end": 17,
+              "unit": "unicode_codepoint",
+              "base": 0,
+              "interval": "half_open",
+              "scope": "original_supplied_line"
+            },
+            "document_char_start": 0,
+            "document_char_end": 17,
+            "page_char_start": 0,
+            "page_char_end": 17,
+            "source_excerpt": "Evidence recovery",
+            "segments": [
+              {
+                "page": 1,
+                "block_id": "p1-left-intro",
+                "reading_index": 0,
+                "line": 1,
+                "line_offset_start": 0,
+                "line_offset_end": 17,
+                "document_char_start": 0,
+                "document_char_end": 17,
+                "page_char_start": 0,
+                "page_char_end": 17,
+                "text": "Evidence recovery"
+              }
+            ],
+            "spans_pages": [
+              1
+            ],
+            "spans_blocks": [
+              "p1-left-intro"
+            ],
+            "fidelity_variant": "hyphen_removed"
+          }
+        ]
+      }
+    },
+    {
+      "id": "L20-empty-query-invalid",
+      "group": "two-column-layout",
+      "input": "examples/synthetic/layout.json",
+      "passed": true,
+      "assertion_errors": [],
+      "actual": {
+        "query_id": "L20-empty-query-invalid",
+        "query": "",
+        "mode": "exact",
+        "semantic_entailment": "not_evaluated",
+        "status": "invalid",
+        "match_count": 0,
+        "matches": [],
+        "error": "query must be a nonempty string and mode exact or fidelity"
+      }
+    },
+    {
+      "id": "L21-absent-quote-not-found",
+      "group": "two-column-layout",
+      "input": "examples/synthetic/layout.json",
+      "passed": true,
+      "assertion_errors": [],
+      "actual": {
+        "query_id": "L21-absent-quote-not-found",
+        "query": "nonexistent synthetic phrase",
+        "mode": "fidelity",
+        "semantic_entailment": "not_evaluated",
+        "status": "not_found",
+        "match_count": 0,
+        "normalized_query": "nonexistent synthetic phrase",
+        "normalized_queries": {
+          "hyphen_removed": "nonexistent synthetic phrase",
+          "hyphen_retained": "nonexistent synthetic phrase"
+        },
+        "matches": []
+      }
+    },
+    {
+      "id": "L22-second-page-primary-location",
+      "group": "two-column-layout",
+      "input": "examples/synthetic/layout.json",
+      "passed": true,
+      "assertion_errors": [],
+      "actual": {
+        "query_id": "L22-second-page-primary-location",
+        "query": "second page",
+        "mode": "exact",
+        "semantic_entailment": "not_evaluated",
+        "status": "matched",
+        "match_count": 1,
+        "normalized_query": "second page",
+        "normalized_queries": {
+          "exact": "second page"
+        },
+        "matches": [
+          {
+            "page": 2,
+            "block_id": "p2-left",
+            "line": 1,
+            "line_offset_start": 4,
+            "line_offset_end": 15,
+            "offset": {
+              "start": 4,
+              "end": 15,
+              "unit": "unicode_codepoint",
+              "base": 0,
+              "interval": "half_open",
+              "scope": "original_supplied_line"
+            },
+            "document_char_start": 221,
+            "document_char_end": 232,
+            "page_char_start": 4,
+            "page_char_end": 15,
+            "source_excerpt": "second page",
+            "segments": [
+              {
+                "page": 2,
+                "block_id": "p2-left",
+                "reading_index": 0,
+                "line": 1,
+                "line_offset_start": 4,
+                "line_offset_end": 15,
+                "document_char_start": 221,
+                "document_char_end": 232,
+                "page_char_start": 4,
+                "page_char_end": 15,
+                "text": "second page"
+              }
+            ],
+            "spans_pages": [
+              2
+            ],
+            "spans_blocks": [
+              "p2-left"
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "id": "L23-fidelity-not-case-folding",
+      "group": "two-column-layout",
+      "input": "examples/synthetic/layout.json",
+      "passed": true,
+      "assertion_errors": [],
+      "actual": {
+        "query_id": "L23-fidelity-not-case-folding",
+        "query": "EVIDENCE RECOVERY",
+        "mode": "fidelity",
+        "semantic_entailment": "not_evaluated",
+        "status": "not_found",
+        "match_count": 0,
+        "normalized_query": "EVIDENCE RECOVERY",
+        "normalized_queries": {
+          "hyphen_removed": "EVIDENCE RECOVERY",
+          "hyphen_retained": "EVIDENCE RECOVERY"
+        },
+        "matches": []
+      }
+    },
+    {
+      "id": "L24-exact-hyphen-without-newline-not-found",
+      "group": "two-column-layout",
+      "input": "examples/synthetic/layout.json",
+      "passed": true,
+      "assertion_errors": [],
+      "actual": {
+        "query_id": "L24-exact-hyphen-without-newline-not-found",
+        "query": "cross-column",
+        "mode": "exact",
+        "semantic_entailment": "not_evaluated",
+        "status": "not_found",
+        "match_count": 0,
+        "normalized_query": "cross-column",
+        "normalized_queries": {
+          "exact": "cross-column"
+        },
+        "matches": []
+      }
+    },
+    {
+      "id": "L25-dehyphenation-is-not-space-insertion",
+      "group": "two-column-layout",
+      "input": "examples/synthetic/layout.json",
+      "passed": true,
+      "assertion_errors": [],
+      "actual": {
+        "query_id": "L25-dehyphenation-is-not-space-insertion",
+        "query": "cross column",
+        "mode": "fidelity",
+        "semantic_entailment": "not_evaluated",
+        "status": "not_found",
+        "match_count": 0,
+        "normalized_query": "cross column",
+        "normalized_queries": {
+          "hyphen_removed": "cross column",
+          "hyphen_retained": "cross column"
+        },
+        "matches": []
+      }
+    },
+    {
+      "id": "T01-text-second-page",
+      "group": "form-feed-text",
+      "input": "examples/synthetic/text.txt",
+      "passed": true,
+      "assertion_errors": [],
+      "actual": {
+        "query_id": "T01-text-second-page",
+        "query": "second page",
+        "mode": "exact",
+        "semantic_entailment": "not_evaluated",
+        "status": "matched",
+        "match_count": 1,
+        "normalized_query": "second page",
+        "normalized_queries": {
+          "exact": "second page"
+        },
+        "matches": [
+          {
+            "page": 2,
+            "block_id": "p2-b1",
+            "line": 1,
+            "line_offset_start": 0,
+            "line_offset_end": 11,
+            "offset": {
+              "start": 0,
+              "end": 11,
+              "unit": "unicode_codepoint",
+              "base": 0,
+              "interval": "half_open",
+              "scope": "original_supplied_line"
+            },
+            "document_char_start": 54,
+            "document_char_end": 65,
+            "page_char_start": 0,
+            "page_char_end": 11,
+            "source_excerpt": "second page",
+            "segments": [
+              {
+                "page": 2,
+                "block_id": "p2-b1",
+                "reading_index": 0,
+                "line": 1,
+                "line_offset_start": 0,
+                "line_offset_end": 11,
+                "document_char_start": 54,
+                "document_char_end": 65,
+                "page_char_start": 0,
+                "page_char_end": 11,
+                "text": "second page"
+              }
+            ],
+            "spans_pages": [
+              2
+            ],
+            "spans_blocks": [
+              "p2-b1"
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "id": "T02-text-line-index",
+      "group": "form-feed-text",
+      "input": "examples/synthetic/text.txt",
+      "passed": true,
+      "assertion_errors": [],
+      "actual": {
+        "query_id": "T02-text-line-index",
+        "query": "repeat repeat",
+        "mode": "exact",
+        "semantic_entailment": "not_evaluated",
+        "status": "matched",
+        "match_count": 1,
+        "normalized_query": "repeat repeat",
+        "normalized_queries": {
+          "exact": "repeat repeat"
+        },
+        "matches": [
+          {
+            "page": 1,
+            "block_id": "p1-b1",
+            "line": 3,
+            "line_offset_start": 0,
+            "line_offset_end": 13,
+            "offset": {
+              "start": 0,
+              "end": 13,
+              "unit": "unicode_codepoint",
+              "base": 0,
+              "interval": "half_open",
+              "scope": "original_supplied_line"
+            },
+            "document_char_start": 38,
+            "document_char_end": 51,
+            "page_char_start": 38,
+            "page_char_end": 51,
+            "source_excerpt": "repeat repeat",
+            "segments": [
+              {
+                "page": 1,
+                "block_id": "p1-b1",
+                "reading_index": 0,
+                "line": 3,
+                "line_offset_start": 0,
+                "line_offset_end": 13,
+                "document_char_start": 38,
+                "document_char_end": 51,
+                "page_char_start": 38,
+                "page_char_end": 51,
+                "text": "repeat repeat"
+              }
+            ],
+            "spans_pages": [
+              1
+            ],
+            "spans_blocks": [
+              "p1-b1"
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "id": "T03-text-cross-page-location",
+      "group": "form-feed-text",
+      "input": "examples/synthetic/text.txt",
+      "passed": true,
+      "assertion_errors": [],
+      "actual": {
+        "query_id": "T03-text-cross-page-location",
+        "query": "repeat repeat second page starts",
+        "mode": "fidelity",
+        "semantic_entailment": "not_evaluated",
+        "status": "matched",
+        "match_count": 1,
+        "normalized_query": "repeat repeat second page starts",
+        "normalized_queries": {
+          "hyphen_removed": "repeat repeat second page starts",
+          "hyphen_retained": "repeat repeat second page starts"
+        },
+        "matches": [
+          {
+            "page": 1,
+            "block_id": "p1-b1",
+            "line": 3,
+            "line_offset_start": 0,
+            "line_offset_end": 13,
+            "offset": {
+              "start": 0,
+              "end": 13,
+              "unit": "unicode_codepoint",
+              "base": 0,
+              "interval": "half_open",
+              "scope": "original_supplied_line"
+            },
+            "document_char_start": 38,
+            "document_char_end": 72,
+            "page_char_start": null,
+            "page_char_end": null,
+            "source_excerpt": "repeat repeat\n\f\nsecond page starts",
+            "segments": [
+              {
+                "page": 1,
+                "block_id": "p1-b1",
+                "reading_index": 0,
+                "line": 3,
+                "line_offset_start": 0,
+                "line_offset_end": 13,
+                "document_char_start": 38,
+                "document_char_end": 51,
+                "page_char_start": 38,
+                "page_char_end": 51,
+                "text": "repeat repeat"
+              },
+              {
+                "page": 2,
+                "block_id": "p2-b1",
+                "reading_index": 0,
+                "line": 1,
+                "line_offset_start": 0,
+                "line_offset_end": 18,
+                "document_char_start": 54,
+                "document_char_end": 72,
+                "page_char_start": 0,
+                "page_char_end": 18,
+                "text": "second page starts"
+              }
+            ],
+            "spans_pages": [
+              1,
+              2
+            ],
+            "spans_blocks": [
+              "p1-b1",
+              "p2-b1"
+            ],
+            "fidelity_variant": "hyphen_removed"
+          }
+        ]
+      }
+    },
+    {
+      "id": "T04-text-not-found-remains-honest",
+      "group": "form-feed-text",
+      "input": "examples/synthetic/text.txt",
+      "passed": true,
+      "assertion_errors": [],
+      "actual": {
+        "query_id": "T04-text-not-found-remains-honest",
+        "query": "not in either page",
+        "mode": "exact",
+        "semantic_entailment": "not_evaluated",
+        "status": "not_found",
+        "match_count": 0,
+        "normalized_query": "not in either page",
+        "normalized_queries": {
+          "exact": "not in either page"
+        },
+        "matches": []
+      }
+    },
+    {
+      "id": "M01-markdown-second-page",
+      "group": "markdown-page-markers",
+      "input": "examples/synthetic/markdown.md",
+      "passed": true,
+      "assertion_errors": [],
+      "actual": {
+        "query_id": "M01-markdown-second-page",
+        "query": "last page",
+        "mode": "exact",
+        "semantic_entailment": "not_evaluated",
+        "status": "matched",
+        "match_count": 1,
+        "normalized_query": "last page",
+        "normalized_queries": {
+          "exact": "last page"
+        },
+        "matches": [
+          {
+            "page": 2,
+            "block_id": "p2-b1",
+            "line": 1,
+            "line_offset_start": 0,
+            "line_offset_end": 9,
+            "offset": {
+              "start": 0,
+              "end": 9,
+              "unit": "unicode_codepoint",
+              "base": 0,
+              "interval": "half_open",
+              "scope": "original_supplied_line"
+            },
+            "document_char_start": 42,
+            "document_char_end": 51,
+            "page_char_start": 0,
+            "page_char_end": 9,
+            "source_excerpt": "last page",
+            "segments": [
+              {
+                "page": 2,
+                "block_id": "p2-b1",
+                "reading_index": 0,
+                "line": 1,
+                "line_offset_start": 0,
+                "line_offset_end": 9,
+                "document_char_start": 42,
+                "document_char_end": 51,
+                "page_char_start": 0,
+                "page_char_end": 9,
+                "text": "last page"
+              }
+            ],
+            "spans_pages": [
+              2
+            ],
+            "spans_blocks": [
+              "p2-b1"
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "id": "M02-markdown-dehyphenation",
+      "group": "markdown-page-markers",
+      "input": "examples/synthetic/markdown.md",
+      "passed": true,
+      "assertion_errors": [],
+      "actual": {
+        "query_id": "M02-markdown-dehyphenation",
+        "query": "dehyphenation test",
+        "mode": "fidelity",
+        "semantic_entailment": "not_evaluated",
+        "status": "matched",
+        "match_count": 1,
+        "normalized_query": "dehyphenation test",
+        "normalized_queries": {
+          "hyphen_removed": "dehyphenation test",
+          "hyphen_retained": "dehyphenation test"
+        },
+        "matches": [
+          {
+            "page": 1,
+            "block_id": "p1-b1",
+            "line": 2,
+            "line_offset_start": 0,
+            "line_offset_end": 9,
+            "offset": {
+              "start": 0,
+              "end": 9,
+              "unit": "unicode_codepoint",
+              "base": 0,
+              "interval": "half_open",
+              "scope": "original_supplied_line"
+            },
+            "document_char_start": 19,
+            "document_char_end": 39,
+            "page_char_start": 19,
+            "page_char_end": 39,
+            "source_excerpt": "dehyphen-\nation test",
+            "segments": [
+              {
+                "page": 1,
+                "block_id": "p1-b1",
+                "reading_index": 0,
+                "line": 2,
+                "line_offset_start": 0,
+                "line_offset_end": 9,
+                "document_char_start": 19,
+                "document_char_end": 28,
+                "page_char_start": 19,
+                "page_char_end": 28,
+                "text": "dehyphen-"
+              },
+              {
+                "page": 1,
+                "block_id": "p1-b1",
+                "reading_index": 0,
+                "line": 3,
+                "line_offset_start": 0,
+                "line_offset_end": 10,
+                "document_char_start": 29,
+                "document_char_end": 39,
+                "page_char_start": 29,
+                "page_char_end": 39,
+                "text": "ation test"
+              }
+            ],
+            "spans_pages": [
+              1
+            ],
+            "spans_blocks": [
+              "p1-b1"
+            ],
+            "fidelity_variant": "hyphen_removed"
+          }
+        ]
+      }
+    },
+    {
+      "id": "M03-markdown-repeat-on-page-two",
+      "group": "markdown-page-markers",
+      "input": "examples/synthetic/markdown.md",
+      "passed": true,
+      "assertion_errors": [],
+      "actual": {
+        "query_id": "M03-markdown-repeat-on-page-two",
+        "query": "repeat repeat",
+        "mode": "exact",
+        "semantic_entailment": "not_evaluated",
+        "status": "matched",
+        "match_count": 1,
+        "normalized_query": "repeat repeat",
+        "normalized_queries": {
+          "exact": "repeat repeat"
+        },
+        "matches": [
+          {
+            "page": 2,
+            "block_id": "p2-b1",
+            "line": 2,
+            "line_offset_start": 0,
+            "line_offset_end": 13,
+            "offset": {
+              "start": 0,
+              "end": 13,
+              "unit": "unicode_codepoint",
+              "base": 0,
+              "interval": "half_open",
+              "scope": "original_supplied_line"
+            },
+            "document_char_start": 52,
+            "document_char_end": 65,
+            "page_char_start": 10,
+            "page_char_end": 23,
+            "source_excerpt": "repeat repeat",
+            "segments": [
+              {
+                "page": 2,
+                "block_id": "p2-b1",
+                "reading_index": 0,
+                "line": 2,
+                "line_offset_start": 0,
+                "line_offset_end": 13,
+                "document_char_start": 52,
+                "document_char_end": 65,
+                "page_char_start": 10,
+                "page_char_end": 23,
+                "text": "repeat repeat"
+              }
+            ],
+            "spans_pages": [
+              2
+            ],
+            "spans_blocks": [
+              "p2-b1"
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "id": "M04-page-marker-not-body-text",
+      "group": "markdown-page-markers",
+      "input": "examples/synthetic/markdown.md",
+      "passed": true,
+      "assertion_errors": [],
+      "actual": {
+        "query_id": "M04-page-marker-not-body-text",
+        "query": "page: 2",
+        "mode": "exact",
+        "semantic_entailment": "not_evaluated",
+        "status": "not_found",
+        "match_count": 0,
+        "normalized_query": "page: 2",
+        "normalized_queries": {
+          "exact": "page: 2"
+        },
+        "matches": []
+      }
+    }
+  ],
+  "semantic_entailment": "not_evaluated"
+}

@@ -1,0 +1,32 @@
+{
+  "case_id":"SYNTHETIC-NEG-UNBALANCED-001",
+  "dataset_status":"SYNTHETIC negative fixture; not an official result",
+  "sources":[{
+    "source_id":"T-NEG-SUM","source_type":"table",
+    "title":"SYNTHETIC unbalanced observed event table",
+    "caption":"The explicit total is intentionally inconsistent; no repair is allowed.",
+    "row_header":{"label":"Component / total","unit":"identifier"},
+    "columns":[{"column_id":"observed","label":"Observed deduplicated events (events)","unit":"events"}],
+    "rows":[
+      {"row_id":"a","label":"Component A","cells":{"observed":"18"}},
+      {"row_id":"b","label":"Component B","cells":{"observed":"15"}},
+      {"row_id":"total","label":"Directly reported total","cells":{"observed":"32"}}
+    ]
+  }],
+  "evidence":[
+    {"evidence_id":"EN-A","source_id":"T-NEG-SUM","locator":{"row_id":"a","column_id":"observed"},"value":"18","unit":"events","quantity_kind":"event_count","statistical_unit":"one observed event","population_scope":"Component A"},
+    {"evidence_id":"EN-B","source_id":"T-NEG-SUM","locator":{"row_id":"b","column_id":"observed"},"value":"15","unit":"events","quantity_kind":"event_count","statistical_unit":"one observed event","population_scope":"Component B"},
+    {"evidence_id":"EN-T","source_id":"T-NEG-SUM","locator":{"row_id":"total","column_id":"observed"},"value":"32","unit":"events","quantity_kind":"event_count","statistical_unit":"one observed event","population_scope":"Components A and B"}
+  ],
+  "assertions":[{
+    "assertion_id":"NEG-SUM","kind":"calculated","operation":"sum_reconciliation",
+    "operands":{"parts":["18","15"],"total":"32"},
+    "operand_units":{"parts":"events","total":"events"},
+    "operand_kinds":{"parts":"event_count","total":"event_count"},
+    "operand_evidence_ids":{"total":["EN-T"]},
+    "part_evidence_ids":[["EN-A"],["EN-B"]],
+    "scope":{"parts":"Observed events in A and B","total":"Direct total for A and B","compatible":true},
+    "rounding":{"places":0,"mode":"half_up"},
+    "evidence_ids":["EN-A","EN-B","EN-T"]
+  }]
+}

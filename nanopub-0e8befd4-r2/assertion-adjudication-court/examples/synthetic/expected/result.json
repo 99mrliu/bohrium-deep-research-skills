@@ -1,0 +1,190 @@
+{
+  "case_id": "SYNTHETIC-ADJUDICATION-020",
+  "status": "success",
+  "adjudication_report": "adjudication-report.json",
+  "adjudication_ledger": "adjudication-ledger.json",
+  "input_count": 20,
+  "adjudicated_count": 20,
+  "verdict_counts": {
+    "supported": 5,
+    "contradicted": 5,
+    "not_established": 5,
+    "mixed": 5
+  },
+  "sources": [
+    "S1",
+    "S2",
+    "S3",
+    "S4",
+    "S5",
+    "S6"
+  ],
+  "uncertainty": [
+    {
+      "uncertainty_id": "U001",
+      "input_ids": [
+        "C004",
+        "C020"
+      ],
+      "topic": "cross_source_time_conflict",
+      "text": "S1与S2属于不同时间层且测值冲突；保留逐源裁决，不平均、不投票。"
+    },
+    {
+      "uncertainty_id": "U002",
+      "input_ids": [
+        "C002",
+        "C014",
+        "C017",
+        "C018"
+      ],
+      "topic": "absence_is_not_reverse",
+      "text": "模态、统计不确定和未测量均只支持未建立，不推出相反事实。"
+    },
+    {
+      "uncertainty_id": "U003",
+      "input_ids": [
+        "C005",
+        "C015"
+      ],
+      "topic": "measurement_vs_inference",
+      "text": "拟合与作者推断不能直接升级为仪器直接测量或确定事实。"
+    }
+  ],
+  "change_records": [
+    {
+      "change_id": "CHANGE-C002",
+      "input_id": "C002",
+      "corrected_claim_ids": [
+        "FIX-C002"
+      ],
+      "change_type": "separate_corrected_claim_proposal",
+      "original_preserved": true
+    },
+    {
+      "change_id": "CHANGE-C003",
+      "input_id": "C003",
+      "corrected_claim_ids": [
+        "FIX-C003"
+      ],
+      "change_type": "separate_corrected_claim_proposal",
+      "original_preserved": true
+    },
+    {
+      "change_id": "CHANGE-C004",
+      "input_id": "C004",
+      "corrected_claim_ids": [
+        "FIX-C004"
+      ],
+      "change_type": "separate_corrected_claim_proposal",
+      "original_preserved": true
+    },
+    {
+      "change_id": "CHANGE-C005",
+      "input_id": "C005",
+      "corrected_claim_ids": [
+        "FIX-C005"
+      ],
+      "change_type": "separate_corrected_claim_proposal",
+      "original_preserved": true
+    },
+    {
+      "change_id": "CHANGE-C007",
+      "input_id": "C007",
+      "corrected_claim_ids": [
+        "FIX-C007"
+      ],
+      "change_type": "separate_corrected_claim_proposal",
+      "original_preserved": true
+    },
+    {
+      "change_id": "CHANGE-C008",
+      "input_id": "C008",
+      "corrected_claim_ids": [
+        "FIX-C008"
+      ],
+      "change_type": "separate_corrected_claim_proposal",
+      "original_preserved": true
+    },
+    {
+      "change_id": "CHANGE-C010",
+      "input_id": "C010",
+      "corrected_claim_ids": [
+        "FIX-C010"
+      ],
+      "change_type": "separate_corrected_claim_proposal",
+      "original_preserved": true
+    },
+    {
+      "change_id": "CHANGE-C011",
+      "input_id": "C011",
+      "corrected_claim_ids": [
+        "FIX-C011"
+      ],
+      "change_type": "separate_corrected_claim_proposal",
+      "original_preserved": true
+    },
+    {
+      "change_id": "CHANGE-C013",
+      "input_id": "C013",
+      "corrected_claim_ids": [
+        "FIX-C013"
+      ],
+      "change_type": "separate_corrected_claim_proposal",
+      "original_preserved": true
+    },
+    {
+      "change_id": "CHANGE-C014",
+      "input_id": "C014",
+      "corrected_claim_ids": [
+        "FIX-C014"
+      ],
+      "change_type": "separate_corrected_claim_proposal",
+      "original_preserved": true
+    },
+    {
+      "change_id": "CHANGE-C015",
+      "input_id": "C015",
+      "corrected_claim_ids": [
+        "FIX-C015"
+      ],
+      "change_type": "separate_corrected_claim_proposal",
+      "original_preserved": true
+    },
+    {
+      "change_id": "CHANGE-C017",
+      "input_id": "C017",
+      "corrected_claim_ids": [
+        "FIX-C017"
+      ],
+      "change_type": "separate_corrected_claim_proposal",
+      "original_preserved": true
+    },
+    {
+      "change_id": "CHANGE-C018",
+      "input_id": "C018",
+      "corrected_claim_ids": [
+        "FIX-C018"
+      ],
+      "change_type": "separate_corrected_claim_proposal",
+      "original_preserved": true
+    },
+    {
+      "change_id": "CHANGE-C019",
+      "input_id": "C019",
+      "corrected_claim_ids": [
+        "FIX-C019"
+      ],
+      "change_type": "separate_corrected_claim_proposal",
+      "original_preserved": true
+    },
+    {
+      "change_id": "CHANGE-C020",
+      "input_id": "C020",
+      "corrected_claim_ids": [
+        "FIX-C020"
+      ],
+      "change_type": "separate_corrected_claim_proposal",
+      "original_preserved": true
+    }
+  ]
+}

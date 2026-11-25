@@ -1,0 +1,22 @@
+{
+  "case_id": "SYNTHETIC-UNIQUE-QUOTES",
+  "synthetic": true,
+  "formal_result": false,
+  "queries": [
+    {
+      "query_id": "unique-exact",
+      "query": "Evidence recovery",
+      "mode": "exact"
+    },
+    {
+      "query_id": "unique-dehyphenated",
+      "query": "cross-column order explicit",
+      "mode": "fidelity"
+    },
+    {
+      "query_id": "unique-cross-block-order",
+      "query": "half open intervals. Right column follows left.",
+      "mode": "fidelity"
+    }
+  ]
+}

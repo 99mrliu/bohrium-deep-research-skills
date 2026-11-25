@@ -1,0 +1,117 @@
+{
+  "document_id": "SYNTHETIC-TWO-COLUMN",
+  "synthetic": true,
+  "formal_result": false,
+  "source": {
+    "source_id": "synthetic-layout-source",
+    "origin": "SYNTHETIC hand-authored text and coordinates; not extracted from a real PDF",
+    "extraction": "SYNTHETIC external block input emulating pdftotext -bbox or PyMuPDF output"
+  },
+  "pages": [
+    {
+      "page": 1,
+      "width": 600,
+      "height": 800,
+      "extraction_status": "text",
+      "block_order": [
+        "p1-header",
+        "p1-left-intro",
+        "p1-left-detail",
+        "p1-right-main",
+        "p1-figure",
+        "p1-footer"
+      ],
+      "blocks": [
+        {
+          "block_id": "p1-header",
+          "role": "header",
+          "bbox": [40, 20, 560, 42],
+          "lines": ["SYNTHETIC JOURNAL"]
+        },
+        {
+          "block_id": "p1-left-intro",
+          "role": "body",
+          "column": 1,
+          "bbox": [40, 80, 280, 170],
+          "lines": [
+            "Evidence recovery keeps",
+            "cross-",
+            "column order explicit."
+          ]
+        },
+        {
+          "block_id": "p1-right-main",
+          "role": "body",
+          "column": 2,
+          "bbox": [320, 80, 560, 240],
+          "lines": [
+            "Right column follows left.",
+            "Repeated phrase appears here.",
+            "Figure legends stay separate."
+          ]
+        },
+        {
+          "block_id": "p1-left-detail",
+          "role": "body",
+          "column": 1,
+          "bbox": [40, 220, 280, 330],
+          "lines": [
+            "Repeated phrase appears here.",
+            "Offsets use zero based",
+            "half open intervals."
+          ]
+        },
+        {
+          "block_id": "p1-figure",
+          "role": "figure_text",
+          "bbox": [320, 370, 560, 450],
+          "lines": ["FIGURE 1 repeated phrase"]
+        },
+        {
+          "block_id": "p1-footer",
+          "role": "footer",
+          "bbox": [40, 760, 560, 780],
+          "lines": ["SYNTHETIC PAGE 1"]
+        }
+      ]
+    },
+    {
+      "page": 2,
+      "width": 600,
+      "height": 800,
+      "extraction_status": "text",
+      "block_order": ["p2-header", "p2-left", "p2-right", "p2-footer"],
+      "blocks": [
+        {
+          "block_id": "p2-header",
+          "role": "header",
+          "bbox": [40, 20, 560, 42],
+          "lines": ["SYNTHETIC JOURNAL"]
+        },
+        {
+          "block_id": "p2-left",
+          "role": "body",
+          "column": 1,
+          "bbox": [40, 80, 280, 180],
+          "lines": [
+            "The second page keeps",
+            "line offsets stable."
+          ]
+        },
+        {
+          "block_id": "p2-right",
+          "role": "body",
+          "column": 2,
+          "bbox": [320, 80, 560, 180],
+          "lines": ["No semantic claim is made."]
+        },
+        {
+          "block_id": "p2-footer",
+          "role": "footer",
+          "bbox": [40, 760, 560, 780],
+          "lines": ["SYNTHETIC PAGE 2"]
+        }
+      ]
+    }
+  ]
+}

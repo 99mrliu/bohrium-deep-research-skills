@@ -1,0 +1,69 @@
+{
+  "assertion_results": [
+    {
+      "assertion_id": "NEG-SUM",
+      "direct_vs_calculated": "calculated",
+      "error": "NEG-SUM sum reconciliation is unbalanced; residual=1/1 events",
+      "evidence_ids": [
+        "EN-A",
+        "EN-B",
+        "EN-T"
+      ],
+      "kind": "calculated",
+      "status": "pending",
+      "unit": null,
+      "value": null
+    }
+  ],
+  "case_id": "SYNTHETIC-NEG-UNBALANCED-001",
+  "change_records": [
+    {
+      "assertion_id": "NEG-SUM",
+      "from": "pending",
+      "to": "unresolved"
+    }
+  ],
+  "run_metadata": {
+    "calculator_version": "1.0.0",
+    "external_requests_used": 0,
+    "numeric_engine": "Decimal input; Fraction exact arithmetic; Decimal final rounding",
+    "python_requirement": "3.9+",
+    "request_limit": 64,
+    "stdlib_only": true,
+    "time_limit_seconds": 900
+  },
+  "sources": [
+    {
+      "evidence_ids": [
+        "EN-A",
+        "EN-B",
+        "EN-T"
+      ],
+      "source_id": "T-NEG-SUM",
+      "source_type": "table",
+      "used_by": [
+        "NEG-SUM"
+      ]
+    }
+  ],
+  "status": "failed",
+  "summary": {
+    "calculated_assertions": 0,
+    "completed_assertions": 0,
+    "direct_assertions": 0,
+    "pending_assertions": 1,
+    "qualitative_assertions": 0,
+    "total_assertions": 1
+  },
+  "uncertainty": [
+    {
+      "code": "semantic_scope_review",
+      "message": "Scope compatibility is explicit and source-bound; no missing value is inferred."
+    },
+    {
+      "assertion_id": "NEG-SUM",
+      "code": "unresolved",
+      "message": "NEG-SUM sum reconciliation is unbalanced; residual=1/1 events"
+    }
+  ]
+}

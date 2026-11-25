@@ -1,0 +1,15 @@
+schema_version: layout-evidence-resources/v1
+challenge: product-arena-09-0e8befd4
+paths:
+  case: /input/case.json
+  task: /input/task.md
+  work: /app/work
+  output: /app/output
+budgets:
+  requests: 64
+  elapsed_seconds: 900
+policy:
+  output_contract_priority: "The output_contract in /input/task.md controls the required result.json fields."
+  partial_early: true
+  optional_pdf_dependencies_required: false
+  python: "3.9+ standard library for scripts/layout_evidence.py"

@@ -1,0 +1,22 @@
+{
+  "calculations": [],
+  "case_id": "SYNTHETIC-NEG-ZERO-001",
+  "direct_assertions": [],
+  "qualitative_assertions": [],
+  "status": "failed",
+  "summary": {
+    "calculated_assertions": 0,
+    "completed_assertions": 0,
+    "direct_assertions": 0,
+    "pending_assertions": 1,
+    "qualitative_assertions": 0,
+    "total_assertions": 1
+  },
+  "unresolved": [
+    {
+      "assertion_id": "NEG-ZERO",
+      "reason": "NEG-ZERO division by zero: share denominator",
+      "value": null
+    }
+  ]
+}

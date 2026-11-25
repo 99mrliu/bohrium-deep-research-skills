@@ -1,0 +1,153 @@
+{
+  "case_id": "SYNTHETIC-QC-001",
+  "dataset_status": "SYNTHETIC — synthetic fixture only; not an official result",
+  "sources": [
+    {
+      "source_id": "T1",
+      "source_type": "table",
+      "title": "SYNTHETIC Table 1. Raw mentions, deduplicated identifiers, and represented people by system, 2024",
+      "caption": "Each cell uses the statistical object named in its full column heading. Rows are not interchangeable; All systems is the explicit denominator population.",
+      "row_header": {"label": "System / denominator population", "unit": "identifier"},
+      "columns": [
+        {"column_id": "mentions", "label": "Raw mentions in 2024 (mentions)", "unit": "mentions"},
+        {"column_id": "unique_ids", "label": "Deduplicated identifiers in 2024 (identifiers)", "unit": "identifiers"},
+        {"column_id": "people", "label": "Consenting represented people in 2024 (people)", "unit": "people"}
+      ],
+      "rows": [
+        {"row_id": "system_a", "label": "System A", "cells": {"mentions": "120", "unique_ids": "100", "people": "80"}},
+        {"row_id": "system_b", "label": "System B", "cells": {"mentions": "110", "unique_ids": "100", "people": "90"}},
+        {"row_id": "system_c", "label": "System C", "cells": {"mentions": "170", "unique_ids": "140", "people": "130"}},
+        {"row_id": "all_systems", "label": "All systems, stated denominator", "cells": {"mentions": "400", "unique_ids": "340", "people": "300"}}
+      ]
+    },
+    {
+      "source_id": "T2",
+      "source_type": "table",
+      "title": "SYNTHETIC Table 2. Observed and planned event counts by component",
+      "caption": "Observed parts reconcile to the observed total. Planned values are separate operands; the residual is observed minus planned.",
+      "row_header": {"label": "Component / total", "unit": "identifier"},
+      "columns": [
+        {"column_id": "observed_events", "label": "Observed events after deduplication (events)", "unit": "events"},
+        {"column_id": "planned_events", "label": "Planned events in the baseline schedule (events)", "unit": "events"}
+      ],
+      "rows": [
+        {"row_id": "component_a", "label": "Component A", "cells": {"observed_events": "18", "planned_events": "19"}},
+        {"row_id": "component_b", "label": "Component B", "cells": {"observed_events": "15", "planned_events": "15"}},
+        {"row_id": "component_c", "label": "Component C", "cells": {"observed_events": "7", "planned_events": "7"}},
+        {"row_id": "total", "label": "Total observed / planned events", "cells": {"observed_events": "40", "planned_events": "41"}}
+      ]
+    },
+    {
+      "source_id": "F1",
+      "source_type": "figure_caption",
+      "title": "SYNTHETIC Figure 1. Independent panels with explicit units",
+      "text": "SYNTHETIC caption. Panel units must not be merged. Values are reported, not measured from pixels. No causal interpretation is supplied.",
+      "panels": [
+        {"panel_id": "a", "label": "CPU time for baseline and candidate pipelines", "unit": "s", "text": "Panel a: baseline CPU time = 20.0 s; candidate CPU time = 15.0 s."},
+        {"panel_id": "b", "label": "Request latency for System A and System B", "unit": "ms", "text": "Panel b: System A latency = 250 ms; System B latency = 200 ms."},
+        {"panel_id": "c", "label": "Head graph residual for Component A", "unit": "events", "text": "Panel c: head graph directly reports residual = -1 event; observed = 18 events, planned = 19 events."},
+        {"panel_id": "d", "label": "Legacy and new index-build counts", "unit": "builds", "text": "Panel d: baseline index builds = 120 builds; new index builds = 150 builds."}
+      ]
+    }
+  ],
+  "evidence": [
+    {"evidence_id":"E-A-M","source_id":"T1","locator":{"row_id":"system_a","column_id":"mentions"},"value":"120","unit":"mentions","quantity_kind":"mentions","statistical_unit":"one raw mention","population_scope":"System A raw mentions in 2024"},
+    {"evidence_id":"E-A-U","source_id":"T1","locator":{"row_id":"system_a","column_id":"unique_ids"},"value":"100","unit":"identifiers","quantity_kind":"unique_identifiers","statistical_unit":"one deduplicated identifier","population_scope":"System A unique identifiers in 2024"},
+    {"evidence_id":"E-A-P","source_id":"T1","locator":{"row_id":"system_a","column_id":"people"},"value":"80","unit":"people","quantity_kind":"people","statistical_unit":"one consenting represented person","population_scope":"System A represented people in 2024"},
+    {"evidence_id":"E-B-M","source_id":"T1","locator":{"row_id":"system_b","column_id":"mentions"},"value":"110","unit":"mentions","quantity_kind":"mentions","statistical_unit":"one raw mention","population_scope":"System B raw mentions in 2024"},
+    {"evidence_id":"E-B-U","source_id":"T1","locator":{"row_id":"system_b","column_id":"unique_ids"},"value":"100","unit":"identifiers","quantity_kind":"unique_identifiers","statistical_unit":"one deduplicated identifier","population_scope":"System B unique identifiers in 2024"},
+    {"evidence_id":"E-C-M","source_id":"T1","locator":{"row_id":"system_c","column_id":"mentions"},"value":"170","unit":"mentions","quantity_kind":"mentions","statistical_unit":"one raw mention","population_scope":"System C raw mentions in 2024"},
+    {"evidence_id":"E-ALL-M","source_id":"T1","locator":{"row_id":"all_systems","column_id":"mentions"},"value":"400","unit":"mentions","quantity_kind":"mentions","statistical_unit":"one raw mention","population_scope":"All systems raw mentions in 2024"},
+    {"evidence_id":"E-ALL-U","source_id":"T1","locator":{"row_id":"all_systems","column_id":"unique_ids"},"value":"340","unit":"identifiers","quantity_kind":"unique_identifiers","statistical_unit":"one deduplicated identifier","population_scope":"All systems unique identifiers in 2024"},
+    {"evidence_id":"E-ALL-P","source_id":"T1","locator":{"row_id":"all_systems","column_id":"people"},"value":"300","unit":"people","quantity_kind":"people","statistical_unit":"one consenting represented person","population_scope":"All systems represented people in 2024"},
+    {"evidence_id":"E-T2-A-OBS","source_id":"T2","locator":{"row_id":"component_a","column_id":"observed_events"},"value":"18","unit":"events","quantity_kind":"event_count","statistical_unit":"one deduplicated observed event","population_scope":"Component A observed events"},
+    {"evidence_id":"E-T2-A-PLAN","source_id":"T2","locator":{"row_id":"component_a","column_id":"planned_events"},"value":"19","unit":"events","quantity_kind":"event_count","statistical_unit":"one planned event","population_scope":"Component A planned events"},
+    {"evidence_id":"E-T2-B-OBS","source_id":"T2","locator":{"row_id":"component_b","column_id":"observed_events"},"value":"15","unit":"events","quantity_kind":"event_count","statistical_unit":"one deduplicated observed event","population_scope":"Component B observed events"},
+    {"evidence_id":"E-T2-C-OBS","source_id":"T2","locator":{"row_id":"component_c","column_id":"observed_events"},"value":"7","unit":"events","quantity_kind":"event_count","statistical_unit":"one deduplicated observed event","population_scope":"Component C observed events"},
+    {"evidence_id":"E-T2-TOTAL-OBS","source_id":"T2","locator":{"row_id":"total","column_id":"observed_events"},"value":"40","unit":"events","quantity_kind":"event_count","statistical_unit":"one deduplicated observed event","population_scope":"All listed components observed events"},
+    {"evidence_id":"E-F-CPU-BASE","source_id":"F1","locator":{"panel_id":"a","field":"baseline_cpu_time"},"value":"20.0","unit":"s","quantity_kind":"cpu_time","statistical_unit":"one pipeline run","population_scope":"Baseline pipeline in panel a"},
+    {"evidence_id":"E-F-CPU-CAND","source_id":"F1","locator":{"panel_id":"a","field":"candidate_cpu_time"},"value":"15.0","unit":"s","quantity_kind":"cpu_time","statistical_unit":"one pipeline run","population_scope":"Candidate pipeline in panel a"},
+    {"evidence_id":"E-F-LAT-A","source_id":"F1","locator":{"panel_id":"b","field":"system_a_latency"},"value":"250","unit":"ms","quantity_kind":"latency","statistical_unit":"one measured request","population_scope":"System A requests in panel b"},
+    {"evidence_id":"E-F-HEAD","source_id":"F1","locator":{"panel_id":"c","field":"head_graph_residual"},"value":"-1","unit":"events","quantity_kind":"event_count","statistical_unit":"one event difference","population_scope":"Component A observed minus planned events"},
+    {"evidence_id":"E-F-INDEX-BASE","source_id":"F1","locator":{"panel_id":"d","field":"baseline_builds"},"value":"120","unit":"builds","quantity_kind":"index_build_count","statistical_unit":"one index build","population_scope":"Baseline index builds in panel d"},
+    {"evidence_id":"E-F-INDEX-NEW","source_id":"F1","locator":{"panel_id":"d","field":"new_builds"},"value":"150","unit":"builds","quantity_kind":"index_build_count","statistical_unit":"one index build","population_scope":"New index builds in panel d"},
+    {"evidence_id":"E-Q-HEADERS","source_id":"T1","locator":{"field":"caption_and_column_headings"},"value":null,"unit":"not_applicable","quantity_kind":"qualitative_metadata","statistical_unit":"not_applicable","population_scope":"T1 row and column headings"},
+    {"evidence_id":"E-Q-SCOPE","source_id":"F1","locator":{"field":"caption"},"value":null,"unit":"not_applicable","quantity_kind":"qualitative_metadata","statistical_unit":"not_applicable","population_scope":"F1 caption scope and causal limitation"}
+  ],
+  "assertions": [
+    {"assertion_id":"D01","kind":"direct","text":"System A has 120 raw mentions.","value":"120","unit":"mentions","evidence_ids":["E-A-M"]},
+    {"assertion_id":"D02","kind":"direct","text":"System A has 100 unique identifiers.","value":"100","unit":"identifiers","evidence_ids":["E-A-U"]},
+    {"assertion_id":"D03","kind":"direct","text":"System A has 80 represented people.","value":"80","unit":"people","evidence_ids":["E-A-P"]},
+    {"assertion_id":"D04","kind":"direct","text":"System B has 110 raw mentions.","value":"110","unit":"mentions","evidence_ids":["E-B-M"]},
+    {"assertion_id":"D05","kind":"direct","text":"System B has 100 unique identifiers.","value":"100","unit":"identifiers","evidence_ids":["E-B-U"]},
+    {"assertion_id":"D06","kind":"direct","text":"System C has 170 raw mentions.","value":"170","unit":"mentions","evidence_ids":["E-C-M"]},
+    {"assertion_id":"D07","kind":"direct","text":"The stated all-system mention denominator is 400.","value":"400","unit":"mentions","evidence_ids":["E-ALL-M"]},
+    {"assertion_id":"D08","kind":"direct","text":"The stated all-system identifier denominator is 340.","value":"340","unit":"identifiers","evidence_ids":["E-ALL-U"]},
+    {"assertion_id":"D09","kind":"direct","text":"The stated all-system people denominator is 300.","value":"300","unit":"people","evidence_ids":["E-ALL-P"]},
+    {"assertion_id":"D10","kind":"direct","text":"Panel a directly reports 20.0 s baseline CPU time.","value":"20.0","unit":"s","evidence_ids":["E-F-CPU-BASE"]},
+    {"assertion_id":"D11","kind":"direct","text":"Panel a directly reports 15.0 s candidate CPU time.","value":"15.0","unit":"s","evidence_ids":["E-F-CPU-CAND"]},
+    {"assertion_id":"D12","kind":"direct","text":"Panel b directly reports System A latency of 250 ms.","value":"250","unit":"ms","evidence_ids":["E-F-LAT-A"]},
+    {"assertion_id":"D13","kind":"direct","text":"Table 2 directly reports 40 total observed events.","value":"40","unit":"events","evidence_ids":["E-T2-TOTAL-OBS"]},
+    {"assertion_id":"D14","kind":"direct","text":"The panel c head graph directly reports -1 event residual.","value":"-1","unit":"events","evidence_ids":["E-F-HEAD"]},
+    {
+      "assertion_id":"C01","kind":"calculated","operation":"share","text":"System A raw mentions as a share of all raw mentions.",
+      "operands":{"numerator":"120","denominator":"400"},
+      "operand_units":{"numerator":"mentions","denominator":"mentions"},
+      "operand_kinds":{"numerator":"mentions","denominator":"mentions"},
+      "operand_evidence_ids":{"numerator":["E-A-M"],"denominator":["E-ALL-M"]},
+      "scope":{"numerator":"System A raw mentions in 2024","denominator":"All systems raw mentions in 2024","compatible":true},
+      "rounding":{"places":1,"mode":"half_up"},"evidence_ids":["E-A-M","E-ALL-M"]
+    },
+    {
+      "assertion_id":"C02","kind":"calculated","operation":"share","text":"System A unique identifiers as a share of all unique identifiers.",
+      "operands":{"numerator":"100","denominator":"340"},
+      "operand_units":{"numerator":"identifiers","denominator":"identifiers"},
+      "operand_kinds":{"numerator":"unique_identifiers","denominator":"unique_identifiers"},
+      "operand_evidence_ids":{"numerator":["E-A-U"],"denominator":["E-ALL-U"]},
+      "scope":{"numerator":"System A unique identifiers in 2024","denominator":"All systems unique identifiers in 2024","compatible":true},
+      "rounding":{"places":1,"mode":"half_up"},"evidence_ids":["E-A-U","E-ALL-U"]
+    },
+    {
+      "assertion_id":"C03","kind":"calculated","operation":"ratio_percent_change","text":"Relative change from baseline to new index-build count.",
+      "operands":{"baseline":"120","new":"150"},
+      "operand_units":{"baseline":"builds","new":"builds"},
+      "operand_kinds":{"baseline":"index_build_count","new":"index_build_count"},
+      "operand_evidence_ids":{"baseline":["E-F-INDEX-BASE"],"new":["E-F-INDEX-NEW"]},
+      "scope":{"baseline":"Baseline index builds in panel d","new":"New index builds in panel d","compatible":true},
+      "rounding":{"places":1,"mode":"half_up"},"evidence_ids":["E-F-INDEX-BASE","E-F-INDEX-NEW"]
+    },
+    {
+      "assertion_id":"C04","kind":"calculated","operation":"relative_cpu_time_change","text":"Candidate CPU time relative to baseline CPU time.",
+      "operands":{"baseline_cpu_time":"20.0","candidate_cpu_time":"15.0"},
+      "operand_units":{"baseline_cpu_time":"s","candidate_cpu_time":"s"},
+      "operand_kinds":{"baseline_cpu_time":"cpu_time","candidate_cpu_time":"cpu_time"},
+      "operand_evidence_ids":{"baseline_cpu_time":["E-F-CPU-BASE"],"candidate_cpu_time":["E-F-CPU-CAND"]},
+      "scope":{"baseline_cpu_time":"Baseline pipeline in panel a","candidate_cpu_time":"Candidate pipeline in panel a","compatible":true},
+      "rounding":{"places":1,"mode":"half_up"},"evidence_ids":["E-F-CPU-BASE","E-F-CPU-CAND"]
+    },
+    {
+      "assertion_id":"C05","kind":"calculated","operation":"sum_reconciliation","text":"Observed component counts reconcile with the directly reported observed total.",
+      "operands":{"parts":["18","15","7"],"total":"40"},
+      "operand_units":{"parts":"events","total":"events"},
+      "operand_kinds":{"parts":"event_count","total":"event_count"},
+      "operand_evidence_ids":{"total":["E-T2-TOTAL-OBS"]},
+      "part_evidence_ids":[["E-T2-A-OBS"],["E-T2-B-OBS"],["E-T2-C-OBS"]],
+      "scope":{"parts":"Observed events in listed components A, B, C","total":"All listed components observed events","compatible":true},
+      "rounding":{"places":0,"mode":"half_up"},"evidence_ids":["E-T2-A-OBS","E-T2-B-OBS","E-T2-C-OBS","E-T2-TOTAL-OBS"]
+    },
+    {
+      "assertion_id":"C06","kind":"calculated","operation":"residual","text":"Component A observed-minus-planned event residual.",
+      "operands":{"left":"18","right":"19"},
+      "operand_units":{"left":"events","right":"events"},
+      "operand_kinds":{"left":"event_count","right":"event_count"},
+      "operand_evidence_ids":{"left":["E-T2-A-OBS"],"right":["E-T2-A-PLAN"]},
+      "scope":{"left":"Component A observed events","right":"Component A planned events","compatible":true},
+      "rounding":{"places":0,"mode":"half_up"},"evidence_ids":["E-T2-A-OBS","E-T2-A-PLAN"]
+    },
+    {"assertion_id":"L01","kind":"qualitative","text":"T1 has complete row and column titles with units.","conclusion":"supported","evidence_ids":["E-Q-HEADERS"]},
+    {"assertion_id":"L02","kind":"qualitative","text":"Mentions, unique identifiers, and people remain distinct counting objects.","conclusion":"supported; numeric equality does not merge object types","evidence_ids":["E-A-M","E-A-U","E-A-P"]},
+    {"assertion_id":"L03","kind":"qualitative","text":"Panel a seconds and panel b milliseconds cannot be pooled without an explicit conversion.","conclusion":"supported; no conversion performed","evidence_ids":["E-F-CPU-BASE","E-F-LAT-A"]},
+    {"assertion_id":"L04","kind":"qualitative","text":"The head graph residual is direct while C06 is independently calculated.","conclusion":"supported; retain both provenance types","evidence_ids":["E-F-HEAD","E-T2-A-OBS","E-T2-A-PLAN"]},
+    {"assertion_id":"L05","kind":"qualitative","text":"The caption does not support a causal claim.","conclusion":"no causal inference permitted","evidence_ids":["E-Q-SCOPE"]}
+  ]
+}

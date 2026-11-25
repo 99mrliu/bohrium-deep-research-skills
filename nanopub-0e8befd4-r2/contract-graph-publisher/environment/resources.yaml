@@ -1,0 +1,6 @@
+max_requests: 64
+max_seconds: 900
+network_access: false
+runtime: python3.9+
+dependencies: stdlib-only
+notes: Local deterministic publishing; zero network requests; no registration or Trusty URI generation.

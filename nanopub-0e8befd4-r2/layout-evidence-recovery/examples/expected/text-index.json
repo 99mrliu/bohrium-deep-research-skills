@@ -1,0 +1,150 @@
+{
+  "schema_version": "layout-evidence-index/v1",
+  "tool": "layout_evidence.py",
+  "tool_version": "1.0.0",
+  "document_id": "text",
+  "synthetic": true,
+  "formal_result": false,
+  "source": {
+    "source_id": "text",
+    "path": "examples/synthetic/text.txt",
+    "sha256": "c58ce92a170ccc739a78f0506c8443c95b9c31101df3d20c74f013ed56f1000c",
+    "media_type": "text/plain",
+    "extraction": "direct UTF-8 text; LF normalization; form-feed pagination"
+  },
+  "included_roles": [
+    "body"
+  ],
+  "pages": [
+    {
+      "page": 1,
+      "width": null,
+      "height": null,
+      "extraction_status": "text",
+      "block_order": [
+        "p1-b1"
+      ],
+      "page_char_start": 0,
+      "page_char_end": 51,
+      "blocks": [
+        {
+          "block_id": "p1-b1",
+          "role": "body",
+          "column": 1,
+          "bbox": null,
+          "input_index": 0,
+          "reading_index": 0,
+          "included": true,
+          "block_char_start": 0,
+          "block_char_end": 51,
+          "text": "SYNTHETIC text only\nalpha at line two\nrepeat repeat",
+          "lines": [
+            {
+              "line": 1,
+              "text": "SYNTHETIC text only",
+              "line_char_start": 0,
+              "line_char_end": 19,
+              "document_char_start": 0,
+              "document_char_end": 19,
+              "page_char_start": 0,
+              "page_char_end": 19
+            },
+            {
+              "line": 2,
+              "text": "alpha at line two",
+              "line_char_start": 0,
+              "line_char_end": 17,
+              "document_char_start": 20,
+              "document_char_end": 37,
+              "page_char_start": 20,
+              "page_char_end": 37
+            },
+            {
+              "line": 3,
+              "text": "repeat repeat",
+              "line_char_start": 0,
+              "line_char_end": 13,
+              "document_char_start": 38,
+              "document_char_end": 51,
+              "page_char_start": 38,
+              "page_char_end": 51
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "page": 2,
+      "width": null,
+      "height": null,
+      "extraction_status": "text",
+      "block_order": [
+        "p2-b1"
+      ],
+      "page_char_start": 54,
+      "page_char_end": 78,
+      "blocks": [
+        {
+          "block_id": "p2-b1",
+          "role": "body",
+          "column": 1,
+          "bbox": null,
+          "input_index": 0,
+          "reading_index": 0,
+          "included": true,
+          "block_char_start": 54,
+          "block_char_end": 78,
+          "text": "second page starts\nomega",
+          "lines": [
+            {
+              "line": 1,
+              "text": "second page starts",
+              "line_char_start": 0,
+              "line_char_end": 18,
+              "document_char_start": 54,
+              "document_char_end": 72,
+              "page_char_start": 0,
+              "page_char_end": 18
+            },
+            {
+              "line": 2,
+              "text": "omega",
+              "line_char_start": 0,
+              "line_char_end": 5,
+              "document_char_start": 73,
+              "document_char_end": 78,
+              "page_char_start": 19,
+              "page_char_end": 24
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "text": "SYNTHETIC text only\nalpha at line two\nrepeat repeat\n\f\nsecond page starts\nomega",
+  "issues": [],
+  "sources": [
+    {
+      "source_id": "text",
+      "path": "examples/synthetic/text.txt",
+      "sha256": "c58ce92a170ccc739a78f0506c8443c95b9c31101df3d20c74f013ed56f1000c",
+      "media_type": "text/plain",
+      "extraction": "direct UTF-8 text; LF normalization; form-feed pagination"
+    }
+  ],
+  "uncertainty": [],
+  "change_records": [
+    {
+      "operation": "index",
+      "source_modified": false,
+      "details": "Normalized indexing only; no source text was overwritten."
+    }
+  ],
+  "semantic_entailment": "not_evaluated",
+  "page_count": 2,
+  "status": "ok",
+  "pagination": {
+    "kind": "form-feeds",
+    "last_declared_page": null
+  }
+}

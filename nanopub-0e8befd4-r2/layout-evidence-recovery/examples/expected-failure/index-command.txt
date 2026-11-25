@@ -1,0 +1,4 @@
+SYNTHETIC EXPECTED FAILURE — NOT A FORMAL RESULT
+Command: python3 scripts/layout_evidence.py index --input examples/expected-failure/layout.json --output examples/expected-failure/index.json
+Expected exit: 2 (blocking NO_TEXT_LAYER / SCAN_REQUIRES_OCR); index JSON is still written for honest partial inspection.
+Follow-up locate command is also expected to exit 2 because the query is ambiguous, the scan is unsearchable, and one query is not found.

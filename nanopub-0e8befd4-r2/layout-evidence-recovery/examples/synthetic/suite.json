@@ -1,0 +1,278 @@
+{
+  "suite_id": "SYNTHETIC-EVIDENCE-RECOVERY-TESTS",
+  "synthetic": true,
+  "formal_result": false,
+  "groups": [
+    {
+      "name": "two-column-layout",
+      "input": "layout.json",
+      "synthetic": true,
+      "cases": [
+        {
+          "id": "L01-exact-line-offset",
+          "query": "Evidence recovery",
+          "mode": "exact",
+          "expected_status": "matched",
+          "expected_matches": 1,
+          "expected": [{"page": 1, "block_id": "p1-left-intro", "line": 1, "line_offset_start": 0, "line_offset_end": 17, "document_char_start": 0, "document_char_end": 17}]
+        },
+        {
+          "id": "L02-fidelity-dehyphenation",
+          "query": "cross-column order explicit",
+          "mode": "fidelity",
+          "expected_status": "matched",
+          "expected_matches": 1,
+          "expected": [{"page": 1, "block_id": "p1-left-intro", "line": 2, "line_offset_start": 0, "line_offset_end": 6, "document_char_start": 24, "document_char_end": 52, "segments": [{"page": 1, "block_id": "p1-left-intro", "line": 2, "line_offset_start": 0, "line_offset_end": 6}, {"page": 1, "block_id": "p1-left-intro", "line": 3, "line_offset_start": 0, "line_offset_end": 21}]}]
+        },
+        {
+          "id": "L03-exact-does-not-fold-hyphen",
+          "query": "cross-column order explicit",
+          "mode": "exact",
+          "expected_status": "not_found",
+          "expected_matches": 0
+        },
+        {
+          "id": "L04-exact-raw-newline-hyphen",
+          "query": "cross-\ncolumn order explicit",
+          "mode": "exact",
+          "expected_status": "matched",
+          "expected_matches": 1,
+          "expected": [{"page": 1, "block_id": "p1-left-intro", "line": 2, "document_char_start": 24, "document_char_end": 52}]
+        },
+        {
+          "id": "L05-repeated-phrase-is-ambiguous",
+          "query": "Repeated phrase appears here.",
+          "mode": "exact",
+          "expected_status": "ambiguous",
+          "expected_matches": 2,
+          "expected": [{"page": 1, "block_id": "p1-left-detail", "line": 1, "line_offset_start": 0, "line_offset_end": 29}, {"page": 1, "block_id": "p1-right-main", "line": 2, "line_offset_start": 0, "line_offset_end": 29}]
+        },
+        {
+          "id": "L06-disambiguate-left-repeat",
+          "query": "Repeated phrase appears here.\nOffsets use zero based",
+          "mode": "exact",
+          "expected_status": "matched",
+          "expected_matches": 1,
+          "expected": [{"page": 1, "block_id": "p1-left-detail", "line": 1, "document_char_start": 54, "document_char_end": 106}]
+        },
+        {
+          "id": "L07-disambiguate-right-repeat",
+          "query": "Repeated phrase appears here.\nFigure legends",
+          "mode": "exact",
+          "expected_status": "matched",
+          "expected_matches": 1,
+          "expected": [{"page": 1, "block_id": "p1-right-main", "line": 2, "document_char_start": 155, "document_char_end": 199}]
+        },
+        {
+          "id": "L08-header-excluded",
+          "query": "SYNTHETIC JOURNAL",
+          "mode": "exact",
+          "expected_status": "not_found",
+          "expected_matches": 0
+        },
+        {
+          "id": "L09-footer-excluded",
+          "query": "SYNTHETIC PAGE 1",
+          "mode": "exact",
+          "expected_status": "not_found",
+          "expected_matches": 0
+        },
+        {
+          "id": "L10-figure-text-excluded",
+          "query": "FIGURE 1 repeated phrase",
+          "mode": "exact",
+          "expected_status": "not_found",
+          "expected_matches": 0
+        },
+        {
+          "id": "L11-exact-cross-line-right-column",
+          "query": "Right column follows left.\nRepeated phrase appears here.",
+          "mode": "exact",
+          "expected_status": "matched",
+          "expected_matches": 1,
+          "expected": [{"page": 1, "block_id": "p1-right-main", "line": 1, "line_offset_start": 0, "line_offset_end": 26, "document_char_start": 128, "document_char_end": 184}]
+        },
+        {
+          "id": "L12-fidelity-cross-line-right-column",
+          "query": "Right column follows left. Repeated phrase appears here.",
+          "mode": "fidelity",
+          "expected_status": "matched",
+          "expected_matches": 1,
+          "expected": [{"page": 1, "block_id": "p1-right-main", "line": 1, "document_char_start": 128, "document_char_end": 184}]
+        },
+        {
+          "id": "L13-page-two-line-offset",
+          "query": "offsets stable",
+          "mode": "exact",
+          "expected_status": "matched",
+          "expected_matches": 1,
+          "expected": [{"page": 2, "block_id": "p2-left", "line": 2, "line_offset_start": 5, "line_offset_end": 19, "document_char_start": 244, "document_char_end": 258, "page_char_start": 27, "page_char_end": 41}]
+        },
+        {
+          "id": "L14-half-open-offset",
+          "query": "Offsets",
+          "mode": "exact",
+          "expected_status": "matched",
+          "expected_matches": 1,
+          "expected": [{"page": 1, "block_id": "p1-left-detail", "line": 2, "line_offset_start": 0, "line_offset_end": 7, "offset": {"start": 0, "end": 7, "base": 0, "interval": "half_open", "scope": "original_supplied_line"}}]
+        },
+        {
+          "id": "L15-declared-order-across-blocks",
+          "query": "half open intervals. Right column follows left.",
+          "mode": "fidelity",
+          "expected_status": "matched",
+          "expected_matches": 1,
+          "expected": [{"page": 1, "block_id": "p1-left-detail", "line": 3, "document_char_start": 107, "document_char_end": 154, "spans_blocks": ["p1-left-detail", "p1-right-main"]}]
+        },
+        {
+          "id": "L16-wrong-geometric-order-not-invented",
+          "query": "Right column follows left. Offsets use zero based",
+          "mode": "fidelity",
+          "expected_status": "not_found",
+          "expected_matches": 0
+        },
+        {
+          "id": "L17-case-sensitive-exact",
+          "query": "evidence recovery",
+          "mode": "exact",
+          "expected_status": "not_found",
+          "expected_matches": 0
+        },
+        {
+          "id": "L18-exact-whitespace-mismatch",
+          "query": "Evidence  recovery",
+          "mode": "exact",
+          "expected_status": "not_found",
+          "expected_matches": 0
+        },
+        {
+          "id": "L19-fidelity-whitespace-fold",
+          "query": "Evidence   recovery",
+          "mode": "fidelity",
+          "expected_status": "matched",
+          "expected_matches": 1,
+          "expected": [{"page": 1, "block_id": "p1-left-intro", "line": 1, "line_offset_start": 0, "line_offset_end": 17}]
+        },
+        {
+          "id": "L20-empty-query-invalid",
+          "query": "",
+          "mode": "exact",
+          "expected_status": "invalid",
+          "expected_matches": 0
+        },
+        {
+          "id": "L21-absent-quote-not-found",
+          "query": "nonexistent synthetic phrase",
+          "mode": "fidelity",
+          "expected_status": "not_found",
+          "expected_matches": 0
+        },
+        {
+          "id": "L22-second-page-primary-location",
+          "query": "second page",
+          "mode": "exact",
+          "expected_status": "matched",
+          "expected_matches": 1,
+          "expected": [{"page": 2, "block_id": "p2-left", "line": 1, "line_offset_start": 4, "line_offset_end": 15, "document_char_start": 221, "document_char_end": 232}]
+        },
+        {
+          "id": "L23-fidelity-not-case-folding",
+          "query": "EVIDENCE RECOVERY",
+          "mode": "fidelity",
+          "expected_status": "not_found",
+          "expected_matches": 0
+        },
+        {
+          "id": "L24-exact-hyphen-without-newline-not-found",
+          "query": "cross-column",
+          "mode": "exact",
+          "expected_status": "not_found",
+          "expected_matches": 0
+        },
+        {
+          "id": "L25-dehyphenation-is-not-space-insertion",
+          "query": "cross column",
+          "mode": "fidelity",
+          "expected_status": "not_found",
+          "expected_matches": 0
+        }
+      ]
+    },
+    {
+      "name": "form-feed-text",
+      "input": "text.txt",
+      "synthetic": true,
+      "cases": [
+        {
+          "id": "T01-text-second-page",
+          "query": "second page",
+          "mode": "exact",
+          "expected_status": "matched",
+          "expected_matches": 1,
+          "expected": [{"page": 2, "block_id": "p2-b1", "line": 1, "line_offset_start": 0, "line_offset_end": 11}]
+        },
+        {
+          "id": "T02-text-line-index",
+          "query": "repeat repeat",
+          "mode": "exact",
+          "expected_status": "matched",
+          "expected_matches": 1,
+          "expected": [{"page": 1, "block_id": "p1-b1", "line": 3, "line_offset_start": 0, "line_offset_end": 13}]
+        },
+        {
+          "id": "T03-text-cross-page-location",
+          "query": "repeat repeat second page starts",
+          "mode": "fidelity",
+          "expected_status": "matched",
+          "expected_matches": 1,
+          "expected": [{"page": 1, "block_id": "p1-b1", "line": 3, "document_char_start": 38, "document_char_end": 72, "spans_pages": [1, 2], "segments": [{"page": 1, "block_id": "p1-b1", "line": 3}, {"page": 2, "block_id": "p2-b1", "line": 1}]}]
+        },
+        {
+          "id": "T04-text-not-found-remains-honest",
+          "query": "not in either page",
+          "mode": "exact",
+          "expected_status": "not_found",
+          "expected_matches": 0
+        }
+      ]
+    },
+    {
+      "name": "markdown-page-markers",
+      "input": "markdown.md",
+      "synthetic": true,
+      "cases": [
+        {
+          "id": "M01-markdown-second-page",
+          "query": "last page",
+          "mode": "exact",
+          "expected_status": "matched",
+          "expected_matches": 1,
+          "expected": [{"page": 2, "block_id": "p2-b1", "line": 1, "line_offset_start": 0, "line_offset_end": 9}]
+        },
+        {
+          "id": "M02-markdown-dehyphenation",
+          "query": "dehyphenation test",
+          "mode": "fidelity",
+          "expected_status": "matched",
+          "expected_matches": 1,
+          "expected": [{"page": 1, "block_id": "p1-b1", "line": 2, "document_char_start": 19, "document_char_end": 39, "segments": [{"page": 1, "block_id": "p1-b1", "line": 2, "line_offset_start": 0, "line_offset_end": 9}, {"page": 1, "block_id": "p1-b1", "line": 3, "line_offset_start": 0, "line_offset_end": 10}]}]
+        },
+        {
+          "id": "M03-markdown-repeat-on-page-two",
+          "query": "repeat repeat",
+          "mode": "exact",
+          "expected_status": "matched",
+          "expected_matches": 1,
+          "expected": [{"page": 2, "block_id": "p2-b1", "line": 2, "line_offset_start": 0, "line_offset_end": 13}]
+        },
+        {
+          "id": "M04-page-marker-not-body-text",
+          "query": "page: 2",
+          "mode": "exact",
+          "expected_status": "not_found",
+          "expected_matches": 0
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,12 @@
+{
+  "actual_exit_code": 2,
+  "case_id": "SYNTHETIC-NEG-ZERO-001",
+  "command": "python3 scripts/quant_ledger.py --case examples/negative_division_zero/input/case.json --task examples/negative_division_zero/input/task.md --resources examples/negative_division_zero/environment/resources.yaml --work-root <temporary>/work --output-root <temporary>/output",
+  "dataset_status": "SYNTHETIC negative execution; not an official result",
+  "expected_artifacts_match": true,
+  "expected_exit_code": 2,
+  "fixture": "examples/negative_division_zero",
+  "pending_value": null,
+  "result_status": "failed",
+  "unresolved_reason": "NEG-ZERO division by zero: share denominator"
+}

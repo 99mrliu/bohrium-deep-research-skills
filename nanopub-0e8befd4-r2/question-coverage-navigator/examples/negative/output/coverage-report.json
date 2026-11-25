@@ -1,0 +1,68 @@
+{
+  "ok": false,
+  "case_id": "synthetic-negative-001",
+  "contract": {
+    "source": "task.md",
+    "exact_top_level": true,
+    "fields": [
+      "answers",
+      "sources",
+      "uncertainty",
+      "change_records"
+    ]
+  },
+  "result_checked": false,
+  "summary": {
+    "coverage_units": 30,
+    "root_questions": 6,
+    "subquestions": 24,
+    "claims": 20,
+    "evidence": 20,
+    "sources": 1,
+    "answer_modes": {
+      "computed": 8,
+      "direct_report": 10,
+      "inferred": 7,
+      "unreported": 5
+    },
+    "statuses": {
+      "answered": 25,
+      "unreported": 5
+    },
+    "duplicate_ids": 0,
+    "dangling_ids": 2,
+    "error_count": 4,
+    "gap_codes": {
+      "answer.missing": 1,
+      "answer_mode.support_mismatch": 1,
+      "id.dangling": 2
+    }
+  },
+  "gaps": [
+    {
+      "code": "answer.missing",
+      "path": "/questions/0/subquestions/0/answer",
+      "message": "Unit 'Q1.1' has no answer.",
+      "fix": "Answer directly, or explicitly state unreported with searched scope."
+    },
+    {
+      "code": "answer_mode.support_mismatch",
+      "path": "/questions/0/subquestions/0/answer_mode",
+      "message": "Mode direct_report lacks direct evidence among its own evidence IDs.",
+      "fix": "Link appropriate evidence or downgrade/split the answer mode."
+    },
+    {
+      "code": "id.dangling",
+      "path": "/questions/0/subquestions/0/claim_ids",
+      "message": "Unit 'Q1.1' links unknown claim 'C-DOES-NOT-EXIST'.",
+      "fix": "Register the claim or remove the link."
+    },
+    {
+      "code": "id.dangling",
+      "path": "/questions/0/subquestions/0/evidence_ids",
+      "message": "Unit 'Q1.1' links unknown evidence 'E-DOES-NOT-EXIST'.",
+      "fix": "Register the evidence or remove the link."
+    }
+  ],
+  "next_action": "Repair gaps in JSON-pointer order, regenerate result from coverage, then rerun audit."
+}

@@ -1,0 +1,1532 @@
+{
+  "label": "SYNTHETIC — NOT AN OFFICIAL RESULT",
+  "questions": [
+    {
+      "question_id": "Q1",
+      "question": "样本与主要结局是什么？",
+      "answer": "研究纳入 120 名受试者。；原位组样本量为 60。；远程组样本量为 60。；主要结局时间点是第 4 周。",
+      "answer_mode": "direct_report",
+      "status": "answered",
+      "confidence": 0.9,
+      "progress_percent": 100,
+      "claim_ids": [
+        "C01",
+        "C02",
+        "C03",
+        "C04"
+      ],
+      "evidence_ids": [
+        "E01",
+        "E02",
+        "E03",
+        "E04"
+      ],
+      "requirement": {
+        "evidence_kinds": [
+          "对应全部子问题的答案、断言与证据链"
+        ],
+        "assertion_links": [
+          "TASK-Q1"
+        ]
+      },
+      "subquestions": [
+        {
+          "subquestion_id": "Q1.1",
+          "question": "针对 F01，答案是什么？",
+          "answer": "研究纳入 120 名受试者。",
+          "answer_mode": "direct_report",
+          "status": "answered",
+          "confidence": 0.99,
+          "progress_percent": 100,
+          "claim_ids": [
+            "C01"
+          ],
+          "evidence_ids": [
+            "E01"
+          ],
+          "requirement": {
+            "evidence_kinds": [
+              "direct supporting record"
+            ],
+            "assertion_links": [
+              "TASK-Q1.1"
+            ]
+          }
+        },
+        {
+          "subquestion_id": "Q1.2",
+          "question": "针对 F02，答案是什么？",
+          "answer": "原位组样本量为 60。",
+          "answer_mode": "direct_report",
+          "status": "answered",
+          "confidence": 0.99,
+          "progress_percent": 100,
+          "claim_ids": [
+            "C02"
+          ],
+          "evidence_ids": [
+            "E02"
+          ],
+          "requirement": {
+            "evidence_kinds": [
+              "direct supporting record"
+            ],
+            "assertion_links": [
+              "TASK-Q1.2"
+            ]
+          }
+        },
+        {
+          "subquestion_id": "Q1.3",
+          "question": "针对 F03，答案是什么？",
+          "answer": "远程组样本量为 60。",
+          "answer_mode": "direct_report",
+          "status": "answered",
+          "confidence": 0.99,
+          "progress_percent": 100,
+          "claim_ids": [
+            "C03"
+          ],
+          "evidence_ids": [
+            "E03"
+          ],
+          "requirement": {
+            "evidence_kinds": [
+              "direct supporting record"
+            ],
+            "assertion_links": [
+              "TASK-Q1.3"
+            ]
+          }
+        },
+        {
+          "subquestion_id": "Q1.4",
+          "question": "针对 F04，答案是什么？",
+          "answer": "主要结局时间点是第 4 周。",
+          "answer_mode": "direct_report",
+          "status": "answered",
+          "confidence": 0.99,
+          "progress_percent": 100,
+          "claim_ids": [
+            "C04"
+          ],
+          "evidence_ids": [
+            "E04"
+          ],
+          "requirement": {
+            "evidence_kinds": [
+              "direct supporting record"
+            ],
+            "assertion_links": [
+              "TASK-Q1.4"
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "question_id": "Q2",
+      "question": "指定数值经过换算或计算后是多少？",
+      "answer": "按预设双倍量表换算，原位组为 24 分。；按预设双倍量表换算，远程组为 30 分。；两次评分均值为 12 分。；该评分占满分的 60%。",
+      "answer_mode": "computed",
+      "status": "answered",
+      "confidence": 0.9,
+      "progress_percent": 100,
+      "claim_ids": [
+        "C05",
+        "C06",
+        "C07",
+        "C08"
+      ],
+      "evidence_ids": [
+        "E05",
+        "E06",
+        "E07",
+        "E08"
+      ],
+      "requirement": {
+        "evidence_kinds": [
+          "对应全部子问题的答案、断言与证据链"
+        ],
+        "assertion_links": [
+          "TASK-Q2"
+        ]
+      },
+      "subquestions": [
+        {
+          "subquestion_id": "Q2.1",
+          "question": "针对 F05，答案是什么？",
+          "answer": "按预设双倍量表换算，原位组为 24 分。",
+          "answer_mode": "computed",
+          "status": "answered",
+          "confidence": 0.99,
+          "progress_percent": 100,
+          "claim_ids": [
+            "C05"
+          ],
+          "evidence_ids": [
+            "E05"
+          ],
+          "requirement": {
+            "evidence_kinds": [
+              "computed supporting record"
+            ],
+            "assertion_links": [
+              "TASK-Q2.1"
+            ]
+          }
+        },
+        {
+          "subquestion_id": "Q2.2",
+          "question": "针对 F06，答案是什么？",
+          "answer": "按预设双倍量表换算，远程组为 30 分。",
+          "answer_mode": "computed",
+          "status": "answered",
+          "confidence": 0.99,
+          "progress_percent": 100,
+          "claim_ids": [
+            "C06"
+          ],
+          "evidence_ids": [
+            "E06"
+          ],
+          "requirement": {
+            "evidence_kinds": [
+              "computed supporting record"
+            ],
+            "assertion_links": [
+              "TASK-Q2.2"
+            ]
+          }
+        },
+        {
+          "subquestion_id": "Q2.3",
+          "question": "针对 F07，答案是什么？",
+          "answer": "两次评分均值为 12 分。",
+          "answer_mode": "computed",
+          "status": "answered",
+          "confidence": 0.99,
+          "progress_percent": 100,
+          "claim_ids": [
+            "C07"
+          ],
+          "evidence_ids": [
+            "E07"
+          ],
+          "requirement": {
+            "evidence_kinds": [
+              "computed supporting record"
+            ],
+            "assertion_links": [
+              "TASK-Q2.3"
+            ]
+          }
+        },
+        {
+          "subquestion_id": "Q2.4",
+          "question": "针对 F08，答案是什么？",
+          "answer": "该评分占满分的 60%。",
+          "answer_mode": "computed",
+          "status": "answered",
+          "confidence": 0.99,
+          "progress_percent": 100,
+          "claim_ids": [
+            "C08"
+          ],
+          "evidence_ids": [
+            "E08"
+          ],
+          "requirement": {
+            "evidence_kinds": [
+              "computed supporting record"
+            ],
+            "assertion_links": [
+              "TASK-Q2.4"
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "question_id": "Q3",
+      "question": "从设计与观察可以作出哪些谨慎推断？",
+      "answer": "提醒组的完成次数更多，提示依从性可能较高，但不能证明因果。；缺少评分者盲法使测量偏倚成为可能，并非已证实发生偏倚。；排除人数较多提示选择性风险，外部推广应谨慎。；传输失败提示技术完整性风险，不能断言影响方向。",
+      "answer_mode": "inferred",
+      "status": "answered",
+      "confidence": 0.9,
+      "progress_percent": 100,
+      "claim_ids": [
+        "C09",
+        "C10",
+        "C11",
+        "C12"
+      ],
+      "evidence_ids": [
+        "E09",
+        "E10",
+        "E11",
+        "E12"
+      ],
+      "requirement": {
+        "evidence_kinds": [
+          "对应全部子问题的答案、断言与证据链"
+        ],
+        "assertion_links": [
+          "TASK-Q3"
+        ]
+      },
+      "subquestions": [
+        {
+          "subquestion_id": "Q3.1",
+          "question": "针对 F09，答案是什么？",
+          "answer": "提醒组的完成次数更多，提示依从性可能较高，但不能证明因果。",
+          "answer_mode": "inferred",
+          "status": "answered",
+          "confidence": 0.9,
+          "progress_percent": 100,
+          "claim_ids": [
+            "C09"
+          ],
+          "evidence_ids": [
+            "E09"
+          ],
+          "requirement": {
+            "evidence_kinds": [
+              "inferred supporting record"
+            ],
+            "assertion_links": [
+              "TASK-Q3.1"
+            ]
+          }
+        },
+        {
+          "subquestion_id": "Q3.2",
+          "question": "针对 F10，答案是什么？",
+          "answer": "缺少评分者盲法使测量偏倚成为可能，并非已证实发生偏倚。",
+          "answer_mode": "inferred",
+          "status": "answered",
+          "confidence": 0.9,
+          "progress_percent": 100,
+          "claim_ids": [
+            "C10"
+          ],
+          "evidence_ids": [
+            "E10"
+          ],
+          "requirement": {
+            "evidence_kinds": [
+              "inferred supporting record"
+            ],
+            "assertion_links": [
+              "TASK-Q3.2"
+            ]
+          }
+        },
+        {
+          "subquestion_id": "Q3.3",
+          "question": "针对 F11，答案是什么？",
+          "answer": "排除人数较多提示选择性风险，外部推广应谨慎。",
+          "answer_mode": "inferred",
+          "status": "answered",
+          "confidence": 0.9,
+          "progress_percent": 100,
+          "claim_ids": [
+            "C11"
+          ],
+          "evidence_ids": [
+            "E11"
+          ],
+          "requirement": {
+            "evidence_kinds": [
+              "inferred supporting record"
+            ],
+            "assertion_links": [
+              "TASK-Q3.3"
+            ]
+          }
+        },
+        {
+          "subquestion_id": "Q3.4",
+          "question": "针对 F12，答案是什么？",
+          "answer": "传输失败提示技术完整性风险，不能断言影响方向。",
+          "answer_mode": "inferred",
+          "status": "answered",
+          "confidence": 0.9,
+          "progress_percent": 100,
+          "claim_ids": [
+            "C12"
+          ],
+          "evidence_ids": [
+            "E12"
+          ],
+          "requirement": {
+            "evidence_kinds": [
+              "inferred supporting record"
+            ],
+            "assertion_links": [
+              "TASK-Q3.4"
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "question_id": "Q4",
+      "question": "随访、安全性与分析原则如何报告？",
+      "answer": "允许的随访窗口是正负 3 天。；总试验时长为 4 周。；来源列出的不良事件类别为头痛和疲劳。；主要分析采用修改后意向治疗原则。",
+      "answer_mode": "direct_report",
+      "status": "answered",
+      "confidence": 0.9,
+      "progress_percent": 100,
+      "claim_ids": [
+        "C13",
+        "C14",
+        "C15",
+        "C16"
+      ],
+      "evidence_ids": [
+        "E13",
+        "E14",
+        "E15",
+        "E16"
+      ],
+      "requirement": {
+        "evidence_kinds": [
+          "对应全部子问题的答案、断言与证据链"
+        ],
+        "assertion_links": [
+          "TASK-Q4"
+        ]
+      },
+      "subquestions": [
+        {
+          "subquestion_id": "Q4.1",
+          "question": "针对 F13，答案是什么？",
+          "answer": "允许的随访窗口是正负 3 天。",
+          "answer_mode": "direct_report",
+          "status": "answered",
+          "confidence": 0.99,
+          "progress_percent": 100,
+          "claim_ids": [
+            "C13"
+          ],
+          "evidence_ids": [
+            "E13"
+          ],
+          "requirement": {
+            "evidence_kinds": [
+              "direct supporting record"
+            ],
+            "assertion_links": [
+              "TASK-Q4.1"
+            ]
+          }
+        },
+        {
+          "subquestion_id": "Q4.2",
+          "question": "针对 F14，答案是什么？",
+          "answer": "总试验时长为 4 周。",
+          "answer_mode": "direct_report",
+          "status": "answered",
+          "confidence": 0.99,
+          "progress_percent": 100,
+          "claim_ids": [
+            "C14"
+          ],
+          "evidence_ids": [
+            "E14"
+          ],
+          "requirement": {
+            "evidence_kinds": [
+              "direct supporting record"
+            ],
+            "assertion_links": [
+              "TASK-Q4.2"
+            ]
+          }
+        },
+        {
+          "subquestion_id": "Q4.3",
+          "question": "针对 F15，答案是什么？",
+          "answer": "来源列出的不良事件类别为头痛和疲劳。",
+          "answer_mode": "direct_report",
+          "status": "answered",
+          "confidence": 0.99,
+          "progress_percent": 100,
+          "claim_ids": [
+            "C15"
+          ],
+          "evidence_ids": [
+            "E15"
+          ],
+          "requirement": {
+            "evidence_kinds": [
+              "direct supporting record"
+            ],
+            "assertion_links": [
+              "TASK-Q4.3"
+            ]
+          }
+        },
+        {
+          "subquestion_id": "Q4.4",
+          "question": "针对 F16，答案是什么？",
+          "answer": "主要分析采用修改后意向治疗原则。",
+          "answer_mode": "direct_report",
+          "status": "answered",
+          "confidence": 0.99,
+          "progress_percent": 100,
+          "claim_ids": [
+            "C16"
+          ],
+          "evidence_ids": [
+            "E16"
+          ],
+          "requirement": {
+            "evidence_kinds": [
+              "direct supporting record"
+            ],
+            "assertion_links": [
+              "TASK-Q4.4"
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "question_id": "Q5",
+      "question": "进一步计算与解释是什么？",
+      "answer": "第 1 至 4 周评分下降 6 分。；两组的未加权均值为 27 分。；仅 20 名参与者使不精确成为合理担忧，但未量化区间。；机制只能视为解释性假设，因为没有直接机制实验。",
+      "answer_mode": "computed",
+      "status": "answered",
+      "confidence": 0.9,
+      "progress_percent": 100,
+      "claim_ids": [
+        "C17",
+        "C18",
+        "C19",
+        "C20"
+      ],
+      "evidence_ids": [
+        "E17",
+        "E18",
+        "E19",
+        "E20"
+      ],
+      "requirement": {
+        "evidence_kinds": [
+          "对应全部子问题的答案、断言与证据链"
+        ],
+        "assertion_links": [
+          "TASK-Q5"
+        ]
+      },
+      "subquestions": [
+        {
+          "subquestion_id": "Q5.1",
+          "question": "针对 F17，答案是什么？",
+          "answer": "第 1 至 4 周评分下降 6 分。",
+          "answer_mode": "computed",
+          "status": "answered",
+          "confidence": 0.99,
+          "progress_percent": 100,
+          "claim_ids": [
+            "C17"
+          ],
+          "evidence_ids": [
+            "E17"
+          ],
+          "requirement": {
+            "evidence_kinds": [
+              "computed supporting record"
+            ],
+            "assertion_links": [
+              "TASK-Q5.1"
+            ]
+          }
+        },
+        {
+          "subquestion_id": "Q5.2",
+          "question": "针对 F18，答案是什么？",
+          "answer": "两组的未加权均值为 27 分。",
+          "answer_mode": "computed",
+          "status": "answered",
+          "confidence": 0.99,
+          "progress_percent": 100,
+          "claim_ids": [
+            "C18"
+          ],
+          "evidence_ids": [
+            "E18"
+          ],
+          "requirement": {
+            "evidence_kinds": [
+              "computed supporting record"
+            ],
+            "assertion_links": [
+              "TASK-Q5.2"
+            ]
+          }
+        },
+        {
+          "subquestion_id": "Q5.3",
+          "question": "针对 F19，答案是什么？",
+          "answer": "仅 20 名参与者使不精确成为合理担忧，但未量化区间。",
+          "answer_mode": "inferred",
+          "status": "answered",
+          "confidence": 0.9,
+          "progress_percent": 100,
+          "claim_ids": [
+            "C19"
+          ],
+          "evidence_ids": [
+            "E19"
+          ],
+          "requirement": {
+            "evidence_kinds": [
+              "inferred supporting record"
+            ],
+            "assertion_links": [
+              "TASK-Q5.3"
+            ]
+          }
+        },
+        {
+          "subquestion_id": "Q5.4",
+          "question": "针对 F20，答案是什么？",
+          "answer": "机制只能视为解释性假设，因为没有直接机制实验。",
+          "answer_mode": "inferred",
+          "status": "answered",
+          "confidence": 0.9,
+          "progress_percent": 100,
+          "claim_ids": [
+            "C20"
+          ],
+          "evidence_ids": [
+            "E20"
+          ],
+          "requirement": {
+            "evidence_kinds": [
+              "inferred supporting record"
+            ],
+            "assertion_links": [
+              "TASK-Q5.4"
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "question_id": "Q6",
+      "question": "药代动力学、生物标志物、生活质量和成本是多少？",
+      "answer": "四类信息均未报告；详见每个子问题的 searched_scope。",
+      "answer_mode": "unreported",
+      "status": "unreported",
+      "confidence": 0.9,
+      "progress_percent": 100,
+      "claim_ids": [],
+      "evidence_ids": [],
+      "requirement": {
+        "evidence_kinds": [
+          "对应全部子问题的答案、断言与证据链"
+        ],
+        "assertion_links": [
+          "TASK-Q6"
+        ]
+      },
+      "subquestions": [
+        {
+          "subquestion_id": "Q6.1",
+          "question": "是否报告药代动力学？",
+          "answer": "未报告药代动力学数据；不能为零、阴性或无差异。",
+          "answer_mode": "unreported",
+          "status": "unreported",
+          "confidence": 0.96,
+          "progress_percent": 100,
+          "claim_ids": [],
+          "evidence_ids": [],
+          "requirement": {
+            "evidence_kinds": [
+              "全文与补充材料披露检查"
+            ],
+            "assertion_links": [
+              "TASK-Q6.1"
+            ]
+          },
+          "unreported": {
+            "searched_scope": [
+              {
+                "source_id": "SRC-SYN",
+                "regions": [
+                  "方法、结果、表注、补充检索记录"
+                ],
+                "actions": [
+                  "检索药代动力学及英文同义词，检查邻近段落"
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "subquestion_id": "Q6.2",
+          "question": "是否报告生物标志物？",
+          "answer": "未报告生物标志物数据；不能为零、阴性或无差异。",
+          "answer_mode": "unreported",
+          "status": "unreported",
+          "confidence": 0.96,
+          "progress_percent": 100,
+          "claim_ids": [],
+          "evidence_ids": [],
+          "requirement": {
+            "evidence_kinds": [
+              "全文与补充材料披露检查"
+            ],
+            "assertion_links": [
+              "TASK-Q6.2"
+            ]
+          },
+          "unreported": {
+            "searched_scope": [
+              {
+                "source_id": "SRC-SYN",
+                "regions": [
+                  "方法、结果、表注、补充检索记录"
+                ],
+                "actions": [
+                  "检索生物标志物及英文同义词，检查邻近段落"
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "subquestion_id": "Q6.3",
+          "question": "是否报告生活质量？",
+          "answer": "未报告生活质量数据；不能为零、阴性或无差异。",
+          "answer_mode": "unreported",
+          "status": "unreported",
+          "confidence": 0.96,
+          "progress_percent": 100,
+          "claim_ids": [],
+          "evidence_ids": [],
+          "requirement": {
+            "evidence_kinds": [
+              "全文与补充材料披露检查"
+            ],
+            "assertion_links": [
+              "TASK-Q6.3"
+            ]
+          },
+          "unreported": {
+            "searched_scope": [
+              {
+                "source_id": "SRC-SYN",
+                "regions": [
+                  "方法、结果、表注、补充检索记录"
+                ],
+                "actions": [
+                  "检索生活质量及英文同义词，检查邻近段落"
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "subquestion_id": "Q6.4",
+          "question": "是否报告成本？",
+          "answer": "未报告成本数据；不能为零、阴性或无差异。",
+          "answer_mode": "unreported",
+          "status": "unreported",
+          "confidence": 0.96,
+          "progress_percent": 100,
+          "claim_ids": [],
+          "evidence_ids": [],
+          "requirement": {
+            "evidence_kinds": [
+              "全文与补充材料披露检查"
+            ],
+            "assertion_links": [
+              "TASK-Q6.4"
+            ]
+          },
+          "unreported": {
+            "searched_scope": [
+              {
+                "source_id": "SRC-SYN",
+                "regions": [
+                  "方法、结果、表注、补充检索记录"
+                ],
+                "actions": [
+                  "检索成本及英文同义词，检查邻近段落"
+                ]
+              }
+            ]
+          }
+        }
+      ],
+      "unreported": {
+        "searched_scope": [
+          {
+            "source_id": "SRC-SYN",
+            "regions": [
+              "全文及补充检索记录"
+            ],
+            "actions": [
+              "逐类同义词检索并检查图表和补充材料入口"
+            ]
+          }
+        ]
+      }
+    }
+  ],
+  "claims": [
+    {
+      "claim_id": "C01",
+      "text": "研究纳入 120 名受试者。",
+      "evidence_ids": [
+        "E01"
+      ]
+    },
+    {
+      "claim_id": "C02",
+      "text": "原位组样本量为 60。",
+      "evidence_ids": [
+        "E02"
+      ]
+    },
+    {
+      "claim_id": "C03",
+      "text": "远程组样本量为 60。",
+      "evidence_ids": [
+        "E03"
+      ]
+    },
+    {
+      "claim_id": "C04",
+      "text": "主要结局时间点是第 4 周。",
+      "evidence_ids": [
+        "E04"
+      ]
+    },
+    {
+      "claim_id": "C05",
+      "text": "按预设双倍量表换算，原位组为 24 分。",
+      "evidence_ids": [
+        "E05"
+      ]
+    },
+    {
+      "claim_id": "C06",
+      "text": "按预设双倍量表换算，远程组为 30 分。",
+      "evidence_ids": [
+        "E06"
+      ]
+    },
+    {
+      "claim_id": "C07",
+      "text": "两次评分均值为 12 分。",
+      "evidence_ids": [
+        "E07"
+      ]
+    },
+    {
+      "claim_id": "C08",
+      "text": "该评分占满分的 60%。",
+      "evidence_ids": [
+        "E08"
+      ]
+    },
+    {
+      "claim_id": "C09",
+      "text": "提醒组的完成次数更多，提示依从性可能较高，但不能证明因果。",
+      "evidence_ids": [
+        "E09"
+      ]
+    },
+    {
+      "claim_id": "C10",
+      "text": "缺少评分者盲法使测量偏倚成为可能，并非已证实发生偏倚。",
+      "evidence_ids": [
+        "E10"
+      ]
+    },
+    {
+      "claim_id": "C11",
+      "text": "排除人数较多提示选择性风险，外部推广应谨慎。",
+      "evidence_ids": [
+        "E11"
+      ]
+    },
+    {
+      "claim_id": "C12",
+      "text": "传输失败提示技术完整性风险，不能断言影响方向。",
+      "evidence_ids": [
+        "E12"
+      ]
+    },
+    {
+      "claim_id": "C13",
+      "text": "允许的随访窗口是正负 3 天。",
+      "evidence_ids": [
+        "E13"
+      ]
+    },
+    {
+      "claim_id": "C14",
+      "text": "总试验时长为 4 周。",
+      "evidence_ids": [
+        "E14"
+      ]
+    },
+    {
+      "claim_id": "C15",
+      "text": "来源列出的不良事件类别为头痛和疲劳。",
+      "evidence_ids": [
+        "E15"
+      ]
+    },
+    {
+      "claim_id": "C16",
+      "text": "主要分析采用修改后意向治疗原则。",
+      "evidence_ids": [
+        "E16"
+      ]
+    },
+    {
+      "claim_id": "C17",
+      "text": "第 1 至 4 周评分下降 6 分。",
+      "evidence_ids": [
+        "E17"
+      ]
+    },
+    {
+      "claim_id": "C18",
+      "text": "两组的未加权均值为 27 分。",
+      "evidence_ids": [
+        "E18"
+      ]
+    },
+    {
+      "claim_id": "C19",
+      "text": "仅 20 名参与者使不精确成为合理担忧，但未量化区间。",
+      "evidence_ids": [
+        "E19"
+      ]
+    },
+    {
+      "claim_id": "C20",
+      "text": "机制只能视为解释性假设，因为没有直接机制实验。",
+      "evidence_ids": [
+        "E20"
+      ]
+    }
+  ],
+  "evidence": [
+    {
+      "evidence_id": "E01",
+      "source_id": "SRC-SYN",
+      "locator": "study.md:F01",
+      "quote": "研究共纳入 120 名合成受试者。",
+      "support": "direct"
+    },
+    {
+      "evidence_id": "E02",
+      "source_id": "SRC-SYN",
+      "locator": "study.md:F02",
+      "quote": "原位组有 60 名合成受试者。",
+      "support": "direct"
+    },
+    {
+      "evidence_id": "E03",
+      "source_id": "SRC-SYN",
+      "locator": "study.md:F03",
+      "quote": "远程组有 60 名合成受试者。",
+      "support": "direct"
+    },
+    {
+      "evidence_id": "E04",
+      "source_id": "SRC-SYN",
+      "locator": "study.md:F04",
+      "quote": "主要结局为第 4 周合成症状评分。",
+      "support": "direct"
+    },
+    {
+      "evidence_id": "E05",
+      "source_id": "SRC-SYN",
+      "locator": "study.md:F05",
+      "quote": "按本演练双倍量表规则，原位组第 4 周评分输入为 12 分。",
+      "support": "computed",
+      "derivation": "12 × 2 = 24 分"
+    },
+    {
+      "evidence_id": "E06",
+      "source_id": "SRC-SYN",
+      "locator": "study.md:F06",
+      "quote": "按本演练双倍量表规则，远程组第 4 周评分输入为 15 分。",
+      "support": "computed",
+      "derivation": "15 × 2 = 30 分"
+    },
+    {
+      "evidence_id": "E07",
+      "source_id": "SRC-SYN",
+      "locator": "study.md:F07",
+      "quote": "第 2 周两次合成评分为 10 分与 14 分。",
+      "support": "computed",
+      "derivation": "(10 + 14) / 2 = 12 分"
+    },
+    {
+      "evidence_id": "E08",
+      "source_id": "SRC-SYN",
+      "locator": "study.md:F08",
+      "quote": "合成评分为 18 分，满分为 30 分。",
+      "support": "computed",
+      "derivation": "18 / 30 × 100 = 60%"
+    },
+    {
+      "evidence_id": "E09",
+      "source_id": "SRC-SYN",
+      "locator": "study.md:F09",
+      "quote": "提醒亚组完成 48 次随访，对照亚组完成 40 次。",
+      "support": "inferred",
+      "rationale": "仅依据所列局部观察作谨慎推断；数字依从性可能更高"
+    },
+    {
+      "evidence_id": "E10",
+      "source_id": "SRC-SYN",
+      "locator": "study.md:F10",
+      "quote": "开放标签阶段未实施评分者盲法。",
+      "support": "inferred",
+      "rationale": "仅依据所列局部观察作谨慎推断；存在测量偏倚风险"
+    },
+    {
+      "evidence_id": "E11",
+      "source_id": "SRC-SYN",
+      "locator": "study.md:F11",
+      "quote": "筛选时排除 80 名潜力受试者。",
+      "support": "inferred",
+      "rationale": "仅依据所列局部观察作谨慎推断；样本选择性可能较强"
+    },
+    {
+      "evidence_id": "E12",
+      "source_id": "SRC-SYN",
+      "locator": "study.md:F12",
+      "quote": "合成设备在 5 次传输中失败 1 次。",
+      "support": "inferred",
+      "rationale": "仅依据所列局部观察作谨慎推断；数据完整性的技术风险有限但存在"
+    },
+    {
+      "evidence_id": "E13",
+      "source_id": "SRC-SYN",
+      "locator": "study.md:F13",
+      "quote": "合成随访窗口允许正负 3 天。",
+      "support": "direct"
+    },
+    {
+      "evidence_id": "E14",
+      "source_id": "SRC-SYN",
+      "locator": "study.md:F14",
+      "quote": "试验共持续 4 周。",
+      "support": "direct"
+    },
+    {
+      "evidence_id": "E15",
+      "source_id": "SRC-SYN",
+      "locator": "study.md:F15",
+      "quote": "来源列出头痛与疲劳两类不良事件。",
+      "support": "direct"
+    },
+    {
+      "evidence_id": "E16",
+      "source_id": "SRC-SYN",
+      "locator": "study.md:F16",
+      "quote": "主要分析遵循修改后意向治疗原则。",
+      "support": "direct"
+    },
+    {
+      "evidence_id": "E17",
+      "source_id": "SRC-SYN",
+      "locator": "study.md:F17",
+      "quote": "第 1 周评分为 20 分，第 4 周评分为 14 分。",
+      "support": "computed",
+      "derivation": "20 - 14 = 6 分"
+    },
+    {
+      "evidence_id": "E18",
+      "source_id": "SRC-SYN",
+      "locator": "study.md:F18",
+      "quote": "两组示例均值为 24 分与 30 分。",
+      "support": "computed",
+      "derivation": "(24 + 30) / 2 = 27 分"
+    },
+    {
+      "evidence_id": "E19",
+      "source_id": "SRC-SYN",
+      "locator": "study.md:F19",
+      "quote": "来源仅提供 20 名合成参与者用于估计参数。",
+      "support": "inferred",
+      "rationale": "仅依据所列局部观察作谨慎推断；小样本使估计不精确"
+    },
+    {
+      "evidence_id": "E20",
+      "source_id": "SRC-SYN",
+      "locator": "study.md:F20",
+      "quote": "来源同时说明机制合理且无任何直接机制实验。",
+      "support": "inferred",
+      "rationale": "仅依据所列局部观察作谨慎推断；机制仍是未验证解释"
+    }
+  ],
+  "sources": [
+    {
+      "source_id": "SRC-SYN",
+      "title": "SYNTHETIC 最小来源：覆盖导航器演练",
+      "path": "examples/sources/study.md",
+      "uncertainty": "全部内容为合成演练，无真实临床外推效度；未知真实人群与正式结果。"
+    }
+  ],
+  "uncertainty": [
+    {
+      "scope": "entire-example",
+      "statement": "SYNTHETIC：仅用于结构测试，不是正式或真实研究结论。"
+    },
+    {
+      "scope": "Q3/Q5 inferred rows",
+      "statement": "推断只表达可能性，不证明因果或偏倚方向。"
+    },
+    {
+      "scope": "Q6",
+      "statement": "未报告结论只覆盖所列最小来源，不证明其他来源也未报告。"
+    }
+  ],
+  "change_records": [
+    {
+      "sequence": 1,
+      "change": "初始建立 6 个根问题及 24 个子问题矩阵。",
+      "reason": "先任务后阅读。"
+    },
+    {
+      "sequence": 2,
+      "change": "将计算、推断与直接报告拆成独立行。",
+      "reason": "避免回答模式混淆。"
+    }
+  ],
+  "result_payload": {
+    "answers": [
+      {
+        "question_id": "Q1",
+        "answer": "研究纳入 120 名受试者。；原位组样本量为 60。；远程组样本量为 60。；主要结局时间点是第 4 周。",
+        "answer_mode": "direct_report",
+        "status": "answered",
+        "claim_ids": [
+          "C01",
+          "C02",
+          "C03",
+          "C04"
+        ],
+        "evidence_ids": [
+          "E01",
+          "E02",
+          "E03",
+          "E04"
+        ],
+        "subquestions": [
+          {
+            "subquestion_id": "Q1.1",
+            "answer": "研究纳入 120 名受试者。",
+            "answer_mode": "direct_report",
+            "status": "answered",
+            "claim_ids": [
+              "C01"
+            ],
+            "evidence_ids": [
+              "E01"
+            ]
+          },
+          {
+            "subquestion_id": "Q1.2",
+            "answer": "原位组样本量为 60。",
+            "answer_mode": "direct_report",
+            "status": "answered",
+            "claim_ids": [
+              "C02"
+            ],
+            "evidence_ids": [
+              "E02"
+            ]
+          },
+          {
+            "subquestion_id": "Q1.3",
+            "answer": "远程组样本量为 60。",
+            "answer_mode": "direct_report",
+            "status": "answered",
+            "claim_ids": [
+              "C03"
+            ],
+            "evidence_ids": [
+              "E03"
+            ]
+          },
+          {
+            "subquestion_id": "Q1.4",
+            "answer": "主要结局时间点是第 4 周。",
+            "answer_mode": "direct_report",
+            "status": "answered",
+            "claim_ids": [
+              "C04"
+            ],
+            "evidence_ids": [
+              "E04"
+            ]
+          }
+        ]
+      },
+      {
+        "question_id": "Q2",
+        "answer": "按预设双倍量表换算，原位组为 24 分。；按预设双倍量表换算，远程组为 30 分。；两次评分均值为 12 分。；该评分占满分的 60%。",
+        "answer_mode": "computed",
+        "status": "answered",
+        "claim_ids": [
+          "C05",
+          "C06",
+          "C07",
+          "C08"
+        ],
+        "evidence_ids": [
+          "E05",
+          "E06",
+          "E07",
+          "E08"
+        ],
+        "subquestions": [
+          {
+            "subquestion_id": "Q2.1",
+            "answer": "按预设双倍量表换算，原位组为 24 分。",
+            "answer_mode": "computed",
+            "status": "answered",
+            "claim_ids": [
+              "C05"
+            ],
+            "evidence_ids": [
+              "E05"
+            ]
+          },
+          {
+            "subquestion_id": "Q2.2",
+            "answer": "按预设双倍量表换算，远程组为 30 分。",
+            "answer_mode": "computed",
+            "status": "answered",
+            "claim_ids": [
+              "C06"
+            ],
+            "evidence_ids": [
+              "E06"
+            ]
+          },
+          {
+            "subquestion_id": "Q2.3",
+            "answer": "两次评分均值为 12 分。",
+            "answer_mode": "computed",
+            "status": "answered",
+            "claim_ids": [
+              "C07"
+            ],
+            "evidence_ids": [
+              "E07"
+            ]
+          },
+          {
+            "subquestion_id": "Q2.4",
+            "answer": "该评分占满分的 60%。",
+            "answer_mode": "computed",
+            "status": "answered",
+            "claim_ids": [
+              "C08"
+            ],
+            "evidence_ids": [
+              "E08"
+            ]
+          }
+        ]
+      },
+      {
+        "question_id": "Q3",
+        "answer": "提醒组的完成次数更多，提示依从性可能较高，但不能证明因果。；缺少评分者盲法使测量偏倚成为可能，并非已证实发生偏倚。；排除人数较多提示选择性风险，外部推广应谨慎。；传输失败提示技术完整性风险，不能断言影响方向。",
+        "answer_mode": "inferred",
+        "status": "answered",
+        "claim_ids": [
+          "C09",
+          "C10",
+          "C11",
+          "C12"
+        ],
+        "evidence_ids": [
+          "E09",
+          "E10",
+          "E11",
+          "E12"
+        ],
+        "subquestions": [
+          {
+            "subquestion_id": "Q3.1",
+            "answer": "提醒组的完成次数更多，提示依从性可能较高，但不能证明因果。",
+            "answer_mode": "inferred",
+            "status": "answered",
+            "claim_ids": [
+              "C09"
+            ],
+            "evidence_ids": [
+              "E09"
+            ]
+          },
+          {
+            "subquestion_id": "Q3.2",
+            "answer": "缺少评分者盲法使测量偏倚成为可能，并非已证实发生偏倚。",
+            "answer_mode": "inferred",
+            "status": "answered",
+            "claim_ids": [
+              "C10"
+            ],
+            "evidence_ids": [
+              "E10"
+            ]
+          },
+          {
+            "subquestion_id": "Q3.3",
+            "answer": "排除人数较多提示选择性风险，外部推广应谨慎。",
+            "answer_mode": "inferred",
+            "status": "answered",
+            "claim_ids": [
+              "C11"
+            ],
+            "evidence_ids": [
+              "E11"
+            ]
+          },
+          {
+            "subquestion_id": "Q3.4",
+            "answer": "传输失败提示技术完整性风险，不能断言影响方向。",
+            "answer_mode": "inferred",
+            "status": "answered",
+            "claim_ids": [
+              "C12"
+            ],
+            "evidence_ids": [
+              "E12"
+            ]
+          }
+        ]
+      },
+      {
+        "question_id": "Q4",
+        "answer": "允许的随访窗口是正负 3 天。；总试验时长为 4 周。；来源列出的不良事件类别为头痛和疲劳。；主要分析采用修改后意向治疗原则。",
+        "answer_mode": "direct_report",
+        "status": "answered",
+        "claim_ids": [
+          "C13",
+          "C14",
+          "C15",
+          "C16"
+        ],
+        "evidence_ids": [
+          "E13",
+          "E14",
+          "E15",
+          "E16"
+        ],
+        "subquestions": [
+          {
+            "subquestion_id": "Q4.1",
+            "answer": "允许的随访窗口是正负 3 天。",
+            "answer_mode": "direct_report",
+            "status": "answered",
+            "claim_ids": [
+              "C13"
+            ],
+            "evidence_ids": [
+              "E13"
+            ]
+          },
+          {
+            "subquestion_id": "Q4.2",
+            "answer": "总试验时长为 4 周。",
+            "answer_mode": "direct_report",
+            "status": "answered",
+            "claim_ids": [
+              "C14"
+            ],
+            "evidence_ids": [
+              "E14"
+            ]
+          },
+          {
+            "subquestion_id": "Q4.3",
+            "answer": "来源列出的不良事件类别为头痛和疲劳。",
+            "answer_mode": "direct_report",
+            "status": "answered",
+            "claim_ids": [
+              "C15"
+            ],
+            "evidence_ids": [
+              "E15"
+            ]
+          },
+          {
+            "subquestion_id": "Q4.4",
+            "answer": "主要分析采用修改后意向治疗原则。",
+            "answer_mode": "direct_report",
+            "status": "answered",
+            "claim_ids": [
+              "C16"
+            ],
+            "evidence_ids": [
+              "E16"
+            ]
+          }
+        ]
+      },
+      {
+        "question_id": "Q5",
+        "answer": "第 1 至 4 周评分下降 6 分。；两组的未加权均值为 27 分。；仅 20 名参与者使不精确成为合理担忧，但未量化区间。；机制只能视为解释性假设，因为没有直接机制实验。",
+        "answer_mode": "computed",
+        "status": "answered",
+        "claim_ids": [
+          "C17",
+          "C18",
+          "C19",
+          "C20"
+        ],
+        "evidence_ids": [
+          "E17",
+          "E18",
+          "E19",
+          "E20"
+        ],
+        "subquestions": [
+          {
+            "subquestion_id": "Q5.1",
+            "answer": "第 1 至 4 周评分下降 6 分。",
+            "answer_mode": "computed",
+            "status": "answered",
+            "claim_ids": [
+              "C17"
+            ],
+            "evidence_ids": [
+              "E17"
+            ]
+          },
+          {
+            "subquestion_id": "Q5.2",
+            "answer": "两组的未加权均值为 27 分。",
+            "answer_mode": "computed",
+            "status": "answered",
+            "claim_ids": [
+              "C18"
+            ],
+            "evidence_ids": [
+              "E18"
+            ]
+          },
+          {
+            "subquestion_id": "Q5.3",
+            "answer": "仅 20 名参与者使不精确成为合理担忧，但未量化区间。",
+            "answer_mode": "inferred",
+            "status": "answered",
+            "claim_ids": [
+              "C19"
+            ],
+            "evidence_ids": [
+              "E19"
+            ]
+          },
+          {
+            "subquestion_id": "Q5.4",
+            "answer": "机制只能视为解释性假设，因为没有直接机制实验。",
+            "answer_mode": "inferred",
+            "status": "answered",
+            "claim_ids": [
+              "C20"
+            ],
+            "evidence_ids": [
+              "E20"
+            ]
+          }
+        ]
+      },
+      {
+        "question_id": "Q6",
+        "answer": "四类信息均未报告；详见每个子问题的 searched_scope。",
+        "answer_mode": "unreported",
+        "status": "unreported",
+        "claim_ids": [],
+        "evidence_ids": [],
+        "subquestions": [
+          {
+            "subquestion_id": "Q6.1",
+            "answer": "未报告药代动力学数据；不能为零、阴性或无差异。",
+            "answer_mode": "unreported",
+            "status": "unreported",
+            "claim_ids": [],
+            "evidence_ids": []
+          },
+          {
+            "subquestion_id": "Q6.2",
+            "answer": "未报告生物标志物数据；不能为零、阴性或无差异。",
+            "answer_mode": "unreported",
+            "status": "unreported",
+            "claim_ids": [],
+            "evidence_ids": []
+          },
+          {
+            "subquestion_id": "Q6.3",
+            "answer": "未报告生活质量数据；不能为零、阴性或无差异。",
+            "answer_mode": "unreported",
+            "status": "unreported",
+            "claim_ids": [],
+            "evidence_ids": []
+          },
+          {
+            "subquestion_id": "Q6.4",
+            "answer": "未报告成本数据；不能为零、阴性或无差异。",
+            "answer_mode": "unreported",
+            "status": "unreported",
+            "claim_ids": [],
+            "evidence_ids": []
+          }
+        ]
+      }
+    ],
+    "sources": [
+      {
+        "source_id": "SRC-SYN",
+        "title": "SYNTHETIC 最小来源：覆盖导航器演练",
+        "path": "examples/sources/study.md",
+        "uncertainty": "全部内容为合成演练，无真实临床外推效度；未知真实人群与正式结果。"
+      }
+    ],
+    "uncertainty": [
+      {
+        "scope": "entire-example",
+        "statement": "SYNTHETIC：仅用于结构测试，不是正式或真实研究结论。"
+      },
+      {
+        "scope": "Q3/Q5 inferred rows",
+        "statement": "推断只表达可能性，不证明因果或偏倚方向。"
+      },
+      {
+        "scope": "Q6",
+        "statement": "未报告结论只覆盖所列最小来源，不证明其他来源也未报告。"
+      }
+    ],
+    "change_records": [
+      {
+        "sequence": 1,
+        "change": "初始建立 6 个根问题及 24 个子问题矩阵。",
+        "reason": "先任务后阅读。"
+      },
+      {
+        "sequence": 2,
+        "change": "将计算、推断与直接报告拆成独立行。",
+        "reason": "避免回答模式混淆。"
+      }
+    ]
+  }
+}

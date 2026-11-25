@@ -1,0 +1,25 @@
+schema_version: "1.0"
+runtime:
+  python: ">=3.9"
+  dependencies: "Python standard library only"
+  max_requests: 64
+  max_seconds: 900
+  network_required_for_synthetic_example: false
+paths:
+  case: /input/case.json
+  task: /input/task.md
+  resources: environment/resources.yaml
+  work: /app/work
+  output: /app/output
+policy:
+  authoritative_contract: "/input/task.md output_contract"
+  checkpoint: "/app/work/adjudication-ledger.partial.json"
+  final_ledger: "/app/output/adjudication-ledger.json"
+  final_report: "/app/output/adjudication-report.json"
+  final_result: "/app/output/result.json"
+  preserve_input: true
+  no_silent_input_drop: true
+  early_honest_partial: true
+limits:
+  max_requests: 64
+  max_seconds: 900

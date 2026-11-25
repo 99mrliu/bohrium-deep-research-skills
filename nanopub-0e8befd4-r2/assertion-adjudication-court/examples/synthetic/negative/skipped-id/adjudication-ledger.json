@@ -1,0 +1,918 @@
+{
+  "schema_version": "1.0",
+  "synthetic": true,
+  "notice": "SYNTHETIC / 合成裁决台账，非正式科研结果。",
+  "case_id": "SYNTHETIC-ADJUDICATION-020",
+  "audit_complete": false,
+  "assertions": [
+    {
+      "input_id": "C001",
+      "original_claim": "S1在2024年直接测得：25 °C下M7电导率为12 mS/cm。",
+      "decision_status": "adjudicated",
+      "verdict": "supported",
+      "components": [
+        {
+          "component_id": "C001.a",
+          "text": "S1于2024年在25 °C直接测得M7电导率12 mS/cm",
+          "disposition": "supported",
+          "claim_nature": "positive_fact",
+          "evidence_basis": "direct_measurement",
+          "rationale": "来源时间、测试温度和数值均与直接测量记录一致。",
+          "evidence": [
+            {
+              "source_id": "S1",
+              "quote": "S1-2024 直接测量记录：在25 °C下，M7的电导率为12 mS/cm（n=3）。",
+              "location": "S1首句",
+              "stance": "support"
+            }
+          ]
+        }
+      ],
+      "corrected_claim_ids": [],
+      "review_disposition": "accept"
+    },
+    {
+      "input_id": "C002",
+      "original_claim": "S1证明PT必然提高电导率。",
+      "decision_status": "adjudicated",
+      "verdict": "not_established",
+      "components": [
+        {
+          "component_id": "C002.a",
+          "text": "S1证明PT必然提高电导率",
+          "disposition": "not_established",
+          "claim_nature": "positive_fact",
+          "evidence_basis": "author_inference",
+          "rationale": "源文仅称可能提高，草稿将或然推断升级为必然和证明；没有强模态的反向事实。",
+          "evidence": [
+            {
+              "source_id": "S1",
+              "quote": "作者推断，PT可能通过降低晶界电阻提高电导率，但本研究没有直接测量晶界电阻。",
+              "location": "S1作者推断句",
+              "stance": "context"
+            }
+          ]
+        }
+      ],
+      "corrected_claim_ids": [
+        "FIX-C002"
+      ],
+      "review_disposition": "rewrite"
+    },
+    {
+      "input_id": "C003",
+      "original_claim": "S2在2024年测得M7电导率为9 mS/cm。",
+      "decision_status": "adjudicated",
+      "verdict": "contradicted",
+      "components": [
+        {
+          "component_id": "C003.a",
+          "text": "S2于2024年测得M7电导率9 mS/cm",
+          "disposition": "contradicted",
+          "claim_nature": "positive_fact",
+          "evidence_basis": "direct_measurement",
+          "rationale": "数值一致但测量时间层相反：S2明确为2025复测。",
+          "evidence": [
+            {
+              "source_id": "S2",
+              "quote": "S2-2025 直接复测：在25 °C下，M7的电导率为9 mS/cm（n=3）。",
+              "location": "S2首句",
+              "stance": "reverse"
+            }
+          ]
+        }
+      ],
+      "corrected_claim_ids": [
+        "FIX-C003"
+      ],
+      "review_disposition": "rewrite"
+    },
+    {
+      "input_id": "C004",
+      "original_claim": "S1与S2均在25 °C下测得M7电导率为12 mS/cm。",
+      "decision_status": "adjudicated",
+      "verdict": "mixed",
+      "components": [
+        {
+          "component_id": "C004.a",
+          "text": "S1在25 °C测得12 mS/cm",
+          "disposition": "supported",
+          "claim_nature": "positive_fact",
+          "evidence_basis": "direct_measurement",
+          "rationale": "S1直接测量值一致。",
+          "evidence": [
+            {
+              "source_id": "S1",
+              "quote": "S1-2024 直接测量记录：在25 °C下，M7的电导率为12 mS/cm（n=3）。",
+              "location": "S1首句",
+              "stance": "support"
+            }
+          ]
+        },
+        {
+          "component_id": "C004.b",
+          "text": "S2在25 °C测得12 mS/cm",
+          "disposition": "contradicted",
+          "claim_nature": "positive_fact",
+          "evidence_basis": "direct_measurement",
+          "rationale": "S2在相同温度测得9而非12，是数值反向证据。",
+          "evidence": [
+            {
+              "source_id": "S2",
+              "quote": "S2-2025 直接复测：在25 °C下，M7的电导率为9 mS/cm（n=3）。",
+              "location": "S2首句",
+              "stance": "reverse"
+            }
+          ]
+        }
+      ],
+      "corrected_claim_ids": [
+        "FIX-C004"
+      ],
+      "review_disposition": "rewrite"
+    },
+    {
+      "input_id": "C005",
+      "original_claim": "S3直接测量了离子迁移数，并证实PT提高了该数值。",
+      "decision_status": "adjudicated",
+      "verdict": "mixed",
+      "components": [
+        {
+          "component_id": "C005.a",
+          "text": "S3直接测量了离子迁移数",
+          "disposition": "contradicted",
+          "claim_nature": "measurement_attribution",
+          "evidence_basis": "direct_measurement",
+          "rationale": "S3明确说不是直接测量，反驳测量方式归属。",
+          "evidence": [
+            {
+              "source_id": "S3",
+              "quote": "S3-2024 综述：作者推断PT可能改善离子迁移数；该判断来自阻抗谱拟合，不是对离子迁移数的直接测量。",
+              "location": "S3首句",
+              "stance": "reverse"
+            }
+          ]
+        },
+        {
+          "component_id": "C005.b",
+          "text": "S3证实PT提高离子迁移数",
+          "disposition": "not_established",
+          "claim_nature": "positive_fact",
+          "evidence_basis": "author_inference",
+          "rationale": "拟合只引出可能改善的作者推断，没有建立证实版本。",
+          "evidence": [
+            {
+              "source_id": "S3",
+              "quote": "S3-2024 综述：作者推断PT可能改善离子迁移数；该判断来自阻抗谱拟合，不是对离子迁移数的直接测量。",
+              "location": "S3首句",
+              "stance": "context"
+            }
+          ]
+        }
+      ],
+      "corrected_claim_ids": [
+        "FIX-C005"
+      ],
+      "review_disposition": "rewrite"
+    },
+    {
+      "input_id": "C006",
+      "original_claim": "S3作者推断PT可能改善离子迁移数。",
+      "decision_status": "adjudicated",
+      "verdict": "supported",
+      "components": [
+        {
+          "component_id": "C006.a",
+          "text": "S3作者推断PT可能改善离子迁移数",
+          "disposition": "supported",
+          "claim_nature": "author_inference",
+          "evidence_basis": "author_inference",
+          "rationale": "命题只归属作者的可能推断，未夸大为直接测量或确定事实。",
+          "evidence": [
+            {
+              "source_id": "S3",
+              "quote": "S3-2024 综述：作者推断PT可能改善离子迁移数；该判断来自阻抗谱拟合，不是对离子迁移数的直接测量。",
+              "location": "S3首句",
+              "stance": "support"
+            }
+          ]
+        }
+      ],
+      "corrected_claim_ids": [],
+      "review_disposition": "accept"
+    },
+    {
+      "input_id": "C007",
+      "original_claim": "应当立即将PT用于临床，因为PT的人体安全性已经验证。",
+      "decision_status": "adjudicated",
+      "verdict": "not_established",
+      "components": [
+        {
+          "component_id": "C007.a",
+          "text": "应立即将PT用于临床",
+          "disposition": "not_established",
+          "claim_nature": "recommendation",
+          "evidence_basis": "normative_judgment",
+          "rationale": "这是无支持的建议，不因缺少证据而伪装成已被反向事实证明。",
+          "evidence": [
+            {
+              "source_id": "S4",
+              "quote": "实验没有评估人体安全性，也没有支持立即临床使用。",
+              "location": "S4第二句",
+              "stance": "context"
+            }
+          ]
+        },
+        {
+          "component_id": "C007.b",
+          "text": "PT的人体安全性已经验证",
+          "disposition": "not_established",
+          "claim_nature": "positive_fact",
+          "evidence_basis": "absence_of_evidence",
+          "rationale": "未评估人体安全性说明验证命题未建立，而非有人体不安全的直接反证。",
+          "evidence": [
+            {
+              "source_id": "S4",
+              "quote": "实验没有评估人体安全性，也没有支持立即临床使用。",
+              "location": "S4第二句",
+              "stance": "context"
+            }
+          ]
+        }
+      ],
+      "corrected_claim_ids": [
+        "FIX-C007"
+      ],
+      "review_disposition": "reject"
+    },
+    {
+      "input_id": "C008",
+      "original_claim": "S4中所有培养样本均未出现细胞毒性。",
+      "decision_status": "adjudicated",
+      "verdict": "contradicted",
+      "components": [
+        {
+          "component_id": "C008.a",
+          "text": "S4所有培养样本均未出现细胞毒性",
+          "disposition": "contradicted",
+          "claim_nature": "negative_fact",
+          "evidence_basis": "direct_observation",
+          "rationale": "源文明确观察2个样本出现毒性，是对全称否定事实的直接反向证据。",
+          "evidence": [
+            {
+              "source_id": "S4",
+              "quote": "S4-2025 细胞实验：5个培养样本中有2个在PT暴露后出现明显细胞毒性。",
+              "location": "S4首句",
+              "stance": "reverse"
+            }
+          ]
+        }
+      ],
+      "corrected_claim_ids": [
+        "FIX-C008"
+      ],
+      "review_disposition": "reject"
+    },
+    {
+      "input_id": "C009",
+      "original_claim": "S4报告5个样本中的2个出现毒性，并提出未来研究低剂量PT。",
+      "decision_status": "adjudicated",
+      "verdict": "supported",
+      "components": [
+        {
+          "component_id": "C009.a",
+          "text": "S4的5个样本中2个出现毒性",
+          "disposition": "supported",
+          "claim_nature": "positive_fact",
+          "evidence_basis": "direct_observation",
+          "rationale": "计数和观察结果一致。",
+          "evidence": [
+            {
+              "source_id": "S4",
+              "quote": "S4-2025 细胞实验：5个培养样本中有2个在PT暴露后出现明显细胞毒性。",
+              "location": "S4首句",
+              "stance": "support"
+            }
+          ]
+        },
+        {
+          "component_id": "C009.b",
+          "text": "S4作者提出未来研究低剂量PT",
+          "disposition": "supported",
+          "claim_nature": "proposal_attribution",
+          "evidence_basis": "source_statement",
+          "rationale": "仅支持作者曾提出该研究提议，不推断提议已有疗效。",
+          "evidence": [
+            {
+              "source_id": "S4",
+              "quote": "作者提出未来可研究低剂量PT，但该提议没有疗效数据支撑。",
+              "location": "S4第三句",
+              "stance": "support"
+            }
+          ]
+        }
+      ],
+      "corrected_claim_ids": [],
+      "review_disposition": "accept"
+    },
+    {
+      "input_id": "C010",
+      "original_claim": "S4的低剂量PT提议已有疗效数据支撑。",
+      "decision_status": "adjudicated",
+      "verdict": "contradicted",
+      "components": [
+        {
+          "component_id": "C010.a",
+          "text": "S4低剂量PT提议已有疗效数据支撑",
+          "disposition": "contradicted",
+          "claim_nature": "positive_fact",
+          "evidence_basis": "source_statement",
+          "rationale": "被裁决的是‘数据已存在’这一事实；源文明确否认数据支撑，并非裁决提议本身真假。",
+          "evidence": [
+            {
+              "source_id": "S4",
+              "quote": "作者提出未来可研究低剂量PT，但该提议没有疗效数据支撑。",
+              "location": "S4第三句",
+              "stance": "reverse"
+            }
+          ]
+        }
+      ],
+      "corrected_claim_ids": [
+        "FIX-C010"
+      ],
+      "review_disposition": "rewrite"
+    },
+    {
+      "input_id": "C011",
+      "original_claim": "S1中，沉积盐D溶解了M7样品。",
+      "decision_status": "adjudicated",
+      "verdict": "contradicted",
+      "components": [
+        {
+          "component_id": "C011.a",
+          "text": "S1中沉积盐D溶解M7样品",
+          "disposition": "contradicted",
+          "claim_nature": "positive_fact",
+          "evidence_basis": "direct_observation",
+          "rationale": "草稿反转溶解者与受作用者；源文明确给出相反主客方向。",
+          "evidence": [
+            {
+              "source_id": "S1",
+              "quote": "在S1中，M7样品溶解了沉积盐D，而不是沉积盐D溶解M7样品。",
+              "location": "S1方向句",
+              "stance": "reverse"
+            }
+          ]
+        }
+      ],
+      "corrected_claim_ids": [
+        "FIX-C011"
+      ],
+      "review_disposition": "rewrite"
+    },
+    {
+      "input_id": "C012",
+      "original_claim": "S1中，M7样品被Lamp-L加热至80 °C。",
+      "decision_status": "adjudicated",
+      "verdict": "supported",
+      "components": [
+        {
+          "component_id": "C012.a",
+          "text": "M7样品被Lamp-L加热至80 °C",
+          "disposition": "supported",
+          "claim_nature": "positive_fact",
+          "evidence_basis": "direct_observation",
+          "rationale": "被动表达与源文主动表达事件方向相同，温度一致。",
+          "evidence": [
+            {
+              "source_id": "S1",
+              "quote": "Lamp-L将样品加热至80 °C。",
+              "location": "S1第二句",
+              "stance": "support"
+            }
+          ]
+        }
+      ],
+      "corrected_claim_ids": [],
+      "review_disposition": "accept"
+    },
+    {
+      "input_id": "C013",
+      "original_claim": "S1中，涂层C阻止了离子穿透。",
+      "decision_status": "adjudicated",
+      "verdict": "contradicted",
+      "components": [
+        {
+          "component_id": "C013.a",
+          "text": "S1中涂层C阻止离子穿透",
+          "disposition": "contradicted",
+          "claim_nature": "positive_fact",
+          "evidence_basis": "direct_observation",
+          "rationale": "源文明确说未阻止且离子穿过，是直接反向证据。",
+          "evidence": [
+            {
+              "source_id": "S1",
+              "quote": "涂层C并未阻止离子穿透；离子穿过了涂层C。",
+              "location": "S1涂层句",
+              "stance": "reverse"
+            }
+          ]
+        }
+      ],
+      "corrected_claim_ids": [
+        "FIX-C013"
+      ],
+      "review_disposition": "rewrite"
+    },
+    {
+      "input_id": "C014",
+      "original_claim": "S2证实PT提高了电导率。",
+      "decision_status": "adjudicated",
+      "verdict": "not_established",
+      "components": [
+        {
+          "component_id": "C014.a",
+          "text": "S2证实PT提高电导率",
+          "disposition": "not_established",
+          "claim_nature": "positive_fact",
+          "evidence_basis": "absence_of_evidence",
+          "rationale": "区间跨零使提高未成立，但不自动证明真实效应必为零或下降，因此不是contradicted。",
+          "evidence": [
+            {
+              "source_id": "S2",
+              "quote": "PT组与对照组的差异区间跨越零，因此PT提高电导率在本数据集中未成立。",
+              "location": "S2差异句",
+              "stance": "context"
+            }
+          ]
+        }
+      ],
+      "corrected_claim_ids": [
+        "FIX-C014"
+      ],
+      "review_disposition": "rewrite"
+    },
+    {
+      "input_id": "C015",
+      "original_claim": "S1直接测得晶界电阻降低，且作者推断PT可能降低晶界电阻。",
+      "decision_status": "adjudicated",
+      "verdict": "mixed",
+      "components": [
+        {
+          "component_id": "C015.a",
+          "text": "S1直接测得晶界电阻降低",
+          "disposition": "contradicted",
+          "claim_nature": "measurement_attribution",
+          "evidence_basis": "direct_measurement",
+          "rationale": "反向证据只反驳‘直接测量’这一归属，不把未知的电阻变化方向写成否定事实。",
+          "evidence": [
+            {
+              "source_id": "S1",
+              "quote": "作者推断，PT可能通过降低晶界电阻提高电导率，但本研究没有直接测量晶界电阻。",
+              "location": "S1推断句",
+              "stance": "reverse"
+            }
+          ]
+        },
+        {
+          "component_id": "C015.b",
+          "text": "S1作者推断PT可能降低晶界电阻",
+          "disposition": "supported",
+          "claim_nature": "author_inference",
+          "evidence_basis": "author_inference",
+          "rationale": "准确保留作者推断和可能模态。",
+          "evidence": [
+            {
+              "source_id": "S1",
+              "quote": "作者推断，PT可能通过降低晶界电阻提高电导率，但本研究没有直接测量晶界电阻。",
+              "location": "S1推断句",
+              "stance": "support"
+            }
+          ]
+        }
+      ],
+      "corrected_claim_ids": [
+        "FIX-C015"
+      ],
+      "review_disposition": "rewrite"
+    },
+    {
+      "input_id": "C016",
+      "original_claim": "S5规定通过四探针法直接测量电导率，并通过等效电路拟合估计晶界电阻。",
+      "decision_status": "adjudicated",
+      "verdict": "supported",
+      "components": [
+        {
+          "component_id": "C016.a",
+          "text": "S5规定四探针直接测量电导率",
+          "disposition": "supported",
+          "claim_nature": "method_attribution",
+          "evidence_basis": "direct_measurement",
+          "rationale": "方法文档明确支持直接测量归属。",
+          "evidence": [
+            {
+              "source_id": "S5",
+              "quote": "S5-2023 方法文档：电导率以四探针法直接测量；晶界电阻通过等效电路拟合估计。",
+              "location": "S5首句",
+              "stance": "support"
+            }
+          ]
+        },
+        {
+          "component_id": "C016.b",
+          "text": "S5通过等效电路拟合估计晶界电阻",
+          "disposition": "supported",
+          "claim_nature": "method_attribution",
+          "evidence_basis": "model_inference",
+          "rationale": "拟合估计与直接测量分开记录。",
+          "evidence": [
+            {
+              "source_id": "S5",
+              "quote": "S5-2023 方法文档：电导率以四探针法直接测量；晶界电阻通过等效电路拟合估计。",
+              "location": "S5首句",
+              "stance": "support"
+            }
+          ]
+        }
+      ],
+      "corrected_claim_ids": [],
+      "review_disposition": "accept"
+    },
+    {
+      "input_id": "C017",
+      "original_claim": "S5证明M7具备一年长期稳定性。",
+      "decision_status": "adjudicated",
+      "verdict": "not_established",
+      "components": [
+        {
+          "component_id": "C017.a",
+          "text": "S5证明M7具备一年长期稳定性",
+          "disposition": "not_established",
+          "claim_nature": "positive_fact",
+          "evidence_basis": "absence_of_evidence",
+          "rationale": "未测量长期稳定性只能说明证明未建立，不构成稳定或不稳定的反向测量。",
+          "evidence": [
+            {
+              "source_id": "S5",
+              "quote": "未测量长期稳定性。",
+              "location": "S5末句",
+              "stance": "context"
+            }
+          ]
+        }
+      ],
+      "corrected_claim_ids": [
+        "FIX-C017"
+      ],
+      "review_disposition": "rewrite"
+    },
+    {
+      "input_id": "C018",
+      "original_claim": "S6证明M7不能保持一年稳定性。",
+      "decision_status": "adjudicated",
+      "verdict": "not_established",
+      "components": [
+        {
+          "component_id": "C018.a",
+          "text": "S6证明M7不能保持一年稳定性",
+          "disposition": "not_established",
+          "claim_nature": "negative_fact",
+          "evidence_basis": "absence_of_evidence",
+          "rationale": "24小时未覆盖一年；草稿的强否定仍未知，不能拿证据缺口当反向证据。",
+          "evidence": [
+            {
+              "source_id": "S6",
+              "quote": "S6-2025 稳定性简报：仅完成24小时测试。不能据此确定一年的稳定性。",
+              "location": "S6前两句",
+              "stance": "context"
+            }
+          ]
+        }
+      ],
+      "corrected_claim_ids": [
+        "FIX-C018"
+      ],
+      "review_disposition": "rewrite"
+    },
+    {
+      "input_id": "C019",
+      "original_claim": "S6完成24小时测试，并完成高温循环测试。",
+      "decision_status": "adjudicated",
+      "verdict": "mixed",
+      "components": [
+        {
+          "component_id": "C019.a",
+          "text": "S6完成24小时测试",
+          "disposition": "supported",
+          "claim_nature": "positive_fact",
+          "evidence_basis": "direct_observation",
+          "rationale": "测试时长有直接来源支持。",
+          "evidence": [
+            {
+              "source_id": "S6",
+              "quote": "S6-2025 稳定性简报：仅完成24小时测试。不能据此确定一年的稳定性。",
+              "location": "S6首句",
+              "stance": "support"
+            }
+          ]
+        },
+        {
+          "component_id": "C019.b",
+          "text": "S6完成高温循环测试",
+          "disposition": "contradicted",
+          "claim_nature": "positive_fact",
+          "evidence_basis": "direct_observation",
+          "rationale": "源文明确未测试，是对‘已完成’的反向证据。",
+          "evidence": [
+            {
+              "source_id": "S6",
+              "quote": "未测试高温循环。",
+              "location": "S6末句",
+              "stance": "reverse"
+            }
+          ]
+        }
+      ],
+      "corrected_claim_ids": [
+        "FIX-C019"
+      ],
+      "review_disposition": "rewrite"
+    }
+  ],
+  "corrected_claims": [
+    {
+      "corrected_claim_id": "FIX-C002",
+      "input_id": "C002",
+      "corrected_text": "S1报告PT组平均电导率为15 mS/cm；作者仅推断PT可能提高电导率。",
+      "rationale": "仅提供带证据边界的替换建议；original_claim保持原样。",
+      "source_ids": [
+        "S1"
+      ]
+    },
+    {
+      "corrected_claim_id": "FIX-C003",
+      "input_id": "C003",
+      "corrected_text": "S2在2025年测得M7在25 °C下的电导率为9 mS/cm。",
+      "rationale": "仅提供带证据边界的替换建议；original_claim保持原样。",
+      "source_ids": [
+        "S2"
+      ]
+    },
+    {
+      "corrected_claim_id": "FIX-C004",
+      "input_id": "C004",
+      "corrected_text": "S1在2024年测得12 mS/cm，S2在2025年相同温度复测为9 mS/cm。",
+      "rationale": "仅提供带证据边界的替换建议；original_claim保持原样。",
+      "source_ids": [
+        "S1",
+        "S2"
+      ]
+    },
+    {
+      "corrected_claim_id": "FIX-C005",
+      "input_id": "C005",
+      "corrected_text": "S3由阻抗谱拟合推断PT可能改善离子迁移数，未直接测量或证实该数值提高。",
+      "rationale": "仅提供带证据边界的替换建议；original_claim保持原样。",
+      "source_ids": [
+        "S3"
+      ]
+    },
+    {
+      "corrected_claim_id": "FIX-C007",
+      "input_id": "C007",
+      "corrected_text": "S4未评估人体安全性，也未支持立即临床使用；该建议尚不成立。",
+      "rationale": "仅提供带证据边界的替换建议；original_claim保持原样。",
+      "source_ids": [
+        "S4"
+      ]
+    },
+    {
+      "corrected_claim_id": "FIX-C008",
+      "input_id": "C008",
+      "corrected_text": "S4的5个培养样本中有2个在PT暴露后出现明显细胞毒性。",
+      "rationale": "仅提供带证据边界的替换建议；original_claim保持原样。",
+      "source_ids": [
+        "S4"
+      ]
+    },
+    {
+      "corrected_claim_id": "FIX-C010",
+      "input_id": "C010",
+      "corrected_text": "S4提出未来研究低剂量PT，但该提议尚无疗效数据支撑。",
+      "rationale": "仅提供带证据边界的替换建议；original_claim保持原样。",
+      "source_ids": [
+        "S4"
+      ]
+    },
+    {
+      "corrected_claim_id": "FIX-C011",
+      "input_id": "C011",
+      "corrected_text": "S1中，M7样品溶解了沉积盐D。",
+      "rationale": "仅提供带证据边界的替换建议；original_claim保持原样。",
+      "source_ids": [
+        "S1"
+      ]
+    },
+    {
+      "corrected_claim_id": "FIX-C013",
+      "input_id": "C013",
+      "corrected_text": "S1中涂层C未阻止离子穿透，离子穿过了涂层C。",
+      "rationale": "仅提供带证据边界的替换建议；original_claim保持原样。",
+      "source_ids": [
+        "S1"
+      ]
+    },
+    {
+      "corrected_claim_id": "FIX-C014",
+      "input_id": "C014",
+      "corrected_text": "S2中PT组与对照组差异区间跨越零，尚未建立PT提高电导率。",
+      "rationale": "仅提供带证据边界的替换建议；original_claim保持原样。",
+      "source_ids": [
+        "S2"
+      ]
+    },
+    {
+      "corrected_claim_id": "FIX-C015",
+      "input_id": "C015",
+      "corrected_text": "S1未直接测量晶界电阻；作者仅推断PT可能通过降低晶界电阻提高电导率。",
+      "rationale": "仅提供带证据边界的替换建议；original_claim保持原样。",
+      "source_ids": [
+        "S1"
+      ]
+    },
+    {
+      "corrected_claim_id": "FIX-C017",
+      "input_id": "C017",
+      "corrected_text": "S5未测量长期稳定性，M7的一年稳定性尚未建立。",
+      "rationale": "仅提供带证据边界的替换建议；original_claim保持原样。",
+      "source_ids": [
+        "S5"
+      ]
+    },
+    {
+      "corrected_claim_id": "FIX-C018",
+      "input_id": "C018",
+      "corrected_text": "S6仅完成24小时测试，不能据此确定M7的一年稳定性或稳定性缺失。",
+      "rationale": "仅提供带证据边界的替换建议；original_claim保持原样。",
+      "source_ids": [
+        "S6"
+      ]
+    },
+    {
+      "corrected_claim_id": "FIX-C019",
+      "input_id": "C019",
+      "corrected_text": "S6完成24小时测试，但未测试高温循环。",
+      "rationale": "仅提供带证据边界的替换建议；original_claim保持原样。",
+      "source_ids": [
+        "S6"
+      ]
+    }
+  ],
+  "sources": [
+    "S1",
+    "S2",
+    "S3",
+    "S4",
+    "S5",
+    "S6"
+  ],
+  "uncertainty": [
+    {
+      "uncertainty_id": "U-SKIPPED-NEGATIVE",
+      "input_ids": [
+        "C020"
+      ],
+      "topic": "intentional_negative_fixture",
+      "text": "故意跳过C020；这是验证错误，不得作为合法partial。"
+    }
+  ],
+  "change_records": [
+    {
+      "change_id": "CHANGE-C002",
+      "input_id": "C002",
+      "corrected_claim_ids": [
+        "FIX-C002"
+      ],
+      "change_type": "separate_corrected_claim_proposal",
+      "original_preserved": true
+    },
+    {
+      "change_id": "CHANGE-C003",
+      "input_id": "C003",
+      "corrected_claim_ids": [
+        "FIX-C003"
+      ],
+      "change_type": "separate_corrected_claim_proposal",
+      "original_preserved": true
+    },
+    {
+      "change_id": "CHANGE-C004",
+      "input_id": "C004",
+      "corrected_claim_ids": [
+        "FIX-C004"
+      ],
+      "change_type": "separate_corrected_claim_proposal",
+      "original_preserved": true
+    },
+    {
+      "change_id": "CHANGE-C005",
+      "input_id": "C005",
+      "corrected_claim_ids": [
+        "FIX-C005"
+      ],
+      "change_type": "separate_corrected_claim_proposal",
+      "original_preserved": true
+    },
+    {
+      "change_id": "CHANGE-C007",
+      "input_id": "C007",
+      "corrected_claim_ids": [
+        "FIX-C007"
+      ],
+      "change_type": "separate_corrected_claim_proposal",
+      "original_preserved": true
+    },
+    {
+      "change_id": "CHANGE-C008",
+      "input_id": "C008",
+      "corrected_claim_ids": [
+        "FIX-C008"
+      ],
+      "change_type": "separate_corrected_claim_proposal",
+      "original_preserved": true
+    },
+    {
+      "change_id": "CHANGE-C010",
+      "input_id": "C010",
+      "corrected_claim_ids": [
+        "FIX-C010"
+      ],
+      "change_type": "separate_corrected_claim_proposal",
+      "original_preserved": true
+    },
+    {
+      "change_id": "CHANGE-C011",
+      "input_id": "C011",
+      "corrected_claim_ids": [
+        "FIX-C011"
+      ],
+      "change_type": "separate_corrected_claim_proposal",
+      "original_preserved": true
+    },
+    {
+      "change_id": "CHANGE-C013",
+      "input_id": "C013",
+      "corrected_claim_ids": [
+        "FIX-C013"
+      ],
+      "change_type": "separate_corrected_claim_proposal",
+      "original_preserved": true
+    },
+    {
+      "change_id": "CHANGE-C014",
+      "input_id": "C014",
+      "corrected_claim_ids": [
+        "FIX-C014"
+      ],
+      "change_type": "separate_corrected_claim_proposal",
+      "original_preserved": true
+    },
+    {
+      "change_id": "CHANGE-C015",
+      "input_id": "C015",
+      "corrected_claim_ids": [
+        "FIX-C015"
+      ],
+      "change_type": "separate_corrected_claim_proposal",
+      "original_preserved": true
+    },
+    {
+      "change_id": "CHANGE-C017",
+      "input_id": "C017",
+      "corrected_claim_ids": [
+        "FIX-C017"
+      ],
+      "change_type": "separate_corrected_claim_proposal",
+      "original_preserved": true
+    },
+    {
+      "change_id": "CHANGE-C018",
+      "input_id": "C018",
+      "corrected_claim_ids": [
+        "FIX-C018"
+      ],
+      "change_type": "separate_corrected_claim_proposal",
+      "original_preserved": true
+    },
+    {
+      "change_id": "CHANGE-C019",
+      "input_id": "C019",
+      "corrected_claim_ids": [
+        "FIX-C019"
+      ],
+      "change_type": "separate_corrected_claim_proposal",
+      "original_preserved": true
+    }
+  ]
+}

@@ -1,0 +1,99 @@
+{
+  "schema_version": "1.0",
+  "synthetic": true,
+  "notice": "SYNTHETIC audit fixture; not a formal scientific result.",
+  "case_id": "SYNTHETIC-ADJUDICATION-020",
+  "valid": false,
+  "audit_complete": false,
+  "expected_process_status": "partial",
+  "input_count": 20,
+  "ledger_record_count": 19,
+  "adjudicated_count": 19,
+  "pending_input_ids": [],
+  "uncovered_input_ids": [
+    "C020"
+  ],
+  "verdict_counts": {
+    "supported": 5,
+    "contradicted": 5,
+    "not_established": 5,
+    "mixed": 4
+  },
+  "rejected_review_count": 2,
+  "checks": [
+    {
+      "check": "case_schema",
+      "passed": true
+    },
+    {
+      "check": "output_contract",
+      "passed": true
+    },
+    {
+      "check": "required_result_fields",
+      "passed": true
+    },
+    {
+      "check": "input_id_coverage",
+      "passed": false
+    },
+    {
+      "check": "input_order",
+      "passed": false
+    },
+    {
+      "check": "original_text_preserved",
+      "passed": true
+    },
+    {
+      "check": "pending_shape",
+      "passed": true
+    },
+    {
+      "check": "component_verdict_logic",
+      "passed": true
+    },
+    {
+      "check": "support_and_reverse_evidence",
+      "passed": true
+    },
+    {
+      "check": "evidence_sources",
+      "passed": true
+    },
+    {
+      "check": "evidence_quotes",
+      "passed": true
+    },
+    {
+      "check": "corrected_claim_links",
+      "passed": true
+    },
+    {
+      "check": "source_inventory",
+      "passed": true
+    },
+    {
+      "check": "change_records",
+      "passed": true
+    },
+    {
+      "check": "result_consistency",
+      "passed": true
+    },
+    {
+      "check": "state_machine",
+      "passed": true
+    }
+  ],
+  "errors": [
+    {
+      "code": "SKIPPED_INPUT_ID",
+      "message": "input_id missing from ledger: C020"
+    },
+    {
+      "code": "INPUT_ORDER",
+      "message": "ledger input order differs from case input order"
+    }
+  ]
+}

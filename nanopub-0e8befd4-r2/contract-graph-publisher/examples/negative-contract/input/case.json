@@ -1,0 +1,27 @@
+{
+  "case_id": "SYNTHETIC-NEGATIVE-EXACT-001",
+  "notice": "SYNTHETIC deliberate contract violation; not a formal result.",
+  "output_contract": {
+    "fields": ["case_id", "claims", "evidence", "sources", "uncertainty", "change_records"],
+    "additionalProperties": false
+  },
+  "manifest": {
+    "output_fields": ["case_id", "claims", "evidence", "sources", "uncertainty", "change_records", "debug_status"],
+    "request_format": "json"
+  },
+  "claims": [
+    {
+      "claim_id": "c-negative-exact-1",
+      "subject": {"iri": "https://example.org/synthetic/A"},
+      "predicate": {"iri": "https://example.org/synthetic/relatedTo"},
+      "object": {"value": "synthetic literal"},
+      "evidence_ids": ["e-negative-exact-1"]
+    }
+  ],
+  "evidence": [
+    {"evidence_id": "e-negative-exact-1", "source_ids": ["s-negative-exact-1"]}
+  ],
+  "sources": [
+    {"source_id": "s-negative-exact-1", "locator": "synthetic://negative-exact/1"}
+  ]
+}

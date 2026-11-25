@@ -1,0 +1,7 @@
+version: 1
+limits:
+  max_requests: 64
+  max_seconds: 900
+paths:
+  work_dir: /app/work
+  output_dir: /app/output

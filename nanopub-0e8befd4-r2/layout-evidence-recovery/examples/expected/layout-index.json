@@ -1,0 +1,438 @@
+{
+  "schema_version": "layout-evidence-index/v1",
+  "tool": "layout_evidence.py",
+  "tool_version": "1.0.0",
+  "document_id": "SYNTHETIC-TWO-COLUMN",
+  "synthetic": true,
+  "formal_result": false,
+  "source": {
+    "source_id": "synthetic-layout-source",
+    "path": "examples/synthetic/layout.json",
+    "sha256": "40577f7c2fb8f2075a67569fde3acdf20b291a79c32287951c51c1135d99557b",
+    "media_type": "application/json",
+    "extraction": "SYNTHETIC external block input emulating pdftotext -bbox or PyMuPDF output",
+    "origin": "SYNTHETIC hand-authored text and coordinates; not extracted from a real PDF"
+  },
+  "included_roles": [
+    "body"
+  ],
+  "pages": [
+    {
+      "page": 1,
+      "width": 600,
+      "height": 800,
+      "extraction_status": "text",
+      "block_order": [
+        "p1-header",
+        "p1-left-intro",
+        "p1-left-detail",
+        "p1-right-main",
+        "p1-figure",
+        "p1-footer"
+      ],
+      "page_char_start": 0,
+      "page_char_end": 214,
+      "blocks": [
+        {
+          "block_id": "p1-header",
+          "role": "header",
+          "column": null,
+          "bbox": [
+            40,
+            20,
+            560,
+            42
+          ],
+          "input_index": 0,
+          "reading_index": null,
+          "included": false,
+          "block_char_start": null,
+          "block_char_end": null,
+          "text": "SYNTHETIC JOURNAL",
+          "lines": [
+            {
+              "line": 1,
+              "text": "SYNTHETIC JOURNAL",
+              "line_char_start": 0,
+              "line_char_end": 17,
+              "document_char_start": null,
+              "document_char_end": null,
+              "page_char_start": null,
+              "page_char_end": null
+            }
+          ]
+        },
+        {
+          "block_id": "p1-left-intro",
+          "role": "body",
+          "column": 1,
+          "bbox": [
+            40,
+            80,
+            280,
+            170
+          ],
+          "input_index": 1,
+          "reading_index": 0,
+          "included": true,
+          "block_char_start": 0,
+          "block_char_end": 53,
+          "text": "Evidence recovery keeps\ncross-\ncolumn order explicit.",
+          "lines": [
+            {
+              "line": 1,
+              "text": "Evidence recovery keeps",
+              "line_char_start": 0,
+              "line_char_end": 23,
+              "document_char_start": 0,
+              "document_char_end": 23,
+              "page_char_start": 0,
+              "page_char_end": 23
+            },
+            {
+              "line": 2,
+              "text": "cross-",
+              "line_char_start": 0,
+              "line_char_end": 6,
+              "document_char_start": 24,
+              "document_char_end": 30,
+              "page_char_start": 24,
+              "page_char_end": 30
+            },
+            {
+              "line": 3,
+              "text": "column order explicit.",
+              "line_char_start": 0,
+              "line_char_end": 22,
+              "document_char_start": 31,
+              "document_char_end": 53,
+              "page_char_start": 31,
+              "page_char_end": 53
+            }
+          ]
+        },
+        {
+          "block_id": "p1-left-detail",
+          "role": "body",
+          "column": 1,
+          "bbox": [
+            40,
+            220,
+            280,
+            330
+          ],
+          "input_index": 2,
+          "reading_index": 1,
+          "included": true,
+          "block_char_start": 54,
+          "block_char_end": 127,
+          "text": "Repeated phrase appears here.\nOffsets use zero based\nhalf open intervals.",
+          "lines": [
+            {
+              "line": 1,
+              "text": "Repeated phrase appears here.",
+              "line_char_start": 0,
+              "line_char_end": 29,
+              "document_char_start": 54,
+              "document_char_end": 83,
+              "page_char_start": 54,
+              "page_char_end": 83
+            },
+            {
+              "line": 2,
+              "text": "Offsets use zero based",
+              "line_char_start": 0,
+              "line_char_end": 22,
+              "document_char_start": 84,
+              "document_char_end": 106,
+              "page_char_start": 84,
+              "page_char_end": 106
+            },
+            {
+              "line": 3,
+              "text": "half open intervals.",
+              "line_char_start": 0,
+              "line_char_end": 20,
+              "document_char_start": 107,
+              "document_char_end": 127,
+              "page_char_start": 107,
+              "page_char_end": 127
+            }
+          ]
+        },
+        {
+          "block_id": "p1-right-main",
+          "role": "body",
+          "column": 2,
+          "bbox": [
+            320,
+            80,
+            560,
+            240
+          ],
+          "input_index": 3,
+          "reading_index": 2,
+          "included": true,
+          "block_char_start": 128,
+          "block_char_end": 214,
+          "text": "Right column follows left.\nRepeated phrase appears here.\nFigure legends stay separate.",
+          "lines": [
+            {
+              "line": 1,
+              "text": "Right column follows left.",
+              "line_char_start": 0,
+              "line_char_end": 26,
+              "document_char_start": 128,
+              "document_char_end": 154,
+              "page_char_start": 128,
+              "page_char_end": 154
+            },
+            {
+              "line": 2,
+              "text": "Repeated phrase appears here.",
+              "line_char_start": 0,
+              "line_char_end": 29,
+              "document_char_start": 155,
+              "document_char_end": 184,
+              "page_char_start": 155,
+              "page_char_end": 184
+            },
+            {
+              "line": 3,
+              "text": "Figure legends stay separate.",
+              "line_char_start": 0,
+              "line_char_end": 29,
+              "document_char_start": 185,
+              "document_char_end": 214,
+              "page_char_start": 185,
+              "page_char_end": 214
+            }
+          ]
+        },
+        {
+          "block_id": "p1-figure",
+          "role": "figure_text",
+          "column": null,
+          "bbox": [
+            320,
+            370,
+            560,
+            450
+          ],
+          "input_index": 4,
+          "reading_index": null,
+          "included": false,
+          "block_char_start": null,
+          "block_char_end": null,
+          "text": "FIGURE 1 repeated phrase",
+          "lines": [
+            {
+              "line": 1,
+              "text": "FIGURE 1 repeated phrase",
+              "line_char_start": 0,
+              "line_char_end": 24,
+              "document_char_start": null,
+              "document_char_end": null,
+              "page_char_start": null,
+              "page_char_end": null
+            }
+          ]
+        },
+        {
+          "block_id": "p1-footer",
+          "role": "footer",
+          "column": null,
+          "bbox": [
+            40,
+            760,
+            560,
+            780
+          ],
+          "input_index": 5,
+          "reading_index": null,
+          "included": false,
+          "block_char_start": null,
+          "block_char_end": null,
+          "text": "SYNTHETIC PAGE 1",
+          "lines": [
+            {
+              "line": 1,
+              "text": "SYNTHETIC PAGE 1",
+              "line_char_start": 0,
+              "line_char_end": 16,
+              "document_char_start": null,
+              "document_char_end": null,
+              "page_char_start": null,
+              "page_char_end": null
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "page": 2,
+      "width": 600,
+      "height": 800,
+      "extraction_status": "text",
+      "block_order": [
+        "p2-header",
+        "p2-left",
+        "p2-right",
+        "p2-footer"
+      ],
+      "page_char_start": 217,
+      "page_char_end": 286,
+      "blocks": [
+        {
+          "block_id": "p2-header",
+          "role": "header",
+          "column": null,
+          "bbox": [
+            40,
+            20,
+            560,
+            42
+          ],
+          "input_index": 0,
+          "reading_index": null,
+          "included": false,
+          "block_char_start": null,
+          "block_char_end": null,
+          "text": "SYNTHETIC JOURNAL",
+          "lines": [
+            {
+              "line": 1,
+              "text": "SYNTHETIC JOURNAL",
+              "line_char_start": 0,
+              "line_char_end": 17,
+              "document_char_start": null,
+              "document_char_end": null,
+              "page_char_start": null,
+              "page_char_end": null
+            }
+          ]
+        },
+        {
+          "block_id": "p2-left",
+          "role": "body",
+          "column": 1,
+          "bbox": [
+            40,
+            80,
+            280,
+            180
+          ],
+          "input_index": 1,
+          "reading_index": 0,
+          "included": true,
+          "block_char_start": 217,
+          "block_char_end": 259,
+          "text": "The second page keeps\nline offsets stable.",
+          "lines": [
+            {
+              "line": 1,
+              "text": "The second page keeps",
+              "line_char_start": 0,
+              "line_char_end": 21,
+              "document_char_start": 217,
+              "document_char_end": 238,
+              "page_char_start": 0,
+              "page_char_end": 21
+            },
+            {
+              "line": 2,
+              "text": "line offsets stable.",
+              "line_char_start": 0,
+              "line_char_end": 20,
+              "document_char_start": 239,
+              "document_char_end": 259,
+              "page_char_start": 22,
+              "page_char_end": 42
+            }
+          ]
+        },
+        {
+          "block_id": "p2-right",
+          "role": "body",
+          "column": 2,
+          "bbox": [
+            320,
+            80,
+            560,
+            180
+          ],
+          "input_index": 2,
+          "reading_index": 1,
+          "included": true,
+          "block_char_start": 260,
+          "block_char_end": 286,
+          "text": "No semantic claim is made.",
+          "lines": [
+            {
+              "line": 1,
+              "text": "No semantic claim is made.",
+              "line_char_start": 0,
+              "line_char_end": 26,
+              "document_char_start": 260,
+              "document_char_end": 286,
+              "page_char_start": 43,
+              "page_char_end": 69
+            }
+          ]
+        },
+        {
+          "block_id": "p2-footer",
+          "role": "footer",
+          "column": null,
+          "bbox": [
+            40,
+            760,
+            560,
+            780
+          ],
+          "input_index": 3,
+          "reading_index": null,
+          "included": false,
+          "block_char_start": null,
+          "block_char_end": null,
+          "text": "SYNTHETIC PAGE 2",
+          "lines": [
+            {
+              "line": 1,
+              "text": "SYNTHETIC PAGE 2",
+              "line_char_start": 0,
+              "line_char_end": 16,
+              "document_char_start": null,
+              "document_char_end": null,
+              "page_char_start": null,
+              "page_char_end": null
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "text": "Evidence recovery keeps\ncross-\ncolumn order explicit.\nRepeated phrase appears here.\nOffsets use zero based\nhalf open intervals.\nRight column follows left.\nRepeated phrase appears here.\nFigure legends stay separate.\n\f\nThe second page keeps\nline offsets stable.\nNo semantic claim is made.",
+  "issues": [],
+  "sources": [
+    {
+      "source_id": "synthetic-layout-source",
+      "path": "examples/synthetic/layout.json",
+      "sha256": "40577f7c2fb8f2075a67569fde3acdf20b291a79c32287951c51c1135d99557b",
+      "media_type": "application/json",
+      "extraction": "SYNTHETIC external block input emulating pdftotext -bbox or PyMuPDF output",
+      "origin": "SYNTHETIC hand-authored text and coordinates; not extracted from a real PDF"
+    }
+  ],
+  "uncertainty": [],
+  "change_records": [
+    {
+      "operation": "index",
+      "source_modified": false,
+      "details": "Normalized indexing only; no source text was overwritten."
+    }
+  ],
+  "semantic_entailment": "not_evaluated",
+  "page_count": 2,
+  "status": "ok"
+}

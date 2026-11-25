@@ -1,0 +1,1483 @@
+{
+  "@graph": [
+    {
+      "@id": "urn:contract-graph-publisher:local:SYNTHETIC-RDF-020:Head",
+      "@graph": [
+        {
+          "@id": "urn:contract-graph-publisher:local:SYNTHETIC-RDF-020:publication",
+          "@type": [
+            "http://www.nanopub.org/nschema#Nanopublication"
+          ],
+          "http://www.nanopub.org/nschema#hasAssertion": [
+            {
+              "@id": "urn:contract-graph-publisher:local:SYNTHETIC-RDF-020:assertion"
+            }
+          ],
+          "http://www.nanopub.org/nschema#hasProvenance": [
+            {
+              "@id": "urn:contract-graph-publisher:local:SYNTHETIC-RDF-020:provenance"
+            }
+          ],
+          "http://www.nanopub.org/nschema#hasPublicationInfo": [
+            {
+              "@id": "urn:contract-graph-publisher:local:SYNTHETIC-RDF-020:pubinfo"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "@id": "urn:contract-graph-publisher:local:SYNTHETIC-RDF-020:assertion",
+      "@graph": [
+        {
+          "@id": "urn:contract-graph-publisher:local:SYNTHETIC-RDF-020:statement:c01",
+          "@type": [
+            "http://www.w3.org/1999/02/22-rdf-syntax-ns#Statement"
+          ],
+          "http://www.w3.org/1999/02/22-rdf-syntax-ns#subject": [
+            {
+              "@id": "https://example.org/synthetic/Material01"
+            }
+          ],
+          "http://www.w3.org/1999/02/22-rdf-syntax-ns#predicate": [
+            {
+              "@id": "https://example.org/synthetic/hasProperty"
+            }
+          ],
+          "http://www.w3.org/1999/02/22-rdf-syntax-ns#object": [
+            {
+              "@id": "https://example.org/synthetic/Stability"
+            }
+          ],
+          "urn:contract-graph-publisher:vocabulary:claimId": [
+            {
+              "@value": "c01"
+            }
+          ],
+          "urn:contract-graph-publisher:vocabulary:polarity": [
+            {
+              "@value": "positive"
+            }
+          ],
+          "urn:contract-graph-publisher:vocabulary:hedged": [
+            {
+              "@value": "false",
+              "@datatype": "http://www.w3.org/2001/XMLSchema#boolean"
+            }
+          ]
+        },
+        {
+          "@id": "urn:contract-graph-publisher:local:SYNTHETIC-RDF-020:statement:c02",
+          "@type": [
+            "http://www.w3.org/1999/02/22-rdf-syntax-ns#Statement"
+          ],
+          "http://www.w3.org/1999/02/22-rdf-syntax-ns#subject": [
+            {
+              "@id": "https://example.org/synthetic/Material02"
+            }
+          ],
+          "http://www.w3.org/1999/02/22-rdf-syntax-ns#predicate": [
+            {
+              "@id": "https://example.org/synthetic/causes"
+            }
+          ],
+          "http://www.w3.org/1999/02/22-rdf-syntax-ns#object": [
+            {
+              "@id": "https://example.org/synthetic/Outcome02"
+            }
+          ],
+          "urn:contract-graph-publisher:vocabulary:claimId": [
+            {
+              "@value": "c02"
+            }
+          ],
+          "urn:contract-graph-publisher:vocabulary:polarity": [
+            {
+              "@value": "negative"
+            }
+          ],
+          "urn:contract-graph-publisher:vocabulary:hedged": [
+            {
+              "@value": "false",
+              "@datatype": "http://www.w3.org/2001/XMLSchema#boolean"
+            }
+          ]
+        },
+        {
+          "@id": "urn:contract-graph-publisher:local:SYNTHETIC-RDF-020:statement:c03",
+          "@type": [
+            "http://www.w3.org/1999/02/22-rdf-syntax-ns#Statement"
+          ],
+          "http://www.w3.org/1999/02/22-rdf-syntax-ns#subject": [
+            {
+              "@id": "https://example.org/synthetic/Material03"
+            }
+          ],
+          "http://www.w3.org/1999/02/22-rdf-syntax-ns#predicate": [
+            {
+              "@id": "https://example.org/synthetic/improves"
+            }
+          ],
+          "http://www.w3.org/1999/02/22-rdf-syntax-ns#object": [
+            {
+              "@id": "https://example.org/synthetic/Metric03"
+            }
+          ],
+          "urn:contract-graph-publisher:vocabulary:claimId": [
+            {
+              "@value": "c03"
+            }
+          ],
+          "urn:contract-graph-publisher:vocabulary:polarity": [
+            {
+              "@value": "positive"
+            }
+          ],
+          "urn:contract-graph-publisher:vocabulary:hedged": [
+            {
+              "@value": "true",
+              "@datatype": "http://www.w3.org/2001/XMLSchema#boolean"
+            }
+          ],
+          "urn:contract-graph-publisher:vocabulary:hedge": [
+            {
+              "@value": "May improve the synthetic metric."
+            }
+          ]
+        },
+        {
+          "@id": "urn:contract-graph-publisher:local:SYNTHETIC-RDF-020:statement:c04",
+          "@type": [
+            "http://www.w3.org/1999/02/22-rdf-syntax-ns#Statement"
+          ],
+          "http://www.w3.org/1999/02/22-rdf-syntax-ns#subject": [
+            {
+              "@id": "https://example.org/synthetic/Material04"
+            }
+          ],
+          "http://www.w3.org/1999/02/22-rdf-syntax-ns#predicate": [
+            {
+              "@id": "https://example.org/synthetic/enables"
+            }
+          ],
+          "http://www.w3.org/1999/02/22-rdf-syntax-ns#object": [
+            {
+              "@id": "https://example.org/synthetic/Process04"
+            }
+          ],
+          "urn:contract-graph-publisher:vocabulary:claimId": [
+            {
+              "@value": "c04"
+            }
+          ],
+          "urn:contract-graph-publisher:vocabulary:polarity": [
+            {
+              "@value": "positive"
+            }
+          ],
+          "urn:contract-graph-publisher:vocabulary:hedged": [
+            {
+              "@value": "false",
+              "@datatype": "http://www.w3.org/2001/XMLSchema#boolean"
+            }
+          ],
+          "urn:contract-graph-publisher:vocabulary:condition": [
+            {
+              "@value": "Only under synthetic condition K04."
+            }
+          ]
+        },
+        {
+          "@id": "urn:contract-graph-publisher:local:SYNTHETIC-RDF-020:statement:c05",
+          "@type": [
+            "http://www.w3.org/1999/02/22-rdf-syntax-ns#Statement"
+          ],
+          "http://www.w3.org/1999/02/22-rdf-syntax-ns#subject": [
+            {
+              "@id": "https://example.org/synthetic/Material05"
+            }
+          ],
+          "http://www.w3.org/1999/02/22-rdf-syntax-ns#predicate": [
+            {
+              "@id": "https://example.org/synthetic/inhibits"
+            }
+          ],
+          "http://www.w3.org/1999/02/22-rdf-syntax-ns#object": [
+            {
+              "@id": "https://example.org/synthetic/Process05"
+            }
+          ],
+          "urn:contract-graph-publisher:vocabulary:claimId": [
+            {
+              "@value": "c05"
+            }
+          ],
+          "urn:contract-graph-publisher:vocabulary:polarity": [
+            {
+              "@value": "negative"
+            }
+          ],
+          "urn:contract-graph-publisher:vocabulary:hedged": [
+            {
+              "@value": "true",
+              "@datatype": "http://www.w3.org/2001/XMLSchema#boolean"
+            }
+          ],
+          "urn:contract-graph-publisher:vocabulary:hedge": [
+            {
+              "@value": "Probably does not inhibit the synthetic process."
+            }
+          ]
+        },
+        {
+          "@id": "urn:contract-graph-publisher:local:SYNTHETIC-RDF-020:statement:c06",
+          "@type": [
+            "http://www.w3.org/1999/02/22-rdf-syntax-ns#Statement"
+          ],
+          "http://www.w3.org/1999/02/22-rdf-syntax-ns#subject": [
+            {
+              "@id": "https://example.org/synthetic/Material06"
+            }
+          ],
+          "http://www.w3.org/1999/02/22-rdf-syntax-ns#predicate": [
+            {
+              "@id": "https://example.org/synthetic/hasLabel"
+            }
+          ],
+          "http://www.w3.org/1999/02/22-rdf-syntax-ns#object": [
+            {
+              "@value": "synthetic label six",
+              "@language": "en"
+            }
+          ],
+          "urn:contract-graph-publisher:vocabulary:claimId": [
+            {
+              "@value": "c06"
+            }
+          ],
+          "urn:contract-graph-publisher:vocabulary:polarity": [
+            {
+              "@value": "positive"
+            }
+          ],
+          "urn:contract-graph-publisher:vocabulary:hedged": [
+            {
+              "@value": "false",
+              "@datatype": "http://www.w3.org/2001/XMLSchema#boolean"
+            }
+          ]
+        },
+        {
+          "@id": "urn:contract-graph-publisher:local:SYNTHETIC-RDF-020:statement:c07",
+          "@type": [
+            "http://www.w3.org/1999/02/22-rdf-syntax-ns#Statement"
+          ],
+          "http://www.w3.org/1999/02/22-rdf-syntax-ns#subject": [
+            {
+              "@id": "https://example.org/synthetic/Material07"
+            }
+          ],
+          "http://www.w3.org/1999/02/22-rdf-syntax-ns#predicate": [
+            {
+              "@id": "https://example.org/synthetic/associatedWith"
+            }
+          ],
+          "http://www.w3.org/1999/02/22-rdf-syntax-ns#object": [
+            {
+              "@id": "https://example.org/synthetic/Phenomenon07"
+            }
+          ],
+          "urn:contract-graph-publisher:vocabulary:claimId": [
+            {
+              "@value": "c07"
+            }
+          ],
+          "urn:contract-graph-publisher:vocabulary:polarity": [
+            {
+              "@value": "positive"
+            }
+          ],
+          "urn:contract-graph-publisher:vocabulary:hedged": [
+            {
+              "@value": "false",
+              "@datatype": "http://www.w3.org/2001/XMLSchema#boolean"
+            }
+          ],
+          "urn:contract-graph-publisher:vocabulary:uncertainty": [
+            {
+              "@value": "Source wording is ambiguous in this synthetic example."
+            }
+          ]
+        },
+        {
+          "@id": "urn:contract-graph-publisher:local:SYNTHETIC-RDF-020:statement:c08",
+          "@type": [
+            "http://www.w3.org/1999/02/22-rdf-syntax-ns#Statement"
+          ],
+          "http://www.w3.org/1999/02/22-rdf-syntax-ns#subject": [
+            {
+              "@id": "https://example.org/synthetic/Material08"
+            }
+          ],
+          "http://www.w3.org/1999/02/22-rdf-syntax-ns#predicate": [
+            {
+              "@id": "https://example.org/synthetic/requires"
+            }
+          ],
+          "http://www.w3.org/1999/02/22-rdf-syntax-ns#object": [
+            {
+              "@id": "https://example.org/synthetic/Reagent08"
+            }
+          ],
+          "urn:contract-graph-publisher:vocabulary:claimId": [
+            {
+              "@value": "c08"
+            }
+          ],
+          "urn:contract-graph-publisher:vocabulary:polarity": [
+            {
+              "@value": "positive"
+            }
+          ],
+          "urn:contract-graph-publisher:vocabulary:hedged": [
+            {
+              "@value": "false",
+              "@datatype": "http://www.w3.org/2001/XMLSchema#boolean"
+            }
+          ],
+          "urn:contract-graph-publisher:vocabulary:condition": [
+            {
+              "@value": "Only in synthetic protocol P08."
+            }
+          ]
+        },
+        {
+          "@id": "urn:contract-graph-publisher:local:SYNTHETIC-RDF-020:statement:c09",
+          "@type": [
+            "http://www.w3.org/1999/02/22-rdf-syntax-ns#Statement"
+          ],
+          "http://www.w3.org/1999/02/22-rdf-syntax-ns#subject": [
+            {
+              "@id": "https://example.org/synthetic/Material09"
+            }
+          ],
+          "http://www.w3.org/1999/02/22-rdf-syntax-ns#predicate": [
+            {
+              "@id": "https://example.org/synthetic/contains"
+            }
+          ],
+          "http://www.w3.org/1999/02/22-rdf-syntax-ns#object": [
+            {
+              "@id": "https://example.org/synthetic/Component09"
+            }
+          ],
+          "urn:contract-graph-publisher:vocabulary:claimId": [
+            {
+              "@value": "c09"
+            }
+          ],
+          "urn:contract-graph-publisher:vocabulary:polarity": [
+            {
+              "@value": "positive"
+            }
+          ],
+          "urn:contract-graph-publisher:vocabulary:hedged": [
+            {
+              "@value": "false",
+              "@datatype": "http://www.w3.org/2001/XMLSchema#boolean"
+            }
+          ]
+        },
+        {
+          "@id": "urn:contract-graph-publisher:local:SYNTHETIC-RDF-020:statement:c10",
+          "@type": [
+            "http://www.w3.org/1999/02/22-rdf-syntax-ns#Statement"
+          ],
+          "http://www.w3.org/1999/02/22-rdf-syntax-ns#subject": [
+            {
+              "@id": "https://example.org/synthetic/Material10"
+            }
+          ],
+          "http://www.w3.org/1999/02/22-rdf-syntax-ns#predicate": [
+            {
+              "@id": "https://example.org/synthetic/compatibleWith"
+            }
+          ],
+          "http://www.w3.org/1999/02/22-rdf-syntax-ns#object": [
+            {
+              "@id": "https://example.org/synthetic/Substrate10"
+            }
+          ],
+          "urn:contract-graph-publisher:vocabulary:claimId": [
+            {
+              "@value": "c10"
+            }
+          ],
+          "urn:contract-graph-publisher:vocabulary:polarity": [
+            {
+              "@value": "negative"
+            }
+          ],
+          "urn:contract-graph-publisher:vocabulary:hedged": [
+            {
+              "@value": "false",
+              "@datatype": "http://www.w3.org/2001/XMLSchema#boolean"
+            }
+          ],
+          "urn:contract-graph-publisher:vocabulary:condition": [
+            {
+              "@value": "Only for the synthetic humid environment."
+            }
+          ]
+        },
+        {
+          "@id": "urn:contract-graph-publisher:local:SYNTHETIC-RDF-020:statement:c11",
+          "@type": [
+            "http://www.w3.org/1999/02/22-rdf-syntax-ns#Statement"
+          ],
+          "http://www.w3.org/1999/02/22-rdf-syntax-ns#subject": [
+            {
+              "@id": "https://example.org/synthetic/Material11"
+            }
+          ],
+          "http://www.w3.org/1999/02/22-rdf-syntax-ns#predicate": [
+            {
+              "@id": "https://example.org/synthetic/modulates"
+            }
+          ],
+          "http://www.w3.org/1999/02/22-rdf-syntax-ns#object": [
+            {
+              "@id": "https://example.org/synthetic/Signal11"
+            }
+          ],
+          "urn:contract-graph-publisher:vocabulary:claimId": [
+            {
+              "@value": "c11"
+            }
+          ],
+          "urn:contract-graph-publisher:vocabulary:polarity": [
+            {
+              "@value": "positive"
+            }
+          ],
+          "urn:contract-graph-publisher:vocabulary:hedged": [
+            {
+              "@value": "true",
+              "@datatype": "http://www.w3.org/2001/XMLSchema#boolean"
+            }
+          ],
+          "urn:contract-graph-publisher:vocabulary:hedge": [
+            {
+              "@value": "Appears to modulate the synthetic signal."
+            }
+          ]
+        },
+        {
+          "@id": "urn:contract-graph-publisher:local:SYNTHETIC-RDF-020:statement:c12",
+          "@type": [
+            "http://www.w3.org/1999/02/22-rdf-syntax-ns#Statement"
+          ],
+          "http://www.w3.org/1999/02/22-rdf-syntax-ns#subject": [
+            {
+              "@id": "https://example.org/synthetic/Material12"
+            }
+          ],
+          "http://www.w3.org/1999/02/22-rdf-syntax-ns#predicate": [
+            {
+              "@id": "https://example.org/synthetic/hasCode"
+            }
+          ],
+          "http://www.w3.org/1999/02/22-rdf-syntax-ns#object": [
+            {
+              "@value": "012",
+              "@datatype": "http://www.w3.org/2001/XMLSchema#string"
+            }
+          ],
+          "urn:contract-graph-publisher:vocabulary:claimId": [
+            {
+              "@value": "c12"
+            }
+          ],
+          "urn:contract-graph-publisher:vocabulary:polarity": [
+            {
+              "@value": "positive"
+            }
+          ],
+          "urn:contract-graph-publisher:vocabulary:hedged": [
+            {
+              "@value": "false",
+              "@datatype": "http://www.w3.org/2001/XMLSchema#boolean"
+            }
+          ]
+        },
+        {
+          "@id": "urn:contract-graph-publisher:local:SYNTHETIC-RDF-020:statement:c13",
+          "@type": [
+            "http://www.w3.org/1999/02/22-rdf-syntax-ns#Statement"
+          ],
+          "http://www.w3.org/1999/02/22-rdf-syntax-ns#subject": [
+            {
+              "@id": "https://example.org/synthetic/Material13"
+            }
+          ],
+          "http://www.w3.org/1999/02/22-rdf-syntax-ns#predicate": [
+            {
+              "@id": "https://example.org/synthetic/produces"
+            }
+          ],
+          "http://www.w3.org/1999/02/22-rdf-syntax-ns#object": [
+            {
+              "@id": "https://example.org/synthetic/Product13"
+            }
+          ],
+          "urn:contract-graph-publisher:vocabulary:claimId": [
+            {
+              "@value": "c13"
+            }
+          ],
+          "urn:contract-graph-publisher:vocabulary:polarity": [
+            {
+              "@value": "positive"
+            }
+          ],
+          "urn:contract-graph-publisher:vocabulary:hedged": [
+            {
+              "@value": "false",
+              "@datatype": "http://www.w3.org/2001/XMLSchema#boolean"
+            }
+          ]
+        },
+        {
+          "@id": "urn:contract-graph-publisher:local:SYNTHETIC-RDF-020:statement:c14",
+          "@type": [
+            "http://www.w3.org/1999/02/22-rdf-syntax-ns#Statement"
+          ],
+          "http://www.w3.org/1999/02/22-rdf-syntax-ns#subject": [
+            {
+              "@id": "https://example.org/synthetic/Material14"
+            }
+          ],
+          "http://www.w3.org/1999/02/22-rdf-syntax-ns#predicate": [
+            {
+              "@id": "https://example.org/synthetic/degrades"
+            }
+          ],
+          "http://www.w3.org/1999/02/22-rdf-syntax-ns#object": [
+            {
+              "@id": "https://example.org/synthetic/Component14"
+            }
+          ],
+          "urn:contract-graph-publisher:vocabulary:claimId": [
+            {
+              "@value": "c14"
+            }
+          ],
+          "urn:contract-graph-publisher:vocabulary:polarity": [
+            {
+              "@value": "negative"
+            }
+          ],
+          "urn:contract-graph-publisher:vocabulary:hedged": [
+            {
+              "@value": "true",
+              "@datatype": "http://www.w3.org/2001/XMLSchema#boolean"
+            }
+          ],
+          "urn:contract-graph-publisher:vocabulary:condition": [
+            {
+              "@value": "Only at the specified synthetic storage state."
+            }
+          ],
+          "urn:contract-graph-publisher:vocabulary:hedge": [
+            {
+              "@value": "Unlikely to degrade the synthetic component."
+            }
+          ]
+        },
+        {
+          "@id": "urn:contract-graph-publisher:local:SYNTHETIC-RDF-020:statement:c15",
+          "@type": [
+            "http://www.w3.org/1999/02/22-rdf-syntax-ns#Statement"
+          ],
+          "http://www.w3.org/1999/02/22-rdf-syntax-ns#subject": [
+            {
+              "@id": "https://example.org/synthetic/Material15"
+            }
+          ],
+          "http://www.w3.org/1999/02/22-rdf-syntax-ns#predicate": [
+            {
+              "@id": "https://example.org/synthetic/binds"
+            }
+          ],
+          "http://www.w3.org/1999/02/22-rdf-syntax-ns#object": [
+            {
+              "@id": "https://example.org/synthetic/Target15"
+            }
+          ],
+          "urn:contract-graph-publisher:vocabulary:claimId": [
+            {
+              "@value": "c15"
+            }
+          ],
+          "urn:contract-graph-publisher:vocabulary:polarity": [
+            {
+              "@value": "positive"
+            }
+          ],
+          "urn:contract-graph-publisher:vocabulary:hedged": [
+            {
+              "@value": "false",
+              "@datatype": "http://www.w3.org/2001/XMLSchema#boolean"
+            }
+          ],
+          "urn:contract-graph-publisher:vocabulary:condition": [
+            {
+              "@value": "Only in the synthetic buffered preparation."
+            }
+          ]
+        },
+        {
+          "@id": "urn:contract-graph-publisher:local:SYNTHETIC-RDF-020:statement:c16",
+          "@type": [
+            "http://www.w3.org/1999/02/22-rdf-syntax-ns#Statement"
+          ],
+          "http://www.w3.org/1999/02/22-rdf-syntax-ns#subject": [
+            {
+              "@id": "https://example.org/synthetic/Material16"
+            }
+          ],
+          "http://www.w3.org/1999/02/22-rdf-syntax-ns#predicate": [
+            {
+              "@id": "https://example.org/synthetic/resembles"
+            }
+          ],
+          "http://www.w3.org/1999/02/22-rdf-syntax-ns#object": [
+            {
+              "@id": "https://example.org/synthetic/Structure16"
+            }
+          ],
+          "urn:contract-graph-publisher:vocabulary:claimId": [
+            {
+              "@value": "c16"
+            }
+          ],
+          "urn:contract-graph-publisher:vocabulary:polarity": [
+            {
+              "@value": "positive"
+            }
+          ],
+          "urn:contract-graph-publisher:vocabulary:hedged": [
+            {
+              "@value": "true",
+              "@datatype": "http://www.w3.org/2001/XMLSchema#boolean"
+            }
+          ],
+          "urn:contract-graph-publisher:vocabulary:hedge": [
+            {
+              "@value": "Provisionally resembles the synthetic structure."
+            }
+          ]
+        },
+        {
+          "@id": "urn:contract-graph-publisher:local:SYNTHETIC-RDF-020:statement:c17",
+          "@type": [
+            "http://www.w3.org/1999/02/22-rdf-syntax-ns#Statement"
+          ],
+          "http://www.w3.org/1999/02/22-rdf-syntax-ns#subject": [
+            {
+              "@id": "https://example.org/synthetic/Material17"
+            }
+          ],
+          "http://www.w3.org/1999/02/22-rdf-syntax-ns#predicate": [
+            {
+              "@id": "https://example.org/synthetic/precedes"
+            }
+          ],
+          "http://www.w3.org/1999/02/22-rdf-syntax-ns#object": [
+            {
+              "@id": "https://example.org/synthetic/Event17"
+            }
+          ],
+          "urn:contract-graph-publisher:vocabulary:claimId": [
+            {
+              "@value": "c17"
+            }
+          ],
+          "urn:contract-graph-publisher:vocabulary:polarity": [
+            {
+              "@value": "positive"
+            }
+          ],
+          "urn:contract-graph-publisher:vocabulary:hedged": [
+            {
+              "@value": "false",
+              "@datatype": "http://www.w3.org/2001/XMLSchema#boolean"
+            }
+          ]
+        },
+        {
+          "@id": "urn:contract-graph-publisher:local:SYNTHETIC-RDF-020:statement:c18",
+          "@type": [
+            "http://www.w3.org/1999/02/22-rdf-syntax-ns#Statement"
+          ],
+          "http://www.w3.org/1999/02/22-rdf-syntax-ns#subject": [
+            {
+              "@id": "https://example.org/synthetic/Material18"
+            }
+          ],
+          "http://www.w3.org/1999/02/22-rdf-syntax-ns#predicate": [
+            {
+              "@id": "https://example.org/synthetic/interactsWith"
+            }
+          ],
+          "http://www.w3.org/1999/02/22-rdf-syntax-ns#object": [
+            {
+              "@id": "https://example.org/synthetic/Agent18"
+            }
+          ],
+          "urn:contract-graph-publisher:vocabulary:claimId": [
+            {
+              "@value": "c18"
+            }
+          ],
+          "urn:contract-graph-publisher:vocabulary:polarity": [
+            {
+              "@value": "negative"
+            }
+          ],
+          "urn:contract-graph-publisher:vocabulary:hedged": [
+            {
+              "@value": "false",
+              "@datatype": "http://www.w3.org/2001/XMLSchema#boolean"
+            }
+          ]
+        },
+        {
+          "@id": "urn:contract-graph-publisher:local:SYNTHETIC-RDF-020:statement:c19",
+          "@type": [
+            "http://www.w3.org/1999/02/22-rdf-syntax-ns#Statement"
+          ],
+          "http://www.w3.org/1999/02/22-rdf-syntax-ns#subject": [
+            {
+              "@id": "https://example.org/synthetic/Material19"
+            }
+          ],
+          "http://www.w3.org/1999/02/22-rdf-syntax-ns#predicate": [
+            {
+              "@id": "https://example.org/synthetic/supports"
+            }
+          ],
+          "http://www.w3.org/1999/02/22-rdf-syntax-ns#object": [
+            {
+              "@id": "https://example.org/synthetic/Function19"
+            }
+          ],
+          "urn:contract-graph-publisher:vocabulary:claimId": [
+            {
+              "@value": "c19"
+            }
+          ],
+          "urn:contract-graph-publisher:vocabulary:polarity": [
+            {
+              "@value": "positive"
+            }
+          ],
+          "urn:contract-graph-publisher:vocabulary:hedged": [
+            {
+              "@value": "false",
+              "@datatype": "http://www.w3.org/2001/XMLSchema#boolean"
+            }
+          ],
+          "urn:contract-graph-publisher:vocabulary:uncertainty": [
+            {
+              "@value": "The synthetic evidence does not resolve mechanism."
+            }
+          ]
+        },
+        {
+          "@id": "urn:contract-graph-publisher:local:SYNTHETIC-RDF-020:statement:c20",
+          "@type": [
+            "http://www.w3.org/1999/02/22-rdf-syntax-ns#Statement"
+          ],
+          "http://www.w3.org/1999/02/22-rdf-syntax-ns#subject": [
+            {
+              "@id": "https://example.org/synthetic/Material20"
+            }
+          ],
+          "http://www.w3.org/1999/02/22-rdf-syntax-ns#predicate": [
+            {
+              "@id": "https://example.org/synthetic/changes"
+            }
+          ],
+          "http://www.w3.org/1999/02/22-rdf-syntax-ns#object": [
+            {
+              "@id": "https://example.org/synthetic/State20"
+            }
+          ],
+          "urn:contract-graph-publisher:vocabulary:claimId": [
+            {
+              "@value": "c20"
+            }
+          ],
+          "urn:contract-graph-publisher:vocabulary:polarity": [
+            {
+              "@value": "negative"
+            }
+          ],
+          "urn:contract-graph-publisher:vocabulary:hedged": [
+            {
+              "@value": "true",
+              "@datatype": "http://www.w3.org/2001/XMLSchema#boolean"
+            }
+          ],
+          "urn:contract-graph-publisher:vocabulary:condition": [
+            {
+              "@value": "Only for synthetic batch B20."
+            }
+          ],
+          "urn:contract-graph-publisher:vocabulary:hedge": [
+            {
+              "@value": "May not change the synthetic state."
+            }
+          ],
+          "urn:contract-graph-publisher:vocabulary:uncertainty": [
+            {
+              "@value": "Synthetic batch annotation is incomplete."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "@id": "urn:contract-graph-publisher:local:SYNTHETIC-RDF-020:provenance",
+      "@graph": [
+        {
+          "@id": "urn:contract-graph-publisher:local:SYNTHETIC-RDF-020:provenance",
+          "urn:contract-graph-publisher:vocabulary:describesAssertion": [
+            {
+              "@id": "urn:contract-graph-publisher:local:SYNTHETIC-RDF-020:assertion"
+            }
+          ]
+        },
+        {
+          "@id": "urn:contract-graph-publisher:local:SYNTHETIC-RDF-020:statement:c01",
+          "http://www.w3.org/ns/prov#wasDerivedFrom": [
+            {
+              "@id": "urn:contract-graph-publisher:local:SYNTHETIC-RDF-020:evidence:e01"
+            }
+          ]
+        },
+        {
+          "@id": "urn:contract-graph-publisher:local:SYNTHETIC-RDF-020:statement:c02",
+          "http://www.w3.org/ns/prov#wasDerivedFrom": [
+            {
+              "@id": "urn:contract-graph-publisher:local:SYNTHETIC-RDF-020:evidence:e02"
+            }
+          ]
+        },
+        {
+          "@id": "urn:contract-graph-publisher:local:SYNTHETIC-RDF-020:statement:c03",
+          "http://www.w3.org/ns/prov#wasDerivedFrom": [
+            {
+              "@id": "urn:contract-graph-publisher:local:SYNTHETIC-RDF-020:evidence:e03"
+            }
+          ]
+        },
+        {
+          "@id": "urn:contract-graph-publisher:local:SYNTHETIC-RDF-020:statement:c04",
+          "http://www.w3.org/ns/prov#wasDerivedFrom": [
+            {
+              "@id": "urn:contract-graph-publisher:local:SYNTHETIC-RDF-020:evidence:e04"
+            }
+          ]
+        },
+        {
+          "@id": "urn:contract-graph-publisher:local:SYNTHETIC-RDF-020:statement:c05",
+          "http://www.w3.org/ns/prov#wasDerivedFrom": [
+            {
+              "@id": "urn:contract-graph-publisher:local:SYNTHETIC-RDF-020:evidence:e05"
+            }
+          ]
+        },
+        {
+          "@id": "urn:contract-graph-publisher:local:SYNTHETIC-RDF-020:statement:c06",
+          "http://www.w3.org/ns/prov#wasDerivedFrom": [
+            {
+              "@id": "urn:contract-graph-publisher:local:SYNTHETIC-RDF-020:evidence:e06"
+            }
+          ]
+        },
+        {
+          "@id": "urn:contract-graph-publisher:local:SYNTHETIC-RDF-020:statement:c07",
+          "http://www.w3.org/ns/prov#wasDerivedFrom": [
+            {
+              "@id": "urn:contract-graph-publisher:local:SYNTHETIC-RDF-020:evidence:e07"
+            }
+          ]
+        },
+        {
+          "@id": "urn:contract-graph-publisher:local:SYNTHETIC-RDF-020:statement:c08",
+          "http://www.w3.org/ns/prov#wasDerivedFrom": [
+            {
+              "@id": "urn:contract-graph-publisher:local:SYNTHETIC-RDF-020:evidence:e08"
+            }
+          ]
+        },
+        {
+          "@id": "urn:contract-graph-publisher:local:SYNTHETIC-RDF-020:statement:c09",
+          "http://www.w3.org/ns/prov#wasDerivedFrom": [
+            {
+              "@id": "urn:contract-graph-publisher:local:SYNTHETIC-RDF-020:evidence:e09"
+            }
+          ]
+        },
+        {
+          "@id": "urn:contract-graph-publisher:local:SYNTHETIC-RDF-020:statement:c10",
+          "http://www.w3.org/ns/prov#wasDerivedFrom": [
+            {
+              "@id": "urn:contract-graph-publisher:local:SYNTHETIC-RDF-020:evidence:e10"
+            }
+          ]
+        },
+        {
+          "@id": "urn:contract-graph-publisher:local:SYNTHETIC-RDF-020:statement:c11",
+          "http://www.w3.org/ns/prov#wasDerivedFrom": [
+            {
+              "@id": "urn:contract-graph-publisher:local:SYNTHETIC-RDF-020:evidence:e11"
+            }
+          ]
+        },
+        {
+          "@id": "urn:contract-graph-publisher:local:SYNTHETIC-RDF-020:statement:c12",
+          "http://www.w3.org/ns/prov#wasDerivedFrom": [
+            {
+              "@id": "urn:contract-graph-publisher:local:SYNTHETIC-RDF-020:evidence:e12"
+            }
+          ]
+        },
+        {
+          "@id": "urn:contract-graph-publisher:local:SYNTHETIC-RDF-020:statement:c13",
+          "http://www.w3.org/ns/prov#wasDerivedFrom": [
+            {
+              "@id": "urn:contract-graph-publisher:local:SYNTHETIC-RDF-020:evidence:e13"
+            }
+          ]
+        },
+        {
+          "@id": "urn:contract-graph-publisher:local:SYNTHETIC-RDF-020:statement:c14",
+          "http://www.w3.org/ns/prov#wasDerivedFrom": [
+            {
+              "@id": "urn:contract-graph-publisher:local:SYNTHETIC-RDF-020:evidence:e14"
+            }
+          ]
+        },
+        {
+          "@id": "urn:contract-graph-publisher:local:SYNTHETIC-RDF-020:statement:c15",
+          "http://www.w3.org/ns/prov#wasDerivedFrom": [
+            {
+              "@id": "urn:contract-graph-publisher:local:SYNTHETIC-RDF-020:evidence:e15"
+            }
+          ]
+        },
+        {
+          "@id": "urn:contract-graph-publisher:local:SYNTHETIC-RDF-020:statement:c16",
+          "http://www.w3.org/ns/prov#wasDerivedFrom": [
+            {
+              "@id": "urn:contract-graph-publisher:local:SYNTHETIC-RDF-020:evidence:e16"
+            }
+          ]
+        },
+        {
+          "@id": "urn:contract-graph-publisher:local:SYNTHETIC-RDF-020:statement:c17",
+          "http://www.w3.org/ns/prov#wasDerivedFrom": [
+            {
+              "@id": "urn:contract-graph-publisher:local:SYNTHETIC-RDF-020:evidence:e17"
+            }
+          ]
+        },
+        {
+          "@id": "urn:contract-graph-publisher:local:SYNTHETIC-RDF-020:statement:c18",
+          "http://www.w3.org/ns/prov#wasDerivedFrom": [
+            {
+              "@id": "urn:contract-graph-publisher:local:SYNTHETIC-RDF-020:evidence:e18"
+            }
+          ]
+        },
+        {
+          "@id": "urn:contract-graph-publisher:local:SYNTHETIC-RDF-020:statement:c19",
+          "http://www.w3.org/ns/prov#wasDerivedFrom": [
+            {
+              "@id": "urn:contract-graph-publisher:local:SYNTHETIC-RDF-020:evidence:e19"
+            }
+          ]
+        },
+        {
+          "@id": "urn:contract-graph-publisher:local:SYNTHETIC-RDF-020:statement:c20",
+          "http://www.w3.org/ns/prov#wasDerivedFrom": [
+            {
+              "@id": "urn:contract-graph-publisher:local:SYNTHETIC-RDF-020:evidence:e20"
+            }
+          ]
+        },
+        {
+          "@id": "urn:contract-graph-publisher:local:SYNTHETIC-RDF-020:evidence:e01",
+          "urn:contract-graph-publisher:vocabulary:evidenceId": [
+            {
+              "@value": "e01"
+            }
+          ],
+          "http://www.w3.org/ns/prov#wasDerivedFrom": [
+            {
+              "@id": "urn:contract-graph-publisher:local:SYNTHETIC-RDF-020:source:s1"
+            }
+          ],
+          "urn:contract-graph-publisher:vocabulary:evidenceText": [
+            {
+              "@value": "Synthetic evidence sentence 01."
+            }
+          ]
+        },
+        {
+          "@id": "urn:contract-graph-publisher:local:SYNTHETIC-RDF-020:evidence:e02",
+          "urn:contract-graph-publisher:vocabulary:evidenceId": [
+            {
+              "@value": "e02"
+            }
+          ],
+          "http://www.w3.org/ns/prov#wasDerivedFrom": [
+            {
+              "@id": "urn:contract-graph-publisher:local:SYNTHETIC-RDF-020:source:s2"
+            }
+          ],
+          "urn:contract-graph-publisher:vocabulary:evidenceText": [
+            {
+              "@value": "Synthetic negative evidence sentence 02."
+            }
+          ]
+        },
+        {
+          "@id": "urn:contract-graph-publisher:local:SYNTHETIC-RDF-020:evidence:e03",
+          "urn:contract-graph-publisher:vocabulary:evidenceId": [
+            {
+              "@value": "e03"
+            }
+          ],
+          "http://www.w3.org/ns/prov#wasDerivedFrom": [
+            {
+              "@id": "urn:contract-graph-publisher:local:SYNTHETIC-RDF-020:source:s3"
+            }
+          ],
+          "urn:contract-graph-publisher:vocabulary:evidenceText": [
+            {
+              "@value": "Synthetic hedged evidence sentence 03."
+            }
+          ]
+        },
+        {
+          "@id": "urn:contract-graph-publisher:local:SYNTHETIC-RDF-020:evidence:e04",
+          "urn:contract-graph-publisher:vocabulary:evidenceId": [
+            {
+              "@value": "e04"
+            }
+          ],
+          "http://www.w3.org/ns/prov#wasDerivedFrom": [
+            {
+              "@id": "urn:contract-graph-publisher:local:SYNTHETIC-RDF-020:source:s4"
+            }
+          ],
+          "urn:contract-graph-publisher:vocabulary:evidenceText": [
+            {
+              "@value": "Synthetic conditional evidence sentence 04."
+            }
+          ]
+        },
+        {
+          "@id": "urn:contract-graph-publisher:local:SYNTHETIC-RDF-020:evidence:e05",
+          "urn:contract-graph-publisher:vocabulary:evidenceId": [
+            {
+              "@value": "e05"
+            }
+          ],
+          "http://www.w3.org/ns/prov#wasDerivedFrom": [
+            {
+              "@id": "urn:contract-graph-publisher:local:SYNTHETIC-RDF-020:source:s1"
+            }
+          ],
+          "urn:contract-graph-publisher:vocabulary:evidenceText": [
+            {
+              "@value": "Synthetic qualified evidence sentence 05."
+            }
+          ]
+        },
+        {
+          "@id": "urn:contract-graph-publisher:local:SYNTHETIC-RDF-020:evidence:e06",
+          "urn:contract-graph-publisher:vocabulary:evidenceId": [
+            {
+              "@value": "e06"
+            }
+          ],
+          "http://www.w3.org/ns/prov#wasDerivedFrom": [
+            {
+              "@id": "urn:contract-graph-publisher:local:SYNTHETIC-RDF-020:source:s2"
+            }
+          ],
+          "urn:contract-graph-publisher:vocabulary:evidenceText": [
+            {
+              "@value": "Synthetic evidence sentence 06."
+            }
+          ]
+        },
+        {
+          "@id": "urn:contract-graph-publisher:local:SYNTHETIC-RDF-020:evidence:e07",
+          "urn:contract-graph-publisher:vocabulary:evidenceId": [
+            {
+              "@value": "e07"
+            }
+          ],
+          "http://www.w3.org/ns/prov#wasDerivedFrom": [
+            {
+              "@id": "urn:contract-graph-publisher:local:SYNTHETIC-RDF-020:source:s3"
+            }
+          ],
+          "urn:contract-graph-publisher:vocabulary:evidenceText": [
+            {
+              "@value": "Synthetic uncertain evidence sentence 07."
+            }
+          ]
+        },
+        {
+          "@id": "urn:contract-graph-publisher:local:SYNTHETIC-RDF-020:evidence:e08",
+          "urn:contract-graph-publisher:vocabulary:evidenceId": [
+            {
+              "@value": "e08"
+            }
+          ],
+          "http://www.w3.org/ns/prov#wasDerivedFrom": [
+            {
+              "@id": "urn:contract-graph-publisher:local:SYNTHETIC-RDF-020:source:s4"
+            }
+          ],
+          "urn:contract-graph-publisher:vocabulary:evidenceText": [
+            {
+              "@value": "Synthetic conditional evidence sentence 08."
+            }
+          ]
+        },
+        {
+          "@id": "urn:contract-graph-publisher:local:SYNTHETIC-RDF-020:evidence:e09",
+          "urn:contract-graph-publisher:vocabulary:evidenceId": [
+            {
+              "@value": "e09"
+            }
+          ],
+          "http://www.w3.org/ns/prov#wasDerivedFrom": [
+            {
+              "@id": "urn:contract-graph-publisher:local:SYNTHETIC-RDF-020:source:s1"
+            }
+          ],
+          "urn:contract-graph-publisher:vocabulary:evidenceText": [
+            {
+              "@value": "Synthetic evidence sentence 09."
+            }
+          ]
+        },
+        {
+          "@id": "urn:contract-graph-publisher:local:SYNTHETIC-RDF-020:evidence:e10",
+          "urn:contract-graph-publisher:vocabulary:evidenceId": [
+            {
+              "@value": "e10"
+            }
+          ],
+          "http://www.w3.org/ns/prov#wasDerivedFrom": [
+            {
+              "@id": "urn:contract-graph-publisher:local:SYNTHETIC-RDF-020:source:s2"
+            }
+          ],
+          "urn:contract-graph-publisher:vocabulary:evidenceText": [
+            {
+              "@value": "Synthetic negative conditional evidence sentence 10."
+            }
+          ]
+        },
+        {
+          "@id": "urn:contract-graph-publisher:local:SYNTHETIC-RDF-020:evidence:e11",
+          "urn:contract-graph-publisher:vocabulary:evidenceId": [
+            {
+              "@value": "e11"
+            }
+          ],
+          "http://www.w3.org/ns/prov#wasDerivedFrom": [
+            {
+              "@id": "urn:contract-graph-publisher:local:SYNTHETIC-RDF-020:source:s3"
+            }
+          ],
+          "urn:contract-graph-publisher:vocabulary:evidenceText": [
+            {
+              "@value": "Synthetic hedged evidence sentence 11."
+            }
+          ]
+        },
+        {
+          "@id": "urn:contract-graph-publisher:local:SYNTHETIC-RDF-020:evidence:e12",
+          "urn:contract-graph-publisher:vocabulary:evidenceId": [
+            {
+              "@value": "e12"
+            }
+          ],
+          "http://www.w3.org/ns/prov#wasDerivedFrom": [
+            {
+              "@id": "urn:contract-graph-publisher:local:SYNTHETIC-RDF-020:source:s4"
+            }
+          ],
+          "urn:contract-graph-publisher:vocabulary:evidenceText": [
+            {
+              "@value": "Synthetic evidence sentence 12."
+            }
+          ]
+        },
+        {
+          "@id": "urn:contract-graph-publisher:local:SYNTHETIC-RDF-020:evidence:e13",
+          "urn:contract-graph-publisher:vocabulary:evidenceId": [
+            {
+              "@value": "e13"
+            }
+          ],
+          "http://www.w3.org/ns/prov#wasDerivedFrom": [
+            {
+              "@id": "urn:contract-graph-publisher:local:SYNTHETIC-RDF-020:source:s1"
+            }
+          ],
+          "urn:contract-graph-publisher:vocabulary:evidenceText": [
+            {
+              "@value": "Synthetic evidence sentence 13."
+            }
+          ]
+        },
+        {
+          "@id": "urn:contract-graph-publisher:local:SYNTHETIC-RDF-020:evidence:e14",
+          "urn:contract-graph-publisher:vocabulary:evidenceId": [
+            {
+              "@value": "e14"
+            }
+          ],
+          "http://www.w3.org/ns/prov#wasDerivedFrom": [
+            {
+              "@id": "urn:contract-graph-publisher:local:SYNTHETIC-RDF-020:source:s2"
+            }
+          ],
+          "urn:contract-graph-publisher:vocabulary:evidenceText": [
+            {
+              "@value": "Synthetic qualified evidence sentence 14."
+            }
+          ]
+        },
+        {
+          "@id": "urn:contract-graph-publisher:local:SYNTHETIC-RDF-020:evidence:e15",
+          "urn:contract-graph-publisher:vocabulary:evidenceId": [
+            {
+              "@value": "e15"
+            }
+          ],
+          "http://www.w3.org/ns/prov#wasDerivedFrom": [
+            {
+              "@id": "urn:contract-graph-publisher:local:SYNTHETIC-RDF-020:source:s3"
+            }
+          ],
+          "urn:contract-graph-publisher:vocabulary:evidenceText": [
+            {
+              "@value": "Synthetic conditional evidence sentence 15."
+            }
+          ]
+        },
+        {
+          "@id": "urn:contract-graph-publisher:local:SYNTHETIC-RDF-020:evidence:e16",
+          "urn:contract-graph-publisher:vocabulary:evidenceId": [
+            {
+              "@value": "e16"
+            }
+          ],
+          "http://www.w3.org/ns/prov#wasDerivedFrom": [
+            {
+              "@id": "urn:contract-graph-publisher:local:SYNTHETIC-RDF-020:source:s4"
+            }
+          ],
+          "urn:contract-graph-publisher:vocabulary:evidenceText": [
+            {
+              "@value": "Synthetic hedged evidence sentence 16."
+            }
+          ]
+        },
+        {
+          "@id": "urn:contract-graph-publisher:local:SYNTHETIC-RDF-020:evidence:e17",
+          "urn:contract-graph-publisher:vocabulary:evidenceId": [
+            {
+              "@value": "e17"
+            }
+          ],
+          "http://www.w3.org/ns/prov#wasDerivedFrom": [
+            {
+              "@id": "urn:contract-graph-publisher:local:SYNTHETIC-RDF-020:source:s1"
+            }
+          ],
+          "urn:contract-graph-publisher:vocabulary:evidenceText": [
+            {
+              "@value": "Synthetic evidence sentence 17."
+            }
+          ]
+        },
+        {
+          "@id": "urn:contract-graph-publisher:local:SYNTHETIC-RDF-020:evidence:e18",
+          "urn:contract-graph-publisher:vocabulary:evidenceId": [
+            {
+              "@value": "e18"
+            }
+          ],
+          "http://www.w3.org/ns/prov#wasDerivedFrom": [
+            {
+              "@id": "urn:contract-graph-publisher:local:SYNTHETIC-RDF-020:source:s2"
+            }
+          ],
+          "urn:contract-graph-publisher:vocabulary:evidenceText": [
+            {
+              "@value": "Synthetic negative evidence sentence 18."
+            }
+          ]
+        },
+        {
+          "@id": "urn:contract-graph-publisher:local:SYNTHETIC-RDF-020:evidence:e19",
+          "urn:contract-graph-publisher:vocabulary:evidenceId": [
+            {
+              "@value": "e19"
+            }
+          ],
+          "http://www.w3.org/ns/prov#wasDerivedFrom": [
+            {
+              "@id": "urn:contract-graph-publisher:local:SYNTHETIC-RDF-020:source:s3"
+            }
+          ],
+          "urn:contract-graph-publisher:vocabulary:evidenceText": [
+            {
+              "@value": "Synthetic uncertain evidence sentence 19."
+            }
+          ]
+        },
+        {
+          "@id": "urn:contract-graph-publisher:local:SYNTHETIC-RDF-020:evidence:e20",
+          "urn:contract-graph-publisher:vocabulary:evidenceId": [
+            {
+              "@value": "e20"
+            }
+          ],
+          "http://www.w3.org/ns/prov#wasDerivedFrom": [
+            {
+              "@id": "urn:contract-graph-publisher:local:SYNTHETIC-RDF-020:source:s4"
+            }
+          ],
+          "urn:contract-graph-publisher:vocabulary:evidenceText": [
+            {
+              "@value": "Synthetic fully qualified evidence sentence 20."
+            }
+          ]
+        },
+        {
+          "@id": "urn:contract-graph-publisher:local:SYNTHETIC-RDF-020:source:s1",
+          "urn:contract-graph-publisher:vocabulary:sourceId": [
+            {
+              "@value": "s1"
+            }
+          ],
+          "urn:contract-graph-publisher:vocabulary:title": [
+            {
+              "@value": "Synthetic corpus part 1"
+            }
+          ],
+          "urn:contract-graph-publisher:vocabulary:locator": [
+            {
+              "@value": "synthetic://rdf-example/source/1"
+            }
+          ]
+        },
+        {
+          "@id": "urn:contract-graph-publisher:local:SYNTHETIC-RDF-020:source:s2",
+          "urn:contract-graph-publisher:vocabulary:sourceId": [
+            {
+              "@value": "s2"
+            }
+          ],
+          "urn:contract-graph-publisher:vocabulary:title": [
+            {
+              "@value": "Synthetic corpus part 2"
+            }
+          ],
+          "urn:contract-graph-publisher:vocabulary:locator": [
+            {
+              "@value": "synthetic://rdf-example/source/2"
+            }
+          ]
+        },
+        {
+          "@id": "urn:contract-graph-publisher:local:SYNTHETIC-RDF-020:source:s3",
+          "urn:contract-graph-publisher:vocabulary:sourceId": [
+            {
+              "@value": "s3"
+            }
+          ],
+          "urn:contract-graph-publisher:vocabulary:title": [
+            {
+              "@value": "Synthetic corpus part 3"
+            }
+          ],
+          "urn:contract-graph-publisher:vocabulary:locator": [
+            {
+              "@value": "synthetic://rdf-example/source/3"
+            }
+          ]
+        },
+        {
+          "@id": "urn:contract-graph-publisher:local:SYNTHETIC-RDF-020:source:s4",
+          "urn:contract-graph-publisher:vocabulary:sourceId": [
+            {
+              "@value": "s4"
+            }
+          ],
+          "urn:contract-graph-publisher:vocabulary:title": [
+            {
+              "@value": "Synthetic corpus part 4"
+            }
+          ],
+          "urn:contract-graph-publisher:vocabulary:locator": [
+            {
+              "@value": "synthetic://rdf-example/source/4"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "@id": "urn:contract-graph-publisher:local:SYNTHETIC-RDF-020:pubinfo",
+      "@graph": [
+        {
+          "@id": "urn:contract-graph-publisher:local:SYNTHETIC-RDF-020:pubinfo",
+          "urn:contract-graph-publisher:vocabulary:describesPublication": [
+            {
+              "@id": "urn:contract-graph-publisher:local:SYNTHETIC-RDF-020:publication"
+            }
+          ]
+        },
+        {
+          "@id": "urn:contract-graph-publisher:local:SYNTHETIC-RDF-020:publication",
+          "urn:contract-graph-publisher:vocabulary:iriStatus": [
+            {
+              "@value": "local-unregistered"
+            }
+          ],
+          "urn:contract-graph-publisher:vocabulary:trustyStatus": [
+            {
+              "@value": "not-generated"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,39 @@
+{
+  "ok": true,
+  "case_id": "synthetic-case-001",
+  "contract": {
+    "source": "task.md",
+    "exact_top_level": true,
+    "fields": [
+      "answers",
+      "sources",
+      "uncertainty",
+      "change_records"
+    ]
+  },
+  "result_checked": true,
+  "summary": {
+    "coverage_units": 30,
+    "root_questions": 6,
+    "subquestions": 24,
+    "claims": 20,
+    "evidence": 20,
+    "sources": 1,
+    "answer_modes": {
+      "computed": 8,
+      "direct_report": 10,
+      "inferred": 7,
+      "unreported": 5
+    },
+    "statuses": {
+      "answered": 25,
+      "unreported": 5
+    },
+    "duplicate_ids": 0,
+    "dangling_ids": 0,
+    "error_count": 0,
+    "gap_codes": {}
+  },
+  "gaps": [],
+  "next_action": "All structural checks passed; scientific correctness still needs domain review."
+}

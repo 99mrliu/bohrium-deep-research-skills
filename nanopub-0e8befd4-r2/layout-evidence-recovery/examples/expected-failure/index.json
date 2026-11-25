@@ -1,0 +1,152 @@
+{
+  "schema_version": "layout-evidence-index/v1",
+  "tool": "layout_evidence.py",
+  "tool_version": "1.0.0",
+  "document_id": "SYNTHETIC-EXPECTED-FAILURE-SCAN",
+  "synthetic": true,
+  "formal_result": false,
+  "source": {
+    "source_id": "synthetic-expected-failure-source",
+    "path": "examples/expected-failure/layout.json",
+    "sha256": "aa01dedf87f30212c3077ad45fc5ef16bebbb070816ed0d2deeb66cb39ca982e",
+    "media_type": "application/json",
+    "extraction": "SYNTHETIC ambiguous two-column blocks plus an intentionally empty scan page",
+    "origin": "SYNTHETIC expected-failure input; not a real PDF and not a formal result"
+  },
+  "included_roles": [
+    "body"
+  ],
+  "pages": [
+    {
+      "page": 1,
+      "width": 600,
+      "height": 800,
+      "extraction_status": "text",
+      "block_order": [
+        "left",
+        "right"
+      ],
+      "page_char_start": 0,
+      "page_char_end": 47,
+      "blocks": [
+        {
+          "block_id": "left",
+          "role": "body",
+          "column": 1,
+          "bbox": [
+            40,
+            80,
+            280,
+            140
+          ],
+          "input_index": 0,
+          "reading_index": 0,
+          "included": true,
+          "block_char_start": 0,
+          "block_char_end": 23,
+          "text": "Same ambiguous wording.",
+          "lines": [
+            {
+              "line": 1,
+              "text": "Same ambiguous wording.",
+              "line_char_start": 0,
+              "line_char_end": 23,
+              "document_char_start": 0,
+              "document_char_end": 23,
+              "page_char_start": 0,
+              "page_char_end": 23
+            }
+          ]
+        },
+        {
+          "block_id": "right",
+          "role": "body",
+          "column": 2,
+          "bbox": [
+            320,
+            80,
+            560,
+            140
+          ],
+          "input_index": 1,
+          "reading_index": 1,
+          "included": true,
+          "block_char_start": 24,
+          "block_char_end": 47,
+          "text": "Same ambiguous wording.",
+          "lines": [
+            {
+              "line": 1,
+              "text": "Same ambiguous wording.",
+              "line_char_start": 0,
+              "line_char_end": 23,
+              "document_char_start": 24,
+              "document_char_end": 47,
+              "page_char_start": 24,
+              "page_char_end": 47
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "page": 2,
+      "width": 600,
+      "height": 800,
+      "extraction_status": "no_text_layer",
+      "block_order": [],
+      "page_char_start": 50,
+      "page_char_end": 50,
+      "blocks": []
+    }
+  ],
+  "text": "Same ambiguous wording.\nSame ambiguous wording.\n\f\n",
+  "issues": [
+    {
+      "code": "NO_TEXT_LAYER",
+      "severity": "blocking",
+      "message": "no OCR or text recovery was performed; this page has no searchable text",
+      "page": 2
+    },
+    {
+      "code": "SCAN_REQUIRES_OCR",
+      "severity": "blocking",
+      "message": "SYNTHETIC scan: no text layer and no OCR result supplied; absence of a match proves nothing.",
+      "page": 2
+    }
+  ],
+  "sources": [
+    {
+      "source_id": "synthetic-expected-failure-source",
+      "path": "examples/expected-failure/layout.json",
+      "sha256": "aa01dedf87f30212c3077ad45fc5ef16bebbb070816ed0d2deeb66cb39ca982e",
+      "media_type": "application/json",
+      "extraction": "SYNTHETIC ambiguous two-column blocks plus an intentionally empty scan page",
+      "origin": "SYNTHETIC expected-failure input; not a real PDF and not a formal result"
+    }
+  ],
+  "uncertainty": [
+    {
+      "code": "NO_TEXT_LAYER",
+      "severity": "blocking",
+      "message": "no OCR or text recovery was performed; this page has no searchable text",
+      "page": 2
+    },
+    {
+      "code": "SCAN_REQUIRES_OCR",
+      "severity": "blocking",
+      "message": "SYNTHETIC scan: no text layer and no OCR result supplied; absence of a match proves nothing.",
+      "page": 2
+    }
+  ],
+  "change_records": [
+    {
+      "operation": "index",
+      "source_modified": false,
+      "details": "Normalized indexing only; no source text was overwritten."
+    }
+  ],
+  "semantic_entailment": "not_evaluated",
+  "page_count": 2,
+  "status": "needs_review"
+}

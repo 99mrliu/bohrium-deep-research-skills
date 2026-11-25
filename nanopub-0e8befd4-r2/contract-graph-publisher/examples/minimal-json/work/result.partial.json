@@ -1,0 +1,99 @@
+{
+  "case_id": "SYNTHETIC-MINIMAL-001",
+  "claims": [
+    {
+      "claim_id": "c-min-1",
+      "subject": {
+        "iri": "https://example.org/synthetic/CompoundA"
+      },
+      "predicate": {
+        "iri": "https://example.org/synthetic/interactsWith"
+      },
+      "object": {
+        "iri": "https://example.org/synthetic/ProcessB"
+      },
+      "evidence_ids": [
+        "e-min-1"
+      ],
+      "polarity": "positive",
+      "hedged": false
+    },
+    {
+      "claim_id": "c-min-2",
+      "subject": {
+        "iri": "https://example.org/synthetic/CompoundC"
+      },
+      "predicate": {
+        "iri": "https://example.org/synthetic/causes"
+      },
+      "object": {
+        "iri": "https://example.org/synthetic/OutcomeD"
+      },
+      "evidence_ids": [
+        "e-min-2"
+      ],
+      "polarity": "negative",
+      "hedged": true,
+      "condition": "Applies only to the synthetic low-dose scenario.",
+      "hedge": "The abstract says this association may not hold.",
+      "uncertainty": "Synthetic wording is deliberately tentative."
+    }
+  ],
+  "evidence": [
+    {
+      "evidence_id": "e-min-1",
+      "source_ids": [
+        "s-min-1"
+      ],
+      "text": "Synthetic statement used only for contract testing."
+    },
+    {
+      "evidence_id": "e-min-2",
+      "source_ids": [
+        "s-min-1"
+      ],
+      "text": "Synthetic negative, conditional, hedged statement."
+    }
+  ],
+  "sources": [
+    {
+      "source_id": "s-min-1",
+      "title": "Synthetic local example source",
+      "locator": "synthetic://minimal/1"
+    }
+  ],
+  "uncertainty": [
+    {
+      "claim_id": "c-min-2",
+      "kind": "negative",
+      "text": "Assertion is explicitly negative and reified."
+    },
+    {
+      "claim_id": "c-min-2",
+      "kind": "conditional",
+      "text": "Applies only to the synthetic low-dose scenario."
+    },
+    {
+      "claim_id": "c-min-2",
+      "kind": "hedged",
+      "text": "The abstract says this association may not hold."
+    },
+    {
+      "claim_id": "c-min-2",
+      "kind": "declared",
+      "text": "Synthetic wording is deliberately tentative."
+    }
+  ],
+  "change_records": [
+    {
+      "sequence": 0,
+      "status": "partial",
+      "action": "Contract accepted before claim normalization."
+    },
+    {
+      "sequence": 1,
+      "status": "partial",
+      "action": "Normalized claims, evidence, sources, and checked original references."
+    }
+  ]
+}

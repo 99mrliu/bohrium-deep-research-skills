@@ -1,0 +1,240 @@
+{
+  "schema_version": "layout-evidence-locations/v1",
+  "case_id": "SYNTHETIC-UNIQUE-QUOTES",
+  "document_id": "SYNTHETIC-TWO-COLUMN",
+  "synthetic": true,
+  "formal_result": false,
+  "expected_failure": false,
+  "status": "ok",
+  "summary": {
+    "matched": 3,
+    "ambiguous": 0,
+    "not_found": 0,
+    "invalid": 0,
+    "total": 3
+  },
+  "locations": [
+    {
+      "query_id": "unique-exact",
+      "query": "Evidence recovery",
+      "mode": "exact",
+      "semantic_entailment": "not_evaluated",
+      "status": "matched",
+      "match_count": 1,
+      "normalized_query": "Evidence recovery",
+      "normalized_queries": {
+        "exact": "Evidence recovery"
+      },
+      "matches": [
+        {
+          "page": 1,
+          "block_id": "p1-left-intro",
+          "line": 1,
+          "line_offset_start": 0,
+          "line_offset_end": 17,
+          "offset": {
+            "start": 0,
+            "end": 17,
+            "unit": "unicode_codepoint",
+            "base": 0,
+            "interval": "half_open",
+            "scope": "original_supplied_line"
+          },
+          "document_char_start": 0,
+          "document_char_end": 17,
+          "page_char_start": 0,
+          "page_char_end": 17,
+          "source_excerpt": "Evidence recovery",
+          "segments": [
+            {
+              "page": 1,
+              "block_id": "p1-left-intro",
+              "reading_index": 0,
+              "line": 1,
+              "line_offset_start": 0,
+              "line_offset_end": 17,
+              "document_char_start": 0,
+              "document_char_end": 17,
+              "page_char_start": 0,
+              "page_char_end": 17,
+              "text": "Evidence recovery"
+            }
+          ],
+          "spans_pages": [
+            1
+          ],
+          "spans_blocks": [
+            "p1-left-intro"
+          ]
+        }
+      ]
+    },
+    {
+      "query_id": "unique-dehyphenated",
+      "query": "cross-column order explicit",
+      "mode": "fidelity",
+      "semantic_entailment": "not_evaluated",
+      "status": "matched",
+      "match_count": 1,
+      "normalized_query": "cross-column order explicit",
+      "normalized_queries": {
+        "hyphen_removed": "cross-column order explicit",
+        "hyphen_retained": "cross-column order explicit"
+      },
+      "matches": [
+        {
+          "page": 1,
+          "block_id": "p1-left-intro",
+          "line": 2,
+          "line_offset_start": 0,
+          "line_offset_end": 6,
+          "offset": {
+            "start": 0,
+            "end": 6,
+            "unit": "unicode_codepoint",
+            "base": 0,
+            "interval": "half_open",
+            "scope": "original_supplied_line"
+          },
+          "document_char_start": 24,
+          "document_char_end": 52,
+          "page_char_start": 24,
+          "page_char_end": 52,
+          "source_excerpt": "cross-\ncolumn order explicit",
+          "segments": [
+            {
+              "page": 1,
+              "block_id": "p1-left-intro",
+              "reading_index": 0,
+              "line": 2,
+              "line_offset_start": 0,
+              "line_offset_end": 6,
+              "document_char_start": 24,
+              "document_char_end": 30,
+              "page_char_start": 24,
+              "page_char_end": 30,
+              "text": "cross-"
+            },
+            {
+              "page": 1,
+              "block_id": "p1-left-intro",
+              "reading_index": 0,
+              "line": 3,
+              "line_offset_start": 0,
+              "line_offset_end": 21,
+              "document_char_start": 31,
+              "document_char_end": 52,
+              "page_char_start": 31,
+              "page_char_end": 52,
+              "text": "column order explicit"
+            }
+          ],
+          "spans_pages": [
+            1
+          ],
+          "spans_blocks": [
+            "p1-left-intro"
+          ],
+          "fidelity_variant": "hyphen_retained"
+        }
+      ]
+    },
+    {
+      "query_id": "unique-cross-block-order",
+      "query": "half open intervals. Right column follows left.",
+      "mode": "fidelity",
+      "semantic_entailment": "not_evaluated",
+      "status": "matched",
+      "match_count": 1,
+      "normalized_query": "half open intervals. Right column follows left.",
+      "normalized_queries": {
+        "hyphen_removed": "half open intervals. Right column follows left.",
+        "hyphen_retained": "half open intervals. Right column follows left."
+      },
+      "matches": [
+        {
+          "page": 1,
+          "block_id": "p1-left-detail",
+          "line": 3,
+          "line_offset_start": 0,
+          "line_offset_end": 20,
+          "offset": {
+            "start": 0,
+            "end": 20,
+            "unit": "unicode_codepoint",
+            "base": 0,
+            "interval": "half_open",
+            "scope": "original_supplied_line"
+          },
+          "document_char_start": 107,
+          "document_char_end": 154,
+          "page_char_start": 107,
+          "page_char_end": 154,
+          "source_excerpt": "half open intervals.\nRight column follows left.",
+          "segments": [
+            {
+              "page": 1,
+              "block_id": "p1-left-detail",
+              "reading_index": 1,
+              "line": 3,
+              "line_offset_start": 0,
+              "line_offset_end": 20,
+              "document_char_start": 107,
+              "document_char_end": 127,
+              "page_char_start": 107,
+              "page_char_end": 127,
+              "text": "half open intervals."
+            },
+            {
+              "page": 1,
+              "block_id": "p1-right-main",
+              "reading_index": 2,
+              "line": 1,
+              "line_offset_start": 0,
+              "line_offset_end": 26,
+              "document_char_start": 128,
+              "document_char_end": 154,
+              "page_char_start": 128,
+              "page_char_end": 154,
+              "text": "Right column follows left."
+            }
+          ],
+          "spans_pages": [
+            1
+          ],
+          "spans_blocks": [
+            "p1-left-detail",
+            "p1-right-main"
+          ],
+          "fidelity_variant": "hyphen_removed"
+        }
+      ]
+    }
+  ],
+  "unresolved_distortions": [],
+  "sources": [
+    {
+      "source_id": "synthetic-layout-source",
+      "path": "examples/synthetic/layout.json",
+      "sha256": "40577f7c2fb8f2075a67569fde3acdf20b291a79c32287951c51c1135d99557b",
+      "media_type": "application/json",
+      "extraction": "SYNTHETIC external block input emulating pdftotext -bbox or PyMuPDF output",
+      "origin": "SYNTHETIC hand-authored text and coordinates; not extracted from a real PDF"
+    },
+    {
+      "source_id": "queries",
+      "path": "examples/synthetic/queries.json",
+      "media_type": "application/json"
+    }
+  ],
+  "uncertainty": [],
+  "change_records": [
+    {
+      "operation": "locate",
+      "source_modified": false,
+      "query_count": 3,
+      "details": "Offsets computed against the supplied index; no semantic inference performed."
+    }
+  ],
+  "semantic_entailment": "not_evaluated"
+}

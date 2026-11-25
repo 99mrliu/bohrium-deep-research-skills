@@ -1,0 +1,50 @@
+{
+  "document_id": "SYNTHETIC-EXPECTED-FAILURE-SCAN",
+  "synthetic": true,
+  "formal_result": false,
+  "source": {
+    "source_id": "synthetic-expected-failure-source",
+    "origin": "SYNTHETIC expected-failure input; not a real PDF and not a formal result",
+    "extraction": "SYNTHETIC ambiguous two-column blocks plus an intentionally empty scan page"
+  },
+  "pages": [
+    {
+      "page": 1,
+      "width": 600,
+      "height": 800,
+      "extraction_status": "text",
+      "block_order": ["left", "right"],
+      "blocks": [
+        {
+          "block_id": "left",
+          "role": "body",
+          "column": 1,
+          "bbox": [40, 80, 280, 140],
+          "lines": ["Same ambiguous wording."]
+        },
+        {
+          "block_id": "right",
+          "role": "body",
+          "column": 2,
+          "bbox": [320, 80, 560, 140],
+          "lines": ["Same ambiguous wording."]
+        }
+      ]
+    },
+    {
+      "page": 2,
+      "width": 600,
+      "height": 800,
+      "extraction_status": "no_text_layer",
+      "block_order": [],
+      "blocks": [],
+      "unresolved": [
+        {
+          "code": "SCAN_REQUIRES_OCR",
+          "severity": "blocking",
+          "message": "SYNTHETIC scan: no text layer and no OCR result supplied; absence of a match proves nothing."
+        }
+      ]
+    }
+  ]
+}

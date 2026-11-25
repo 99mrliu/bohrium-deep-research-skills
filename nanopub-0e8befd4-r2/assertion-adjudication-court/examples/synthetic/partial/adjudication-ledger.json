@@ -1,0 +1,244 @@
+{
+  "schema_version": "1.0",
+  "synthetic": true,
+  "notice": "SYNTHETIC / 合成裁决台账，非正式科研结果。",
+  "case_id": "SYNTHETIC-ADJUDICATION-020",
+  "audit_complete": false,
+  "assertions": [
+    {
+      "input_id": "C001",
+      "original_claim": "S1在2024年直接测得：25 °C下M7电导率为12 mS/cm。",
+      "decision_status": "adjudicated",
+      "verdict": "supported",
+      "components": [
+        {
+          "component_id": "C001.a",
+          "text": "S1于2024年在25 °C直接测得M7电导率12 mS/cm",
+          "disposition": "supported",
+          "claim_nature": "positive_fact",
+          "evidence_basis": "direct_measurement",
+          "rationale": "来源时间、测试温度和数值均与直接测量记录一致。",
+          "evidence": [
+            {
+              "source_id": "S1",
+              "quote": "S1-2024 直接测量记录：在25 °C下，M7的电导率为12 mS/cm（n=3）。",
+              "location": "S1首句",
+              "stance": "support"
+            }
+          ]
+        }
+      ],
+      "corrected_claim_ids": [],
+      "review_disposition": "accept"
+    },
+    {
+      "input_id": "C002",
+      "original_claim": "S1证明PT必然提高电导率。",
+      "decision_status": "pending",
+      "verdict": null,
+      "components": [],
+      "corrected_claim_ids": [],
+      "review_disposition": "pending"
+    },
+    {
+      "input_id": "C003",
+      "original_claim": "S2在2024年测得M7电导率为9 mS/cm。",
+      "decision_status": "pending",
+      "verdict": null,
+      "components": [],
+      "corrected_claim_ids": [],
+      "review_disposition": "pending"
+    },
+    {
+      "input_id": "C004",
+      "original_claim": "S1与S2均在25 °C下测得M7电导率为12 mS/cm。",
+      "decision_status": "pending",
+      "verdict": null,
+      "components": [],
+      "corrected_claim_ids": [],
+      "review_disposition": "pending"
+    },
+    {
+      "input_id": "C005",
+      "original_claim": "S3直接测量了离子迁移数，并证实PT提高了该数值。",
+      "decision_status": "pending",
+      "verdict": null,
+      "components": [],
+      "corrected_claim_ids": [],
+      "review_disposition": "pending"
+    },
+    {
+      "input_id": "C006",
+      "original_claim": "S3作者推断PT可能改善离子迁移数。",
+      "decision_status": "pending",
+      "verdict": null,
+      "components": [],
+      "corrected_claim_ids": [],
+      "review_disposition": "pending"
+    },
+    {
+      "input_id": "C007",
+      "original_claim": "应当立即将PT用于临床，因为PT的人体安全性已经验证。",
+      "decision_status": "pending",
+      "verdict": null,
+      "components": [],
+      "corrected_claim_ids": [],
+      "review_disposition": "pending"
+    },
+    {
+      "input_id": "C008",
+      "original_claim": "S4中所有培养样本均未出现细胞毒性。",
+      "decision_status": "pending",
+      "verdict": null,
+      "components": [],
+      "corrected_claim_ids": [],
+      "review_disposition": "pending"
+    },
+    {
+      "input_id": "C009",
+      "original_claim": "S4报告5个样本中的2个出现毒性，并提出未来研究低剂量PT。",
+      "decision_status": "pending",
+      "verdict": null,
+      "components": [],
+      "corrected_claim_ids": [],
+      "review_disposition": "pending"
+    },
+    {
+      "input_id": "C010",
+      "original_claim": "S4的低剂量PT提议已有疗效数据支撑。",
+      "decision_status": "pending",
+      "verdict": null,
+      "components": [],
+      "corrected_claim_ids": [],
+      "review_disposition": "pending"
+    },
+    {
+      "input_id": "C011",
+      "original_claim": "S1中，沉积盐D溶解了M7样品。",
+      "decision_status": "pending",
+      "verdict": null,
+      "components": [],
+      "corrected_claim_ids": [],
+      "review_disposition": "pending"
+    },
+    {
+      "input_id": "C012",
+      "original_claim": "S1中，M7样品被Lamp-L加热至80 °C。",
+      "decision_status": "pending",
+      "verdict": null,
+      "components": [],
+      "corrected_claim_ids": [],
+      "review_disposition": "pending"
+    },
+    {
+      "input_id": "C013",
+      "original_claim": "S1中，涂层C阻止了离子穿透。",
+      "decision_status": "pending",
+      "verdict": null,
+      "components": [],
+      "corrected_claim_ids": [],
+      "review_disposition": "pending"
+    },
+    {
+      "input_id": "C014",
+      "original_claim": "S2证实PT提高了电导率。",
+      "decision_status": "pending",
+      "verdict": null,
+      "components": [],
+      "corrected_claim_ids": [],
+      "review_disposition": "pending"
+    },
+    {
+      "input_id": "C015",
+      "original_claim": "S1直接测得晶界电阻降低，且作者推断PT可能降低晶界电阻。",
+      "decision_status": "pending",
+      "verdict": null,
+      "components": [],
+      "corrected_claim_ids": [],
+      "review_disposition": "pending"
+    },
+    {
+      "input_id": "C016",
+      "original_claim": "S5规定通过四探针法直接测量电导率，并通过等效电路拟合估计晶界电阻。",
+      "decision_status": "pending",
+      "verdict": null,
+      "components": [],
+      "corrected_claim_ids": [],
+      "review_disposition": "pending"
+    },
+    {
+      "input_id": "C017",
+      "original_claim": "S5证明M7具备一年长期稳定性。",
+      "decision_status": "pending",
+      "verdict": null,
+      "components": [],
+      "corrected_claim_ids": [],
+      "review_disposition": "pending"
+    },
+    {
+      "input_id": "C018",
+      "original_claim": "S6证明M7不能保持一年稳定性。",
+      "decision_status": "pending",
+      "verdict": null,
+      "components": [],
+      "corrected_claim_ids": [],
+      "review_disposition": "pending"
+    },
+    {
+      "input_id": "C019",
+      "original_claim": "S6完成24小时测试，并完成高温循环测试。",
+      "decision_status": "pending",
+      "verdict": null,
+      "components": [],
+      "corrected_claim_ids": [],
+      "review_disposition": "pending"
+    },
+    {
+      "input_id": "C020",
+      "original_claim": "S1的2024年结果代表S2的2025年复测，并且S2在25 °C下测得9 mS/cm。",
+      "decision_status": "pending",
+      "verdict": null,
+      "components": [],
+      "corrected_claim_ids": [],
+      "review_disposition": "pending"
+    }
+  ],
+  "corrected_claims": [],
+  "sources": [
+    "S1",
+    "S2",
+    "S3",
+    "S4",
+    "S5",
+    "S6"
+  ],
+  "uncertainty": [
+    {
+      "uncertainty_id": "U-PARTIAL",
+      "input_ids": [
+        "C002",
+        "C003",
+        "C004",
+        "C005",
+        "C006",
+        "C007",
+        "C008",
+        "C009",
+        "C010",
+        "C011",
+        "C012",
+        "C013",
+        "C014",
+        "C015",
+        "C016",
+        "C017",
+        "C018",
+        "C019",
+        "C020"
+      ],
+      "topic": "early_checkpoint",
+      "text": "诚实early partial：已登记全部20个ID和原文，仅C001完成，其余均pending。"
+    }
+  ],
+  "change_records": []
+}

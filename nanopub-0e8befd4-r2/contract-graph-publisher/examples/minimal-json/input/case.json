@@ -1,0 +1,66 @@
+{
+  "case_id": "SYNTHETIC-MINIMAL-001",
+  "notice": "SYNTHETIC example only; not a formal result.",
+  "output_contract": {
+    "fields": [
+      "case_id",
+      "claims",
+      "evidence",
+      "sources",
+      "uncertainty",
+      "change_records"
+    ],
+    "additionalProperties": false
+  },
+  "manifest": {
+    "output_fields": [
+      "case_id",
+      "claims",
+      "evidence",
+      "sources",
+      "uncertainty",
+      "change_records"
+    ],
+    "request_format": "json"
+  },
+  "claims": [
+    {
+      "claim_id": "c-min-1",
+      "subject": {"iri": "https://example.org/synthetic/CompoundA"},
+      "predicate": {"iri": "https://example.org/synthetic/interactsWith"},
+      "object": {"iri": "https://example.org/synthetic/ProcessB"},
+      "evidence_ids": ["e-min-1"]
+    },
+    {
+      "claim_id": "c-min-2",
+      "subject": {"iri": "https://example.org/synthetic/CompoundC"},
+      "predicate": {"iri": "https://example.org/synthetic/causes"},
+      "object": {"iri": "https://example.org/synthetic/OutcomeD"},
+      "evidence_ids": ["e-min-2"],
+      "polarity": "negative",
+      "hedged": true,
+      "hedge": "The abstract says this association may not hold.",
+      "condition": "Applies only to the synthetic low-dose scenario.",
+      "uncertainty": "Synthetic wording is deliberately tentative."
+    }
+  ],
+  "evidence": [
+    {
+      "evidence_id": "e-min-1",
+      "source_ids": ["s-min-1"],
+      "text": "Synthetic statement used only for contract testing."
+    },
+    {
+      "evidence_id": "e-min-2",
+      "source_ids": ["s-min-1"],
+      "text": "Synthetic negative, conditional, hedged statement."
+    }
+  ],
+  "sources": [
+    {
+      "source_id": "s-min-1",
+      "title": "Synthetic local example source",
+      "locator": "synthetic://minimal/1"
+    }
+  ]
+}

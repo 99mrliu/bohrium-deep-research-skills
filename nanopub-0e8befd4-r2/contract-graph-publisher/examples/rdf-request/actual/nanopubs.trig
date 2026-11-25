@@ -1,0 +1,264 @@
+# Strict local TriG subset; local IRIs are not registered or Trusty URIs.
+<urn:contract-graph-publisher:local:SYNTHETIC-RDF-020:Head> {
+<urn:contract-graph-publisher:local:SYNTHETIC-RDF-020:publication> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.nanopub.org/nschema#Nanopublication> .
+<urn:contract-graph-publisher:local:SYNTHETIC-RDF-020:publication> <http://www.nanopub.org/nschema#hasAssertion> <urn:contract-graph-publisher:local:SYNTHETIC-RDF-020:assertion> .
+<urn:contract-graph-publisher:local:SYNTHETIC-RDF-020:publication> <http://www.nanopub.org/nschema#hasProvenance> <urn:contract-graph-publisher:local:SYNTHETIC-RDF-020:provenance> .
+<urn:contract-graph-publisher:local:SYNTHETIC-RDF-020:publication> <http://www.nanopub.org/nschema#hasPublicationInfo> <urn:contract-graph-publisher:local:SYNTHETIC-RDF-020:pubinfo> .
+}
+<urn:contract-graph-publisher:local:SYNTHETIC-RDF-020:assertion> {
+<urn:contract-graph-publisher:local:SYNTHETIC-RDF-020:statement:c01> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#Statement> .
+<urn:contract-graph-publisher:local:SYNTHETIC-RDF-020:statement:c01> <http://www.w3.org/1999/02/22-rdf-syntax-ns#subject> <https://example.org/synthetic/Material01> .
+<urn:contract-graph-publisher:local:SYNTHETIC-RDF-020:statement:c01> <http://www.w3.org/1999/02/22-rdf-syntax-ns#predicate> <https://example.org/synthetic/hasProperty> .
+<urn:contract-graph-publisher:local:SYNTHETIC-RDF-020:statement:c01> <http://www.w3.org/1999/02/22-rdf-syntax-ns#object> <https://example.org/synthetic/Stability> .
+<urn:contract-graph-publisher:local:SYNTHETIC-RDF-020:statement:c01> <urn:contract-graph-publisher:vocabulary:claimId> "c01" .
+<urn:contract-graph-publisher:local:SYNTHETIC-RDF-020:statement:c01> <urn:contract-graph-publisher:vocabulary:polarity> "positive" .
+<urn:contract-graph-publisher:local:SYNTHETIC-RDF-020:statement:c01> <urn:contract-graph-publisher:vocabulary:hedged> "false"^^<http://www.w3.org/2001/XMLSchema#boolean> .
+<urn:contract-graph-publisher:local:SYNTHETIC-RDF-020:statement:c02> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#Statement> .
+<urn:contract-graph-publisher:local:SYNTHETIC-RDF-020:statement:c02> <http://www.w3.org/1999/02/22-rdf-syntax-ns#subject> <https://example.org/synthetic/Material02> .
+<urn:contract-graph-publisher:local:SYNTHETIC-RDF-020:statement:c02> <http://www.w3.org/1999/02/22-rdf-syntax-ns#predicate> <https://example.org/synthetic/causes> .
+<urn:contract-graph-publisher:local:SYNTHETIC-RDF-020:statement:c02> <http://www.w3.org/1999/02/22-rdf-syntax-ns#object> <https://example.org/synthetic/Outcome02> .
+<urn:contract-graph-publisher:local:SYNTHETIC-RDF-020:statement:c02> <urn:contract-graph-publisher:vocabulary:claimId> "c02" .
+<urn:contract-graph-publisher:local:SYNTHETIC-RDF-020:statement:c02> <urn:contract-graph-publisher:vocabulary:polarity> "negative" .
+<urn:contract-graph-publisher:local:SYNTHETIC-RDF-020:statement:c02> <urn:contract-graph-publisher:vocabulary:hedged> "false"^^<http://www.w3.org/2001/XMLSchema#boolean> .
+<urn:contract-graph-publisher:local:SYNTHETIC-RDF-020:statement:c03> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#Statement> .
+<urn:contract-graph-publisher:local:SYNTHETIC-RDF-020:statement:c03> <http://www.w3.org/1999/02/22-rdf-syntax-ns#subject> <https://example.org/synthetic/Material03> .
+<urn:contract-graph-publisher:local:SYNTHETIC-RDF-020:statement:c03> <http://www.w3.org/1999/02/22-rdf-syntax-ns#predicate> <https://example.org/synthetic/improves> .
+<urn:contract-graph-publisher:local:SYNTHETIC-RDF-020:statement:c03> <http://www.w3.org/1999/02/22-rdf-syntax-ns#object> <https://example.org/synthetic/Metric03> .
+<urn:contract-graph-publisher:local:SYNTHETIC-RDF-020:statement:c03> <urn:contract-graph-publisher:vocabulary:claimId> "c03" .
+<urn:contract-graph-publisher:local:SYNTHETIC-RDF-020:statement:c03> <urn:contract-graph-publisher:vocabulary:polarity> "positive" .
+<urn:contract-graph-publisher:local:SYNTHETIC-RDF-020:statement:c03> <urn:contract-graph-publisher:vocabulary:hedged> "true"^^<http://www.w3.org/2001/XMLSchema#boolean> .
+<urn:contract-graph-publisher:local:SYNTHETIC-RDF-020:statement:c03> <urn:contract-graph-publisher:vocabulary:hedge> "May improve the synthetic metric." .
+<urn:contract-graph-publisher:local:SYNTHETIC-RDF-020:statement:c04> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#Statement> .
+<urn:contract-graph-publisher:local:SYNTHETIC-RDF-020:statement:c04> <http://www.w3.org/1999/02/22-rdf-syntax-ns#subject> <https://example.org/synthetic/Material04> .
+<urn:contract-graph-publisher:local:SYNTHETIC-RDF-020:statement:c04> <http://www.w3.org/1999/02/22-rdf-syntax-ns#predicate> <https://example.org/synthetic/enables> .
+<urn:contract-graph-publisher:local:SYNTHETIC-RDF-020:statement:c04> <http://www.w3.org/1999/02/22-rdf-syntax-ns#object> <https://example.org/synthetic/Process04> .
+<urn:contract-graph-publisher:local:SYNTHETIC-RDF-020:statement:c04> <urn:contract-graph-publisher:vocabulary:claimId> "c04" .
+<urn:contract-graph-publisher:local:SYNTHETIC-RDF-020:statement:c04> <urn:contract-graph-publisher:vocabulary:polarity> "positive" .
+<urn:contract-graph-publisher:local:SYNTHETIC-RDF-020:statement:c04> <urn:contract-graph-publisher:vocabulary:hedged> "false"^^<http://www.w3.org/2001/XMLSchema#boolean> .
+<urn:contract-graph-publisher:local:SYNTHETIC-RDF-020:statement:c04> <urn:contract-graph-publisher:vocabulary:condition> "Only under synthetic condition K04." .
+<urn:contract-graph-publisher:local:SYNTHETIC-RDF-020:statement:c05> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#Statement> .
+<urn:contract-graph-publisher:local:SYNTHETIC-RDF-020:statement:c05> <http://www.w3.org/1999/02/22-rdf-syntax-ns#subject> <https://example.org/synthetic/Material05> .
+<urn:contract-graph-publisher:local:SYNTHETIC-RDF-020:statement:c05> <http://www.w3.org/1999/02/22-rdf-syntax-ns#predicate> <https://example.org/synthetic/inhibits> .
+<urn:contract-graph-publisher:local:SYNTHETIC-RDF-020:statement:c05> <http://www.w3.org/1999/02/22-rdf-syntax-ns#object> <https://example.org/synthetic/Process05> .
+<urn:contract-graph-publisher:local:SYNTHETIC-RDF-020:statement:c05> <urn:contract-graph-publisher:vocabulary:claimId> "c05" .
+<urn:contract-graph-publisher:local:SYNTHETIC-RDF-020:statement:c05> <urn:contract-graph-publisher:vocabulary:polarity> "negative" .
+<urn:contract-graph-publisher:local:SYNTHETIC-RDF-020:statement:c05> <urn:contract-graph-publisher:vocabulary:hedged> "true"^^<http://www.w3.org/2001/XMLSchema#boolean> .
+<urn:contract-graph-publisher:local:SYNTHETIC-RDF-020:statement:c05> <urn:contract-graph-publisher:vocabulary:hedge> "Probably does not inhibit the synthetic process." .
+<urn:contract-graph-publisher:local:SYNTHETIC-RDF-020:statement:c06> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#Statement> .
+<urn:contract-graph-publisher:local:SYNTHETIC-RDF-020:statement:c06> <http://www.w3.org/1999/02/22-rdf-syntax-ns#subject> <https://example.org/synthetic/Material06> .
+<urn:contract-graph-publisher:local:SYNTHETIC-RDF-020:statement:c06> <http://www.w3.org/1999/02/22-rdf-syntax-ns#predicate> <https://example.org/synthetic/hasLabel> .
+<urn:contract-graph-publisher:local:SYNTHETIC-RDF-020:statement:c06> <http://www.w3.org/1999/02/22-rdf-syntax-ns#object> "synthetic label six"@en .
+<urn:contract-graph-publisher:local:SYNTHETIC-RDF-020:statement:c06> <urn:contract-graph-publisher:vocabulary:claimId> "c06" .
+<urn:contract-graph-publisher:local:SYNTHETIC-RDF-020:statement:c06> <urn:contract-graph-publisher:vocabulary:polarity> "positive" .
+<urn:contract-graph-publisher:local:SYNTHETIC-RDF-020:statement:c06> <urn:contract-graph-publisher:vocabulary:hedged> "false"^^<http://www.w3.org/2001/XMLSchema#boolean> .
+<urn:contract-graph-publisher:local:SYNTHETIC-RDF-020:statement:c07> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#Statement> .
+<urn:contract-graph-publisher:local:SYNTHETIC-RDF-020:statement:c07> <http://www.w3.org/1999/02/22-rdf-syntax-ns#subject> <https://example.org/synthetic/Material07> .
+<urn:contract-graph-publisher:local:SYNTHETIC-RDF-020:statement:c07> <http://www.w3.org/1999/02/22-rdf-syntax-ns#predicate> <https://example.org/synthetic/associatedWith> .
+<urn:contract-graph-publisher:local:SYNTHETIC-RDF-020:statement:c07> <http://www.w3.org/1999/02/22-rdf-syntax-ns#object> <https://example.org/synthetic/Phenomenon07> .
+<urn:contract-graph-publisher:local:SYNTHETIC-RDF-020:statement:c07> <urn:contract-graph-publisher:vocabulary:claimId> "c07" .
+<urn:contract-graph-publisher:local:SYNTHETIC-RDF-020:statement:c07> <urn:contract-graph-publisher:vocabulary:polarity> "positive" .
+<urn:contract-graph-publisher:local:SYNTHETIC-RDF-020:statement:c07> <urn:contract-graph-publisher:vocabulary:hedged> "false"^^<http://www.w3.org/2001/XMLSchema#boolean> .
+<urn:contract-graph-publisher:local:SYNTHETIC-RDF-020:statement:c07> <urn:contract-graph-publisher:vocabulary:uncertainty> "Source wording is ambiguous in this synthetic example." .
+<urn:contract-graph-publisher:local:SYNTHETIC-RDF-020:statement:c08> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#Statement> .
+<urn:contract-graph-publisher:local:SYNTHETIC-RDF-020:statement:c08> <http://www.w3.org/1999/02/22-rdf-syntax-ns#subject> <https://example.org/synthetic/Material08> .
+<urn:contract-graph-publisher:local:SYNTHETIC-RDF-020:statement:c08> <http://www.w3.org/1999/02/22-rdf-syntax-ns#predicate> <https://example.org/synthetic/requires> .
+<urn:contract-graph-publisher:local:SYNTHETIC-RDF-020:statement:c08> <http://www.w3.org/1999/02/22-rdf-syntax-ns#object> <https://example.org/synthetic/Reagent08> .
+<urn:contract-graph-publisher:local:SYNTHETIC-RDF-020:statement:c08> <urn:contract-graph-publisher:vocabulary:claimId> "c08" .
+<urn:contract-graph-publisher:local:SYNTHETIC-RDF-020:statement:c08> <urn:contract-graph-publisher:vocabulary:polarity> "positive" .
+<urn:contract-graph-publisher:local:SYNTHETIC-RDF-020:statement:c08> <urn:contract-graph-publisher:vocabulary:hedged> "false"^^<http://www.w3.org/2001/XMLSchema#boolean> .
+<urn:contract-graph-publisher:local:SYNTHETIC-RDF-020:statement:c08> <urn:contract-graph-publisher:vocabulary:condition> "Only in synthetic protocol P08." .
+<urn:contract-graph-publisher:local:SYNTHETIC-RDF-020:statement:c09> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#Statement> .
+<urn:contract-graph-publisher:local:SYNTHETIC-RDF-020:statement:c09> <http://www.w3.org/1999/02/22-rdf-syntax-ns#subject> <https://example.org/synthetic/Material09> .
+<urn:contract-graph-publisher:local:SYNTHETIC-RDF-020:statement:c09> <http://www.w3.org/1999/02/22-rdf-syntax-ns#predicate> <https://example.org/synthetic/contains> .
+<urn:contract-graph-publisher:local:SYNTHETIC-RDF-020:statement:c09> <http://www.w3.org/1999/02/22-rdf-syntax-ns#object> <https://example.org/synthetic/Component09> .
+<urn:contract-graph-publisher:local:SYNTHETIC-RDF-020:statement:c09> <urn:contract-graph-publisher:vocabulary:claimId> "c09" .
+<urn:contract-graph-publisher:local:SYNTHETIC-RDF-020:statement:c09> <urn:contract-graph-publisher:vocabulary:polarity> "positive" .
+<urn:contract-graph-publisher:local:SYNTHETIC-RDF-020:statement:c09> <urn:contract-graph-publisher:vocabulary:hedged> "false"^^<http://www.w3.org/2001/XMLSchema#boolean> .
+<urn:contract-graph-publisher:local:SYNTHETIC-RDF-020:statement:c10> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#Statement> .
+<urn:contract-graph-publisher:local:SYNTHETIC-RDF-020:statement:c10> <http://www.w3.org/1999/02/22-rdf-syntax-ns#subject> <https://example.org/synthetic/Material10> .
+<urn:contract-graph-publisher:local:SYNTHETIC-RDF-020:statement:c10> <http://www.w3.org/1999/02/22-rdf-syntax-ns#predicate> <https://example.org/synthetic/compatibleWith> .
+<urn:contract-graph-publisher:local:SYNTHETIC-RDF-020:statement:c10> <http://www.w3.org/1999/02/22-rdf-syntax-ns#object> <https://example.org/synthetic/Substrate10> .
+<urn:contract-graph-publisher:local:SYNTHETIC-RDF-020:statement:c10> <urn:contract-graph-publisher:vocabulary:claimId> "c10" .
+<urn:contract-graph-publisher:local:SYNTHETIC-RDF-020:statement:c10> <urn:contract-graph-publisher:vocabulary:polarity> "negative" .
+<urn:contract-graph-publisher:local:SYNTHETIC-RDF-020:statement:c10> <urn:contract-graph-publisher:vocabulary:hedged> "false"^^<http://www.w3.org/2001/XMLSchema#boolean> .
+<urn:contract-graph-publisher:local:SYNTHETIC-RDF-020:statement:c10> <urn:contract-graph-publisher:vocabulary:condition> "Only for the synthetic humid environment." .
+<urn:contract-graph-publisher:local:SYNTHETIC-RDF-020:statement:c11> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#Statement> .
+<urn:contract-graph-publisher:local:SYNTHETIC-RDF-020:statement:c11> <http://www.w3.org/1999/02/22-rdf-syntax-ns#subject> <https://example.org/synthetic/Material11> .
+<urn:contract-graph-publisher:local:SYNTHETIC-RDF-020:statement:c11> <http://www.w3.org/1999/02/22-rdf-syntax-ns#predicate> <https://example.org/synthetic/modulates> .
+<urn:contract-graph-publisher:local:SYNTHETIC-RDF-020:statement:c11> <http://www.w3.org/1999/02/22-rdf-syntax-ns#object> <https://example.org/synthetic/Signal11> .
+<urn:contract-graph-publisher:local:SYNTHETIC-RDF-020:statement:c11> <urn:contract-graph-publisher:vocabulary:claimId> "c11" .
+<urn:contract-graph-publisher:local:SYNTHETIC-RDF-020:statement:c11> <urn:contract-graph-publisher:vocabulary:polarity> "positive" .
+<urn:contract-graph-publisher:local:SYNTHETIC-RDF-020:statement:c11> <urn:contract-graph-publisher:vocabulary:hedged> "true"^^<http://www.w3.org/2001/XMLSchema#boolean> .
+<urn:contract-graph-publisher:local:SYNTHETIC-RDF-020:statement:c11> <urn:contract-graph-publisher:vocabulary:hedge> "Appears to modulate the synthetic signal." .
+<urn:contract-graph-publisher:local:SYNTHETIC-RDF-020:statement:c12> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#Statement> .
+<urn:contract-graph-publisher:local:SYNTHETIC-RDF-020:statement:c12> <http://www.w3.org/1999/02/22-rdf-syntax-ns#subject> <https://example.org/synthetic/Material12> .
+<urn:contract-graph-publisher:local:SYNTHETIC-RDF-020:statement:c12> <http://www.w3.org/1999/02/22-rdf-syntax-ns#predicate> <https://example.org/synthetic/hasCode> .
+<urn:contract-graph-publisher:local:SYNTHETIC-RDF-020:statement:c12> <http://www.w3.org/1999/02/22-rdf-syntax-ns#object> "012"^^<http://www.w3.org/2001/XMLSchema#string> .
+<urn:contract-graph-publisher:local:SYNTHETIC-RDF-020:statement:c12> <urn:contract-graph-publisher:vocabulary:claimId> "c12" .
+<urn:contract-graph-publisher:local:SYNTHETIC-RDF-020:statement:c12> <urn:contract-graph-publisher:vocabulary:polarity> "positive" .
+<urn:contract-graph-publisher:local:SYNTHETIC-RDF-020:statement:c12> <urn:contract-graph-publisher:vocabulary:hedged> "false"^^<http://www.w3.org/2001/XMLSchema#boolean> .
+<urn:contract-graph-publisher:local:SYNTHETIC-RDF-020:statement:c13> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#Statement> .
+<urn:contract-graph-publisher:local:SYNTHETIC-RDF-020:statement:c13> <http://www.w3.org/1999/02/22-rdf-syntax-ns#subject> <https://example.org/synthetic/Material13> .
+<urn:contract-graph-publisher:local:SYNTHETIC-RDF-020:statement:c13> <http://www.w3.org/1999/02/22-rdf-syntax-ns#predicate> <https://example.org/synthetic/produces> .
+<urn:contract-graph-publisher:local:SYNTHETIC-RDF-020:statement:c13> <http://www.w3.org/1999/02/22-rdf-syntax-ns#object> <https://example.org/synthetic/Product13> .
+<urn:contract-graph-publisher:local:SYNTHETIC-RDF-020:statement:c13> <urn:contract-graph-publisher:vocabulary:claimId> "c13" .
+<urn:contract-graph-publisher:local:SYNTHETIC-RDF-020:statement:c13> <urn:contract-graph-publisher:vocabulary:polarity> "positive" .
+<urn:contract-graph-publisher:local:SYNTHETIC-RDF-020:statement:c13> <urn:contract-graph-publisher:vocabulary:hedged> "false"^^<http://www.w3.org/2001/XMLSchema#boolean> .
+<urn:contract-graph-publisher:local:SYNTHETIC-RDF-020:statement:c14> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#Statement> .
+<urn:contract-graph-publisher:local:SYNTHETIC-RDF-020:statement:c14> <http://www.w3.org/1999/02/22-rdf-syntax-ns#subject> <https://example.org/synthetic/Material14> .
+<urn:contract-graph-publisher:local:SYNTHETIC-RDF-020:statement:c14> <http://www.w3.org/1999/02/22-rdf-syntax-ns#predicate> <https://example.org/synthetic/degrades> .
+<urn:contract-graph-publisher:local:SYNTHETIC-RDF-020:statement:c14> <http://www.w3.org/1999/02/22-rdf-syntax-ns#object> <https://example.org/synthetic/Component14> .
+<urn:contract-graph-publisher:local:SYNTHETIC-RDF-020:statement:c14> <urn:contract-graph-publisher:vocabulary:claimId> "c14" .
+<urn:contract-graph-publisher:local:SYNTHETIC-RDF-020:statement:c14> <urn:contract-graph-publisher:vocabulary:polarity> "negative" .
+<urn:contract-graph-publisher:local:SYNTHETIC-RDF-020:statement:c14> <urn:contract-graph-publisher:vocabulary:hedged> "true"^^<http://www.w3.org/2001/XMLSchema#boolean> .
+<urn:contract-graph-publisher:local:SYNTHETIC-RDF-020:statement:c14> <urn:contract-graph-publisher:vocabulary:condition> "Only at the specified synthetic storage state." .
+<urn:contract-graph-publisher:local:SYNTHETIC-RDF-020:statement:c14> <urn:contract-graph-publisher:vocabulary:hedge> "Unlikely to degrade the synthetic component." .
+<urn:contract-graph-publisher:local:SYNTHETIC-RDF-020:statement:c15> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#Statement> .
+<urn:contract-graph-publisher:local:SYNTHETIC-RDF-020:statement:c15> <http://www.w3.org/1999/02/22-rdf-syntax-ns#subject> <https://example.org/synthetic/Material15> .
+<urn:contract-graph-publisher:local:SYNTHETIC-RDF-020:statement:c15> <http://www.w3.org/1999/02/22-rdf-syntax-ns#predicate> <https://example.org/synthetic/binds> .
+<urn:contract-graph-publisher:local:SYNTHETIC-RDF-020:statement:c15> <http://www.w3.org/1999/02/22-rdf-syntax-ns#object> <https://example.org/synthetic/Target15> .
+<urn:contract-graph-publisher:local:SYNTHETIC-RDF-020:statement:c15> <urn:contract-graph-publisher:vocabulary:claimId> "c15" .
+<urn:contract-graph-publisher:local:SYNTHETIC-RDF-020:statement:c15> <urn:contract-graph-publisher:vocabulary:polarity> "positive" .
+<urn:contract-graph-publisher:local:SYNTHETIC-RDF-020:statement:c15> <urn:contract-graph-publisher:vocabulary:hedged> "false"^^<http://www.w3.org/2001/XMLSchema#boolean> .
+<urn:contract-graph-publisher:local:SYNTHETIC-RDF-020:statement:c15> <urn:contract-graph-publisher:vocabulary:condition> "Only in the synthetic buffered preparation." .
+<urn:contract-graph-publisher:local:SYNTHETIC-RDF-020:statement:c16> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#Statement> .
+<urn:contract-graph-publisher:local:SYNTHETIC-RDF-020:statement:c16> <http://www.w3.org/1999/02/22-rdf-syntax-ns#subject> <https://example.org/synthetic/Material16> .
+<urn:contract-graph-publisher:local:SYNTHETIC-RDF-020:statement:c16> <http://www.w3.org/1999/02/22-rdf-syntax-ns#predicate> <https://example.org/synthetic/resembles> .
+<urn:contract-graph-publisher:local:SYNTHETIC-RDF-020:statement:c16> <http://www.w3.org/1999/02/22-rdf-syntax-ns#object> <https://example.org/synthetic/Structure16> .
+<urn:contract-graph-publisher:local:SYNTHETIC-RDF-020:statement:c16> <urn:contract-graph-publisher:vocabulary:claimId> "c16" .
+<urn:contract-graph-publisher:local:SYNTHETIC-RDF-020:statement:c16> <urn:contract-graph-publisher:vocabulary:polarity> "positive" .
+<urn:contract-graph-publisher:local:SYNTHETIC-RDF-020:statement:c16> <urn:contract-graph-publisher:vocabulary:hedged> "true"^^<http://www.w3.org/2001/XMLSchema#boolean> .
+<urn:contract-graph-publisher:local:SYNTHETIC-RDF-020:statement:c16> <urn:contract-graph-publisher:vocabulary:hedge> "Provisionally resembles the synthetic structure." .
+<urn:contract-graph-publisher:local:SYNTHETIC-RDF-020:statement:c17> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#Statement> .
+<urn:contract-graph-publisher:local:SYNTHETIC-RDF-020:statement:c17> <http://www.w3.org/1999/02/22-rdf-syntax-ns#subject> <https://example.org/synthetic/Material17> .
+<urn:contract-graph-publisher:local:SYNTHETIC-RDF-020:statement:c17> <http://www.w3.org/1999/02/22-rdf-syntax-ns#predicate> <https://example.org/synthetic/precedes> .
+<urn:contract-graph-publisher:local:SYNTHETIC-RDF-020:statement:c17> <http://www.w3.org/1999/02/22-rdf-syntax-ns#object> <https://example.org/synthetic/Event17> .
+<urn:contract-graph-publisher:local:SYNTHETIC-RDF-020:statement:c17> <urn:contract-graph-publisher:vocabulary:claimId> "c17" .
+<urn:contract-graph-publisher:local:SYNTHETIC-RDF-020:statement:c17> <urn:contract-graph-publisher:vocabulary:polarity> "positive" .
+<urn:contract-graph-publisher:local:SYNTHETIC-RDF-020:statement:c17> <urn:contract-graph-publisher:vocabulary:hedged> "false"^^<http://www.w3.org/2001/XMLSchema#boolean> .
+<urn:contract-graph-publisher:local:SYNTHETIC-RDF-020:statement:c18> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#Statement> .
+<urn:contract-graph-publisher:local:SYNTHETIC-RDF-020:statement:c18> <http://www.w3.org/1999/02/22-rdf-syntax-ns#subject> <https://example.org/synthetic/Material18> .
+<urn:contract-graph-publisher:local:SYNTHETIC-RDF-020:statement:c18> <http://www.w3.org/1999/02/22-rdf-syntax-ns#predicate> <https://example.org/synthetic/interactsWith> .
+<urn:contract-graph-publisher:local:SYNTHETIC-RDF-020:statement:c18> <http://www.w3.org/1999/02/22-rdf-syntax-ns#object> <https://example.org/synthetic/Agent18> .
+<urn:contract-graph-publisher:local:SYNTHETIC-RDF-020:statement:c18> <urn:contract-graph-publisher:vocabulary:claimId> "c18" .
+<urn:contract-graph-publisher:local:SYNTHETIC-RDF-020:statement:c18> <urn:contract-graph-publisher:vocabulary:polarity> "negative" .
+<urn:contract-graph-publisher:local:SYNTHETIC-RDF-020:statement:c18> <urn:contract-graph-publisher:vocabulary:hedged> "false"^^<http://www.w3.org/2001/XMLSchema#boolean> .
+<urn:contract-graph-publisher:local:SYNTHETIC-RDF-020:statement:c19> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#Statement> .
+<urn:contract-graph-publisher:local:SYNTHETIC-RDF-020:statement:c19> <http://www.w3.org/1999/02/22-rdf-syntax-ns#subject> <https://example.org/synthetic/Material19> .
+<urn:contract-graph-publisher:local:SYNTHETIC-RDF-020:statement:c19> <http://www.w3.org/1999/02/22-rdf-syntax-ns#predicate> <https://example.org/synthetic/supports> .
+<urn:contract-graph-publisher:local:SYNTHETIC-RDF-020:statement:c19> <http://www.w3.org/1999/02/22-rdf-syntax-ns#object> <https://example.org/synthetic/Function19> .
+<urn:contract-graph-publisher:local:SYNTHETIC-RDF-020:statement:c19> <urn:contract-graph-publisher:vocabulary:claimId> "c19" .
+<urn:contract-graph-publisher:local:SYNTHETIC-RDF-020:statement:c19> <urn:contract-graph-publisher:vocabulary:polarity> "positive" .
+<urn:contract-graph-publisher:local:SYNTHETIC-RDF-020:statement:c19> <urn:contract-graph-publisher:vocabulary:hedged> "false"^^<http://www.w3.org/2001/XMLSchema#boolean> .
+<urn:contract-graph-publisher:local:SYNTHETIC-RDF-020:statement:c19> <urn:contract-graph-publisher:vocabulary:uncertainty> "The synthetic evidence does not resolve mechanism." .
+<urn:contract-graph-publisher:local:SYNTHETIC-RDF-020:statement:c20> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#Statement> .
+<urn:contract-graph-publisher:local:SYNTHETIC-RDF-020:statement:c20> <http://www.w3.org/1999/02/22-rdf-syntax-ns#subject> <https://example.org/synthetic/Material20> .
+<urn:contract-graph-publisher:local:SYNTHETIC-RDF-020:statement:c20> <http://www.w3.org/1999/02/22-rdf-syntax-ns#predicate> <https://example.org/synthetic/changes> .
+<urn:contract-graph-publisher:local:SYNTHETIC-RDF-020:statement:c20> <http://www.w3.org/1999/02/22-rdf-syntax-ns#object> <https://example.org/synthetic/State20> .
+<urn:contract-graph-publisher:local:SYNTHETIC-RDF-020:statement:c20> <urn:contract-graph-publisher:vocabulary:claimId> "c20" .
+<urn:contract-graph-publisher:local:SYNTHETIC-RDF-020:statement:c20> <urn:contract-graph-publisher:vocabulary:polarity> "negative" .
+<urn:contract-graph-publisher:local:SYNTHETIC-RDF-020:statement:c20> <urn:contract-graph-publisher:vocabulary:hedged> "true"^^<http://www.w3.org/2001/XMLSchema#boolean> .
+<urn:contract-graph-publisher:local:SYNTHETIC-RDF-020:statement:c20> <urn:contract-graph-publisher:vocabulary:condition> "Only for synthetic batch B20." .
+<urn:contract-graph-publisher:local:SYNTHETIC-RDF-020:statement:c20> <urn:contract-graph-publisher:vocabulary:hedge> "May not change the synthetic state." .
+<urn:contract-graph-publisher:local:SYNTHETIC-RDF-020:statement:c20> <urn:contract-graph-publisher:vocabulary:uncertainty> "Synthetic batch annotation is incomplete." .
+}
+<urn:contract-graph-publisher:local:SYNTHETIC-RDF-020:provenance> {
+<urn:contract-graph-publisher:local:SYNTHETIC-RDF-020:provenance> <urn:contract-graph-publisher:vocabulary:describesAssertion> <urn:contract-graph-publisher:local:SYNTHETIC-RDF-020:assertion> .
+<urn:contract-graph-publisher:local:SYNTHETIC-RDF-020:statement:c01> <http://www.w3.org/ns/prov#wasDerivedFrom> <urn:contract-graph-publisher:local:SYNTHETIC-RDF-020:evidence:e01> .
+<urn:contract-graph-publisher:local:SYNTHETIC-RDF-020:statement:c02> <http://www.w3.org/ns/prov#wasDerivedFrom> <urn:contract-graph-publisher:local:SYNTHETIC-RDF-020:evidence:e02> .
+<urn:contract-graph-publisher:local:SYNTHETIC-RDF-020:statement:c03> <http://www.w3.org/ns/prov#wasDerivedFrom> <urn:contract-graph-publisher:local:SYNTHETIC-RDF-020:evidence:e03> .
+<urn:contract-graph-publisher:local:SYNTHETIC-RDF-020:statement:c04> <http://www.w3.org/ns/prov#wasDerivedFrom> <urn:contract-graph-publisher:local:SYNTHETIC-RDF-020:evidence:e04> .
+<urn:contract-graph-publisher:local:SYNTHETIC-RDF-020:statement:c05> <http://www.w3.org/ns/prov#wasDerivedFrom> <urn:contract-graph-publisher:local:SYNTHETIC-RDF-020:evidence:e05> .
+<urn:contract-graph-publisher:local:SYNTHETIC-RDF-020:statement:c06> <http://www.w3.org/ns/prov#wasDerivedFrom> <urn:contract-graph-publisher:local:SYNTHETIC-RDF-020:evidence:e06> .
+<urn:contract-graph-publisher:local:SYNTHETIC-RDF-020:statement:c07> <http://www.w3.org/ns/prov#wasDerivedFrom> <urn:contract-graph-publisher:local:SYNTHETIC-RDF-020:evidence:e07> .
+<urn:contract-graph-publisher:local:SYNTHETIC-RDF-020:statement:c08> <http://www.w3.org/ns/prov#wasDerivedFrom> <urn:contract-graph-publisher:local:SYNTHETIC-RDF-020:evidence:e08> .
+<urn:contract-graph-publisher:local:SYNTHETIC-RDF-020:statement:c09> <http://www.w3.org/ns/prov#wasDerivedFrom> <urn:contract-graph-publisher:local:SYNTHETIC-RDF-020:evidence:e09> .
+<urn:contract-graph-publisher:local:SYNTHETIC-RDF-020:statement:c10> <http://www.w3.org/ns/prov#wasDerivedFrom> <urn:contract-graph-publisher:local:SYNTHETIC-RDF-020:evidence:e10> .
+<urn:contract-graph-publisher:local:SYNTHETIC-RDF-020:statement:c11> <http://www.w3.org/ns/prov#wasDerivedFrom> <urn:contract-graph-publisher:local:SYNTHETIC-RDF-020:evidence:e11> .
+<urn:contract-graph-publisher:local:SYNTHETIC-RDF-020:statement:c12> <http://www.w3.org/ns/prov#wasDerivedFrom> <urn:contract-graph-publisher:local:SYNTHETIC-RDF-020:evidence:e12> .
+<urn:contract-graph-publisher:local:SYNTHETIC-RDF-020:statement:c13> <http://www.w3.org/ns/prov#wasDerivedFrom> <urn:contract-graph-publisher:local:SYNTHETIC-RDF-020:evidence:e13> .
+<urn:contract-graph-publisher:local:SYNTHETIC-RDF-020:statement:c14> <http://www.w3.org/ns/prov#wasDerivedFrom> <urn:contract-graph-publisher:local:SYNTHETIC-RDF-020:evidence:e14> .
+<urn:contract-graph-publisher:local:SYNTHETIC-RDF-020:statement:c15> <http://www.w3.org/ns/prov#wasDerivedFrom> <urn:contract-graph-publisher:local:SYNTHETIC-RDF-020:evidence:e15> .
+<urn:contract-graph-publisher:local:SYNTHETIC-RDF-020:statement:c16> <http://www.w3.org/ns/prov#wasDerivedFrom> <urn:contract-graph-publisher:local:SYNTHETIC-RDF-020:evidence:e16> .
+<urn:contract-graph-publisher:local:SYNTHETIC-RDF-020:statement:c17> <http://www.w3.org/ns/prov#wasDerivedFrom> <urn:contract-graph-publisher:local:SYNTHETIC-RDF-020:evidence:e17> .
+<urn:contract-graph-publisher:local:SYNTHETIC-RDF-020:statement:c18> <http://www.w3.org/ns/prov#wasDerivedFrom> <urn:contract-graph-publisher:local:SYNTHETIC-RDF-020:evidence:e18> .
+<urn:contract-graph-publisher:local:SYNTHETIC-RDF-020:statement:c19> <http://www.w3.org/ns/prov#wasDerivedFrom> <urn:contract-graph-publisher:local:SYNTHETIC-RDF-020:evidence:e19> .
+<urn:contract-graph-publisher:local:SYNTHETIC-RDF-020:statement:c20> <http://www.w3.org/ns/prov#wasDerivedFrom> <urn:contract-graph-publisher:local:SYNTHETIC-RDF-020:evidence:e20> .
+<urn:contract-graph-publisher:local:SYNTHETIC-RDF-020:evidence:e01> <urn:contract-graph-publisher:vocabulary:evidenceId> "e01" .
+<urn:contract-graph-publisher:local:SYNTHETIC-RDF-020:evidence:e01> <http://www.w3.org/ns/prov#wasDerivedFrom> <urn:contract-graph-publisher:local:SYNTHETIC-RDF-020:source:s1> .
+<urn:contract-graph-publisher:local:SYNTHETIC-RDF-020:evidence:e01> <urn:contract-graph-publisher:vocabulary:evidenceText> "Synthetic evidence sentence 01." .
+<urn:contract-graph-publisher:local:SYNTHETIC-RDF-020:evidence:e02> <urn:contract-graph-publisher:vocabulary:evidenceId> "e02" .
+<urn:contract-graph-publisher:local:SYNTHETIC-RDF-020:evidence:e02> <http://www.w3.org/ns/prov#wasDerivedFrom> <urn:contract-graph-publisher:local:SYNTHETIC-RDF-020:source:s2> .
+<urn:contract-graph-publisher:local:SYNTHETIC-RDF-020:evidence:e02> <urn:contract-graph-publisher:vocabulary:evidenceText> "Synthetic negative evidence sentence 02." .
+<urn:contract-graph-publisher:local:SYNTHETIC-RDF-020:evidence:e03> <urn:contract-graph-publisher:vocabulary:evidenceId> "e03" .
+<urn:contract-graph-publisher:local:SYNTHETIC-RDF-020:evidence:e03> <http://www.w3.org/ns/prov#wasDerivedFrom> <urn:contract-graph-publisher:local:SYNTHETIC-RDF-020:source:s3> .
+<urn:contract-graph-publisher:local:SYNTHETIC-RDF-020:evidence:e03> <urn:contract-graph-publisher:vocabulary:evidenceText> "Synthetic hedged evidence sentence 03." .
+<urn:contract-graph-publisher:local:SYNTHETIC-RDF-020:evidence:e04> <urn:contract-graph-publisher:vocabulary:evidenceId> "e04" .
+<urn:contract-graph-publisher:local:SYNTHETIC-RDF-020:evidence:e04> <http://www.w3.org/ns/prov#wasDerivedFrom> <urn:contract-graph-publisher:local:SYNTHETIC-RDF-020:source:s4> .
+<urn:contract-graph-publisher:local:SYNTHETIC-RDF-020:evidence:e04> <urn:contract-graph-publisher:vocabulary:evidenceText> "Synthetic conditional evidence sentence 04." .
+<urn:contract-graph-publisher:local:SYNTHETIC-RDF-020:evidence:e05> <urn:contract-graph-publisher:vocabulary:evidenceId> "e05" .
+<urn:contract-graph-publisher:local:SYNTHETIC-RDF-020:evidence:e05> <http://www.w3.org/ns/prov#wasDerivedFrom> <urn:contract-graph-publisher:local:SYNTHETIC-RDF-020:source:s1> .
+<urn:contract-graph-publisher:local:SYNTHETIC-RDF-020:evidence:e05> <urn:contract-graph-publisher:vocabulary:evidenceText> "Synthetic qualified evidence sentence 05." .
+<urn:contract-graph-publisher:local:SYNTHETIC-RDF-020:evidence:e06> <urn:contract-graph-publisher:vocabulary:evidenceId> "e06" .
+<urn:contract-graph-publisher:local:SYNTHETIC-RDF-020:evidence:e06> <http://www.w3.org/ns/prov#wasDerivedFrom> <urn:contract-graph-publisher:local:SYNTHETIC-RDF-020:source:s2> .
+<urn:contract-graph-publisher:local:SYNTHETIC-RDF-020:evidence:e06> <urn:contract-graph-publisher:vocabulary:evidenceText> "Synthetic evidence sentence 06." .
+<urn:contract-graph-publisher:local:SYNTHETIC-RDF-020:evidence:e07> <urn:contract-graph-publisher:vocabulary:evidenceId> "e07" .
+<urn:contract-graph-publisher:local:SYNTHETIC-RDF-020:evidence:e07> <http://www.w3.org/ns/prov#wasDerivedFrom> <urn:contract-graph-publisher:local:SYNTHETIC-RDF-020:source:s3> .
+<urn:contract-graph-publisher:local:SYNTHETIC-RDF-020:evidence:e07> <urn:contract-graph-publisher:vocabulary:evidenceText> "Synthetic uncertain evidence sentence 07." .
+<urn:contract-graph-publisher:local:SYNTHETIC-RDF-020:evidence:e08> <urn:contract-graph-publisher:vocabulary:evidenceId> "e08" .
+<urn:contract-graph-publisher:local:SYNTHETIC-RDF-020:evidence:e08> <http://www.w3.org/ns/prov#wasDerivedFrom> <urn:contract-graph-publisher:local:SYNTHETIC-RDF-020:source:s4> .
+<urn:contract-graph-publisher:local:SYNTHETIC-RDF-020:evidence:e08> <urn:contract-graph-publisher:vocabulary:evidenceText> "Synthetic conditional evidence sentence 08." .
+<urn:contract-graph-publisher:local:SYNTHETIC-RDF-020:evidence:e09> <urn:contract-graph-publisher:vocabulary:evidenceId> "e09" .
+<urn:contract-graph-publisher:local:SYNTHETIC-RDF-020:evidence:e09> <http://www.w3.org/ns/prov#wasDerivedFrom> <urn:contract-graph-publisher:local:SYNTHETIC-RDF-020:source:s1> .
+<urn:contract-graph-publisher:local:SYNTHETIC-RDF-020:evidence:e09> <urn:contract-graph-publisher:vocabulary:evidenceText> "Synthetic evidence sentence 09." .
+<urn:contract-graph-publisher:local:SYNTHETIC-RDF-020:evidence:e10> <urn:contract-graph-publisher:vocabulary:evidenceId> "e10" .
+<urn:contract-graph-publisher:local:SYNTHETIC-RDF-020:evidence:e10> <http://www.w3.org/ns/prov#wasDerivedFrom> <urn:contract-graph-publisher:local:SYNTHETIC-RDF-020:source:s2> .
+<urn:contract-graph-publisher:local:SYNTHETIC-RDF-020:evidence:e10> <urn:contract-graph-publisher:vocabulary:evidenceText> "Synthetic negative conditional evidence sentence 10." .
+<urn:contract-graph-publisher:local:SYNTHETIC-RDF-020:evidence:e11> <urn:contract-graph-publisher:vocabulary:evidenceId> "e11" .
+<urn:contract-graph-publisher:local:SYNTHETIC-RDF-020:evidence:e11> <http://www.w3.org/ns/prov#wasDerivedFrom> <urn:contract-graph-publisher:local:SYNTHETIC-RDF-020:source:s3> .
+<urn:contract-graph-publisher:local:SYNTHETIC-RDF-020:evidence:e11> <urn:contract-graph-publisher:vocabulary:evidenceText> "Synthetic hedged evidence sentence 11." .
+<urn:contract-graph-publisher:local:SYNTHETIC-RDF-020:evidence:e12> <urn:contract-graph-publisher:vocabulary:evidenceId> "e12" .
+<urn:contract-graph-publisher:local:SYNTHETIC-RDF-020:evidence:e12> <http://www.w3.org/ns/prov#wasDerivedFrom> <urn:contract-graph-publisher:local:SYNTHETIC-RDF-020:source:s4> .
+<urn:contract-graph-publisher:local:SYNTHETIC-RDF-020:evidence:e12> <urn:contract-graph-publisher:vocabulary:evidenceText> "Synthetic evidence sentence 12." .
+<urn:contract-graph-publisher:local:SYNTHETIC-RDF-020:evidence:e13> <urn:contract-graph-publisher:vocabulary:evidenceId> "e13" .
+<urn:contract-graph-publisher:local:SYNTHETIC-RDF-020:evidence:e13> <http://www.w3.org/ns/prov#wasDerivedFrom> <urn:contract-graph-publisher:local:SYNTHETIC-RDF-020:source:s1> .
+<urn:contract-graph-publisher:local:SYNTHETIC-RDF-020:evidence:e13> <urn:contract-graph-publisher:vocabulary:evidenceText> "Synthetic evidence sentence 13." .
+<urn:contract-graph-publisher:local:SYNTHETIC-RDF-020:evidence:e14> <urn:contract-graph-publisher:vocabulary:evidenceId> "e14" .
+<urn:contract-graph-publisher:local:SYNTHETIC-RDF-020:evidence:e14> <http://www.w3.org/ns/prov#wasDerivedFrom> <urn:contract-graph-publisher:local:SYNTHETIC-RDF-020:source:s2> .
+<urn:contract-graph-publisher:local:SYNTHETIC-RDF-020:evidence:e14> <urn:contract-graph-publisher:vocabulary:evidenceText> "Synthetic qualified evidence sentence 14." .
+<urn:contract-graph-publisher:local:SYNTHETIC-RDF-020:evidence:e15> <urn:contract-graph-publisher:vocabulary:evidenceId> "e15" .
+<urn:contract-graph-publisher:local:SYNTHETIC-RDF-020:evidence:e15> <http://www.w3.org/ns/prov#wasDerivedFrom> <urn:contract-graph-publisher:local:SYNTHETIC-RDF-020:source:s3> .
+<urn:contract-graph-publisher:local:SYNTHETIC-RDF-020:evidence:e15> <urn:contract-graph-publisher:vocabulary:evidenceText> "Synthetic conditional evidence sentence 15." .
+<urn:contract-graph-publisher:local:SYNTHETIC-RDF-020:evidence:e16> <urn:contract-graph-publisher:vocabulary:evidenceId> "e16" .
+<urn:contract-graph-publisher:local:SYNTHETIC-RDF-020:evidence:e16> <http://www.w3.org/ns/prov#wasDerivedFrom> <urn:contract-graph-publisher:local:SYNTHETIC-RDF-020:source:s4> .
+<urn:contract-graph-publisher:local:SYNTHETIC-RDF-020:evidence:e16> <urn:contract-graph-publisher:vocabulary:evidenceText> "Synthetic hedged evidence sentence 16." .
+<urn:contract-graph-publisher:local:SYNTHETIC-RDF-020:evidence:e17> <urn:contract-graph-publisher:vocabulary:evidenceId> "e17" .
+<urn:contract-graph-publisher:local:SYNTHETIC-RDF-020:evidence:e17> <http://www.w3.org/ns/prov#wasDerivedFrom> <urn:contract-graph-publisher:local:SYNTHETIC-RDF-020:source:s1> .
+<urn:contract-graph-publisher:local:SYNTHETIC-RDF-020:evidence:e17> <urn:contract-graph-publisher:vocabulary:evidenceText> "Synthetic evidence sentence 17." .
+<urn:contract-graph-publisher:local:SYNTHETIC-RDF-020:evidence:e18> <urn:contract-graph-publisher:vocabulary:evidenceId> "e18" .
+<urn:contract-graph-publisher:local:SYNTHETIC-RDF-020:evidence:e18> <http://www.w3.org/ns/prov#wasDerivedFrom> <urn:contract-graph-publisher:local:SYNTHETIC-RDF-020:source:s2> .
+<urn:contract-graph-publisher:local:SYNTHETIC-RDF-020:evidence:e18> <urn:contract-graph-publisher:vocabulary:evidenceText> "Synthetic negative evidence sentence 18." .
+<urn:contract-graph-publisher:local:SYNTHETIC-RDF-020:evidence:e19> <urn:contract-graph-publisher:vocabulary:evidenceId> "e19" .
+<urn:contract-graph-publisher:local:SYNTHETIC-RDF-020:evidence:e19> <http://www.w3.org/ns/prov#wasDerivedFrom> <urn:contract-graph-publisher:local:SYNTHETIC-RDF-020:source:s3> .
+<urn:contract-graph-publisher:local:SYNTHETIC-RDF-020:evidence:e19> <urn:contract-graph-publisher:vocabulary:evidenceText> "Synthetic uncertain evidence sentence 19." .
+<urn:contract-graph-publisher:local:SYNTHETIC-RDF-020:evidence:e20> <urn:contract-graph-publisher:vocabulary:evidenceId> "e20" .
+<urn:contract-graph-publisher:local:SYNTHETIC-RDF-020:evidence:e20> <http://www.w3.org/ns/prov#wasDerivedFrom> <urn:contract-graph-publisher:local:SYNTHETIC-RDF-020:source:s4> .
+<urn:contract-graph-publisher:local:SYNTHETIC-RDF-020:evidence:e20> <urn:contract-graph-publisher:vocabulary:evidenceText> "Synthetic fully qualified evidence sentence 20." .
+<urn:contract-graph-publisher:local:SYNTHETIC-RDF-020:source:s1> <urn:contract-graph-publisher:vocabulary:sourceId> "s1" .
+<urn:contract-graph-publisher:local:SYNTHETIC-RDF-020:source:s1> <urn:contract-graph-publisher:vocabulary:title> "Synthetic corpus part 1" .
+<urn:contract-graph-publisher:local:SYNTHETIC-RDF-020:source:s1> <urn:contract-graph-publisher:vocabulary:locator> "synthetic://rdf-example/source/1" .
+<urn:contract-graph-publisher:local:SYNTHETIC-RDF-020:source:s2> <urn:contract-graph-publisher:vocabulary:sourceId> "s2" .
+<urn:contract-graph-publisher:local:SYNTHETIC-RDF-020:source:s2> <urn:contract-graph-publisher:vocabulary:title> "Synthetic corpus part 2" .
+<urn:contract-graph-publisher:local:SYNTHETIC-RDF-020:source:s2> <urn:contract-graph-publisher:vocabulary:locator> "synthetic://rdf-example/source/2" .
+<urn:contract-graph-publisher:local:SYNTHETIC-RDF-020:source:s3> <urn:contract-graph-publisher:vocabulary:sourceId> "s3" .
+<urn:contract-graph-publisher:local:SYNTHETIC-RDF-020:source:s3> <urn:contract-graph-publisher:vocabulary:title> "Synthetic corpus part 3" .
+<urn:contract-graph-publisher:local:SYNTHETIC-RDF-020:source:s3> <urn:contract-graph-publisher:vocabulary:locator> "synthetic://rdf-example/source/3" .
+<urn:contract-graph-publisher:local:SYNTHETIC-RDF-020:source:s4> <urn:contract-graph-publisher:vocabulary:sourceId> "s4" .
+<urn:contract-graph-publisher:local:SYNTHETIC-RDF-020:source:s4> <urn:contract-graph-publisher:vocabulary:title> "Synthetic corpus part 4" .
+<urn:contract-graph-publisher:local:SYNTHETIC-RDF-020:source:s4> <urn:contract-graph-publisher:vocabulary:locator> "synthetic://rdf-example/source/4" .
+}
+<urn:contract-graph-publisher:local:SYNTHETIC-RDF-020:pubinfo> {
+<urn:contract-graph-publisher:local:SYNTHETIC-RDF-020:pubinfo> <urn:contract-graph-publisher:vocabulary:describesPublication> <urn:contract-graph-publisher:local:SYNTHETIC-RDF-020:publication> .
+<urn:contract-graph-publisher:local:SYNTHETIC-RDF-020:publication> <urn:contract-graph-publisher:vocabulary:iriStatus> "local-unregistered" .
+<urn:contract-graph-publisher:local:SYNTHETIC-RDF-020:publication> <urn:contract-graph-publisher:vocabulary:trustyStatus> "not-generated" .
+}

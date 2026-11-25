@@ -1,0 +1,160 @@
+{
+  "case_id": "SYNTHETIC-ADJUDICATION-020",
+  "status": "partial",
+  "adjudication_report": "adjudication-report.json",
+  "adjudication_ledger": "adjudication-ledger.json",
+  "input_count": 20,
+  "adjudicated_count": 19,
+  "verdict_counts": {
+    "supported": 5,
+    "contradicted": 5,
+    "not_established": 5,
+    "mixed": 4
+  },
+  "sources": [
+    "S1",
+    "S2",
+    "S3",
+    "S4",
+    "S5",
+    "S6"
+  ],
+  "uncertainty": [
+    {
+      "uncertainty_id": "U-SKIPPED-NEGATIVE",
+      "input_ids": [
+        "C020"
+      ],
+      "topic": "intentional_negative_fixture",
+      "text": "故意跳过C020；这是验证错误，不得作为合法partial。"
+    }
+  ],
+  "change_records": [
+    {
+      "change_id": "CHANGE-C002",
+      "input_id": "C002",
+      "corrected_claim_ids": [
+        "FIX-C002"
+      ],
+      "change_type": "separate_corrected_claim_proposal",
+      "original_preserved": true
+    },
+    {
+      "change_id": "CHANGE-C003",
+      "input_id": "C003",
+      "corrected_claim_ids": [
+        "FIX-C003"
+      ],
+      "change_type": "separate_corrected_claim_proposal",
+      "original_preserved": true
+    },
+    {
+      "change_id": "CHANGE-C004",
+      "input_id": "C004",
+      "corrected_claim_ids": [
+        "FIX-C004"
+      ],
+      "change_type": "separate_corrected_claim_proposal",
+      "original_preserved": true
+    },
+    {
+      "change_id": "CHANGE-C005",
+      "input_id": "C005",
+      "corrected_claim_ids": [
+        "FIX-C005"
+      ],
+      "change_type": "separate_corrected_claim_proposal",
+      "original_preserved": true
+    },
+    {
+      "change_id": "CHANGE-C007",
+      "input_id": "C007",
+      "corrected_claim_ids": [
+        "FIX-C007"
+      ],
+      "change_type": "separate_corrected_claim_proposal",
+      "original_preserved": true
+    },
+    {
+      "change_id": "CHANGE-C008",
+      "input_id": "C008",
+      "corrected_claim_ids": [
+        "FIX-C008"
+      ],
+      "change_type": "separate_corrected_claim_proposal",
+      "original_preserved": true
+    },
+    {
+      "change_id": "CHANGE-C010",
+      "input_id": "C010",
+      "corrected_claim_ids": [
+        "FIX-C010"
+      ],
+      "change_type": "separate_corrected_claim_proposal",
+      "original_preserved": true
+    },
+    {
+      "change_id": "CHANGE-C011",
+      "input_id": "C011",
+      "corrected_claim_ids": [
+        "FIX-C011"
+      ],
+      "change_type": "separate_corrected_claim_proposal",
+      "original_preserved": true
+    },
+    {
+      "change_id": "CHANGE-C013",
+      "input_id": "C013",
+      "corrected_claim_ids": [
+        "FIX-C013"
+      ],
+      "change_type": "separate_corrected_claim_proposal",
+      "original_preserved": true
+    },
+    {
+      "change_id": "CHANGE-C014",
+      "input_id": "C014",
+      "corrected_claim_ids": [
+        "FIX-C014"
+      ],
+      "change_type": "separate_corrected_claim_proposal",
+      "original_preserved": true
+    },
+    {
+      "change_id": "CHANGE-C015",
+      "input_id": "C015",
+      "corrected_claim_ids": [
+        "FIX-C015"
+      ],
+      "change_type": "separate_corrected_claim_proposal",
+      "original_preserved": true
+    },
+    {
+      "change_id": "CHANGE-C017",
+      "input_id": "C017",
+      "corrected_claim_ids": [
+        "FIX-C017"
+      ],
+      "change_type": "separate_corrected_claim_proposal",
+      "original_preserved": true
+    },
+    {
+      "change_id": "CHANGE-C018",
+      "input_id": "C018",
+      "corrected_claim_ids": [
+        "FIX-C018"
+      ],
+      "change_type": "separate_corrected_claim_proposal",
+      "original_preserved": true
+    },
+    {
+      "change_id": "CHANGE-C019",
+      "input_id": "C019",
+      "corrected_claim_ids": [
+        "FIX-C019"
+      ],
+      "change_type": "separate_corrected_claim_proposal",
+      "original_preserved": true
+    }
+  ]
+}

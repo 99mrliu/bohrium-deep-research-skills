@@ -1,0 +1,88 @@
+{
+  "schema_version": "1.0",
+  "synthetic": true,
+  "notice": "SYNTHETIC audit fixture; not a formal scientific result.",
+  "case_id": "SYNTHETIC-ADJUDICATION-020",
+  "valid": true,
+  "audit_complete": true,
+  "expected_process_status": "success",
+  "input_count": 20,
+  "ledger_record_count": 20,
+  "adjudicated_count": 20,
+  "pending_input_ids": [],
+  "uncovered_input_ids": [],
+  "verdict_counts": {
+    "supported": 5,
+    "contradicted": 5,
+    "not_established": 5,
+    "mixed": 5
+  },
+  "rejected_review_count": 2,
+  "checks": [
+    {
+      "check": "case_schema",
+      "passed": true
+    },
+    {
+      "check": "output_contract",
+      "passed": true
+    },
+    {
+      "check": "required_result_fields",
+      "passed": true
+    },
+    {
+      "check": "input_id_coverage",
+      "passed": true
+    },
+    {
+      "check": "input_order",
+      "passed": true
+    },
+    {
+      "check": "original_text_preserved",
+      "passed": true
+    },
+    {
+      "check": "pending_shape",
+      "passed": true
+    },
+    {
+      "check": "component_verdict_logic",
+      "passed": true
+    },
+    {
+      "check": "support_and_reverse_evidence",
+      "passed": true
+    },
+    {
+      "check": "evidence_sources",
+      "passed": true
+    },
+    {
+      "check": "evidence_quotes",
+      "passed": true
+    },
+    {
+      "check": "corrected_claim_links",
+      "passed": true
+    },
+    {
+      "check": "source_inventory",
+      "passed": true
+    },
+    {
+      "check": "change_records",
+      "passed": true
+    },
+    {
+      "check": "result_consistency",
+      "passed": true
+    },
+    {
+      "check": "state_machine",
+      "passed": true
+    }
+  ],
+  "errors": []
+}

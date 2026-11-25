@@ -1,0 +1,18 @@
+{
+  "case_id": "SYNTHETIC-EXPECTED-FAILURE",
+  "synthetic": true,
+  "formal_result": false,
+  "expected_failure": true,
+  "queries": [
+    {
+      "query_id": "ambiguous-repeat",
+      "query": "Same ambiguous wording.",
+      "mode": "exact"
+    },
+    {
+      "query_id": "scan-only-unknown",
+      "query": "words possibly visible only in the scan",
+      "mode": "fidelity"
+    }
+  ]
+}

@@ -1,0 +1,522 @@
+{
+  "artifacts": {
+    "calculations": "calculations.json",
+    "result": "result.json"
+  },
+  "assertion_results": [
+    {
+      "assertion_id": "D01",
+      "direct_vs_calculated": "direct",
+      "evidence_ids": [
+        "E-A-M"
+      ],
+      "kind": "direct",
+      "status": "complete",
+      "unit": "mentions",
+      "value": "120"
+    },
+    {
+      "assertion_id": "D02",
+      "direct_vs_calculated": "direct",
+      "evidence_ids": [
+        "E-A-U"
+      ],
+      "kind": "direct",
+      "status": "complete",
+      "unit": "identifiers",
+      "value": "100"
+    },
+    {
+      "assertion_id": "D03",
+      "direct_vs_calculated": "direct",
+      "evidence_ids": [
+        "E-A-P"
+      ],
+      "kind": "direct",
+      "status": "complete",
+      "unit": "people",
+      "value": "80"
+    },
+    {
+      "assertion_id": "D04",
+      "direct_vs_calculated": "direct",
+      "evidence_ids": [
+        "E-B-M"
+      ],
+      "kind": "direct",
+      "status": "complete",
+      "unit": "mentions",
+      "value": "110"
+    },
+    {
+      "assertion_id": "D05",
+      "direct_vs_calculated": "direct",
+      "evidence_ids": [
+        "E-B-U"
+      ],
+      "kind": "direct",
+      "status": "complete",
+      "unit": "identifiers",
+      "value": "100"
+    },
+    {
+      "assertion_id": "D06",
+      "direct_vs_calculated": "direct",
+      "evidence_ids": [
+        "E-C-M"
+      ],
+      "kind": "direct",
+      "status": "complete",
+      "unit": "mentions",
+      "value": "170"
+    },
+    {
+      "assertion_id": "D07",
+      "direct_vs_calculated": "direct",
+      "evidence_ids": [
+        "E-ALL-M"
+      ],
+      "kind": "direct",
+      "status": "complete",
+      "unit": "mentions",
+      "value": "400"
+    },
+    {
+      "assertion_id": "D08",
+      "direct_vs_calculated": "direct",
+      "evidence_ids": [
+        "E-ALL-U"
+      ],
+      "kind": "direct",
+      "status": "complete",
+      "unit": "identifiers",
+      "value": "340"
+    },
+    {
+      "assertion_id": "D09",
+      "direct_vs_calculated": "direct",
+      "evidence_ids": [
+        "E-ALL-P"
+      ],
+      "kind": "direct",
+      "status": "complete",
+      "unit": "people",
+      "value": "300"
+    },
+    {
+      "assertion_id": "D10",
+      "direct_vs_calculated": "direct",
+      "evidence_ids": [
+        "E-F-CPU-BASE"
+      ],
+      "kind": "direct",
+      "status": "complete",
+      "unit": "s",
+      "value": "20.0"
+    },
+    {
+      "assertion_id": "D11",
+      "direct_vs_calculated": "direct",
+      "evidence_ids": [
+        "E-F-CPU-CAND"
+      ],
+      "kind": "direct",
+      "status": "complete",
+      "unit": "s",
+      "value": "15.0"
+    },
+    {
+      "assertion_id": "D12",
+      "direct_vs_calculated": "direct",
+      "evidence_ids": [
+        "E-F-LAT-A"
+      ],
+      "kind": "direct",
+      "status": "complete",
+      "unit": "ms",
+      "value": "250"
+    },
+    {
+      "assertion_id": "D13",
+      "direct_vs_calculated": "direct",
+      "evidence_ids": [
+        "E-T2-TOTAL-OBS"
+      ],
+      "kind": "direct",
+      "status": "complete",
+      "unit": "events",
+      "value": "40"
+    },
+    {
+      "assertion_id": "D14",
+      "direct_vs_calculated": "direct",
+      "evidence_ids": [
+        "E-F-HEAD"
+      ],
+      "kind": "direct",
+      "status": "complete",
+      "unit": "events",
+      "value": "-1"
+    },
+    {
+      "assertion_id": "C01",
+      "direct_vs_calculated": "calculated",
+      "evidence_ids": [
+        "E-A-M",
+        "E-ALL-M"
+      ],
+      "kind": "calculated",
+      "status": "complete",
+      "unit": "percent",
+      "value": "30.0"
+    },
+    {
+      "assertion_id": "C02",
+      "direct_vs_calculated": "calculated",
+      "evidence_ids": [
+        "E-A-U",
+        "E-ALL-U"
+      ],
+      "kind": "calculated",
+      "status": "complete",
+      "unit": "percent",
+      "value": "29.4"
+    },
+    {
+      "assertion_id": "C03",
+      "direct_vs_calculated": "calculated",
+      "evidence_ids": [
+        "E-F-INDEX-BASE",
+        "E-F-INDEX-NEW"
+      ],
+      "kind": "calculated",
+      "status": "complete",
+      "unit": "percent",
+      "value": "25.0"
+    },
+    {
+      "assertion_id": "C04",
+      "direct_vs_calculated": "calculated",
+      "evidence_ids": [
+        "E-F-CPU-BASE",
+        "E-F-CPU-CAND"
+      ],
+      "kind": "calculated",
+      "status": "complete",
+      "unit": "percent",
+      "value": "-25.0"
+    },
+    {
+      "assertion_id": "C05",
+      "direct_vs_calculated": "calculated",
+      "evidence_ids": [
+        "E-T2-A-OBS",
+        "E-T2-B-OBS",
+        "E-T2-C-OBS",
+        "E-T2-TOTAL-OBS"
+      ],
+      "kind": "calculated",
+      "status": "complete",
+      "unit": "events",
+      "value": "0"
+    },
+    {
+      "assertion_id": "C06",
+      "direct_vs_calculated": "calculated",
+      "evidence_ids": [
+        "E-T2-A-OBS",
+        "E-T2-A-PLAN"
+      ],
+      "kind": "calculated",
+      "status": "complete",
+      "unit": "events",
+      "value": "-1"
+    },
+    {
+      "assertion_id": "L01",
+      "direct_vs_calculated": "not_applicable",
+      "evidence_ids": [
+        "E-Q-HEADERS"
+      ],
+      "kind": "qualitative",
+      "status": "complete",
+      "unit": null,
+      "value": null
+    },
+    {
+      "assertion_id": "L02",
+      "direct_vs_calculated": "not_applicable",
+      "evidence_ids": [
+        "E-A-M",
+        "E-A-U",
+        "E-A-P"
+      ],
+      "kind": "qualitative",
+      "status": "complete",
+      "unit": null,
+      "value": null
+    },
+    {
+      "assertion_id": "L03",
+      "direct_vs_calculated": "not_applicable",
+      "evidence_ids": [
+        "E-F-CPU-BASE",
+        "E-F-LAT-A"
+      ],
+      "kind": "qualitative",
+      "status": "complete",
+      "unit": null,
+      "value": null
+    },
+    {
+      "assertion_id": "L04",
+      "direct_vs_calculated": "not_applicable",
+      "evidence_ids": [
+        "E-F-HEAD",
+        "E-T2-A-OBS",
+        "E-T2-A-PLAN"
+      ],
+      "kind": "qualitative",
+      "status": "complete",
+      "unit": null,
+      "value": null
+    },
+    {
+      "assertion_id": "L05",
+      "direct_vs_calculated": "not_applicable",
+      "evidence_ids": [
+        "E-Q-SCOPE"
+      ],
+      "kind": "qualitative",
+      "status": "complete",
+      "unit": null,
+      "value": null
+    }
+  ],
+  "case_id": "SYNTHETIC-QC-001",
+  "change_records": [
+    {
+      "assertion_id": "D01",
+      "from": "pending",
+      "to": "complete"
+    },
+    {
+      "assertion_id": "D02",
+      "from": "pending",
+      "to": "complete"
+    },
+    {
+      "assertion_id": "D03",
+      "from": "pending",
+      "to": "complete"
+    },
+    {
+      "assertion_id": "D04",
+      "from": "pending",
+      "to": "complete"
+    },
+    {
+      "assertion_id": "D05",
+      "from": "pending",
+      "to": "complete"
+    },
+    {
+      "assertion_id": "D06",
+      "from": "pending",
+      "to": "complete"
+    },
+    {
+      "assertion_id": "D07",
+      "from": "pending",
+      "to": "complete"
+    },
+    {
+      "assertion_id": "D08",
+      "from": "pending",
+      "to": "complete"
+    },
+    {
+      "assertion_id": "D09",
+      "from": "pending",
+      "to": "complete"
+    },
+    {
+      "assertion_id": "D10",
+      "from": "pending",
+      "to": "complete"
+    },
+    {
+      "assertion_id": "D11",
+      "from": "pending",
+      "to": "complete"
+    },
+    {
+      "assertion_id": "D12",
+      "from": "pending",
+      "to": "complete"
+    },
+    {
+      "assertion_id": "D13",
+      "from": "pending",
+      "to": "complete"
+    },
+    {
+      "assertion_id": "D14",
+      "from": "pending",
+      "to": "complete"
+    },
+    {
+      "assertion_id": "C01",
+      "from": "pending",
+      "to": "complete"
+    },
+    {
+      "assertion_id": "C02",
+      "from": "pending",
+      "to": "complete"
+    },
+    {
+      "assertion_id": "C03",
+      "from": "pending",
+      "to": "complete"
+    },
+    {
+      "assertion_id": "C04",
+      "from": "pending",
+      "to": "complete"
+    },
+    {
+      "assertion_id": "C05",
+      "from": "pending",
+      "to": "complete"
+    },
+    {
+      "assertion_id": "C06",
+      "from": "pending",
+      "to": "complete"
+    },
+    {
+      "assertion_id": "L01",
+      "from": "pending",
+      "to": "complete"
+    },
+    {
+      "assertion_id": "L02",
+      "from": "pending",
+      "to": "complete"
+    },
+    {
+      "assertion_id": "L03",
+      "from": "pending",
+      "to": "complete"
+    },
+    {
+      "assertion_id": "L04",
+      "from": "pending",
+      "to": "complete"
+    },
+    {
+      "assertion_id": "L05",
+      "from": "pending",
+      "to": "complete"
+    }
+  ],
+  "run_metadata": {
+    "calculator_version": "1.0.0",
+    "external_requests_used": 0,
+    "numeric_engine": "Decimal input; Fraction exact arithmetic; Decimal final rounding",
+    "python_requirement": "3.9+",
+    "request_limit": 64,
+    "stdlib_only": true,
+    "time_limit_seconds": 900
+  },
+  "sources": [
+    {
+      "evidence_ids": [
+        "E-A-M",
+        "E-A-U",
+        "E-A-P",
+        "E-B-M",
+        "E-B-U",
+        "E-C-M",
+        "E-ALL-M",
+        "E-ALL-U",
+        "E-ALL-P",
+        "E-Q-HEADERS"
+      ],
+      "source_id": "T1",
+      "source_type": "table",
+      "used_by": [
+        "C01",
+        "C02",
+        "D01",
+        "D02",
+        "D03",
+        "D04",
+        "D05",
+        "D06",
+        "D07",
+        "D08",
+        "D09",
+        "L01",
+        "L02"
+      ]
+    },
+    {
+      "evidence_ids": [
+        "E-T2-A-OBS",
+        "E-T2-A-PLAN",
+        "E-T2-B-OBS",
+        "E-T2-C-OBS",
+        "E-T2-TOTAL-OBS"
+      ],
+      "source_id": "T2",
+      "source_type": "table",
+      "used_by": [
+        "C05",
+        "C06",
+        "D13",
+        "L04"
+      ]
+    },
+    {
+      "evidence_ids": [
+        "E-F-CPU-BASE",
+        "E-F-CPU-CAND",
+        "E-F-LAT-A",
+        "E-F-HEAD",
+        "E-F-INDEX-BASE",
+        "E-F-INDEX-NEW",
+        "E-Q-SCOPE"
+      ],
+      "source_id": "F1",
+      "source_type": "figure_caption",
+      "used_by": [
+        "C03",
+        "C04",
+        "D10",
+        "D11",
+        "D12",
+        "D14",
+        "L03",
+        "L04",
+        "L05"
+      ]
+    }
+  ],
+  "status": "complete",
+  "summary": {
+    "calculated_assertions": 6,
+    "completed_assertions": 25,
+    "direct_assertions": 14,
+    "pending_assertions": 0,
+    "qualitative_assertions": 5,
+    "total_assertions": 25
+  },
+  "uncertainty": [
+    {
+      "code": "semantic_scope_review",
+      "message": "Scope compatibility is explicit and source-bound; no missing value is inferred."
+    }
+  ]
+}
