@@ -1,0 +1,630 @@
+{
+  "artifact_sha1": "f1435e75038a17ce6151d1b067eb327cd125bf86",
+  "data": {
+    "candidates": [
+      {
+        "authors": [
+          "Aster, Lin",
+          "Velluti, Marco"
+        ],
+        "doi": "10.0000/synth.001",
+        "hop": 0,
+        "kind": "resolved",
+        "record_id": "doi:10.0000/synth.001",
+        "source": {
+          "file": "examples/corpus/crossref_batch.json",
+          "pointer": "/message/items/0"
+        },
+        "title": "Adaptive Gradient Sketching for Sparse Citation Networks",
+        "venue": "Journal of Synthetic Bibliometrics",
+        "year": 2021
+      },
+      {
+        "authors": [
+          "Nandakumar, Priya"
+        ],
+        "doi": "10.0000/synth.002",
+        "hop": 1,
+        "kind": "resolved",
+        "record_id": "doi:10.0000/synth.002",
+        "source": {
+          "file": "examples/corpus/crossref_batch.json",
+          "pointer": "/message/items/1"
+        },
+        "title": "Efficient Reservoir Sampling over Streaming Graphs",
+        "venue": "Transactions on Fictional Algorithms",
+        "via_edge": {
+          "direction_restored": false,
+          "source_id": "doi:10.0000/synth.001",
+          "target_id": "doi:10.0000/synth.002",
+          "type": "reference"
+        },
+        "year": 2019
+      },
+      {
+        "authors": [
+          "Okafor T",
+          "Grimaldi S"
+        ],
+        "doi": "10.0000/synth.003",
+        "hop": 1,
+        "kind": "resolved",
+        "record_id": "doi:10.0000/synth.003",
+        "source": {
+          "file": "examples/corpus/europepmc_batch.json",
+          "pointer": "/resultList/result/0"
+        },
+        "title": "Sketch-Based Centrality Estimation in Large Bibliographic Graphs",
+        "venue": "Annals of Imaginary Informatics",
+        "via_edge": {
+          "direction_restored": true,
+          "source_id": "doi:10.0000/synth.001",
+          "target_id": "doi:10.0000/synth.003",
+          "type": "citation"
+        },
+        "year": 2023
+      },
+      {
+        "authors": [
+          "Hana Bergstrom",
+          "Ravi Chatterjee"
+        ],
+        "doi": "10.0000/synth.004",
+        "hop": 1,
+        "kind": "resolved",
+        "record_id": "doi:10.0000/synth.004",
+        "source": {
+          "file": "examples/corpus/openalex_nodes.jsonl",
+          "pointer": "line 2"
+        },
+        "title": "A Survey of Approximate Neighborhood Methods",
+        "venue": "Review of Synthetic Graph Methods",
+        "via_edge": {
+          "direction_restored": false,
+          "source_id": "doi:10.0000/synth.001",
+          "target_id": "doi:10.0000/synth.004",
+          "type": "reference"
+        },
+        "year": 2020
+      },
+      {
+        "authors": [],
+        "doi": "10.0000/synth.404",
+        "hop": 1,
+        "kind": "stub",
+        "raw_pointer": "Aster, L. Phantom Sketching on Unseen Graphs, unpublished note.",
+        "record_id": "doi:10.0000/synth.404",
+        "source": {
+          "file": "examples/corpus/crossref_batch.json",
+          "pointer": "/message/items/0/reference/2"
+        },
+        "title": null,
+        "venue": null,
+        "via_edge": {
+          "direction_restored": false,
+          "source_id": "doi:10.0000/synth.001",
+          "target_id": "doi:10.0000/synth.404",
+          "type": "reference"
+        },
+        "year": null
+      }
+    ],
+    "corpus_records": {
+      "records": {
+        "doi:10.0000/synth.001": {
+          "authors": [
+            "Aster, Lin",
+            "Velluti, Marco"
+          ],
+          "citations_raw": [],
+          "doi": "10.0000/synth.001",
+          "extra_sources": [],
+          "kind": "resolved",
+          "openalex_id": null,
+          "record_id": "doi:10.0000/synth.001",
+          "refs": [
+            {
+              "doi": "10.0000/synth.002",
+              "raw": "ref1",
+              "source": {
+                "file": "examples/corpus/crossref_batch.json",
+                "pointer": "/message/items/0/reference/0"
+              },
+              "title": "Efficient Reservoir Sampling over Streaming Graphs"
+            },
+            {
+              "doi": "10.0000/synth.004",
+              "raw": "ref2",
+              "source": {
+                "file": "examples/corpus/crossref_batch.json",
+                "pointer": "/message/items/0/reference/1"
+              },
+              "title": "A Survey of Approximate Neighborhood Methods"
+            },
+            {
+              "doi": "10.0000/synth.404",
+              "raw": "Aster, L. Phantom Sketching on Unseen Graphs, unpublished note.",
+              "source": {
+                "file": "examples/corpus/crossref_batch.json",
+                "pointer": "/message/items/0/reference/2"
+              },
+              "title": null
+            }
+          ],
+          "source": {
+            "file": "examples/corpus/crossref_batch.json",
+            "pointer": "/message/items/0"
+          },
+          "title": "Adaptive Gradient Sketching for Sparse Citation Networks",
+          "venue": "Journal of Synthetic Bibliometrics",
+          "year": 2021
+        },
+        "doi:10.0000/synth.002": {
+          "authors": [
+            "Nandakumar, Priya"
+          ],
+          "citations_raw": [],
+          "doi": "10.0000/synth.002",
+          "extra_sources": [
+            {
+              "file": "examples/corpus/openalex_nodes.jsonl",
+              "pointer": "line 1"
+            }
+          ],
+          "kind": "resolved",
+          "openalex_id": "https://openalex.org/W0000000002",
+          "record_id": "doi:10.0000/synth.002",
+          "refs": [],
+          "source": {
+            "file": "examples/corpus/crossref_batch.json",
+            "pointer": "/message/items/1"
+          },
+          "title": "Efficient Reservoir Sampling over Streaming Graphs",
+          "venue": "Transactions on Fictional Algorithms",
+          "year": 2019
+        },
+        "doi:10.0000/synth.003": {
+          "authors": [
+            "Okafor T",
+            "Grimaldi S"
+          ],
+          "citations_raw": [],
+          "doi": "10.0000/synth.003",
+          "extra_sources": [],
+          "kind": "resolved",
+          "openalex_id": null,
+          "record_id": "doi:10.0000/synth.003",
+          "refs": [
+            {
+              "doi": "10.0000/synth.001",
+              "raw": "Aster L, Velluti M. Adaptive Gradient Sketching for Sparse Citation Networks. J Synth Bibliometrics. 2021.",
+              "source": {
+                "file": "examples/corpus/europepmc_batch.json",
+                "pointer": "/resultList/result/0/referenceList/reference/0"
+              },
+              "title": null
+            }
+          ],
+          "source": {
+            "file": "examples/corpus/europepmc_batch.json",
+            "pointer": "/resultList/result/0"
+          },
+          "title": "Sketch-Based Centrality Estimation in Large Bibliographic Graphs",
+          "venue": "Annals of Imaginary Informatics",
+          "year": 2023
+        },
+        "doi:10.0000/synth.004": {
+          "authors": [
+            "Hana Bergstrom",
+            "Ravi Chatterjee"
+          ],
+          "citations_raw": [],
+          "doi": "10.0000/synth.004",
+          "extra_sources": [],
+          "kind": "resolved",
+          "openalex_id": "https://openalex.org/W0000000004",
+          "record_id": "doi:10.0000/synth.004",
+          "refs": [
+            {
+              "doi": null,
+              "raw": "https://openalex.org/W0000000002",
+              "source": {
+                "file": "examples/corpus/openalex_nodes.jsonl",
+                "pointer": "line 2/referenced_works/0"
+              },
+              "title": null
+            }
+          ],
+          "source": {
+            "file": "examples/corpus/openalex_nodes.jsonl",
+            "pointer": "line 2"
+          },
+          "title": "A Survey of Approximate Neighborhood Methods",
+          "venue": "Review of Synthetic Graph Methods",
+          "year": 2020
+        },
+        "doi:10.0000/synth.005": {
+          "authors": [
+            "Elena Voronova"
+          ],
+          "citations_raw": [],
+          "doi": "10.0000/synth.005",
+          "extra_sources": [],
+          "kind": "resolved",
+          "openalex_id": "https://openalex.org/W0000000005",
+          "record_id": "doi:10.0000/synth.005",
+          "refs": [
+            {
+              "doi": null,
+              "raw": "https://openalex.org/W0000000002",
+              "source": {
+                "file": "examples/corpus/openalex_nodes.jsonl",
+                "pointer": "line 3/referenced_works/0"
+              },
+              "title": null
+            }
+          ],
+          "source": {
+            "file": "examples/corpus/openalex_nodes.jsonl",
+            "pointer": "line 3"
+          },
+          "title": "Robust Hashing for Dynamic Graph Summaries",
+          "venue": "Proceedings of the Fictional Conference on Data Sketches",
+          "year": 2022
+        },
+        "doi:10.0000/synth.404": {
+          "authors": [],
+          "citations_raw": [],
+          "doi": "10.0000/synth.404",
+          "extra_sources": [],
+          "kind": "stub",
+          "openalex_id": null,
+          "raw_pointer": "Aster, L. Phantom Sketching on Unseen Graphs, unpublished note.",
+          "record_id": "doi:10.0000/synth.404",
+          "refs": [],
+          "source": {
+            "file": "examples/corpus/crossref_batch.json",
+            "pointer": "/message/items/0/reference/2"
+          },
+          "title": null,
+          "venue": null,
+          "year": null
+        }
+      }
+    },
+    "evidence": [
+      {
+        "kind": "seed-resolution",
+        "note": "种子记录，按 DOI/标题键在语料中解析。",
+        "record_id": "doi:10.0000/synth.001",
+        "source": {
+          "file": "examples/corpus/crossref_batch.json",
+          "pointer": "/message/items/0"
+        }
+      },
+      {
+        "hop": 1,
+        "kind": "expansion",
+        "note": "沿 reference 边第 1 层扩展到达。",
+        "record_id": "doi:10.0000/synth.002",
+        "source": {
+          "file": "examples/corpus/crossref_batch.json",
+          "pointer": "/message/items/0/reference/0"
+        },
+        "via_edge": {
+          "direction_restored": false,
+          "source_id": "doi:10.0000/synth.001",
+          "target_id": "doi:10.0000/synth.002",
+          "type": "reference"
+        }
+      },
+      {
+        "hop": 1,
+        "kind": "expansion",
+        "note": "沿 citation 边第 1 层扩展到达。",
+        "record_id": "doi:10.0000/synth.003",
+        "source": {
+          "file": "examples/corpus/europepmc_batch.json",
+          "pointer": "/resultList/result/0/referenceList/reference/0"
+        },
+        "via_edge": {
+          "direction_restored": true,
+          "source_id": "doi:10.0000/synth.001",
+          "target_id": "doi:10.0000/synth.003",
+          "type": "citation"
+        }
+      },
+      {
+        "hop": 1,
+        "kind": "expansion",
+        "note": "沿 reference 边第 1 层扩展到达。",
+        "record_id": "doi:10.0000/synth.004",
+        "source": {
+          "file": "examples/corpus/crossref_batch.json",
+          "pointer": "/message/items/0/reference/1"
+        },
+        "via_edge": {
+          "direction_restored": false,
+          "source_id": "doi:10.0000/synth.001",
+          "target_id": "doi:10.0000/synth.004",
+          "type": "reference"
+        }
+      },
+      {
+        "hop": 1,
+        "kind": "expansion",
+        "note": "沿 reference 边第 1 层扩展到达。",
+        "record_id": "doi:10.0000/synth.404",
+        "source": {
+          "file": "examples/corpus/crossref_batch.json",
+          "pointer": "/message/items/0/reference/2"
+        },
+        "via_edge": {
+          "direction_restored": false,
+          "source_id": "doi:10.0000/synth.001",
+          "target_id": "doi:10.0000/synth.404",
+          "type": "reference"
+        }
+      }
+    ],
+    "graph_edges": [
+      {
+        "direction_restored": false,
+        "source": {
+          "file": "examples/corpus/crossref_batch.json",
+          "pointer": "/message/items/0/reference/0"
+        },
+        "source_id": "doi:10.0000/synth.001",
+        "target_id": "doi:10.0000/synth.002",
+        "type": "reference"
+      },
+      {
+        "direction_restored": true,
+        "restored_from": "doi:10.0000/synth.003->doi:10.0000/synth.001",
+        "source": {
+          "file": "examples/corpus/europepmc_batch.json",
+          "pointer": "/resultList/result/0/referenceList/reference/0"
+        },
+        "source_id": "doi:10.0000/synth.001",
+        "target_id": "doi:10.0000/synth.003",
+        "type": "citation"
+      },
+      {
+        "direction_restored": false,
+        "source": {
+          "file": "examples/corpus/crossref_batch.json",
+          "pointer": "/message/items/0/reference/1"
+        },
+        "source_id": "doi:10.0000/synth.001",
+        "target_id": "doi:10.0000/synth.004",
+        "type": "reference"
+      },
+      {
+        "direction_restored": false,
+        "source": {
+          "file": "examples/corpus/crossref_batch.json",
+          "pointer": "/message/items/0/reference/2"
+        },
+        "source_id": "doi:10.0000/synth.001",
+        "target_id": "doi:10.0000/synth.404",
+        "type": "reference"
+      },
+      {
+        "direction_restored": true,
+        "restored_from": "doi:10.0000/synth.001->doi:10.0000/synth.002",
+        "source": {
+          "file": "examples/corpus/crossref_batch.json",
+          "pointer": "/message/items/0/reference/0"
+        },
+        "source_id": "doi:10.0000/synth.002",
+        "target_id": "doi:10.0000/synth.001",
+        "type": "citation"
+      },
+      {
+        "direction_restored": true,
+        "restored_from": "doi:10.0000/synth.004->doi:10.0000/synth.002",
+        "source": {
+          "file": "examples/corpus/openalex_nodes.jsonl",
+          "pointer": "line 2/referenced_works/0"
+        },
+        "source_id": "doi:10.0000/synth.002",
+        "target_id": "doi:10.0000/synth.004",
+        "type": "citation"
+      },
+      {
+        "direction_restored": true,
+        "restored_from": "doi:10.0000/synth.005->doi:10.0000/synth.002",
+        "source": {
+          "file": "examples/corpus/openalex_nodes.jsonl",
+          "pointer": "line 3/referenced_works/0"
+        },
+        "source_id": "doi:10.0000/synth.002",
+        "target_id": "doi:10.0000/synth.005",
+        "type": "citation"
+      },
+      {
+        "direction_restored": false,
+        "source": {
+          "file": "examples/corpus/europepmc_batch.json",
+          "pointer": "/resultList/result/0/referenceList/reference/0"
+        },
+        "source_id": "doi:10.0000/synth.003",
+        "target_id": "doi:10.0000/synth.001",
+        "type": "reference"
+      },
+      {
+        "direction_restored": true,
+        "restored_from": "doi:10.0000/synth.001->doi:10.0000/synth.004",
+        "source": {
+          "file": "examples/corpus/crossref_batch.json",
+          "pointer": "/message/items/0/reference/1"
+        },
+        "source_id": "doi:10.0000/synth.004",
+        "target_id": "doi:10.0000/synth.001",
+        "type": "citation"
+      },
+      {
+        "direction_restored": false,
+        "source": {
+          "file": "examples/corpus/openalex_nodes.jsonl",
+          "pointer": "line 2/referenced_works/0"
+        },
+        "source_id": "doi:10.0000/synth.004",
+        "target_id": "doi:10.0000/synth.002",
+        "type": "reference"
+      },
+      {
+        "direction_restored": true,
+        "restored_from": "doi:10.0000/synth.005->doi:10.0000/synth.004",
+        "source": {
+          "file": "examples/corpus/edges_extra.csv",
+          "pointer": "line 2"
+        },
+        "source_id": "doi:10.0000/synth.004",
+        "target_id": "doi:10.0000/synth.005",
+        "type": "citation"
+      },
+      {
+        "direction_restored": false,
+        "source": {
+          "file": "examples/corpus/openalex_nodes.jsonl",
+          "pointer": "line 3/referenced_works/0"
+        },
+        "source_id": "doi:10.0000/synth.005",
+        "target_id": "doi:10.0000/synth.002",
+        "type": "reference"
+      },
+      {
+        "direction_restored": false,
+        "source": {
+          "file": "examples/corpus/edges_extra.csv",
+          "pointer": "line 2"
+        },
+        "source_id": "doi:10.0000/synth.005",
+        "target_id": "doi:10.0000/synth.004",
+        "type": "reference"
+      },
+      {
+        "direction_restored": true,
+        "restored_from": "doi:10.0000/synth.001->doi:10.0000/synth.404",
+        "source": {
+          "file": "examples/corpus/crossref_batch.json",
+          "pointer": "/message/items/0/reference/2"
+        },
+        "source_id": "doi:10.0000/synth.404",
+        "target_id": "doi:10.0000/synth.001",
+        "type": "citation"
+      }
+    ],
+    "result_edges": [
+      {
+        "direction_restored": false,
+        "source": {
+          "file": "examples/corpus/crossref_batch.json",
+          "pointer": "/message/items/0/reference/0"
+        },
+        "source_id": "doi:10.0000/synth.001",
+        "target_id": "doi:10.0000/synth.002",
+        "type": "reference"
+      },
+      {
+        "direction_restored": true,
+        "restored_from": "doi:10.0000/synth.003->doi:10.0000/synth.001",
+        "source": {
+          "file": "examples/corpus/europepmc_batch.json",
+          "pointer": "/resultList/result/0/referenceList/reference/0"
+        },
+        "source_id": "doi:10.0000/synth.001",
+        "target_id": "doi:10.0000/synth.003",
+        "type": "citation"
+      },
+      {
+        "direction_restored": false,
+        "source": {
+          "file": "examples/corpus/crossref_batch.json",
+          "pointer": "/message/items/0/reference/1"
+        },
+        "source_id": "doi:10.0000/synth.001",
+        "target_id": "doi:10.0000/synth.004",
+        "type": "reference"
+      },
+      {
+        "direction_restored": false,
+        "source": {
+          "file": "examples/corpus/crossref_batch.json",
+          "pointer": "/message/items/0/reference/2"
+        },
+        "source_id": "doi:10.0000/synth.001",
+        "target_id": "doi:10.0000/synth.404",
+        "type": "reference"
+      },
+      {
+        "direction_restored": true,
+        "restored_from": "doi:10.0000/synth.001->doi:10.0000/synth.002",
+        "source": {
+          "file": "examples/corpus/crossref_batch.json",
+          "pointer": "/message/items/0/reference/0"
+        },
+        "source_id": "doi:10.0000/synth.002",
+        "target_id": "doi:10.0000/synth.001",
+        "type": "citation"
+      },
+      {
+        "direction_restored": true,
+        "restored_from": "doi:10.0000/synth.004->doi:10.0000/synth.002",
+        "source": {
+          "file": "examples/corpus/openalex_nodes.jsonl",
+          "pointer": "line 2/referenced_works/0"
+        },
+        "source_id": "doi:10.0000/synth.002",
+        "target_id": "doi:10.0000/synth.004",
+        "type": "citation"
+      },
+      {
+        "direction_restored": false,
+        "source": {
+          "file": "examples/corpus/europepmc_batch.json",
+          "pointer": "/resultList/result/0/referenceList/reference/0"
+        },
+        "source_id": "doi:10.0000/synth.003",
+        "target_id": "doi:10.0000/synth.001",
+        "type": "reference"
+      },
+      {
+        "direction_restored": true,
+        "restored_from": "doi:10.0000/synth.001->doi:10.0000/synth.004",
+        "source": {
+          "file": "examples/corpus/crossref_batch.json",
+          "pointer": "/message/items/0/reference/1"
+        },
+        "source_id": "doi:10.0000/synth.004",
+        "target_id": "doi:10.0000/synth.001",
+        "type": "citation"
+      },
+      {
+        "direction_restored": false,
+        "source": {
+          "file": "examples/corpus/openalex_nodes.jsonl",
+          "pointer": "line 2/referenced_works/0"
+        },
+        "source_id": "doi:10.0000/synth.004",
+        "target_id": "doi:10.0000/synth.002",
+        "type": "reference"
+      },
+      {
+        "direction_restored": true,
+        "restored_from": "doi:10.0000/synth.001->doi:10.0000/synth.404",
+        "source": {
+          "file": "examples/corpus/crossref_batch.json",
+          "pointer": "/message/items/0/reference/2"
+        },
+        "source_id": "doi:10.0000/synth.404",
+        "target_id": "doi:10.0000/synth.001",
+        "type": "citation"
+      }
+    ]
+  },
+  "finished_at": "2026-11-25T08:58:15.141991+00:00",
+  "stage": 2,
+  "stage_name": "stage2_shallow"
+}

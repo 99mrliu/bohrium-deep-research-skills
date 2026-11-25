@@ -1,0 +1,29 @@
+{
+  "_meta": {
+    "purpose": "result.json 骨架：output_contract 逐字段占位 + 填充计划；pipeline.py 会按 output_contract 自动镜像填充，无需手工编辑本文件",
+    "case_file": "/Users/liuhengshen/Desktop/bhr_product/ch60a8202d-new/bundles/v2-d-contract-first-deliverable-forge/examples/case.json",
+    "contract_fields": 9
+  },
+  "_fill_plan": {
+    "case_id": "从 case.json 顶层 case_id 原样复制；pipeline 自动填充",
+    "seed_paper": "种子记录视图：DOI/标题鲁棒解析后的规范化记录（含 locator）；pipeline 自动填充",
+    "candidates": "去重后的候选文献清单（含 layer/relation/locator/stub 标记）；pipeline 自动填充",
+    "edges": "引用边表（kind=reference/citation，含 direction_restored 标记与 locator）；pipeline 自动填充",
+    "evidence_records": "逐候选与逐边的关联依据 + 可回指定位 {file,pointer}；pipeline 自动填充",
+    "status": "ok/partial/failed，诚实反映完成度；pipeline 自动填充",
+    "uncertainty": "stub、解析失败、合并、缺字段等不确定性说明；pipeline 自动填充",
+    "layer_counts": "各扩展层新增候选数统计；pipeline 自动填充",
+    "method_summary": "一段中文方法摘要（扩展方向、去重键、规模）；pipeline 自动填充"
+  },
+  "skeleton": {
+    "case_id": "synth-case-001",
+    "seed_paper": {},
+    "candidates": [],
+    "edges": [],
+    "evidence_records": [],
+    "status": "",
+    "uncertainty": [],
+    "layer_counts": {},
+    "method_summary": ""
+  }
+}

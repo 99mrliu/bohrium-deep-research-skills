@@ -1,0 +1,389 @@
+{
+  "case_id": "SYNTH-DEMO-001",
+  "seed_node_ids": [
+    "doi:10.0000/synth.seed-2021"
+  ],
+  "nodes": [
+    {
+      "id": "doi:10.0000/synth.alpha-2005",
+      "layer": 2,
+      "directions": [
+        "backward"
+      ],
+      "stub": false,
+      "classic": false
+    },
+    {
+      "id": "doi:10.0000/synth.beta-2015",
+      "layer": 1,
+      "directions": [
+        "backward"
+      ],
+      "stub": false,
+      "classic": false
+    },
+    {
+      "id": "doi:10.0000/synth.classic-1998",
+      "layer": 1,
+      "directions": [
+        "backward"
+      ],
+      "stub": false,
+      "classic": true
+    },
+    {
+      "id": "doi:10.0000/synth.delta-2022",
+      "layer": 1,
+      "directions": [
+        "forward"
+      ],
+      "stub": false,
+      "classic": false
+    },
+    {
+      "id": "doi:10.0000/synth.epsilon-2023",
+      "layer": 1,
+      "directions": [
+        "forward"
+      ],
+      "stub": false,
+      "classic": false
+    },
+    {
+      "id": "doi:10.0000/synth.seed-2021",
+      "layer": 0,
+      "directions": [
+        "seed"
+      ],
+      "stub": false,
+      "classic": false
+    },
+    {
+      "id": "doi:10.0000/synth.unresolved-2010",
+      "layer": 2,
+      "directions": [
+        "backward"
+      ],
+      "stub": true,
+      "classic": false
+    }
+  ],
+  "edges": [
+    {
+      "source": "doi:10.0000/synth.alpha-2005",
+      "target": "doi:10.0000/synth.beta-2015",
+      "direction": "forward",
+      "semantics": "cited_by",
+      "direction_restored": true,
+      "sources": [
+        {
+          "file": "examples/corpus/crossref_batch.json",
+          "pointer": "/message/items/2/reference/0"
+        }
+      ]
+    },
+    {
+      "source": "doi:10.0000/synth.beta-2015",
+      "target": "doi:10.0000/synth.alpha-2005",
+      "direction": "backward",
+      "semantics": "cites",
+      "direction_restored": false,
+      "sources": [
+        {
+          "file": "examples/corpus/crossref_batch.json",
+          "pointer": "/message/items/2/reference/0"
+        }
+      ]
+    },
+    {
+      "source": "doi:10.0000/synth.beta-2015",
+      "target": "doi:10.0000/synth.classic-1998",
+      "direction": "backward",
+      "semantics": "cites",
+      "direction_restored": false,
+      "sources": [
+        {
+          "file": "examples/corpus/crossref_batch.json",
+          "pointer": "/message/items/2/reference/1"
+        }
+      ]
+    },
+    {
+      "source": "doi:10.0000/synth.beta-2015",
+      "target": "doi:10.0000/synth.epsilon-2023",
+      "direction": "forward",
+      "semantics": "cited_by",
+      "direction_restored": true,
+      "sources": [
+        {
+          "file": "examples/corpus/europepmc_results.json",
+          "pointer": "/resultList/result/1/referenceList/reference/2"
+        }
+      ]
+    },
+    {
+      "source": "doi:10.0000/synth.beta-2015",
+      "target": "doi:10.0000/synth.seed-2021",
+      "direction": "forward",
+      "semantics": "cited_by",
+      "direction_restored": true,
+      "sources": [
+        {
+          "file": "examples/corpus/crossref_batch.json",
+          "pointer": "/message/items/4/reference/1"
+        }
+      ]
+    },
+    {
+      "source": "doi:10.0000/synth.beta-2015",
+      "target": "doi:10.0000/synth.unresolved-2010",
+      "direction": "backward",
+      "semantics": "cites",
+      "direction_restored": false,
+      "sources": [
+        {
+          "file": "examples/corpus/crossref_batch.json",
+          "pointer": "/message/items/2/reference/2"
+        }
+      ]
+    },
+    {
+      "source": "doi:10.0000/synth.classic-1998",
+      "target": "doi:10.0000/synth.beta-2015",
+      "direction": "forward",
+      "semantics": "cited_by",
+      "direction_restored": true,
+      "sources": [
+        {
+          "file": "examples/corpus/crossref_batch.json",
+          "pointer": "/message/items/2/reference/1"
+        }
+      ]
+    },
+    {
+      "source": "doi:10.0000/synth.classic-1998",
+      "target": "doi:10.0000/synth.delta-2022",
+      "direction": "forward",
+      "semantics": "cited_by",
+      "direction_restored": true,
+      "sources": [
+        {
+          "file": "examples/corpus/europepmc_results.json",
+          "pointer": "/resultList/result/0/referenceList/reference/1"
+        }
+      ]
+    },
+    {
+      "source": "doi:10.0000/synth.classic-1998",
+      "target": "doi:10.0000/synth.seed-2021",
+      "direction": "forward",
+      "semantics": "cited_by",
+      "direction_restored": true,
+      "sources": [
+        {
+          "file": "examples/corpus/crossref_batch.json",
+          "pointer": "/message/items/4/reference/0"
+        }
+      ]
+    },
+    {
+      "source": "doi:10.0000/synth.delta-2022",
+      "target": "doi:10.0000/synth.classic-1998",
+      "direction": "backward",
+      "semantics": "cites",
+      "direction_restored": false,
+      "sources": [
+        {
+          "file": "examples/corpus/europepmc_results.json",
+          "pointer": "/resultList/result/0/referenceList/reference/1"
+        }
+      ]
+    },
+    {
+      "source": "doi:10.0000/synth.delta-2022",
+      "target": "doi:10.0000/synth.epsilon-2023",
+      "direction": "forward",
+      "semantics": "cited_by",
+      "direction_restored": true,
+      "sources": [
+        {
+          "file": "examples/corpus/europepmc_results.json",
+          "pointer": "/resultList/result/1/referenceList/reference/1"
+        }
+      ]
+    },
+    {
+      "source": "doi:10.0000/synth.delta-2022",
+      "target": "doi:10.0000/synth.seed-2021",
+      "direction": "backward",
+      "semantics": "cites",
+      "direction_restored": false,
+      "sources": [
+        {
+          "file": "examples/corpus/europepmc_results.json",
+          "pointer": "/resultList/result/0/referenceList/reference/0"
+        }
+      ]
+    },
+    {
+      "source": "doi:10.0000/synth.epsilon-2023",
+      "target": "doi:10.0000/synth.beta-2015",
+      "direction": "backward",
+      "semantics": "cites",
+      "direction_restored": false,
+      "sources": [
+        {
+          "file": "examples/corpus/europepmc_results.json",
+          "pointer": "/resultList/result/1/referenceList/reference/2"
+        }
+      ]
+    },
+    {
+      "source": "doi:10.0000/synth.epsilon-2023",
+      "target": "doi:10.0000/synth.delta-2022",
+      "direction": "backward",
+      "semantics": "cites",
+      "direction_restored": false,
+      "sources": [
+        {
+          "file": "examples/corpus/europepmc_results.json",
+          "pointer": "/resultList/result/1/referenceList/reference/1"
+        }
+      ]
+    },
+    {
+      "source": "doi:10.0000/synth.epsilon-2023",
+      "target": "doi:10.0000/synth.seed-2021",
+      "direction": "backward",
+      "semantics": "cites",
+      "direction_restored": false,
+      "sources": [
+        {
+          "file": "examples/corpus/europepmc_results.json",
+          "pointer": "/resultList/result/1/referenceList/reference/0"
+        }
+      ]
+    },
+    {
+      "source": "doi:10.0000/synth.seed-2021",
+      "target": "doi:10.0000/synth.beta-2015",
+      "direction": "backward",
+      "semantics": "cites",
+      "direction_restored": false,
+      "sources": [
+        {
+          "file": "examples/corpus/crossref_batch.json",
+          "pointer": "/message/items/4/reference/1"
+        }
+      ]
+    },
+    {
+      "source": "doi:10.0000/synth.seed-2021",
+      "target": "doi:10.0000/synth.classic-1998",
+      "direction": "backward",
+      "semantics": "cites",
+      "direction_restored": false,
+      "sources": [
+        {
+          "file": "examples/corpus/crossref_batch.json",
+          "pointer": "/message/items/4/reference/0"
+        }
+      ]
+    },
+    {
+      "source": "doi:10.0000/synth.seed-2021",
+      "target": "doi:10.0000/synth.delta-2022",
+      "direction": "forward",
+      "semantics": "cited_by",
+      "direction_restored": true,
+      "sources": [
+        {
+          "file": "examples/corpus/europepmc_results.json",
+          "pointer": "/resultList/result/0/referenceList/reference/0"
+        }
+      ]
+    },
+    {
+      "source": "doi:10.0000/synth.seed-2021",
+      "target": "doi:10.0000/synth.epsilon-2023",
+      "direction": "forward",
+      "semantics": "cited_by",
+      "direction_restored": true,
+      "sources": [
+        {
+          "file": "examples/corpus/europepmc_results.json",
+          "pointer": "/resultList/result/1/referenceList/reference/0"
+        }
+      ]
+    },
+    {
+      "source": "doi:10.0000/synth.unresolved-2010",
+      "target": "doi:10.0000/synth.beta-2015",
+      "direction": "forward",
+      "semantics": "cited_by",
+      "direction_restored": true,
+      "sources": [
+        {
+          "file": "examples/corpus/crossref_batch.json",
+          "pointer": "/message/items/2/reference/2"
+        }
+      ]
+    }
+  ],
+  "layers": [
+    {
+      "depth": 1,
+      "added": [
+        "doi:10.0000/synth.classic-1998",
+        "doi:10.0000/synth.beta-2015",
+        "doi:10.0000/synth.epsilon-2023",
+        "doi:10.0000/synth.delta-2022"
+      ],
+      "n_added": 4,
+      "n_backward": 2,
+      "n_forward": 2,
+      "pruned": {
+        "branch_cap": 1,
+        "keyword_irrelevant": 1
+      }
+    },
+    {
+      "depth": 2,
+      "added": [
+        "doi:10.0000/synth.alpha-2005",
+        "doi:10.0000/synth.unresolved-2010"
+      ],
+      "n_added": 2,
+      "n_backward": 2,
+      "n_forward": 0,
+      "pruned": {}
+    },
+    {
+      "depth": 3,
+      "added": [],
+      "n_added": 0,
+      "n_backward": 0,
+      "n_forward": 0,
+      "pruned": {}
+    }
+  ],
+  "params": {
+    "max_depth": 4,
+    "max_nodes": 250,
+    "max_branch": 2,
+    "year_min": 2000,
+    "classic_citedby": 1000,
+    "keywords": [
+      "snowball",
+      "synthetic",
+      "widget",
+      "citation",
+      "benchmark",
+      "traversal",
+      "citations",
+      "classic",
+      "foundational",
+      "sampling"
+    ]
+  }
+}

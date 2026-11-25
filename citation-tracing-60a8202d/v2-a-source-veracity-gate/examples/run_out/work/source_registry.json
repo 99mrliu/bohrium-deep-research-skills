@@ -1,0 +1,74 @@
+{
+  "roots_scanned": [
+    "examples/corpus"
+  ],
+  "roots_missing": [],
+  "files_total": 4,
+  "files_parsed_ok": 3,
+  "parse_coverage": 0.75,
+  "records_total": 5,
+  "work_records": 5,
+  "edge_records": 0,
+  "files": [
+    {
+      "file": "broken_response.json",
+      "abs_path": "/Users/liuhengshen/Desktop/bhr_product/ch60a8202d-new/bundles/v2-a-source-veracity-gate/examples/corpus/broken_response.json",
+      "sha1": "ae27b980187a35cee8939a52d8849916a94a7a4d",
+      "bytes": 192,
+      "format": "unknown",
+      "records": 0,
+      "status": "failed",
+      "error": "JSONDecodeError: Expecting ',' delimiter: line 7 column 1 (char 192)"
+    },
+    {
+      "file": "crossref_batch1.json",
+      "abs_path": "/Users/liuhengshen/Desktop/bhr_product/ch60a8202d-new/bundles/v2-a-source-veracity-gate/examples/corpus/crossref_batch1.json",
+      "sha1": "8ad7778a77b4c0c735a029e834cdb35d88de33f7",
+      "bytes": 1246,
+      "format": "crossref",
+      "records": 2,
+      "status": "ok",
+      "error": null
+    },
+    {
+      "file": "crossref_batch2.json",
+      "abs_path": "/Users/liuhengshen/Desktop/bhr_product/ch60a8202d-new/bundles/v2-a-source-veracity-gate/examples/corpus/crossref_batch2.json",
+      "sha1": "196213977d93913ac24fbcdde19b0a355cead6b5",
+      "bytes": 627,
+      "format": "crossref",
+      "records": 1,
+      "status": "ok",
+      "error": null
+    },
+    {
+      "file": "europepmc_batch1.json",
+      "abs_path": "/Users/liuhengshen/Desktop/bhr_product/ch60a8202d-new/bundles/v2-a-source-veracity-gate/examples/corpus/europepmc_batch1.json",
+      "sha1": "1f3b8a18b4f959af5daf48d59e92d9d068ebb0fb",
+      "bytes": 1103,
+      "format": "europepmc",
+      "records": 2,
+      "status": "ok",
+      "error": null
+    }
+  ],
+  "conflicts": [
+    {
+      "type": "same-doi-different-title",
+      "doi": "10.0000/synth.001",
+      "titles": [
+        "A Synthetic Gradient Method for Citation Flow",
+        "A Synthetic Gradient Method for Citation Flow: Extended Conference Version"
+      ],
+      "locators": [
+        {
+          "file": "crossref_batch1.json",
+          "pointer": "/message/items/0"
+        },
+        {
+          "file": "europepmc_batch1.json",
+          "pointer": "/resultList/result/1"
+        }
+      ]
+    }
+  ]
+}

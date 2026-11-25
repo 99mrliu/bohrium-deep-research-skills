@@ -1,0 +1,38 @@
+{
+  "status": "ok",
+  "message-type": "work-list",
+  "note": "SYNTHETIC sample data, not real papers. 合成示例数据，非真实文献。",
+  "message": {
+    "total-results": 2,
+    "items": [
+      {
+        "DOI": "10.0000/synth.001",
+        "title": ["Adaptive Gradient Sketching for Sparse Citation Networks"],
+        "author": [
+          {"given": "Lin", "family": "Aster"},
+          {"given": "Marco", "family": "Velluti"}
+        ],
+        "issued": {"date-parts": [[2021]]},
+        "container-title": ["Journal of Synthetic Bibliometrics"],
+        "reference": [
+          {"key": "ref1", "DOI": "10.0000/synth.002",
+           "article-title": "Efficient Reservoir Sampling over Streaming Graphs"},
+          {"key": "ref2", "DOI": "https://doi.org/10.0000/synth.004",
+           "article-title": "A Survey of Approximate Neighborhood Methods"},
+          {"key": "ref3", "DOI": "10.0000/synth.404",
+           "unstructured": "Aster, L. Phantom Sketching on Unseen Graphs, unpublished note."}
+        ]
+      },
+      {
+        "DOI": "10.0000/synth.002",
+        "title": ["Efficient Reservoir Sampling over Streaming Graphs"],
+        "author": [
+          {"given": "Priya", "family": "Nandakumar"}
+        ],
+        "issued": {"date-parts": [[2019]]},
+        "container-title": ["Transactions on Fictional Algorithms"],
+        "reference": []
+      }
+    ]
+  }
+}

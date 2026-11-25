@@ -1,0 +1,21 @@
+{
+  "_notice": "合成示例 / SYNTHETIC, not a real case, 非正式案例。仅用于演示 Skill 管线。",
+  "case_id": "SYNTH-DEMO-001",
+  "seed_papers": [
+    {"doi": "10.0000/synth.seed-2021", "title": "Snowball sampling of synthetic widget citations"}
+  ],
+  "research_question": "Trace the citation neighbourhood of the synthetic seed paper on snowball sampling of widget citations: backward to its methodological origins and forward to follow-up work.",
+  "output_contract": {
+    "case_id": "string，原样回填案例标识",
+    "status": "ok | partial | failed，诚实状态",
+    "seed": "种子解析结果，含全部解析尝试记录",
+    "candidates": "追踪得到的候选文献节点，带层级与方向",
+    "edges": "追踪子图的引用边，每条带方向与来源定位",
+    "layers": "逐层扩展统计",
+    "pruning_log": "全部剪枝决策（节点、原因、保留/剪除）",
+    "stop_log": "停止判据记录",
+    "sources": "来源文件注册表",
+    "evidence_records": "每个节点的到达证据（边+locator）",
+    "uncertainty": "不确定性与遗漏说明"
+  }
+}

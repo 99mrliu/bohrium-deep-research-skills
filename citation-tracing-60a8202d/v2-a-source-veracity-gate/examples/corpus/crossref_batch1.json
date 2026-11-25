@@ -1,0 +1,43 @@
+{
+  "status": "ok",
+  "message-type": "work-list",
+  "message": {
+    "total-results": 2,
+    "items": [
+      {
+        "DOI": "10.0000/synth.001",
+        "title": ["A Synthetic Gradient Method for Citation Flow"],
+        "author": [
+          {"given": "Alice V.", "family": "Merian"},
+          {"given": "Boris T.", "family": "Quill"}
+        ],
+        "container-title": ["Journal of Synthetic Bibliometrics"],
+        "issued": {"date-parts": [[2019, 3, 14]]},
+        "type": "journal-article",
+        "reference": [
+          {
+            "key": "ref1",
+            "DOI": "10.0000/synth.002",
+            "article-title": "Foundations of Veracity-Gated Indexing"
+          },
+          {
+            "key": "ref2",
+            "DOI": "10.0000/synth.999",
+            "article-title": "Phantom Benchmark for Citation Recall"
+          }
+        ]
+      },
+      {
+        "DOI": "10.0000/synth.002",
+        "title": ["Foundations of Veracity-Gated Indexing"],
+        "author": [
+          {"given": "Clara", "family": "Dostoev"}
+        ],
+        "container-title": ["Annals of Fictional Retrieval"],
+        "issued": {"date-parts": [[2015, 7, 1]]},
+        "type": "journal-article",
+        "reference": []
+      }
+    ]
+  }
+}

@@ -1,0 +1,11 @@
+source,target,kind,direction_restored,locator_file,locator_pointer
+P4,P2,reference,false,/Users/liuhengshen/Desktop/bhr_product/ch60a8202d-new/bundles/v2-d-contract-first-deliverable-forge/examples/corpus/crossref_seed.json,$.message
+P4,P3,reference,false,/Users/liuhengshen/Desktop/bhr_product/ch60a8202d-new/bundles/v2-d-contract-first-deliverable-forge/examples/corpus/crossref_seed.json,$.message
+P4,S1,reference,false,/Users/liuhengshen/Desktop/bhr_product/ch60a8202d-new/bundles/v2-d-contract-first-deliverable-forge/examples/corpus/crossref_seed.json,$.message
+P4,P1,citation,true,/Users/liuhengshen/Desktop/bhr_product/ch60a8202d-new/bundles/v2-d-contract-first-deliverable-forge/examples/corpus/citing.jsonl,line 1
+P2,P3,reference,false,/Users/liuhengshen/Desktop/bhr_product/ch60a8202d-new/bundles/v2-d-contract-first-deliverable-forge/examples/corpus/crossref_batch.json,$.message.items[0]
+P2,P4,citation,true,/Users/liuhengshen/Desktop/bhr_product/ch60a8202d-new/bundles/v2-d-contract-first-deliverable-forge/examples/corpus/crossref_seed.json,$.message
+P3,P2,citation,true,/Users/liuhengshen/Desktop/bhr_product/ch60a8202d-new/bundles/v2-d-contract-first-deliverable-forge/examples/corpus/crossref_batch.json,$.message.items[0]
+P3,P4,citation,true,/Users/liuhengshen/Desktop/bhr_product/ch60a8202d-new/bundles/v2-d-contract-first-deliverable-forge/examples/corpus/crossref_seed.json,$.message
+S1,P4,citation,true,/Users/liuhengshen/Desktop/bhr_product/ch60a8202d-new/bundles/v2-d-contract-first-deliverable-forge/examples/corpus/crossref_seed.json,$.message
+P1,P4,reference,false,/Users/liuhengshen/Desktop/bhr_product/ch60a8202d-new/bundles/v2-d-contract-first-deliverable-forge/examples/corpus/citing.jsonl,line 1

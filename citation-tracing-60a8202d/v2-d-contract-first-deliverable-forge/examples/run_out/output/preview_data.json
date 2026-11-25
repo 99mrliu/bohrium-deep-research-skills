@@ -1,0 +1,111 @@
+{
+  "layout": "seed-centered radial",
+  "nodes": [
+    {
+      "id": "P4",
+      "title": "Adaptive Graph Kernels for Retinal Vessel Segmentation",
+      "layer": 0,
+      "stub": false,
+      "x": 0.0,
+      "y": 0.0
+    },
+    {
+      "id": "P1",
+      "title": "Deep Graph Kernels Improve Retinal Vessel Segmentation",
+      "unresolved_ref": "",
+      "layer": 1,
+      "stub": false,
+      "x": 0.0,
+      "y": -1.0
+    },
+    {
+      "id": "P2",
+      "title": "Spectral Graph Kernel Methods: A Foundational Study",
+      "unresolved_ref": "",
+      "layer": 1,
+      "stub": false,
+      "x": 1.0,
+      "y": 0.0
+    },
+    {
+      "id": "P3",
+      "title": "RETINA-BENCH: A Benchmark Dataset for Retinal Imaging",
+      "unresolved_ref": "",
+      "layer": 1,
+      "stub": false,
+      "x": 0.0,
+      "y": 1.0
+    },
+    {
+      "id": "S1",
+      "title": "",
+      "unresolved_ref": "10.0000/synth.999",
+      "layer": 1,
+      "stub": true,
+      "x": -1.0,
+      "y": 0.0
+    }
+  ],
+  "edges": [
+    {
+      "source": "P4",
+      "target": "P2",
+      "kind": "reference",
+      "direction_restored": false
+    },
+    {
+      "source": "P4",
+      "target": "P3",
+      "kind": "reference",
+      "direction_restored": false
+    },
+    {
+      "source": "P4",
+      "target": "S1",
+      "kind": "reference",
+      "direction_restored": false
+    },
+    {
+      "source": "P4",
+      "target": "P1",
+      "kind": "citation",
+      "direction_restored": true
+    },
+    {
+      "source": "P2",
+      "target": "P3",
+      "kind": "reference",
+      "direction_restored": false
+    },
+    {
+      "source": "P2",
+      "target": "P4",
+      "kind": "citation",
+      "direction_restored": true
+    },
+    {
+      "source": "P3",
+      "target": "P2",
+      "kind": "citation",
+      "direction_restored": true
+    },
+    {
+      "source": "P3",
+      "target": "P4",
+      "kind": "citation",
+      "direction_restored": true
+    },
+    {
+      "source": "S1",
+      "target": "P4",
+      "kind": "citation",
+      "direction_restored": true
+    },
+    {
+      "source": "P1",
+      "target": "P4",
+      "kind": "reference",
+      "direction_restored": false
+    }
+  ]
+}

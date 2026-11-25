@@ -1,0 +1,20 @@
+{
+  "_comment": "SYNTHETIC 合成示例数据，非真实文献 / not real papers。Crossref 单条 message 风格。",
+  "status": "ok",
+  "message-type": "work",
+  "message": {
+    "DOI": "10.0000/synth.001",
+    "title": ["Adaptive Graph Kernels for Retinal Vessel Segmentation"],
+    "container-title": ["Journal of Synthetic Medical Imaging"],
+    "issued": {"date-parts": [[2021]]},
+    "author": [
+      {"given": "Lin", "family": "Zhao"},
+      {"given": "Marta", "family": "Kowalska"}
+    ],
+    "reference": [
+      {"key": "ref1", "DOI": "10.0000/synth.002"},
+      {"key": "ref2", "DOI": "10.0000/synth.003"},
+      {"key": "ref3", "DOI": "10.0000/synth.999", "unstructured": "Synthetic preprint, not in local corpus"}
+    ]
+  }
+}

@@ -1,0 +1,549 @@
+{
+  "generated_by": "refgraph.py",
+  "stats": {
+    "roots_scanned": [
+      "examples/corpus"
+    ],
+    "files_ok": 2,
+    "files_failed": 0,
+    "nodes": 9,
+    "stub_nodes": 1,
+    "edges": 24,
+    "backward_edges": 12,
+    "forward_edges": 12,
+    "forward_edges_restored": 12,
+    "reference_targets_stubbed": 1
+  },
+  "registry": [
+    {
+      "file": "examples/corpus/crossref_batch.json",
+      "format": "crossref",
+      "status": "ok",
+      "records": 5,
+      "edges": 0,
+      "error": null
+    },
+    {
+      "file": "examples/corpus/europepmc_results.json",
+      "format": "europepmc",
+      "status": "ok",
+      "records": 3,
+      "edges": 0,
+      "error": null
+    }
+  ],
+  "nodes": [
+    {
+      "id": "doi:10.0000/synth.alpha-2005",
+      "doi": "10.0000/synth.alpha-2005",
+      "title": "Synthetic gradient calibration for benchmark datasets",
+      "year": 2005,
+      "authors": [
+        "Alphafield, A."
+      ],
+      "venue": "Journal of Synthetic Methods",
+      "cited_by_count": 240,
+      "stub": false,
+      "references": [],
+      "citations": [],
+      "sources": [
+        {
+          "file": "examples/corpus/crossref_batch.json",
+          "pointer": "/message/items/1"
+        }
+      ]
+    },
+    {
+      "id": "doi:10.0000/synth.beta-2015",
+      "doi": "10.0000/synth.beta-2015",
+      "title": "Improved widget alignment via calibrated gradients",
+      "year": 2015,
+      "authors": [
+        "Betafield, B."
+      ],
+      "venue": "Journal of Synthetic Methods",
+      "cited_by_count": 86,
+      "stub": false,
+      "references": [
+        "doi:10.0000/synth.alpha-2005",
+        "doi:10.0000/synth.classic-1998",
+        "doi:10.0000/synth.unresolved-2010"
+      ],
+      "citations": [],
+      "sources": [
+        {
+          "file": "examples/corpus/crossref_batch.json",
+          "pointer": "/message/items/2"
+        }
+      ]
+    },
+    {
+      "id": "doi:10.0000/synth.classic-1998",
+      "doi": "10.0000/synth.classic-1998",
+      "title": "A foundational taxonomy of synthetic widgets",
+      "year": 1998,
+      "authors": [
+        "Classicfield, C."
+      ],
+      "venue": "Annals of Synthetic Bibliometrics",
+      "cited_by_count": 4820,
+      "stub": false,
+      "references": [],
+      "citations": [],
+      "sources": [
+        {
+          "file": "examples/corpus/crossref_batch.json",
+          "pointer": "/message/items/0"
+        }
+      ]
+    },
+    {
+      "id": "doi:10.0000/synth.delta-2022",
+      "doi": "10.0000/synth.delta-2022",
+      "title": "Follow-up report on synthetic widget citation snowballing",
+      "year": 2022,
+      "authors": [
+        "Deltafield D",
+        "Epsilonfield E"
+      ],
+      "venue": "Synthetic Citation Studies",
+      "cited_by_count": 9,
+      "stub": false,
+      "references": [
+        "doi:10.0000/synth.classic-1998",
+        "doi:10.0000/synth.seed-2021"
+      ],
+      "citations": [],
+      "sources": [
+        {
+          "file": "examples/corpus/europepmc_results.json",
+          "pointer": "/resultList/result/0"
+        }
+      ]
+    },
+    {
+      "id": "doi:10.0000/synth.epsilon-2023",
+      "doi": "10.0000/synth.epsilon-2023",
+      "title": "Revisiting snowballed widget citation networks",
+      "year": 2023,
+      "authors": [
+        "Epsilonfield E"
+      ],
+      "venue": "Synthetic Citation Studies",
+      "cited_by_count": 4,
+      "stub": false,
+      "references": [
+        "doi:10.0000/synth.beta-2015",
+        "doi:10.0000/synth.delta-2022",
+        "doi:10.0000/synth.seed-2021"
+      ],
+      "citations": [],
+      "sources": [
+        {
+          "file": "examples/corpus/europepmc_results.json",
+          "pointer": "/resultList/result/1"
+        }
+      ]
+    },
+    {
+      "id": "doi:10.0000/synth.noise-2020",
+      "doi": "10.0000/synth.noise-2020",
+      "title": "Marine shellfish lipidomics survey",
+      "year": 2020,
+      "authors": [
+        "Noisefield, N."
+      ],
+      "venue": "Journal of Marine Lipids",
+      "cited_by_count": 3,
+      "stub": false,
+      "references": [],
+      "citations": [],
+      "sources": [
+        {
+          "file": "examples/corpus/crossref_batch.json",
+          "pointer": "/message/items/3"
+        }
+      ]
+    },
+    {
+      "id": "doi:10.0000/synth.seed-2021",
+      "doi": "10.0000/synth.seed-2021",
+      "title": "Snowball sampling of synthetic widget citations",
+      "year": 2021,
+      "authors": [
+        "Seedfield, S.",
+        "Tracer, T."
+      ],
+      "venue": "Journal of Synthetic Bibliometrics",
+      "cited_by_count": 17,
+      "stub": false,
+      "references": [
+        "doi:10.0000/synth.beta-2015",
+        "doi:10.0000/synth.classic-1998",
+        "doi:10.0000/synth.noise-2020"
+      ],
+      "citations": [],
+      "sources": [
+        {
+          "file": "examples/corpus/crossref_batch.json",
+          "pointer": "/message/items/4"
+        }
+      ]
+    },
+    {
+      "id": "doi:10.0000/synth.theta-2023",
+      "doi": "10.0000/synth.theta-2023",
+      "title": "Notation fixes for aggregated benchmark counts",
+      "year": 2023,
+      "authors": [
+        "Thetafield T"
+      ],
+      "venue": "Synthetic Notation Notes",
+      "cited_by_count": 2,
+      "stub": false,
+      "references": [
+        "doi:10.0000/synth.seed-2021"
+      ],
+      "citations": [],
+      "sources": [
+        {
+          "file": "examples/corpus/europepmc_results.json",
+          "pointer": "/resultList/result/2"
+        }
+      ]
+    },
+    {
+      "id": "doi:10.0000/synth.unresolved-2010",
+      "doi": "10.0000/synth.unresolved-2010",
+      "title": null,
+      "title_hint": "Unresolvable synthetic work absent from this corpus",
+      "year": null,
+      "authors": [],
+      "venue": null,
+      "cited_by_count": null,
+      "stub": true,
+      "references": [],
+      "citations": [],
+      "sources": [
+        {
+          "file": "examples/corpus/crossref_batch.json",
+          "pointer": "/message/items/2/reference/2"
+        }
+      ]
+    }
+  ],
+  "edges": [
+    {
+      "source": "doi:10.0000/synth.alpha-2005",
+      "target": "doi:10.0000/synth.beta-2015",
+      "direction": "forward",
+      "semantics": "cited_by",
+      "direction_restored": true,
+      "sources": [
+        {
+          "file": "examples/corpus/crossref_batch.json",
+          "pointer": "/message/items/2/reference/0"
+        }
+      ]
+    },
+    {
+      "source": "doi:10.0000/synth.beta-2015",
+      "target": "doi:10.0000/synth.alpha-2005",
+      "direction": "backward",
+      "semantics": "cites",
+      "direction_restored": false,
+      "sources": [
+        {
+          "file": "examples/corpus/crossref_batch.json",
+          "pointer": "/message/items/2/reference/0"
+        }
+      ]
+    },
+    {
+      "source": "doi:10.0000/synth.beta-2015",
+      "target": "doi:10.0000/synth.classic-1998",
+      "direction": "backward",
+      "semantics": "cites",
+      "direction_restored": false,
+      "sources": [
+        {
+          "file": "examples/corpus/crossref_batch.json",
+          "pointer": "/message/items/2/reference/1"
+        }
+      ]
+    },
+    {
+      "source": "doi:10.0000/synth.beta-2015",
+      "target": "doi:10.0000/synth.epsilon-2023",
+      "direction": "forward",
+      "semantics": "cited_by",
+      "direction_restored": true,
+      "sources": [
+        {
+          "file": "examples/corpus/europepmc_results.json",
+          "pointer": "/resultList/result/1/referenceList/reference/2"
+        }
+      ]
+    },
+    {
+      "source": "doi:10.0000/synth.beta-2015",
+      "target": "doi:10.0000/synth.seed-2021",
+      "direction": "forward",
+      "semantics": "cited_by",
+      "direction_restored": true,
+      "sources": [
+        {
+          "file": "examples/corpus/crossref_batch.json",
+          "pointer": "/message/items/4/reference/1"
+        }
+      ]
+    },
+    {
+      "source": "doi:10.0000/synth.beta-2015",
+      "target": "doi:10.0000/synth.unresolved-2010",
+      "direction": "backward",
+      "semantics": "cites",
+      "direction_restored": false,
+      "sources": [
+        {
+          "file": "examples/corpus/crossref_batch.json",
+          "pointer": "/message/items/2/reference/2"
+        }
+      ]
+    },
+    {
+      "source": "doi:10.0000/synth.classic-1998",
+      "target": "doi:10.0000/synth.beta-2015",
+      "direction": "forward",
+      "semantics": "cited_by",
+      "direction_restored": true,
+      "sources": [
+        {
+          "file": "examples/corpus/crossref_batch.json",
+          "pointer": "/message/items/2/reference/1"
+        }
+      ]
+    },
+    {
+      "source": "doi:10.0000/synth.classic-1998",
+      "target": "doi:10.0000/synth.delta-2022",
+      "direction": "forward",
+      "semantics": "cited_by",
+      "direction_restored": true,
+      "sources": [
+        {
+          "file": "examples/corpus/europepmc_results.json",
+          "pointer": "/resultList/result/0/referenceList/reference/1"
+        }
+      ]
+    },
+    {
+      "source": "doi:10.0000/synth.classic-1998",
+      "target": "doi:10.0000/synth.seed-2021",
+      "direction": "forward",
+      "semantics": "cited_by",
+      "direction_restored": true,
+      "sources": [
+        {
+          "file": "examples/corpus/crossref_batch.json",
+          "pointer": "/message/items/4/reference/0"
+        }
+      ]
+    },
+    {
+      "source": "doi:10.0000/synth.delta-2022",
+      "target": "doi:10.0000/synth.classic-1998",
+      "direction": "backward",
+      "semantics": "cites",
+      "direction_restored": false,
+      "sources": [
+        {
+          "file": "examples/corpus/europepmc_results.json",
+          "pointer": "/resultList/result/0/referenceList/reference/1"
+        }
+      ]
+    },
+    {
+      "source": "doi:10.0000/synth.delta-2022",
+      "target": "doi:10.0000/synth.epsilon-2023",
+      "direction": "forward",
+      "semantics": "cited_by",
+      "direction_restored": true,
+      "sources": [
+        {
+          "file": "examples/corpus/europepmc_results.json",
+          "pointer": "/resultList/result/1/referenceList/reference/1"
+        }
+      ]
+    },
+    {
+      "source": "doi:10.0000/synth.delta-2022",
+      "target": "doi:10.0000/synth.seed-2021",
+      "direction": "backward",
+      "semantics": "cites",
+      "direction_restored": false,
+      "sources": [
+        {
+          "file": "examples/corpus/europepmc_results.json",
+          "pointer": "/resultList/result/0/referenceList/reference/0"
+        }
+      ]
+    },
+    {
+      "source": "doi:10.0000/synth.epsilon-2023",
+      "target": "doi:10.0000/synth.beta-2015",
+      "direction": "backward",
+      "semantics": "cites",
+      "direction_restored": false,
+      "sources": [
+        {
+          "file": "examples/corpus/europepmc_results.json",
+          "pointer": "/resultList/result/1/referenceList/reference/2"
+        }
+      ]
+    },
+    {
+      "source": "doi:10.0000/synth.epsilon-2023",
+      "target": "doi:10.0000/synth.delta-2022",
+      "direction": "backward",
+      "semantics": "cites",
+      "direction_restored": false,
+      "sources": [
+        {
+          "file": "examples/corpus/europepmc_results.json",
+          "pointer": "/resultList/result/1/referenceList/reference/1"
+        }
+      ]
+    },
+    {
+      "source": "doi:10.0000/synth.epsilon-2023",
+      "target": "doi:10.0000/synth.seed-2021",
+      "direction": "backward",
+      "semantics": "cites",
+      "direction_restored": false,
+      "sources": [
+        {
+          "file": "examples/corpus/europepmc_results.json",
+          "pointer": "/resultList/result/1/referenceList/reference/0"
+        }
+      ]
+    },
+    {
+      "source": "doi:10.0000/synth.noise-2020",
+      "target": "doi:10.0000/synth.seed-2021",
+      "direction": "forward",
+      "semantics": "cited_by",
+      "direction_restored": true,
+      "sources": [
+        {
+          "file": "examples/corpus/crossref_batch.json",
+          "pointer": "/message/items/4/reference/2"
+        }
+      ]
+    },
+    {
+      "source": "doi:10.0000/synth.seed-2021",
+      "target": "doi:10.0000/synth.beta-2015",
+      "direction": "backward",
+      "semantics": "cites",
+      "direction_restored": false,
+      "sources": [
+        {
+          "file": "examples/corpus/crossref_batch.json",
+          "pointer": "/message/items/4/reference/1"
+        }
+      ]
+    },
+    {
+      "source": "doi:10.0000/synth.seed-2021",
+      "target": "doi:10.0000/synth.classic-1998",
+      "direction": "backward",
+      "semantics": "cites",
+      "direction_restored": false,
+      "sources": [
+        {
+          "file": "examples/corpus/crossref_batch.json",
+          "pointer": "/message/items/4/reference/0"
+        }
+      ]
+    },
+    {
+      "source": "doi:10.0000/synth.seed-2021",
+      "target": "doi:10.0000/synth.delta-2022",
+      "direction": "forward",
+      "semantics": "cited_by",
+      "direction_restored": true,
+      "sources": [
+        {
+          "file": "examples/corpus/europepmc_results.json",
+          "pointer": "/resultList/result/0/referenceList/reference/0"
+        }
+      ]
+    },
+    {
+      "source": "doi:10.0000/synth.seed-2021",
+      "target": "doi:10.0000/synth.epsilon-2023",
+      "direction": "forward",
+      "semantics": "cited_by",
+      "direction_restored": true,
+      "sources": [
+        {
+          "file": "examples/corpus/europepmc_results.json",
+          "pointer": "/resultList/result/1/referenceList/reference/0"
+        }
+      ]
+    },
+    {
+      "source": "doi:10.0000/synth.seed-2021",
+      "target": "doi:10.0000/synth.noise-2020",
+      "direction": "backward",
+      "semantics": "cites",
+      "direction_restored": false,
+      "sources": [
+        {
+          "file": "examples/corpus/crossref_batch.json",
+          "pointer": "/message/items/4/reference/2"
+        }
+      ]
+    },
+    {
+      "source": "doi:10.0000/synth.seed-2021",
+      "target": "doi:10.0000/synth.theta-2023",
+      "direction": "forward",
+      "semantics": "cited_by",
+      "direction_restored": true,
+      "sources": [
+        {
+          "file": "examples/corpus/europepmc_results.json",
+          "pointer": "/resultList/result/2/referenceList/reference/0"
+        }
+      ]
+    },
+    {
+      "source": "doi:10.0000/synth.theta-2023",
+      "target": "doi:10.0000/synth.seed-2021",
+      "direction": "backward",
+      "semantics": "cites",
+      "direction_restored": false,
+      "sources": [
+        {
+          "file": "examples/corpus/europepmc_results.json",
+          "pointer": "/resultList/result/2/referenceList/reference/0"
+        }
+      ]
+    },
+    {
+      "source": "doi:10.0000/synth.unresolved-2010",
+      "target": "doi:10.0000/synth.beta-2015",
+      "direction": "forward",
+      "semantics": "cited_by",
+      "direction_restored": true,
+      "sources": [
+        {
+          "file": "examples/corpus/crossref_batch.json",
+          "pointer": "/message/items/2/reference/2"
+        }
+      ]
+    }
+  ]
+}

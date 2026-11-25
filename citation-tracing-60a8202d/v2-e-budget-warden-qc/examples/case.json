@@ -1,0 +1,26 @@
+{
+  "case_id": "synthetic-demo-60a8202d-e001",
+  "title": "合成示例：图摘要方法的引文追踪（SYNTHETIC, not real papers）",
+  "research_question": "围绕虚构种子论文 10.0000/synth.001，沿引用关系找出其方法出处、后续改进与平行工作。",
+  "seed_papers": [
+    {
+      "doi": "10.0000/synth.001",
+      "title": "Adaptive Gradient Sketching for Sparse Citation Networks"
+    }
+  ],
+  "constraints": {
+    "offline_only": true,
+    "note": "合成示例 / SYNTHETIC：全部文献为虚构，DOI 使用 10.0000/synth.* 保留段。"
+  },
+  "output_contract": {
+    "case_id": "string，逐字镜像案例标识",
+    "status": "string，ok/partial/failed",
+    "seed": "object，种子解析结果",
+    "candidates": "array，候选文献（含 source 定位）",
+    "edges": "array，引用边（含方向与 source 定位）",
+    "sources": "array，来源注册表",
+    "evidence_records": "array，扩展证据",
+    "uncertainty": "array，不确定性与缺失说明",
+    "review_notes": "string|null，人工复核备注（管线无此产物，预期置空）"
+  }
+}

@@ -1,0 +1,368 @@
+{
+  "case_id": "synth-case-001",
+  "seed_paper": {
+    "id": "P4",
+    "doi": "10.0000/synth.001",
+    "title": "Adaptive Graph Kernels for Retinal Vessel Segmentation",
+    "year": 2021,
+    "found": true,
+    "source": {
+      "file": "/Users/liuhengshen/Desktop/bhr_product/ch60a8202d-new/bundles/v2-d-contract-first-deliverable-forge/examples/corpus/crossref_seed.json",
+      "pointer": "$.message"
+    }
+  },
+  "candidates": [
+    {
+      "id": "P1",
+      "doi": "10.0000/synth.004",
+      "title": "Deep Graph Kernels Improve Retinal Vessel Segmentation",
+      "year": 2023,
+      "layer": 1,
+      "stub": false,
+      "relation": "正向引用 P4（前向追踪，citation 边由全语料反向索引恢复，direction_restored=true）",
+      "source": {
+        "file": "/Users/liuhengshen/Desktop/bhr_product/ch60a8202d-new/bundles/v2-d-contract-first-deliverable-forge/examples/corpus/citing.jsonl",
+        "pointer": "line 1"
+      }
+    },
+    {
+      "id": "P2",
+      "doi": "10.0000/synth.002",
+      "title": "Spectral Graph Kernel Methods: A Foundational Study",
+      "year": 2015,
+      "layer": 1,
+      "stub": false,
+      "relation": "被 P4 列为参考文献（后向追踪，reference 边）",
+      "source": {
+        "file": "/Users/liuhengshen/Desktop/bhr_product/ch60a8202d-new/bundles/v2-d-contract-first-deliverable-forge/examples/corpus/crossref_batch.json",
+        "pointer": "$.message.items[0]"
+      }
+    },
+    {
+      "id": "P3",
+      "doi": "10.0000/synth.003",
+      "title": "RETINA-BENCH: A Benchmark Dataset for Retinal Imaging",
+      "year": 2012,
+      "layer": 1,
+      "stub": false,
+      "relation": "被 P4 列为参考文献（后向追踪，reference 边）",
+      "source": {
+        "file": "/Users/liuhengshen/Desktop/bhr_product/ch60a8202d-new/bundles/v2-d-contract-first-deliverable-forge/examples/corpus/crossref_batch.json",
+        "pointer": "$.message.items[1]"
+      }
+    },
+    {
+      "id": "S1",
+      "doi": "10.0000/synth.999",
+      "title": "",
+      "year": null,
+      "layer": 1,
+      "stub": true,
+      "relation": "被 P4 列为参考文献（后向追踪，reference 边）",
+      "source": {
+        "file": "/Users/liuhengshen/Desktop/bhr_product/ch60a8202d-new/bundles/v2-d-contract-first-deliverable-forge/examples/corpus/crossref_seed.json",
+        "pointer": "$.message"
+      },
+      "unresolved_ref": "10.0000/synth.999"
+    }
+  ],
+  "edges": [
+    {
+      "source": "P4",
+      "target": "P2",
+      "kind": "reference",
+      "direction_restored": false,
+      "locator": {
+        "file": "/Users/liuhengshen/Desktop/bhr_product/ch60a8202d-new/bundles/v2-d-contract-first-deliverable-forge/examples/corpus/crossref_seed.json",
+        "pointer": "$.message"
+      }
+    },
+    {
+      "source": "P4",
+      "target": "P3",
+      "kind": "reference",
+      "direction_restored": false,
+      "locator": {
+        "file": "/Users/liuhengshen/Desktop/bhr_product/ch60a8202d-new/bundles/v2-d-contract-first-deliverable-forge/examples/corpus/crossref_seed.json",
+        "pointer": "$.message"
+      }
+    },
+    {
+      "source": "P4",
+      "target": "S1",
+      "kind": "reference",
+      "direction_restored": false,
+      "locator": {
+        "file": "/Users/liuhengshen/Desktop/bhr_product/ch60a8202d-new/bundles/v2-d-contract-first-deliverable-forge/examples/corpus/crossref_seed.json",
+        "pointer": "$.message"
+      }
+    },
+    {
+      "source": "P4",
+      "target": "P1",
+      "kind": "citation",
+      "direction_restored": true,
+      "locator": {
+        "file": "/Users/liuhengshen/Desktop/bhr_product/ch60a8202d-new/bundles/v2-d-contract-first-deliverable-forge/examples/corpus/citing.jsonl",
+        "pointer": "line 1"
+      }
+    },
+    {
+      "source": "P2",
+      "target": "P3",
+      "kind": "reference",
+      "direction_restored": false,
+      "locator": {
+        "file": "/Users/liuhengshen/Desktop/bhr_product/ch60a8202d-new/bundles/v2-d-contract-first-deliverable-forge/examples/corpus/crossref_batch.json",
+        "pointer": "$.message.items[0]"
+      }
+    },
+    {
+      "source": "P2",
+      "target": "P4",
+      "kind": "citation",
+      "direction_restored": true,
+      "locator": {
+        "file": "/Users/liuhengshen/Desktop/bhr_product/ch60a8202d-new/bundles/v2-d-contract-first-deliverable-forge/examples/corpus/crossref_seed.json",
+        "pointer": "$.message"
+      }
+    },
+    {
+      "source": "P3",
+      "target": "P2",
+      "kind": "citation",
+      "direction_restored": true,
+      "locator": {
+        "file": "/Users/liuhengshen/Desktop/bhr_product/ch60a8202d-new/bundles/v2-d-contract-first-deliverable-forge/examples/corpus/crossref_batch.json",
+        "pointer": "$.message.items[0]"
+      }
+    },
+    {
+      "source": "P3",
+      "target": "P4",
+      "kind": "citation",
+      "direction_restored": true,
+      "locator": {
+        "file": "/Users/liuhengshen/Desktop/bhr_product/ch60a8202d-new/bundles/v2-d-contract-first-deliverable-forge/examples/corpus/crossref_seed.json",
+        "pointer": "$.message"
+      }
+    },
+    {
+      "source": "S1",
+      "target": "P4",
+      "kind": "citation",
+      "direction_restored": true,
+      "locator": {
+        "file": "/Users/liuhengshen/Desktop/bhr_product/ch60a8202d-new/bundles/v2-d-contract-first-deliverable-forge/examples/corpus/crossref_seed.json",
+        "pointer": "$.message"
+      }
+    },
+    {
+      "source": "P1",
+      "target": "P4",
+      "kind": "reference",
+      "direction_restored": false,
+      "locator": {
+        "file": "/Users/liuhengshen/Desktop/bhr_product/ch60a8202d-new/bundles/v2-d-contract-first-deliverable-forge/examples/corpus/citing.jsonl",
+        "pointer": "line 1"
+      }
+    }
+  ],
+  "evidence_records": [
+    {
+      "type": "candidate",
+      "candidate_id": "P1",
+      "claim": "候选 P1（Deep Graph Kernels Improve Retinal Vessel Segmentation）经引用扩展在第 1 层发现",
+      "basis": "正向引用 P4（前向追踪，citation 边由全语料反向索引恢复，direction_restored=true）",
+      "locator": {
+        "file": "/Users/liuhengshen/Desktop/bhr_product/ch60a8202d-new/bundles/v2-d-contract-first-deliverable-forge/examples/corpus/citing.jsonl",
+        "pointer": "line 1"
+      }
+    },
+    {
+      "type": "candidate",
+      "candidate_id": "P2",
+      "claim": "候选 P2（Spectral Graph Kernel Methods: A Foundational Study）经引用扩展在第 1 层发现",
+      "basis": "被 P4 列为参考文献（后向追踪，reference 边）",
+      "locator": {
+        "file": "/Users/liuhengshen/Desktop/bhr_product/ch60a8202d-new/bundles/v2-d-contract-first-deliverable-forge/examples/corpus/crossref_batch.json",
+        "pointer": "$.message.items[0]"
+      }
+    },
+    {
+      "type": "candidate",
+      "candidate_id": "P3",
+      "claim": "候选 P3（RETINA-BENCH: A Benchmark Dataset for Retinal Imaging）经引用扩展在第 1 层发现",
+      "basis": "被 P4 列为参考文献（后向追踪，reference 边）",
+      "locator": {
+        "file": "/Users/liuhengshen/Desktop/bhr_product/ch60a8202d-new/bundles/v2-d-contract-first-deliverable-forge/examples/corpus/crossref_batch.json",
+        "pointer": "$.message.items[1]"
+      }
+    },
+    {
+      "type": "candidate",
+      "candidate_id": "S1",
+      "claim": "候选 S1（10.0000/synth.999）经引用扩展在第 1 层发现",
+      "basis": "被 P4 列为参考文献（后向追踪，reference 边）",
+      "locator": {
+        "file": "/Users/liuhengshen/Desktop/bhr_product/ch60a8202d-new/bundles/v2-d-contract-first-deliverable-forge/examples/corpus/crossref_seed.json",
+        "pointer": "$.message"
+      }
+    },
+    {
+      "type": "edge",
+      "claim": "引用边 P4 -> P2（reference）",
+      "basis": "数据源直接给出参考文献列表",
+      "locator": {
+        "file": "/Users/liuhengshen/Desktop/bhr_product/ch60a8202d-new/bundles/v2-d-contract-first-deliverable-forge/examples/corpus/crossref_seed.json",
+        "pointer": "$.message"
+      }
+    },
+    {
+      "type": "edge",
+      "claim": "引用边 P4 -> P3（reference）",
+      "basis": "数据源直接给出参考文献列表",
+      "locator": {
+        "file": "/Users/liuhengshen/Desktop/bhr_product/ch60a8202d-new/bundles/v2-d-contract-first-deliverable-forge/examples/corpus/crossref_seed.json",
+        "pointer": "$.message"
+      }
+    },
+    {
+      "type": "edge",
+      "claim": "引用边 P4 -> S1（reference）",
+      "basis": "数据源直接给出参考文献列表",
+      "locator": {
+        "file": "/Users/liuhengshen/Desktop/bhr_product/ch60a8202d-new/bundles/v2-d-contract-first-deliverable-forge/examples/corpus/crossref_seed.json",
+        "pointer": "$.message"
+      }
+    },
+    {
+      "type": "edge",
+      "claim": "引用边 P4 -> P1（citation）",
+      "basis": "数据源仅给参考文献列表，前向边经全语料反向索引恢复（direction_restored=true）",
+      "locator": {
+        "file": "/Users/liuhengshen/Desktop/bhr_product/ch60a8202d-new/bundles/v2-d-contract-first-deliverable-forge/examples/corpus/citing.jsonl",
+        "pointer": "line 1"
+      }
+    },
+    {
+      "type": "edge",
+      "claim": "引用边 P2 -> P3（reference）",
+      "basis": "数据源直接给出参考文献列表",
+      "locator": {
+        "file": "/Users/liuhengshen/Desktop/bhr_product/ch60a8202d-new/bundles/v2-d-contract-first-deliverable-forge/examples/corpus/crossref_batch.json",
+        "pointer": "$.message.items[0]"
+      }
+    },
+    {
+      "type": "edge",
+      "claim": "引用边 P2 -> P4（citation）",
+      "basis": "数据源仅给参考文献列表，前向边经全语料反向索引恢复（direction_restored=true）",
+      "locator": {
+        "file": "/Users/liuhengshen/Desktop/bhr_product/ch60a8202d-new/bundles/v2-d-contract-first-deliverable-forge/examples/corpus/crossref_seed.json",
+        "pointer": "$.message"
+      }
+    },
+    {
+      "type": "edge",
+      "claim": "引用边 P3 -> P2（citation）",
+      "basis": "数据源仅给参考文献列表，前向边经全语料反向索引恢复（direction_restored=true）",
+      "locator": {
+        "file": "/Users/liuhengshen/Desktop/bhr_product/ch60a8202d-new/bundles/v2-d-contract-first-deliverable-forge/examples/corpus/crossref_batch.json",
+        "pointer": "$.message.items[0]"
+      }
+    },
+    {
+      "type": "edge",
+      "claim": "引用边 P3 -> P4（citation）",
+      "basis": "数据源仅给参考文献列表，前向边经全语料反向索引恢复（direction_restored=true）",
+      "locator": {
+        "file": "/Users/liuhengshen/Desktop/bhr_product/ch60a8202d-new/bundles/v2-d-contract-first-deliverable-forge/examples/corpus/crossref_seed.json",
+        "pointer": "$.message"
+      }
+    },
+    {
+      "type": "edge",
+      "claim": "引用边 S1 -> P4（citation）",
+      "basis": "数据源仅给参考文献列表，前向边经全语料反向索引恢复（direction_restored=true）",
+      "locator": {
+        "file": "/Users/liuhengshen/Desktop/bhr_product/ch60a8202d-new/bundles/v2-d-contract-first-deliverable-forge/examples/corpus/crossref_seed.json",
+        "pointer": "$.message"
+      }
+    },
+    {
+      "type": "edge",
+      "claim": "引用边 P1 -> P4（reference）",
+      "basis": "数据源直接给出参考文献列表",
+      "locator": {
+        "file": "/Users/liuhengshen/Desktop/bhr_product/ch60a8202d-new/bundles/v2-d-contract-first-deliverable-forge/examples/corpus/citing.jsonl",
+        "pointer": "line 1"
+      }
+    }
+  ],
+  "status": "partial",
+  "uncertainty": [
+    "身份合并 1 次（DOI/标题键），明细见 result.merge_log",
+    "1 个引用目标无法在语料中解析，已保留为 stub（仅原始指针与定位，未补造元数据）"
+  ],
+  "layer_counts": {
+    "layer_1": 4,
+    "layer_2": 0
+  },
+  "method_summary": "围绕种子《Adaptive Graph Kernels for Retinal Vessel Segmentation》执行 1–2 层引用扩展：后向沿 references 边（citing→cited），前向经全语料反向索引恢复 citation 边（cited→citing，direction_restored=true）；身份合并采用 DOI 规范化精确键＋标题规范化键；去重后候选 4 条、扩展边 10 条、stub 1 个；全部记录带 locator 可回指。",
+  "seed": {
+    "id": "P4",
+    "doi": "10.0000/synth.001",
+    "title": "Adaptive Graph Kernels for Retinal Vessel Segmentation",
+    "year": 2021,
+    "found": true,
+    "source": {
+      "file": "/Users/liuhengshen/Desktop/bhr_product/ch60a8202d-new/bundles/v2-d-contract-first-deliverable-forge/examples/corpus/crossref_seed.json",
+      "pointer": "$.message"
+    }
+  },
+  "sources": [
+    {
+      "file": "/Users/liuhengshen/Desktop/bhr_product/ch60a8202d-new/bundles/v2-d-contract-first-deliverable-forge/examples/corpus/citing.jsonl",
+      "format": "jsonl",
+      "records": 1,
+      "edges": 0,
+      "status": "ok",
+      "error": ""
+    },
+    {
+      "file": "/Users/liuhengshen/Desktop/bhr_product/ch60a8202d-new/bundles/v2-d-contract-first-deliverable-forge/examples/corpus/crossref_batch.json",
+      "format": "json",
+      "records": 2,
+      "edges": 0,
+      "status": "ok",
+      "error": ""
+    },
+    {
+      "file": "/Users/liuhengshen/Desktop/bhr_product/ch60a8202d-new/bundles/v2-d-contract-first-deliverable-forge/examples/corpus/crossref_seed.json",
+      "format": "json",
+      "records": 1,
+      "edges": 0,
+      "status": "ok",
+      "error": ""
+    },
+    {
+      "file": "/Users/liuhengshen/Desktop/bhr_product/ch60a8202d-new/bundles/v2-d-contract-first-deliverable-forge/examples/corpus/europepmc.json",
+      "format": "json",
+      "records": 1,
+      "edges": 0,
+      "status": "ok",
+      "error": ""
+    }
+  ],
+  "merge_log": [
+    {
+      "kept": "P2",
+      "merged_from": {
+        "file": "/Users/liuhengshen/Desktop/bhr_product/ch60a8202d-new/bundles/v2-d-contract-first-deliverable-forge/examples/corpus/europepmc.json",
+        "pointer": "$.resultList.result[0]"
+      },
+      "match_key": "title"
+    }
+  ]
+}

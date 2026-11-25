@@ -1,0 +1,56 @@
+{
+  "_notice": "SYNTHETIC DEMO CORPUS / 合成示例语料：全部为虚构文献，非真实论文，仅用于演示。",
+  "version": "6.9-synth",
+  "resultList": {
+    "result": [
+      {
+        "id": "SYNTH004",
+        "source": "SYNTH",
+        "doi": "10.0000/synth.delta-2022",
+        "title": "Follow-up report on synthetic widget citation snowballing",
+        "authorString": "Deltafield D, Epsilonfield E",
+        "journalTitle": "Synthetic Citation Studies",
+        "pubYear": "2022",
+        "citedByCount": 9,
+        "referenceList": {
+          "reference": [
+            {"id": "r1", "doi": "10.0000/synth.seed-2021"},
+            {"id": "r2", "doi": "10.0000/synth.classic-1998"}
+          ]
+        }
+      },
+      {
+        "id": "SYNTH005",
+        "source": "SYNTH",
+        "doi": "10.0000/synth.epsilon-2023",
+        "title": "Revisiting snowballed widget citation networks",
+        "authorString": "Epsilonfield E",
+        "journalTitle": "Synthetic Citation Studies",
+        "pubYear": "2023",
+        "citedByCount": 4,
+        "referenceList": {
+          "reference": [
+            {"id": "r1", "doi": "10.0000/synth.seed-2021"},
+            {"id": "r2", "doi": "10.0000/synth.delta-2022"},
+            {"id": "r3", "doi": "10.0000/synth.beta-2015"}
+          ]
+        }
+      },
+      {
+        "id": "SYNTH008",
+        "source": "SYNTH",
+        "doi": "10.0000/synth.theta-2023",
+        "title": "Notation fixes for aggregated benchmark counts",
+        "authorString": "Thetafield T",
+        "journalTitle": "Synthetic Notation Notes",
+        "pubYear": "2023",
+        "citedByCount": 2,
+        "referenceList": {
+          "reference": [
+            {"id": "r1", "doi": "10.0000/synth.seed-2021"}
+          ]
+        }
+      }
+    ]
+  }
+}

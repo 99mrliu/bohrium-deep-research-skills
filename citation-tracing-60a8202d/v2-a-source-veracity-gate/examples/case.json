@@ -1,0 +1,23 @@
+{
+  "case_id": "SYNTH-CASE-001",
+  "title": "合成示例：引文追踪与关联文献发现（SYNTHETIC）",
+  "seed_paper": {
+    "doi": "10.0000/synth.001",
+    "title": "A Synthetic Gradient Method for Citation Flow"
+  },
+  "research_question": "围绕种子论文做 1-2 层前向/后向引文追踪，交付可回指的候选集。",
+  "max_hops": 2,
+  "output_contract": {
+    "case_id": "string，案例标识",
+    "status": "string，ok/partial/failed",
+    "seed": "object，解析后的种子及其语料内命中情况",
+    "candidates": "array，扩展得到的候选文献，每条带来源定位",
+    "edges": "array，引用边，每条带数据源定位",
+    "sources": "array，贡献数据的语料文件清单",
+    "evidence_records": "array，每条候选的纳入依据",
+    "uncertainty": "array，空结果/冲突/缺失/未识别字段的诚实说明",
+    "screening_rationale": "string，筛选与排序依据",
+    "omissions": "array，被门禁拦截或未解析条目的遗漏说明",
+    "novelty_statement": "string，本案例未定义语义的字段，用于演示诚实空值"
+  }
+}

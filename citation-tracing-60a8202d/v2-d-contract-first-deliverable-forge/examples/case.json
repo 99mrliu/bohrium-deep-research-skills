@@ -1,0 +1,20 @@
+{
+  "_comment": "SYNTHETIC 合成示例 / not a real case。output_contract 除标准字段外另含 layer_counts 与 method_summary 两个自定义字段，用于演示契约镜像对未知字段的鲁棒填充。",
+  "case_id": "synth-case-001",
+  "seed_paper": {
+    "doi": "10.0000/synth.001",
+    "title": "Adaptive Graph Kernels for Retinal Vessel Segmentation"
+  },
+  "task": "围绕种子论文做 1–2 层前后向引文追踪，去重后给出候选集、引用边与逐条证据定位。",
+  "output_contract": {
+    "case_id": "string",
+    "seed_paper": "object",
+    "candidates": "array",
+    "edges": "array",
+    "evidence_records": "array",
+    "status": "string",
+    "uncertainty": "array",
+    "layer_counts": "object",
+    "method_summary": "string"
+  }
+}

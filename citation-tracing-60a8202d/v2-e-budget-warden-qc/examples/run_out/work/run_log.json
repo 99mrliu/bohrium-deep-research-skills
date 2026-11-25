@@ -1,0 +1,79 @@
+{
+  "events": [
+    {
+      "msg": "honest partial result.json written (case_id=synthetic-demo-60a8202d-e001, seeds=1)",
+      "stage": "stage0",
+      "time": "2026-11-25T08:58:15.134863+00:00"
+    },
+    {
+      "msg": "budget check: remaining=850.0s margin=30s -> go",
+      "stage": "stage1",
+      "time": "2026-11-25T08:58:15.134959+00:00"
+    },
+    {
+      "msg": "ingested 4 files, 5 records, 1 raw edges",
+      "stage": "stage1",
+      "time": "2026-11-25T08:58:15.138212+00:00"
+    },
+    {
+      "msg": "resolved=1 unresolved=0",
+      "stage": "seed",
+      "time": "2026-11-25T08:58:15.138373+00:00"
+    },
+    {
+      "msg": "budget check: remaining=850.0s margin=30s -> go",
+      "stage": "stage2",
+      "time": "2026-11-25T08:58:15.138674+00:00"
+    },
+    {
+      "msg": "depth-1 expansion: 5 candidates, 10 edges",
+      "stage": "stage2",
+      "time": "2026-11-25T08:58:15.145913+00:00"
+    },
+    {
+      "msg": "budget check: remaining=850.0s margin=30s -> go",
+      "stage": "stage3",
+      "time": "2026-11-25T08:58:15.146119+00:00"
+    },
+    {
+      "msg": "final result: status=ok candidates=6 edges=14 stubs=1",
+      "stage": "stage3",
+      "time": "2026-11-25T08:58:15.150192+00:00"
+    },
+    {
+      "msg": "resume requested; latest checkpoint stage=2",
+      "stage": "resume",
+      "time": "2026-11-25T08:58:30.440780+00:00"
+    },
+    {
+      "msg": "skipped (resume)",
+      "stage": "stage0",
+      "time": "2026-11-25T08:58:30.441632+00:00"
+    },
+    {
+      "msg": "skipped (resume); loaded 5 records, 1 raw edges",
+      "stage": "stage1",
+      "time": "2026-11-25T08:58:30.442276+00:00"
+    },
+    {
+      "msg": "resolved=1 unresolved=0",
+      "stage": "seed",
+      "time": "2026-11-25T08:58:30.442400+00:00"
+    },
+    {
+      "msg": "skipped (resume); loaded graph with 14 edges",
+      "stage": "stage2",
+      "time": "2026-11-25T08:58:30.442633+00:00"
+    },
+    {
+      "msg": "budget check: remaining=850.0s margin=30s -> go",
+      "stage": "stage3",
+      "time": "2026-11-25T08:58:30.442749+00:00"
+    },
+    {
+      "msg": "final result: status=ok candidates=6 edges=14 stubs=1",
+      "stage": "stage3",
+      "time": "2026-11-25T08:58:30.443674+00:00"
+    }
+  ]
+}

@@ -1,0 +1,32 @@
+{
+  "hitCount": 2,
+  "request": {"query": "synthetic citation flow", "pageSize": 25},
+  "resultList": {
+    "result": [
+      {
+        "id": "SYNTH004",
+        "source": "MED",
+        "doi": "10.0000/synth.004",
+        "title": "Parallel Methods for Citation Tracing at Scale",
+        "authorString": "Elena Raskol; Ivan Karamaz",
+        "pubYear": "2020",
+        "journalTitle": "Journal of Synthetic Bibliometrics",
+        "referenceList": {
+          "reference": [
+            {"id": "r1", "doi": "10.0000/synth.001", "title": "A Synthetic Gradient Method for Citation Flow"},
+            {"id": "r2", "doi": "10.0000/synth.002", "title": "Foundations of Veracity-Gated Indexing"}
+          ]
+        }
+      },
+      {
+        "id": "SYNTH001X",
+        "source": "MED",
+        "doi": "10.0000/synth.001",
+        "title": "A Synthetic Gradient Method for Citation Flow: Extended Conference Version",
+        "authorString": "Alice V. Merian; Boris T. Quill",
+        "pubYear": "2019",
+        "journalTitle": "Proceedings of the Imaginary Conference on Graph Mining"
+      }
+    ]
+  }
+}

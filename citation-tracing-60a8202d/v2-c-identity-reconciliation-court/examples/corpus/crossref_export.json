@@ -1,0 +1,50 @@
+{
+  "_comment": "合成示例 / SYNTHETIC：全部文献与 DOI 均为虚构，非真实论文，非正式案例结果。Crossref 风格导出。",
+  "status": "ok",
+  "message-type": "work-list",
+  "message": {
+    "total-results": 3,
+    "items": [
+      {
+        "DOI": "10.0000/synth.a1",
+        "type": "journal-article",
+        "title": ["Graph Snowball Sampling for Citation Tracing"],
+        "author": [
+          {"given": "Wei", "family": "Lan"},
+          {"given": "Mira", "family": "Sol"}
+        ],
+        "issued": {"date-parts": [[2021]]},
+        "container-title": ["Journal of Synthetic Bibliometrics"],
+        "publisher": "Synthetic Press",
+        "reference": [
+          {"DOI": "10.0000/synth.found", "article-title": "Foundations of Citation Graph Traversal"},
+          {"DOI": "10.0000/synth.b1", "article-title": "A Bridging Method Not In This Corpus"}
+        ]
+      },
+      {
+        "DOI": "10.0000/synth.s1",
+        "type": "journal-article",
+        "title": ["A Survey of Graph Sampling"],
+        "author": [{"given": "Jia", "family": "Chen"}],
+        "issued": {"date-parts": [[2018]]},
+        "container-title": ["Annals of Fictional Surveys"],
+        "publisher": "Synthetic Press"
+      },
+      {
+        "DOI": "10.0000/synth.m1",
+        "type": "journal-article",
+        "title": ["Robust Identity Matching Across Scholarly Indexes"],
+        "author": [
+          {"given": "Wei", "family": "Lan"},
+          {"given": "Tomas", "family": "Berg"}
+        ],
+        "issued": {"date-parts": [[2020]]},
+        "container-title": ["Journal of Synthetic Bibliometrics"],
+        "publisher": "Synthetic Press",
+        "reference": [
+          {"DOI": "10.0000/synth.found"}
+        ]
+      }
+    ]
+  }
+}

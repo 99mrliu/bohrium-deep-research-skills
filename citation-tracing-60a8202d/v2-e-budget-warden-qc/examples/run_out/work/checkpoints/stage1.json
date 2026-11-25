@@ -1,0 +1,222 @@
+{
+  "artifact_sha1": "902719fcc68b25467d684102088e0d10025e1b6a",
+  "data": {
+    "corpus_records": {
+      "records": {
+        "doi:10.0000/synth.001": {
+          "authors": [
+            "Aster, Lin",
+            "Velluti, Marco"
+          ],
+          "citations_raw": [],
+          "doi": "10.0000/synth.001",
+          "extra_sources": [],
+          "kind": "resolved",
+          "openalex_id": null,
+          "record_id": "doi:10.0000/synth.001",
+          "refs": [
+            {
+              "doi": "10.0000/synth.002",
+              "raw": "ref1",
+              "source": {
+                "file": "examples/corpus/crossref_batch.json",
+                "pointer": "/message/items/0/reference/0"
+              },
+              "title": "Efficient Reservoir Sampling over Streaming Graphs"
+            },
+            {
+              "doi": "10.0000/synth.004",
+              "raw": "ref2",
+              "source": {
+                "file": "examples/corpus/crossref_batch.json",
+                "pointer": "/message/items/0/reference/1"
+              },
+              "title": "A Survey of Approximate Neighborhood Methods"
+            },
+            {
+              "doi": "10.0000/synth.404",
+              "raw": "Aster, L. Phantom Sketching on Unseen Graphs, unpublished note.",
+              "source": {
+                "file": "examples/corpus/crossref_batch.json",
+                "pointer": "/message/items/0/reference/2"
+              },
+              "title": null
+            }
+          ],
+          "source": {
+            "file": "examples/corpus/crossref_batch.json",
+            "pointer": "/message/items/0"
+          },
+          "title": "Adaptive Gradient Sketching for Sparse Citation Networks",
+          "venue": "Journal of Synthetic Bibliometrics",
+          "year": 2021
+        },
+        "doi:10.0000/synth.002": {
+          "authors": [
+            "Nandakumar, Priya"
+          ],
+          "citations_raw": [],
+          "doi": "10.0000/synth.002",
+          "extra_sources": [
+            {
+              "file": "examples/corpus/openalex_nodes.jsonl",
+              "pointer": "line 1"
+            }
+          ],
+          "kind": "resolved",
+          "openalex_id": "https://openalex.org/W0000000002",
+          "record_id": "doi:10.0000/synth.002",
+          "refs": [],
+          "source": {
+            "file": "examples/corpus/crossref_batch.json",
+            "pointer": "/message/items/1"
+          },
+          "title": "Efficient Reservoir Sampling over Streaming Graphs",
+          "venue": "Transactions on Fictional Algorithms",
+          "year": 2019
+        },
+        "doi:10.0000/synth.003": {
+          "authors": [
+            "Okafor T",
+            "Grimaldi S"
+          ],
+          "citations_raw": [],
+          "doi": "10.0000/synth.003",
+          "extra_sources": [],
+          "kind": "resolved",
+          "openalex_id": null,
+          "record_id": "doi:10.0000/synth.003",
+          "refs": [
+            {
+              "doi": "10.0000/synth.001",
+              "raw": "Aster L, Velluti M. Adaptive Gradient Sketching for Sparse Citation Networks. J Synth Bibliometrics. 2021.",
+              "source": {
+                "file": "examples/corpus/europepmc_batch.json",
+                "pointer": "/resultList/result/0/referenceList/reference/0"
+              },
+              "title": null
+            }
+          ],
+          "source": {
+            "file": "examples/corpus/europepmc_batch.json",
+            "pointer": "/resultList/result/0"
+          },
+          "title": "Sketch-Based Centrality Estimation in Large Bibliographic Graphs",
+          "venue": "Annals of Imaginary Informatics",
+          "year": 2023
+        },
+        "doi:10.0000/synth.004": {
+          "authors": [
+            "Hana Bergstrom",
+            "Ravi Chatterjee"
+          ],
+          "citations_raw": [],
+          "doi": "10.0000/synth.004",
+          "extra_sources": [],
+          "kind": "resolved",
+          "openalex_id": "https://openalex.org/W0000000004",
+          "record_id": "doi:10.0000/synth.004",
+          "refs": [
+            {
+              "doi": null,
+              "raw": "https://openalex.org/W0000000002",
+              "source": {
+                "file": "examples/corpus/openalex_nodes.jsonl",
+                "pointer": "line 2/referenced_works/0"
+              },
+              "title": null
+            }
+          ],
+          "source": {
+            "file": "examples/corpus/openalex_nodes.jsonl",
+            "pointer": "line 2"
+          },
+          "title": "A Survey of Approximate Neighborhood Methods",
+          "venue": "Review of Synthetic Graph Methods",
+          "year": 2020
+        },
+        "doi:10.0000/synth.005": {
+          "authors": [
+            "Elena Voronova"
+          ],
+          "citations_raw": [],
+          "doi": "10.0000/synth.005",
+          "extra_sources": [],
+          "kind": "resolved",
+          "openalex_id": "https://openalex.org/W0000000005",
+          "record_id": "doi:10.0000/synth.005",
+          "refs": [
+            {
+              "doi": null,
+              "raw": "https://openalex.org/W0000000002",
+              "source": {
+                "file": "examples/corpus/openalex_nodes.jsonl",
+                "pointer": "line 3/referenced_works/0"
+              },
+              "title": null
+            }
+          ],
+          "source": {
+            "file": "examples/corpus/openalex_nodes.jsonl",
+            "pointer": "line 3"
+          },
+          "title": "Robust Hashing for Dynamic Graph Summaries",
+          "venue": "Proceedings of the Fictional Conference on Data Sketches",
+          "year": 2022
+        }
+      }
+    },
+    "raw_edges": [
+      {
+        "edge_type": "reference",
+        "source": {
+          "file": "examples/corpus/edges_extra.csv",
+          "pointer": "line 2"
+        },
+        "source_raw": "10.0000/synth.005",
+        "target_raw": "10.0000/synth.004"
+      }
+    ],
+    "sources": [
+      {
+        "edges": 0,
+        "error": null,
+        "file": "examples/corpus/crossref_batch.json",
+        "format": "crossref-batch",
+        "parse_ok": true,
+        "records": 2,
+        "sha1": "97d74bb2b39b7e807b679ced4d0598e4f3617e1d"
+      },
+      {
+        "edges": 1,
+        "error": null,
+        "file": "examples/corpus/edges_extra.csv",
+        "format": "table:csv",
+        "parse_ok": true,
+        "records": 0,
+        "sha1": "9d2cbc8b03c632232d9dd4a25bda43661f5ee7c9"
+      },
+      {
+        "edges": 0,
+        "error": null,
+        "file": "examples/corpus/europepmc_batch.json",
+        "format": "europepmc",
+        "parse_ok": true,
+        "records": 1,
+        "sha1": "8032316beb687177950c51dbce0f20858ffe525d"
+      },
+      {
+        "edges": 0,
+        "error": null,
+        "file": "examples/corpus/openalex_nodes.jsonl",
+        "format": "jsonl(3 lines)",
+        "parse_ok": true,
+        "records": 3,
+        "sha1": "bfb89c3000207f8d47e5087ec7cbcd11a92bf899"
+      }
+    ]
+  },
+  "finished_at": "2026-11-25T08:58:15.136676+00:00",
+  "stage": 1,
+  "stage_name": "stage1_ingest"
+}

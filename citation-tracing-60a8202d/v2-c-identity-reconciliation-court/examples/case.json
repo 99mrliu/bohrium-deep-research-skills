@@ -1,0 +1,16 @@
+{
+  "_comment": "合成示例 / SYNTHETIC, not real papers, 非正式案例结果。seed 与 output_contract 均为虚构的最小演示契约。",
+  "case_id": "synthetic-identity-001",
+  "task": "从种子论文出发做 1–2 层引用扩展；先对跨库语料做身份合并与去重，再交付干净候选清单与合并证据台账。",
+  "seed": {"doi": "10.0000/synth.a1"},
+  "output_contract": {
+    "seed": "解析出的种子文献及其来源定位",
+    "candidates": "去重合并后的候选文献清单（含扩展层级、身份合并信息与定位）",
+    "edges": "实体级引用边（含方向语义、direction_restored 标记与来源定位）",
+    "merge_summary": "身份合并台账摘要（合并组、存疑队列、同名不同文、同文不同名）",
+    "sources": "语料来源注册表（文件、格式、记录数、解析状态）",
+    "evidence_records": "可复核证据记录（身份合并与每条引用边）",
+    "uncertainty": "不确定性与缺失说明",
+    "expansion_layers": "引用扩展层数"
+  }
+}

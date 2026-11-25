@@ -1,0 +1,37 @@
+{
+  "_comment": "合成示例 / SYNTHETIC：全部文献与 DOI 均为虚构，非真实论文，非正式案例结果。EuropePMC 风格检索结果。",
+  "hitCount": 3,
+  "resultList": {
+    "result": [
+      {
+        "id": "SYNTH-S2",
+        "doi": "10.0000/synth.s2",
+        "title": "A survey of graph sampling",
+        "authorString": "Rao Iyer",
+        "pubYear": "2021",
+        "journalTitle": "Synthetic Review Quarterly",
+        "pubType": "journal-article",
+        "referenceList": {
+          "reference": [
+            {"doi": "10.0000/synth.a1", "title": "Graph Snowball Sampling for Citation Tracing"}
+          ]
+        }
+      },
+      {
+        "id": "SYNTH-M1-CONF",
+        "doi": "10.0000/synth.m1",
+        "title": "Identity matching for scholarly records: an extended robust approach",
+        "authorString": "Wei Lan, Tomas Berg",
+        "pubYear": "2020",
+        "journalTitle": "Proceedings of the Synthetic Workshop on Records",
+        "pubType": "conference-paper"
+      },
+      {
+        "id": "SYNTH-NOTES-1",
+        "title": "Notes on Incremental Citation Import States",
+        "journalTitle": "Unpublished Synthetic Notes",
+        "pubType": "other"
+      }
+    ]
+  }
+}

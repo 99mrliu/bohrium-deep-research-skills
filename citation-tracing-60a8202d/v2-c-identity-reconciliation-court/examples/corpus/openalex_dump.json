@@ -1,0 +1,32 @@
+{
+  "_comment": "合成示例 / SYNTHETIC：全部文献与 DOI 均为虚构，非真实论文，非正式案例结果。OpenAlex 风格导出。",
+  "meta": {"count": 2},
+  "results": [
+    {
+      "id": "https://openalex.org/W000000001",
+      "doi": "https://doi.org/10.0000/synth.arxiv.a1",
+      "title": "Graph snowball sampling for citation tracing: a synthetic study",
+      "publication_year": 2020,
+      "type": "preprint",
+      "authorships": [
+        {"author": {"display_name": "Wei Lan"}},
+        {"author": {"display_name": "Mira Sol"}}
+      ],
+      "primary_location": {"source": {"display_name": "arXiv (Cornell University)"}},
+      "referenced_works": ["https://doi.org/10.0000/synth.found"]
+    },
+    {
+      "id": "https://openalex.org/W000000002",
+      "doi": "https://doi.org/10.0000/synth.found",
+      "title": "Foundations of Citation Graph Traversal",
+      "publication_year": 2015,
+      "type": "journal-article",
+      "authorships": [
+        {"author": {"display_name": "Wei Lan"}},
+        {"author": {"display_name": "Petra Odin"}}
+      ],
+      "primary_location": {"source": {"display_name": "Journal of Synthetic Bibliometrics"}},
+      "referenced_works": []
+    }
+  ]
+}

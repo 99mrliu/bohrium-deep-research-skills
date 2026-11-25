@@ -1,0 +1,71 @@
+{
+  "change_log": [],
+  "checks": [
+    {
+      "check": "Q1",
+      "detail": "case_id 正常：synthetic-demo-60a8202d-e001",
+      "fixable": true,
+      "fixed": true,
+      "severity": "info"
+    },
+    {
+      "check": "Q2",
+      "detail": "必备顶层字段齐全",
+      "fixable": true,
+      "fixed": true,
+      "severity": "info"
+    },
+    {
+      "check": "Q3",
+      "detail": "output_contract 镜像完整（9 字段）",
+      "fixable": true,
+      "fixed": true,
+      "severity": "info"
+    },
+    {
+      "check": "Q3b",
+      "detail": "契约空值字段：review_notes",
+      "fixable": false,
+      "fixed": false,
+      "severity": "minor"
+    },
+    {
+      "check": "Q4",
+      "detail": "全部记录与边均带 source locator",
+      "fixable": false,
+      "fixed": true,
+      "severity": "info"
+    },
+    {
+      "check": "Q5",
+      "detail": "stub 比例 16.7%（1/6）",
+      "fixable": false,
+      "fixed": true,
+      "severity": "info"
+    },
+    {
+      "check": "Q6",
+      "detail": "status 与完成阶段一致（ok/stage3）",
+      "fixable": true,
+      "fixed": true,
+      "severity": "info"
+    },
+    {
+      "check": "Q7",
+      "detail": "checkpoint 链完整：stage [0, 1, 2, 3]",
+      "fixable": false,
+      "fixed": true,
+      "severity": "info"
+    }
+  ],
+  "generated_at": "2026-11-25T08:58:59.874242+00:00",
+  "ok": true,
+  "result_path": "examples/run_out/output/result.json",
+  "summary": {
+    "auto_fixed": 0,
+    "candidates": 6,
+    "critical_open": 0,
+    "major_open": 0,
+    "stubs": 1
+  }
+}

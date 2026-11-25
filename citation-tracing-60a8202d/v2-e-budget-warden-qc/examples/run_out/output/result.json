@@ -1,0 +1,881 @@
+{
+  "candidates": [
+    {
+      "authors": [
+        "Aster, Lin",
+        "Velluti, Marco"
+      ],
+      "doi": "10.0000/synth.001",
+      "hop": 0,
+      "kind": "resolved",
+      "record_id": "doi:10.0000/synth.001",
+      "source": {
+        "file": "examples/corpus/crossref_batch.json",
+        "pointer": "/message/items/0"
+      },
+      "title": "Adaptive Gradient Sketching for Sparse Citation Networks",
+      "venue": "Journal of Synthetic Bibliometrics",
+      "year": 2021
+    },
+    {
+      "authors": [
+        "Nandakumar, Priya"
+      ],
+      "doi": "10.0000/synth.002",
+      "hop": 1,
+      "kind": "resolved",
+      "record_id": "doi:10.0000/synth.002",
+      "source": {
+        "file": "examples/corpus/crossref_batch.json",
+        "pointer": "/message/items/1"
+      },
+      "title": "Efficient Reservoir Sampling over Streaming Graphs",
+      "venue": "Transactions on Fictional Algorithms",
+      "via_edge": {
+        "direction_restored": false,
+        "source_id": "doi:10.0000/synth.001",
+        "target_id": "doi:10.0000/synth.002",
+        "type": "reference"
+      },
+      "year": 2019
+    },
+    {
+      "authors": [
+        "Okafor T",
+        "Grimaldi S"
+      ],
+      "doi": "10.0000/synth.003",
+      "hop": 1,
+      "kind": "resolved",
+      "record_id": "doi:10.0000/synth.003",
+      "source": {
+        "file": "examples/corpus/europepmc_batch.json",
+        "pointer": "/resultList/result/0"
+      },
+      "title": "Sketch-Based Centrality Estimation in Large Bibliographic Graphs",
+      "venue": "Annals of Imaginary Informatics",
+      "via_edge": {
+        "direction_restored": true,
+        "source_id": "doi:10.0000/synth.001",
+        "target_id": "doi:10.0000/synth.003",
+        "type": "citation"
+      },
+      "year": 2023
+    },
+    {
+      "authors": [
+        "Hana Bergstrom",
+        "Ravi Chatterjee"
+      ],
+      "doi": "10.0000/synth.004",
+      "hop": 1,
+      "kind": "resolved",
+      "record_id": "doi:10.0000/synth.004",
+      "source": {
+        "file": "examples/corpus/openalex_nodes.jsonl",
+        "pointer": "line 2"
+      },
+      "title": "A Survey of Approximate Neighborhood Methods",
+      "venue": "Review of Synthetic Graph Methods",
+      "via_edge": {
+        "direction_restored": false,
+        "source_id": "doi:10.0000/synth.001",
+        "target_id": "doi:10.0000/synth.004",
+        "type": "reference"
+      },
+      "year": 2020
+    },
+    {
+      "authors": [],
+      "doi": "10.0000/synth.404",
+      "hop": 1,
+      "kind": "stub",
+      "raw_pointer": "Aster, L. Phantom Sketching on Unseen Graphs, unpublished note.",
+      "record_id": "doi:10.0000/synth.404",
+      "source": {
+        "file": "examples/corpus/crossref_batch.json",
+        "pointer": "/message/items/0/reference/2"
+      },
+      "title": null,
+      "venue": null,
+      "via_edge": {
+        "direction_restored": false,
+        "source_id": "doi:10.0000/synth.001",
+        "target_id": "doi:10.0000/synth.404",
+        "type": "reference"
+      },
+      "year": null
+    },
+    {
+      "authors": [
+        "Elena Voronova"
+      ],
+      "doi": "10.0000/synth.005",
+      "hop": 2,
+      "kind": "resolved",
+      "record_id": "doi:10.0000/synth.005",
+      "source": {
+        "file": "examples/corpus/openalex_nodes.jsonl",
+        "pointer": "line 3"
+      },
+      "title": "Robust Hashing for Dynamic Graph Summaries",
+      "venue": "Proceedings of the Fictional Conference on Data Sketches",
+      "via_edge": {
+        "direction_restored": true,
+        "source_id": "doi:10.0000/synth.002",
+        "target_id": "doi:10.0000/synth.005",
+        "type": "citation"
+      },
+      "year": 2022
+    }
+  ],
+  "case_id": "synthetic-demo-60a8202d-e001",
+  "contract": {
+    "candidates": [
+      {
+        "authors": [
+          "Aster, Lin",
+          "Velluti, Marco"
+        ],
+        "doi": "10.0000/synth.001",
+        "hop": 0,
+        "kind": "resolved",
+        "record_id": "doi:10.0000/synth.001",
+        "source": {
+          "file": "examples/corpus/crossref_batch.json",
+          "pointer": "/message/items/0"
+        },
+        "title": "Adaptive Gradient Sketching for Sparse Citation Networks",
+        "venue": "Journal of Synthetic Bibliometrics",
+        "year": 2021
+      },
+      {
+        "authors": [
+          "Nandakumar, Priya"
+        ],
+        "doi": "10.0000/synth.002",
+        "hop": 1,
+        "kind": "resolved",
+        "record_id": "doi:10.0000/synth.002",
+        "source": {
+          "file": "examples/corpus/crossref_batch.json",
+          "pointer": "/message/items/1"
+        },
+        "title": "Efficient Reservoir Sampling over Streaming Graphs",
+        "venue": "Transactions on Fictional Algorithms",
+        "via_edge": {
+          "direction_restored": false,
+          "source_id": "doi:10.0000/synth.001",
+          "target_id": "doi:10.0000/synth.002",
+          "type": "reference"
+        },
+        "year": 2019
+      },
+      {
+        "authors": [
+          "Okafor T",
+          "Grimaldi S"
+        ],
+        "doi": "10.0000/synth.003",
+        "hop": 1,
+        "kind": "resolved",
+        "record_id": "doi:10.0000/synth.003",
+        "source": {
+          "file": "examples/corpus/europepmc_batch.json",
+          "pointer": "/resultList/result/0"
+        },
+        "title": "Sketch-Based Centrality Estimation in Large Bibliographic Graphs",
+        "venue": "Annals of Imaginary Informatics",
+        "via_edge": {
+          "direction_restored": true,
+          "source_id": "doi:10.0000/synth.001",
+          "target_id": "doi:10.0000/synth.003",
+          "type": "citation"
+        },
+        "year": 2023
+      },
+      {
+        "authors": [
+          "Hana Bergstrom",
+          "Ravi Chatterjee"
+        ],
+        "doi": "10.0000/synth.004",
+        "hop": 1,
+        "kind": "resolved",
+        "record_id": "doi:10.0000/synth.004",
+        "source": {
+          "file": "examples/corpus/openalex_nodes.jsonl",
+          "pointer": "line 2"
+        },
+        "title": "A Survey of Approximate Neighborhood Methods",
+        "venue": "Review of Synthetic Graph Methods",
+        "via_edge": {
+          "direction_restored": false,
+          "source_id": "doi:10.0000/synth.001",
+          "target_id": "doi:10.0000/synth.004",
+          "type": "reference"
+        },
+        "year": 2020
+      },
+      {
+        "authors": [],
+        "doi": "10.0000/synth.404",
+        "hop": 1,
+        "kind": "stub",
+        "raw_pointer": "Aster, L. Phantom Sketching on Unseen Graphs, unpublished note.",
+        "record_id": "doi:10.0000/synth.404",
+        "source": {
+          "file": "examples/corpus/crossref_batch.json",
+          "pointer": "/message/items/0/reference/2"
+        },
+        "title": null,
+        "venue": null,
+        "via_edge": {
+          "direction_restored": false,
+          "source_id": "doi:10.0000/synth.001",
+          "target_id": "doi:10.0000/synth.404",
+          "type": "reference"
+        },
+        "year": null
+      },
+      {
+        "authors": [
+          "Elena Voronova"
+        ],
+        "doi": "10.0000/synth.005",
+        "hop": 2,
+        "kind": "resolved",
+        "record_id": "doi:10.0000/synth.005",
+        "source": {
+          "file": "examples/corpus/openalex_nodes.jsonl",
+          "pointer": "line 3"
+        },
+        "title": "Robust Hashing for Dynamic Graph Summaries",
+        "venue": "Proceedings of the Fictional Conference on Data Sketches",
+        "via_edge": {
+          "direction_restored": true,
+          "source_id": "doi:10.0000/synth.002",
+          "target_id": "doi:10.0000/synth.005",
+          "type": "citation"
+        },
+        "year": 2022
+      }
+    ],
+    "case_id": "synthetic-demo-60a8202d-e001",
+    "edges": [
+      {
+        "direction_restored": false,
+        "source": {
+          "file": "examples/corpus/crossref_batch.json",
+          "pointer": "/message/items/0/reference/0"
+        },
+        "source_id": "doi:10.0000/synth.001",
+        "target_id": "doi:10.0000/synth.002",
+        "type": "reference"
+      },
+      {
+        "direction_restored": true,
+        "restored_from": "doi:10.0000/synth.003->doi:10.0000/synth.001",
+        "source": {
+          "file": "examples/corpus/europepmc_batch.json",
+          "pointer": "/resultList/result/0/referenceList/reference/0"
+        },
+        "source_id": "doi:10.0000/synth.001",
+        "target_id": "doi:10.0000/synth.003",
+        "type": "citation"
+      },
+      {
+        "direction_restored": false,
+        "source": {
+          "file": "examples/corpus/crossref_batch.json",
+          "pointer": "/message/items/0/reference/1"
+        },
+        "source_id": "doi:10.0000/synth.001",
+        "target_id": "doi:10.0000/synth.004",
+        "type": "reference"
+      },
+      {
+        "direction_restored": false,
+        "source": {
+          "file": "examples/corpus/crossref_batch.json",
+          "pointer": "/message/items/0/reference/2"
+        },
+        "source_id": "doi:10.0000/synth.001",
+        "target_id": "doi:10.0000/synth.404",
+        "type": "reference"
+      },
+      {
+        "direction_restored": true,
+        "restored_from": "doi:10.0000/synth.001->doi:10.0000/synth.002",
+        "source": {
+          "file": "examples/corpus/crossref_batch.json",
+          "pointer": "/message/items/0/reference/0"
+        },
+        "source_id": "doi:10.0000/synth.002",
+        "target_id": "doi:10.0000/synth.001",
+        "type": "citation"
+      },
+      {
+        "direction_restored": true,
+        "restored_from": "doi:10.0000/synth.004->doi:10.0000/synth.002",
+        "source": {
+          "file": "examples/corpus/openalex_nodes.jsonl",
+          "pointer": "line 2/referenced_works/0"
+        },
+        "source_id": "doi:10.0000/synth.002",
+        "target_id": "doi:10.0000/synth.004",
+        "type": "citation"
+      },
+      {
+        "direction_restored": true,
+        "restored_from": "doi:10.0000/synth.005->doi:10.0000/synth.002",
+        "source": {
+          "file": "examples/corpus/openalex_nodes.jsonl",
+          "pointer": "line 3/referenced_works/0"
+        },
+        "source_id": "doi:10.0000/synth.002",
+        "target_id": "doi:10.0000/synth.005",
+        "type": "citation"
+      },
+      {
+        "direction_restored": false,
+        "source": {
+          "file": "examples/corpus/europepmc_batch.json",
+          "pointer": "/resultList/result/0/referenceList/reference/0"
+        },
+        "source_id": "doi:10.0000/synth.003",
+        "target_id": "doi:10.0000/synth.001",
+        "type": "reference"
+      },
+      {
+        "direction_restored": true,
+        "restored_from": "doi:10.0000/synth.001->doi:10.0000/synth.004",
+        "source": {
+          "file": "examples/corpus/crossref_batch.json",
+          "pointer": "/message/items/0/reference/1"
+        },
+        "source_id": "doi:10.0000/synth.004",
+        "target_id": "doi:10.0000/synth.001",
+        "type": "citation"
+      },
+      {
+        "direction_restored": false,
+        "source": {
+          "file": "examples/corpus/openalex_nodes.jsonl",
+          "pointer": "line 2/referenced_works/0"
+        },
+        "source_id": "doi:10.0000/synth.004",
+        "target_id": "doi:10.0000/synth.002",
+        "type": "reference"
+      },
+      {
+        "direction_restored": true,
+        "restored_from": "doi:10.0000/synth.005->doi:10.0000/synth.004",
+        "source": {
+          "file": "examples/corpus/edges_extra.csv",
+          "pointer": "line 2"
+        },
+        "source_id": "doi:10.0000/synth.004",
+        "target_id": "doi:10.0000/synth.005",
+        "type": "citation"
+      },
+      {
+        "direction_restored": false,
+        "source": {
+          "file": "examples/corpus/openalex_nodes.jsonl",
+          "pointer": "line 3/referenced_works/0"
+        },
+        "source_id": "doi:10.0000/synth.005",
+        "target_id": "doi:10.0000/synth.002",
+        "type": "reference"
+      },
+      {
+        "direction_restored": false,
+        "source": {
+          "file": "examples/corpus/edges_extra.csv",
+          "pointer": "line 2"
+        },
+        "source_id": "doi:10.0000/synth.005",
+        "target_id": "doi:10.0000/synth.004",
+        "type": "reference"
+      },
+      {
+        "direction_restored": true,
+        "restored_from": "doi:10.0000/synth.001->doi:10.0000/synth.404",
+        "source": {
+          "file": "examples/corpus/crossref_batch.json",
+          "pointer": "/message/items/0/reference/2"
+        },
+        "source_id": "doi:10.0000/synth.404",
+        "target_id": "doi:10.0000/synth.001",
+        "type": "citation"
+      }
+    ],
+    "evidence_records": [
+      {
+        "kind": "seed-resolution",
+        "note": "种子记录，按 DOI/标题键在语料中解析。",
+        "record_id": "doi:10.0000/synth.001",
+        "source": {
+          "file": "examples/corpus/crossref_batch.json",
+          "pointer": "/message/items/0"
+        }
+      },
+      {
+        "hop": 1,
+        "kind": "expansion",
+        "note": "沿 reference 边第 1 层扩展到达。",
+        "record_id": "doi:10.0000/synth.002",
+        "source": {
+          "file": "examples/corpus/crossref_batch.json",
+          "pointer": "/message/items/0/reference/0"
+        },
+        "via_edge": {
+          "direction_restored": false,
+          "source_id": "doi:10.0000/synth.001",
+          "target_id": "doi:10.0000/synth.002",
+          "type": "reference"
+        }
+      },
+      {
+        "hop": 1,
+        "kind": "expansion",
+        "note": "沿 citation 边第 1 层扩展到达。",
+        "record_id": "doi:10.0000/synth.003",
+        "source": {
+          "file": "examples/corpus/europepmc_batch.json",
+          "pointer": "/resultList/result/0/referenceList/reference/0"
+        },
+        "via_edge": {
+          "direction_restored": true,
+          "source_id": "doi:10.0000/synth.001",
+          "target_id": "doi:10.0000/synth.003",
+          "type": "citation"
+        }
+      },
+      {
+        "hop": 1,
+        "kind": "expansion",
+        "note": "沿 reference 边第 1 层扩展到达。",
+        "record_id": "doi:10.0000/synth.004",
+        "source": {
+          "file": "examples/corpus/crossref_batch.json",
+          "pointer": "/message/items/0/reference/1"
+        },
+        "via_edge": {
+          "direction_restored": false,
+          "source_id": "doi:10.0000/synth.001",
+          "target_id": "doi:10.0000/synth.004",
+          "type": "reference"
+        }
+      },
+      {
+        "hop": 2,
+        "kind": "expansion",
+        "note": "沿 citation 边第 2 层扩展到达。",
+        "record_id": "doi:10.0000/synth.005",
+        "source": {
+          "file": "examples/corpus/openalex_nodes.jsonl",
+          "pointer": "line 3/referenced_works/0"
+        },
+        "via_edge": {
+          "direction_restored": true,
+          "source_id": "doi:10.0000/synth.002",
+          "target_id": "doi:10.0000/synth.005",
+          "type": "citation"
+        }
+      },
+      {
+        "hop": 1,
+        "kind": "expansion",
+        "note": "沿 reference 边第 1 层扩展到达。",
+        "record_id": "doi:10.0000/synth.404",
+        "source": {
+          "file": "examples/corpus/crossref_batch.json",
+          "pointer": "/message/items/0/reference/2"
+        },
+        "via_edge": {
+          "direction_restored": false,
+          "source_id": "doi:10.0000/synth.001",
+          "target_id": "doi:10.0000/synth.404",
+          "type": "reference"
+        }
+      }
+    ],
+    "review_notes": null,
+    "seed": {
+      "declared": [
+        {
+          "doi": "10.0000/synth.001",
+          "title": "Adaptive Gradient Sketching for Sparse Citation Networks"
+        }
+      ],
+      "resolved": [
+        {
+          "record_id": "doi:10.0000/synth.001",
+          "seed": {
+            "doi": "10.0000/synth.001",
+            "title": "Adaptive Gradient Sketching for Sparse Citation Networks"
+          }
+        }
+      ],
+      "unresolved": []
+    },
+    "sources": [
+      {
+        "edges": 0,
+        "error": null,
+        "file": "examples/corpus/crossref_batch.json",
+        "format": "crossref-batch",
+        "parse_ok": true,
+        "records": 2,
+        "sha1": "97d74bb2b39b7e807b679ced4d0598e4f3617e1d"
+      },
+      {
+        "edges": 1,
+        "error": null,
+        "file": "examples/corpus/edges_extra.csv",
+        "format": "table:csv",
+        "parse_ok": true,
+        "records": 0,
+        "sha1": "9d2cbc8b03c632232d9dd4a25bda43661f5ee7c9"
+      },
+      {
+        "edges": 0,
+        "error": null,
+        "file": "examples/corpus/europepmc_batch.json",
+        "format": "europepmc",
+        "parse_ok": true,
+        "records": 1,
+        "sha1": "8032316beb687177950c51dbce0f20858ffe525d"
+      },
+      {
+        "edges": 0,
+        "error": null,
+        "file": "examples/corpus/openalex_nodes.jsonl",
+        "format": "jsonl(3 lines)",
+        "parse_ok": true,
+        "records": 3,
+        "sha1": "bfb89c3000207f8d47e5087ec7cbcd11a92bf899"
+      }
+    ],
+    "status": "ok",
+    "uncertainty": [
+      "1 条记录为 stub（语料内无法解析的引用目标），仅保留原始指针与定位，未补造元数据。",
+      "output_contract 字段 'review_notes' 无对应产物，按契约置空。"
+    ]
+  },
+  "edges": [
+    {
+      "direction_restored": false,
+      "source": {
+        "file": "examples/corpus/crossref_batch.json",
+        "pointer": "/message/items/0/reference/0"
+      },
+      "source_id": "doi:10.0000/synth.001",
+      "target_id": "doi:10.0000/synth.002",
+      "type": "reference"
+    },
+    {
+      "direction_restored": true,
+      "restored_from": "doi:10.0000/synth.003->doi:10.0000/synth.001",
+      "source": {
+        "file": "examples/corpus/europepmc_batch.json",
+        "pointer": "/resultList/result/0/referenceList/reference/0"
+      },
+      "source_id": "doi:10.0000/synth.001",
+      "target_id": "doi:10.0000/synth.003",
+      "type": "citation"
+    },
+    {
+      "direction_restored": false,
+      "source": {
+        "file": "examples/corpus/crossref_batch.json",
+        "pointer": "/message/items/0/reference/1"
+      },
+      "source_id": "doi:10.0000/synth.001",
+      "target_id": "doi:10.0000/synth.004",
+      "type": "reference"
+    },
+    {
+      "direction_restored": false,
+      "source": {
+        "file": "examples/corpus/crossref_batch.json",
+        "pointer": "/message/items/0/reference/2"
+      },
+      "source_id": "doi:10.0000/synth.001",
+      "target_id": "doi:10.0000/synth.404",
+      "type": "reference"
+    },
+    {
+      "direction_restored": true,
+      "restored_from": "doi:10.0000/synth.001->doi:10.0000/synth.002",
+      "source": {
+        "file": "examples/corpus/crossref_batch.json",
+        "pointer": "/message/items/0/reference/0"
+      },
+      "source_id": "doi:10.0000/synth.002",
+      "target_id": "doi:10.0000/synth.001",
+      "type": "citation"
+    },
+    {
+      "direction_restored": true,
+      "restored_from": "doi:10.0000/synth.004->doi:10.0000/synth.002",
+      "source": {
+        "file": "examples/corpus/openalex_nodes.jsonl",
+        "pointer": "line 2/referenced_works/0"
+      },
+      "source_id": "doi:10.0000/synth.002",
+      "target_id": "doi:10.0000/synth.004",
+      "type": "citation"
+    },
+    {
+      "direction_restored": true,
+      "restored_from": "doi:10.0000/synth.005->doi:10.0000/synth.002",
+      "source": {
+        "file": "examples/corpus/openalex_nodes.jsonl",
+        "pointer": "line 3/referenced_works/0"
+      },
+      "source_id": "doi:10.0000/synth.002",
+      "target_id": "doi:10.0000/synth.005",
+      "type": "citation"
+    },
+    {
+      "direction_restored": false,
+      "source": {
+        "file": "examples/corpus/europepmc_batch.json",
+        "pointer": "/resultList/result/0/referenceList/reference/0"
+      },
+      "source_id": "doi:10.0000/synth.003",
+      "target_id": "doi:10.0000/synth.001",
+      "type": "reference"
+    },
+    {
+      "direction_restored": true,
+      "restored_from": "doi:10.0000/synth.001->doi:10.0000/synth.004",
+      "source": {
+        "file": "examples/corpus/crossref_batch.json",
+        "pointer": "/message/items/0/reference/1"
+      },
+      "source_id": "doi:10.0000/synth.004",
+      "target_id": "doi:10.0000/synth.001",
+      "type": "citation"
+    },
+    {
+      "direction_restored": false,
+      "source": {
+        "file": "examples/corpus/openalex_nodes.jsonl",
+        "pointer": "line 2/referenced_works/0"
+      },
+      "source_id": "doi:10.0000/synth.004",
+      "target_id": "doi:10.0000/synth.002",
+      "type": "reference"
+    },
+    {
+      "direction_restored": true,
+      "restored_from": "doi:10.0000/synth.005->doi:10.0000/synth.004",
+      "source": {
+        "file": "examples/corpus/edges_extra.csv",
+        "pointer": "line 2"
+      },
+      "source_id": "doi:10.0000/synth.004",
+      "target_id": "doi:10.0000/synth.005",
+      "type": "citation"
+    },
+    {
+      "direction_restored": false,
+      "source": {
+        "file": "examples/corpus/openalex_nodes.jsonl",
+        "pointer": "line 3/referenced_works/0"
+      },
+      "source_id": "doi:10.0000/synth.005",
+      "target_id": "doi:10.0000/synth.002",
+      "type": "reference"
+    },
+    {
+      "direction_restored": false,
+      "source": {
+        "file": "examples/corpus/edges_extra.csv",
+        "pointer": "line 2"
+      },
+      "source_id": "doi:10.0000/synth.005",
+      "target_id": "doi:10.0000/synth.004",
+      "type": "reference"
+    },
+    {
+      "direction_restored": true,
+      "restored_from": "doi:10.0000/synth.001->doi:10.0000/synth.404",
+      "source": {
+        "file": "examples/corpus/crossref_batch.json",
+        "pointer": "/message/items/0/reference/2"
+      },
+      "source_id": "doi:10.0000/synth.404",
+      "target_id": "doi:10.0000/synth.001",
+      "type": "citation"
+    }
+  ],
+  "evidence_records": [
+    {
+      "kind": "seed-resolution",
+      "note": "种子记录，按 DOI/标题键在语料中解析。",
+      "record_id": "doi:10.0000/synth.001",
+      "source": {
+        "file": "examples/corpus/crossref_batch.json",
+        "pointer": "/message/items/0"
+      }
+    },
+    {
+      "hop": 1,
+      "kind": "expansion",
+      "note": "沿 reference 边第 1 层扩展到达。",
+      "record_id": "doi:10.0000/synth.002",
+      "source": {
+        "file": "examples/corpus/crossref_batch.json",
+        "pointer": "/message/items/0/reference/0"
+      },
+      "via_edge": {
+        "direction_restored": false,
+        "source_id": "doi:10.0000/synth.001",
+        "target_id": "doi:10.0000/synth.002",
+        "type": "reference"
+      }
+    },
+    {
+      "hop": 1,
+      "kind": "expansion",
+      "note": "沿 citation 边第 1 层扩展到达。",
+      "record_id": "doi:10.0000/synth.003",
+      "source": {
+        "file": "examples/corpus/europepmc_batch.json",
+        "pointer": "/resultList/result/0/referenceList/reference/0"
+      },
+      "via_edge": {
+        "direction_restored": true,
+        "source_id": "doi:10.0000/synth.001",
+        "target_id": "doi:10.0000/synth.003",
+        "type": "citation"
+      }
+    },
+    {
+      "hop": 1,
+      "kind": "expansion",
+      "note": "沿 reference 边第 1 层扩展到达。",
+      "record_id": "doi:10.0000/synth.004",
+      "source": {
+        "file": "examples/corpus/crossref_batch.json",
+        "pointer": "/message/items/0/reference/1"
+      },
+      "via_edge": {
+        "direction_restored": false,
+        "source_id": "doi:10.0000/synth.001",
+        "target_id": "doi:10.0000/synth.004",
+        "type": "reference"
+      }
+    },
+    {
+      "hop": 2,
+      "kind": "expansion",
+      "note": "沿 citation 边第 2 层扩展到达。",
+      "record_id": "doi:10.0000/synth.005",
+      "source": {
+        "file": "examples/corpus/openalex_nodes.jsonl",
+        "pointer": "line 3/referenced_works/0"
+      },
+      "via_edge": {
+        "direction_restored": true,
+        "source_id": "doi:10.0000/synth.002",
+        "target_id": "doi:10.0000/synth.005",
+        "type": "citation"
+      }
+    },
+    {
+      "hop": 1,
+      "kind": "expansion",
+      "note": "沿 reference 边第 1 层扩展到达。",
+      "record_id": "doi:10.0000/synth.404",
+      "source": {
+        "file": "examples/corpus/crossref_batch.json",
+        "pointer": "/message/items/0/reference/2"
+      },
+      "via_edge": {
+        "direction_restored": false,
+        "source_id": "doi:10.0000/synth.001",
+        "target_id": "doi:10.0000/synth.404",
+        "type": "reference"
+      }
+    }
+  ],
+  "seed": {
+    "declared": [
+      {
+        "doi": "10.0000/synth.001",
+        "title": "Adaptive Gradient Sketching for Sparse Citation Networks"
+      }
+    ],
+    "resolved": [
+      {
+        "record_id": "doi:10.0000/synth.001",
+        "seed": {
+          "doi": "10.0000/synth.001",
+          "title": "Adaptive Gradient Sketching for Sparse Citation Networks"
+        }
+      }
+    ],
+    "unresolved": []
+  },
+  "sources": [
+    {
+      "edges": 0,
+      "error": null,
+      "file": "examples/corpus/crossref_batch.json",
+      "format": "crossref-batch",
+      "parse_ok": true,
+      "records": 2,
+      "sha1": "97d74bb2b39b7e807b679ced4d0598e4f3617e1d"
+    },
+    {
+      "edges": 1,
+      "error": null,
+      "file": "examples/corpus/edges_extra.csv",
+      "format": "table:csv",
+      "parse_ok": true,
+      "records": 0,
+      "sha1": "9d2cbc8b03c632232d9dd4a25bda43661f5ee7c9"
+    },
+    {
+      "edges": 0,
+      "error": null,
+      "file": "examples/corpus/europepmc_batch.json",
+      "format": "europepmc",
+      "parse_ok": true,
+      "records": 1,
+      "sha1": "8032316beb687177950c51dbce0f20858ffe525d"
+    },
+    {
+      "edges": 0,
+      "error": null,
+      "file": "examples/corpus/openalex_nodes.jsonl",
+      "format": "jsonl(3 lines)",
+      "parse_ok": true,
+      "records": 3,
+      "sha1": "bfb89c3000207f8d47e5087ec7cbcd11a92bf899"
+    }
+  ],
+  "stage_summary": {
+    "budget_limited": false,
+    "completed_stage": 3,
+    "max_depth_reached": 2,
+    "pipeline": [
+      "stage0_contract",
+      "stage1_ingest",
+      "stage2_shallow",
+      "stage3_deepen"
+    ]
+  },
+  "status": "ok",
+  "uncertainty": [
+    "1 条记录为 stub（语料内无法解析的引用目标），仅保留原始指针与定位，未补造元数据。",
+    "output_contract 字段 'review_notes' 无对应产物，按契约置空。",
+    "QC-Q3b：契约字段 review_notes 为 null，属契约允许的空值，但请人工确认。"
+  ]
+}

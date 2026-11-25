@@ -1,0 +1,24 @@
+{
+  "diffs": [],
+  "generated_at": "2026-11-25T08:58:49.141322+00:00",
+  "identical": true,
+  "note": "仅比较 result.json 字节；run_log.json 时间戳差异属预期，不参与比较。",
+  "runs": [
+    {
+      "dir": "/private/var/folders/7r/mnfbx0px1j14kpqsr2bp7nyc0000gn/T/brain/warden-repro-0-rip_y376",
+      "result_bytes": 26482,
+      "returncode": 0,
+      "run": 0,
+      "stderr_tail": "",
+      "stdout_tail": "warden done: status=ok candidates=6 edges=14 stubs=1\n"
+    },
+    {
+      "dir": "/private/var/folders/7r/mnfbx0px1j14kpqsr2bp7nyc0000gn/T/brain/warden-repro-1-ttic_mn2",
+      "result_bytes": 26482,
+      "returncode": 0,
+      "run": 1,
+      "stderr_tail": "",
+      "stdout_tail": "warden done: status=ok candidates=6 edges=14 stubs=1\n"
+    }
+  ]
+}

@@ -1,0 +1,327 @@
+{
+  "case_id": "SYNTH-CASE-001",
+  "status": "partial",
+  "seed": {
+    "doi": "10.0000/synth.001",
+    "title": "A Synthetic Gradient Method for Citation Flow",
+    "via": "case.json:seed_paper",
+    "corpus_id": "doi:10.0000/synth.001",
+    "found_in_corpus": true
+  },
+  "candidates": [
+    {
+      "id": "doi:10.0000/synth.002",
+      "title": "Foundations of Veracity-Gated Indexing",
+      "authors": [
+        "Clara Dostoev"
+      ],
+      "year": 2015,
+      "doi": "10.0000/synth.002",
+      "venue": "Annals of Fictional Retrieval",
+      "depth": 1,
+      "reached_via": "backward(参考文献)",
+      "source_formats": [
+        "crossref"
+      ],
+      "sources": [
+        {
+          "file": "crossref_batch1.json",
+          "pointer": "/message/items/1"
+        }
+      ]
+    },
+    {
+      "id": "doi:10.0000/synth.003",
+      "title": "Improving Synthetic Gradient Flow with Veracity Gates",
+      "authors": [
+        "Diego Ferrant",
+        "Alice V. Merian"
+      ],
+      "year": 2021,
+      "doi": "10.0000/synth.003",
+      "venue": "Proceedings of the Imaginary Conference on Graph Mining",
+      "depth": 1,
+      "reached_via": "forward(施引)",
+      "source_formats": [
+        "crossref"
+      ],
+      "sources": [
+        {
+          "file": "crossref_batch2.json",
+          "pointer": "/message"
+        }
+      ]
+    },
+    {
+      "id": "doi:10.0000/synth.004",
+      "title": "Parallel Methods for Citation Tracing at Scale",
+      "authors": [
+        "Elena Raskol",
+        "Ivan Karamaz"
+      ],
+      "year": 2020,
+      "doi": "10.0000/synth.004",
+      "venue": "Journal of Synthetic Bibliometrics",
+      "depth": 1,
+      "reached_via": "forward(施引)",
+      "source_formats": [
+        "europepmc"
+      ],
+      "sources": [
+        {
+          "file": "europepmc_batch1.json",
+          "pointer": "/resultList/result/0"
+        }
+      ]
+    }
+  ],
+  "edges": [
+    {
+      "from": "doi:10.0000/synth.001",
+      "to": "doi:10.0000/synth.002",
+      "kind": "reference",
+      "direction_restored": false,
+      "source": {
+        "file": "crossref_batch1.json",
+        "pointer": "/message/items/0/reference/0"
+      }
+    },
+    {
+      "from": "doi:10.0000/synth.002",
+      "to": "doi:10.0000/synth.001",
+      "kind": "citation",
+      "direction_restored": true,
+      "source": {
+        "file": "crossref_batch1.json",
+        "pointer": "/message/items/0/reference/0"
+      }
+    },
+    {
+      "from": "doi:10.0000/synth.001",
+      "to": "stub:78ef428df21a",
+      "kind": "reference",
+      "direction_restored": false,
+      "source": {
+        "file": "crossref_batch1.json",
+        "pointer": "/message/items/0/reference/1"
+      },
+      "note": "target_unresolved: 语料内无此记录，保留 stub"
+    },
+    {
+      "from": "doi:10.0000/synth.003",
+      "to": "doi:10.0000/synth.001",
+      "kind": "reference",
+      "direction_restored": false,
+      "source": {
+        "file": "crossref_batch2.json",
+        "pointer": "/message/reference/0"
+      }
+    },
+    {
+      "from": "doi:10.0000/synth.001",
+      "to": "doi:10.0000/synth.003",
+      "kind": "citation",
+      "direction_restored": true,
+      "source": {
+        "file": "crossref_batch2.json",
+        "pointer": "/message/reference/0"
+      }
+    },
+    {
+      "from": "doi:10.0000/synth.004",
+      "to": "doi:10.0000/synth.001",
+      "kind": "reference",
+      "direction_restored": false,
+      "source": {
+        "file": "europepmc_batch1.json",
+        "pointer": "/resultList/result/0/referenceList/reference/0"
+      }
+    },
+    {
+      "from": "doi:10.0000/synth.001",
+      "to": "doi:10.0000/synth.004",
+      "kind": "citation",
+      "direction_restored": true,
+      "source": {
+        "file": "europepmc_batch1.json",
+        "pointer": "/resultList/result/0/referenceList/reference/0"
+      }
+    },
+    {
+      "from": "doi:10.0000/synth.004",
+      "to": "doi:10.0000/synth.002",
+      "kind": "reference",
+      "direction_restored": false,
+      "source": {
+        "file": "europepmc_batch1.json",
+        "pointer": "/resultList/result/0/referenceList/reference/1"
+      }
+    },
+    {
+      "from": "doi:10.0000/synth.002",
+      "to": "doi:10.0000/synth.004",
+      "kind": "citation",
+      "direction_restored": true,
+      "source": {
+        "file": "europepmc_batch1.json",
+        "pointer": "/resultList/result/0/referenceList/reference/1"
+      }
+    }
+  ],
+  "sources": [
+    {
+      "file": "broken_response.json",
+      "sha1": "ae27b980187a35cee8939a52d8849916a94a7a4d",
+      "bytes": 192,
+      "format": "unknown",
+      "records": 0,
+      "status": "failed"
+    },
+    {
+      "file": "crossref_batch1.json",
+      "sha1": "8ad7778a77b4c0c735a029e834cdb35d88de33f7",
+      "bytes": 1246,
+      "format": "crossref",
+      "records": 2,
+      "status": "ok"
+    },
+    {
+      "file": "crossref_batch2.json",
+      "sha1": "196213977d93913ac24fbcdde19b0a355cead6b5",
+      "bytes": 627,
+      "format": "crossref",
+      "records": 1,
+      "status": "ok"
+    },
+    {
+      "file": "europepmc_batch1.json",
+      "sha1": "1f3b8a18b4f959af5daf48d59e92d9d068ebb0fb",
+      "bytes": 1103,
+      "format": "europepmc",
+      "records": 2,
+      "status": "ok"
+    }
+  ],
+  "evidence_records": [
+    {
+      "candidate_id": "doi:10.0000/synth.002",
+      "title": "Foundations of Veracity-Gated Indexing",
+      "depth": 1,
+      "reached_via": "backward(参考文献)",
+      "edge_evidence": [
+        {
+          "from": "doi:10.0000/synth.001",
+          "to": "doi:10.0000/synth.002",
+          "kind": "reference",
+          "direction_restored": false,
+          "source": {
+            "file": "crossref_batch1.json",
+            "pointer": "/message/items/0/reference/0"
+          }
+        }
+      ],
+      "locators": [
+        {
+          "file": "crossref_batch1.json",
+          "pointer": "/message/items/1"
+        }
+      ]
+    },
+    {
+      "candidate_id": "doi:10.0000/synth.003",
+      "title": "Improving Synthetic Gradient Flow with Veracity Gates",
+      "depth": 1,
+      "reached_via": "forward(施引)",
+      "edge_evidence": [
+        {
+          "from": "doi:10.0000/synth.001",
+          "to": "doi:10.0000/synth.003",
+          "kind": "citation",
+          "direction_restored": true,
+          "source": {
+            "file": "crossref_batch2.json",
+            "pointer": "/message/reference/0"
+          }
+        }
+      ],
+      "locators": [
+        {
+          "file": "crossref_batch2.json",
+          "pointer": "/message"
+        }
+      ]
+    },
+    {
+      "candidate_id": "doi:10.0000/synth.004",
+      "title": "Parallel Methods for Citation Tracing at Scale",
+      "depth": 1,
+      "reached_via": "forward(施引)",
+      "edge_evidence": [
+        {
+          "from": "doi:10.0000/synth.001",
+          "to": "doi:10.0000/synth.004",
+          "kind": "citation",
+          "direction_restored": true,
+          "source": {
+            "file": "europepmc_batch1.json",
+            "pointer": "/resultList/result/0/referenceList/reference/0"
+          }
+        }
+      ],
+      "locators": [
+        {
+          "file": "europepmc_batch1.json",
+          "pointer": "/resultList/result/0"
+        }
+      ]
+    }
+  ],
+  "uncertainty": [
+    "合并字段冲突：doi:10.0000/synth.001 的 title 存在多个值 A Synthetic Gradient Method for Citation Flow / A Synthetic Gradient Method for Citation Flow: Extended Conference Version（保留可回指）",
+    "合并字段冲突：doi:10.0000/synth.001 的 venue 存在多个值 Journal of Synthetic Bibliometrics / Proceedings of the Imaginary Conference on Graph Mining（保留可回指）",
+    "1 条引用目标在语料内无记录，已保留为 stub（不补造元数据）",
+    "真实性瑕疵（status 降级依据）：1 个语料文件解析失败/未判定：broken_response.json",
+    "真实性瑕疵（status 降级依据）：2 组合并字段冲突",
+    "真实性瑕疵（status 降级依据）：1 条未解析引用目标（stub）",
+    "output_contract 字段 'novelty_statement' 语义未在本 Skill 中定义，已按诚实空值(null)填充"
+  ],
+  "stubs": [
+    {
+      "id": "stub:78ef428df21a",
+      "label": "Phantom Benchmark for Citation Recall",
+      "doi": "10.0000/synth.999",
+      "first_seen": {
+        "file": "crossref_batch1.json",
+        "pointer": "/message/items/0/reference/1"
+      }
+    }
+  ],
+  "screening_rationale": "从种子出发沿引用图做 1–2 层扩展（reference 边向后、citation 边向前，前向边由全语料反向索引恢复处标 direction_restored）；身份合并采用 DOI 规范化精确匹配＋标题规范化匹配；所有候选均通过 locator 门禁（必须带 {file, pointer} 定位）。",
+  "omissions": [
+    {
+      "type": "unresolved-reference",
+      "detail": {
+        "from": "doi:10.0000/synth.001",
+        "stub": "stub:78ef428df21a",
+        "locator": {
+          "file": "crossref_batch1.json",
+          "pointer": "/message/items/0/reference/1"
+        }
+      }
+    }
+  ],
+  "novelty_statement": null,
+  "output_contract_mirrored": [
+    "candidates",
+    "case_id",
+    "edges",
+    "evidence_records",
+    "novelty_statement",
+    "omissions",
+    "screening_rationale",
+    "seed",
+    "sources",
+    "status",
+    "uncertainty"
+  ]
+}

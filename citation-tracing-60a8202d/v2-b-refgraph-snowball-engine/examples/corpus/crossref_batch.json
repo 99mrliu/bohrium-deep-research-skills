@@ -1,0 +1,63 @@
+{
+  "_notice": "SYNTHETIC DEMO CORPUS / 合成示例语料：全部为虚构文献，非真实论文，仅用于演示。",
+  "status": "ok",
+  "message-type": "work-list",
+  "message": {
+    "total-results": 5,
+    "items": [
+      {
+        "DOI": "10.0000/synth.classic-1998",
+        "title": ["A foundational taxonomy of synthetic widgets"],
+        "container-title": ["Annals of Synthetic Bibliometrics"],
+        "issued": {"date-parts": [[1998]]},
+        "author": [{"family": "Classicfield", "given": "C."}],
+        "is-referenced-by-count": 4820,
+        "reference": []
+      },
+      {
+        "DOI": "10.0000/synth.alpha-2005",
+        "title": ["Synthetic gradient calibration for benchmark datasets"],
+        "container-title": ["Journal of Synthetic Methods"],
+        "issued": {"date-parts": [[2005]]},
+        "author": [{"family": "Alphafield", "given": "A."}],
+        "is-referenced-by-count": 240,
+        "reference": []
+      },
+      {
+        "DOI": "10.0000/synth.beta-2015",
+        "title": ["Improved widget alignment via calibrated gradients"],
+        "container-title": ["Journal of Synthetic Methods"],
+        "issued": {"date-parts": [[2015]]},
+        "author": [{"family": "Betafield", "given": "B."}],
+        "is-referenced-by-count": 86,
+        "reference": [
+          {"DOI": "10.0000/synth.alpha-2005", "article-title": "Synthetic gradient calibration for benchmark datasets"},
+          {"DOI": "10.0000/synth.classic-1998", "article-title": "A foundational taxonomy of synthetic widgets"},
+          {"DOI": "10.0000/synth.unresolved-2010", "article-title": "Unresolvable synthetic work absent from this corpus"}
+        ]
+      },
+      {
+        "DOI": "10.0000/synth.noise-2020",
+        "title": ["Marine shellfish lipidomics survey"],
+        "container-title": ["Journal of Marine Lipids"],
+        "issued": {"date-parts": [[2020]]},
+        "author": [{"family": "Noisefield", "given": "N."}],
+        "is-referenced-by-count": 3,
+        "reference": []
+      },
+      {
+        "DOI": "10.0000/synth.seed-2021",
+        "title": ["Snowball sampling of synthetic widget citations"],
+        "container-title": ["Journal of Synthetic Bibliometrics"],
+        "issued": {"date-parts": [[2021]]},
+        "author": [{"family": "Seedfield", "given": "S."}, {"family": "Tracer", "given": "T."}],
+        "is-referenced-by-count": 17,
+        "reference": [
+          {"DOI": "10.0000/synth.classic-1998", "article-title": "A foundational taxonomy of synthetic widgets"},
+          {"DOI": "10.0000/synth.beta-2015", "article-title": "Improved widget alignment via calibrated gradients"},
+          {"DOI": "10.0000/synth.noise-2020", "article-title": "Marine shellfish lipidomics survey"}
+        ]
+      }
+    ]
+  }
+}

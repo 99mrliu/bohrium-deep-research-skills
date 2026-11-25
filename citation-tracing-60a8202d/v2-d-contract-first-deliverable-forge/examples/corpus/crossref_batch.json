@@ -1,0 +1,32 @@
+{
+  "_comment": "SYNTHETIC 合成示例数据，非真实文献 / not real papers。Crossref message.items 批量风格。",
+  "status": "ok",
+  "message-type": "work-list",
+  "message": {
+    "items": [
+      {
+        "DOI": "10.0000/synth.002",
+        "title": ["Spectral Graph Kernel Methods: A Foundational Study"],
+        "container-title": ["Annals of Synthetic Graph Theory"],
+        "issued": {"date-parts": [[2015]]},
+        "author": [
+          {"given": "Priya", "family": "Raghavan"}
+        ],
+        "reference": [
+          {"key": "ref1", "DOI": "10.0000/synth.003"}
+        ]
+      },
+      {
+        "DOI": "10.0000/synth.003",
+        "title": ["RETINA-BENCH: A Benchmark Dataset for Retinal Imaging"],
+        "container-title": ["Synthetic Data Archives"],
+        "issued": {"date-parts": [[2012]]},
+        "author": [
+          {"given": "Tom", "family": "Weber"},
+          {"given": "Aiko", "family": "Tanaka"}
+        ],
+        "reference": []
+      }
+    ]
+  }
+}

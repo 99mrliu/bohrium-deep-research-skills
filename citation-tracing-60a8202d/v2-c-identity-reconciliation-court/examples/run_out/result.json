@@ -1,0 +1,410 @@
+{
+  "candidates": [
+    {
+      "authors": [
+        "Wei Lan",
+        "Mira Sol"
+      ],
+      "doi": "10.0000/synth.a1",
+      "dois": [
+        "10.0000/synth.a1",
+        "10.0000/synth.arxiv.a1"
+      ],
+      "entity_id": "E0001",
+      "kind": "journal",
+      "layer": 0,
+      "lineage": [
+        "journal",
+        "preprint"
+      ],
+      "locators": [
+        {
+          "file": "examples/corpus/crossref_export.json",
+          "pointer": "$.message.items[0]"
+        },
+        {
+          "file": "examples/corpus/openalex_dump.json",
+          "pointer": "$.results[0]"
+        }
+      ],
+      "member_count": 2,
+      "role": "seed",
+      "title": "Graph Snowball Sampling for Citation Tracing",
+      "venue": "Journal of Synthetic Bibliometrics",
+      "year": 2021
+    },
+    {
+      "authors": [
+        "Rao Iyer"
+      ],
+      "doi": "10.0000/synth.s2",
+      "dois": [
+        "10.0000/synth.s2"
+      ],
+      "entity_id": "E0004",
+      "kind": "journal",
+      "layer": 1,
+      "lineage": [
+        "journal"
+      ],
+      "locators": [
+        {
+          "file": "examples/corpus/europepmc_hits.json",
+          "pointer": "$.resultList.result[0]"
+        }
+      ],
+      "member_count": 1,
+      "role": "expanded",
+      "title": "A survey of graph sampling",
+      "venue": "Synthetic Review Quarterly",
+      "year": 2021
+    },
+    {
+      "authors": [
+        "Wei Lan",
+        "Petra Odin"
+      ],
+      "doi": "10.0000/synth.found",
+      "dois": [
+        "10.0000/synth.found"
+      ],
+      "entity_id": "E0006",
+      "kind": "journal",
+      "layer": 1,
+      "lineage": [
+        "journal"
+      ],
+      "locators": [
+        {
+          "file": "examples/corpus/openalex_dump.json",
+          "pointer": "$.results[1]"
+        }
+      ],
+      "member_count": 1,
+      "role": "expanded",
+      "title": "Foundations of Citation Graph Traversal",
+      "venue": "Journal of Synthetic Bibliometrics",
+      "year": 2015
+    },
+    {
+      "authors": [
+        "Wei Lan",
+        "Tomas Berg"
+      ],
+      "doi": "10.0000/synth.m1",
+      "dois": [
+        "10.0000/synth.m1"
+      ],
+      "entity_id": "E0003",
+      "kind": "journal",
+      "layer": 2,
+      "lineage": [
+        "conference",
+        "journal"
+      ],
+      "locators": [
+        {
+          "file": "examples/corpus/crossref_export.json",
+          "pointer": "$.message.items[2]"
+        },
+        {
+          "file": "examples/corpus/europepmc_hits.json",
+          "pointer": "$.resultList.result[1]"
+        }
+      ],
+      "member_count": 2,
+      "role": "expanded",
+      "title": "Robust Identity Matching Across Scholarly Indexes",
+      "venue": "Journal of Synthetic Bibliometrics",
+      "year": 2020
+    }
+  ],
+  "case_id": "synthetic-identity-001",
+  "edges": [
+    {
+      "cited": "E0006",
+      "citing": "E0001",
+      "direction": "backward",
+      "direction_restored": false,
+      "kind": "reference",
+      "raw_pointer": "10.0000/synth.found",
+      "source": {
+        "file": "examples/corpus/crossref_export.json",
+        "pointer": "$.message.items[0].references[0]"
+      }
+    },
+    {
+      "cited": "E0006",
+      "citing": "E0003",
+      "direction": "backward",
+      "direction_restored": false,
+      "kind": "reference",
+      "raw_pointer": "10.0000/synth.found",
+      "source": {
+        "file": "examples/corpus/crossref_export.json",
+        "pointer": "$.message.items[2].references[0]"
+      }
+    },
+    {
+      "cited": "E0001",
+      "citing": "E0004",
+      "direction": "backward",
+      "direction_restored": false,
+      "kind": "reference",
+      "raw_pointer": "10.0000/synth.a1",
+      "source": {
+        "file": "examples/corpus/europepmc_hits.json",
+        "pointer": "$.resultList.result[0].references[0]"
+      }
+    },
+    {
+      "cited": "E0001",
+      "citing": "E0004",
+      "direction": "forward",
+      "direction_restored": true,
+      "kind": "citation",
+      "note": "由全语料参考文献反向索引恢复的前向边",
+      "source": {
+        "derived_from": "references_reverse_index"
+      }
+    },
+    {
+      "cited": "E0006",
+      "citing": "E0001",
+      "direction": "forward",
+      "direction_restored": true,
+      "kind": "citation",
+      "note": "由全语料参考文献反向索引恢复的前向边",
+      "source": {
+        "derived_from": "references_reverse_index"
+      }
+    },
+    {
+      "cited": "E0006",
+      "citing": "E0003",
+      "direction": "forward",
+      "direction_restored": true,
+      "kind": "citation",
+      "note": "由全语料参考文献反向索引恢复的前向边",
+      "source": {
+        "derived_from": "references_reverse_index"
+      }
+    }
+  ],
+  "evidence_records": [
+    {
+      "claim": "实体 E0001 由 2 条成员记录合并而成，代表记录 r00001",
+      "entity_id": "E0001",
+      "locators": [
+        {
+          "file": "examples/corpus/crossref_export.json",
+          "pointer": "$.message.items[0]"
+        },
+        {
+          "file": "examples/corpus/openalex_dump.json",
+          "pointer": "$.results[0]"
+        }
+      ],
+      "type": "entity_identity"
+    },
+    {
+      "claim": "实体 E0004 由 1 条成员记录合并而成，代表记录 r00004",
+      "entity_id": "E0004",
+      "locators": [
+        {
+          "file": "examples/corpus/europepmc_hits.json",
+          "pointer": "$.resultList.result[0]"
+        }
+      ],
+      "type": "entity_identity"
+    },
+    {
+      "claim": "实体 E0006 由 1 条成员记录合并而成，代表记录 r00008",
+      "entity_id": "E0006",
+      "locators": [
+        {
+          "file": "examples/corpus/openalex_dump.json",
+          "pointer": "$.results[1]"
+        }
+      ],
+      "type": "entity_identity"
+    },
+    {
+      "claim": "实体 E0003 由 2 条成员记录合并而成，代表记录 r00003",
+      "entity_id": "E0003",
+      "locators": [
+        {
+          "file": "examples/corpus/crossref_export.json",
+          "pointer": "$.message.items[2]"
+        },
+        {
+          "file": "examples/corpus/europepmc_hits.json",
+          "pointer": "$.resultList.result[1]"
+        }
+      ],
+      "type": "entity_identity"
+    },
+    {
+      "claim": "E0001 → E0006（reference）",
+      "source": {
+        "file": "examples/corpus/crossref_export.json",
+        "pointer": "$.message.items[0].references[0]"
+      },
+      "type": "citation_edge"
+    },
+    {
+      "claim": "E0003 → E0006（reference）",
+      "source": {
+        "file": "examples/corpus/crossref_export.json",
+        "pointer": "$.message.items[2].references[0]"
+      },
+      "type": "citation_edge"
+    },
+    {
+      "claim": "E0004 → E0001（reference）",
+      "source": {
+        "file": "examples/corpus/europepmc_hits.json",
+        "pointer": "$.resultList.result[0].references[0]"
+      },
+      "type": "citation_edge"
+    },
+    {
+      "claim": "E0004 → E0001（citation，direction_restored）",
+      "source": {
+        "derived_from": "references_reverse_index"
+      },
+      "type": "citation_edge"
+    },
+    {
+      "claim": "E0001 → E0006（citation，direction_restored）",
+      "source": {
+        "derived_from": "references_reverse_index"
+      },
+      "type": "citation_edge"
+    },
+    {
+      "claim": "E0003 → E0006（citation，direction_restored）",
+      "source": {
+        "derived_from": "references_reverse_index"
+      },
+      "type": "citation_edge"
+    }
+  ],
+  "expansion_layers": 2,
+  "generated_by": "run_case.py (identity-reconciliation-court, offline, stdlib)",
+  "merge_summary": {
+    "distinct_same_title": [
+      {
+        "locators": [
+          {
+            "file": "examples/corpus/crossref_export.json",
+            "pointer": "$.message.items[1]"
+          },
+          {
+            "file": "examples/corpus/europepmc_hits.json",
+            "pointer": "$.resultList.result[0]"
+          }
+        ],
+        "reason": "标题高度相似，但作者/DOI 完全不重叠，判定为同名不同文（distinct_same_title）",
+        "rec_a": "r00002",
+        "rec_b": "r00004",
+        "score": 0.55,
+        "title": "A Survey of Graph Sampling"
+      }
+    ],
+    "merged_groups": [
+      {
+        "entity_id": "E0001",
+        "flags": [
+          "version_chain"
+        ],
+        "members": [
+          "r00001",
+          "r00007"
+        ],
+        "version_chain": true
+      },
+      {
+        "entity_id": "E0003",
+        "flags": [
+          "version_chain",
+          "same_work_different_title"
+        ],
+        "members": [
+          "r00003",
+          "r00005"
+        ],
+        "version_chain": true
+      }
+    ],
+    "review_queue": [],
+    "same_work_different_title": [
+      {
+        "doi": "10.0000/synth.m1",
+        "locators": [
+          {
+            "file": "examples/corpus/crossref_export.json",
+            "pointer": "$.message.items[2]"
+          },
+          {
+            "file": "examples/corpus/europepmc_hits.json",
+            "pointer": "$.resultList.result[1]"
+          }
+        ],
+        "reason": "DOI 相同但标题差异大，判定为同文不同名（same_work_different_title），双标题均保留为证据",
+        "rec_a": "r00003",
+        "rec_b": "r00005",
+        "titles": [
+          "Robust Identity Matching Across Scholarly Indexes",
+          "Identity matching for scholarly records: an extended robust approach"
+        ]
+      }
+    ],
+    "stats": {
+      "distinct_same_title_pairs": 1,
+      "entities": 6,
+      "files_error": 0,
+      "files_registered": 3,
+      "incomplete_records": 1,
+      "merged_groups": 2,
+      "records_parsed": 8,
+      "review_pairs": 0,
+      "roots_scanned": [
+        "examples/corpus"
+      ],
+      "same_work_different_title_pairs": 1
+    }
+  },
+  "seed": [
+    {
+      "doi": "10.0000/synth.a1",
+      "entity_id": "E0001",
+      "title": "Graph Snowball Sampling for Citation Tracing"
+    }
+  ],
+  "sources": [
+    {
+      "file": "examples/corpus/crossref_export.json",
+      "format": "crossref",
+      "records": 3,
+      "status": "ok"
+    },
+    {
+      "file": "examples/corpus/europepmc_hits.json",
+      "format": "europepmc",
+      "records": 3,
+      "status": "ok"
+    },
+    {
+      "file": "examples/corpus/openalex_dump.json",
+      "format": "openalex",
+      "records": 2,
+      "status": "ok"
+    }
+  ],
+  "status": "ok",
+  "uncertainty": [
+    "stub 引用目标：10.0000/synth.b1（引用目标不在语料中，保留为 stub（未补造元数据））",
+    "残缺记录（缺 DOI/年份等关键字段）保持为独立实体: E0005，未参与自动合并"
+  ]
+}
