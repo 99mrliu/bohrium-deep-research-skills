@@ -1,0 +1,797 @@
+{
+  "anchoring_rule": "NFKC + casefold + 空白折叠后的子串匹配；片段由脚本从规范化原文截取",
+  "facets": {
+    "population": {
+      "terms": {
+        "化疗所致周围神经病变": {
+          "hits_by_record": {
+            "SYNM-1024": [
+              {
+                "field": "title",
+                "start": 18,
+                "end": 28,
+                "snippet": "nrc-9(neurocalm)治疗化疗所致周围神经病变的多中心随机对照试验"
+              },
+              {
+                "field": "abstract",
+                "start": 3,
+                "end": 13,
+                "snippet": "背景:化疗所致周围神经病变(cipn)严重影响肿瘤化疗患者的生活质量。方法:共纳入21…"
+              }
+            ],
+            "SYNM-2077": [
+              {
+                "field": "abstract",
+                "start": 23,
+                "end": 33,
+                "snippet": "目的:评价 neurocalm(nrc-9)对化疗所致周围神经病变患者感觉症状的影响。120 例患者按 1:1 随机分组。结果…"
+              }
+            ],
+            "SYNM-3301": [
+              {
+                "field": "abstract",
+                "start": 44,
+                "end": 54,
+                "snippet": "…例接受 nrc-9 治疗的肿瘤化疗患者,随访 24 周,观察化疗所致周围神经病变相关感觉症状变化与生活质量。"
+              }
+            ],
+            "SYNM-4150": [
+              {
+                "field": "abstract",
+                "start": 7,
+                "end": 17,
+                "snippet": "纳入 80 例化疗所致周围神经病变(cipn)患者,比较电针与假针对感觉症状与生活质量的影响。"
+              }
+            ],
+            "SYNM-6023": [
+              {
+                "field": "title",
+                "start": 0,
+                "end": 10,
+                "snippet": "化疗所致周围神经病变管理进展:从 nrc-9 到康复策略"
+              }
+            ],
+            "SYNM-8201": [
+              {
+                "field": "abstract",
+                "start": 8,
+                "end": 18,
+                "snippet": "在 65 岁以上化疗所致周围神经病变(cipn)患者中比较 nrc-9 与安慰剂,主要结局为感觉…"
+              }
+            ],
+            "SYNM-8202": [
+              {
+                "field": "abstract",
+                "start": 18,
+                "end": 28,
+                "snippet": "比较两个剂量 nrc-9 与安慰剂在化疗所致周围神经病变(cipn)患者中的疗效,结局包括感觉症状。"
+              }
+            ],
+            "SYNB-0831": [
+              {
+                "field": "title",
+                "start": 18,
+                "end": 28,
+                "snippet": "nrc-9(neurocalm)治疗化疗所致周围神经病变的多中心随机对照试验"
+              },
+              {
+                "field": "abstract",
+                "start": 3,
+                "end": 13,
+                "snippet": "背景:化疗所致周围神经病变(cipn)严重影响肿瘤化疗患者的生活质量。方法:共纳入21…"
+              }
+            ]
+          },
+          "corpus_hit_count": 10
+        },
+        "CIPN": {
+          "hits_by_record": {
+            "SYNM-1024": [
+              {
+                "field": "abstract",
+                "start": 14,
+                "end": 18,
+                "snippet": "背景:化疗所致周围神经病变(cipn)严重影响肿瘤化疗患者的生活质量。方法:共纳入218例cip…"
+              },
+              {
+                "field": "abstract",
+                "start": 45,
+                "end": 49,
+                "snippet": "…ipn)严重影响肿瘤化疗患者的生活质量。方法:共纳入218例cipn患者,随机双盲分配至nrc-9组或安慰剂组,疗程12周。结果…"
+              },
+              {
+                "field": "abstract",
+                "start": 122,
+                "end": 126,
+                "snippet": "…较基线显著改善,生活质量量表得分提高。结论:nrc-9可改善cipn患者感觉症状与生活质量。"
+              }
+            ],
+            "SYNM-2077": [
+              {
+                "field": "title",
+                "start": 13,
+                "end": 17,
+                "snippet": "nrc-9 对比安慰剂在 cipn 患者中的疗效:一项随机对照试验"
+              }
+            ],
+            "SYNM-4150": [
+              {
+                "field": "title",
+                "start": 12,
+                "end": 16,
+                "snippet": "电针联合安慰剂对照改善 cipn 患者生活质量的随机对照试验"
+              },
+              {
+                "field": "abstract",
+                "start": 18,
+                "end": 22,
+                "snippet": "纳入 80 例化疗所致周围神经病变(cipn)患者,比较电针与假针对感觉症状与生活质量的影响。"
+              }
+            ],
+            "SYNM-6023": [
+              {
+                "field": "abstract",
+                "start": 5,
+                "end": 9,
+                "snippet": "本文综述 cipn 的药物治疗证据,包括 nrc-9 的随机对照试验结果及其对…"
+              }
+            ],
+            "SYNM-8201": [
+              {
+                "field": "title",
+                "start": 9,
+                "end": 13,
+                "snippet": "nrc-9 用于 cipn 老年患者的随机对照试验亚组分析"
+              },
+              {
+                "field": "abstract",
+                "start": 19,
+                "end": 23,
+                "snippet": "在 65 岁以上化疗所致周围神经病变(cipn)患者中比较 nrc-9 与安慰剂,主要结局为感觉症状。"
+              }
+            ],
+            "SYNM-8202": [
+              {
+                "field": "title",
+                "start": 9,
+                "end": 13,
+                "snippet": "nrc-9 治疗 cipn 的剂量探索随机对照试验"
+              },
+              {
+                "field": "abstract",
+                "start": 29,
+                "end": 33,
+                "snippet": "比较两个剂量 nrc-9 与安慰剂在化疗所致周围神经病变(cipn)患者中的疗效,结局包括感觉症状。"
+              }
+            ],
+            "SYNB-0831": [
+              {
+                "field": "abstract",
+                "start": 14,
+                "end": 18,
+                "snippet": "背景:化疗所致周围神经病变(cipn)严重影响肿瘤化疗患者的生活质量。方法:共纳入218例cip…"
+              },
+              {
+                "field": "abstract",
+                "start": 45,
+                "end": 49,
+                "snippet": "…ipn)严重影响肿瘤化疗患者的生活质量。方法:共纳入218例cipn患者,随机双盲分配至nrc-9组或安慰剂组,疗程12周。结果…"
+              },
+              {
+                "field": "abstract",
+                "start": 122,
+                "end": 126,
+                "snippet": "…较基线显著改善,生活质量量表得分提高。结论:nrc-9可改善cipn患者感觉症状与生活质量。"
+              }
+            ]
+          },
+          "corpus_hit_count": 14
+        },
+        "肿瘤化疗患者": {
+          "hits_by_record": {
+            "SYNM-1024": [
+              {
+                "field": "abstract",
+                "start": 23,
+                "end": 29,
+                "snippet": "背景:化疗所致周围神经病变(cipn)严重影响肿瘤化疗患者的生活质量。方法:共纳入218例cipn患者,随机双盲分配至…"
+              }
+            ],
+            "SYNM-3301": [
+              {
+                "field": "title",
+                "start": 14,
+                "end": 20,
+                "snippet": "真实世界中 nrc-9 用于肿瘤化疗患者周围神经病变的队列研究"
+              },
+              {
+                "field": "abstract",
+                "start": 27,
+                "end": 33,
+                "snippet": "前瞻性队列研究,纳入 96 例接受 nrc-9 治疗的肿瘤化疗患者,随访 24 周,观察化疗所致周围神经病变相关感觉症状变化与…"
+              }
+            ],
+            "SYNB-0831": [
+              {
+                "field": "abstract",
+                "start": 23,
+                "end": 29,
+                "snippet": "背景:化疗所致周围神经病变(cipn)严重影响肿瘤化疗患者的生活质量。方法:共纳入218例cipn患者,随机双盲分配至…"
+              }
+            ]
+          },
+          "corpus_hit_count": 4
+        }
+      }
+    },
+    "intervention": {
+      "terms": {
+        "NRC-9": {
+          "hits_by_record": {
+            "SYNM-1024": [
+              {
+                "field": "title",
+                "start": 0,
+                "end": 5,
+                "snippet": "nrc-9(neurocalm)治疗化疗所致周围神经病变的多中心随机对…"
+              },
+              {
+                "field": "abstract",
+                "start": 59,
+                "end": 64,
+                "snippet": "…的生活质量。方法:共纳入218例cipn患者,随机双盲分配至nrc-9组或安慰剂组,疗程12周。结果:nrc-9组感觉症状评分较基…"
+              },
+              {
+                "field": "abstract",
+                "start": 80,
+                "end": 85,
+                "snippet": "…者,随机双盲分配至nrc-9组或安慰剂组,疗程12周。结果:nrc-9组感觉症状评分较基线显著改善,生活质量量表得分提高。结论:n…"
+              },
+              {
+                "field": "abstract",
+                "start": 114,
+                "end": 119,
+                "snippet": "…9组感觉症状评分较基线显著改善,生活质量量表得分提高。结论:nrc-9可改善cipn患者感觉症状与生活质量。"
+              }
+            ],
+            "SYNM-2077": [
+              {
+                "field": "title",
+                "start": 0,
+                "end": 5,
+                "snippet": "nrc-9 对比安慰剂在 cipn 患者中的疗效:一项随机对照试验"
+              },
+              {
+                "field": "abstract",
+                "start": 16,
+                "end": 21,
+                "snippet": "目的:评价 neurocalm(nrc-9)对化疗所致周围神经病变患者感觉症状的影响。120 例患者按…"
+              },
+              {
+                "field": "abstract",
+                "start": 70,
+                "end": 75,
+                "snippet": "…影响。120 例患者按 1:1 随机分组。结果:12 周后 nrc-9 组感觉症状改善率高于安慰剂组。"
+              }
+            ],
+            "SYNM-3301": [
+              {
+                "field": "title",
+                "start": 6,
+                "end": 11,
+                "snippet": "真实世界中 nrc-9 用于肿瘤化疗患者周围神经病变的队列研究"
+              },
+              {
+                "field": "abstract",
+                "start": 18,
+                "end": 23,
+                "snippet": "前瞻性队列研究,纳入 96 例接受 nrc-9 治疗的肿瘤化疗患者,随访 24 周,观察化疗所致周围神经病…"
+              }
+            ],
+            "SYNM-5288": [
+              {
+                "field": "title",
+                "start": 0,
+                "end": 5,
+                "snippet": "nrc-9 治疗糖尿病周围神经病变感觉症状的随机对照试验"
+              },
+              {
+                "field": "abstract",
+                "start": 20,
+                "end": 25,
+                "snippet": "纳入 150 例糖尿病周围神经病变患者,nrc-9 对比安慰剂,疗程 16 周,主要结局为感觉症状评分。"
+              }
+            ],
+            "SYNM-6023": [
+              {
+                "field": "title",
+                "start": 17,
+                "end": 22,
+                "snippet": "化疗所致周围神经病变管理进展:从 nrc-9 到康复策略"
+              },
+              {
+                "field": "abstract",
+                "start": 21,
+                "end": 26,
+                "snippet": "本文综述 cipn 的药物治疗证据,包括 nrc-9 的随机对照试验结果及其对生活质量的影响。"
+              }
+            ],
+            "SYNM-7190": [
+              {
+                "field": "title",
+                "start": 0,
+                "end": 5,
+                "snippet": "nrc-9 对背根神经节神经元轴突生长的影响:体外实验"
+              },
+              {
+                "field": "abstract",
+                "start": 30,
+                "end": 35,
+                "snippet": "采用大鼠背根神经节神经元培养体系,观察 neurocalm(nrc-9)对轴突再生的作用。"
+              }
+            ],
+            "SYNM-8201": [
+              {
+                "field": "title",
+                "start": 0,
+                "end": 5,
+                "snippet": "nrc-9 用于 cipn 老年患者的随机对照试验亚组分析"
+              },
+              {
+                "field": "abstract",
+                "start": 30,
+                "end": 35,
+                "snippet": "在 65 岁以上化疗所致周围神经病变(cipn)患者中比较 nrc-9 与安慰剂,主要结局为感觉症状。"
+              }
+            ],
+            "SYNM-8202": [
+              {
+                "field": "title",
+                "start": 0,
+                "end": 5,
+                "snippet": "nrc-9 治疗 cipn 的剂量探索随机对照试验"
+              },
+              {
+                "field": "abstract",
+                "start": 7,
+                "end": 12,
+                "snippet": "比较两个剂量 nrc-9 与安慰剂在化疗所致周围神经病变(cipn)患者中的疗效,结…"
+              }
+            ],
+            "SYNB-0831": [
+              {
+                "field": "title",
+                "start": 0,
+                "end": 5,
+                "snippet": "nrc-9(neurocalm)治疗化疗所致周围神经病变的多中心随机对…"
+              },
+              {
+                "field": "abstract",
+                "start": 59,
+                "end": 64,
+                "snippet": "…的生活质量。方法:共纳入218例cipn患者,随机双盲分配至nrc-9组或安慰剂组,疗程12周。结果:nrc-9组感觉症状评分较基…"
+              },
+              {
+                "field": "abstract",
+                "start": 80,
+                "end": 85,
+                "snippet": "…者,随机双盲分配至nrc-9组或安慰剂组,疗程12周。结果:nrc-9组感觉症状评分较基线显著改善,生活质量量表得分提高。结论:n…"
+              },
+              {
+                "field": "abstract",
+                "start": 114,
+                "end": 119,
+                "snippet": "…9组感觉症状评分较基线显著改善,生活质量量表得分提高。结论:nrc-9可改善cipn患者感觉症状与生活质量。"
+              }
+            ]
+          },
+          "corpus_hit_count": 23
+        },
+        "Neurocalm": {
+          "hits_by_record": {
+            "SYNM-1024": [
+              {
+                "field": "title",
+                "start": 6,
+                "end": 15,
+                "snippet": "nrc-9(neurocalm)治疗化疗所致周围神经病变的多中心随机对照试验"
+              }
+            ],
+            "SYNM-2077": [
+              {
+                "field": "abstract",
+                "start": 6,
+                "end": 15,
+                "snippet": "目的:评价 neurocalm(nrc-9)对化疗所致周围神经病变患者感觉症状的影响。12…"
+              }
+            ],
+            "SYNM-7190": [
+              {
+                "field": "abstract",
+                "start": 20,
+                "end": 29,
+                "snippet": "采用大鼠背根神经节神经元培养体系,观察 neurocalm(nrc-9)对轴突再生的作用。"
+              }
+            ],
+            "SYNB-0831": [
+              {
+                "field": "title",
+                "start": 6,
+                "end": 15,
+                "snippet": "nrc-9(neurocalm)治疗化疗所致周围神经病变的多中心随机对照试验"
+              }
+            ]
+          },
+          "corpus_hit_count": 4
+        },
+        "吗啡缓释片": {
+          "hits_by_record": {},
+          "corpus_hit_count": 0
+        }
+      }
+    },
+    "comparator": {
+      "terms": {
+        "安慰剂": {
+          "hits_by_record": {
+            "SYNM-1024": [
+              {
+                "field": "abstract",
+                "start": 66,
+                "end": 69,
+                "snippet": "…法:共纳入218例cipn患者,随机双盲分配至nrc-9组或安慰剂组,疗程12周。结果:nrc-9组感觉症状评分较基线显著改善…"
+              }
+            ],
+            "SYNM-2077": [
+              {
+                "field": "title",
+                "start": 8,
+                "end": 11,
+                "snippet": "nrc-9 对比安慰剂在 cipn 患者中的疗效:一项随机对照试验"
+              },
+              {
+                "field": "abstract",
+                "start": 86,
+                "end": 89,
+                "snippet": "…随机分组。结果:12 周后 nrc-9 组感觉症状改善率高于安慰剂组。"
+              }
+            ],
+            "SYNM-4150": [
+              {
+                "field": "title",
+                "start": 4,
+                "end": 7,
+                "snippet": "电针联合安慰剂对照改善 cipn 患者生活质量的随机对照试验"
+              }
+            ],
+            "SYNM-5288": [
+              {
+                "field": "abstract",
+                "start": 28,
+                "end": 31,
+                "snippet": "纳入 150 例糖尿病周围神经病变患者,nrc-9 对比安慰剂,疗程 16 周,主要结局为感觉症状评分。"
+              }
+            ],
+            "SYNM-8201": [
+              {
+                "field": "abstract",
+                "start": 37,
+                "end": 40,
+                "snippet": "…上化疗所致周围神经病变(cipn)患者中比较 nrc-9 与安慰剂,主要结局为感觉症状。"
+              }
+            ],
+            "SYNM-8202": [
+              {
+                "field": "abstract",
+                "start": 14,
+                "end": 17,
+                "snippet": "比较两个剂量 nrc-9 与安慰剂在化疗所致周围神经病变(cipn)患者中的疗效,结局包括感觉…"
+              }
+            ],
+            "SYNB-0831": [
+              {
+                "field": "abstract",
+                "start": 66,
+                "end": 69,
+                "snippet": "…法:共纳入218例cipn患者,随机双盲分配至nrc-9组或安慰剂组,疗程12周。结果:nrc-9组感觉症状评分较基线显著改善…"
+              }
+            ]
+          },
+          "corpus_hit_count": 8
+        }
+      }
+    },
+    "outcome": {
+      "terms": {
+        "感觉症状": {
+          "hits_by_record": {
+            "SYNM-1024": [
+              {
+                "field": "abstract",
+                "start": 86,
+                "end": 90,
+                "snippet": "…分配至nrc-9组或安慰剂组,疗程12周。结果:nrc-9组感觉症状评分较基线显著改善,生活质量量表得分提高。结论:nrc-9可…"
+              },
+              {
+                "field": "abstract",
+                "start": 128,
+                "end": 132,
+                "snippet": "…善,生活质量量表得分提高。结论:nrc-9可改善cipn患者感觉症状与生活质量。"
+              }
+            ],
+            "SYNM-2077": [
+              {
+                "field": "abstract",
+                "start": 35,
+                "end": 39,
+                "snippet": "… neurocalm(nrc-9)对化疗所致周围神经病变患者感觉症状的影响。120 例患者按 1:1 随机分组。结果:12 周后…"
+              },
+              {
+                "field": "abstract",
+                "start": 77,
+                "end": 81,
+                "snippet": "…例患者按 1:1 随机分组。结果:12 周后 nrc-9 组感觉症状改善率高于安慰剂组。"
+              }
+            ],
+            "SYNM-3301": [
+              {
+                "field": "abstract",
+                "start": 56,
+                "end": 60,
+                "snippet": "…的肿瘤化疗患者,随访 24 周,观察化疗所致周围神经病变相关感觉症状变化与生活质量。"
+              }
+            ],
+            "SYNM-4150": [
+              {
+                "field": "abstract",
+                "start": 34,
+                "end": 38,
+                "snippet": "…0 例化疗所致周围神经病变(cipn)患者,比较电针与假针对感觉症状与生活质量的影响。"
+              }
+            ],
+            "SYNM-5288": [
+              {
+                "field": "title",
+                "start": 17,
+                "end": 21,
+                "snippet": "nrc-9 治疗糖尿病周围神经病变感觉症状的随机对照试验"
+              },
+              {
+                "field": "abstract",
+                "start": 45,
+                "end": 49,
+                "snippet": "…病变患者,nrc-9 对比安慰剂,疗程 16 周,主要结局为感觉症状评分。"
+              }
+            ],
+            "SYNM-8201": [
+              {
+                "field": "abstract",
+                "start": 46,
+                "end": 50,
+                "snippet": "…病变(cipn)患者中比较 nrc-9 与安慰剂,主要结局为感觉症状。"
+              }
+            ],
+            "SYNM-8202": [
+              {
+                "field": "abstract",
+                "start": 45,
+                "end": 49,
+                "snippet": "…慰剂在化疗所致周围神经病变(cipn)患者中的疗效,结局包括感觉症状。"
+              }
+            ],
+            "SYNB-0831": [
+              {
+                "field": "abstract",
+                "start": 86,
+                "end": 90,
+                "snippet": "…分配至nrc-9组或安慰剂组,疗程12周。结果:nrc-9组感觉症状评分较基线显著改善,生活质量量表得分提高。结论:nrc-9可…"
+              },
+              {
+                "field": "abstract",
+                "start": 128,
+                "end": 132,
+                "snippet": "…善,生活质量量表得分提高。结论:nrc-9可改善cipn患者感觉症状与生活质量。"
+              }
+            ]
+          },
+          "corpus_hit_count": 12
+        },
+        "生活质量": {
+          "hits_by_record": {
+            "SYNM-1024": [
+              {
+                "field": "abstract",
+                "start": 30,
+                "end": 34,
+                "snippet": "背景:化疗所致周围神经病变(cipn)严重影响肿瘤化疗患者的生活质量。方法:共纳入218例cipn患者,随机双盲分配至nrc-9…"
+              },
+              {
+                "field": "abstract",
+                "start": 100,
+                "end": 104,
+                "snippet": "…,疗程12周。结果:nrc-9组感觉症状评分较基线显著改善,生活质量量表得分提高。结论:nrc-9可改善cipn患者感觉症状与生…"
+              },
+              {
+                "field": "abstract",
+                "start": 133,
+                "end": 137,
+                "snippet": "…量量表得分提高。结论:nrc-9可改善cipn患者感觉症状与生活质量。"
+              }
+            ],
+            "SYNM-3301": [
+              {
+                "field": "abstract",
+                "start": 63,
+                "end": 67,
+                "snippet": "…,随访 24 周,观察化疗所致周围神经病变相关感觉症状变化与生活质量。"
+              }
+            ],
+            "SYNM-4150": [
+              {
+                "field": "title",
+                "start": 19,
+                "end": 23,
+                "snippet": "电针联合安慰剂对照改善 cipn 患者生活质量的随机对照试验"
+              },
+              {
+                "field": "abstract",
+                "start": 39,
+                "end": 43,
+                "snippet": "…所致周围神经病变(cipn)患者,比较电针与假针对感觉症状与生活质量的影响。"
+              }
+            ],
+            "SYNM-6023": [
+              {
+                "field": "abstract",
+                "start": 39,
+                "end": 43,
+                "snippet": "… 的药物治疗证据,包括 nrc-9 的随机对照试验结果及其对生活质量的影响。"
+              }
+            ],
+            "SYNB-0831": [
+              {
+                "field": "abstract",
+                "start": 30,
+                "end": 34,
+                "snippet": "背景:化疗所致周围神经病变(cipn)严重影响肿瘤化疗患者的生活质量。方法:共纳入218例cipn患者,随机双盲分配至nrc-9…"
+              },
+              {
+                "field": "abstract",
+                "start": 100,
+                "end": 104,
+                "snippet": "…,疗程12周。结果:nrc-9组感觉症状评分较基线显著改善,生活质量量表得分提高。结论:nrc-9可改善cipn患者感觉症状与生…"
+              },
+              {
+                "field": "abstract",
+                "start": 133,
+                "end": 137,
+                "snippet": "…量量表得分提高。结论:nrc-9可改善cipn患者感觉症状与生活质量。"
+              }
+            ]
+          },
+          "corpus_hit_count": 10
+        }
+      }
+    },
+    "study_design": {
+      "terms": {
+        "随机对照试验": {
+          "hits_by_record": {
+            "SYNM-1024": [
+              {
+                "field": "title",
+                "start": 32,
+                "end": 38,
+                "snippet": "…c-9(neurocalm)治疗化疗所致周围神经病变的多中心随机对照试验"
+              }
+            ],
+            "SYNM-2077": [
+              {
+                "field": "title",
+                "start": 27,
+                "end": 33,
+                "snippet": "nrc-9 对比安慰剂在 cipn 患者中的疗效:一项随机对照试验"
+              }
+            ],
+            "SYNM-4150": [
+              {
+                "field": "title",
+                "start": 24,
+                "end": 30,
+                "snippet": "电针联合安慰剂对照改善 cipn 患者生活质量的随机对照试验"
+              }
+            ],
+            "SYNM-5288": [
+              {
+                "field": "title",
+                "start": 22,
+                "end": 28,
+                "snippet": "nrc-9 治疗糖尿病周围神经病变感觉症状的随机对照试验"
+              }
+            ],
+            "SYNM-6023": [
+              {
+                "field": "abstract",
+                "start": 28,
+                "end": 34,
+                "snippet": "本文综述 cipn 的药物治疗证据,包括 nrc-9 的随机对照试验结果及其对生活质量的影响。"
+              }
+            ],
+            "SYNM-8201": [
+              {
+                "field": "title",
+                "start": 19,
+                "end": 25,
+                "snippet": "nrc-9 用于 cipn 老年患者的随机对照试验亚组分析"
+              }
+            ],
+            "SYNM-8202": [
+              {
+                "field": "title",
+                "start": 19,
+                "end": 25,
+                "snippet": "nrc-9 治疗 cipn 的剂量探索随机对照试验"
+              }
+            ],
+            "SYNB-0831": [
+              {
+                "field": "title",
+                "start": 32,
+                "end": 38,
+                "snippet": "…c-9(neurocalm)治疗化疗所致周围神经病变的多中心随机对照试验"
+              }
+            ]
+          },
+          "corpus_hit_count": 8
+        },
+        "双盲": {
+          "hits_by_record": {
+            "SYNM-1024": [
+              {
+                "field": "abstract",
+                "start": 54,
+                "end": 56,
+                "snippet": "…瘤化疗患者的生活质量。方法:共纳入218例cipn患者,随机双盲分配至nrc-9组或安慰剂组,疗程12周。结果:nrc-9组…"
+              }
+            ],
+            "SYNB-0831": [
+              {
+                "field": "abstract",
+                "start": 54,
+                "end": 56,
+                "snippet": "…瘤化疗患者的生活质量。方法:共纳入218例cipn患者,随机双盲分配至nrc-9组或安慰剂组,疗程12周。结果:nrc-9组…"
+              }
+            ]
+          },
+          "corpus_hit_count": 2
+        },
+        "队列研究": {
+          "hits_by_record": {
+            "SYNM-3301": [
+              {
+                "field": "title",
+                "start": 27,
+                "end": 31,
+                "snippet": "真实世界中 nrc-9 用于肿瘤化疗患者周围神经病变的队列研究"
+              },
+              {
+                "field": "abstract",
+                "start": 3,
+                "end": 7,
+                "snippet": "前瞻性队列研究,纳入 96 例接受 nrc-9 治疗的肿瘤化疗患者,随访 …"
+              }
+            ]
+          },
+          "corpus_hit_count": 2
+        }
+      }
+    }
+  },
+  "anchor_failures": [
+    {
+      "facet": "intervention",
+      "term": "吗啡缓释片",
+      "reason": "规范化子串匹配在整个语料中零命中"
+    }
+  ]
+}

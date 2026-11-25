@@ -1,0 +1,117 @@
+{
+  "case_id": "search09-synthetic-demo",
+  "status": "partial",
+  "sources": [
+    "examples/input/case.json",
+    "examples/input/task.md",
+    "examples/work/decisions.json",
+    "examples/work/dedup_report.json",
+    "examples/work/conflict_resolutions.json"
+  ],
+  "uncertainty": [
+    "合成演示：R05 冲突意见调解无法核验组织方预期",
+    "合成演示：有限快照、无实时库"
+  ],
+  "change_records": [
+    {
+      "ts": "2026-11-25T08:51:45+00:00",
+      "actor": "scaffold_result.py",
+      "change": "skeleton_initialized",
+      "detail": "骨架新建：5 个合同字段就位，占位 null"
+    },
+    {
+      "ts": "2026-11-25T08:51:51+00:00",
+      "actor": "fill_ledger.py",
+      "change": "field_marked:decisions",
+      "detail": "state=filled"
+    },
+    {
+      "ts": "2026-11-25T08:51:51+00:00",
+      "actor": "fill_ledger.py",
+      "change": "field_marked:dedup_report",
+      "detail": "state=filled"
+    },
+    {
+      "ts": "2026-11-25T08:51:51+00:00",
+      "actor": "fill_ledger.py",
+      "change": "field_marked:conflict_resolutions",
+      "detail": "state=filled"
+    },
+    {
+      "ts": "2026-11-25T08:51:52+00:00",
+      "actor": "fill_ledger.py",
+      "change": "field_marked:screening_summary",
+      "detail": "state=filled"
+    },
+    {
+      "ts": "2026-11-25T08:52:03+00:00",
+      "actor": "fill_ledger.py",
+      "change": "field_marked:limits",
+      "detail": "state=null_with_reason reason=合成演示：有限快照、无实时库，检索结果不可外推，limits 无法给出完整结论"
+    },
+    {
+      "ts": "2026-11-25T08:52:03+00:00",
+      "actor": "fill_ledger.py",
+      "change": "field_marked:uncertainty",
+      "detail": "state=filled"
+    },
+    {
+      "ts": "2026-11-25T08:52:03+00:00",
+      "actor": "fill_ledger.py",
+      "change": "field_marked:sources",
+      "detail": "state=filled"
+    },
+    {
+      "ts": "2026-11-25T08:52:03+00:00",
+      "actor": "fill_ledger.py",
+      "change": "field_marked:status",
+      "detail": "state=filled"
+    }
+  ],
+  "decisions": [
+    {
+      "record_id": "R01",
+      "decision": "include",
+      "reason": "合成理由：题录与 PICO 匹配（演示）"
+    },
+    {
+      "record_id": "R02",
+      "decision": "include",
+      "reason": "合成理由：摘要符合纳入标准（演示）"
+    },
+    {
+      "record_id": "R03",
+      "decision": "deduplicated",
+      "reason": "组织方标注的合成重复导出，与 R01 合并（演示）"
+    },
+    {
+      "record_id": "R04",
+      "decision": "exclude",
+      "reason": "合成理由：主题不相关（演示）"
+    },
+    {
+      "record_id": "R05",
+      "decision": "include",
+      "reason": "冲突双人意见调解后纳入，见 conflict_resolutions（演示）"
+    }
+  ],
+  "dedup_report": {
+    "note": "合成示例，非真实评测案例",
+    "duplicates_found": [
+      {
+        "kept": "R01",
+        "removed": "R03",
+        "evidence": "标题/作者/年份一致，输入夹具标注 synthetic_duplicate_export（演示）"
+      }
+    ],
+    "method": "合成演示：精确匹配标题+作者+年份"
+  },
+  "screening_summary": {
+    "records_total": 5,
+    "included": 3,
+    "excluded": 1,
+    "deduplicated": 1,
+    "conflicts_resolved": 1
+  },
+  "limits": null
+}

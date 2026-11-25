@@ -1,0 +1,218 @@
+{
+  "method": "每个 facet 权重单独 ±20%，其余按比例缩放保持和为 1；共 10 个扰动方案，命中事实不变，仅权重变化",
+  "runs": [
+    {
+      "run_id": "population_up20pct",
+      "perturbed_facet": "population",
+      "factor": 1.2,
+      "weights": {
+        "population": 0.36,
+        "intervention": 0.274286,
+        "comparator": 0.091429,
+        "outcome": 0.182857,
+        "study_design": 0.091429
+      },
+      "tier_counts": {
+        "high": 7,
+        "medium": 3,
+        "low": 1
+      },
+      "records_changed_tier": []
+    },
+    {
+      "run_id": "population_down20pct",
+      "perturbed_facet": "population",
+      "factor": 0.8,
+      "weights": {
+        "population": 0.24,
+        "intervention": 0.325714,
+        "comparator": 0.108571,
+        "outcome": 0.217143,
+        "study_design": 0.108571
+      },
+      "tier_counts": {
+        "high": 7,
+        "medium": 3,
+        "low": 1
+      },
+      "records_changed_tier": []
+    },
+    {
+      "run_id": "intervention_up20pct",
+      "perturbed_facet": "intervention",
+      "factor": 1.2,
+      "weights": {
+        "population": 0.274286,
+        "intervention": 0.36,
+        "comparator": 0.091429,
+        "outcome": 0.182857,
+        "study_design": 0.091429
+      },
+      "tier_counts": {
+        "high": 6,
+        "medium": 4,
+        "low": 1
+      },
+      "records_changed_tier": [
+        "SYNM-4150"
+      ]
+    },
+    {
+      "run_id": "intervention_down20pct",
+      "perturbed_facet": "intervention",
+      "factor": 0.8,
+      "weights": {
+        "population": 0.325714,
+        "intervention": 0.24,
+        "comparator": 0.108571,
+        "outcome": 0.217143,
+        "study_design": 0.108571
+      },
+      "tier_counts": {
+        "high": 7,
+        "medium": 2,
+        "low": 2
+      },
+      "records_changed_tier": [
+        "SYNM-7190"
+      ]
+    },
+    {
+      "run_id": "comparator_up20pct",
+      "perturbed_facet": "comparator",
+      "factor": 1.2,
+      "weights": {
+        "population": 0.293333,
+        "intervention": 0.293333,
+        "comparator": 0.12,
+        "outcome": 0.195556,
+        "study_design": 0.097778
+      },
+      "tier_counts": {
+        "high": 7,
+        "medium": 3,
+        "low": 1
+      },
+      "records_changed_tier": []
+    },
+    {
+      "run_id": "comparator_down20pct",
+      "perturbed_facet": "comparator",
+      "factor": 0.8,
+      "weights": {
+        "population": 0.306667,
+        "intervention": 0.306667,
+        "comparator": 0.08,
+        "outcome": 0.204444,
+        "study_design": 0.102222
+      },
+      "tier_counts": {
+        "high": 7,
+        "medium": 3,
+        "low": 1
+      },
+      "records_changed_tier": []
+    },
+    {
+      "run_id": "outcome_up20pct",
+      "perturbed_facet": "outcome",
+      "factor": 1.2,
+      "weights": {
+        "population": 0.285,
+        "intervention": 0.285,
+        "comparator": 0.095,
+        "outcome": 0.24,
+        "study_design": 0.095
+      },
+      "tier_counts": {
+        "high": 7,
+        "medium": 3,
+        "low": 1
+      },
+      "records_changed_tier": []
+    },
+    {
+      "run_id": "outcome_down20pct",
+      "perturbed_facet": "outcome",
+      "factor": 0.8,
+      "weights": {
+        "population": 0.315,
+        "intervention": 0.315,
+        "comparator": 0.105,
+        "outcome": 0.16,
+        "study_design": 0.105
+      },
+      "tier_counts": {
+        "high": 6,
+        "medium": 4,
+        "low": 1
+      },
+      "records_changed_tier": [
+        "SYNM-3301"
+      ]
+    },
+    {
+      "run_id": "study_design_up20pct",
+      "perturbed_facet": "study_design",
+      "factor": 1.2,
+      "weights": {
+        "population": 0.293333,
+        "intervention": 0.293333,
+        "comparator": 0.097778,
+        "outcome": 0.195556,
+        "study_design": 0.12
+      },
+      "tier_counts": {
+        "high": 7,
+        "medium": 3,
+        "low": 1
+      },
+      "records_changed_tier": []
+    },
+    {
+      "run_id": "study_design_down20pct",
+      "perturbed_facet": "study_design",
+      "factor": 0.8,
+      "weights": {
+        "population": 0.306667,
+        "intervention": 0.306667,
+        "comparator": 0.102222,
+        "outcome": 0.204444,
+        "study_design": 0.08
+      },
+      "tier_counts": {
+        "high": 7,
+        "medium": 3,
+        "low": 1
+      },
+      "records_changed_tier": []
+    }
+  ],
+  "rank_instability": [
+    {
+      "record_id": "SYNM-3301",
+      "base_tier": "high",
+      "alt_tiers": {
+        "outcome_down20pct": "medium"
+      },
+      "n_runs_changed": 1
+    },
+    {
+      "record_id": "SYNM-4150",
+      "base_tier": "high",
+      "alt_tiers": {
+        "intervention_up20pct": "medium"
+      },
+      "n_runs_changed": 1
+    },
+    {
+      "record_id": "SYNM-7190",
+      "base_tier": "medium",
+      "alt_tiers": {
+        "intervention_down20pct": "low"
+      },
+      "n_runs_changed": 1
+    }
+  ],
+  "interpretation": "rank_instability 中的记录对权重敏感，档位结论不稳，建议人工优先核阅这些记录的边界判断；排序仍不构成纳入/排除判定。"
+}

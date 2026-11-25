@@ -1,0 +1,26 @@
+{
+  "duplicate_clusters": [
+    {
+      "canonical": "R01",
+      "duplicate": "R05",
+      "basis": "title_key 完全一致（合成夹具重复导出）"
+    }
+  ],
+  "conflict_flags": [
+    {
+      "record_id": "R04",
+      "reviews": [
+        {
+          "reviewer": "reviewer_alpha",
+          "vote": "include"
+        },
+        {
+          "reviewer": "reviewer_beta",
+          "vote": "exclude"
+        }
+      ],
+      "resolution": "保守置 uncertain，留待人工复核（模拟）"
+    }
+  ],
+  "note": "去重与冲突标记（模拟）"
+}

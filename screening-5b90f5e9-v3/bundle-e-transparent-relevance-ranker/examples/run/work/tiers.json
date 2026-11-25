@@ -1,0 +1,121 @@
+{
+  "tier_rules": {
+    "high": "score >= 60.0",
+    "medium": "30.0 <= score < 60.0",
+    "low": "score < 30.0"
+  },
+  "ranked": [
+    {
+      "rank": 1,
+      "record_id": "SYNB-0831",
+      "title": "NRC-9（Neurocalm）治疗化疗所致周围神经病变的多中心随机对照试验",
+      "total_score": 87.6667,
+      "tier": "high",
+      "tie_group": "T1"
+    },
+    {
+      "rank": 1,
+      "record_id": "SYNM-1024",
+      "title": "NRC-9（Neurocalm）治疗化疗所致周围神经病变的多中心随机对照试验",
+      "total_score": 87.6667,
+      "tier": "high",
+      "tie_group": "T1"
+    },
+    {
+      "rank": 3,
+      "record_id": "SYNM-2077",
+      "title": "NRC-9 对比安慰剂在 CIPN 患者中的疗效：一项随机对照试验",
+      "total_score": 76.3333,
+      "tier": "high",
+      "tie_group": null
+    },
+    {
+      "rank": 4,
+      "record_id": "SYNM-4150",
+      "title": "电针联合安慰剂对照改善 CIPN 患者生活质量的随机对照试验",
+      "total_score": 62.3333,
+      "tier": "high",
+      "tie_group": null
+    },
+    {
+      "rank": 5,
+      "record_id": "SYNM-3301",
+      "title": "真实世界中 NRC-9 用于肿瘤化疗患者周围神经病变的队列研究",
+      "total_score": 61.3333,
+      "tier": "high",
+      "tie_group": null
+    },
+    {
+      "rank": 6,
+      "record_id": "SYNM-8201",
+      "title": "NRC-9 用于 CIPN 老年患者的随机对照试验亚组分析",
+      "total_score": 60.8333,
+      "tier": "high",
+      "tie_group": "T2"
+    },
+    {
+      "rank": 6,
+      "record_id": "SYNM-8202",
+      "title": "NRC-9 治疗 CIPN 的剂量探索随机对照试验",
+      "total_score": 60.8333,
+      "tier": "high",
+      "tie_group": "T2"
+    },
+    {
+      "rank": 8,
+      "record_id": "SYNM-5288",
+      "title": "NRC-9 治疗糖尿病周围神经病变感觉症状的随机对照试验",
+      "total_score": 51.8333,
+      "tier": "medium",
+      "tie_group": null
+    },
+    {
+      "rank": 9,
+      "record_id": "SYNM-6023",
+      "title": "化疗所致周围神经病变管理进展：从 NRC-9 到康复策略",
+      "total_score": 47.5833,
+      "tier": "medium",
+      "tie_group": null
+    },
+    {
+      "rank": 10,
+      "record_id": "SYNM-7190",
+      "title": "NRC-9 对背根神经节神经元轴突生长的影响：体外实验",
+      "total_score": 32.5,
+      "tier": "medium",
+      "tie_group": null
+    },
+    {
+      "rank": 11,
+      "record_id": "SYNM-9005",
+      "title": "化疗相关恶心呕吐防治的再思考",
+      "total_score": 0.75,
+      "tier": "low",
+      "tie_group": null
+    }
+  ],
+  "tie_groups": [
+    {
+      "tie_group": "T1",
+      "total_score": 87.6667,
+      "members": [
+        "SYNB-0831",
+        "SYNM-1024"
+      ]
+    },
+    {
+      "tie_group": "T2",
+      "total_score": 60.8333,
+      "members": [
+        "SYNM-8201",
+        "SYNM-8202"
+      ]
+    }
+  ],
+  "tier_counts": {
+    "high": 7,
+    "medium": 3,
+    "low": 1
+  },
+  "note": "名次为阅读优先级建议；不构成纳入/排除判定。"
+}

@@ -1,0 +1,21 @@
+{
+  "research_question": "在成人化疗所致周围神经病变（CIPN）患者中，NRC-9（Neurocalm）相比安慰剂能否改善感觉症状与生活质量？",
+  "_note": "合成示例，非真实评测案例。负例：故意放入语料中不存在的词“吗啡缓释片”，用于演示 anchor_hits.py 的 exit 3 锚定门禁。",
+  "facets": {
+    "population": {
+      "terms": ["化疗所致周围神经病变", "CIPN", "肿瘤化疗患者"]
+    },
+    "intervention": {
+      "terms": ["NRC-9", "Neurocalm", "吗啡缓释片"]
+    },
+    "comparator": {
+      "terms": ["安慰剂"]
+    },
+    "outcome": {
+      "terms": ["感觉症状", "生活质量"]
+    },
+    "study_design": {
+      "terms": ["随机对照试验", "双盲", "队列研究"]
+    }
+  }
+}

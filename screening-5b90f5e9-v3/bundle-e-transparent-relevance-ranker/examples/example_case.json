@@ -1,0 +1,26 @@
+{
+  "case_id": "synthetic-rank-demo-01",
+  "_disclaimer": "合成示例，非真实评测案例。所有题录、作者、期刊、数据库均为虚构，仅用于演示透明排序流水线。",
+  "research_question": "在成人化疗所致周围神经病变（CIPN）患者中，NRC-9（Neurocalm）相比安慰剂能否改善感觉症状与生活质量？请对候选题录给出可复算的阅读优先级排序。",
+  "eligibility": {
+    "include": "本示例不产出纳入/排除判定；此字段仅为演示合同字段映射而保留。",
+    "exclude": "同上。"
+  },
+  "output_contract": [
+    "case_id",
+    "skill_name",
+    "status",
+    "product",
+    "ranking_rationale",
+    "score_decomposition",
+    "sensitivity",
+    "sources",
+    "uncertainty",
+    "change_records",
+    "counts",
+    "included_studies"
+  ],
+  "materials": [
+    "materials/records.jsonl"
+  ]
+}

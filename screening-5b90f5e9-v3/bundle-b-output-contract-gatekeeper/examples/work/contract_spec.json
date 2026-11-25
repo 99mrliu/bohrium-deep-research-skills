@@ -1,0 +1,28 @@
+{
+  "spec_version": "1.0",
+  "generated_at": "2026-11-25T08:52:49+00:00",
+  "generated_by": "contract_probe.py",
+  "case_id": "search09-synthetic-demo",
+  "contract_fields": [
+    "decisions",
+    "dedup_report",
+    "conflict_resolutions",
+    "screening_summary",
+    "limits"
+  ],
+  "runtime_minimum_fields": [
+    "case_id",
+    "status",
+    "sources",
+    "uncertainty",
+    "change_records"
+  ],
+  "provenance": {
+    "case_id_source": "case.json",
+    "fields_source": "case.json"
+  },
+  "warnings": [
+    "contract_shape: list from case.json.fields",
+    "contract_shape: free-text markdown section from task.md"
+  ]
+}

@@ -1,0 +1,21 @@
+{
+  "research_question": "在成人化疗所致周围神经病变（CIPN）患者中，NRC-9（Neurocalm）相比安慰剂能否改善感觉症状与生活质量？请对候选题录给出可复算的阅读优先级排序。",
+  "_note": "合成示例，非真实评测案例。此文件演示[模型]步骤填写的 facet 词表：每个词都锚定在合成题录文本中真实出现。",
+  "facets": {
+    "population": {
+      "terms": ["化疗所致周围神经病变", "CIPN", "肿瘤化疗患者"]
+    },
+    "intervention": {
+      "terms": ["NRC-9", "Neurocalm"]
+    },
+    "comparator": {
+      "terms": ["安慰剂"]
+    },
+    "outcome": {
+      "terms": ["感觉症状", "生活质量"]
+    },
+    "study_design": {
+      "terms": ["随机对照试验", "双盲", "队列研究"]
+    }
+  }
+}

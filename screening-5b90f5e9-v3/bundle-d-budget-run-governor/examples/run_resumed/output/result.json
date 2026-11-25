@@ -1,0 +1,167 @@
+{
+  "status": "completed",
+  "case_id": "syn-governor-demo-001",
+  "decisions": [
+    {
+      "record_id": "R01",
+      "decision": "include",
+      "evidence_level": "full",
+      "rationale": "（模拟占位判定，非真实筛选结论）"
+    },
+    {
+      "record_id": "R02",
+      "decision": "exclude",
+      "evidence_level": "full",
+      "rationale": "（模拟占位判定，非真实筛选结论）"
+    },
+    {
+      "record_id": "R03",
+      "decision": "include",
+      "evidence_level": "full",
+      "rationale": "（模拟占位判定，非真实筛选结论）"
+    },
+    {
+      "record_id": "R04",
+      "decision": "uncertain",
+      "evidence_level": "full",
+      "rationale": "（模拟占位判定，非真实筛选结论）"
+    },
+    {
+      "record_id": "R06",
+      "decision": "exclude",
+      "evidence_level": "full",
+      "rationale": "（模拟占位判定，非真实筛选结论）"
+    },
+    {
+      "record_id": "R07",
+      "decision": "include",
+      "evidence_level": "full",
+      "rationale": "（模拟占位判定，非真实筛选结论）"
+    },
+    {
+      "record_id": "R08",
+      "decision": "exclude",
+      "evidence_level": "full",
+      "rationale": "（模拟占位判定，非真实筛选结论）"
+    },
+    {
+      "record_id": "R09",
+      "decision": "include",
+      "evidence_level": "full",
+      "rationale": "（模拟占位判定，非真实筛选结论）"
+    }
+  ],
+  "screening_summary": {
+    "total_records": 9,
+    "decided": 8,
+    "included": 4,
+    "excluded": 3,
+    "uncertain": 1
+  },
+  "dedup_report": {
+    "duplicate_clusters": [
+      {
+        "canonical": "R01",
+        "duplicate": "R05",
+        "basis": "title_key 完全一致（合成夹具重复导出）"
+      }
+    ],
+    "conflict_flags": [
+      {
+        "record_id": "R04",
+        "reviews": [
+          {
+            "reviewer": "reviewer_alpha",
+            "vote": "include"
+          },
+          {
+            "reviewer": "reviewer_beta",
+            "vote": "exclude"
+          }
+        ],
+        "resolution": "保守置 uncertain，留待人工复核（模拟）"
+      }
+    ],
+    "note": "去重与冲突标记（模拟）"
+  },
+  "sources": [
+    {
+      "record_id": "R01",
+      "citation": "Synth A, Demo B. Telerehabilitation for chronic low back pain: a randomized controlled trial. J Synth Rehabil. 2023;15(2):101-112."
+    },
+    {
+      "record_id": "R02",
+      "citation": "Demo C, Synth D. Home-based exercise therapy and pain outcomes in adults with chronic low back pain. Demo Spine J. 2022;9(4):210-218."
+    },
+    {
+      "record_id": "R03",
+      "citation": "Synth E. A qualitative study of patient experiences with digital pain self-management. Qual Demo Health. 2021;7(1):33-41."
+    },
+    {
+      "record_id": "R04",
+      "citation": "Demo F, Synth G, Demo H. Wearable-guided activity pacing for chronic low back pain: pilot RCT. Pilot Demo Stud. 2024;12(3):55-63.",
+      "fixture_note": "合成夹具：冲突双人意见，调度器只能保守置 uncertain 留待人工复核。"
+    },
+    {
+      "record_id": "R05",
+      "citation": "Synth A, Demo B. Telerehabilitation for chronic low back pain: a randomized controlled trial. J Synth Rehabil. 2023;15(2):101-112.",
+      "fixture_note": "合成夹具：R01 的重复导出记录（不同导出格式），用于演示去重。"
+    },
+    {
+      "record_id": "R06",
+      "citation": "Demo I, Synth J. Economic evaluation of telehealth programmes for musculoskeletal pain. Demo Health Econ. 2020;5(2):77-85."
+    },
+    {
+      "record_id": "R07",
+      "citation": "Synth K, Demo L. Cognitive behavioral therapy delivered by smartphone for chronic pain: an RCT. J Demo Behav Med. 2023;18(1):12-24."
+    },
+    {
+      "record_id": "R08",
+      "citation": "Demo M. Narrative review of digital health in spinal care. Spine Demo Rev. 2019;3(1):5-14."
+    },
+    {
+      "record_id": "R09",
+      "citation": "Synth N, Demo O, Synth P. Video-conference physiotherapy versus in-person care for chronic low back pain: noninferiority RCT. BMJ Demo Open. 2024;14(2):e001."
+    }
+  ],
+  "uncertainty": [
+    "以下记录判为 uncertain，需人工复核（本调度器不做内容判定）：R04。"
+  ],
+  "change_records": [
+    {
+      "action": "merge_duplicate_export",
+      "canonical": "R01",
+      "duplicate": "R05",
+      "basis": "title_key 完全一致（合成夹具重复导出）",
+      "actor": "simulate_stages（合成示例）",
+      "ts": "2026-11-25T08:59:53+00:00"
+    }
+  ],
+  "notes": [
+    "调度器：budget-run-governor；档位=L0；判定批量=3；本文件由 flush_partial.py 增量落盘，任何时刻中断均为合法交付。",
+    "边界声明：本调度器只调度执行过程与预算，不含任何判定内容、诊断分析或渲染结论。"
+  ],
+  "scheduler": {
+    "skill": "budget-run-governor",
+    "level": "L0",
+    "flushed_at": "2026-11-25T09:00:02+00:00",
+    "completed_stages": [
+      "inventory",
+      "scaffold",
+      "normalize",
+      "dedupe",
+      "decide",
+      "diagnose",
+      "fill",
+      "final_check"
+    ],
+    "pending_stages": [],
+    "ledger": {
+      "spent_requests": 30,
+      "budget_requests": 64,
+      "reserve_requests": 2,
+      "elapsed_seconds": 420.0,
+      "budget_seconds": 900.0
+    }
+  }
+}

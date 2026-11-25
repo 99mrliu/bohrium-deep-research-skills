@@ -1,0 +1,23 @@
+{
+  "generated_by": "selfcheck.py v1.0.0",
+  "ts": "2026-11-25T09:02:55Z",
+  "scope_note": "本终检不做计数闭合审计（属另一方向职责）。",
+  "checks": [
+    {
+      "name": "contract_fields_present",
+      "status": "pass",
+      "detail": "10 个合同字段齐备；null 字段均有 uncertainty 说明"
+    },
+    {
+      "name": "evidence_anchor_authenticity",
+      "status": "pass",
+      "detail": "54 条证据 quote 全部锚定到题录真实片段"
+    },
+    {
+      "name": "status_finalization",
+      "status": "pass",
+      "detail": "selfcheck 全部通过，status 置 completed。"
+    }
+  ],
+  "final_status": "completed"
+}

@@ -1,0 +1,89 @@
+{
+  "case_id": "syn-governor-demo-001",
+  "_disclaimer": "合成示例，非真实评测案例。全部题录为演示虚构，不对应任何真实文献。",
+  "research_question": "（合成）某远程康复干预对慢性腰痛患者疼痛评分的影响：随机对照试验的系统综述筛选",
+  "output_contract": {
+    "required_fields": [
+      "case_id",
+      "status",
+      "decisions",
+      "screening_summary",
+      "dedup_report",
+      "sources",
+      "uncertainty",
+      "change_records",
+      "notes"
+    ]
+  },
+  "records": [
+    {
+      "record_id": "R01",
+      "title": "Telerehabilitation for chronic low back pain: a randomized controlled trial",
+      "citation": "Synth A, Demo B. Telerehabilitation for chronic low back pain: a randomized controlled trial. J Synth Rehabil. 2023;15(2):101-112.",
+      "year": 2023,
+      "abstract": "（合成摘要）远程康复对比常规护理对慢性腰痛疼痛评分的影响……"
+    },
+    {
+      "record_id": "R02",
+      "title": "Home-based exercise therapy and pain outcomes in adults with chronic low back pain",
+      "citation": "Demo C, Synth D. Home-based exercise therapy and pain outcomes in adults with chronic low back pain. Demo Spine J. 2022;9(4):210-218.",
+      "year": 2022,
+      "abstract": "（合成摘要）居家运动疗法对成人慢性腰痛疼痛结局的影响……"
+    },
+    {
+      "record_id": "R03",
+      "title": "A qualitative study of patient experiences with digital pain self-management",
+      "citation": "Synth E. A qualitative study of patient experiences with digital pain self-management. Qual Demo Health. 2021;7(1):33-41.",
+      "year": 2021,
+      "abstract": "（合成摘要）患者对数字化疼痛自我管理的体验的质性研究……"
+    },
+    {
+      "record_id": "R04",
+      "title": "Wearable-guided activity pacing for chronic low back pain: pilot RCT",
+      "citation": "Demo F, Synth G, Demo H. Wearable-guided activity pacing for chronic low back pain: pilot RCT. Pilot Demo Stud. 2024;12(3):55-63.",
+      "year": 2024,
+      "abstract": "（合成摘要）可穿戴设备指导的活动节律调节用于慢性腰痛的先导 RCT……",
+      "conflicting_reviews": [
+        {"reviewer": "reviewer_alpha", "vote": "include"},
+        {"reviewer": "reviewer_beta", "vote": "exclude"}
+      ],
+      "fixture_note": "合成夹具：冲突双人意见，调度器只能保守置 uncertain 留待人工复核。"
+    },
+    {
+      "record_id": "R05",
+      "title": "Telerehabilitation for chronic low back pain: a randomized controlled trial",
+      "citation": "Synth A, Demo B. Telerehabilitation for chronic low back pain: a randomized controlled trial. J Synth Rehabil. 2023;15(2):101-112.",
+      "year": 2023,
+      "abstract": "（合成摘要，与 R01 同源导出）远程康复对比常规护理……",
+      "fixture_note": "合成夹具：R01 的重复导出记录（不同导出格式），用于演示去重。"
+    },
+    {
+      "record_id": "R06",
+      "title": "Economic evaluation of telehealth programmes for musculoskeletal pain",
+      "citation": "Demo I, Synth J. Economic evaluation of telehealth programmes for musculoskeletal pain. Demo Health Econ. 2020;5(2):77-85.",
+      "year": 2020,
+      "abstract": "（合成摘要）肌骨疼痛远程医疗项目的经济学评价……"
+    },
+    {
+      "record_id": "R07",
+      "title": "Cognitive behavioral therapy delivered by smartphone for chronic pain: an RCT",
+      "citation": "Synth K, Demo L. Cognitive behavioral therapy delivered by smartphone for chronic pain: an RCT. J Demo Behav Med. 2023;18(1):12-24.",
+      "year": 2023,
+      "abstract": "（合成摘要）智能手机递送的认知行为治疗用于慢性疼痛的 RCT……"
+    },
+    {
+      "record_id": "R08",
+      "title": "Narrative review of digital health in spinal care",
+      "citation": "Demo M. Narrative review of digital health in spinal care. Spine Demo Rev. 2019;3(1):5-14.",
+      "year": 2019,
+      "abstract": "（合成摘要）脊柱照护中数字健康的叙述性综述……"
+    },
+    {
+      "record_id": "R09",
+      "title": "Video-conference physiotherapy versus in-person care for chronic low back pain: noninferiority RCT",
+      "citation": "Synth N, Demo O, Synth P. Video-conference physiotherapy versus in-person care for chronic low back pain: noninferiority RCT. BMJ Demo Open. 2024;14(2):e001.",
+      "year": 2024,
+      "abstract": "（合成摘要）视频会议物理治疗对比线下照护用于慢性腰痛的非劣效 RCT……"
+    }
+  ]
+}

@@ -1,0 +1,90 @@
+{
+  "generated_by": "fragility_report.py v1.0.0",
+  "total_exclusions": 8,
+  "reason_code_distribution": {
+    "EX_POP_AGE": 3,
+    "EX_DESIGN_NOT_RCT": 2,
+    "EX_OUTCOME_NO_BMI": 2,
+    "EX_INT_NOT_GLP1": 1
+  },
+  "single_reason_exclusions": {
+    "count": 4,
+    "share": 0.5,
+    "items": [
+      {
+        "record_id": "R03",
+        "primary_reason_code": "EX_POP_AGE",
+        "not_met_criteria": [
+          "C1_population"
+        ]
+      },
+      {
+        "record_id": "R05",
+        "primary_reason_code": "EX_DESIGN_NOT_RCT",
+        "not_met_criteria": [
+          "C5_design"
+        ]
+      },
+      {
+        "record_id": "R06",
+        "primary_reason_code": "EX_DESIGN_NOT_RCT",
+        "not_met_criteria": [
+          "C5_design"
+        ]
+      },
+      {
+        "record_id": "R09",
+        "primary_reason_code": "EX_OUTCOME_NO_BMI",
+        "not_met_criteria": [
+          "C4_outcome"
+        ]
+      }
+    ]
+  },
+  "excluded_without_not_met": {
+    "count": 1,
+    "items": [
+      {
+        "record_id": "R11",
+        "primary_reason_code": "EX_OUTCOME_NO_BMI",
+        "not_met_criteria": []
+      }
+    ]
+  },
+  "robust_exclusions": {
+    "count": 3,
+    "items": [
+      {
+        "record_id": "R04",
+        "primary_reason_code": "EX_INT_NOT_GLP1",
+        "not_met_criteria": [
+          "C2_intervention",
+          "C3_comparator",
+          "C4_outcome",
+          "C5_design"
+        ]
+      },
+      {
+        "record_id": "R08",
+        "primary_reason_code": "EX_POP_AGE",
+        "not_met_criteria": [
+          "C1_population",
+          "C4_outcome",
+          "C5_design"
+        ]
+      },
+      {
+        "record_id": "R12",
+        "primary_reason_code": "EX_POP_AGE",
+        "not_met_criteria": [
+          "C1_population",
+          "C5_design"
+        ]
+      }
+    ]
+  },
+  "fragile_share": 0.625,
+  "fragile_threshold": 0.5,
+  "fragile_flag": true,
+  "interpretation": "fragile_share=0.625 >=阈值 0.50：排除面整体偏脆弱，建议优先复核单理由排除与无 not_met 排除"
+}

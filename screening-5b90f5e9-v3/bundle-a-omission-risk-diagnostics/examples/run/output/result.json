@@ -1,0 +1,568 @@
+{
+  "case_id": "syn-omission-demo-001",
+  "status": "completed",
+  "near_misses": {
+    "generated_by": "mine_near_misses.py v1.0.0",
+    "total_judgments": 12,
+    "total_excluded": 8,
+    "queue_size": 5,
+    "queue": [
+      {
+        "record_id": "R11",
+        "primary_reason_code": "EX_OUTCOME_NO_BMI",
+        "triggers": [
+          {
+            "type": "excluded_without_not_met",
+            "criterion": null
+          },
+          {
+            "type": "uncertain_verdict",
+            "criterion": "C4_outcome"
+          }
+        ],
+        "risk_score": 6,
+        "suggested_actions": [
+          "最高优先：该排除没有任何 not_met 判据支撑，须双人独立复核原始题录后重新判定",
+          "补充证据（如全文/方法段）后重判该 uncertain 判据"
+        ]
+      },
+      {
+        "record_id": "R05",
+        "primary_reason_code": "EX_DESIGN_NOT_RCT",
+        "triggers": [
+          {
+            "type": "single_criterion_exclusion",
+            "criterion": "C5_design"
+          },
+          {
+            "type": "uncertain_verdict",
+            "criterion": "C2_intervention"
+          }
+        ],
+        "risk_score": 5,
+        "suggested_actions": [
+          "复核唯一否决判据的判定是否过严，核对证据片段是否支持 not_met",
+          "补充证据（如全文/方法段）后重判该 uncertain 判据"
+        ]
+      },
+      {
+        "record_id": "R06",
+        "primary_reason_code": "EX_DESIGN_NOT_RCT",
+        "triggers": [
+          {
+            "type": "single_criterion_exclusion",
+            "criterion": "C5_design"
+          },
+          {
+            "type": "weak_evidence_anchor",
+            "criterion": "C5_design"
+          }
+        ],
+        "risk_score": 5,
+        "suggested_actions": [
+          "复核唯一否决判据的判定是否过严，核对证据片段是否支持 not_met",
+          "证据锚定弱：回查标题/摘要原文，确认证据片段真实支撑判定"
+        ]
+      },
+      {
+        "record_id": "R03",
+        "primary_reason_code": "EX_POP_AGE",
+        "triggers": [
+          {
+            "type": "single_criterion_exclusion",
+            "criterion": "C1_population"
+          }
+        ],
+        "risk_score": 3,
+        "suggested_actions": [
+          "复核唯一否决判据的判定是否过严，核对证据片段是否支持 not_met"
+        ]
+      },
+      {
+        "record_id": "R09",
+        "primary_reason_code": "EX_OUTCOME_NO_BMI",
+        "triggers": [
+          {
+            "type": "single_criterion_exclusion",
+            "criterion": "C4_outcome"
+          }
+        ],
+        "risk_score": 3,
+        "suggested_actions": [
+          "复核唯一否决判据的判定是否过严，核对证据片段是否支持 not_met"
+        ]
+      }
+    ],
+    "included_uncertain": []
+  },
+  "fragility_report": {
+    "generated_by": "fragility_report.py v1.0.0",
+    "total_exclusions": 8,
+    "reason_code_distribution": {
+      "EX_POP_AGE": 3,
+      "EX_DESIGN_NOT_RCT": 2,
+      "EX_OUTCOME_NO_BMI": 2,
+      "EX_INT_NOT_GLP1": 1
+    },
+    "single_reason_exclusions": {
+      "count": 4,
+      "share": 0.5,
+      "items": [
+        {
+          "record_id": "R03",
+          "primary_reason_code": "EX_POP_AGE",
+          "not_met_criteria": [
+            "C1_population"
+          ]
+        },
+        {
+          "record_id": "R05",
+          "primary_reason_code": "EX_DESIGN_NOT_RCT",
+          "not_met_criteria": [
+            "C5_design"
+          ]
+        },
+        {
+          "record_id": "R06",
+          "primary_reason_code": "EX_DESIGN_NOT_RCT",
+          "not_met_criteria": [
+            "C5_design"
+          ]
+        },
+        {
+          "record_id": "R09",
+          "primary_reason_code": "EX_OUTCOME_NO_BMI",
+          "not_met_criteria": [
+            "C4_outcome"
+          ]
+        }
+      ]
+    },
+    "excluded_without_not_met": {
+      "count": 1,
+      "items": [
+        {
+          "record_id": "R11",
+          "primary_reason_code": "EX_OUTCOME_NO_BMI",
+          "not_met_criteria": []
+        }
+      ]
+    },
+    "robust_exclusions": {
+      "count": 3,
+      "items": [
+        {
+          "record_id": "R04",
+          "primary_reason_code": "EX_INT_NOT_GLP1",
+          "not_met_criteria": [
+            "C2_intervention",
+            "C3_comparator",
+            "C4_outcome",
+            "C5_design"
+          ]
+        },
+        {
+          "record_id": "R08",
+          "primary_reason_code": "EX_POP_AGE",
+          "not_met_criteria": [
+            "C1_population",
+            "C4_outcome",
+            "C5_design"
+          ]
+        },
+        {
+          "record_id": "R12",
+          "primary_reason_code": "EX_POP_AGE",
+          "not_met_criteria": [
+            "C1_population",
+            "C5_design"
+          ]
+        }
+      ]
+    },
+    "fragile_share": 0.625,
+    "fragile_threshold": 0.5,
+    "fragile_flag": true,
+    "interpretation": "fragile_share=0.625 >=阈值 0.50：排除面整体偏脆弱，建议优先复核单理由排除与无 not_met 排除"
+  },
+  "facet_coverage": {
+    "generated_by": "facet_coverage.py v1.0.0",
+    "status": "completed",
+    "included_total": 4,
+    "facets": [
+      {
+        "facet_id": "F1_population",
+        "label": "adolescents with obesity",
+        "included_hits": 4,
+        "matched_records": [
+          {
+            "record_id": "R01",
+            "matched_keywords": [
+              "adolescent",
+              "adolescents",
+              "obesity"
+            ]
+          },
+          {
+            "record_id": "R02",
+            "matched_keywords": [
+              "adolescent",
+              "adolescents",
+              "obesity"
+            ]
+          },
+          {
+            "record_id": "R07",
+            "matched_keywords": [
+              "adolescent",
+              "adolescents",
+              "obesity"
+            ]
+          },
+          {
+            "record_id": "R10",
+            "matched_keywords": [
+              "adolescent",
+              "adolescents",
+              "obesity"
+            ]
+          }
+        ],
+        "status": "ok"
+      },
+      {
+        "facet_id": "F2_intervention",
+        "label": "GLP-1 receptor agonist",
+        "included_hits": 4,
+        "matched_records": [
+          {
+            "record_id": "R01",
+            "matched_keywords": [
+              "semaglutide"
+            ]
+          },
+          {
+            "record_id": "R02",
+            "matched_keywords": [
+              "liraglutide"
+            ]
+          },
+          {
+            "record_id": "R07",
+            "matched_keywords": [
+              "exenatide"
+            ]
+          },
+          {
+            "record_id": "R10",
+            "matched_keywords": [
+              "liraglutide"
+            ]
+          }
+        ],
+        "status": "ok"
+      },
+      {
+        "facet_id": "F3_comparator",
+        "label": "lifestyle intervention comparator",
+        "included_hits": 0,
+        "matched_records": [],
+        "status": "zero_inclusion_alarm"
+      },
+      {
+        "facet_id": "F4_outcome",
+        "label": "BMI / weight change",
+        "included_hits": 4,
+        "matched_records": [
+          {
+            "record_id": "R01",
+            "matched_keywords": [
+              "bmi",
+              "z-score"
+            ]
+          },
+          {
+            "record_id": "R02",
+            "matched_keywords": [
+              "bmi",
+              "weight"
+            ]
+          },
+          {
+            "record_id": "R07",
+            "matched_keywords": [
+              "bmi"
+            ]
+          },
+          {
+            "record_id": "R10",
+            "matched_keywords": [
+              "bmi",
+              "z-score"
+            ]
+          }
+        ],
+        "status": "ok"
+      },
+      {
+        "facet_id": "F5_design",
+        "label": "randomized controlled trial",
+        "included_hits": 4,
+        "matched_records": [
+          {
+            "record_id": "R01",
+            "matched_keywords": [
+              "randomized"
+            ]
+          },
+          {
+            "record_id": "R02",
+            "matched_keywords": [
+              "randomized",
+              "double-blind"
+            ]
+          },
+          {
+            "record_id": "R07",
+            "matched_keywords": [
+              "randomized"
+            ]
+          },
+          {
+            "record_id": "R10",
+            "matched_keywords": [
+              "randomized",
+              "placebo-controlled"
+            ]
+          }
+        ],
+        "status": "ok"
+      }
+    ],
+    "alarms": [
+      {
+        "facet_id": "F3_comparator",
+        "label": "lifestyle intervention comparator",
+        "alarm": "zero_inclusion_alarm",
+        "interpretation": "纳入集在该主题面命中为 0。本快照无法区分“检索遗漏”“筛选过严”与“该面真空”；须人工回查检索式与排除理由后方可定性。"
+      }
+    ],
+    "note": "覆盖核查基于题录关键词匹配，语义覆盖有限；不构成全局召回声明。"
+  },
+  "omission_statement": {
+    "path": "omission_statement.md",
+    "excluded_total": 8,
+    "reason_code_distribution": {
+      "EX_POP_AGE": 3,
+      "EX_DESIGN_NOT_RCT": 2,
+      "EX_OUTCOME_NO_BMI": 2,
+      "EX_INT_NOT_GLP1": 1
+    },
+    "fragile_share": 0.625,
+    "fragile_flag": true,
+    "recheck_queue_size": 5,
+    "top_recheck": [
+      "R11",
+      "R05",
+      "R06"
+    ],
+    "facet_alarms": [
+      "F3_comparator"
+    ],
+    "cannot_answer": [
+      "本诊断仅基于有限题录快照，无法回答数据库之外是否仍有未检出的合格文献（不声称全局召回）。",
+      "facet 零纳入报警无法在本快照内定性为“检索遗漏”“筛选过严”或“该面真空”，须人工回查检索式与全文。",
+      "被排除记录中证据锚定弱的条目，其判定正确性须人工核对原文后才能确认。",
+      "本技能不重新执行初筛判定，上游 judgments 本身的系统性偏倚只能被标记、不能被本流程纠正。"
+    ]
+  },
+  "recheck_worklist": {
+    "generated_by": "mine_near_misses.py v1.0.0",
+    "ranking_basis": "risk_score 降序；同分按 record_id 字典序",
+    "risk_weights": {
+      "excluded_without_not_met": 4,
+      "single_criterion_exclusion": 3,
+      "uncertain_verdict": 2,
+      "weak_evidence_anchor": 2
+    },
+    "worklist": [
+      {
+        "rank": 1,
+        "record_id": "R11",
+        "risk_score": 6,
+        "trigger_types": [
+          "excluded_without_not_met",
+          "uncertain_verdict"
+        ],
+        "suggested_actions": [
+          "最高优先：该排除没有任何 not_met 判据支撑，须双人独立复核原始题录后重新判定",
+          "补充证据（如全文/方法段）后重判该 uncertain 判据"
+        ],
+        "status": "pending_human_recheck"
+      },
+      {
+        "rank": 2,
+        "record_id": "R05",
+        "risk_score": 5,
+        "trigger_types": [
+          "single_criterion_exclusion",
+          "uncertain_verdict"
+        ],
+        "suggested_actions": [
+          "复核唯一否决判据的判定是否过严，核对证据片段是否支持 not_met",
+          "补充证据（如全文/方法段）后重判该 uncertain 判据"
+        ],
+        "status": "pending_human_recheck"
+      },
+      {
+        "rank": 3,
+        "record_id": "R06",
+        "risk_score": 5,
+        "trigger_types": [
+          "single_criterion_exclusion",
+          "weak_evidence_anchor"
+        ],
+        "suggested_actions": [
+          "复核唯一否决判据的判定是否过严，核对证据片段是否支持 not_met",
+          "证据锚定弱：回查标题/摘要原文，确认证据片段真实支撑判定"
+        ],
+        "status": "pending_human_recheck"
+      },
+      {
+        "rank": 4,
+        "record_id": "R03",
+        "risk_score": 3,
+        "trigger_types": [
+          "single_criterion_exclusion"
+        ],
+        "suggested_actions": [
+          "复核唯一否决判据的判定是否过严，核对证据片段是否支持 not_met"
+        ],
+        "status": "pending_human_recheck"
+      },
+      {
+        "rank": 5,
+        "record_id": "R09",
+        "risk_score": 3,
+        "trigger_types": [
+          "single_criterion_exclusion"
+        ],
+        "suggested_actions": [
+          "复核唯一否决判据的判定是否过严，核对证据片段是否支持 not_met"
+        ],
+        "status": "pending_human_recheck"
+      }
+    ]
+  },
+  "sources": [
+    {
+      "path": "/Users/liuhengshen/Desktop/bhr_product/5b90f5e9-five/bundles/bundle-a-omission-risk-diagnostics/examples/run/input/records.json",
+      "sha256": "5622a27c42c81b999f05db097c61c5a4fb9e1c9c8980c4b2e6d657869ba50422",
+      "role": "records"
+    },
+    {
+      "path": "/Users/liuhengshen/Desktop/bhr_product/5b90f5e9-five/bundles/bundle-a-omission-risk-diagnostics/examples/run/input/judgments.json",
+      "sha256": "b1f36410d28cd752c3e01504e93ca66cb5214c3bce973372e55bd81d36a59a77",
+      "role": "judgments"
+    }
+  ],
+  "uncertainty": [],
+  "change_records": [
+    {
+      "ts": "2026-11-25T09:00:28Z",
+      "action": "scaffold_result: skeleton ensured (10 contract fields)",
+      "files": [
+        "/Users/liuhengshen/Desktop/bhr_product/5b90f5e9-five/bundles/bundle-a-omission-risk-diagnostics/examples/run/output/result.json"
+      ]
+    },
+    {
+      "ts": "2026-11-25T09:00:28Z",
+      "action": "mine_near_misses: queue=5/8 excluded",
+      "files": [
+        "/Users/liuhengshen/Desktop/bhr_product/5b90f5e9-five/bundles/bundle-a-omission-risk-diagnostics/examples/run/work/near_misses.json",
+        "/Users/liuhengshen/Desktop/bhr_product/5b90f5e9-five/bundles/bundle-a-omission-risk-diagnostics/examples/run/work/recheck_worklist.json",
+        "/Users/liuhengshen/Desktop/bhr_product/5b90f5e9-five/bundles/bundle-a-omission-risk-diagnostics/examples/run/output/result.json"
+      ]
+    },
+    {
+      "ts": "2026-11-25T09:00:28Z",
+      "action": "fragility_report: fragile_share=0.625 flag=True",
+      "files": [
+        "/Users/liuhengshen/Desktop/bhr_product/5b90f5e9-five/bundles/bundle-a-omission-risk-diagnostics/examples/run/work/fragility_report.json",
+        "/Users/liuhengshen/Desktop/bhr_product/5b90f5e9-five/bundles/bundle-a-omission-risk-diagnostics/examples/run/output/result.json"
+      ]
+    },
+    {
+      "ts": "2026-11-25T09:00:29Z",
+      "action": "facet_coverage: facets=5 alarms=1",
+      "files": [
+        "/Users/liuhengshen/Desktop/bhr_product/5b90f5e9-five/bundles/bundle-a-omission-risk-diagnostics/examples/run/work/facet_coverage.json",
+        "/Users/liuhengshen/Desktop/bhr_product/5b90f5e9-five/bundles/bundle-a-omission-risk-diagnostics/examples/run/output/result.json"
+      ]
+    },
+    {
+      "ts": "2026-11-25T09:00:29Z",
+      "action": "omission_statement: statement generated",
+      "files": [
+        "/Users/liuhengshen/Desktop/bhr_product/5b90f5e9-five/bundles/bundle-a-omission-risk-diagnostics/examples/run/output/omission_statement.md",
+        "/Users/liuhengshen/Desktop/bhr_product/5b90f5e9-five/bundles/bundle-a-omission-risk-diagnostics/examples/run/output/result.json"
+      ]
+    },
+    {
+      "ts": "2026-11-25T09:00:29Z",
+      "action": "selfcheck: completed",
+      "files": [
+        "/Users/liuhengshen/Desktop/bhr_product/5b90f5e9-five/bundles/bundle-a-omission-risk-diagnostics/examples/run/work/selfcheck.json",
+        "/Users/liuhengshen/Desktop/bhr_product/5b90f5e9-five/bundles/bundle-a-omission-risk-diagnostics/examples/run/output/result.json"
+      ]
+    },
+    {
+      "ts": "2026-11-25T09:02:53Z",
+      "action": "scaffold_result: skeleton ensured (10 contract fields)",
+      "files": [
+        "/Users/liuhengshen/Desktop/bhr_product/5b90f5e9-five/bundles/bundle-a-omission-risk-diagnostics/examples/run/output/result.json"
+      ]
+    },
+    {
+      "ts": "2026-11-25T09:02:54Z",
+      "action": "mine_near_misses: queue=5/8 excluded",
+      "files": [
+        "/Users/liuhengshen/Desktop/bhr_product/5b90f5e9-five/bundles/bundle-a-omission-risk-diagnostics/examples/run/work/near_misses.json",
+        "/Users/liuhengshen/Desktop/bhr_product/5b90f5e9-five/bundles/bundle-a-omission-risk-diagnostics/examples/run/work/recheck_worklist.json",
+        "/Users/liuhengshen/Desktop/bhr_product/5b90f5e9-five/bundles/bundle-a-omission-risk-diagnostics/examples/run/output/result.json"
+      ]
+    },
+    {
+      "ts": "2026-11-25T09:02:54Z",
+      "action": "fragility_report: fragile_share=0.625 flag=True",
+      "files": [
+        "/Users/liuhengshen/Desktop/bhr_product/5b90f5e9-five/bundles/bundle-a-omission-risk-diagnostics/examples/run/work/fragility_report.json",
+        "/Users/liuhengshen/Desktop/bhr_product/5b90f5e9-five/bundles/bundle-a-omission-risk-diagnostics/examples/run/output/result.json"
+      ]
+    },
+    {
+      "ts": "2026-11-25T09:02:54Z",
+      "action": "facet_coverage: facets=5 alarms=1",
+      "files": [
+        "/Users/liuhengshen/Desktop/bhr_product/5b90f5e9-five/bundles/bundle-a-omission-risk-diagnostics/examples/run/work/facet_coverage.json",
+        "/Users/liuhengshen/Desktop/bhr_product/5b90f5e9-five/bundles/bundle-a-omission-risk-diagnostics/examples/run/output/result.json"
+      ]
+    },
+    {
+      "ts": "2026-11-25T09:02:54Z",
+      "action": "omission_statement: statement generated",
+      "files": [
+        "/Users/liuhengshen/Desktop/bhr_product/5b90f5e9-five/bundles/bundle-a-omission-risk-diagnostics/examples/run/output/omission_statement.md",
+        "/Users/liuhengshen/Desktop/bhr_product/5b90f5e9-five/bundles/bundle-a-omission-risk-diagnostics/examples/run/output/result.json"
+      ]
+    },
+    {
+      "ts": "2026-11-25T09:02:55Z",
+      "action": "selfcheck: completed",
+      "files": [
+        "/Users/liuhengshen/Desktop/bhr_product/5b90f5e9-five/bundles/bundle-a-omission-risk-diagnostics/examples/run/work/selfcheck.json",
+        "/Users/liuhengshen/Desktop/bhr_product/5b90f5e9-five/bundles/bundle-a-omission-risk-diagnostics/examples/run/output/result.json"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,77 @@
+{
+  "changes": [
+    {
+      "field": "title",
+      "new": "Influência da cafeína na atenção de idosos",
+      "old": "InfluÃªncia da cafeÃ­na na atenÃ§Ã£o de idosos",
+      "record_id": "SCIELO-0003",
+      "rule": "text_health_safe_repair",
+      "source_record_id": null
+    },
+    {
+      "field": "title",
+      "new": "Fish oil & cardiovascular risk — a cohort study",
+      "old": "Fish oil &amp; cardiovascular risk &#8212; a cohort study",
+      "record_id": "EMBASE-0005",
+      "rule": "text_health_safe_repair",
+      "source_record_id": null
+    },
+    {
+      "field": "abstract",
+      "new": "Primary endpoint reduced events (P < 0.05) with confidence intervals reported in the supplement.",
+      "old": "Primary endpoint reduced events (P &lt; 0.05)\u0007 with confidence intervals reported in the supplement.",
+      "record_id": "EMBASE-0005",
+      "rule": "text_health_safe_repair",
+      "source_record_id": null
+    }
+  ],
+  "fields_scanned": [
+    "title",
+    "abstract",
+    "journal",
+    "source",
+    "keywords",
+    "publication_type"
+  ],
+  "generated_by": "text_health.py",
+  "issues": [
+    {
+      "action": "repaired",
+      "field": "title",
+      "issue": "mojibake_utf8_as_latin1",
+      "record_id": "SCIELO-0003"
+    },
+    {
+      "action": "flagged_untrusted",
+      "field": "abstract",
+      "issue": "mojibake_unrepairable",
+      "record_id": "SCIELO-0003"
+    },
+    {
+      "action": "repaired",
+      "field": "title",
+      "issue": "html_entity_residue",
+      "record_id": "EMBASE-0005"
+    },
+    {
+      "action": "repaired",
+      "field": "abstract",
+      "issue": "control_or_invisible_chars",
+      "record_id": "EMBASE-0005"
+    },
+    {
+      "action": "repaired",
+      "field": "abstract",
+      "issue": "html_entity_residue",
+      "record_id": "EMBASE-0005"
+    }
+  ],
+  "notes": [
+    "仅执行可验证的安全修复；不可修复的乱码保留原值并标记，",
+    "不做任何猜测性改写。"
+  ],
+  "records_total": 9,
+  "untrusted_text_fields": [
+    "SCIELO-0003.abstract"
+  ]
+}

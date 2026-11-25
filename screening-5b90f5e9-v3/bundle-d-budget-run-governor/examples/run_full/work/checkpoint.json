@@ -1,0 +1,95 @@
+{
+  "version": 1,
+  "updated_at": "2026-11-25T09:00:10+00:00",
+  "order": [
+    "inventory",
+    "scaffold",
+    "normalize",
+    "dedupe",
+    "decide",
+    "diagnose",
+    "fill",
+    "final_check"
+  ],
+  "stages": {
+    "inventory": {
+      "seq": 1,
+      "ts": "2026-11-25T09:00:10+00:00",
+      "inputs": {},
+      "outputs": {
+        "examples/run_full/work/inventory.json": "9972f4bf2ef8e90fa36a319f2a3f70dbb4db3db1385932a190d16158381f9e6f"
+      }
+    },
+    "scaffold": {
+      "seq": 2,
+      "ts": "2026-11-25T09:00:10+00:00",
+      "inputs": {
+        "examples/run_full/work/inventory.json": "9972f4bf2ef8e90fa36a319f2a3f70dbb4db3db1385932a190d16158381f9e6f"
+      },
+      "outputs": {
+        "examples/run_full/work/skeleton.json": "67ebf0fd809c32292df8da62494d3f2fe53dc04908bdef1932988b33a4e25cf5"
+      }
+    },
+    "normalize": {
+      "seq": 3,
+      "ts": "2026-11-25T09:00:10+00:00",
+      "inputs": {
+        "examples/run_full/work/inventory.json": "9972f4bf2ef8e90fa36a319f2a3f70dbb4db3db1385932a190d16158381f9e6f"
+      },
+      "outputs": {
+        "examples/run_full/work/normalized.json": "f1ce719383215f10ae227f214515df4c51af4134bace07a6e1e8498947d0baa8"
+      }
+    },
+    "dedupe": {
+      "seq": 4,
+      "ts": "2026-11-25T09:00:10+00:00",
+      "inputs": {
+        "examples/run_full/work/normalized.json": "f1ce719383215f10ae227f214515df4c51af4134bace07a6e1e8498947d0baa8"
+      },
+      "outputs": {
+        "examples/run_full/work/dedup_report.json": "7423f8971f283712ddfbc0f4ef47d2f92779e78883d99d0da6b906ba08ad4ff7"
+      }
+    },
+    "decide": {
+      "seq": 5,
+      "ts": "2026-11-25T09:00:10+00:00",
+      "inputs": {
+        "examples/run_full/work/dedup_report.json": "7423f8971f283712ddfbc0f4ef47d2f92779e78883d99d0da6b906ba08ad4ff7",
+        "examples/run_full/work/skeleton.json": "67ebf0fd809c32292df8da62494d3f2fe53dc04908bdef1932988b33a4e25cf5"
+      },
+      "outputs": {
+        "examples/run_full/work/decisions.json": "6698342ce5f47dc05bab86092bed781e12b2fdea1b1bd7a1991eb875d3f5a3ca"
+      }
+    },
+    "diagnose": {
+      "seq": 6,
+      "ts": "2026-11-25T09:00:10+00:00",
+      "inputs": {
+        "examples/run_full/work/decisions.json": "6698342ce5f47dc05bab86092bed781e12b2fdea1b1bd7a1991eb875d3f5a3ca"
+      },
+      "outputs": {
+        "examples/run_full/work/diagnostics.json": "09cc7b0425754efafc0e7542dbb1f1c2d642d60662a460ecfd9e5b59ca1b78c5"
+      }
+    },
+    "fill": {
+      "seq": 7,
+      "ts": "2026-11-25T09:00:10+00:00",
+      "inputs": {
+        "examples/run_full/work/diagnostics.json": "09cc7b0425754efafc0e7542dbb1f1c2d642d60662a460ecfd9e5b59ca1b78c5"
+      },
+      "outputs": {
+        "examples/run_full/work/fill_notes.json": "b314e807296d798cc48ea3177065fb09192926e877edbfa16ff6dda448903f5c"
+      }
+    },
+    "final_check": {
+      "seq": 8,
+      "ts": "2026-11-25T09:00:10+00:00",
+      "inputs": {
+        "examples/run_full/work/fill_notes.json": "b314e807296d798cc48ea3177065fb09192926e877edbfa16ff6dda448903f5c"
+      },
+      "outputs": {
+        "examples/run_full/work/final_check.json": "24554558f66f8cdbd7fef0407deeacc96f0bbb811c7e01170a19dd50dc1a80fd"
+      }
+    }
+  }
+}

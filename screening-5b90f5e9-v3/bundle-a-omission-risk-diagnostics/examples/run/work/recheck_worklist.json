@@ -1,0 +1,78 @@
+{
+  "generated_by": "mine_near_misses.py v1.0.0",
+  "ranking_basis": "risk_score 降序；同分按 record_id 字典序",
+  "risk_weights": {
+    "excluded_without_not_met": 4,
+    "single_criterion_exclusion": 3,
+    "uncertain_verdict": 2,
+    "weak_evidence_anchor": 2
+  },
+  "worklist": [
+    {
+      "rank": 1,
+      "record_id": "R11",
+      "risk_score": 6,
+      "trigger_types": [
+        "excluded_without_not_met",
+        "uncertain_verdict"
+      ],
+      "suggested_actions": [
+        "最高优先：该排除没有任何 not_met 判据支撑，须双人独立复核原始题录后重新判定",
+        "补充证据（如全文/方法段）后重判该 uncertain 判据"
+      ],
+      "status": "pending_human_recheck"
+    },
+    {
+      "rank": 2,
+      "record_id": "R05",
+      "risk_score": 5,
+      "trigger_types": [
+        "single_criterion_exclusion",
+        "uncertain_verdict"
+      ],
+      "suggested_actions": [
+        "复核唯一否决判据的判定是否过严，核对证据片段是否支持 not_met",
+        "补充证据（如全文/方法段）后重判该 uncertain 判据"
+      ],
+      "status": "pending_human_recheck"
+    },
+    {
+      "rank": 3,
+      "record_id": "R06",
+      "risk_score": 5,
+      "trigger_types": [
+        "single_criterion_exclusion",
+        "weak_evidence_anchor"
+      ],
+      "suggested_actions": [
+        "复核唯一否决判据的判定是否过严，核对证据片段是否支持 not_met",
+        "证据锚定弱：回查标题/摘要原文，确认证据片段真实支撑判定"
+      ],
+      "status": "pending_human_recheck"
+    },
+    {
+      "rank": 4,
+      "record_id": "R03",
+      "risk_score": 3,
+      "trigger_types": [
+        "single_criterion_exclusion"
+      ],
+      "suggested_actions": [
+        "复核唯一否决判据的判定是否过严，核对证据片段是否支持 not_met"
+      ],
+      "status": "pending_human_recheck"
+    },
+    {
+      "rank": 5,
+      "record_id": "R09",
+      "risk_score": 3,
+      "trigger_types": [
+        "single_criterion_exclusion"
+      ],
+      "suggested_actions": [
+        "复核唯一否决判据的判定是否过严，核对证据片段是否支持 not_met"
+      ],
+      "status": "pending_human_recheck"
+    }
+  ]
+}

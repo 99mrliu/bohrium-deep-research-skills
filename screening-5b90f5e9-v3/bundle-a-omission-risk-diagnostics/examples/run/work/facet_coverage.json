@@ -1,0 +1,164 @@
+{
+  "generated_by": "facet_coverage.py v1.0.0",
+  "status": "completed",
+  "included_total": 4,
+  "facets": [
+    {
+      "facet_id": "F1_population",
+      "label": "adolescents with obesity",
+      "included_hits": 4,
+      "matched_records": [
+        {
+          "record_id": "R01",
+          "matched_keywords": [
+            "adolescent",
+            "adolescents",
+            "obesity"
+          ]
+        },
+        {
+          "record_id": "R02",
+          "matched_keywords": [
+            "adolescent",
+            "adolescents",
+            "obesity"
+          ]
+        },
+        {
+          "record_id": "R07",
+          "matched_keywords": [
+            "adolescent",
+            "adolescents",
+            "obesity"
+          ]
+        },
+        {
+          "record_id": "R10",
+          "matched_keywords": [
+            "adolescent",
+            "adolescents",
+            "obesity"
+          ]
+        }
+      ],
+      "status": "ok"
+    },
+    {
+      "facet_id": "F2_intervention",
+      "label": "GLP-1 receptor agonist",
+      "included_hits": 4,
+      "matched_records": [
+        {
+          "record_id": "R01",
+          "matched_keywords": [
+            "semaglutide"
+          ]
+        },
+        {
+          "record_id": "R02",
+          "matched_keywords": [
+            "liraglutide"
+          ]
+        },
+        {
+          "record_id": "R07",
+          "matched_keywords": [
+            "exenatide"
+          ]
+        },
+        {
+          "record_id": "R10",
+          "matched_keywords": [
+            "liraglutide"
+          ]
+        }
+      ],
+      "status": "ok"
+    },
+    {
+      "facet_id": "F3_comparator",
+      "label": "lifestyle intervention comparator",
+      "included_hits": 0,
+      "matched_records": [],
+      "status": "zero_inclusion_alarm"
+    },
+    {
+      "facet_id": "F4_outcome",
+      "label": "BMI / weight change",
+      "included_hits": 4,
+      "matched_records": [
+        {
+          "record_id": "R01",
+          "matched_keywords": [
+            "bmi",
+            "z-score"
+          ]
+        },
+        {
+          "record_id": "R02",
+          "matched_keywords": [
+            "bmi",
+            "weight"
+          ]
+        },
+        {
+          "record_id": "R07",
+          "matched_keywords": [
+            "bmi"
+          ]
+        },
+        {
+          "record_id": "R10",
+          "matched_keywords": [
+            "bmi",
+            "z-score"
+          ]
+        }
+      ],
+      "status": "ok"
+    },
+    {
+      "facet_id": "F5_design",
+      "label": "randomized controlled trial",
+      "included_hits": 4,
+      "matched_records": [
+        {
+          "record_id": "R01",
+          "matched_keywords": [
+            "randomized"
+          ]
+        },
+        {
+          "record_id": "R02",
+          "matched_keywords": [
+            "randomized",
+            "double-blind"
+          ]
+        },
+        {
+          "record_id": "R07",
+          "matched_keywords": [
+            "randomized"
+          ]
+        },
+        {
+          "record_id": "R10",
+          "matched_keywords": [
+            "randomized",
+            "placebo-controlled"
+          ]
+        }
+      ],
+      "status": "ok"
+    }
+  ],
+  "alarms": [
+    {
+      "facet_id": "F3_comparator",
+      "label": "lifestyle intervention comparator",
+      "alarm": "zero_inclusion_alarm",
+      "interpretation": "纳入集在该主题面命中为 0。本快照无法区分“检索遗漏”“筛选过严”与“该面真空”；须人工回查检索式与排除理由后方可定性。"
+    }
+  ],
+  "note": "覆盖核查基于题录关键词匹配，语义覆盖有限；不构成全局召回声明。"
+}

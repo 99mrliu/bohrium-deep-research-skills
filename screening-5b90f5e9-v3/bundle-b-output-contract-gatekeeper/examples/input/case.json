@@ -1,0 +1,24 @@
+{
+  "case_id": "search09-synthetic-demo",
+  "notice": "合成示例，非真实评测案例。所有文献、检索式、重复导出与冲突意见均为演示用虚构数据。",
+  "research_question": "合成演示：可穿戴设备心率变异性指标对成年人过劳预警的有效性（虚构题目）",
+  "snapshot_note": "有限快照、无实时库；records 为合成题录，含组织方标注的合成重复导出与冲突双人意见夹具",
+  "records": [
+    {"record_id": "R01", "title": "Synthetic HRV wearable study A", "authors": "Doe J; Smith A", "year": 2021, "abstract": "合成摘要 A……"},
+    {"record_id": "R02", "title": "Synthetic HRV wearable study B", "authors": "Lee K", "year": 2020, "abstract": "合成摘要 B……"},
+    {"record_id": "R03", "title": "Synthetic HRV wearable study A (duplicate export)", "authors": "Doe J; Smith A", "year": 2021, "abstract": "合成摘要 A……", "fixture": "synthetic_duplicate_export"},
+    {"record_id": "R04", "title": "Synthetic unrelated study C", "authors": "Wang M", "year": 2019, "abstract": "合成摘要 C……"},
+    {"record_id": "R05", "title": "Synthetic borderline study D", "authors": "Chen X", "year": 2022, "abstract": "合成摘要 D……", "fixture": "conflicting_dual_opinions",
+     "dual_opinions": [{"reviewer": "synth-reviewer-1", "vote": "include"}, {"reviewer": "synth-reviewer-2", "vote": "exclude"}]}
+  ],
+  "search_string": "((heart rate variability) AND (wearable*) AND (occupational stress OR overwork)) [SYNTHETIC DEMO STRING]",
+  "output_contract": {
+    "fields": [
+      {"field": "decisions", "type": "array", "desc": "逐题录纳入/排除决定及理由"},
+      {"field": "dedup_report", "type": "object", "desc": "合成重复导出的识别与处置"},
+      {"field": "conflict_resolutions", "type": "array", "desc": "冲突双人意见的调解记录"},
+      {"field": "screening_summary", "type": "object", "desc": "筛选统计汇总"},
+      {"field": "limits", "type": "string|null", "desc": "限制说明；无限制时为 null 并须解释"}
+    ]
+  }
+}

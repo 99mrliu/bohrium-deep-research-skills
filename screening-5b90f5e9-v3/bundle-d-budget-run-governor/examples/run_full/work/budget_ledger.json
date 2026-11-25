@@ -1,0 +1,65 @@
+{
+  "version": 1,
+  "created_at": "2026-11-25T09:00:09+00:00",
+  "budget_requests": 64,
+  "budget_seconds": 900.0,
+  "reserve_requests": 2,
+  "events": [
+    {
+      "ts": "2026-11-25T09:00:10+00:00",
+      "stage": "inventory",
+      "requests": 0,
+      "seconds": 5.0,
+      "note": "模拟消耗（合成示例）"
+    },
+    {
+      "ts": "2026-11-25T09:00:10+00:00",
+      "stage": "scaffold",
+      "requests": 1,
+      "seconds": 17.0,
+      "note": "模拟消耗（合成示例）"
+    },
+    {
+      "ts": "2026-11-25T09:00:10+00:00",
+      "stage": "normalize",
+      "requests": 0,
+      "seconds": 5.0,
+      "note": "模拟消耗（合成示例）"
+    },
+    {
+      "ts": "2026-11-25T09:00:10+00:00",
+      "stage": "dedupe",
+      "requests": 1,
+      "seconds": 17.0,
+      "note": "模拟消耗（合成示例）"
+    },
+    {
+      "ts": "2026-11-25T09:00:10+00:00",
+      "stage": "decide",
+      "requests": 3,
+      "seconds": 41.0,
+      "note": "模拟消耗（合成示例）"
+    },
+    {
+      "ts": "2026-11-25T09:00:10+00:00",
+      "stage": "diagnose",
+      "requests": 9,
+      "seconds": 113.0,
+      "note": "模拟消耗（合成示例）"
+    },
+    {
+      "ts": "2026-11-25T09:00:10+00:00",
+      "stage": "fill",
+      "requests": 1,
+      "seconds": 17.0,
+      "note": "模拟消耗（合成示例）"
+    },
+    {
+      "ts": "2026-11-25T09:00:10+00:00",
+      "stage": "final_check",
+      "requests": 1,
+      "seconds": 17.0,
+      "note": "模拟消耗（合成示例）"
+    }
+  ]
+}

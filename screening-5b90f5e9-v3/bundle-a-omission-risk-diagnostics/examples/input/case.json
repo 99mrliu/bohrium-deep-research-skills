@@ -1,0 +1,58 @@
+{
+  "case_id": "syn-omission-demo-001",
+  "case_label": "合成示例，非真实评测案例",
+  "research_question": "In adolescents (12-18 years) with obesity, do GLP-1 receptor agonists versus placebo or lifestyle intervention reduce BMI z-score in randomized controlled trials?",
+  "facets": [
+    {
+      "facet_id": "F1_population",
+      "label": "adolescents with obesity",
+      "keywords": ["adolescent", "adolescents", "youth", "teenager", "obesity", "obese"]
+    },
+    {
+      "facet_id": "F2_intervention",
+      "label": "GLP-1 receptor agonist",
+      "keywords": ["glp-1", "glucagon-like peptide", "liraglutide", "semaglutide", "exenatide"]
+    },
+    {
+      "facet_id": "F3_comparator",
+      "label": "lifestyle intervention comparator",
+      "keywords": ["lifestyle", "diet", "exercise", "behavioral", "behavioural"]
+    },
+    {
+      "facet_id": "F4_outcome",
+      "label": "BMI / weight change",
+      "keywords": ["bmi", "body mass index", "weight", "adiposity", "z-score"]
+    },
+    {
+      "facet_id": "F5_design",
+      "label": "randomized controlled trial",
+      "keywords": ["randomized", "randomised", "rct", "placebo-controlled", "double-blind"]
+    }
+  ],
+  "output_contract": {
+    "required_fields": [
+      "case_id",
+      "status",
+      "near_misses",
+      "fragility_report",
+      "facet_coverage",
+      "omission_statement",
+      "recheck_worklist",
+      "sources",
+      "uncertainty",
+      "change_records"
+    ],
+    "field_notes": {
+      "near_misses": "险漏队列：触发器与风险分",
+      "fragility_report": "排除稳健性分析",
+      "facet_coverage": "主题面覆盖核查",
+      "omission_statement": "结构化遗漏说明（含 md 路径）",
+      "recheck_worklist": "按风险分排序的人工复核队列"
+    }
+  },
+  "materials": {
+    "records": "records.json",
+    "judgments": "judgments.json"
+  },
+  "notes": "本文件为合成示例输入夹具，非真实评测案例；仅含有限题录快照，不构成全局召回声明。"
+}

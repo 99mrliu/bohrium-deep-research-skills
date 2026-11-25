@@ -1,0 +1,246 @@
+{
+  "changes": [
+    {
+      "field": "doi",
+      "new": "10.1000/jtest.2024.123",
+      "old": "https://doi.org/10.1000/JTEST.2024.123",
+      "record_id": "WOS-0001",
+      "rule": "doi_normalize",
+      "source_record_id": null
+    },
+    {
+      "field": "doi",
+      "new": "10.1000/jtest.2024.123",
+      "old": "10.1000/jtest.2024.123.",
+      "record_id": "PUBMED-0002",
+      "rule": "doi_normalize",
+      "source_record_id": null
+    },
+    {
+      "field": "doi",
+      "new": "10.1002/14651858.cd012345.pub2",
+      "old": "10.1002/14651858.CD012345.pub2",
+      "record_id": "EMBASE-0005",
+      "rule": "doi_normalize",
+      "source_record_id": null
+    },
+    {
+      "field": "year",
+      "new": 2024,
+      "old": null,
+      "record_id": "PUBMED-0002",
+      "rule": "cross_fill_by_doi",
+      "source_record_id": "WOS-0001"
+    },
+    {
+      "field": "journal",
+      "new": "Journal of Test Studies",
+      "old": null,
+      "record_id": "PUBMED-0002",
+      "rule": "cross_fill_by_doi",
+      "source_record_id": "WOS-0001"
+    },
+    {
+      "field": "volume",
+      "new": "12",
+      "old": null,
+      "record_id": "PUBMED-0002",
+      "rule": "cross_fill_by_doi",
+      "source_record_id": "WOS-0001"
+    },
+    {
+      "field": "issue",
+      "new": "3",
+      "old": null,
+      "record_id": "PUBMED-0002",
+      "rule": "cross_fill_by_doi",
+      "source_record_id": "WOS-0001"
+    },
+    {
+      "field": "pages",
+      "new": "112-120",
+      "old": null,
+      "record_id": "PUBMED-0002",
+      "rule": "cross_fill_by_doi",
+      "source_record_id": "WOS-0001"
+    },
+    {
+      "field": "language",
+      "new": "en",
+      "old": null,
+      "record_id": "PUBMED-0002",
+      "rule": "cross_fill_by_doi",
+      "source_record_id": "WOS-0001"
+    },
+    {
+      "field": "pages",
+      "new": "88-95",
+      "old": null,
+      "record_id": "WOS-0007",
+      "rule": "cross_fill_by_doi",
+      "source_record_id": "PUBMED-0008"
+    },
+    {
+      "field": "pages",
+      "new": "88-95",
+      "old": null,
+      "record_id": "OVID-0006",
+      "rule": "cross_fill_by_title",
+      "source_record_id": "WOS-0007"
+    }
+  ],
+  "conflicts": [
+    {
+      "action": "not_filled_conflict",
+      "candidates": [
+        {
+          "record_id": "WOS-0001",
+          "value": "We randomized 180 adults to caffeine or placebo and measured sustained attention over four weeks."
+        },
+        {
+          "record_id": "PUBMED-0002",
+          "value": "Randomized trial of caffeine and attention in 180 adults."
+        }
+      ],
+      "field": "abstract",
+      "key": "doi:10.1000/jtest.2024.123"
+    },
+    {
+      "action": "not_filled_conflict",
+      "candidates": [
+        {
+          "record_id": "WOS-0007",
+          "value": "Journal of Occupational Sleep"
+        },
+        {
+          "record_id": "PUBMED-0008",
+          "value": "J Occup Sleep"
+        }
+      ],
+      "field": "journal",
+      "key": "doi:10.5555/sleep.2005.007"
+    },
+    {
+      "action": "not_filled_conflict",
+      "candidates": [
+        {
+          "record_id": "WOS-0007",
+          "value": "Shift work, short sleep and cardiometabolic risk markers."
+        },
+        {
+          "record_id": "PUBMED-0008",
+          "value": "Metabolic syndrome components by sleep duration strata."
+        }
+      ],
+      "field": "abstract",
+      "key": "doi:10.5555/sleep.2005.007"
+    },
+    {
+      "action": "not_filled_conflict",
+      "candidates": [
+        {
+          "record_id": "WOS-0001",
+          "value": "We randomized 180 adults to caffeine or placebo and measured sustained attention over four weeks."
+        },
+        {
+          "record_id": "PUBMED-0002",
+          "value": "Randomized trial of caffeine and attention in 180 adults."
+        }
+      ],
+      "field": "abstract",
+      "key": "title:caffeine intake and cognitive performance in adults a randomized trial"
+    },
+    {
+      "action": "not_filled_conflict",
+      "candidates": [
+        {
+          "record_id": "OVID-0006",
+          "value": "doi:10.10/abc"
+        },
+        {
+          "record_id": "WOS-0007",
+          "value": "10.5555/sleep.2005.007"
+        },
+        {
+          "record_id": "PUBMED-0008",
+          "value": "10.5555/sleep.2005.007"
+        }
+      ],
+      "field": "doi",
+      "key": "title:sleep duration and metabolic syndrome in shift workers"
+    },
+    {
+      "action": "not_filled_conflict",
+      "candidates": [
+        {
+          "record_id": "OVID-0006",
+          "value": "20O5"
+        },
+        {
+          "record_id": "WOS-0007",
+          "value": 2005
+        },
+        {
+          "record_id": "PUBMED-0008",
+          "value": 2005
+        }
+      ],
+      "field": "year",
+      "key": "title:sleep duration and metabolic syndrome in shift workers"
+    },
+    {
+      "action": "not_filled_conflict",
+      "candidates": [
+        {
+          "record_id": "WOS-0007",
+          "value": "Journal of Occupational Sleep"
+        },
+        {
+          "record_id": "PUBMED-0008",
+          "value": "J Occup Sleep"
+        }
+      ],
+      "field": "journal",
+      "key": "title:sleep duration and metabolic syndrome in shift workers"
+    },
+    {
+      "action": "not_filled_conflict",
+      "candidates": [
+        {
+          "record_id": "OVID-0006",
+          "value": "Cross-sectional analysis of shift workers in three factories."
+        },
+        {
+          "record_id": "WOS-0007",
+          "value": "Shift work, short sleep and cardiometabolic risk markers."
+        },
+        {
+          "record_id": "PUBMED-0008",
+          "value": "Metabolic syndrome components by sleep duration strata."
+        }
+      ],
+      "field": "abstract",
+      "key": "title:sleep duration and metabolic syndrome in shift workers"
+    }
+  ],
+  "doi_flags": [
+    {
+      "action": "kept_original_flagged_untrusted",
+      "issue": "doi_malformed",
+      "record_id": "OVID-0006",
+      "value": "doi:10.10/abc"
+    }
+  ],
+  "generated_by": "repair_fields.py",
+  "notes": [
+    "只补字段、不合并记录；无强键不补；冲突不补；",
+    "DOI 仅做形态规范化，未联网验证。"
+  ],
+  "records_total": 9,
+  "stats": {
+    "conflicts_not_filled": 8,
+    "cross_filled": 8,
+    "doi_malformed": 1,
+    "doi_normalized": 3
+  }
+}

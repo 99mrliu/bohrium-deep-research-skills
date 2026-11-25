@@ -1,0 +1,45 @@
+{
+  "report_version": "1.0",
+  "generated_at": "2026-11-25T08:52:32+00:00",
+  "generated_by": "validate_result.py",
+  "result_under_test": "examples/negative/output/result.json",
+  "verdict": "FAIL",
+  "checks": [
+    {
+      "id": "V1_CASE_ID",
+      "ok": true,
+      "detail": "result.case_id='search09-synthetic-demo' vs spec.case_id='search09-synthetic-demo'"
+    },
+    {
+      "id": "V2_FIELDS_PRESENT",
+      "ok": false,
+      "detail": "缺失合同字段: ['conflict_resolutions']"
+    },
+    {
+      "id": "V3_STATUS_FINAL",
+      "ok": true,
+      "detail": "status='partial'（终态词表 ('completed', 'partial', 'failed')；in_progress 骨架不可交付）"
+    },
+    {
+      "id": "V5_LEDGER_CONSISTENT",
+      "ok": true,
+      "detail": "台账与 result.json 一致"
+    },
+    {
+      "id": "V4_HONESTY_PARTIAL",
+      "ok": true,
+      "detail": "partial 且 uncertainty/limits 非空"
+    },
+    {
+      "id": "V6_PATHS_EXIST",
+      "ok": true,
+      "detail": "全部引用路径存在"
+    },
+    {
+      "id": "V7_RUNTIME_MINIMUM",
+      "ok": true,
+      "detail": "sources/uncertainty/change_records 就位"
+    }
+  ],
+  "violation_count": 1
+}

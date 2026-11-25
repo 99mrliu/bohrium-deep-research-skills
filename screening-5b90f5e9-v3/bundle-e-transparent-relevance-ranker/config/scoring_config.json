@@ -1,0 +1,46 @@
+{
+  "config_version": "1.0.0",
+  "description": "transparent-relevance-ranker 的全部评分参数。任何权重/阈值修改必须在此文件中进行并在 change_records 中留痕；脚本与模型均不得硬编码权重。",
+  "facet_weights": {
+    "population": 0.30,
+    "intervention": 0.30,
+    "comparator": 0.10,
+    "outcome": 0.20,
+    "study_design": 0.10
+  },
+  "coverage_points": 70.0,
+  "recency_points": 10.0,
+  "recency_window_years": 5,
+  "recency_decay_span_years": 5,
+  "unknown_year_factor": 0.5,
+  "type_points": 15.0,
+  "type_weights": {
+    "randomized controlled trial": 1.0,
+    "controlled clinical trial": 0.85,
+    "cohort study": 0.7,
+    "case-control study": 0.6,
+    "cross-sectional study": 0.5,
+    "case series": 0.35,
+    "systematic review": 0.35,
+    "meta-analysis": 0.35,
+    "review": 0.25,
+    "in vitro study": 0.1,
+    "editorial": 0.05,
+    "unknown": 0.3
+  },
+  "diversity": {
+    "key_priority": ["journal", "first_author"],
+    "penalty_per_extra": 2.0,
+    "max_penalty": 5.0
+  },
+  "tiers": {
+    "high_min": 60.0,
+    "medium_min": 30.0
+  },
+  "sensitivity": {
+    "perturbation": 0.2
+  },
+  "rounding_decimals": 4,
+  "max_hits_per_field_per_term": 3,
+  "snippet_context_chars": 30
+}

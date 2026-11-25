@@ -1,0 +1,171 @@
+{
+  "domain_flags": {
+    "OVID-0006": [
+      {
+        "field": "doi",
+        "issue": "doi_malformed",
+        "value": "doi:10.10/abc"
+      },
+      {
+        "field": "year",
+        "issue": "year_not_4digit_int",
+        "value": "20O5"
+      }
+    ]
+  },
+  "fields": {
+    "abstract": {
+      "completeness": 0.8889,
+      "missing": 0,
+      "placeholder": 1,
+      "present": 8
+    },
+    "authors": {
+      "completeness": 0.2222,
+      "missing": 7,
+      "placeholder": 0,
+      "present": 2
+    },
+    "doi": {
+      "completeness": 0.7778,
+      "missing": 1,
+      "placeholder": 1,
+      "present": 7
+    },
+    "issue": {
+      "completeness": 0.1111,
+      "missing": 8,
+      "placeholder": 0,
+      "present": 1
+    },
+    "journal": {
+      "completeness": 0.7778,
+      "missing": 2,
+      "placeholder": 0,
+      "present": 7
+    },
+    "language": {
+      "completeness": 0.3333,
+      "missing": 6,
+      "placeholder": 0,
+      "present": 3
+    },
+    "pages": {
+      "completeness": 0.6667,
+      "missing": 3,
+      "placeholder": 0,
+      "present": 6
+    },
+    "title": {
+      "completeness": 1.0,
+      "missing": 0,
+      "placeholder": 0,
+      "present": 9
+    },
+    "volume": {
+      "completeness": 0.1111,
+      "missing": 8,
+      "placeholder": 0,
+      "present": 1
+    },
+    "year": {
+      "completeness": 0.8889,
+      "missing": 1,
+      "placeholder": 0,
+      "present": 8
+    }
+  },
+  "generated_by": "profile_fields.py",
+  "language": {
+    "CNKI-0004": {
+      "confidence": "medium",
+      "declared": null,
+      "eligible_languages": [
+        "en"
+      ],
+      "guess": "en",
+      "language_flag": false
+    },
+    "CNKI-0009": {
+      "confidence": "high",
+      "declared": "zh",
+      "eligible_languages": [
+        "en"
+      ],
+      "guess": "zh",
+      "language_flag": true
+    },
+    "EMBASE-0005": {
+      "confidence": "high",
+      "declared": null,
+      "eligible_languages": [
+        "en"
+      ],
+      "guess": "en",
+      "language_flag": false
+    },
+    "OVID-0006": {
+      "confidence": "high",
+      "declared": null,
+      "eligible_languages": [
+        "en"
+      ],
+      "guess": "en",
+      "language_flag": false
+    },
+    "PUBMED-0002": {
+      "confidence": "high",
+      "declared": null,
+      "eligible_languages": [
+        "en"
+      ],
+      "guess": "en",
+      "language_flag": false
+    },
+    "PUBMED-0008": {
+      "confidence": "medium",
+      "declared": null,
+      "eligible_languages": [
+        "en"
+      ],
+      "guess": "en",
+      "language_flag": false
+    },
+    "SCIELO-0003": {
+      "confidence": "high",
+      "declared": "pt",
+      "eligible_languages": [
+        "en"
+      ],
+      "guess": "pt",
+      "language_flag": true
+    },
+    "WOS-0001": {
+      "confidence": "high",
+      "declared": "en",
+      "eligible_languages": [
+        "en"
+      ],
+      "guess": "en",
+      "language_flag": false
+    },
+    "WOS-0007": {
+      "confidence": "high",
+      "declared": null,
+      "eligible_languages": [
+        "en"
+      ],
+      "guess": "en",
+      "language_flag": false
+    }
+  },
+  "notes": [
+    "画像仅做标记，不改写记录；",
+    "语种为字符脚本+停用词启发式，低置信度结果仅供人工参考。"
+  ],
+  "records_total": 9,
+  "records_with_language_flag": [
+    "CNKI-0009",
+    "SCIELO-0003"
+  ]
+}

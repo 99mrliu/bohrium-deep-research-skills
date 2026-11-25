@@ -1,0 +1,151 @@
+{
+  "judgments_label": "合成示例，非真实评测案例；以下判定为手工构造的夹具，用于演示诊断流程",
+  "generated_by": "synthetic-fixture-v1",
+  "criteria_legend": {
+    "C1_population": "adolescents (12-18) with obesity",
+    "C2_intervention": "GLP-1 receptor agonist",
+    "C3_comparator": "placebo or lifestyle intervention",
+    "C4_outcome": "BMI / weight change reported",
+    "C5_design": "randomized controlled trial"
+  },
+  "items": [
+    {
+      "record_id": "R01",
+      "decision": "include",
+      "primary_reason_code": null,
+      "criteria": [
+        {"criterion_id": "C1_population", "verdict": "met", "rationale_code": "MET", "evidence": {"quote": "adolescents (12 to 17 years) with obesity", "source": "abstract", "anchor_strength": "strong"}},
+        {"criterion_id": "C2_intervention", "verdict": "met", "rationale_code": "MET", "evidence": {"quote": "semaglutide", "source": "abstract", "anchor_strength": "strong"}},
+        {"criterion_id": "C3_comparator", "verdict": "met", "rationale_code": "MET", "evidence": {"quote": "or placebo once weekly for 68 weeks", "source": "abstract", "anchor_strength": "strong"}},
+        {"criterion_id": "C4_outcome", "verdict": "met", "rationale_code": "MET", "evidence": {"quote": "change in BMI z-score", "source": "abstract", "anchor_strength": "strong"}},
+        {"criterion_id": "C5_design", "verdict": "met", "rationale_code": "MET", "evidence": {"quote": "randomly assigned", "source": "abstract", "anchor_strength": "strong"}}
+      ]
+    },
+    {
+      "record_id": "R02",
+      "decision": "include",
+      "primary_reason_code": null,
+      "criteria": [
+        {"criterion_id": "C1_population", "verdict": "met", "rationale_code": "MET", "evidence": {"quote": "251 adolescents with obesity", "source": "abstract", "anchor_strength": "strong"}},
+        {"criterion_id": "C2_intervention", "verdict": "met", "rationale_code": "MET", "evidence": {"quote": "liraglutide (3.0 mg)", "source": "abstract", "anchor_strength": "strong"}},
+        {"criterion_id": "C3_comparator", "verdict": "met", "rationale_code": "MET", "evidence": {"quote": "matching placebo", "source": "abstract", "anchor_strength": "strong"}},
+        {"criterion_id": "C4_outcome", "verdict": "met", "rationale_code": "MET", "evidence": {"quote": "change from baseline in the BMI standard-deviation score", "source": "abstract", "anchor_strength": "strong"}},
+        {"criterion_id": "C5_design", "verdict": "met", "rationale_code": "MET", "evidence": {"quote": "randomized, double-blind trial", "source": "title", "anchor_strength": "strong"}}
+      ]
+    },
+    {
+      "record_id": "R03",
+      "decision": "exclude",
+      "primary_reason_code": "EX_POP_AGE",
+      "criteria": [
+        {"criterion_id": "C1_population", "verdict": "not_met", "rationale_code": "EX_POP_AGE", "evidence": {"quote": "adults aged 30-55", "source": "abstract", "anchor_strength": "strong"}},
+        {"criterion_id": "C2_intervention", "verdict": "met", "rationale_code": "MET", "evidence": {"quote": "semaglutide", "source": "abstract", "anchor_strength": "strong"}},
+        {"criterion_id": "C3_comparator", "verdict": "met", "rationale_code": "MET", "evidence": {"quote": "versus placebo", "source": "abstract", "anchor_strength": "strong"}},
+        {"criterion_id": "C4_outcome", "verdict": "met", "rationale_code": "MET", "evidence": {"quote": "Body weight and BMI were measured", "source": "abstract", "anchor_strength": "strong"}},
+        {"criterion_id": "C5_design", "verdict": "met", "rationale_code": "MET", "evidence": {"quote": "randomized trial", "source": "abstract", "anchor_strength": "strong"}}
+      ]
+    },
+    {
+      "record_id": "R04",
+      "decision": "exclude",
+      "primary_reason_code": "EX_INT_NOT_GLP1",
+      "criteria": [
+        {"criterion_id": "C1_population", "verdict": "met", "rationale_code": "MET", "evidence": {"quote": "480 youth with obesity", "source": "abstract", "anchor_strength": "strong"}},
+        {"criterion_id": "C2_intervention", "verdict": "not_met", "rationale_code": "EX_INT_NOT_GLP1", "evidence": {"quote": "Metformin and insulin use patterns", "source": "abstract", "anchor_strength": "strong"}},
+        {"criterion_id": "C3_comparator", "verdict": "not_met", "rationale_code": "EX_COMPARATOR", "evidence": {"quote": "no trial intervention was administered", "source": "abstract", "anchor_strength": "strong"}},
+        {"criterion_id": "C4_outcome", "verdict": "not_met", "rationale_code": "EX_OUTCOME_NO_BMI", "evidence": {"quote": "no weight outcomes were collected", "source": "abstract", "anchor_strength": "strong"}},
+        {"criterion_id": "C5_design", "verdict": "not_met", "rationale_code": "EX_DESIGN_NOT_RCT", "evidence": {"quote": "cross-sectional survey", "source": "abstract", "anchor_strength": "strong"}}
+      ]
+    },
+    {
+      "record_id": "R05",
+      "decision": "exclude",
+      "primary_reason_code": "EX_DESIGN_NOT_RCT",
+      "criteria": [
+        {"criterion_id": "C1_population", "verdict": "met", "rationale_code": "MET", "evidence": {"quote": "30 adolescents with severe obesity", "source": "abstract", "anchor_strength": "strong"}},
+        {"criterion_id": "C2_intervention", "verdict": "uncertain", "rationale_code": "UNC_INT_CLASS", "evidence": {"quote": "tirzepatide, a dual GIP and GLP-1 receptor agonist", "source": "abstract", "anchor_strength": "strong"}},
+        {"criterion_id": "C4_outcome", "verdict": "met", "rationale_code": "MET", "evidence": {"quote": "BMI z-score", "source": "abstract", "anchor_strength": "strong"}},
+        {"criterion_id": "C5_design", "verdict": "not_met", "rationale_code": "EX_DESIGN_NOT_RCT", "evidence": {"quote": "single-arm pilot study", "source": "abstract", "anchor_strength": "strong"}}
+      ]
+    },
+    {
+      "record_id": "R06",
+      "decision": "exclude",
+      "primary_reason_code": "EX_DESIGN_NOT_RCT",
+      "criteria": [
+        {"criterion_id": "C1_population", "verdict": "met", "rationale_code": "MET", "evidence": {"quote": "120 teenagers", "source": "abstract", "anchor_strength": "strong"}},
+        {"criterion_id": "C5_design", "verdict": "not_met", "rationale_code": "EX_DESIGN_NOT_RCT", "evidence": {"quote": "Weight trajectories", "source": "abstract", "anchor_strength": "weak"}}
+      ]
+    },
+    {
+      "record_id": "R07",
+      "decision": "include",
+      "primary_reason_code": null,
+      "criteria": [
+        {"criterion_id": "C1_population", "verdict": "met", "rationale_code": "MET", "evidence": {"quote": "Adolescents aged 12-18 with obesity", "source": "abstract", "anchor_strength": "strong"}},
+        {"criterion_id": "C2_intervention", "verdict": "met", "rationale_code": "MET", "evidence": {"quote": "exenatide once weekly", "source": "abstract", "anchor_strength": "strong"}},
+        {"criterion_id": "C3_comparator", "verdict": "met", "rationale_code": "MET", "evidence": {"quote": "or placebo for 26 weeks", "source": "abstract", "anchor_strength": "strong"}},
+        {"criterion_id": "C4_outcome", "verdict": "met", "rationale_code": "MET", "evidence": {"quote": "Change in BMI was a prespecified secondary endpoint", "source": "abstract", "anchor_strength": "strong"}},
+        {"criterion_id": "C5_design", "verdict": "met", "rationale_code": "MET", "evidence": {"quote": "randomly assigned", "source": "abstract", "anchor_strength": "strong"}}
+      ]
+    },
+    {
+      "record_id": "R08",
+      "decision": "exclude",
+      "primary_reason_code": "EX_POP_AGE",
+      "criteria": [
+        {"criterion_id": "C1_population", "verdict": "not_met", "rationale_code": "EX_POP_AGE", "evidence": {"quote": "in adults", "source": "abstract", "anchor_strength": "strong"}},
+        {"criterion_id": "C2_intervention", "verdict": "met", "rationale_code": "MET", "evidence": {"quote": "GLP-1 receptor agonists", "source": "abstract", "anchor_strength": "strong"}},
+        {"criterion_id": "C4_outcome", "verdict": "not_met", "rationale_code": "EX_OUTCOME_NO_BMI", "evidence": {"quote": "Weight change was not analyzed", "source": "abstract", "anchor_strength": "strong"}},
+        {"criterion_id": "C5_design", "verdict": "not_met", "rationale_code": "EX_DESIGN_NOT_RCT", "evidence": {"quote": "a meta-analysis", "source": "title", "anchor_strength": "strong"}}
+      ]
+    },
+    {
+      "record_id": "R09",
+      "decision": "exclude",
+      "primary_reason_code": "EX_OUTCOME_NO_BMI",
+      "criteria": [
+        {"criterion_id": "C1_population", "verdict": "met", "rationale_code": "MET", "evidence": {"quote": "62 adolescents with Prader-Willi syndrome", "source": "abstract", "anchor_strength": "strong"}},
+        {"criterion_id": "C2_intervention", "verdict": "met", "rationale_code": "MET", "evidence": {"quote": "semaglutide", "source": "abstract", "anchor_strength": "strong"}},
+        {"criterion_id": "C3_comparator", "verdict": "met", "rationale_code": "MET", "evidence": {"quote": "or placebo for 16 weeks", "source": "abstract", "anchor_strength": "strong"}},
+        {"criterion_id": "C4_outcome", "verdict": "not_met", "rationale_code": "EX_OUTCOME_NO_BMI", "evidence": {"quote": "body composition was not assessed", "source": "abstract", "anchor_strength": "strong"}},
+        {"criterion_id": "C5_design", "verdict": "met", "rationale_code": "MET", "evidence": {"quote": "randomized, double-blind trial", "source": "abstract", "anchor_strength": "strong"}}
+      ]
+    },
+    {
+      "record_id": "R10",
+      "decision": "include",
+      "primary_reason_code": null,
+      "criteria": [
+        {"criterion_id": "C1_population", "verdict": "met", "rationale_code": "MET", "evidence": {"quote": "135 adolescents with obesity", "source": "abstract", "anchor_strength": "strong"}},
+        {"criterion_id": "C2_intervention", "verdict": "met", "rationale_code": "MET", "evidence": {"quote": "liraglutide", "source": "abstract", "anchor_strength": "strong"}},
+        {"criterion_id": "C3_comparator", "verdict": "met", "rationale_code": "MET", "evidence": {"quote": "randomized, placebo-controlled trial", "source": "abstract", "anchor_strength": "strong"}},
+        {"criterion_id": "C4_outcome", "verdict": "met", "rationale_code": "MET", "evidence": {"quote": "change in BMI z-score at 52 weeks", "source": "abstract", "anchor_strength": "strong"}},
+        {"criterion_id": "C5_design", "verdict": "met", "rationale_code": "MET", "evidence": {"quote": "randomized, placebo-controlled trial", "source": "title", "anchor_strength": "strong"}}
+      ]
+    },
+    {
+      "record_id": "R11",
+      "decision": "exclude",
+      "primary_reason_code": "EX_OUTCOME_NO_BMI",
+      "criteria": [
+        {"criterion_id": "C1_population", "verdict": "met", "rationale_code": "MET", "evidence": {"quote": "Youth aged 10-17", "source": "abstract", "anchor_strength": "strong"}},
+        {"criterion_id": "C2_intervention", "verdict": "met", "rationale_code": "MET", "evidence": {"quote": "dulaglutide", "source": "abstract", "anchor_strength": "strong"}},
+        {"criterion_id": "C3_comparator", "verdict": "met", "rationale_code": "MET", "evidence": {"quote": "or placebo for 26 weeks", "source": "abstract", "anchor_strength": "strong"}},
+        {"criterion_id": "C4_outcome", "verdict": "uncertain", "rationale_code": "UNC_OUTCOME_AMBIGUOUS", "evidence": {"quote": "HbA1c and body weight were measured", "source": "abstract", "anchor_strength": "strong"}},
+        {"criterion_id": "C5_design", "verdict": "met", "rationale_code": "MET", "evidence": {"quote": "randomized", "source": "abstract", "anchor_strength": "strong"}}
+      ]
+    },
+    {
+      "record_id": "R12",
+      "decision": "exclude",
+      "primary_reason_code": "EX_POP_AGE",
+      "criteria": [
+        {"criterion_id": "C1_population", "verdict": "not_met", "rationale_code": "EX_POP_AGE", "evidence": {"quote": "children under 10", "source": "abstract", "anchor_strength": "strong"}},
+        {"criterion_id": "C2_intervention", "verdict": "met", "rationale_code": "MET", "evidence": {"quote": "GLP-1 receptor agonists", "source": "abstract", "anchor_strength": "strong"}},
+        {"criterion_id": "C4_outcome", "verdict": "met", "rationale_code": "MET", "evidence": {"quote": "BMI changes over 12 months", "source": "abstract", "anchor_strength": "strong"}},
+        {"criterion_id": "C5_design", "verdict": "not_met", "rationale_code": "EX_DESIGN_NOT_RCT", "evidence": {"quote": "retrospective cohort study", "source": "abstract", "anchor_strength": "strong"}}
+      ]
+    }
+  ]
+}

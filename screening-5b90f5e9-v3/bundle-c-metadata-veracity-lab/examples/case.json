@@ -1,0 +1,17 @@
+{
+  "case_id": "demo-meta-veracity-001",
+  "note": "合成示例，非真实评测案例。全部记录均为虚构，仅用于演示 metadata-veracity-lab 流程。",
+  "research_question": "成人咖啡因摄入与注意力/认知结局的关系（演示用虚构问题）",
+  "eligible_languages": ["en"],
+  "records_file": "synthetic_records.jsonl",
+  "output_contract": {
+    "required_fields": [
+      "field_profile_summary",
+      "field_trust",
+      "repair_ledger",
+      "quarantine",
+      "language_flags",
+      "screening_decisions"
+    ]
+  }
+}
