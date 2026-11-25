@@ -1,0 +1,361 @@
+{
+  "case_id": "synthetic-mini-001",
+  "status": "success",
+  "output_contract": {
+    "toc": "reconstructed table of contents with levels and page anchors",
+    "references": "structured reference records (raw kept verbatim when unparsable)",
+    "captions": "figure/table caption index with caption-mention cross-check",
+    "structure_issues": "numbering gaps, level jumps, caption/mention mismatches",
+    "uncertainty": "known uncertainties and caveats of this run"
+  },
+  "outputs": {
+    "toc": {
+      "status": "ok",
+      "data": {
+        "status": "ok",
+        "count": 9,
+        "entries": [
+          {
+            "anchor": "sec-abstract",
+            "number": null,
+            "title": "Abstract",
+            "level": 1,
+            "page": 1
+          },
+          {
+            "anchor": "sec-1",
+            "number": "1",
+            "title": "Introduction",
+            "level": 1,
+            "page": 1
+          },
+          {
+            "anchor": "sec-1-1",
+            "number": "1.1",
+            "title": "Background",
+            "level": 2,
+            "page": 1
+          },
+          {
+            "anchor": "sec-1-2",
+            "number": "1.2",
+            "title": "Contributions",
+            "level": 2,
+            "page": 1
+          },
+          {
+            "anchor": "sec-2",
+            "number": "2",
+            "title": "Method",
+            "level": 1,
+            "page": 2
+          },
+          {
+            "anchor": "sec-2-1",
+            "number": "2.1",
+            "title": "Sprocket Alignment",
+            "level": 2,
+            "page": 2
+          },
+          {
+            "anchor": "sec-2-2-1",
+            "number": "2.2.1",
+            "title": "Fine Alignment Details",
+            "level": 3,
+            "page": 2
+          },
+          {
+            "anchor": "sec-acknowledgments",
+            "number": null,
+            "title": "Acknowledgments",
+            "level": 1,
+            "page": 3
+          },
+          {
+            "anchor": "sec-references",
+            "number": null,
+            "title": "References",
+            "level": 1,
+            "page": 3
+          }
+        ]
+      }
+    },
+    "references": {
+      "status": "ok",
+      "data": {
+        "status": "ok",
+        "located_by": "headings",
+        "style_hint": "mixed",
+        "count": 6,
+        "summary": {
+          "parsed": 5,
+          "partial": 0,
+          "raw": 1
+        },
+        "entries": [
+          {
+            "raw": "[1] A. Turing, B. Lovelace. On Computable Widgets. Journal of Synthetic Machinery 12, 34–56 (1936).",
+            "label": 1,
+            "authors": [
+              "A. Turing",
+              "B. Lovelace"
+            ],
+            "year": 1936,
+            "title": "On Computable Widgets",
+            "venue": "Journal of Synthetic Machinery",
+            "volume": "12",
+            "issue": null,
+            "pages": "34–56",
+            "doi": null,
+            "parse_status": "parsed",
+            "confidence": 0.95,
+            "reasons": [
+              "authors recognized (2)"
+            ],
+            "style": "bracket",
+            "page": 3
+          },
+          {
+            "raw": "[2] C. Shannon. A Mathematical Theory of Sprockets. Bell System Technical Journal 27, 379–423 (1948).",
+            "label": 2,
+            "authors": [
+              "C. Shannon"
+            ],
+            "year": 1948,
+            "title": "A Mathematical Theory of Sprockets",
+            "venue": "Bell System Technical Journal",
+            "volume": "27",
+            "issue": null,
+            "pages": "379–423",
+            "doi": null,
+            "parse_status": "parsed",
+            "confidence": 0.95,
+            "reasons": [
+              "authors recognized (1)"
+            ],
+            "style": "bracket",
+            "page": 3
+          },
+          {
+            "raw": "[3] D. Knuth. The Art of Frobnication. Addison-Wesley (1968).",
+            "label": 3,
+            "authors": [
+              "D. Knuth"
+            ],
+            "year": 1968,
+            "title": "The Art of Frobnication",
+            "venue": "Addison-Wesley",
+            "volume": null,
+            "issue": null,
+            "pages": null,
+            "doi": null,
+            "parse_status": "parsed",
+            "confidence": 0.75,
+            "reasons": [
+              "authors recognized (1)"
+            ],
+            "style": "bracket",
+            "page": 3
+          },
+          {
+            "raw": "Hopper, G. & Kleene, S. (1952). Recursive widget theory. Annals of Synthetic Mathematics, 54(3), 101-118. https://doi.org/10.1234/synth.1952.54",
+            "label": null,
+            "authors": [
+              "Hopper, G.",
+              "Kleene, S."
+            ],
+            "year": 1952,
+            "title": "Recursive widget theory",
+            "venue": "Annals of Synthetic Mathematics",
+            "volume": "54",
+            "issue": "3",
+            "pages": "101-118",
+            "doi": "10.1234/synth.1952.54",
+            "parse_status": "parsed",
+            "confidence": 1.0,
+            "reasons": [
+              "doi found",
+              "authors recognized (2)"
+            ],
+            "style": "author-year",
+            "page": 4
+          },
+          {
+            "raw": "Von Neumann, J. (1945). First draft of a frobnica report. Synthetic Archives, 3, 1-12.",
+            "label": null,
+            "authors": [
+              "Von Neumann, J."
+            ],
+            "year": 1945,
+            "title": "First draft of a frobnica report",
+            "venue": "Synthetic Archives",
+            "volume": "3",
+            "issue": null,
+            "pages": "1-12",
+            "doi": null,
+            "parse_status": "parsed",
+            "confidence": 0.95,
+            "reasons": [
+              "authors recognized (1)"
+            ],
+            "style": "author-year",
+            "page": 4
+          },
+          {
+            "raw": "%%% BROKEN ENTRY ||| no year no authors ~~~ !!! ??? ~~~ garbage text that cannot be parsed into any bibliographic fields at all.",
+            "label": null,
+            "authors": [],
+            "year": null,
+            "title": null,
+            "venue": null,
+            "volume": null,
+            "issue": null,
+            "pages": null,
+            "doi": null,
+            "parse_status": "raw",
+            "confidence": 0,
+            "reasons": [
+              "author list not recognized",
+              "no year found",
+              "title/venue boundary not found",
+              "kept verbatim; no fields invented",
+              "missing: authors, year, title, venue"
+            ],
+            "style": "author-year",
+            "page": 4
+          }
+        ],
+        "warnings": []
+      }
+    },
+    "captions": {
+      "status": "ok",
+      "data": {
+        "captions": [
+          {
+            "label": "Fig. 1",
+            "page": 2,
+            "line": 12,
+            "text": "Frobnication rate versus sprocket alignment for synthetic widgets."
+          },
+          {
+            "label": "Table 1",
+            "page": 3,
+            "line": 1,
+            "text": "Synthetic results on the toy benchmark (never cited in text)."
+          }
+        ],
+        "gaps": {
+          "captions_without_mentions": [
+            {
+              "label": "Table 1",
+              "page": 3,
+              "text": "Synthetic results on the toy benchmark (never cited in text)."
+            }
+          ],
+          "mentions_without_captions": [
+            {
+              "label": "Fig. 2",
+              "mentions": [
+                {
+                  "label": "Fig. 2",
+                  "page": 2,
+                  "line": 2,
+                  "context": "Our method aligns sprockets before frobnication. Fig. 2 illustrates the"
+                }
+              ]
+            }
+          ]
+        }
+      }
+    },
+    "structure_issues": {
+      "status": "ok",
+      "data": {
+        "heading_inconsistencies": [
+          {
+            "type": "missing_parent",
+            "message": "heading '2.2.1 Fine Alignment Details' (page 2) implies parent section '2.2' which is absent from the document",
+            "page": 2
+          },
+          {
+            "type": "level_jump",
+            "message": "heading '2.2.1 Fine Alignment Details' (level 3, page 2) is nested under '2' (level 1): intermediate level missing",
+            "page": 2
+          }
+        ],
+        "caption_gaps": {
+          "captions_without_mentions": [
+            {
+              "label": "Table 1",
+              "page": 3,
+              "text": "Synthetic results on the toy benchmark (never cited in text)."
+            }
+          ],
+          "mentions_without_captions": [
+            {
+              "label": "Fig. 2",
+              "mentions": [
+                {
+                  "label": "Fig. 2",
+                  "page": 2,
+                  "line": 2,
+                  "context": "Our method aligns sprockets before frobnication. Fig. 2 illustrates the"
+                }
+              ]
+            }
+          ]
+        }
+      }
+    },
+    "uncertainty": {
+      "status": "ok",
+      "data": [
+        "1 reference(s) kept verbatim with parse_status=raw; missing fields were left null, never invented",
+        "unnumbered headings are leveled by typography heuristics and may be mis-leveled without font-size hints",
+        "in-text mentions are string matches; a wrapped line starting with 'Fig. n' can be misread as a caption",
+        "caption/mention gaps detected; see structure_issues"
+      ]
+    }
+  },
+  "findings": {
+    "heading_inconsistencies": 2,
+    "captions_without_mentions": 1,
+    "mentions_without_captions": 1,
+    "references_raw": 1
+  },
+  "sources": [
+    "pages.txt",
+    "headings.json",
+    "toc.json",
+    "references.json",
+    "case.json"
+  ],
+  "uncertainty": [
+    "1 reference(s) kept verbatim with parse_status=raw; missing fields were left null, never invented",
+    "unnumbered headings are leveled by typography heuristics and may be mis-leveled without font-size hints",
+    "in-text mentions are string matches; a wrapped line starting with 'Fig. n' can be misread as a caption",
+    "caption/mention gaps detected; see structure_issues"
+  ],
+  "change_record": [
+    {
+      "step": 1,
+      "tool": "heading_tree.py",
+      "artifact": "headings.json / toc.json",
+      "status": "consumed"
+    },
+    {
+      "step": 2,
+      "tool": "refs_parse.py",
+      "artifact": "references.json",
+      "status": "consumed"
+    },
+    {
+      "step": 3,
+      "tool": "structure_report.py",
+      "artifact": "structure_report.json / result.json",
+      "status": "produced"
+    }
+  ]
+}

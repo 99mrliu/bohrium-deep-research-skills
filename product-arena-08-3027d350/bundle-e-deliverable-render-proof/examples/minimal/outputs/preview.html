@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Render Proof Preview</title>
+<style>
+:root{--ink:#1c2733;--dim:#8a94a0;--accent:#2456a6;--warn:#c62828;}
+*{box-sizing:border-box}
+body{margin:0;font-family:-apple-system,"Helvetica Neue","Segoe UI",Arial,"PingFang SC","Microsoft YaHei",sans-serif;color:var(--ink);background:#f6f7f9;display:flex}
+nav#sidebar{position:fixed;top:0;left:0;bottom:0;width:210px;overflow-y:auto;background:#101820;color:#dfe6ee;padding:14px 12px;font-size:13px}
+nav#sidebar h1{font-size:13px;margin:0 0 10px;letter-spacing:.08em;text-transform:uppercase;color:#9fb0c3}
+nav#sidebar ul{list-style:none;margin:0;padding:0}
+nav#sidebar li{margin:2px 0}
+nav#sidebar a{color:#cfe0f5;text-decoration:none;display:block;padding:3px 8px;border-radius:4px}
+nav#sidebar a:hover{background:#1e2c3c}
+nav#sidebar .pg{font-weight:700;margin-top:10px;color:#8fd0ff}
+main{margin-left:230px;max-width:860px;padding:28px 32px 80px;background:#fff;min-height:100vh;flex:1}
+.block{margin:0 0 14px;padding:10px 14px;border-left:3px solid #d8dee6;border-radius:0 6px 6px 0;background:#fff}
+.block .anch{display:inline-block;font-family:ui-monospace,SFMono-Regular,Menlo,Consolas,monospace;font-size:11px;color:#fff;background:var(--accent);border-radius:3px;padding:1px 6px;margin-right:8px;vertical-align:middle}
+.block .meta{display:block;font-size:11px;color:var(--dim);margin-top:6px;font-family:ui-monospace,SFMono-Regular,Menlo,Consolas,monospace}
+.block.kind-heading{font-size:20px;font-weight:700;border-left-color:var(--accent)}
+.block.kind-body{font-size:15px;line-height:1.65}
+.block.kind-caption{font-size:13px;font-style:italic;color:#42505e;border-left-color:#7fb2e5}
+.block.kind-equation{font-family:ui-monospace,SFMono-Regular,Menlo,Consolas,monospace;background:#f0f4fa;border-left-color:#5b8dd9;font-size:14px}
+.block.kind-reference{font-size:13px;color:#39424e;border-left-color:#b9c4d0}
+.block.kind-header,.block.kind-footer{opacity:.45;font-size:12px;color:var(--dim);border-left-color:#c9d2dc;background:#fafbfc}
+.block.kind-unresolved{border:1.5px solid var(--warn);border-left:4px solid var(--warn);background:#fff5f5}
+.block.kind-unresolved .anch{background:var(--warn)}
+.badge-nobbox{display:inline-block;font-size:10px;color:#7a5a00;background:#fff3cd;border:1px solid #e6cf7a;border-radius:3px;padding:0 5px;margin-left:6px}
+h2.page-sep{margin:26px 0 12px;font-size:14px;color:#5a6a7a;border-bottom:1px solid #e2e7ee;padding-bottom:6px}
+section#appendix h2{margin-top:40px;font-size:16px;color:#5a6a7a;border-top:2px solid #d8dee6;padding-top:16px}
+</style>
+</head>
+<body>
+<nav id="sidebar"><h1>Pages</h1>
+<ul>
+<li class="pg"><a href="#pg-1">Page 1</a></li>
+<li><a href="#p1-b1">p1-b1 &middot; header</a></li>
+<li><a href="#p1-b2">p1-b2 &middot; heading</a></li>
+<li><a href="#p1-b3">p1-b3 &middot; body</a></li>
+<li><a href="#p1-b4">p1-b4 &middot; heading</a></li>
+<li><a href="#p1-b5">p1-b5 &middot; body</a></li>
+<li><a href="#p1-b6">p1-b6 &middot; body</a></li>
+<li><a href="#p1-b7">p1-b7 &middot; equation</a></li>
+<li><a href="#p1-b8">p1-b8 &middot; caption</a></li>
+<li><a href="#p1-b9">p1-b9 &middot; footer</a></li>
+<li class="pg"><a href="#pg-2">Page 2</a></li>
+<li><a href="#p2-b1">p2-b1 &middot; header</a></li>
+<li><a href="#p2-b2">p2-b2 &middot; heading</a></li>
+<li><a href="#p2-b3">p2-b3 &middot; body</a></li>
+<li><a href="#p2-b4">p2-b4 &middot; body</a></li>
+<li><a href="#p2-b5">p2-b5 &middot; equation</a></li>
+<li><a href="#p2-b6">p2-b6 &middot; caption</a></li>
+<li><a href="#p2-b7">p2-b7 &middot; unresolved</a></li>
+<li><a href="#p2-b8">p2-b8 &middot; reference</a></li>
+<li><a href="#p2-b9">p2-b9 &middot; reference</a></li>
+<li><a href="#p2-b10">p2-b10 &middot; unresolved</a></li>
+<li><a href="#p2-b11">p2-b11 &middot; footer</a></li>
+</ul></nav>
+<main>
+<h2 class="page-sep" id="pg-1">Page 1</h2>
+<div class="block kind-heading" id="p1-b2" data-anchor="p1-b2" title="anchor=p1-b2 | page=1 col=0 | bbox=[72.0, 70.0, 523.0, 96.0] | kind=heading"><span class="anch">p1-b2</span>A Fully Synthetic Paper Used Only to Exercise the Render-Proof Pipeline<span class="meta">page 1 &middot; col 0 &middot; bbox [72.0, 70.0, 523.0, 96.0] &middot; kind heading</span></div>
+<div class="block kind-body" id="p1-b3" data-anchor="p1-b3" title="anchor=p1-b3 | page=1 col=0 | bbox=[72.0, 104.0, 523.0, 118.0] | kind=body"><span class="anch">p1-b3</span>Ada Sample, Ben Fixture — Institute of Fabricated Examples. This line is synthetic author metadata, not a real affiliation.<span class="meta">page 1 &middot; col 0 &middot; bbox [72.0, 104.0, 523.0, 118.0] &middot; kind body</span></div>
+<div class="block kind-heading" id="p1-b4" data-anchor="p1-b4" title="anchor=p1-b4 | page=1 col=0 | bbox=[72.0, 140.0, 300.0, 158.0] | kind=heading"><span class="anch">p1-b4</span>1. Introduction<span class="meta">page 1 &middot; col 0 &middot; bbox [72.0, 140.0, 300.0, 158.0] &middot; kind heading</span></div>
+<div class="block kind-body" id="p1-b5" data-anchor="p1-b5" title="anchor=p1-b5 | page=1 col=0 | bbox=[72.0, 166.0, 523.0, 226.0] | kind=body"><span class="anch">p1-b5</span>This paragraph is invented text standing in for an introduction. Its only job is to be parsed into a typed, anchored block and then rendered into the deliverables with its anchor intact.<span class="meta">page 1 &middot; col 0 &middot; bbox [72.0, 166.0, 523.0, 226.0] &middot; kind body</span></div>
+<div class="block kind-body" id="p1-b6" data-anchor="p1-b6" title="anchor=p1-b6 | page=1 col=0 | bbox=n/a | kind=body"><span class="anch">p1-b6</span>This synthetic body block intentionally has bbox=null: the renderer must still render it, and QC must warn about the missing geometry instead of crashing or dropping the block.<span class="badge-nobbox">bbox: n/a</span><span class="meta">page 1 &middot; col 0 &middot; bbox n/a &middot; kind body</span></div>
+<div class="block kind-equation" id="p1-b7" data-anchor="p1-b7" title="anchor=p1-b7 | page=1 col=0 | bbox=[120.0, 240.0, 475.0, 262.0] | kind=equation"><span class="anch">p1-b7</span>E_render = sum over blocks of |anchors_out - anchors_in| = 0<span class="meta">page 1 &middot; col 0 &middot; bbox [120.0, 240.0, 475.0, 262.0] &middot; kind equation</span></div>
+<div class="block kind-caption" id="p1-b8" data-anchor="p1-b8" title="anchor=p1-b8 | page=1 col=0 | bbox=[72.0, 270.0, 523.0, 288.0] | kind=caption"><span class="anch">p1-b8</span>Figure 1 (synthetic): schematic of anchor flow from parsed blocks to rendered deliverables. No real figure exists.<span class="meta">page 1 &middot; col 0 &middot; bbox [72.0, 270.0, 523.0, 288.0] &middot; kind caption</span></div>
+<h2 class="page-sep" id="pg-2">Page 2</h2>
+<div class="block kind-heading" id="p2-b2" data-anchor="p2-b2" title="anchor=p2-b2 | page=2 col=0 | bbox=[72.0, 60.0, 250.0, 78.0] | kind=heading"><span class="anch">p2-b2</span>2. Methods<span class="meta">page 2 &middot; col 0 &middot; bbox [72.0, 60.0, 250.0, 78.0] &middot; kind heading</span></div>
+<div class="block kind-body" id="p2-b3" data-anchor="p2-b3" title="anchor=p2-b3 | page=2 col=0 | bbox=[72.0, 86.0, 285.0, 160.0] | kind=body"><span class="anch">p2-b3</span>Column one of a fabricated methods section. The two-column layout here exists only to prove that the column field survives into the anchor map and the deliverables.<span class="meta">page 2 &middot; col 0 &middot; bbox [72.0, 86.0, 285.0, 160.0] &middot; kind body</span></div>
+<div class="block kind-body" id="p2-b4" data-anchor="p2-b4" title="anchor=p2-b4 | page=2 col=1 | bbox=[310.0, 86.0, 523.0, 140.0] | kind=body"><span class="anch">p2-b4</span>Column two continues the invented methods text. Every sentence is synthetic; nothing here describes real research.<span class="meta">page 2 &middot; col 1 &middot; bbox [310.0, 86.0, 523.0, 140.0] &middot; kind body</span></div>
+<div class="block kind-equation" id="p2-b5" data-anchor="p2-b5" title="anchor=p2-b5 | page=2 col=1 | bbox=[330.0, 150.0, 500.0, 172.0] | kind=equation"><span class="anch">p2-b5</span>recall(anchors) = |out ∩ in| / |in| = 1.0<span class="meta">page 2 &middot; col 1 &middot; bbox [330.0, 150.0, 500.0, 172.0] &middot; kind equation</span></div>
+<div class="block kind-caption" id="p2-b6" data-anchor="p2-b6" title="anchor=p2-b6 | page=2 col=1 | bbox=[310.0, 180.0, 523.0, 198.0] | kind=caption"><span class="anch">p2-b6</span>Table 1 (synthetic): reconciliation counters. The table itself is not included in this example.<span class="meta">page 2 &middot; col 1 &middot; bbox [310.0, 180.0, 523.0, 198.0] &middot; kind caption</span></div>
+<div class="block kind-unresolved" id="p2-b7" data-anchor="p2-b7" title="anchor=p2-b7 | page=2 col=0 | bbox=[72.0, 210.0, 285.0, 250.0] | kind=unresolved"><span class="anch">p2-b7</span><em>[UNRESOLVED &mdash; text unavailable; reason: synthetic vector figure region; upstream parse could not recover text]</em><span class="meta">page 2 &middot; col 0 &middot; bbox [72.0, 210.0, 285.0, 250.0] &middot; kind unresolved</span></div>
+<div class="block kind-reference" id="p2-b8" data-anchor="p2-b8" title="anchor=p2-b8 | page=2 col=0 | bbox=[72.0, 260.0, 285.0, 300.0] | kind=reference"><span class="anch">p2-b8</span>[1] Sample, A. and Fixture, B. (2026). Fabricated references for testing only. Synth. J. Demo 0, 1-2.<span class="meta">page 2 &middot; col 0 &middot; bbox [72.0, 260.0, 285.0, 300.0] &middot; kind reference</span></div>
+<div class="block kind-reference" id="p2-b9" data-anchor="p2-b9" title="anchor=p2-b9 | page=2 col=0 | bbox=[72.0, 306.0, 285.0, 340.0] | kind=reference"><span class="anch">p2-b9</span>[2] Placeholder, C. (2025). Another invented citation; do not look it up.<span class="meta">page 2 &middot; col 0 &middot; bbox [72.0, 306.0, 285.0, 340.0] &middot; kind reference</span></div>
+<div class="block kind-unresolved" id="p2-b10" data-anchor="p2-b10" title="anchor=p2-b10 | page=2 col=1 | bbox=[310.0, 260.0, 523.0, 290.0] | kind=unresolved"><span class="anch">p2-b10</span><em>[UNRESOLVED &mdash; text unavailable; reason: synthetic rotated text strip; orientation not handled by upstream parse]</em><span class="meta">page 2 &middot; col 1 &middot; bbox [310.0, 260.0, 523.0, 290.0] &middot; kind unresolved</span></div>
+<section id="appendix">
+<h2>Appendix &mdash; running headers &amp; footers</h2>
+<div class="block kind-header" id="p1-b1" data-anchor="p1-b1" title="anchor=p1-b1 | page=1 col=0 | bbox=[72.0, 30.0, 523.0, 44.0] | kind=header"><span class="anch">p1-b1</span>SYNTHETIC JOURNAL OF DEMO STUDIES — VOL. 0 (FABRICATED EXAMPLE)<span class="meta">page 1 &middot; col 0 &middot; bbox [72.0, 30.0, 523.0, 44.0] &middot; kind header</span></div>
+<div class="block kind-footer" id="p1-b9" data-anchor="p1-b9" title="anchor=p1-b9 | page=1 col=0 | bbox=[72.0, 760.0, 523.0, 774.0] | kind=footer"><span class="anch">p1-b9</span>— 1 —<span class="meta">page 1 &middot; col 0 &middot; bbox [72.0, 760.0, 523.0, 774.0] &middot; kind footer</span></div>
+<div class="block kind-header" id="p2-b1" data-anchor="p2-b1" title="anchor=p2-b1 | page=2 col=0 | bbox=[72.0, 30.0, 523.0, 44.0] | kind=header"><span class="anch">p2-b1</span>SYNTHETIC JOURNAL OF DEMO STUDIES — VOL. 0 (FABRICATED EXAMPLE)<span class="meta">page 2 &middot; col 0 &middot; bbox [72.0, 30.0, 523.0, 44.0] &middot; kind header</span></div>
+<div class="block kind-footer" id="p2-b11" data-anchor="p2-b11" title="anchor=p2-b11 | page=2 col=0 | bbox=[72.0, 760.0, 523.0, 774.0] | kind=footer"><span class="anch">p2-b11</span>— 2 —<span class="meta">page 2 &middot; col 0 &middot; bbox [72.0, 760.0, 523.0, 774.0] &middot; kind footer</span></div>
+</section>
+</main>
+</body>
+</html>

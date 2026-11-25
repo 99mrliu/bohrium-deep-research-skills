@@ -1,0 +1,31 @@
+{
+  "case_id": "synthetic-render-proof-001",
+  "status": "pass",
+  "counts": {
+    "blocks_in": 20,
+    "anchors_in_map": 20,
+    "anchors_in_md": 20,
+    "anchors_in_html": 20
+  },
+  "zero_silent_drops": true,
+  "checks": {
+    "anchor_map_schema_valid": true,
+    "anchor_map_covers_all_blocks": true,
+    "deliverable_md": {
+      "missing": [],
+      "duplicated": [],
+      "extra": []
+    },
+    "preview_html": {
+      "missing": [],
+      "duplicated": [],
+      "extra": []
+    }
+  },
+  "problems": [],
+  "warnings": [
+    "1 block(s) have bbox=null and were rendered without coordinates (title/meta show 'bbox: n/a'): p1-b6",
+    "2 unresolved block(s) kept and highlighted: p2-b7, p2-b10"
+  ],
+  "handoff": null
+}

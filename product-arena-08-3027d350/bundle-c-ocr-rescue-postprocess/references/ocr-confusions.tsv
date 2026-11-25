@@ -1,0 +1,38 @@
+id	kind	pattern	replacement	context	confidence	comment
+dig0_o	char_in_word	0	o	in_word	high	digit zero inside an alpha word is almost always letter o (rec0gnize -> recognize); lexicon-gated
+dig1_l	char_in_word	1	l	in_word	high	digit one inside an alpha word is usually lowercase l (ana1ysis -> analysis); lexicon-gated
+dig1_i	char_in_word	1	i	in_word	medium	digit one can also be i (1mage -> image); only when l-version is not in lexicon
+dig1_I	char_in_word	1	I	in_word	low	digit one as capital I; rare in body text; keep for completeness
+dig5_s	char_in_word	5	s	in_word	medium	digit five for letter s (5ample -> sample); lexicon-gated
+dig2_z	char_in_word	2	z	in_word	medium	digit two for letter z (2inc -> zinc); lexicon-gated
+dig6_b	char_in_word	6	b	in_word	low	digit six for letter b; uncommon in clean scans
+dig9_g	char_in_word	9	g	in_word	low	digit nine for letter g; uncommon in clean scans
+dig8_b	char_in_word	8	b	in_word	low	digit eight for letter b (8and -> band); rare
+capI_l	char_in_word	I	l	in_word	medium	capital I misread inside lowercase words (Iaser -> laser); lexicon-gated
+capO_o	char_in_word	O	o	in_word	low	capital O inside lowercase words; risky, keep low
+sym_dollar	char_in_word	$	s	in_word	low	dollar sign for s in degraded scans
+sym_at	char_in_word	@	a	in_word	low	at-sign for a in degraded scans
+sym_pipe	char_in_word	|	l	in_word	medium	pipe glyph for l or I in degraded scans
+seq_rn_m	seq_in_word	rn	m	lexicon	medium	rn sequence from letter m (rnetal -> metal); only when result in lexicon; true rn words (barn, kernel) are protected by the original-in-lexicon guard
+seq_vv_w	seq_in_word	vv	w	lexicon	medium	vv sequence from letter w (vvavelength -> wavelength); lexicon-gated
+seq_d_cl	seq_in_word	d	cl	lexicon	low	d can come from cl (daim -> claim); very risky, almost always deferred
+seq_cl_d	seq_in_word	cl	d	lexicon	low	cl can come from d in bold fonts; very risky, almost always deferred
+seq_iii_m	seq_in_word	iii	m	lexicon	low	three strokes for m in heavy bold or broken fonts
+seq_m_rn	seq_in_word	m	rn	lexicon	low	reverse direction (true rn misread as m); rare in machine OCR
+seq_ri_n	seq_in_word	ri	n	lexicon	low	ri merged into n in tight kerning
+seq_c_e	seq_in_word	c	e	lexicon	low	c misread as e (cven -> even) in faded scans
+seq_f_s	seq_in_word	f	s	lexicon	low	long-s confusion in historical prints (fpectrum -> spectrum)
+lig_fi	ligature_insert	fi	fi	missing_ligature	high	fi ligature dropped leaving a truncated token (nished -> finished); only when exactly one insertion lands in lexicon
+lig_fl	ligature_insert	fl	fl	missing_ligature	high	fl ligature dropped; same uniqueness requirement
+lig_ff	ligature_insert	ff	ff	missing_ligature	high	ff ligature dropped; same uniqueness requirement
+lig_ffi	ligature_insert	ffi	ffi	missing_ligature	medium	ffi ligature dropped; longer insertion, keep medium
+split_merge	space_merge				high	spurious space splitting one word in two (diff raction -> diffraction); join must be in lexicon and at least one part unknown
+greek_a	greek_latin	a	α	physics_suffix	high	latin a before -particles/-decay/-rays is usually alpha (a-particles -> α-particles)
+greek_b	greek_latin	b	β	physics_suffix	medium	latin b/B before physics suffix is usually beta; b is also common as a label
+greek_B	greek_latin	B	β	physics_suffix	medium	capital B before -decay/-emission; ambiguous with boron and magnetic field
+greek_g	greek_latin	g	γ	physics_suffix	medium	latin g before -rays/-radiation is usually gamma
+greek_y	greek_latin	y	γ	physics_suffix	low	latin y for gamma in some fonts; rare
+unreadable_sym	unreadable	.*[#@$%^&*~§¥¢|{}<>].*	[unreadable]	none	high	symbol-mash token that no lexicon word can explain; mark, never guess
+alone_l	standalone_confusable	l	1	numeric_context	low	standalone lowercase l next to a number or unit (l mV) may be digit 1 or litre; genuinely ambiguous, always deferred
+alone_I	standalone_confusable	I	1	numeric_context	low	standalone capital I in numeric context may be digit 1 or pronoun
+alone_O	standalone_confusable	O	0	numeric_context	low	standalone capital O in numeric context may be digit zero

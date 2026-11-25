@@ -1,0 +1,22 @@
+{
+  "case_id": "synthetic-render-proof-001",
+  "status": "success",
+  "deliverable_md": "outputs/deliverable.md",
+  "preview_html": "outputs/preview.html",
+  "anchor_map": "outputs/anchor_map.json",
+  "render_qc": "outputs/render_qc.json",
+  "uncertainty": [
+    "1 block(s) have bbox=null and were rendered without coordinates (title/meta show 'bbox: n/a'): p1-b6",
+    "2 unresolved block(s) kept and highlighted: p2-b7, p2-b10"
+  ],
+  "sources": [
+    "blocks.jsonl",
+    "anchor_map.json"
+  ],
+  "uncertainty_note": "Synthetic example: all blocks were fabricated for this bundle; warnings list blocks rendered with incomplete geometry.",
+  "change_record": [
+    "anchor_map.py: validated blocks.jsonl schema, assigned stable p{page}-b{seq} anchors",
+    "render_preview.py: rendered deliverable.md (anchors inline, header/footer appendix) and self-contained preview.html",
+    "render_qc.py: parsed both artifacts back, reconciled anchors (pass)"
+  ]
+}

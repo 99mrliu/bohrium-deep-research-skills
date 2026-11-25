@@ -1,0 +1,14 @@
+{
+  "case_id": "SYNTH-DEMO-0001",
+  "task": "Extract the full text of the attached PDF and report a page map and intake notes.",
+  "output_contract": {
+    "full_text": "complete extracted text of the document",
+    "page_map": "per-page routing / extraction map",
+    "intake_notes": "forensic intake observations about the input PDF",
+    "uncertainty": "list of honest uncertainties and unfilled-field reasons"
+  },
+  "attachments": [
+    "paper.pdf"
+  ],
+  "note": "SYNTHETIC example case for examples/minimal; not a formal case, not a real paper."
+}

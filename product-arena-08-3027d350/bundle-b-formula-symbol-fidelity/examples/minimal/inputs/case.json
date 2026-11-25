@@ -1,0 +1,15 @@
+{
+  "case_id": "synthetic-minimal-001",
+  "title": "SYNTHETIC minimal case — two pages, four display equations",
+  "synthetic": true,
+  "disclaimer": "Hand-authored word-level TSV; not extracted from a real PDF. Used only to demonstrate the pipeline end to end.",
+  "source": {
+    "words_tsv": "inputs/words.tsv",
+    "note": "In a real run this comes from `pdftotext -tsv` or pymupdf word extraction of the case PDF discovered under /input."
+  },
+  "output_contract": {
+    "equations": "list of detected equations: eq_number, page, bbox, linearized text with ^/_ markup, verification status",
+    "symbol_audit": "reconciliation of mapped symbol counts (raw vs linearized) and the list of unmappable unknown characters",
+    "uncertainty": "explicit list of unknown symbols, numbering anomalies and any line that could not be verified"
+  }
+}

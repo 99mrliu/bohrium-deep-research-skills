@@ -1,0 +1,38 @@
+[
+  {
+    "id": "c0002",
+    "page": 1,
+    "line": 1,
+    "col": 32,
+    "span": "rnetal",
+    "suggestion": "metal",
+    "rule": "seq_rn_m",
+    "confidence": "medium",
+    "decision": "defer",
+    "reason": "medium confidence requires --aggressive or --threshold medium; original left untouched"
+  },
+  {
+    "id": "c0014",
+    "page": 3,
+    "line": 14,
+    "col": 20,
+    "span": "vvavelength",
+    "suggestion": "wavelength",
+    "rule": "seq_vv_w",
+    "confidence": "medium",
+    "decision": "defer",
+    "reason": "medium confidence requires --aggressive or --threshold medium; original left untouched"
+  },
+  {
+    "id": "c0016",
+    "page": 3,
+    "line": 17,
+    "col": 34,
+    "span": "l",
+    "suggestion": "1",
+    "rule": "alone_l",
+    "confidence": "low",
+    "decision": "defer",
+    "reason": "low confidence; policy never alters low-confidence text"
+  }
+]

@@ -1,0 +1,60 @@
+{
+  "schema": "symbol-inventory/1",
+  "math_lines": 4,
+  "glyphs": {
+    "Δ": {
+      "name": "Delta",
+      "latex": "\\Delta",
+      "raw_count": 1,
+      "output_count": 1,
+      "ok": true
+    },
+    "α": {
+      "name": "alpha",
+      "latex": "\\alpha",
+      "raw_count": 1,
+      "output_count": 1,
+      "ok": true
+    },
+    "β": {
+      "name": "beta",
+      "latex": "\\beta",
+      "raw_count": 1,
+      "output_count": 1,
+      "ok": true
+    },
+    "σ": {
+      "name": "sigma",
+      "latex": "\\sigma",
+      "raw_count": 2,
+      "output_count": 2,
+      "ok": true
+    },
+    "∂": {
+      "name": "partial",
+      "latex": "\\partial",
+      "raw_count": 1,
+      "output_count": 1,
+      "ok": true
+    }
+  },
+  "totals": {
+    "raw_mapped": 6,
+    "output_mapped": 6,
+    "unknown": 1
+  },
+  "unknown": [
+    {
+      "char": "",
+      "codepoint": "U+E000",
+      "occurrences": [
+        {
+          "page": 2,
+          "line_id": "p2-l008"
+        }
+      ]
+    }
+  ],
+  "unmatched_lines": [],
+  "status": "issues"
+}

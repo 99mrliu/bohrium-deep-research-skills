@@ -1,0 +1,13 @@
+{
+  "case_id": "SYNTH-OCR-0001",
+  "title": "Synthetic scanned-article OCR post-process demo",
+  "synthetic": true,
+  "disclaimer": "SYNTHETIC example. The input text was written by hand and seeded with artificial OCR errors for demonstration; it does not come from a real scanned document.",
+  "input_raw_ocr": "inputs/raw_ocr.txt",
+  "output_contract": {
+    "corrected_text": "UTF-8 corrected OCR text, same pagination (form feeds preserved)",
+    "change_log": "JSONL; every applied edit with page, line, col, before, after, rule, confidence",
+    "qc_metrics": "before/after suspicious-token rates, counts by rule, remaining candidates, per-line heat",
+    "uncertainty": "deferred or rejected candidates with reasons (review list)"
+  }
+}

@@ -1,0 +1,206 @@
+{
+  "status": "ok",
+  "meta": {
+    "source": "pages.txt",
+    "pages": 4,
+    "headings": 9,
+    "warnings": []
+  },
+  "flat": [
+    {
+      "anchor": "sec-abstract",
+      "number": null,
+      "title": "Abstract",
+      "level": 1,
+      "page": 1,
+      "line": 4,
+      "kind": "known"
+    },
+    {
+      "anchor": "sec-1",
+      "number": "1",
+      "title": "Introduction",
+      "level": 1,
+      "page": 1,
+      "line": 9,
+      "kind": "numbered"
+    },
+    {
+      "anchor": "sec-1-1",
+      "number": "1.1",
+      "title": "Background",
+      "level": 2,
+      "page": 1,
+      "line": 13,
+      "kind": "numbered"
+    },
+    {
+      "anchor": "sec-1-2",
+      "number": "1.2",
+      "title": "Contributions",
+      "level": 2,
+      "page": 1,
+      "line": 16,
+      "kind": "numbered"
+    },
+    {
+      "anchor": "sec-2",
+      "number": "2",
+      "title": "Method",
+      "level": 1,
+      "page": 2,
+      "line": 1,
+      "kind": "numbered"
+    },
+    {
+      "anchor": "sec-2-1",
+      "number": "2.1",
+      "title": "Sprocket Alignment",
+      "level": 2,
+      "page": 2,
+      "line": 5,
+      "kind": "numbered"
+    },
+    {
+      "anchor": "sec-2-2-1",
+      "number": "2.2.1",
+      "title": "Fine Alignment Details",
+      "level": 3,
+      "page": 2,
+      "line": 8,
+      "kind": "numbered"
+    },
+    {
+      "anchor": "sec-acknowledgments",
+      "number": null,
+      "title": "Acknowledgments",
+      "level": 1,
+      "page": 3,
+      "line": 3,
+      "kind": "known"
+    },
+    {
+      "anchor": "sec-references",
+      "number": null,
+      "title": "References",
+      "level": 1,
+      "page": 3,
+      "line": 6,
+      "kind": "known"
+    }
+  ],
+  "tree": {
+    "number": null,
+    "title": "<document>",
+    "level": 0,
+    "page": null,
+    "anchor": "root",
+    "kind": "root",
+    "children": [
+      {
+        "number": null,
+        "title": "Abstract",
+        "level": 1,
+        "page": 1,
+        "line": 4,
+        "anchor": "sec-abstract",
+        "kind": "known",
+        "children": []
+      },
+      {
+        "number": "1",
+        "title": "Introduction",
+        "level": 1,
+        "page": 1,
+        "line": 9,
+        "anchor": "sec-1",
+        "kind": "numbered",
+        "children": [
+          {
+            "number": "1.1",
+            "title": "Background",
+            "level": 2,
+            "page": 1,
+            "line": 13,
+            "anchor": "sec-1-1",
+            "kind": "numbered",
+            "children": []
+          },
+          {
+            "number": "1.2",
+            "title": "Contributions",
+            "level": 2,
+            "page": 1,
+            "line": 16,
+            "anchor": "sec-1-2",
+            "kind": "numbered",
+            "children": []
+          }
+        ]
+      },
+      {
+        "number": "2",
+        "title": "Method",
+        "level": 1,
+        "page": 2,
+        "line": 1,
+        "anchor": "sec-2",
+        "kind": "numbered",
+        "children": [
+          {
+            "number": "2.1",
+            "title": "Sprocket Alignment",
+            "level": 2,
+            "page": 2,
+            "line": 5,
+            "anchor": "sec-2-1",
+            "kind": "numbered",
+            "children": []
+          },
+          {
+            "number": "2.2.1",
+            "title": "Fine Alignment Details",
+            "level": 3,
+            "page": 2,
+            "line": 8,
+            "anchor": "sec-2-2-1",
+            "kind": "numbered",
+            "children": []
+          }
+        ]
+      },
+      {
+        "number": null,
+        "title": "Acknowledgments",
+        "level": 1,
+        "page": 3,
+        "line": 3,
+        "anchor": "sec-acknowledgments",
+        "kind": "known",
+        "children": []
+      },
+      {
+        "number": null,
+        "title": "References",
+        "level": 1,
+        "page": 3,
+        "line": 6,
+        "anchor": "sec-references",
+        "kind": "known",
+        "children": []
+      }
+    ]
+  },
+  "inconsistencies": [
+    {
+      "type": "missing_parent",
+      "message": "heading '2.2.1 Fine Alignment Details' (page 2) implies parent section '2.2' which is absent from the document",
+      "page": 2
+    },
+    {
+      "type": "level_jump",
+      "message": "heading '2.2.1 Fine Alignment Details' (level 3, page 2) is nested under '2' (level 1): intermediate level missing",
+      "page": 2
+    }
+  ]
+}

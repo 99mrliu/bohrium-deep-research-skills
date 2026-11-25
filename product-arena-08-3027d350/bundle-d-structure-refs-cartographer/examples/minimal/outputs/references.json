@@ -1,0 +1,145 @@
+{
+  "status": "ok",
+  "located_by": "headings",
+  "style_hint": "mixed",
+  "count": 6,
+  "summary": {
+    "parsed": 5,
+    "partial": 0,
+    "raw": 1
+  },
+  "entries": [
+    {
+      "raw": "[1] A. Turing, B. Lovelace. On Computable Widgets. Journal of Synthetic Machinery 12, 34–56 (1936).",
+      "label": 1,
+      "authors": [
+        "A. Turing",
+        "B. Lovelace"
+      ],
+      "year": 1936,
+      "title": "On Computable Widgets",
+      "venue": "Journal of Synthetic Machinery",
+      "volume": "12",
+      "issue": null,
+      "pages": "34–56",
+      "doi": null,
+      "parse_status": "parsed",
+      "confidence": 0.95,
+      "reasons": [
+        "authors recognized (2)"
+      ],
+      "style": "bracket",
+      "page": 3
+    },
+    {
+      "raw": "[2] C. Shannon. A Mathematical Theory of Sprockets. Bell System Technical Journal 27, 379–423 (1948).",
+      "label": 2,
+      "authors": [
+        "C. Shannon"
+      ],
+      "year": 1948,
+      "title": "A Mathematical Theory of Sprockets",
+      "venue": "Bell System Technical Journal",
+      "volume": "27",
+      "issue": null,
+      "pages": "379–423",
+      "doi": null,
+      "parse_status": "parsed",
+      "confidence": 0.95,
+      "reasons": [
+        "authors recognized (1)"
+      ],
+      "style": "bracket",
+      "page": 3
+    },
+    {
+      "raw": "[3] D. Knuth. The Art of Frobnication. Addison-Wesley (1968).",
+      "label": 3,
+      "authors": [
+        "D. Knuth"
+      ],
+      "year": 1968,
+      "title": "The Art of Frobnication",
+      "venue": "Addison-Wesley",
+      "volume": null,
+      "issue": null,
+      "pages": null,
+      "doi": null,
+      "parse_status": "parsed",
+      "confidence": 0.75,
+      "reasons": [
+        "authors recognized (1)"
+      ],
+      "style": "bracket",
+      "page": 3
+    },
+    {
+      "raw": "Hopper, G. & Kleene, S. (1952). Recursive widget theory. Annals of Synthetic Mathematics, 54(3), 101-118. https://doi.org/10.1234/synth.1952.54",
+      "label": null,
+      "authors": [
+        "Hopper, G.",
+        "Kleene, S."
+      ],
+      "year": 1952,
+      "title": "Recursive widget theory",
+      "venue": "Annals of Synthetic Mathematics",
+      "volume": "54",
+      "issue": "3",
+      "pages": "101-118",
+      "doi": "10.1234/synth.1952.54",
+      "parse_status": "parsed",
+      "confidence": 1.0,
+      "reasons": [
+        "doi found",
+        "authors recognized (2)"
+      ],
+      "style": "author-year",
+      "page": 4
+    },
+    {
+      "raw": "Von Neumann, J. (1945). First draft of a frobnica report. Synthetic Archives, 3, 1-12.",
+      "label": null,
+      "authors": [
+        "Von Neumann, J."
+      ],
+      "year": 1945,
+      "title": "First draft of a frobnica report",
+      "venue": "Synthetic Archives",
+      "volume": "3",
+      "issue": null,
+      "pages": "1-12",
+      "doi": null,
+      "parse_status": "parsed",
+      "confidence": 0.95,
+      "reasons": [
+        "authors recognized (1)"
+      ],
+      "style": "author-year",
+      "page": 4
+    },
+    {
+      "raw": "%%% BROKEN ENTRY ||| no year no authors ~~~ !!! ??? ~~~ garbage text that cannot be parsed into any bibliographic fields at all.",
+      "label": null,
+      "authors": [],
+      "year": null,
+      "title": null,
+      "venue": null,
+      "volume": null,
+      "issue": null,
+      "pages": null,
+      "doi": null,
+      "parse_status": "raw",
+      "confidence": 0,
+      "reasons": [
+        "author list not recognized",
+        "no year found",
+        "title/venue boundary not found",
+        "kept verbatim; no fields invented",
+        "missing: authors, year, title, venue"
+      ],
+      "style": "author-year",
+      "page": 4
+    }
+  ],
+  "warnings": []
+}

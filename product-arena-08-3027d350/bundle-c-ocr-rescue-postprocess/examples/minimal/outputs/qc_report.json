@@ -1,0 +1,134 @@
+{
+  "status": "ok",
+  "suspicious_token_definition": "digit-in-word | symbol mash | standalone l/I/O | ascii alpha token (len>=3) not in lexicon",
+  "before": {
+    "tokens": 150,
+    "suspicious": 16,
+    "rate": 0.1067
+  },
+  "after": {
+    "tokens": 149,
+    "suspicious": 3,
+    "rate": 0.0201
+  },
+  "delta": {
+    "suspicious": 13,
+    "rate_reduction": 0.0866
+  },
+  "applied_changes": 13,
+  "applied_by_rule": {
+    "dig0_o": 3,
+    "dig1_l": 6,
+    "greek_a": 1,
+    "lig_fi": 1,
+    "split_merge": 1,
+    "unreadable_sym": 1
+  },
+  "remaining_candidates": [
+    {
+      "id": "c0002",
+      "span": "rnetal",
+      "suggestion": "metal",
+      "confidence": "medium",
+      "rule": "seq_rn_m"
+    },
+    {
+      "id": "c0014",
+      "span": "vvavelength",
+      "suggestion": "wavelength",
+      "confidence": "medium",
+      "rule": "seq_vv_w"
+    },
+    {
+      "id": "c0016",
+      "span": "l",
+      "suggestion": "1",
+      "confidence": "low",
+      "rule": "alone_l"
+    }
+  ],
+  "per_line_heat": {
+    "before": [
+      {
+        "page": 1,
+        "line": 1,
+        "tokens": 11,
+        "suspicious": 2
+      },
+      {
+        "page": 1,
+        "line": 2,
+        "tokens": 9,
+        "suspicious": 3
+      },
+      {
+        "page": 1,
+        "line": 3,
+        "tokens": 10,
+        "suspicious": 3
+      },
+      {
+        "page": 1,
+        "line": 5,
+        "tokens": 9,
+        "suspicious": 1
+      },
+      {
+        "page": 2,
+        "line": 7,
+        "tokens": 10,
+        "suspicious": 2
+      },
+      {
+        "page": 2,
+        "line": 9,
+        "tokens": 10,
+        "suspicious": 1
+      },
+      {
+        "page": 2,
+        "line": 12,
+        "tokens": 4,
+        "suspicious": 1
+      },
+      {
+        "page": 3,
+        "line": 14,
+        "tokens": 10,
+        "suspicious": 1
+      },
+      {
+        "page": 3,
+        "line": 16,
+        "tokens": 11,
+        "suspicious": 1
+      },
+      {
+        "page": 3,
+        "line": 17,
+        "tokens": 12,
+        "suspicious": 1
+      }
+    ],
+    "after": [
+      {
+        "page": 1,
+        "line": 1,
+        "tokens": 11,
+        "suspicious": 1
+      },
+      {
+        "page": 3,
+        "line": 14,
+        "tokens": 10,
+        "suspicious": 1
+      },
+      {
+        "page": 3,
+        "line": 17,
+        "tokens": 12,
+        "suspicious": 1
+      }
+    ]
+  }
+}

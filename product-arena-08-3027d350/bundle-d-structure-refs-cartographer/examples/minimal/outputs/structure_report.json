@@ -1,0 +1,79 @@
+{
+  "status": "ok",
+  "counts": {
+    "pages": 4,
+    "headings": 9,
+    "heading_inconsistencies": 2,
+    "captions": 2,
+    "mention_instances": 2,
+    "distinct_mentioned_labels": 2,
+    "references": 6,
+    "reference_parse": {
+      "parsed": 5,
+      "partial": 0,
+      "raw": 1
+    }
+  },
+  "captions": [
+    {
+      "label": "Fig. 1",
+      "page": 2,
+      "line": 12,
+      "text": "Frobnication rate versus sprocket alignment for synthetic widgets."
+    },
+    {
+      "label": "Table 1",
+      "page": 3,
+      "line": 1,
+      "text": "Synthetic results on the toy benchmark (never cited in text)."
+    }
+  ],
+  "mentions": [
+    {
+      "label": "Fig. 1",
+      "page": 1,
+      "line": 10,
+      "context": "Widgets are widely frobnicated in synthetic settings. As shown in Fig. 1,"
+    },
+    {
+      "label": "Fig. 2",
+      "page": 2,
+      "line": 2,
+      "context": "Our method aligns sprockets before frobnication. Fig. 2 illustrates the"
+    }
+  ],
+  "gaps": {
+    "captions_without_mentions": [
+      {
+        "label": "Table 1",
+        "page": 3,
+        "text": "Synthetic results on the toy benchmark (never cited in text)."
+      }
+    ],
+    "mentions_without_captions": [
+      {
+        "label": "Fig. 2",
+        "mentions": [
+          {
+            "label": "Fig. 2",
+            "page": 2,
+            "line": 2,
+            "context": "Our method aligns sprockets before frobnication. Fig. 2 illustrates the"
+          }
+        ]
+      }
+    ]
+  },
+  "heading_inconsistencies": [
+    {
+      "type": "missing_parent",
+      "message": "heading '2.2.1 Fine Alignment Details' (page 2) implies parent section '2.2' which is absent from the document",
+      "page": 2
+    },
+    {
+      "type": "level_jump",
+      "message": "heading '2.2.1 Fine Alignment Details' (level 3, page 2) is nested under '2' (level 1): intermediate level missing",
+      "page": 2
+    }
+  ]
+}

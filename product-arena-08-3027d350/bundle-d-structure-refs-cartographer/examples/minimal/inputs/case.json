@@ -1,0 +1,12 @@
+{
+  "case_id": "synthetic-mini-001",
+  "title": "Synthetic mini-paper used only to smoke-test the structure-refs-cartographer skill",
+  "synthetic": true,
+  "output_contract": {
+    "toc": "reconstructed table of contents with levels and page anchors",
+    "references": "structured reference records (raw kept verbatim when unparsable)",
+    "captions": "figure/table caption index with caption-mention cross-check",
+    "structure_issues": "numbering gaps, level jumps, caption/mention mismatches",
+    "uncertainty": "known uncertainties and caveats of this run"
+  }
+}

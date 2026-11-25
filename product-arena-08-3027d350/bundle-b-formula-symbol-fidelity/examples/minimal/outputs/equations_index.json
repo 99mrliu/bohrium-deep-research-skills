@@ -1,0 +1,63 @@
+{
+  "schema": "equations-index/1",
+  "equations": [
+    {
+      "eq_number": "1",
+      "page": 1,
+      "bbox": [
+        250.0,
+        196.0,
+        356.0,
+        212.0
+      ],
+      "line_id": "p1-l002",
+      "linearized": "E = m c^{2}",
+      "verification": "ok"
+    },
+    {
+      "eq_number": "2",
+      "page": 1,
+      "bbox": [
+        240.0,
+        340.0,
+        372.0,
+        352.0
+      ],
+      "line_id": "p1-l004",
+      "linearized": "\\alpha + \\beta = \\Delta \\sigma",
+      "verification": "duplicate_number"
+    },
+    {
+      "eq_number": "2",
+      "page": 2,
+      "bbox": [
+        250.0,
+        200.0,
+        332.0,
+        215.0
+      ],
+      "line_id": "p2-l006",
+      "linearized": "a_{i} = b",
+      "verification": "duplicate_number"
+    },
+    {
+      "eq_number": "3",
+      "page": 2,
+      "bbox": [
+        240.0,
+        340.0,
+        366.0,
+        352.0
+      ],
+      "line_id": "p2-l008",
+      "linearized": "\\partial f = \\sigma x ",
+      "verification": "ok"
+    }
+  ],
+  "numbering": {
+    "anomalies": [
+      "duplicate equation number (2): 2 occurrences"
+    ],
+    "policy": "inconsistencies are flagged, never fixed by guessing"
+  }
+}

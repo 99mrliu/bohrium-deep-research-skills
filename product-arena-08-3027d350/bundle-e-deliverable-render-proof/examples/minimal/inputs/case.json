@@ -1,0 +1,15 @@
+{
+  "case_id": "synthetic-render-proof-001",
+  "task": "Render typed, anchored PDF blocks (SYNTHETIC example) into deliverable.md, preview.html, anchor_map.json, and reconcile with render QC.",
+  "input": {
+    "blocks": "inputs/blocks.jsonl",
+    "note": "All blocks are fabricated for this bundle. No real paper was parsed."
+  },
+  "output_contract": {
+    "deliverable_md": "outputs/deliverable.md",
+    "preview_html": "outputs/preview.html",
+    "anchor_map": "outputs/anchor_map.json",
+    "render_qc": "outputs/render_qc.json",
+    "uncertainty": "list of disclosed rendering risks / warnings"
+  }
+}

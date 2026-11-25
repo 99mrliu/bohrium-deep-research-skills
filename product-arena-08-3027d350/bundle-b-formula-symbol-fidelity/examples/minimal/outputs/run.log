@@ -1,0 +1,24 @@
+$ python3 ../../scripts/math_detect.py --input inputs/words.tsv --out outputs/math_lines.jsonl
+{
+  "status": "ok",
+  "input": "inputs/words.tsv",
+  "words": 84,
+  "lines_total": 8,
+  "math_candidates": 4,
+  "out": "outputs/math_lines.jsonl"
+}
+$ python3 ../../scripts/symbol_fidelity.py --math-lines outputs/math_lines.jsonl --input inputs/words.tsv --out-dir outputs
+{
+  "status": "issues",
+  "math_lines": 4,
+  "unknown": 1,
+  "out_dir": "outputs"
+}
+$ python3 ../../scripts/eq_index.py --linearized outputs/math_linearized.jsonl --inventory outputs/symbol_inventory.json --case inputs/case.json --out-dir outputs
+{
+  "status": "partial",
+  "equations": 4,
+  "anomalies": 1,
+  "unknown_symbols": 1,
+  "out_dir": "outputs"
+}

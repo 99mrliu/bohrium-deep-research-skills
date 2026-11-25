@@ -1,0 +1,36 @@
+{
+  "case_id": "synthetic-render-proof-001",
+  "status": "fail",
+  "counts": {
+    "blocks_in": 20,
+    "anchors_in_map": 20,
+    "anchors_in_md": 19,
+    "anchors_in_html": 20
+  },
+  "zero_silent_drops": false,
+  "checks": {
+    "anchor_map_schema_valid": true,
+    "anchor_map_covers_all_blocks": true,
+    "deliverable_md": {
+      "missing": [
+        "p1-b5"
+      ],
+      "duplicated": [],
+      "extra": []
+    },
+    "preview_html": {
+      "missing": [],
+      "duplicated": [],
+      "extra": []
+    }
+  },
+  "problems": [
+    "deliverable.md: 1 missing anchor(s): p1-b5",
+    "block/anchor counts do not reconcile: {\"anchors_in_html\": 20, \"anchors_in_map\": 20, \"anchors_in_md\": 19, \"blocks_in\": 20}"
+  ],
+  "warnings": [
+    "1 block(s) have bbox=null and were rendered without coordinates (title/meta show 'bbox: n/a'): p1-b6",
+    "2 unresolved block(s) kept and highlighted: p2-b7, p2-b10"
+  ],
+  "handoff": "Reconciliation failed: some parsed blocks are missing, duplicated, or unexpected in the rendered deliverables. Hand back to the upstream parse/render step; do NOT ship these deliverables."
+}

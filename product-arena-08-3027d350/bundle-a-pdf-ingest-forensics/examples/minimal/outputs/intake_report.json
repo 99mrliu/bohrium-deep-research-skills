@@ -1,0 +1,157 @@
+{
+  "schema": "pdf-ingest-forensics/intake_report/v1",
+  "tool": "pdf_probe.py",
+  "source": {
+    "mode": "manifest",
+    "path": "/Users/liuhengshen/Desktop/bhr_product/ra01-5dir/submit-3027d350-a-ingest-forensics/skill/examples/minimal/inputs/pages.json",
+    "note": "SYNTHETIC page inventory for the minimal example; no real PDF/paper."
+  },
+  "status": "partial",
+  "reasons": [
+    "scanned_pages: [3, 10] have images but <20 chars",
+    "rotated_pages: [7] carry non-zero /Rotate",
+    "duplicate_pages: [[8, 9]]"
+  ],
+  "encrypted": false,
+  "page_count": 10,
+  "pages": [
+    {
+      "page": 1,
+      "width": 612,
+      "height": 792,
+      "rotate": 0,
+      "image_count": 0,
+      "char_count": 271,
+      "fingerprint": "702331a992f146449b63d45a7a9d17a6",
+      "flags": [],
+      "duplicate_of": null
+    },
+    {
+      "page": 2,
+      "width": 612,
+      "height": 792,
+      "rotate": 0,
+      "image_count": 0,
+      "char_count": 225,
+      "fingerprint": "55dfa25232d9ccd1a9976373ca1a299a",
+      "flags": [],
+      "duplicate_of": null
+    },
+    {
+      "page": 3,
+      "width": 612,
+      "height": 792,
+      "rotate": 0,
+      "image_count": 1,
+      "char_count": 0,
+      "fingerprint": null,
+      "flags": [
+        "scanned_candidate"
+      ],
+      "duplicate_of": null
+    },
+    {
+      "page": 4,
+      "width": 612,
+      "height": 792,
+      "rotate": 0,
+      "image_count": 0,
+      "char_count": 226,
+      "fingerprint": "5bbebcc0dd28a71c9d779b447c559e68",
+      "flags": [],
+      "duplicate_of": null
+    },
+    {
+      "page": 5,
+      "width": 612,
+      "height": 792,
+      "rotate": 0,
+      "image_count": 0,
+      "char_count": 321,
+      "fingerprint": "cb2bb4b7c3641c90cbe02cd319c47b99",
+      "flags": [],
+      "duplicate_of": null
+    },
+    {
+      "page": 6,
+      "width": 612,
+      "height": 792,
+      "rotate": 0,
+      "image_count": 0,
+      "char_count": 206,
+      "fingerprint": "e166f97b8302d822137e6cbad15256d5",
+      "flags": [],
+      "duplicate_of": null
+    },
+    {
+      "page": 7,
+      "width": 612,
+      "height": 792,
+      "rotate": 90,
+      "image_count": 0,
+      "char_count": 233,
+      "fingerprint": "1092e9631a96dd6899639f0049ea82b1",
+      "flags": [
+        "rotated"
+      ],
+      "duplicate_of": null
+    },
+    {
+      "page": 8,
+      "width": 612,
+      "height": 792,
+      "rotate": 0,
+      "image_count": 0,
+      "char_count": 280,
+      "fingerprint": "971f0be3503b9d96a0c1e512e15df217",
+      "flags": [],
+      "duplicate_of": null
+    },
+    {
+      "page": 9,
+      "width": 612,
+      "height": 792,
+      "rotate": 0,
+      "image_count": 0,
+      "char_count": 280,
+      "fingerprint": "971f0be3503b9d96a0c1e512e15df217",
+      "flags": [
+        "duplicate_page"
+      ],
+      "duplicate_of": 8
+    },
+    {
+      "page": 10,
+      "width": 612,
+      "height": 792,
+      "rotate": 0,
+      "image_count": 2,
+      "char_count": 3,
+      "fingerprint": null,
+      "flags": [
+        "scanned_candidate"
+      ],
+      "duplicate_of": null
+    }
+  ],
+  "summary": {
+    "measure_tool": "manifest",
+    "text_layer_measured": true,
+    "scanned_pages": [
+      3,
+      10
+    ],
+    "rotated_pages": [
+      7
+    ],
+    "empty_pages": [],
+    "duplicate_pairs": [
+      [
+        8,
+        9
+      ]
+    ]
+  },
+  "raw_container": null,
+  "limitations": []
+}

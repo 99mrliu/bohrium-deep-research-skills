@@ -1,0 +1,94 @@
+{
+  "case_id": "synthetic-minimal-001",
+  "status": "partial",
+  "generated_by": "formula-symbol-fidelity/scripts/eq_index.py",
+  "equations": [
+    {
+      "eq_number": "1",
+      "page": 1,
+      "bbox": [
+        250.0,
+        196.0,
+        356.0,
+        212.0
+      ],
+      "line_id": "p1-l002",
+      "linearized": "E = m c^{2}",
+      "verification": "ok"
+    },
+    {
+      "eq_number": "2",
+      "page": 1,
+      "bbox": [
+        240.0,
+        340.0,
+        372.0,
+        352.0
+      ],
+      "line_id": "p1-l004",
+      "linearized": "\\alpha + \\beta = \\Delta \\sigma",
+      "verification": "duplicate_number"
+    },
+    {
+      "eq_number": "2",
+      "page": 2,
+      "bbox": [
+        250.0,
+        200.0,
+        332.0,
+        215.0
+      ],
+      "line_id": "p2-l006",
+      "linearized": "a_{i} = b",
+      "verification": "duplicate_number"
+    },
+    {
+      "eq_number": "3",
+      "page": 2,
+      "bbox": [
+        240.0,
+        340.0,
+        366.0,
+        352.0
+      ],
+      "line_id": "p2-l008",
+      "linearized": "\\partial f = \\sigma x ",
+      "verification": "ok"
+    }
+  ],
+  "symbol_audit": {
+    "status": "issues",
+    "totals": {
+      "raw_mapped": 6,
+      "output_mapped": 6,
+      "unknown": 1
+    },
+    "unknown": [
+      {
+        "char": "",
+        "codepoint": "U+E000",
+        "occurrences": [
+          {
+            "page": 2,
+            "line_id": "p2-l008"
+          }
+        ]
+      }
+    ]
+  },
+  "uncertainty": [
+    "unmappable symbol U+E000 kept verbatim, not guessed (p2:p2-l008)",
+    "duplicate equation number (2): 2 occurrences"
+  ],
+  "sources": {
+    "case": "inputs/case.json",
+    "linearized": "outputs/math_linearized.jsonl",
+    "inventory": "outputs/symbol_inventory.json"
+  },
+  "change_record": [
+    "parsed math_linearized.jsonl and symbol_inventory.json",
+    "built equations_index.json; numbering anomalies flagged, not repaired",
+    "echoed every output_contract field; unknown fields left empty with explanation",
+    "status set to 'partial' from symbol audit + numbering analysis"
+  ]
+}

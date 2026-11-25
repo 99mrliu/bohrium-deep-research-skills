@@ -1,0 +1,125 @@
+{
+  "schema": "pdf-ingest-forensics/route_decision/v1",
+  "tool": "route_decision.py",
+  "route": "mixed_pagelevel",
+  "reasons": [
+    "7/10 pages direct, 3/10 pages need OCR"
+  ],
+  "page_assignments": [
+    {
+      "page": 1,
+      "action": "direct_text_layer",
+      "char_count": 271,
+      "image_count": 0,
+      "rotate": 0,
+      "duplicate_of": null,
+      "reasons": [
+        "clean text layer"
+      ]
+    },
+    {
+      "page": 2,
+      "action": "direct_text_layer",
+      "char_count": 225,
+      "image_count": 0,
+      "rotate": 0,
+      "duplicate_of": null,
+      "reasons": [
+        "clean text layer"
+      ]
+    },
+    {
+      "page": 3,
+      "action": "ocr_handoff",
+      "char_count": 0,
+      "image_count": 1,
+      "rotate": 0,
+      "duplicate_of": null,
+      "reasons": [
+        "image(s) present but <20 extractable chars; no usable text layer"
+      ]
+    },
+    {
+      "page": 4,
+      "action": "direct_text_layer",
+      "char_count": 226,
+      "image_count": 0,
+      "rotate": 0,
+      "duplicate_of": null,
+      "reasons": [
+        "clean text layer"
+      ]
+    },
+    {
+      "page": 5,
+      "action": "ocr_handoff",
+      "char_count": 321,
+      "image_count": 0,
+      "rotate": 0,
+      "duplicate_of": null,
+      "reasons": [
+        "glyph corruption severity=high (U+FFFD run of 3 (failed decode); PUA ratio 15.75% > 0.5% (unmapped CID/custom encoding)); extracted text is untrustworthy, re-acquire via OCR"
+      ]
+    },
+    {
+      "page": 6,
+      "action": "direct_text_layer",
+      "char_count": 206,
+      "image_count": 0,
+      "rotate": 0,
+      "duplicate_of": null,
+      "reasons": [
+        "clean text layer"
+      ]
+    },
+    {
+      "page": 7,
+      "action": "direct_text_layer",
+      "char_count": 233,
+      "image_count": 0,
+      "rotate": 90,
+      "duplicate_of": null,
+      "reasons": [
+        "page /Rotate=90; apply rotation before any layout/table analysis"
+      ]
+    },
+    {
+      "page": 8,
+      "action": "direct_text_layer",
+      "char_count": 280,
+      "image_count": 0,
+      "rotate": 0,
+      "duplicate_of": null,
+      "reasons": [
+        "clean text layer"
+      ]
+    },
+    {
+      "page": 9,
+      "action": "direct_text_layer",
+      "char_count": 280,
+      "image_count": 0,
+      "rotate": 0,
+      "duplicate_of": 8,
+      "reasons": [
+        "duplicate of page 8; parse once, record mapping"
+      ]
+    },
+    {
+      "page": 10,
+      "action": "ocr_handoff",
+      "char_count": 3,
+      "image_count": 2,
+      "rotate": 0,
+      "duplicate_of": null,
+      "reasons": [
+        "image(s) present but <20 extractable chars; no usable text layer"
+      ]
+    }
+  ],
+  "inputs": {
+    "intake": "/Users/liuhengshen/Desktop/bhr_product/ra01-5dir/submit-3027d350-a-ingest-forensics/skill/examples/minimal/outputs/intake_report.json",
+    "glyph": "/Users/liuhengshen/Desktop/bhr_product/ra01-5dir/submit-3027d350-a-ingest-forensics/skill/examples/minimal/outputs/glyph_audit.json",
+    "case": "/Users/liuhengshen/Desktop/bhr_product/ra01-5dir/submit-3027d350-a-ingest-forensics/skill/examples/minimal/inputs/case.json"
+  }
+}

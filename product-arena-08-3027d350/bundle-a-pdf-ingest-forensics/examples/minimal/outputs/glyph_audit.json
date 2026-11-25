@@ -1,0 +1,177 @@
+{
+  "schema": "pdf-ingest-forensics/glyph_audit/v1",
+  "tool": "glyph_audit.py",
+  "input": "/Users/liuhengshen/Desktop/bhr_product/ra01-5dir/submit-3027d350-a-ingest-forensics/skill/examples/minimal/inputs/extracted",
+  "status": "corrupt",
+  "global_severity": "high",
+  "reasons": [
+    "PUA ratio 15.75% > 0.5% (unmapped CID/custom encoding)",
+    "U+FFFD run of 3 (failed decode)"
+  ],
+  "files": [
+    {
+      "chars_total": 272,
+      "fffd_count": 0,
+      "fffd_max_run": 0,
+      "pua_count": 0,
+      "pua_ratio": 0.0,
+      "control_count": 0,
+      "mojibake_hits": 0,
+      "mojibake_chars": 0,
+      "mojibake_ratio": 0.0,
+      "known_signature_hits": 0,
+      "cjk_chars": 0,
+      "latin_chars": 217,
+      "cjk_latin_flips": 0,
+      "severity": "none",
+      "reasons": [
+        "no glyph corruption signals"
+      ],
+      "file": "page01.txt"
+    },
+    {
+      "chars_total": 226,
+      "fffd_count": 0,
+      "fffd_max_run": 0,
+      "pua_count": 0,
+      "pua_ratio": 0.0,
+      "control_count": 0,
+      "mojibake_hits": 0,
+      "mojibake_chars": 0,
+      "mojibake_ratio": 0.0,
+      "known_signature_hits": 0,
+      "cjk_chars": 0,
+      "latin_chars": 182,
+      "cjk_latin_flips": 0,
+      "severity": "none",
+      "reasons": [
+        "no glyph corruption signals"
+      ],
+      "file": "page02.txt"
+    },
+    {
+      "chars_total": 227,
+      "fffd_count": 0,
+      "fffd_max_run": 0,
+      "pua_count": 0,
+      "pua_ratio": 0.0,
+      "control_count": 0,
+      "mojibake_hits": 0,
+      "mojibake_chars": 0,
+      "mojibake_ratio": 0.0,
+      "known_signature_hits": 0,
+      "cjk_chars": 0,
+      "latin_chars": 170,
+      "cjk_latin_flips": 0,
+      "severity": "none",
+      "reasons": [
+        "no glyph corruption signals"
+      ],
+      "file": "page04.txt"
+    },
+    {
+      "chars_total": 322,
+      "fffd_count": 3,
+      "fffd_max_run": 3,
+      "pua_count": 40,
+      "pua_ratio": 0.15748,
+      "control_count": 0,
+      "mojibake_hits": 0,
+      "mojibake_chars": 0,
+      "mojibake_ratio": 0.0,
+      "known_signature_hits": 1,
+      "cjk_chars": 0,
+      "latin_chars": 214,
+      "cjk_latin_flips": 0,
+      "severity": "high",
+      "reasons": [
+        "U+FFFD run of 3 (failed decode)",
+        "PUA ratio 15.75% > 0.5% (unmapped CID/custom encoding)"
+      ],
+      "file": "page05.txt"
+    },
+    {
+      "chars_total": 207,
+      "fffd_count": 0,
+      "fffd_max_run": 0,
+      "pua_count": 0,
+      "pua_ratio": 0.0,
+      "control_count": 0,
+      "mojibake_hits": 0,
+      "mojibake_chars": 0,
+      "mojibake_ratio": 0.0,
+      "known_signature_hits": 0,
+      "cjk_chars": 0,
+      "latin_chars": 158,
+      "cjk_latin_flips": 0,
+      "severity": "none",
+      "reasons": [
+        "no glyph corruption signals"
+      ],
+      "file": "page06.txt"
+    },
+    {
+      "chars_total": 234,
+      "fffd_count": 0,
+      "fffd_max_run": 0,
+      "pua_count": 0,
+      "pua_ratio": 0.0,
+      "control_count": 0,
+      "mojibake_hits": 0,
+      "mojibake_chars": 0,
+      "mojibake_ratio": 0.0,
+      "known_signature_hits": 0,
+      "cjk_chars": 0,
+      "latin_chars": 182,
+      "cjk_latin_flips": 0,
+      "severity": "none",
+      "reasons": [
+        "no glyph corruption signals"
+      ],
+      "file": "page07.txt"
+    },
+    {
+      "chars_total": 281,
+      "fffd_count": 0,
+      "fffd_max_run": 0,
+      "pua_count": 0,
+      "pua_ratio": 0.0,
+      "control_count": 0,
+      "mojibake_hits": 0,
+      "mojibake_chars": 0,
+      "mojibake_ratio": 0.0,
+      "known_signature_hits": 0,
+      "cjk_chars": 0,
+      "latin_chars": 214,
+      "cjk_latin_flips": 0,
+      "severity": "none",
+      "reasons": [
+        "no glyph corruption signals"
+      ],
+      "file": "page08.txt"
+    },
+    {
+      "chars_total": 281,
+      "fffd_count": 0,
+      "fffd_max_run": 0,
+      "pua_count": 0,
+      "pua_ratio": 0.0,
+      "control_count": 0,
+      "mojibake_hits": 0,
+      "mojibake_chars": 0,
+      "mojibake_ratio": 0.0,
+      "known_signature_hits": 0,
+      "cjk_chars": 0,
+      "latin_chars": 214,
+      "cjk_latin_flips": 0,
+      "severity": "none",
+      "reasons": [
+        "no glyph corruption signals"
+      ],
+      "file": "page09.txt"
+    }
+  ],
+  "flagged_files": [
+    "page05.txt"
+  ]
+}

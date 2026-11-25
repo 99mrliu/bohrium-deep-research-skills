@@ -1,0 +1,80 @@
+{
+  "case_id": "SYNTH-OCR-0001",
+  "status": "ok",
+  "skill": "ocr-rescue-postprocess",
+  "outputs": {
+    "corrected_text": {
+      "path": "corrected.txt",
+      "status": "produced",
+      "contract_hint": "UTF-8 corrected OCR text, same pagination (form feeds preserved)"
+    },
+    "change_log": {
+      "path": "change_log.jsonl",
+      "status": "produced",
+      "contract_hint": "JSONL; every applied edit with page, line, col, before, after, rule, confidence"
+    },
+    "qc_metrics": {
+      "path": "qc_report.json",
+      "status": "produced",
+      "contract_hint": "before/after suspicious-token rates, counts by rule, remaining candidates, per-line heat"
+    },
+    "uncertainty": {
+      "path": "review_list.json",
+      "status": "produced",
+      "contract_hint": "deferred or rejected candidates with reasons (review list)"
+    }
+  },
+  "sources": {
+    "tools": {
+      "tesseract": "not found (not required: this skill post-processes existing OCR text)",
+      "platform_ocr_tool": "not detected in this environment"
+    },
+    "references": {
+      "lexicon": "../../../references/lexicon-en.txt"
+    },
+    "input_raw_ocr": "examples/minimal/inputs/raw_ocr.txt"
+  },
+  "metrics": {
+    "suspicious_rate_before": 0.1067,
+    "suspicious_rate_after": 0.0201,
+    "suspicious_tokens_before": 16,
+    "suspicious_tokens_after": 3
+  },
+  "change_record": {
+    "applied": 13,
+    "marked_unreadable": 1,
+    "deferred_or_rejected": 3,
+    "by_rule": {
+      "dig0_o": 3,
+      "dig1_l": 6,
+      "greek_a": 1,
+      "lig_fi": 1,
+      "split_merge": 1,
+      "unreadable_sym": 1
+    },
+    "change_log": "change_log.jsonl"
+  },
+  "uncertainty": [
+    {
+      "span": "rnetal",
+      "suggestion": "metal",
+      "confidence": "medium",
+      "reason": "medium confidence requires --aggressive or --threshold medium; original left untouched"
+    },
+    {
+      "span": "vvavelength",
+      "suggestion": "wavelength",
+      "confidence": "medium",
+      "reason": "medium confidence requires --aggressive or --threshold medium; original left untouched"
+    },
+    {
+      "span": "l",
+      "suggestion": "1",
+      "confidence": "low",
+      "reason": "low confidence; policy never alters low-confidence text"
+    }
+  ],
+  "warnings": [
+    "3 candidate(s) left unapplied (see uncertainty)"
+  ]
+}
