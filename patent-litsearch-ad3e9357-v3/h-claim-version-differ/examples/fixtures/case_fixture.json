@@ -1,0 +1,24 @@
+{
+  "case_id": "HX-SYNTH-0001",
+  "synthetic": true,
+  "description": "合成夹具：虚构案件 HX1001 的公开版/授权版权利要求文本、虚构案件 HX1002 的 WO 合并 OCR 单版本文本，以及一份故意含违禁措辞的伪造说明。全部内容虚构，仅用于演示与自查。",
+  "materials": {
+    "claims_publication": "claims_pub_HX1001.txt",
+    "claims_grant": "claims_grant_HX1001.txt",
+    "claims_wo_single_version": "claims_wo_boundary_HX1002.txt",
+    "gate_demo_note": "note_bad.md"
+  },
+  "expected_observations": {
+    "HX1001": "授权版权利要求 1 前序改写；要素 a fastener 收窄为 a titanium alloy fastener（modified）；damping pad 要素被删除（removed）；从属项重新编号，公开版第 3 项无对应编号（整项删除）。",
+    "HX1002": "仅单一版本可观察，且权利要求 1 跨越已声明的 OCR 合并边界；只能产出 partial 状态的单侧清单并标注边界偏移。"
+  },
+  "output_contract": {
+    "case_id": "字符串，须与本文件 case_id 逐字一致",
+    "status": "ok | partial | failed，须诚实反映完成度",
+    "sources": [{"path": "输入文件路径", "sha256": "文件内容的 SHA-256（hex）"}],
+    "uncertainty": "字符串或 null；说明未解决的不确定点",
+    "change_records": [{"ts": "ISO-8601 时间戳", "action": "动作", "detail": "细节"}],
+    "claim_correspondence": "claim_align.py 产出的对应表 JSON（内联对象或路径）；未填写为 null 并在 uncertainty 中说明",
+    "comparison_note": "scope_note.py 渲染且通过 --gate 的 markdown 说明（内联或路径）；未填写为 null"
+  }
+}

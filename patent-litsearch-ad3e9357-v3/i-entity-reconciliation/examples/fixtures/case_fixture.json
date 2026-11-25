@@ -1,0 +1,21 @@
+{
+  "case_id": "SYNTH-IX1001",
+  "note": "SYNTHETIC fixture / 合成示例数据 — not a real evaluation case. Demonstrates the case.json shape consumed by the walkthrough.",
+  "materials": {
+    "patent_records": ["rec_IX1001.txt", "rec_IX1002.txt"],
+    "comparison_papers": ["paper_PX2001.txt"]
+  },
+  "output_contract": {
+    "case_id": null,
+    "status": null,
+    "entity_reconciliation": {
+      "auto_matches": null,
+      "candidate_pairs": null,
+      "non_matches": null
+    },
+    "overlap_ledger": null,
+    "sources": null,
+    "uncertainty": null,
+    "change_records": null
+  }
+}

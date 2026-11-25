@@ -1,0 +1,11 @@
+{
+  "description": "SYNTHETIC example match policy. Thresholds and feature weights are DECLARED here and loaded by entity_match.py / cross_ledger.py; nothing is hardcoded in the scripts. Bands: score >= high -> auto; low <= score < high -> candidate; score < low -> non-match. Forcing flags (order_variant, suffix_conflict) always demote to candidate. exact_norm = 1.0 saturates the score to 1.0 (see references/match_policy.md).",
+  "thresholds": {"high": 0.9, "low": 0.2},
+  "weights": {
+    "exact_norm": 0.4,
+    "core_eq": 0.15,
+    "core_containment": 0.15,
+    "token_jaccard": 0.1,
+    "initial_surname": 0.2
+  }
+}

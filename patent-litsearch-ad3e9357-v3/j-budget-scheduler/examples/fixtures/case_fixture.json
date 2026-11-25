@@ -1,0 +1,41 @@
+{
+  "_notice": "合成示例数据：本文件为自造的调度测试夹具，不含任何真实专利、真实案件或真实检索结论；仅用于演示预算调度技能。",
+  "case_id": "SYNTH-AD3E9357-000",
+  "task": "合成核验任务：对虚拟案卷执行预算受限的多步核验（仅用于演示调度，不做真实取证）。",
+  "output_contract": {
+    "fields": {
+      "facsimile_forensics": {
+        "mandatory": true,
+        "description": "传真件取证结论占位（合成字段）"
+      },
+      "date_chronology": {
+        "mandatory": true,
+        "description": "日期年表一致性占位（合成字段）"
+      },
+      "claim_diff": {
+        "mandatory": true,
+        "description": "权利要求版本差异占位（合成字段）"
+      },
+      "entity_resolution": {
+        "mandatory": true,
+        "description": "实体消歧结论占位（合成字段）"
+      },
+      "retrieval_queries": {
+        "mandatory": false,
+        "description": "号码/主题检索式记录占位（合成字段）"
+      },
+      "legal_status": {
+        "mandatory": false,
+        "description": "官方法律状态占位（合成字段；未知时须如实声明）"
+      },
+      "family_links": {
+        "mandatory": false,
+        "description": "同族链接观察占位（合成字段；观察到的链接非穷尽同族）"
+      },
+      "ocr_boundary_notes": {
+        "mandatory": false,
+        "description": "WO 合并 OCR 边界保留说明占位（合成字段）"
+      }
+    }
+  }
+}

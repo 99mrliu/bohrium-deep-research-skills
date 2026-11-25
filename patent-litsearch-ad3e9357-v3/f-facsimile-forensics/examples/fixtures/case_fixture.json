@@ -1,0 +1,19 @@
+{
+  "_comment": "SYNTHETIC FIXTURE mimicking the shape of /input/case.json. All content fabricated for testing; this is not a real evaluation case.",
+  "case_id": "FX-SYNTH-0001",
+  "task": "Locate and anchor bibliographic facts in the supplied synthetic facsimile PDF and synthetic record texts; retain the declared OCR merge boundary; produce a facsimile-vs-database discrepancy ledger.",
+  "materials": [
+    "FX-2099-0123456-A1_frontpage.pdf",
+    "rec_FX1001.txt",
+    "db_FX1001.txt"
+  ],
+  "output_contract": {
+    "case_id": null,
+    "bibliographic_anchors": null,
+    "ocr_boundary_declarations": null,
+    "discrepancy_ledger": null,
+    "legal_status": null,
+    "uncertainty": null,
+    "change_records": null
+  }
+}

@@ -1,0 +1,12 @@
+{
+  "_comment": "SYNTHETIC FIXTURE - example anchor tolerance policy for testing only; not a real case policy.",
+  "allow_whitespace_collapse": true,
+  "allow_page_boundary_merge": true,
+  "declared_boundaries": [
+    {
+      "record": "FX1001",
+      "field": "related_wo",
+      "note": "WO 2099/054321 A1 text was merged across an OCR page boundary (page 2 -> page 3); the merge is retained and declared here rather than silently re-split."
+    }
+  ]
+}

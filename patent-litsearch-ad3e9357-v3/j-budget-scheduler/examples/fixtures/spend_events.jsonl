@@ -1,0 +1,12 @@
+{"_notice": "合成示例：模拟花费事件脚本（逐行作为 budget_ledger.py append --kind spend 的 payload），数字为自造，仅用于演示；首行为零花费说明行。", "step_id": "__meta__", "requests": 0, "seconds": 0, "tokens": 0}
+{"step_id": "v01", "requests": 4, "seconds": 62, "tokens": 720, "note": "合成：v01 实际花费"}
+{"step_id": "v02", "requests": 5, "seconds": 74, "tokens": 810, "note": "合成：v02 实际花费"}
+{"step_id": "v03", "requests": 3, "seconds": 41, "tokens": 520, "note": "合成：v03 实际花费"}
+{"step_id": "v05", "requests": 9, "seconds": 148, "tokens": 1150, "note": "合成：v05 实际花费（超估）"}
+{"step_id": "v09", "requests": 8, "seconds": 160, "tokens": 1040, "note": "合成：v09 实际花费（超估）"}
+{"step_id": "v08", "requests": 2, "seconds": 26, "tokens": 310, "note": "合成：v08 实际花费"}
+{"step_id": "v06", "requests": 3, "seconds": 33, "tokens": 410, "note": "合成：v06 实际花费"}
+{"step_id": "v11", "requests": 2, "seconds": 21, "tokens": 270, "note": "合成：v11 实际花费"}
+{"step_id": "v10", "requests": 3, "seconds": 36, "tokens": 440, "note": "合成：v10 实际花费"}
+{"step_id": "v04", "requests": 9, "seconds": 128, "tokens": 950, "note": "合成：v04 实际花费（超估）"}
+{"step_id": "v07", "requests": 6, "seconds": 105, "tokens": 580, "note": "合成：v07 实际花费；此后剩余秒数低于阈值，触发降级"}

@@ -1,0 +1,9 @@
+{
+  "_notice": "合成示例策略：阈值与成本均为演示用自造参数，正式运行时可按评测预算（64 请求 / 900 秒 / 16384 token）调整。",
+  "safety_margin": 1.15,
+  "unknown_cost_margin": 1.5,
+  "default_cost": {"requests": 4, "seconds": 60, "tokens": 3000},
+  "checkpoint_cost": {"requests": 1, "seconds": 10, "tokens": 1000},
+  "degrade_cost": {"requests": 2, "seconds": 20, "tokens": 2000},
+  "degrade_threshold": {"requests": 8, "seconds": 120, "tokens": 4096}
+}

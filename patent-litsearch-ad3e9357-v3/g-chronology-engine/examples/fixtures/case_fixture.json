@@ -1,0 +1,25 @@
+{
+  "case_id": "SYN-CHRON-001",
+  "synthetic": true,
+  "note": "合成示例 fixture：所有专利记录、日期、优先权号、机构名称均为虚构，仅用于演示与自检，不对应任何真实专利。",
+  "inputs": {
+    "records": ["rec_GX1001.txt", "rec_GX1002.txt", "rec_GX1003.txt"],
+    "estimate_request": "estimate_request.json"
+  },
+  "expected_findings": {
+    "rec_GX1001": "多格式日期；含一个歧义数字日期 6/5/2018（两种解释）与一个口径未判定的 unknown 事件。",
+    "rec_GX1002": "OCR 混淆日期 2O2O-O6-15；授权日 2018-05-01 早于申请日 2019-06-04 → order_violation。",
+    "rec_GX1003": "与 GX1001 构成观测同族，优先权日 2018-06-15 ≠ 2018-06-05 → family_priority_conflict。"
+  },
+  "output_contract": {
+    "case_id": "string，逐字复制自本案 case_id",
+    "status": "ok | partial | failed（须如实；partial 必须说明限制）",
+    "normalized_events": "每记录事件列表：kind/raw/iso/precision/format_tag/interpretations/quote/span/warnings",
+    "timelines": "每记录有序时间轴（含 unplaced 与 warnings）",
+    "conflicts": "结构化冲突记录：order_violation / family_priority_conflict",
+    "term_estimates": "估算输出，必须含 is_estimate=true、not_legal_status=true、assumptions[]、as_of",
+    "sources": "输入文件路径 + sha256",
+    "uncertainty": "不确定性说明（歧义日期、OCR 修复假设、unknown 口径、观测同族不完整等）",
+    "change_records": "增量修改记录（先写诚实骨架，再逐步改进，每次追加）"
+  }
+}
