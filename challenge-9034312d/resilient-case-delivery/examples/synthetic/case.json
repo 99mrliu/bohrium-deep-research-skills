@@ -1,0 +1,27 @@
+{
+  "case_id": "synthetic-resilience-001",
+  "label": "SYNTHETIC",
+  "synthetic": true,
+  "output_contract": {
+    "figure.svg[editable]": {
+      "path": "figure.svg",
+      "kind": "svg",
+      "required": true
+    },
+    "preview@PNG": {
+      "path": "figure.png",
+      "kind": "png",
+      "required": false
+    },
+    "source→mapping": {
+      "path": "data_mapping.json",
+      "kind": "json",
+      "required": true
+    },
+    "delivery report / limits": {
+      "path": "report.md",
+      "kind": "report",
+      "required": true
+    }
+  }
+}

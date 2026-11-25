@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="960" height="540" viewBox="0 0 960 540" role="img">
+  <title>SYNTHETIC Figure 03 — enzymatic assay with inhibition and CSV chart</title>
+  <desc>Authoring fixture only: E catalyses S to P; I inhibits the conversion; a later absorbance readout maps actual synthetic CSV rows to two progress curves.</desc>
+  <defs>
+    <marker id="source-arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0,0 L10,5 L0,10 Z" fill="#38516e"/></marker>
+    <marker id="source-catalysis" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0,0 L10,5 L0,10" fill="none" stroke="#7a5195" stroke-width="2"/></marker>
+  </defs>
+  <style>.box{fill:#f8fbff;stroke:#9dafc6}.entity{fill:#edf5ff;stroke:#426d9b}.process{fill:#fff5dd;stroke:#a67000}.flow{fill:none;stroke:#38516e;stroke-width:2;marker-end:url(#source-arrow)}.catalysis{fill:none;stroke:#7a5195;stroke-width:2;stroke-dasharray:3 3;marker-end:url(#source-catalysis)}.inhibition{stroke:#c9363e;stroke-width:2}.measurement{fill:none;stroke:#7653a6;stroke-width:2;stroke-dasharray:5 3}.txt{font:14px Arial,sans-serif;fill:#1e3048}.small{font:11px Arial,sans-serif;fill:#4e5f73}</style>
+  <rect width="960" height="540" fill="#fff"/>
+  <text x="24" y="30" class="txt" font-weight="bold">SYNTHETIC Figure 03 — NOT EXPERIMENTAL EVIDENCE</text>
+  <g id="source-panel-a">
+    <rect x="24" y="50" width="560" height="250" rx="10" class="box"/>
+    <text x="40" y="76" class="txt">A. Reaction mixture</text>
+    <rect id="source-enzyme" x="54" y="100" width="140" height="48" rx="20" class="entity"/>
+    <text x="124" y="129" text-anchor="middle" class="txt">Synthetic enzyme E</text>
+    <rect id="source-substrate" x="54" y="190" width="140" height="48" rx="20" class="entity"/>
+    <text x="124" y="219" text-anchor="middle" class="txt">Synthetic substrate S</text>
+    <rect id="source-reaction" x="285" y="150" width="145" height="58" rx="8" class="process"/>
+    <text x="357" y="175" text-anchor="middle" class="txt">E-catalysed</text><text x="357" y="193" text-anchor="middle" class="txt">S conversion</text>
+    <rect id="source-product" x="474" y="154" width="91" height="48" rx="20" class="entity"/>
+    <text x="519" y="183" text-anchor="middle" class="txt">Product P</text>
+    <path id="source-flow-s" d="M194,214 C250,214 245,192 285,186" class="flow"/>
+    <path id="source-flow-p" d="M430,178 L474,178" class="flow"/>
+    <path id="source-catalysis-e" d="M194,124 C252,124 250,151 285,161" class="catalysis"/>
+    <rect id="source-inhibitor" x="272" y="239" width="169" height="42" rx="20" class="entity"/>
+    <text x="356" y="265" text-anchor="middle" class="txt">Synthetic inhibitor I</text>
+    <path id="source-inhibition-i" d="M356,239 L356,218" class="inhibition"/>
+    <path d="M345,218 L367,218" class="inhibition"/>
+    <text x="370" y="231" class="small" fill="#c9363e">inhibition (unspecified mechanism)</text>
+  </g>
+  <g id="source-panel-b">
+    <rect x="610" y="50" width="326" height="438" rx="10" class="box"/>
+    <text x="628" y="76" class="txt">B. Detection and records</text>
+    <path id="source-assay" d="M650,110 L670,90 H900 L918,110 L900,142 H670 Z" fill="#f5efff" stroke="#7653a6"/>
+    <text x="784" y="111" text-anchor="middle" class="txt">Synthetic absorbance readout</text>
+    <text x="784" y="130" text-anchor="middle" class="small">product formation</text>
+    <path id="source-measurement" d="M584,178 C620,178 616,116 650,116" class="measurement"/>
+    <path d="M785,142 L785,172" class="measurement"/>
+    <text x="648" y="196" class="small">SYNTHETIC CSV progress curves</text>
+    <rect id="source-chart" x="648" y="210" width="270" height="235" fill="#fff" stroke="#8494a7"/>
+    <path d="M675,405 V235 M675,405 H899" fill="none" stroke="#596579"/>
+    <path id="source-control-series" d="M675,405 L720,355 L765,306 L810,257 L855,210" fill="none" stroke="#276fbf" stroke-width="2"/>
+    <path id="source-inhibitor-series" d="M675,405 L720,378 L765,354 L810,329 L855,306" fill="none" stroke="#e07145" stroke-width="2"/>
+    <text x="690" y="230" class="small">control (blue)</text><text x="795" y="230" class="small">with_inhibitor (orange)</text>
+    <text x="786" y="433" text-anchor="middle" class="small">time_min (rows from assay.csv)</text>
+  </g>
+  <text x="35" y="340" class="txt">Phase dependency: reaction → detection</text>
+  <text x="35" y="364" class="small">All compounds, values, and observations are invented solely for this runnable software example.</text>
+</svg>

@@ -1,0 +1,46 @@
+{
+  "schema": "dual-artifact-quality-gate/expected-matrix-v1",
+  "case_id": "SYNTHETIC-dual-gate-001",
+  "synthetic": true,
+  "basis": ["task.md", "truth_table.json", "semantic_checklist.json"],
+  "expectations": [
+    {"check_id":"coverage.feed","gate":"coverage","truth_ids":["entity.feed.label"],"path":"svg.entities.feed.label","op":"exists","severity":"error"},
+    {"check_id":"coverage.pump","gate":"coverage","truth_ids":["entity.pump.label"],"path":"svg.entities.pump.label","op":"exists","severity":"error"},
+    {"check_id":"coverage.reactor","gate":"coverage","truth_ids":["entity.reactor.label"],"path":"svg.entities.reactor.label","op":"exists","severity":"error"},
+    {"check_id":"coverage.preserved_note","gate":"coverage","truth_ids":["preserve.note.id"],"path":"svg.ids","op":"contains","expected":"unrelated-note","severity":"error"},
+
+    {"check_id":"source.feed.label","gate":"source_support","truth_ids":["entity.feed.label"],"path":"svg.entities.feed.label","op":"eq","expected":"FEED","severity":"error"},
+    {"check_id":"source.pump.label","gate":"source_support","truth_ids":["entity.pump.label"],"path":"svg.entities.pump.label","op":"eq","expected":"PUMP","severity":"error"},
+    {"check_id":"source.reactor.label","gate":"source_support","truth_ids":["entity.reactor.label"],"path":"svg.entities.reactor.label","op":"eq","expected":"REACTOR","severity":"error"},
+
+    {"check_id":"direction.first.from","gate":"direction_marker_semantics","truth_ids":["edge.feed_pump.from"],"path":"svg.edges.feed_to_pump.from","op":"eq","expected":"feed","severity":"error"},
+    {"check_id":"direction.first.to","gate":"direction_marker_semantics","truth_ids":["edge.feed_pump.to"],"path":"svg.edges.feed_to_pump.to","op":"eq","expected":"pump","severity":"error"},
+    {"check_id":"direction.first.geometry","gate":"direction_marker_semantics","truth_ids":["edge.feed_pump.from","edge.feed_pump.to"],"path":"svg.edges.feed_to_pump.geometry.d","op":"eq","expected":"M230 205 L285 205","severity":"error"},
+    {"check_id":"marker.first.end","gate":"direction_marker_semantics","truth_ids":["edge.feed_pump.marker"],"path":"svg.edges.feed_to_pump.marker_end","op":"eq","expected":"arrow","severity":"error"},
+    {"check_id":"direction.second.from","gate":"direction_marker_semantics","truth_ids":["edge.pump_reactor.from"],"path":"svg.edges.pump_to_reactor.from","op":"eq","expected":"pump","severity":"error"},
+    {"check_id":"direction.second.to","gate":"direction_marker_semantics","truth_ids":["edge.pump_reactor.to"],"path":"svg.edges.pump_to_reactor.to","op":"eq","expected":"reactor","severity":"error"},
+    {"check_id":"marker.second.end","gate":"direction_marker_semantics","truth_ids":["edge.pump_reactor.marker"],"path":"svg.edges.pump_to_reactor.marker_end","op":"eq","expected":"arrow","severity":"error"},
+
+    {"check_id":"order.first","gate":"numbering_order","truth_ids":["edge.feed_pump.order"],"path":"svg.edges.feed_to_pump.order","op":"eq","expected":1,"severity":"error"},
+    {"check_id":"order.second","gate":"numbering_order","truth_ids":["edge.pump_reactor.order"],"path":"svg.edges.pump_to_reactor.order","op":"eq","expected":2,"severity":"error"},
+
+    {"check_id":"legend.flow.label","gate":"legend_style","truth_ids":["legend.flow.label"],"path":"svg.legend_items.flow.label","op":"eq","expected":"MATERIAL FLOW (SYNTHETIC)","severity":"error"},
+    {"check_id":"legend.flow.stroke","gate":"legend_style","truth_ids":["legend.flow.stroke"],"path":"svg.legend_items.flow.style.stroke","op":"eq","expected":"#33445a","severity":"error"},
+
+    {"check_id":"chart.svg.run_a.value","gate":"chart_data_values","truth_ids":["chart.run_a.value"],"path":"svg.chart_values.Measurement|Run A.value","op":"approx","expected":2.5,"tolerance":1e-9,"severity":"error"},
+    {"check_id":"chart.svg.run_a.height","gate":"chart_data_values","truth_ids":["chart.run_a.value"],"path":"svg.chart_values.Measurement|Run A.geometry.height","op":"approx","expected":112.5,"tolerance":1e-9,"severity":"error"},
+    {"check_id":"chart.svg.run_a.unit","gate":"chart_data_values","truth_ids":["chart.run_a.unit"],"path":"svg.chart_values.Measurement|Run A.unit","op":"eq","expected":"SYN-U","severity":"error"},
+    {"check_id":"chart.csv.run_a.value","gate":"chart_data_values","truth_ids":["chart.run_a.value"],"path":"csv.measurements.csv.values.Measurement|Run A.value","op":"approx","expected":2.5,"tolerance":1e-9,"severity":"error"},
+    {"check_id":"chart.csv.run_a.unit","gate":"chart_data_values","truth_ids":["chart.run_a.unit"],"path":"csv.measurements.csv.values.Measurement|Run A.unit","op":"eq","expected":"SYN-U","severity":"error"},
+    {"check_id":"chart.svg.run_b.value","gate":"chart_data_values","truth_ids":["chart.run_b.value"],"path":"svg.chart_values.Measurement|Run B.value","op":"approx","expected":4.0,"tolerance":1e-9,"severity":"error"},
+    {"check_id":"chart.svg.run_b.height","gate":"chart_data_values","truth_ids":["chart.run_b.value"],"path":"svg.chart_values.Measurement|Run B.geometry.height","op":"approx","expected":180.0,"tolerance":1e-9,"severity":"error"},
+    {"check_id":"chart.svg.run_b.y","gate":"chart_data_values","truth_ids":["chart.run_b.value"],"path":"svg.chart_values.Measurement|Run B.geometry.y","op":"approx","expected":220.0,"tolerance":1e-9,"severity":"error"},
+    {"check_id":"chart.svg.run_b.unit","gate":"chart_data_values","truth_ids":["chart.run_b.unit"],"path":"svg.chart_values.Measurement|Run B.unit","op":"eq","expected":"SYN-U","severity":"error"},
+    {"check_id":"chart.csv.run_b.value","gate":"chart_data_values","truth_ids":["chart.run_b.value"],"path":"csv.measurements.csv.values.Measurement|Run B.value","op":"approx","expected":4.0,"tolerance":1e-9,"severity":"error"},
+    {"check_id":"chart.csv.run_b.unit","gate":"chart_data_values","truth_ids":["chart.run_b.unit"],"path":"csv.measurements.csv.values.Measurement|Run B.unit","op":"eq","expected":"SYN-U","severity":"error"},
+
+    {"check_id":"layers.required","gate":"editable_layers","truth_ids":[],"task_basis":"task.md: layered editable SVG","path":"svg.layer_set","op":"includes_all","expected":["background","annotations","entities","flows","chart","legend"],"severity":"error"},
+    {"check_id":"layers.editable_text","gate":"editable_layers","truth_ids":[],"task_basis":"task.md: editable text and marks","path":"svg.text_count","op":"gte","expected":15,"severity":"error"},
+    {"check_id":"layers.run_b_mark","gate":"editable_layers","truth_ids":[],"task_basis":"task.md: distinct editable chart marks","path":"svg.chart_values.Measurement|Run B.geometry.width","op":"approx","expected":45.0,"tolerance":1e-9,"severity":"error"}
+  ]
+}

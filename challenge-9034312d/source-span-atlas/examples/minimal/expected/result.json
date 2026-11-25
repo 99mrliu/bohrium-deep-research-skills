@@ -1,0 +1,61 @@
+{
+  "artifacts": {
+    "atlas": "<OUTPUT_DIR>/atlas.json",
+    "editable_svg": "<OUTPUT_DIR>/figure.svg",
+    "report": "<OUTPUT_DIR>/report.md"
+  },
+  "case_id": "synthetic-minimal-source-span-atlas",
+  "change_records": [],
+  "editable_source": "<OUTPUT_DIR>/figure.svg",
+  "scientific_validation_note": "Gate success verifies source spans, locators, declared reviews, CSV mappings, and visual coverage. Scientific correctness still depends on independent comparison against the actual PDF and original figures.",
+  "source_atlas": "<OUTPUT_DIR>/atlas.json",
+  "sources": [
+    {
+      "bytes": 489,
+      "declared_path": "sources/methods.txt",
+      "kind": "methods",
+      "original_pdf_page_offset": 0,
+      "role": "Synthetic methods text",
+      "sha256": "75ccb7e905bbca223dcb11488824b72df73c881f049c9d8d9f78615a3a43552f",
+      "source_id": "methods",
+      "version": "synthetic-methods-v1",
+      "visual_bytes": null,
+      "visual_declared_path": null,
+      "visual_sha256": null
+    },
+    {
+      "bytes": 1524,
+      "declared_path": "sources/original_figure03.svg",
+      "kind": "figure",
+      "original_pdf_page_offset": 0,
+      "role": "Synthetic original Figure 03 to inspect visually",
+      "sha256": "1f851fa3bc8acacd9c7a0df495314c79e71bc31084846dd3dc1a75c3b27bcfe2",
+      "source_id": "figure03",
+      "version": "synthetic-figure03-v1",
+      "visual_bytes": null,
+      "visual_declared_path": null,
+      "visual_sha256": null
+    },
+    {
+      "bytes": 43,
+      "declared_path": "data/measurements.csv",
+      "kind": "csv",
+      "original_pdf_page_offset": 0,
+      "role": "Actual CSV bytes behind chart",
+      "sha256": "d99cf28841a59a5f09e7ca2ba70dd776597d9223d6bab01a784407ceb1bb27e2",
+      "source_id": "measurements",
+      "version": "synthetic-csv-v1",
+      "visual_bytes": null,
+      "visual_declared_path": null,
+      "visual_sha256": null
+    }
+  ],
+  "status": "success",
+  "structured_result": "<OUTPUT_DIR>/result.json",
+  "uncertainties": [
+    "SYNTHETIC example only; values and biological-source-style figure are fabricated solely as a labelled interface fixture and are not scientific evidence.",
+    "The simple renderer is not a publication layout engine; font availability and final journal requirements need native export inspection."
+  ],
+  "verdict": "passed",
+  "verification_report": "<OUTPUT_DIR>/report.md"
+}

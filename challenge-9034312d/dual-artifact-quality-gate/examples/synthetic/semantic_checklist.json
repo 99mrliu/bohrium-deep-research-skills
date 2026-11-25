@@ -1,0 +1,22 @@
+{
+  "schema": "dual-artifact-quality-gate/semantic-checklist-v1",
+  "case_id": "SYNTHETIC-dual-gate-001",
+  "synthetic": true,
+  "expectation_basis": ["task.md", "truth_table.json"],
+  "gates": [
+    {"id":"coverage","required":true,"criterion":"All synthetic source facts and requested output elements are covered.","review_question":"Are FEED, PUMP, REACTOR, two flows, chart, legend and preserved note present?","evidence":["truth_table.json","expected_matrix.json","visual_review.json"]},
+    {"id":"source_support","required":true,"criterion":"Visible entity names equal the invented source terminology exactly.","review_question":"Does the reactor say REACTOR rather than VESSEL?","evidence":["sources/method.md","rendered_observations.json","visual_review.json"]},
+    {"id":"direction_marker_semantics","required":true,"criterion":"Flow endpoints and visible arrowheads follow FEED to PUMP to REACTOR.","review_question":"Does the first visible arrow point right from FEED into PUMP?","evidence":["sources/method.md","before.png","figure.png"]},
+    {"id":"numbering_order","required":true,"criterion":"First and second flow order values equal source steps 1 and 2.","review_question":"Do visible sequence and data-order match the two synthetic source steps?","evidence":["sources/method.md","rendered_observations.json"]},
+    {"id":"legend_style","required":true,"criterion":"Material-flow legend text and stroke match the source and target flow.","review_question":"Is the synthetic legend visible and consistent with the dark flow arrows?","evidence":["sources/method.md","figure.png"]},
+    {"id":"chart_data_values","required":true,"criterion":"Both SVG marks and independent CSV observations equal 2.5 and 4.0 SYN-U.","review_question":"Do bar labels/heights and actual synthetic CSV cells agree for Run A and Run B?","evidence":["sources/measurements.csv","rendered_observations.json","figure.png"]},
+    {"id":"editable_layers","required":true,"criterion":"Six real named SVG layers, editable text and distinct editable chart marks remain.","review_question":"Are text and marks real SVG elements rather than a flattened screenshot?","evidence":["figure.svg","export_audit.json"]},
+    {"id":"export_validity","required":true,"criterion":"SVG XML and actual PNG signature/chunks are structurally valid with nonzero dimensions.","review_question":"Does the real PNG open without clipping and preserve readable labels?","evidence":["figure.svg","figure.png","export_audit.json","visual_review.json"]},
+    {"id":"result_contract","required":true,"criterion":"Every synthetic output_contract key and required disclosure is top-level and valid.","review_question":"Does final result honestly report success with existing output-relative paths?","evidence":["case.json","result.json","contract_audit.json"]},
+    {"id":"source_preserving_edit_diff","required":true,"criterion":"Only four declared label/direction/chart targets change and all protected IDs survive.","review_question":"Are the second flow, note, legend and Run A visually and structurally unchanged?","evidence":["edit_intent.json","source_edit_diff.json","visual_diff.json"]}
+  ],
+  "source_review_requirements": {
+    "figure03_primary_biological_source": {"required":false,"reason":"This wholly invented software fixture contains no figure03 or biological claim; it cannot demonstrate biological validation."},
+    "actual_chart_comparison": {"required":true,"reason":"The synthetic task contains an actual two-bar chart and actual synthetic CSV cells."}
+  }
+}

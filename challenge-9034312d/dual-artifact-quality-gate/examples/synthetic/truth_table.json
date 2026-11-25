@@ -1,0 +1,27 @@
+{
+  "schema": "dual-artifact-quality-gate/truth-table-v1",
+  "case_id": "SYNTHETIC-dual-gate-001",
+  "synthetic": true,
+  "derived_by": "agent from actual synthetic example sources, independently of the SVG fixture renderer",
+  "facts": [
+    {"truth_id":"entity.feed.label","kind":"entity","subject":"feed","predicate":"label","value":"FEED","required":true,"source":{"path":"sources/method.md","locator":"line 3","quote":"The entity labels are FEED, PUMP, and REACTOR."}},
+    {"truth_id":"entity.pump.label","kind":"entity","subject":"pump","predicate":"label","value":"PUMP","required":true,"source":{"path":"sources/method.md","locator":"line 3","quote":"The entity labels are FEED, PUMP, and REACTOR."}},
+    {"truth_id":"entity.reactor.label","kind":"entity","subject":"reactor","predicate":"label","value":"REACTOR","required":true,"source":{"path":"sources/method.md","locator":"line 3","quote":"The entity labels are FEED, PUMP, and REACTOR."}},
+    {"truth_id":"edge.feed_pump.from","kind":"edge","subject":"feed_to_pump","predicate":"from","value":"feed","required":true,"source":{"path":"sources/method.md","locator":"line 4","quote":"Step 1: FEED flows to PUMP with a visible material-flow arrowhead."}},
+    {"truth_id":"edge.feed_pump.to","kind":"edge","subject":"feed_to_pump","predicate":"to","value":"pump","required":true,"source":{"path":"sources/method.md","locator":"line 4","quote":"Step 1: FEED flows to PUMP with a visible material-flow arrowhead."}},
+    {"truth_id":"edge.feed_pump.marker","kind":"edge","subject":"feed_to_pump","predicate":"marker_end","value":"arrow","required":true,"source":{"path":"sources/method.md","locator":"line 4","quote":"Step 1: FEED flows to PUMP with a visible material-flow arrowhead."}},
+    {"truth_id":"edge.feed_pump.order","kind":"edge","subject":"feed_to_pump","predicate":"order","value":1,"required":true,"source":{"path":"sources/method.md","locator":"line 4","quote":"Step 1: FEED flows to PUMP with a visible material-flow arrowhead."}},
+    {"truth_id":"edge.pump_reactor.from","kind":"edge","subject":"pump_to_reactor","predicate":"from","value":"pump","required":true,"source":{"path":"sources/method.md","locator":"line 5","quote":"Step 2: PUMP flows to REACTOR with a visible material-flow arrowhead."}},
+    {"truth_id":"edge.pump_reactor.to","kind":"edge","subject":"pump_to_reactor","predicate":"to","value":"reactor","required":true,"source":{"path":"sources/method.md","locator":"line 5","quote":"Step 2: PUMP flows to REACTOR with a visible material-flow arrowhead."}},
+    {"truth_id":"edge.pump_reactor.marker","kind":"edge","subject":"pump_to_reactor","predicate":"marker_end","value":"arrow","required":true,"source":{"path":"sources/method.md","locator":"line 5","quote":"Step 2: PUMP flows to REACTOR with a visible material-flow arrowhead."}},
+    {"truth_id":"edge.pump_reactor.order","kind":"edge","subject":"pump_to_reactor","predicate":"order","value":2,"required":true,"source":{"path":"sources/method.md","locator":"line 5","quote":"Step 2: PUMP flows to REACTOR with a visible material-flow arrowhead."}},
+    {"truth_id":"legend.flow.label","kind":"legend","subject":"flow","predicate":"label","value":"MATERIAL FLOW (SYNTHETIC)","required":true,"source":{"path":"sources/method.md","locator":"line 6","quote":"The material-flow legend says MATERIAL FLOW (SYNTHETIC) and uses stroke #33445a."}},
+    {"truth_id":"legend.flow.stroke","kind":"legend","subject":"flow","predicate":"stroke","value":"#33445a","required":true,"source":{"path":"sources/method.md","locator":"line 6","quote":"The material-flow legend says MATERIAL FLOW (SYNTHETIC) and uses stroke #33445a."}},
+    {"truth_id":"chart.run_a.value","kind":"chart_value","subject":"Measurement|Run A","predicate":"value","value":2.5,"required":true,"source":{"path":"sources/measurements.csv","locator":"row 2, value column","quote":"Measurement,Run A,2.5,SYN-U"}},
+    {"truth_id":"chart.run_a.unit","kind":"chart_value","subject":"Measurement|Run A","predicate":"unit","value":"SYN-U","required":true,"source":{"path":"sources/measurements.csv","locator":"row 2, unit column","quote":"Measurement,Run A,2.5,SYN-U"}},
+    {"truth_id":"chart.run_b.value","kind":"chart_value","subject":"Measurement|Run B","predicate":"value","value":4.0,"required":true,"source":{"path":"sources/measurements.csv","locator":"row 3, value column","quote":"Measurement,Run B,4.0,SYN-U"}},
+    {"truth_id":"chart.run_b.unit","kind":"chart_value","subject":"Measurement|Run B","predicate":"unit","value":"SYN-U","required":true,"source":{"path":"sources/measurements.csv","locator":"row 3, unit column","quote":"Measurement,Run B,4.0,SYN-U"}},
+    {"truth_id":"preserve.note.id","kind":"preservation","subject":"unrelated-note","predicate":"id","value":"unrelated-note","required":true,"source":{"path":"sources/method.md","locator":"line 7","quote":"The unaddressed note PRESERVE THIS UNADDRESSED NOTE must remain unchanged."}}
+  ],
+  "extraction_uncertainties": []
+}

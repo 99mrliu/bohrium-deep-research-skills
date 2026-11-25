@@ -1,0 +1,28 @@
+{
+  "schema": "dual-artifact-quality-gate/visual-review-v1",
+  "case_id": "SYNTHETIC-dual-gate-001",
+  "synthetic": true,
+  "round": 2,
+  "reviewer": {"type":"agent","identity":"Synthetic example author; actual corrected figure.png and before/after comparison reviewed"},
+  "images_inspected": ["before.png", "figure.png", "visual_diff.png"],
+  "source_comparisons": [
+    {"role":"method_source","source":"sources/method.md","locator":"lines 3-7","inspected":true,"status":"pass","observations":["Corrected figure visibly reads REACTOR, both arrows point from left to right, step text is unchanged, and the unaddressed note is preserved."]},
+    {"role":"actual_data_source","source":"sources/measurements.csv","locator":"rows 2-3","inspected":true,"status":"pass","observations":["Visible bars and labels now read Run A 2.5 SYN-U and Run B 4.0 SYN-U, agreeing with the actual synthetic CSV cells."]}
+  ],
+  "gate_reviews": [
+    {"gate":"coverage","status":"pass","observations":["All required synthetic entities, flows, chart marks, legend, sequence and note remain visible."],"defects":[]},
+    {"gate":"source_support","status":"pass","observations":["FEED, PUMP and REACTOR now agree exactly with the synthetic source."],"defects":[]},
+    {"gate":"direction_marker_semantics","status":"pass","observations":["First arrowhead now points right into PUMP; second still points right into REACTOR."],"defects":[]},
+    {"gate":"numbering_order","status":"pass","observations":["Visible steps and parsed order remain 1 then 2."],"defects":[]},
+    {"gate":"legend_style","status":"pass","observations":["Legend text, dark stroke and arrow style agree with both corrected flows."],"defects":[]},
+    {"gate":"chart_data_values","status":"pass","observations":["Run B visible value changed from 3.0 to 4.0 and its height increased to the expected 180 pixels; Run A is unchanged."],"defects":[]},
+    {"gate":"editable_layers","status":"pass","observations":["Corrected SVG retains six named layers, separate text nodes, paths and bar rectangles."],"defects":[]},
+    {"gate":"export_validity","status":"pass","observations":["Corrected PNG opens at 1000 by 620 with no clipping; before/after and diff images were inspected."],"defects":[]},
+    {"gate":"result_contract","status":"pass","observations":["Final top-level contract fields resolve to actual generated evidence and status reflects final gate results."],"defects":[]},
+    {"gate":"source_preserving_edit_diff","status":"pass","observations":["Visual changes are confined to reactor label, first arrow and Run B bar/value; second flow, note, legend and Run A are unchanged."],"defects":[]}
+  ],
+  "chart_comparisons": [
+    {"chart":"figure.svg#layer-chart","source":"sources/measurements.csv","rows_compared":["Measurement|Run A","Measurement|Run B"],"status":"pass","observations":["Agent compared both visible categories, values and SYN-U units with actual synthetic CSV rows 2-3; bar heights use 45 pixels per unit."]}
+  ],
+  "residual_defects": []
+}

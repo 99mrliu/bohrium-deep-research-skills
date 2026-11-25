@@ -1,0 +1,21 @@
+{
+  "case_id": "SYNTHETIC-ENZYME-001",
+  "synthetic": true,
+  "notice": "SYNTHETIC MINIMAL EXAMPLE ONLY. Not an official case, a primary biological result, or experimental evidence.",
+  "task": "task.md",
+  "semantic_graph": "semantic_graph.json",
+  "primary_figure": "source/figure03.svg",
+  "caption": "source/caption.md",
+  "methods": "source/methods.md",
+  "source_data": "data/assay.csv",
+  "output_contract": {
+    "editable_svg": "figure.svg",
+    "preview_png": "synthetic-preview.png",
+    "export_pdf": "synthetic-preview.pdf",
+    "export_report": "export_report.json",
+    "semantic_graph": "semantic_graph.json",
+    "validation_report": "validation_report.json",
+    "source_comparison": "source_comparison.json",
+    "result_json": "result.json"
+  }
+}

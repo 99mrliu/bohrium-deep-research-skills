@@ -1,0 +1,55 @@
+{
+  "spec_version": "1.0",
+  "synthetic": true,
+  "title": "SYNTHETIC | Microreactor screening route",
+  "subtitle": "Illustrative apparatus + mechanism-safe controls + CSV-driven chart",
+  "description": "Entirely synthetic feed-to-collector apparatus with control relationships and a simulated screening chart. No experimental claim is made.",
+  "canvas": {
+    "width": 1600,
+    "height": 1000,
+    "physical_width": 320,
+    "physical_height": 200
+  },
+  "diagram": {"x": 60, "y": 155, "width": 1480, "height": 440},
+  "nodes": [
+    {"id": "feed", "label": "Feed reservoir", "sublabel": "simulated", "kind": "reservoir", "rank": 0, "lane": 0},
+    {"id": "pump", "label": "Metering pump", "kind": "pump", "rank": 1, "lane": 0},
+    {"id": "reactor", "label": "Microreactor", "kind": "reactor", "rank": 2, "lane": 0},
+    {"id": "detector", "label": "Inline detector", "kind": "detector", "rank": 3, "lane": 0},
+    {"id": "collector", "label": "Fraction collector", "kind": "output", "rank": 4, "lane": 0},
+    {"id": "controller", "label": "Control unit", "kind": "process", "rank": 2, "lane": 1},
+    {"id": "drain", "label": "Drain valve", "kind": "valve", "rank": 3, "lane": 1}
+  ],
+  "edges": [
+    {"id": "e1", "from": "feed", "to": "pump", "kind": "material", "label": "feed"},
+    {"id": "e2", "from": "pump", "to": "reactor", "kind": "material"},
+    {"id": "e3", "from": "reactor", "to": "detector", "kind": "material"},
+    {"id": "e4", "from": "detector", "to": "collector", "kind": "material", "label": "fractions"},
+    {"id": "e5", "from": "detector", "to": "controller", "kind": "information", "label": "signal"},
+    {"id": "e6", "from": "controller", "to": "pump", "kind": "activation", "label": "starts"},
+    {"id": "e7", "from": "controller", "to": "drain", "kind": "inhibition", "label": "blocks"}
+  ],
+  "charts": [
+    {
+      "id": "chart-response",
+      "title": "Simulated response and purity",
+      "data_csv": "chart.csv",
+      "x_column": "residence_time_min",
+      "x_label": "Residence time (min) · synthetic values",
+      "y_label": "Response / purity (%)",
+      "y_columns": [
+        {"column": "response_pct", "label": "Response"},
+        {"column": "purity_pct", "label": "Purity"}
+      ],
+      "box": {"x": 60, "y": 625, "width": 1480, "height": 315}
+    }
+  ],
+  "sources": [
+    {"source_id": "SYN-APPARATUS", "locator": "examples/synthetic/input/source_spec.json:nodes+edges", "support": "Author-created synthetic topology; not extracted from a paper."},
+    {"source_id": "SYN-CSV", "locator": "examples/synthetic/input/chart.csv:all rows", "support": "Author-created simulated numeric values."}
+  ],
+  "footer": "SYNTHETIC EXAMPLE · live SVG text · chart values mapped from chart.csv · no scientific claim",
+  "change_records": [
+    {"version": "1.0.0", "operation": "Initial independently authored synthetic example"}
+  ]
+}

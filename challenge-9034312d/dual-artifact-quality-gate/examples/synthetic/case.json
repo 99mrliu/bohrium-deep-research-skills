@@ -1,0 +1,19 @@
+{
+  "case_id": "SYNTHETIC-dual-gate-001",
+  "synthetic": true,
+  "task": "task.md",
+  "output_contract": {
+    "editable_svg": {"type": "path", "required": true},
+    "preview_png": {"type": "path", "required": true},
+    "truth_table": {"type": "path", "required": true},
+    "semantic_checklist": {"type": "path", "required": true},
+    "expected_matrix": {"type": "path", "required": true},
+    "rendered_observations": {"type": "path", "required": true},
+    "visual_review": {"type": "path", "required": true},
+    "visual_diff": {"type": "path", "required": true},
+    "source_edit_diff": {"type": "path", "required": true},
+    "export_audit": {"type": "path", "required": true},
+    "contract_audit": {"type": "path", "required": true},
+    "qc_report": {"type": "path", "required": true}
+  }
+}

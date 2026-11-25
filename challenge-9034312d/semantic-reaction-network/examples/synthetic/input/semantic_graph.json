@@ -1,0 +1,286 @@
+{
+  "schema_version": "semantic-reaction-network/1.0",
+  "case_id": "SYNTHETIC-ENZYME-001",
+  "synthetic": true,
+  "title": "SYNTHETIC enzymatic assay with inhibition and measurement",
+  "subtitle": "SYNTHETIC fixture only; not a biological claim or experimental evidence",
+  "sources": [
+    {
+      "id": "fig03",
+      "role": "synthetic_figure03",
+      "path": "source/figure03.svg",
+      "version": "synthetic-v1",
+      "locator": "whole figure"
+    },
+    {
+      "id": "caption03",
+      "role": "caption",
+      "path": "source/caption.md",
+      "version": "synthetic-v1",
+      "locator": "Figure 03 caption"
+    },
+    {
+      "id": "methods03",
+      "role": "methods",
+      "path": "source/methods.md",
+      "version": "synthetic-v1",
+      "locator": "Synthetic assay method"
+    },
+    {
+      "id": "csv03",
+      "role": "source_data",
+      "path": "data/assay.csv",
+      "version": "synthetic-v1",
+      "locator": "all rows"
+    }
+  ],
+  "primary_biological_source": {
+    "required": false,
+    "figure": "fig03",
+    "caption": "caption03",
+    "methods": "methods03"
+  },
+  "source_review": {
+    "status": "inspected",
+    "scope": "SYNTHETIC fixture inspection; this does not certify a real primary biological source",
+    "figure_opened": "source/figure03.svg",
+    "caption_read": "source/caption.md",
+    "methods_read": "source/methods.md",
+    "comparison_rule": "entities, compartments, directed typed relations, measurement and chart mapping; not pixels"
+  },
+  "compartments": [
+    {
+      "id": "reaction_mix",
+      "label": "Reaction mixture (synthetic)",
+      "columns": 3
+    },
+    {
+      "id": "detection_pipeline",
+      "label": "Detection and records (synthetic)",
+      "columns": 2
+    }
+  ],
+  "nodes": [
+    {
+      "id": "enzyme",
+      "kind": "entity",
+      "entity_type": "enzyme",
+      "label": "Synthetic enzyme E",
+      "compartment": "reaction_mix",
+      "phase": "reaction",
+      "required": true,
+      "source_refs": ["fig03", "caption03", "methods03"],
+      "ports": [
+        {"id": "catalysis", "direction": "out", "carrier": "signal"}
+      ]
+    },
+    {
+      "id": "substrate",
+      "kind": "entity",
+      "entity_type": "substrate",
+      "label": "Synthetic substrate S",
+      "compartment": "reaction_mix",
+      "phase": "reaction",
+      "required": true,
+      "source_refs": ["fig03", "caption03", "methods03"],
+      "ports": [
+        {"id": "supply", "direction": "out", "carrier": "material"}
+      ]
+    },
+    {
+      "id": "inhibitor",
+      "kind": "entity",
+      "entity_type": "inhibitor",
+      "label": "Synthetic inhibitor I",
+      "compartment": "reaction_mix",
+      "phase": "reaction",
+      "required": true,
+      "source_refs": ["fig03", "caption03", "methods03"],
+      "ports": [
+        {"id": "regulation", "direction": "out", "carrier": "signal"}
+      ]
+    },
+    {
+      "id": "reaction",
+      "kind": "process",
+      "label": "E-catalysed S conversion",
+      "compartment": "reaction_mix",
+      "phase": "reaction",
+      "required": true,
+      "source_refs": ["fig03", "caption03", "methods03"],
+      "ports": [
+        {"id": "substrate_in", "direction": "in", "carrier": "material"},
+        {"id": "catalysis_in", "direction": "in", "carrier": "signal"},
+        {"id": "inhibition_in", "direction": "in", "carrier": "signal"},
+        {"id": "product_out", "direction": "out", "carrier": "material"},
+        {"id": "signal_out", "direction": "out", "carrier": "data"}
+      ]
+    },
+    {
+      "id": "product",
+      "kind": "entity",
+      "entity_type": "product",
+      "label": "Synthetic product P",
+      "compartment": "reaction_mix",
+      "phase": "reaction",
+      "required": true,
+      "source_refs": ["fig03", "caption03", "methods03"],
+      "ports": [
+        {"id": "receive", "direction": "in", "carrier": "material"}
+      ]
+    },
+    {
+      "id": "assay",
+      "kind": "measurement",
+      "label": "Synthetic absorbance readout",
+      "measured_property": "product formation",
+      "compartment": "detection_pipeline",
+      "phase": "detection",
+      "required": true,
+      "source_refs": ["fig03", "caption03", "methods03"],
+      "ports": [
+        {"id": "observation", "direction": "in", "carrier": "data"},
+        {"id": "series", "direction": "out", "carrier": "data"}
+      ]
+    },
+    {
+      "id": "chart",
+      "kind": "chart",
+      "label": "SYNTHETIC CSV progress curves",
+      "required": true,
+      "source_refs": ["fig03", "csv03"],
+      "ports": [
+        {"id": "data_in", "direction": "in", "carrier": "data"}
+      ],
+      "chart": {
+        "csv_path": "data/assay.csv",
+        "x": "time_min",
+        "y": "product_uM",
+        "series": "condition",
+        "x_label": "time_min (min)",
+        "y_label": "product_uM (µM)",
+        "panel": "B",
+        "source_refs": ["csv03"]
+      }
+    }
+  ],
+  "edges": [
+    {
+      "id": "e-substrate-conversion",
+      "kind": "material_flow",
+      "from": {"node": "substrate", "port": "supply"},
+      "to": {"node": "reaction", "port": "substrate_in"},
+      "phase": "reaction",
+      "label": "S enters conversion",
+      "source_refs": ["fig03", "caption03", "methods03"],
+      "visual": {"marker": "arrow"}
+    },
+    {
+      "id": "e-product-formation",
+      "kind": "material_flow",
+      "from": {"node": "reaction", "port": "product_out"},
+      "to": {"node": "product", "port": "receive"},
+      "phase": "reaction",
+      "label": "P formed",
+      "source_refs": ["fig03", "caption03", "methods03"],
+      "visual": {"marker": "arrow"}
+    },
+    {
+      "id": "e-enzyme-catalysis",
+      "kind": "catalysis",
+      "from": {"node": "enzyme", "port": "catalysis"},
+      "to": {"node": "reaction", "port": "catalysis_in"},
+      "phase": "reaction",
+      "label": "catalysis",
+      "source_refs": ["fig03", "caption03", "methods03"],
+      "visual": {"marker": "catalysis-arrow"}
+    },
+    {
+      "id": "e-inhibitor-reaction",
+      "kind": "inhibition",
+      "from": {"node": "inhibitor", "port": "regulation"},
+      "to": {"node": "reaction", "port": "inhibition_in"},
+      "phase": "reaction",
+      "label": "inhibition ⊣",
+      "source_refs": ["fig03", "caption03", "methods03"],
+      "visual": {"marker": "inhibition-bar"}
+    },
+    {
+      "id": "e-reaction-readout",
+      "kind": "measurement",
+      "from": {"node": "reaction", "port": "signal_out"},
+      "to": {"node": "assay", "port": "observation"},
+      "phase": "detection",
+      "label": "measure",
+      "source_refs": ["fig03", "caption03", "methods03"],
+      "visual": {"marker": "measurement-dot"}
+    },
+    {
+      "id": "e-readout-chart",
+      "kind": "measurement",
+      "from": {"node": "assay", "port": "series"},
+      "to": {"node": "chart", "port": "data_in"},
+      "phase": "detection",
+      "label": "mapped CSV records",
+      "source_refs": ["fig03", "csv03"],
+      "visual": {"marker": "measurement-dot"}
+    }
+  ],
+  "phase_dependencies": [
+    {
+      "from_phase": "reaction",
+      "to_phase": "detection",
+      "type": "precedes",
+      "source_refs": ["caption03", "methods03"]
+    }
+  ],
+  "branches": [],
+  "joins": [],
+  "source_semantics": {
+    "source_refs": ["fig03", "caption03", "methods03", "csv03"],
+    "nodes": [
+      {"id": "enzyme", "kind": "entity", "label": "Synthetic enzyme E", "compartment": "reaction_mix"},
+      {"id": "substrate", "kind": "entity", "label": "Synthetic substrate S", "compartment": "reaction_mix"},
+      {"id": "inhibitor", "kind": "entity", "label": "Synthetic inhibitor I", "compartment": "reaction_mix"},
+      {"id": "reaction", "kind": "process", "label": "E-catalysed S conversion", "compartment": "reaction_mix"},
+      {"id": "product", "kind": "entity", "label": "Synthetic product P", "compartment": "reaction_mix"},
+      {"id": "assay", "kind": "measurement", "label": "Synthetic absorbance readout", "compartment": "detection_pipeline"},
+      {"id": "chart", "kind": "chart", "label": "SYNTHETIC CSV progress curves"}
+    ],
+    "edges": [
+      {"id": "e-substrate-conversion", "kind": "material_flow", "from": {"node": "substrate"}, "to": {"node": "reaction"}},
+      {"id": "e-product-formation", "kind": "material_flow", "from": {"node": "reaction"}, "to": {"node": "product"}},
+      {"id": "e-enzyme-catalysis", "kind": "catalysis", "from": {"node": "enzyme"}, "to": {"node": "reaction"}},
+      {"id": "e-inhibitor-reaction", "kind": "inhibition", "from": {"node": "inhibitor"}, "to": {"node": "reaction"}},
+      {"id": "e-reaction-readout", "kind": "measurement", "from": {"node": "reaction"}, "to": {"node": "assay"}},
+      {"id": "e-readout-chart", "kind": "measurement", "from": {"node": "assay"}, "to": {"node": "chart"}}
+    ],
+    "phase_dependencies": [
+      {
+        "from_phase": "reaction",
+        "to_phase": "detection",
+        "type": "precedes",
+        "source_refs": ["caption03", "methods03"]
+      }
+    ]
+  },
+  "change_records": [
+    {
+      "record_id": "synthetic-layout-only",
+      "action": "layout",
+      "scope": "all nodes",
+      "reason": "Different compact layout preserves the inspected source topology; this is not a pixel copy.",
+      "source_refs": ["fig03"]
+    }
+  ],
+  "output_contract": {
+    "editable_svg": "figure.svg",
+    "preview_png": "synthetic-preview.png",
+    "export_pdf": "synthetic-preview.pdf",
+    "export_report": "export_report.json",
+    "semantic_graph": "semantic_graph.json",
+    "validation_report": "validation_report.json",
+    "source_comparison": "source_comparison.json",
+    "result_json": "result.json"
+  }
+}

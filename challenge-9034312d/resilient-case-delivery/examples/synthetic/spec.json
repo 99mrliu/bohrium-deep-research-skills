@@ -1,0 +1,38 @@
+{
+  "schema_version": 1,
+  "case_id": "synthetic-resilience-001",
+  "synthetic": true,
+  "title": "SYNTHETIC two-condition response trace",
+  "mode": "chart",
+  "artifact_key": "figure.svg[editable]",
+  "preview_artifact_key": "preview@PNG",
+  "data_artifact_key": "source→mapping",
+  "report_artifact_key": "delivery report / limits",
+  "materials": [
+    {
+      "id": "synthetic_csv",
+      "path": "source.csv",
+      "kind": "csv",
+      "role": "primary_source",
+      "version": "synthetic-v1",
+      "locator": "Header plus ten synthetic data rows"
+    },
+    {
+      "id": "synthetic_note",
+      "path": "source.txt",
+      "kind": "text",
+      "role": "scope_note",
+      "version": "synthetic-v1",
+      "locator": "Entire short text file"
+    }
+  ],
+  "chart": {
+    "source_id": "synthetic_csv",
+    "x_column": "time_min",
+    "y_column": "response",
+    "series_column": "condition",
+    "title": "Synthetic response over time",
+    "x_label": "Time (min, synthetic)",
+    "y_label": "Response (arbitrary units, synthetic)"
+  }
+}

@@ -1,0 +1,20 @@
+{
+  "schema": "dual-artifact-quality-gate/edit-intent-v1",
+  "mode": "edit",
+  "allowed_changes": [
+    {"id": "reactor-label", "attributes": ["text"]},
+    {"id": "flow-1", "attributes": ["d", "data-from", "data-to"]},
+    {"id": "bar-run-b", "attributes": ["data-value", "height", "y"]},
+    {"id": "bar-b-value", "attributes": ["text", "y"]}
+  ],
+  "required_preserve_ids": [
+    "title",
+    "entity-feed",
+    "entity-pump",
+    "flow-2",
+    "unrelated-note",
+    "legend-flow",
+    "bar-run-a"
+  ],
+  "reason": "Correct only three source-backed synthetic defects; preserve all unaddressed structure."
+}

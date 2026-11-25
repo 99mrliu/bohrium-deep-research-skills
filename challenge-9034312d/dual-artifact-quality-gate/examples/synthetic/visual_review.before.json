@@ -1,0 +1,32 @@
+{
+  "schema": "dual-artifact-quality-gate/visual-review-v1",
+  "case_id": "SYNTHETIC-dual-gate-001",
+  "synthetic": true,
+  "round": 1,
+  "reviewer": {"type":"agent","identity":"Synthetic example author; actual before.png reviewed"},
+  "images_inspected": ["before.png"],
+  "source_comparisons": [
+    {"role":"method_source","source":"sources/method.md","locator":"lines 3-7","inspected":true,"status":"fail","observations":["FEED and PUMP labels and second rightward flow match; first flow visibly points left; REACTOR is visibly replaced by VESSEL."]},
+    {"role":"actual_data_source","source":"sources/measurements.csv","locator":"rows 2-3","inspected":true,"status":"fail","observations":["Run A is 2.5 SYN-U; Run B source cell is 4.0 SYN-U but the visible first bar is 3.0 and shorter."]}
+  ],
+  "gate_reviews": [
+    {"gate":"coverage","status":"pass","observations":["All requested synthetic entities, two flows, legend, note and two bars are visible."],"defects":[]},
+    {"gate":"source_support","status":"fail","observations":["Visible VESSEL conflicts with source REACTOR."],"defects":["Wrong reactor label"]},
+    {"gate":"direction_marker_semantics","status":"fail","observations":["First arrowhead is at the FEED side and points left; source says FEED to PUMP."],"defects":["Reversed first flow"]},
+    {"gate":"numbering_order","status":"pass","observations":["Visible step text says 1 FEED > PUMP and 2 PUMP > REACTOR."],"defects":[]},
+    {"gate":"legend_style","status":"pass","observations":["Dark material-flow swatch and MATERIAL FLOW (SYNTHETIC) label are visible."],"defects":[]},
+    {"gate":"chart_data_values","status":"fail","observations":["Run B visibly reads 3.0 and its bar is lower than the source-derived 4.0 height."],"defects":["Wrong Run B value and geometry"]},
+    {"gate":"editable_layers","status":"pass","observations":["Six named groups and separate text/rect/path marks are visible in the source SVG."],"defects":[]},
+    {"gate":"export_validity","status":"pass","observations":["before.png opens as a 1000 by 620 image with readable labels and no clipped panel."],"defects":[]},
+    {"gate":"result_contract","status":"pass","observations":["Synthetic contract fields are registered in the partial checkpoint."],"defects":[]},
+    {"gate":"source_preserving_edit_diff","status":"pass","observations":["Baseline structure and protected IDs are identified before correction."],"defects":[]}
+  ],
+  "chart_comparisons": [
+    {"chart":"before.svg#layer-chart","source":"sources/measurements.csv","rows_compared":["Measurement|Run A","Measurement|Run B"],"status":"fail","observations":["Run A agrees at 2.5 SYN-U; Run B disagrees: observed 3.0 versus actual synthetic source 4.0 SYN-U."]}
+  ],
+  "residual_defects": [
+    {"code":"LABEL_MISMATCH","gate":"source_support","status":"residual_error","evidence":["before.png"],"impact":"Wrong synthetic entity label."},
+    {"code":"DIRECTION_MISMATCH","gate":"direction_marker_semantics","status":"residual_error","evidence":["before.png"],"impact":"First synthetic material flow is reversed."},
+    {"code":"CHART_VALUE_MISMATCH","gate":"chart_data_values","status":"residual_error","evidence":["before.png","sources/measurements.csv row 3"],"impact":"Run B synthetic value and bar height are wrong."}
+  ]
+}

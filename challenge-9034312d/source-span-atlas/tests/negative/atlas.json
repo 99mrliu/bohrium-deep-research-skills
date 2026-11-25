@@ -1,0 +1,46 @@
+{
+  "schema_version": "source-span-atlas/1.0",
+  "case_id": "synthetic-negative-unsupported",
+  "synthetic": true,
+  "title": "SYNTHETIC negative test — unsupported motor connection",
+  "sources": [
+    {"source_id": "methods", "path": "sources/methods.txt", "kind": "methods", "version": "synthetic-v1"}
+  ],
+  "assertions": [
+    {
+      "id": "A_ROTOR",
+      "category": "entity",
+      "label": "Rotor",
+      "evidence_status": "explicit",
+      "visual": {"id": "visual-rotor"},
+      "evidence": [{"source_id": "methods", "quote": "The rotor is mounted above the chamber.", "locator": {"page": 1, "section": "SYNTHETIC NEGATIVE TEST"}}],
+      "semantic_review": {"result": "match", "reviewed_sources": ["methods"], "reviewer": "synthetic-negative-test", "comparison": "The rotor is explicitly named; this otherwise valid node isolates the negative test to the unsupported connection."}
+    },
+    {
+      "id": "A_CHAMBER",
+      "category": "entity",
+      "label": "Chamber",
+      "evidence_status": "explicit",
+      "visual": {"id": "visual-chamber"},
+      "evidence": [{"source_id": "methods", "quote": "The rotor is mounted above the chamber.", "locator": {"page": 1, "section": "SYNTHETIC NEGATIVE TEST"}}],
+      "semantic_review": {"result": "match", "reviewed_sources": ["methods"], "reviewer": "synthetic-negative-test", "comparison": "The chamber is explicitly named; its spatial description provides no motor or drive connection."}
+    },
+    {
+      "id": "A_UNSUPPORTED_MOTOR",
+      "category": "connection",
+      "label": "Invented motor drive from chamber to rotor",
+      "from": "visual-chamber",
+      "to": "visual-rotor",
+      "evidence_status": "unsupported",
+      "evidence": [],
+      "visual": {"id": "visual-invented-edge"},
+      "semantic_review": {"result": "unreviewed", "reviewed_sources": ["methods"], "reviewer": "synthetic-negative-test", "comparison": "The synthetic source does not support this invented connection."}
+    }
+  ],
+  "output_contract": {
+    "editable_source": "figure.svg",
+    "source_atlas": "atlas.json",
+    "verification_report": "report.md"
+  },
+  "uncertainties": ["Intentional unsupported assertion: the negative gate must fail."]
+}
