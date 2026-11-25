@@ -1,0 +1,30 @@
+{
+  "case_id": "synthetic-figure-twin-v1",
+  "task": "task.md",
+  "spec": "spec.json",
+  "timeout_seconds": 30,
+  "output_contract": {
+    "required_fields": [
+      "case_id", "status", "summary", "sources", "artifacts", "comparison", "mapping",
+      "report", "uncertainty", "change_records", "errors", "reproduction_verdict"
+    ]
+  },
+  "candidates": [
+    {
+      "id": "candidate_a",
+      "label": "Near analytic candidate",
+      "command": ["python3", "../../scripts/paper_figure_twin.py", "emit-synthetic-candidate", "--method", "near", "--output", "{work}/candidate_a.csv"],
+      "cwd": ".",
+      "output": "{work}/candidate_a.csv",
+      "implementation_provenance": "Organizer-authored synthetic analytic method; not paper author code"
+    },
+    {
+      "id": "candidate_b",
+      "label": "Biased analytic candidate",
+      "command": ["python3", "../../scripts/paper_figure_twin.py", "emit-synthetic-candidate", "--method", "biased", "--output", "{work}/candidate_b.json"],
+      "cwd": ".",
+      "output": "{work}/candidate_b.json",
+      "implementation_provenance": "Organizer-authored synthetic analytic method; not paper author code"
+    }
+  ]
+}

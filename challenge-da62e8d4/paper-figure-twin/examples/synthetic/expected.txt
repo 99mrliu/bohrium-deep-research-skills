@@ -1,0 +1,26 @@
+Expected comparison semantics (exact floating-point output may vary by platform):
+
+Both candidate commands execute and return exit code 0. The comparison command returns exit code 2
+because the complete scientific reproduction_verdict is "fail": candidate_b exceeds its predeclared
+tolerances. Delivery is nevertheless complete, so result.json and comparison.json have status="success";
+this is not a partial run, and the task-level errors array is empty.
+
+candidate_a / paper_s1: 9 aligned points, x overlap [0, 8], RMSE approximately 0.0223606798 mV,
+MAE approximately 0.0166666667 mV, max absolute error approximately 0.03 mV, PASS.
+
+candidate_b / paper_s1: 9 aligned points, x overlap [0, 8], errors 0.18 + 0.04*x,
+max absolute error approximately 0.50 mV, FAIL. Its rising signed error supports an attribution
+of systematic positive and x-growing bias, not a claim about author code or paper validity.
+
+Expected artifacts: comparison.json, mapping.json, report.md, result.json, two overlay SVGs,
+two error SVGs, two real overlay PNGs, two real error PNGs, side_by_side.svg and side_by_side.png.
+The run_example.sh wrapper treats comparison exit 2 as expected, validates JSON semantics, runs
+negative tests, and itself exits 0 only when all those assertions succeed.
+
+Negative tests: missing anchors and zero-width x overlap must each produce comparison exit 1,
+status=partial, reproduction_verdict=not_comparable, every dynamically declared contract field, and no
+fabricated comparison.json. Contract parser checks cover list, direct mapping, fields/required_fields,
+and JSON Schema. The JSON Schema integration has an evidence-backed custom field supplied through
+spec.contract_values, keeps that field flattened at result top level in both success and partial runs,
+and never invents a value for an unknown contract field. A fully executed run with an unsupplied custom
+field is delivery-partial and exits 1 even though its numeric comparison was produced.

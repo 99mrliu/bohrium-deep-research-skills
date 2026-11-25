@@ -1,0 +1,10 @@
+{
+  "fields": {
+    "question_response": {
+      "answer_fragment": "42 K；来自 synthetic demo-system，但此负例故意缺失回答级证据。",
+      "evidence_ids": []
+    }
+  },
+  "scientific_status": "degraded",
+  "scientific_notes": ["负例：finalize 必须因 answered field 缺 evidence_ids 返回 2。"]
+}

@@ -1,0 +1,12 @@
+Expected outcome for a correct run (numeric formatting/timestamps may differ):
+
+- spec validation: valid; the recorded SHA-256 matches the canonical spec body.
+- defective_vertex candidate runs first, exits 0 and writes valid JSON, but FAILS the independent root/residual/Vieta checks at base scale and at nonzero rescalings.
+- stable_q_form candidate still runs after that failure, exits 0, its diagnostic line is ignored and its last JSON line parses; it PASSES at all three scales.
+- paper_vs_oracle.status is matched, because paper target [2,3] agrees with mathematical roots [2,3].
+- candidate_vs_paper is mismatched for defective_vertex but matched for stable_q_form at every scale; these comparisons are separate from Oracle truth.
+- oracle_report.json completion_status is complete because the execution loop finished, while oracle_report.json status and result.json status are partial: one candidate fails and this is only a synthetic fixture.
+- result.json top-level status is one of success/partial/unable/refused (partial for this example), never complete.
+- result.json has case_id plus every output_contract key at top level, with no output_contract wrapper; status, sources, uncertainty, and change_records are present, including when requested directly by output_contract.
+- result uncertainty states that candidates are organizer-written rather than author code and that raw data/repository were not fabricated.
+- no candidate source is modified by the run.

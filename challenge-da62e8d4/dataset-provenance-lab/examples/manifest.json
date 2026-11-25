@@ -1,0 +1,78 @@
+{
+  "schema_version": "1.0",
+  "dataset": {
+    "name": "Intentional feature-only overlap fixture",
+    "version": "fixture-v1",
+    "description": "Synthetic minimum example; not a formal case or author data.",
+    "source": {
+      "kind": "synthetic",
+      "declared_by": "dataset-provenance-lab example",
+      "note": "Hand-authored synthetic CSV fixture; no external provenance claim."
+    }
+  },
+  "files": [
+    {
+      "id": "train_part",
+      "path": "train.csv",
+      "role": "train",
+      "sha256": "2535e45c150356ea26c69e95bdbfaa10be579c92dc1b542942292e89614bcebd",
+      "format": "csv",
+      "encoding": "utf-8",
+      "delimiter": ",",
+      "missing_values": [""]
+    },
+    {
+      "id": "test_part",
+      "path": "test.csv",
+      "role": "test",
+      "sha256": "6d16289437f525ce772b1efe3942c310e8b7c8b05a9e1edaf35a0410e704b72c",
+      "format": "csv",
+      "encoding": "utf-8",
+      "delimiter": ",",
+      "missing_values": [""]
+    }
+  ],
+  "target": {
+    "name": "target",
+    "semantic_type": "categorical"
+  },
+  "features": {
+    "names": ["f1", "f2", "f3"],
+    "selection_note": "Fixture columns f1-f3 only; target is excluded."
+  },
+  "split": {
+    "train_file_ids": ["train_part"],
+    "test_file_ids": ["test_part"],
+    "strategy": "Provided files; no resampling performed.",
+    "declared_random_seed": null
+  },
+  "paper_claims": [
+    {
+      "claim_id": "synthetic_rows",
+      "kind": "n_rows",
+      "expected": 14,
+      "page": 1,
+      "quote": "The combined synthetic table has 14 rows.",
+      "locator": {"file_ids": ["train_part", "test_part"]},
+      "evidence_note": "Quote is from synthetic task.md, not a real paper or PDF."
+    },
+    {
+      "claim_id": "synthetic_features",
+      "kind": "n_features",
+      "expected": 3,
+      "page": 1,
+      "quote": "The synthetic task uses 3 features.",
+      "locator": {"file_id": "train_part", "feature_names": ["f1", "f2", "f3"]},
+      "evidence_note": "Quote is from synthetic task.md, not a real paper or PDF."
+    },
+    {
+      "claim_id": "synthetic_split",
+      "kind": "split",
+      "expected": {"train": 8, "test": 6},
+      "page": 1,
+      "quote": "The synthetic split has 8 train rows and 6 test rows.",
+      "locator": {"train_file_ids": ["train_part"], "test_file_ids": ["test_part"]},
+      "evidence_note": "Quote is from synthetic task.md, not a real paper or PDF."
+    }
+  ]
+}

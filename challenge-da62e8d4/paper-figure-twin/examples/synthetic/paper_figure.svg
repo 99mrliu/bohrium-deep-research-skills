@@ -1,0 +1,24 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="800" height="480" viewBox="0 0 800 480">
+  <rect width="800" height="480" fill="white"/>
+  <text x="400" y="28" text-anchor="middle" font-family="Arial,sans-serif" font-size="20" font-weight="bold">Synthetic paper figure — panel a</text>
+  <text x="400" y="48" text-anchor="middle" font-family="Arial,sans-serif" font-size="12">Organizer-created source; manual pixel sampling only</text>
+  <line x1="80" y1="400" x2="720" y2="400" stroke="#111827" stroke-width="2"/>
+  <line x1="80" y1="400" x2="80" y2="60" stroke="#111827" stroke-width="2"/>
+  <g font-family="Arial,sans-serif" font-size="13" fill="#111827">
+    <text x="80" y="422" text-anchor="middle">0</text><text x="240" y="422" text-anchor="middle">2</text>
+    <text x="400" y="422" text-anchor="middle">4</text><text x="560" y="422" text-anchor="middle">6</text>
+    <text x="720" y="422" text-anchor="middle">8</text>
+    <text x="66" y="404" text-anchor="end">0</text><text x="66" y="319" text-anchor="end">0.5</text>
+    <text x="66" y="234" text-anchor="end">1.0</text><text x="66" y="149" text-anchor="end">1.5</text>
+    <text x="66" y="64" text-anchor="end">2.0</text>
+  </g>
+  <g stroke="#d1d5db" stroke-dasharray="3,5">
+    <line x1="80" y1="315" x2="720" y2="315"/><line x1="80" y1="230" x2="720" y2="230"/>
+    <line x1="80" y1="145" x2="720" y2="145"/><line x1="80" y1="60" x2="720" y2="60"/>
+  </g>
+  <polyline points="80,230 120,187.731 160,151.864 200,127.911 240,119.5 280,127.911 320,151.864 360,187.731 400,230 440,272.269 480,308.136 520,332.089 560,340.5 600,332.089 640,308.136 680,272.269 720,230" fill="none" stroke="#111827" stroke-width="3"/>
+  <text x="400" y="455" text-anchor="middle" font-family="Arial,sans-serif" font-size="16">time since start (s)</text>
+  <text x="20" y="230" text-anchor="middle" transform="rotate(-90 20 230)" font-family="Arial,sans-serif" font-size="16">signal (mV)</text>
+  <line x1="580" y1="82" x2="620" y2="82" stroke="#111827" stroke-width="3"/>
+  <text x="628" y="87" font-family="Arial,sans-serif" font-size="14">S1 (synthetic)</text>
+</svg>

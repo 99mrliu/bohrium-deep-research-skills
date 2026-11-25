@@ -1,0 +1,131 @@
+{
+  "artifact_contract": {
+    "intervention_report_json": "intervention_report.json",
+    "intervention_report_md": "intervention_report.md",
+    "result": "result.json",
+    "runs": "runs/index.json"
+  },
+  "case_file": "case.json",
+  "case_id": "synthetic-single-parameter-bug",
+  "hypotheses": [
+    {
+      "direction": "decrease",
+      "falsification": "The negative control fails if any subprocess is executed or a causal conclusion is emitted.",
+      "hypothesis_id": "H_CONFOUNDED",
+      "predicted_signatures": [
+        "No candidate stdout may exist because preflight must reject the plan."
+      ],
+      "statement": "This deliberately invalid plan changes two factors and must yield no causal claim."
+    }
+  ],
+  "metric": {
+    "key": "error",
+    "noise_epsilon": 1e-12
+  },
+  "provenance_notes": [
+    "这是 confounded 负例，必须拒绝执行；不得产生强因果结论。"
+  ],
+  "question": "Reject a simultaneous implementation and parameter intervention before executing any candidate.",
+  "registration": {
+    "plan_sha256": "ec42d96dbdd79ccf7028fe517217b81c220667cebdc72e87f1d1b067dfe2302f",
+    "registered_at": "2026-11-25T00:00:00+08:00"
+  },
+  "runs": [
+    {
+      "argv": [
+        "python3",
+        "candidate_a.py",
+        "--material",
+        "material.txt",
+        "--steps",
+        "4",
+        "--seed",
+        "11"
+      ],
+      "candidate": "A",
+      "cwd": ".",
+      "env": {},
+      "inputs": [
+        "candidate_a.py",
+        "material.txt"
+      ],
+      "outputs": [],
+      "role": "baseline",
+      "run_id": "negative_baseline_1",
+      "timeout_seconds": 10
+    },
+    {
+      "argv": [
+        "python3",
+        "candidate_a.py",
+        "--material",
+        "material.txt",
+        "--steps",
+        "4",
+        "--seed",
+        "22"
+      ],
+      "candidate": "A",
+      "cwd": ".",
+      "env": {},
+      "inputs": [
+        "candidate_a.py",
+        "material.txt"
+      ],
+      "outputs": [],
+      "role": "baseline",
+      "run_id": "negative_baseline_2",
+      "timeout_seconds": 10
+    },
+    {
+      "argv": [
+        "python3",
+        "candidate_b.py",
+        "--material",
+        "material.txt",
+        "--seed",
+        "11"
+      ],
+      "candidate": "A",
+      "cwd": ".",
+      "env": {},
+      "inputs": [
+        "candidate_b.py",
+        "material.txt"
+      ],
+      "outputs": [],
+      "role": "variant",
+      "run_id": "negative_variant",
+      "timeout_seconds": 10
+    }
+  ],
+  "schema_version": 1,
+  "sources": [
+    {
+      "path": "candidate_a.py",
+      "role": "declared baseline candidate; must not execute"
+    },
+    {
+      "path": "candidate_b.py",
+      "role": "confounded implementation; must not execute"
+    }
+  ],
+  "variants": [
+    {
+      "baseline_run_ids": [
+        "negative_baseline_1",
+        "negative_baseline_2"
+      ],
+      "changed_paths": [
+        "parameter.steps",
+        "implementation.integrator"
+      ],
+      "factor": "parameter",
+      "hypothesis_id": "H_CONFOUNDED",
+      "run_ids": [
+        "negative_variant"
+      ],
+      "variant_id": "CONF implementation_and_parameter"
+    }
+  ]
+}

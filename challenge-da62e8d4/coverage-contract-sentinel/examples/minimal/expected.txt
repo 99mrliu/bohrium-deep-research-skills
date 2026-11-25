@@ -1,0 +1,31 @@
+Positive finalize:
+STATUS partial
+CONTRACT PASS
+COVERAGE partial
+SCIENTIFIC degraded
+positive assertions: partial / PASS / partial / degraded; flat standards, sources, uncertainty, changes retained
+
+At every stage the top level is exactly case_id/status/sources/uncertainty/change_records/delivery plus all answer-contract fields.
+status maps scientific complete/degraded/unavailable to success/partial/unable; the three delivery axes remain independent.
+sources exactly mirror registered evidence with id/path/hash/locator/kind. uncertainty contains scientific_notes, unavailable_reasons, and coverage_gaps.
+change_records contains init, three register operations, and finalize with sequential atomic_state snapshots.
+released_data_note remains a structured unavailable with a concrete reason, missing original repository/version, and next steps.
+The two synthetic candidate logs and comparison remain linked; neither is presented as author code or real science.
+coverage.svg always exists; coverage.png also exists when matplotlib is available and init used --with-png.
+
+Negative control (missing evidence):
+STATUS partial (or unable when no substantive answer exists)
+CONTRACT FAIL
+COVERAGE partial
+SCIENTIFIC degraded (or unavailable when no substantive answer exists)
+ERROR: question_response: answered field requires evidence_ids
+negative assertions: missing-evidence answer rejected with exit 2; flat status and uncertainty retained
+
+Placeholder negative:
+STATUS unable
+CONTRACT FAIL
+COVERAGE partial
+SCIENTIFIC unavailable
+
+The failed final still emits all standard fields, records finalize with exit_code 2 and atomic_state.contract_status FAIL.
+Partial/degraded PASS is honest incomplete delivery, not fake success.

@@ -1,0 +1,15 @@
+{
+  "case_id": "synthetic-feature-only-overlap-001",
+  "synthetic": true,
+  "formal_case": false,
+  "output_contract": {
+    "required_fields": [
+      "data_identity",
+      "data_quality",
+      "split_audit",
+      "paper_claim_checks",
+      "method_comparison",
+      "limitations"
+    ]
+  }
+}

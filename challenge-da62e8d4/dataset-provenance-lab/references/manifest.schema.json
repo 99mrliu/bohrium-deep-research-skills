@@ -1,0 +1,126 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://example.invalid/dataset-provenance-lab/manifest.schema.json",
+  "title": "Dataset provenance audit manifest",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["schema_version", "dataset", "files", "target", "features", "split"],
+  "properties": {
+    "schema_version": {"const": "1.0"},
+    "dataset": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["name", "version", "source"],
+      "properties": {
+        "name": {"type": "string", "minLength": 1},
+        "version": {"type": "string", "minLength": 1},
+        "description": {"type": "string"},
+        "source": {
+          "type": "object",
+          "additionalProperties": false,
+          "required": ["kind"],
+          "properties": {
+            "kind": {
+              "enum": ["synthetic", "author_repository", "publisher", "organization_fixture", "other", "unknown"]
+            },
+            "uri": {"type": "string"},
+            "retrieved_at": {"type": "string"},
+            "declared_by": {"type": "string"},
+            "note": {"type": "string"}
+          }
+        }
+      }
+    },
+    "files": {
+      "type": "array",
+      "minItems": 2,
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": ["id", "path", "role", "sha256", "format"],
+        "properties": {
+          "id": {"type": "string", "pattern": "^[A-Za-z0-9_.-]+$"},
+          "path": {"type": "string", "minLength": 1},
+          "role": {"enum": ["train", "test", "validation", "unlabeled", "other"]},
+          "sha256": {"type": "string", "pattern": "^[0-9a-f]{64}$"},
+          "format": {"const": "csv"},
+          "encoding": {"type": "string", "default": "utf-8"},
+          "delimiter": {"type": "string", "minLength": 1, "maxLength": 1, "default": ","},
+          "missing_values": {
+            "type": "array",
+            "items": {"type": "string"},
+            "uniqueItems": true,
+            "default": [""]
+          }
+        }
+      }
+    },
+    "target": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["name"],
+      "properties": {
+        "name": {"type": "string", "minLength": 1},
+        "semantic_type": {"type": "string"},
+        "positive_label": {"type": ["string", "number", "boolean", "null"]}
+      }
+    },
+    "features": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["names"],
+      "properties": {
+        "names": {
+          "type": "array",
+          "minItems": 1,
+          "uniqueItems": true,
+          "items": {"type": "string", "minLength": 1}
+        },
+        "selection_note": {"type": "string"}
+      }
+    },
+    "split": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["train_file_ids", "test_file_ids"],
+      "properties": {
+        "train_file_ids": {"$ref": "#/$defs/fileIdList"},
+        "test_file_ids": {"$ref": "#/$defs/fileIdList"},
+        "strategy": {"type": "string"},
+        "declared_random_seed": {"type": ["integer", "string", "null"]}
+      }
+    },
+    "paper_claims": {
+      "type": "array",
+      "default": [],
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": ["claim_id", "kind", "expected"],
+        "properties": {
+          "claim_id": {"type": "string", "minLength": 1},
+          "kind": {"enum": ["n_rows", "n_features", "split"]},
+          "expected": true,
+          "page": {
+            "anyOf": [
+              {"type": "integer", "minimum": 1},
+              {"type": "string", "minLength": 1}
+            ]
+          },
+          "quote": {"type": "string"},
+          "locator": {"type": "object"},
+          "document_sha256": {"type": "string", "pattern": "^[0-9a-f]{64}$"},
+          "evidence_note": {"type": "string"}
+        }
+      }
+    }
+  },
+  "$defs": {
+    "fileIdList": {
+      "type": "array",
+      "minItems": 1,
+      "uniqueItems": true,
+      "items": {"type": "string", "pattern": "^[A-Za-z0-9_.-]+$"}
+    }
+  }
+}

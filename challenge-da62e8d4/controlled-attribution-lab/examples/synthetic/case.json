@@ -1,0 +1,34 @@
+{
+  "case_id": "synthetic-single-parameter-bug",
+  "objective": "Explain candidate A's excess numerical error without skipping candidate B.",
+  "target": {
+    "name": "integral_exp_minus_x_0_to_1",
+    "value": 0.6321205588285577,
+    "absolute_error_tolerance": 0.02,
+    "source": "material.txt (organizer synthetic target)"
+  },
+  "output_contract": {
+    "fields": [
+      {"name": "reproduction_summary"},
+      {"name": "candidate_comparison"},
+      {"name": "attribution_summary"},
+      {"name": "evidence_boundary"},
+      {"name": "runs"},
+      {"name": "intervention_report_json"},
+      {"name": "intervention_report_md"},
+      {"name": "result"},
+      {"name": "case_id"},
+      {"name": "status"},
+      {"name": "execution_status"},
+      {"name": "sources"},
+      {"name": "uncertainty"},
+      {"name": "change_records"}
+    ]
+  },
+  "provenance": {
+    "organizer_synthetic": true,
+    "author_original_code": false,
+    "full_pmlb": false,
+    "original_data_repository_provided": false
+  }
+}

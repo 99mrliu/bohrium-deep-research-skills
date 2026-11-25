@@ -1,0 +1,17 @@
+{
+  "case_id": "synthetic-coverage-demo",
+  "source_constraints": "组织方仅提供合成题面；未提供作者代码或原始数据仓库。",
+  "output_contract": {
+    "type": "object",
+    "required": [
+      "question_response",
+      "method_comparison",
+      "released_data_note"
+    ],
+    "properties": {
+      "question_response": {"type": "object"},
+      "method_comparison": {"type": "object"},
+      "released_data_note": {"type": "object"}
+    }
+  }
+}

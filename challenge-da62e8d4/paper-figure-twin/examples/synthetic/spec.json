@@ -1,0 +1,53 @@
+{
+  "version": 1,
+  "figure": {
+    "source_file": "paper_figure.svg",
+    "source_locator": "organizer-synthetic-paper#figure=1&page=1&panel=a",
+    "figure": "Synthetic Fig. 1",
+    "page": 1,
+    "panel": "a",
+    "render_dpi": null,
+    "note": "Original self-authored text SVG; no PDF or pre-extracted text layer; not a real paper figure"
+  },
+  "axes": {
+    "x": {
+      "name": "time since start",
+      "paper_unit": "s",
+      "pixel_scale": "linear",
+      "anchors": [
+        {"pixel": 80, "value": 0},
+        {"pixel": 720, "value": 8}
+      ]
+    },
+    "y": {
+      "name": "signal",
+      "paper_unit": "mV",
+      "pixel_scale": "linear",
+      "anchors": [
+        {"pixel": 400, "value": 0},
+        {"pixel": 60, "value": 2}
+      ]
+    }
+  },
+  "tolerances": {
+    "rmse": 0.05,
+    "mae": 0.05,
+    "max_error": 0.05,
+    "unit": "mV",
+    "declared_before_comparison": true,
+    "source": "examples/synthetic/task.md, fixed before either candidate run"
+  },
+  "series": [
+    {
+      "id": "paper_s1",
+      "label": "Synthetic paper S1",
+      "unit": "mV",
+      "x_definition": "time_since_start_s",
+      "points_file": "paper_points.json",
+      "candidate_series": [
+        {"candidate_id": "candidate_a", "series_id": "a_s1", "unit": "mV", "x_definition": "time_since_start_s"},
+        {"candidate_id": "candidate_b", "series_id": "b_s1", "unit": "mV", "x_definition": "time_since_start_s"}
+      ]
+    }
+  ]
+}

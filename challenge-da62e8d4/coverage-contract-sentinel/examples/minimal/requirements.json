@@ -1,0 +1,25 @@
+{
+  "requirements": [
+    {
+      "id": "q1-parameter",
+      "question": "示例参数的值、单位和适用范围是什么，原文页/表/行定位在哪里？",
+      "fields": ["question_response"],
+      "required_artifacts": ["paper_parameter_trace"],
+      "evidence_ids": ["paper-source"]
+    },
+    {
+      "id": "q2-two-candidates",
+      "question": "两个 synthetic candidate 的结果是什么，是否满足事前绝对容差 0.25，差异如何归因？",
+      "fields": ["method_comparison"],
+      "required_artifacts": ["candidate_a_log", "candidate_b_log", "comparison_table"],
+      "evidence_ids": ["run-a", "run-b", "comparison"]
+    },
+    {
+      "id": "q3-data-availability",
+      "question": "是否有原始 released-data 仓库可支持审计；若没有，具体缺失是什么？",
+      "fields": ["released_data_note"],
+      "required_artifacts": ["source_attribution_statement"],
+      "evidence_ids": ["case-attribution"]
+    }
+  ]
+}

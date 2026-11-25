@@ -1,0 +1,18 @@
+SYNTHETIC ORGANIZER MATERIAL — NOT AN ORIGINAL RESEARCH PAPER
+
+Definition and formula
+----------------------
+For a x^2 + b x + c = 0 with a != 0 and discriminant b^2 - 4ac >= 0, the two real roots satisfy:
+
+x = (-b +/- sqrt(b^2 - 4ac)) / (2a).
+
+Vieta identities are x1 + x2 = -b/a and x1*x2 = c/a. Multiplying all three coefficients by the same nonzero scale leaves roots invariant.
+
+Illustrative target table
+-------------------------
+Polynomial: x^2 - 5x + 6 = 0.
+Paper target roots (ascending): [2, 3].
+
+Provenance and limits
+---------------------
+This text was generated solely as a minimal test fixture. Both candidate programs are organizer-written synthetic programs, not author implementations. No original raw dataset or author repository is supplied, and neither may be invented. The target is a paper-like value, not the Oracle's input or definition of mathematical truth.

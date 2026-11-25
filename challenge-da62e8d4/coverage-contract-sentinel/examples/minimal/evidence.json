@@ -1,0 +1,51 @@
+{
+  "evidence": [
+    {
+      "id": "paper-source",
+      "kind": "paper",
+      "path": "inputs/paper_excerpt.md",
+      "locator": {"original_page": 3, "table": "Table 1", "row": "demo-system", "column": "T"},
+      "fields": ["question_response"],
+      "artifacts": ["paper_parameter_trace"],
+      "note": "Synthetic excerpt，仅演示页/表/行定位；不把 kind=paper 当作语义支持。"
+    },
+    {
+      "id": "run-a",
+      "kind": "run",
+      "path": "synthetic_logs/candidate_a.log",
+      "command": "python3 generate_synthetic.py（生成 synthetic 日志；非候选执行器）",
+      "locator": {"lines": "1-6", "value_line": 4, "exit_line": 6},
+      "fields": ["method_comparison"],
+      "artifacts": ["candidate_a_log"],
+      "note": "组织方合成候选 A 的预登记绝对容差为 0.25。"
+    },
+    {
+      "id": "run-b",
+      "kind": "run",
+      "path": "synthetic_logs/candidate_b.log",
+      "command": "python3 generate_synthetic.py（生成 synthetic 日志；非候选执行器）",
+      "locator": {"lines": "1-6", "value_line": 4, "exit_line": 6},
+      "fields": ["method_comparison"],
+      "artifacts": ["candidate_b_log"],
+      "note": "组织方合成候选 B；不是作者原始代码。"
+    },
+    {
+      "id": "comparison",
+      "kind": "comparison",
+      "path": "synthetic_logs/comparison.json",
+      "locator": {"json_pointer": "/comparison", "tolerance_pointer": "/comparison/absolute_tolerance"},
+      "fields": ["method_comparison"],
+      "artifacts": ["comparison_table"],
+      "note": "比较两个 synthetic 值，保留差异和实现设置归因。"
+    },
+    {
+      "id": "case-attribution",
+      "kind": "attribution",
+      "path": "inputs/case.json",
+      "locator": {"json_pointer": "/source_constraints"},
+      "fields": ["released_data_note"],
+      "artifacts": ["source_attribution_statement"],
+      "note": "明确组织方未提供作者代码或原始数据仓库。"
+    }
+  ]
+}

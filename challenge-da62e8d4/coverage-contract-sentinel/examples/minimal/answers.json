@@ -1,0 +1,36 @@
+{
+  "fields": {
+    "question_response": {
+      "answer_fragment": {
+        "value": 42,
+        "unit": "K",
+        "scope": "仅适用于 synthetic demo-system；值来自原合成页 3、Table 1 的 demo-system 行，不代表真实论文结论。"
+      },
+      "evidence_ids": ["paper-source"]
+    },
+    "method_comparison": {
+      "answer_fragment": {
+        "candidate_a": {"value": 10.0, "run_status": "succeeded"},
+        "candidate_b": {"value": 10.1, "run_status": "succeeded"},
+        "absolute_difference": 0.1,
+        "preregistered_absolute_tolerance": 0.25,
+        "within_preregistered_tolerance": true,
+        "difference_attribution": "差异来自生成器为两个 synthetic 实现设置的固定偏移，仅演示比较闭环，不归因于真实数值方法或作者代码。"
+      },
+      "evidence_ids": ["run-a", "run-b", "comparison"]
+    },
+    "released_data_note": {
+      "unavailable": {
+        "reason": "组织方没有提供原始数据仓库或作者代码，只有合成题面与生成日志，因此不能给出 released-data 仓库级复现结论。",
+        "missing_materials": ["原始数据仓库 URL、版本提交或归档定位"],
+        "next_steps": ["取得原始仓库后登记 attribution、environment、parameter、run、comparison 证据，再重新评估本字段。"]
+      },
+      "evidence_ids": ["case-attribution"]
+    }
+  },
+  "scientific_status": "degraded",
+  "scientific_notes": [
+    "两个合成候选均完成，但 released_data_note 显式 unavailable，coverage 必须 partial。",
+    "组织方 synthetic 生成日志和摘录不是作者代码、真实 PDF 或原始数据，不构成真实科学复现。"
+  ]
+}

@@ -1,0 +1,487 @@
+{
+  "artifact_contract": {
+    "intervention_report_json": "intervention_report.json",
+    "intervention_report_md": "intervention_report.md",
+    "result": "result.json",
+    "runs": "runs/index.json"
+  },
+  "case_file": "case.json",
+  "case_id": "synthetic-single-parameter-bug",
+  "contract_values": {
+    "evidence_boundary": {
+      "evidence": [
+        {
+          "locator": "provenance",
+          "path": "case.json"
+        },
+        {
+          "locator": "organizer-synthetic target",
+          "path": "material.txt"
+        },
+        {
+          "locator": "uncertainty and attribution_scope",
+          "path": "intervention_report.json"
+        }
+      ],
+      "value": {
+        "material_scope": "Organizer-synthetic material, two organizer-synthetic candidates, and experiment-defined parameters.",
+        "remaining_review": "Formal PDF, figure, original repository, and untested-factor limitations remain explicit.",
+        "statement": "Evidence is attributable only within tested conditions; no unique root cause or complete author-repository reproduction is claimed."
+      }
+    }
+  },
+  "hypotheses": [
+    {
+      "direction": "decrease",
+      "falsification": "An error increase beyond noise falsifies the direction; an effect within noise is inconclusive.",
+      "hypothesis_id": "H_A_STEPS_FIX",
+      "predicted_signatures": [
+        "The median error decrease exceeds the A baseline pairwise noise floor.",
+        "The fixed-variant estimates move toward TARGET and within_preregistered_tolerance is true.",
+        "candidate remains A and the stdout method remains left_rectangle."
+      ],
+      "statement": "With implementation, material, environment and seeds fixed, increasing only parameter.steps from 4 to 40 decreases candidate A absolute error below the preregistered tolerance."
+    },
+    {
+      "direction": "decrease",
+      "falsification": "An error increase beyond noise falsifies this preregistered direction; an effect within noise is inconclusive.",
+      "hypothesis_id": "H_A_FEWER_STEPS_PREREGISTERED_WRONG_DIRECTION",
+      "predicted_signatures": [
+        "The median error decrease exceeds the A baseline pairwise noise floor.",
+        "The quadrature implementation and material stay unchanged."
+      ],
+      "statement": "Deliberately test the preregistered directional claim that decreasing only parameter.steps from 4 to 2 decreases candidate A absolute error."
+    },
+    {
+      "direction": "unresolved",
+      "falsification": "No directional claim exists to falsify; insufficient separation from noise is inconclusive.",
+      "hypothesis_id": "H_B_SEED_UNRESOLVED",
+      "predicted_signatures": [
+        "Compare the median seed-variant shift with the B baseline pairwise noise floor.",
+        "A within-noise shift remains inconclusive rather than root-cause evidence.",
+        "The Simpson implementation and intervals remain fixed."
+      ],
+      "statement": "For candidate B, changing only seed.value may create a detectable error shift, but no direction is preregistered and the effect must exceed baseline noise."
+    }
+  ],
+  "metric": {
+    "key": "error",
+    "noise_epsilon": 1e-12
+  },
+  "provenance_notes": [
+    "未提供原始数据仓库；本示例没有真实 PDF，不能声称完整作者仓库复现。",
+    "组织方合成示例，不是作者原代码，也不是全量 PMLB。",
+    "steps=4/40/2、Simpson intervals=100、seeds 和 noise scale 均为本实验自行设定，不是论文事实。"
+  ],
+  "question": "Does a single steps-parameter intervention explain candidate A's excess absolute error, while candidate B provides an independent comparison and a noise-floor negative control?",
+  "registration": {
+    "plan_sha256": "7245f9372f2cec99500645b57d4dbb73c64b7a0f0690a1c8b78556450ed7120c",
+    "registered_at": "2026-11-25T00:00:00+08:00"
+  },
+  "runs": [
+    {
+      "argv": [
+        "python3",
+        "candidate_a.py",
+        "--material",
+        "material.txt",
+        "--steps",
+        "4",
+        "--seed",
+        "11",
+        "--noise-scale",
+        "0.002"
+      ],
+      "candidate": "A",
+      "cwd": ".",
+      "env": {
+        "PYTHONHASHSEED": "0"
+      },
+      "inputs": [
+        "candidate_a.py",
+        "material.txt"
+      ],
+      "outputs": [],
+      "role": "baseline",
+      "run_id": "a_baseline_1",
+      "timeout_seconds": 10
+    },
+    {
+      "argv": [
+        "python3",
+        "candidate_a.py",
+        "--material",
+        "material.txt",
+        "--steps",
+        "4",
+        "--seed",
+        "22",
+        "--noise-scale",
+        "0.002"
+      ],
+      "candidate": "A",
+      "cwd": ".",
+      "env": {
+        "PYTHONHASHSEED": "0"
+      },
+      "inputs": [
+        "candidate_a.py",
+        "material.txt"
+      ],
+      "outputs": [],
+      "role": "baseline",
+      "run_id": "a_baseline_2",
+      "timeout_seconds": 10
+    },
+    {
+      "argv": [
+        "python3",
+        "candidate_a.py",
+        "--material",
+        "material.txt",
+        "--steps",
+        "4",
+        "--seed",
+        "33",
+        "--noise-scale",
+        "0.002"
+      ],
+      "candidate": "A",
+      "cwd": ".",
+      "env": {
+        "PYTHONHASHSEED": "0"
+      },
+      "inputs": [
+        "candidate_a.py",
+        "material.txt"
+      ],
+      "outputs": [],
+      "role": "baseline",
+      "run_id": "a_baseline_3",
+      "timeout_seconds": 10
+    },
+    {
+      "argv": [
+        "python3",
+        "candidate_a.py",
+        "--material",
+        "material.txt",
+        "--steps",
+        "40",
+        "--seed",
+        "11",
+        "--noise-scale",
+        "0.002"
+      ],
+      "candidate": "A",
+      "cwd": ".",
+      "env": {
+        "PYTHONHASHSEED": "0"
+      },
+      "inputs": [
+        "candidate_a.py",
+        "material.txt"
+      ],
+      "outputs": [],
+      "role": "variant",
+      "run_id": "a_steps_40_1",
+      "timeout_seconds": 10
+    },
+    {
+      "argv": [
+        "python3",
+        "candidate_a.py",
+        "--material",
+        "material.txt",
+        "--steps",
+        "40",
+        "--seed",
+        "22",
+        "--noise-scale",
+        "0.002"
+      ],
+      "candidate": "A",
+      "cwd": ".",
+      "env": {
+        "PYTHONHASHSEED": "0"
+      },
+      "inputs": [
+        "candidate_a.py",
+        "material.txt"
+      ],
+      "outputs": [],
+      "role": "variant",
+      "run_id": "a_steps_40_2",
+      "timeout_seconds": 10
+    },
+    {
+      "argv": [
+        "python3",
+        "candidate_a.py",
+        "--material",
+        "material.txt",
+        "--steps",
+        "2",
+        "--seed",
+        "11",
+        "--noise-scale",
+        "0.002"
+      ],
+      "candidate": "A",
+      "cwd": ".",
+      "env": {
+        "PYTHONHASHSEED": "0"
+      },
+      "inputs": [
+        "candidate_a.py",
+        "material.txt"
+      ],
+      "outputs": [],
+      "role": "variant",
+      "run_id": "a_steps_2_1",
+      "timeout_seconds": 10
+    },
+    {
+      "argv": [
+        "python3",
+        "candidate_a.py",
+        "--material",
+        "material.txt",
+        "--steps",
+        "2",
+        "--seed",
+        "22",
+        "--noise-scale",
+        "0.002"
+      ],
+      "candidate": "A",
+      "cwd": ".",
+      "env": {
+        "PYTHONHASHSEED": "0"
+      },
+      "inputs": [
+        "candidate_a.py",
+        "material.txt"
+      ],
+      "outputs": [],
+      "role": "variant",
+      "run_id": "a_steps_2_2",
+      "timeout_seconds": 10
+    },
+    {
+      "argv": [
+        "python3",
+        "candidate_b.py",
+        "--material",
+        "material.txt",
+        "--seed",
+        "101"
+      ],
+      "candidate": "B",
+      "cwd": ".",
+      "env": {
+        "PYTHONHASHSEED": "0"
+      },
+      "inputs": [
+        "candidate_b.py",
+        "material.txt"
+      ],
+      "outputs": [],
+      "role": "baseline",
+      "run_id": "b_baseline_1",
+      "timeout_seconds": 10
+    },
+    {
+      "argv": [
+        "python3",
+        "candidate_b.py",
+        "--material",
+        "material.txt",
+        "--seed",
+        "202"
+      ],
+      "candidate": "B",
+      "cwd": ".",
+      "env": {
+        "PYTHONHASHSEED": "0"
+      },
+      "inputs": [
+        "candidate_b.py",
+        "material.txt"
+      ],
+      "outputs": [],
+      "role": "baseline",
+      "run_id": "b_baseline_2",
+      "timeout_seconds": 10
+    },
+    {
+      "argv": [
+        "python3",
+        "candidate_b.py",
+        "--material",
+        "material.txt",
+        "--seed",
+        "303"
+      ],
+      "candidate": "B",
+      "cwd": ".",
+      "env": {
+        "PYTHONHASHSEED": "0"
+      },
+      "inputs": [
+        "candidate_b.py",
+        "material.txt"
+      ],
+      "outputs": [],
+      "role": "baseline",
+      "run_id": "b_baseline_3",
+      "timeout_seconds": 10
+    },
+    {
+      "argv": [
+        "python3",
+        "candidate_b.py",
+        "--material",
+        "material.txt",
+        "--seed",
+        "401"
+      ],
+      "candidate": "B",
+      "cwd": ".",
+      "env": {
+        "PYTHONHASHSEED": "0"
+      },
+      "inputs": [
+        "candidate_b.py",
+        "material.txt"
+      ],
+      "outputs": [],
+      "role": "variant",
+      "run_id": "b_seed_variant_1",
+      "timeout_seconds": 10
+    },
+    {
+      "argv": [
+        "python3",
+        "candidate_b.py",
+        "--material",
+        "material.txt",
+        "--seed",
+        "502"
+      ],
+      "candidate": "B",
+      "cwd": ".",
+      "env": {
+        "PYTHONHASHSEED": "0"
+      },
+      "inputs": [
+        "candidate_b.py",
+        "material.txt"
+      ],
+      "outputs": [],
+      "role": "variant",
+      "run_id": "b_seed_variant_2",
+      "timeout_seconds": 10
+    },
+    {
+      "argv": [
+        "python3",
+        "candidate_b.py",
+        "--material",
+        "material.txt",
+        "--seed",
+        "603"
+      ],
+      "candidate": "B",
+      "cwd": ".",
+      "env": {
+        "PYTHONHASHSEED": "0"
+      },
+      "inputs": [
+        "candidate_b.py",
+        "material.txt"
+      ],
+      "outputs": [],
+      "role": "variant",
+      "run_id": "b_seed_variant_3",
+      "timeout_seconds": 10
+    }
+  ],
+  "schema_version": 1,
+  "sources": [
+    {
+      "path": "case.json",
+      "role": "synthetic case and output contract"
+    },
+    {
+      "path": "task.md",
+      "role": "synthetic task"
+    },
+    {
+      "path": "material.txt",
+      "role": "organizer-synthetic material and target"
+    },
+    {
+      "path": "candidate_a.py",
+      "role": "candidate A; organizer synthetic, not author original code"
+    },
+    {
+      "path": "candidate_b.py",
+      "role": "candidate B; independent Simpson comparison"
+    }
+  ],
+  "variants": [
+    {
+      "baseline_run_ids": [
+        "a_baseline_1",
+        "a_baseline_2",
+        "a_baseline_3"
+      ],
+      "changed_paths": [
+        "parameter.steps"
+      ],
+      "factor": "parameter",
+      "hypothesis_id": "H_A_STEPS_FIX",
+      "run_ids": [
+        "a_steps_40_1",
+        "a_steps_40_2"
+      ],
+      "variant_id": "A_steps_4_to_40"
+    },
+    {
+      "baseline_run_ids": [
+        "a_baseline_1",
+        "a_baseline_2",
+        "a_baseline_3"
+      ],
+      "changed_paths": [
+        "parameter.steps"
+      ],
+      "factor": "parameter",
+      "hypothesis_id": "H_A_FEWER_STEPS_PREREGISTERED_WRONG_DIRECTION",
+      "run_ids": [
+        "a_steps_2_1",
+        "a_steps_2_2"
+      ],
+      "variant_id": "A_steps_4_to_2"
+    },
+    {
+      "baseline_run_ids": [
+        "b_baseline_1",
+        "b_baseline_2",
+        "b_baseline_3"
+      ],
+      "changed_paths": [
+        "seed.value"
+      ],
+      "factor": "seed",
+      "hypothesis_id": "H_B_SEED_UNRESOLVED",
+      "run_ids": [
+        "b_seed_variant_1",
+        "b_seed_variant_2",
+        "b_seed_variant_3"
+      ],
+      "variant_id": "B_seed_only"
+    }
+  ]
+}

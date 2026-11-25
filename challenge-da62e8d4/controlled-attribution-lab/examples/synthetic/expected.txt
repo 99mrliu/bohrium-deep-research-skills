@@ -1,0 +1,39 @@
+Expected positive plan:
+  exit code: 0
+  result.status: success (legal top-level delivery status)
+  result.execution_status: complete (all 13 commands, artifacts, and answers delivered)
+  execution_command_count: 13
+  candidates actually run: A and B
+  case_id and every case.output_contract field are read from the real case.json
+  standard case_id/status/sources/uncertainty/change_records fields are present
+  answer fields contain generated evidence or evidence-backed contract_values;
+  they are not replaced by plan.artifact_contract paths
+  A_steps_4_to_40 / H_A_STEPS_FIX: supported
+    only parameter.steps changes; error decreases beyond the A baseline noise floor
+  A_steps_4_to_2 / H_A_FEWER_STEPS_PREREGISTERED_WRONG_DIRECTION: falsified
+    the preregistered decrease direction is contradicted by an increase beyond noise
+  B_seed_only / H_B_SEED_UNRESOLVED: inconclusive
+    effect is zero and does not exceed the B baseline noise floor
+
+Expected confounded negative plan:
+  exit code: 2
+  result.status: unable
+  result.execution_status: rejected
+  execution_command_count: 0
+  no candidate run directories, stdout, or stderr are created
+  every answer field remains top-level; unavailable answers explain the rejection
+  validation error identifies changed_paths exactly-one-factor violation
+
+All scientific statements remain bounded:
+  受控证据支持/未支持
+  attributable only within tested conditions
+  neither success/complete execution nor supported proves a unique root cause
+
+case.output_contract is the formal answer-field contract. plan.artifact_contract
+only maps artifact names to safe relative paths. The legacy plan.output_contract
+path mapping remains readable for backward compatibility, but is never the source
+of formal case answers.
+
+The synthetic example contains no real PDF and no original data repository. Its
+parameters are experiment-defined, not paper facts. Formal PDF/figure checks are
+required by SKILL.md and references/protocol.md for an actual case.

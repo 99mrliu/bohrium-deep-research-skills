@@ -1,0 +1,94 @@
+{
+  "spec": {
+    "candidates": [
+      {
+        "argv": [
+          "python3",
+          "candidate_defective.py",
+          "--a={a}",
+          "--b={b}",
+          "--c={c}",
+          "--json-out",
+          "{json_out}"
+        ],
+        "author_code": false,
+        "cwd": "{spec_dir}",
+        "id": "defective_vertex",
+        "output": {
+          "mode": "json_file",
+          "path": "{json_out}"
+        },
+        "source_path": "candidate_defective.py",
+        "timeout_seconds": 5
+      },
+      {
+        "argv": [
+          "python3",
+          "candidate_stable.py",
+          "--a={a}",
+          "--b={b}",
+          "--c={c}"
+        ],
+        "author_code": false,
+        "cwd": "{spec_dir}",
+        "id": "stable_q_form",
+        "output": {
+          "mode": "last_json_line"
+        },
+        "source_path": "candidate_stable.py",
+        "timeout_seconds": 5
+      }
+    ],
+    "case_file": "case.json",
+    "contract_values": {
+      "difference_attribution": [
+        {
+          "candidate_id": "defective_vertex",
+          "evidence": "Valid JSON and exit 0 do not save the candidate from independent root, residual, and Vieta failures.",
+          "source_level_defect": "The source intentionally assigns -b/(2a) to both output roots, duplicating the vertex instead of computing sqrt(discriminant)-separated roots."
+        },
+        {
+          "candidate_id": "stable_q_form",
+          "source_level_observation": "The stable q-form agrees with the independent Decimal result for this fixture; this does not establish general correctness."
+        }
+      ],
+      "reproduction_summary": {
+        "paper_like_target": "[2,3]",
+        "statement": "Synthetic independent mathematical check only; paper reproduction and author-code reproduction are not claimed."
+      }
+    },
+    "evaluation_mode": "synthetic",
+    "oracle": {
+      "parameters": {
+        "a": "1",
+        "b": "-5",
+        "c": "6",
+        "precision": 80
+      },
+      "scaling_factors": [
+        "1",
+        "1e-6",
+        "1e6"
+      ],
+      "tolerances": {
+        "abs": "1e-12",
+        "rel": "1e-12",
+        "residual_abs": "1e-12",
+        "residual_scaled": "1e-12"
+      },
+      "type": "quadratic_roots"
+    },
+    "paper_materials": [
+      "paper.txt"
+    ],
+    "paper_target": {
+      "roots": [
+        "2",
+        "3"
+      ]
+    },
+    "spec_version": "1.0",
+    "task_file": "task.md"
+  },
+  "spec_sha256": "e08646a5d37d2795b629f678a32cc73cd2f986d0910f69fd66542f63e160e465"
+}
