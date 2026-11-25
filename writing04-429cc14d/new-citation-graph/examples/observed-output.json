@@ -1,0 +1,35 @@
+{
+  "parts": [
+    {
+      "id": "body1",
+      "text": "Synthetic claim.",
+      "marker": "[1,2]"
+    },
+    {
+      "id": "caption1",
+      "text": "Synthetic caption.",
+      "marker": "[1,?missing]"
+    }
+  ],
+  "bibliography": [
+    {
+      "number": 1,
+      "key": "b",
+      "record": "Synthetic B"
+    },
+    {
+      "number": 2,
+      "key": "a",
+      "record": "Synthetic A"
+    }
+  ],
+  "uncited": [
+    "unused"
+  ],
+  "issues": [
+    {
+      "part": "caption1",
+      "missing_key": "missing"
+    }
+  ]
+}

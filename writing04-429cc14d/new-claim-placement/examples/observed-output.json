@@ -1,0 +1,20 @@
+[
+  {
+    "claim_id": "s1",
+    "claim": "Synthetic intervention improved outcome.",
+    "proposed_citations": [
+      "R1"
+    ],
+    "state": "semantic_review_required",
+    "incomplete_anchors": [],
+    "instruction": "Place only after checking that the quoted source supports this specific claim; keep source locator."
+  },
+  {
+    "claim_id": "s2",
+    "claim": "Synthetic unsupported claim.",
+    "proposed_citations": [],
+    "state": "needs_evidence",
+    "incomplete_anchors": [],
+    "instruction": "Place only after checking that the quoted source supports this specific claim; keep source locator."
+  }
+]

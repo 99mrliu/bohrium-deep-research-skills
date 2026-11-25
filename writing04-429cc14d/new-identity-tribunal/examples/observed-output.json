@@ -1,0 +1,29 @@
+[
+  {
+    "ids": [
+      "a",
+      "b"
+    ],
+    "decision": "same_identifier_review_metadata",
+    "reason": "same DOI",
+    "auto_merge": false
+  },
+  {
+    "ids": [
+      "a",
+      "c"
+    ],
+    "decision": "candidate_review",
+    "reason": "same normalized title and year",
+    "auto_merge": false
+  },
+  {
+    "ids": [
+      "b",
+      "c"
+    ],
+    "decision": "candidate_review",
+    "reason": "same normalized title and year",
+    "auto_merge": false
+  }
+]

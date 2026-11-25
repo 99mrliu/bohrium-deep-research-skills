@@ -1,0 +1,25 @@
+{
+  "references": {
+    "a": "Synthetic A",
+    "b": "Synthetic B",
+    "unused": "Synthetic unused"
+  },
+  "parts": [
+    {
+      "id": "body1",
+      "text": "Synthetic claim.",
+      "citations": [
+        "b",
+        "a"
+      ]
+    },
+    {
+      "id": "caption1",
+      "text": "Synthetic caption.",
+      "citations": [
+        "b",
+        "missing"
+      ]
+    }
+  ]
+}
