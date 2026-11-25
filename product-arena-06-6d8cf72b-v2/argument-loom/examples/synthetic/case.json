@@ -1,0 +1,85 @@
+{
+  "case_id": "synthetic-argument-loom-001",
+  "synthetic": true,
+  "task_file": "task.md",
+  "papers": [
+    {
+      "source_id": "synthetic-lumen-beads",
+      "path": "sources/paper.txt",
+      "representation": "sources/paper.json"
+    }
+  ],
+  "output_contract": {
+    "type": "object",
+    "additionalProperties": false,
+    "required": [
+      "case_id",
+      "status",
+      "summary",
+      "outputs",
+      "source_status",
+      "uncertainties",
+      "change_records"
+    ],
+    "properties": {
+      "case_id": {
+        "type": "string",
+        "const": "synthetic-argument-loom-001"
+      },
+      "status": {
+        "type": "string",
+        "enum": ["complete", "partial", "failed"]
+      },
+      "summary": {
+        "type": "string",
+        "minLength": 1
+      },
+      "outputs": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": ["argument_graph", "notes", "graph_markdown", "audit"],
+        "properties": {
+          "argument_graph": {"type": "string", "minLength": 1},
+          "notes": {"type": "string", "minLength": 1},
+          "graph_markdown": {"type": "string", "minLength": 1},
+          "audit": {"type": "string", "minLength": 1}
+        }
+      },
+      "source_status": {
+        "type": "array",
+        "minItems": 1,
+        "items": {
+          "type": "object",
+          "additionalProperties": false,
+          "required": ["source_id", "status", "detail"],
+          "properties": {
+            "source_id": {"type": "string", "minLength": 1},
+            "status": {
+              "type": "string",
+              "enum": ["readable", "partial", "unreadable", "missing"]
+            },
+            "detail": {"type": "string", "minLength": 1}
+          }
+        }
+      },
+      "uncertainties": {
+        "type": "array",
+        "minItems": 1,
+        "items": {"type": "string", "minLength": 1}
+      },
+      "change_records": {
+        "type": "array",
+        "minItems": 1,
+        "items": {
+          "type": "object",
+          "additionalProperties": false,
+          "required": ["action", "detail"],
+          "properties": {
+            "action": {"type": "string", "minLength": 1},
+            "detail": {"type": "string", "minLength": 1}
+          }
+        }
+      }
+    }
+  }
+}

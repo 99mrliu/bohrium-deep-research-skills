@@ -1,0 +1,146 @@
+{
+  "case_id": "synthetic-numerical-replication-a-b-v1",
+  "synthetic": true,
+  "numeric_ledger_path": "numeric_ledger.json",
+  "output_contract": {
+    "type": "object",
+    "properties": {
+      "case_id": {"type": "string"},
+      "status": {"type": "string", "enum": ["complete", "partial", "failed"]},
+      "direct_answer": {
+        "type": "object",
+        "properties": {
+          "answer": {"type": "string"},
+          "comparisons": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "properties": {
+                "method": {"type": "string"},
+                "condition": {"type": "string"},
+                "relative_reduction_percent": {"type": "string"},
+                "percentage_point_reduction": {"type": "string"},
+                "provenance": {"type": "string", "enum": ["independently_calculated"]}
+              },
+              "required": ["method", "condition", "relative_reduction_percent", "percentage_point_reduction", "provenance"],
+              "additionalProperties": false
+            }
+          },
+          "caveats": {"type": "array", "items": {"type": "string"}}
+        },
+        "required": ["answer", "comparisons", "caveats"],
+        "additionalProperties": false
+      },
+      "numerical_findings": {
+        "type": "array",
+        "items": {
+          "type": "object",
+          "properties": {
+            "calculation_id": {"type": "string"},
+            "operation": {"type": "string"},
+            "actual": {"type": "string"},
+            "expected": {"type": "string"},
+            "calculation_match": {"type": "boolean"},
+            "formula": {"type": "string"},
+            "provenance": {"type": "string"},
+            "input_anchors": {"type": "array", "items": {"type": "string"}},
+            "output_unit": {"type": "string"}
+          },
+          "required": ["calculation_id", "operation", "actual", "expected", "calculation_match", "formula", "provenance", "input_anchors", "output_unit"],
+          "additionalProperties": false
+        }
+      },
+      "notes": {
+        "type": "object",
+        "properties": {
+          "summary": {"type": "string"},
+          "limitations": {"type": "array", "items": {"type": "string"}},
+          "visual_comparison": {"type": "string"}
+        },
+        "required": ["summary", "limitations", "visual_comparison"],
+        "additionalProperties": false
+      },
+      "sources": {
+        "type": "array",
+        "items": {
+          "type": "object",
+          "properties": {
+            "source_id": {"type": "string"},
+            "path": {"type": "string"},
+            "status": {"type": "string", "enum": ["readable", "missing", "unreadable"]},
+            "uncertainty": {"type": "string"}
+          },
+          "required": ["source_id", "path", "status", "uncertainty"],
+          "additionalProperties": false
+        }
+      },
+      "uncertainty": {"type": "array", "items": {"type": "string"}},
+      "change_records": {
+        "type": "array",
+        "items": {
+          "type": "object",
+          "properties": {
+            "sequence": {"type": "integer", "minimum": 1},
+            "action": {"type": "string"},
+            "detail": {"type": "string"}
+          },
+          "required": ["sequence", "action", "detail"],
+          "additionalProperties": false
+        }
+      },
+      "artifacts": {"type": "array", "items": {"type": "string"}}
+    },
+    "required": ["case_id", "status", "direct_answer", "numerical_findings", "notes", "sources", "uncertainty", "change_records", "artifacts"],
+    "additionalProperties": false
+  },
+  "response": {
+    "direct_answer": {
+      "answer": "SYNTHETIC: High-temperature relative reductions are 25% for Method A and 20% for Method B, with 10 and 4 percentage-point reductions. Low-temperature relative reductions are both 25%, with 3 and 2 percentage-point reductions for A and B.",
+      "comparisons": [
+        {
+          "method": "Method A",
+          "condition": "high temperature",
+          "relative_reduction_percent": "25",
+          "percentage_point_reduction": "10",
+          "provenance": "independently_calculated"
+        },
+        {
+          "method": "Method B",
+          "condition": "high temperature",
+          "relative_reduction_percent": "20",
+          "percentage_point_reduction": "4",
+          "provenance": "independently_calculated"
+        },
+        {
+          "method": "Method A",
+          "condition": "low temperature",
+          "relative_reduction_percent": "25",
+          "percentage_point_reduction": "3",
+          "provenance": "independently_calculated"
+        },
+        {
+          "method": "Method B",
+          "condition": "low temperature",
+          "relative_reduction_percent": "25",
+          "percentage_point_reduction": "2",
+          "provenance": "independently_calculated"
+        }
+      ],
+      "caveats": [
+        "SYNTHETIC fictional values only; lower error is better.",
+        "Repeated measurements on the same eight fictional specimens are correlated and are not independent biological replicates.",
+        "The 40-to-30 change is a 25% relative reduction and 10 percentage points, not a 10% relative reduction.",
+        "No original Figure 1 was supplied; figure values and original-to-derived agreement are missing."
+      ]
+    },
+    "notes": {
+      "summary": "SYNTHETIC direct QA is answered first. Thirteen independently calculated checks exercise percent reduction, percentage points, ratio, signed difference, sum, product, and division. Body/table values for Method A high-temperature endpoints agree; the original figure input remains missing.",
+      "limitations": [
+        "No real literature, original PDF, OCR, external data, statistical independence, confidence interval, or significance test is involved.",
+        "Integer inputs and two-decimal rounded calculations do not establish significant figures or measurement uncertainty.",
+        "The arithmetic sum/product checks are not scientifically pooled endpoints."
+      ],
+      "visual_comparison": "comparison.svg is a labelled SYNTHETIC derived plot of extracted values only, explicitly NOT ORIGINAL and not proof of source correctness. Original render, crop, and visual agreement are missing."
+    }
+  }
+}

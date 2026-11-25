@@ -1,0 +1,297 @@
+{
+  "case_id": "synthetic-lumenfen-semantic-coverage-001",
+  "synthetic": true,
+  "label": "SYNTHETIC — entirely fictional; not real research evidence",
+  "materials": [
+    "source.json"
+  ],
+  "output_contract": {
+    "type": "object",
+    "additionalProperties": false,
+    "required": [
+      "case_id",
+      "Q1",
+      "Q2",
+      "Q3"
+    ],
+    "properties": {
+      "case_id": {
+        "type": "string",
+        "const": "synthetic-lumenfen-semantic-coverage-001"
+      },
+      "Q1": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": [
+          "item_id",
+          "question",
+          "answer",
+          "status",
+          "evidence",
+          "checked_scope"
+        ],
+        "properties": {
+          "item_id": {
+            "type": "string",
+            "const": "Q1"
+          },
+          "question": {
+            "type": "string",
+            "minLength": 1,
+            "maxLength": 500
+          },
+          "answer": {
+            "type": "string",
+            "minLength": 1,
+            "maxLength": 900
+          },
+          "status": {
+            "type": "string",
+            "enum": [
+              "answered",
+              "not_reported",
+              "unreadable",
+              "missing"
+            ]
+          },
+          "evidence": {
+            "type": "array",
+            "minItems": 0,
+            "maxItems": 4,
+            "items": {
+              "type": "object",
+              "additionalProperties": false,
+              "required": [
+                "evidence_id",
+                "source_id",
+                "anchor",
+                "quote",
+                "evidence_role"
+              ],
+              "properties": {
+                "evidence_id": {
+                  "type": "string",
+                  "minLength": 1,
+                  "maxLength": 60
+                },
+                "source_id": {
+                  "type": "string",
+                  "const": "SYNTH-LUMENFEN-2026"
+                },
+                "anchor": {
+                  "type": "string",
+                  "enum": [
+                    "S1",
+                    "S2",
+                    "T1"
+                  ]
+                },
+                "quote": {
+                  "type": "string",
+                  "minLength": 1,
+                  "maxLength": 1200
+                },
+                "evidence_role": {
+                  "type": "string",
+                  "enum": [
+                    "author_reported",
+                    "formula_derived_from_reported",
+                    "mixed",
+                    "context_only"
+                  ]
+                }
+              }
+            }
+          },
+          "checked_scope": {
+            "type": "string",
+            "minLength": 20,
+            "maxLength": 1200
+          }
+        }
+      },
+      "Q2": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": [
+          "item_id",
+          "question",
+          "answer",
+          "status",
+          "evidence",
+          "checked_scope"
+        ],
+        "properties": {
+          "item_id": {
+            "type": "string",
+            "const": "Q2"
+          },
+          "question": {
+            "type": "string",
+            "minLength": 1,
+            "maxLength": 500
+          },
+          "answer": {
+            "type": "string",
+            "minLength": 1,
+            "maxLength": 900
+          },
+          "status": {
+            "type": "string",
+            "enum": [
+              "answered",
+              "not_reported",
+              "unreadable",
+              "missing"
+            ]
+          },
+          "evidence": {
+            "type": "array",
+            "minItems": 0,
+            "maxItems": 4,
+            "items": {
+              "type": "object",
+              "additionalProperties": false,
+              "required": [
+                "evidence_id",
+                "source_id",
+                "anchor",
+                "quote",
+                "evidence_role"
+              ],
+              "properties": {
+                "evidence_id": {
+                  "type": "string",
+                  "minLength": 1,
+                  "maxLength": 60
+                },
+                "source_id": {
+                  "type": "string",
+                  "const": "SYNTH-LUMENFEN-2026"
+                },
+                "anchor": {
+                  "type": "string",
+                  "enum": [
+                    "S1",
+                    "S2",
+                    "T1"
+                  ]
+                },
+                "quote": {
+                  "type": "string",
+                  "minLength": 1,
+                  "maxLength": 1200
+                },
+                "evidence_role": {
+                  "type": "string",
+                  "enum": [
+                    "author_reported",
+                    "formula_derived_from_reported",
+                    "mixed",
+                    "context_only"
+                  ]
+                }
+              }
+            }
+          },
+          "checked_scope": {
+            "type": "string",
+            "minLength": 20,
+            "maxLength": 1200
+          }
+        }
+      },
+      "Q3": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": [
+          "item_id",
+          "question",
+          "answer",
+          "status",
+          "evidence",
+          "checked_scope"
+        ],
+        "properties": {
+          "item_id": {
+            "type": "string",
+            "const": "Q3"
+          },
+          "question": {
+            "type": "string",
+            "minLength": 1,
+            "maxLength": 500
+          },
+          "answer": {
+            "type": "string",
+            "minLength": 1,
+            "maxLength": 900
+          },
+          "status": {
+            "type": "string",
+            "enum": [
+              "answered",
+              "not_reported",
+              "unreadable",
+              "missing"
+            ]
+          },
+          "evidence": {
+            "type": "array",
+            "minItems": 0,
+            "maxItems": 4,
+            "items": {
+              "type": "object",
+              "additionalProperties": false,
+              "required": [
+                "evidence_id",
+                "source_id",
+                "anchor",
+                "quote",
+                "evidence_role"
+              ],
+              "properties": {
+                "evidence_id": {
+                  "type": "string",
+                  "minLength": 1,
+                  "maxLength": 60
+                },
+                "source_id": {
+                  "type": "string",
+                  "const": "SYNTH-LUMENFEN-2026"
+                },
+                "anchor": {
+                  "type": "string",
+                  "enum": [
+                    "S1",
+                    "S2",
+                    "T1"
+                  ]
+                },
+                "quote": {
+                  "type": "string",
+                  "minLength": 1,
+                  "maxLength": 1200
+                },
+                "evidence_role": {
+                  "type": "string",
+                  "enum": [
+                    "author_reported",
+                    "formula_derived_from_reported",
+                    "mixed",
+                    "context_only"
+                  ]
+                }
+              }
+            }
+          },
+          "checked_scope": {
+            "type": "string",
+            "minLength": 20,
+            "maxLength": 1200
+          }
+        }
+      }
+    }
+  }
+}

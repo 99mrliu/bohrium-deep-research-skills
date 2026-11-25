@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="1000" height="620" viewBox="0 0 1000 620" role="img" aria-labelledby="title desc">
+<title id="title">SYNTHETIC — Derived numerical comparison</title>
+<desc id="desc">Signed bar chart generated solely from anchored ledger values. It is not an original figure and does not validate the source.</desc>
+<rect width="1000" height="620" fill="#fbfcfe"/>
+<style>text{font-family:Arial,Helvetica,sans-serif;fill:#172436}.small{font-size:14px}.label{font-size:16px}.value{font-size:15px;font-weight:bold}.tick{font-size:13px;fill:#526174}</style>
+<text x="50" y="42" font-size="24" font-weight="bold">SYNTHETIC — Numerical comparison from extracted values</text>
+<text x="50" y="72" class="label" fill="#9b3b2e">DERIVED COMPARISON — NOT ORIGINAL; NOT PROOF OF SOURCE CORRECTNESS</text>
+<text x="50" y="101" class="small">Conditions and values are anchored in verification.json; inspect original page/crops separately.</text>
+<line x1="90" y1="440.00" x2="950" y2="440.00" stroke="#dce2ea" stroke-width="1"/>
+<text x="80" y="444.00" text-anchor="end" class="tick">0.0</text>
+<line x1="90" y1="378.00" x2="950" y2="378.00" stroke="#dce2ea" stroke-width="1"/>
+<text x="80" y="382.00" text-anchor="end" class="tick">9.0</text>
+<line x1="90" y1="316.00" x2="950" y2="316.00" stroke="#dce2ea" stroke-width="1"/>
+<text x="80" y="320.00" text-anchor="end" class="tick">17.9</text>
+<line x1="90" y1="254.00" x2="950" y2="254.00" stroke="#dce2ea" stroke-width="1"/>
+<text x="80" y="258.00" text-anchor="end" class="tick">26.9</text>
+<line x1="90" y1="192.00" x2="950" y2="192.00" stroke="#dce2ea" stroke-width="1"/>
+<text x="80" y="196.00" text-anchor="end" class="tick">35.8</text>
+<line x1="90" y1="130.00" x2="950" y2="130.00" stroke="#dce2ea" stroke-width="1"/>
+<text x="80" y="134.00" text-anchor="end" class="tick">44.8</text>
+<line x1="90" y1="130" x2="90" y2="440" stroke="#607085"/>
+<line x1="90" y1="440.00" x2="950" y2="440.00" stroke="#607085"/>
+<text x="28" y="285" transform="rotate(-90 28 285)" text-anchor="middle" class="label">Error (%)</text>
+<rect data-value-id="a_high_control" data-unit="percent" x="122.45" y="163.21" width="55.17" height="276.79" rx="3" fill="#465f78"><title>Control: 40 percent</title></rect>
+<text x="150.04" y="155.21" text-anchor="middle" class="value">40</text>
+<rect data-value-id="a_high_treatment" data-unit="percent" x="203.58" y="232.41" width="55.17" height="207.59" rx="3" fill="#d06b4f"><title>Treatment: 30 percent</title></rect>
+<text x="231.17" y="224.41" text-anchor="middle" class="value">30</text>
+<rect data-value-id="b_high_control" data-unit="percent" x="337.45" y="301.61" width="55.17" height="138.39" rx="3" fill="#465f78"><title>Control: 20 percent</title></rect>
+<text x="365.04" y="293.61" text-anchor="middle" class="value">20</text>
+<rect data-value-id="b_high_treatment" data-unit="percent" x="418.58" y="329.29" width="55.17" height="110.71" rx="3" fill="#d06b4f"><title>Treatment: 16 percent</title></rect>
+<text x="446.17" y="321.29" text-anchor="middle" class="value">16</text>
+<rect data-value-id="a_low_control" data-unit="percent" x="552.45" y="356.96" width="55.17" height="83.04" rx="3" fill="#465f78"><title>Control: 12 percent</title></rect>
+<text x="580.04" y="348.96" text-anchor="middle" class="value">12</text>
+<rect data-value-id="a_low_treatment" data-unit="percent" x="633.58" y="377.72" width="55.17" height="62.28" rx="3" fill="#d06b4f"><title>Treatment: 9 percent</title></rect>
+<text x="661.17" y="369.72" text-anchor="middle" class="value">9</text>
+<rect data-value-id="b_low_control" data-unit="percent" x="767.45" y="384.64" width="55.17" height="55.36" rx="3" fill="#465f78"><title>Control: 8 percent</title></rect>
+<text x="795.04" y="376.64" text-anchor="middle" class="value">8</text>
+<rect data-value-id="b_low_treatment" data-unit="percent" x="848.58" y="398.48" width="55.17" height="41.52" rx="3" fill="#d06b4f"><title>Treatment: 6 percent</title></rect>
+<text x="876.17" y="390.48" text-anchor="middle" class="value">6</text>
+<text x="197.50" y="468" text-anchor="middle" class="label">A — high</text>
+<text x="412.50" y="468" text-anchor="middle" class="label">B — high</text>
+<text x="627.50" y="468" text-anchor="middle" class="label">A — low</text>
+<text x="842.50" y="468" text-anchor="middle" class="label">B — low</text>
+<rect x="100" y="512" width="20" height="20" fill="#465f78"/>
+<text x="130" y="528" class="label">Control</text>
+<rect x="310" y="512" width="20" height="20" fill="#d06b4f"/>
+<text x="340" y="528" class="label">Treatment</text>
+<text x="50" y="574" class="small">Arithmetic verification is independent; repeated measurements are not independent replicates.</text>
+<text x="50" y="598" class="small">No confidence intervals or statistical significance are inferred.</text>
+</svg>

@@ -1,0 +1,25 @@
+{
+  "case_id": "synthetic-aurora-leaf-qv7-zt3",
+  "synthetic": true,
+  "status": "partial",
+  "machine_visual_truth_verified": false,
+  "machine_visual_truth_note": "The validator checks records and attestations only; it cannot verify actual agent sight or pixel truth.",
+  "errors": [],
+  "warnings": [
+    {
+      "code": "READING_ORDER_UNCERTAIN",
+      "state": "uncertain",
+      "message": "synth-page-000: double/multi-column reading order is uncertain",
+      "claim_ids": []
+    },
+    {
+      "code": "BODY_CORROBORATION_NOT_REPORTED",
+      "state": "not_reported",
+      "message": "claim-cell-measured-intervention-23: direct original-cell evidence remains reviewed; independent body corroboration is absent",
+      "claim_ids": [
+        "claim-cell-measured-intervention-23"
+      ]
+    }
+  ],
+  "unresolved_claims": []
+}

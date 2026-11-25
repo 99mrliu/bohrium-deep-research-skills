@@ -1,0 +1,433 @@
+{
+  "schema_version": "1.0",
+  "ledger_id": "synthetic-methods-a-b-low-high-errors-v1",
+  "synthetic": true,
+  "numbers_matter": true,
+  "sources": [
+    {
+      "source_id": "fictional-source",
+      "path": "materials/fictional_source.md",
+      "uncertainty": "Entirely synthetic text; no external literature claim or original PDF is present."
+    }
+  ],
+  "values": [
+    {
+      "value_id": "a_high_control",
+      "number": "40",
+      "unit": "percent",
+      "provenance": "author_reported",
+      "anchor": {
+        "source_id": "fictional-source",
+        "locator": "synthetic page 1, Table 1",
+        "row": "Method A",
+        "column": "High control (%)",
+        "condition": "high temperature, control",
+        "unit": "percent",
+        "quote": "| Method A | 12 | 9 | 40 | 30 |",
+        "char_start": 419,
+        "char_end": 450
+      }
+    },
+    {
+      "value_id": "a_high_treatment",
+      "number": "30",
+      "unit": "percent",
+      "provenance": "author_reported",
+      "anchor": {
+        "source_id": "fictional-source",
+        "locator": "synthetic page 1, Table 1",
+        "row": "Method A",
+        "column": "High treatment (%)",
+        "condition": "high temperature, treatment",
+        "unit": "percent",
+        "quote": "| Method A | 12 | 9 | 40 | 30 |",
+        "char_start": 419,
+        "char_end": 450
+      }
+    },
+    {
+      "value_id": "b_high_control",
+      "number": "20",
+      "unit": "percent",
+      "provenance": "author_reported",
+      "anchor": {
+        "source_id": "fictional-source",
+        "locator": "synthetic page 1, Table 1",
+        "row": "Method B",
+        "column": "High control (%)",
+        "condition": "high temperature, control",
+        "unit": "percent",
+        "quote": "| Method B | 8 | 6 | 20 | 16 |",
+        "char_start": 451,
+        "char_end": 481
+      }
+    },
+    {
+      "value_id": "b_high_treatment",
+      "number": "16",
+      "unit": "percent",
+      "provenance": "author_reported",
+      "anchor": {
+        "source_id": "fictional-source",
+        "locator": "synthetic page 1, Table 1",
+        "row": "Method B",
+        "column": "High treatment (%)",
+        "condition": "high temperature, treatment",
+        "unit": "percent",
+        "quote": "| Method B | 8 | 6 | 20 | 16 |",
+        "char_start": 451,
+        "char_end": 481
+      }
+    },
+    {
+      "value_id": "a_low_control",
+      "number": "12",
+      "unit": "percent",
+      "provenance": "author_reported",
+      "anchor": {
+        "source_id": "fictional-source",
+        "locator": "synthetic page 1, Table 1",
+        "row": "Method A",
+        "column": "Low control (%)",
+        "condition": "low temperature, control",
+        "unit": "percent",
+        "quote": "| Method A | 12 | 9 | 40 | 30 |",
+        "char_start": 419,
+        "char_end": 450
+      }
+    },
+    {
+      "value_id": "a_low_treatment",
+      "number": "9",
+      "unit": "percent",
+      "provenance": "author_reported",
+      "anchor": {
+        "source_id": "fictional-source",
+        "locator": "synthetic page 1, Table 1",
+        "row": "Method A",
+        "column": "Low treatment (%)",
+        "condition": "low temperature, treatment",
+        "unit": "percent",
+        "quote": "| Method A | 12 | 9 | 40 | 30 |",
+        "char_start": 419,
+        "char_end": 450
+      }
+    },
+    {
+      "value_id": "b_low_control",
+      "number": "8",
+      "unit": "percent",
+      "provenance": "author_reported",
+      "anchor": {
+        "source_id": "fictional-source",
+        "locator": "synthetic page 1, Table 1",
+        "row": "Method B",
+        "column": "Low control (%)",
+        "condition": "low temperature, control",
+        "unit": "percent",
+        "quote": "| Method B | 8 | 6 | 20 | 16 |",
+        "char_start": 451,
+        "char_end": 481
+      }
+    },
+    {
+      "value_id": "b_low_treatment",
+      "number": "6",
+      "unit": "percent",
+      "provenance": "author_reported",
+      "anchor": {
+        "source_id": "fictional-source",
+        "locator": "synthetic page 1, Table 1",
+        "row": "Method B",
+        "column": "Low treatment (%)",
+        "condition": "low temperature, treatment",
+        "unit": "percent",
+        "quote": "| Method B | 8 | 6 | 20 | 16 |",
+        "char_start": 451,
+        "char_end": 481
+      }
+    },
+    {
+      "value_id": "a_high_body_control",
+      "number": "40",
+      "unit": "percent",
+      "provenance": "author_reported",
+      "anchor": {
+        "source_id": "fictional-source",
+        "locator": "synthetic page 1, Body statement, sentence 1",
+        "row": "Method A body assertion",
+        "column": "initial high-temperature error",
+        "condition": "high temperature, control",
+        "unit": "percent",
+        "quote": "High temperature, Method A: error changed from 40% to 30%",
+        "char_start": 502,
+        "char_end": 559
+      }
+    },
+    {
+      "value_id": "a_high_body_treatment",
+      "number": "30",
+      "unit": "percent",
+      "provenance": "author_reported",
+      "anchor": {
+        "source_id": "fictional-source",
+        "locator": "synthetic page 1, Body statement, sentence 1",
+        "row": "Method A body assertion",
+        "column": "final high-temperature error",
+        "condition": "high temperature, treatment",
+        "unit": "percent",
+        "quote": "High temperature, Method A: error changed from 40% to 30%",
+        "char_start": 502,
+        "char_end": 559
+      }
+    },
+    {
+      "value_id": "figure_1_a_high_control",
+      "number": null,
+      "unit": "percent",
+      "provenance": "missing",
+      "anchor": {
+        "source_id": "fictional-source",
+        "locator": "synthetic page 1, Measurements and missing displays, Figure 1 reference",
+        "row": "Method A (referenced only)",
+        "column": "High control (referenced only)",
+        "condition": "high temperature, control; original figure unavailable",
+        "unit": "percent",
+        "quote": null
+      },
+      "note": "No original Figure 1 was supplied; null is not a zero and no pixel estimate was made."
+    }
+  ],
+  "calculations": [
+    {
+      "calculation_id": "a_high_relative_reduction",
+      "operation": "percent_relative_change",
+      "provenance": "independently_calculated",
+      "direction": "reduction",
+      "operands": {"initial": "a_high_control", "final": "a_high_treatment"},
+      "expected": "25",
+      "expected_basis": "Independent hand check: (40-30)/40 * 100 = 25.",
+      "tolerance": {"type": "absolute", "value": "0.0000001"},
+      "rounding": {"places": 2, "mode": "ROUND_HALF_UP"},
+      "note": "Positive 25 denotes reduction; signed change would be -25 percent."
+    },
+    {
+      "calculation_id": "a_high_pp_reduction",
+      "operation": "percentage_point_difference",
+      "provenance": "independently_calculated",
+      "direction": "reduction",
+      "operands": {"initial": "a_high_control", "final": "a_high_treatment"},
+      "expected": "10",
+      "expected_basis": "Independent hand check: 40 percentage points minus 30 percentage points = 10.",
+      "tolerance": {"type": "absolute", "value": "0.0000001"},
+      "rounding": {"places": 2, "mode": "ROUND_HALF_UP"}
+    },
+    {
+      "calculation_id": "b_high_relative_reduction",
+      "operation": "percent_relative_change",
+      "provenance": "independently_calculated",
+      "direction": "reduction",
+      "operands": {"initial": "b_high_control", "final": "b_high_treatment"},
+      "expected": "20",
+      "expected_basis": "Independent hand check: (20-16)/20 * 100 = 20.",
+      "tolerance": {"type": "absolute", "value": "0.0000001"},
+      "rounding": {"places": 2, "mode": "ROUND_HALF_UP"}
+    },
+    {
+      "calculation_id": "b_high_pp_reduction",
+      "operation": "percentage_point_difference",
+      "provenance": "independently_calculated",
+      "direction": "reduction",
+      "operands": {"initial": "b_high_control", "final": "b_high_treatment"},
+      "expected": "4",
+      "expected_basis": "Independent hand check: 20 minus 16 = 4 percentage points.",
+      "tolerance": {"type": "absolute", "value": "0.0000001"},
+      "rounding": {"places": 2, "mode": "ROUND_HALF_UP"}
+    },
+    {
+      "calculation_id": "a_low_relative_reduction",
+      "operation": "percent_relative_change",
+      "provenance": "independently_calculated",
+      "direction": "reduction",
+      "operands": {"initial": "a_low_control", "final": "a_low_treatment"},
+      "expected": "25",
+      "expected_basis": "Independent hand check: (12-9)/12 * 100 = 25.",
+      "tolerance": {"type": "absolute", "value": "0.0000001"},
+      "rounding": {"places": 2, "mode": "ROUND_HALF_UP"}
+    },
+    {
+      "calculation_id": "a_low_pp_reduction",
+      "operation": "percentage_point_difference",
+      "provenance": "independently_calculated",
+      "direction": "reduction",
+      "operands": {"initial": "a_low_control", "final": "a_low_treatment"},
+      "expected": "3",
+      "expected_basis": "Independent hand check: 12 minus 9 = 3 percentage points.",
+      "tolerance": {"type": "absolute", "value": "0.0000001"},
+      "rounding": {"places": 2, "mode": "ROUND_HALF_UP"}
+    },
+    {
+      "calculation_id": "b_low_relative_reduction",
+      "operation": "percent_relative_change",
+      "provenance": "independently_calculated",
+      "direction": "reduction",
+      "operands": {"initial": "b_low_control", "final": "b_low_treatment"},
+      "expected": "25",
+      "expected_basis": "Independent hand check: (8-6)/8 * 100 = 25.",
+      "tolerance": {"type": "absolute", "value": "0.0000001"},
+      "rounding": {"places": 2, "mode": "ROUND_HALF_UP"}
+    },
+    {
+      "calculation_id": "b_low_pp_reduction",
+      "operation": "percentage_point_difference",
+      "provenance": "independently_calculated",
+      "direction": "reduction",
+      "operands": {"initial": "b_low_control", "final": "b_low_treatment"},
+      "expected": "2",
+      "expected_basis": "Independent hand check: 8 minus 6 = 2 percentage points.",
+      "tolerance": {"type": "absolute", "value": "0.0000001"},
+      "rounding": {"places": 2, "mode": "ROUND_HALF_UP"}
+    },
+    {
+      "calculation_id": "a_high_final_initial_ratio",
+      "operation": "ratio",
+      "provenance": "independently_calculated",
+      "direction": "signed",
+      "ratio_order": "final_over_initial",
+      "operands": {"initial": "a_high_control", "final": "a_high_treatment"},
+      "expected": "0.75",
+      "expected_basis": "Independent simplified fraction: 30/40 = 3/4.",
+      "tolerance": {"type": "absolute", "value": "0.0000001"},
+      "rounding": {"places": 2, "mode": "ROUND_HALF_UP"}
+    },
+    {
+      "calculation_id": "a_high_signed_difference",
+      "operation": "difference",
+      "provenance": "independently_calculated",
+      "direction": "signed",
+      "operands": {"initial": "a_high_control", "final": "a_high_treatment"},
+      "expected": "-10",
+      "expected_basis": "Independent sign check: final minus initial = 30-40.",
+      "tolerance": {"type": "absolute", "value": "0.0000001"},
+      "rounding": {"places": 2, "mode": "ROUND_HALF_UP"}
+    },
+    {
+      "calculation_id": "low_control_arithmetic_sum",
+      "operation": "sum",
+      "provenance": "independently_calculated",
+      "direction": "signed",
+      "operands": {"method_a": "a_low_control", "method_b": "b_low_control"},
+      "expected": "20",
+      "expected_basis": "Independent arithmetic coverage check: 12+8 = 20; no pooled scientific interpretation.",
+      "tolerance": {"type": "absolute", "value": "0.0000001"},
+      "rounding": {"places": 2, "mode": "ROUND_HALF_UP"},
+      "note": "Arithmetic-only operation test; summing method errors is not a scientific pooled endpoint."
+    },
+    {
+      "calculation_id": "low_control_arithmetic_product",
+      "operation": "product",
+      "provenance": "independently_calculated",
+      "direction": "signed",
+      "operands": {"method_a": "a_low_control", "method_b": "b_low_control"},
+      "output_unit": "percent * percent",
+      "expected": "96",
+      "expected_basis": "Independent arithmetic coverage check: 12*8 = 96; compound unit retained.",
+      "tolerance": {"type": "absolute", "value": "0.0000001"},
+      "rounding": {"places": 2, "mode": "ROUND_HALF_UP"},
+      "note": "Arithmetic-only operation test; no dimensional cancellation is claimed."
+    },
+    {
+      "calculation_id": "high_control_arithmetic_division",
+      "operation": "division",
+      "provenance": "independently_calculated",
+      "direction": "signed",
+      "operands": {"numerator": "a_high_control", "denominator": "b_high_control"},
+      "output_unit": "dimensionless",
+      "expected": "2",
+      "expected_basis": "Independent arithmetic coverage check: 40/20 = 2.",
+      "tolerance": {"type": "absolute", "value": "0.0000001"},
+      "rounding": {"places": 2, "mode": "ROUND_HALF_UP"}
+    }
+  ],
+  "reconciliations": [
+    {
+      "reconciliation_id": "body_table_a_high_control",
+      "value_ids": ["a_high_control", "a_high_body_control"],
+      "status": "consistent",
+      "note": "Body and Table 1 both report 40 percent under the same high/control condition."
+    },
+    {
+      "reconciliation_id": "body_table_a_high_treatment",
+      "value_ids": ["a_high_treatment", "a_high_body_treatment"],
+      "status": "consistent",
+      "note": "Body and Table 1 both report 30 percent under the same high/treatment condition."
+    },
+    {
+      "reconciliation_id": "figure_table_a_high_control",
+      "value_ids": ["a_high_control", "figure_1_a_high_control"],
+      "status": "not_checked",
+      "note": "Original Figure 1 is unavailable; no table/figure agreement or conflict can be inferred."
+    }
+  ],
+  "inferences": [
+    {
+      "inference_id": "low_condition_interpretation",
+      "statement": "Both fictional methods have 25% relative low-temperature reductions, but Method A has the larger absolute reduction (3 versus 2 percentage points).",
+      "provenance": "reader_inference",
+      "depends_on": ["a_low_relative_reduction", "b_low_relative_reduction", "a_low_pp_reduction", "b_low_pp_reduction"],
+      "caveat": "This is arithmetic interpretation only; repeated measurements preclude treating paired readings as independent replicates."
+    }
+  ],
+  "uncertainties": [
+    "SYNTHETIC: the same eight fictional specimens were measured repeatedly; control/treatment measurements are correlated, not independent biological replicates.",
+    "Original Figure 1 is missing; the derived comparison has not been checked against an original rendered figure.",
+    "No dispersion or confidence interval is reported; none is calculated or invented."
+  ],
+  "limitations": [
+    "No OCR was needed for the UTF-8 synthetic text; real OCR may confuse decimal points, signs, digits, units, and columns.",
+    "Inputs are displayed integers; arithmetic output precision does not establish measurement significant figures.",
+    "Product and sum records exercise the engine only and are not pooled scientific endpoints."
+  ],
+  "visual_comparison": {
+    "enabled": true,
+    "derived_output": "comparison.svg",
+    "axis_label": "Error (%)",
+    "original_render": null,
+    "original_crop": null,
+    "original_review": {
+      "status": "missing",
+      "checked_values": [],
+      "note": "No original PDF/figure exists in this synthetic example. The SVG is derived from source tuples and is not evidence of original correctness."
+    },
+    "series": [
+      {
+        "label": "A — high",
+        "bars": [
+          {"label": "Control", "value_id": "a_high_control"},
+          {"label": "Treatment", "value_id": "a_high_treatment"}
+        ]
+      },
+      {
+        "label": "B — high",
+        "bars": [
+          {"label": "Control", "value_id": "b_high_control"},
+          {"label": "Treatment", "value_id": "b_high_treatment"}
+        ]
+      },
+      {
+        "label": "A — low",
+        "bars": [
+          {"label": "Control", "value_id": "a_low_control"},
+          {"label": "Treatment", "value_id": "a_low_treatment"}
+        ]
+      },
+      {
+        "label": "B — low",
+        "bars": [
+          {"label": "Control", "value_id": "b_low_control"},
+          {"label": "Treatment", "value_id": "b_low_treatment"}
+        ]
+      }
+    ]
+  }
+}

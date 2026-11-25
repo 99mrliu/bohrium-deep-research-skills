@@ -1,0 +1,36 @@
+{
+  "case_id": "synthetic-argument-loom-001",
+  "status": "complete",
+  "summary": "合成示例 / non-official: Assembled 10 section-native nodes, 15 typed edges, and 3 core claims.",
+  "outputs": {
+    "argument_graph": "argument_graph.json",
+    "notes": "notes.md",
+    "graph_markdown": "graph.md",
+    "audit": "audit.json"
+  },
+  "source_status": [
+    {
+      "source_id": "synthetic-lumen-beads",
+      "status": "readable",
+      "detail": "Source registry marks all 6 registered sections readable; this does not claim semantic completeness."
+    }
+  ],
+  "uncertainties": [
+    "The fictional three-pair study reports no confidence interval or statistical test; uncertainty beyond the descriptive pair-level values remains unquantified.",
+    "Semantic entailment labels were assigned by reading the complete synthetic text; deterministic checks do not establish scientific truth."
+  ],
+  "change_records": [
+    {
+      "action": "read",
+      "detail": "Read all six sections of the synthetic source representation and retained their stated purposes."
+    },
+    {
+      "action": "review",
+      "detail": "Checked proposition scope, evidence values, warrant fit, limitations, and the introduction-to-results transition."
+    },
+    {
+      "action": "assemble",
+      "detail": "Deterministically rendered graph JSON/Markdown and section-aligned notes; checked the output contract."
+    }
+  ]
+}

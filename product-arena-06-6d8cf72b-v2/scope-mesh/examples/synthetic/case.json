@@ -1,0 +1,91 @@
+{
+  "synthetic": true,
+  "label": "SYNTHETIC / 合成示例 — entirely fictional",
+  "case_id": "synthetic-aster17-scope-001",
+  "output_contract": {
+    "type": "object",
+    "additionalProperties": false,
+    "required": [
+      "case_id",
+      "status",
+      "answer",
+      "key_conclusions",
+      "sources",
+      "uncertainty",
+      "change_records"
+    ],
+    "properties": {
+      "case_id": {
+        "type": "string",
+        "const": "synthetic-aster17-scope-001"
+      },
+      "status": {
+        "type": "string",
+        "enum": ["success", "partial", "failed"]
+      },
+      "answer": {
+        "type": "string",
+        "minLength": 1
+      },
+      "key_conclusions": {
+        "type": "array",
+        "minItems": 4,
+        "maxItems": 4,
+        "items": {
+          "type": "object",
+          "additionalProperties": false,
+          "required": ["claim_id", "statement", "classification", "scope_record_ids"],
+          "properties": {
+            "claim_id": {"type": "string", "minLength": 1},
+            "statement": {"type": "string", "minLength": 1},
+            "classification": {
+              "type": "string",
+              "enum": ["demonstrated", "inferred", "not_reported", "conflicting", "unsupported_generalization"]
+            },
+            "scope_record_ids": {
+              "type": "array",
+              "minItems": 1,
+              "uniqueItems": true,
+              "items": {"type": "string", "minLength": 1}
+            }
+          }
+        }
+      },
+      "sources": {
+        "type": "array",
+        "minItems": 4,
+        "maxItems": 4,
+        "items": {
+          "type": "object",
+          "additionalProperties": false,
+          "required": ["source_id", "anchor", "quote"],
+          "properties": {
+            "source_id": {"type": "string", "const": "source.txt"},
+            "anchor": {"type": "string", "pattern": "^S[1-5]$"},
+            "quote": {"type": "string", "minLength": 1}
+          }
+        }
+      },
+      "uncertainty": {
+        "type": "array",
+        "minItems": 3,
+        "items": {"type": "string", "minLength": 1}
+      },
+      "change_records": {
+        "type": "array",
+        "minItems": 2,
+        "maxItems": 2,
+        "items": {
+          "type": "object",
+          "additionalProperties": false,
+          "required": ["field", "change", "reason"],
+          "properties": {
+            "field": {"type": "string", "minLength": 1},
+            "change": {"type": "string", "minLength": 1},
+            "reason": {"type": "string", "minLength": 1}
+          }
+        }
+      }
+    }
+  }
+}

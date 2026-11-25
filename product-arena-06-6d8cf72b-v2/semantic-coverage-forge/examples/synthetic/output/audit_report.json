@@ -1,0 +1,26 @@
+{
+  "label": "SYNTHETIC audit",
+  "synthetic": true,
+  "structural_status": "PASS",
+  "semantic_status": "NOT_AUTO_VERIFIED",
+  "overall_status": "STRUCTURAL_PASS_SEMANTICS_NOT_AUTO_VERIFIED",
+  "truth_notice": "Mechanical checks do not establish scientific truth, complete source coverage, or whole-answer entailment. Exact quote retrieval and required-term presence still require human semantic review.",
+  "summary": {
+    "matrix_items": 3,
+    "structural_findings": 0,
+    "semantic_findings": 0
+  },
+  "findings": [],
+  "paths": {
+    "plan": "examples/synthetic/plan.json",
+    "result": "examples/synthetic/output/result.json",
+    "case": "examples/synthetic/case.json",
+    "task": "examples/synthetic/task.md",
+    "sources": [
+      "examples/synthetic/source.json"
+    ],
+    "report": "examples/synthetic/output/audit_report.json"
+  },
+  "contract_authority": "case#/output_contract",
+  "validated_schema_count": 1
+}

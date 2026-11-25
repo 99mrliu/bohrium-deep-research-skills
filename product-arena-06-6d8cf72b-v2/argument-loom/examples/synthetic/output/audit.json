@@ -1,0 +1,15 @@
+{
+  "audit_type": "graph",
+  "status": "PASS",
+  "semantic_truth_checked": false,
+  "caveat": "PASS checks deterministic anchors, topology, coverage, and contract syntax only; it does not prove semantic entailment or scientific truth.",
+  "issues": [],
+  "metrics": {
+    "case_id": "synthetic-argument-loom-001",
+    "sections": 6,
+    "nodes": 10,
+    "edges": 15,
+    "core_claims": 3,
+    "duplicate_node_ids": 0
+  }
+}

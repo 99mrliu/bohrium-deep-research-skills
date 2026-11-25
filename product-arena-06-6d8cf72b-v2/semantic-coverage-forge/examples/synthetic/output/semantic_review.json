@@ -1,0 +1,136 @@
+{
+  "label": "SYNTHETIC semantic review — fictional example only",
+  "synthetic": true,
+  "case_id": "synthetic-lumenfen-semantic-coverage-001",
+  "authored_review_status": "CHECKLIST_RECORDED_NOT_INDEPENDENT_TRUTH_CERTIFICATION",
+  "structural_gate": "PASS",
+  "machine_semantic_status": "NOT_AUTO_VERIFIED",
+  "truth_notice": "Mechanical checks do not establish scientific truth, complete source coverage, or whole-answer entailment. Exact quote retrieval and required-term presence still require human semantic review.",
+  "review_order": [
+    "explicit_question_and_contract_decomposition",
+    "direct_answer_before_citation",
+    "adversarial_omission_comparator_negation_condition_generalization_review",
+    "whole_answer_evidence_entailment_human_check",
+    "two_sided_conflict_and_derivation_check",
+    "absence_status_and_checked_scope_check",
+    "structural_schema_as_final_gate"
+  ],
+  "items": [
+    {
+      "item_id": "Q1",
+      "question": "At 12 weeks, what mean orientation score did the authors report, and was that number author-reported or calculated from the excerpt?",
+      "direct_answer": "The authors reported a 12-week mean orientation score of 82.4 points; the value was author-reported, not calculated from the excerpt (n=36).",
+      "status": "answered",
+      "evidence_role": "author_reported",
+      "evidence_count": 1,
+      "checked_scope": "Checked S1 (Twelve-week results) in full for the time point, mean orientation score, units, sample size, and reported-versus-derived provenance.",
+      "declared_source_scope": [
+        {
+          "source_id": "SYNTH-LUMENFEN-2026",
+          "anchors": [
+            "S1"
+          ]
+        }
+      ],
+      "adversarial_review": {
+        "omission": "Both requested components are present: the 12-week orientation mean (82.4 points) and its author-reported rather than calculated provenance.",
+        "comparator": "Q1 requests one reported mean, not a group contrast; no between-group direction or baseline was invented.",
+        "negation": "The phrase 'not calculated from the excerpt' preserves the provenance limit while leaving the reported value intact.",
+        "condition": "The 12-week endpoint, orientation-score endpoint, points unit, and n=36 denominator all match S1.",
+        "unsupported_generalization": "The answer reports a study mean only; it makes no efficacy, participant-wide, or beyond-excerpt claim.",
+        "whole_answer_entailment": "The single S1 quotation contains the mean, time point, unit, sample size, and author-reported wording used by the answer; human entailment review remains required.",
+        "conflicts_two_sided": "No competing orientation mean appears in S1, S2, or T1, so there is no Q1 value conflict to reconcile.",
+        "formula_derived_vs_author_reported": "The 82.4-point value is labelled author-reported; SEM 1.2 was not used to derive a new estimate.",
+        "status_integrity": "Q1 is answered with one S1 evidence item whose anchor is inside its declared checked scope."
+      },
+      "residual_uncertainty": "No additional uncertainty is inferred beyond the excerpt's reported mean and SEM."
+    },
+    {
+      "item_id": "Q2",
+      "question": "In Table 1 at the Reed site, how did Compass A's mean completion time compare with Compass B's, including the exploratory/unadjusted conditions and units, and can the comparison be generalized to other sites?",
+      "direct_answer": "At the Reed site only, Compass A's mean completion time was 1.3 minutes lower than Compass B's (8.1 vs 9.4 minutes), a difference calculated from the two reported means; the comparison was exploratory and unadjusted (n=12 per group). No, this table does not support generalizing the comparison to other sites.",
+      "status": "answered",
+      "evidence_role": "mixed",
+      "evidence_count": 1,
+      "checked_scope": "Checked T1 (Table 1, Reed-site exploratory completion times) in full for both means, units, comparator direction, sample size, conditions, and other-site scope.",
+      "declared_source_scope": [
+        {
+          "source_id": "SYNTH-LUMENFEN-2026",
+          "anchors": [
+            "T1"
+          ]
+        }
+      ],
+      "adversarial_review": {
+        "omission": "The response supplies both Reed means, their direction and difference, minutes, per-group n, exploratory/unadjusted conditions, and an explicit answer about other-site generalization.",
+        "comparator": "Compass A (8.1 minutes) is correctly described as 1.3 minutes lower than Compass B (9.4 minutes), using B as the stated baseline.",
+        "negation": "The explicit 'No' blocks the requested other-site generalization instead of implying it from a favourable numerical difference.",
+        "condition": "Every comparison clause remains tied to Reed site only and to the exploratory, unadjusted T1 analysis with n=12 per group.",
+        "unsupported_generalization": "The response does not infer superiority at other sites or statistical significance from an unadjusted descriptive comparison.",
+        "whole_answer_entailment": "T1 supports both input means and all restrictions; the matrix separately documents the calculated subtraction rather than pretending T1 reports 1.3 minutes.",
+        "conflicts_two_sided": "T1 contains one Reed comparison and no other-site completion results, so the answer does not suppress a competing site estimate.",
+        "formula_derived_vs_author_reported": {
+          "formula": "9.4 minutes - 8.1 minutes = 1.3 minutes; Compass A minus Compass B = -1.3 minutes, so A is 1.3 minutes lower.",
+          "inputs": [
+            "Compass A: author-reported 8.1 minutes at Reed",
+            "Compass B: author-reported 9.4 minutes at Reed"
+          ],
+          "rounding": "One decimal place, matching both reported inputs; the difference is calculated, not author-reported."
+        },
+        "status_integrity": "Q2 is answered with mixed evidence: T1 supplies the reported means while the matrix records the derived direction and difference."
+      },
+      "residual_uncertainty": "The difference is exploratory, unadjusted, and restricted to Reed; no other-site or significance conclusion is supported."
+    },
+    {
+      "item_id": "Q3",
+      "question": "What 95% confidence interval is reported for the 12-week mean orientation score?",
+      "direct_answer": "Not reported in the checked excerpt: S1 gives the mean and SEM, but no reported 95% confidence interval or CI bounds for the 12-week mean orientation score; no CI was calculated.",
+      "status": "not_reported",
+      "evidence_role": "no_evidence_expected",
+      "evidence_count": 0,
+      "checked_scope": "Checked S1 (Twelve-week results), S2 (Statistical reporting), and T1 (Table 1) in full for a reported 95% confidence interval or lower/upper CI bounds. None appears. The SEM 1.2 in S1 is not treated as a CI; this not_reported status is limited to the supplied excerpt.",
+      "declared_source_scope": [
+        {
+          "source_id": "SYNTH-LUMENFEN-2026",
+          "anchors": [
+            "S1",
+            "S2",
+            "T1"
+          ]
+        }
+      ],
+      "adversarial_review": {
+        "omission": "The response states that no 95% CI or CI bounds are reported for the 12-week mean and separately notes that no CI was calculated.",
+        "comparator": "Q3 requests interval bounds rather than an arm comparison; no lower/upper pair or arm contrast was fabricated.",
+        "negation": "'Not reported in the checked excerpt' is explicitly bounded and does not become a claim that no study anywhere reports this interval.",
+        "condition": "The absence statement remains restricted to the 12-week orientation score and the enumerated S1, S2, and T1 excerpt anchors.",
+        "unsupported_generalization": "The answer neither converts SEM 1.2 into a confidence level nor invents a symmetric interval around 82.4 points.",
+        "whole_answer_entailment": "S1 provides the near-miss SEM while S2 explicitly excludes CI bounds and calculations; these are reviewed as scope evidence, not inserted as fake support quotes.",
+        "conflicts_two_sided": "The excerpt contains no competing CI bounds; the only potential confusion is SEM versus CI, which the answer resolves without substitution.",
+        "formula_derived_vs_author_reported": "No CI formula was applied and no interval is represented as author-reported; the task prohibits deriving one from SEM here.",
+        "status_integrity": "Q3 uses not_reported, retains evidence=[], and documents all three checked anchors rather than manufacturing an absence quotation."
+      },
+      "residual_uncertainty": "Not reported only in S1, S2, and T1 of the supplied excerpt; this is not a claim about other documents."
+    }
+  ],
+  "machine_findings": [],
+  "change_records": [
+    {
+      "item_id": "Q2",
+      "change": "The authored answer includes Reed-only, exploratory, unadjusted, n=12 per group, comparator direction, units, calculated provenance, and refusal to generalize.",
+      "reason": "Condition, comparator, derivation, and unsupported-generalization review."
+    },
+    {
+      "item_id": "Q3",
+      "change": "The authored answer distinguishes SEM from a 95% CI, leaves evidence empty, and lists S1, S2, and T1 as checked scope.",
+      "reason": "Not-reported integrity; no fabricated evidence or derived CI."
+    }
+  ],
+  "paths": {
+    "result": "result.json",
+    "answer_matrix": "answer_matrix.json",
+    "audit_report": "audit_report.json",
+    "semantic_review_json": "semantic_review.json",
+    "semantic_review_markdown": "semantic_review.md"
+  }
+}

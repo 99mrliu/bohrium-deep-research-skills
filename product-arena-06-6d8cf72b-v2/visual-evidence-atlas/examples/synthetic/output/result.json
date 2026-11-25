@@ -1,0 +1,202 @@
+{
+  "case_id": "synthetic-aurora-leaf-qv7-zt3",
+  "synthetic": true,
+  "status": "partial",
+  "task_answer": "SYNTHETIC: Panel B contains the intervention condition. Direct inspection of original Table ZT-3 shows 23 arbitrary units for row Measured, column Intervention. The cell claim is reviewed on that direct original-cell evidence; absent independent body corroboration remains a limitation, and the two-column reading order remains uncertain, so the atlas is partial.",
+  "sources": [
+    {
+      "region_id": "reg-figure-qv7",
+      "page_id": "synth-page-000",
+      "kind": "figure",
+      "bbox": [
+        40,
+        80,
+        705,
+        410
+      ],
+      "evidence_state": "available"
+    },
+    {
+      "region_id": "reg-panel-a",
+      "page_id": "synth-page-000",
+      "kind": "panel",
+      "bbox": [
+        55,
+        105,
+        360,
+        390
+      ],
+      "evidence_state": "available"
+    },
+    {
+      "region_id": "reg-panel-b",
+      "page_id": "synth-page-000",
+      "kind": "panel",
+      "bbox": [
+        400,
+        105,
+        690,
+        390
+      ],
+      "evidence_state": "available"
+    },
+    {
+      "region_id": "reg-caption-figure-qv7",
+      "page_id": "synth-page-000",
+      "kind": "caption",
+      "bbox": [
+        40,
+        395,
+        705,
+        425
+      ],
+      "evidence_state": "available"
+    },
+    {
+      "region_id": "reg-body-panel-discussion",
+      "page_id": "synth-page-000",
+      "kind": "body_paragraph",
+      "bbox": [
+        40,
+        445,
+        350,
+        600
+      ],
+      "evidence_state": "available"
+    },
+    {
+      "region_id": "reg-caption-table-zt3",
+      "page_id": "synth-page-000",
+      "kind": "caption",
+      "bbox": [
+        390,
+        445,
+        705,
+        500
+      ],
+      "evidence_state": "available"
+    },
+    {
+      "region_id": "reg-table-zt3",
+      "page_id": "synth-page-000",
+      "kind": "table",
+      "bbox": [
+        390,
+        510,
+        705,
+        700
+      ],
+      "evidence_state": "available"
+    },
+    {
+      "region_id": "reg-table-row-measured",
+      "page_id": "synth-page-000",
+      "kind": "table_row",
+      "bbox": [
+        390,
+        635,
+        705,
+        700
+      ],
+      "evidence_state": "available"
+    },
+    {
+      "region_id": "reg-cell-measured-intervention",
+      "page_id": "synth-page-000",
+      "kind": "table_cell",
+      "bbox": [
+        600,
+        635,
+        705,
+        700
+      ],
+      "evidence_state": "available"
+    }
+  ],
+  "visual_claims": [
+    {
+      "claim_id": "claim-panel-b-intervention",
+      "decisive": true,
+      "inspection_status": "agent_attested_inspected",
+      "caption_state": "corroborated",
+      "body_state": "corroborated",
+      "resolution": "reviewed_corroborated",
+      "change_record_id": "cr-inspect-panel-b"
+    },
+    {
+      "claim_id": "claim-cell-measured-intervention-23",
+      "decisive": true,
+      "inspection_status": "agent_attested_inspected",
+      "caption_state": "corroborated",
+      "body_state": "not_reported",
+      "resolution": "reviewed_corroborated",
+      "change_record_id": "cr-inspect-cell-23"
+    }
+  ],
+  "artifacts": [
+    {
+      "path": "atlas.html",
+      "kind": "atlas_html",
+      "original": false
+    },
+    {
+      "path": "atlas.md",
+      "kind": "atlas_markdown",
+      "original": false
+    },
+    {
+      "path": "audit_report.json",
+      "kind": "audit_report",
+      "original": false
+    },
+    {
+      "path": "original_page.svg",
+      "kind": "original_page_evidence",
+      "original": true
+    },
+    {
+      "path": "original_cell_crop.svg",
+      "kind": "original_crop_evidence",
+      "original": true
+    }
+  ],
+  "uncertainty": [
+    {
+      "code": "READING_ORDER_UNCERTAIN",
+      "state": "uncertain",
+      "message": "synth-page-000: double/multi-column reading order is uncertain",
+      "claim_ids": []
+    },
+    {
+      "code": "BODY_CORROBORATION_NOT_REPORTED",
+      "state": "not_reported",
+      "message": "claim-cell-measured-intervention-23: direct original-cell evidence remains reviewed; independent body corroboration is absent",
+      "claim_ids": [
+        "claim-cell-measured-intervention-23"
+      ]
+    }
+  ],
+  "change_records": [
+    {
+      "change_record_id": "cr-inspect-panel-b",
+      "actor": "synthetic-example-agent",
+      "action": "visual_inspection_attestation",
+      "subject_ids": [
+        "claim-panel-b-intervention",
+        "reg-panel-b"
+      ],
+      "note": "SYNTHETIC ATTESTATION: original_page.svg was visually reviewed as the fictional original page fixture; panel B and its literal Intervention label were inspected. This is not machine-verified sight."
+    },
+    {
+      "change_record_id": "cr-inspect-cell-23",
+      "actor": "synthetic-example-agent",
+      "action": "visual_inspection_attestation",
+      "subject_ids": [
+        "claim-cell-measured-intervention-23",
+        "reg-cell-measured-intervention"
+      ],
+      "note": "SYNTHETIC ATTESTATION: original_page.svg and original_cell_crop.svg were visually reviewed at the red-boxed Measured/Intervention cell; the literal 23 and its row/column identity were inspected. Absent body corroboration and reading-order uncertainty remain limitations; this is direct original-cell evidence, not machine-verified sight."
+    }
+  ],
+  "failures": []
+}

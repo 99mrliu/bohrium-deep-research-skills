@@ -1,0 +1,90 @@
+{
+  "case_id": "synthetic-aurora-leaf-qv7-zt3",
+  "synthetic": true,
+  "output_contract": {
+    "type": "object",
+    "additionalProperties": false,
+    "required": ["case_id", "synthetic", "status", "task_answer", "sources", "visual_claims", "artifacts", "uncertainty", "change_records", "failures"],
+    "properties": {
+      "case_id": {"type": "string"},
+      "synthetic": {"type": "boolean", "const": true},
+      "status": {"type": "string", "enum": ["complete", "partial", "failed"]},
+      "task_answer": {"type": "string"},
+      "sources": {
+        "type": "array",
+        "items": {
+          "type": "object",
+          "additionalProperties": false,
+          "required": ["region_id", "page_id", "kind", "bbox", "evidence_state"],
+          "properties": {
+            "region_id": {"type": "string"},
+            "page_id": {"type": "string"},
+            "kind": {"type": "string"},
+            "bbox": {"type": "array", "minItems": 4, "items": {"type": "integer"}},
+            "evidence_state": {"type": "string", "enum": ["available", "missing", "unreadable", "not_reported", "conflict"]}
+          }
+        }
+      },
+      "visual_claims": {
+        "type": "array",
+        "items": {
+          "type": "object",
+          "additionalProperties": false,
+          "required": ["claim_id", "decisive", "inspection_status", "caption_state", "body_state", "resolution", "change_record_id"],
+          "properties": {
+            "claim_id": {"type": "string"},
+            "decisive": {"type": "boolean"},
+            "inspection_status": {"type": "string", "enum": ["agent_attested_inspected", "not_inspected", "missing", "unreadable"]},
+            "caption_state": {"type": "string", "enum": ["corroborated", "not_reported", "conflict", "missing", "unreadable"]},
+            "body_state": {"type": "string", "enum": ["corroborated", "not_reported", "conflict", "missing", "unreadable"]},
+            "resolution": {"type": "string"},
+            "change_record_id": {"type": ["string", "null"]}
+          }
+        }
+      },
+      "artifacts": {
+        "type": "array",
+        "items": {
+          "type": "object",
+          "additionalProperties": false,
+          "required": ["path", "kind", "original"],
+          "properties": {
+            "path": {"type": "string"},
+            "kind": {"type": "string"},
+            "original": {"type": "boolean"}
+          }
+        }
+      },
+      "uncertainty": {
+        "type": "array",
+        "items": {
+          "type": "object",
+          "additionalProperties": false,
+          "required": ["code", "state", "message", "claim_ids"],
+          "properties": {
+            "code": {"type": "string"},
+            "state": {"type": "string"},
+            "message": {"type": "string"},
+            "claim_ids": {"type": "array", "items": {"type": "string"}}
+          }
+        }
+      },
+      "change_records": {
+        "type": "array",
+        "items": {
+          "type": "object",
+          "additionalProperties": false,
+          "required": ["change_record_id", "actor", "action", "subject_ids", "note"],
+          "properties": {
+            "change_record_id": {"type": "string"},
+            "actor": {"type": "string"},
+            "action": {"type": "string"},
+            "subject_ids": {"type": "array", "items": {"type": "string"}},
+            "note": {"type": "string"}
+          }
+        }
+      },
+      "failures": {"type": "array", "items": {"type": "string"}}
+    }
+  }
+}

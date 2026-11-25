@@ -1,0 +1,75 @@
+{
+  "synthetic": true,
+  "label": "SYNTHETIC / 合成示例 — authored contract response",
+  "result": {
+    "case_id": "synthetic-aster17-scope-001",
+    "status": "success",
+    "answer": "No. In this entirely synthetic single-batch study of cast Aster-17 coupons, PEO (18 V for 12 min) lowered pooled mean 48 h mass loss versus no coating under 5% NaCl salt spray at 35 °C (6.4 versus approximately 9.1 g/m^2). It did not always help: 0.8 mm thin coupons had higher mean mass loss with PEO (8.7 versus 7.9 g/m^2), so the always/every-subgroup claim is unsupported. Service life, other alloys, field environments, and state-of-the-art ranking on external datasets were not reported. The edge-to-face mechanism is speculation, not demonstrated.",
+    "key_conclusions": [
+      {
+        "claim_id": "C-BOUNDED",
+        "statement": "For the specified fictional cast Aster-17 coupons and 48 h salt-spray conditions, pooled mean mass loss was lower with PEO than no coating; this is not a universal or field-service conclusion.",
+        "classification": "demonstrated",
+        "scope_record_ids": ["R-POOLED", "R-THICK", "R-THIN"]
+      },
+      {
+        "claim_id": "C-CONTRARY",
+        "statement": "The 0.8 mm thin subgroup reversed the pooled direction: 8.7 g/m^2 with PEO versus 7.9 g/m^2 without coating.",
+        "classification": "demonstrated",
+        "scope_record_ids": ["R-THIN"]
+      },
+      {
+        "claim_id": "C-UNIVERSAL",
+        "statement": "The always/every-subgroup and state-of-the-art/all-datasets statement is an unsupported generalization; the bounded restatement must replace it.",
+        "classification": "unsupported_generalization",
+        "scope_record_ids": ["R-POOLED", "R-THIN", "R-SERVICE"]
+      },
+      {
+        "claim_id": "C-SERVICE",
+        "statement": "Service life, other alloys, field performance, and comparative ranking are not reported in the supplied source.",
+        "classification": "not_reported",
+        "scope_record_ids": ["R-SERVICE"]
+      }
+    ],
+    "sources": [
+      {
+        "source_id": "source.txt",
+        "anchor": "S1",
+        "quote": "Coupons underwent a 48 h salt-spray exposure at 35 °C with 5% NaCl. Mass loss was measured in g/m^2 after exactly 48 h."
+      },
+      {
+        "source_id": "source.txt",
+        "anchor": "S3",
+        "quote": "Across all coupons, mean mass loss was 6.4 g/m^2 in the PEO arm and approximately 9.1 g/m^2 in the uncoated arm."
+      },
+      {
+        "source_id": "source.txt",
+        "anchor": "S4",
+        "quote": "thin PEO 8.7, uncoated 7.9"
+      },
+      {
+        "source_id": "source.txt",
+        "anchor": "S5",
+        "quote": "The study was not designed to test service life, other alloys, field environments, or rankings against other coating methods."
+      }
+    ],
+    "uncertainty": [
+      "SYNTHETIC / 合成示例: all study entities and values are fictional, and the source closure is not a literature search.",
+      "No confidence intervals were reported; subgroup uncertainty and the thin-coupon mechanism remain unresolved.",
+      "The single batch, two thicknesses, one exposure, and 48 h endpoint restrict external generalization.",
+      "No defined external comparison set, search date, or comparable ranking metric supports state-of-the-art wording."
+    ],
+    "change_records": [
+      {
+        "field": "key_conclusions[C-UNIVERSAL]",
+        "change": "Replaced always/every-subgroup wording with separate pooled, thick, and thin bounded findings.",
+        "reason": "The in-scope thin subgroup showed higher mass loss with PEO and defeats the universal direction."
+      },
+      {
+        "field": "key_conclusions[C-SERVICE]",
+        "change": "Reclassified service-life and state-of-the-art extrapolation as not reported.",
+        "reason": "No field endpoint, other-alloy dataset, or external coating comparison was supplied."
+      }
+    ]
+  }
+}

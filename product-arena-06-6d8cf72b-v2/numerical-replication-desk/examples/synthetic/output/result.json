@@ -1,0 +1,335 @@
+{
+  "case_id": "synthetic-numerical-replication-a-b-v1",
+  "status": "complete",
+  "direct_answer": {
+    "answer": "SYNTHETIC: High-temperature relative reductions are 25% for Method A and 20% for Method B, with 10 and 4 percentage-point reductions. Low-temperature relative reductions are both 25%, with 3 and 2 percentage-point reductions for A and B.",
+    "comparisons": [
+      {
+        "method": "Method A",
+        "condition": "high temperature",
+        "relative_reduction_percent": "25",
+        "percentage_point_reduction": "10",
+        "provenance": "independently_calculated"
+      },
+      {
+        "method": "Method B",
+        "condition": "high temperature",
+        "relative_reduction_percent": "20",
+        "percentage_point_reduction": "4",
+        "provenance": "independently_calculated"
+      },
+      {
+        "method": "Method A",
+        "condition": "low temperature",
+        "relative_reduction_percent": "25",
+        "percentage_point_reduction": "3",
+        "provenance": "independently_calculated"
+      },
+      {
+        "method": "Method B",
+        "condition": "low temperature",
+        "relative_reduction_percent": "25",
+        "percentage_point_reduction": "2",
+        "provenance": "independently_calculated"
+      }
+    ],
+    "caveats": [
+      "SYNTHETIC fictional values only; lower error is better.",
+      "Repeated measurements on the same eight fictional specimens are correlated and are not independent biological replicates.",
+      "The 40-to-30 change is a 25% relative reduction and 10 percentage points, not a 10% relative reduction.",
+      "No original Figure 1 was supplied; figure values and original-to-derived agreement are missing."
+    ]
+  },
+  "numerical_findings": [
+    {
+      "calculation_id": "a_high_relative_reduction",
+      "operation": "percent_relative_change",
+      "actual": "25.00",
+      "expected": "25",
+      "calculation_match": true,
+      "formula": "100 * (40 - 30) / abs(40) = 25",
+      "provenance": "independently_calculated",
+      "input_anchors": [
+        "synthetic page 1, Table 1 | row=Method A | column=High control (%) | condition=high temperature, control | unit=percent | char_start=419 | char_end=450 | quote_check=matched | quote=| Method A | 12 | 9 | 40 | 30 |",
+        "synthetic page 1, Table 1 | row=Method A | column=High treatment (%) | condition=high temperature, treatment | unit=percent | char_start=419 | char_end=450 | quote_check=matched | quote=| Method A | 12 | 9 | 40 | 30 |"
+      ],
+      "output_unit": "percent"
+    },
+    {
+      "calculation_id": "a_high_pp_reduction",
+      "operation": "percentage_point_difference",
+      "actual": "10.00",
+      "expected": "10",
+      "calculation_match": true,
+      "formula": "40 - 30 = 10",
+      "provenance": "independently_calculated",
+      "input_anchors": [
+        "synthetic page 1, Table 1 | row=Method A | column=High control (%) | condition=high temperature, control | unit=percent | char_start=419 | char_end=450 | quote_check=matched | quote=| Method A | 12 | 9 | 40 | 30 |",
+        "synthetic page 1, Table 1 | row=Method A | column=High treatment (%) | condition=high temperature, treatment | unit=percent | char_start=419 | char_end=450 | quote_check=matched | quote=| Method A | 12 | 9 | 40 | 30 |"
+      ],
+      "output_unit": "percentage_points"
+    },
+    {
+      "calculation_id": "b_high_relative_reduction",
+      "operation": "percent_relative_change",
+      "actual": "20.00",
+      "expected": "20",
+      "calculation_match": true,
+      "formula": "100 * (20 - 16) / abs(20) = 20",
+      "provenance": "independently_calculated",
+      "input_anchors": [
+        "synthetic page 1, Table 1 | row=Method B | column=High control (%) | condition=high temperature, control | unit=percent | char_start=451 | char_end=481 | quote_check=matched | quote=| Method B | 8 | 6 | 20 | 16 |",
+        "synthetic page 1, Table 1 | row=Method B | column=High treatment (%) | condition=high temperature, treatment | unit=percent | char_start=451 | char_end=481 | quote_check=matched | quote=| Method B | 8 | 6 | 20 | 16 |"
+      ],
+      "output_unit": "percent"
+    },
+    {
+      "calculation_id": "b_high_pp_reduction",
+      "operation": "percentage_point_difference",
+      "actual": "4.00",
+      "expected": "4",
+      "calculation_match": true,
+      "formula": "20 - 16 = 4",
+      "provenance": "independently_calculated",
+      "input_anchors": [
+        "synthetic page 1, Table 1 | row=Method B | column=High control (%) | condition=high temperature, control | unit=percent | char_start=451 | char_end=481 | quote_check=matched | quote=| Method B | 8 | 6 | 20 | 16 |",
+        "synthetic page 1, Table 1 | row=Method B | column=High treatment (%) | condition=high temperature, treatment | unit=percent | char_start=451 | char_end=481 | quote_check=matched | quote=| Method B | 8 | 6 | 20 | 16 |"
+      ],
+      "output_unit": "percentage_points"
+    },
+    {
+      "calculation_id": "a_low_relative_reduction",
+      "operation": "percent_relative_change",
+      "actual": "25.00",
+      "expected": "25",
+      "calculation_match": true,
+      "formula": "100 * (12 - 9) / abs(12) = 25",
+      "provenance": "independently_calculated",
+      "input_anchors": [
+        "synthetic page 1, Table 1 | row=Method A | column=Low control (%) | condition=low temperature, control | unit=percent | char_start=419 | char_end=450 | quote_check=matched | quote=| Method A | 12 | 9 | 40 | 30 |",
+        "synthetic page 1, Table 1 | row=Method A | column=Low treatment (%) | condition=low temperature, treatment | unit=percent | char_start=419 | char_end=450 | quote_check=matched | quote=| Method A | 12 | 9 | 40 | 30 |"
+      ],
+      "output_unit": "percent"
+    },
+    {
+      "calculation_id": "a_low_pp_reduction",
+      "operation": "percentage_point_difference",
+      "actual": "3.00",
+      "expected": "3",
+      "calculation_match": true,
+      "formula": "12 - 9 = 3",
+      "provenance": "independently_calculated",
+      "input_anchors": [
+        "synthetic page 1, Table 1 | row=Method A | column=Low control (%) | condition=low temperature, control | unit=percent | char_start=419 | char_end=450 | quote_check=matched | quote=| Method A | 12 | 9 | 40 | 30 |",
+        "synthetic page 1, Table 1 | row=Method A | column=Low treatment (%) | condition=low temperature, treatment | unit=percent | char_start=419 | char_end=450 | quote_check=matched | quote=| Method A | 12 | 9 | 40 | 30 |"
+      ],
+      "output_unit": "percentage_points"
+    },
+    {
+      "calculation_id": "b_low_relative_reduction",
+      "operation": "percent_relative_change",
+      "actual": "25.00",
+      "expected": "25",
+      "calculation_match": true,
+      "formula": "100 * (8 - 6) / abs(8) = 25",
+      "provenance": "independently_calculated",
+      "input_anchors": [
+        "synthetic page 1, Table 1 | row=Method B | column=Low control (%) | condition=low temperature, control | unit=percent | char_start=451 | char_end=481 | quote_check=matched | quote=| Method B | 8 | 6 | 20 | 16 |",
+        "synthetic page 1, Table 1 | row=Method B | column=Low treatment (%) | condition=low temperature, treatment | unit=percent | char_start=451 | char_end=481 | quote_check=matched | quote=| Method B | 8 | 6 | 20 | 16 |"
+      ],
+      "output_unit": "percent"
+    },
+    {
+      "calculation_id": "b_low_pp_reduction",
+      "operation": "percentage_point_difference",
+      "actual": "2.00",
+      "expected": "2",
+      "calculation_match": true,
+      "formula": "8 - 6 = 2",
+      "provenance": "independently_calculated",
+      "input_anchors": [
+        "synthetic page 1, Table 1 | row=Method B | column=Low control (%) | condition=low temperature, control | unit=percent | char_start=451 | char_end=481 | quote_check=matched | quote=| Method B | 8 | 6 | 20 | 16 |",
+        "synthetic page 1, Table 1 | row=Method B | column=Low treatment (%) | condition=low temperature, treatment | unit=percent | char_start=451 | char_end=481 | quote_check=matched | quote=| Method B | 8 | 6 | 20 | 16 |"
+      ],
+      "output_unit": "percentage_points"
+    },
+    {
+      "calculation_id": "a_high_final_initial_ratio",
+      "operation": "ratio",
+      "actual": "0.75",
+      "expected": "0.75",
+      "calculation_match": true,
+      "formula": "30 / 40 = 0.75",
+      "provenance": "independently_calculated",
+      "input_anchors": [
+        "synthetic page 1, Table 1 | row=Method A | column=High control (%) | condition=high temperature, control | unit=percent | char_start=419 | char_end=450 | quote_check=matched | quote=| Method A | 12 | 9 | 40 | 30 |",
+        "synthetic page 1, Table 1 | row=Method A | column=High treatment (%) | condition=high temperature, treatment | unit=percent | char_start=419 | char_end=450 | quote_check=matched | quote=| Method A | 12 | 9 | 40 | 30 |"
+      ],
+      "output_unit": "dimensionless"
+    },
+    {
+      "calculation_id": "a_high_signed_difference",
+      "operation": "difference",
+      "actual": "-10.00",
+      "expected": "-10",
+      "calculation_match": true,
+      "formula": "30 - 40 = -10",
+      "provenance": "independently_calculated",
+      "input_anchors": [
+        "synthetic page 1, Table 1 | row=Method A | column=High control (%) | condition=high temperature, control | unit=percent | char_start=419 | char_end=450 | quote_check=matched | quote=| Method A | 12 | 9 | 40 | 30 |",
+        "synthetic page 1, Table 1 | row=Method A | column=High treatment (%) | condition=high temperature, treatment | unit=percent | char_start=419 | char_end=450 | quote_check=matched | quote=| Method A | 12 | 9 | 40 | 30 |"
+      ],
+      "output_unit": "percent"
+    },
+    {
+      "calculation_id": "low_control_arithmetic_sum",
+      "operation": "sum",
+      "actual": "20.00",
+      "expected": "20",
+      "calculation_match": true,
+      "formula": "12 + 8 = 20",
+      "provenance": "independently_calculated",
+      "input_anchors": [
+        "synthetic page 1, Table 1 | row=Method A | column=Low control (%) | condition=low temperature, control | unit=percent | char_start=419 | char_end=450 | quote_check=matched | quote=| Method A | 12 | 9 | 40 | 30 |",
+        "synthetic page 1, Table 1 | row=Method B | column=Low control (%) | condition=low temperature, control | unit=percent | char_start=451 | char_end=481 | quote_check=matched | quote=| Method B | 8 | 6 | 20 | 16 |"
+      ],
+      "output_unit": "percent"
+    },
+    {
+      "calculation_id": "low_control_arithmetic_product",
+      "operation": "product",
+      "actual": "96.00",
+      "expected": "96",
+      "calculation_match": true,
+      "formula": "12 * 8 = 96",
+      "provenance": "independently_calculated",
+      "input_anchors": [
+        "synthetic page 1, Table 1 | row=Method A | column=Low control (%) | condition=low temperature, control | unit=percent | char_start=419 | char_end=450 | quote_check=matched | quote=| Method A | 12 | 9 | 40 | 30 |",
+        "synthetic page 1, Table 1 | row=Method B | column=Low control (%) | condition=low temperature, control | unit=percent | char_start=451 | char_end=481 | quote_check=matched | quote=| Method B | 8 | 6 | 20 | 16 |"
+      ],
+      "output_unit": "percent * percent"
+    },
+    {
+      "calculation_id": "high_control_arithmetic_division",
+      "operation": "division",
+      "actual": "2.00",
+      "expected": "2",
+      "calculation_match": true,
+      "formula": "40 / 20 = 2",
+      "provenance": "independently_calculated",
+      "input_anchors": [
+        "synthetic page 1, Table 1 | row=Method A | column=High control (%) | condition=high temperature, control | unit=percent | char_start=419 | char_end=450 | quote_check=matched | quote=| Method A | 12 | 9 | 40 | 30 |",
+        "synthetic page 1, Table 1 | row=Method B | column=High control (%) | condition=high temperature, control | unit=percent | char_start=451 | char_end=481 | quote_check=matched | quote=| Method B | 8 | 6 | 20 | 16 |"
+      ],
+      "output_unit": "dimensionless"
+    }
+  ],
+  "notes": {
+    "summary": "SYNTHETIC direct QA is answered first. Thirteen independently calculated checks exercise percent reduction, percentage points, ratio, signed difference, sum, product, and division. Body/table values for Method A high-temperature endpoints agree; the original figure input remains missing.",
+    "limitations": [
+      "No real literature, original PDF, OCR, external data, statistical independence, confidence interval, or significance test is involved.",
+      "Integer inputs and two-decimal rounded calculations do not establish significant figures or measurement uncertainty.",
+      "The arithmetic sum/product checks are not scientifically pooled endpoints."
+    ],
+    "visual_comparison": "comparison.svg is a labelled SYNTHETIC derived plot of extracted values only, explicitly NOT ORIGINAL and not proof of source correctness. Original render, crop, and visual agreement are missing."
+  },
+  "sources": [
+    {
+      "source_id": "fictional-source",
+      "path": "materials/fictional_source.md",
+      "status": "readable",
+      "uncertainty": "Entirely synthetic text; no external literature claim or original PDF is present."
+    }
+  ],
+  "uncertainty": [
+    "SYNTHETIC: the same eight fictional specimens were measured repeatedly; control/treatment measurements are correlated, not independent biological replicates.",
+    "Original Figure 1 is missing; the derived comparison has not been checked against an original rendered figure.",
+    "No dispersion or confidence interval is reported; none is calculated or invented.",
+    "No OCR was needed for the UTF-8 synthetic text; real OCR may confuse decimal points, signs, digits, units, and columns.",
+    "Inputs are displayed integers; arithmetic output precision does not establish measurement significant figures.",
+    "Product and sum records exercise the engine only and are not pooled scientific endpoints."
+  ],
+  "change_records": [
+    {
+      "sequence": 1,
+      "action": "source_read",
+      "detail": "fictional-source: readable"
+    },
+    {
+      "sequence": 2,
+      "action": "decimal_calculation",
+      "detail": "a_high_relative_reduction: matched"
+    },
+    {
+      "sequence": 3,
+      "action": "decimal_calculation",
+      "detail": "a_high_pp_reduction: matched"
+    },
+    {
+      "sequence": 4,
+      "action": "decimal_calculation",
+      "detail": "b_high_relative_reduction: matched"
+    },
+    {
+      "sequence": 5,
+      "action": "decimal_calculation",
+      "detail": "b_high_pp_reduction: matched"
+    },
+    {
+      "sequence": 6,
+      "action": "decimal_calculation",
+      "detail": "a_low_relative_reduction: matched"
+    },
+    {
+      "sequence": 7,
+      "action": "decimal_calculation",
+      "detail": "a_low_pp_reduction: matched"
+    },
+    {
+      "sequence": 8,
+      "action": "decimal_calculation",
+      "detail": "b_low_relative_reduction: matched"
+    },
+    {
+      "sequence": 9,
+      "action": "decimal_calculation",
+      "detail": "b_low_pp_reduction: matched"
+    },
+    {
+      "sequence": 10,
+      "action": "decimal_calculation",
+      "detail": "a_high_final_initial_ratio: matched"
+    },
+    {
+      "sequence": 11,
+      "action": "decimal_calculation",
+      "detail": "a_high_signed_difference: matched"
+    },
+    {
+      "sequence": 12,
+      "action": "decimal_calculation",
+      "detail": "low_control_arithmetic_sum: matched"
+    },
+    {
+      "sequence": 13,
+      "action": "decimal_calculation",
+      "detail": "low_control_arithmetic_product: matched"
+    },
+    {
+      "sequence": 14,
+      "action": "decimal_calculation",
+      "detail": "high_control_arithmetic_division: matched"
+    },
+    {
+      "sequence": 15,
+      "action": "derived_visual_created",
+      "detail": "comparison.svg is derived only; original review=missing"
+    }
+  ],
+  "artifacts": [
+    "verification.json",
+    "verification.md",
+    "comparison.svg",
+    "result.json"
+  ]
+}

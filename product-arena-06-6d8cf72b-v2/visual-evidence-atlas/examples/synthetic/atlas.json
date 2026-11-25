@@ -1,0 +1,221 @@
+{
+  "schema_version": "1.0",
+  "case_id": "synthetic-aurora-leaf-qv7-zt3",
+  "synthetic": true,
+  "task_answer": "SYNTHETIC: Panel B contains the intervention condition. Direct inspection of original Table ZT-3 shows 23 arbitrary units for row Measured, column Intervention. The cell claim is reviewed on that direct original-cell evidence; absent independent body corroboration remains a limitation, and the two-column reading order remains uncertain, so the atlas is partial.",
+  "coordinate_convention": {
+    "name": "original-render-top-left-px",
+    "origin": "top-left",
+    "units": "px",
+    "bbox": "[x0,y0,x1,y1]",
+    "x1_y1": "exclusive",
+    "source_anchor_offsets": "unicode-codepoint-zero-based-end-exclusive"
+  },
+  "pages": [
+    {
+      "page_id": "synth-page-000",
+      "pdf_page_index": 0,
+      "printed_page": "S-1",
+      "source_file": "fictional-aurora-leaf-supplement.pdf (identity only; no PDF or content inference)",
+      "image": {
+        "path": "original_page.svg",
+        "width": 760,
+        "height": 1000,
+        "role": "original_synthetic_page_fixture"
+      },
+      "layout": {
+        "columns": 2,
+        "reading_order": "uncertain",
+        "note": "SYNTHETIC: left body column and right table column must not be assigned order from extraction alone."
+      }
+    }
+  ],
+  "crops": [
+    {
+      "crop_id": "crop-cell-measured-intervention",
+      "page_id": "synth-page-000",
+      "parent_region_id": "reg-cell-measured-intervention",
+      "source_bbox": [600, 635, 705, 700],
+      "image": {
+        "path": "original_cell_crop.svg",
+        "width": 630,
+        "height": 390,
+        "role": "original_synthetic_crop_fixture_6x"
+      }
+    }
+  ],
+  "regions": [
+    {
+      "region_id": "reg-figure-qv7",
+      "page_id": "synth-page-000",
+      "kind": "figure",
+      "bbox": [40, 80, 705, 410],
+      "evidence_state": "available"
+    },
+    {
+      "region_id": "reg-panel-a",
+      "page_id": "synth-page-000",
+      "kind": "panel",
+      "parent_id": "reg-figure-qv7",
+      "panel_label": "A",
+      "bbox": [55, 105, 360, 390],
+      "evidence_state": "available"
+    },
+    {
+      "region_id": "reg-panel-b",
+      "page_id": "synth-page-000",
+      "kind": "panel",
+      "parent_id": "reg-figure-qv7",
+      "panel_label": "B",
+      "bbox": [400, 105, 690, 390],
+      "evidence_state": "available"
+    },
+    {
+      "region_id": "reg-caption-figure-qv7",
+      "page_id": "synth-page-000",
+      "kind": "caption",
+      "parent_id": "reg-figure-qv7",
+      "bbox": [40, 395, 705, 425],
+      "evidence_state": "available",
+      "text_evidence": {
+        "role": "figure_caption",
+        "source_anchor": {
+          "start": 76,
+          "end": 287,
+          "quote": "Figure QV-7. Fictional Aurora Leaf assay: panel A shows the control condition; panel B shows the intervention condition. The corresponding individual intervention measurement is 23 arbitrary units in Table ZT-3."
+        }
+      }
+    },
+    {
+      "region_id": "reg-body-panel-discussion",
+      "page_id": "synth-page-000",
+      "kind": "body_paragraph",
+      "bbox": [40, 445, 350, 600],
+      "evidence_state": "available",
+      "text_evidence": {
+        "role": "body",
+        "source_anchor": {
+          "start": 408,
+          "end": 609,
+          "quote": "Body paragraph. Panel B is the intervention condition, whereas panel A is the control. Table ZT-3 summarizes the measurements, but this paragraph does not report the individual intervention cell value."
+        }
+      }
+    },
+    {
+      "region_id": "reg-caption-table-zt3",
+      "page_id": "synth-page-000",
+      "kind": "caption",
+      "parent_id": "reg-table-zt3",
+      "bbox": [390, 445, 705, 500],
+      "evidence_state": "available",
+      "text_evidence": {
+        "role": "table_caption",
+        "source_anchor": {
+          "start": 289,
+          "end": 406,
+          "quote": "Table ZT-3. Fictional Aurora Leaf measurements in arbitrary units; column identities are shown in the original table."
+        }
+      }
+    },
+    {
+      "region_id": "reg-table-zt3",
+      "page_id": "synth-page-000",
+      "kind": "table",
+      "bbox": [390, 510, 705, 700],
+      "evidence_state": "available"
+    },
+    {
+      "region_id": "reg-table-row-measured",
+      "page_id": "synth-page-000",
+      "kind": "table_row",
+      "parent_id": "reg-table-zt3",
+      "row_label": "Measured",
+      "bbox": [390, 635, 705, 700],
+      "evidence_state": "available"
+    },
+    {
+      "region_id": "reg-cell-measured-intervention",
+      "page_id": "synth-page-000",
+      "kind": "table_cell",
+      "parent_id": "reg-table-row-measured",
+      "row_label": "Measured",
+      "column_label": "Intervention",
+      "bbox": [600, 635, 705, 700],
+      "evidence_state": "available",
+      "text_evidence": {
+        "role": "table_cell_value",
+        "source_anchor": {
+          "start": 665,
+          "end": 667,
+          "quote": "23"
+        }
+      }
+    }
+  ],
+  "visual_claims": [
+    {
+      "claim_id": "claim-panel-b-intervention",
+      "claim_text": "SYNTHETIC: Figure QV-7 panel B is the intervention condition.",
+      "decisive": true,
+      "subject_region_ids": ["reg-panel-b"],
+      "inspection": {
+        "status": "agent_attested_inspected",
+        "change_record_id": "cr-inspect-panel-b"
+      },
+      "caption_corroboration": {
+        "state": "corroborated",
+        "source_anchor": {
+          "start": 76,
+          "end": 287,
+          "quote": "Figure QV-7. Fictional Aurora Leaf assay: panel A shows the control condition; panel B shows the intervention condition. The corresponding individual intervention measurement is 23 arbitrary units in Table ZT-3."
+        }
+      },
+      "body_corroboration": {
+        "state": "corroborated",
+        "source_anchor": {
+          "start": 424,
+          "end": 494,
+          "quote": "Panel B is the intervention condition, whereas panel A is the control."
+        }
+      }
+    },
+    {
+      "claim_id": "claim-cell-measured-intervention-23",
+      "claim_text": "SYNTHETIC: Table ZT-3 row Measured, column Intervention contains 23 arbitrary units; direct original-cell inspection supports this claim, while absent body corroboration remains a limitation.",
+      "decisive": true,
+      "subject_region_ids": ["reg-cell-measured-intervention"],
+      "inspection": {
+        "status": "agent_attested_inspected",
+        "change_record_id": "cr-inspect-cell-23"
+      },
+      "caption_corroboration": {
+        "state": "corroborated",
+        "source_anchor": {
+          "start": 76,
+          "end": 287,
+          "quote": "Figure QV-7. Fictional Aurora Leaf assay: panel A shows the control condition; panel B shows the intervention condition. The corresponding individual intervention measurement is 23 arbitrary units in Table ZT-3."
+        }
+      },
+      "body_corroboration": {
+        "state": "not_reported",
+        "source_anchor": null
+      }
+    }
+  ],
+  "change_records": [
+    {
+      "change_record_id": "cr-inspect-panel-b",
+      "actor": "synthetic-example-agent",
+      "action": "visual_inspection_attestation",
+      "subject_ids": ["claim-panel-b-intervention", "reg-panel-b"],
+      "note": "SYNTHETIC ATTESTATION: original_page.svg was visually reviewed as the fictional original page fixture; panel B and its literal Intervention label were inspected. This is not machine-verified sight."
+    },
+    {
+      "change_record_id": "cr-inspect-cell-23",
+      "actor": "synthetic-example-agent",
+      "action": "visual_inspection_attestation",
+      "subject_ids": ["claim-cell-measured-intervention-23", "reg-cell-measured-intervention"],
+      "note": "SYNTHETIC ATTESTATION: original_page.svg and original_cell_crop.svg were visually reviewed at the red-boxed Measured/Intervention cell; the literal 23 and its row/column identity were inspected. Absent body corroboration and reading-order uncertainty remain limitations; this is direct original-cell evidence, not machine-verified sight."
+    }
+  ]
+}

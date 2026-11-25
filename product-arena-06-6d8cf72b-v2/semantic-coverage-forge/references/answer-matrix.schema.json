@@ -1,0 +1,181 @@
+{
+  "$schema": "https://json-schema.org/2020-12/schema",
+  "$id": "urn:semantic-coverage-forge:plan",
+  "title": "Semantic coverage plan and answer matrix",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "case_id",
+    "synthetic",
+    "task_type",
+    "output_schema",
+    "answer_matrix",
+    "item_id_contracts"
+  ],
+  "properties": {
+    "case_id": {"type": "string", "minLength": 1},
+    "synthetic": {"type": "boolean"},
+    "task_type": {
+      "type": "string",
+      "enum": ["qa", "notes", "extract", "verify", "translate"]
+    },
+    "output_schema": {
+      "type": "object",
+      "description": "Exact output_contract schema copied from the task; not a replacement for it."
+    },
+    "answer_matrix": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["version", "items"],
+      "properties": {
+        "version": {"type": "string", "const": "1.0"},
+        "items": {
+          "type": "array",
+          "minItems": 1,
+          "items": {"$ref": "#/$defs/matrixItem"}
+        }
+      }
+    },
+    "item_id_contracts": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": ["path", "id_property", "ids", "exact"],
+        "properties": {
+          "path": {
+            "type": "string",
+            "description": "JSON Pointer to an object or array whose item_id values or object keys are constrained."
+          },
+          "id_property": {
+            "type": ["string", "null"],
+            "description": "Property containing the ID; null means object keys."
+          },
+          "ids": {
+            "type": "array",
+            "items": {"type": "string", "minLength": 1},
+            "uniqueItems": true
+          },
+          "exact": {
+            "type": "boolean",
+            "description": "When true, IDs, count, and order must match exactly."
+          }
+        }
+      }
+    }
+  },
+  "$defs": {
+    "matrixItem": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "item_id",
+        "question",
+        "answer_path",
+        "status_path",
+        "evidence_path",
+        "checked_scope_path",
+        "evidence_role",
+        "checked_source_scope",
+        "required_answer_terms",
+        "forbidden_generalizations",
+        "derivation",
+        "uncertainty"
+      ],
+      "properties": {
+        "item_id": {"type": "string", "minLength": 1},
+        "question": {"type": "string", "minLength": 1},
+        "answer_path": {"type": "string", "pattern": "^/"},
+        "status_path": {
+          "type": ["string", "null"],
+          "pattern": "^/",
+          "description": "Use null for a closed direct-answer-only result and supply answer_status in this matrix row."
+        },
+        "evidence_path": {
+          "type": ["string", "null"],
+          "pattern": "^/",
+          "description": "Use null for a closed direct-answer-only result and supply evidence in this matrix row."
+        },
+        "checked_scope_path": {
+          "type": ["string", "null"],
+          "pattern": "^/",
+          "description": "Use null for a closed direct-answer-only result and supply checked_scope in this matrix row."
+        },
+        "answer_status": {
+          "type": "string",
+          "enum": ["answered", "not_reported", "unreadable", "missing"],
+          "description": "Matrix-local status used only when status_path is null."
+        },
+        "evidence": {
+          "type": "array",
+          "description": "Matrix-local evidence items used only when evidence_path is null."
+        },
+        "checked_scope": {
+          "type": "string",
+          "minLength": 1,
+          "description": "Matrix-local checked-scope narrative used only when checked_scope_path is null."
+        },
+        "inventory_gap": {
+          "type": "string",
+          "minLength": 1,
+          "description": "Required explanation when status is missing and checked_source_scope is empty."
+        },
+        "evidence_role": {
+          "type": "string",
+          "enum": [
+            "author_reported",
+            "formula_derived_from_reported",
+            "mixed",
+            "context_only",
+            "no_evidence_expected"
+          ]
+        },
+        "checked_source_scope": {
+          "type": "array",
+          "description": "Exact source/anchor pairs checked. Empty only for status missing with a non-empty inventory_gap; evidence must use a declared pair.",
+          "items": {
+            "type": "object",
+            "additionalProperties": false,
+            "required": ["source_id", "anchors"],
+            "properties": {
+              "source_id": {"type": "string", "minLength": 1},
+              "anchors": {
+                "type": "array",
+                "minItems": 1,
+                "uniqueItems": true,
+                "items": {"type": "string", "minLength": 1}
+              }
+            }
+          }
+        },
+        "required_answer_terms": {
+          "type": "array",
+          "description": "Case-insensitive required snippets for values, qualifiers, comparators, negation, conditions, and units. Presence is not proof of meaning.",
+          "items": {"type": "string", "minLength": 1}
+        },
+        "forbidden_generalizations": {
+          "type": "array",
+          "items": {"type": "string", "minLength": 1}
+        },
+        "derivation": {
+          "type": ["object", "null"],
+          "additionalProperties": false,
+          "required": ["formula", "inputs", "rounding"],
+          "properties": {
+            "formula": {"type": "string", "minLength": 1},
+            "inputs": {
+              "type": "array",
+              "minItems": 1,
+              "items": {"type": "string", "minLength": 1}
+            },
+            "rounding": {"type": "string", "minLength": 1}
+          }
+        },
+        "uncertainty": {
+          "type": "string",
+          "description": "Residual uncertainty or an explicit statement of none identified by this matrix row."
+        }
+      }
+    }
+  }
+}

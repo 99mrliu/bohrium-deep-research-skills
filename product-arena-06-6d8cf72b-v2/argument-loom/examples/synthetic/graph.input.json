@@ -1,0 +1,137 @@
+{
+  "graph_id": "synthetic-lumen-argument-v1",
+  "paper_id": "synthetic-lumen-beads",
+  "source_id": "synthetic-lumen-beads",
+  "example_label": "合成示例 / non-official / SYNTHETIC EXAMPLE — unique fictional paper; not an official answer",
+  "sections": [
+    {"section_id": "abstract", "order": 0, "title": "Abstract", "purpose": "Summarize the question, paired result, and restrained next step."},
+    {"section_id": "introduction", "order": 1, "title": "Introduction", "purpose": "Establish uncertainty about shallow soil beds and state the controlled question."},
+    {"section_id": "methods", "order": 2, "title": "Methods", "purpose": "Specify the paired protocol and controls that warrant a within-assay comparison."},
+    {"section_id": "results", "order": 3, "title": "Results", "purpose": "Report mean and pair-level peak-temperature differences without extending scope."},
+    {"section_id": "discussion", "order": 4, "title": "Discussion", "purpose": "Interpret the controlled comparison and limit generalization beyond the assay."},
+    {"section_id": "conclusion", "order": 5, "title": "Conclusion", "purpose": "State the protocol-bounded result and the research needed before practical claims."}
+  ],
+  "nodes": [
+    {
+      "id": "C0",
+      "type": "claim",
+      "core": true,
+      "text": "Three paired bench trials showed a lower mean peak for coated beads (18.0 °C versus 20.0 °C), motivating further tests rather than deployment.",
+      "section_id": "abstract",
+      "section_order": 0,
+      "limit_status": "reported",
+      "semantic_status": "reviewer_confirmed",
+      "anchor": {"source_id": "synthetic-lumen-beads", "locator": "abstract/p1", "quote": "In three paired trials, coated beads reached a mean peak of 18.0 °C, compared with 20.0 °C for uncoated beads.", "page": 1}
+    },
+    {
+      "id": "B1",
+      "type": "background",
+      "text": "Temperature-buffering behavior in shallow soil beds remained uncertain.",
+      "section_id": "introduction",
+      "section_order": 1,
+      "semantic_status": "reviewer_confirmed",
+      "anchor": {"source_id": "synthetic-lumen-beads", "locator": "introduction/p1", "quote": "Passive cooling media can buffer temperature swings, but their behavior in shallow soil beds is uncertain.", "page": 1}
+    },
+    {
+      "id": "T1",
+      "type": "transition",
+      "text": "The background uncertainty motivates testing coating effects under a controlled heat pulse.",
+      "section_id": "introduction",
+      "section_order": 1,
+      "semantic_status": "reviewer_confirmed",
+      "anchor": {"source_id": "synthetic-lumen-beads", "locator": "introduction/p1", "quote": "We therefore asked whether a lumen coating changes peak temperature under a controlled heat pulse.", "page": 1}
+    },
+    {
+      "id": "W1",
+      "type": "warrant",
+      "text": "Randomized positions and simultaneous shielded-probe measurements reduce position and timing alternatives for the within-pair contrast.",
+      "section_id": "methods",
+      "section_order": 2,
+      "semantic_status": "reviewer_confirmed",
+      "anchor": {"source_id": "synthetic-lumen-beads", "locator": "methods/p2", "quote": "Bed positions were randomized for each pair, and temperatures were recorded simultaneously by shielded probes at a depth of 2 cm.", "page": 1}
+    },
+    {
+      "id": "E1",
+      "type": "evidence",
+      "text": "The observed mean peaks were 18.0 °C for coated beads and 20.0 °C for uncoated beads across three pairs.",
+      "section_id": "results",
+      "section_order": 3,
+      "semantic_status": "reviewer_confirmed",
+      "anchor": {"source_id": "synthetic-lumen-beads", "locator": "results/p1", "quote": "Across the three pairs, mean peak temperatures were 18.0 °C for coated beads and 20.0 °C for uncoated beads.", "page": 1}
+    },
+    {
+      "id": "E2",
+      "type": "evidence",
+      "text": "The three within-pair reductions were 1.8 °C, 2.1 °C, and 2.1 °C.",
+      "section_id": "results",
+      "section_order": 3,
+      "semantic_status": "reviewer_confirmed",
+      "anchor": {"source_id": "synthetic-lumen-beads", "locator": "results/p2", "quote": "Individual within-pair reductions were 1.8 °C, 2.1 °C, and 2.1 °C", "page": 1}
+    },
+    {
+      "id": "C1",
+      "type": "claim",
+      "core": true,
+      "text": "In this bench assay, coated beads produced a 2.0 °C lower mean peak temperature than uncoated beads.",
+      "section_id": "results",
+      "section_order": 3,
+      "limit_status": "reported",
+      "semantic_status": "reviewer_confirmed",
+      "anchor": {"source_id": "synthetic-lumen-beads", "locator": "results/p1", "quote": "mean peak temperatures were 18.0 °C for coated beads and 20.0 °C for uncoated beads", "page": 1}
+    },
+    {
+      "id": "W2",
+      "type": "warrant",
+      "text": "Pairing and simultaneous measurement license a within-assay interpretation of the temperature difference.",
+      "section_id": "discussion",
+      "section_order": 4,
+      "semantic_status": "reviewer_confirmed",
+      "anchor": {"source_id": "synthetic-lumen-beads", "locator": "discussion/p1", "quote": "The paired design and simultaneous measurements support a within-assay interpretation of the temperature difference.", "page": 1}
+    },
+    {
+      "id": "L1",
+      "type": "limitation",
+      "text": "Three pairs in one chamber and one soil mixture do not establish generalization to field moisture, airflow, or longer heating.",
+      "section_id": "discussion",
+      "section_order": 4,
+      "semantic_status": "reviewer_confirmed",
+      "anchor": {"source_id": "synthetic-lumen-beads", "locator": "discussion/p2", "quote": "However, only three pairs were tested in one chamber with one soil mixture, so the estimate may not generalize to field moisture, airflow, or longer heating cycles.", "page": 1}
+    },
+    {
+      "id": "C2",
+      "type": "claim",
+      "core": true,
+      "text": "The coating association is bounded to the specific bench protocol; multi-chamber and outdoor evidence is required before practical claims.",
+      "section_id": "conclusion",
+      "section_order": 5,
+      "limit_status": "reported",
+      "semantic_status": "reviewer_confirmed",
+      "anchor": {"source_id": "synthetic-lumen-beads", "locator": "conclusion/p1", "quote": "Under this specific bench protocol, lumen coating was associated with a 2.0 °C lower mean peak temperature.", "page": 1}
+    }
+  ],
+  "edges": [
+    {"id": "S0", "from": "E1", "to": "C0", "type": "supports"},
+    {"id": "S1", "from": "E1", "to": "C1", "type": "supports"},
+    {"id": "S2", "from": "E1", "to": "C2", "type": "supports"},
+    {"id": "S3", "from": "E2", "to": "C1", "type": "supports"},
+    {"id": "S4", "from": "E2", "to": "C2", "type": "supports"},
+    {"id": "W0", "from": "W1", "to": "C0", "type": "warrants"},
+    {"id": "W3", "from": "W1", "to": "C1", "type": "warrants"},
+    {"id": "W4", "from": "W1", "to": "C2", "type": "warrants"},
+    {"id": "W5", "from": "W2", "to": "C2", "type": "warrants"},
+    {"id": "L0", "from": "L1", "to": "C0", "type": "limits"},
+    {"id": "L3", "from": "L1", "to": "C1", "type": "limits"},
+    {"id": "L4", "from": "L1", "to": "C2", "type": "limits"},
+    {"id": "M0", "from": "B1", "to": "C1", "type": "motivates"},
+    {"id": "T0", "from": "T1", "to": "C1", "type": "transitions_to"},
+    {"id": "M1", "from": "C1", "to": "C2", "type": "motivates"}
+  ],
+  "uncertainties": [
+    "The fictional three-pair study reports no confidence interval or statistical test; uncertainty beyond the descriptive pair-level values remains unquantified.",
+    "Semantic entailment labels were assigned by reading the complete synthetic text; deterministic checks do not establish scientific truth."
+  ],
+  "change_records": [
+    {"action": "read", "detail": "Read all six sections of the synthetic source representation and retained their stated purposes."},
+    {"action": "review", "detail": "Checked proposition scope, evidence values, warrant fit, limitations, and the introduction-to-results transition."}
+  ]
+}

@@ -1,0 +1,77 @@
+{
+  "synthetic": true,
+  "label": "SYNTHETIC / 合成示例 — authored universal and bounded claims",
+  "claims": [
+    {
+      "claim_id": "C-UNIVERSAL",
+      "statement": "PEO always reduces mass loss in every Aster-17 subgroup and is state of the art on all datasets.",
+      "universal": true,
+      "scope_record_ids": ["R-POOLED", "R-THICK", "R-THIN", "R-MECHANISM", "R-SERVICE"],
+      "section_coverage": {
+        "methods": {
+          "checked": true,
+          "evidence": {
+            "source": "source.txt",
+            "anchor": "S1",
+            "quote": "Thick coupons were 2.0 mm and thin coupons were 0.8 mm; each arm contained eight coupons of each thickness."
+          }
+        },
+        "results": {
+          "checked": true,
+          "evidence": {
+            "source": "source.txt",
+            "anchor": "S3",
+            "quote": "In the thin stratum, mean mass loss was 8.7 g/m^2 with PEO and 7.9 g/m^2 without coating, reversing the pooled direction."
+          }
+        },
+        "tables": {
+          "checked": true,
+          "evidence": {
+            "source": "source.txt",
+            "anchor": "S4",
+            "quote": "thin PEO 8.7, uncoated 7.9"
+          }
+        },
+        "discussion": {
+          "checked": true,
+          "evidence": {
+            "source": "source.txt",
+            "anchor": "S5",
+            "quote": "The study was not designed to test service life, other alloys, field environments, or rankings against other coating methods."
+          }
+        }
+      },
+      "exception_search": {
+        "performed": true,
+        "terms": ["thin", "thick", "reversed", "opposite", "no mechanism", "other alloys", "field environments", "rankings", "all datasets"],
+        "locations": ["Methods [S1]", "Abstract [S2]", "Results [S3]", "Table 1 [S4]", "Discussion [S5]"]
+      },
+      "counterexamples": [
+        {
+          "record_id": "R-THIN",
+          "disposition": "bounded_restatement",
+          "reason": "The in-scope 0.8 mm subgroup has higher mass loss with PEO, defeating 'always' and 'every subgroup'; the pooled result must not erase this exception."
+        }
+      ],
+      "bounded_restatement": "In this single fictional batch of cast Aster-17 coupons exposed to 5% NaCl salt spray for 48 h at 35 °C, PEO lowered pooled mean mass loss versus no coating, but the 0.8 mm thin subgroup reversed direction; service-life and state-of-the-art claims are not reported."
+    },
+    {
+      "claim_id": "C-BOUNDED",
+      "statement": "For the tested fictional cast Aster-17 coupons under the specified 48 h salt spray, pooled and thick-stratum mean mass loss favored PEO over no coating, while the thin stratum did not.",
+      "universal": false,
+      "scope_record_ids": ["R-POOLED", "R-THICK", "R-THIN"],
+      "scope_record_link_exceptions": {
+        "R-THIN": {
+          "kind": "composition",
+          "reason": "This aggregate bounded synthesis deliberately includes the separately identified contrary thin-stratum record so the pooled and opposite subgroup directions remain distinct."
+        }
+      }
+    },
+    {
+      "claim_id": "C-SERVICE",
+      "statement": "Service life, other alloys, field environments, and comparative state-of-the-art ranking are not reported.",
+      "universal": false,
+      "scope_record_ids": ["R-SERVICE"]
+    }
+  ]
+}

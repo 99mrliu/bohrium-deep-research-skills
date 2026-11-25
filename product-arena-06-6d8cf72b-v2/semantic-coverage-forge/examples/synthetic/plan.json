@@ -1,0 +1,153 @@
+{
+  "case_id": "synthetic-lumenfen-semantic-coverage-001",
+  "synthetic": true,
+  "task_type": "qa",
+  "output_schema": {
+    "type": "object",
+    "additionalProperties": false,
+    "required": ["case_id", "Q1", "Q2", "Q3"],
+    "properties": {
+      "case_id": {"type": "string", "const": "synthetic-lumenfen-semantic-coverage-001"},
+      "Q1": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": ["item_id", "question", "answer", "status", "evidence", "checked_scope"],
+        "properties": {
+          "item_id": {"type": "string", "const": "Q1"},
+          "question": {"type": "string", "minLength": 1, "maxLength": 500},
+          "answer": {"type": "string", "minLength": 1, "maxLength": 900},
+          "status": {"type": "string", "enum": ["answered", "not_reported", "unreadable", "missing"]},
+          "evidence": {
+            "type": "array", "minItems": 0, "maxItems": 4,
+            "items": {
+              "type": "object",
+              "additionalProperties": false,
+              "required": ["evidence_id", "source_id", "anchor", "quote", "evidence_role"],
+              "properties": {
+                "evidence_id": {"type": "string", "minLength": 1, "maxLength": 60},
+                "source_id": {"type": "string", "const": "SYNTH-LUMENFEN-2026"},
+                "anchor": {"type": "string", "enum": ["S1", "S2", "T1"]},
+                "quote": {"type": "string", "minLength": 1, "maxLength": 1200},
+                "evidence_role": {"type": "string", "enum": ["author_reported", "formula_derived_from_reported", "mixed", "context_only"]}
+              }
+            }
+          },
+          "checked_scope": {"type": "string", "minLength": 20, "maxLength": 1200}
+        }
+      },
+      "Q2": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": ["item_id", "question", "answer", "status", "evidence", "checked_scope"],
+        "properties": {
+          "item_id": {"type": "string", "const": "Q2"},
+          "question": {"type": "string", "minLength": 1, "maxLength": 500},
+          "answer": {"type": "string", "minLength": 1, "maxLength": 900},
+          "status": {"type": "string", "enum": ["answered", "not_reported", "unreadable", "missing"]},
+          "evidence": {
+            "type": "array", "minItems": 0, "maxItems": 4,
+            "items": {
+              "type": "object",
+              "additionalProperties": false,
+              "required": ["evidence_id", "source_id", "anchor", "quote", "evidence_role"],
+              "properties": {
+                "evidence_id": {"type": "string", "minLength": 1, "maxLength": 60},
+                "source_id": {"type": "string", "const": "SYNTH-LUMENFEN-2026"},
+                "anchor": {"type": "string", "enum": ["S1", "S2", "T1"]},
+                "quote": {"type": "string", "minLength": 1, "maxLength": 1200},
+                "evidence_role": {"type": "string", "enum": ["author_reported", "formula_derived_from_reported", "mixed", "context_only"]}
+              }
+            }
+          },
+          "checked_scope": {"type": "string", "minLength": 20, "maxLength": 1200}
+        }
+      },
+      "Q3": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": ["item_id", "question", "answer", "status", "evidence", "checked_scope"],
+        "properties": {
+          "item_id": {"type": "string", "const": "Q3"},
+          "question": {"type": "string", "minLength": 1, "maxLength": 500},
+          "answer": {"type": "string", "minLength": 1, "maxLength": 900},
+          "status": {"type": "string", "enum": ["answered", "not_reported", "unreadable", "missing"]},
+          "evidence": {
+            "type": "array", "minItems": 0, "maxItems": 4,
+            "items": {
+              "type": "object",
+              "additionalProperties": false,
+              "required": ["evidence_id", "source_id", "anchor", "quote", "evidence_role"],
+              "properties": {
+                "evidence_id": {"type": "string", "minLength": 1, "maxLength": 60},
+                "source_id": {"type": "string", "const": "SYNTH-LUMENFEN-2026"},
+                "anchor": {"type": "string", "enum": ["S1", "S2", "T1"]},
+                "quote": {"type": "string", "minLength": 1, "maxLength": 1200},
+                "evidence_role": {"type": "string", "enum": ["author_reported", "formula_derived_from_reported", "mixed", "context_only"]}
+              }
+            }
+          },
+          "checked_scope": {"type": "string", "minLength": 20, "maxLength": 1200}
+        }
+      }
+    }
+  },
+  "answer_matrix": {
+    "version": "1.0",
+    "items": [
+      {
+        "item_id": "Q1",
+        "question": "At 12 weeks, what mean orientation score did the authors report, and was that number author-reported or calculated from the excerpt?",
+        "answer_path": "/Q1/answer",
+        "status_path": "/Q1/status",
+        "evidence_path": "/Q1/evidence",
+        "checked_scope_path": "/Q1/checked_scope",
+        "evidence_role": "author_reported",
+        "checked_source_scope": [{"source_id": "SYNTH-LUMENFEN-2026", "anchors": ["S1"]}],
+        "required_answer_terms": ["12-week", "82.4 points", "author-reported", "not calculated", "n=36"],
+        "forbidden_generalizations": ["all participants everywhere", "proves efficacy"],
+        "derivation": null,
+        "uncertainty": "No additional uncertainty is inferred beyond the excerpt's reported mean and SEM."
+      },
+      {
+        "item_id": "Q2",
+        "question": "In Table 1 at the Reed site, how did Compass A's mean completion time compare with Compass B's, including the exploratory/unadjusted conditions and units, and can the comparison be generalized to other sites?",
+        "answer_path": "/Q2/answer",
+        "status_path": "/Q2/status",
+        "evidence_path": "/Q2/evidence",
+        "checked_scope_path": "/Q2/checked_scope",
+        "evidence_role": "mixed",
+        "checked_source_scope": [{"source_id": "SYNTH-LUMENFEN-2026", "anchors": ["T1"]}],
+        "required_answer_terms": ["Reed site only", "1.3 minutes lower", "8.1", "9.4 minutes", "calculated", "exploratory", "unadjusted", "n=12 per group", "No,", "other sites"],
+        "forbidden_generalizations": ["all sites show", "universally superior", "proves superiority", "statistically significant"],
+        "derivation": {
+          "formula": "9.4 minutes - 8.1 minutes = 1.3 minutes; Compass A minus Compass B = -1.3 minutes, so A is 1.3 minutes lower.",
+          "inputs": ["Compass A: author-reported 8.1 minutes at Reed", "Compass B: author-reported 9.4 minutes at Reed"],
+          "rounding": "One decimal place, matching both reported inputs; the difference is calculated, not author-reported."
+        },
+        "uncertainty": "The difference is exploratory, unadjusted, and restricted to Reed; no other-site or significance conclusion is supported."
+      },
+      {
+        "item_id": "Q3",
+        "question": "What 95% confidence interval is reported for the 12-week mean orientation score?",
+        "answer_path": "/Q3/answer",
+        "status_path": "/Q3/status",
+        "evidence_path": "/Q3/evidence",
+        "checked_scope_path": "/Q3/checked_scope",
+        "evidence_role": "no_evidence_expected",
+        "checked_source_scope": [{"source_id": "SYNTH-LUMENFEN-2026", "anchors": ["S1", "S2", "T1"]}],
+        "required_answer_terms": ["Not reported", "95% confidence interval", "SEM", "no CI was calculated"],
+        "forbidden_generalizations": ["no study has ever reported", "95% ci is 82.4"],
+        "derivation": null,
+        "uncertainty": "Not reported only in S1, S2, and T1 of the supplied excerpt; this is not a claim about other documents."
+      }
+    ]
+  },
+  "item_id_contracts": [
+    {"path": "/Q1", "id_property": "item_id", "ids": ["Q1"], "exact": true},
+    {"path": "/Q2", "id_property": "item_id", "ids": ["Q2"], "exact": true},
+    {"path": "/Q3", "id_property": "item_id", "ids": ["Q3"], "exact": true},
+    {"path": "/Q1/evidence", "id_property": "evidence_id", "ids": ["Q1-E1"], "exact": true},
+    {"path": "/Q2/evidence", "id_property": "evidence_id", "ids": ["Q2-E1"], "exact": true},
+    {"path": "/Q3/evidence", "id_property": "evidence_id", "ids": [], "exact": true}
+  ]
+}

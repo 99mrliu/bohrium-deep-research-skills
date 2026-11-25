@@ -1,0 +1,2318 @@
+{
+  "schema_version": "1.0",
+  "ledger_id": "synthetic-methods-a-b-low-high-errors-v1",
+  "synthetic": true,
+  "status": "passed",
+  "sources": [
+    {
+      "source_id": "fictional-source",
+      "path": "materials/fictional_source.md",
+      "status": "readable",
+      "uncertainty": "Entirely synthetic text; no external literature claim or original PDF is present."
+    }
+  ],
+  "source_values": [
+    {
+      "value_id": "a_high_control",
+      "number": "40",
+      "unit": "percent",
+      "provenance": "author_reported",
+      "anchor": {
+        "source_id": "fictional-source",
+        "locator": "synthetic page 1, Table 1",
+        "row": "Method A",
+        "column": "High control (%)",
+        "condition": "high temperature, control",
+        "unit": "percent",
+        "quote": "| Method A | 12 | 9 | 40 | 30 |",
+        "char_start": 419,
+        "char_end": 450
+      },
+      "canonical_unit": "percent",
+      "quote_check": {
+        "status": "matched",
+        "locator_status": "region_verified",
+        "quote": "| Method A | 12 | 9 | 40 | 30 |",
+        "char_start": 419,
+        "char_end": 450,
+        "method": "exact Python Unicode code-point slice at anchor.char_start:char_end; no global substring fallback"
+      },
+      "source_status": "readable"
+    },
+    {
+      "value_id": "a_high_treatment",
+      "number": "30",
+      "unit": "percent",
+      "provenance": "author_reported",
+      "anchor": {
+        "source_id": "fictional-source",
+        "locator": "synthetic page 1, Table 1",
+        "row": "Method A",
+        "column": "High treatment (%)",
+        "condition": "high temperature, treatment",
+        "unit": "percent",
+        "quote": "| Method A | 12 | 9 | 40 | 30 |",
+        "char_start": 419,
+        "char_end": 450
+      },
+      "canonical_unit": "percent",
+      "quote_check": {
+        "status": "matched",
+        "locator_status": "region_verified",
+        "quote": "| Method A | 12 | 9 | 40 | 30 |",
+        "char_start": 419,
+        "char_end": 450,
+        "method": "exact Python Unicode code-point slice at anchor.char_start:char_end; no global substring fallback"
+      },
+      "source_status": "readable"
+    },
+    {
+      "value_id": "b_high_control",
+      "number": "20",
+      "unit": "percent",
+      "provenance": "author_reported",
+      "anchor": {
+        "source_id": "fictional-source",
+        "locator": "synthetic page 1, Table 1",
+        "row": "Method B",
+        "column": "High control (%)",
+        "condition": "high temperature, control",
+        "unit": "percent",
+        "quote": "| Method B | 8 | 6 | 20 | 16 |",
+        "char_start": 451,
+        "char_end": 481
+      },
+      "canonical_unit": "percent",
+      "quote_check": {
+        "status": "matched",
+        "locator_status": "region_verified",
+        "quote": "| Method B | 8 | 6 | 20 | 16 |",
+        "char_start": 451,
+        "char_end": 481,
+        "method": "exact Python Unicode code-point slice at anchor.char_start:char_end; no global substring fallback"
+      },
+      "source_status": "readable"
+    },
+    {
+      "value_id": "b_high_treatment",
+      "number": "16",
+      "unit": "percent",
+      "provenance": "author_reported",
+      "anchor": {
+        "source_id": "fictional-source",
+        "locator": "synthetic page 1, Table 1",
+        "row": "Method B",
+        "column": "High treatment (%)",
+        "condition": "high temperature, treatment",
+        "unit": "percent",
+        "quote": "| Method B | 8 | 6 | 20 | 16 |",
+        "char_start": 451,
+        "char_end": 481
+      },
+      "canonical_unit": "percent",
+      "quote_check": {
+        "status": "matched",
+        "locator_status": "region_verified",
+        "quote": "| Method B | 8 | 6 | 20 | 16 |",
+        "char_start": 451,
+        "char_end": 481,
+        "method": "exact Python Unicode code-point slice at anchor.char_start:char_end; no global substring fallback"
+      },
+      "source_status": "readable"
+    },
+    {
+      "value_id": "a_low_control",
+      "number": "12",
+      "unit": "percent",
+      "provenance": "author_reported",
+      "anchor": {
+        "source_id": "fictional-source",
+        "locator": "synthetic page 1, Table 1",
+        "row": "Method A",
+        "column": "Low control (%)",
+        "condition": "low temperature, control",
+        "unit": "percent",
+        "quote": "| Method A | 12 | 9 | 40 | 30 |",
+        "char_start": 419,
+        "char_end": 450
+      },
+      "canonical_unit": "percent",
+      "quote_check": {
+        "status": "matched",
+        "locator_status": "region_verified",
+        "quote": "| Method A | 12 | 9 | 40 | 30 |",
+        "char_start": 419,
+        "char_end": 450,
+        "method": "exact Python Unicode code-point slice at anchor.char_start:char_end; no global substring fallback"
+      },
+      "source_status": "readable"
+    },
+    {
+      "value_id": "a_low_treatment",
+      "number": "9",
+      "unit": "percent",
+      "provenance": "author_reported",
+      "anchor": {
+        "source_id": "fictional-source",
+        "locator": "synthetic page 1, Table 1",
+        "row": "Method A",
+        "column": "Low treatment (%)",
+        "condition": "low temperature, treatment",
+        "unit": "percent",
+        "quote": "| Method A | 12 | 9 | 40 | 30 |",
+        "char_start": 419,
+        "char_end": 450
+      },
+      "canonical_unit": "percent",
+      "quote_check": {
+        "status": "matched",
+        "locator_status": "region_verified",
+        "quote": "| Method A | 12 | 9 | 40 | 30 |",
+        "char_start": 419,
+        "char_end": 450,
+        "method": "exact Python Unicode code-point slice at anchor.char_start:char_end; no global substring fallback"
+      },
+      "source_status": "readable"
+    },
+    {
+      "value_id": "b_low_control",
+      "number": "8",
+      "unit": "percent",
+      "provenance": "author_reported",
+      "anchor": {
+        "source_id": "fictional-source",
+        "locator": "synthetic page 1, Table 1",
+        "row": "Method B",
+        "column": "Low control (%)",
+        "condition": "low temperature, control",
+        "unit": "percent",
+        "quote": "| Method B | 8 | 6 | 20 | 16 |",
+        "char_start": 451,
+        "char_end": 481
+      },
+      "canonical_unit": "percent",
+      "quote_check": {
+        "status": "matched",
+        "locator_status": "region_verified",
+        "quote": "| Method B | 8 | 6 | 20 | 16 |",
+        "char_start": 451,
+        "char_end": 481,
+        "method": "exact Python Unicode code-point slice at anchor.char_start:char_end; no global substring fallback"
+      },
+      "source_status": "readable"
+    },
+    {
+      "value_id": "b_low_treatment",
+      "number": "6",
+      "unit": "percent",
+      "provenance": "author_reported",
+      "anchor": {
+        "source_id": "fictional-source",
+        "locator": "synthetic page 1, Table 1",
+        "row": "Method B",
+        "column": "Low treatment (%)",
+        "condition": "low temperature, treatment",
+        "unit": "percent",
+        "quote": "| Method B | 8 | 6 | 20 | 16 |",
+        "char_start": 451,
+        "char_end": 481
+      },
+      "canonical_unit": "percent",
+      "quote_check": {
+        "status": "matched",
+        "locator_status": "region_verified",
+        "quote": "| Method B | 8 | 6 | 20 | 16 |",
+        "char_start": 451,
+        "char_end": 481,
+        "method": "exact Python Unicode code-point slice at anchor.char_start:char_end; no global substring fallback"
+      },
+      "source_status": "readable"
+    },
+    {
+      "value_id": "a_high_body_control",
+      "number": "40",
+      "unit": "percent",
+      "provenance": "author_reported",
+      "anchor": {
+        "source_id": "fictional-source",
+        "locator": "synthetic page 1, Body statement, sentence 1",
+        "row": "Method A body assertion",
+        "column": "initial high-temperature error",
+        "condition": "high temperature, control",
+        "unit": "percent",
+        "quote": "High temperature, Method A: error changed from 40% to 30%",
+        "char_start": 502,
+        "char_end": 559
+      },
+      "canonical_unit": "percent",
+      "quote_check": {
+        "status": "matched",
+        "locator_status": "region_verified",
+        "quote": "High temperature, Method A: error changed from 40% to 30%",
+        "char_start": 502,
+        "char_end": 559,
+        "method": "exact Python Unicode code-point slice at anchor.char_start:char_end; no global substring fallback"
+      },
+      "source_status": "readable"
+    },
+    {
+      "value_id": "a_high_body_treatment",
+      "number": "30",
+      "unit": "percent",
+      "provenance": "author_reported",
+      "anchor": {
+        "source_id": "fictional-source",
+        "locator": "synthetic page 1, Body statement, sentence 1",
+        "row": "Method A body assertion",
+        "column": "final high-temperature error",
+        "condition": "high temperature, treatment",
+        "unit": "percent",
+        "quote": "High temperature, Method A: error changed from 40% to 30%",
+        "char_start": 502,
+        "char_end": 559
+      },
+      "canonical_unit": "percent",
+      "quote_check": {
+        "status": "matched",
+        "locator_status": "region_verified",
+        "quote": "High temperature, Method A: error changed from 40% to 30%",
+        "char_start": 502,
+        "char_end": 559,
+        "method": "exact Python Unicode code-point slice at anchor.char_start:char_end; no global substring fallback"
+      },
+      "source_status": "readable"
+    },
+    {
+      "value_id": "figure_1_a_high_control",
+      "number": null,
+      "unit": "percent",
+      "provenance": "missing",
+      "anchor": {
+        "source_id": "fictional-source",
+        "locator": "synthetic page 1, Measurements and missing displays, Figure 1 reference",
+        "row": "Method A (referenced only)",
+        "column": "High control (referenced only)",
+        "condition": "high temperature, control; original figure unavailable",
+        "unit": "percent",
+        "quote": null
+      },
+      "note": "No original Figure 1 was supplied; null is not a zero and no pixel estimate was made.",
+      "canonical_unit": "percent",
+      "quote_check": {
+        "status": "not_applicable",
+        "locator_status": "not_applicable",
+        "quote": null,
+        "char_start": null,
+        "char_end": null,
+        "method": "no quote required for a missing or not_reported value"
+      },
+      "source_status": "readable"
+    }
+  ],
+  "calculations": [
+    {
+      "calculation_id": "a_high_relative_reduction",
+      "operation": "percent_relative_change",
+      "direction": "reduction",
+      "provenance": "independently_calculated",
+      "input_operands": [
+        {
+          "role": "initial",
+          "value_id": "a_high_control",
+          "number": "40",
+          "unit": "percent",
+          "provenance": "author_reported",
+          "anchor": {
+            "source_id": "fictional-source",
+            "locator": "synthetic page 1, Table 1",
+            "row": "Method A",
+            "column": "High control (%)",
+            "condition": "high temperature, control",
+            "unit": "percent",
+            "quote": "| Method A | 12 | 9 | 40 | 30 |",
+            "char_start": 419,
+            "char_end": 450
+          },
+          "quote_check": "matched",
+          "locator_check": "region_verified"
+        },
+        {
+          "role": "final",
+          "value_id": "a_high_treatment",
+          "number": "30",
+          "unit": "percent",
+          "provenance": "author_reported",
+          "anchor": {
+            "source_id": "fictional-source",
+            "locator": "synthetic page 1, Table 1",
+            "row": "Method A",
+            "column": "High treatment (%)",
+            "condition": "high temperature, treatment",
+            "unit": "percent",
+            "quote": "| Method A | 12 | 9 | 40 | 30 |",
+            "char_start": 419,
+            "char_end": 450
+          },
+          "quote_check": "matched",
+          "locator_check": "region_verified"
+        }
+      ],
+      "expected": "25",
+      "tolerance": {
+        "type": "absolute",
+        "value": "0.0000001"
+      },
+      "rounding": {
+        "places": 2,
+        "mode": "ROUND_HALF_UP"
+      },
+      "expected_basis": "Independent hand check: (40-30)/40 * 100 = 25.",
+      "note": "Positive 25 denotes reduction; signed change would be -25 percent.",
+      "status": "matched",
+      "match": true,
+      "arithmetic_match": true,
+      "formula": "100 * (40 - 30) / abs(40) = 25",
+      "actual_raw": "25",
+      "actual_rounded": "25.00",
+      "output_unit": "percent",
+      "discrepancy": "0",
+      "allowed_discrepancy": "0.0000001",
+      "comparison": "abs(0) <= 0.0000001",
+      "anchor_failures": []
+    },
+    {
+      "calculation_id": "a_high_pp_reduction",
+      "operation": "percentage_point_difference",
+      "direction": "reduction",
+      "provenance": "independently_calculated",
+      "input_operands": [
+        {
+          "role": "initial",
+          "value_id": "a_high_control",
+          "number": "40",
+          "unit": "percent",
+          "provenance": "author_reported",
+          "anchor": {
+            "source_id": "fictional-source",
+            "locator": "synthetic page 1, Table 1",
+            "row": "Method A",
+            "column": "High control (%)",
+            "condition": "high temperature, control",
+            "unit": "percent",
+            "quote": "| Method A | 12 | 9 | 40 | 30 |",
+            "char_start": 419,
+            "char_end": 450
+          },
+          "quote_check": "matched",
+          "locator_check": "region_verified"
+        },
+        {
+          "role": "final",
+          "value_id": "a_high_treatment",
+          "number": "30",
+          "unit": "percent",
+          "provenance": "author_reported",
+          "anchor": {
+            "source_id": "fictional-source",
+            "locator": "synthetic page 1, Table 1",
+            "row": "Method A",
+            "column": "High treatment (%)",
+            "condition": "high temperature, treatment",
+            "unit": "percent",
+            "quote": "| Method A | 12 | 9 | 40 | 30 |",
+            "char_start": 419,
+            "char_end": 450
+          },
+          "quote_check": "matched",
+          "locator_check": "region_verified"
+        }
+      ],
+      "expected": "10",
+      "tolerance": {
+        "type": "absolute",
+        "value": "0.0000001"
+      },
+      "rounding": {
+        "places": 2,
+        "mode": "ROUND_HALF_UP"
+      },
+      "expected_basis": "Independent hand check: 40 percentage points minus 30 percentage points = 10.",
+      "note": "",
+      "status": "matched",
+      "match": true,
+      "arithmetic_match": true,
+      "formula": "40 - 30 = 10",
+      "actual_raw": "10",
+      "actual_rounded": "10.00",
+      "output_unit": "percentage_points",
+      "discrepancy": "0",
+      "allowed_discrepancy": "0.0000001",
+      "comparison": "abs(0) <= 0.0000001",
+      "anchor_failures": []
+    },
+    {
+      "calculation_id": "b_high_relative_reduction",
+      "operation": "percent_relative_change",
+      "direction": "reduction",
+      "provenance": "independently_calculated",
+      "input_operands": [
+        {
+          "role": "initial",
+          "value_id": "b_high_control",
+          "number": "20",
+          "unit": "percent",
+          "provenance": "author_reported",
+          "anchor": {
+            "source_id": "fictional-source",
+            "locator": "synthetic page 1, Table 1",
+            "row": "Method B",
+            "column": "High control (%)",
+            "condition": "high temperature, control",
+            "unit": "percent",
+            "quote": "| Method B | 8 | 6 | 20 | 16 |",
+            "char_start": 451,
+            "char_end": 481
+          },
+          "quote_check": "matched",
+          "locator_check": "region_verified"
+        },
+        {
+          "role": "final",
+          "value_id": "b_high_treatment",
+          "number": "16",
+          "unit": "percent",
+          "provenance": "author_reported",
+          "anchor": {
+            "source_id": "fictional-source",
+            "locator": "synthetic page 1, Table 1",
+            "row": "Method B",
+            "column": "High treatment (%)",
+            "condition": "high temperature, treatment",
+            "unit": "percent",
+            "quote": "| Method B | 8 | 6 | 20 | 16 |",
+            "char_start": 451,
+            "char_end": 481
+          },
+          "quote_check": "matched",
+          "locator_check": "region_verified"
+        }
+      ],
+      "expected": "20",
+      "tolerance": {
+        "type": "absolute",
+        "value": "0.0000001"
+      },
+      "rounding": {
+        "places": 2,
+        "mode": "ROUND_HALF_UP"
+      },
+      "expected_basis": "Independent hand check: (20-16)/20 * 100 = 20.",
+      "note": "",
+      "status": "matched",
+      "match": true,
+      "arithmetic_match": true,
+      "formula": "100 * (20 - 16) / abs(20) = 20",
+      "actual_raw": "20",
+      "actual_rounded": "20.00",
+      "output_unit": "percent",
+      "discrepancy": "0",
+      "allowed_discrepancy": "0.0000001",
+      "comparison": "abs(0) <= 0.0000001",
+      "anchor_failures": []
+    },
+    {
+      "calculation_id": "b_high_pp_reduction",
+      "operation": "percentage_point_difference",
+      "direction": "reduction",
+      "provenance": "independently_calculated",
+      "input_operands": [
+        {
+          "role": "initial",
+          "value_id": "b_high_control",
+          "number": "20",
+          "unit": "percent",
+          "provenance": "author_reported",
+          "anchor": {
+            "source_id": "fictional-source",
+            "locator": "synthetic page 1, Table 1",
+            "row": "Method B",
+            "column": "High control (%)",
+            "condition": "high temperature, control",
+            "unit": "percent",
+            "quote": "| Method B | 8 | 6 | 20 | 16 |",
+            "char_start": 451,
+            "char_end": 481
+          },
+          "quote_check": "matched",
+          "locator_check": "region_verified"
+        },
+        {
+          "role": "final",
+          "value_id": "b_high_treatment",
+          "number": "16",
+          "unit": "percent",
+          "provenance": "author_reported",
+          "anchor": {
+            "source_id": "fictional-source",
+            "locator": "synthetic page 1, Table 1",
+            "row": "Method B",
+            "column": "High treatment (%)",
+            "condition": "high temperature, treatment",
+            "unit": "percent",
+            "quote": "| Method B | 8 | 6 | 20 | 16 |",
+            "char_start": 451,
+            "char_end": 481
+          },
+          "quote_check": "matched",
+          "locator_check": "region_verified"
+        }
+      ],
+      "expected": "4",
+      "tolerance": {
+        "type": "absolute",
+        "value": "0.0000001"
+      },
+      "rounding": {
+        "places": 2,
+        "mode": "ROUND_HALF_UP"
+      },
+      "expected_basis": "Independent hand check: 20 minus 16 = 4 percentage points.",
+      "note": "",
+      "status": "matched",
+      "match": true,
+      "arithmetic_match": true,
+      "formula": "20 - 16 = 4",
+      "actual_raw": "4",
+      "actual_rounded": "4.00",
+      "output_unit": "percentage_points",
+      "discrepancy": "0",
+      "allowed_discrepancy": "0.0000001",
+      "comparison": "abs(0) <= 0.0000001",
+      "anchor_failures": []
+    },
+    {
+      "calculation_id": "a_low_relative_reduction",
+      "operation": "percent_relative_change",
+      "direction": "reduction",
+      "provenance": "independently_calculated",
+      "input_operands": [
+        {
+          "role": "initial",
+          "value_id": "a_low_control",
+          "number": "12",
+          "unit": "percent",
+          "provenance": "author_reported",
+          "anchor": {
+            "source_id": "fictional-source",
+            "locator": "synthetic page 1, Table 1",
+            "row": "Method A",
+            "column": "Low control (%)",
+            "condition": "low temperature, control",
+            "unit": "percent",
+            "quote": "| Method A | 12 | 9 | 40 | 30 |",
+            "char_start": 419,
+            "char_end": 450
+          },
+          "quote_check": "matched",
+          "locator_check": "region_verified"
+        },
+        {
+          "role": "final",
+          "value_id": "a_low_treatment",
+          "number": "9",
+          "unit": "percent",
+          "provenance": "author_reported",
+          "anchor": {
+            "source_id": "fictional-source",
+            "locator": "synthetic page 1, Table 1",
+            "row": "Method A",
+            "column": "Low treatment (%)",
+            "condition": "low temperature, treatment",
+            "unit": "percent",
+            "quote": "| Method A | 12 | 9 | 40 | 30 |",
+            "char_start": 419,
+            "char_end": 450
+          },
+          "quote_check": "matched",
+          "locator_check": "region_verified"
+        }
+      ],
+      "expected": "25",
+      "tolerance": {
+        "type": "absolute",
+        "value": "0.0000001"
+      },
+      "rounding": {
+        "places": 2,
+        "mode": "ROUND_HALF_UP"
+      },
+      "expected_basis": "Independent hand check: (12-9)/12 * 100 = 25.",
+      "note": "",
+      "status": "matched",
+      "match": true,
+      "arithmetic_match": true,
+      "formula": "100 * (12 - 9) / abs(12) = 25",
+      "actual_raw": "25",
+      "actual_rounded": "25.00",
+      "output_unit": "percent",
+      "discrepancy": "0",
+      "allowed_discrepancy": "0.0000001",
+      "comparison": "abs(0) <= 0.0000001",
+      "anchor_failures": []
+    },
+    {
+      "calculation_id": "a_low_pp_reduction",
+      "operation": "percentage_point_difference",
+      "direction": "reduction",
+      "provenance": "independently_calculated",
+      "input_operands": [
+        {
+          "role": "initial",
+          "value_id": "a_low_control",
+          "number": "12",
+          "unit": "percent",
+          "provenance": "author_reported",
+          "anchor": {
+            "source_id": "fictional-source",
+            "locator": "synthetic page 1, Table 1",
+            "row": "Method A",
+            "column": "Low control (%)",
+            "condition": "low temperature, control",
+            "unit": "percent",
+            "quote": "| Method A | 12 | 9 | 40 | 30 |",
+            "char_start": 419,
+            "char_end": 450
+          },
+          "quote_check": "matched",
+          "locator_check": "region_verified"
+        },
+        {
+          "role": "final",
+          "value_id": "a_low_treatment",
+          "number": "9",
+          "unit": "percent",
+          "provenance": "author_reported",
+          "anchor": {
+            "source_id": "fictional-source",
+            "locator": "synthetic page 1, Table 1",
+            "row": "Method A",
+            "column": "Low treatment (%)",
+            "condition": "low temperature, treatment",
+            "unit": "percent",
+            "quote": "| Method A | 12 | 9 | 40 | 30 |",
+            "char_start": 419,
+            "char_end": 450
+          },
+          "quote_check": "matched",
+          "locator_check": "region_verified"
+        }
+      ],
+      "expected": "3",
+      "tolerance": {
+        "type": "absolute",
+        "value": "0.0000001"
+      },
+      "rounding": {
+        "places": 2,
+        "mode": "ROUND_HALF_UP"
+      },
+      "expected_basis": "Independent hand check: 12 minus 9 = 3 percentage points.",
+      "note": "",
+      "status": "matched",
+      "match": true,
+      "arithmetic_match": true,
+      "formula": "12 - 9 = 3",
+      "actual_raw": "3",
+      "actual_rounded": "3.00",
+      "output_unit": "percentage_points",
+      "discrepancy": "0",
+      "allowed_discrepancy": "0.0000001",
+      "comparison": "abs(0) <= 0.0000001",
+      "anchor_failures": []
+    },
+    {
+      "calculation_id": "b_low_relative_reduction",
+      "operation": "percent_relative_change",
+      "direction": "reduction",
+      "provenance": "independently_calculated",
+      "input_operands": [
+        {
+          "role": "initial",
+          "value_id": "b_low_control",
+          "number": "8",
+          "unit": "percent",
+          "provenance": "author_reported",
+          "anchor": {
+            "source_id": "fictional-source",
+            "locator": "synthetic page 1, Table 1",
+            "row": "Method B",
+            "column": "Low control (%)",
+            "condition": "low temperature, control",
+            "unit": "percent",
+            "quote": "| Method B | 8 | 6 | 20 | 16 |",
+            "char_start": 451,
+            "char_end": 481
+          },
+          "quote_check": "matched",
+          "locator_check": "region_verified"
+        },
+        {
+          "role": "final",
+          "value_id": "b_low_treatment",
+          "number": "6",
+          "unit": "percent",
+          "provenance": "author_reported",
+          "anchor": {
+            "source_id": "fictional-source",
+            "locator": "synthetic page 1, Table 1",
+            "row": "Method B",
+            "column": "Low treatment (%)",
+            "condition": "low temperature, treatment",
+            "unit": "percent",
+            "quote": "| Method B | 8 | 6 | 20 | 16 |",
+            "char_start": 451,
+            "char_end": 481
+          },
+          "quote_check": "matched",
+          "locator_check": "region_verified"
+        }
+      ],
+      "expected": "25",
+      "tolerance": {
+        "type": "absolute",
+        "value": "0.0000001"
+      },
+      "rounding": {
+        "places": 2,
+        "mode": "ROUND_HALF_UP"
+      },
+      "expected_basis": "Independent hand check: (8-6)/8 * 100 = 25.",
+      "note": "",
+      "status": "matched",
+      "match": true,
+      "arithmetic_match": true,
+      "formula": "100 * (8 - 6) / abs(8) = 25",
+      "actual_raw": "25",
+      "actual_rounded": "25.00",
+      "output_unit": "percent",
+      "discrepancy": "0",
+      "allowed_discrepancy": "0.0000001",
+      "comparison": "abs(0) <= 0.0000001",
+      "anchor_failures": []
+    },
+    {
+      "calculation_id": "b_low_pp_reduction",
+      "operation": "percentage_point_difference",
+      "direction": "reduction",
+      "provenance": "independently_calculated",
+      "input_operands": [
+        {
+          "role": "initial",
+          "value_id": "b_low_control",
+          "number": "8",
+          "unit": "percent",
+          "provenance": "author_reported",
+          "anchor": {
+            "source_id": "fictional-source",
+            "locator": "synthetic page 1, Table 1",
+            "row": "Method B",
+            "column": "Low control (%)",
+            "condition": "low temperature, control",
+            "unit": "percent",
+            "quote": "| Method B | 8 | 6 | 20 | 16 |",
+            "char_start": 451,
+            "char_end": 481
+          },
+          "quote_check": "matched",
+          "locator_check": "region_verified"
+        },
+        {
+          "role": "final",
+          "value_id": "b_low_treatment",
+          "number": "6",
+          "unit": "percent",
+          "provenance": "author_reported",
+          "anchor": {
+            "source_id": "fictional-source",
+            "locator": "synthetic page 1, Table 1",
+            "row": "Method B",
+            "column": "Low treatment (%)",
+            "condition": "low temperature, treatment",
+            "unit": "percent",
+            "quote": "| Method B | 8 | 6 | 20 | 16 |",
+            "char_start": 451,
+            "char_end": 481
+          },
+          "quote_check": "matched",
+          "locator_check": "region_verified"
+        }
+      ],
+      "expected": "2",
+      "tolerance": {
+        "type": "absolute",
+        "value": "0.0000001"
+      },
+      "rounding": {
+        "places": 2,
+        "mode": "ROUND_HALF_UP"
+      },
+      "expected_basis": "Independent hand check: 8 minus 6 = 2 percentage points.",
+      "note": "",
+      "status": "matched",
+      "match": true,
+      "arithmetic_match": true,
+      "formula": "8 - 6 = 2",
+      "actual_raw": "2",
+      "actual_rounded": "2.00",
+      "output_unit": "percentage_points",
+      "discrepancy": "0",
+      "allowed_discrepancy": "0.0000001",
+      "comparison": "abs(0) <= 0.0000001",
+      "anchor_failures": []
+    },
+    {
+      "calculation_id": "a_high_final_initial_ratio",
+      "operation": "ratio",
+      "direction": "signed",
+      "provenance": "independently_calculated",
+      "input_operands": [
+        {
+          "role": "initial",
+          "value_id": "a_high_control",
+          "number": "40",
+          "unit": "percent",
+          "provenance": "author_reported",
+          "anchor": {
+            "source_id": "fictional-source",
+            "locator": "synthetic page 1, Table 1",
+            "row": "Method A",
+            "column": "High control (%)",
+            "condition": "high temperature, control",
+            "unit": "percent",
+            "quote": "| Method A | 12 | 9 | 40 | 30 |",
+            "char_start": 419,
+            "char_end": 450
+          },
+          "quote_check": "matched",
+          "locator_check": "region_verified"
+        },
+        {
+          "role": "final",
+          "value_id": "a_high_treatment",
+          "number": "30",
+          "unit": "percent",
+          "provenance": "author_reported",
+          "anchor": {
+            "source_id": "fictional-source",
+            "locator": "synthetic page 1, Table 1",
+            "row": "Method A",
+            "column": "High treatment (%)",
+            "condition": "high temperature, treatment",
+            "unit": "percent",
+            "quote": "| Method A | 12 | 9 | 40 | 30 |",
+            "char_start": 419,
+            "char_end": 450
+          },
+          "quote_check": "matched",
+          "locator_check": "region_verified"
+        }
+      ],
+      "expected": "0.75",
+      "tolerance": {
+        "type": "absolute",
+        "value": "0.0000001"
+      },
+      "rounding": {
+        "places": 2,
+        "mode": "ROUND_HALF_UP"
+      },
+      "expected_basis": "Independent simplified fraction: 30/40 = 3/4.",
+      "note": "",
+      "ratio_order": "final_over_initial",
+      "status": "matched",
+      "match": true,
+      "arithmetic_match": true,
+      "formula": "30 / 40 = 0.75",
+      "actual_raw": "0.75",
+      "actual_rounded": "0.75",
+      "output_unit": "dimensionless",
+      "discrepancy": "0",
+      "allowed_discrepancy": "0.0000001",
+      "comparison": "abs(0) <= 0.0000001",
+      "anchor_failures": []
+    },
+    {
+      "calculation_id": "a_high_signed_difference",
+      "operation": "difference",
+      "direction": "signed",
+      "provenance": "independently_calculated",
+      "input_operands": [
+        {
+          "role": "initial",
+          "value_id": "a_high_control",
+          "number": "40",
+          "unit": "percent",
+          "provenance": "author_reported",
+          "anchor": {
+            "source_id": "fictional-source",
+            "locator": "synthetic page 1, Table 1",
+            "row": "Method A",
+            "column": "High control (%)",
+            "condition": "high temperature, control",
+            "unit": "percent",
+            "quote": "| Method A | 12 | 9 | 40 | 30 |",
+            "char_start": 419,
+            "char_end": 450
+          },
+          "quote_check": "matched",
+          "locator_check": "region_verified"
+        },
+        {
+          "role": "final",
+          "value_id": "a_high_treatment",
+          "number": "30",
+          "unit": "percent",
+          "provenance": "author_reported",
+          "anchor": {
+            "source_id": "fictional-source",
+            "locator": "synthetic page 1, Table 1",
+            "row": "Method A",
+            "column": "High treatment (%)",
+            "condition": "high temperature, treatment",
+            "unit": "percent",
+            "quote": "| Method A | 12 | 9 | 40 | 30 |",
+            "char_start": 419,
+            "char_end": 450
+          },
+          "quote_check": "matched",
+          "locator_check": "region_verified"
+        }
+      ],
+      "expected": "-10",
+      "tolerance": {
+        "type": "absolute",
+        "value": "0.0000001"
+      },
+      "rounding": {
+        "places": 2,
+        "mode": "ROUND_HALF_UP"
+      },
+      "expected_basis": "Independent sign check: final minus initial = 30-40.",
+      "note": "",
+      "status": "matched",
+      "match": true,
+      "arithmetic_match": true,
+      "formula": "30 - 40 = -10",
+      "actual_raw": "-10",
+      "actual_rounded": "-10.00",
+      "output_unit": "percent",
+      "discrepancy": "0",
+      "allowed_discrepancy": "0.0000001",
+      "comparison": "abs(0) <= 0.0000001",
+      "anchor_failures": []
+    },
+    {
+      "calculation_id": "low_control_arithmetic_sum",
+      "operation": "sum",
+      "direction": "signed",
+      "provenance": "independently_calculated",
+      "input_operands": [
+        {
+          "role": "method_a",
+          "value_id": "a_low_control",
+          "number": "12",
+          "unit": "percent",
+          "provenance": "author_reported",
+          "anchor": {
+            "source_id": "fictional-source",
+            "locator": "synthetic page 1, Table 1",
+            "row": "Method A",
+            "column": "Low control (%)",
+            "condition": "low temperature, control",
+            "unit": "percent",
+            "quote": "| Method A | 12 | 9 | 40 | 30 |",
+            "char_start": 419,
+            "char_end": 450
+          },
+          "quote_check": "matched",
+          "locator_check": "region_verified"
+        },
+        {
+          "role": "method_b",
+          "value_id": "b_low_control",
+          "number": "8",
+          "unit": "percent",
+          "provenance": "author_reported",
+          "anchor": {
+            "source_id": "fictional-source",
+            "locator": "synthetic page 1, Table 1",
+            "row": "Method B",
+            "column": "Low control (%)",
+            "condition": "low temperature, control",
+            "unit": "percent",
+            "quote": "| Method B | 8 | 6 | 20 | 16 |",
+            "char_start": 451,
+            "char_end": 481
+          },
+          "quote_check": "matched",
+          "locator_check": "region_verified"
+        }
+      ],
+      "expected": "20",
+      "tolerance": {
+        "type": "absolute",
+        "value": "0.0000001"
+      },
+      "rounding": {
+        "places": 2,
+        "mode": "ROUND_HALF_UP"
+      },
+      "expected_basis": "Independent arithmetic coverage check: 12+8 = 20; no pooled scientific interpretation.",
+      "note": "Arithmetic-only operation test; summing method errors is not a scientific pooled endpoint.",
+      "status": "matched",
+      "match": true,
+      "arithmetic_match": true,
+      "formula": "12 + 8 = 20",
+      "actual_raw": "20",
+      "actual_rounded": "20.00",
+      "output_unit": "percent",
+      "discrepancy": "0",
+      "allowed_discrepancy": "0.0000001",
+      "comparison": "abs(0) <= 0.0000001",
+      "anchor_failures": []
+    },
+    {
+      "calculation_id": "low_control_arithmetic_product",
+      "operation": "product",
+      "direction": "signed",
+      "provenance": "independently_calculated",
+      "input_operands": [
+        {
+          "role": "method_a",
+          "value_id": "a_low_control",
+          "number": "12",
+          "unit": "percent",
+          "provenance": "author_reported",
+          "anchor": {
+            "source_id": "fictional-source",
+            "locator": "synthetic page 1, Table 1",
+            "row": "Method A",
+            "column": "Low control (%)",
+            "condition": "low temperature, control",
+            "unit": "percent",
+            "quote": "| Method A | 12 | 9 | 40 | 30 |",
+            "char_start": 419,
+            "char_end": 450
+          },
+          "quote_check": "matched",
+          "locator_check": "region_verified"
+        },
+        {
+          "role": "method_b",
+          "value_id": "b_low_control",
+          "number": "8",
+          "unit": "percent",
+          "provenance": "author_reported",
+          "anchor": {
+            "source_id": "fictional-source",
+            "locator": "synthetic page 1, Table 1",
+            "row": "Method B",
+            "column": "Low control (%)",
+            "condition": "low temperature, control",
+            "unit": "percent",
+            "quote": "| Method B | 8 | 6 | 20 | 16 |",
+            "char_start": 451,
+            "char_end": 481
+          },
+          "quote_check": "matched",
+          "locator_check": "region_verified"
+        }
+      ],
+      "expected": "96",
+      "tolerance": {
+        "type": "absolute",
+        "value": "0.0000001"
+      },
+      "rounding": {
+        "places": 2,
+        "mode": "ROUND_HALF_UP"
+      },
+      "expected_basis": "Independent arithmetic coverage check: 12*8 = 96; compound unit retained.",
+      "note": "Arithmetic-only operation test; no dimensional cancellation is claimed.",
+      "status": "matched",
+      "match": true,
+      "arithmetic_match": true,
+      "formula": "12 * 8 = 96",
+      "actual_raw": "96",
+      "actual_rounded": "96.00",
+      "output_unit": "percent * percent",
+      "discrepancy": "0",
+      "allowed_discrepancy": "0.0000001",
+      "comparison": "abs(0) <= 0.0000001",
+      "anchor_failures": []
+    },
+    {
+      "calculation_id": "high_control_arithmetic_division",
+      "operation": "division",
+      "direction": "signed",
+      "provenance": "independently_calculated",
+      "input_operands": [
+        {
+          "role": "numerator",
+          "value_id": "a_high_control",
+          "number": "40",
+          "unit": "percent",
+          "provenance": "author_reported",
+          "anchor": {
+            "source_id": "fictional-source",
+            "locator": "synthetic page 1, Table 1",
+            "row": "Method A",
+            "column": "High control (%)",
+            "condition": "high temperature, control",
+            "unit": "percent",
+            "quote": "| Method A | 12 | 9 | 40 | 30 |",
+            "char_start": 419,
+            "char_end": 450
+          },
+          "quote_check": "matched",
+          "locator_check": "region_verified"
+        },
+        {
+          "role": "denominator",
+          "value_id": "b_high_control",
+          "number": "20",
+          "unit": "percent",
+          "provenance": "author_reported",
+          "anchor": {
+            "source_id": "fictional-source",
+            "locator": "synthetic page 1, Table 1",
+            "row": "Method B",
+            "column": "High control (%)",
+            "condition": "high temperature, control",
+            "unit": "percent",
+            "quote": "| Method B | 8 | 6 | 20 | 16 |",
+            "char_start": 451,
+            "char_end": 481
+          },
+          "quote_check": "matched",
+          "locator_check": "region_verified"
+        }
+      ],
+      "expected": "2",
+      "tolerance": {
+        "type": "absolute",
+        "value": "0.0000001"
+      },
+      "rounding": {
+        "places": 2,
+        "mode": "ROUND_HALF_UP"
+      },
+      "expected_basis": "Independent arithmetic coverage check: 40/20 = 2.",
+      "note": "",
+      "status": "matched",
+      "match": true,
+      "arithmetic_match": true,
+      "formula": "40 / 20 = 2",
+      "actual_raw": "2",
+      "actual_rounded": "2.00",
+      "output_unit": "dimensionless",
+      "discrepancy": "0",
+      "allowed_discrepancy": "0.0000001",
+      "comparison": "abs(0) <= 0.0000001",
+      "anchor_failures": []
+    }
+  ],
+  "reconciliations": [
+    {
+      "reconciliation_id": "body_table_a_high_control",
+      "value_ids": [
+        "a_high_control",
+        "a_high_body_control"
+      ],
+      "status": "consistent",
+      "note": "Body and Table 1 both report 40 percent under the same high/control condition.",
+      "numbers": [
+        "40",
+        "40"
+      ],
+      "units": [
+        "percent",
+        "percent"
+      ],
+      "numeric_equality_after_unit_alignment": true
+    },
+    {
+      "reconciliation_id": "body_table_a_high_treatment",
+      "value_ids": [
+        "a_high_treatment",
+        "a_high_body_treatment"
+      ],
+      "status": "consistent",
+      "note": "Body and Table 1 both report 30 percent under the same high/treatment condition.",
+      "numbers": [
+        "30",
+        "30"
+      ],
+      "units": [
+        "percent",
+        "percent"
+      ],
+      "numeric_equality_after_unit_alignment": true
+    },
+    {
+      "reconciliation_id": "figure_table_a_high_control",
+      "value_ids": [
+        "a_high_control",
+        "figure_1_a_high_control"
+      ],
+      "status": "not_checked",
+      "note": "Original Figure 1 is unavailable; no table/figure agreement or conflict can be inferred.",
+      "numbers": [
+        "40",
+        null
+      ],
+      "units": [
+        "percent",
+        "percent"
+      ],
+      "numeric_equality_after_unit_alignment": null
+    }
+  ],
+  "conflicts": [],
+  "reader_inferences": [
+    {
+      "inference_id": "low_condition_interpretation",
+      "statement": "Both fictional methods have 25% relative low-temperature reductions, but Method A has the larger absolute reduction (3 versus 2 percentage points).",
+      "provenance": "reader_inference",
+      "depends_on": [
+        "a_low_relative_reduction",
+        "b_low_relative_reduction",
+        "a_low_pp_reduction",
+        "b_low_pp_reduction"
+      ],
+      "caveat": "This is arithmetic interpretation only; repeated measurements preclude treating paired readings as independent replicates."
+    }
+  ],
+  "visual_comparison": {
+    "status": "derived_created",
+    "derived_path": "comparison.svg",
+    "original_render": {
+      "status": "missing",
+      "path": null
+    },
+    "original_crop": {
+      "status": "missing",
+      "path": null
+    },
+    "original_review": {
+      "status": "missing",
+      "checked_values": [],
+      "note": "No original PDF/figure exists in this synthetic example. The SVG is derived from source tuples and is not evidence of original correctness."
+    },
+    "claim": "Derived plot of extracted values only; no correctness claim follows without original-render review."
+  },
+  "uncertainties": [
+    "SYNTHETIC: the same eight fictional specimens were measured repeatedly; control/treatment measurements are correlated, not independent biological replicates.",
+    "Original Figure 1 is missing; the derived comparison has not been checked against an original rendered figure.",
+    "No dispersion or confidence interval is reported; none is calculated or invented.",
+    "No OCR was needed for the UTF-8 synthetic text; real OCR may confuse decimal points, signs, digits, units, and columns.",
+    "Inputs are displayed integers; arithmetic output precision does not establish measurement significant figures.",
+    "Product and sum records exercise the engine only and are not pooled scientific endpoints."
+  ],
+  "change_records": [
+    {
+      "sequence": 1,
+      "action": "source_read",
+      "detail": "fictional-source: readable"
+    },
+    {
+      "sequence": 2,
+      "action": "decimal_calculation",
+      "detail": "a_high_relative_reduction: matched"
+    },
+    {
+      "sequence": 3,
+      "action": "decimal_calculation",
+      "detail": "a_high_pp_reduction: matched"
+    },
+    {
+      "sequence": 4,
+      "action": "decimal_calculation",
+      "detail": "b_high_relative_reduction: matched"
+    },
+    {
+      "sequence": 5,
+      "action": "decimal_calculation",
+      "detail": "b_high_pp_reduction: matched"
+    },
+    {
+      "sequence": 6,
+      "action": "decimal_calculation",
+      "detail": "a_low_relative_reduction: matched"
+    },
+    {
+      "sequence": 7,
+      "action": "decimal_calculation",
+      "detail": "a_low_pp_reduction: matched"
+    },
+    {
+      "sequence": 8,
+      "action": "decimal_calculation",
+      "detail": "b_low_relative_reduction: matched"
+    },
+    {
+      "sequence": 9,
+      "action": "decimal_calculation",
+      "detail": "b_low_pp_reduction: matched"
+    },
+    {
+      "sequence": 10,
+      "action": "decimal_calculation",
+      "detail": "a_high_final_initial_ratio: matched"
+    },
+    {
+      "sequence": 11,
+      "action": "decimal_calculation",
+      "detail": "a_high_signed_difference: matched"
+    },
+    {
+      "sequence": 12,
+      "action": "decimal_calculation",
+      "detail": "low_control_arithmetic_sum: matched"
+    },
+    {
+      "sequence": 13,
+      "action": "decimal_calculation",
+      "detail": "low_control_arithmetic_product: matched"
+    },
+    {
+      "sequence": 14,
+      "action": "decimal_calculation",
+      "detail": "high_control_arithmetic_division: matched"
+    },
+    {
+      "sequence": 15,
+      "action": "derived_visual_created",
+      "detail": "comparison.svg is derived only; original review=missing"
+    },
+    {
+      "sequence": 16,
+      "action": "result_ready",
+      "detail": "case_id synthetic-numerical-replication-a-b-v1; status complete; recursive contract validation passed"
+    }
+  ],
+  "summary": {
+    "calculations_total": 13,
+    "matched": 13,
+    "mismatches": [],
+    "not_computed": [],
+    "quote_failures": [],
+    "source_failures": [],
+    "conflicts": []
+  },
+  "contract_audit": {
+    "status": "passed",
+    "checks": [
+      {
+        "path": "$",
+        "check": "contract must be an object schema",
+        "passed": true
+      },
+      {
+        "path": "$",
+        "check": "root type must be object",
+        "passed": true
+      },
+      {
+        "path": "$",
+        "check": "root additionalProperties must be false",
+        "passed": true
+      },
+      {
+        "path": "$",
+        "check": "root properties must be a nonempty object",
+        "passed": true
+      },
+      {
+        "path": "$.required",
+        "check": "required must be an array of strings",
+        "passed": true
+      },
+      {
+        "path": "$",
+        "check": "case_id must be declared and required",
+        "passed": true
+      },
+      {
+        "path": "$.properties.case_id",
+        "check": "case_id must be a string",
+        "passed": true
+      },
+      {
+        "path": "$.required",
+        "check": "required keys must be declared properties",
+        "passed": true
+      },
+      {
+        "path": "$",
+        "check": "unsupported schema keywords are rejected: []",
+        "passed": true
+      },
+      {
+        "path": "$.type",
+        "check": "unsupported or missing schema type",
+        "passed": true
+      },
+      {
+        "path": "$.properties",
+        "check": "object properties are required",
+        "passed": true
+      },
+      {
+        "path": "$.additionalProperties",
+        "check": "object additionalProperties must be false",
+        "passed": true
+      },
+      {
+        "path": "$.required",
+        "check": "required must be a unique string array",
+        "passed": true
+      },
+      {
+        "path": "$.required",
+        "check": "required keys must be declared",
+        "passed": true
+      },
+      {
+        "path": "$.properties",
+        "check": "property names must be strings",
+        "passed": true
+      },
+      {
+        "path": "$.properties.case_id",
+        "check": "unsupported schema keywords are rejected: []",
+        "passed": true
+      },
+      {
+        "path": "$.properties.case_id.type",
+        "check": "unsupported or missing schema type",
+        "passed": true
+      },
+      {
+        "path": "$.properties",
+        "check": "property names must be strings",
+        "passed": true
+      },
+      {
+        "path": "$.properties.status",
+        "check": "unsupported schema keywords are rejected: []",
+        "passed": true
+      },
+      {
+        "path": "$.properties.status.enum",
+        "check": "enum must be a nonempty array",
+        "passed": true
+      },
+      {
+        "path": "$.properties.status.enum",
+        "check": "enum values must be unique using JSON-aware equality",
+        "passed": true
+      },
+      {
+        "path": "$.properties.status.type",
+        "check": "unsupported or missing schema type",
+        "passed": true
+      },
+      {
+        "path": "$.properties",
+        "check": "property names must be strings",
+        "passed": true
+      },
+      {
+        "path": "$.properties.direct_answer",
+        "check": "unsupported schema keywords are rejected: []",
+        "passed": true
+      },
+      {
+        "path": "$.properties.direct_answer.type",
+        "check": "unsupported or missing schema type",
+        "passed": true
+      },
+      {
+        "path": "$.properties.direct_answer.properties",
+        "check": "object properties are required",
+        "passed": true
+      },
+      {
+        "path": "$.properties.direct_answer.additionalProperties",
+        "check": "object additionalProperties must be false",
+        "passed": true
+      },
+      {
+        "path": "$.properties.direct_answer.required",
+        "check": "required must be a unique string array",
+        "passed": true
+      },
+      {
+        "path": "$.properties.direct_answer.required",
+        "check": "required keys must be declared",
+        "passed": true
+      },
+      {
+        "path": "$.properties.direct_answer.properties",
+        "check": "property names must be strings",
+        "passed": true
+      },
+      {
+        "path": "$.properties.direct_answer.properties.answer",
+        "check": "unsupported schema keywords are rejected: []",
+        "passed": true
+      },
+      {
+        "path": "$.properties.direct_answer.properties.answer.type",
+        "check": "unsupported or missing schema type",
+        "passed": true
+      },
+      {
+        "path": "$.properties.direct_answer.properties",
+        "check": "property names must be strings",
+        "passed": true
+      },
+      {
+        "path": "$.properties.direct_answer.properties.comparisons",
+        "check": "unsupported schema keywords are rejected: []",
+        "passed": true
+      },
+      {
+        "path": "$.properties.direct_answer.properties.comparisons.type",
+        "check": "unsupported or missing schema type",
+        "passed": true
+      },
+      {
+        "path": "$.properties.direct_answer.properties.comparisons.items",
+        "check": "array item schema is required",
+        "passed": true
+      },
+      {
+        "path": "$.properties.direct_answer.properties.comparisons.items",
+        "check": "unsupported schema keywords are rejected: []",
+        "passed": true
+      },
+      {
+        "path": "$.properties.direct_answer.properties.comparisons.items.type",
+        "check": "unsupported or missing schema type",
+        "passed": true
+      },
+      {
+        "path": "$.properties.direct_answer.properties.comparisons.items.properties",
+        "check": "object properties are required",
+        "passed": true
+      },
+      {
+        "path": "$.properties.direct_answer.properties.comparisons.items.additionalProperties",
+        "check": "object additionalProperties must be false",
+        "passed": true
+      },
+      {
+        "path": "$.properties.direct_answer.properties.comparisons.items.required",
+        "check": "required must be a unique string array",
+        "passed": true
+      },
+      {
+        "path": "$.properties.direct_answer.properties.comparisons.items.required",
+        "check": "required keys must be declared",
+        "passed": true
+      },
+      {
+        "path": "$.properties.direct_answer.properties.comparisons.items.properties",
+        "check": "property names must be strings",
+        "passed": true
+      },
+      {
+        "path": "$.properties.direct_answer.properties.comparisons.items.properties.method",
+        "check": "unsupported schema keywords are rejected: []",
+        "passed": true
+      },
+      {
+        "path": "$.properties.direct_answer.properties.comparisons.items.properties.method.type",
+        "check": "unsupported or missing schema type",
+        "passed": true
+      },
+      {
+        "path": "$.properties.direct_answer.properties.comparisons.items.properties",
+        "check": "property names must be strings",
+        "passed": true
+      },
+      {
+        "path": "$.properties.direct_answer.properties.comparisons.items.properties.condition",
+        "check": "unsupported schema keywords are rejected: []",
+        "passed": true
+      },
+      {
+        "path": "$.properties.direct_answer.properties.comparisons.items.properties.condition.type",
+        "check": "unsupported or missing schema type",
+        "passed": true
+      },
+      {
+        "path": "$.properties.direct_answer.properties.comparisons.items.properties",
+        "check": "property names must be strings",
+        "passed": true
+      },
+      {
+        "path": "$.properties.direct_answer.properties.comparisons.items.properties.relative_reduction_percent",
+        "check": "unsupported schema keywords are rejected: []",
+        "passed": true
+      },
+      {
+        "path": "$.properties.direct_answer.properties.comparisons.items.properties.relative_reduction_percent.type",
+        "check": "unsupported or missing schema type",
+        "passed": true
+      },
+      {
+        "path": "$.properties.direct_answer.properties.comparisons.items.properties",
+        "check": "property names must be strings",
+        "passed": true
+      },
+      {
+        "path": "$.properties.direct_answer.properties.comparisons.items.properties.percentage_point_reduction",
+        "check": "unsupported schema keywords are rejected: []",
+        "passed": true
+      },
+      {
+        "path": "$.properties.direct_answer.properties.comparisons.items.properties.percentage_point_reduction.type",
+        "check": "unsupported or missing schema type",
+        "passed": true
+      },
+      {
+        "path": "$.properties.direct_answer.properties.comparisons.items.properties",
+        "check": "property names must be strings",
+        "passed": true
+      },
+      {
+        "path": "$.properties.direct_answer.properties.comparisons.items.properties.provenance",
+        "check": "unsupported schema keywords are rejected: []",
+        "passed": true
+      },
+      {
+        "path": "$.properties.direct_answer.properties.comparisons.items.properties.provenance.enum",
+        "check": "enum must be a nonempty array",
+        "passed": true
+      },
+      {
+        "path": "$.properties.direct_answer.properties.comparisons.items.properties.provenance.enum",
+        "check": "enum values must be unique using JSON-aware equality",
+        "passed": true
+      },
+      {
+        "path": "$.properties.direct_answer.properties.comparisons.items.properties.provenance.type",
+        "check": "unsupported or missing schema type",
+        "passed": true
+      },
+      {
+        "path": "$.properties.direct_answer.properties",
+        "check": "property names must be strings",
+        "passed": true
+      },
+      {
+        "path": "$.properties.direct_answer.properties.caveats",
+        "check": "unsupported schema keywords are rejected: []",
+        "passed": true
+      },
+      {
+        "path": "$.properties.direct_answer.properties.caveats.type",
+        "check": "unsupported or missing schema type",
+        "passed": true
+      },
+      {
+        "path": "$.properties.direct_answer.properties.caveats.items",
+        "check": "array item schema is required",
+        "passed": true
+      },
+      {
+        "path": "$.properties.direct_answer.properties.caveats.items",
+        "check": "unsupported schema keywords are rejected: []",
+        "passed": true
+      },
+      {
+        "path": "$.properties.direct_answer.properties.caveats.items.type",
+        "check": "unsupported or missing schema type",
+        "passed": true
+      },
+      {
+        "path": "$.properties",
+        "check": "property names must be strings",
+        "passed": true
+      },
+      {
+        "path": "$.properties.numerical_findings",
+        "check": "unsupported schema keywords are rejected: []",
+        "passed": true
+      },
+      {
+        "path": "$.properties.numerical_findings.type",
+        "check": "unsupported or missing schema type",
+        "passed": true
+      },
+      {
+        "path": "$.properties.numerical_findings.items",
+        "check": "array item schema is required",
+        "passed": true
+      },
+      {
+        "path": "$.properties.numerical_findings.items",
+        "check": "unsupported schema keywords are rejected: []",
+        "passed": true
+      },
+      {
+        "path": "$.properties.numerical_findings.items.type",
+        "check": "unsupported or missing schema type",
+        "passed": true
+      },
+      {
+        "path": "$.properties.numerical_findings.items.properties",
+        "check": "object properties are required",
+        "passed": true
+      },
+      {
+        "path": "$.properties.numerical_findings.items.additionalProperties",
+        "check": "object additionalProperties must be false",
+        "passed": true
+      },
+      {
+        "path": "$.properties.numerical_findings.items.required",
+        "check": "required must be a unique string array",
+        "passed": true
+      },
+      {
+        "path": "$.properties.numerical_findings.items.required",
+        "check": "required keys must be declared",
+        "passed": true
+      },
+      {
+        "path": "$.properties.numerical_findings.items.properties",
+        "check": "property names must be strings",
+        "passed": true
+      },
+      {
+        "path": "$.properties.numerical_findings.items.properties.calculation_id",
+        "check": "unsupported schema keywords are rejected: []",
+        "passed": true
+      },
+      {
+        "path": "$.properties.numerical_findings.items.properties.calculation_id.type",
+        "check": "unsupported or missing schema type",
+        "passed": true
+      },
+      {
+        "path": "$.properties.numerical_findings.items.properties",
+        "check": "property names must be strings",
+        "passed": true
+      },
+      {
+        "path": "$.properties.numerical_findings.items.properties.operation",
+        "check": "unsupported schema keywords are rejected: []",
+        "passed": true
+      },
+      {
+        "path": "$.properties.numerical_findings.items.properties.operation.type",
+        "check": "unsupported or missing schema type",
+        "passed": true
+      },
+      {
+        "path": "$.properties.numerical_findings.items.properties",
+        "check": "property names must be strings",
+        "passed": true
+      },
+      {
+        "path": "$.properties.numerical_findings.items.properties.actual",
+        "check": "unsupported schema keywords are rejected: []",
+        "passed": true
+      },
+      {
+        "path": "$.properties.numerical_findings.items.properties.actual.type",
+        "check": "unsupported or missing schema type",
+        "passed": true
+      },
+      {
+        "path": "$.properties.numerical_findings.items.properties",
+        "check": "property names must be strings",
+        "passed": true
+      },
+      {
+        "path": "$.properties.numerical_findings.items.properties.expected",
+        "check": "unsupported schema keywords are rejected: []",
+        "passed": true
+      },
+      {
+        "path": "$.properties.numerical_findings.items.properties.expected.type",
+        "check": "unsupported or missing schema type",
+        "passed": true
+      },
+      {
+        "path": "$.properties.numerical_findings.items.properties",
+        "check": "property names must be strings",
+        "passed": true
+      },
+      {
+        "path": "$.properties.numerical_findings.items.properties.calculation_match",
+        "check": "unsupported schema keywords are rejected: []",
+        "passed": true
+      },
+      {
+        "path": "$.properties.numerical_findings.items.properties.calculation_match.type",
+        "check": "unsupported or missing schema type",
+        "passed": true
+      },
+      {
+        "path": "$.properties.numerical_findings.items.properties",
+        "check": "property names must be strings",
+        "passed": true
+      },
+      {
+        "path": "$.properties.numerical_findings.items.properties.formula",
+        "check": "unsupported schema keywords are rejected: []",
+        "passed": true
+      },
+      {
+        "path": "$.properties.numerical_findings.items.properties.formula.type",
+        "check": "unsupported or missing schema type",
+        "passed": true
+      },
+      {
+        "path": "$.properties.numerical_findings.items.properties",
+        "check": "property names must be strings",
+        "passed": true
+      },
+      {
+        "path": "$.properties.numerical_findings.items.properties.provenance",
+        "check": "unsupported schema keywords are rejected: []",
+        "passed": true
+      },
+      {
+        "path": "$.properties.numerical_findings.items.properties.provenance.type",
+        "check": "unsupported or missing schema type",
+        "passed": true
+      },
+      {
+        "path": "$.properties.numerical_findings.items.properties",
+        "check": "property names must be strings",
+        "passed": true
+      },
+      {
+        "path": "$.properties.numerical_findings.items.properties.input_anchors",
+        "check": "unsupported schema keywords are rejected: []",
+        "passed": true
+      },
+      {
+        "path": "$.properties.numerical_findings.items.properties.input_anchors.type",
+        "check": "unsupported or missing schema type",
+        "passed": true
+      },
+      {
+        "path": "$.properties.numerical_findings.items.properties.input_anchors.items",
+        "check": "array item schema is required",
+        "passed": true
+      },
+      {
+        "path": "$.properties.numerical_findings.items.properties.input_anchors.items",
+        "check": "unsupported schema keywords are rejected: []",
+        "passed": true
+      },
+      {
+        "path": "$.properties.numerical_findings.items.properties.input_anchors.items.type",
+        "check": "unsupported or missing schema type",
+        "passed": true
+      },
+      {
+        "path": "$.properties.numerical_findings.items.properties",
+        "check": "property names must be strings",
+        "passed": true
+      },
+      {
+        "path": "$.properties.numerical_findings.items.properties.output_unit",
+        "check": "unsupported schema keywords are rejected: []",
+        "passed": true
+      },
+      {
+        "path": "$.properties.numerical_findings.items.properties.output_unit.type",
+        "check": "unsupported or missing schema type",
+        "passed": true
+      },
+      {
+        "path": "$.properties",
+        "check": "property names must be strings",
+        "passed": true
+      },
+      {
+        "path": "$.properties.notes",
+        "check": "unsupported schema keywords are rejected: []",
+        "passed": true
+      },
+      {
+        "path": "$.properties.notes.type",
+        "check": "unsupported or missing schema type",
+        "passed": true
+      },
+      {
+        "path": "$.properties.notes.properties",
+        "check": "object properties are required",
+        "passed": true
+      },
+      {
+        "path": "$.properties.notes.additionalProperties",
+        "check": "object additionalProperties must be false",
+        "passed": true
+      },
+      {
+        "path": "$.properties.notes.required",
+        "check": "required must be a unique string array",
+        "passed": true
+      },
+      {
+        "path": "$.properties.notes.required",
+        "check": "required keys must be declared",
+        "passed": true
+      },
+      {
+        "path": "$.properties.notes.properties",
+        "check": "property names must be strings",
+        "passed": true
+      },
+      {
+        "path": "$.properties.notes.properties.summary",
+        "check": "unsupported schema keywords are rejected: []",
+        "passed": true
+      },
+      {
+        "path": "$.properties.notes.properties.summary.type",
+        "check": "unsupported or missing schema type",
+        "passed": true
+      },
+      {
+        "path": "$.properties.notes.properties",
+        "check": "property names must be strings",
+        "passed": true
+      },
+      {
+        "path": "$.properties.notes.properties.limitations",
+        "check": "unsupported schema keywords are rejected: []",
+        "passed": true
+      },
+      {
+        "path": "$.properties.notes.properties.limitations.type",
+        "check": "unsupported or missing schema type",
+        "passed": true
+      },
+      {
+        "path": "$.properties.notes.properties.limitations.items",
+        "check": "array item schema is required",
+        "passed": true
+      },
+      {
+        "path": "$.properties.notes.properties.limitations.items",
+        "check": "unsupported schema keywords are rejected: []",
+        "passed": true
+      },
+      {
+        "path": "$.properties.notes.properties.limitations.items.type",
+        "check": "unsupported or missing schema type",
+        "passed": true
+      },
+      {
+        "path": "$.properties.notes.properties",
+        "check": "property names must be strings",
+        "passed": true
+      },
+      {
+        "path": "$.properties.notes.properties.visual_comparison",
+        "check": "unsupported schema keywords are rejected: []",
+        "passed": true
+      },
+      {
+        "path": "$.properties.notes.properties.visual_comparison.type",
+        "check": "unsupported or missing schema type",
+        "passed": true
+      },
+      {
+        "path": "$.properties",
+        "check": "property names must be strings",
+        "passed": true
+      },
+      {
+        "path": "$.properties.sources",
+        "check": "unsupported schema keywords are rejected: []",
+        "passed": true
+      },
+      {
+        "path": "$.properties.sources.type",
+        "check": "unsupported or missing schema type",
+        "passed": true
+      },
+      {
+        "path": "$.properties.sources.items",
+        "check": "array item schema is required",
+        "passed": true
+      },
+      {
+        "path": "$.properties.sources.items",
+        "check": "unsupported schema keywords are rejected: []",
+        "passed": true
+      },
+      {
+        "path": "$.properties.sources.items.type",
+        "check": "unsupported or missing schema type",
+        "passed": true
+      },
+      {
+        "path": "$.properties.sources.items.properties",
+        "check": "object properties are required",
+        "passed": true
+      },
+      {
+        "path": "$.properties.sources.items.additionalProperties",
+        "check": "object additionalProperties must be false",
+        "passed": true
+      },
+      {
+        "path": "$.properties.sources.items.required",
+        "check": "required must be a unique string array",
+        "passed": true
+      },
+      {
+        "path": "$.properties.sources.items.required",
+        "check": "required keys must be declared",
+        "passed": true
+      },
+      {
+        "path": "$.properties.sources.items.properties",
+        "check": "property names must be strings",
+        "passed": true
+      },
+      {
+        "path": "$.properties.sources.items.properties.source_id",
+        "check": "unsupported schema keywords are rejected: []",
+        "passed": true
+      },
+      {
+        "path": "$.properties.sources.items.properties.source_id.type",
+        "check": "unsupported or missing schema type",
+        "passed": true
+      },
+      {
+        "path": "$.properties.sources.items.properties",
+        "check": "property names must be strings",
+        "passed": true
+      },
+      {
+        "path": "$.properties.sources.items.properties.path",
+        "check": "unsupported schema keywords are rejected: []",
+        "passed": true
+      },
+      {
+        "path": "$.properties.sources.items.properties.path.type",
+        "check": "unsupported or missing schema type",
+        "passed": true
+      },
+      {
+        "path": "$.properties.sources.items.properties",
+        "check": "property names must be strings",
+        "passed": true
+      },
+      {
+        "path": "$.properties.sources.items.properties.status",
+        "check": "unsupported schema keywords are rejected: []",
+        "passed": true
+      },
+      {
+        "path": "$.properties.sources.items.properties.status.enum",
+        "check": "enum must be a nonempty array",
+        "passed": true
+      },
+      {
+        "path": "$.properties.sources.items.properties.status.enum",
+        "check": "enum values must be unique using JSON-aware equality",
+        "passed": true
+      },
+      {
+        "path": "$.properties.sources.items.properties.status.type",
+        "check": "unsupported or missing schema type",
+        "passed": true
+      },
+      {
+        "path": "$.properties.sources.items.properties",
+        "check": "property names must be strings",
+        "passed": true
+      },
+      {
+        "path": "$.properties.sources.items.properties.uncertainty",
+        "check": "unsupported schema keywords are rejected: []",
+        "passed": true
+      },
+      {
+        "path": "$.properties.sources.items.properties.uncertainty.type",
+        "check": "unsupported or missing schema type",
+        "passed": true
+      },
+      {
+        "path": "$.properties",
+        "check": "property names must be strings",
+        "passed": true
+      },
+      {
+        "path": "$.properties.uncertainty",
+        "check": "unsupported schema keywords are rejected: []",
+        "passed": true
+      },
+      {
+        "path": "$.properties.uncertainty.type",
+        "check": "unsupported or missing schema type",
+        "passed": true
+      },
+      {
+        "path": "$.properties.uncertainty.items",
+        "check": "array item schema is required",
+        "passed": true
+      },
+      {
+        "path": "$.properties.uncertainty.items",
+        "check": "unsupported schema keywords are rejected: []",
+        "passed": true
+      },
+      {
+        "path": "$.properties.uncertainty.items.type",
+        "check": "unsupported or missing schema type",
+        "passed": true
+      },
+      {
+        "path": "$.properties",
+        "check": "property names must be strings",
+        "passed": true
+      },
+      {
+        "path": "$.properties.change_records",
+        "check": "unsupported schema keywords are rejected: []",
+        "passed": true
+      },
+      {
+        "path": "$.properties.change_records.type",
+        "check": "unsupported or missing schema type",
+        "passed": true
+      },
+      {
+        "path": "$.properties.change_records.items",
+        "check": "array item schema is required",
+        "passed": true
+      },
+      {
+        "path": "$.properties.change_records.items",
+        "check": "unsupported schema keywords are rejected: []",
+        "passed": true
+      },
+      {
+        "path": "$.properties.change_records.items.type",
+        "check": "unsupported or missing schema type",
+        "passed": true
+      },
+      {
+        "path": "$.properties.change_records.items.properties",
+        "check": "object properties are required",
+        "passed": true
+      },
+      {
+        "path": "$.properties.change_records.items.additionalProperties",
+        "check": "object additionalProperties must be false",
+        "passed": true
+      },
+      {
+        "path": "$.properties.change_records.items.required",
+        "check": "required must be a unique string array",
+        "passed": true
+      },
+      {
+        "path": "$.properties.change_records.items.required",
+        "check": "required keys must be declared",
+        "passed": true
+      },
+      {
+        "path": "$.properties.change_records.items.properties",
+        "check": "property names must be strings",
+        "passed": true
+      },
+      {
+        "path": "$.properties.change_records.items.properties.sequence",
+        "check": "unsupported schema keywords are rejected: []",
+        "passed": true
+      },
+      {
+        "path": "$.properties.change_records.items.properties.sequence.minimum",
+        "check": "numeric constraint must be a finite JSON number",
+        "passed": true
+      },
+      {
+        "path": "$.properties.change_records.items.properties.sequence.type",
+        "check": "unsupported or missing schema type",
+        "passed": true
+      },
+      {
+        "path": "$.properties.change_records.items.properties",
+        "check": "property names must be strings",
+        "passed": true
+      },
+      {
+        "path": "$.properties.change_records.items.properties.action",
+        "check": "unsupported schema keywords are rejected: []",
+        "passed": true
+      },
+      {
+        "path": "$.properties.change_records.items.properties.action.type",
+        "check": "unsupported or missing schema type",
+        "passed": true
+      },
+      {
+        "path": "$.properties.change_records.items.properties",
+        "check": "property names must be strings",
+        "passed": true
+      },
+      {
+        "path": "$.properties.change_records.items.properties.detail",
+        "check": "unsupported schema keywords are rejected: []",
+        "passed": true
+      },
+      {
+        "path": "$.properties.change_records.items.properties.detail.type",
+        "check": "unsupported or missing schema type",
+        "passed": true
+      },
+      {
+        "path": "$.properties",
+        "check": "property names must be strings",
+        "passed": true
+      },
+      {
+        "path": "$.properties.artifacts",
+        "check": "unsupported schema keywords are rejected: []",
+        "passed": true
+      },
+      {
+        "path": "$.properties.artifacts.type",
+        "check": "unsupported or missing schema type",
+        "passed": true
+      },
+      {
+        "path": "$.properties.artifacts.items",
+        "check": "array item schema is required",
+        "passed": true
+      },
+      {
+        "path": "$.properties.artifacts.items",
+        "check": "unsupported schema keywords are rejected: []",
+        "passed": true
+      },
+      {
+        "path": "$.properties.artifacts.items.type",
+        "check": "unsupported or missing schema type",
+        "passed": true
+      }
+    ]
+  }
+}
