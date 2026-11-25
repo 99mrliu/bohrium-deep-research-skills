@@ -1,0 +1,292 @@
+[
+  {
+    "chain_id": "chain-001",
+    "members": [
+      "arxiv:2401.00001v1",
+      "crossref:10.1234/jcat.2024.0001"
+    ],
+    "lifecycle_state": "published",
+    "state_evidence": [
+      {
+        "file": "crossref_records.json",
+        "pointer": "/message/items/0"
+      }
+    ],
+    "representative_title": "Adaptive Graph Neural Potentials for Catalytic Surfaces",
+    "representative_locator": {
+      "file": "crossref_records.json",
+      "pointer": "/message/items/0"
+    },
+    "link_decisions": [
+      {
+        "rule": "R1-doi-relation(has-preprint)",
+        "confidence": "high",
+        "a": "crossref:10.1234/jcat.2024.0001",
+        "b": "arxiv:2401.00001v1",
+        "merged": true,
+        "locators": [
+          {
+            "file": "crossref_records.json",
+            "pointer": "/message/items/0"
+          },
+          {
+            "file": "arxiv_records.json",
+            "pointer": "/entries/0"
+          },
+          {
+            "file": "crossref_records.json",
+            "pointer": "/message/items/0/relation/0"
+          }
+        ]
+      },
+      {
+        "rule": "R4-title+first-author",
+        "confidence": "low",
+        "a": "arxiv:2401.00001v1",
+        "b": "crossref:10.1234/jcat.2024.0001",
+        "merged": false,
+        "locators": [
+          {
+            "file": "arxiv_records.json",
+            "pointer": "/entries/0"
+          },
+          {
+            "file": "crossref_records.json",
+            "pointer": "/message/items/0"
+          }
+        ]
+      }
+    ],
+    "signals": []
+  },
+  {
+    "chain_id": "chain-002",
+    "members": [
+      "arxiv:2402.00002v1",
+      "arxiv:2402.00002v2"
+    ],
+    "lifecycle_state": "revised",
+    "state_evidence": [
+      {
+        "file": "arxiv_records.json",
+        "pointer": "/entries/1"
+      },
+      {
+        "file": "arxiv_records.json",
+        "pointer": "/entries/2"
+      }
+    ],
+    "representative_title": "Diffusion Sampling with Energy-Guided Transport",
+    "representative_locator": {
+      "file": "arxiv_records.json",
+      "pointer": "/entries/2"
+    },
+    "link_decisions": [
+      {
+        "rule": "R3-arxiv-version(2402.00002)",
+        "confidence": "high",
+        "a": "arxiv:2402.00002v1",
+        "b": "arxiv:2402.00002v2",
+        "merged": true,
+        "locators": [
+          {
+            "file": "arxiv_records.json",
+            "pointer": "/entries/1"
+          },
+          {
+            "file": "arxiv_records.json",
+            "pointer": "/entries/2"
+          }
+        ]
+      },
+      {
+        "rule": "R4-title+first-author",
+        "confidence": "low",
+        "a": "arxiv:2402.00002v1",
+        "b": "arxiv:2402.00002v2",
+        "merged": false,
+        "locators": [
+          {
+            "file": "arxiv_records.json",
+            "pointer": "/entries/1"
+          },
+          {
+            "file": "arxiv_records.json",
+            "pointer": "/entries/2"
+          }
+        ]
+      }
+    ],
+    "signals": []
+  },
+  {
+    "chain_id": "chain-003",
+    "members": [
+      "crossref:10.1234/jmat.2023.0999",
+      "crossref:10.1234/jmat.2024.1000"
+    ],
+    "lifecycle_state": "retracted",
+    "state_evidence": [
+      {
+        "file": "crossref_records.json",
+        "pointer": "/message/items/1/relation/0"
+      },
+      {
+        "file": "crossref_records.json",
+        "pointer": "/message/items/1/update-to/0"
+      },
+      {
+        "file": "crossref_records.json",
+        "pointer": "/message/items/2"
+      },
+      {
+        "file": "crossref_records.json",
+        "pointer": "/message/items/2/relation/0"
+      }
+    ],
+    "representative_title": "Colossal Magnetoresistance in Layered Oxide Thin Films",
+    "representative_locator": {
+      "file": "crossref_records.json",
+      "pointer": "/message/items/1"
+    },
+    "link_decisions": [
+      {
+        "rule": "R1-doi-relation(has-retraction)",
+        "confidence": "high",
+        "a": "crossref:10.1234/jmat.2023.0999",
+        "b": "crossref:10.1234/jmat.2024.1000",
+        "merged": true,
+        "locators": [
+          {
+            "file": "crossref_records.json",
+            "pointer": "/message/items/1"
+          },
+          {
+            "file": "crossref_records.json",
+            "pointer": "/message/items/2"
+          },
+          {
+            "file": "crossref_records.json",
+            "pointer": "/message/items/1/relation/0"
+          }
+        ]
+      },
+      {
+        "rule": "R1-doi-relation(is-retraction-of)",
+        "confidence": "high",
+        "a": "crossref:10.1234/jmat.2024.1000",
+        "b": "crossref:10.1234/jmat.2023.0999",
+        "merged": false,
+        "locators": [
+          {
+            "file": "crossref_records.json",
+            "pointer": "/message/items/2"
+          },
+          {
+            "file": "crossref_records.json",
+            "pointer": "/message/items/1"
+          },
+          {
+            "file": "crossref_records.json",
+            "pointer": "/message/items/2/relation/0"
+          }
+        ]
+      },
+      {
+        "rule": "R2-update-to(retraction)",
+        "confidence": "high",
+        "a": "crossref:10.1234/jmat.2023.0999",
+        "b": "crossref:10.1234/jmat.2024.1000",
+        "merged": false,
+        "locators": [
+          {
+            "file": "crossref_records.json",
+            "pointer": "/message/items/1"
+          },
+          {
+            "file": "crossref_records.json",
+            "pointer": "/message/items/2"
+          },
+          {
+            "file": "crossref_records.json",
+            "pointer": "/message/items/1/update-to/0"
+          }
+        ]
+      }
+    ],
+    "signals": [
+      {
+        "signal": "retraction",
+        "via": "relation(has-retraction)",
+        "locator": {
+          "file": "crossref_records.json",
+          "pointer": "/message/items/1/relation/0"
+        }
+      },
+      {
+        "signal": "retraction",
+        "via": "update-to(retraction)",
+        "locator": {
+          "file": "crossref_records.json",
+          "pointer": "/message/items/1/update-to/0"
+        }
+      },
+      {
+        "signal": "retraction",
+        "via": "record-kind",
+        "locator": {
+          "file": "crossref_records.json",
+          "pointer": "/message/items/2"
+        }
+      },
+      {
+        "signal": "retraction",
+        "via": "relation(is-retraction-of)",
+        "locator": {
+          "file": "crossref_records.json",
+          "pointer": "/message/items/2/relation/0"
+        }
+      }
+    ]
+  },
+  {
+    "chain_id": "chain-004",
+    "members": [
+      "europepmc:10.5678/neur.2024.0777"
+    ],
+    "lifecycle_state": "published",
+    "state_evidence": [
+      {
+        "file": "europepmc_records.json",
+        "pointer": "/resultList/result/0"
+      }
+    ],
+    "representative_title": "Topological Data Analysis of Neural Population Codes",
+    "representative_locator": {
+      "file": "europepmc_records.json",
+      "pointer": "/resultList/result/0"
+    },
+    "link_decisions": [],
+    "signals": []
+  },
+  {
+    "chain_id": "chain-005",
+    "members": [
+      "europepmc:europepmc_records.json#1"
+    ],
+    "lifecycle_state": "preprint_only",
+    "state_evidence": [
+      {
+        "file": "europepmc_records.json",
+        "pointer": "/resultList/result/1"
+      }
+    ],
+    "representative_title": "Unindexed Notes on Sparse Recovery Bounds",
+    "representative_locator": {
+      "file": "europepmc_records.json",
+      "pointer": "/resultList/result/1"
+    },
+    "link_decisions": [],
+    "signals": []
+  }
+]

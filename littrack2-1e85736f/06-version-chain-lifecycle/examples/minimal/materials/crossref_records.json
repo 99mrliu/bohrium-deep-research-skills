@@ -1,0 +1,69 @@
+{
+  "snapshot_note": "SYNTHETIC — 编造的 Crossref 风格快照（message.items 布局），仅供演示，不对应真实记录。",
+  "status": "ok",
+  "message-type": "work-list",
+  "message": {
+    "total-results": 3,
+    "items": [
+      {
+        "DOI": "10.1234/jcat.2024.0001",
+        "type": "journal-article",
+        "title": ["Adaptive Graph Neural Potentials for Catalytic Surfaces"],
+        "author": [
+          {"given": "Heng", "family": "Liu"},
+          {"given": "Petra", "family": "Novak"}
+        ],
+        "container-title": ["Journal of Synthetic Catalysis"],
+        "published": {"date-parts": [[2024, 2, 10]]},
+        "relation": [
+          {
+            "id-type": "doi",
+            "id": "10.48550/arXiv.2401.00001",
+            "relation-type": "has-preprint"
+          }
+        ]
+      },
+      {
+        "DOI": "10.1234/jmat.2023.0999",
+        "type": "journal-article",
+        "title": ["Colossal Magnetoresistance in Layered Oxide Thin Films"],
+        "author": [
+          {"given": "Wei", "family": "Chen"},
+          {"given": "Sofia", "family": "Lindqvist"}
+        ],
+        "container-title": ["Journal of Synthetic Materials"],
+        "published": {"date-parts": [[2023, 11, 5]]},
+        "relation": [
+          {
+            "id-type": "doi",
+            "id": "10.1234/jmat.2024.1000",
+            "relation-type": "has-retraction"
+          }
+        ],
+        "update-to": [
+          {
+            "type": "retraction",
+            "DOI": "10.1234/jmat.2024.1000",
+            "updated": {"date-parts": [[2024, 2, 14]]}
+          }
+        ]
+      },
+      {
+        "DOI": "10.1234/jmat.2024.1000",
+        "type": "journal-article",
+        "subtype": "retraction-notice",
+        "title": ["Retraction Notice: Colossal Magnetoresistance in Layered Oxide Thin Films"],
+        "author": [{"given": "Wei", "family": "Chen"}],
+        "container-title": ["Journal of Synthetic Materials"],
+        "published": {"date-parts": [[2024, 2, 14]]},
+        "relation": [
+          {
+            "id-type": "doi",
+            "id": "10.1234/jmat.2023.0999",
+            "relation-type": "is-retraction-of"
+          }
+        ]
+      }
+    ]
+  }
+}

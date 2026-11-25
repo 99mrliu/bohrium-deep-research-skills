@@ -1,0 +1,28 @@
+{
+  "_comment": "SYNTHETIC — 人工构造的历史运行记录（回归基线）。run1 在同一真值下：TP=3（syn.201 / 2611.10234 / syn.203）、FP=1（syn.099 backfill 误报）、FN=1（syn.204），无重复声明。与本次 run2（TP=2, FN=2, 重复=1）对比应触发 recall_regression、duplicate_regression、false_alert_regression 与 new_false_negatives（syn.203）。",
+  "runs": [
+    {
+      "run_id": "run1-synthetic",
+      "finished_at": "2026-11-20T00:00:00Z",
+      "metrics": {
+        "precision": 0.75,
+        "recall": 0.75,
+        "duplicate_rate": 0.0,
+        "false_alert_rate": 0.25,
+        "backfill_misclassification_count": 1,
+        "backfill_misclassification_rate": 1.0
+      },
+      "counts": {
+        "candidate_entries": 4,
+        "unique_claims": 4,
+        "duplicates": 0,
+        "tp": 3,
+        "fp": 1,
+        "fn": 1
+      },
+      "tp_keys": ["doi:10.1000/syn.201", "arxiv:2611.10234", "doi:10.1000/syn.203"],
+      "fp_keys": ["doi:10.1000/syn.099"],
+      "fn_keys": ["doi:10.1000/syn.204"]
+    }
+  ]
+}

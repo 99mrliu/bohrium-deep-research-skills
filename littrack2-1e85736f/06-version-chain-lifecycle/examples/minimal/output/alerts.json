@@ -1,0 +1,84 @@
+[
+  {
+    "alert_type": "retraction_notice",
+    "priority": "critical",
+    "chain_id": "chain-003",
+    "lifecycle_state": "retracted",
+    "title": "Colossal Magnetoresistance in Layered Oxide Thin Films",
+    "reason": "链内检测到撤稿信号；撤稿预警不可被去重吞掉",
+    "evidence": [
+      {
+        "file": "crossref_records.json",
+        "pointer": "/message/items/1"
+      },
+      {
+        "file": "crossref_records.json",
+        "pointer": "/message/items/2"
+      }
+    ]
+  },
+  {
+    "alert_type": "version_update",
+    "priority": "normal",
+    "chain_id": "chain-001",
+    "lifecycle_state": "published",
+    "title": "Adaptive Graph Neural Potentials for Catalytic Surfaces",
+    "reason": "同一成果的版本推进（如预印本→正式版、v1→v2），不重复预警",
+    "evidence": [
+      {
+        "file": "arxiv_records.json",
+        "pointer": "/entries/0"
+      },
+      {
+        "file": "crossref_records.json",
+        "pointer": "/message/items/0"
+      }
+    ]
+  },
+  {
+    "alert_type": "version_update",
+    "priority": "normal",
+    "chain_id": "chain-002",
+    "lifecycle_state": "revised",
+    "title": "Diffusion Sampling with Energy-Guided Transport",
+    "reason": "同一成果的版本推进（如预印本→正式版、v1→v2），不重复预警",
+    "evidence": [
+      {
+        "file": "arxiv_records.json",
+        "pointer": "/entries/1"
+      },
+      {
+        "file": "arxiv_records.json",
+        "pointer": "/entries/2"
+      }
+    ]
+  },
+  {
+    "alert_type": "new_work",
+    "priority": "normal",
+    "chain_id": "chain-004",
+    "lifecycle_state": "published",
+    "title": "Topological Data Analysis of Neural Population Codes",
+    "reason": "单记录链，窗口内全新成果",
+    "evidence": [
+      {
+        "file": "europepmc_records.json",
+        "pointer": "/resultList/result/0"
+      }
+    ]
+  },
+  {
+    "alert_type": "new_work",
+    "priority": "normal",
+    "chain_id": "chain-005",
+    "lifecycle_state": "preprint_only",
+    "title": "Unindexed Notes on Sparse Recovery Bounds",
+    "reason": "单记录链，窗口内全新成果",
+    "evidence": [
+      {
+        "file": "europepmc_records.json",
+        "pointer": "/resultList/result/1"
+      }
+    ]
+  }
+]

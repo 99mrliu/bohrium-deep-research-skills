@@ -1,0 +1,115 @@
+{
+  "_comment": "SYNTHETIC — 人工构造的合成 t_now 当前快照（截至 2026-11-24T00:00:00Z）。在 t_prev 基础上新增 6 条：4 条窗口内真新增（syn.201 / 2611.10234 / syn.203 / syn.204）、1 条晚入库旧文献 backfill（syn.099，published 2026-08-15）、1 条窗口外 out_of_window（2611.20999，published 2026-11-26）。所有文献均为虚构。",
+  "snapshot_id": "syn-now-2026-11-24",
+  "taken_at": "2026-11-24T00:00:00Z",
+  "records": [
+    {
+      "source": "crossref",
+      "doi": "10.1000/syn.101",
+      "arxiv_id": null,
+      "title": "Graph Neural Potentials for Catalysis",
+      "authors": ["Syn Author A", "Syn Author B"],
+      "published": "2026-10-20",
+      "ingested_at": "2026-10-22"
+    },
+    {
+      "source": "crossref",
+      "doi": "10.1000/syn.102",
+      "arxiv_id": null,
+      "title": "Active Learning for Reaction Yield Prediction",
+      "authors": ["Syn Author C"],
+      "published": "2026-10-28",
+      "ingested_at": "2026-10-30"
+    },
+    {
+      "source": "europepmc",
+      "doi": null,
+      "arxiv_id": "2610.04567",
+      "title": "Foundation Models for Protein-Ligand Docking",
+      "authors": ["Syn Author D", "Syn Author E"],
+      "published": "2026-10-15",
+      "ingested_at": "2026-10-16"
+    },
+    {
+      "source": "publisher",
+      "doi": "10.1000/syn.104",
+      "arxiv_id": null,
+      "title": "Battery Electrolyte Screening with Uncertainty Quantification",
+      "authors": ["Syn Author F"],
+      "published": "2026-11-05",
+      "ingested_at": "2026-11-08"
+    },
+    {
+      "source": "europepmc",
+      "doi": null,
+      "arxiv_id": "2611.01234",
+      "title": "Diffusion Models for Crystal Structure Generation",
+      "authors": ["Syn Author G"],
+      "published": "2026-11-03",
+      "ingested_at": "2026-11-06"
+    },
+    {
+      "source": "crossref",
+      "doi": "10.1000/syn.106",
+      "arxiv_id": null,
+      "title": "High-Throughput DFT Workflows: A Survey",
+      "authors": ["Syn Author H", "Syn Author I"],
+      "published": "2026-09-30",
+      "ingested_at": "2026-10-02"
+    },
+    {
+      "source": "crossref",
+      "doi": "10.1000/syn.201",
+      "arxiv_id": null,
+      "title": "Self-Driving Labs for Perovskite Optimization",
+      "authors": ["Syn Author J"],
+      "published": "2026-11-10",
+      "ingested_at": "2026-11-15"
+    },
+    {
+      "source": "europepmc",
+      "doi": null,
+      "arxiv_id": "2611.10234",
+      "title": "Multimodal Retrieval for Materials Literature",
+      "authors": ["Syn Author K", "Syn Author L"],
+      "published": "2026-11-12",
+      "ingested_at": "2026-11-16"
+    },
+    {
+      "source": "publisher",
+      "doi": "10.1000/syn.203",
+      "arxiv_id": null,
+      "title": "Bayesian Optimization of Flow Chemistry Conditions",
+      "authors": ["Syn Author M"],
+      "published": "2026-11-18",
+      "ingested_at": "2026-11-21"
+    },
+    {
+      "source": "crossref",
+      "doi": "10.1000/syn.204",
+      "arxiv_id": null,
+      "title": "Benchmarking LLM Agents for Hypothesis Generation",
+      "authors": ["Syn Author N", "Syn Author O"],
+      "published": "2026-11-20",
+      "ingested_at": "2026-11-23"
+    },
+    {
+      "source": "crossref",
+      "doi": "10.1000/syn.099",
+      "arxiv_id": null,
+      "title": "Calorimetric Data Curation Practices",
+      "authors": ["Syn Author P"],
+      "published": "2026-08-15",
+      "ingested_at": "2026-11-19"
+    },
+    {
+      "source": "europepmc",
+      "doi": null,
+      "arxiv_id": "2611.20999",
+      "title": "Neural Scaling Laws for Molecular Pretraining",
+      "authors": ["Syn Author Q"],
+      "published": "2026-11-26",
+      "ingested_at": "2026-11-24"
+    }
+  ]
+}

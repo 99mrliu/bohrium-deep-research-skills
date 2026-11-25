@@ -1,0 +1,19 @@
+{
+  "case_id": "case-1e85736f-syn-006",
+  "synthetic": true,
+  "synthetic_note": "本案例全部数据为演示而编造（synthetic）：所有 DOI、arXiv id、作者、标题、日期均为虚构，不对应任何真实文献或真实 API 响应；快照结构仅模仿 Crossref / Europe PMC / arXiv 的常见响应布局。",
+  "task": "对窗口内的题录快照做版本链生命周期管理：合并同一成果的预印本/正式版/修订版/撤稿声明为一条链，裁决生命周期状态，并按 new_work / version_update / retraction_notice / correction_notice 分类预警。",
+  "window": "2024-02-01/2024-02-29",
+  "materials_dir": "materials",
+  "output_dir": "output",
+  "output_contract": [
+    "case_id",
+    "status",
+    "window",
+    "chains",
+    "alerts",
+    "unresolved",
+    "material_anomalies",
+    "notes"
+  ]
+}

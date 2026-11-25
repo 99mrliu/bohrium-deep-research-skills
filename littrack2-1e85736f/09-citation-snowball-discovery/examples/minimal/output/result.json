@@ -1,0 +1,347 @@
+{
+  "case_id": "case-1e85736f-syn-009",
+  "task_echo": {
+    "seeds": [
+      "seed-a",
+      "seed-b"
+    ],
+    "query_terms": [
+      "lithium",
+      "dendrite"
+    ]
+  },
+  "window": {
+    "start": "2024-01-01",
+    "end": "2026-12-31"
+  },
+  "channels": {
+    "keyword": {
+      "source": "examples/minimal/materials/crossref_response.json",
+      "candidate_count": 2,
+      "locator_base": "/message/items"
+    },
+    "graph": {
+      "source": "examples/minimal/materials/reference_graph.json",
+      "summary": {
+        "path": "/Users/liuhengshen/Desktop/bhr_product/littrack2-five/bundles/09-citation-snowball-discovery/examples/minimal/materials/reference_graph.json",
+        "layout": "nodes/edges",
+        "node_count": 6,
+        "edge_count": 6
+      },
+      "seed_count": 2,
+      "seeds_used": [
+        "seed-a",
+        "seed-b"
+      ],
+      "seeds_missing": []
+    }
+  },
+  "expansion": {
+    "records": [
+      {
+        "node_id": "kw-1",
+        "doi": "10.5555/syn.kw.1",
+        "title": "Lithium dendrite suppression via alloy interlayers in solid-state batteries",
+        "abstract": "An alloy interlayer homogenizes lithium flux and suppresses dendrite formation.",
+        "year": 2025,
+        "directions": [
+          "forward"
+        ],
+        "seeds_via": [
+          "seed-a"
+        ],
+        "distance": 1,
+        "co_citation": 0,
+        "edges": [
+          {
+            "id": "e4",
+            "locator": "/edges/4",
+            "direction": "forward"
+          }
+        ],
+        "node_locator": "/nodes/5",
+        "in_window": true,
+        "role": "new"
+      },
+      {
+        "node_id": "ref-1",
+        "doi": "10.5555/syn.ref.1",
+        "title": "Mechanistic origins of filament growth in inorganic solid electrolytes",
+        "abstract": "Metal filament propagation through grain boundaries is governed by local current focusing at microcracks, as shown by coupled electrochemical-mechanical modelling.",
+        "year": 2024,
+        "directions": [
+          "backward"
+        ],
+        "seeds_via": [
+          "seed-a",
+          "seed-b"
+        ],
+        "distance": 1,
+        "co_citation": 2,
+        "edges": [
+          {
+            "id": "e0",
+            "locator": "/edges/0",
+            "direction": "backward"
+          },
+          {
+            "id": "e2",
+            "locator": "/edges/2",
+            "direction": "backward"
+          }
+        ],
+        "node_locator": "/nodes/2",
+        "in_window": true,
+        "role": "new"
+      },
+      {
+        "node_id": "ref-2",
+        "doi": "10.5555/syn.ref.2",
+        "title": "Phase-field modelling of electrodeposition morphology at buried interfaces",
+        "abstract": "A phase-field framework predicts morphology transitions of electrodeposits at buried metal-ceramic interfaces under stack pressure.",
+        "year": 2025,
+        "directions": [
+          "backward"
+        ],
+        "seeds_via": [
+          "seed-a"
+        ],
+        "distance": 1,
+        "co_citation": 1,
+        "edges": [
+          {
+            "id": "e1",
+            "locator": "/edges/1",
+            "direction": "backward"
+          }
+        ],
+        "node_locator": "/nodes/3",
+        "in_window": true,
+        "role": "new"
+      },
+      {
+        "node_id": "ref-old",
+        "doi": "10.5555/syn.ref.old",
+        "title": "Early survey of metallic anodes for solid-state cells",
+        "abstract": "A pre-2020 survey of metallic anode integration challenges.",
+        "year": 2019,
+        "directions": [
+          "backward"
+        ],
+        "seeds_via": [
+          "seed-a"
+        ],
+        "distance": 1,
+        "co_citation": 1,
+        "edges": [
+          {
+            "id": "e3",
+            "locator": "/edges/3",
+            "direction": "backward"
+          }
+        ],
+        "node_locator": "/nodes/4",
+        "in_window": false,
+        "role": "context"
+      }
+    ],
+    "dangling_references": [
+      {
+        "missing_id": "ghost-001",
+        "from_seed": "seed-b",
+        "direction": "backward",
+        "edge_id": "e5",
+        "edge_locator": "/edges/5"
+      }
+    ],
+    "seeds_used": [
+      "seed-a",
+      "seed-b"
+    ],
+    "seeds_missing": []
+  },
+  "merged": {
+    "both": [
+      {
+        "id": "kw-1",
+        "doi": "10.5555/syn.kw.1",
+        "title": "Lithium dendrite suppression via alloy interlayers in solid-state batteries",
+        "year": 2025,
+        "channel": "both",
+        "matched_via": "doi",
+        "locators": {
+          "graph": "/nodes/5",
+          "keyword": "/message/items/0"
+        },
+        "distance": 1,
+        "co_citation": 0,
+        "directions": [
+          "forward"
+        ]
+      }
+    ],
+    "graph_only": [
+      {
+        "id": "ref-1",
+        "doi": "10.5555/syn.ref.1",
+        "title": "Mechanistic origins of filament growth in inorganic solid electrolytes",
+        "year": 2024,
+        "channel": "graph_only",
+        "locators": {
+          "graph": "/nodes/2",
+          "keyword": null
+        },
+        "distance": 1,
+        "co_citation": 2,
+        "directions": [
+          "backward"
+        ]
+      },
+      {
+        "id": "ref-2",
+        "doi": "10.5555/syn.ref.2",
+        "title": "Phase-field modelling of electrodeposition morphology at buried interfaces",
+        "year": 2025,
+        "channel": "graph_only",
+        "locators": {
+          "graph": "/nodes/3",
+          "keyword": null
+        },
+        "distance": 1,
+        "co_citation": 1,
+        "directions": [
+          "backward"
+        ]
+      }
+    ],
+    "keyword_only": [
+      {
+        "id": "doi:10.5555/syn.kw.2",
+        "doi": "10.5555/syn.kw.2",
+        "title": "Dendrite-resistant polymer coatings for lithium metal anodes",
+        "year": 2025,
+        "channel": "keyword_only",
+        "locators": {
+          "graph": null,
+          "keyword": "/message/items/1"
+        }
+      }
+    ],
+    "context": [
+      {
+        "node_id": "ref-old",
+        "doi": "10.5555/syn.ref.old",
+        "title": "Early survey of metallic anodes for solid-state cells",
+        "abstract": "A pre-2020 survey of metallic anode integration challenges.",
+        "year": 2019,
+        "directions": [
+          "backward"
+        ],
+        "seeds_via": [
+          "seed-a"
+        ],
+        "distance": 1,
+        "co_citation": 1,
+        "edges": [
+          {
+            "id": "e3",
+            "locator": "/edges/3",
+            "direction": "backward"
+          }
+        ],
+        "node_locator": "/nodes/4",
+        "in_window": false,
+        "role": "context"
+      }
+    ]
+  },
+  "complementarity": {
+    "counts": {
+      "both": 1,
+      "graph_only": 2,
+      "keyword_only": 1,
+      "total_new_unique": 4
+    },
+    "graph_unique_gain": 0.5,
+    "graph_unique_gain_definition": "graph_unique_gain = |graph_only| / (|both| + |graph_only| + |keyword_only|)，分母为去重后窗口内新候选总数",
+    "graph_channel_yield": {
+      "graph_new_candidates": 3,
+      "note": "图谱渠道窗口内新候选数 = both + graph_only；context 与 dangling 不计入"
+    },
+    "diagnosis": [
+      {
+        "id": "ref-1",
+        "title": "Mechanistic origins of filament growth in inorganic solid electrolytes",
+        "reasons": [
+          "标题不含任何查询词: 'lithium', 'dendrite'",
+          "摘要不含任何查询词: 'lithium', 'dendrite'"
+        ],
+        "evidence": {
+          "graph_node_locator": "/nodes/2",
+          "note": "证据为图谱节点记录中的 title/abstract 原文，locator 指向该记录"
+        }
+      },
+      {
+        "id": "ref-2",
+        "title": "Phase-field modelling of electrodeposition morphology at buried interfaces",
+        "reasons": [
+          "标题不含任何查询词: 'lithium', 'dendrite'",
+          "摘要不含任何查询词: 'lithium', 'dendrite'"
+        ],
+        "evidence": {
+          "graph_node_locator": "/nodes/3",
+          "note": "证据为图谱节点记录中的 title/abstract 原文，locator 指向该记录"
+        }
+      }
+    ]
+  },
+  "ranking": {
+    "criteria": [
+      "1) 图谱距离升序（一轮扩展恒为 1；关键词独有候选记 null 排后）",
+      "2) 种子共被引次数降序（backward 方向来源种子数）",
+      "3) 渠道优先级 both > graph_only > keyword_only",
+      "4) id 字典序（稳定次序）"
+    ],
+    "ranked": [
+      {
+        "rank": 1,
+        "id": "ref-1",
+        "channel": "graph_only",
+        "distance": 1,
+        "co_citation": 2,
+        "reason": "distance=1, co_citation=2, channel=graph_only"
+      },
+      {
+        "rank": 2,
+        "id": "ref-2",
+        "channel": "graph_only",
+        "distance": 1,
+        "co_citation": 1,
+        "reason": "distance=1, co_citation=1, channel=graph_only"
+      },
+      {
+        "rank": 3,
+        "id": "kw-1",
+        "channel": "both",
+        "distance": 1,
+        "co_citation": 0,
+        "reason": "distance=1, co_citation=0, channel=both"
+      },
+      {
+        "rank": 4,
+        "id": "doi:10.5555/syn.kw.2",
+        "channel": "keyword_only",
+        "distance": null,
+        "co_citation": null,
+        "reason": "distance=None, co_citation=None, channel=keyword_only"
+      }
+    ]
+  },
+  "gaps": [],
+  "notes": [
+    "本示例为显式标注的合成数据（synthetic），不对应任何真实文献；DOI 均为保留测试段 10.5555/*。",
+    "所有引文边仅取自 materials/reference_graph.json；关键词候选仅取自 materials/crossref_response.json；全程离线。"
+  ],
+  "generated_by": "citation-snowball-discovery run_minimal_example.py (synthetic example)",
+  "status": "complete"
+}

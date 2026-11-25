@@ -1,0 +1,28 @@
+{
+  "case_id": "case-1e85736f-syn-010",
+  "synthetic": true,
+  "synthetic_note": "本案例中的快照、候选清单与历史运行记录均为人工构造的合成数据，仅用于演示与自测本 Skill 的测量流程；其中所有文献、DOI、arXiv 号与日期均为虚构，不代表任何真实文献或真实检索结果。",
+  "task": "材料中包含同一来源的两份快照（t_prev 增量导入状态与 t_now 当前快照）、一份候选新增清单与一份历史运行记录。请：(1) 由快照对机械构造增量真值（new/backfill/out_of_window）；(2) 用真值评测候选新增清单，计算 precision/recall/duplicate_rate/false_alert_rate/backfill_misclassification，并逐条列出 TP/FP/FN（带 locator）；(3) 与历史运行对比做回归检测；(4) 产出 eval_report.md 与 result.json。",
+  "window": {
+    "start": "2026-11-01",
+    "end": "2026-11-24"
+  },
+  "materials_dir": "materials",
+  "output_dir": "output",
+  "output_contract": {
+    "required_fields": [
+      "case_id",
+      "status",
+      "synthetic",
+      "benchmark_constructible",
+      "snapshot_pair",
+      "truth_summary",
+      "metrics_summary",
+      "regression_summary",
+      "artifacts",
+      "limitations",
+      "notes"
+    ],
+    "status_enum": ["ok", "partial"]
+  }
+}

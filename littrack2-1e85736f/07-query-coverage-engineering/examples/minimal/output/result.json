@@ -1,0 +1,762 @@
+{
+  "case_id": "case-1e85736f-syn-007",
+  "status": "complete",
+  "synthetic": true,
+  "synthetic_note": "本案例及 materials/ 下全部快照与参考图谱均为手工构造的合成数据，仅用于离线测试本 Skill；其中所有 DOI（10.55555/syn.*）、PMID（SYNPMID*）、arXiv ID（SYN:*）与期刊名均为虚构，不对应任何真实文献。",
+  "concepts": {
+    "final": [
+      {
+        "id": "object",
+        "label": "研究对象",
+        "terms": [
+          "molecular property",
+          "chemical property",
+          "property"
+        ]
+      },
+      {
+        "id": "method",
+        "label": "方法",
+        "terms": [
+          "graph neural network",
+          "GNN",
+          "message passing neural network",
+          "message passing"
+        ]
+      },
+      {
+        "id": "scenario",
+        "label": "应用场景",
+        "terms": [
+          "drug discovery",
+          "molecular discovery"
+        ]
+      }
+    ],
+    "initial": [
+      {
+        "id": "object",
+        "label": "研究对象",
+        "terms": [
+          "molecular property",
+          "chemical property",
+          "property"
+        ]
+      },
+      {
+        "id": "method",
+        "label": "方法",
+        "terms": [
+          "graph neural network",
+          "GNN",
+          "message passing neural network"
+        ]
+      },
+      {
+        "id": "scenario",
+        "label": "应用场景",
+        "terms": [
+          "drug discovery",
+          "molecular discovery"
+        ]
+      }
+    ],
+    "degraded": false,
+    "needs_model_review": false,
+    "warnings": [],
+    "locator": {
+      "path": "/Users/liuhengshen/Desktop/bhr_product/littrack2-five/bundles/07-query-coverage-engineering/examples/minimal/case.json",
+      "pointer": "/concepts"
+    }
+  },
+  "queries": {
+    "initial": {
+      "crossref": {
+        "source": "crossref",
+        "dialect": "query.bibliographic + filter",
+        "query": "molecular property chemical property property graph neural network GNN message passing neural network drug discovery molecular discovery",
+        "filter": "from-pub-date:2024-01-01,until-pub-date:2026-06-30",
+        "notes": [
+          "Crossref REST API 无 AND/OR/短语布尔语义；空格分隔词串按相关度匹配，概念块的 AND/OR 结构无法在服务端表达，需客户端后置过滤",
+          "多词 term 的词序与短语约束在此方言中丢失（见 query_lint QL001）"
+        ]
+      },
+      "europepmc": {
+        "source": "europepmc",
+        "dialect": "Europe PMC query syntax (TITLE_ABS, AND/OR, FIRST_PDATE)",
+        "query": "(TITLE_ABS:\"molecular property\" OR TITLE_ABS:\"chemical property\" OR TITLE_ABS:property) AND (TITLE_ABS:\"graph neural network\" OR TITLE_ABS:GNN OR TITLE_ABS:\"message passing neural network\") AND (TITLE_ABS:\"drug discovery\" OR TITLE_ABS:\"molecular discovery\") AND FIRST_PDATE:[2024-01-01 TO 2026-06-30]",
+        "filter": null,
+        "notes": [
+          "块内 OR、块间 AND；短语用双引号锁定词序"
+        ]
+      },
+      "arxiv": {
+        "source": "arxiv",
+        "dialect": "arXiv API search_query (all:/ti:/abs:, AND/OR/ANDNOT, submittedDate)",
+        "query": "(all:\"molecular property\" OR all:\"chemical property\" OR all:property) AND (all:\"graph neural network\" OR all:GNN OR all:\"message passing neural network\") AND (all:\"drug discovery\" OR all:\"molecular discovery\") AND submittedDate:[202401010000 TO 202606302359]",
+        "filter": null,
+        "notes": [
+          "arXiv 不支持通配符 *（见 query_lint QL004）",
+          "all: 覆盖标题/摘要/作者等字段；如需限定摘要用 abs:"
+        ]
+      }
+    },
+    "final": {
+      "crossref": {
+        "source": "crossref",
+        "dialect": "query.bibliographic + filter",
+        "query": "molecular property chemical property property graph neural network GNN message passing neural network message passing drug discovery molecular discovery",
+        "filter": "from-pub-date:2024-01-01,until-pub-date:2026-06-30",
+        "notes": [
+          "Crossref REST API 无 AND/OR/短语布尔语义；空格分隔词串按相关度匹配，概念块的 AND/OR 结构无法在服务端表达，需客户端后置过滤",
+          "多词 term 的词序与短语约束在此方言中丢失（见 query_lint QL001）"
+        ]
+      },
+      "europepmc": {
+        "source": "europepmc",
+        "dialect": "Europe PMC query syntax (TITLE_ABS, AND/OR, FIRST_PDATE)",
+        "query": "(TITLE_ABS:\"molecular property\" OR TITLE_ABS:\"chemical property\" OR TITLE_ABS:property) AND (TITLE_ABS:\"graph neural network\" OR TITLE_ABS:GNN OR TITLE_ABS:\"message passing neural network\" OR TITLE_ABS:\"message passing\") AND (TITLE_ABS:\"drug discovery\" OR TITLE_ABS:\"molecular discovery\") AND FIRST_PDATE:[2024-01-01 TO 2026-06-30]",
+        "filter": null,
+        "notes": [
+          "块内 OR、块间 AND；短语用双引号锁定词序"
+        ]
+      },
+      "arxiv": {
+        "source": "arxiv",
+        "dialect": "arXiv API search_query (all:/ti:/abs:, AND/OR/ANDNOT, submittedDate)",
+        "query": "(all:\"molecular property\" OR all:\"chemical property\" OR all:property) AND (all:\"graph neural network\" OR all:GNN OR all:\"message passing neural network\" OR all:\"message passing\") AND (all:\"drug discovery\" OR all:\"molecular discovery\") AND submittedDate:[202401010000 TO 202606302359]",
+        "filter": null,
+        "notes": [
+          "arXiv 不支持通配符 *（见 query_lint QL004）",
+          "all: 覆盖标题/摘要/作者等字段；如需限定摘要用 abs:"
+        ]
+      }
+    },
+    "window": {
+      "start": "2024-01-01",
+      "end": "2026-06-30"
+    },
+    "locator": {
+      "path": "/Users/liuhengshen/Desktop/bhr_product/littrack2-five/bundles/07-query-coverage-engineering/examples/minimal/output/queries_revised.json",
+      "pointer": "/queries"
+    }
+  },
+  "lint_report": {
+    "findings": [
+      {
+        "rule_id": "QL003",
+        "severity": "warn",
+        "concept": "object",
+        "term": "property",
+        "source": null,
+        "message": "块 'object' 的单词 term 'property' 过于宽泛，会引入大量噪声",
+        "suggestion": "替换为更具体的多词短语，或与块内其他 term 合并为短语；若为唯一 term 则该块实际上起不到限定作用"
+      },
+      {
+        "rule_id": "QL001",
+        "severity": "info",
+        "concept": "object",
+        "term": "molecular property",
+        "source": "crossref",
+        "message": "多词 term 'molecular property' 在 crossref query.bibliographic 中退化为无序词集合",
+        "suggestion": "Crossref 结果需在客户端做短语级后置过滤，或以 Europe PMC/arXiv 的短语查询为准、Crossref 仅作补充召回"
+      },
+      {
+        "rule_id": "QL001",
+        "severity": "info",
+        "concept": "object",
+        "term": "chemical property",
+        "source": "crossref",
+        "message": "多词 term 'chemical property' 在 crossref query.bibliographic 中退化为无序词集合",
+        "suggestion": "Crossref 结果需在客户端做短语级后置过滤，或以 Europe PMC/arXiv 的短语查询为准、Crossref 仅作补充召回"
+      },
+      {
+        "rule_id": "QL001",
+        "severity": "info",
+        "concept": "method",
+        "term": "graph neural network",
+        "source": "crossref",
+        "message": "多词 term 'graph neural network' 在 crossref query.bibliographic 中退化为无序词集合",
+        "suggestion": "Crossref 结果需在客户端做短语级后置过滤，或以 Europe PMC/arXiv 的短语查询为准、Crossref 仅作补充召回"
+      },
+      {
+        "rule_id": "QL001",
+        "severity": "info",
+        "concept": "method",
+        "term": "message passing neural network",
+        "source": "crossref",
+        "message": "多词 term 'message passing neural network' 在 crossref query.bibliographic 中退化为无序词集合",
+        "suggestion": "Crossref 结果需在客户端做短语级后置过滤，或以 Europe PMC/arXiv 的短语查询为准、Crossref 仅作补充召回"
+      },
+      {
+        "rule_id": "QL001",
+        "severity": "info",
+        "concept": "method",
+        "term": "message passing",
+        "source": "crossref",
+        "message": "多词 term 'message passing' 在 crossref query.bibliographic 中退化为无序词集合",
+        "suggestion": "Crossref 结果需在客户端做短语级后置过滤，或以 Europe PMC/arXiv 的短语查询为准、Crossref 仅作补充召回"
+      },
+      {
+        "rule_id": "QL001",
+        "severity": "info",
+        "concept": "scenario",
+        "term": "drug discovery",
+        "source": "crossref",
+        "message": "多词 term 'drug discovery' 在 crossref query.bibliographic 中退化为无序词集合",
+        "suggestion": "Crossref 结果需在客户端做短语级后置过滤，或以 Europe PMC/arXiv 的短语查询为准、Crossref 仅作补充召回"
+      },
+      {
+        "rule_id": "QL001",
+        "severity": "info",
+        "concept": "scenario",
+        "term": "molecular discovery",
+        "source": "crossref",
+        "message": "多词 term 'molecular discovery' 在 crossref query.bibliographic 中退化为无序词集合",
+        "suggestion": "Crossref 结果需在客户端做短语级后置过滤，或以 Europe PMC/arXiv 的短语查询为准、Crossref 仅作补充召回"
+      }
+    ],
+    "summary": {
+      "error": 0,
+      "warn": 1,
+      "info": 7
+    },
+    "rule_table": {
+      "QL001": "crossref 无短语语义：多词 term 词序约束丢失",
+      "QL002": "裸 OR 无括号：布尔优先级可能与意图不符",
+      "QL003": "过宽单词 term：引入大量噪声",
+      "QL004": "该源不支持通配符",
+      "QL005": "大小写变体重复 term",
+      "QL006": "空概念块",
+      "QL007": "term 自带引号：双重引用风险"
+    },
+    "locator": {
+      "path": "/Users/liuhengshen/Desktop/bhr_product/littrack2-five/bundles/07-query-coverage-engineering/examples/minimal/output/lint_report.json",
+      "pointer": "/"
+    }
+  },
+  "coverage": {
+    "final": {
+      "window": {
+        "start": "2024-01-01",
+        "end": "2026-06-30"
+      },
+      "concepts_used": [
+        {
+          "id": "object",
+          "label": "研究对象",
+          "terms": [
+            "molecular property",
+            "chemical property",
+            "property"
+          ]
+        },
+        {
+          "id": "method",
+          "label": "方法",
+          "terms": [
+            "graph neural network",
+            "GNN",
+            "message passing neural network",
+            "message passing"
+          ]
+        },
+        {
+          "id": "scenario",
+          "label": "应用场景",
+          "terms": [
+            "drug discovery",
+            "molecular discovery"
+          ]
+        }
+      ],
+      "seeds_total": 4,
+      "matrix": {
+        "arxiv": {
+          "seed-1": "absent_from_snapshot",
+          "seed-2": "hit",
+          "seed-3": "hit",
+          "seed-4": "absent_from_snapshot"
+        },
+        "crossref": {
+          "seed-1": "hit",
+          "seed-2": "hit",
+          "seed-3": "hit",
+          "seed-4": "absent_from_snapshot"
+        },
+        "europepmc": {
+          "seed-1": "hit",
+          "seed-2": "absent_from_snapshot",
+          "seed-3": "absent_from_snapshot",
+          "seed-4": "hit"
+        }
+      },
+      "summary": {
+        "arxiv": {
+          "seeds_total": 4,
+          "hit": 2,
+          "miss": 0,
+          "absent_from_snapshot": 2,
+          "outside_window": 0,
+          "no_snapshot": 0,
+          "known_item_recall": 1.0
+        },
+        "crossref": {
+          "seeds_total": 4,
+          "hit": 3,
+          "miss": 0,
+          "absent_from_snapshot": 1,
+          "outside_window": 0,
+          "no_snapshot": 0,
+          "known_item_recall": 1.0
+        },
+        "europepmc": {
+          "seeds_total": 4,
+          "hit": 2,
+          "miss": 0,
+          "absent_from_snapshot": 2,
+          "outside_window": 0,
+          "no_snapshot": 0,
+          "known_item_recall": 1.0
+        }
+      },
+      "seeds": [
+        {
+          "seed_id": "seed-1",
+          "seed_title": "Graph neural networks for molecular property prediction in drug discovery: a 2025 benchmark",
+          "seed_locator": {
+            "path": "/Users/liuhengshen/Desktop/bhr_product/littrack2-five/bundles/07-query-coverage-engineering/examples/minimal/materials/reference_graph.json",
+            "pointer": "/seeds/0"
+          },
+          "sources": {
+            "arxiv": {
+              "status": "absent_from_snapshot",
+              "record_title": null,
+              "locator": null
+            },
+            "crossref": {
+              "status": "hit",
+              "record_title": "Graph neural networks for molecular property prediction in drug discovery: a 2025 benchmark",
+              "locator": {
+                "path": "/Users/liuhengshen/Desktop/bhr_product/littrack2-five/bundles/07-query-coverage-engineering/examples/minimal/materials/crossref_snapshot.json",
+                "pointer": "/items/0"
+              },
+              "blocks": {
+                "object": {
+                  "hit": true,
+                  "matched_terms": [
+                    "molecular property",
+                    "property"
+                  ]
+                },
+                "method": {
+                  "hit": true,
+                  "matched_terms": [
+                    "graph neural network"
+                  ]
+                },
+                "scenario": {
+                  "hit": true,
+                  "matched_terms": [
+                    "drug discovery"
+                  ]
+                }
+              }
+            },
+            "europepmc": {
+              "status": "hit",
+              "record_title": "Graph neural networks for molecular property prediction in drug discovery: a 2025 benchmark",
+              "locator": {
+                "path": "/Users/liuhengshen/Desktop/bhr_product/littrack2-five/bundles/07-query-coverage-engineering/examples/minimal/materials/europepmc_snapshot.json",
+                "pointer": "/items/0"
+              },
+              "blocks": {
+                "object": {
+                  "hit": true,
+                  "matched_terms": [
+                    "molecular property",
+                    "property"
+                  ]
+                },
+                "method": {
+                  "hit": true,
+                  "matched_terms": [
+                    "graph neural network"
+                  ]
+                },
+                "scenario": {
+                  "hit": true,
+                  "matched_terms": [
+                    "drug discovery"
+                  ]
+                }
+              }
+            }
+          }
+        },
+        {
+          "seed_id": "seed-2",
+          "seed_title": "A message passing neural network for chemical property prediction in molecular discovery",
+          "seed_locator": {
+            "path": "/Users/liuhengshen/Desktop/bhr_product/littrack2-five/bundles/07-query-coverage-engineering/examples/minimal/materials/reference_graph.json",
+            "pointer": "/seeds/1"
+          },
+          "sources": {
+            "arxiv": {
+              "status": "hit",
+              "record_title": "A message passing neural network for chemical property prediction in molecular discovery",
+              "locator": {
+                "path": "/Users/liuhengshen/Desktop/bhr_product/littrack2-five/bundles/07-query-coverage-engineering/examples/minimal/materials/arxiv_snapshot.json",
+                "pointer": "/items/0"
+              },
+              "blocks": {
+                "object": {
+                  "hit": true,
+                  "matched_terms": [
+                    "chemical property",
+                    "property"
+                  ]
+                },
+                "method": {
+                  "hit": true,
+                  "matched_terms": [
+                    "message passing neural network",
+                    "message passing"
+                  ]
+                },
+                "scenario": {
+                  "hit": true,
+                  "matched_terms": [
+                    "molecular discovery"
+                  ]
+                }
+              }
+            },
+            "crossref": {
+              "status": "hit",
+              "record_title": "A message passing neural network for chemical property prediction in molecular discovery",
+              "locator": {
+                "path": "/Users/liuhengshen/Desktop/bhr_product/littrack2-five/bundles/07-query-coverage-engineering/examples/minimal/materials/crossref_snapshot.json",
+                "pointer": "/items/1"
+              },
+              "blocks": {
+                "object": {
+                  "hit": true,
+                  "matched_terms": [
+                    "chemical property",
+                    "property"
+                  ]
+                },
+                "method": {
+                  "hit": true,
+                  "matched_terms": [
+                    "message passing neural network",
+                    "message passing"
+                  ]
+                },
+                "scenario": {
+                  "hit": true,
+                  "matched_terms": [
+                    "molecular discovery"
+                  ]
+                }
+              }
+            },
+            "europepmc": {
+              "status": "absent_from_snapshot",
+              "record_title": null,
+              "locator": null
+            }
+          }
+        },
+        {
+          "seed_id": "seed-3",
+          "seed_title": "Chemprop: directed message passing for molecular property prediction in drug discovery",
+          "seed_locator": {
+            "path": "/Users/liuhengshen/Desktop/bhr_product/littrack2-five/bundles/07-query-coverage-engineering/examples/minimal/materials/reference_graph.json",
+            "pointer": "/seeds/2"
+          },
+          "sources": {
+            "arxiv": {
+              "status": "hit",
+              "record_title": "Chemprop: directed message passing for molecular property prediction in drug discovery",
+              "locator": {
+                "path": "/Users/liuhengshen/Desktop/bhr_product/littrack2-five/bundles/07-query-coverage-engineering/examples/minimal/materials/arxiv_snapshot.json",
+                "pointer": "/items/1"
+              },
+              "blocks": {
+                "object": {
+                  "hit": true,
+                  "matched_terms": [
+                    "molecular property",
+                    "property"
+                  ]
+                },
+                "method": {
+                  "hit": true,
+                  "matched_terms": [
+                    "message passing"
+                  ]
+                },
+                "scenario": {
+                  "hit": true,
+                  "matched_terms": [
+                    "drug discovery"
+                  ]
+                }
+              }
+            },
+            "crossref": {
+              "status": "hit",
+              "record_title": "Chemprop: directed message passing for molecular property prediction in drug discovery",
+              "locator": {
+                "path": "/Users/liuhengshen/Desktop/bhr_product/littrack2-five/bundles/07-query-coverage-engineering/examples/minimal/materials/crossref_snapshot.json",
+                "pointer": "/items/2"
+              },
+              "blocks": {
+                "object": {
+                  "hit": true,
+                  "matched_terms": [
+                    "molecular property",
+                    "property"
+                  ]
+                },
+                "method": {
+                  "hit": true,
+                  "matched_terms": [
+                    "message passing"
+                  ]
+                },
+                "scenario": {
+                  "hit": true,
+                  "matched_terms": [
+                    "drug discovery"
+                  ]
+                }
+              }
+            },
+            "europepmc": {
+              "status": "absent_from_snapshot",
+              "record_title": null,
+              "locator": null
+            }
+          }
+        },
+        {
+          "seed_id": "seed-4",
+          "seed_title": "GNN-based molecular property models for drug discovery pipelines",
+          "seed_locator": {
+            "path": "/Users/liuhengshen/Desktop/bhr_product/littrack2-five/bundles/07-query-coverage-engineering/examples/minimal/materials/reference_graph.json",
+            "pointer": "/seeds/3"
+          },
+          "sources": {
+            "arxiv": {
+              "status": "absent_from_snapshot",
+              "record_title": null,
+              "locator": null
+            },
+            "crossref": {
+              "status": "absent_from_snapshot",
+              "record_title": null,
+              "locator": null
+            },
+            "europepmc": {
+              "status": "hit",
+              "record_title": "GNN-based molecular property models for drug discovery pipelines",
+              "locator": {
+                "path": "/Users/liuhengshen/Desktop/bhr_product/littrack2-five/bundles/07-query-coverage-engineering/examples/minimal/materials/europepmc_snapshot.json",
+                "pointer": "/items/1"
+              },
+              "blocks": {
+                "object": {
+                  "hit": true,
+                  "matched_terms": [
+                    "molecular property",
+                    "property"
+                  ]
+                },
+                "method": {
+                  "hit": true,
+                  "matched_terms": [
+                    "GNN"
+                  ]
+                },
+                "scenario": {
+                  "hit": true,
+                  "matched_terms": [
+                    "drug discovery"
+                  ]
+                }
+              }
+            }
+          }
+        }
+      ],
+      "missed_seeds": [],
+      "warnings": [],
+      "note": "已知项召回仅针对种子清单，是检索式召回能力的可验证下界，不代表对真实全量相关文献的召回率"
+    },
+    "initial_summary": {
+      "arxiv": {
+        "seeds_total": 4,
+        "hit": 1,
+        "miss": 1,
+        "absent_from_snapshot": 2,
+        "outside_window": 0,
+        "no_snapshot": 0,
+        "known_item_recall": 0.5
+      },
+      "crossref": {
+        "seeds_total": 4,
+        "hit": 2,
+        "miss": 1,
+        "absent_from_snapshot": 1,
+        "outside_window": 0,
+        "no_snapshot": 0,
+        "known_item_recall": 0.6666666666666666
+      },
+      "europepmc": {
+        "seeds_total": 4,
+        "hit": 2,
+        "miss": 0,
+        "absent_from_snapshot": 2,
+        "outside_window": 0,
+        "no_snapshot": 0,
+        "known_item_recall": 1.0
+      }
+    },
+    "locator": {
+      "path": "/Users/liuhengshen/Desktop/bhr_product/littrack2-five/bundles/07-query-coverage-engineering/examples/minimal/output/coverage_revised.json",
+      "pointer": "/"
+    }
+  },
+  "missed_seeds": [
+    {
+      "seed_id": "seed-3",
+      "seed_title": "Chemprop: directed message passing for molecular property prediction in drug discovery",
+      "seed_locator": {
+        "path": "/Users/liuhengshen/Desktop/bhr_product/littrack2-five/bundles/07-query-coverage-engineering/examples/minimal/materials/reference_graph.json",
+        "pointer": "/seeds/2"
+      },
+      "miss_in_sources": [
+        "arxiv",
+        "crossref"
+      ],
+      "diagnosis": {
+        "arxiv": {
+          "reason": "概念块 'method' 无任何同义词命中该记录标题/摘要",
+          "suggestions": {
+            "method": [
+              {
+                "term": "message passing",
+                "overlap_with_block_tokens": 2
+              },
+              {
+                "term": "directed message passing",
+                "overlap_with_block_tokens": 2
+              },
+              {
+                "term": "message",
+                "overlap_with_block_tokens": 1
+              }
+            ]
+          },
+          "minimal_revision": [
+            {
+              "concept": "method",
+              "add_term": "message passing"
+            }
+          ]
+        },
+        "crossref": {
+          "reason": "概念块 'method' 无任何同义词命中该记录标题/摘要",
+          "suggestions": {
+            "method": [
+              {
+                "term": "message passing",
+                "overlap_with_block_tokens": 2
+              },
+              {
+                "term": "directed message passing",
+                "overlap_with_block_tokens": 2
+              },
+              {
+                "term": "message",
+                "overlap_with_block_tokens": 1
+              }
+            ]
+          },
+          "minimal_revision": [
+            {
+              "concept": "method",
+              "add_term": "message passing"
+            }
+          ]
+        }
+      },
+      "record_locators": {
+        "arxiv": {
+          "path": "/Users/liuhengshen/Desktop/bhr_product/littrack2-five/bundles/07-query-coverage-engineering/examples/minimal/materials/arxiv_snapshot.json",
+          "pointer": "/items/1"
+        },
+        "crossref": {
+          "path": "/Users/liuhengshen/Desktop/bhr_product/littrack2-five/bundles/07-query-coverage-engineering/examples/minimal/materials/crossref_snapshot.json",
+          "pointer": "/items/2"
+        }
+      }
+    }
+  ],
+  "query_revisions": [
+    {
+      "concept": "method",
+      "add_term": "message passing",
+      "rationale": "种子 seed-3 在源 arxiv 被概念块 'method' 挡掉（该块无同义词命中其记录）；加入从该记录文本确定性抽取的 top-1 候选同义词 'message passing' 为最小化修订",
+      "evidence": {
+        "seed_id": "seed-3",
+        "seed_locator": {
+          "path": "/Users/liuhengshen/Desktop/bhr_product/littrack2-five/bundles/07-query-coverage-engineering/examples/minimal/materials/reference_graph.json",
+          "pointer": "/seeds/2"
+        },
+        "record_locator": {
+          "path": "/Users/liuhengshen/Desktop/bhr_product/littrack2-five/bundles/07-query-coverage-engineering/examples/minimal/materials/arxiv_snapshot.json",
+          "pointer": "/items/1"
+        }
+      }
+    }
+  ],
+  "omissions": [
+    "种子 seed-1 在源 ['arxiv'] 的快照中不存在，无法验证该源召回（可能该源未收录或快照未覆盖；非检索式问题，见 locator /Users/liuhengshen/Desktop/bhr_product/littrack2-five/bundles/07-query-coverage-engineering/examples/minimal/materials/reference_graph.json#/seeds/0）",
+    "种子 seed-2 在源 ['europepmc'] 的快照中不存在，无法验证该源召回（可能该源未收录或快照未覆盖；非检索式问题，见 locator /Users/liuhengshen/Desktop/bhr_product/littrack2-five/bundles/07-query-coverage-engineering/examples/minimal/materials/reference_graph.json#/seeds/1）",
+    "种子 seed-3 在源 ['europepmc'] 的快照中不存在，无法验证该源召回（可能该源未收录或快照未覆盖；非检索式问题，见 locator /Users/liuhengshen/Desktop/bhr_product/littrack2-five/bundles/07-query-coverage-engineering/examples/minimal/materials/reference_graph.json#/seeds/2）",
+    "种子 seed-4 在源 ['arxiv', 'crossref'] 的快照中不存在，无法验证该源召回（可能该源未收录或快照未覆盖；非检索式问题，见 locator /Users/liuhengshen/Desktop/bhr_product/littrack2-five/bundles/07-query-coverage-engineering/examples/minimal/materials/reference_graph.json#/seeds/3）",
+    "覆盖验证仅针对保留的种子清单；真实全量相关文献的召回率离线不可知，本结果是召回能力的可验证下界，不是完整召回证明"
+  ],
+  "locators": {
+    "case": {
+      "path": "/Users/liuhengshen/Desktop/bhr_product/littrack2-five/bundles/07-query-coverage-engineering/examples/minimal/case.json",
+      "pointer": "/"
+    },
+    "concepts": {
+      "path": "/Users/liuhengshen/Desktop/bhr_product/littrack2-five/bundles/07-query-coverage-engineering/examples/minimal/case.json",
+      "pointer": "/concepts"
+    },
+    "queries": {
+      "path": "/Users/liuhengshen/Desktop/bhr_product/littrack2-five/bundles/07-query-coverage-engineering/examples/minimal/output/queries_revised.json",
+      "pointer": "/queries"
+    },
+    "lint_report": {
+      "path": "/Users/liuhengshen/Desktop/bhr_product/littrack2-five/bundles/07-query-coverage-engineering/examples/minimal/output/lint_report.json",
+      "pointer": "/"
+    },
+    "coverage_final": {
+      "path": "/Users/liuhengshen/Desktop/bhr_product/littrack2-five/bundles/07-query-coverage-engineering/examples/minimal/output/coverage_revised.json",
+      "pointer": "/"
+    },
+    "coverage_initial": {
+      "path": "/Users/liuhengshen/Desktop/bhr_product/littrack2-five/bundles/07-query-coverage-engineering/examples/minimal/output/coverage_initial.json",
+      "pointer": "/"
+    }
+  },
+  "contract_notes": [],
+  "partial_reasons": []
+}

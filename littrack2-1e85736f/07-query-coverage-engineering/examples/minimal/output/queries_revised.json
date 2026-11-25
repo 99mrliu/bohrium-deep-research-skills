@@ -1,0 +1,66 @@
+{
+  "concepts": [
+    {
+      "id": "object",
+      "label": "研究对象",
+      "terms": [
+        "molecular property",
+        "chemical property",
+        "property"
+      ]
+    },
+    {
+      "id": "method",
+      "label": "方法",
+      "terms": [
+        "graph neural network",
+        "GNN",
+        "message passing neural network",
+        "message passing"
+      ]
+    },
+    {
+      "id": "scenario",
+      "label": "应用场景",
+      "terms": [
+        "drug discovery",
+        "molecular discovery"
+      ]
+    }
+  ],
+  "window": {
+    "start": "2024-01-01",
+    "end": "2026-06-30"
+  },
+  "queries": {
+    "crossref": {
+      "source": "crossref",
+      "dialect": "query.bibliographic + filter",
+      "query": "molecular property chemical property property graph neural network GNN message passing neural network message passing drug discovery molecular discovery",
+      "filter": "from-pub-date:2024-01-01,until-pub-date:2026-06-30",
+      "notes": [
+        "Crossref REST API 无 AND/OR/短语布尔语义；空格分隔词串按相关度匹配，概念块的 AND/OR 结构无法在服务端表达，需客户端后置过滤",
+        "多词 term 的词序与短语约束在此方言中丢失（见 query_lint QL001）"
+      ]
+    },
+    "europepmc": {
+      "source": "europepmc",
+      "dialect": "Europe PMC query syntax (TITLE_ABS, AND/OR, FIRST_PDATE)",
+      "query": "(TITLE_ABS:\"molecular property\" OR TITLE_ABS:\"chemical property\" OR TITLE_ABS:property) AND (TITLE_ABS:\"graph neural network\" OR TITLE_ABS:GNN OR TITLE_ABS:\"message passing neural network\" OR TITLE_ABS:\"message passing\") AND (TITLE_ABS:\"drug discovery\" OR TITLE_ABS:\"molecular discovery\") AND FIRST_PDATE:[2024-01-01 TO 2026-06-30]",
+      "filter": null,
+      "notes": [
+        "块内 OR、块间 AND；短语用双引号锁定词序"
+      ]
+    },
+    "arxiv": {
+      "source": "arxiv",
+      "dialect": "arXiv API search_query (all:/ti:/abs:, AND/OR/ANDNOT, submittedDate)",
+      "query": "(all:\"molecular property\" OR all:\"chemical property\" OR all:property) AND (all:\"graph neural network\" OR all:GNN OR all:\"message passing neural network\" OR all:\"message passing\") AND (all:\"drug discovery\" OR all:\"molecular discovery\") AND submittedDate:[202401010000 TO 202606302359]",
+      "filter": null,
+      "notes": [
+        "arXiv 不支持通配符 *（见 query_lint QL004）",
+        "all: 覆盖标题/摘要/作者等字段；如需限定摘要用 abs:"
+      ]
+    }
+  }
+}

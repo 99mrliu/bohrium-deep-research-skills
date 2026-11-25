@@ -1,0 +1,39 @@
+{
+  "case_id": "case-1e85736f-syn-007",
+  "source": "case.json:concepts",
+  "degraded": false,
+  "needs_model_review": false,
+  "concepts": [
+    {
+      "id": "object",
+      "label": "研究对象",
+      "terms": [
+        "molecular property",
+        "chemical property",
+        "property"
+      ]
+    },
+    {
+      "id": "method",
+      "label": "方法",
+      "terms": [
+        "graph neural network",
+        "GNN",
+        "message passing neural network"
+      ]
+    },
+    {
+      "id": "scenario",
+      "label": "应用场景",
+      "terms": [
+        "drug discovery",
+        "molecular discovery"
+      ]
+    }
+  ],
+  "warnings": [],
+  "locator": {
+    "path": "/Users/liuhengshen/Desktop/bhr_product/littrack2-five/bundles/07-query-coverage-engineering/examples/minimal/case.json",
+    "pointer": "/concepts"
+  }
+}

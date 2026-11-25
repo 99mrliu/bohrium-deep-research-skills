@@ -1,0 +1,30 @@
+{
+  "synthetic": true,
+  "note": "SYNTHETIC 合成参考图谱：手工构造的保留种子文献清单（retained reference graph），用于已知项召回验证；所有标识符均为虚构，不对应任何真实文献。埋点：seed-3 的标题/摘要只出现 'directed message passing'，初始概念块 method 缺少同义词 'message passing'，会被初始检索式漏掉。",
+  "seeds": [
+    {
+      "seed_id": "seed-1",
+      "title": "Graph neural networks for molecular property prediction in drug discovery: a 2025 benchmark",
+      "identifiers": {"doi": "10.55555/syn.2025.001", "pmid": "SYNPMID001"},
+      "why_relevant": "基准评测类核心文献，覆盖三个概念块"
+    },
+    {
+      "seed_id": "seed-2",
+      "title": "A message passing neural network for chemical property prediction in molecular discovery",
+      "identifiers": {"doi": "10.55555/syn.2026.002", "arxiv_id": "SYN:2511.00002"},
+      "why_relevant": "方法学核心文献（MPNN 变体）"
+    },
+    {
+      "seed_id": "seed-3",
+      "title": "Chemprop: directed message passing for molecular property prediction in drug discovery",
+      "identifiers": {"doi": "10.55555/syn.2025.003", "arxiv_id": "SYN:2508.00003"},
+      "why_relevant": "广泛使用的工具论文；埋点种子：初始检索式缺少同义词 'message passing' 会漏检"
+    },
+    {
+      "seed_id": "seed-4",
+      "title": "GNN-based molecular property models for drug discovery pipelines",
+      "identifiers": {"pmid": "SYNPMID004"},
+      "why_relevant": "应用管线类文献；仅存在于 europepmc 快照，用于演示 absent_from_snapshot 诊断"
+    }
+  ]
+}

@@ -1,0 +1,129 @@
+{
+  "source_basis": "snapshot_pair (t_prev import state + t_now current snapshot)",
+  "snapshots": {
+    "prev": "/Users/liuhengshen/Desktop/bhr_product/littrack2-five/bundles/10-replay-benchmark-eval/examples/minimal/materials/snapshot_prev.json",
+    "now": "/Users/liuhengshen/Desktop/bhr_product/littrack2-five/bundles/10-replay-benchmark-eval/examples/minimal/materials/snapshot_now.json"
+  },
+  "window": {
+    "start": "2026-11-01",
+    "end": "2026-11-24",
+    "inclusive": true
+  },
+  "counts": {
+    "added_total": 6,
+    "new": 4,
+    "backfill": 1,
+    "out_of_window": 1,
+    "unclassifiable": 0
+  },
+  "truth_new": [
+    {
+      "canonical_key": "doi:10.1000/syn.201",
+      "doi": "10.1000/syn.201",
+      "arxiv_id": null,
+      "title": "Self-Driving Labs for Perovskite Optimization",
+      "published": "2026-11-10",
+      "ingested_at": "2026-11-15",
+      "source": "crossref",
+      "locator": {
+        "snapshot": "now",
+        "index": 6,
+        "source": "crossref",
+        "doi": "10.1000/syn.201",
+        "arxiv_id": null,
+        "title": "Self-Driving Labs for Perovskite Optimization"
+      }
+    },
+    {
+      "canonical_key": "arxiv:2611.10234",
+      "doi": null,
+      "arxiv_id": "2611.10234",
+      "title": "Multimodal Retrieval for Materials Literature",
+      "published": "2026-11-12",
+      "ingested_at": "2026-11-16",
+      "source": "europepmc",
+      "locator": {
+        "snapshot": "now",
+        "index": 7,
+        "source": "europepmc",
+        "doi": null,
+        "arxiv_id": "2611.10234",
+        "title": "Multimodal Retrieval for Materials Literature"
+      }
+    },
+    {
+      "canonical_key": "doi:10.1000/syn.203",
+      "doi": "10.1000/syn.203",
+      "arxiv_id": null,
+      "title": "Bayesian Optimization of Flow Chemistry Conditions",
+      "published": "2026-11-18",
+      "ingested_at": "2026-11-21",
+      "source": "publisher",
+      "locator": {
+        "snapshot": "now",
+        "index": 8,
+        "source": "publisher",
+        "doi": "10.1000/syn.203",
+        "arxiv_id": null,
+        "title": "Bayesian Optimization of Flow Chemistry Conditions"
+      }
+    },
+    {
+      "canonical_key": "doi:10.1000/syn.204",
+      "doi": "10.1000/syn.204",
+      "arxiv_id": null,
+      "title": "Benchmarking LLM Agents for Hypothesis Generation",
+      "published": "2026-11-20",
+      "ingested_at": "2026-11-23",
+      "source": "crossref",
+      "locator": {
+        "snapshot": "now",
+        "index": 9,
+        "source": "crossref",
+        "doi": "10.1000/syn.204",
+        "arxiv_id": null,
+        "title": "Benchmarking LLM Agents for Hypothesis Generation"
+      }
+    }
+  ],
+  "truth_backfill": [
+    {
+      "canonical_key": "doi:10.1000/syn.099",
+      "doi": "10.1000/syn.099",
+      "arxiv_id": null,
+      "title": "Calorimetric Data Curation Practices",
+      "published": "2026-08-15",
+      "ingested_at": "2026-11-19",
+      "source": "crossref",
+      "locator": {
+        "snapshot": "now",
+        "index": 10,
+        "source": "crossref",
+        "doi": "10.1000/syn.099",
+        "arxiv_id": null,
+        "title": "Calorimetric Data Curation Practices"
+      }
+    }
+  ],
+  "truth_out_of_window": [
+    {
+      "canonical_key": "arxiv:2611.20999",
+      "doi": null,
+      "arxiv_id": "2611.20999",
+      "title": "Neural Scaling Laws for Molecular Pretraining",
+      "published": "2026-11-26",
+      "ingested_at": "2026-11-24",
+      "source": "europepmc",
+      "locator": {
+        "snapshot": "now",
+        "index": 11,
+        "source": "europepmc",
+        "doi": null,
+        "arxiv_id": "2611.20999",
+        "title": "Neural Scaling Laws for Molecular Pretraining"
+      }
+    }
+  ],
+  "unclassifiable": [],
+  "construction_note": "真值由快照对机械构造：t_now 有而 t_prev 无者为新增候选，再按 published 与窗口分类。未做任何人工标注或外部检索；单快照场景不得调用本脚本。"
+}

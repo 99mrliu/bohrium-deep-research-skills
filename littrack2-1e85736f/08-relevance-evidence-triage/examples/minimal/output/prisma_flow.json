@@ -1,0 +1,24 @@
+{
+  "identified": 13,
+  "prefiltered_out": 3,
+  "prefiltered_out_by_category": {
+    "out_of_window": 1,
+    "non_research_type": 1,
+    "language": 1
+  },
+  "screened": 10,
+  "included": 4,
+  "needs_human_review": 2,
+  "excluded_at_screening": 4,
+  "excluded_at_screening_by_category": {
+    "wrong_outcome": 1,
+    "duplicate_of_kept": 1,
+    "wrong_population": 1,
+    "wrong_method": 1
+  },
+  "invariants": {
+    "identified == prefiltered_out + screened": true,
+    "screened == included + needs_human_review + excluded_at_screening": true
+  },
+  "ok": true
+}

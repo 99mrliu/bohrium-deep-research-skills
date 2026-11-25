@@ -1,0 +1,597 @@
+{
+  "prev_path": "/Users/liuhengshen/Desktop/bhr_product/littrack2-five/bundles/10-replay-benchmark-eval/examples/minimal/materials/snapshot_prev.json",
+  "now_path": "/Users/liuhengshen/Desktop/bhr_product/littrack2-five/bundles/10-replay-benchmark-eval/examples/minimal/materials/snapshot_now.json",
+  "counts": {
+    "prev_records": 6,
+    "now_records": 12,
+    "common": 6,
+    "added": 6,
+    "removed": 0
+  },
+  "records_prev": [
+    {
+      "primary_key": "doi:10.1000/syn.101",
+      "keys": {
+        "doi": "doi:10.1000/syn.101",
+        "title": "title:graph neural potentials for catalysis"
+      },
+      "record": {
+        "source": "crossref",
+        "doi": "10.1000/syn.101",
+        "arxiv_id": null,
+        "title": "Graph Neural Potentials for Catalysis",
+        "authors": [
+          "Syn Author A",
+          "Syn Author B"
+        ],
+        "published": "2026-10-20",
+        "ingested_at": "2026-10-22"
+      },
+      "locator": {
+        "snapshot": "prev",
+        "index": 0,
+        "source": "crossref",
+        "doi": "10.1000/syn.101",
+        "arxiv_id": null,
+        "title": "Graph Neural Potentials for Catalysis"
+      }
+    },
+    {
+      "primary_key": "doi:10.1000/syn.102",
+      "keys": {
+        "doi": "doi:10.1000/syn.102",
+        "title": "title:active learning for reaction yield prediction"
+      },
+      "record": {
+        "source": "crossref",
+        "doi": "10.1000/syn.102",
+        "arxiv_id": null,
+        "title": "Active Learning for Reaction Yield Prediction",
+        "authors": [
+          "Syn Author C"
+        ],
+        "published": "2026-10-28",
+        "ingested_at": "2026-10-30"
+      },
+      "locator": {
+        "snapshot": "prev",
+        "index": 1,
+        "source": "crossref",
+        "doi": "10.1000/syn.102",
+        "arxiv_id": null,
+        "title": "Active Learning for Reaction Yield Prediction"
+      }
+    },
+    {
+      "primary_key": "arxiv:2610.04567",
+      "keys": {
+        "arxiv": "arxiv:2610.04567",
+        "title": "title:foundation models for protein ligand docking"
+      },
+      "record": {
+        "source": "europepmc",
+        "doi": null,
+        "arxiv_id": "2610.04567",
+        "title": "Foundation Models for Protein-Ligand Docking",
+        "authors": [
+          "Syn Author D",
+          "Syn Author E"
+        ],
+        "published": "2026-10-15",
+        "ingested_at": "2026-10-16"
+      },
+      "locator": {
+        "snapshot": "prev",
+        "index": 2,
+        "source": "europepmc",
+        "doi": null,
+        "arxiv_id": "2610.04567",
+        "title": "Foundation Models for Protein-Ligand Docking"
+      }
+    },
+    {
+      "primary_key": "doi:10.1000/syn.104",
+      "keys": {
+        "doi": "doi:10.1000/syn.104",
+        "title": "title:battery electrolyte screening with uncertainty quantification"
+      },
+      "record": {
+        "source": "publisher",
+        "doi": "10.1000/syn.104",
+        "arxiv_id": null,
+        "title": "Battery Electrolyte Screening with Uncertainty Quantification",
+        "authors": [
+          "Syn Author F"
+        ],
+        "published": "2026-11-05",
+        "ingested_at": "2026-11-08"
+      },
+      "locator": {
+        "snapshot": "prev",
+        "index": 3,
+        "source": "publisher",
+        "doi": "10.1000/syn.104",
+        "arxiv_id": null,
+        "title": "Battery Electrolyte Screening with Uncertainty Quantification"
+      }
+    },
+    {
+      "primary_key": "arxiv:2611.01234",
+      "keys": {
+        "arxiv": "arxiv:2611.01234",
+        "title": "title:diffusion models for crystal structure generation"
+      },
+      "record": {
+        "source": "europepmc",
+        "doi": null,
+        "arxiv_id": "2611.01234",
+        "title": "Diffusion Models for Crystal Structure Generation",
+        "authors": [
+          "Syn Author G"
+        ],
+        "published": "2026-11-03",
+        "ingested_at": "2026-11-06"
+      },
+      "locator": {
+        "snapshot": "prev",
+        "index": 4,
+        "source": "europepmc",
+        "doi": null,
+        "arxiv_id": "2611.01234",
+        "title": "Diffusion Models for Crystal Structure Generation"
+      }
+    },
+    {
+      "primary_key": "doi:10.1000/syn.106",
+      "keys": {
+        "doi": "doi:10.1000/syn.106",
+        "title": "title:high throughput dft workflows a survey"
+      },
+      "record": {
+        "source": "crossref",
+        "doi": "10.1000/syn.106",
+        "arxiv_id": null,
+        "title": "High-Throughput DFT Workflows: A Survey",
+        "authors": [
+          "Syn Author H",
+          "Syn Author I"
+        ],
+        "published": "2026-09-30",
+        "ingested_at": "2026-10-02"
+      },
+      "locator": {
+        "snapshot": "prev",
+        "index": 5,
+        "source": "crossref",
+        "doi": "10.1000/syn.106",
+        "arxiv_id": null,
+        "title": "High-Throughput DFT Workflows: A Survey"
+      }
+    }
+  ],
+  "records_now": [
+    {
+      "primary_key": "doi:10.1000/syn.101",
+      "keys": {
+        "doi": "doi:10.1000/syn.101",
+        "title": "title:graph neural potentials for catalysis"
+      },
+      "record": {
+        "source": "crossref",
+        "doi": "10.1000/syn.101",
+        "arxiv_id": null,
+        "title": "Graph Neural Potentials for Catalysis",
+        "authors": [
+          "Syn Author A",
+          "Syn Author B"
+        ],
+        "published": "2026-10-20",
+        "ingested_at": "2026-10-22"
+      },
+      "locator": {
+        "snapshot": "now",
+        "index": 0,
+        "source": "crossref",
+        "doi": "10.1000/syn.101",
+        "arxiv_id": null,
+        "title": "Graph Neural Potentials for Catalysis"
+      }
+    },
+    {
+      "primary_key": "doi:10.1000/syn.102",
+      "keys": {
+        "doi": "doi:10.1000/syn.102",
+        "title": "title:active learning for reaction yield prediction"
+      },
+      "record": {
+        "source": "crossref",
+        "doi": "10.1000/syn.102",
+        "arxiv_id": null,
+        "title": "Active Learning for Reaction Yield Prediction",
+        "authors": [
+          "Syn Author C"
+        ],
+        "published": "2026-10-28",
+        "ingested_at": "2026-10-30"
+      },
+      "locator": {
+        "snapshot": "now",
+        "index": 1,
+        "source": "crossref",
+        "doi": "10.1000/syn.102",
+        "arxiv_id": null,
+        "title": "Active Learning for Reaction Yield Prediction"
+      }
+    },
+    {
+      "primary_key": "arxiv:2610.04567",
+      "keys": {
+        "arxiv": "arxiv:2610.04567",
+        "title": "title:foundation models for protein ligand docking"
+      },
+      "record": {
+        "source": "europepmc",
+        "doi": null,
+        "arxiv_id": "2610.04567",
+        "title": "Foundation Models for Protein-Ligand Docking",
+        "authors": [
+          "Syn Author D",
+          "Syn Author E"
+        ],
+        "published": "2026-10-15",
+        "ingested_at": "2026-10-16"
+      },
+      "locator": {
+        "snapshot": "now",
+        "index": 2,
+        "source": "europepmc",
+        "doi": null,
+        "arxiv_id": "2610.04567",
+        "title": "Foundation Models for Protein-Ligand Docking"
+      }
+    },
+    {
+      "primary_key": "doi:10.1000/syn.104",
+      "keys": {
+        "doi": "doi:10.1000/syn.104",
+        "title": "title:battery electrolyte screening with uncertainty quantification"
+      },
+      "record": {
+        "source": "publisher",
+        "doi": "10.1000/syn.104",
+        "arxiv_id": null,
+        "title": "Battery Electrolyte Screening with Uncertainty Quantification",
+        "authors": [
+          "Syn Author F"
+        ],
+        "published": "2026-11-05",
+        "ingested_at": "2026-11-08"
+      },
+      "locator": {
+        "snapshot": "now",
+        "index": 3,
+        "source": "publisher",
+        "doi": "10.1000/syn.104",
+        "arxiv_id": null,
+        "title": "Battery Electrolyte Screening with Uncertainty Quantification"
+      }
+    },
+    {
+      "primary_key": "arxiv:2611.01234",
+      "keys": {
+        "arxiv": "arxiv:2611.01234",
+        "title": "title:diffusion models for crystal structure generation"
+      },
+      "record": {
+        "source": "europepmc",
+        "doi": null,
+        "arxiv_id": "2611.01234",
+        "title": "Diffusion Models for Crystal Structure Generation",
+        "authors": [
+          "Syn Author G"
+        ],
+        "published": "2026-11-03",
+        "ingested_at": "2026-11-06"
+      },
+      "locator": {
+        "snapshot": "now",
+        "index": 4,
+        "source": "europepmc",
+        "doi": null,
+        "arxiv_id": "2611.01234",
+        "title": "Diffusion Models for Crystal Structure Generation"
+      }
+    },
+    {
+      "primary_key": "doi:10.1000/syn.106",
+      "keys": {
+        "doi": "doi:10.1000/syn.106",
+        "title": "title:high throughput dft workflows a survey"
+      },
+      "record": {
+        "source": "crossref",
+        "doi": "10.1000/syn.106",
+        "arxiv_id": null,
+        "title": "High-Throughput DFT Workflows: A Survey",
+        "authors": [
+          "Syn Author H",
+          "Syn Author I"
+        ],
+        "published": "2026-09-30",
+        "ingested_at": "2026-10-02"
+      },
+      "locator": {
+        "snapshot": "now",
+        "index": 5,
+        "source": "crossref",
+        "doi": "10.1000/syn.106",
+        "arxiv_id": null,
+        "title": "High-Throughput DFT Workflows: A Survey"
+      }
+    },
+    {
+      "primary_key": "doi:10.1000/syn.201",
+      "keys": {
+        "doi": "doi:10.1000/syn.201",
+        "title": "title:self driving labs for perovskite optimization"
+      },
+      "record": {
+        "source": "crossref",
+        "doi": "10.1000/syn.201",
+        "arxiv_id": null,
+        "title": "Self-Driving Labs for Perovskite Optimization",
+        "authors": [
+          "Syn Author J"
+        ],
+        "published": "2026-11-10",
+        "ingested_at": "2026-11-15"
+      },
+      "locator": {
+        "snapshot": "now",
+        "index": 6,
+        "source": "crossref",
+        "doi": "10.1000/syn.201",
+        "arxiv_id": null,
+        "title": "Self-Driving Labs for Perovskite Optimization"
+      }
+    },
+    {
+      "primary_key": "arxiv:2611.10234",
+      "keys": {
+        "arxiv": "arxiv:2611.10234",
+        "title": "title:multimodal retrieval for materials literature"
+      },
+      "record": {
+        "source": "europepmc",
+        "doi": null,
+        "arxiv_id": "2611.10234",
+        "title": "Multimodal Retrieval for Materials Literature",
+        "authors": [
+          "Syn Author K",
+          "Syn Author L"
+        ],
+        "published": "2026-11-12",
+        "ingested_at": "2026-11-16"
+      },
+      "locator": {
+        "snapshot": "now",
+        "index": 7,
+        "source": "europepmc",
+        "doi": null,
+        "arxiv_id": "2611.10234",
+        "title": "Multimodal Retrieval for Materials Literature"
+      }
+    },
+    {
+      "primary_key": "doi:10.1000/syn.203",
+      "keys": {
+        "doi": "doi:10.1000/syn.203",
+        "title": "title:bayesian optimization of flow chemistry conditions"
+      },
+      "record": {
+        "source": "publisher",
+        "doi": "10.1000/syn.203",
+        "arxiv_id": null,
+        "title": "Bayesian Optimization of Flow Chemistry Conditions",
+        "authors": [
+          "Syn Author M"
+        ],
+        "published": "2026-11-18",
+        "ingested_at": "2026-11-21"
+      },
+      "locator": {
+        "snapshot": "now",
+        "index": 8,
+        "source": "publisher",
+        "doi": "10.1000/syn.203",
+        "arxiv_id": null,
+        "title": "Bayesian Optimization of Flow Chemistry Conditions"
+      }
+    },
+    {
+      "primary_key": "doi:10.1000/syn.204",
+      "keys": {
+        "doi": "doi:10.1000/syn.204",
+        "title": "title:benchmarking llm agents for hypothesis generation"
+      },
+      "record": {
+        "source": "crossref",
+        "doi": "10.1000/syn.204",
+        "arxiv_id": null,
+        "title": "Benchmarking LLM Agents for Hypothesis Generation",
+        "authors": [
+          "Syn Author N",
+          "Syn Author O"
+        ],
+        "published": "2026-11-20",
+        "ingested_at": "2026-11-23"
+      },
+      "locator": {
+        "snapshot": "now",
+        "index": 9,
+        "source": "crossref",
+        "doi": "10.1000/syn.204",
+        "arxiv_id": null,
+        "title": "Benchmarking LLM Agents for Hypothesis Generation"
+      }
+    },
+    {
+      "primary_key": "doi:10.1000/syn.099",
+      "keys": {
+        "doi": "doi:10.1000/syn.099",
+        "title": "title:calorimetric data curation practices"
+      },
+      "record": {
+        "source": "crossref",
+        "doi": "10.1000/syn.099",
+        "arxiv_id": null,
+        "title": "Calorimetric Data Curation Practices",
+        "authors": [
+          "Syn Author P"
+        ],
+        "published": "2026-08-15",
+        "ingested_at": "2026-11-19"
+      },
+      "locator": {
+        "snapshot": "now",
+        "index": 10,
+        "source": "crossref",
+        "doi": "10.1000/syn.099",
+        "arxiv_id": null,
+        "title": "Calorimetric Data Curation Practices"
+      }
+    },
+    {
+      "primary_key": "arxiv:2611.20999",
+      "keys": {
+        "arxiv": "arxiv:2611.20999",
+        "title": "title:neural scaling laws for molecular pretraining"
+      },
+      "record": {
+        "source": "europepmc",
+        "doi": null,
+        "arxiv_id": "2611.20999",
+        "title": "Neural Scaling Laws for Molecular Pretraining",
+        "authors": [
+          "Syn Author Q"
+        ],
+        "published": "2026-11-26",
+        "ingested_at": "2026-11-24"
+      },
+      "locator": {
+        "snapshot": "now",
+        "index": 11,
+        "source": "europepmc",
+        "doi": null,
+        "arxiv_id": "2611.20999",
+        "title": "Neural Scaling Laws for Molecular Pretraining"
+      }
+    }
+  ],
+  "added": [
+    {
+      "canonical_key": "doi:10.1000/syn.201",
+      "doi": "10.1000/syn.201",
+      "arxiv_id": null,
+      "title": "Self-Driving Labs for Perovskite Optimization",
+      "published": "2026-11-10",
+      "ingested_at": "2026-11-15",
+      "source": "crossref",
+      "locator": {
+        "snapshot": "now",
+        "index": 6,
+        "source": "crossref",
+        "doi": "10.1000/syn.201",
+        "arxiv_id": null,
+        "title": "Self-Driving Labs for Perovskite Optimization"
+      }
+    },
+    {
+      "canonical_key": "arxiv:2611.10234",
+      "doi": null,
+      "arxiv_id": "2611.10234",
+      "title": "Multimodal Retrieval for Materials Literature",
+      "published": "2026-11-12",
+      "ingested_at": "2026-11-16",
+      "source": "europepmc",
+      "locator": {
+        "snapshot": "now",
+        "index": 7,
+        "source": "europepmc",
+        "doi": null,
+        "arxiv_id": "2611.10234",
+        "title": "Multimodal Retrieval for Materials Literature"
+      }
+    },
+    {
+      "canonical_key": "doi:10.1000/syn.203",
+      "doi": "10.1000/syn.203",
+      "arxiv_id": null,
+      "title": "Bayesian Optimization of Flow Chemistry Conditions",
+      "published": "2026-11-18",
+      "ingested_at": "2026-11-21",
+      "source": "publisher",
+      "locator": {
+        "snapshot": "now",
+        "index": 8,
+        "source": "publisher",
+        "doi": "10.1000/syn.203",
+        "arxiv_id": null,
+        "title": "Bayesian Optimization of Flow Chemistry Conditions"
+      }
+    },
+    {
+      "canonical_key": "doi:10.1000/syn.204",
+      "doi": "10.1000/syn.204",
+      "arxiv_id": null,
+      "title": "Benchmarking LLM Agents for Hypothesis Generation",
+      "published": "2026-11-20",
+      "ingested_at": "2026-11-23",
+      "source": "crossref",
+      "locator": {
+        "snapshot": "now",
+        "index": 9,
+        "source": "crossref",
+        "doi": "10.1000/syn.204",
+        "arxiv_id": null,
+        "title": "Benchmarking LLM Agents for Hypothesis Generation"
+      }
+    },
+    {
+      "canonical_key": "doi:10.1000/syn.099",
+      "doi": "10.1000/syn.099",
+      "arxiv_id": null,
+      "title": "Calorimetric Data Curation Practices",
+      "published": "2026-08-15",
+      "ingested_at": "2026-11-19",
+      "source": "crossref",
+      "locator": {
+        "snapshot": "now",
+        "index": 10,
+        "source": "crossref",
+        "doi": "10.1000/syn.099",
+        "arxiv_id": null,
+        "title": "Calorimetric Data Curation Practices"
+      }
+    },
+    {
+      "canonical_key": "arxiv:2611.20999",
+      "doi": null,
+      "arxiv_id": "2611.20999",
+      "title": "Neural Scaling Laws for Molecular Pretraining",
+      "published": "2026-11-26",
+      "ingested_at": "2026-11-24",
+      "source": "europepmc",
+      "locator": {
+        "snapshot": "now",
+        "index": 11,
+        "source": "europepmc",
+        "doi": null,
+        "arxiv_id": "2611.20999",
+        "title": "Neural Scaling Laws for Molecular Pretraining"
+      }
+    }
+  ],
+  "removed": [],
+  "warnings": []
+}

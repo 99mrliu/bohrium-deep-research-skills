@@ -1,0 +1,27 @@
+{
+  "case_id": "case-1e85736f-syn-009",
+  "synthetic": true,
+  "synthetic_note": "本案例全部为人工构造的合成数据：文献标题、摘要、DOI（保留测试段 10.5555/*）、引文边与 API 快照均为虚构，仅用于验证 citation-snowball-discovery 流程，不对应任何真实文献或检索结果。",
+  "task": {
+    "statement": "围绕固态电池中锂枝晶问题做最新文献发现：以两颗种子文献做一轮引文滚雪球扩展，与关键词快照候选合并，量化图谱渠道互补增益。",
+    "seeds": ["seed-a", "seed-b"],
+    "query_terms": ["lithium", "dendrite"]
+  },
+  "window": {"start": "2024-01-01", "end": "2026-12-31"},
+  "materials_dir": "examples/minimal/materials",
+  "output_dir": "examples/minimal/output",
+  "output_contract": [
+    "case_id",
+    "status",
+    "generated_by",
+    "task_echo",
+    "window",
+    "channels",
+    "expansion",
+    "merged",
+    "complementarity",
+    "ranking",
+    "gaps",
+    "notes"
+  ]
+}

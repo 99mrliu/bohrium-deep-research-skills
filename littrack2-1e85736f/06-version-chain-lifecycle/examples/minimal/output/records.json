@@ -1,0 +1,181 @@
+[
+  {
+    "source": "arxiv",
+    "doi": "10.48550/arxiv.2401.00001",
+    "arxiv_id": "2401.00001",
+    "arxiv_version": 1,
+    "title": "Adaptive Graph Neural Potentials for Catalytic Surfaces",
+    "title_norm": "adaptive graph neural potentials for catalytic surfaces",
+    "first_author": "heng liu",
+    "kind": "preprint",
+    "relations": [],
+    "update_to": [],
+    "date": "2024-01-15",
+    "comment": "21 pages, 8 figures",
+    "locator": {
+      "file": "arxiv_records.json",
+      "pointer": "/entries/0"
+    },
+    "uid": "arxiv:2401.00001v1"
+  },
+  {
+    "source": "arxiv",
+    "doi": "10.48550/arxiv.2402.00002",
+    "arxiv_id": "2402.00002",
+    "arxiv_version": 1,
+    "title": "Diffusion Sampling with Energy-Guided Transport",
+    "title_norm": "diffusion sampling with energy guided transport",
+    "first_author": "maria gomez",
+    "kind": "preprint",
+    "relations": [],
+    "update_to": [],
+    "date": "2024-02-03",
+    "comment": "v1: initial submission",
+    "locator": {
+      "file": "arxiv_records.json",
+      "pointer": "/entries/1"
+    },
+    "uid": "arxiv:2402.00002v1"
+  },
+  {
+    "source": "arxiv",
+    "doi": "10.48550/arxiv.2402.00002",
+    "arxiv_id": "2402.00002",
+    "arxiv_version": 2,
+    "title": "Diffusion Sampling with Energy-Guided Transport",
+    "title_norm": "diffusion sampling with energy guided transport",
+    "first_author": "maria gomez",
+    "kind": "preprint",
+    "relations": [],
+    "update_to": [],
+    "date": "2024-02-20",
+    "comment": "v2: corrected Eq. (7) and added ablation study",
+    "locator": {
+      "file": "arxiv_records.json",
+      "pointer": "/entries/2"
+    },
+    "uid": "arxiv:2402.00002v2"
+  },
+  {
+    "source": "crossref",
+    "doi": "10.1234/jcat.2024.0001",
+    "arxiv_id": null,
+    "arxiv_version": null,
+    "title": "Adaptive Graph Neural Potentials for Catalytic Surfaces",
+    "title_norm": "adaptive graph neural potentials for catalytic surfaces",
+    "first_author": "heng liu",
+    "kind": "journal-article",
+    "relations": [
+      {
+        "type": "has-preprint",
+        "id": "10.48550/arxiv.2401.00001",
+        "id_type": "doi",
+        "pointer": "/relation/0"
+      }
+    ],
+    "update_to": [],
+    "date": "2024-02-10",
+    "comment": null,
+    "locator": {
+      "file": "crossref_records.json",
+      "pointer": "/message/items/0"
+    },
+    "uid": "crossref:10.1234/jcat.2024.0001"
+  },
+  {
+    "source": "crossref",
+    "doi": "10.1234/jmat.2023.0999",
+    "arxiv_id": null,
+    "arxiv_version": null,
+    "title": "Colossal Magnetoresistance in Layered Oxide Thin Films",
+    "title_norm": "colossal magnetoresistance in layered oxide thin films",
+    "first_author": "wei chen",
+    "kind": "journal-article",
+    "relations": [
+      {
+        "type": "has-retraction",
+        "id": "10.1234/jmat.2024.1000",
+        "id_type": "doi",
+        "pointer": "/relation/0"
+      }
+    ],
+    "update_to": [
+      {
+        "type": "retraction",
+        "doi": "10.1234/jmat.2024.1000",
+        "pointer": "/update-to/0"
+      }
+    ],
+    "date": "2023-11-05",
+    "comment": null,
+    "locator": {
+      "file": "crossref_records.json",
+      "pointer": "/message/items/1"
+    },
+    "uid": "crossref:10.1234/jmat.2023.0999"
+  },
+  {
+    "source": "crossref",
+    "doi": "10.1234/jmat.2024.1000",
+    "arxiv_id": null,
+    "arxiv_version": null,
+    "title": "Retraction Notice: Colossal Magnetoresistance in Layered Oxide Thin Films",
+    "title_norm": "retraction notice colossal magnetoresistance in layered oxide thin films",
+    "first_author": "wei chen",
+    "kind": "retraction-notice",
+    "relations": [
+      {
+        "type": "is-retraction-of",
+        "id": "10.1234/jmat.2023.0999",
+        "id_type": "doi",
+        "pointer": "/relation/0"
+      }
+    ],
+    "update_to": [],
+    "date": "2024-02-14",
+    "comment": null,
+    "locator": {
+      "file": "crossref_records.json",
+      "pointer": "/message/items/2"
+    },
+    "uid": "crossref:10.1234/jmat.2024.1000"
+  },
+  {
+    "source": "europepmc",
+    "doi": "10.5678/neur.2024.0777",
+    "arxiv_id": null,
+    "arxiv_version": null,
+    "title": "Topological Data Analysis of Neural Population Codes",
+    "title_norm": "topological data analysis of neural population codes",
+    "first_author": "aisha bello",
+    "kind": "journal-article",
+    "relations": [],
+    "update_to": [],
+    "date": "2024-02-08",
+    "comment": "journal-article",
+    "locator": {
+      "file": "europepmc_records.json",
+      "pointer": "/resultList/result/0"
+    },
+    "uid": "europepmc:10.5678/neur.2024.0777"
+  },
+  {
+    "source": "europepmc",
+    "doi": null,
+    "arxiv_id": null,
+    "arxiv_version": null,
+    "title": "Unindexed Notes on Sparse Recovery Bounds",
+    "title_norm": "unindexed notes on sparse recovery bounds",
+    "first_author": "noor haddad",
+    "kind": "preprint",
+    "relations": [],
+    "update_to": [],
+    "date": "2024-02-12",
+    "comment": "preprint",
+    "locator": {
+      "file": "europepmc_records.json",
+      "pointer": "/resultList/result/1"
+    },
+    "uid": "europepmc:europepmc_records.json#1"
+  }
+]

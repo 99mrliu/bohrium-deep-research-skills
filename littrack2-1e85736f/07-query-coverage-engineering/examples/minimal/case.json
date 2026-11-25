@@ -1,0 +1,41 @@
+{
+  "case_id": "case-1e85736f-syn-007",
+  "synthetic": true,
+  "synthetic_note": "本案例及 materials/ 下全部快照与参考图谱均为手工构造的合成数据，仅用于离线测试本 Skill；其中所有 DOI（10.55555/syn.*）、PMID（SYNPMID*）、arXiv ID（SYN:*）与期刊名均为虚构，不对应任何真实文献。",
+  "task": "追踪 2024-01 至 2026-06 期间“图神经网络用于分子性质预测（药物发现场景）”的最新文献。产出：可审计的多源布尔检索式、检索式 lint 报告、基于保留参考图谱的已知项覆盖验证（逐源×逐概念块命中矩阵、未命中诊断、最小化修订建议）与遗漏说明。",
+  "research_question": "Which recent studies apply graph neural networks to molecular property prediction in drug discovery settings?",
+  "concepts": [
+    {
+      "id": "object",
+      "label": "研究对象",
+      "terms": ["molecular property", "chemical property", "property"]
+    },
+    {
+      "id": "method",
+      "label": "方法",
+      "terms": ["graph neural network", "GNN", "message passing neural network"]
+    },
+    {
+      "id": "scenario",
+      "label": "应用场景",
+      "terms": ["drug discovery", "molecular discovery"]
+    }
+  ],
+  "seeds_hint": "materials/reference_graph.json",
+  "window": {"start": "2024-01-01", "end": "2026-06-30"},
+  "materials_dir": "materials",
+  "output_dir": "output",
+  "output_contract": [
+    "case_id",
+    "status",
+    "synthetic",
+    "concepts",
+    "queries",
+    "lint_report",
+    "coverage",
+    "missed_seeds",
+    "query_revisions",
+    "omissions",
+    "locators"
+  ]
+}

@@ -1,0 +1,360 @@
+{
+  "window": {
+    "start": "2024-01-01",
+    "end": "2026-06-30"
+  },
+  "concepts_used": [
+    {
+      "id": "object",
+      "label": "研究对象",
+      "terms": [
+        "molecular property",
+        "chemical property",
+        "property"
+      ]
+    },
+    {
+      "id": "method",
+      "label": "方法",
+      "terms": [
+        "graph neural network",
+        "GNN",
+        "message passing neural network",
+        "message passing"
+      ]
+    },
+    {
+      "id": "scenario",
+      "label": "应用场景",
+      "terms": [
+        "drug discovery",
+        "molecular discovery"
+      ]
+    }
+  ],
+  "seeds_total": 4,
+  "matrix": {
+    "arxiv": {
+      "seed-1": "absent_from_snapshot",
+      "seed-2": "hit",
+      "seed-3": "hit",
+      "seed-4": "absent_from_snapshot"
+    },
+    "crossref": {
+      "seed-1": "hit",
+      "seed-2": "hit",
+      "seed-3": "hit",
+      "seed-4": "absent_from_snapshot"
+    },
+    "europepmc": {
+      "seed-1": "hit",
+      "seed-2": "absent_from_snapshot",
+      "seed-3": "absent_from_snapshot",
+      "seed-4": "hit"
+    }
+  },
+  "summary": {
+    "arxiv": {
+      "seeds_total": 4,
+      "hit": 2,
+      "miss": 0,
+      "absent_from_snapshot": 2,
+      "outside_window": 0,
+      "no_snapshot": 0,
+      "known_item_recall": 1.0
+    },
+    "crossref": {
+      "seeds_total": 4,
+      "hit": 3,
+      "miss": 0,
+      "absent_from_snapshot": 1,
+      "outside_window": 0,
+      "no_snapshot": 0,
+      "known_item_recall": 1.0
+    },
+    "europepmc": {
+      "seeds_total": 4,
+      "hit": 2,
+      "miss": 0,
+      "absent_from_snapshot": 2,
+      "outside_window": 0,
+      "no_snapshot": 0,
+      "known_item_recall": 1.0
+    }
+  },
+  "seeds": [
+    {
+      "seed_id": "seed-1",
+      "seed_title": "Graph neural networks for molecular property prediction in drug discovery: a 2025 benchmark",
+      "seed_locator": {
+        "path": "/Users/liuhengshen/Desktop/bhr_product/littrack2-five/bundles/07-query-coverage-engineering/examples/minimal/materials/reference_graph.json",
+        "pointer": "/seeds/0"
+      },
+      "sources": {
+        "arxiv": {
+          "status": "absent_from_snapshot",
+          "record_title": null,
+          "locator": null
+        },
+        "crossref": {
+          "status": "hit",
+          "record_title": "Graph neural networks for molecular property prediction in drug discovery: a 2025 benchmark",
+          "locator": {
+            "path": "/Users/liuhengshen/Desktop/bhr_product/littrack2-five/bundles/07-query-coverage-engineering/examples/minimal/materials/crossref_snapshot.json",
+            "pointer": "/items/0"
+          },
+          "blocks": {
+            "object": {
+              "hit": true,
+              "matched_terms": [
+                "molecular property",
+                "property"
+              ]
+            },
+            "method": {
+              "hit": true,
+              "matched_terms": [
+                "graph neural network"
+              ]
+            },
+            "scenario": {
+              "hit": true,
+              "matched_terms": [
+                "drug discovery"
+              ]
+            }
+          }
+        },
+        "europepmc": {
+          "status": "hit",
+          "record_title": "Graph neural networks for molecular property prediction in drug discovery: a 2025 benchmark",
+          "locator": {
+            "path": "/Users/liuhengshen/Desktop/bhr_product/littrack2-five/bundles/07-query-coverage-engineering/examples/minimal/materials/europepmc_snapshot.json",
+            "pointer": "/items/0"
+          },
+          "blocks": {
+            "object": {
+              "hit": true,
+              "matched_terms": [
+                "molecular property",
+                "property"
+              ]
+            },
+            "method": {
+              "hit": true,
+              "matched_terms": [
+                "graph neural network"
+              ]
+            },
+            "scenario": {
+              "hit": true,
+              "matched_terms": [
+                "drug discovery"
+              ]
+            }
+          }
+        }
+      }
+    },
+    {
+      "seed_id": "seed-2",
+      "seed_title": "A message passing neural network for chemical property prediction in molecular discovery",
+      "seed_locator": {
+        "path": "/Users/liuhengshen/Desktop/bhr_product/littrack2-five/bundles/07-query-coverage-engineering/examples/minimal/materials/reference_graph.json",
+        "pointer": "/seeds/1"
+      },
+      "sources": {
+        "arxiv": {
+          "status": "hit",
+          "record_title": "A message passing neural network for chemical property prediction in molecular discovery",
+          "locator": {
+            "path": "/Users/liuhengshen/Desktop/bhr_product/littrack2-five/bundles/07-query-coverage-engineering/examples/minimal/materials/arxiv_snapshot.json",
+            "pointer": "/items/0"
+          },
+          "blocks": {
+            "object": {
+              "hit": true,
+              "matched_terms": [
+                "chemical property",
+                "property"
+              ]
+            },
+            "method": {
+              "hit": true,
+              "matched_terms": [
+                "message passing neural network",
+                "message passing"
+              ]
+            },
+            "scenario": {
+              "hit": true,
+              "matched_terms": [
+                "molecular discovery"
+              ]
+            }
+          }
+        },
+        "crossref": {
+          "status": "hit",
+          "record_title": "A message passing neural network for chemical property prediction in molecular discovery",
+          "locator": {
+            "path": "/Users/liuhengshen/Desktop/bhr_product/littrack2-five/bundles/07-query-coverage-engineering/examples/minimal/materials/crossref_snapshot.json",
+            "pointer": "/items/1"
+          },
+          "blocks": {
+            "object": {
+              "hit": true,
+              "matched_terms": [
+                "chemical property",
+                "property"
+              ]
+            },
+            "method": {
+              "hit": true,
+              "matched_terms": [
+                "message passing neural network",
+                "message passing"
+              ]
+            },
+            "scenario": {
+              "hit": true,
+              "matched_terms": [
+                "molecular discovery"
+              ]
+            }
+          }
+        },
+        "europepmc": {
+          "status": "absent_from_snapshot",
+          "record_title": null,
+          "locator": null
+        }
+      }
+    },
+    {
+      "seed_id": "seed-3",
+      "seed_title": "Chemprop: directed message passing for molecular property prediction in drug discovery",
+      "seed_locator": {
+        "path": "/Users/liuhengshen/Desktop/bhr_product/littrack2-five/bundles/07-query-coverage-engineering/examples/minimal/materials/reference_graph.json",
+        "pointer": "/seeds/2"
+      },
+      "sources": {
+        "arxiv": {
+          "status": "hit",
+          "record_title": "Chemprop: directed message passing for molecular property prediction in drug discovery",
+          "locator": {
+            "path": "/Users/liuhengshen/Desktop/bhr_product/littrack2-five/bundles/07-query-coverage-engineering/examples/minimal/materials/arxiv_snapshot.json",
+            "pointer": "/items/1"
+          },
+          "blocks": {
+            "object": {
+              "hit": true,
+              "matched_terms": [
+                "molecular property",
+                "property"
+              ]
+            },
+            "method": {
+              "hit": true,
+              "matched_terms": [
+                "message passing"
+              ]
+            },
+            "scenario": {
+              "hit": true,
+              "matched_terms": [
+                "drug discovery"
+              ]
+            }
+          }
+        },
+        "crossref": {
+          "status": "hit",
+          "record_title": "Chemprop: directed message passing for molecular property prediction in drug discovery",
+          "locator": {
+            "path": "/Users/liuhengshen/Desktop/bhr_product/littrack2-five/bundles/07-query-coverage-engineering/examples/minimal/materials/crossref_snapshot.json",
+            "pointer": "/items/2"
+          },
+          "blocks": {
+            "object": {
+              "hit": true,
+              "matched_terms": [
+                "molecular property",
+                "property"
+              ]
+            },
+            "method": {
+              "hit": true,
+              "matched_terms": [
+                "message passing"
+              ]
+            },
+            "scenario": {
+              "hit": true,
+              "matched_terms": [
+                "drug discovery"
+              ]
+            }
+          }
+        },
+        "europepmc": {
+          "status": "absent_from_snapshot",
+          "record_title": null,
+          "locator": null
+        }
+      }
+    },
+    {
+      "seed_id": "seed-4",
+      "seed_title": "GNN-based molecular property models for drug discovery pipelines",
+      "seed_locator": {
+        "path": "/Users/liuhengshen/Desktop/bhr_product/littrack2-five/bundles/07-query-coverage-engineering/examples/minimal/materials/reference_graph.json",
+        "pointer": "/seeds/3"
+      },
+      "sources": {
+        "arxiv": {
+          "status": "absent_from_snapshot",
+          "record_title": null,
+          "locator": null
+        },
+        "crossref": {
+          "status": "absent_from_snapshot",
+          "record_title": null,
+          "locator": null
+        },
+        "europepmc": {
+          "status": "hit",
+          "record_title": "GNN-based molecular property models for drug discovery pipelines",
+          "locator": {
+            "path": "/Users/liuhengshen/Desktop/bhr_product/littrack2-five/bundles/07-query-coverage-engineering/examples/minimal/materials/europepmc_snapshot.json",
+            "pointer": "/items/1"
+          },
+          "blocks": {
+            "object": {
+              "hit": true,
+              "matched_terms": [
+                "molecular property",
+                "property"
+              ]
+            },
+            "method": {
+              "hit": true,
+              "matched_terms": [
+                "GNN"
+              ]
+            },
+            "scenario": {
+              "hit": true,
+              "matched_terms": [
+                "drug discovery"
+              ]
+            }
+          }
+        }
+      }
+    }
+  ],
+  "missed_seeds": [],
+  "warnings": [],
+  "note": "已知项召回仅针对种子清单，是检索式召回能力的可验证下界，不代表对真实全量相关文献的召回率"
+}

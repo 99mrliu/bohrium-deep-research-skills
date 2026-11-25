@@ -1,0 +1,62 @@
+{
+  "layout_note": "合成（synthetic）保留参考图谱。约定：边 source -> target 表示 source 引用 target。所有节点、DOI、标题、摘要与引文边均为虚构。",
+  "synthetic": true,
+  "nodes": [
+    {
+      "id": "seed-a",
+      "doi": "10.5555/syn.seed.a",
+      "title": "Operando X-ray imaging of lithium dendrite growth in solid-state batteries",
+      "abstract": "We track lithium dendrite initiation inside sulfide solid electrolytes with operando X-ray tomography.",
+      "year": 2025,
+      "container": "Synthetic Journal of Energy Materials"
+    },
+    {
+      "id": "seed-b",
+      "doi": "10.5555/syn.seed.b",
+      "title": "Interface engineering suppresses lithium dendrite penetration in solid-state cells",
+      "abstract": "A gradient interphase layer blocks lithium dendrite penetration and extends cycle life.",
+      "year": 2025,
+      "container": "Synthetic Journal of Energy Materials"
+    },
+    {
+      "id": "ref-1",
+      "doi": "10.5555/syn.ref.1",
+      "title": "Mechanistic origins of filament growth in inorganic solid electrolytes",
+      "abstract": "Metal filament propagation through grain boundaries is governed by local current focusing at microcracks, as shown by coupled electrochemical-mechanical modelling.",
+      "year": 2024,
+      "container": "Synthetic Solid State Letters"
+    },
+    {
+      "id": "ref-2",
+      "doi": "10.5555/syn.ref.2",
+      "title": "Phase-field modelling of electrodeposition morphology at buried interfaces",
+      "abstract": "A phase-field framework predicts morphology transitions of electrodeposits at buried metal-ceramic interfaces under stack pressure.",
+      "year": 2025,
+      "container": "Synthetic Computational Materials Review"
+    },
+    {
+      "id": "ref-old",
+      "doi": "10.5555/syn.ref.old",
+      "title": "Early survey of metallic anodes for solid-state cells",
+      "abstract": "A pre-2020 survey of metallic anode integration challenges.",
+      "year": 2019,
+      "container": "Synthetic Battery Archives"
+    },
+    {
+      "id": "kw-1",
+      "doi": "10.5555/syn.kw.1",
+      "title": "Lithium dendrite suppression via alloy interlayers in solid-state batteries",
+      "abstract": "An alloy interlayer homogenizes lithium flux and suppresses dendrite formation.",
+      "year": 2025,
+      "container": "Synthetic Journal of Energy Materials"
+    }
+  ],
+  "edges": [
+    {"id": "e0", "source": "seed-a", "target": "ref-1"},
+    {"id": "e1", "source": "seed-a", "target": "ref-2"},
+    {"id": "e2", "source": "seed-b", "target": "ref-1"},
+    {"id": "e3", "source": "seed-a", "target": "ref-old"},
+    {"id": "e4", "source": "kw-1", "target": "seed-a"},
+    {"id": "e5", "source": "seed-b", "target": "ghost-001"}
+  ]
+}

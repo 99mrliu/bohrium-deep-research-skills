@@ -1,0 +1,73 @@
+{
+  "case_id": "case-1e85736f-syn-008",
+  "synthetic": true,
+  "synthetic_note": "本 case 与 materials/ 下全部快照均为合成数据，仅用于 skill 演示与自检；所有文献、DOI、作者、期刊均为虚构，不对应任何真实记录。",
+  "task": "围绕研究问题对材料快照中的题录做双阶段相关性分级筛选：确定性规则预筛 + 多维 rubric 透明打分；为每条保留/待复核条目装订逐字证据（quote+field+char offsets）；输出 PRISMA 式流转计数、排除原因分类与遗漏说明，最终写 result.json。",
+  "research_question": "In adults with type 2 diabetes, does high-intensity interval training (HIIT) improve glycemic control (e.g., HbA1c, fasting glucose) compared with moderate continuous training or usual care?",
+  "window": {"start": "2024-01-01", "end": "2024-12-31"},
+  "materials_dir": "materials",
+  "output_dir": "output",
+  "prefilter": {
+    "allowed_languages": ["en"],
+    "excluded_doc_types": ["editorial", "news", "correction", "letter", "book-chapter", "review"],
+    "blocklist_title_terms": ["erratum", "retraction notice"],
+    "source_priority": ["crossref", "europepmc", "arxiv"]
+  },
+  "screening_rubric": {
+    "include_threshold": 6,
+    "borderline_delta": 1,
+    "dimensions": {
+      "population": {
+        "points": 3,
+        "terms": ["type 2 diabetes", "t2dm", "type 2 diabetic"],
+        "comment": "研究对象：2 型糖尿病成人"
+      },
+      "intervention": {
+        "points": 3,
+        "terms": ["high-intensity interval", "hiit", "sprint interval"],
+        "weak_terms": [{"term": "interval training", "points": 1}],
+        "comment": "干预：高强度间歇训练（弱命中=只说 interval training）"
+      },
+      "study_design": {
+        "points": 2,
+        "terms": ["randomized", "randomised", "rct"],
+        "comment": "设计：随机对照"
+      },
+      "outcome": {
+        "points": 2,
+        "terms": ["hba1c", "glycemic control", "glycaemic control", "fasting glucose", "insulin sensitivity"],
+        "comment": "结局：血糖控制指标"
+      },
+      "negative_population": {
+        "points": -4,
+        "terms": ["children", "adolescents", "pediatric", "type 1 diabetes", "gestational", "mice", "rats"],
+        "comment": "错对象：儿童/1型/妊娠/动物"
+      },
+      "negative_method": {
+        "points": -3,
+        "terms": ["polyphenol", "dietary", "metformin", "pharmacological"],
+        "comment": "错方法：非运动干预（药物/膳食）"
+      },
+      "negative_outcome": {
+        "points": -2,
+        "terms": ["endothelial function", "vo2max"],
+        "comment": "错结局：非血糖结局为主"
+      }
+    },
+    "category_map": {
+      "negative_population": "wrong_population",
+      "negative_method": "wrong_method",
+      "negative_outcome": "wrong_outcome"
+    }
+  },
+  "output_contract": {
+    "required_fields": [
+      "case_id", "status", "research_question", "screening_window",
+      "prisma_flow", "included", "needs_human_review", "excluded",
+      "exclusions_by_category", "evidence_policy", "omission_notes",
+      "limitations", "artifacts"
+    ],
+    "status_values": ["ok", "partial"],
+    "notes": "缺失字段必须补 null 且 status=partial；证据 quote 必须逐字来自题录原文且偏移可复算。"
+  }
+}

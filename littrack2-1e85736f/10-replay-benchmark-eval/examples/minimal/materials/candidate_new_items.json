@@ -1,0 +1,29 @@
+{
+  "_comment": "SYNTHETIC — 人工构造的合成候选新增清单（某次追踪运行的输出，待评测对象）。埋点：(a) 漏报 2 条真新增（syn.203、syn.204）→ FN=2；(b) 第 0 条与第 2 条为同一文献（一次用 DOI、一次用标题声明）→ 重复 1 条；(c) 第 3 条把 backfill（syn.099，published 2026-08-15）误报为 new → FP=1 且计入 backfill_misclassification。第 1 条故意用大小写/多余空格不同的标题声明，以检验标题归一化。",
+  "run_id": "run2-synthetic",
+  "items": [
+    {
+      "doi": "https://doi.org/10.1000/syn.201",
+      "title": "Self-Driving Labs for Perovskite Optimization",
+      "claimed_at": "2026-11-24"
+    },
+    {
+      "doi": null,
+      "arxiv_id": null,
+      "title": "Multimodal retrieval  for materials literature",
+      "claimed_at": "2026-11-24"
+    },
+    {
+      "doi": null,
+      "arxiv_id": null,
+      "title": "Self-Driving Labs for Perovskite Optimization",
+      "claimed_at": "2026-11-24"
+    },
+    {
+      "doi": "10.1000/syn.099",
+      "arxiv_id": null,
+      "title": "Calorimetric Data Curation Practices",
+      "claimed_at": "2026-11-24"
+    }
+  ]
+}

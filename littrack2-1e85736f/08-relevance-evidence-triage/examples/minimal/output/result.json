@@ -1,0 +1,504 @@
+{
+  "case_id": "case-1e85736f-syn-008",
+  "status": "ok",
+  "research_question": "In adults with type 2 diabetes, does high-intensity interval training (HIIT) improve glycemic control (e.g., HbA1c, fasting glucose) compared with moderate continuous training or usual care?",
+  "screening_window": {
+    "start": "2024-01-01",
+    "end": "2024-12-31"
+  },
+  "prisma_flow": {
+    "identified": 13,
+    "prefiltered_out": 3,
+    "prefiltered_out_by_category": {
+      "out_of_window": 1,
+      "non_research_type": 1,
+      "language": 1
+    },
+    "screened": 10,
+    "included": 4,
+    "needs_human_review": 2,
+    "excluded_at_screening": 4,
+    "excluded_at_screening_by_category": {
+      "wrong_outcome": 1,
+      "duplicate_of_kept": 1,
+      "wrong_population": 1,
+      "wrong_method": 1
+    },
+    "invariants": {
+      "identified == prefiltered_out + screened": true,
+      "screened == included + needs_human_review + excluded_at_screening": true
+    },
+    "ok": true
+  },
+  "included": [
+    {
+      "record_id": "arxiv:SYN-ARXIV-2024-00201",
+      "source": "arxiv",
+      "title": "High-intensity interval versus moderate continuous training on glycemic control in type 2 diabetes: a randomized controlled trial",
+      "doi_or_id": "arxiv:SYN-ARXIV-2024-00201",
+      "score": 10,
+      "decision": "included",
+      "title_only": false,
+      "score_entries": [
+        {
+          "dimension": "population",
+          "term": "type 2 diabetes",
+          "points": 3,
+          "field": "title"
+        },
+        {
+          "dimension": "intervention",
+          "term": "high-intensity interval",
+          "points": 3,
+          "field": "title"
+        },
+        {
+          "dimension": "study_design",
+          "term": "randomized",
+          "points": 2,
+          "field": "title"
+        },
+        {
+          "dimension": "outcome",
+          "term": "hba1c",
+          "points": 2,
+          "field": "abstract"
+        }
+      ],
+      "rationale_note": "",
+      "evidence": [
+        {
+          "quote": "High-intensity interval versus moderate continuous training on glycemic control in type 2 diabetes: a randomized controlled trial",
+          "field": "title",
+          "char_start": 0,
+          "char_end": 129,
+          "dimension": "population",
+          "matched_term": "type 2 diabetes"
+        },
+        {
+          "quote": "High-intensity interval versus moderate continuous training on glycemic control in type 2 diabetes: a randomized controlled trial",
+          "field": "title",
+          "char_start": 0,
+          "char_end": 129,
+          "dimension": "intervention",
+          "matched_term": "high-intensity interval"
+        },
+        {
+          "quote": "HbA1c and glycemic control improved more with high-intensity interval training than with moderate continuous training.",
+          "field": "abstract",
+          "char_start": 154,
+          "char_end": 272,
+          "dimension": "outcome",
+          "matched_term": "hba1c"
+        }
+      ]
+    },
+    {
+      "record_id": "crossref:10.0000/syn-metab-2024-001",
+      "source": "crossref",
+      "title": "Effect of high-intensity interval training on glycemic control in adults with type 2 diabetes: a randomized controlled trial",
+      "doi_or_id": "crossref:10.0000/syn-metab-2024-001",
+      "score": 10,
+      "decision": "included",
+      "title_only": false,
+      "score_entries": [
+        {
+          "dimension": "population",
+          "term": "type 2 diabetes",
+          "points": 3,
+          "field": "title"
+        },
+        {
+          "dimension": "intervention",
+          "term": "high-intensity interval",
+          "points": 3,
+          "field": "title"
+        },
+        {
+          "dimension": "study_design",
+          "term": "randomized",
+          "points": 2,
+          "field": "title"
+        },
+        {
+          "dimension": "outcome",
+          "term": "hba1c",
+          "points": 2,
+          "field": "abstract"
+        }
+      ],
+      "rationale_note": "",
+      "evidence": [
+        {
+          "quote": "Effect of high-intensity interval training on glycemic control in adults with type 2 diabetes: a randomized controlled trial",
+          "field": "title",
+          "char_start": 0,
+          "char_end": 124,
+          "dimension": "population",
+          "matched_term": "type 2 diabetes"
+        },
+        {
+          "quote": "Effect of high-intensity interval training on glycemic control in adults with type 2 diabetes: a randomized controlled trial",
+          "field": "title",
+          "char_start": 0,
+          "char_end": 124,
+          "dimension": "intervention",
+          "matched_term": "high-intensity interval"
+        },
+        {
+          "quote": "The primary outcome was change in HbA1c.",
+          "field": "abstract",
+          "char_start": 109,
+          "char_end": 149,
+          "dimension": "outcome",
+          "matched_term": "hba1c"
+        }
+      ]
+    },
+    {
+      "record_id": "europepmc:SYN000101",
+      "source": "europepmc",
+      "title": "Sprint interval training improves HbA1c and insulin sensitivity in adults with type 2 diabetes: a randomized trial",
+      "doi_or_id": "europepmc:SYN000101",
+      "score": 10,
+      "decision": "included",
+      "title_only": false,
+      "score_entries": [
+        {
+          "dimension": "population",
+          "term": "type 2 diabetes",
+          "points": 3,
+          "field": "title"
+        },
+        {
+          "dimension": "intervention",
+          "term": "sprint interval",
+          "points": 3,
+          "field": "title"
+        },
+        {
+          "dimension": "study_design",
+          "term": "randomized",
+          "points": 2,
+          "field": "title"
+        },
+        {
+          "dimension": "outcome",
+          "term": "hba1c",
+          "points": 2,
+          "field": "title"
+        }
+      ],
+      "rationale_note": "",
+      "evidence": [
+        {
+          "quote": "Sprint interval training improves HbA1c and insulin sensitivity in adults with type 2 diabetes: a randomized trial",
+          "field": "title",
+          "char_start": 0,
+          "char_end": 114,
+          "dimension": "population",
+          "matched_term": "type 2 diabetes"
+        },
+        {
+          "quote": "Sprint interval training improves HbA1c and insulin sensitivity in adults with type 2 diabetes: a randomized trial",
+          "field": "title",
+          "char_start": 0,
+          "char_end": 114,
+          "dimension": "intervention",
+          "matched_term": "sprint interval"
+        },
+        {
+          "quote": "Sprint interval training improves HbA1c and insulin sensitivity in adults with type 2 diabetes: a randomized trial",
+          "field": "title",
+          "char_start": 0,
+          "char_end": 114,
+          "dimension": "outcome",
+          "matched_term": "hba1c"
+        }
+      ]
+    },
+    {
+      "record_id": "europepmc:SYN000104",
+      "source": "europepmc",
+      "title": "Effects of high-intensity interval training on glycemic control in type 2 diabetes: a randomized trial",
+      "doi_or_id": "europepmc:SYN000104",
+      "score": 10,
+      "decision": "included",
+      "title_only": true,
+      "score_entries": [
+        {
+          "dimension": "population",
+          "term": "type 2 diabetes",
+          "points": 3,
+          "field": "title"
+        },
+        {
+          "dimension": "intervention",
+          "term": "high-intensity interval",
+          "points": 3,
+          "field": "title"
+        },
+        {
+          "dimension": "study_design",
+          "term": "randomized",
+          "points": 2,
+          "field": "title"
+        },
+        {
+          "dimension": "outcome",
+          "term": "glycemic control",
+          "points": 2,
+          "field": "title"
+        }
+      ],
+      "rationale_note": "",
+      "evidence": [
+        {
+          "quote": "Effects of high-intensity interval training on glycemic control in type 2 diabetes: a randomized trial",
+          "field": "title",
+          "char_start": 0,
+          "char_end": 102,
+          "dimension": "population",
+          "matched_term": "type 2 diabetes"
+        },
+        {
+          "quote": "Effects of high-intensity interval training on glycemic control in type 2 diabetes: a randomized trial",
+          "field": "title",
+          "char_start": 0,
+          "char_end": 102,
+          "dimension": "intervention",
+          "matched_term": "high-intensity interval"
+        },
+        {
+          "quote": "Effects of high-intensity interval training on glycemic control in type 2 diabetes: a randomized trial",
+          "field": "title",
+          "char_start": 0,
+          "char_end": 102,
+          "dimension": "outcome",
+          "matched_term": "glycemic control"
+        }
+      ]
+    }
+  ],
+  "needs_human_review": [
+    {
+      "record_id": "europepmc:SYN000102",
+      "source": "europepmc",
+      "title": "Aerobic exercise and glucose handling in people with type 2 diabetes",
+      "doi_or_id": "europepmc:SYN000102",
+      "score": 5,
+      "decision": "needs_human_review",
+      "title_only": false,
+      "score_entries": [
+        {
+          "dimension": "population",
+          "term": "type 2 diabetes",
+          "points": 3,
+          "field": "title"
+        },
+        {
+          "dimension": "outcome",
+          "term": "fasting glucose",
+          "points": 2,
+          "field": "abstract"
+        }
+      ],
+      "rationale_note": "",
+      "evidence": [
+        {
+          "quote": "Aerobic exercise and glucose handling in people with type 2 diabetes",
+          "field": "title",
+          "char_start": 0,
+          "char_end": 68,
+          "dimension": "population",
+          "matched_term": "type 2 diabetes"
+        },
+        {
+          "quote": "Fasting glucose improved modestly and medication use was unchanged.",
+          "field": "abstract",
+          "char_start": 82,
+          "char_end": 149,
+          "dimension": "outcome",
+          "matched_term": "fasting glucose"
+        }
+      ],
+      "band": {
+        "threshold": 6,
+        "delta": 1,
+        "note": "分数落在阈值±δ 边界带内，需人工复核，未强行二分"
+      }
+    },
+    {
+      "record_id": "europepmc:SYN000103",
+      "source": "europepmc",
+      "title": "Interval training in adults with type 2 diabetes: a pilot study of glycemic control",
+      "doi_or_id": "europepmc:SYN000103",
+      "score": 6,
+      "decision": "needs_human_review",
+      "title_only": false,
+      "score_entries": [
+        {
+          "dimension": "population",
+          "term": "type 2 diabetes",
+          "points": 3,
+          "field": "title"
+        },
+        {
+          "dimension": "intervention",
+          "term": "interval training",
+          "points": 1,
+          "field": "title",
+          "weak": true
+        },
+        {
+          "dimension": "outcome",
+          "term": "glycemic control",
+          "points": 2,
+          "field": "title"
+        }
+      ],
+      "rationale_note": "",
+      "evidence": [
+        {
+          "quote": "Interval training in adults with type 2 diabetes: a pilot study of glycemic control",
+          "field": "title",
+          "char_start": 0,
+          "char_end": 83,
+          "dimension": "population",
+          "matched_term": "type 2 diabetes"
+        },
+        {
+          "quote": "Interval training in adults with type 2 diabetes: a pilot study of glycemic control",
+          "field": "title",
+          "char_start": 0,
+          "char_end": 83,
+          "dimension": "intervention",
+          "matched_term": "interval training"
+        },
+        {
+          "quote": "Interval training in adults with type 2 diabetes: a pilot study of glycemic control",
+          "field": "title",
+          "char_start": 0,
+          "char_end": 83,
+          "dimension": "outcome",
+          "matched_term": "glycemic control"
+        }
+      ],
+      "band": {
+        "threshold": 6,
+        "delta": 1,
+        "note": "分数落在阈值±δ 边界带内，需人工复核，未强行二分"
+      }
+    }
+  ],
+  "excluded": [
+    {
+      "record_id": "arxiv:SYN-ARXIV-2024-00202",
+      "source": "arxiv",
+      "title": "High-intensity interval training and endothelial function in adults with type 2 diabetes",
+      "stage": "screening",
+      "category": "wrong_outcome",
+      "category_evidence": "endothelial function",
+      "score": 4
+    },
+    {
+      "record_id": "arxiv:SYN-ARXIV-2024-00203",
+      "source": "arxiv",
+      "title": "Sprint interval training improves HbA1c and insulin sensitivity in adults with type 2 diabetes: a randomized trial",
+      "stage": "screening",
+      "category": "duplicate_of_kept",
+      "category_evidence": "same normalized title as europepmc:SYN000101",
+      "score": 10
+    },
+    {
+      "record_id": "crossref:10.0000/syn-ped-2024-002",
+      "source": "crossref",
+      "title": "High-intensity interval training in children and adolescents with obesity: a pilot study",
+      "stage": "screening",
+      "category": "wrong_population",
+      "category_evidence": "children",
+      "score": 1
+    },
+    {
+      "record_id": "crossref:10.0000/syn-old-2021-003",
+      "source": "crossref",
+      "title": "High-intensity interval training versus moderate continuous training for glycemic control in type 2 diabetes: a randomized controlled trial",
+      "stage": "prefilter",
+      "category": "out_of_window",
+      "category_evidence": "window",
+      "score": null
+    },
+    {
+      "record_id": "crossref:10.0000/syn-edit-2024-004",
+      "source": "crossref",
+      "title": "Interval training for diabetes care: time to move faster",
+      "stage": "prefilter",
+      "category": "non_research_type",
+      "category_evidence": "doc_type",
+      "score": null
+    },
+    {
+      "record_id": "crossref:10.0000/syn-es-2024-005",
+      "source": "crossref",
+      "title": "Entrenamiento interválico de alta intensidad y control glucémico en la diabetes tipo 2: ensayo aleatorizado",
+      "stage": "prefilter",
+      "category": "language",
+      "category_evidence": "language",
+      "score": null
+    },
+    {
+      "record_id": "europepmc:SYN000105",
+      "source": "europepmc",
+      "title": "Dietary polyphenols and glycemic control in adults with type 2 diabetes: a randomized crossover trial",
+      "stage": "screening",
+      "category": "wrong_method",
+      "category_evidence": "polyphenol",
+      "score": 4
+    }
+  ],
+  "exclusions_by_category": {
+    "wrong_outcome": 1,
+    "duplicate_of_kept": 1,
+    "wrong_population": 1,
+    "out_of_window": 1,
+    "non_research_type": 1,
+    "language": 1,
+    "wrong_method": 1
+  },
+  "evidence_policy": {
+    "verbatim": true,
+    "source_fields": [
+      "title",
+      "abstract"
+    ],
+    "offsets": "char offsets into the field text as stored in snapshot",
+    "selected_by": "auto_select_deterministic_stand-in",
+    "candidates_file": "evidence_candidates.json",
+    "selected_file": "evidence_selected.json"
+  },
+  "omission_notes": {
+    "prefilter_excluded_not_audited": [
+      "language",
+      "non_research_type",
+      "out_of_window"
+    ],
+    "prefilter_note": "以下类别的预筛排除条目未逐条人工抽审，可能存在误排: language, non_research_type, out_of_window",
+    "title_only_records": [
+      "europepmc:SYN000104"
+    ],
+    "title_only_note": "以下条目摘要缺失，只能按标题判断，结论置信度低",
+    "other": []
+  },
+  "limitations": [
+    "存在仅按标题判断的条目（摘要缺失）",
+    "预筛排除类别未逐条抽审: language, non_research_type, out_of_window",
+    "本结果为合成（synthetic）示例产物，不构成真实文献结论"
+  ],
+  "artifacts": {
+    "prefilter_results": "prefilter_results.jsonl",
+    "screening_decisions": "screening_decisions.jsonl",
+    "evidence_candidates": "evidence_candidates.json",
+    "evidence_selected": "evidence_selected.json",
+    "prisma_flow": "prisma_flow.json"
+  }
+}

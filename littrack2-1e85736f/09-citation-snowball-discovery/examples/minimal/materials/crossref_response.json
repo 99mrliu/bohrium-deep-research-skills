@@ -1,0 +1,26 @@
+{
+  "status": "ok",
+  "message-type": "work-list",
+  "synthetic": true,
+  "synthetic_note": "虚构的 Crossref 风格响应快照，仅含 2 条合成记录；查询词为 lithium, dendrite。",
+  "message": {
+    "query": {"terms": "lithium dendrite"},
+    "total-results": 2,
+    "items": [
+      {
+        "DOI": "10.5555/syn.kw.1",
+        "title": ["Lithium dendrite suppression via alloy interlayers in solid-state batteries"],
+        "abstract": "An alloy interlayer homogenizes lithium flux and suppresses dendrite formation.",
+        "container-title": ["Synthetic Journal of Energy Materials"],
+        "issued": {"date-parts": [[2025, 3, 14]]}
+      },
+      {
+        "DOI": "10.5555/syn.kw.2",
+        "title": ["Dendrite-resistant polymer coatings for lithium metal anodes"],
+        "abstract": "Elastic polymer coatings accommodate volume change and prevent dendrite shorting in lithium metal cells.",
+        "container-title": ["Synthetic Polymer Energy Journal"],
+        "issued": {"date-parts": [[2025, 6, 2]]}
+      }
+    ]
+  }
+}

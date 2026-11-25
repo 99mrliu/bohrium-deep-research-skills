@@ -1,0 +1,266 @@
+{
+  "findings": [
+    {
+      "rule_id": "QL003",
+      "severity": "warn",
+      "concept": "object",
+      "term": "property",
+      "source": null,
+      "message": "块 'object' 的单词 term 'property' 过于宽泛，会引入大量噪声",
+      "suggestion": "替换为更具体的多词短语，或与块内其他 term 合并为短语；若为唯一 term 则该块实际上起不到限定作用"
+    },
+    {
+      "rule_id": "QL001",
+      "severity": "info",
+      "concept": "object",
+      "term": "molecular property",
+      "source": "crossref",
+      "message": "多词 term 'molecular property' 在 crossref query.bibliographic 中退化为无序词集合",
+      "suggestion": "Crossref 结果需在客户端做短语级后置过滤，或以 Europe PMC/arXiv 的短语查询为准、Crossref 仅作补充召回"
+    },
+    {
+      "rule_id": "QL001",
+      "severity": "info",
+      "concept": "object",
+      "term": "chemical property",
+      "source": "crossref",
+      "message": "多词 term 'chemical property' 在 crossref query.bibliographic 中退化为无序词集合",
+      "suggestion": "Crossref 结果需在客户端做短语级后置过滤，或以 Europe PMC/arXiv 的短语查询为准、Crossref 仅作补充召回"
+    },
+    {
+      "rule_id": "QL001",
+      "severity": "info",
+      "concept": "method",
+      "term": "graph neural network",
+      "source": "crossref",
+      "message": "多词 term 'graph neural network' 在 crossref query.bibliographic 中退化为无序词集合",
+      "suggestion": "Crossref 结果需在客户端做短语级后置过滤，或以 Europe PMC/arXiv 的短语查询为准、Crossref 仅作补充召回"
+    },
+    {
+      "rule_id": "QL001",
+      "severity": "info",
+      "concept": "method",
+      "term": "message passing neural network",
+      "source": "crossref",
+      "message": "多词 term 'message passing neural network' 在 crossref query.bibliographic 中退化为无序词集合",
+      "suggestion": "Crossref 结果需在客户端做短语级后置过滤，或以 Europe PMC/arXiv 的短语查询为准、Crossref 仅作补充召回"
+    },
+    {
+      "rule_id": "QL001",
+      "severity": "info",
+      "concept": "method",
+      "term": "message passing",
+      "source": "crossref",
+      "message": "多词 term 'message passing' 在 crossref query.bibliographic 中退化为无序词集合",
+      "suggestion": "Crossref 结果需在客户端做短语级后置过滤，或以 Europe PMC/arXiv 的短语查询为准、Crossref 仅作补充召回"
+    },
+    {
+      "rule_id": "QL001",
+      "severity": "info",
+      "concept": "scenario",
+      "term": "drug discovery",
+      "source": "crossref",
+      "message": "多词 term 'drug discovery' 在 crossref query.bibliographic 中退化为无序词集合",
+      "suggestion": "Crossref 结果需在客户端做短语级后置过滤，或以 Europe PMC/arXiv 的短语查询为准、Crossref 仅作补充召回"
+    },
+    {
+      "rule_id": "QL001",
+      "severity": "info",
+      "concept": "scenario",
+      "term": "molecular discovery",
+      "source": "crossref",
+      "message": "多词 term 'molecular discovery' 在 crossref query.bibliographic 中退化为无序词集合",
+      "suggestion": "Crossref 结果需在客户端做短语级后置过滤，或以 Europe PMC/arXiv 的短语查询为准、Crossref 仅作补充召回"
+    }
+  ],
+  "summary": {
+    "error": 0,
+    "warn": 1,
+    "info": 7
+  },
+  "rule_table": {
+    "QL001": "crossref 无短语语义：多词 term 词序约束丢失",
+    "QL002": "裸 OR 无括号：布尔优先级可能与意图不符",
+    "QL003": "过宽单词 term：引入大量噪声",
+    "QL004": "该源不支持通配符",
+    "QL005": "大小写变体重复 term",
+    "QL006": "空概念块",
+    "QL007": "term 自带引号：双重引用风险"
+  },
+  "note": "lint 只做静态审计与建议；召回修复由 coverage_check 诊断驱动",
+  "per_stage": {
+    "initial": {
+      "findings": [
+        {
+          "rule_id": "QL003",
+          "severity": "warn",
+          "concept": "object",
+          "term": "property",
+          "source": null,
+          "message": "块 'object' 的单词 term 'property' 过于宽泛，会引入大量噪声",
+          "suggestion": "替换为更具体的多词短语，或与块内其他 term 合并为短语；若为唯一 term 则该块实际上起不到限定作用"
+        },
+        {
+          "rule_id": "QL001",
+          "severity": "info",
+          "concept": "object",
+          "term": "molecular property",
+          "source": "crossref",
+          "message": "多词 term 'molecular property' 在 crossref query.bibliographic 中退化为无序词集合",
+          "suggestion": "Crossref 结果需在客户端做短语级后置过滤，或以 Europe PMC/arXiv 的短语查询为准、Crossref 仅作补充召回"
+        },
+        {
+          "rule_id": "QL001",
+          "severity": "info",
+          "concept": "object",
+          "term": "chemical property",
+          "source": "crossref",
+          "message": "多词 term 'chemical property' 在 crossref query.bibliographic 中退化为无序词集合",
+          "suggestion": "Crossref 结果需在客户端做短语级后置过滤，或以 Europe PMC/arXiv 的短语查询为准、Crossref 仅作补充召回"
+        },
+        {
+          "rule_id": "QL001",
+          "severity": "info",
+          "concept": "method",
+          "term": "graph neural network",
+          "source": "crossref",
+          "message": "多词 term 'graph neural network' 在 crossref query.bibliographic 中退化为无序词集合",
+          "suggestion": "Crossref 结果需在客户端做短语级后置过滤，或以 Europe PMC/arXiv 的短语查询为准、Crossref 仅作补充召回"
+        },
+        {
+          "rule_id": "QL001",
+          "severity": "info",
+          "concept": "method",
+          "term": "message passing neural network",
+          "source": "crossref",
+          "message": "多词 term 'message passing neural network' 在 crossref query.bibliographic 中退化为无序词集合",
+          "suggestion": "Crossref 结果需在客户端做短语级后置过滤，或以 Europe PMC/arXiv 的短语查询为准、Crossref 仅作补充召回"
+        },
+        {
+          "rule_id": "QL001",
+          "severity": "info",
+          "concept": "scenario",
+          "term": "drug discovery",
+          "source": "crossref",
+          "message": "多词 term 'drug discovery' 在 crossref query.bibliographic 中退化为无序词集合",
+          "suggestion": "Crossref 结果需在客户端做短语级后置过滤，或以 Europe PMC/arXiv 的短语查询为准、Crossref 仅作补充召回"
+        },
+        {
+          "rule_id": "QL001",
+          "severity": "info",
+          "concept": "scenario",
+          "term": "molecular discovery",
+          "source": "crossref",
+          "message": "多词 term 'molecular discovery' 在 crossref query.bibliographic 中退化为无序词集合",
+          "suggestion": "Crossref 结果需在客户端做短语级后置过滤，或以 Europe PMC/arXiv 的短语查询为准、Crossref 仅作补充召回"
+        }
+      ],
+      "summary": {
+        "error": 0,
+        "warn": 1,
+        "info": 6
+      },
+      "rule_table": {
+        "QL001": "crossref 无短语语义：多词 term 词序约束丢失",
+        "QL002": "裸 OR 无括号：布尔优先级可能与意图不符",
+        "QL003": "过宽单词 term：引入大量噪声",
+        "QL004": "该源不支持通配符",
+        "QL005": "大小写变体重复 term",
+        "QL006": "空概念块",
+        "QL007": "term 自带引号：双重引用风险"
+      },
+      "note": "lint 只做静态审计与建议，不自动改写检索式；召回类问题交给 coverage_check 诊断"
+    },
+    "revised": {
+      "findings": [
+        {
+          "rule_id": "QL003",
+          "severity": "warn",
+          "concept": "object",
+          "term": "property",
+          "source": null,
+          "message": "块 'object' 的单词 term 'property' 过于宽泛，会引入大量噪声",
+          "suggestion": "替换为更具体的多词短语，或与块内其他 term 合并为短语；若为唯一 term 则该块实际上起不到限定作用"
+        },
+        {
+          "rule_id": "QL001",
+          "severity": "info",
+          "concept": "object",
+          "term": "molecular property",
+          "source": "crossref",
+          "message": "多词 term 'molecular property' 在 crossref query.bibliographic 中退化为无序词集合",
+          "suggestion": "Crossref 结果需在客户端做短语级后置过滤，或以 Europe PMC/arXiv 的短语查询为准、Crossref 仅作补充召回"
+        },
+        {
+          "rule_id": "QL001",
+          "severity": "info",
+          "concept": "object",
+          "term": "chemical property",
+          "source": "crossref",
+          "message": "多词 term 'chemical property' 在 crossref query.bibliographic 中退化为无序词集合",
+          "suggestion": "Crossref 结果需在客户端做短语级后置过滤，或以 Europe PMC/arXiv 的短语查询为准、Crossref 仅作补充召回"
+        },
+        {
+          "rule_id": "QL001",
+          "severity": "info",
+          "concept": "method",
+          "term": "graph neural network",
+          "source": "crossref",
+          "message": "多词 term 'graph neural network' 在 crossref query.bibliographic 中退化为无序词集合",
+          "suggestion": "Crossref 结果需在客户端做短语级后置过滤，或以 Europe PMC/arXiv 的短语查询为准、Crossref 仅作补充召回"
+        },
+        {
+          "rule_id": "QL001",
+          "severity": "info",
+          "concept": "method",
+          "term": "message passing neural network",
+          "source": "crossref",
+          "message": "多词 term 'message passing neural network' 在 crossref query.bibliographic 中退化为无序词集合",
+          "suggestion": "Crossref 结果需在客户端做短语级后置过滤，或以 Europe PMC/arXiv 的短语查询为准、Crossref 仅作补充召回"
+        },
+        {
+          "rule_id": "QL001",
+          "severity": "info",
+          "concept": "method",
+          "term": "message passing",
+          "source": "crossref",
+          "message": "多词 term 'message passing' 在 crossref query.bibliographic 中退化为无序词集合",
+          "suggestion": "Crossref 结果需在客户端做短语级后置过滤，或以 Europe PMC/arXiv 的短语查询为准、Crossref 仅作补充召回"
+        },
+        {
+          "rule_id": "QL001",
+          "severity": "info",
+          "concept": "scenario",
+          "term": "drug discovery",
+          "source": "crossref",
+          "message": "多词 term 'drug discovery' 在 crossref query.bibliographic 中退化为无序词集合",
+          "suggestion": "Crossref 结果需在客户端做短语级后置过滤，或以 Europe PMC/arXiv 的短语查询为准、Crossref 仅作补充召回"
+        },
+        {
+          "rule_id": "QL001",
+          "severity": "info",
+          "concept": "scenario",
+          "term": "molecular discovery",
+          "source": "crossref",
+          "message": "多词 term 'molecular discovery' 在 crossref query.bibliographic 中退化为无序词集合",
+          "suggestion": "Crossref 结果需在客户端做短语级后置过滤，或以 Europe PMC/arXiv 的短语查询为准、Crossref 仅作补充召回"
+        }
+      ],
+      "summary": {
+        "error": 0,
+        "warn": 1,
+        "info": 7
+      },
+      "rule_table": {
+        "QL001": "crossref 无短语语义：多词 term 词序约束丢失",
+        "QL002": "裸 OR 无括号：布尔优先级可能与意图不符",
+        "QL003": "过宽单词 term：引入大量噪声",
+        "QL004": "该源不支持通配符",
+        "QL005": "大小写变体重复 term",
+        "QL006": "空概念块",
+        "QL007": "term 自带引号：双重引用风险"
+      },
+      "note": "lint 只做静态审计与建议，不自动改写检索式；召回类问题交给 coverage_check 诊断"
+    }
+  }
+}
