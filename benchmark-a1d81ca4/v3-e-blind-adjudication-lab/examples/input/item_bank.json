@@ -1,0 +1,56 @@
+{
+  "case_id": "benchmark-a1d81ca4-revision2-fixed-synthetic-example",
+  "benchmark_item_stage": "benchmark-DRAFT",
+  "revision": "revision2 fixed cases",
+  "reference_answer_provenance": "Agent-derived solely from the supplied synthetic source excerpts for this runnable example; production use requires agent derivation from actual supplied sources.",
+  "items": [
+    {
+      "item_id": "DRAFT-001",
+      "source_conditioned": true,
+      "prompt": "According to the paragraph, what yield did catalyst X produce, how did it compare with the no-catalyst condition, and which limitations prevent a broader claim?",
+      "reference_answer": "Catalyst X produced 72% yield versus 31% without catalyst, a 41-percentage-point difference at 20 minutes and 25 °C. Each condition had three repeats, but long-term stability and other temperatures were untested, so no broader stability or temperature-generalization claim is supported.",
+      "rubric": {
+        "0": "Wrong yield/comparison or unsupported broad conclusion.",
+        "1": "Correct 72% versus 31% comparison but omits a material condition or limitation.",
+        "2": "Includes both yields, a valid difference, conditions/repeats, and both scope limitations."
+      },
+      "evidence_refs": [{"source_id": "SRC-PARA-CATALYST", "locator": "paragraph 1, sentences 1-3"}]
+    },
+    {
+      "item_id": "DRAFT-002",
+      "source_conditioned": true,
+      "prompt": "Summarize the dose-response results and state whether the table establishes a statistically significant dose effect.",
+      "reference_answer": "Mean response rises from 41.2 in control to 48.0 at dose 5 and 55.1 at dose 10, with n=6 per group. The table does not establish statistical significance because it reports no hypothesis test, confidence interval, or adjusted comparison.",
+      "rubric": {
+        "0": "Claims established statistical significance or misreports the group pattern.",
+        "1": "Reports the descriptive trend but gives an incomplete qualification about statistical evidence.",
+        "2": "Accurately reports the means/group sizes and explicitly rejects a significance claim from these descriptive data alone."
+      },
+      "evidence_refs": [{"source_id": "SRC-TABLE-DOSE", "locator": "table 1, all rows and table note"}]
+    },
+    {
+      "item_id": "DRAFT-003",
+      "source_conditioned": true,
+      "prompt": "Summarize all measured 7-day storage outcomes, handling conditions, and unmeasured stability outcomes for formulation F.",
+      "reference_answer": "After 7 days, formulation F retained 92% at 4 °C and 74% at 25 °C; light-protected samples were tested in duplicate. The source does not support conclusions about 28-day retention, microbial stability, or freeze-thaw performance.",
+      "rubric": {
+        "0": "Misstates the measured retention outcomes or invents an unmeasured result.",
+        "1": "Gives some correct measured outcomes but omits at least one temperature, handling/replicate detail, or important scope limit.",
+        "2": "Covers both temperatures and retention values, light/duplicate handling, and all three unmeasured outcomes."
+      },
+      "evidence_refs": [{"source_id": "SRC-PARA-STORAGE", "locator": "paragraph 1, sentences 1-3"}]
+    },
+    {
+      "item_id": "DRAFT-004",
+      "source_conditioned": true,
+      "prompt": "Which extraction method has the highest mean recovery, what trade-off does it involve versus B, and can one call it significantly better?",
+      "reference_answer": "Method C has the highest mean recovery at 83%, versus 81% for B. Both use 20 mL solvent, but C takes 30 rather than 15 minutes. C cannot be called significantly better from this table because no significance test is reported; each mean is based on three replicates.",
+      "rubric": {
+        "0": "Selects the wrong method, reverses the time trade-off, or invents significance.",
+        "1": "Selects C with mostly correct values but omits the comparison trade-off or statistical qualification.",
+        "2": "Correctly covers C/B recoveries, equal solvent, doubled time, replicate count, and absence of significance testing."
+      },
+      "evidence_refs": [{"source_id": "SRC-TABLE-EXTRACTION", "locator": "table 2, rows A-C and footnote"}]
+    }
+  ]
+}

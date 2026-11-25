@@ -1,0 +1,181 @@
+{
+  "schema_version": "1.0",
+  "synthetic_only": true,
+  "items": [
+    {
+      "item_id": "synth-reaction",
+      "required": true,
+      "status": "benchmark-DRAFT",
+      "question": "For synthetic run S-17, state the catalyst, temperature, reaction time, and isolated yield.",
+      "reference_answer": "S-17 used NQ-7 at 120 °C for 3 h, giving an isolated yield of 82.4%.",
+      "evidence": [
+        {"source_id": "P1+T1", "quote": "S-17 | NQ-7 | 120 °C | 3 h | 82.4%"}
+      ],
+      "rubric": {
+        "predicates": [
+          {"id": "entity", "category": "entity", "predicate": {"literal": ["NQ-7", "NQ‑7"]}},
+          {"id": "temperature", "category": "numeric_value_unit", "predicate": {"numeric": {"target": 120, "units": ["°C", "℃"], "comparison": "eq", "require_unit": true, "tolerance": {"absolute": 0, "relative": 0}}}},
+          {"id": "duration", "category": "condition", "predicate": {"numeric": {"target": 3, "units": ["h", "hour", "hours", "小时"], "comparison": "eq", "require_unit": true, "tolerance": {"absolute": 0, "relative": 0}}}},
+          {"id": "yield", "category": "numeric_value_unit", "predicate": {"numeric": {"target": 82.4, "units": ["%", "percent", "百分比"], "comparison": "eq", "require_unit": true, "tolerance": {"absolute": 0, "relative": 0}}}},
+          {"id": "no_contradiction", "category": "forbidden_assertion", "predicate": {"forbidden": [
+            {"regex": ["未\\s*使用\\s*NQ-7", "did not use\\s+NQ-7"]},
+            {"literal": ["催化剂 NQ-3", "catalyst NQ-3"]},
+            {"literal": ["完全失败", "complete failure"]}
+          ]}}
+        ],
+        "score_bands": [
+          {"score": 2, "when": {"all": ["entity", "temperature", "duration", "yield", "no_contradiction"]}, "rationale": "all four source facts are present without contradiction"},
+          {"score": 1, "when": {"all": ["entity", "no_contradiction", {"any": ["temperature", "yield"]}]}, "rationale": "correct catalyst and at least one central fact, but incomplete or numerically wrong"},
+          {"score": 0, "when": {"not": "entity"}, "rationale": "required catalyst is absent"}
+        ],
+        "default_score": 0
+      },
+      "probes": [
+        {"probe_id": "synth-reaction-exact", "probe_class": "exact", "raw_output": "S-17 使用 NQ-7，在 120 °C 反应 3 h，分离产率为 82.4%。", "expected_score": 2, "expected_predicates": {"entity": true, "temperature": true, "duration": true, "yield": true, "no_contradiction": true}, "rationale": "The source-backed complete answer earns full credit."},
+        {"probe_id": "synth-reaction-paraphrase", "probe_class": "paraphrase", "raw_output": "S-17 used NQ‑7 at 120°C for 3 hours, with 82.4 percent isolated yield.", "expected_score": 2, "expected_predicates": {"entity": true, "temperature": true, "duration": true, "yield": true, "no_contradiction": true}, "rationale": "NFKC dashes and declared English alternatives preserve meaning."},
+        {"probe_id": "synth-reaction-partial", "probe_class": "partial", "raw_output": "S-17 used NQ-7 at 120 °C.", "expected_score": 1, "expected_predicates": {"entity": true, "temperature": true, "duration": false, "yield": false, "no_contradiction": true}, "rationale": "Catalyst and temperature are correct; time and yield are missing."},
+        {"probe_id": "synth-reaction-wrong-entity", "probe_class": "wrong_entity", "raw_output": "S-17 used catalyst NQ-3 at 120 °C for 3 h, yielding 82.4%.", "expected_score": 0, "expected_predicates": {"entity": false, "temperature": true, "duration": true, "yield": true, "no_contradiction": false}, "rationale": "Control catalyst NQ-3 is the wrong entity and explicitly forbidden."},
+        {"probe_id": "synth-reaction-wrong-numeric", "probe_class": "wrong_numeric", "raw_output": "S-17 used NQ-7 at 120 °C for 3 h, yielding 61.0%.", "expected_score": 1, "expected_predicates": {"entity": true, "temperature": true, "duration": true, "yield": false, "no_contradiction": true}, "rationale": "The control yield is numerically wrong, but other independent facts retain partial credit."},
+        {"probe_id": "synth-reaction-wrong-value", "probe_class": "wrong_value", "raw_output": "S-17 used NQ-7 at 120 °C for 3 h; it was a complete failure.", "expected_score": 0, "expected_predicates": {"entity": true, "temperature": true, "duration": true, "yield": false, "no_contradiction": false}, "rationale": "Complete failure contradicts the reported successful yield."},
+        {"probe_id": "synth-reaction-wrong-unit", "probe_class": "wrong_unit", "raw_output": "S-17 used NQ-7 at 120 °C for 3 h, yielding 82.4 mg.", "expected_score": 1, "expected_predicates": {"entity": true, "temperature": true, "duration": true, "yield": false, "no_contradiction": true}, "rationale": "The numeral is right but mg is not a percentage unit."},
+        {"probe_id": "synth-reaction-omitted-condition", "probe_class": "omitted_condition", "raw_output": "S-17 used NQ-7 at 120 °C and gave 82.4% isolated yield.", "expected_score": 1, "expected_predicates": {"entity": true, "temperature": true, "duration": false, "yield": true, "no_contradiction": true}, "rationale": "The required three-hour condition is omitted."},
+        {"probe_id": "synth-reaction-negation", "probe_class": "negation_reversal", "raw_output": "S-17 未使用 NQ-7；120 °C，3 h，82.4%。", "expected_score": 0, "expected_predicates": {"entity": true, "temperature": true, "duration": true, "yield": true, "no_contradiction": false}, "rationale": "Negation reverses the catalyst assertion despite containing its name."},
+        {"probe_id": "synth-reaction-empty", "probe_class": "empty", "raw_output": "", "expected_score": 0, "expected_predicates": {"entity": false, "temperature": false, "duration": false, "yield": false, "no_contradiction": true}, "rationale": "Empty text safely forces zero even though no forbidden phrase appears."},
+        {"probe_id": "synth-reaction-unsupported", "probe_class": "unsupported", "raw_output": "S-19 used NQ-7 at 80 °C for 3 h and yielded 48.5%.", "expected_score": 0, "expected_predicates": {"entity": true, "temperature": false, "duration": true, "yield": false, "no_contradiction": true}, "rationale": "Facts from the wrong run do not answer the S-17 target beyond sharing a catalyst."}
+      ]
+    },
+    {
+      "item_id": "synth-stability",
+      "required": true,
+      "status": "benchmark-DRAFT",
+      "question": "Under what synthetic storage conditions did F-22 remain stable for 14 days?",
+      "reference_answer": "F-22 remained stable for 14 days at −20 °C in a sealed amber vial.",
+      "evidence": [
+        {"source_id": "P2", "quote": "F-22 remained stable for 14 days when stored at −20 °C in a sealed amber vial."}
+      ],
+      "rubric": {
+        "predicates": [
+          {"id": "entity", "category": "entity", "predicate": {"literal": "F-22"}},
+          {"id": "temperature", "category": "numeric_value_unit", "predicate": {"numeric": {"target": -20, "units": ["°C", "℃"], "comparison": "eq", "require_unit": true, "tolerance": {"absolute": 0, "relative": 0}}}},
+          {"id": "duration", "category": "numeric_value_unit", "predicate": {"numeric": {"target": 14, "units": ["day", "days", "d", "天"], "comparison": "eq", "require_unit": true, "tolerance": {"absolute": 0, "relative": 0}}}},
+          {"id": "container", "category": "condition", "predicate": {"all": [{"any": [{"literal": "amber vial"}, {"literal": "棕色瓶"}, {"literal": "棕瓶"}]}, {"any": [{"literal": "sealed"}, {"literal": "密封"}]}]}},
+          {"id": "no_contradiction", "category": "forbidden_assertion", "predicate": {"forbidden": [
+            {"literal": "F-12"},
+            {"regex": ["未\\s*密封", "不应\\s*密封", "not\\s+sealed"]},
+            {"literal": ["不稳定", "unstable"]}
+          ]}}
+        ],
+        "score_bands": [
+          {"score": 2, "when": {"all": ["entity", "temperature", "duration", "container", "no_contradiction"]}, "rationale": "entity, temperature, duration, and sealed amber container are all correct"},
+          {"score": 1, "when": {"all": ["entity", "duration", "no_contradiction"]}, "rationale": "correct duration and entity with an omitted/wrong temperature or container condition"},
+          {"score": 0, "when": {"not": "entity"}, "rationale": "F-22 is absent"}
+        ],
+        "default_score": 0
+      },
+      "probes": [
+        {"probe_id": "synth-stability-exact", "probe_class": "exact", "raw_output": "F-22 在 −20 °C 的密封棕色瓶中保存时可稳定 14 天。", "expected_score": 2, "expected_predicates": {"entity": true, "temperature": true, "duration": true, "container": true, "no_contradiction": true}, "rationale": "Every condition in P2 is represented."},
+        {"probe_id": "synth-stability-paraphrase", "probe_class": "paraphrase", "raw_output": "F-22 remained stable for 14 days at −20 °C in a sealed amber vial.", "expected_score": 2, "expected_predicates": {"entity": true, "temperature": true, "duration": true, "container": true, "no_contradiction": true}, "rationale": "The English source wording is an accepted paraphrase of the reference answer."},
+        {"probe_id": "synth-stability-partial", "probe_class": "partial", "raw_output": "F-22 remained stable for 14 days in a sealed amber vial.", "expected_score": 1, "expected_predicates": {"entity": true, "temperature": false, "duration": true, "container": true, "no_contradiction": true}, "rationale": "Duration and container are right but temperature is absent."},
+        {"probe_id": "synth-stability-wrong-entity", "probe_class": "wrong_entity", "raw_output": "F-12 remained stable for 14 days at −20 °C in a sealed amber vial.", "expected_score": 0, "expected_predicates": {"entity": false, "temperature": true, "duration": true, "container": true, "no_contradiction": false}, "rationale": "F-12 is a different synthetic test article."},
+        {"probe_id": "synth-stability-wrong-numeric", "probe_class": "wrong_numeric", "raw_output": "F-22 remained stable for 5 days at −20 °C in a sealed amber vial.", "expected_score": 0, "expected_predicates": {"entity": true, "temperature": true, "duration": false, "container": true, "no_contradiction": true}, "rationale": "Five days is the 4 °C result, not the requested fourteen-day duration."},
+        {"probe_id": "synth-stability-wrong-value", "probe_class": "wrong_value", "raw_output": "F-22 was unstable for 14 days at −20 °C in a sealed amber vial.", "expected_score": 0, "expected_predicates": {"entity": true, "temperature": true, "duration": true, "container": true, "no_contradiction": false}, "rationale": "Unstable reverses the reported status."},
+        {"probe_id": "synth-stability-wrong-unit", "probe_class": "wrong_unit", "raw_output": "F-22 remained stable for 14 months at −20 °C in a sealed amber vial.", "expected_score": 0, "expected_predicates": {"entity": true, "temperature": true, "duration": false, "container": true, "no_contradiction": true}, "rationale": "Fourteen months is not fourteen days."},
+        {"probe_id": "synth-stability-omitted-condition", "probe_class": "omitted_condition", "raw_output": "F-22 remained stable for 14 days at −20 °C in an amber vial.", "expected_score": 1, "expected_predicates": {"entity": true, "temperature": true, "duration": true, "container": false, "no_contradiction": true}, "rationale": "The essential sealed-container condition is omitted."},
+        {"probe_id": "synth-stability-negation", "probe_class": "negation_reversal", "raw_output": "F-22 不应密封；在 −20 °C 棕色瓶中可稳定 14 天。", "expected_score": 0, "expected_predicates": {"entity": true, "temperature": true, "duration": true, "container": true, "no_contradiction": false}, "rationale": "The negated text still contains the sealed token, but an explicit forbidden assertion vetoes credit."},
+        {"probe_id": "synth-stability-empty", "probe_class": "empty", "raw_output": "", "expected_score": 0, "expected_predicates": {"entity": false, "temperature": false, "duration": false, "container": false, "no_contradiction": true}, "rationale": "Empty text earns zero."},
+        {"probe_id": "synth-stability-unsupported", "probe_class": "unsupported", "raw_output": "Photostability was excellent for all formulations.", "expected_score": 0, "expected_predicates": {"entity": false, "temperature": false, "duration": false, "container": false, "no_contradiction": true}, "rationale": "Photostability was not tested and this assertion is unsupported."}
+      ]
+    },
+    {
+      "item_id": "synth-cohort",
+      "required": true,
+      "status": "benchmark-DRAFT",
+      "question": "For synthetic Cohort A, give the dose, assessment condition, and responder result.",
+      "reference_answer": "In adults-only Cohort A, 15 mg for 28 days produced 18/30 responders (60.0%).",
+      "evidence": [
+        {"source_id": "T2", "quote": "Cohort A | 15 mg | adults | 28 days | 18/30 (60.0%)"}
+      ],
+      "rubric": {
+        "predicates": [
+          {"id": "entity", "category": "entity", "predicate": {"literal": ["cohort a", "a组", "a 组"]}},
+          {"id": "dose", "category": "numeric_value_unit", "predicate": {"numeric": {"target": 15, "units": ["mg", "毫克"], "comparison": "eq", "require_unit": true, "tolerance": {"absolute": 0, "relative": 0}}}},
+          {"id": "response", "category": "response_value", "predicate": {"any": [
+            {"literal": ["18/30", "18 / 30", "18 of 30"]},
+            {"numeric": {"target": 60, "units": ["%", "percent"], "comparison": "eq", "require_unit": true, "tolerance": {"absolute": 0.05, "relative": 0}}}
+          ]}},
+          {"id": "condition", "category": "condition", "predicate": {"all": [
+            {"numeric": {"target": 28, "units": ["day", "days", "天"], "comparison": "eq", "require_unit": true, "tolerance": {"absolute": 0, "relative": 0}}},
+            {"literal": ["adults", "adults-only", "成人"]}
+          ]}},
+          {"id": "no_contradiction", "category": "forbidden_assertion", "predicate": {"forbidden": [
+            {"literal": ["cohort b", "cohort c", "b组", "c组"]},
+            {"literal": ["all patients failed", "所有患者均无效"]},
+            {"regex": ["未达\\s*到?\\s*18\\s*/\\s*30", "did not reach\\s+18\\s*/\\s*30"]}
+          ]}}
+        ],
+        "score_bands": [
+          {"score": 2, "when": {"all": ["entity", "dose", "response", "condition", "no_contradiction"]}, "rationale": "dose, adult/Day-28 condition, and response are correct for Cohort A"},
+          {"score": 1, "when": {"all": ["entity", "no_contradiction", {"any": ["dose", "response"]}]}, "rationale": "correct cohort and one central value but incomplete or wrong elsewhere"},
+          {"score": 0, "when": {"not": "entity"}, "rationale": "Cohort A is absent"}
+        ],
+        "default_score": 0
+      },
+      "probes": [
+        {"probe_id": "synth-cohort-exact", "probe_class": "exact", "raw_output": "在仅限成人的 Cohort A 中，15 mg、28 天后有 18/30 例应答（60.0%）。", "expected_score": 2, "expected_predicates": {"entity": true, "dose": true, "response": true, "condition": true, "no_contradiction": true}, "rationale": "The complete row and adult condition are correct."},
+        {"probe_id": "synth-cohort-paraphrase", "probe_class": "paraphrase", "raw_output": "Adults in Cohort A received 15 mg; at 28 days, 18 of 30 responded (60 percent).", "expected_score": 2, "expected_predicates": {"entity": true, "dose": true, "response": true, "condition": true, "no_contradiction": true}, "rationale": "Both declared response alternatives and all conditions are present."},
+        {"probe_id": "synth-cohort-partial", "probe_class": "partial", "raw_output": "Adults in Cohort A received 15 mg and were assessed at 28 days.", "expected_score": 1, "expected_predicates": {"entity": true, "dose": true, "response": false, "condition": true, "no_contradiction": true}, "rationale": "Dose and conditions are right, but responder result is missing."},
+        {"probe_id": "synth-cohort-wrong-entity", "probe_class": "wrong_entity", "raw_output": "Adults in Cohort B received 15 mg; at 28 days, 18/30 responded.", "expected_score": 0, "expected_predicates": {"entity": false, "dose": true, "response": true, "condition": true, "no_contradiction": false}, "rationale": "Cohort B is explicitly the wrong row."},
+        {"probe_id": "synth-cohort-wrong-numeric", "probe_class": "wrong_numeric", "raw_output": "Adults in Cohort A received 30 mg; at 28 days, 18/30 responded.", "expected_score": 1, "expected_predicates": {"entity": true, "dose": false, "response": true, "condition": true, "no_contradiction": true}, "rationale": "Thirty milligrams belongs to Cohort B, while response and conditions remain correct."},
+        {"probe_id": "synth-cohort-wrong-value", "probe_class": "wrong_value", "raw_output": "Adults in Cohort A received 15 mg; at 28 days, all patients failed.", "expected_score": 0, "expected_predicates": {"entity": true, "dose": true, "response": false, "condition": true, "no_contradiction": false}, "rationale": "Universal failure contradicts 18 responders."},
+        {"probe_id": "synth-cohort-wrong-unit", "probe_class": "wrong_unit", "raw_output": "Adults in Cohort A received 15 g; at 28 days, 18/30 responded.", "expected_score": 1, "expected_predicates": {"entity": true, "dose": false, "response": true, "condition": true, "no_contradiction": true}, "rationale": "Grams cannot satisfy the required milligram rule."},
+        {"probe_id": "synth-cohort-omitted-condition", "probe_class": "omitted_condition", "raw_output": "Cohort A received 15 mg and had 18/30 responders.", "expected_score": 1, "expected_predicates": {"entity": true, "dose": true, "response": true, "condition": false, "no_contradiction": true}, "rationale": "Adult population and Day-28 assessment condition are omitted."},
+        {"probe_id": "synth-cohort-negation", "probe_class": "negation_reversal", "raw_output": "Adults in Cohort A received 15 mg; at 28 days, they did not reach 18/30 responders.", "expected_score": 0, "expected_predicates": {"entity": true, "dose": true, "response": true, "condition": true, "no_contradiction": false}, "rationale": "The literal response phrase co-occurs with an explicitly forbidden negation."},
+        {"probe_id": "synth-cohort-empty", "probe_class": "empty", "raw_output": "", "expected_score": 0, "expected_predicates": {"entity": false, "dose": false, "response": false, "condition": false, "no_contradiction": true}, "rationale": "Empty text earns zero."},
+        {"probe_id": "synth-cohort-unsupported", "probe_class": "unsupported", "raw_output": "Cohort C received 15 mg and had 20/30 responders at 56 days.", "expected_score": 0, "expected_predicates": {"entity": false, "dose": true, "response": false, "condition": false, "no_contradiction": false}, "rationale": "The source facts concern another cohort and assessment time."}
+      ]
+    },
+    {
+      "item_id": "synth-unreported",
+      "required": true,
+      "requires_unreported_probe": true,
+      "status": "benchmark-DRAFT",
+      "question": "What is the twelve-month recurrence proportion for synthetic R-31? Say unreported if applicable and do not substitute the four-week result.",
+      "reference_answer": "For R-31, the recurrence proportion at 12 months is not reported.",
+      "evidence": [
+        {"source_id": "P3+T3", "quote": "R-31 | 12 months | not reported"}
+      ],
+      "rubric": {
+        "predicates": [
+          {"id": "entity", "category": "entity", "predicate": {"literal": "R-31"}},
+          {"id": "window", "category": "condition", "predicate": {"numeric": {"target": 12, "units": ["month", "months", "mo", "个月"], "comparison": "eq", "require_unit": true, "tolerance": {"absolute": 0, "relative": 0}}}},
+          {"id": "unreported", "category": "legitimate_unreported", "predicate": {"literal": ["not reported", "no recurrence data were reported", "未报告", "没有可报告", "未提供", "尚无报告"]}},
+          {"id": "no_substitution", "category": "forbidden_assertion", "predicate": {"forbidden": [
+            {"literal": "Q-31"},
+            {"regex": ["(?<![a-z0-9.])[-+]?(?:\\d+(?:\\.\\d*)?|\\.\\d+)\\s*%"]},
+            {"regex": ["4-week recurrence", "4\\s*周复发", "四周复发"]}
+          ]}}
+        ],
+        "score_bands": [
+          {"score": 2, "when": {"all": ["entity", "window", "unreported", "no_substitution"]}, "rationale": "the correct entity and window are explicitly unreported without numeric substitution"},
+          {"score": 1, "when": {"all": ["entity", "no_substitution", {"any": ["unreported", "window"]}]}, "rationale": "R-31 is discussed without substitution but window or unreported status is incomplete/wrong"},
+          {"score": 0, "when": {"not": "entity"}, "rationale": "R-31 is absent"}
+        ],
+        "default_score": 0
+      },
+      "probes": [
+        {"probe_id": "synth-unreported-exact", "probe_class": "exact", "raw_output": "For R-31, the recurrence proportion at 12 months is not reported.", "expected_score": 2, "expected_predicates": {"entity": true, "window": true, "unreported": true, "no_substitution": true}, "rationale": "The source explicitly says not reported for the correct twelve-month record."},
+        {"probe_id": "synth-unreported-paraphrase", "probe_class": "paraphrase", "raw_output": "R-31 的 12 个月复发率未提供。", "expected_score": 2, "expected_predicates": {"entity": true, "window": true, "unreported": true, "no_substitution": true}, "rationale": "未提供 is a declared Chinese unreported alternative."},
+        {"probe_id": "synth-unreported-partial", "probe_class": "partial", "raw_output": "R-31 recurrence proportion is not reported.", "expected_score": 1, "expected_predicates": {"entity": true, "window": false, "unreported": true, "no_substitution": true}, "rationale": "Unreported status is correct but the twelve-month window is omitted."},
+        {"probe_id": "synth-unreported-wrong-entity", "probe_class": "wrong_entity", "raw_output": "For Q-31, the recurrence proportion at 12 months is not reported.", "expected_score": 0, "expected_predicates": {"entity": false, "window": true, "unreported": true, "no_substitution": false}, "rationale": "Q-31 is a different record and is explicitly forbidden."},
+        {"probe_id": "synth-unreported-wrong-numeric", "probe_class": "wrong_numeric", "raw_output": "For R-31, the 24-month recurrence proportion is not reported.", "expected_score": 1, "expected_predicates": {"entity": true, "window": false, "unreported": true, "no_substitution": true}, "rationale": "The unreported status is right but 24 months is the wrong window."},
+        {"probe_id": "synth-unreported-wrong-value", "probe_class": "wrong_value", "raw_output": "For R-31, the recurrence proportion at 12 months has been reported.", "expected_score": 1, "expected_predicates": {"entity": true, "window": true, "unreported": false, "no_substitution": true}, "rationale": "Claiming a reported value reverses availability but retains entity and window."},
+        {"probe_id": "synth-unreported-wrong-unit", "probe_class": "wrong_unit", "raw_output": "For R-31, the 12-year recurrence proportion is not reported.", "expected_score": 1, "expected_predicates": {"entity": true, "window": false, "unreported": true, "no_substitution": true}, "rationale": "Twelve years is not twelve months."},
+        {"probe_id": "synth-unreported-omitted-condition", "probe_class": "omitted_condition", "raw_output": "R-31 completed 12 months of follow-up.", "expected_score": 1, "expected_predicates": {"entity": true, "window": true, "unreported": false, "no_substitution": true}, "rationale": "The window is present but the required unreported response is omitted."},
+        {"probe_id": "synth-unreported-negation", "probe_class": "negation_reversal", "raw_output": "For R-31, the recurrence proportion at 12 months was reported as 8%.", "expected_score": 0, "expected_predicates": {"entity": true, "window": true, "unreported": false, "no_substitution": false}, "rationale": "This reverses unreported status and substitutes the four-week percentage."},
+        {"probe_id": "synth-unreported-empty", "probe_class": "empty", "raw_output": "", "expected_score": 0, "expected_predicates": {"entity": false, "window": false, "unreported": false, "no_substitution": true}, "rationale": "Empty output earns zero despite the absence of forbidden text."},
+        {"probe_id": "synth-unreported-unsupported", "probe_class": "unsupported", "raw_output": "R-31 had an 8% four-week recurrence proportion.", "expected_score": 0, "expected_predicates": {"entity": true, "window": false, "unreported": false, "no_substitution": false}, "rationale": "A true four-week fact is an explicitly prohibited substitute for the twelve-month answer."},
+        {"probe_id": "synth-unreported-legitimate", "probe_class": "legitimate_unreported", "raw_output": "At 12 months, no recurrence data were reported for R-31.", "expected_score": 2, "expected_predicates": {"entity": true, "window": true, "unreported": true, "no_substitution": true}, "rationale": "A legitimate explicit unreported response earns full credit."}
+      ]
+    }
+  ]
+}

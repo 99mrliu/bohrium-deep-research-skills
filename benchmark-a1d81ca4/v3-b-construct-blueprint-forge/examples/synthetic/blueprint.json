@@ -1,0 +1,104 @@
+{
+  "schema_version": "1.0",
+  "synthetic": true,
+  "label": "SYNTHETIC EXAMPLE ONLY — authored from synthetic source materials",
+  "task_intent": "Synthetic measurement-design example: build a four-item source-conditioned benchmark draft for interpreting the Aster wetland aeration record without extending beyond its reported evidence.",
+  "items": [
+    {
+      "item_id": "item-1",
+      "task_intent": "Extract the intended primary measurement and its censoring threshold while rejecting the adjacent secondary time point.",
+      "cognitive_operation": "locate_extract",
+      "source_scope": [
+        {"source_id": "paragraphs", "locator": "P1"}
+      ],
+      "answer_invariant": {
+        "required_claims": ["primary_endpoint", "detection_limit"],
+        "value_form": "An object with a minute value and a concentration in mg/L.",
+        "acceptance_rule": "Both numeric values and their units must equal the source; the secondary observation and zero substitution are not accepted."
+      },
+      "difficulty_rationale": "The adjacent secondary time point and explicit not-zero instruction distinguish complete extraction from nearby-value selection.",
+      "license_basis": {
+        "basis": "Synthetic original materials created solely for this self-test; no external license is asserted.",
+        "source_ids": ["paragraphs"]
+      },
+      "rubric_plan": {
+        "0": "Neither primary_endpoint nor detection_limit is correctly extracted.",
+        "1": "Only one of primary_endpoint or detection_limit is correct and the other is absent or wrong.",
+        "2": "Both primary_endpoint and detection_limit are correct with units and no swapped secondary value."
+      }
+    },
+    {
+      "item_id": "item-2",
+      "task_intent": "Model the North table row and baseline-direction relationship to derive a rounded percent increase.",
+      "cognitive_operation": "table_relation_calculation",
+      "source_scope": [
+        {"source_id": "paragraphs", "locator": "P2"},
+        {"source_id": "T1", "locator": "T1#North"}
+      ],
+      "answer_invariant": {
+        "required_claims": ["row_and_direction", "percent_increase"],
+        "value_form": "A numeric percent value rounded to one decimal place.",
+        "acceptance_rule": "Use North's two unrounded concentrations with baseline as denominator; accept only the stated one-decimal result within the arithmetic tolerance."
+      },
+      "difficulty_rationale": "The item requires selecting a row and denominator before arithmetic, so reversed subtraction or an alternate site is not full understanding.",
+      "license_basis": {
+        "basis": "Synthetic original materials created solely for this self-test; no external license is asserted.",
+        "source_ids": ["paragraphs", "T1"]
+      },
+      "rubric_plan": {
+        "0": "Neither row_and_direction nor percent_increase is supported by the selected inputs and formula.",
+        "1": "Only partial work is present: row_and_direction is right but percent_increase is wrong, or arithmetic follows an incorrect row selection.",
+        "2": "row_and_direction uses North and its baseline denominator, and percent_increase agrees with the independently recomputed rounded reference."
+      }
+    },
+    {
+      "item_id": "item-3",
+      "task_intent": "Apply a joint response definition to two sites without promoting descriptive contrast into inferential significance.",
+      "cognitive_operation": "comparison_boundary",
+      "source_scope": [
+        {"source_id": "paragraphs", "locator": "P3"},
+        {"source_id": "T1", "locator": "T1#North"},
+        {"source_id": "T1", "locator": "T1#South"}
+      ],
+      "answer_invariant": {
+        "required_claims": ["joint_threshold", "north_decision", "south_decision", "inference_boundary"],
+        "value_form": "Two Boolean site classifications plus an explicit inference-limit statement.",
+        "acceptance_rule": "Both inclusive conditions govern each classification, equality is included, and no significant between-site effect may be claimed without a test."
+      },
+      "difficulty_rationale": "One site meets equality at the final-value boundary while the other fails both conditions; an additional inference boundary discourages overclaiming.",
+      "license_basis": {
+        "basis": "Synthetic original materials created solely for this self-test; no external license is asserted.",
+        "source_ids": ["paragraphs", "T1"]
+      },
+      "rubric_plan": {
+        "0": "No defensible joint_threshold, north_decision, south_decision or inference_boundary is supplied.",
+        "1": "Only a partial subset of joint_threshold, north_decision, south_decision and inference_boundary is correct, or one classification omits a joint condition.",
+        "2": "joint_threshold is inclusive and conjunctive, north_decision and south_decision are both correct, and inference_boundary rejects unsupported significance."
+      }
+    },
+    {
+      "item_id": "item-4",
+      "task_intent": "Resolve an initial exclusion rule against a later site record by identifying the controlling amendment timing and scope.",
+      "cognitive_operation": "synthesis_conflict",
+      "source_scope": [
+        {"source_id": "paragraphs", "locator": "P4"},
+        {"source_id": "paragraphs", "locator": "P5"}
+      ],
+      "answer_invariant": {
+        "required_claims": ["original_rule", "north_status", "controlling_condition"],
+        "value_form": "A concise conflict resolution naming the initial rule, site status and controlling source condition.",
+        "acceptance_rule": "The resolution must synthesize both paragraphs and rely on pre-freeze approval for this probe; an unqualified latest-text-wins or post-hoc rationale is not equivalent."
+      },
+      "difficulty_rationale": "The general exclusion and specific exception appear in separate paragraphs, requiring temporal and applicability constraints rather than one-source extraction.",
+      "license_basis": {
+        "basis": "Synthetic original materials created solely for this self-test; no external license is asserted.",
+        "source_ids": ["paragraphs"]
+      },
+      "rubric_plan": {
+        "0": "original_rule, north_status and controlling_condition are missing or contradict both paragraphs.",
+        "1": "Only a partial resolution is present, such as north_status without controlling_condition or original_rule without a justified synthesis.",
+        "2": "original_rule is acknowledged, north_status is resolved correctly, and controlling_condition cites pre-freeze amendment A-2 applicability without post-hoc reasoning."
+      }
+    }
+  ]
+}

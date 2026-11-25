@@ -1,0 +1,24 @@
+{
+  "case_id": "benchmark-a1d81ca4-revision2-fixed-synthetic-example",
+  "benchmark_revision": "revision2",
+  "fixed_case_count": 4,
+  "source_mode": "entirely_synthetic_workflow_fixture",
+  "title": "Four source-conditioned benchmark-DRAFT blind adjudication items",
+  "not_benchmark_results": true,
+  "output_contract": {
+    "case_id": "Original case identifier",
+    "status": "Primary four-item task status; success is independent of optional human review",
+    "item_bank": "Original four-item bank with agent-derived reference answers and 0/1/2 rubrics",
+    "adjudication": "Optional independent verdicts/disputes, or typed not_applicable when no actual human verdicts exist",
+    "agreement": "Optional automatic-final comparison, or typed not_applicable with no human kappa",
+    "raw_agreements": "Per-item automatic/final labels without imputation, or explicit not-applicable rows",
+    "failures": "Searchable mismatch failure records; empty when no comparison was conducted",
+    "targeted_probes": "Next-version probe specifications with retest item IDs; empty when no comparison was conducted",
+    "sources": "Supplied source excerpts and exact locators",
+    "uncertainty": "Source provenance, review availability, unresolved, and support limitations",
+    "change_records": "Stage-by-stage transformations, primary status, and optional-review limitations",
+    "summary": "Primary completion counts and separate optional-review status",
+    "review_status": "conducted, partial, or not_conducted_no_human_verdicts",
+    "diagnostics": "Machine-readable separation of primary item-bank completion and optional review"
+  }
+}

@@ -1,0 +1,24 @@
+{
+  "case_id": "synthetic-rerun-ledger-four-items",
+  "case_version": "synthetic-case-v1",
+  "benchmark_revision": "benchmark-a1d81ca4-revision2",
+  "benchmark_status": "benchmark-DRAFT",
+  "synthetic": true,
+  "output_contract": {
+    "required_fields": [
+      "case_id",
+      "status",
+      "success",
+      "items",
+      "summary",
+      "sources",
+      "uncertainty",
+      "change_records",
+      "run_manifest",
+      "limitations"
+    ],
+    "field_placement": "every required field is top-level",
+    "success_values": ["SUCCESS"],
+    "partial_values": ["PARTIAL"]
+  }
+}

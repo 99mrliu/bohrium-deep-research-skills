@@ -1,0 +1,9 @@
+{
+  "case_id": "benchmark-a1d81ca4-revision2-fixed-synthetic-example",
+  "materials": [
+    {"role": "scientific_sources", "file": "source_evidence.json", "description": "Synthetic paragraphs and tables with exact excerpt locators"},
+    {"role": "draft_item_bank", "file": "item_bank.json", "description": "Four source-conditioned benchmark-DRAFT items"},
+    {"role": "raw_candidate_outputs", "file": "candidate_outputs.json", "description": "Answers actually submitted to blind reviewers"},
+    {"role": "automatic_scores", "file": "auto_scores.json", "description": "Synthetic automatic labels, kept outside reviewer packets"}
+  ]
+}

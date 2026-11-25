@@ -1,0 +1,271 @@
+{
+  "schema_version": "1.0",
+  "bank_version": "synthetic-v2",
+  "synthetic": true,
+  "label": "SYNTHETIC EXAMPLE ONLY — every item and answer is fabricated from the labelled synthetic materials",
+  "items": [
+    {
+      "item_id": "item-1",
+      "task": "Using P1, report the primary endpoint time and the probe detection limit, including units. Do not substitute the secondary observation or recode a below-limit reading.",
+      "task_intent": "Extract the intended primary measurement and its censoring threshold while rejecting the adjacent secondary time point.",
+      "cognitive_operation": "locate_extract",
+      "source_scope": [
+        {"source_id": "paragraphs", "locator": "P1"}
+      ],
+      "input_material": [
+        {
+          "source_id": "paragraphs",
+          "locator": "P1",
+          "content": "SYNTHETIC EXAMPLE: At the North site, dissolved oxygen was recorded at 30 minutes as a secondary observation, while the primary endpoint was dissolved oxygen at 60 minutes. Probe P-07 had a detection limit of 0.2 mg/L; readings below that limit were to be reported as \"<0.2 mg/L\", not as zero."
+        }
+      ],
+      "reference_answer": {
+        "primary_endpoint_min": 60,
+        "detection_limit_mg_per_L": 0.2
+      },
+      "rubric": {
+        "0": "Neither primary_endpoint nor detection_limit matches the source, or the response substitutes an unrelated measurement.",
+        "1": "Only one of primary_endpoint or detection_limit is correct; the other is missing or confused with the secondary observation or zero.",
+        "2": "Both primary_endpoint and detection_limit match reference_answer with appropriate units and no substitution."
+      },
+      "difficulty": {
+        "level": "easy",
+        "rationale": "The adjacent secondary time point and explicit not-zero instruction distinguish complete extraction from nearby-value selection."
+      },
+      "data_license": {
+        "basis": "Synthetic original materials created solely for this self-test; no external license is asserted.",
+        "source_ids": ["paragraphs"]
+      },
+      "evidence": [
+        {
+          "source_id": "paragraphs",
+          "locator": "P1",
+          "quote": "the primary endpoint was dissolved oxygen at 60 minutes",
+          "supports": ["primary_endpoint"]
+        },
+        {
+          "source_id": "paragraphs",
+          "locator": "P1",
+          "quote": "Probe P-07 had a detection limit of 0.2 mg/L",
+          "supports": ["detection_limit"]
+        }
+      ],
+      "unique_answer_rationale": "P1 explicitly labels 30 minutes as secondary and separates the censoring threshold from a zero reading, leaving one structured pair.",
+      "uncertainty": [],
+      "arithmetic": null
+    },
+    {
+      "item_id": "item-2",
+      "task": "Using the North row and P2, calculate the percent increase from baseline to 60 minutes. Use baseline as denominator and round the response to one decimal place.",
+      "task_intent": "Model the North table row and baseline-direction relationship to derive a rounded percent increase.",
+      "cognitive_operation": "table_relation_calculation",
+      "source_scope": [
+        {"source_id": "paragraphs", "locator": "P2"},
+        {"source_id": "T1", "locator": "T1#North"}
+      ],
+      "input_material": [
+        {
+          "source_id": "paragraphs",
+          "locator": "P2",
+          "content": "SYNTHETIC EXAMPLE: Table T1 contains the unrounded analysis values. For derived summaries, percent increase is calculated as (60-minute value minus baseline value) divided by baseline value, multiplied by 100, using the baseline as denominator."
+        },
+        {
+          "source_id": "T1",
+          "locator": "T1#North",
+          "content": "SYNTHETIC EXAMPLE table T1; columns: site, baseline_oxygen_mg_per_L, oxygen_60min_mg_per_L; North, 1.8, 3.0"
+        }
+      ],
+      "reference_answer": {
+        "value": 66.7,
+        "unit": "percent"
+      },
+      "rubric": {
+        "0": "Neither row_and_direction nor percent_increase is defensible from the North row and stated formula.",
+        "1": "Only partial credit: row_and_direction is correctly selected but percent_increase is arithmetically wrong, or the calculation uses the wrong row or denominator.",
+        "2": "row_and_direction selects North with baseline denominator, and percent_increase matches reference_answer after one-decimal rounding."
+      },
+      "difficulty": {
+        "level": "medium",
+        "rationale": "The item requires selecting a row and denominator before arithmetic, so reversed subtraction or an alternate site is not full understanding."
+      },
+      "data_license": {
+        "basis": "Synthetic original materials created solely for this self-test; no external license is asserted.",
+        "source_ids": ["paragraphs", "T1"]
+      },
+      "evidence": [
+        {
+          "source_id": "T1",
+          "locator": "T1#North",
+          "quote": "North, 1.8, 3.0",
+          "supports": ["row_and_direction"]
+        },
+        {
+          "source_id": "paragraphs",
+          "locator": "P2",
+          "quote": "(60-minute value minus baseline value) divided by baseline value, multiplied by 100",
+          "supports": ["percent_increase"]
+        }
+      ],
+      "unique_answer_rationale": "Only North's baseline and 60-minute columns satisfy the named row and P2's directed formula; the rounding rule fixes the displayed value.",
+      "uncertainty": [],
+      "arithmetic": {
+        "expression": "(after_60min - baseline) / baseline * 100",
+        "bindings": {"after_60min": 3.0, "baseline": 1.8},
+        "expected": 66.66666666666667,
+        "evaluation_tolerance": 1e-9,
+        "answer_tolerance": 0.05,
+        "rounding": "Round only the display value to one decimal place."
+      }
+    },
+    {
+      "item_id": "item-3",
+      "task": "Apply the P3 response rule to North and South using T1. Classify each site and state whether the contrast establishes a statistically significant difference.",
+      "task_intent": "Apply a joint response definition to two sites without promoting descriptive contrast into inferential significance.",
+      "cognitive_operation": "comparison_boundary",
+      "source_scope": [
+        {"source_id": "paragraphs", "locator": "P3"},
+        {"source_id": "T1", "locator": "T1#North"},
+        {"source_id": "T1", "locator": "T1#South"}
+      ],
+      "input_material": [
+        {
+          "source_id": "paragraphs",
+          "locator": "P3",
+          "content": "SYNTHETIC EXAMPLE: A site was called a responder only if its increase from baseline was at least 1.0 mg/L and its 60-minute value was at least 3.0 mg/L. Both conditions were required. The supplied record contains descriptive measurements only and no inferential test, so it does not establish a statistically significant between-site difference."
+        },
+        {
+          "source_id": "T1",
+          "locator": "T1#North",
+          "content": "SYNTHETIC EXAMPLE table T1; columns: site, baseline_oxygen_mg_per_L, oxygen_60min_mg_per_L; North, 1.8, 3.0"
+        },
+        {
+          "source_id": "T1",
+          "locator": "T1#South",
+          "content": "SYNTHETIC EXAMPLE table T1; columns: site, baseline_oxygen_mg_per_L, oxygen_60min_mg_per_L; South, 2.0, 2.9"
+        }
+      ],
+      "reference_answer": {
+        "north_meets_response_boundary": true,
+        "south_meets_response_boundary": false,
+        "statistical_significance": "not established by this descriptive record"
+      },
+      "rubric": {
+        "0": "No defensible joint_threshold, north_decision, south_decision or inference_boundary is supplied.",
+        "1": "Only a partial subset of joint_threshold, north_decision, south_decision and inference_boundary is correct, or one site is classified without both conditions.",
+        "2": "joint_threshold applies both inclusive conditions, north_decision and south_decision match reference_answer, and inference_boundary makes no significance claim."
+      },
+      "difficulty": {
+        "level": "hard",
+        "rationale": "One site meets equality at the final-value boundary while the other fails both conditions; an additional inference boundary discourages overclaiming."
+      },
+      "data_license": {
+        "basis": "Synthetic original materials created solely for this self-test; no external license is asserted.",
+        "source_ids": ["paragraphs", "T1"]
+      },
+      "evidence": [
+        {
+          "source_id": "paragraphs",
+          "locator": "P3",
+          "quote": "increase from baseline was at least 1.0 mg/L and its 60-minute value was at least 3.0 mg/L. Both conditions were required",
+          "supports": ["joint_threshold"]
+        },
+        {
+          "source_id": "T1",
+          "locator": "T1#North",
+          "quote": "North, 1.8, 3.0",
+          "supports": ["north_decision"]
+        },
+        {
+          "source_id": "T1",
+          "locator": "T1#South",
+          "quote": "South, 2.0, 2.9",
+          "supports": ["south_decision"]
+        },
+        {
+          "source_id": "paragraphs",
+          "locator": "P3",
+          "quote": "no inferential test, so it does not establish a statistically significant between-site difference",
+          "supports": ["inference_boundary"]
+        }
+      ],
+      "unique_answer_rationale": "North satisfies increase and inclusive final equality, South fails both, and the absence of an inferential test uniquely constrains the strength of the conclusion.",
+      "uncertainty": [],
+      "arithmetic": null
+    },
+    {
+      "item_id": "item-4",
+      "task": "P4 and P5 give different handling for equilibration time. Determine North's primary analysis status and identify the source feature that justifies resolving their apparent conflict.",
+      "task_intent": "Resolve an initial exclusion rule against a later site record by identifying the controlling amendment timing and scope.",
+      "cognitive_operation": "synthesis_conflict",
+      "source_scope": [
+        {"source_id": "paragraphs", "locator": "P4"},
+        {"source_id": "paragraphs", "locator": "P5"}
+      ],
+      "input_material": [
+        {
+          "source_id": "paragraphs",
+          "locator": "P4",
+          "content": "SYNTHETIC EXAMPLE: Protocol version 1 specified that any primary-endpoint measurement with less than 10 minutes of probe equilibration should be excluded from primary analysis."
+        },
+        {
+          "source_id": "paragraphs",
+          "locator": "P5",
+          "content": "SYNTHETIC EXAMPLE: Protocol amendment A-2 was approved before the data freeze and permitted 8 minutes of equilibration for probe P-07. North's primary-endpoint measurement used 8 minutes of equilibration and was retained under amendment A-2. No approval after the data freeze was used."
+        }
+      ],
+      "reference_answer": {
+        "original_rule": "The legacy protocol imposed a blanket short-contact exclusion.",
+        "north_primary_value_status": "retained",
+        "controlling_condition": "prospective amendment A-2 approved before data freeze and applicable to probe P-07"
+      },
+      "rubric": {
+        "0": "original_rule, north_status and controlling_condition are absent or contradict the paragraphs.",
+        "1": "Only a partial synthesis is present, such as north_status without controlling_condition, or original_rule is quoted without resolving applicability.",
+        "2": "original_rule is acknowledged, north_status matches reference_answer, and controlling_condition uses pre-freeze amendment A-2 applicability without post-hoc reasoning."
+      },
+      "difficulty": {
+        "level": "hard",
+        "rationale": "The general exclusion and specific exception appear in separate paragraphs, requiring temporal and applicability constraints rather than one-source extraction."
+      },
+      "data_license": {
+        "basis": "Synthetic original materials created solely for this self-test; no external license is asserted.",
+        "source_ids": ["paragraphs"]
+      },
+      "evidence": [
+        {
+          "source_id": "paragraphs",
+          "locator": "P4",
+          "quote": "less than 10 minutes of probe equilibration should be excluded from primary analysis",
+          "supports": ["original_rule"]
+        },
+        {
+          "source_id": "paragraphs",
+          "locator": "P5",
+          "quote": "North's primary-endpoint measurement used 8 minutes of equilibration and was retained under amendment A-2",
+          "supports": ["north_status"]
+        },
+        {
+          "source_id": "paragraphs",
+          "locator": "P5",
+          "quote": "Protocol amendment A-2 was approved before the data freeze and permitted 8 minutes of equilibration for probe P-07",
+          "supports": ["controlling_condition"]
+        }
+      ],
+      "unique_answer_rationale": "P5's pre-freeze approval and probe-specific permission supply a documented exception to P4 for North, rather than a generic preference for the later paragraph.",
+      "uncertainty": [],
+      "arithmetic": null
+    }
+  ],
+  "uncertainty": [
+    {"statement": "The bank is entirely synthetic; passing this example predicts no real benchmark performance.", "status": "declared_limitation"}
+  ],
+  "change_records": [
+    {
+      "from_version": "synthetic-v1",
+      "to_version": "synthetic-v2",
+      "item_id": "item-2",
+      "changes": ["reference_answer display precision", "rubric rounding wording"],
+      "reason": "Exercise diff reporting between two actual bundled synthetic draft states."
+    }
+  ]
+}

@@ -1,0 +1,27 @@
+{
+  "case_id": "SYNTHETIC-ONLY-CASE-001",
+  "synthetic": true,
+  "notice": "Complete synthetic interface example; not an organizer case, whiteboard, score, or scientific result.",
+  "output_contract": {
+    "fields": [
+      {
+        "name": "Bank",
+        "type": "array",
+        "minItems": 4,
+        "maxItems": 4
+      },
+      {
+        "name": "sources",
+        "type": "array"
+      },
+      {
+        "name": "uncertainty",
+        "type": "array"
+      },
+      {
+        "name": "change_records",
+        "type": "array"
+      }
+    ]
+  }
+}

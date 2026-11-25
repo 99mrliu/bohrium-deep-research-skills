@@ -1,0 +1,37 @@
+{
+  "case_id": "SYNTHETIC-RUBRIC-LAB-004",
+  "output_contract": {
+    "fields": [
+      {"name": "item_bank", "type": "object"},
+      {"name": "score_report", "type": "object"},
+      {"name": "mutation_report", "type": "object"},
+      {"name": "sources", "type": "array"},
+      {"name": "uncertainty", "type": "array"},
+      {"name": "change_records", "type": "array"},
+      {"name": "status", "type": "string"},
+      {"name": "summary", "type": "object"}
+    ]
+  },
+  "revision": "synthetic-example-1",
+  "task_type": "synthetic_downstream_rubric_scoring",
+  "contract_field_to_preserve": {
+    "nested_original_value": 17,
+    "note": "This arbitrary original field must remain top-level."
+  },
+  "sources": [
+    {
+      "source_id": "synthetic-materials",
+      "path_in_example": "materials/source_text.md",
+      "label": "FULLY SYNTHETIC; not external evidence"
+    }
+  ],
+  "uncertainty": [
+    "All source claims and labels are synthetic; the example tests rules only."
+  ],
+  "change_records": [
+    {
+      "change": "Created four synthetic source-conditioned items for local regression testing.",
+      "kind": "synthetic_fixture"
+    }
+  ]
+}

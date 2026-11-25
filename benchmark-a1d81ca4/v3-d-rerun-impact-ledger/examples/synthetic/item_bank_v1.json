@@ -1,0 +1,162 @@
+{
+  "schema": "rerun-impact-ledger/item-bank-v1",
+  "bank_version": "synthetic-bank-v1",
+  "benchmark_revision": "benchmark-a1d81ca4-revision2",
+  "synthetic": true,
+  "scoring_semantics": {
+    "version": "synthetic-scoring-v1",
+    "component_aggregation": "sum",
+    "answer_comparison": "exact normalized string",
+    "score_scale": "0/1/2 integer per item"
+  },
+  "items": [
+    {
+      "item_id": "SYNTH-DRAFT-001",
+      "benchmark_status": "benchmark-DRAFT",
+      "source_conditioned": true,
+      "task": "Using paragraph N1, calculate the percentage of enrolled north-clinic participants who completed follow-up. Round to one decimal place and include the percent sign.",
+      "reference_answer": "66.7%",
+      "rubric": {
+        "max_score": 2,
+        "components": [
+          {
+            "component_id": "calculation",
+            "points": 1,
+            "requirement": "Use verified evidence and divide 12 by 18 and multiply by 100."
+          },
+          {
+            "component_id": "final_answer",
+            "points": 1,
+            "requirement": "Report 66.7% with one decimal place."
+          }
+        ]
+      },
+      "evidence": [
+        {
+          "material": "north_paragraph.md",
+          "locator": "Paragraph N1",
+          "quote": "The north clinic enrolled 18 participants, and 12 completed follow-up."
+        }
+      ],
+      "computation": {
+        "type": "ratio_percent",
+        "source": "north_paragraph.md",
+        "enrolled_pattern": "enrolled (\\d+) participants",
+        "completed_pattern": "(\\d+) completed follow-up",
+        "decimals": 1
+      }
+    },
+    {
+      "item_id": "SYNTH-DRAFT-002",
+      "benchmark_status": "benchmark-DRAFT",
+      "source_conditioned": true,
+      "task": "Using paragraph E1, determine how many east-site samples remained after quality-control exclusions. Return an integer count.",
+      "reference_answer": "19",
+      "rubric": {
+        "max_score": 2,
+        "components": [
+          {
+            "component_id": "calculation",
+            "points": 1,
+            "requirement": "Use verified evidence and subtract excluded samples from received samples."
+          },
+          {
+            "component_id": "final_answer",
+            "points": 1,
+            "requirement": "Report the integer 19."
+          }
+        ]
+      },
+      "evidence": [
+        {
+          "material": "east_paragraph.md",
+          "locator": "Paragraph E1",
+          "quote": "The east site received 24 samples; 5 failed quality control and were excluded."
+        }
+      ],
+      "computation": {
+        "type": "difference",
+        "source": "east_paragraph.md",
+        "received_pattern": "received (\\d+) samples",
+        "excluded_pattern": "(\\d+) failed quality control"
+      }
+    },
+    {
+      "item_id": "SYNTH-DRAFT-003",
+      "benchmark_status": "benchmark-DRAFT",
+      "source_conditioned": true,
+      "task": "Using the north rows in observations.csv, calculate the total observations across days 1 and 2. Return an integer.",
+      "reference_answer": "16",
+      "rubric": {
+        "max_score": 2,
+        "components": [
+          {
+            "component_id": "calculation",
+            "points": 1,
+            "requirement": "Use verified evidence and add 7 and 9."
+          },
+          {
+            "component_id": "final_answer",
+            "points": 1,
+            "requirement": "Report the integer 16."
+          }
+        ]
+      },
+      "evidence": [
+        {
+          "material": "observations.csv",
+          "locator": "CSV data rows 1-2 (north)",
+          "quote": "north,1,7\nnorth,2,9"
+        }
+      ],
+      "computation": {
+        "type": "table_aggregate",
+        "source": "observations.csv",
+        "site": "north",
+        "aggregate": "sum"
+      }
+    },
+    {
+      "item_id": "SYNTH-DRAFT-004",
+      "benchmark_status": "benchmark-DRAFT",
+      "source_conditioned": true,
+      "task": "Add the north follow-up count in paragraph C1 to the south day-2 observations in observations.csv. Return an integer.",
+      "reference_answer": "23",
+      "rubric": {
+        "max_score": 2,
+        "components": [
+          {
+            "component_id": "calculation",
+            "points": 1,
+            "requirement": "Use verified evidence and add 12 and 11 across the two sources."
+          },
+          {
+            "component_id": "final_answer",
+            "points": 1,
+            "requirement": "Report the integer 23."
+          }
+        ]
+      },
+      "evidence": [
+        {
+          "material": "combined_paragraph.md",
+          "locator": "Paragraph C1",
+          "quote": "The combined review retained the north follow-up count of 12 for a cross-source arithmetic check."
+        },
+        {
+          "material": "observations.csv",
+          "locator": "CSV south day-2 row",
+          "quote": "south,2,11"
+        }
+      ],
+      "computation": {
+        "type": "cross_source_sum",
+        "paragraph_source": "combined_paragraph.md",
+        "paragraph_pattern": "count of (\\d+)",
+        "table_source": "observations.csv",
+        "site": "south",
+        "day": 2
+      }
+    }
+  ]
+}

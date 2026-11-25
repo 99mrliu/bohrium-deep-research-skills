@@ -1,0 +1,41 @@
+{
+  "synthetic": true,
+  "collection": "COMPLETE SYNTHETIC example sources; no real experiment and no official case data",
+  "documents": [
+    {
+      "source_key": "SYNTHETIC-P1",
+      "page": 3,
+      "paragraphs": [
+        "In the SYNTHETIC Alloy A trial, the annealing temperature was ４５０ °C.",
+        "For the same SYNTHETIC Alloy A trial, the report explicitly states: no toxicity data were collected."
+      ]
+    },
+    {
+      "source_key": "SYNTHETIC-T1",
+      "table": {
+        "caption": "SYNTHETIC bench measurements; values are invented only for boundary testing",
+        "rows": [
+          {
+            "sample": "SYNTHETIC-A",
+            "yield": "The SYNTHETIC-A measured yield was 18%.",
+            "pH": "The SYNTHETIC-A measured pH was 7.2."
+          }
+        ]
+      }
+    },
+    {
+      "source_key": "SYNTHETIC-N2",
+      "nested": {
+        "observations": [
+          {
+            "paragraph": "In a SYNTHETIC control run, latency changed from 12 ms to 9 ms while the same protocol identifier was retained."
+          },
+          {
+            "paragraph": "The SYNTHETIC control note says that cost was not reported; it does not license an estimated cost."
+          }
+        ]
+      },
+      "free_text": "The SYNTHETIC fourth item used   protocol Q-7.\nA second line in this same paragraph records replicate count 2.\n\nThis separate SYNTHETIC paragraph must remain a separate index node."
+    }
+  ]
+}

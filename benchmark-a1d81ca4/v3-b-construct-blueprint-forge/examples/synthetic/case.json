@@ -1,0 +1,36 @@
+{
+  "case_id": "synthetic-aster-construct-v1",
+  "synthetic": true,
+  "label": "SYNTHETIC EXAMPLE ONLY — no empirical scientific content",
+  "task_file": "task.md",
+  "task_intent": "Synthetic measurement-design example: build a four-item source-conditioned benchmark draft for interpreting the Aster wetland aeration record without extending beyond its reported evidence.",
+  "materials": [
+    {
+      "source_id": "paragraphs",
+      "path": "materials/paragraphs.md",
+      "media_type": "text/markdown",
+      "synthetic": true
+    },
+    {
+      "source_id": "T1",
+      "path": "materials/table.csv",
+      "media_type": "text/csv",
+      "synthetic": true
+    }
+  ],
+  "output_contract": {
+    "fields": [
+      "case_id",
+      {"name": "items", "type": "list", "required": true},
+      {"name": "status", "type": "string"},
+      {"name": "sources", "type": "list"},
+      {"name": "uncertainty", "type": "list"},
+      {"name": "change_records", "type": "list"},
+      {"name": "defects", "type": "list"}
+    ]
+  },
+  "uncertainty": [
+    {"statement": "All source values are synthetic and support tool testing only, not external scientific conclusions.", "status": "declared_limitation"}
+  ],
+  "change_records": []
+}

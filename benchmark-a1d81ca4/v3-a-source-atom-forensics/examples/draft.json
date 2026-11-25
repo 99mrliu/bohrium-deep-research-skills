@@ -1,0 +1,224 @@
+{
+  "case_id": "SYNTHETIC-ONLY-CASE-001",
+  "synthetic": true,
+  "notice": "COMPLETE SYNTHETIC draft: all scientific content is invented for local boundary testing only.",
+  "Bank": [
+    {
+      "id": "SYNTHETIC-ITEM-001",
+      "task": "For synthetic Alloy A, report the annealing temperature and whether toxicity data were collected.",
+      "scope/input_material": "Only the two SYNTHETIC-P1 paragraphs on page 3; no external inference.",
+      "reference_answer": {
+        "elements": [
+          {
+            "id": "temperature",
+            "text": "The annealing temperature was 450 °C."
+          },
+          {
+            "id": "toxicity_absence",
+            "text": "No toxicity data were collected."
+          }
+        ]
+      },
+      "rubric": {
+        "0": "Neither substantive element is correctly reported.",
+        "1": "Exactly one element is correctly reported with a usable source quote.",
+        "2": "Both elements are correctly reported with atom-level source support; absence is not converted into a value."
+      },
+      "difficulty": "synthetic-easy",
+      "data_license": "Entirely synthetic example content; local reuse permitted; no external scientific data.",
+      "evidence": {
+        "atoms": [
+          {
+            "id": "synthetic-a001-temperature",
+            "text": "Annealing temperature was 450 °C.",
+            "type": "numeric",
+            "reason": "Agent adjudication: this atom is the sole temperature proposition in the temperature answer element.",
+            "answer_element_ids": ["temperature"],
+            "evidence": {
+              "node_id": "node_33da5736319da5498ab58ad1",
+              "quote": "annealing temperature was 450 °C",
+              "reason": "Agent adjudication: the quote explicitly predicates this temperature of Alloy A; NFKC maps the source full-width digits without changing meaning."
+            }
+          },
+          {
+            "id": "synthetic-a001-toxicity",
+            "text": "Toxicity data were not collected.",
+            "type": "absence",
+            "reason": "Agent adjudication: this atom encodes only the required collection-status proposition, with no invented toxicity result.",
+            "answer_element_ids": ["toxicity_absence"],
+            "evidence": {
+              "node_id": "node_f4ce6d518cce1064d1782ca3",
+              "quote": "no toxicity data were collected",
+              "reason": "Agent adjudication: the source expressly states absence of collection; this atom neither invents a measurement nor generalizes beyond the synthetic trial."
+            }
+          }
+        ]
+      }
+    },
+    {
+      "id": "SYNTHETIC-ITEM-002",
+      "task": "Extract synthetic sample A yield and pH without crossing table rows.",
+      "scope/input_material": "The row located at $.documents[1].table.rows[0] in the synthetic material only.",
+      "reference_answer": [
+        {
+          "id": "yield",
+          "text": "The measured yield was 18%."
+        },
+        {
+          "id": "ph",
+          "text": "The measured pH was 7.2."
+        }
+      ],
+      "rubric": {
+        "0": "Neither value is correctly extracted.",
+        "1": "One value is correct and row-local, or both are present but one lacks row-local support.",
+        "2": "Both values are exact and separately mapped to their synthetic row cells."
+      },
+      "difficulty": "synthetic-table-boundary",
+      "data_license": "Entirely synthetic example content; no external observations.",
+      "evidence": {
+        "atoms": [
+          {
+            "id": "synthetic-a002-yield",
+            "text": "Measured yield: 18%.",
+            "type": "numeric",
+            "reason": "Agent adjudication: the atom isolates the yield answer element from the separate pH proposition.",
+            "answer_element_ids": ["yield"],
+            "evidence": {
+              "node_id": "node_bfa86a444a6c160d5f9600a7",
+              "quote": "measured yield was 18%",
+              "reason": "Agent adjudication: the yield label, sample row, number, and percent sign agree; the quote is not used as proof beyond this synthetic row."
+            }
+          },
+          {
+            "id": "synthetic-a002-ph",
+            "text": "Measured pH: 7.2.",
+            "type": "numeric",
+            "reason": "Agent adjudication: the atom isolates the pH answer element and preserves its measured-value qualifier.",
+            "answer_element_ids": ["ph"],
+            "evidence": {
+              "node_id": "node_47b1462a58291e7009ffe8cb",
+              "quote": "measured pH was 7.2",
+              "reason": "Agent adjudication: the quote explicitly assigns 7.2 to pH in the same synthetic row; it is separate from the yield atom."
+            }
+          }
+        ]
+      }
+    },
+    {
+      "id": "SYNTHETIC-ITEM-003",
+      "task": "Report synthetic control latency endpoints and handle the unreported cost honestly.",
+      "scope/input_material": "Only the two nested observation paragraphs under SYNTHETIC-N2; page is absent and must remain unclaimed.",
+      "reference_answer": {
+        "elements": [
+          {
+            "id": "latency",
+            "text": "Latency changed from 12 ms to 9 ms."
+          },
+          {
+            "id": "cost",
+            "text": "Cost was not reported and cannot be estimated from the material."
+          }
+        ]
+      },
+      "rubric": {
+        "0": "Endpoints are wrong and an unsupported cost is invented.",
+        "1": "Endpoints or unreported-cost status is correct, but coverage or qualification is incomplete.",
+        "2": "Both endpoints and the explicit cost limitation are independently supported; no page is fabricated."
+      },
+      "difficulty": "synthetic-recursion-and-unreported",
+      "data_license": "Synthetic only; no external scientific or financial claim.",
+      "evidence": {
+        "atoms": [
+          {
+            "id": "synthetic-a003-latency",
+            "text": "Latency endpoints were 12 ms and 9 ms.",
+            "type": "numeric",
+            "reason": "Agent adjudication: this atom represents both ordered endpoints required by the latency answer element.",
+            "answer_element_ids": ["latency"],
+            "evidence": {
+              "node_id": "node_c4551b4bdb000db6ef6d9c52",
+              "quote": "latency changed from 12 ms to 9 ms",
+              "reason": "Agent adjudication: direction and both values preserve the exact source relation; the shared ms unit is retained in the answer element."
+            }
+          },
+          {
+            "id": "synthetic-a003-cost",
+            "text": "Cost is unreported; no estimate is justified.",
+            "type": "absence",
+            "reason": "Agent adjudication: the atom faithfully maps the cost answer element to non-reporting and the prohibition on estimation.",
+            "answer_element_ids": ["cost"],
+            "evidence": {
+              "node_id": "node_66fdc1b6771afeb263bc124f",
+              "quote": "cost was not reported; it does not license an estimated cost",
+              "reason": "Agent adjudication: the quote directly establishes non-reporting and the drafting boundary, with no numerical imputation."
+            }
+          }
+        ]
+      }
+    },
+    {
+      "id": "SYNTHETIC-ITEM-004",
+      "task": "Extract the synthetic protocol and replicate count from a multiline paragraph while respecting node boundaries.",
+      "scope/input_material": "Only the first paragraph of $.documents[2].free_text; quote matching permits whitespace normalization but not crossing into the separate paragraph.",
+      "reference_answer": {
+        "elements": [
+          {
+            "id": "protocol",
+            "text": "The protocol identifier was Q-7."
+          },
+          {
+            "id": "replicates",
+            "text": "The replicate count was 2."
+          }
+        ]
+      },
+      "rubric": {
+        "0": "Neither identifier nor replicate count is supported.",
+        "1": "One element is covered correctly or a quote crosses a paragraph boundary.",
+        "2": "Both atoms map to the first paragraph, retain values, and do not rely on the separate paragraph."
+      },
+      "difficulty": "synthetic-whitespace-node-boundary",
+      "data_license": "Entirely synthetic; generated for exact normalized quote tests only.",
+      "evidence": {
+        "atoms": [
+          {
+            "id": "synthetic-a004-protocol",
+            "text": "Protocol identifier Q-7.",
+            "type": "identifier",
+            "reason": "Agent adjudication: the atom is exactly the protocol-identifier element and does not absorb the replicate-count proposition.",
+            "answer_element_ids": ["protocol"],
+            "evidence": {
+              "node_id": "node_6cdaaab8e951d16c060fa48f",
+              "quote": "used protocol Q-7",
+              "reason": "Agent adjudication: whitespace collapse makes this quote contiguous while preserving the identifier; no part comes from the second free-text paragraph."
+            }
+          },
+          {
+            "id": "synthetic-a004-replicates",
+            "text": "Replicate count was 2.",
+            "type": "numeric",
+            "reason": "Agent adjudication: the atom maps only the requested replicate count, independently of the protocol identifier.",
+            "answer_element_ids": ["replicates"],
+            "evidence": {
+              "node_id": "node_6cdaaab8e951d16c060fa48f",
+              "quote": "records   replicate\ncount 2",
+              "reason": "Agent adjudication: NFKC whitespace normalization allows spacing and line-wrap differences only; the quote still explicitly assigns count 2 in the declared node."
+            }
+          }
+        ]
+      }
+    }
+  ],
+  "sources": [],
+  "uncertainty": [
+    "Synthetic gate success is structural and lexical only; the agent-authored reason fields remain subject to independent semantic review.",
+    "No DSH score or actual experimental conclusion is asserted."
+  ],
+  "change_records": [
+    {
+      "stage": "synthetic-authoring",
+      "note": "Four boundary items authored only from the accompanying synthetic source bytes."
+    }
+  ]
+}
