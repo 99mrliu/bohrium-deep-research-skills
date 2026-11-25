@@ -1,0 +1,46 @@
+{
+  "tool": "linearize_math",
+  "thresholds": {
+    "script_size_ratio": 0.8,
+    "script_offset_ratio": 0.25,
+    "baseline_tolerance_ratio": 0.3
+  },
+  "engine": {
+    "engine": "pymupdf-rawdict",
+    "degrade_reason": null,
+    "degraded_pages": []
+  },
+  "counts": {
+    "equations": 4,
+    "numbered": 3,
+    "replacements": 0,
+    "trusted_decoded": 11,
+    "unmapped": 1,
+    "baseline_anomalies": 0,
+    "partial_zones": 0
+  },
+  "notes": [
+    "unmapped 台账覆盖公式区及全局 Symbol/ZapfDingbats 字体字符"
+  ],
+  "replacement_detail": [],
+  "unmapped_symbols": [
+    {
+      "page": 1,
+      "bbox": [
+        125.0,
+        211.79,
+        134.12,
+        223.79
+      ],
+      "font": "ZapfDingbats",
+      "raw_codepoint": "U+006B",
+      "extracted_char": "k",
+      "reason": "ZapfDingbats 码位不在保守映射子集(不猜测)",
+      "zone_id": null,
+      "context": "outside-math-zone"
+    }
+  ],
+  "baseline_anomalies": [],
+  "status": "partial",
+  "ts": "2026-11-25T10:23:40+0800"
+}

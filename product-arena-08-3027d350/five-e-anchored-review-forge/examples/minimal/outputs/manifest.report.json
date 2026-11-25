@@ -1,0 +1,23 @@
+{
+  "script": "render_manifest.py",
+  "warnings": [],
+  "status": "success",
+  "stats": {
+    "pages": 2,
+    "blocks": 13,
+    "anchors": 13
+  },
+  "files_listed": 8,
+  "contract_fields": [
+    "review_html",
+    "overlays",
+    "manifest",
+    "stats",
+    "input_hashes"
+  ],
+  "outputs": {
+    "manifest": "outputs/manifest.json",
+    "result": "outputs/result.json"
+  },
+  "exit_code": 0
+}

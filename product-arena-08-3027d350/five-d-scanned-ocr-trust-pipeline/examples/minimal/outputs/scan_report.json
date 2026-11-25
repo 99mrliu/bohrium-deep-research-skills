@@ -1,0 +1,56 @@
+{
+  "pdf": "/Users/liuhengshen/Desktop/bhr_product/ra01-5dir/bundles/d-scan-ocr-trust/skill/examples/minimal/inputs/scan_like.pdf",
+  "pdf_bytes": 244554,
+  "truncated": false,
+  "page_count": 1,
+  "class_counts": {
+    "scanned": 1
+  },
+  "thresholds": {
+    "min_text_chars": 100,
+    "fullpage_pixels": 100000
+  },
+  "engine": {
+    "primary": "stdlib-regex+zlib",
+    "cross_validation": [
+      {
+        "engine": "PyMuPDF 2.1",
+        "pages": [
+          {
+            "page": 1,
+            "text_chars": 0,
+            "image_xobjects": 1,
+            "image_pixels": 120000,
+            "page_class": "scanned",
+            "agree": true
+          }
+        ],
+        "status": "ok"
+      },
+      {
+        "engine": "pdftotext",
+        "pages": [
+          {
+            "page": 1,
+            "text_chars": 0
+          }
+        ],
+        "status": "ok"
+      }
+    ]
+  },
+  "warnings": [],
+  "notes": [],
+  "pages": [
+    {
+      "page": 1,
+      "object": "3 0",
+      "page_class": "scanned",
+      "text_chars_approx": 0,
+      "image_xobjects": 1,
+      "image_pixels": 120000,
+      "fullpage_image": true,
+      "notes": []
+    }
+  ]
+}

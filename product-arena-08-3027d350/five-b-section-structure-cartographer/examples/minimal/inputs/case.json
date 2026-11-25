@@ -1,0 +1,15 @@
+{
+  "case_id": "synth-minimal-001",
+  "note": "合成示例（非正式案例、非真实论文）：PDF 由 make_sample.py 纯标准库生成。",
+  "pdf": "sample.pdf",
+  "output_contract": {
+    "fields": [
+      "document_tree",
+      "section_spans",
+      "references",
+      "reference_count",
+      "structure_audit",
+      "engine"
+    ]
+  }
+}

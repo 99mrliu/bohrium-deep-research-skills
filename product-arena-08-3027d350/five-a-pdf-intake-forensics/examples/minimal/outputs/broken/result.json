@@ -1,0 +1,34 @@
+{
+  "case_id": "synthetic-intake-003",
+  "pdf_file": "broken_tail.pdf",
+  "page_count": 1,
+  "routing_strategy": "direct_text",
+  "ocr_pages": [],
+  "intake_notes": "broken_tail.pdf: 1 页, strategy=direct_text, ocr_pages=[]（输入截尾，结果部分）",
+  "status": "partial",
+  "sources": [
+    "/Users/liuhengshen/Desktop/bhr_product/ra01-5dir/bundles/a-intake-forensics/skill/examples/minimal/inputs/broken_tail.pdf",
+    "/Users/liuhengshen/Desktop/bhr_product/ra01-5dir/bundles/a-intake-forensics/skill/examples/minimal/outputs/broken/forensics.json",
+    "/Users/liuhengshen/Desktop/bhr_product/ra01-5dir/bundles/a-intake-forensics/skill/examples/minimal/outputs/broken/probe.json"
+  ],
+  "uncertainty": [
+    "truncated_input: 文件疑似截尾，以下路由仅覆盖已恢复部分"
+  ],
+  "change_record": [
+    {
+      "at": "2026-11-25T10:23:36+08:00",
+      "actor": "route_case.py",
+      "action": "read forensics.json + probe.json + case.json"
+    },
+    {
+      "at": "2026-11-25T10:23:36+08:00",
+      "actor": "route_case.py",
+      "action": "decided strategy=direct_text ocr_pages=[]"
+    },
+    {
+      "at": "2026-11-25T10:23:36+08:00",
+      "actor": "route_case.py",
+      "action": "wrote routing_plan.json / intake_summary.md / result.json (status=partial)"
+    }
+  ]
+}

@@ -1,0 +1,117 @@
+{
+  "tool": "linearize_math",
+  "equations": [
+    {
+      "id": "eq-001",
+      "page": 1,
+      "anchor": {
+        "page": 1,
+        "bbox": [
+          [
+            72.0,
+            534.66
+          ],
+          [
+            129.1,
+            145.59
+          ]
+        ]
+      },
+      "verbatim": "α + β = γ(1)",
+      "linear": "α + β = γ",
+      "number": "1",
+      "unmapped": [],
+      "mode": "char",
+      "signals": [
+        "greek_letter",
+        "math_operator",
+        "equation_number"
+      ],
+      "partial": false
+    },
+    {
+      "id": "eq-002",
+      "page": 1,
+      "anchor": {
+        "page": 1,
+        "bbox": [
+          [
+            72.0,
+            534.66
+          ],
+          [
+            168.48,
+            189.09
+          ]
+        ]
+      },
+      "verbatim": "Ei = x2 + χψ(2)",
+      "linear": "E_{i} = x^{2} + χψ",
+      "number": "2",
+      "unmapped": [],
+      "mode": "char",
+      "signals": [
+        "greek_letter",
+        "math_operator",
+        "script_layout",
+        "equation_number"
+      ],
+      "partial": false
+    },
+    {
+      "id": "eq-003",
+      "page": 1,
+      "anchor": {
+        "page": 1,
+        "bbox": [
+          [
+            72.0,
+            134.75
+          ],
+          [
+            249.1,
+            265.59
+          ]
+        ]
+      },
+      "verbatim": "Sum: α + β",
+      "linear": "Sum: α + β",
+      "number": null,
+      "unmapped": [],
+      "mode": "char",
+      "signals": [
+        "greek_letter",
+        "math_operator"
+      ],
+      "partial": false
+    },
+    {
+      "id": "eq-004",
+      "page": 2,
+      "anchor": {
+        "page": 2,
+        "bbox": [
+          [
+            72.0,
+            534.66
+          ],
+          [
+            79.1,
+            95.59
+          ]
+        ]
+      },
+      "verbatim": "Σ φ(ξ) = Ω(3)",
+      "linear": "Σ φ(ξ) = Ω",
+      "number": "3",
+      "unmapped": [],
+      "mode": "char",
+      "signals": [
+        "greek_letter",
+        "math_operator",
+        "equation_number"
+      ],
+      "partial": false
+    }
+  ]
+}

@@ -1,0 +1,32 @@
+{
+  "case_id": "synthetic-intake-001",
+  "pdf_file": "ok_text.pdf",
+  "page_count": 2,
+  "routing_strategy": "direct_text",
+  "ocr_pages": [],
+  "intake_notes": "ok_text.pdf: 2 页, strategy=direct_text, ocr_pages=[]",
+  "status": "success",
+  "sources": [
+    "/Users/liuhengshen/Desktop/bhr_product/ra01-5dir/bundles/a-intake-forensics/skill/examples/minimal/inputs/ok_text.pdf",
+    "/Users/liuhengshen/Desktop/bhr_product/ra01-5dir/bundles/a-intake-forensics/skill/examples/minimal/outputs/ok/forensics.json",
+    "/Users/liuhengshen/Desktop/bhr_product/ra01-5dir/bundles/a-intake-forensics/skill/examples/minimal/outputs/ok/probe.json"
+  ],
+  "uncertainty": [],
+  "change_record": [
+    {
+      "at": "2026-11-25T10:23:35+08:00",
+      "actor": "route_case.py",
+      "action": "read forensics.json + probe.json + case.json"
+    },
+    {
+      "at": "2026-11-25T10:23:35+08:00",
+      "actor": "route_case.py",
+      "action": "decided strategy=direct_text ocr_pages=[]"
+    },
+    {
+      "at": "2026-11-25T10:23:35+08:00",
+      "actor": "route_case.py",
+      "action": "wrote routing_plan.json / intake_summary.md / result.json (status=success)"
+    }
+  ]
+}

@@ -1,0 +1,69 @@
+{
+  "pdf": "/Users/liuhengshen/Desktop/bhr_product/ra01-5dir/bundles/d-scan-ocr-trust/skill/examples/minimal/inputs/scan_like.pdf",
+  "ocr": "/Users/liuhengshen/Desktop/bhr_product/ra01-5dir/bundles/d-scan-ocr-trust/skill/examples/minimal/inputs/synthetic_ocr.txt",
+  "summary": {
+    "trust_distribution": {
+      "high": 0,
+      "medium": 1,
+      "low": 2,
+      "illegible": 0
+    },
+    "thresholds": {
+      "rate_max": 0.02,
+      "suspect_max": 5
+    },
+    "n_pages": 3
+  },
+  "pages": [
+    {
+      "page": 1,
+      "page_class": "scanned",
+      "ocr_present": true,
+      "tokens": 54,
+      "corrections": 6,
+      "correction_rate": 0.111111,
+      "suspects": 1,
+      "trust": "low",
+      "verbatim": "/Users/liuhengshen/Desktop/bhr_product/ra01-5dir/bundles/d-scan-ocr-trust/skill/examples/minimal/outputs/work/pages/page-001.verbatim.txt",
+      "corrected": "/Users/liuhengshen/Desktop/bhr_product/ra01-5dir/bundles/d-scan-ocr-trust/skill/examples/minimal/outputs/work/pages/page-001.corrected.txt",
+      "notes": [
+        "修正率 11.11% >= 2%"
+      ]
+    },
+    {
+      "page": 2,
+      "page_class": "unknown",
+      "ocr_present": true,
+      "tokens": 49,
+      "corrections": 0,
+      "correction_rate": 0.0,
+      "suspects": 0,
+      "trust": "medium",
+      "verbatim": "/Users/liuhengshen/Desktop/bhr_product/ra01-5dir/bundles/d-scan-ocr-trust/skill/examples/minimal/outputs/work/pages/page-002.verbatim.txt",
+      "corrected": "/Users/liuhengshen/Desktop/bhr_product/ra01-5dir/bundles/d-scan-ocr-trust/skill/examples/minimal/outputs/work/pages/page-002.corrected.txt",
+      "notes": [
+        "该页不在 scan_report 中（OCR 页超出 PDF 页数）",
+        "页类 unknown（扫描判定失败或 OCR 页超出 PDF 页数），按扫描页规则降级处理；已 OCR 且修正率 0.00% < 2%"
+      ]
+    },
+    {
+      "page": 3,
+      "page_class": "unknown",
+      "ocr_present": true,
+      "tokens": 47,
+      "corrections": 7,
+      "correction_rate": 0.148936,
+      "suspects": 1,
+      "trust": "low",
+      "verbatim": "/Users/liuhengshen/Desktop/bhr_product/ra01-5dir/bundles/d-scan-ocr-trust/skill/examples/minimal/outputs/work/pages/page-003.verbatim.txt",
+      "corrected": "/Users/liuhengshen/Desktop/bhr_product/ra01-5dir/bundles/d-scan-ocr-trust/skill/examples/minimal/outputs/work/pages/page-003.corrected.txt",
+      "notes": [
+        "该页不在 scan_report 中（OCR 页超出 PDF 页数）",
+        "页类 unknown（扫描判定失败或 OCR 页超出 PDF 页数），按扫描页规则降级处理；修正率 14.89% >= 2%"
+      ]
+    }
+  ],
+  "uncertainty": [
+    "OCR 文本页数（3）与 PDF 页数（1）不一致，超出页按 unknown 类降级处理"
+  ]
+}

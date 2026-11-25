@@ -1,0 +1,170 @@
+{
+  "tool": "detect_math_zones",
+  "thresholds": {
+    "min_signals": 2,
+    "script_size_ratio": 0.8,
+    "script_offset_ratio": 0.25
+  },
+  "counts": {
+    "pages": 2,
+    "lines": 9,
+    "zones": 4,
+    "numbered_zones": 3
+  },
+  "partial_pages": [],
+  "zones": [
+    {
+      "id": "zone-001",
+      "page": 1,
+      "y": [
+        129.1,
+        145.59
+      ],
+      "x": [
+        72.0,
+        534.66
+      ],
+      "raw_chars": "α + β = γ(1)",
+      "detected_number": "1",
+      "signals": [
+        "greek_letter",
+        "math_operator",
+        "equation_number"
+      ],
+      "mode": "char",
+      "partial": false,
+      "script_evidence": null,
+      "glyph_ids": [
+        87,
+        88,
+        89,
+        90,
+        91,
+        92,
+        93,
+        94,
+        95,
+        96,
+        97,
+        98
+      ]
+    },
+    {
+      "id": "zone-002",
+      "page": 1,
+      "y": [
+        168.48,
+        189.09
+      ],
+      "x": [
+        72.0,
+        534.66
+      ],
+      "raw_chars": "Ei = x2 + χψ(2)",
+      "detected_number": "2",
+      "signals": [
+        "greek_letter",
+        "math_operator",
+        "script_layout",
+        "equation_number"
+      ],
+      "mode": "char",
+      "partial": false,
+      "script_evidence": {
+        "char": "i",
+        "kind": "subscript",
+        "size": 7.0,
+        "median_size": 12.0,
+        "offset": -5.0
+      },
+      "glyph_ids": [
+        99,
+        100,
+        101,
+        102,
+        103,
+        104,
+        105,
+        106,
+        107,
+        108,
+        109,
+        110,
+        111,
+        112,
+        113
+      ]
+    },
+    {
+      "id": "zone-003",
+      "page": 1,
+      "y": [
+        249.1,
+        265.59
+      ],
+      "x": [
+        72.0,
+        134.75
+      ],
+      "raw_chars": "Sum: α + β",
+      "detected_number": null,
+      "signals": [
+        "greek_letter",
+        "math_operator"
+      ],
+      "mode": "char",
+      "partial": false,
+      "script_evidence": null,
+      "glyph_ids": [
+        123,
+        124,
+        125,
+        126,
+        127,
+        128,
+        129,
+        130,
+        131,
+        132
+      ]
+    },
+    {
+      "id": "zone-004",
+      "page": 2,
+      "y": [
+        79.1,
+        95.59
+      ],
+      "x": [
+        72.0,
+        534.66
+      ],
+      "raw_chars": "Σ φ(ξ) = Ω(3)",
+      "detected_number": "3",
+      "signals": [
+        "greek_letter",
+        "math_operator",
+        "equation_number"
+      ],
+      "mode": "char",
+      "partial": false,
+      "script_evidence": null,
+      "glyph_ids": [
+        145,
+        146,
+        147,
+        148,
+        149,
+        150,
+        151,
+        152,
+        153,
+        154,
+        155,
+        156,
+        157
+      ]
+    }
+  ],
+  "ts": "2026-11-25T10:23:39+0800"
+}

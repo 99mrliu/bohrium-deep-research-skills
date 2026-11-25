@@ -1,0 +1,113 @@
+{
+  "engine": "pymupdf",
+  "mode": "styled",
+  "body_size_median": 10.0,
+  "title": "Synthetic Study of Document Structure Extraction",
+  "authors": "Alice Smith, Bob Jones, Carol White Department of Examples, Demo University",
+  "heading_count": 9,
+  "tree": [
+    {
+      "number": null,
+      "title": "Abstract",
+      "level": 1,
+      "kind": "abstract",
+      "page": 1,
+      "y0": 154.49,
+      "line_idx": 4,
+      "children": [],
+      "end_line_idx": 7
+    },
+    {
+      "number": "1",
+      "title": "Introduction",
+      "level": 1,
+      "kind": "numbered",
+      "page": 1,
+      "y0": 233.42,
+      "line_idx": 8,
+      "children": [
+        {
+          "number": "1.1",
+          "title": "Background",
+          "level": 2,
+          "kind": "numbered",
+          "page": 1,
+          "y0": 297.46,
+          "line_idx": 11,
+          "children": [],
+          "end_line_idx": 13
+        }
+      ],
+      "end_line_idx": 13
+    },
+    {
+      "number": "2",
+      "title": "Methods",
+      "level": 1,
+      "kind": "numbered",
+      "page": 2,
+      "y0": 37.02,
+      "line_idx": 14,
+      "children": [
+        {
+          "number": "2.1",
+          "title": "Data",
+          "level": 2,
+          "kind": "numbered",
+          "page": 2,
+          "y0": 101.06,
+          "line_idx": 17,
+          "children": [],
+          "end_line_idx": 19
+        },
+        {
+          "number": "2.2",
+          "title": "Setup",
+          "level": 2,
+          "kind": "numbered",
+          "page": 2,
+          "y0": 160.26,
+          "line_idx": 20,
+          "children": [],
+          "end_line_idx": 22
+        }
+      ],
+      "end_line_idx": 22
+    },
+    {
+      "number": "3",
+      "title": "Results",
+      "level": 1,
+      "kind": "numbered",
+      "page": 2,
+      "y0": 223.32,
+      "line_idx": 23,
+      "children": [],
+      "end_line_idx": 29
+    },
+    {
+      "number": null,
+      "title": "References",
+      "level": 1,
+      "kind": "references",
+      "page": 3,
+      "y0": 37.02,
+      "line_idx": 30,
+      "children": [],
+      "end_line_idx": 35
+    },
+    {
+      "number": null,
+      "title": "Acknowledgments",
+      "level": 1,
+      "kind": "acknowledgments",
+      "page": 3,
+      "y0": 167.42,
+      "line_idx": 36,
+      "children": [],
+      "end_line_idx": null
+    }
+  ],
+  "heading_candidates": [],
+  "degraded_notes": []
+}

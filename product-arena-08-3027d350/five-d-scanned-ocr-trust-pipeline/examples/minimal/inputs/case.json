@@ -1,0 +1,15 @@
+{
+  "case_id": "synthetic-scan-ocr-minimal-001",
+  "note": "合成示例（非正式案例、非真实论文）：scan_like.pdf 为脚本生成的 1 页纯位图 PDF；synthetic_ocr.txt 为人工编造的 3 页 OCR 文本（含典型混淆错误与多解嫌疑词），两文件页数故意不一致，用于触发 unknown 页类与 partial 诚实路径。",
+  "pdf": "inputs/scan_like.pdf",
+  "ocr_text": "inputs/synthetic_ocr.txt",
+  "output_contract": {
+    "fields": {
+      "page_classes": "逐页版面类别（born_digital/scanned/mixed/empty/unknown）",
+      "ocr_corrections": "OCR 后处理纠正与嫌疑统计",
+      "trust_ledger": "逐页可信分级台账路径",
+      "corrected_text": "保守纠错后文本路径",
+      "unreadable_pages": "不可读（illegible）页清单"
+    }
+  }
+}

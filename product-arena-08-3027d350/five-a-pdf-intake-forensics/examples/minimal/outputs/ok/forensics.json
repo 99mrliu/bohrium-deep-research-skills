@@ -1,0 +1,100 @@
+{
+  "tool": "pdf_forensics.py",
+  "pdf_path": "/Users/liuhengshen/Desktop/bhr_product/ra01-5dir/bundles/a-intake-forensics/skill/examples/minimal/inputs/ok_text.pdf",
+  "file_size_bytes": 2978,
+  "generated_at": "2026-11-25T10:23:34+08:00",
+  "issues": [],
+  "pdf_version": "1.4",
+  "encrypted": false,
+  "linearized": false,
+  "object_count": 8,
+  "objstm_count": 0,
+  "xref_stream": false,
+  "xref": {
+    "startxref_found": true,
+    "startxref_offset": 2722,
+    "startxref_points_to_xref": true,
+    "trailer_eof_in_tail": true,
+    "eof_marker_count": 1,
+    "prev_count": 0,
+    "incremental_update": false,
+    "xref_ok": true,
+    "truncated": false
+  },
+  "metadata": {
+    "Producer": "pdf-intake-forensics make_samples.py",
+    "Creator": "stdlib synthetic generator",
+    "CreationDate": "D:20261125090000+08'00'"
+  },
+  "page_count": 2,
+  "pages": [
+    {
+      "object": 3,
+      "mediabox": [
+        0.0,
+        0.0,
+        612.0,
+        792.0
+      ],
+      "rotate": 0,
+      "content_objects": [
+        2
+      ],
+      "content_filters": [],
+      "text_showing_bytes": 864,
+      "text_showing_ops": 12,
+      "decompress_errors": [],
+      "fonts": [
+        {
+          "base_font": "Helvetica",
+          "subtype": "Type1",
+          "has_tounicode": false,
+          "embedded": false,
+          "resource_name": "F1",
+          "object": 1
+        }
+      ],
+      "image_count": 0,
+      "images": []
+    },
+    {
+      "object": 5,
+      "mediabox": [
+        0.0,
+        0.0,
+        612.0,
+        792.0
+      ],
+      "rotate": 0,
+      "content_objects": [
+        4
+      ],
+      "content_filters": [],
+      "text_showing_bytes": 864,
+      "text_showing_ops": 12,
+      "decompress_errors": [],
+      "fonts": [
+        {
+          "base_font": "Helvetica",
+          "subtype": "Type1",
+          "has_tounicode": false,
+          "embedded": false,
+          "resource_name": "F1",
+          "object": 1
+        }
+      ],
+      "image_count": 0,
+      "images": []
+    }
+  ],
+  "crosscheck": {
+    "engine": "pymupdf",
+    "page_count": 2,
+    "chars_per_page": [
+      876,
+      876
+    ],
+    "diffs": []
+  },
+  "status": "ok"
+}

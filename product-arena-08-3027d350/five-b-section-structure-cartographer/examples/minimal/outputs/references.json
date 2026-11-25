@@ -1,0 +1,56 @@
+{
+  "status": "success",
+  "entry_count": 4,
+  "entries": [
+    {
+      "index": 1,
+      "anchor": {
+        "page": 3,
+        "y0": 70.15
+      },
+      "raw_text": "[1] Smith, A. Example citation one for the synthetic reference list. Journal of Demos, 2020.",
+      "first_author_guess": "Smith",
+      "year_guess": "2020"
+    },
+    {
+      "index": 2,
+      "anchor": {
+        "page": 3,
+        "y0": 89.65
+      },
+      "raw_text": "[2] Jones, B. and White, C. A rather long second example title that wraps onto a second line inside the PDF layout for testing continuation. Proc. Testing, 2021.",
+      "first_author_guess": "Jones",
+      "year_guess": "2021"
+    },
+    {
+      "index": 3,
+      "anchor": {
+        "page": 3,
+        "y0": 122.65
+      },
+      "raw_text": "[3] Brown, D. Third example entry. Demo Letters, 2019.",
+      "first_author_guess": "Brown",
+      "year_guess": "2019"
+    },
+    {
+      "index": 4,
+      "anchor": {
+        "page": 3,
+        "y0": 142.15
+      },
+      "raw_text": "[4] Miller, E. Fourth example entry. Annals of Samples, 2022.",
+      "first_author_guess": "Miller",
+      "year_guess": "2022"
+    }
+  ],
+  "leftovers": [],
+  "char_accounting": {
+    "interval_total_chars": 377,
+    "entries_chars": 368,
+    "leftovers_chars": 0,
+    "skipped_heading_chars": 10,
+    "join_spaces_added": -1,
+    "balanced": true,
+    "note": "续行以单空格连接；join_spaces_added 为合并引入的空格数，原文无任何字符被丢弃。"
+  }
+}

@@ -1,0 +1,24 @@
+{
+  "script": "mini_extract.py",
+  "pdf": "/Users/liuhengshen/Desktop/bhr_product/ra01-5dir/bundles/e-review-render-forge/skill/examples/minimal/inputs/sample.pdf",
+  "engine": "pymupdf",
+  "degraded_from": null,
+  "degrade_reason": null,
+  "warnings": [],
+  "status": "success",
+  "pages": 2,
+  "blocks": 13,
+  "kind_counts": {
+    "title": 1,
+    "body": 8,
+    "heading": 2,
+    "equation": 1,
+    "caption": 1
+  },
+  "outputs": {
+    "blocks_jsonl": "outputs/blocks.jsonl",
+    "page_meta_json": "outputs/page_meta.json"
+  },
+  "input_sha256": "3826eeff53c7427f1e36bc063dfa24fd79743f42bc5f69677c1725b1f365c64a",
+  "exit_code": 0
+}

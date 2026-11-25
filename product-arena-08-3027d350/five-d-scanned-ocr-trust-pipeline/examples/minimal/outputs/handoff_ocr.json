@@ -1,0 +1,20 @@
+{
+  "pdf": "/Users/liuhengshen/Desktop/bhr_product/ra01-5dir/bundles/d-scan-ocr-trust/skill/examples/minimal/inputs/scan_like.pdf",
+  "generated_by": "scan_detect.py",
+  "n_pages_to_ocr": 1,
+  "pages": [
+    {
+      "page": 1,
+      "page_class": "scanned",
+      "suggest_dpi": 300,
+      "suggest_preprocess": [
+        "deskew",
+        "binarize"
+      ],
+      "reason": "无文字层（text_chars=0）且存在整页位图"
+    }
+  ],
+  "notes": [
+    "OCR 本体移交平台 ocr-tool 执行；本清单仅给页码与建议参数"
+  ]
+}

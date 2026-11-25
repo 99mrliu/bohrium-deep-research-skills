@@ -1,0 +1,57 @@
+{
+  "schema": "anchored-review-forge/manifest@1",
+  "hash_algorithm": "sha256",
+  "stats": {
+    "pages": 2,
+    "blocks": 13,
+    "anchors": 13
+  },
+  "input_hashes": {
+    "blocks.jsonl": "8e38370e7046ab6bca3f7d1b7210f1b71060f342daf67f94715df6be466e2dd6",
+    "page_meta.json": "edef2da0929cca11cd20b39af807890073b5635e71f3858b85d7d5ca823c9c70",
+    "sample.pdf": "3826eeff53c7427f1e36bc063dfa24fd79743f42bc5f69677c1725b1f365c64a"
+  },
+  "files": [
+    {
+      "path": "blocks.jsonl",
+      "bytes": 2556,
+      "sha256": "8e38370e7046ab6bca3f7d1b7210f1b71060f342daf67f94715df6be466e2dd6"
+    },
+    {
+      "path": "extract.report.json",
+      "bytes": 635,
+      "sha256": "64a7dedd4838a6124cf9971e070ee8643ab4811e2cf13d8b0d6527f35ea3983e"
+    },
+    {
+      "path": "overlay.report.json",
+      "bytes": 253,
+      "sha256": "f4e7cbf9b8ad2821d3767880c72109d29a1a6ded14e57a6d82944bcf6b38dcc6"
+    },
+    {
+      "path": "overlays/page-1.svg",
+      "bytes": 3260,
+      "sha256": "923131b5b27f625b6e9df3271986261de0c3956dc20c22d95aeb877f19d1a33c"
+    },
+    {
+      "path": "overlays/page-2.svg",
+      "bytes": 1551,
+      "sha256": "86c6a8f28cd4bb7ce936ea973eb7642486f57c714d129cd73a65866eed71d415"
+    },
+    {
+      "path": "page_meta.json",
+      "bytes": 168,
+      "sha256": "edef2da0929cca11cd20b39af807890073b5635e71f3858b85d7d5ca823c9c70"
+    },
+    {
+      "path": "review.html",
+      "bytes": 12993,
+      "sha256": "41669e42c98a434f5a72ea916eadb48f1fff16a4592d022b92636fad900aea89"
+    },
+    {
+      "path": "review.report.json",
+      "bytes": 180,
+      "sha256": "66a4aa267342a9d4baf1c97dd6c3a4bf19fd42f936721f8923d8c2a6958610f8"
+    }
+  ],
+  "notes": "files[] 覆盖产物根目录下除 manifest.json、result.json 与 manifest.report.json（本脚本自产，哈希巡检后才写出）外的全部文件；复核方式：shasum -a 256 <file> 与对应 sha256 逐项比对。"
+}

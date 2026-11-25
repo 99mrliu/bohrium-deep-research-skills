@@ -1,0 +1,69 @@
+{
+  "checks": {
+    "numbering": {
+      "gaps": [],
+      "duplicates": [],
+      "inversions": [],
+      "level_breaks": []
+    },
+    "figures_tables": {
+      "figure": {
+        "cited": [
+          1,
+          3
+        ],
+        "captioned": [
+          1
+        ],
+        "cited_not_captioned": [
+          3
+        ],
+        "captioned_not_cited": []
+      },
+      "table": {
+        "cited": [
+          1
+        ],
+        "captioned": [
+          1
+        ],
+        "cited_not_captioned": [],
+        "captioned_not_cited": []
+      }
+    },
+    "caption_lines": [
+      {
+        "page": 2,
+        "y0": 288.53,
+        "kind": "figure",
+        "n": 1,
+        "text": "Figure 1: Synthetic results overview generated for testing."
+      },
+      {
+        "page": 2,
+        "y0": 306.73,
+        "kind": "table",
+        "n": 1,
+        "text": "Table 1: Synthetic measurements with placeholder values."
+      }
+    ],
+    "coverage": {
+      "total_chars": 1846,
+      "covered_chars": 1846,
+      "coverage": 1.0,
+      "note": "front_matter/body/references/appendix 等区间并集对全文字符的覆盖率。"
+    },
+    "references_char_accounting": {
+      "interval_total_chars": 377,
+      "entries_chars": 368,
+      "leftovers_chars": 0,
+      "skipped_heading_chars": 10,
+      "join_spaces_added": -1,
+      "balanced": true,
+      "note": "续行以单空格连接；join_spaces_added 为合并引入的空格数，原文无任何字符被丢弃。"
+    }
+  },
+  "issue_count": 1,
+  "uncertainty": [],
+  "note": "issue 为审计发现（如引用无题注），不等同于流水线失败。"
+}

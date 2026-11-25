@@ -1,0 +1,13 @@
+{"id": "p1.b1", "page": 1, "kind": "title", "bbox": [72.0, 70.74, 440.06, 95.53], "text": "Anchored Rendering of Parsed Documents", "column": 1, "order": 1}
+{"id": "p1.b2", "page": 1, "kind": "body", "bbox": [72.0, 111.18, 348.35, 154.29], "text": "This synthetic two-page document exists only to feed the\nminimal extractor of the anchored-review-forge skill.\nEvery sentence is fabricated and carries no real claims.", "column": 1, "order": 2}
+{"id": "p1.b3", "page": 1, "kind": "heading", "bbox": [72.0, 169.09, 162.28, 186.99], "text": "1. Introduction", "column": 1, "order": 3}
+{"id": "p1.b4", "page": 1, "kind": "body", "bbox": [72.0, 197.18, 357.52, 226.29], "text": "Anchored rendering draws one colored rectangle per block\nso that a reviewer can trace each line back to the PDF.", "column": 1, "order": 4}
+{"id": "p1.b5", "page": 1, "kind": "body", "bbox": [72.0, 239.18, 322.06, 254.29], "text": "The equation below is a stand-in with no derivation:", "column": 1, "order": 5}
+{"id": "p1.b6", "page": 1, "kind": "equation", "bbox": [72.0, 267.17, 206.17, 282.29], "text": "E = m c^2 + 1/2 k_B T    (1)", "column": 1, "order": 6}
+{"id": "p1.b7", "page": 1, "kind": "body", "bbox": [72.0, 295.17, 341.64, 324.29], "text": "The caption below belongs to a figure that is not drawn,\nwhich is fine for a geometry-only smoke test.", "column": 1, "order": 7}
+{"id": "p1.b8", "page": 1, "kind": "caption", "bbox": [72.0, 337.17, 328.17, 352.29], "text": "Figure 1: Schematic of the anchored review pipeline.", "column": 1, "order": 8}
+{"id": "p1.b9", "page": 1, "kind": "body", "bbox": [72.0, 365.17, 315.33, 394.29], "text": "A trailing paragraph closes the first synthetic page\nso that body blocks outnumber every other kind.", "column": 1, "order": 9}
+{"id": "p2.b1", "page": 2, "kind": "heading", "bbox": [72.0, 71.09, 132.67, 88.99], "text": "2. Method", "column": 1, "order": 10}
+{"id": "p2.b2", "page": 2, "kind": "body", "bbox": [72.0, 99.18, 333.66, 142.29], "text": "Words are clustered into lines by vertical proximity\nand lines merge into blocks while the gap stays small.\nThe kind of each block is assigned by simple rules.", "column": 1, "order": 11}
+{"id": "p2.b3", "page": 2, "kind": "body", "bbox": [72.0, 155.18, 337.33, 184.29], "text": "Rendering is one-to-one in PDF points with no scaling,\nwhich keeps every rectangle easy to audit by eye.", "column": 1, "order": 12}
+{"id": "p2.b4", "page": 2, "kind": "body", "bbox": [72.0, 197.18, 261.54, 212.29], "text": "End of the synthetic sample document.", "column": 1, "order": 13}

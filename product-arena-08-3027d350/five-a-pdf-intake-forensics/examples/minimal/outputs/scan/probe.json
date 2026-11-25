@@ -1,0 +1,39 @@
+{
+  "tool": "textlayer_probe.py",
+  "pdf_path": "/Users/liuhengshen/Desktop/bhr_product/ra01-5dir/bundles/a-intake-forensics/skill/examples/minimal/inputs/scan_like.pdf",
+  "generated_at": "2026-11-25T10:23:35+08:00",
+  "status": "ok",
+  "engine": "pymupdf",
+  "engine_notes": [],
+  "thresholds": {
+    "none_max_chars": 10,
+    "text_min_chars": 100,
+    "garbage_ratio_threshold": 0.05
+  },
+  "page_count": 1,
+  "pages": [
+    {
+      "page": 1,
+      "chars": 0,
+      "classification": "none",
+      "garbled": false,
+      "metrics": {
+        "fffd_count": 0,
+        "cid_hits": 0,
+        "control_chars": 0,
+        "high_byte_count": 0,
+        "high_byte_ratio": 0.0,
+        "garbage_ratio": 0.0,
+        "garbled": false
+      },
+      "sample": ""
+    }
+  ],
+  "classification_summary": {
+    "text": 0,
+    "sparse": 0,
+    "none": 1,
+    "garbled_pages": 0
+  },
+  "notes": []
+}

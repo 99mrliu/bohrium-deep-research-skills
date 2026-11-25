@@ -1,0 +1,280 @@
+{
+  "case_id": "synth-minimal-001",
+  "status": "success",
+  "output_contract_fields": [
+    "document_tree",
+    "section_spans",
+    "references",
+    "reference_count",
+    "structure_audit",
+    "engine"
+  ],
+  "document_tree": [
+    {
+      "number": null,
+      "title": "Abstract",
+      "level": 1,
+      "kind": "abstract",
+      "page": 1,
+      "y0": 154.49,
+      "line_idx": 4,
+      "children": [],
+      "end_line_idx": 7
+    },
+    {
+      "number": "1",
+      "title": "Introduction",
+      "level": 1,
+      "kind": "numbered",
+      "page": 1,
+      "y0": 233.42,
+      "line_idx": 8,
+      "children": [
+        {
+          "number": "1.1",
+          "title": "Background",
+          "level": 2,
+          "kind": "numbered",
+          "page": 1,
+          "y0": 297.46,
+          "line_idx": 11,
+          "children": [],
+          "end_line_idx": 13
+        }
+      ],
+      "end_line_idx": 13
+    },
+    {
+      "number": "2",
+      "title": "Methods",
+      "level": 1,
+      "kind": "numbered",
+      "page": 2,
+      "y0": 37.02,
+      "line_idx": 14,
+      "children": [
+        {
+          "number": "2.1",
+          "title": "Data",
+          "level": 2,
+          "kind": "numbered",
+          "page": 2,
+          "y0": 101.06,
+          "line_idx": 17,
+          "children": [],
+          "end_line_idx": 19
+        },
+        {
+          "number": "2.2",
+          "title": "Setup",
+          "level": 2,
+          "kind": "numbered",
+          "page": 2,
+          "y0": 160.26,
+          "line_idx": 20,
+          "children": [],
+          "end_line_idx": 22
+        }
+      ],
+      "end_line_idx": 22
+    },
+    {
+      "number": "3",
+      "title": "Results",
+      "level": 1,
+      "kind": "numbered",
+      "page": 2,
+      "y0": 223.32,
+      "line_idx": 23,
+      "children": [],
+      "end_line_idx": 29
+    },
+    {
+      "number": null,
+      "title": "References",
+      "level": 1,
+      "kind": "references",
+      "page": 3,
+      "y0": 37.02,
+      "line_idx": 30,
+      "children": [],
+      "end_line_idx": 35
+    },
+    {
+      "number": null,
+      "title": "Acknowledgments",
+      "level": 1,
+      "kind": "acknowledgments",
+      "page": 3,
+      "y0": 167.42,
+      "line_idx": 36,
+      "children": [],
+      "end_line_idx": null
+    }
+  ],
+  "section_spans": {
+    "front_matter": {
+      "start": {
+        "page": 1,
+        "y0": 30.6
+      },
+      "end": {
+        "page": 1,
+        "y0": 208.15
+      },
+      "start_line_idx": 0,
+      "end_line_idx": 7
+    },
+    "body": {
+      "start": {
+        "page": 1,
+        "y0": 233.42
+      },
+      "end": {
+        "page": 2,
+        "y0": 337.25
+      },
+      "start_line_idx": 8,
+      "end_line_idx": 29
+    },
+    "references": {
+      "start": {
+        "page": 3,
+        "y0": 37.02
+      },
+      "end": {
+        "page": 3,
+        "y0": 142.15
+      },
+      "start_line_idx": 30,
+      "end_line_idx": 35
+    },
+    "appendix": null,
+    "acknowledgments": {
+      "start": {
+        "page": 3,
+        "y0": 167.42
+      },
+      "end": {
+        "page": 3,
+        "y0": 196.55
+      },
+      "start_line_idx": 36,
+      "end_line_idx": 37
+    }
+  },
+  "references": [
+    {
+      "index": 1,
+      "anchor": {
+        "page": 3,
+        "y0": 70.15
+      },
+      "raw_text": "[1] Smith, A. Example citation one for the synthetic reference list. Journal of Demos, 2020.",
+      "first_author_guess": "Smith",
+      "year_guess": "2020"
+    },
+    {
+      "index": 2,
+      "anchor": {
+        "page": 3,
+        "y0": 89.65
+      },
+      "raw_text": "[2] Jones, B. and White, C. A rather long second example title that wraps onto a second line inside the PDF layout for testing continuation. Proc. Testing, 2021.",
+      "first_author_guess": "Jones",
+      "year_guess": "2021"
+    },
+    {
+      "index": 3,
+      "anchor": {
+        "page": 3,
+        "y0": 122.65
+      },
+      "raw_text": "[3] Brown, D. Third example entry. Demo Letters, 2019.",
+      "first_author_guess": "Brown",
+      "year_guess": "2019"
+    },
+    {
+      "index": 4,
+      "anchor": {
+        "page": 3,
+        "y0": 142.15
+      },
+      "raw_text": "[4] Miller, E. Fourth example entry. Annals of Samples, 2022.",
+      "first_author_guess": "Miller",
+      "year_guess": "2022"
+    }
+  ],
+  "reference_count": 4,
+  "structure_audit": {
+    "issue_count": 1,
+    "figures": {
+      "cited": [
+        1,
+        3
+      ],
+      "captioned": [
+        1
+      ],
+      "cited_not_captioned": [
+        3
+      ],
+      "captioned_not_cited": []
+    },
+    "tables": {
+      "cited": [
+        1
+      ],
+      "captioned": [
+        1
+      ],
+      "cited_not_captioned": [],
+      "captioned_not_cited": []
+    },
+    "numbering": {
+      "gaps": [],
+      "duplicates": [],
+      "inversions": [],
+      "level_breaks": []
+    },
+    "coverage": {
+      "total_chars": 1846,
+      "covered_chars": 1846,
+      "coverage": 1.0,
+      "note": "front_matter/body/references/appendix 等区间并集对全文字符的覆盖率。"
+    }
+  },
+  "engine": {
+    "engine": "pymupdf",
+    "mode": "styled"
+  },
+  "sources": [
+    "/Users/liuhengshen/Desktop/bhr_product/ra01-5dir/bundles/b-structure-cartography/skill/examples/minimal/inputs/sample.pdf",
+    "/Users/liuhengshen/Desktop/bhr_product/ra01-5dir/bundles/b-structure-cartography/skill/examples/minimal/outputs/lines.jsonl",
+    "/Users/liuhengshen/Desktop/bhr_product/ra01-5dir/bundles/b-structure-cartography/skill/examples/minimal/outputs/document_tree.json",
+    "/Users/liuhengshen/Desktop/bhr_product/ra01-5dir/bundles/b-structure-cartography/skill/examples/minimal/outputs/spans.json",
+    "/Users/liuhengshen/Desktop/bhr_product/ra01-5dir/bundles/b-structure-cartography/skill/examples/minimal/outputs/references.json",
+    "/Users/liuhengshen/Desktop/bhr_product/ra01-5dir/bundles/b-structure-cartography/skill/examples/minimal/inputs/case.json"
+  ],
+  "uncertainty": [],
+  "change_record": [
+    {
+      "step": "extract_styled_lines",
+      "engine": "pymupdf",
+      "mode": "styled"
+    },
+    {
+      "step": "build_hierarchy",
+      "heading_count": 9
+    },
+    {
+      "step": "split_references",
+      "entry_count": 4
+    },
+    {
+      "step": "audit_structure",
+      "issue_count": 1,
+      "time_utc": "2026-11-25T02:24:23Z"
+    }
+  ]
+}

@@ -1,0 +1,36 @@
+{
+  "tool": "textlayer_probe.py",
+  "pdf_path": "/Users/liuhengshen/Desktop/bhr_product/ra01-5dir/bundles/a-intake-forensics/skill/examples/minimal/inputs/broken_tail.pdf",
+  "generated_at": "2026-11-25T10:23:36+08:00",
+  "status": "partial",
+  "engine": "stdlib_count",
+  "engine_notes": [
+    "pymupdf: pymupdf_zero_pages: 打开成功但未重建出任何页（典型于截尾/坏 xref）",
+    "pdftotext: pdftotext_exit_1: Syntax Error: Couldn't find trailer dictionary / Syntax Error: Couldn't find trailer dictionary / Syntax Error: Couldn't read xref table",
+    "stdlib_count: counts_are_bytes_not_unicode_chars"
+  ],
+  "thresholds": {
+    "none_max_chars": 10,
+    "text_min_chars": 100,
+    "garbage_ratio_threshold": 0.05
+  },
+  "page_count": 1,
+  "pages": [
+    {
+      "page": 1,
+      "chars": 864,
+      "classification": "text",
+      "garbled": null,
+      "metrics": null,
+      "sample": "",
+      "note": "stdlib_count: 值为文本绘制字节数近似，未做乱码检测"
+    }
+  ],
+  "classification_summary": {
+    "text": 1,
+    "sparse": 0,
+    "none": 0,
+    "garbled_pages": 0
+  },
+  "notes": []
+}

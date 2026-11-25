@@ -1,0 +1,18 @@
+{
+  "tool": "route_case.py",
+  "case_id": "synthetic-intake-002",
+  "generated_at": "2026-11-25T10:23:35+08:00",
+  "strategy": "full_ocr",
+  "ocr_pages": [
+    1
+  ],
+  "handoff_reason": null,
+  "page_count": 1,
+  "truncated_input": false,
+  "issues": [],
+  "inputs": {
+    "case": "/Users/liuhengshen/Desktop/bhr_product/ra01-5dir/bundles/a-intake-forensics/skill/examples/minimal/inputs/case.json",
+    "forensics": "/Users/liuhengshen/Desktop/bhr_product/ra01-5dir/bundles/a-intake-forensics/skill/examples/minimal/outputs/scan/forensics.json",
+    "probe": "/Users/liuhengshen/Desktop/bhr_product/ra01-5dir/bundles/a-intake-forensics/skill/examples/minimal/outputs/scan/probe.json"
+  }
+}

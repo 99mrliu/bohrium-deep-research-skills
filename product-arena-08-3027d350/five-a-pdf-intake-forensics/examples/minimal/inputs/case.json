@@ -1,0 +1,14 @@
+{
+  "case_id": "synthetic-intake-001",
+  "pdf": "ok_text.pdf",
+  "note": "合成示例（非正式案例、非真实论文）。scan_like/broken_tail 复用同一契约，经 --pdf/--case-id 覆盖运行。",
+  "output_contract": {
+    "fields": [
+      "pdf_file",
+      "page_count",
+      "routing_strategy",
+      "ocr_pages",
+      "intake_notes"
+    ]
+  }
+}

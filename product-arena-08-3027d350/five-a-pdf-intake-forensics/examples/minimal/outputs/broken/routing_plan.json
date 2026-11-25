@@ -1,0 +1,18 @@
+{
+  "tool": "route_case.py",
+  "case_id": "synthetic-intake-003",
+  "generated_at": "2026-11-25T10:23:36+08:00",
+  "strategy": "direct_text",
+  "ocr_pages": [],
+  "handoff_reason": null,
+  "page_count": 1,
+  "truncated_input": true,
+  "issues": [
+    "truncated_input: 文件疑似截尾，以下路由仅覆盖已恢复部分"
+  ],
+  "inputs": {
+    "case": "/Users/liuhengshen/Desktop/bhr_product/ra01-5dir/bundles/a-intake-forensics/skill/examples/minimal/inputs/case.json",
+    "forensics": "/Users/liuhengshen/Desktop/bhr_product/ra01-5dir/bundles/a-intake-forensics/skill/examples/minimal/outputs/broken/forensics.json",
+    "probe": "/Users/liuhengshen/Desktop/bhr_product/ra01-5dir/bundles/a-intake-forensics/skill/examples/minimal/outputs/broken/probe.json"
+  }
+}

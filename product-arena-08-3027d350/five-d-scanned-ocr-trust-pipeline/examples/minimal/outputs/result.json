@@ -1,0 +1,30 @@
+{
+  "case_id": "synthetic-scan-ocr-minimal-001",
+  "status": "partial",
+  "sources": [
+    "/Users/liuhengshen/Desktop/bhr_product/ra01-5dir/bundles/d-scan-ocr-trust/skill/examples/minimal/outputs/scan_report.json",
+    "/Users/liuhengshen/Desktop/bhr_product/ra01-5dir/bundles/d-scan-ocr-trust/skill/examples/minimal/outputs/postcheck.json",
+    "/Users/liuhengshen/Desktop/bhr_product/ra01-5dir/bundles/d-scan-ocr-trust/skill/examples/minimal/inputs/synthetic_ocr.txt",
+    "/Users/liuhengshen/Desktop/bhr_product/ra01-5dir/bundles/d-scan-ocr-trust/skill/examples/minimal/outputs/corrected.txt"
+  ],
+  "uncertainty": [
+    "OCR 文本页数（3）与 PDF 页数（1）不一致，超出页按 unknown 类降级处理",
+    "存在 unknown 页类，相关页可信度按降级规则处理"
+  ],
+  "change_record": [
+    "trust_ledger.py：合并 scan_report + postcheck，按写死规则分级"
+  ],
+  "page_classes": {
+    "1": "scanned",
+    "2": "unknown",
+    "3": "unknown"
+  },
+  "ocr_corrections": {
+    "corrections": 13,
+    "suspects": 2,
+    "corrections_ledger": "/Users/liuhengshen/Desktop/bhr_product/ra01-5dir/bundles/d-scan-ocr-trust/skill/examples/minimal/outputs/postcheck.json"
+  },
+  "trust_ledger": "/Users/liuhengshen/Desktop/bhr_product/ra01-5dir/bundles/d-scan-ocr-trust/skill/examples/minimal/outputs/trust_ledger.json",
+  "corrected_text": "/Users/liuhengshen/Desktop/bhr_product/ra01-5dir/bundles/d-scan-ocr-trust/skill/examples/minimal/outputs/corrected.txt",
+  "unreadable_pages": []
+}

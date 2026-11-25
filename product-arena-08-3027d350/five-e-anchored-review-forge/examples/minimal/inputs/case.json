@@ -1,0 +1,14 @@
+{
+  "case_id": "synthetic-anchored-review-001",
+  "title": "合成示例：解析块渲染复核",
+  "pdf": "inputs/sample.pdf",
+  "task": "把最小提取器产出的带坐标块渲染成可复核交付物（SVG 叠加图、review.html、manifest）",
+  "synthetic": true,
+  "output_contract": [
+    "review_html",
+    "overlays",
+    "manifest",
+    "stats",
+    "input_hashes"
+  ]
+}

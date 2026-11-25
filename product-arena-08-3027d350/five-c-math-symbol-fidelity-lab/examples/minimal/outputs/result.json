@@ -1,0 +1,353 @@
+{
+  "case_id": "synthetic-math-001",
+  "equations": [
+    {
+      "id": "eq-001",
+      "page": 1,
+      "anchor": {
+        "page": 1,
+        "bbox": [
+          [
+            72.0,
+            534.66
+          ],
+          [
+            129.1,
+            145.59
+          ]
+        ]
+      },
+      "verbatim": "α + β = γ(1)",
+      "linear": "α + β = γ",
+      "number": "1",
+      "unmapped": [],
+      "mode": "char",
+      "signals": [
+        "greek_letter",
+        "math_operator",
+        "equation_number"
+      ],
+      "partial": false
+    },
+    {
+      "id": "eq-002",
+      "page": 1,
+      "anchor": {
+        "page": 1,
+        "bbox": [
+          [
+            72.0,
+            534.66
+          ],
+          [
+            168.48,
+            189.09
+          ]
+        ]
+      },
+      "verbatim": "Ei = x2 + χψ(2)",
+      "linear": "E_{i} = x^{2} + χψ",
+      "number": "2",
+      "unmapped": [],
+      "mode": "char",
+      "signals": [
+        "greek_letter",
+        "math_operator",
+        "script_layout",
+        "equation_number"
+      ],
+      "partial": false
+    },
+    {
+      "id": "eq-003",
+      "page": 1,
+      "anchor": {
+        "page": 1,
+        "bbox": [
+          [
+            72.0,
+            134.75
+          ],
+          [
+            249.1,
+            265.59
+          ]
+        ]
+      },
+      "verbatim": "Sum: α + β",
+      "linear": "Sum: α + β",
+      "number": null,
+      "unmapped": [],
+      "mode": "char",
+      "signals": [
+        "greek_letter",
+        "math_operator"
+      ],
+      "partial": false
+    },
+    {
+      "id": "eq-004",
+      "page": 2,
+      "anchor": {
+        "page": 2,
+        "bbox": [
+          [
+            72.0,
+            534.66
+          ],
+          [
+            79.1,
+            95.59
+          ]
+        ]
+      },
+      "verbatim": "Σ φ(ξ) = Ω(3)",
+      "linear": "Σ φ(ξ) = Ω",
+      "number": "3",
+      "unmapped": [],
+      "mode": "char",
+      "signals": [
+        "greek_letter",
+        "math_operator",
+        "equation_number"
+      ],
+      "partial": false
+    }
+  ],
+  "unmapped_symbols": [
+    {
+      "page": 1,
+      "bbox": [
+        125.0,
+        211.79,
+        134.12,
+        223.79
+      ],
+      "font": "ZapfDingbats",
+      "raw_codepoint": "U+006B",
+      "extracted_char": "k",
+      "reason": "ZapfDingbats 码位不在保守映射子集(不猜测)",
+      "zone_id": null,
+      "context": "outside-math-zone"
+    }
+  ],
+  "fidelity_summary": {
+    "counts": {
+      "equations": 4,
+      "numbered": 3,
+      "replacements": 0,
+      "trusted_decoded": 11,
+      "unmapped": 1,
+      "baseline_anomalies": 0,
+      "partial_zones": 0
+    },
+    "replacement_detail": [],
+    "baseline_anomalies": [],
+    "status": "partial",
+    "thresholds": {
+      "script_size_ratio": 0.8,
+      "script_offset_ratio": 0.25,
+      "baseline_tolerance_ratio": 0.3
+    }
+  },
+  "math_zones": [
+    {
+      "id": "zone-001",
+      "page": 1,
+      "y": [
+        129.1,
+        145.59
+      ],
+      "x": [
+        72.0,
+        534.66
+      ],
+      "raw_chars": "α + β = γ(1)",
+      "detected_number": "1",
+      "signals": [
+        "greek_letter",
+        "math_operator",
+        "equation_number"
+      ],
+      "mode": "char",
+      "partial": false,
+      "script_evidence": null,
+      "glyph_ids": [
+        87,
+        88,
+        89,
+        90,
+        91,
+        92,
+        93,
+        94,
+        95,
+        96,
+        97,
+        98
+      ]
+    },
+    {
+      "id": "zone-002",
+      "page": 1,
+      "y": [
+        168.48,
+        189.09
+      ],
+      "x": [
+        72.0,
+        534.66
+      ],
+      "raw_chars": "Ei = x2 + χψ(2)",
+      "detected_number": "2",
+      "signals": [
+        "greek_letter",
+        "math_operator",
+        "script_layout",
+        "equation_number"
+      ],
+      "mode": "char",
+      "partial": false,
+      "script_evidence": {
+        "char": "i",
+        "kind": "subscript",
+        "size": 7.0,
+        "median_size": 12.0,
+        "offset": -5.0
+      },
+      "glyph_ids": [
+        99,
+        100,
+        101,
+        102,
+        103,
+        104,
+        105,
+        106,
+        107,
+        108,
+        109,
+        110,
+        111,
+        112,
+        113
+      ]
+    },
+    {
+      "id": "zone-003",
+      "page": 1,
+      "y": [
+        249.1,
+        265.59
+      ],
+      "x": [
+        72.0,
+        134.75
+      ],
+      "raw_chars": "Sum: α + β",
+      "detected_number": null,
+      "signals": [
+        "greek_letter",
+        "math_operator"
+      ],
+      "mode": "char",
+      "partial": false,
+      "script_evidence": null,
+      "glyph_ids": [
+        123,
+        124,
+        125,
+        126,
+        127,
+        128,
+        129,
+        130,
+        131,
+        132
+      ]
+    },
+    {
+      "id": "zone-004",
+      "page": 2,
+      "y": [
+        79.1,
+        95.59
+      ],
+      "x": [
+        72.0,
+        534.66
+      ],
+      "raw_chars": "Σ φ(ξ) = Ω(3)",
+      "detected_number": "3",
+      "signals": [
+        "greek_letter",
+        "math_operator",
+        "equation_number"
+      ],
+      "mode": "char",
+      "partial": false,
+      "script_evidence": null,
+      "glyph_ids": [
+        145,
+        146,
+        147,
+        148,
+        149,
+        150,
+        151,
+        152,
+        153,
+        154,
+        155,
+        156,
+        157
+      ]
+    }
+  ],
+  "engine_info": {
+    "engine": "pymupdf-rawdict",
+    "degrade_reason": null,
+    "page_modes": {
+      "1": "char",
+      "2": "char"
+    },
+    "degraded_pages": [],
+    "counts": {
+      "records": 182,
+      "char_records": 182,
+      "word_records": 0,
+      "pages": 2
+    }
+  },
+  "status": "partial",
+  "sources": [
+    "examples/minimal/inputs/sample_math.pdf",
+    "examples/minimal/inputs/case.json"
+  ],
+  "uncertainty": [
+    "保真度状态 partial: 未映射符号 1 个(见 unmapped_symbols 台账)"
+  ],
+  "change_record": [
+    {
+      "step": "extract_glyphs",
+      "artifact": "/tmp/cwork/glyphs.jsonl",
+      "engine": "pymupdf-rawdict"
+    },
+    {
+      "step": "detect_math_zones",
+      "artifact": "/tmp/cwork/math_zones.json",
+      "zones": 4
+    },
+    {
+      "step": "linearize_math",
+      "artifact": "/tmp/cwork/equations.json",
+      "equations": 4,
+      "fidelity_status": "partial"
+    },
+    {
+      "step": "make_result",
+      "artifact": "/tmp/cwork/result.json",
+      "ts": "2026-11-25T10:23:40+0800"
+    }
+  ]
+}

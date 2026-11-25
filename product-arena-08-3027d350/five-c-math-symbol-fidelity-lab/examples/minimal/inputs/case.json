@@ -1,0 +1,14 @@
+{
+  "case_id": "synthetic-math-001",
+  "title": "合成示例: 数学符号保真(非正式案例、非真实论文)",
+  "inputs": {
+    "pdf": "examples/minimal/inputs/sample_math.pdf"
+  },
+  "output_contract": [
+    "equations",
+    "unmapped_symbols",
+    "fidelity_summary",
+    "math_zones",
+    "engine_info"
+  ]
+}

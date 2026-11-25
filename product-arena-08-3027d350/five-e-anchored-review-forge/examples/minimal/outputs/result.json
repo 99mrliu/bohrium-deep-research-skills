@@ -1,0 +1,32 @@
+{
+  "case_id": "synthetic-anchored-review-001",
+  "review_html": "review.html",
+  "overlays": [
+    "overlays/page-1.svg",
+    "overlays/page-2.svg"
+  ],
+  "manifest": "manifest.json",
+  "stats": {
+    "pages": 2,
+    "blocks": 13,
+    "anchors": 13
+  },
+  "input_hashes": {
+    "blocks.jsonl": "8e38370e7046ab6bca3f7d1b7210f1b71060f342daf67f94715df6be466e2dd6",
+    "page_meta.json": "edef2da0929cca11cd20b39af807890073b5635e71f3858b85d7d5ca823c9c70",
+    "sample.pdf": "3826eeff53c7427f1e36bc063dfa24fd79743f42bc5f69677c1725b1f365c64a"
+  },
+  "status": "success",
+  "sources": [
+    "blocks.jsonl",
+    "page_meta.json",
+    "overlays/*.svg",
+    "review.html",
+    "manifest.json"
+  ],
+  "uncertainty": [],
+  "change_record": [
+    "render_manifest.py: 对产物根目录逐文件计算 sha256 写入 manifest.json",
+    "render_manifest.py: 按 case.json 的 output_contract 填充 result.json （status=success）"
+  ]
+}

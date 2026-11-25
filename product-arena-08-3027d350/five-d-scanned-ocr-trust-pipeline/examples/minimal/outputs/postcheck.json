@@ -1,0 +1,153 @@
+{
+  "ocr": "/Users/liuhengshen/Desktop/bhr_product/ra01-5dir/bundles/d-scan-ocr-trust/skill/examples/minimal/inputs/synthetic_ocr.txt",
+  "engine": "stdlib-lexicon-rules",
+  "lexicon": {
+    "path": "/Users/liuhengshen/Desktop/bhr_product/ra01-5dir/bundles/d-scan-ocr-trust/skill/references/lexicon-en.txt",
+    "size": 445
+  },
+  "policy": "保守纠错：仅唯一解改正并记账；多解/无解进 suspects 原文保留",
+  "stats": {
+    "pages": 3,
+    "lines": 4,
+    "tokens_checked": 150,
+    "corrections": 13,
+    "suspects": 2,
+    "unknown_words": 0,
+    "per_page": {
+      "1": {
+        "tokens": 54,
+        "corrections": 6,
+        "suspects": 1,
+        "correction_rate": 0.111111
+      },
+      "2": {
+        "tokens": 49,
+        "corrections": 0,
+        "suspects": 0,
+        "correction_rate": 0.0
+      },
+      "3": {
+        "tokens": 47,
+        "corrections": 7,
+        "suspects": 1,
+        "correction_rate": 0.148936
+      }
+    }
+  },
+  "corrections": [
+    {
+      "page": 1,
+      "line": 1,
+      "from": "5ample",
+      "to": "sample",
+      "rule": "confusion_unique"
+    },
+    {
+      "page": 1,
+      "line": 1,
+      "from": "chernical",
+      "to": "chemical",
+      "rule": "confusion_unique"
+    },
+    {
+      "page": 1,
+      "line": 1,
+      "from": "1nfrared",
+      "to": "infrared",
+      "rule": "confusion_unique"
+    },
+    {
+      "page": 1,
+      "line": 1,
+      "from": "detecti0n",
+      "to": "detection",
+      "rule": "confusion_unique"
+    },
+    {
+      "page": 1,
+      "line": 1,
+      "from": "rnicrowave",
+      "to": "microwave",
+      "rule": "confusion_unique"
+    },
+    {
+      "page": 1,
+      "line": 1,
+      "from": "c1uster",
+      "to": "cluster",
+      "rule": "confusion_unique"
+    },
+    {
+      "page": 3,
+      "line": 1,
+      "from": "vvave",
+      "to": "wave",
+      "rule": "confusion_unique"
+    },
+    {
+      "page": 3,
+      "line": 1,
+      "from": "0xidation",
+      "to": "oxidation",
+      "rule": "confusion_unique"
+    },
+    {
+      "page": 3,
+      "line": 1,
+      "from": "comparis0n",
+      "to": "comparison",
+      "rule": "confusion_unique"
+    },
+    {
+      "page": 3,
+      "line": 1,
+      "from": "resu1ts",
+      "to": "results",
+      "rule": "confusion_unique"
+    },
+    {
+      "page": 3,
+      "line": 1,
+      "from": "2O25",
+      "to": "2025",
+      "rule": "numeric_context"
+    },
+    {
+      "page": 3,
+      "line": 1,
+      "from": "rnethod",
+      "to": "method",
+      "rule": "confusion_unique"
+    },
+    {
+      "page": 3,
+      "line": 1,
+      "from": "5pectra",
+      "to": "spectra",
+      "rule": "confusion_unique"
+    }
+  ],
+  "suspects": [
+    {
+      "page": 1,
+      "line": 1,
+      "token": "ha1l",
+      "candidates": [
+        "hail",
+        "hall"
+      ],
+      "reason": "ambiguous:多个单点替换均在词典，原文保留"
+    },
+    {
+      "page": 3,
+      "line": 1,
+      "token": "wa1l",
+      "candidates": [
+        "wail",
+        "wall"
+      ],
+      "reason": "ambiguous:多个单点替换均在词典，原文保留"
+    }
+  ],
+  "unknown_words_sample": []
+}

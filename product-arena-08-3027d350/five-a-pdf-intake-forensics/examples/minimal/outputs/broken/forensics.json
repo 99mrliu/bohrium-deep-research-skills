@@ -1,0 +1,70 @@
+{
+  "tool": "pdf_forensics.py",
+  "pdf_path": "/Users/liuhengshen/Desktop/bhr_product/ra01-5dir/bundles/a-intake-forensics/skill/examples/minimal/inputs/broken_tail.pdf",
+  "file_size_bytes": 1786,
+  "generated_at": "2026-11-25T10:23:36+08:00",
+  "issues": [
+    "truncated: 文件尾缺少完整 startxref/%%EOF，疑似截尾或写入中断",
+    "page_order_fallback: kids walk failed, pages listed in object-number order",
+    "crosscheck_diff: page_count: stdlib=1 pymupdf=0"
+  ],
+  "pdf_version": "1.4",
+  "encrypted": false,
+  "linearized": false,
+  "object_count": 4,
+  "objstm_count": 0,
+  "xref_stream": false,
+  "xref": {
+    "startxref_found": false,
+    "startxref_offset": null,
+    "startxref_points_to_xref": null,
+    "trailer_eof_in_tail": false,
+    "eof_marker_count": 0,
+    "prev_count": 0,
+    "incremental_update": false,
+    "xref_ok": false,
+    "truncated": true
+  },
+  "metadata": {},
+  "page_count": 1,
+  "pages": [
+    {
+      "object": 3,
+      "mediabox": [
+        0.0,
+        0.0,
+        612.0,
+        792.0
+      ],
+      "rotate": 0,
+      "content_objects": [
+        2
+      ],
+      "content_filters": [],
+      "text_showing_bytes": 864,
+      "text_showing_ops": 12,
+      "decompress_errors": [],
+      "fonts": [
+        {
+          "base_font": "Helvetica",
+          "subtype": "Type1",
+          "has_tounicode": false,
+          "embedded": false,
+          "resource_name": "F1",
+          "object": 1
+        }
+      ],
+      "image_count": 0,
+      "images": []
+    }
+  ],
+  "crosscheck": {
+    "engine": "pymupdf",
+    "page_count": 0,
+    "chars_per_page": [],
+    "diffs": [
+      "page_count: stdlib=1 pymupdf=0"
+    ]
+  },
+  "status": "partial"
+}

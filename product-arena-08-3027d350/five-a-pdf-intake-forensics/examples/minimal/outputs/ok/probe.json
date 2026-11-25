@@ -1,0 +1,55 @@
+{
+  "tool": "textlayer_probe.py",
+  "pdf_path": "/Users/liuhengshen/Desktop/bhr_product/ra01-5dir/bundles/a-intake-forensics/skill/examples/minimal/inputs/ok_text.pdf",
+  "generated_at": "2026-11-25T10:23:34+08:00",
+  "status": "ok",
+  "engine": "pymupdf",
+  "engine_notes": [],
+  "thresholds": {
+    "none_max_chars": 10,
+    "text_min_chars": 100,
+    "garbage_ratio_threshold": 0.05
+  },
+  "page_count": 2,
+  "pages": [
+    {
+      "page": 1,
+      "chars": 708,
+      "classification": "text",
+      "garbled": false,
+      "metrics": {
+        "fffd_count": 0,
+        "cid_hits": 0,
+        "control_chars": 0,
+        "high_byte_count": 0,
+        "high_byte_ratio": 0.0,
+        "garbage_ratio": 0.0,
+        "garbled": false
+      },
+      "sample": "Page 1, line 01: the quick brown fox jumps over the lazy dog 0123456789. Page 1,"
+    },
+    {
+      "page": 2,
+      "chars": 708,
+      "classification": "text",
+      "garbled": false,
+      "metrics": {
+        "fffd_count": 0,
+        "cid_hits": 0,
+        "control_chars": 0,
+        "high_byte_count": 0,
+        "high_byte_ratio": 0.0,
+        "garbage_ratio": 0.0,
+        "garbled": false
+      },
+      "sample": "Page 2, line 01: the quick brown fox jumps over the lazy dog 0123456789. Page 2,"
+    }
+  ],
+  "classification_summary": {
+    "text": 2,
+    "sparse": 0,
+    "none": 0,
+    "garbled_pages": 0
+  },
+  "notes": []
+}
