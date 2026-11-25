@@ -43,7 +43,7 @@ python3 ../../scripts/render_manifest.py --out-dir outputs --blocks outputs/bloc
    脚本/样式。另用含 `& < > " '` 的对抗文本块做过转义压测（在 /tmp，
    不进 outputs）：SVG 可解析且 `<title>` 往返还原，HTML 中无裸注入。
 6. **manifest 哈希复核**（`shasum -a 256` 实算 vs manifest.json 条目）：
-   - `review.html`：`36c0dadcbce7ad35eac92a64476f6b10702bb43a8d1106dc7dd12315c2834837` —— 一致
+   - `review.html`：`41669e42c98a434f5a72ea916eadb48f1fff16a4592d022b92636fad900aea89` —— 一致（review.html 内嵌生成时间，重跑后哈希会变，以 manifest.json 条目为准复核）
    - `overlays/page-1.svg`：`923131b5b27f625b6e9df3271986261de0c3956dc20c22d95aeb877f19d1a33c` —— 一致
 7. **状态流转**：除本示例外，自测中真实触发过 partial（屏蔽 pymupdf
    走 pdftotext 引擎，产出相同 13 块并记 title 兜底 warning，退出码 2）
