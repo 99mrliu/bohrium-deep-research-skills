@@ -1,0 +1,86 @@
+{
+  "case_id": "SYNTHETIC-ER-001",
+  "synthetic": true,
+  "output_contract": ["case_id", "status", "editable_source", "export_artifact", "content_map", "compliance_checks", "exceptions", "audit_artifact"],
+  "registry": {
+    "entities": [
+      {
+        "canonical_id": "syn:human-tp53-gene",
+        "entity_kind": "gene",
+        "species": "Homo sapiens",
+        "gene_symbol": "TP53",
+        "aliases": ["TP53", "p53"],
+        "alias_policies": {"TP53": "context_required", "p53": "context_required"},
+        "source_locator": {"document": "SYNTHETIC-registry", "locator": "fixture entity 1"}
+      },
+      {
+        "canonical_id": "syn:human-tp53-protein",
+        "entity_kind": "protein",
+        "species": "Homo sapiens",
+        "protein_name": "TP53",
+        "aliases": ["TP53", "p53", "Tumor protein p53"],
+        "alias_policies": {"TP53": "context_required", "p53": "context_required"},
+        "source_locator": {"document": "SYNTHETIC-registry", "locator": "fixture entity 2"}
+      },
+      {
+        "canonical_id": "syn:mouse-trp53-gene",
+        "entity_kind": "gene",
+        "species": "Mus musculus",
+        "gene_symbol": "Trp53",
+        "aliases": ["Trp53", "p53"],
+        "alias_policies": {"p53": "context_required"},
+        "source_locator": {"document": "SYNTHETIC-registry", "locator": "fixture entity 3"}
+      },
+      {
+        "canonical_id": "syn:human-receptor-r",
+        "entity_kind": "receptor",
+        "species": "Homo sapiens",
+        "protein_name": "Synthetic receptor R",
+        "aliases": ["SYNR"],
+        "source_locator": {"document": "SYNTHETIC-registry", "locator": "fixture entity 4"}
+      },
+      {
+        "canonical_id": "syn:complex-c",
+        "entity_kind": "complex",
+        "species": "Homo sapiens",
+        "display_name": "Synthetic assembly C",
+        "aliases": ["Assembly C"],
+        "members": ["syn:human-tp53-protein", "syn:human-receptor-r"],
+        "source_locator": {"document": "SYNTHETIC-registry", "locator": "fixture entity 5"}
+      },
+      {
+        "canonical_id": "syn:family-f",
+        "entity_kind": "family",
+        "species": "Homo sapiens",
+        "display_name": "Synthetic family F",
+        "aliases": ["Family F"],
+        "members": ["syn:human-tp53-protein", "syn:human-receptor-r"],
+        "source_locator": {"document": "SYNTHETIC-registry", "locator": "fixture entity 6"}
+      },
+      {
+        "canonical_id": "syn:cell-t",
+        "entity_kind": "cell_type",
+        "species": "Homo sapiens",
+        "display_name": "Synthetic cell T",
+        "aliases": ["Cell T"],
+        "source_locator": {"document": "SYNTHETIC-registry", "locator": "fixture entity 7"}
+      },
+      {
+        "canonical_id": "syn:small-molecule-a",
+        "entity_kind": "small_molecule",
+        "species": "not_applicable",
+        "display_name": "Synthetic molecule A",
+        "aliases": ["Molecule A"],
+        "source_locator": {"document": "SYNTHETIC-registry", "locator": "fixture entity 8"}
+      }
+    ],
+    "interactions": [{"source": "syn:human-receptor-r", "target": "syn:complex-c"}]
+  },
+  "mentions": [
+    {"surface": "p53", "species": "Homo sapiens", "entity_kind": "gene"},
+    {"surface": "P53", "species": "Homo sapiens", "entity_kind": "protein"},
+    {"surface": "p53", "species": "Mus musculus", "entity_kind": "gene"},
+    {"surface": "TP53", "species": "Homo sapiens", "entity_kind": "protein"}
+  ],
+  "source_files": ["task.md", "figure-workorder.json", "figure03.svg", "figure03.caption.txt", "data/values.csv"]
+}

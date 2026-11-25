@@ -1,0 +1,22 @@
+{
+  "synthetic": true,
+  "changed": [],
+  "unchanged": ["All input entities, edges, compartments and constraints"],
+  "operations": [],
+  "output_contract": {
+    "contract_version": "1.0",
+    "required_files": ["layout.json", "figure.svg", "figure.png", "figure.pdf", "topology_audit.json", "sources.json", "uncertainty.json", "change_records.json", "result.json"],
+    "artifacts": {
+      "layout": "layout.json",
+      "svg": "figure.svg",
+      "png": "figure.png",
+      "pdf": "figure.pdf",
+      "audit": "topology_audit.json",
+      "sources": "sources.json",
+      "uncertainty": "uncertainty.json",
+      "change_records": "change_records.json",
+      "result": "result.json"
+    },
+    "result_requirements": ["case_id", "status", "partial", "artifact_checks", "sources", "uncertainties", "change_records"]
+  }
+}

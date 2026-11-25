@@ -1,0 +1,76 @@
+{
+  "schema_version": 6,
+  "task_id": "source-surgery",
+  "bundle_name": "source_surgery",
+  "case_id": "source-surgery__figure03_source__figure03__source-preserving",
+  "composite_id": "source-surgery__figure03_source__figure03__source-preserving",
+  "record_key": "source-surgery__figure03_source__figure03__source-preserving",
+  "source_file": "figure03_source.svg",
+  "panel": "figure03",
+  "mode": "source-preserving",
+  "input_mode": "source-preserving",
+  "asset": {
+    "source_file": "figure03_source.svg",
+    "panel": "figure03",
+    "mode": "source-preserving"
+  },
+  "source": {
+    "paper": "source_paper.md",
+    "editable_svg": "source.svg",
+    "figure03_png": "figure03.png",
+    "data": "data.csv",
+    "workorder": "source_surgery/workorder.json"
+  },
+  "paths": {
+    "work": "/app/work/source-surgery",
+    "output": "/app/output/source-surgery"
+  },
+  "editorial_policy": {
+    "final_target": "shared_win_figure",
+    "generation_overwrite_protection": true
+  },
+  "scientific_requirements": {
+    "native_agent_must_read": ["source_paper.md", "source.svg", "figure03.png", "data.csv"],
+    "script_role": "XML integrity, deterministic editing, export and readback only; no biological inference",
+    "preserve_unrelated_layers": true,
+    "visual_review_required_before_complete": true
+  },
+  "output_contract": {
+    "case_id": "source-surgery__figure03_source__figure03__source-preserving",
+    "result_file_pointer": "result/source-surgery__figure03_source__figure03__source-preserving.json",
+    "result": "result/source-surgery__figure03_source__figure03__source-preserving.json",
+    "record_key": "record_key/source-surgery__figure03_source__figure03__source-preserving.json",
+    "edited": "edited/source-surgery__figure03_source__figure03__source-preserving.json",
+    "edited_svg": "edited/source-surgery__figure03_source__figure03__source-preserving/source.svg",
+    "edited_png": "edited/source-surgery__figure03_source__figure03__source-preserving/figure03.png",
+    "edited_pdf": "edited/source-surgery__figure03_source__figure03__source-preserving/figure03.pdf",
+    "before_xml": "review/before.xml",
+    "after_xml": "review/after.xml",
+    "unchanged_elements": "review/unchanged_elements.json",
+    "change_records": "review/change_records.json",
+    "source_map": "sources/content_mapping.json",
+    "sources": "sources/sources.json",
+    "uncertainty": "sources/uncertainty.json",
+    "validation": "review/validation.json",
+    "visual_review": "review/visual_review.json",
+    "run_manifest": "review/run_manifest.json",
+    "asset_paths": {
+      "result": "result/source-surgery__figure03_source__figure03__source-preserving.json",
+      "record_key": "record_key/source-surgery__figure03_source__figure03__source-preserving.json",
+      "edited": "edited/source-surgery__figure03_source__figure03__source-preserving.json",
+      "edited_svg": "edited/source-surgery__figure03_source__figure03__source-preserving/source.svg",
+      "edited_png": "edited/source-surgery__figure03_source__figure03__source-preserving/figure03.png",
+      "edited_pdf": "edited/source-surgery__figure03_source__figure03__source-preserving/figure03.pdf",
+      "before_xml": "review/before.xml",
+      "after_xml": "review/after.xml",
+      "unchanged_elements": "review/unchanged_elements.json",
+      "change_records": "review/change_records.json",
+      "source_map": "sources/content_mapping.json",
+      "sources": "sources/sources.json",
+      "uncertainty": "sources/uncertainty.json",
+      "validation": "review/validation.json",
+      "visual_review": "review/visual_review.json",
+      "run_manifest": "review/run_manifest.json"
+    }
+  }
+}

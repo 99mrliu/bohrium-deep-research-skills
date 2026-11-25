@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" id="figure03-root" width="800" height="500" viewBox="0 0 800 500" version="1.1">
+  <metadata id="source-metadata">
+    <rdf:RDF id="source-rdf">
+      <rdf:Description id="source-description" rdf:about="">SYNTHETIC layered source for source-preserving surgery; not experimental biology.</rdf:Description>
+    </rdf:RDF>
+  </metadata>
+  <title id="figure-title">SYNTHETIC mechanism panel — original source</title>
+  <desc id="figure-description">All layers, metadata, labels and geometry are intentionally retained except explicit workorder targets.</desc>
+  <defs id="figure-definitions">
+    <marker id="arrow-direct" markerWidth="10" markerHeight="10" refX="9" refY="3" orient="auto" markerUnits="strokeWidth">
+      <path id="arrow-direct-shape" d="M0,0 L0,6 L9,3 z" fill="#2563eb"/>
+    </marker>
+    <marker id="arrow-feedback" markerWidth="10" markerHeight="10" refX="9" refY="3" orient="auto" markerUnits="strokeWidth">
+      <path id="arrow-feedback-shape" d="M0,0 L0,6 L9,3 z" fill="#7c3aed"/>
+    </marker>
+    <marker id="arrow-uncertain" markerWidth="10" markerHeight="10" refX="9" refY="3" orient="auto" markerUnits="strokeWidth">
+      <path id="arrow-uncertain-shape" d="M0,0 L0,6 L9,3 z" fill="#b45309"/>
+    </marker>
+  </defs>
+  <g id="background-layer">
+    <rect id="background" x="0" y="0" width="800" height="500" fill="#f8fafc"/>
+    <text id="panel-label" x="30" y="42" font-family="sans-serif" font-size="26" font-weight="700" fill="#0f172a">Figure 03 | SYNTHETIC</text>
+  </g>
+  <g id="edges-layer" fill="none" stroke-width="3">
+    <path id="edge-ab" data-edge-kind="direct" d="M245 225 C310 225 340 225 405 225" stroke="#2563eb" marker-end="url(#arrow-direct)"/>
+    <path id="edge-cb" data-edge-kind="dashed" d="M620 155 C620 185 590 195 550 205" stroke="#b45309" stroke-dasharray="8 5"/>
+    <path id="edge-ba" data-edge-kind="feedback" d="M435 285 C390 350 265 350 205 285" stroke="#7c3aed" stroke-dasharray="10 5" marker-end="url(#arrow-feedback)"/>
+  </g>
+  <g id="nodes-layer" font-family="sans-serif">
+    <g id="node-a-group">
+      <rect id="node-a" x="75" y="170" width="170" height="110" rx="12" fill="#dbeafe" stroke="#1e40af" stroke-width="2"/>
+      <text id="node-a-label" x="160" y="220" text-anchor="middle" font-size="21" fill="#0f172a">Target A</text>
+      <text id="node-a-note" x="160" y="248" text-anchor="middle" font-size="14" fill="#475569">source node</text>
+    </g>
+    <g id="node-b-group">
+      <rect id="node-b" x="405" y="170" width="170" height="110" rx="12" style="fill: #dcfce7; stroke: #166534; stroke-width: 2"/>
+      <text id="node-b-label" x="490" y="220" text-anchor="middle" font-size="21" fill="#0f172a">Response B</text>
+      <text id="node-b-note" x="490" y="248" text-anchor="middle" font-size="14" fill="#475569">editable label</text>
+    </g>
+    <g id="node-c-group">
+      <rect id="node-c" x="535" y="60" width="170" height="90" rx="12" fill="#fef3c7" stroke="#92400e" stroke-width="2"/>
+      <text id="node-c-label" x="620" y="113" text-anchor="middle" font-size="20" fill="#0f172a">Modulator C</text>
+    </g>
+  </g>
+  <g id="annotation-layer" font-family="sans-serif">
+    <text id="edge-ab-label" x="325" y="203" text-anchor="middle" font-size="14" fill="#1d4ed8">activates</text>
+    <text id="edge-cb-label" x="658" y="190" text-anchor="middle" font-size="14" fill="#92400e">uncertain</text>
+    <text id="feedback-label" x="320" y="345" text-anchor="middle" font-size="14" fill="#6d28d9">feedback inhibition</text>
+    <g id="protected-layer">
+      <rect id="protected-note-box" x="55" y="385" width="690" height="70" rx="8" fill="#ffffff" stroke="#cbd5e1"/>
+      <text id="protected-note-text" x="75" y="415" font-size="15" fill="#334155">Protected unrelated note: preserve this text and all non-target layers verbatim.</text>
+      <text id="protected-source-text" x="75" y="440" font-size="13" fill="#64748b">Source: SYNTHETIC input/data.csv; biological interpretation is not inferred.</text>
+    </g>
+    <text id="legend-label" x="655" y="480" text-anchor="middle" font-size="12" fill="#475569" data-review="original">legend: editable source</text>
+  </g>
+</svg>

@@ -1,0 +1,17 @@
+{
+  "reviewer": "Native Agent synthetic-source review",
+  "verdict": "pass",
+  "materials_read": ["source_paper.md", "data.csv", "specification.json", "workorder.json", "task.md"],
+  "reviewed_entity_ids": ["node-a", "node-b", "node-c"],
+  "feedback_reviewed": true,
+  "uncertain_edges_reviewed": true,
+  "observations": [
+    "The three specified labels and source/target endpoints agree with the three synthetic CSV observations and source excerpt.",
+    "Response B to Target A is preserved as feedback inhibition.",
+    "Modulator C to Response B remains explicitly marked uncertain in specification and legend."
+  ],
+  "limitations": [
+    "This review establishes fidelity only to the synthetic materials, not real biological validity.",
+    "Visual fitting and export fidelity require separate inspection of generated PNG and PDF."
+  ]
+}

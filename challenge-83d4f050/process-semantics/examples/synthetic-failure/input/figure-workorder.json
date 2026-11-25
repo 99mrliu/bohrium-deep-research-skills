@@ -1,0 +1,8 @@
+{
+  "label": "SYNTHETIC — NOT A SCIENTIFIC CLAIM",
+  "figure_id": "figure03",
+  "synthetic": true,
+  "mode": "reject-before-rendering",
+  "requested_exports": ["svg", "png", "pdf"],
+  "expected_failures": ["INHIBITION_PRODUCTION", "TRANSPORT_SAME_COMPARTMENT"]
+}

@@ -1,0 +1,33 @@
+{
+  "schema_version": "1.0",
+  "synthetic": true,
+  "description": "SYNTHETIC ONLY: branch + feedback + cytosol-to-nucleus transport; not biological evidence.",
+  "compartments": [
+    {"id": "outside", "role": "extracellular", "order": 0, "label": "Extracellular"},
+    {"id": "pm", "role": "membrane", "order": 1, "label": "Plasma membrane"},
+    {"id": "cyto", "role": "cytosol", "order": 2, "label": "Cytosol"},
+    {"id": "nuc", "role": "nucleus", "order": 3, "label": "Nucleus"}
+  ],
+  "entities": [
+    {"id": "LIG", "label": "Synthetic ligand", "kind": "ligand", "compartment": "outside"},
+    {"id": "REC", "label": "Receptor R", "kind": "receptor", "compartment": "pm"},
+    {"id": "KIN", "label": "Kinase K", "kind": "kinase", "compartment": "cyto"},
+    {"id": "BR", "label": "Branch B", "kind": "adaptor", "compartment": "cyto"},
+    {"id": "MOD", "label": "Modifier M", "kind": "protein", "compartment": "cyto"},
+    {"id": "TF", "label": "Factor T", "kind": "transcription_factor", "compartment": "nuc"}
+  ],
+  "edges": [
+    {"id": "E-LR", "source": "LIG", "target": "REC", "kind": "activation"},
+    {"id": "E-RK", "source": "REC", "target": "KIN", "kind": "activation"},
+    {"id": "E-KT", "source": "KIN", "target": "TF", "kind": "transport"},
+    {"id": "E-RB", "source": "REC", "target": "BR", "kind": "activation"},
+    {"id": "E-KM", "source": "KIN", "target": "MOD", "kind": "activation"},
+    {"id": "E-TR", "source": "TF", "target": "REC", "kind": "inhibition"}
+  ],
+  "constraints": {
+    "canvas": {"width": 1400, "height": 900},
+    "layer_gap": 220,
+    "feedback_edges": ["E-TR"],
+    "allowed_transitions": [["cytosol", "nucleus"], ["nucleus", "cytosol"]]
+  }
+}

@@ -1,0 +1,80 @@
+{
+  "schema_version": 6,
+  "task_id": "quality-gates",
+  "bundle_name": "quality_gates",
+  "case_id": "quality-gates__figure03_specification.json__figure03__quality-demo",
+  "composite_id": "quality-gates__figure03_specification.json__figure03__quality-demo",
+  "record_key": "quality-gates__figure03_specification.json__figure03__quality-demo",
+  "source_file": "figure03_specification.json",
+  "panel": "figure03",
+  "mode": "quality-demo",
+  "input_mode": "specification-render",
+  "asset": {
+    "source_file": "figure03_specification.json",
+    "panel": "figure03",
+    "mode": "quality-demo"
+  },
+  "source": {
+    "paper": "source_paper.md",
+    "data": "data.csv",
+    "workorder": "workorder.json",
+    "agent_specification": "specification.json",
+    "native_scientific_review": "scientific_review.json"
+  },
+  "paths": {
+    "work": "/app/work/quality-gates",
+    "output": "/app/output/quality-gates"
+  },
+  "editorial_policy": {
+    "final_target": "shared_win_figure",
+    "generation_overwrite_protection": true
+  },
+  "scientific_requirements": {
+    "native_agent_must_read": ["source_paper.md", "data.csv", "specification.json", "scientific_review.json"],
+    "script_role": "State, contract, artifact and readback audits only; never automatic biological judgment",
+    "native_visual_attestation_required": true,
+    "feedback_and_uncertain_edges_required": true
+  },
+  "exit_codes": {
+    "success_or_audited_partial": 0,
+    "internal_or_usage": 2,
+    "contract_or_artifact": 3,
+    "scientific_review": 4
+  },
+  "output_contract": {
+    "case_id": "quality-gates__figure03_specification.json__figure03__quality-demo",
+    "result_file_pointer": "result/result.json",
+    "result": "result/result.json",
+    "record_key": "record_key/quality-gates__figure03_specification.json__figure03__quality-demo.json",
+    "edited": "edited/quality-gates__figure03_specification.json__figure03__quality-demo.json",
+    "svg": "generated/quality-gates__figure03_specification.json__figure03__quality-demo/figure03.svg",
+    "png": "generated/quality-gates__figure03_specification.json__figure03__quality-demo/figure03.png",
+    "pdf": "generated/quality-gates__figure03_specification.json__figure03__quality-demo/figure03.pdf",
+    "run_manifest": "review/run_manifest.json",
+    "audit": "review/audit.json",
+    "visual_review": "review/visual_review.json",
+    "scientific_readback": "review/scientific_readback.json",
+    "recovery": "review/recovery.json",
+    "source_map": "sources/content_mapping.json",
+    "sources": "sources/sources.json",
+    "uncertainty": "sources/uncertainty.json",
+    "change_records": "review/change_records.json",
+    "asset_paths": {
+      "result": "result/result.json",
+      "record_key": "record_key/quality-gates__figure03_specification.json__figure03__quality-demo.json",
+      "edited": "edited/quality-gates__figure03_specification.json__figure03__quality-demo.json",
+      "svg": "generated/quality-gates__figure03_specification.json__figure03__quality-demo/figure03.svg",
+      "png": "generated/quality-gates__figure03_specification.json__figure03__quality-demo/figure03.png",
+      "pdf": "generated/quality-gates__figure03_specification.json__figure03__quality-demo/figure03.pdf",
+      "run_manifest": "review/run_manifest.json",
+      "audit": "review/audit.json",
+      "visual_review": "review/visual_review.json",
+      "scientific_readback": "review/scientific_readback.json",
+      "recovery": "review/recovery.json",
+      "source_map": "sources/content_mapping.json",
+      "sources": "sources/sources.json",
+      "uncertainty": "sources/uncertainty.json",
+      "change_records": "review/change_records.json"
+    }
+  }
+}

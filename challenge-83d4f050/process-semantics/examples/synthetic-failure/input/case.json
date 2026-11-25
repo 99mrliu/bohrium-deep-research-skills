@@ -1,0 +1,34 @@
+{
+  "case_id": "SYNTHETIC-PS-FAIL-001",
+  "synthetic": true,
+  "output_contract": ["case_id", "status", "editable_source", "export_artifact", "content_map", "compliance_checks", "exceptions", "audit_artifact"],
+  "model": {
+    "entities": [
+      {"canonical_id": "syn-kinase-k", "label": "Active kinase K"},
+      {"canonical_id": "syn-inhibitor-i", "label": "Kinase inhibitor I"},
+      {"canonical_id": "syn-cargo-a", "label": "Cargo origin", "compartment": "cytoplasm"},
+      {"canonical_id": "syn-cargo-b", "label": "Cargo destination", "compartment": "cytoplasm"}
+    ],
+    "processes": [
+      {
+        "process_id": "syn-illegal-inhibition",
+        "process_type": "inhibition",
+        "inputs": ["syn-kinase-k"],
+        "outputs": ["syn-kinase-k"],
+        "modulators": [{"entity_id": "syn-inhibitor-i", "effect": "inhibition"}],
+        "source_locator": {"document": "SYNTHETIC-failure-model", "locator": "deliberate illegal process 1"}
+      },
+      {
+        "process_id": "syn-illegal-transport",
+        "process_type": "transport",
+        "inputs": ["syn-cargo-a"],
+        "outputs": ["syn-cargo-b"],
+        "modulators": [],
+        "from_compartment": "cytoplasm",
+        "to_compartment": "cytoplasm",
+        "source_locator": {"document": "SYNTHETIC-failure-model", "locator": "deliberate illegal process 2"}
+      }
+    ]
+  },
+  "source_files": ["task.md", "figure-workorder.json", "figure03.svg", "figure03.caption.txt", "data/values.csv"]
+}

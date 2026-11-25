@@ -1,0 +1,47 @@
+{
+  "case_id": "SYNTHETIC-PS-001",
+  "synthetic": true,
+  "output_contract": ["case_id", "status", "editable_source", "export_artifact", "content_map", "compliance_checks", "exceptions", "audit_artifact"],
+  "model": {
+    "entities": [
+      {"canonical_id": "syn-receptor-r", "label": "Receptor R", "layout": {"x": 55, "y": 105}},
+      {"canonical_id": "syn-kinase-k", "label": "Kinase K", "layout": {"x": 55, "y": 255}},
+      {"canonical_id": "syn-active-k", "label": "Active kinase K*", "layout": {"x": 700, "y": 255}},
+      {"canonical_id": "syn-inhibitor-i", "label": "Kinase inhibitor I", "layout": {"x": 55, "y": 420}},
+      {"canonical_id": "syn-cargo-cyto", "label": "Cargo C", "compartment": "cytoplasm", "layout": {"x": 55, "y": 590}},
+      {"canonical_id": "syn-cargo-nucleus", "label": "Cargo C", "compartment": "nucleus", "layout": {"x": 920, "y": 590}}
+    ],
+    "processes": [
+      {
+        "process_id": "syn-activate-k",
+        "process_type": "activation",
+        "inputs": ["syn-kinase-k"],
+        "outputs": ["syn-active-k"],
+        "modulators": [{"entity_id": "syn-receptor-r", "effect": "activation"}],
+        "source_locator": {"document": "SYNTHETIC-process-model", "locator": "fixture process 1"},
+        "layout": {"x": 425, "y": 280}
+      },
+      {
+        "process_id": "syn-inhibit-k",
+        "process_type": "inhibition",
+        "inputs": ["syn-active-k"],
+        "outputs": [],
+        "modulators": [{"entity_id": "syn-inhibitor-i", "effect": "inhibition"}],
+        "source_locator": {"document": "SYNTHETIC-process-model", "locator": "fixture process 2"},
+        "layout": {"x": 425, "y": 455}
+      },
+      {
+        "process_id": "syn-transport-c",
+        "process_type": "transport",
+        "inputs": ["syn-cargo-cyto"],
+        "outputs": ["syn-cargo-nucleus"],
+        "modulators": [],
+        "from_compartment": "cytoplasm",
+        "to_compartment": "nucleus",
+        "source_locator": {"document": "SYNTHETIC-process-model", "locator": "fixture process 3"},
+        "layout": {"x": 565, "y": 625}
+      }
+    ]
+  },
+  "source_files": ["task.md", "figure-workorder.json", "figure03.svg", "figure03.caption.txt", "data/values.csv"]
+}

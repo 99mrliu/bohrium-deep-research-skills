@@ -1,0 +1,96 @@
+{
+  "schema_version": 1,
+  "synthetic": true,
+  "title": "Figure 03 | SYNTHETIC quality pipeline",
+  "entities": [
+    {
+      "id": "node-a",
+      "label": "Target A",
+      "note": "source entity",
+      "source": "source_paper.md#entities",
+      "x": 145,
+      "y": 200,
+      "fill": "#dbeafe",
+      "stroke": "#1e40af"
+    },
+    {
+      "id": "node-b",
+      "label": "Response B",
+      "note": "measured response",
+      "source": "source_paper.md#entities",
+      "x": 565,
+      "y": 200,
+      "fill": "#dcfce7",
+      "stroke": "#166534"
+    },
+    {
+      "id": "node-c",
+      "label": "Modulator C",
+      "note": "uncertain evidence",
+      "source": "source_paper.md#entities",
+      "x": 565,
+      "y": 50,
+      "fill": "#fef3c7",
+      "stroke": "#92400e"
+    }
+  ],
+  "edges": [
+    {
+      "id": "a-b",
+      "source": "node-a",
+      "target": "node-b",
+      "relation": "activates",
+      "kind": "direct",
+      "legend": "activates",
+      "color": "#2563eb",
+      "uncertain": false,
+      "source_record": "SYN-001"
+    },
+    {
+      "id": "b-a-feedback",
+      "source": "node-b",
+      "target": "node-a",
+      "relation": "feedback_inhibition",
+      "kind": "feedback",
+      "legend": "feedback inhibition",
+      "color": "#7c3aed",
+      "uncertain": false,
+      "source_record": "SYN-002"
+    },
+    {
+      "id": "c-b",
+      "source": "node-c",
+      "target": "node-b",
+      "relation": "uncertain_association",
+      "kind": "uncertain",
+      "legend": "uncertain association",
+      "color": "#b45309",
+      "uncertain": true,
+      "source_record": "SYN-003"
+    }
+  ],
+  "legend": [
+    {
+      "relation": "activates",
+      "label": "direct activation",
+      "color": "#2563eb",
+      "uncertain": false
+    },
+    {
+      "relation": "feedback_inhibition",
+      "label": "feedback inhibition",
+      "color": "#7c3aed",
+      "uncertain": false
+    },
+    {
+      "relation": "uncertain_association",
+      "label": "uncertain association",
+      "color": "#b45309",
+      "uncertain": true
+    }
+  ],
+  "uncertainty": [
+    "SYN-003 is explicitly uncertain; the edge must remain visibly labeled and machine-readable as uncertain.",
+    "The synthetic numbers are placeholders and support no biological inference."
+  ]
+}

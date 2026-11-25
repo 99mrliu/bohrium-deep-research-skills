@@ -1,0 +1,12 @@
+{
+  "schema_version": 1,
+  "synthetic": true,
+  "goal": "Exercise process quality control, recoverability and native scientific review with one independent deterministic renderer.",
+  "source_materials": ["source_paper.md", "data.csv"],
+  "agent_authored_translation": "specification.json",
+  "native_scientific_review": "scientific_review.json",
+  "required_stages": ["observed", "specified", "rendered", "exported", "audited", "delivered"],
+  "failure_injections": ["missing-png", "missing-result-field"],
+  "delivery_rule": "Machine-audited runs remain partial; only hash-bound native PNG/PDF visual attestation may advance audited to delivered.",
+  "no_automatic_biology": true
+}

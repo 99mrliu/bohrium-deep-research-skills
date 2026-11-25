@@ -1,0 +1,28 @@
+{
+  "title":"Evidence closure toy pathway",
+  "synthetic":true,
+  "width":1100,"height":700,
+  "compartments":[
+    {"id":"extracellular","label":"Extracellular","x":60,"y":80,"w":980,"h":110,"fill":"#f3f7fb"},
+    {"id":"cytosol","label":"Cytosol","x":60,"y":280,"w":980,"h":130,"fill":"#fbf8ef"},
+    {"id":"nucleus","label":"Nucleus","x":60,"y":440,"w":980,"h":110,"fill":"#f6f0fa"}
+  ],
+  "evidence":[
+    {"id":"E1","file":"source_notes.txt","locator":"synthetic notes line 1","quote":"Ligand L binds receptor R at the plasma membrane.","evidence_type":"direct"},
+    {"id":"E2","file":"source_notes.txt","locator":"synthetic notes line 2","quote":"Receptor R activates kinase K in the cytosol.","evidence_type":"direct"},
+    {"id":"E3","file":"source_notes.txt","locator":"synthetic notes line 3","quote":"Kinase K inhibits factor F in the nucleus; this synthetic relation is intentionally simplified.","evidence_type":"direct"}
+  ],
+  "entities":[
+    {"id":"L","label":"Ligand L","kind":"small_molecule","compartment":"extracellular","x":170,"y":140,"evidence_ids":["E1"]},
+    {"id":"R","label":"Receptor R","kind":"receptor","compartment":"membrane","x":450,"y":240,"evidence_ids":["E1","E2"],"fill":"#fff0c9"},
+    {"id":"K","label":"Kinase K","kind":"protein","compartment":"cytosol","x":700,"y":345,"evidence_ids":["E2","E3"]},
+    {"id":"F","label":"Factor F","kind":"protein","compartment":"nucleus","x":860,"y":495,"evidence_ids":["E3"],"fill":"#f2e2f7"}
+  ],
+  "edges":[
+    {"id":"lr","from":"L","to":"R","kind":"binds","evidence_ids":["E1"]},
+    {"id":"rk","from":"R","to":"K","kind":"activates","evidence_ids":["E2"]},
+    {"id":"kf","from":"K","to":"F","kind":"inhibits","evidence_ids":["E3"]}
+  ],
+  "encodings":[],
+  "change_records":[]
+}

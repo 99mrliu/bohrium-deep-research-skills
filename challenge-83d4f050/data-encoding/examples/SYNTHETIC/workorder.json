@@ -1,0 +1,38 @@
+{
+  "changed": [],
+  "unchanged": ["Raw observations and data spec"],
+  "operations": [],
+  "chart": {
+    "type": "bar",
+    "feature": "SYNTHETIC_FEATURE",
+    "title": "SYNTHETIC replicated measurements",
+    "x": "group",
+    "y": "group_mean",
+    "error": "group_sem",
+    "channels": {
+      "fill": {"column": "group", "scale": "categorical", "range": ["#3b78a8", "#d17a32"], "missing": "skip", "out_of_range": "skip"},
+      "size": {"column": "sample_mean", "scale": "linear", "range": [4, 11], "missing": "skip", "out_of_range": "clamp"},
+      "edge_width": {"column": "abs_log2FC", "scale": "linear", "range": [1.2, 5], "missing": "skip", "out_of_range": "clamp"}
+    },
+    "edges": [
+      {"id": "contrast", "source": "Control", "target": "Treated", "directed": true}
+    ]
+  },
+  "output_contract": {
+    "contract_version": "1.0",
+    "required_files": ["derived.csv", "group_summary.csv", "data_audit.json", "chart.svg", "chart.png", "chart.pdf", "sources.json", "uncertainty.json", "change_records.json", "result.json"],
+    "artifacts": {
+      "derived": "derived.csv",
+      "group_summary": "group_summary.csv",
+      "audit": "data_audit.json",
+      "svg": "chart.svg",
+      "png": "chart.png",
+      "pdf": "chart.pdf",
+      "sources": "sources.json",
+      "uncertainty": "uncertainty.json",
+      "change_records": "change_records.json",
+      "result": "result.json"
+    },
+    "result_requirements": ["case_id", "status", "partial", "artifact_checks", "sources", "uncertainties", "change_records"]
+  }
+}

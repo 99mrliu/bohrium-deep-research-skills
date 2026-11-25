@@ -1,0 +1,15 @@
+{
+  "case_id": "SYNTHETIC-ER-FAIL-001",
+  "synthetic": true,
+  "output_contract": ["case_id", "status", "editable_source", "export_artifact", "content_map", "compliance_checks", "exceptions", "audit_artifact"],
+  "registry": {
+    "entities": [
+      {"canonical_id": "syn:human-tp53-gene", "entity_kind": "gene", "species": "Homo sapiens", "gene_symbol": "TP53", "aliases": ["TP53", "p53"], "alias_policies": {"TP53": "context_required", "p53": "context_required"}, "source_locator": {"document": "SYNTHETIC-registry", "locator": "failure entity 1"}},
+      {"canonical_id": "syn:human-tp53-protein", "entity_kind": "protein", "species": "Homo sapiens", "protein_name": "TP53", "aliases": ["TP53", "p53"], "alias_policies": {"TP53": "context_required", "p53": "context_required"}, "source_locator": {"document": "SYNTHETIC-registry", "locator": "failure entity 2"}},
+      {"canonical_id": "syn:mouse-trp53-gene", "entity_kind": "gene", "species": "Mus musculus", "gene_symbol": "Trp53", "aliases": ["Trp53", "p53"], "alias_policies": {"p53": "context_required"}, "source_locator": {"document": "SYNTHETIC-registry", "locator": "failure entity 3"}}
+    ],
+    "interactions": []
+  },
+  "mentions": [{"surface": "p53"}],
+  "source_files": ["task.md", "figure-workorder.json", "figure03.svg", "figure03.caption.txt", "data/values.csv"]
+}

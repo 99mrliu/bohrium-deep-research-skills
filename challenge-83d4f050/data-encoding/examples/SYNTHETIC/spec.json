@@ -1,0 +1,19 @@
+{
+  "path": "replicates.csv",
+  "format": "csv",
+  "columns": {
+    "feature": "feature",
+    "sample": "sample_id",
+    "group": "condition",
+    "replicate": "replicate",
+    "value": "intensity",
+    "p": "p_value"
+  },
+  "filters": [
+    {"column": "qc", "operator": "eq", "value": "PASS"}
+  ],
+  "transforms": {
+    "log2FC": {"operation": "column", "column": "log2fc"},
+    "neg_log10_p": {"operation": "neg_log10", "column": "p_value", "floor": 1e-300}
+  }
+}

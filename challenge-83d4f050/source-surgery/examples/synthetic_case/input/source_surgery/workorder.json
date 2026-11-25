@@ -1,0 +1,51 @@
+{
+  "schema_version": 1,
+  "synthetic": true,
+  "operations": [
+    {
+      "op": "set_text",
+      "id": "node-b-label",
+      "text": "Edited B",
+      "reason": "Workorder label correction"
+    },
+    {
+      "op": "replace_edge_kind",
+      "id": "edge-ab",
+      "kind": "uncertain",
+      "reason": "Evidence status is uncertain in this synthetic example"
+    },
+    {
+      "op": "set_style",
+      "id": "node-b",
+      "properties": {
+        "fill": "#fff7ed",
+        "stroke": "#c2410c"
+      },
+      "reason": "Highlight only the edited node; preserve stroke-width"
+    },
+    {
+      "op": "set_text",
+      "id": "edge-ab-label",
+      "text": "uncertain",
+      "reason": "Keep visible annotation consistent with the revised edge kind"
+    },
+    {
+      "op": "move_by",
+      "id": "edge-ab-label",
+      "dx": 8,
+      "dy": -6,
+      "reason": "Avoid the revised edge label touching the path"
+    },
+    {
+      "op": "set_attribute",
+      "id": "legend-label",
+      "attribute": "data-review",
+      "value": "edited",
+      "reason": "Exercise a safe non-ID attribute update"
+    }
+  ],
+  "uncertainty": [
+    "The edge-ab association is deliberately uncertain in this SYNTHETIC case; no biological claim is made.",
+    "PyMuPDF may substitute fonts; inspect text fitting and marker geometry visually."
+  ]
+}
