@@ -1,0 +1,39 @@
+{
+  "case_id": "SYNTHETIC-ADVERSARIAL-GATE-V1",
+  "claim_reviews": [
+    {
+      "claim_id": "synthetic-claim-1",
+      "decoys_checked": [
+        "hedge_promotion"
+      ],
+      "observation": "Speculation and the words suggest/may remain attached to the claim.",
+      "verdict": "pass"
+    }
+  ],
+  "field_reviews": [
+    {
+      "decoys_checked": [
+        "wrong_subject",
+        "wrong_condition",
+        "wrong_comparator",
+        "same_number_elsewhere",
+        "hedge_promotion"
+      ],
+      "field_id": "syn_response",
+      "observation": "The quote binds SynA, condition C, comparator D, mean ± SD, 12.4, and nM in one synthetic sentence.",
+      "verdict": "pass"
+    },
+    {
+      "decoys_checked": [
+        "false_absence",
+        "similar_field_substitution"
+      ],
+      "field_id": "syn_unmeasured",
+      "observation": "All three synthetic paragraphs were inspected; none contains the requested second response measurement.",
+      "verdict": "pass"
+    }
+  ],
+  "reviewer": "synthetic-example",
+  "schema": "decoy-review/v1",
+  "semantic_correctness_not_proven": true
+}

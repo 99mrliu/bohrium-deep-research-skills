@@ -1,0 +1,16 @@
+{
+  "case_id": "SYNTHETIC-EXAMPLE-NOT-OFFICIAL",
+  "example_label": "SYNTHETIC EXAMPLE — never official results",
+  "task_instruction": "Synthetic example only. Reconstruct the continued table and bind the requested fields; these are never official results.",
+  "source": {
+    "title": "Synthetic example coordinate table",
+    "doi": null
+  },
+  "output_contract": {
+    "case_id": "preserve input case_id",
+    "status": "answered|partial|insufficient_evidence|input_error",
+    "result": "one structured record per requested field",
+    "claims": "field claims with source and cell evidence",
+    "uncertainties": "unreported fields, conflicts and extraction limits"
+  }
+}

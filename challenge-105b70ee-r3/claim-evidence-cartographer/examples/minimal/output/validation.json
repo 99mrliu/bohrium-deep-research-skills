@@ -1,0 +1,28 @@
+{
+  "valid": true,
+  "case_id": "SYNTHETIC-MINIMAL-NOT-A-TEST-CASE",
+  "status": "answered",
+  "requested_field_count": 4,
+  "field_status_counts": {
+    "reported": 3,
+    "not_reported": 1
+  },
+  "claim_count": 5,
+  "claim_kind_counts": {
+    "author_conclusion": 1,
+    "limitation": 1,
+    "hypothesis_speculation": 1,
+    "method_observation": 1,
+    "prior_work_cited_claim": 1
+  },
+  "graph_node_count": 23,
+  "graph_edge_count": 29,
+  "verbatim_grounded_edge_count": 11,
+  "checks": [
+    "all requested field_ids occur once in both mirrors in request order",
+    "required per-field keys and condition alias equality",
+    "all evidence quotations are exact substrings of registered paragraphs",
+    "cited/hedged/speculative claim non-promotion guards",
+    "graph edge endpoints and evidence-backed grounded_in edges"
+  ]
+}

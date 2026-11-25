@@ -1,0 +1,590 @@
+{
+  "schema_version": "table-coordinate-forge/tables-v1",
+  "label": "SYNTHETIC EXAMPLE — never official results",
+  "created_at": "2026-11-25T02:34:38.158184+00:00",
+  "tables": [
+    {
+      "table_id": "s001-table001",
+      "source_id": "supplied-bbox-001",
+      "segments": [
+        {
+          "segment_id": "s001-seg001",
+          "source_id": "supplied-bbox-001",
+          "page": 1,
+          "pdf_page_label": "1",
+          "bbox": {
+            "xMin": 60.0,
+            "yMin": 50.0,
+            "xMax": 456.0,
+            "yMax": 122.0
+          },
+          "column_count": 3,
+          "column_cuts": [
+            145.0,
+            327.5
+          ],
+          "relative_column_cuts": [
+            0.2369281045751634,
+            0.5351307189542484
+          ],
+          "cut_row_support": [
+            3,
+            3
+          ],
+          "header_row_ids": [
+            "s001-seg001-r01"
+          ],
+          "data_row_ids": [
+            "s001-seg001-r02",
+            "s001-seg001-r03"
+          ],
+          "header_status": "geometric_candidate_requires_agent_review",
+          "own_header_cell_ids": [
+            "s001-seg001-r01-c01",
+            "s001-seg001-r01-c02",
+            "s001-seg001-r01-c03"
+          ],
+          "rows": [
+            {
+              "row_id": "s001-seg001-r01",
+              "physical_row_id": "s001-p001-pr001",
+              "bbox": {
+                "xMin": 60.0,
+                "yMin": 50.0,
+                "xMax": 456.0,
+                "yMax": 62.0
+              },
+              "source_line_ids": [
+                "s001-p001-b001-l001"
+              ],
+              "cells": [
+                {
+                  "cell_id": "s001-seg001-r01-c01",
+                  "row_id": "s001-seg001-r01",
+                  "column_start": 1,
+                  "column_end": 1,
+                  "text": "Catalyst",
+                  "bbox": {
+                    "xMin": 60.0,
+                    "yMin": 50.0,
+                    "xMax": 112.0,
+                    "yMax": 62.0
+                  },
+                  "source_id": "supplied-bbox-001",
+                  "page": 1,
+                  "word_ids": [
+                    "s001-p001-b001-l001-w001"
+                  ],
+                  "spanning_geometry": false,
+                  "paragraph_id": "s001-seg001-r01-c01"
+                },
+                {
+                  "cell_id": "s001-seg001-r01-c02",
+                  "row_id": "s001-seg001-r01",
+                  "column_start": 2,
+                  "column_end": 2,
+                  "text": "Temp (°C)",
+                  "bbox": {
+                    "xMin": 200.0,
+                    "yMin": 50.0,
+                    "xMax": 260.0,
+                    "yMax": 62.0
+                  },
+                  "source_id": "supplied-bbox-001",
+                  "page": 1,
+                  "word_ids": [
+                    "s001-p001-b001-l001-w002",
+                    "s001-p001-b001-l001-w003"
+                  ],
+                  "spanning_geometry": false,
+                  "paragraph_id": "s001-seg001-r01-c02"
+                },
+                {
+                  "cell_id": "s001-seg001-r01-c03",
+                  "row_id": "s001-seg001-r01",
+                  "column_start": 3,
+                  "column_end": 3,
+                  "text": "Yield (%) at 24 h",
+                  "bbox": {
+                    "xMin": 380.0,
+                    "yMin": 50.0,
+                    "xMax": 456.0,
+                    "yMax": 62.0
+                  },
+                  "source_id": "supplied-bbox-001",
+                  "page": 1,
+                  "word_ids": [
+                    "s001-p001-b001-l001-w004",
+                    "s001-p001-b001-l001-w005",
+                    "s001-p001-b001-l001-w006",
+                    "s001-p001-b001-l001-w007",
+                    "s001-p001-b001-l001-w008"
+                  ],
+                  "spanning_geometry": false,
+                  "paragraph_id": "s001-seg001-r01-c03"
+                }
+              ]
+            },
+            {
+              "row_id": "s001-seg001-r02",
+              "physical_row_id": "s001-p001-pr002",
+              "bbox": {
+                "xMin": 60.0,
+                "yMin": 80.0,
+                "xMax": 447.0,
+                "yMax": 92.0
+              },
+              "source_line_ids": [
+                "s001-p001-b001-l002"
+              ],
+              "cells": [
+                {
+                  "cell_id": "s001-seg001-r02-c01",
+                  "row_id": "s001-seg001-r02",
+                  "column_start": 1,
+                  "column_end": 1,
+                  "text": "A",
+                  "bbox": {
+                    "xMin": 60.0,
+                    "yMin": 80.0,
+                    "xMax": 70.0,
+                    "yMax": 92.0
+                  },
+                  "source_id": "supplied-bbox-001",
+                  "page": 1,
+                  "word_ids": [
+                    "s001-p001-b001-l002-w001"
+                  ],
+                  "spanning_geometry": false,
+                  "paragraph_id": "s001-seg001-r02-c01"
+                },
+                {
+                  "cell_id": "s001-seg001-r02-c02",
+                  "row_id": "s001-seg001-r02",
+                  "column_start": 2,
+                  "column_end": 2,
+                  "text": "25",
+                  "bbox": {
+                    "xMin": 220.0,
+                    "yMin": 80.0,
+                    "xMax": 235.0,
+                    "yMax": 92.0
+                  },
+                  "source_id": "supplied-bbox-001",
+                  "page": 1,
+                  "word_ids": [
+                    "s001-p001-b001-l002-w002"
+                  ],
+                  "spanning_geometry": false,
+                  "paragraph_id": "s001-seg001-r02-c02"
+                },
+                {
+                  "cell_id": "s001-seg001-r02-c03",
+                  "row_id": "s001-seg001-r02",
+                  "column_start": 3,
+                  "column_end": 3,
+                  "text": "42.0",
+                  "bbox": {
+                    "xMin": 420.0,
+                    "yMin": 80.0,
+                    "xMax": 447.0,
+                    "yMax": 92.0
+                  },
+                  "source_id": "supplied-bbox-001",
+                  "page": 1,
+                  "word_ids": [
+                    "s001-p001-b001-l002-w003"
+                  ],
+                  "spanning_geometry": false,
+                  "paragraph_id": "s001-seg001-r02-c03"
+                }
+              ]
+            },
+            {
+              "row_id": "s001-seg001-r03",
+              "physical_row_id": "s001-p001-pr003",
+              "bbox": {
+                "xMin": 60.0,
+                "yMin": 110.0,
+                "xMax": 447.0,
+                "yMax": 122.0
+              },
+              "source_line_ids": [
+                "s001-p001-b001-l003"
+              ],
+              "cells": [
+                {
+                  "cell_id": "s001-seg001-r03-c01",
+                  "row_id": "s001-seg001-r03",
+                  "column_start": 1,
+                  "column_end": 1,
+                  "text": "B",
+                  "bbox": {
+                    "xMin": 60.0,
+                    "yMin": 110.0,
+                    "xMax": 70.0,
+                    "yMax": 122.0
+                  },
+                  "source_id": "supplied-bbox-001",
+                  "page": 1,
+                  "word_ids": [
+                    "s001-p001-b001-l003-w001"
+                  ],
+                  "spanning_geometry": false,
+                  "paragraph_id": "s001-seg001-r03-c01"
+                },
+                {
+                  "cell_id": "s001-seg001-r03-c02",
+                  "row_id": "s001-seg001-r03",
+                  "column_start": 2,
+                  "column_end": 2,
+                  "text": "40",
+                  "bbox": {
+                    "xMin": 220.0,
+                    "yMin": 110.0,
+                    "xMax": 235.0,
+                    "yMax": 122.0
+                  },
+                  "source_id": "supplied-bbox-001",
+                  "page": 1,
+                  "word_ids": [
+                    "s001-p001-b001-l003-w002"
+                  ],
+                  "spanning_geometry": false,
+                  "paragraph_id": "s001-seg001-r03-c02"
+                },
+                {
+                  "cell_id": "s001-seg001-r03-c03",
+                  "row_id": "s001-seg001-r03",
+                  "column_start": 3,
+                  "column_end": 3,
+                  "text": "44.0",
+                  "bbox": {
+                    "xMin": 420.0,
+                    "yMin": 110.0,
+                    "xMax": 447.0,
+                    "yMax": 122.0
+                  },
+                  "source_id": "supplied-bbox-001",
+                  "page": 1,
+                  "word_ids": [
+                    "s001-p001-b001-l003-w003"
+                  ],
+                  "spanning_geometry": false,
+                  "paragraph_id": "s001-seg001-r03-c03"
+                }
+              ]
+            }
+          ],
+          "continued_from": null,
+          "continuation_reason": null,
+          "header_cell_ids_by_column": {
+            "1": [
+              "s001-seg001-r01-c01"
+            ],
+            "2": [
+              "s001-seg001-r01-c02"
+            ],
+            "3": [
+              "s001-seg001-r01-c03"
+            ]
+          },
+          "table_id": "s001-table001"
+        },
+        {
+          "segment_id": "s001-seg002",
+          "source_id": "supplied-bbox-001",
+          "page": 2,
+          "pdf_page_label": "2",
+          "bbox": {
+            "xMin": 60.0,
+            "yMin": 50.0,
+            "xMax": 522.0,
+            "yMax": 122.0
+          },
+          "column_count": 3,
+          "column_cuts": [
+            145.0,
+            327.5
+          ],
+          "relative_column_cuts": [
+            0.2369281045751634,
+            0.5351307189542484
+          ],
+          "cut_row_support": [
+            3,
+            3
+          ],
+          "header_row_ids": [
+            "s001-seg002-r01"
+          ],
+          "data_row_ids": [
+            "s001-seg002-r02",
+            "s001-seg002-r03"
+          ],
+          "header_status": "geometric_candidate_requires_agent_review",
+          "own_header_cell_ids": [
+            "s001-seg002-r01-c01",
+            "s001-seg002-r01-c02",
+            "s001-seg002-r01-c03"
+          ],
+          "rows": [
+            {
+              "row_id": "s001-seg002-r01",
+              "physical_row_id": "s001-p002-pr001",
+              "bbox": {
+                "xMin": 60.0,
+                "yMin": 50.0,
+                "xMax": 522.0,
+                "yMax": 62.0
+              },
+              "source_line_ids": [
+                "s001-p002-b001-l001"
+              ],
+              "cells": [
+                {
+                  "cell_id": "s001-seg002-r01-c01",
+                  "row_id": "s001-seg002-r01",
+                  "column_start": 1,
+                  "column_end": 1,
+                  "text": "Catalyst (cont.)",
+                  "bbox": {
+                    "xMin": 60.0,
+                    "yMin": 50.0,
+                    "xMax": 144.0,
+                    "yMax": 62.0
+                  },
+                  "source_id": "supplied-bbox-001",
+                  "page": 2,
+                  "word_ids": [
+                    "s001-p002-b001-l001-w001",
+                    "s001-p002-b001-l001-w002"
+                  ],
+                  "spanning_geometry": false,
+                  "paragraph_id": "s001-seg002-r01-c01"
+                },
+                {
+                  "cell_id": "s001-seg002-r01-c02",
+                  "row_id": "s001-seg002-r01",
+                  "column_start": 2,
+                  "column_end": 2,
+                  "text": "Temp (°C) (continued)",
+                  "bbox": {
+                    "xMin": 200.0,
+                    "yMin": 50.0,
+                    "xMax": 326.0,
+                    "yMax": 62.0
+                  },
+                  "source_id": "supplied-bbox-001",
+                  "page": 2,
+                  "word_ids": [
+                    "s001-p002-b001-l001-w003",
+                    "s001-p002-b001-l001-w004",
+                    "s001-p002-b001-l001-w005"
+                  ],
+                  "spanning_geometry": false,
+                  "paragraph_id": "s001-seg002-r01-c02"
+                },
+                {
+                  "cell_id": "s001-seg002-r01-c03",
+                  "row_id": "s001-seg002-r01",
+                  "column_start": 3,
+                  "column_end": 3,
+                  "text": "Yield (%) at 24 h (continued)",
+                  "bbox": {
+                    "xMin": 380.0,
+                    "yMin": 50.0,
+                    "xMax": 522.0,
+                    "yMax": 62.0
+                  },
+                  "source_id": "supplied-bbox-001",
+                  "page": 2,
+                  "word_ids": [
+                    "s001-p002-b001-l001-w006",
+                    "s001-p002-b001-l001-w007",
+                    "s001-p002-b001-l001-w008",
+                    "s001-p002-b001-l001-w009",
+                    "s001-p002-b001-l001-w010",
+                    "s001-p002-b001-l001-w011"
+                  ],
+                  "spanning_geometry": false,
+                  "paragraph_id": "s001-seg002-r01-c03"
+                }
+              ]
+            },
+            {
+              "row_id": "s001-seg002-r02",
+              "physical_row_id": "s001-p002-pr002",
+              "bbox": {
+                "xMin": 60.0,
+                "yMin": 80.0,
+                "xMax": 447.0,
+                "yMax": 92.0
+              },
+              "source_line_ids": [
+                "s001-p002-b001-l002"
+              ],
+              "cells": [
+                {
+                  "cell_id": "s001-seg002-r02-c01",
+                  "row_id": "s001-seg002-r02",
+                  "column_start": 1,
+                  "column_end": 1,
+                  "text": "C",
+                  "bbox": {
+                    "xMin": 60.0,
+                    "yMin": 80.0,
+                    "xMax": 70.0,
+                    "yMax": 92.0
+                  },
+                  "source_id": "supplied-bbox-001",
+                  "page": 2,
+                  "word_ids": [
+                    "s001-p002-b001-l002-w001"
+                  ],
+                  "spanning_geometry": false,
+                  "paragraph_id": "s001-seg002-r02-c01"
+                },
+                {
+                  "cell_id": "s001-seg002-r02-c02",
+                  "row_id": "s001-seg002-r02",
+                  "column_start": 2,
+                  "column_end": 2,
+                  "text": "80",
+                  "bbox": {
+                    "xMin": 220.0,
+                    "yMin": 80.0,
+                    "xMax": 235.0,
+                    "yMax": 92.0
+                  },
+                  "source_id": "supplied-bbox-001",
+                  "page": 2,
+                  "word_ids": [
+                    "s001-p002-b001-l002-w002"
+                  ],
+                  "spanning_geometry": false,
+                  "paragraph_id": "s001-seg002-r02-c02"
+                },
+                {
+                  "cell_id": "s001-seg002-r02-c03",
+                  "row_id": "s001-seg002-r02",
+                  "column_start": 3,
+                  "column_end": 3,
+                  "text": "51.3",
+                  "bbox": {
+                    "xMin": 420.0,
+                    "yMin": 80.0,
+                    "xMax": 447.0,
+                    "yMax": 92.0
+                  },
+                  "source_id": "supplied-bbox-001",
+                  "page": 2,
+                  "word_ids": [
+                    "s001-p002-b001-l002-w003"
+                  ],
+                  "spanning_geometry": false,
+                  "paragraph_id": "s001-seg002-r02-c03"
+                }
+              ]
+            },
+            {
+              "row_id": "s001-seg002-r03",
+              "physical_row_id": "s001-p002-pr003",
+              "bbox": {
+                "xMin": 60.0,
+                "yMin": 110.0,
+                "xMax": 447.0,
+                "yMax": 122.0
+              },
+              "source_line_ids": [
+                "s001-p002-b001-l003"
+              ],
+              "cells": [
+                {
+                  "cell_id": "s001-seg002-r03-c01",
+                  "row_id": "s001-seg002-r03",
+                  "column_start": 1,
+                  "column_end": 1,
+                  "text": "D",
+                  "bbox": {
+                    "xMin": 60.0,
+                    "yMin": 110.0,
+                    "xMax": 70.0,
+                    "yMax": 122.0
+                  },
+                  "source_id": "supplied-bbox-001",
+                  "page": 2,
+                  "word_ids": [
+                    "s001-p002-b001-l003-w001"
+                  ],
+                  "spanning_geometry": false,
+                  "paragraph_id": "s001-seg002-r03-c01"
+                },
+                {
+                  "cell_id": "s001-seg002-r03-c02",
+                  "row_id": "s001-seg002-r03",
+                  "column_start": 2,
+                  "column_end": 2,
+                  "text": "100",
+                  "bbox": {
+                    "xMin": 220.0,
+                    "yMin": 110.0,
+                    "xMax": 235.0,
+                    "yMax": 122.0
+                  },
+                  "source_id": "supplied-bbox-001",
+                  "page": 2,
+                  "word_ids": [
+                    "s001-p002-b001-l003-w002"
+                  ],
+                  "spanning_geometry": false,
+                  "paragraph_id": "s001-seg002-r03-c02"
+                },
+                {
+                  "cell_id": "s001-seg002-r03-c03",
+                  "row_id": "s001-seg002-r03",
+                  "column_start": 3,
+                  "column_end": 3,
+                  "text": "55.0",
+                  "bbox": {
+                    "xMin": 420.0,
+                    "yMin": 110.0,
+                    "xMax": 447.0,
+                    "yMax": 122.0
+                  },
+                  "source_id": "supplied-bbox-001",
+                  "page": 2,
+                  "word_ids": [
+                    "s001-p002-b001-l003-w003"
+                  ],
+                  "spanning_geometry": false,
+                  "paragraph_id": "s001-seg002-r03-c03"
+                }
+              ]
+            }
+          ],
+          "continued_from": "s001-seg001",
+          "continuation_reason": "explicit continued header plus compatible columns",
+          "header_cell_ids_by_column": {
+            "1": [
+              "s001-seg001-r01-c01",
+              "s001-seg002-r01-c01"
+            ],
+            "2": [
+              "s001-seg001-r01-c02",
+              "s001-seg002-r01-c02"
+            ],
+            "3": [
+              "s001-seg001-r01-c03",
+              "s001-seg002-r01-c03"
+            ]
+          },
+          "table_id": "s001-table001",
+          "continuation_header_similarity": 0.9756,
+          "continuation_cut_delta": 0.0
+        }
+      ]
+    }
+  ],
+  "promotion_policy": "Candidates only; a reviewed binding is mandatory for every field."
+}

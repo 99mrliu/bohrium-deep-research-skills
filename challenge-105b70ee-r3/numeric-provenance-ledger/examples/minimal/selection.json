@@ -1,0 +1,48 @@
+{
+  "schema_version": "numeric-selection/v1",
+  "semantics": "SYNTHETIC example: IDs were selected by reading context; no similarity ranking or automatic answer selection.",
+  "fields": {
+    "treatment_response_37c": {
+      "status": "reported",
+      "value_token_ids": ["N000005"],
+      "condition_token_ids": ["N000004"],
+      "statistic_token_ids": [],
+      "reference_token_ids": [],
+      "notes": "Selected the treated 37 °C statement, not the 25 °C control decoy (N000002)."
+    },
+    "recovery_half_time": {
+      "status": "not_reported",
+      "coverage": [
+        {
+          "source_id": "synthetic-main",
+          "paragraph_id": "p-absence",
+          "quote": "The study did not report the recovery half-time."
+        }
+      ],
+      "notes": "The requested measurement is explicitly absent in the scoped synthetic source; this is not zero or an unreadable value."
+    },
+    "replicated_treatment_response_37c": {
+      "status": "source_conflict",
+      "variants": [
+        {
+          "status": "reported",
+          "value_token_ids": ["N000005"],
+          "condition_token_ids": ["N000004"],
+          "statistic_token_ids": [],
+          "reference_token_ids": [],
+          "notes": "Primary synthetic source value."
+        },
+        {
+          "status": "reported",
+          "value_token_ids": ["N000016"],
+          "condition_token_ids": ["N000015"],
+          "statistic_token_ids": [],
+          "reference_token_ids": ["N000017"],
+          "notes": "Synthetic replication value."
+        }
+      ],
+      "coverage": [],
+      "notes": "Both sources use 37 °C and mV but report different exact central values and uncertainties; neither is preferred or averaged."
+    }
+  }
+}

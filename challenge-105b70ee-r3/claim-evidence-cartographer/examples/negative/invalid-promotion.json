@@ -1,0 +1,44 @@
+{
+  "schema_version": "claim-evidence-curation/1.0",
+  "conditions": [],
+  "observations": [],
+  "claims": [
+    {
+      "claim_id": "NEG-CITED",
+      "kind": "author_conclusion",
+      "text": "The current authors establish that additive X suppresses the unwanted pathway through the same mechanism here.",
+      "epistemic_status": "established_author_conclusion",
+      "modality": "declarative",
+      "hedges": [],
+      "attribution": {
+        "speaker": "Zhao et al., as cited in the synthetic source",
+        "origin": "cited_work"
+      },
+      "condition_ids": [],
+      "supporting_observation_ids": [],
+      "promotion_allowed": true,
+      "evidence": [
+        {
+          "source_id": "SRC-SYN-NEG",
+          "paragraph_id": "N1",
+          "page": null,
+          "quote": "Zhao et al. reported that additive X could suppress the unwanted pathway in their system, suggesting that the same mechanism might operate here; we did not test that mechanism in the present study."
+        }
+      ]
+    }
+  ],
+  "field_results": [
+    {
+      "field_id": "established_current_author_mechanism",
+      "status": "reported",
+      "scalar": "Additive X is established to suppress the unwanted pathway through the same mechanism here.",
+      "units": null,
+      "statistic": null,
+      "experimental_condition": "Current study",
+      "comparator": null,
+      "claim_ids": ["NEG-CITED"],
+      "notes": "DELIBERATELY INVALID: erased cited attribution and hedges to test the non-promotion guard."
+    }
+  ],
+  "uncertainties": []
+}

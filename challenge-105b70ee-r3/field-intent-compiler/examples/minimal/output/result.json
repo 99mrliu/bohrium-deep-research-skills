@@ -1,0 +1,860 @@
+{
+  "case_id": "SYNTHETIC-FIELD-INTENT-001",
+  "status": "partial",
+  "synthetic": true,
+  "label": "SYNTHETIC EXAMPLE — NOT A FORMAL TEST RESULT",
+  "result": {
+    "fields": [
+      {
+        "field_id": "F_YIELD_120C",
+        "status": "reported",
+        "scalar": 72,
+        "units": "%",
+        "statistic": "single reported value",
+        "experimental_condition": "temperature=120 °C AND solvent=toluene",
+        "condition": "temperature=120 °C AND solvent=toluene",
+        "comparator": null,
+        "paragraph_id": "p-yield-120C",
+        "quote": "At 120 °C in toluene, Catalyst X gave a yield of 72%.",
+        "evidence": [
+          {
+            "source_id": "S_SYNTHETIC",
+            "page": 1,
+            "paragraph_id": "p-yield-120C",
+            "quote": "At 120 °C in toluene, Catalyst X gave a yield of 72%."
+          }
+        ],
+        "verbatim_value": "72",
+        "modality": "not_applicable",
+        "notes": "SYNTHETIC: the decoy has the same literal value but fails the condition test; scalar 72 retains spelling '72' in verbatim_value.",
+        "failure_reason": null,
+        "acceptance_checks": [
+          {
+            "test_id": "F_YIELD_120C::comparator",
+            "passed": true,
+            "rationale": "This is an unpaired yield and the schema requests no comparator."
+          },
+          {
+            "test_id": "F_YIELD_120C::expected_value_form",
+            "passed": true,
+            "rationale": "The sentence supplies one numeric value rather than a range."
+          },
+          {
+            "test_id": "F_YIELD_120C::metric_identity",
+            "passed": true,
+            "rationale": "The sentence explicitly names product yield, not conversion or selectivity."
+          },
+          {
+            "test_id": "F_YIELD_120C::modality",
+            "passed": true,
+            "rationale": "This numeric field is not a conclusion field."
+          },
+          {
+            "test_id": "F_YIELD_120C::requested_unit",
+            "passed": true,
+            "rationale": "The percent sign directly follows 72; no conversion was made."
+          },
+          {
+            "test_id": "F_YIELD_120C::required_condition",
+            "passed": true,
+            "rationale": "120 °C and toluene jointly bind the 72% yield in this sentence."
+          },
+          {
+            "test_id": "F_YIELD_120C::source_scope",
+            "passed": true,
+            "rationale": "The evidence is in the sole permitted source S_SYNTHETIC."
+          },
+          {
+            "test_id": "F_YIELD_120C::statistic",
+            "passed": true,
+            "rationale": "The selected sentence reports one value and no variability statistic."
+          },
+          {
+            "test_id": "F_YIELD_120C::subject_entity",
+            "passed": true,
+            "rationale": "The yield is predicated of Catalyst X."
+          },
+          {
+            "test_id": "F_YIELD_120C::verbatim_evidence",
+            "passed": true,
+            "rationale": "The quote is exact and contains the verbatim token 72; semantic checks above are separately satisfied."
+          }
+        ],
+        "rejected_candidates": [
+          {
+            "reason": "Rejected despite the identical number and unit: this occurrence is at 80 °C, not the required 120 °C.",
+            "verbatim_value": "72",
+            "evidence": {
+              "source_id": "S_SYNTHETIC",
+              "page": 1,
+              "paragraph_id": "p-decoy-80C",
+              "quote": "At 80 °C in toluene, Catalyst X gave a yield of 72%."
+            },
+            "failed_test_id": "F_YIELD_120C::required_condition"
+          }
+        ]
+      },
+      {
+        "field_id": "F_YIELD_SD_120C",
+        "status": "not_reported",
+        "scalar": null,
+        "units": null,
+        "statistic": null,
+        "experimental_condition": null,
+        "condition": null,
+        "comparator": null,
+        "paragraph_id": null,
+        "quote": null,
+        "evidence": [],
+        "verbatim_value": null,
+        "modality": null,
+        "notes": "SYNTHETIC: three replicates are mentioned, but a replicate count is not a standard deviation and no SD value was invented.",
+        "failure_reason": null,
+        "search_record": {
+          "paragraphs_searched": [
+            {
+              "source_id": "S_SYNTHETIC",
+              "paragraph_id": "p-decoy-80C",
+              "page": 1
+            },
+            {
+              "source_id": "S_SYNTHETIC",
+              "paragraph_id": "p-yield-120C",
+              "page": 1
+            },
+            {
+              "source_id": "S_SYNTHETIC",
+              "paragraph_id": "p-replicates",
+              "page": 1
+            },
+            {
+              "source_id": "S_SYNTHETIC",
+              "paragraph_id": "p-selectivity-a",
+              "page": 2
+            },
+            {
+              "source_id": "S_SYNTHETIC",
+              "paragraph_id": "p-selectivity-b",
+              "page": 2
+            },
+            {
+              "source_id": "S_SYNTHETIC",
+              "paragraph_id": "p-conversion-unreadable",
+              "page": 3
+            },
+            {
+              "source_id": "S_SYNTHETIC",
+              "paragraph_id": "p-outlook",
+              "page": 3
+            }
+          ],
+          "rationale": "All seven paragraphs in the allowed synthetic source were searched; the yield sentence and replicate statement do not report an SD, and the other paragraphs concern other fields."
+        }
+      },
+      {
+        "field_id": "F_SELECTIVITY_120C",
+        "status": "source_conflict",
+        "scalar": null,
+        "units": null,
+        "statistic": null,
+        "experimental_condition": null,
+        "condition": null,
+        "comparator": null,
+        "paragraph_id": null,
+        "quote": null,
+        "evidence": [
+          {
+            "source_id": "S_SYNTHETIC",
+            "page": 2,
+            "paragraph_id": "p-selectivity-a",
+            "quote": "At 120 °C in toluene, Catalyst X showed 90% selectivity in the main-text table."
+          },
+          {
+            "source_id": "S_SYNTHETIC",
+            "page": 2,
+            "paragraph_id": "p-selectivity-b",
+            "quote": "At 120 °C in toluene, Catalyst X showed 88% selectivity in the supplementary rerun."
+          }
+        ],
+        "verbatim_value": null,
+        "modality": "not_applicable",
+        "notes": "SYNTHETIC: both 90% and 88% satisfy the field semantics but disagree; no source-priority rule was invented and no scalar was selected.",
+        "failure_reason": null,
+        "acceptance_checks": [
+          {
+            "test_id": "F_SELECTIVITY_120C::comparator",
+            "passed": true,
+            "rationale": "Neither value is a comparative effect and no comparator was requested."
+          },
+          {
+            "test_id": "F_SELECTIVITY_120C::expected_value_form",
+            "passed": true,
+            "rationale": "Each candidate is a single numeric scalar; the field-level answer remains unresolved because they disagree."
+          },
+          {
+            "test_id": "F_SELECTIVITY_120C::metric_identity",
+            "passed": true,
+            "rationale": "Both candidates explicitly report selectivity, the requested metric."
+          },
+          {
+            "test_id": "F_SELECTIVITY_120C::modality",
+            "passed": true,
+            "rationale": "This numeric field is not a conclusion field."
+          },
+          {
+            "test_id": "F_SELECTIVITY_120C::requested_unit",
+            "passed": true,
+            "rationale": "Both values carry an explicit percent unit."
+          },
+          {
+            "test_id": "F_SELECTIVITY_120C::required_condition",
+            "passed": true,
+            "rationale": "Both values are jointly bound to 120 °C and toluene."
+          },
+          {
+            "test_id": "F_SELECTIVITY_120C::source_scope",
+            "passed": true,
+            "rationale": "Both paragraphs belong to the permitted source."
+          },
+          {
+            "test_id": "F_SELECTIVITY_120C::statistic",
+            "passed": true,
+            "rationale": "Each statement presents a single value, not an error estimate."
+          },
+          {
+            "test_id": "F_SELECTIVITY_120C::subject_entity",
+            "passed": true,
+            "rationale": "Both statements predicate selectivity of Catalyst X."
+          },
+          {
+            "test_id": "F_SELECTIVITY_120C::verbatim_evidence",
+            "passed": true,
+            "rationale": "Each value is contained in its own exact quote; matching alone was not used to choose between them."
+          }
+        ],
+        "conflict_candidates": [
+          {
+            "scalar": 90,
+            "units": "%",
+            "statistic": "single reported value",
+            "experimental_condition": "temperature=120 °C AND solvent=toluene",
+            "condition": "temperature=120 °C AND solvent=toluene",
+            "comparator": null,
+            "verbatim_value": "90",
+            "modality": "not_applicable",
+            "evidence": {
+              "source_id": "S_SYNTHETIC",
+              "page": 2,
+              "paragraph_id": "p-selectivity-a",
+              "quote": "At 120 °C in toluene, Catalyst X showed 90% selectivity in the main-text table."
+            }
+          },
+          {
+            "scalar": 88,
+            "units": "%",
+            "statistic": "single reported value",
+            "experimental_condition": "temperature=120 °C AND solvent=toluene",
+            "condition": "temperature=120 °C AND solvent=toluene",
+            "comparator": null,
+            "verbatim_value": "88",
+            "modality": "not_applicable",
+            "evidence": {
+              "source_id": "S_SYNTHETIC",
+              "page": 2,
+              "paragraph_id": "p-selectivity-b",
+              "quote": "At 120 °C in toluene, Catalyst X showed 88% selectivity in the supplementary rerun."
+            }
+          }
+        ]
+      },
+      {
+        "field_id": "F_CONVERSION_120C",
+        "status": "extraction_failed",
+        "scalar": null,
+        "units": null,
+        "statistic": null,
+        "experimental_condition": null,
+        "condition": null,
+        "comparator": null,
+        "paragraph_id": null,
+        "quote": null,
+        "evidence": [
+          {
+            "source_id": "S_SYNTHETIC",
+            "page": 3,
+            "paragraph_id": "p-conversion-unreadable",
+            "quote": "At 120 °C in toluene, Catalyst X conversion table cell: [illegible]."
+          }
+        ],
+        "verbatim_value": null,
+        "modality": null,
+        "notes": "This is an access/readability failure, not a claim that conversion was unreported and not a zero value.",
+        "failure_reason": "SYNTHETIC: the relevant conversion table cell is present only as '[illegible]' in the supplied source register, so the reported scalar cannot be recovered."
+      },
+      {
+        "field_id": "F_AUTHOR_OUTLOOK",
+        "status": "reported",
+        "scalar": "These results suggest that Catalyst X may be promising under the tested conditions.",
+        "units": null,
+        "statistic": null,
+        "experimental_condition": "under the tested conditions; preserve hedging",
+        "condition": "under the tested conditions; preserve hedging",
+        "comparator": null,
+        "paragraph_id": "p-outlook",
+        "quote": "These results suggest that Catalyst X may be promising under the tested conditions.",
+        "evidence": [
+          {
+            "source_id": "S_SYNTHETIC",
+            "page": 3,
+            "paragraph_id": "p-outlook",
+            "quote": "These results suggest that Catalyst X may be promising under the tested conditions."
+          }
+        ],
+        "verbatim_value": "These results suggest that Catalyst X may be promising under the tested conditions.",
+        "modality": "author_speculation",
+        "notes": "SYNTHETIC: hedging is preserved; no upgrade to a definitive author conclusion.",
+        "failure_reason": null,
+        "acceptance_checks": [
+          {
+            "test_id": "F_AUTHOR_OUTLOOK::comparator",
+            "passed": true,
+            "rationale": "The outlook has no comparator and none is requested."
+          },
+          {
+            "test_id": "F_AUTHOR_OUTLOOK::expected_value_form",
+            "passed": true,
+            "rationale": "The complete conclusion sentence is retained verbatim."
+          },
+          {
+            "test_id": "F_AUTHOR_OUTLOOK::metric_identity",
+            "passed": true,
+            "rationale": "The sentence states the author's outlook about catalyst promise."
+          },
+          {
+            "test_id": "F_AUTHOR_OUTLOOK::modality",
+            "passed": true,
+            "rationale": "'suggest' and 'may' are preserved and classified as author_speculation, not an established conclusion."
+          },
+          {
+            "test_id": "F_AUTHOR_OUTLOOK::requested_unit",
+            "passed": true,
+            "rationale": "No unit is applicable to this textual conclusion."
+          },
+          {
+            "test_id": "F_AUTHOR_OUTLOOK::required_condition",
+            "passed": true,
+            "rationale": "The qualification 'under the tested conditions' remains attached to the statement."
+          },
+          {
+            "test_id": "F_AUTHOR_OUTLOOK::source_scope",
+            "passed": true,
+            "rationale": "The conclusion comes from the permitted synthetic source."
+          },
+          {
+            "test_id": "F_AUTHOR_OUTLOOK::statistic",
+            "passed": true,
+            "rationale": "No statistic is applicable or inserted."
+          },
+          {
+            "test_id": "F_AUTHOR_OUTLOOK::subject_entity",
+            "passed": true,
+            "rationale": "The outlook explicitly concerns Catalyst X."
+          },
+          {
+            "test_id": "F_AUTHOR_OUTLOOK::verbatim_evidence",
+            "passed": true,
+            "rationale": "The entire sentence is an exact paragraph substring and is also the scalar."
+          }
+        ]
+      }
+    ],
+    "field_results": [
+      {
+        "field_id": "F_YIELD_120C",
+        "status": "reported",
+        "scalar": 72,
+        "units": "%",
+        "statistic": "single reported value",
+        "experimental_condition": "temperature=120 °C AND solvent=toluene",
+        "condition": "temperature=120 °C AND solvent=toluene",
+        "comparator": null,
+        "paragraph_id": "p-yield-120C",
+        "quote": "At 120 °C in toluene, Catalyst X gave a yield of 72%.",
+        "evidence": [
+          {
+            "source_id": "S_SYNTHETIC",
+            "page": 1,
+            "paragraph_id": "p-yield-120C",
+            "quote": "At 120 °C in toluene, Catalyst X gave a yield of 72%."
+          }
+        ],
+        "verbatim_value": "72",
+        "modality": "not_applicable",
+        "notes": "SYNTHETIC: the decoy has the same literal value but fails the condition test; scalar 72 retains spelling '72' in verbatim_value.",
+        "failure_reason": null,
+        "acceptance_checks": [
+          {
+            "test_id": "F_YIELD_120C::comparator",
+            "passed": true,
+            "rationale": "This is an unpaired yield and the schema requests no comparator."
+          },
+          {
+            "test_id": "F_YIELD_120C::expected_value_form",
+            "passed": true,
+            "rationale": "The sentence supplies one numeric value rather than a range."
+          },
+          {
+            "test_id": "F_YIELD_120C::metric_identity",
+            "passed": true,
+            "rationale": "The sentence explicitly names product yield, not conversion or selectivity."
+          },
+          {
+            "test_id": "F_YIELD_120C::modality",
+            "passed": true,
+            "rationale": "This numeric field is not a conclusion field."
+          },
+          {
+            "test_id": "F_YIELD_120C::requested_unit",
+            "passed": true,
+            "rationale": "The percent sign directly follows 72; no conversion was made."
+          },
+          {
+            "test_id": "F_YIELD_120C::required_condition",
+            "passed": true,
+            "rationale": "120 °C and toluene jointly bind the 72% yield in this sentence."
+          },
+          {
+            "test_id": "F_YIELD_120C::source_scope",
+            "passed": true,
+            "rationale": "The evidence is in the sole permitted source S_SYNTHETIC."
+          },
+          {
+            "test_id": "F_YIELD_120C::statistic",
+            "passed": true,
+            "rationale": "The selected sentence reports one value and no variability statistic."
+          },
+          {
+            "test_id": "F_YIELD_120C::subject_entity",
+            "passed": true,
+            "rationale": "The yield is predicated of Catalyst X."
+          },
+          {
+            "test_id": "F_YIELD_120C::verbatim_evidence",
+            "passed": true,
+            "rationale": "The quote is exact and contains the verbatim token 72; semantic checks above are separately satisfied."
+          }
+        ],
+        "rejected_candidates": [
+          {
+            "reason": "Rejected despite the identical number and unit: this occurrence is at 80 °C, not the required 120 °C.",
+            "verbatim_value": "72",
+            "evidence": {
+              "source_id": "S_SYNTHETIC",
+              "page": 1,
+              "paragraph_id": "p-decoy-80C",
+              "quote": "At 80 °C in toluene, Catalyst X gave a yield of 72%."
+            },
+            "failed_test_id": "F_YIELD_120C::required_condition"
+          }
+        ]
+      },
+      {
+        "field_id": "F_YIELD_SD_120C",
+        "status": "not_reported",
+        "scalar": null,
+        "units": null,
+        "statistic": null,
+        "experimental_condition": null,
+        "condition": null,
+        "comparator": null,
+        "paragraph_id": null,
+        "quote": null,
+        "evidence": [],
+        "verbatim_value": null,
+        "modality": null,
+        "notes": "SYNTHETIC: three replicates are mentioned, but a replicate count is not a standard deviation and no SD value was invented.",
+        "failure_reason": null,
+        "search_record": {
+          "paragraphs_searched": [
+            {
+              "source_id": "S_SYNTHETIC",
+              "paragraph_id": "p-decoy-80C",
+              "page": 1
+            },
+            {
+              "source_id": "S_SYNTHETIC",
+              "paragraph_id": "p-yield-120C",
+              "page": 1
+            },
+            {
+              "source_id": "S_SYNTHETIC",
+              "paragraph_id": "p-replicates",
+              "page": 1
+            },
+            {
+              "source_id": "S_SYNTHETIC",
+              "paragraph_id": "p-selectivity-a",
+              "page": 2
+            },
+            {
+              "source_id": "S_SYNTHETIC",
+              "paragraph_id": "p-selectivity-b",
+              "page": 2
+            },
+            {
+              "source_id": "S_SYNTHETIC",
+              "paragraph_id": "p-conversion-unreadable",
+              "page": 3
+            },
+            {
+              "source_id": "S_SYNTHETIC",
+              "paragraph_id": "p-outlook",
+              "page": 3
+            }
+          ],
+          "rationale": "All seven paragraphs in the allowed synthetic source were searched; the yield sentence and replicate statement do not report an SD, and the other paragraphs concern other fields."
+        }
+      },
+      {
+        "field_id": "F_SELECTIVITY_120C",
+        "status": "source_conflict",
+        "scalar": null,
+        "units": null,
+        "statistic": null,
+        "experimental_condition": null,
+        "condition": null,
+        "comparator": null,
+        "paragraph_id": null,
+        "quote": null,
+        "evidence": [
+          {
+            "source_id": "S_SYNTHETIC",
+            "page": 2,
+            "paragraph_id": "p-selectivity-a",
+            "quote": "At 120 °C in toluene, Catalyst X showed 90% selectivity in the main-text table."
+          },
+          {
+            "source_id": "S_SYNTHETIC",
+            "page": 2,
+            "paragraph_id": "p-selectivity-b",
+            "quote": "At 120 °C in toluene, Catalyst X showed 88% selectivity in the supplementary rerun."
+          }
+        ],
+        "verbatim_value": null,
+        "modality": "not_applicable",
+        "notes": "SYNTHETIC: both 90% and 88% satisfy the field semantics but disagree; no source-priority rule was invented and no scalar was selected.",
+        "failure_reason": null,
+        "acceptance_checks": [
+          {
+            "test_id": "F_SELECTIVITY_120C::comparator",
+            "passed": true,
+            "rationale": "Neither value is a comparative effect and no comparator was requested."
+          },
+          {
+            "test_id": "F_SELECTIVITY_120C::expected_value_form",
+            "passed": true,
+            "rationale": "Each candidate is a single numeric scalar; the field-level answer remains unresolved because they disagree."
+          },
+          {
+            "test_id": "F_SELECTIVITY_120C::metric_identity",
+            "passed": true,
+            "rationale": "Both candidates explicitly report selectivity, the requested metric."
+          },
+          {
+            "test_id": "F_SELECTIVITY_120C::modality",
+            "passed": true,
+            "rationale": "This numeric field is not a conclusion field."
+          },
+          {
+            "test_id": "F_SELECTIVITY_120C::requested_unit",
+            "passed": true,
+            "rationale": "Both values carry an explicit percent unit."
+          },
+          {
+            "test_id": "F_SELECTIVITY_120C::required_condition",
+            "passed": true,
+            "rationale": "Both values are jointly bound to 120 °C and toluene."
+          },
+          {
+            "test_id": "F_SELECTIVITY_120C::source_scope",
+            "passed": true,
+            "rationale": "Both paragraphs belong to the permitted source."
+          },
+          {
+            "test_id": "F_SELECTIVITY_120C::statistic",
+            "passed": true,
+            "rationale": "Each statement presents a single value, not an error estimate."
+          },
+          {
+            "test_id": "F_SELECTIVITY_120C::subject_entity",
+            "passed": true,
+            "rationale": "Both statements predicate selectivity of Catalyst X."
+          },
+          {
+            "test_id": "F_SELECTIVITY_120C::verbatim_evidence",
+            "passed": true,
+            "rationale": "Each value is contained in its own exact quote; matching alone was not used to choose between them."
+          }
+        ],
+        "conflict_candidates": [
+          {
+            "scalar": 90,
+            "units": "%",
+            "statistic": "single reported value",
+            "experimental_condition": "temperature=120 °C AND solvent=toluene",
+            "condition": "temperature=120 °C AND solvent=toluene",
+            "comparator": null,
+            "verbatim_value": "90",
+            "modality": "not_applicable",
+            "evidence": {
+              "source_id": "S_SYNTHETIC",
+              "page": 2,
+              "paragraph_id": "p-selectivity-a",
+              "quote": "At 120 °C in toluene, Catalyst X showed 90% selectivity in the main-text table."
+            }
+          },
+          {
+            "scalar": 88,
+            "units": "%",
+            "statistic": "single reported value",
+            "experimental_condition": "temperature=120 °C AND solvent=toluene",
+            "condition": "temperature=120 °C AND solvent=toluene",
+            "comparator": null,
+            "verbatim_value": "88",
+            "modality": "not_applicable",
+            "evidence": {
+              "source_id": "S_SYNTHETIC",
+              "page": 2,
+              "paragraph_id": "p-selectivity-b",
+              "quote": "At 120 °C in toluene, Catalyst X showed 88% selectivity in the supplementary rerun."
+            }
+          }
+        ]
+      },
+      {
+        "field_id": "F_CONVERSION_120C",
+        "status": "extraction_failed",
+        "scalar": null,
+        "units": null,
+        "statistic": null,
+        "experimental_condition": null,
+        "condition": null,
+        "comparator": null,
+        "paragraph_id": null,
+        "quote": null,
+        "evidence": [
+          {
+            "source_id": "S_SYNTHETIC",
+            "page": 3,
+            "paragraph_id": "p-conversion-unreadable",
+            "quote": "At 120 °C in toluene, Catalyst X conversion table cell: [illegible]."
+          }
+        ],
+        "verbatim_value": null,
+        "modality": null,
+        "notes": "This is an access/readability failure, not a claim that conversion was unreported and not a zero value.",
+        "failure_reason": "SYNTHETIC: the relevant conversion table cell is present only as '[illegible]' in the supplied source register, so the reported scalar cannot be recovered."
+      },
+      {
+        "field_id": "F_AUTHOR_OUTLOOK",
+        "status": "reported",
+        "scalar": "These results suggest that Catalyst X may be promising under the tested conditions.",
+        "units": null,
+        "statistic": null,
+        "experimental_condition": "under the tested conditions; preserve hedging",
+        "condition": "under the tested conditions; preserve hedging",
+        "comparator": null,
+        "paragraph_id": "p-outlook",
+        "quote": "These results suggest that Catalyst X may be promising under the tested conditions.",
+        "evidence": [
+          {
+            "source_id": "S_SYNTHETIC",
+            "page": 3,
+            "paragraph_id": "p-outlook",
+            "quote": "These results suggest that Catalyst X may be promising under the tested conditions."
+          }
+        ],
+        "verbatim_value": "These results suggest that Catalyst X may be promising under the tested conditions.",
+        "modality": "author_speculation",
+        "notes": "SYNTHETIC: hedging is preserved; no upgrade to a definitive author conclusion.",
+        "failure_reason": null,
+        "acceptance_checks": [
+          {
+            "test_id": "F_AUTHOR_OUTLOOK::comparator",
+            "passed": true,
+            "rationale": "The outlook has no comparator and none is requested."
+          },
+          {
+            "test_id": "F_AUTHOR_OUTLOOK::expected_value_form",
+            "passed": true,
+            "rationale": "The complete conclusion sentence is retained verbatim."
+          },
+          {
+            "test_id": "F_AUTHOR_OUTLOOK::metric_identity",
+            "passed": true,
+            "rationale": "The sentence states the author's outlook about catalyst promise."
+          },
+          {
+            "test_id": "F_AUTHOR_OUTLOOK::modality",
+            "passed": true,
+            "rationale": "'suggest' and 'may' are preserved and classified as author_speculation, not an established conclusion."
+          },
+          {
+            "test_id": "F_AUTHOR_OUTLOOK::requested_unit",
+            "passed": true,
+            "rationale": "No unit is applicable to this textual conclusion."
+          },
+          {
+            "test_id": "F_AUTHOR_OUTLOOK::required_condition",
+            "passed": true,
+            "rationale": "The qualification 'under the tested conditions' remains attached to the statement."
+          },
+          {
+            "test_id": "F_AUTHOR_OUTLOOK::source_scope",
+            "passed": true,
+            "rationale": "The conclusion comes from the permitted synthetic source."
+          },
+          {
+            "test_id": "F_AUTHOR_OUTLOOK::statistic",
+            "passed": true,
+            "rationale": "No statistic is applicable or inserted."
+          },
+          {
+            "test_id": "F_AUTHOR_OUTLOOK::subject_entity",
+            "passed": true,
+            "rationale": "The outlook explicitly concerns Catalyst X."
+          },
+          {
+            "test_id": "F_AUTHOR_OUTLOOK::verbatim_evidence",
+            "passed": true,
+            "rationale": "The entire sentence is an exact paragraph substring and is also the scalar."
+          }
+        ]
+      }
+    ]
+  },
+  "claims": [
+    {
+      "claim_id": "claim::F_YIELD_120C",
+      "field_id": "F_YIELD_120C",
+      "kind": "reported_field",
+      "statement": "72",
+      "evidence": [
+        {
+          "source_id": "S_SYNTHETIC",
+          "page": 1,
+          "paragraph_id": "p-yield-120C",
+          "quote": "At 120 °C in toluene, Catalyst X gave a yield of 72%."
+        }
+      ],
+      "source_id": "S_SYNTHETIC",
+      "location": {
+        "page": 1,
+        "paragraph_id": "p-yield-120C"
+      }
+    },
+    {
+      "claim_id": "claim::F_AUTHOR_OUTLOOK",
+      "field_id": "F_AUTHOR_OUTLOOK",
+      "kind": "author_speculation",
+      "statement": "These results suggest that Catalyst X may be promising under the tested conditions.",
+      "evidence": [
+        {
+          "source_id": "S_SYNTHETIC",
+          "page": 3,
+          "paragraph_id": "p-outlook",
+          "quote": "These results suggest that Catalyst X may be promising under the tested conditions."
+        }
+      ],
+      "source_id": "S_SYNTHETIC",
+      "location": {
+        "page": 3,
+        "paragraph_id": "p-outlook"
+      }
+    }
+  ],
+  "uncertainties": [
+    {
+      "field_id": "F_YIELD_SD_120C",
+      "kind": "not_reported",
+      "message": "SYNTHETIC: three replicates are mentioned, but a replicate count is not a standard deviation and no SD value was invented.",
+      "search_record": {
+        "paragraphs_searched": [
+          {
+            "source_id": "S_SYNTHETIC",
+            "paragraph_id": "p-decoy-80C",
+            "page": 1
+          },
+          {
+            "source_id": "S_SYNTHETIC",
+            "paragraph_id": "p-yield-120C",
+            "page": 1
+          },
+          {
+            "source_id": "S_SYNTHETIC",
+            "paragraph_id": "p-replicates",
+            "page": 1
+          },
+          {
+            "source_id": "S_SYNTHETIC",
+            "paragraph_id": "p-selectivity-a",
+            "page": 2
+          },
+          {
+            "source_id": "S_SYNTHETIC",
+            "paragraph_id": "p-selectivity-b",
+            "page": 2
+          },
+          {
+            "source_id": "S_SYNTHETIC",
+            "paragraph_id": "p-conversion-unreadable",
+            "page": 3
+          },
+          {
+            "source_id": "S_SYNTHETIC",
+            "paragraph_id": "p-outlook",
+            "page": 3
+          }
+        ],
+        "rationale": "All seven paragraphs in the allowed synthetic source were searched; the yield sentence and replicate statement do not report an SD, and the other paragraphs concern other fields."
+      }
+    },
+    {
+      "field_id": "F_SELECTIVITY_120C",
+      "kind": "source_conflict",
+      "message": "SYNTHETIC: both 90% and 88% satisfy the field semantics but disagree; no source-priority rule was invented and no scalar was selected.",
+      "candidate_count": 2
+    },
+    {
+      "field_id": "F_CONVERSION_120C",
+      "kind": "extraction_failed",
+      "message": "SYNTHETIC: the relevant conversion table cell is present only as '[illegible]' in the supplied source register, so the reported scalar cannot be recovered."
+    }
+  ],
+  "sources": [
+    {
+      "source_id": "S_SYNTHETIC",
+      "title": "SYNTHETIC Catalyst X excerpt (invented; not a publication)",
+      "synthetic": true
+    }
+  ],
+  "change_records": [
+    {
+      "sequence": 1,
+      "event": "conservative_skeleton_initialized",
+      "candidate_values_read": false
+    },
+    {
+      "sequence": 2,
+      "event": "contract_compiled_before_candidate_adjudication",
+      "contract_sha256": "37cb8680bc58438b9f359bf742193382d03b8b45d12ecfa661f1ed2d08ca3acf",
+      "candidate_values_read": false
+    },
+    {
+      "sequence": 3,
+      "event": "agent_adjudication_validated_and_compiled",
+      "decision_contract_sha256": "37cb8680bc58438b9f359bf742193382d03b8b45d12ecfa661f1ed2d08ca3acf",
+      "source_register_sha256": "ee517a3867e12022da2a017760c6f2fef2a94c947f27bfe912e47c19404a70db"
+    }
+  ]
+}

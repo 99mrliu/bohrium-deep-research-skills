@@ -1,0 +1,5 @@
+SYNTHETIC EXAMPLE — never official results
+Command: python3 scripts/runtime.py --input-dir examples/minimal --work-dir examples/minimal/failure-work --output-dir examples/minimal/failure-output --bindings examples/minimal/failure-work/invalid-header-bindings.json
+Exit code: 2
+Observed rejection: Reviewed bindings rejected; no candidate answer was promoted: Binding for yield_A_25C_24h: column header text differs: Yield (%) at 24 h != Yield (%)
+All three failure-output scalar values remained null.

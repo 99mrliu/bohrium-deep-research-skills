@@ -1,0 +1,17 @@
+[
+  {
+    "comparator": "comparator D",
+    "description": "SYNTHETIC numeric response request; not an official target.",
+    "experimental_condition": "condition C",
+    "field_id": "syn_response",
+    "statistic_required": true,
+    "subject": "SynA"
+  },
+  {
+    "comparator": "comparator D",
+    "description": "SYNTHETIC absent measurement; not an official target.",
+    "experimental_condition": "condition C",
+    "field_id": "syn_unmeasured",
+    "subject": "SynA"
+  }
+]

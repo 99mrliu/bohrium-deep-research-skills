@@ -1,0 +1,67 @@
+{
+  "description": "SYNTHETIC target schema; every value and entity is invented.",
+  "fields": [
+    {
+      "field_id": "F_YIELD_120C",
+      "question": "What yield did SYNTHETIC Catalyst X give at 120 °C in toluene?",
+      "metric_identity": "product yield",
+      "subject_entity": "SYNTHETIC Catalyst X",
+      "expected_value_form": "single numeric scalar",
+      "requested_unit": "%",
+      "statistic": "single reported value",
+      "required_condition": "temperature=120 °C AND solvent=toluene",
+      "comparator": "none",
+      "source_scope": ["S_SYNTHETIC"]
+    },
+    {
+      "field_id": "F_YIELD_SD_120C",
+      "question": "What standard deviation of yield was reported for SYNTHETIC Catalyst X at 120 °C in toluene?",
+      "metric_identity": "product yield variability",
+      "subject_entity": "SYNTHETIC Catalyst X",
+      "expected_value_form": "single numeric scalar",
+      "requested_unit": "percentage points",
+      "statistic": "standard deviation",
+      "required_condition": "temperature=120 °C AND solvent=toluene",
+      "comparator": "none",
+      "source_scope": ["S_SYNTHETIC"]
+    },
+    {
+      "field_id": "F_SELECTIVITY_120C",
+      "question": "What selectivity did SYNTHETIC Catalyst X give at 120 °C in toluene?",
+      "metric_identity": "product selectivity",
+      "subject_entity": "SYNTHETIC Catalyst X",
+      "expected_value_form": "single numeric scalar",
+      "requested_unit": "%",
+      "statistic": "single reported value",
+      "required_condition": "temperature=120 °C AND solvent=toluene",
+      "comparator": "none",
+      "source_scope": ["S_SYNTHETIC"]
+    },
+    {
+      "field_id": "F_CONVERSION_120C",
+      "question": "What conversion did SYNTHETIC Catalyst X give at 120 °C in toluene?",
+      "metric_identity": "reactant conversion",
+      "subject_entity": "SYNTHETIC Catalyst X",
+      "expected_value_form": "single numeric scalar",
+      "requested_unit": "%",
+      "statistic": "single reported value",
+      "required_condition": "temperature=120 °C AND solvent=toluene",
+      "comparator": "none",
+      "source_scope": ["S_SYNTHETIC"]
+    },
+    {
+      "field_id": "F_AUTHOR_OUTLOOK",
+      "question": "What is the author's stated outlook for SYNTHETIC Catalyst X, preserving speculative modality?",
+      "field_kind": "conclusion",
+      "metric_identity": "author outlook on catalyst promise",
+      "subject_entity": "SYNTHETIC Catalyst X",
+      "expected_value_form": "verbatim conclusion sentence",
+      "requested_unit": "not_applicable",
+      "statistic": "not_applicable",
+      "required_condition": "under the tested conditions; preserve hedging",
+      "comparator": "none",
+      "source_scope": ["S_SYNTHETIC"],
+      "modality": "author_speculation"
+    }
+  ]
+}

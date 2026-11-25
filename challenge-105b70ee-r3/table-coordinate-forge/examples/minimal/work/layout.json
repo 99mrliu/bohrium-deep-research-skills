@@ -1,0 +1,958 @@
+{
+  "schema_version": "table-coordinate-forge/layout-v1",
+  "label": "SYNTHETIC EXAMPLE — never official results",
+  "created_at": "2026-11-25T02:34:38.118854+00:00",
+  "pages": [
+    {
+      "page": "1",
+      "page_index": 1,
+      "width": 612.0,
+      "height": 300.0,
+      "physical_rows": [
+        {
+          "words": [
+            {
+              "text": "Catalyst",
+              "bbox": {
+                "xMin": 60.0,
+                "yMin": 50.0,
+                "xMax": 112.0,
+                "yMax": 62.0
+              },
+              "word_id": "s001-p001-b001-l001-w001"
+            },
+            {
+              "text": "Temp",
+              "bbox": {
+                "xMin": 200.0,
+                "yMin": 50.0,
+                "xMax": 230.0,
+                "yMax": 62.0
+              },
+              "word_id": "s001-p001-b001-l001-w002"
+            },
+            {
+              "text": "(°C)",
+              "bbox": {
+                "xMin": 234.0,
+                "yMin": 50.0,
+                "xMax": 260.0,
+                "yMax": 62.0
+              },
+              "word_id": "s001-p001-b001-l001-w003"
+            },
+            {
+              "text": "Yield",
+              "bbox": {
+                "xMin": 380.0,
+                "yMin": 50.0,
+                "xMax": 408.0,
+                "yMax": 62.0
+              },
+              "word_id": "s001-p001-b001-l001-w004"
+            },
+            {
+              "text": "(%)",
+              "bbox": {
+                "xMin": 412.0,
+                "yMin": 50.0,
+                "xMax": 424.0,
+                "yMax": 62.0
+              },
+              "word_id": "s001-p001-b001-l001-w005"
+            },
+            {
+              "text": "at",
+              "bbox": {
+                "xMin": 428.0,
+                "yMin": 50.0,
+                "xMax": 434.0,
+                "yMax": 62.0
+              },
+              "word_id": "s001-p001-b001-l001-w006"
+            },
+            {
+              "text": "24",
+              "bbox": {
+                "xMin": 438.0,
+                "yMin": 50.0,
+                "xMax": 448.0,
+                "yMax": 62.0
+              },
+              "word_id": "s001-p001-b001-l001-w007"
+            },
+            {
+              "text": "h",
+              "bbox": {
+                "xMin": 452.0,
+                "yMin": 50.0,
+                "xMax": 456.0,
+                "yMax": 62.0
+              },
+              "word_id": "s001-p001-b001-l001-w008"
+            }
+          ],
+          "bbox": {
+            "xMin": 60.0,
+            "yMin": 50.0,
+            "xMax": 456.0,
+            "yMax": 62.0
+          },
+          "source_line_ids": [
+            "s001-p001-b001-l001"
+          ],
+          "physical_row_id": "s001-p001-pr001",
+          "groups": [
+            {
+              "text": "Catalyst",
+              "bbox": {
+                "xMin": 60.0,
+                "yMin": 50.0,
+                "xMax": 112.0,
+                "yMax": 62.0
+              },
+              "words": [
+                {
+                  "text": "Catalyst",
+                  "bbox": {
+                    "xMin": 60.0,
+                    "yMin": 50.0,
+                    "xMax": 112.0,
+                    "yMax": 62.0
+                  },
+                  "word_id": "s001-p001-b001-l001-w001"
+                }
+              ],
+              "gap_threshold": 8.0
+            },
+            {
+              "text": "Temp (°C)",
+              "bbox": {
+                "xMin": 200.0,
+                "yMin": 50.0,
+                "xMax": 260.0,
+                "yMax": 62.0
+              },
+              "words": [
+                {
+                  "text": "Temp",
+                  "bbox": {
+                    "xMin": 200.0,
+                    "yMin": 50.0,
+                    "xMax": 230.0,
+                    "yMax": 62.0
+                  },
+                  "word_id": "s001-p001-b001-l001-w002"
+                },
+                {
+                  "text": "(°C)",
+                  "bbox": {
+                    "xMin": 234.0,
+                    "yMin": 50.0,
+                    "xMax": 260.0,
+                    "yMax": 62.0
+                  },
+                  "word_id": "s001-p001-b001-l001-w003"
+                }
+              ],
+              "gap_threshold": 8.0
+            },
+            {
+              "text": "Yield (%) at 24 h",
+              "bbox": {
+                "xMin": 380.0,
+                "yMin": 50.0,
+                "xMax": 456.0,
+                "yMax": 62.0
+              },
+              "words": [
+                {
+                  "text": "Yield",
+                  "bbox": {
+                    "xMin": 380.0,
+                    "yMin": 50.0,
+                    "xMax": 408.0,
+                    "yMax": 62.0
+                  },
+                  "word_id": "s001-p001-b001-l001-w004"
+                },
+                {
+                  "text": "(%)",
+                  "bbox": {
+                    "xMin": 412.0,
+                    "yMin": 50.0,
+                    "xMax": 424.0,
+                    "yMax": 62.0
+                  },
+                  "word_id": "s001-p001-b001-l001-w005"
+                },
+                {
+                  "text": "at",
+                  "bbox": {
+                    "xMin": 428.0,
+                    "yMin": 50.0,
+                    "xMax": 434.0,
+                    "yMax": 62.0
+                  },
+                  "word_id": "s001-p001-b001-l001-w006"
+                },
+                {
+                  "text": "24",
+                  "bbox": {
+                    "xMin": 438.0,
+                    "yMin": 50.0,
+                    "xMax": 448.0,
+                    "yMax": 62.0
+                  },
+                  "word_id": "s001-p001-b001-l001-w007"
+                },
+                {
+                  "text": "h",
+                  "bbox": {
+                    "xMin": 452.0,
+                    "yMin": 50.0,
+                    "xMax": 456.0,
+                    "yMax": 62.0
+                  },
+                  "word_id": "s001-p001-b001-l001-w008"
+                }
+              ],
+              "gap_threshold": 8.0
+            }
+          ]
+        },
+        {
+          "words": [
+            {
+              "text": "A",
+              "bbox": {
+                "xMin": 60.0,
+                "yMin": 80.0,
+                "xMax": 70.0,
+                "yMax": 92.0
+              },
+              "word_id": "s001-p001-b001-l002-w001"
+            },
+            {
+              "text": "25",
+              "bbox": {
+                "xMin": 220.0,
+                "yMin": 80.0,
+                "xMax": 235.0,
+                "yMax": 92.0
+              },
+              "word_id": "s001-p001-b001-l002-w002"
+            },
+            {
+              "text": "42.0",
+              "bbox": {
+                "xMin": 420.0,
+                "yMin": 80.0,
+                "xMax": 447.0,
+                "yMax": 92.0
+              },
+              "word_id": "s001-p001-b001-l002-w003"
+            }
+          ],
+          "bbox": {
+            "xMin": 60.0,
+            "yMin": 80.0,
+            "xMax": 447.0,
+            "yMax": 92.0
+          },
+          "source_line_ids": [
+            "s001-p001-b001-l002"
+          ],
+          "physical_row_id": "s001-p001-pr002",
+          "groups": [
+            {
+              "text": "A",
+              "bbox": {
+                "xMin": 60.0,
+                "yMin": 80.0,
+                "xMax": 70.0,
+                "yMax": 92.0
+              },
+              "words": [
+                {
+                  "text": "A",
+                  "bbox": {
+                    "xMin": 60.0,
+                    "yMin": 80.0,
+                    "xMax": 70.0,
+                    "yMax": 92.0
+                  },
+                  "word_id": "s001-p001-b001-l002-w001"
+                }
+              ],
+              "gap_threshold": 8.0
+            },
+            {
+              "text": "25",
+              "bbox": {
+                "xMin": 220.0,
+                "yMin": 80.0,
+                "xMax": 235.0,
+                "yMax": 92.0
+              },
+              "words": [
+                {
+                  "text": "25",
+                  "bbox": {
+                    "xMin": 220.0,
+                    "yMin": 80.0,
+                    "xMax": 235.0,
+                    "yMax": 92.0
+                  },
+                  "word_id": "s001-p001-b001-l002-w002"
+                }
+              ],
+              "gap_threshold": 8.0
+            },
+            {
+              "text": "42.0",
+              "bbox": {
+                "xMin": 420.0,
+                "yMin": 80.0,
+                "xMax": 447.0,
+                "yMax": 92.0
+              },
+              "words": [
+                {
+                  "text": "42.0",
+                  "bbox": {
+                    "xMin": 420.0,
+                    "yMin": 80.0,
+                    "xMax": 447.0,
+                    "yMax": 92.0
+                  },
+                  "word_id": "s001-p001-b001-l002-w003"
+                }
+              ],
+              "gap_threshold": 8.0
+            }
+          ]
+        },
+        {
+          "words": [
+            {
+              "text": "B",
+              "bbox": {
+                "xMin": 60.0,
+                "yMin": 110.0,
+                "xMax": 70.0,
+                "yMax": 122.0
+              },
+              "word_id": "s001-p001-b001-l003-w001"
+            },
+            {
+              "text": "40",
+              "bbox": {
+                "xMin": 220.0,
+                "yMin": 110.0,
+                "xMax": 235.0,
+                "yMax": 122.0
+              },
+              "word_id": "s001-p001-b001-l003-w002"
+            },
+            {
+              "text": "44.0",
+              "bbox": {
+                "xMin": 420.0,
+                "yMin": 110.0,
+                "xMax": 447.0,
+                "yMax": 122.0
+              },
+              "word_id": "s001-p001-b001-l003-w003"
+            }
+          ],
+          "bbox": {
+            "xMin": 60.0,
+            "yMin": 110.0,
+            "xMax": 447.0,
+            "yMax": 122.0
+          },
+          "source_line_ids": [
+            "s001-p001-b001-l003"
+          ],
+          "physical_row_id": "s001-p001-pr003",
+          "groups": [
+            {
+              "text": "B",
+              "bbox": {
+                "xMin": 60.0,
+                "yMin": 110.0,
+                "xMax": 70.0,
+                "yMax": 122.0
+              },
+              "words": [
+                {
+                  "text": "B",
+                  "bbox": {
+                    "xMin": 60.0,
+                    "yMin": 110.0,
+                    "xMax": 70.0,
+                    "yMax": 122.0
+                  },
+                  "word_id": "s001-p001-b001-l003-w001"
+                }
+              ],
+              "gap_threshold": 8.0
+            },
+            {
+              "text": "40",
+              "bbox": {
+                "xMin": 220.0,
+                "yMin": 110.0,
+                "xMax": 235.0,
+                "yMax": 122.0
+              },
+              "words": [
+                {
+                  "text": "40",
+                  "bbox": {
+                    "xMin": 220.0,
+                    "yMin": 110.0,
+                    "xMax": 235.0,
+                    "yMax": 122.0
+                  },
+                  "word_id": "s001-p001-b001-l003-w002"
+                }
+              ],
+              "gap_threshold": 8.0
+            },
+            {
+              "text": "44.0",
+              "bbox": {
+                "xMin": 420.0,
+                "yMin": 110.0,
+                "xMax": 447.0,
+                "yMax": 122.0
+              },
+              "words": [
+                {
+                  "text": "44.0",
+                  "bbox": {
+                    "xMin": 420.0,
+                    "yMin": 110.0,
+                    "xMax": 447.0,
+                    "yMax": 122.0
+                  },
+                  "word_id": "s001-p001-b001-l003-w003"
+                }
+              ],
+              "gap_threshold": 8.0
+            }
+          ]
+        }
+      ],
+      "source_id": "supplied-bbox-001"
+    },
+    {
+      "page": "2",
+      "page_index": 2,
+      "width": 612.0,
+      "height": 300.0,
+      "physical_rows": [
+        {
+          "words": [
+            {
+              "text": "Catalyst",
+              "bbox": {
+                "xMin": 60.0,
+                "yMin": 50.0,
+                "xMax": 112.0,
+                "yMax": 62.0
+              },
+              "word_id": "s001-p002-b001-l001-w001"
+            },
+            {
+              "text": "(cont.)",
+              "bbox": {
+                "xMin": 116.0,
+                "yMin": 50.0,
+                "xMax": 144.0,
+                "yMax": 62.0
+              },
+              "word_id": "s001-p002-b001-l001-w002"
+            },
+            {
+              "text": "Temp",
+              "bbox": {
+                "xMin": 200.0,
+                "yMin": 50.0,
+                "xMax": 230.0,
+                "yMax": 62.0
+              },
+              "word_id": "s001-p002-b001-l001-w003"
+            },
+            {
+              "text": "(°C)",
+              "bbox": {
+                "xMin": 234.0,
+                "yMin": 50.0,
+                "xMax": 260.0,
+                "yMax": 62.0
+              },
+              "word_id": "s001-p002-b001-l001-w004"
+            },
+            {
+              "text": "(continued)",
+              "bbox": {
+                "xMin": 264.0,
+                "yMin": 50.0,
+                "xMax": 326.0,
+                "yMax": 62.0
+              },
+              "word_id": "s001-p002-b001-l001-w005"
+            },
+            {
+              "text": "Yield",
+              "bbox": {
+                "xMin": 380.0,
+                "yMin": 50.0,
+                "xMax": 408.0,
+                "yMax": 62.0
+              },
+              "word_id": "s001-p002-b001-l001-w006"
+            },
+            {
+              "text": "(%)",
+              "bbox": {
+                "xMin": 412.0,
+                "yMin": 50.0,
+                "xMax": 424.0,
+                "yMax": 62.0
+              },
+              "word_id": "s001-p002-b001-l001-w007"
+            },
+            {
+              "text": "at",
+              "bbox": {
+                "xMin": 428.0,
+                "yMin": 50.0,
+                "xMax": 434.0,
+                "yMax": 62.0
+              },
+              "word_id": "s001-p002-b001-l001-w008"
+            },
+            {
+              "text": "24",
+              "bbox": {
+                "xMin": 438.0,
+                "yMin": 50.0,
+                "xMax": 448.0,
+                "yMax": 62.0
+              },
+              "word_id": "s001-p002-b001-l001-w009"
+            },
+            {
+              "text": "h",
+              "bbox": {
+                "xMin": 452.0,
+                "yMin": 50.0,
+                "xMax": 456.0,
+                "yMax": 62.0
+              },
+              "word_id": "s001-p002-b001-l001-w010"
+            },
+            {
+              "text": "(continued)",
+              "bbox": {
+                "xMin": 460.0,
+                "yMin": 50.0,
+                "xMax": 522.0,
+                "yMax": 62.0
+              },
+              "word_id": "s001-p002-b001-l001-w011"
+            }
+          ],
+          "bbox": {
+            "xMin": 60.0,
+            "yMin": 50.0,
+            "xMax": 522.0,
+            "yMax": 62.0
+          },
+          "source_line_ids": [
+            "s001-p002-b001-l001"
+          ],
+          "physical_row_id": "s001-p002-pr001",
+          "groups": [
+            {
+              "text": "Catalyst (cont.)",
+              "bbox": {
+                "xMin": 60.0,
+                "yMin": 50.0,
+                "xMax": 144.0,
+                "yMax": 62.0
+              },
+              "words": [
+                {
+                  "text": "Catalyst",
+                  "bbox": {
+                    "xMin": 60.0,
+                    "yMin": 50.0,
+                    "xMax": 112.0,
+                    "yMax": 62.0
+                  },
+                  "word_id": "s001-p002-b001-l001-w001"
+                },
+                {
+                  "text": "(cont.)",
+                  "bbox": {
+                    "xMin": 116.0,
+                    "yMin": 50.0,
+                    "xMax": 144.0,
+                    "yMax": 62.0
+                  },
+                  "word_id": "s001-p002-b001-l001-w002"
+                }
+              ],
+              "gap_threshold": 8.0
+            },
+            {
+              "text": "Temp (°C) (continued)",
+              "bbox": {
+                "xMin": 200.0,
+                "yMin": 50.0,
+                "xMax": 326.0,
+                "yMax": 62.0
+              },
+              "words": [
+                {
+                  "text": "Temp",
+                  "bbox": {
+                    "xMin": 200.0,
+                    "yMin": 50.0,
+                    "xMax": 230.0,
+                    "yMax": 62.0
+                  },
+                  "word_id": "s001-p002-b001-l001-w003"
+                },
+                {
+                  "text": "(°C)",
+                  "bbox": {
+                    "xMin": 234.0,
+                    "yMin": 50.0,
+                    "xMax": 260.0,
+                    "yMax": 62.0
+                  },
+                  "word_id": "s001-p002-b001-l001-w004"
+                },
+                {
+                  "text": "(continued)",
+                  "bbox": {
+                    "xMin": 264.0,
+                    "yMin": 50.0,
+                    "xMax": 326.0,
+                    "yMax": 62.0
+                  },
+                  "word_id": "s001-p002-b001-l001-w005"
+                }
+              ],
+              "gap_threshold": 8.0
+            },
+            {
+              "text": "Yield (%) at 24 h (continued)",
+              "bbox": {
+                "xMin": 380.0,
+                "yMin": 50.0,
+                "xMax": 522.0,
+                "yMax": 62.0
+              },
+              "words": [
+                {
+                  "text": "Yield",
+                  "bbox": {
+                    "xMin": 380.0,
+                    "yMin": 50.0,
+                    "xMax": 408.0,
+                    "yMax": 62.0
+                  },
+                  "word_id": "s001-p002-b001-l001-w006"
+                },
+                {
+                  "text": "(%)",
+                  "bbox": {
+                    "xMin": 412.0,
+                    "yMin": 50.0,
+                    "xMax": 424.0,
+                    "yMax": 62.0
+                  },
+                  "word_id": "s001-p002-b001-l001-w007"
+                },
+                {
+                  "text": "at",
+                  "bbox": {
+                    "xMin": 428.0,
+                    "yMin": 50.0,
+                    "xMax": 434.0,
+                    "yMax": 62.0
+                  },
+                  "word_id": "s001-p002-b001-l001-w008"
+                },
+                {
+                  "text": "24",
+                  "bbox": {
+                    "xMin": 438.0,
+                    "yMin": 50.0,
+                    "xMax": 448.0,
+                    "yMax": 62.0
+                  },
+                  "word_id": "s001-p002-b001-l001-w009"
+                },
+                {
+                  "text": "h",
+                  "bbox": {
+                    "xMin": 452.0,
+                    "yMin": 50.0,
+                    "xMax": 456.0,
+                    "yMax": 62.0
+                  },
+                  "word_id": "s001-p002-b001-l001-w010"
+                },
+                {
+                  "text": "(continued)",
+                  "bbox": {
+                    "xMin": 460.0,
+                    "yMin": 50.0,
+                    "xMax": 522.0,
+                    "yMax": 62.0
+                  },
+                  "word_id": "s001-p002-b001-l001-w011"
+                }
+              ],
+              "gap_threshold": 8.0
+            }
+          ]
+        },
+        {
+          "words": [
+            {
+              "text": "C",
+              "bbox": {
+                "xMin": 60.0,
+                "yMin": 80.0,
+                "xMax": 70.0,
+                "yMax": 92.0
+              },
+              "word_id": "s001-p002-b001-l002-w001"
+            },
+            {
+              "text": "80",
+              "bbox": {
+                "xMin": 220.0,
+                "yMin": 80.0,
+                "xMax": 235.0,
+                "yMax": 92.0
+              },
+              "word_id": "s001-p002-b001-l002-w002"
+            },
+            {
+              "text": "51.3",
+              "bbox": {
+                "xMin": 420.0,
+                "yMin": 80.0,
+                "xMax": 447.0,
+                "yMax": 92.0
+              },
+              "word_id": "s001-p002-b001-l002-w003"
+            }
+          ],
+          "bbox": {
+            "xMin": 60.0,
+            "yMin": 80.0,
+            "xMax": 447.0,
+            "yMax": 92.0
+          },
+          "source_line_ids": [
+            "s001-p002-b001-l002"
+          ],
+          "physical_row_id": "s001-p002-pr002",
+          "groups": [
+            {
+              "text": "C",
+              "bbox": {
+                "xMin": 60.0,
+                "yMin": 80.0,
+                "xMax": 70.0,
+                "yMax": 92.0
+              },
+              "words": [
+                {
+                  "text": "C",
+                  "bbox": {
+                    "xMin": 60.0,
+                    "yMin": 80.0,
+                    "xMax": 70.0,
+                    "yMax": 92.0
+                  },
+                  "word_id": "s001-p002-b001-l002-w001"
+                }
+              ],
+              "gap_threshold": 8.0
+            },
+            {
+              "text": "80",
+              "bbox": {
+                "xMin": 220.0,
+                "yMin": 80.0,
+                "xMax": 235.0,
+                "yMax": 92.0
+              },
+              "words": [
+                {
+                  "text": "80",
+                  "bbox": {
+                    "xMin": 220.0,
+                    "yMin": 80.0,
+                    "xMax": 235.0,
+                    "yMax": 92.0
+                  },
+                  "word_id": "s001-p002-b001-l002-w002"
+                }
+              ],
+              "gap_threshold": 8.0
+            },
+            {
+              "text": "51.3",
+              "bbox": {
+                "xMin": 420.0,
+                "yMin": 80.0,
+                "xMax": 447.0,
+                "yMax": 92.0
+              },
+              "words": [
+                {
+                  "text": "51.3",
+                  "bbox": {
+                    "xMin": 420.0,
+                    "yMin": 80.0,
+                    "xMax": 447.0,
+                    "yMax": 92.0
+                  },
+                  "word_id": "s001-p002-b001-l002-w003"
+                }
+              ],
+              "gap_threshold": 8.0
+            }
+          ]
+        },
+        {
+          "words": [
+            {
+              "text": "D",
+              "bbox": {
+                "xMin": 60.0,
+                "yMin": 110.0,
+                "xMax": 70.0,
+                "yMax": 122.0
+              },
+              "word_id": "s001-p002-b001-l003-w001"
+            },
+            {
+              "text": "100",
+              "bbox": {
+                "xMin": 220.0,
+                "yMin": 110.0,
+                "xMax": 235.0,
+                "yMax": 122.0
+              },
+              "word_id": "s001-p002-b001-l003-w002"
+            },
+            {
+              "text": "55.0",
+              "bbox": {
+                "xMin": 420.0,
+                "yMin": 110.0,
+                "xMax": 447.0,
+                "yMax": 122.0
+              },
+              "word_id": "s001-p002-b001-l003-w003"
+            }
+          ],
+          "bbox": {
+            "xMin": 60.0,
+            "yMin": 110.0,
+            "xMax": 447.0,
+            "yMax": 122.0
+          },
+          "source_line_ids": [
+            "s001-p002-b001-l003"
+          ],
+          "physical_row_id": "s001-p002-pr003",
+          "groups": [
+            {
+              "text": "D",
+              "bbox": {
+                "xMin": 60.0,
+                "yMin": 110.0,
+                "xMax": 70.0,
+                "yMax": 122.0
+              },
+              "words": [
+                {
+                  "text": "D",
+                  "bbox": {
+                    "xMin": 60.0,
+                    "yMin": 110.0,
+                    "xMax": 70.0,
+                    "yMax": 122.0
+                  },
+                  "word_id": "s001-p002-b001-l003-w001"
+                }
+              ],
+              "gap_threshold": 8.0
+            },
+            {
+              "text": "100",
+              "bbox": {
+                "xMin": 220.0,
+                "yMin": 110.0,
+                "xMax": 235.0,
+                "yMax": 122.0
+              },
+              "words": [
+                {
+                  "text": "100",
+                  "bbox": {
+                    "xMin": 220.0,
+                    "yMin": 110.0,
+                    "xMax": 235.0,
+                    "yMax": 122.0
+                  },
+                  "word_id": "s001-p002-b001-l003-w002"
+                }
+              ],
+              "gap_threshold": 8.0
+            },
+            {
+              "text": "55.0",
+              "bbox": {
+                "xMin": 420.0,
+                "yMin": 110.0,
+                "xMax": 447.0,
+                "yMax": 122.0
+              },
+              "words": [
+                {
+                  "text": "55.0",
+                  "bbox": {
+                    "xMin": 420.0,
+                    "yMin": 110.0,
+                    "xMax": 447.0,
+                    "yMax": 122.0
+                  },
+                  "word_id": "s001-p002-b001-l003-w003"
+                }
+              ],
+              "gap_threshold": 8.0
+            }
+          ]
+        }
+      ],
+      "source_id": "supplied-bbox-001"
+    }
+  ],
+  "coordinate_convention": "PDF points as supplied by pdftotext; origin at upper-left"
+}

@@ -1,0 +1,92 @@
+{
+  "schema_version": "table-coordinate-forge/reviewed-bindings-v1",
+  "label": "SYNTHETIC EXAMPLE — never official results",
+  "instructions": [
+    "Inspect table-preview.md/svg and tables.json; replace extraction_failed only after semantic review.",
+    "For reported, copy REPORTED_REQUIRED keys from a candidate template and check exact cell/header IDs.",
+    "For not_reported, provide reviewed_scope; for unresolved layout, retain extraction_failed with actionable notes."
+  ],
+  "bindings": [
+    {
+      "field_id": "yield_A_25C_24h",
+      "status": "extraction_failed",
+      "notes": "No reviewed cell binding yet; inspect reconstructed geometry.",
+      "reported_candidate_template": {
+        "field_id": "yield_A_25C_24h",
+        "status": "reported",
+        "source_id": "replace",
+        "cell_id": "replace",
+        "scalar": "verbatim substring of cell",
+        "units": null,
+        "statistic": null,
+        "experimental_condition": null,
+        "comparator": null,
+        "row_header_cell_ids": [],
+        "column_header_cell_ids": [
+          "replace"
+        ],
+        "expected_row_header_text": [],
+        "expected_column_header_text": [
+          "exact header text"
+        ],
+        "condition_cell_ids": [],
+        "expected_condition_text": [],
+        "notes": "replace with semantic review decision"
+      }
+    },
+    {
+      "field_id": "yield_C_80C_24h",
+      "status": "extraction_failed",
+      "notes": "No reviewed cell binding yet; inspect reconstructed geometry.",
+      "reported_candidate_template": {
+        "field_id": "yield_C_80C_24h",
+        "status": "reported",
+        "source_id": "replace",
+        "cell_id": "replace",
+        "scalar": "verbatim substring of cell",
+        "units": null,
+        "statistic": null,
+        "experimental_condition": null,
+        "comparator": null,
+        "row_header_cell_ids": [],
+        "column_header_cell_ids": [
+          "replace"
+        ],
+        "expected_row_header_text": [],
+        "expected_column_header_text": [
+          "exact header text"
+        ],
+        "condition_cell_ids": [],
+        "expected_condition_text": [],
+        "notes": "replace with semantic review decision"
+      }
+    },
+    {
+      "field_id": "selectivity_C_80C_24h",
+      "status": "extraction_failed",
+      "notes": "No reviewed cell binding yet; inspect reconstructed geometry.",
+      "reported_candidate_template": {
+        "field_id": "selectivity_C_80C_24h",
+        "status": "reported",
+        "source_id": "replace",
+        "cell_id": "replace",
+        "scalar": "verbatim substring of cell",
+        "units": null,
+        "statistic": null,
+        "experimental_condition": null,
+        "comparator": null,
+        "row_header_cell_ids": [],
+        "column_header_cell_ids": [
+          "replace"
+        ],
+        "expected_row_header_text": [],
+        "expected_column_header_text": [
+          "exact header text"
+        ],
+        "condition_cell_ids": [],
+        "expected_condition_text": [],
+        "notes": "replace with semantic review decision"
+      }
+    }
+  ]
+}

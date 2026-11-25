@@ -1,0 +1,109 @@
+{
+  "schema_version": "claim-evidence-graph/1.0",
+  "synthetic_example": true,
+  "case_id": "SYNTHETIC-NEGATIVE-NO-PROMOTION",
+  "status": "insufficient_evidence",
+  "nodes": [
+    {
+      "id": "case:SYNTHETIC-NEGATIVE-NO-PROMOTION",
+      "type": "case",
+      "case_id": "SYNTHETIC-NEGATIVE-NO-PROMOTION",
+      "status": "insufficient_evidence"
+    },
+    {
+      "id": "source:SRC-SYN-NEG",
+      "type": "source",
+      "source_id": "SRC-SYN-NEG",
+      "title": "Synthetic cited-and-hedged negative example",
+      "synthetic": true,
+      "input_relative_path": "source.txt"
+    },
+    {
+      "id": "claim:NEG-CITED",
+      "type": "claim",
+      "claim_id": "NEG-CITED",
+      "kind": "prior_work_cited_claim",
+      "text": "Zhao et al.'s cited result concerns their system; transfer of the mechanism to the current system is only suggested and remains untested here.",
+      "epistemic_status": "cited_hedged_claim",
+      "modality": "reported_and_speculative",
+      "hedges": [
+        "could",
+        "suggesting",
+        "might",
+        "did not test"
+      ],
+      "attribution": {
+        "speaker": "Zhao et al., as cited in the synthetic source",
+        "origin": "cited_work",
+        "citation": "Zhao et al.; bibliographic details not supplied in this synthetic excerpt"
+      },
+      "condition_ids": [],
+      "supporting_observation_ids": [],
+      "promotion_allowed": false,
+      "evidence": [
+        {
+          "source_id": "SRC-SYN-NEG",
+          "paragraph_id": "N1",
+          "page": null,
+          "quote": "Zhao et al. reported that additive X could suppress the unwanted pathway in their system, suggesting that the same mechanism might operate here; we did not test that mechanism in the present study."
+        }
+      ]
+    },
+    {
+      "id": "paragraph:SRC-SYN-NEG:N1",
+      "type": "paragraph",
+      "source_id": "SRC-SYN-NEG",
+      "paragraph_id": "N1",
+      "page": null,
+      "text": "Zhao et al. reported that additive X could suppress the unwanted pathway in their system, suggesting that the same mechanism might operate here; we did not test that mechanism in the present study."
+    },
+    {
+      "id": "field:established_current_author_mechanism",
+      "type": "target_field",
+      "field_id": "established_current_author_mechanism",
+      "status": "not_reported",
+      "scalar": null,
+      "units": null,
+      "statistic": null,
+      "experimental_condition": "Mechanism of additive X in the current study; explicitly not tested",
+      "condition": "Mechanism of additive X in the current study; explicitly not tested",
+      "comparator": null,
+      "paragraph_id": "N1",
+      "quote": "we did not test that mechanism in the present study",
+      "evidence": [
+        {
+          "source_id": "SRC-SYN-NEG",
+          "paragraph_id": "N1",
+          "page": null,
+          "quote": "we did not test that mechanism in the present study"
+        },
+        {
+          "source_id": "SRC-SYN-NEG",
+          "paragraph_id": "N1",
+          "page": null,
+          "quote": "Zhao et al. reported that additive X could suppress the unwanted pathway in their system, suggesting that the same mechanism might operate here; we did not test that mechanism in the present study."
+        }
+      ],
+      "notes": "The entire synthetic source was inspected. The cited hedged proposition addresses background, not an established current-author mechanism; missing does not mean zero or false. Claim layers: NEG-CITED=prior_work_cited_claim/cited_hedged_claim."
+    }
+  ],
+  "edges": [
+    {
+      "from": "claim:NEG-CITED",
+      "to": "paragraph:SRC-SYN-NEG:N1",
+      "type": "grounded_in",
+      "evidence": {
+        "source_id": "SRC-SYN-NEG",
+        "paragraph_id": "N1",
+        "page": null,
+        "quote": "Zhao et al. reported that additive X could suppress the unwanted pathway in their system, suggesting that the same mechanism might operate here; we did not test that mechanism in the present study."
+      }
+    },
+    {
+      "from": "field:established_current_author_mechanism",
+      "to": "claim:NEG-CITED",
+      "type": "interpreted_with_epistemic_layer"
+    }
+  ],
+  "promotion_policy": "Cited, hedged, speculative, and limitation nodes never become established current-author conclusions through graph traversal."
+}

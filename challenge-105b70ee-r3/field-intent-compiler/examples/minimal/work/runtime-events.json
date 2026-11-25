@@ -1,0 +1,22 @@
+{
+  "synthetic": true,
+  "events": [
+    {
+      "sequence": 1,
+      "event": "full_result_skeleton_written",
+      "candidate_values_read": false
+    },
+    {
+      "sequence": 2,
+      "event": "acceptance_contract_and_tests_compiled",
+      "candidate_values_read": false,
+      "contract_sha256": "37cb8680bc58438b9f359bf742193382d03b8b45d12ecfa661f1ed2d08ca3acf"
+    },
+    {
+      "sequence": 3,
+      "event": "source_register_and_agent_decisions_validated",
+      "contract_sha256": "37cb8680bc58438b9f359bf742193382d03b8b45d12ecfa661f1ed2d08ca3acf",
+      "candidate_values_read": true
+    }
+  ]
+}

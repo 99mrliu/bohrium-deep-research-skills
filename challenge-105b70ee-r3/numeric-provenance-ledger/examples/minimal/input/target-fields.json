@@ -1,0 +1,16 @@
+{
+  "fields": [
+    {
+      "field_id": "treatment_response_37c",
+      "definition": "Treated response under 37 °C in the primary synthetic source; preserve central value and ± uncertainty."
+    },
+    {
+      "field_id": "recovery_half_time",
+      "definition": "Reported recovery half-time under the primary synthetic treatment condition."
+    },
+    {
+      "field_id": "replicated_treatment_response_37c",
+      "definition": "A single reconciled treated response under 37 °C across both synthetic sources; do not average disagreements."
+    }
+  ]
+}

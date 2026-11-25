@@ -1,0 +1,105 @@
+{
+  "case_id": "SYNTHETIC-EXAMPLE-NOT-OFFICIAL",
+  "status": "partial",
+  "result": {
+    "fields": [
+      {
+        "field_id": "yield_A_25C_24h",
+        "status": "extraction_failed",
+        "scalar": null,
+        "units": null,
+        "statistic": null,
+        "experimental_condition": null,
+        "condition": null,
+        "comparator": null,
+        "paragraph_id": null,
+        "quote": null,
+        "evidence": [],
+        "notes": "Coordinate candidates are available; awaiting explicit reviewed cell and condition binding."
+      },
+      {
+        "field_id": "yield_C_80C_24h",
+        "status": "extraction_failed",
+        "scalar": null,
+        "units": null,
+        "statistic": null,
+        "experimental_condition": null,
+        "condition": null,
+        "comparator": null,
+        "paragraph_id": null,
+        "quote": null,
+        "evidence": [],
+        "notes": "Coordinate candidates are available; awaiting explicit reviewed cell and condition binding."
+      },
+      {
+        "field_id": "selectivity_C_80C_24h",
+        "status": "extraction_failed",
+        "scalar": null,
+        "units": null,
+        "statistic": null,
+        "experimental_condition": null,
+        "condition": null,
+        "comparator": null,
+        "paragraph_id": null,
+        "quote": null,
+        "evidence": [],
+        "notes": "Coordinate candidates are available; awaiting explicit reviewed cell and condition binding."
+      }
+    ],
+    "layout": {
+      "usable": true,
+      "table_count": 1,
+      "segment_count": 2,
+      "preview_markdown": "table-preview.md",
+      "preview_svg": "table-preview.svg",
+      "binding_policy": "Candidates only; explicit semantic cell binding required."
+    },
+    "example_label": "SYNTHETIC EXAMPLE — never official results"
+  },
+  "claims": [],
+  "uncertainties": [
+    {
+      "kind": "review_required",
+      "field_id": null,
+      "message": "Geometry is a candidate layer. Bind each requested field only after checking row, column, continuation and condition headers against the PDF."
+    },
+    {
+      "kind": "binding_rejected",
+      "field_id": null,
+      "message": "Reviewed bindings rejected; no candidate answer was promoted: Binding for yield_A_25C_24h: column header text differs: Yield (%) at 24 h != Yield (%)"
+    }
+  ],
+  "sources": [
+    {
+      "source_id": "task-card",
+      "kind": "task",
+      "path": "task.md",
+      "note": "Task instructions are not scientific evidence."
+    },
+    {
+      "source_id": "supplied-bbox-001",
+      "kind": "bbox_xhtml",
+      "path": "synthetic-bbox.xhtml",
+      "sha256": "54c788c0053531d5d0c4e82902808e93eef3072f310a7a4c1cb5f2409b77121b",
+      "bytes": 3062,
+      "bbox_status": "Supplied bbox XHTML used directly; no text-layer flattening."
+    }
+  ],
+  "change_records": [
+    {
+      "event": "early_partial_written",
+      "at": "2026-11-25T02:34:38.155823+00:00",
+      "detail": "Result initialized before PDF parsing to preserve a valid partial deliverable."
+    },
+    {
+      "event": "coordinate_geometry_reconstructed",
+      "at": "2026-11-25T02:34:38.160304+00:00",
+      "detail": "Parsed 2 pages and proposed 2 table segments; no field was auto-promoted."
+    },
+    {
+      "event": "reviewed_bindings_rejected",
+      "at": "2026-11-25T02:34:38.161088+00:00",
+      "detail": "Reviewed bindings rejected; no candidate answer was promoted: Binding for yield_A_25C_24h: column header text differs: Yield (%) at 24 h != Yield (%)"
+    }
+  ]
+}

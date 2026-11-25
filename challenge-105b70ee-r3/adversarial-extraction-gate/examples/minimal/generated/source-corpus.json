@@ -1,0 +1,27 @@
+{
+  "schema": "evidence-corpus/v1",
+  "sources": [
+    {
+      "paragraphs": [
+        {
+          "page": 1,
+          "paragraph_id": "p1",
+          "text": "For SynA under condition C, versus comparator D, mean ± SD response was 12.4 nM. This sentence and all values are synthetic."
+        },
+        {
+          "page": 1,
+          "paragraph_id": "p2",
+          "text": "The investigators suggest SynA may alter downstream signaling under condition C. This is synthetic hedged text."
+        },
+        {
+          "page": 2,
+          "paragraph_id": "p3",
+          "text": "The synthetic protocol lists SynA and condition C but contains no second response measurement."
+        }
+      ],
+      "source_id": "synthetic-source",
+      "title": "SYNTHETIC source text for validator testing"
+    }
+  ],
+  "synthetic": true
+}

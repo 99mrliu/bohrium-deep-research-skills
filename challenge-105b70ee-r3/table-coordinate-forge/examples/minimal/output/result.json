@@ -1,0 +1,550 @@
+{
+  "case_id": "SYNTHETIC-EXAMPLE-NOT-OFFICIAL",
+  "status": "answered",
+  "result": {
+    "fields": [
+      {
+        "field_id": "yield_A_25C_24h",
+        "status": "reported",
+        "scalar": "42.0",
+        "units": "%",
+        "statistic": null,
+        "experimental_condition": "Catalyst=A; Temp=25 °C; at 24 h",
+        "condition": "Catalyst=A; Temp=25 °C; at 24 h",
+        "comparator": null,
+        "paragraph_id": "s001-seg001-r02-c03",
+        "quote": "42.0",
+        "evidence": [
+          {
+            "source_id": "supplied-bbox-001",
+            "page": 1,
+            "paragraph_id": "s001-seg001-r02-c03",
+            "quote": "42.0",
+            "location": {
+              "table_id": "s001-table001",
+              "segment_id": "s001-seg001",
+              "row_id": "s001-seg001-r02",
+              "column_start": 3,
+              "column_end": 3,
+              "row_header_cell_ids": [
+                "s001-seg001-r02-c01",
+                "s001-seg001-r02-c02"
+              ],
+              "column_header_cell_ids": [
+                "s001-seg001-r01-c03"
+              ]
+            },
+            "condition_evidence": [
+              {
+                "source_id": "supplied-bbox-001",
+                "page": 1,
+                "paragraph_id": "s001-seg001-r01-c01",
+                "quote": "Catalyst",
+                "location": {
+                  "table_id": "s001-table001",
+                  "segment_id": "s001-seg001",
+                  "row_id": "s001-seg001-r01",
+                  "column_start": 1,
+                  "column_end": 1
+                }
+              },
+              {
+                "source_id": "supplied-bbox-001",
+                "page": 1,
+                "paragraph_id": "s001-seg001-r02-c01",
+                "quote": "A",
+                "location": {
+                  "table_id": "s001-table001",
+                  "segment_id": "s001-seg001",
+                  "row_id": "s001-seg001-r02",
+                  "column_start": 1,
+                  "column_end": 1
+                }
+              },
+              {
+                "source_id": "supplied-bbox-001",
+                "page": 1,
+                "paragraph_id": "s001-seg001-r01-c02",
+                "quote": "Temp (°C)",
+                "location": {
+                  "table_id": "s001-table001",
+                  "segment_id": "s001-seg001",
+                  "row_id": "s001-seg001-r01",
+                  "column_start": 2,
+                  "column_end": 2
+                }
+              },
+              {
+                "source_id": "supplied-bbox-001",
+                "page": 1,
+                "paragraph_id": "s001-seg001-r02-c02",
+                "quote": "25",
+                "location": {
+                  "table_id": "s001-table001",
+                  "segment_id": "s001-seg001",
+                  "row_id": "s001-seg001-r02",
+                  "column_start": 2,
+                  "column_end": 2
+                }
+              },
+              {
+                "source_id": "supplied-bbox-001",
+                "page": 1,
+                "paragraph_id": "s001-seg001-r01-c03",
+                "quote": "Yield (%) at 24 h",
+                "location": {
+                  "table_id": "s001-table001",
+                  "segment_id": "s001-seg001",
+                  "row_id": "s001-seg001-r01",
+                  "column_start": 3,
+                  "column_end": 3
+                }
+              }
+            ]
+          }
+        ],
+        "notes": "SYNTHETIC EXAMPLE — never official results. Reviewed row A, temperature 25, percent yield header and 24 h timing against the coordinate preview. [geometry=s001-table001/s001-seg001/s001-seg001-r02]"
+      },
+      {
+        "field_id": "yield_C_80C_24h",
+        "status": "reported",
+        "scalar": "51.3",
+        "units": "%",
+        "statistic": null,
+        "experimental_condition": "Catalyst=C; Temp=80 °C; at 24 h",
+        "condition": "Catalyst=C; Temp=80 °C; at 24 h",
+        "comparator": null,
+        "paragraph_id": "s001-seg002-r02-c03",
+        "quote": "51.3",
+        "evidence": [
+          {
+            "source_id": "supplied-bbox-001",
+            "page": 2,
+            "paragraph_id": "s001-seg002-r02-c03",
+            "quote": "51.3",
+            "location": {
+              "table_id": "s001-table001",
+              "segment_id": "s001-seg002",
+              "row_id": "s001-seg002-r02",
+              "column_start": 3,
+              "column_end": 3,
+              "row_header_cell_ids": [
+                "s001-seg002-r02-c01",
+                "s001-seg002-r02-c02"
+              ],
+              "column_header_cell_ids": [
+                "s001-seg001-r01-c03",
+                "s001-seg002-r01-c03"
+              ]
+            },
+            "condition_evidence": [
+              {
+                "source_id": "supplied-bbox-001",
+                "page": 2,
+                "paragraph_id": "s001-seg002-r01-c01",
+                "quote": "Catalyst (cont.)",
+                "location": {
+                  "table_id": "s001-table001",
+                  "segment_id": "s001-seg002",
+                  "row_id": "s001-seg002-r01",
+                  "column_start": 1,
+                  "column_end": 1
+                }
+              },
+              {
+                "source_id": "supplied-bbox-001",
+                "page": 2,
+                "paragraph_id": "s001-seg002-r02-c01",
+                "quote": "C",
+                "location": {
+                  "table_id": "s001-table001",
+                  "segment_id": "s001-seg002",
+                  "row_id": "s001-seg002-r02",
+                  "column_start": 1,
+                  "column_end": 1
+                }
+              },
+              {
+                "source_id": "supplied-bbox-001",
+                "page": 1,
+                "paragraph_id": "s001-seg001-r01-c02",
+                "quote": "Temp (°C)",
+                "location": {
+                  "table_id": "s001-table001",
+                  "segment_id": "s001-seg001",
+                  "row_id": "s001-seg001-r01",
+                  "column_start": 2,
+                  "column_end": 2
+                }
+              },
+              {
+                "source_id": "supplied-bbox-001",
+                "page": 2,
+                "paragraph_id": "s001-seg002-r01-c02",
+                "quote": "Temp (°C) (continued)",
+                "location": {
+                  "table_id": "s001-table001",
+                  "segment_id": "s001-seg002",
+                  "row_id": "s001-seg002-r01",
+                  "column_start": 2,
+                  "column_end": 2
+                }
+              },
+              {
+                "source_id": "supplied-bbox-001",
+                "page": 2,
+                "paragraph_id": "s001-seg002-r02-c02",
+                "quote": "80",
+                "location": {
+                  "table_id": "s001-table001",
+                  "segment_id": "s001-seg002",
+                  "row_id": "s001-seg002-r02",
+                  "column_start": 2,
+                  "column_end": 2
+                }
+              },
+              {
+                "source_id": "supplied-bbox-001",
+                "page": 1,
+                "paragraph_id": "s001-seg001-r01-c03",
+                "quote": "Yield (%) at 24 h",
+                "location": {
+                  "table_id": "s001-table001",
+                  "segment_id": "s001-seg001",
+                  "row_id": "s001-seg001-r01",
+                  "column_start": 3,
+                  "column_end": 3
+                }
+              },
+              {
+                "source_id": "supplied-bbox-001",
+                "page": 2,
+                "paragraph_id": "s001-seg002-r01-c03",
+                "quote": "Yield (%) at 24 h (continued)",
+                "location": {
+                  "table_id": "s001-table001",
+                  "segment_id": "s001-seg002",
+                  "row_id": "s001-seg002-r01",
+                  "column_start": 3,
+                  "column_end": 3
+                }
+              }
+            ]
+          }
+        ],
+        "notes": "SYNTHETIC EXAMPLE — never official results. Reviewed row C on page 2 and retained both inherited and repeated continued headers, including 80 °C and 24 h. [geometry=s001-table001/s001-seg002/s001-seg002-r02]"
+      },
+      {
+        "field_id": "selectivity_C_80C_24h",
+        "status": "not_reported",
+        "scalar": null,
+        "units": null,
+        "statistic": null,
+        "experimental_condition": "Catalyst=C; Temp=80 °C; at 24 h",
+        "condition": "Catalyst=C; Temp=80 °C; at 24 h",
+        "comparator": null,
+        "paragraph_id": null,
+        "quote": null,
+        "evidence": [],
+        "notes": "SYNTHETIC EXAMPLE — never official results. No selectivity column, row-spanning note, or cell supplying selectivity for catalyst C was present in the reviewed synthetic table; absence is not zero. Reviewed scope: All six reconstructed header/data rows on synthetic PDF pages 1–2 (s001-seg001 and s001-seg002), including every continued-header path; available column headers are Catalyst, Temp (°C), and Yield (%) at 24 h only."
+      }
+    ],
+    "layout": {
+      "usable": true,
+      "table_count": 1,
+      "segment_count": 2,
+      "preview_markdown": "table-preview.md",
+      "preview_svg": "table-preview.svg",
+      "binding_policy": "Only explicit reviewed bindings were applied; geometry candidates are not auto-promoted."
+    },
+    "example_label": "SYNTHETIC EXAMPLE — never official results"
+  },
+  "claims": [
+    {
+      "kind": "field_extraction",
+      "field_id": "yield_A_25C_24h",
+      "source_id": "supplied-bbox-001",
+      "evidence": [
+        {
+          "source_id": "supplied-bbox-001",
+          "page": 1,
+          "paragraph_id": "s001-seg001-r02-c03",
+          "quote": "42.0",
+          "location": {
+            "table_id": "s001-table001",
+            "segment_id": "s001-seg001",
+            "row_id": "s001-seg001-r02",
+            "column_start": 3,
+            "column_end": 3,
+            "row_header_cell_ids": [
+              "s001-seg001-r02-c01",
+              "s001-seg001-r02-c02"
+            ],
+            "column_header_cell_ids": [
+              "s001-seg001-r01-c03"
+            ]
+          },
+          "condition_evidence": [
+            {
+              "source_id": "supplied-bbox-001",
+              "page": 1,
+              "paragraph_id": "s001-seg001-r01-c01",
+              "quote": "Catalyst",
+              "location": {
+                "table_id": "s001-table001",
+                "segment_id": "s001-seg001",
+                "row_id": "s001-seg001-r01",
+                "column_start": 1,
+                "column_end": 1
+              }
+            },
+            {
+              "source_id": "supplied-bbox-001",
+              "page": 1,
+              "paragraph_id": "s001-seg001-r02-c01",
+              "quote": "A",
+              "location": {
+                "table_id": "s001-table001",
+                "segment_id": "s001-seg001",
+                "row_id": "s001-seg001-r02",
+                "column_start": 1,
+                "column_end": 1
+              }
+            },
+            {
+              "source_id": "supplied-bbox-001",
+              "page": 1,
+              "paragraph_id": "s001-seg001-r01-c02",
+              "quote": "Temp (°C)",
+              "location": {
+                "table_id": "s001-table001",
+                "segment_id": "s001-seg001",
+                "row_id": "s001-seg001-r01",
+                "column_start": 2,
+                "column_end": 2
+              }
+            },
+            {
+              "source_id": "supplied-bbox-001",
+              "page": 1,
+              "paragraph_id": "s001-seg001-r02-c02",
+              "quote": "25",
+              "location": {
+                "table_id": "s001-table001",
+                "segment_id": "s001-seg001",
+                "row_id": "s001-seg001-r02",
+                "column_start": 2,
+                "column_end": 2
+              }
+            },
+            {
+              "source_id": "supplied-bbox-001",
+              "page": 1,
+              "paragraph_id": "s001-seg001-r01-c03",
+              "quote": "Yield (%) at 24 h",
+              "location": {
+                "table_id": "s001-table001",
+                "segment_id": "s001-seg001",
+                "row_id": "s001-seg001-r01",
+                "column_start": 3,
+                "column_end": 3
+              }
+            }
+          ]
+        }
+      ],
+      "location": {
+        "table_id": "s001-table001",
+        "segment_id": "s001-seg001",
+        "row_id": "s001-seg001-r02",
+        "column_start": 3,
+        "column_end": 3,
+        "row_header_cell_ids": [
+          "s001-seg001-r02-c01",
+          "s001-seg001-r02-c02"
+        ],
+        "column_header_cell_ids": [
+          "s001-seg001-r01-c03"
+        ]
+      },
+      "statement": "yield_A_25C_24h = 42.0 % under Catalyst=A; Temp=25 °C; at 24 h"
+    },
+    {
+      "kind": "field_extraction",
+      "field_id": "yield_C_80C_24h",
+      "source_id": "supplied-bbox-001",
+      "evidence": [
+        {
+          "source_id": "supplied-bbox-001",
+          "page": 2,
+          "paragraph_id": "s001-seg002-r02-c03",
+          "quote": "51.3",
+          "location": {
+            "table_id": "s001-table001",
+            "segment_id": "s001-seg002",
+            "row_id": "s001-seg002-r02",
+            "column_start": 3,
+            "column_end": 3,
+            "row_header_cell_ids": [
+              "s001-seg002-r02-c01",
+              "s001-seg002-r02-c02"
+            ],
+            "column_header_cell_ids": [
+              "s001-seg001-r01-c03",
+              "s001-seg002-r01-c03"
+            ]
+          },
+          "condition_evidence": [
+            {
+              "source_id": "supplied-bbox-001",
+              "page": 2,
+              "paragraph_id": "s001-seg002-r01-c01",
+              "quote": "Catalyst (cont.)",
+              "location": {
+                "table_id": "s001-table001",
+                "segment_id": "s001-seg002",
+                "row_id": "s001-seg002-r01",
+                "column_start": 1,
+                "column_end": 1
+              }
+            },
+            {
+              "source_id": "supplied-bbox-001",
+              "page": 2,
+              "paragraph_id": "s001-seg002-r02-c01",
+              "quote": "C",
+              "location": {
+                "table_id": "s001-table001",
+                "segment_id": "s001-seg002",
+                "row_id": "s001-seg002-r02",
+                "column_start": 1,
+                "column_end": 1
+              }
+            },
+            {
+              "source_id": "supplied-bbox-001",
+              "page": 1,
+              "paragraph_id": "s001-seg001-r01-c02",
+              "quote": "Temp (°C)",
+              "location": {
+                "table_id": "s001-table001",
+                "segment_id": "s001-seg001",
+                "row_id": "s001-seg001-r01",
+                "column_start": 2,
+                "column_end": 2
+              }
+            },
+            {
+              "source_id": "supplied-bbox-001",
+              "page": 2,
+              "paragraph_id": "s001-seg002-r01-c02",
+              "quote": "Temp (°C) (continued)",
+              "location": {
+                "table_id": "s001-table001",
+                "segment_id": "s001-seg002",
+                "row_id": "s001-seg002-r01",
+                "column_start": 2,
+                "column_end": 2
+              }
+            },
+            {
+              "source_id": "supplied-bbox-001",
+              "page": 2,
+              "paragraph_id": "s001-seg002-r02-c02",
+              "quote": "80",
+              "location": {
+                "table_id": "s001-table001",
+                "segment_id": "s001-seg002",
+                "row_id": "s001-seg002-r02",
+                "column_start": 2,
+                "column_end": 2
+              }
+            },
+            {
+              "source_id": "supplied-bbox-001",
+              "page": 1,
+              "paragraph_id": "s001-seg001-r01-c03",
+              "quote": "Yield (%) at 24 h",
+              "location": {
+                "table_id": "s001-table001",
+                "segment_id": "s001-seg001",
+                "row_id": "s001-seg001-r01",
+                "column_start": 3,
+                "column_end": 3
+              }
+            },
+            {
+              "source_id": "supplied-bbox-001",
+              "page": 2,
+              "paragraph_id": "s001-seg002-r01-c03",
+              "quote": "Yield (%) at 24 h (continued)",
+              "location": {
+                "table_id": "s001-table001",
+                "segment_id": "s001-seg002",
+                "row_id": "s001-seg002-r01",
+                "column_start": 3,
+                "column_end": 3
+              }
+            }
+          ]
+        }
+      ],
+      "location": {
+        "table_id": "s001-table001",
+        "segment_id": "s001-seg002",
+        "row_id": "s001-seg002-r02",
+        "column_start": 3,
+        "column_end": 3,
+        "row_header_cell_ids": [
+          "s001-seg002-r02-c01",
+          "s001-seg002-r02-c02"
+        ],
+        "column_header_cell_ids": [
+          "s001-seg001-r01-c03",
+          "s001-seg002-r01-c03"
+        ]
+      },
+      "statement": "yield_C_80C_24h = 51.3 % under Catalyst=C; Temp=80 °C; at 24 h"
+    }
+  ],
+  "uncertainties": [
+    {
+      "kind": "not_reported",
+      "field_id": "selectivity_C_80C_24h",
+      "message": "SYNTHETIC EXAMPLE — never official results. No selectivity column, row-spanning note, or cell supplying selectivity for catalyst C was present in the reviewed synthetic table; absence is not zero. Reviewed scope: All six reconstructed header/data rows on synthetic PDF pages 1–2 (s001-seg001 and s001-seg002), including every continued-header path; available column headers are Catalyst, Temp (°C), and Yield (%) at 24 h only."
+    }
+  ],
+  "sources": [
+    {
+      "source_id": "task-card",
+      "kind": "task",
+      "path": "task.md",
+      "note": "Task instructions are not scientific evidence."
+    },
+    {
+      "source_id": "supplied-bbox-001",
+      "kind": "bbox_xhtml",
+      "path": "synthetic-bbox.xhtml",
+      "sha256": "54c788c0053531d5d0c4e82902808e93eef3072f310a7a4c1cb5f2409b77121b",
+      "bytes": 3062,
+      "bbox_status": "Supplied bbox XHTML used directly; no text-layer flattening."
+    }
+  ],
+  "change_records": [
+    {
+      "event": "early_partial_written",
+      "at": "2026-11-25T02:34:38.116430+00:00",
+      "detail": "Result initialized before PDF parsing to preserve a valid partial deliverable."
+    },
+    {
+      "event": "coordinate_geometry_reconstructed",
+      "at": "2026-11-25T02:34:38.121137+00:00",
+      "detail": "Parsed 2 pages and proposed 2 table segments; no field was auto-promoted."
+    },
+    {
+      "event": "reviewed_bindings_applied",
+      "at": "2026-11-25T02:34:38.121868+00:00",
+      "detail": "Applied 3 explicit bindings; 0 fields remain extraction_failed."
+    }
+  ]
+}

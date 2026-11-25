@@ -1,0 +1,339 @@
+{
+  "base": {
+    "actual_pass": true,
+    "sha256_after": "418c556ae5ed960dbc7d34007f330a543a4726379821c5a6a42b1bb1bdafd0a4",
+    "sha256_before": "418c556ae5ed960dbc7d34007f330a543a4726379821c5a6a42b1bb1bdafd0a4",
+    "unchanged": true,
+    "validation_errors": []
+  },
+  "benchmark_score": null,
+  "case_id": "SYNTHETIC-ADVERSARIAL-GATE-V1",
+  "mutation_results": [
+    {
+      "actual_validator_rejected": true,
+      "base_unchanged": true,
+      "expected_code_observed": true,
+      "expected_rejection_code": "SUBJECT_MISMATCH",
+      "failure_mode": "Value is attributed to a different subject than requested.",
+      "mutation": "wrong_subject",
+      "observed_error_codes": [
+        "SUBJECT_MISMATCH"
+      ],
+      "pass": true,
+      "validation_errors": [
+        {
+          "code": "SUBJECT_MISMATCH",
+          "message": "value does not preserve the requested subject",
+          "path": "result.fields[0].subject"
+        }
+      ]
+    },
+    {
+      "actual_validator_rejected": true,
+      "base_unchanged": true,
+      "expected_code_observed": true,
+      "expected_rejection_code": "CONDITION_MISMATCH",
+      "failure_mode": "The numeric result is detached from its requested condition.",
+      "mutation": "wrong_condition",
+      "observed_error_codes": [
+        "CONDITION_MISMATCH"
+      ],
+      "pass": true,
+      "validation_errors": [
+        {
+          "code": "CONDITION_MISMATCH",
+          "message": "value does not preserve the requested experimental_condition",
+          "path": "result.fields[0].experimental_condition"
+        }
+      ]
+    },
+    {
+      "actual_validator_rejected": true,
+      "base_unchanged": true,
+      "expected_code_observed": true,
+      "expected_rejection_code": "COMPARATOR_MISMATCH",
+      "failure_mode": "The numeric result is attached to the wrong comparator.",
+      "mutation": "wrong_comparator",
+      "observed_error_codes": [
+        "COMPARATOR_MISMATCH"
+      ],
+      "pass": true,
+      "validation_errors": [
+        {
+          "code": "COMPARATOR_MISMATCH",
+          "message": "value does not preserve the requested comparator",
+          "path": "result.fields[0].comparator"
+        }
+      ]
+    },
+    {
+      "actual_validator_rejected": true,
+      "base_unchanged": true,
+      "expected_code_observed": true,
+      "expected_rejection_code": "SCALAR_ABSENT_FROM_QUOTE",
+      "failure_mode": "A plausible scalar is not present in the supporting quotation.",
+      "mutation": "scalar_absent_from_quote",
+      "observed_error_codes": [
+        "SCALAR_ABSENT_FROM_QUOTE"
+      ],
+      "pass": true,
+      "validation_errors": [
+        {
+          "code": "SCALAR_ABSENT_FROM_QUOTE",
+          "message": "reported scalar is not literally present in the field quote",
+          "path": "result.fields[0].scalar"
+        }
+      ]
+    },
+    {
+      "actual_validator_rejected": true,
+      "base_unchanged": true,
+      "expected_code_observed": true,
+      "expected_rejection_code": "UNIT_NOT_IN_QUOTE",
+      "failure_mode": "The unit is changed after extraction.",
+      "mutation": "unit_altered",
+      "observed_error_codes": [
+        "UNIT_NOT_IN_QUOTE"
+      ],
+      "pass": true,
+      "validation_errors": [
+        {
+          "code": "UNIT_NOT_IN_QUOTE",
+          "message": "units must be preserved as a nonempty literal substring of the quote",
+          "path": "result.fields[0].units"
+        }
+      ]
+    },
+    {
+      "actual_validator_rejected": true,
+      "base_unchanged": true,
+      "expected_code_observed": true,
+      "expected_rejection_code": "STATISTIC_DROPPED",
+      "failure_mode": "A required statistic is omitted while the number remains.",
+      "mutation": "statistic_dropped",
+      "observed_error_codes": [
+        "STATISTIC_DROPPED"
+      ],
+      "pass": true,
+      "validation_errors": [
+        {
+          "code": "STATISTIC_DROPPED",
+          "message": "the target explicitly requires a statistic",
+          "path": "result.fields[0].statistic"
+        }
+      ]
+    },
+    {
+      "actual_validator_rejected": true,
+      "base_unchanged": true,
+      "expected_code_observed": true,
+      "expected_rejection_code": "VALUE_ON_NOT_REPORTED",
+      "failure_mode": "A populated extraction is mislabeled as not_reported.",
+      "mutation": "false_not_reported",
+      "observed_error_codes": [
+        "VALUE_ON_NOT_REPORTED"
+      ],
+      "pass": true,
+      "validation_errors": [
+        {
+          "code": "VALUE_ON_NOT_REPORTED",
+          "message": "not_reported requires null scalar",
+          "path": "result.fields[0].scalar"
+        },
+        {
+          "code": "VALUE_ON_NOT_REPORTED",
+          "message": "not_reported requires null units",
+          "path": "result.fields[0].units"
+        },
+        {
+          "code": "VALUE_ON_NOT_REPORTED",
+          "message": "not_reported requires null statistic",
+          "path": "result.fields[0].statistic"
+        }
+      ]
+    },
+    {
+      "actual_validator_rejected": true,
+      "base_unchanged": true,
+      "expected_code_observed": true,
+      "expected_rejection_code": "SOURCE_CONFLICT_REQUIRES_TWO_SOURCES",
+      "failure_mode": "A conflict is declared without two conflicting evidence records.",
+      "mutation": "unsupported_source_conflict",
+      "observed_error_codes": [
+        "CONFLICT_PRIMARY_QUOTE_AMBIGUOUS",
+        "SOURCE_CONFLICT_REQUIRES_TWO_SOURCES",
+        "VALUE_ON_SOURCE_CONFLICT"
+      ],
+      "pass": true,
+      "validation_errors": [
+        {
+          "code": "VALUE_ON_SOURCE_CONFLICT",
+          "message": "source_conflict requires null scalar",
+          "path": "result.fields[0].scalar"
+        },
+        {
+          "code": "VALUE_ON_SOURCE_CONFLICT",
+          "message": "source_conflict requires null units",
+          "path": "result.fields[0].units"
+        },
+        {
+          "code": "VALUE_ON_SOURCE_CONFLICT",
+          "message": "source_conflict requires null statistic",
+          "path": "result.fields[0].statistic"
+        },
+        {
+          "code": "SOURCE_CONFLICT_REQUIRES_TWO_SOURCES",
+          "message": "source_conflict needs at least two distinct evidence objects",
+          "path": "result.fields[0].evidence"
+        },
+        {
+          "code": "CONFLICT_PRIMARY_QUOTE_AMBIGUOUS",
+          "message": "source_conflict keeps top-level quote/paragraph_id null; use evidence list",
+          "path": "result.fields[0]"
+        }
+      ]
+    },
+    {
+      "actual_validator_rejected": true,
+      "base_unchanged": true,
+      "expected_code_observed": true,
+      "expected_rejection_code": "DUPLICATE_FIELD_ID",
+      "failure_mode": "One requested field_id is emitted twice.",
+      "mutation": "duplicate_field",
+      "observed_error_codes": [
+        "DUPLICATE_FIELD_ID"
+      ],
+      "pass": true,
+      "validation_errors": [
+        {
+          "code": "DUPLICATE_FIELD_ID",
+          "message": "field_id occurs more than once: syn_response",
+          "path": "result.fields"
+        }
+      ]
+    },
+    {
+      "actual_validator_rejected": true,
+      "base_unchanged": true,
+      "expected_code_observed": true,
+      "expected_rejection_code": "MISSING_FIELD_ID",
+      "failure_mode": "A requested field_id is omitted.",
+      "mutation": "missing_field",
+      "observed_error_codes": [
+        "MISSING_FIELD_ID"
+      ],
+      "pass": true,
+      "validation_errors": [
+        {
+          "code": "MISSING_FIELD_ID",
+          "message": "requested field_id is missing: syn_unmeasured",
+          "path": "result.fields"
+        }
+      ]
+    },
+    {
+      "actual_validator_rejected": true,
+      "base_unchanged": true,
+      "expected_code_observed": true,
+      "expected_rejection_code": "QUOTE_NOT_IN_PARAGRAPH",
+      "failure_mode": "A real quote from another paragraph is used with the original locator.",
+      "mutation": "quotation_paragraph_mismatch",
+      "observed_error_codes": [
+        "QUOTE_NOT_IN_PARAGRAPH",
+        "SCALAR_ABSENT_FROM_QUOTE",
+        "STATISTIC_NOT_IN_QUOTE",
+        "UNIT_NOT_IN_QUOTE"
+      ],
+      "pass": true,
+      "validation_errors": [
+        {
+          "code": "SCALAR_ABSENT_FROM_QUOTE",
+          "message": "reported scalar is not literally present in the field quote",
+          "path": "result.fields[0].scalar"
+        },
+        {
+          "code": "UNIT_NOT_IN_QUOTE",
+          "message": "units must be preserved as a nonempty literal substring of the quote",
+          "path": "result.fields[0].units"
+        },
+        {
+          "code": "STATISTIC_NOT_IN_QUOTE",
+          "message": "statistic must be a literal substring of the quote",
+          "path": "result.fields[0].statistic"
+        },
+        {
+          "code": "QUOTE_NOT_IN_PARAGRAPH",
+          "message": "quote is not a verbatim substring of the cited paragraph",
+          "path": "result.fields[0].evidence.quote"
+        }
+      ]
+    },
+    {
+      "actual_validator_rejected": true,
+      "base_unchanged": true,
+      "expected_code_observed": true,
+      "expected_rejection_code": "HEDGED_CLAIM_PROMOTED",
+      "failure_mode": "Suggest/may evidence is rewritten as an unhedged explicit conclusion.",
+      "mutation": "hedged_claim_promoted",
+      "observed_error_codes": [
+        "HEDGED_CLAIM_PROMOTED"
+      ],
+      "pass": true,
+      "validation_errors": [
+        {
+          "code": "HEDGED_CLAIM_PROMOTED",
+          "message": "hedged evidence cannot support an unhedged promoted claim",
+          "path": "claims[0].statement"
+        }
+      ]
+    },
+    {
+      "actual_validator_rejected": true,
+      "base_unchanged": true,
+      "expected_code_observed": true,
+      "expected_rejection_code": "CONDITION_ALIAS_MISMATCH",
+      "failure_mode": "Condition alias is left inconsistent with experimental_condition.",
+      "mutation": "stale_condition_alias",
+      "observed_error_codes": [
+        "CONDITION_ALIAS_MISMATCH"
+      ],
+      "pass": true,
+      "validation_errors": [
+        {
+          "code": "CONDITION_ALIAS_MISMATCH",
+          "message": "condition must exactly mirror experimental_condition",
+          "path": "result.fields[0].condition"
+        }
+      ]
+    },
+    {
+      "actual_validator_rejected": true,
+      "base_unchanged": true,
+      "expected_code_observed": true,
+      "expected_rejection_code": "FIELD_RESULTS_NOT_MIRRORED",
+      "failure_mode": "result.field_results silently diverges from result.fields.",
+      "mutation": "stale_mirrored_fields",
+      "observed_error_codes": [
+        "FIELD_RESULTS_NOT_MIRRORED"
+      ],
+      "pass": true,
+      "validation_errors": [
+        {
+          "code": "FIELD_RESULTS_NOT_MIRRORED",
+          "message": "field_results must be an exact mirror of fields when present",
+          "path": "result.field_results"
+        }
+      ]
+    }
+  ],
+  "observed_totals": {
+    "mutations_failed_expected_rejection": 0,
+    "mutations_passed_expected_rejection": 14,
+    "mutations_run": 14
+  },
+  "official_case": false,
+  "overall_actual_pass": true,
+  "schema": "adversarial-mutation-audit/v1",
+  "semantic_limit": "Passing structural and mutation tests proves only these explicit validator behaviors on the synthetic fixture. It does not prove semantic correctness of this or any real extraction. An agent must perform decoy review against the original material.",
+  "synthetic": true
+}

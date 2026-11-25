@@ -1,0 +1,118 @@
+{
+  "case_id": "SYNTHETIC-ADVERSARIAL-GATE-V1",
+  "change_records": [
+    {
+      "action": "created_synthetic_fixture",
+      "description": "Created only for executable contract and adversarial-validator testing.",
+      "sequence": 1
+    }
+  ],
+  "claims": [
+    {
+      "claim_id": "synthetic-claim-1",
+      "evidence": {
+        "page": 1,
+        "paragraph_id": "p2",
+        "quote": "The investigators suggest SynA may alter downstream signaling under condition C.",
+        "source_id": "synthetic-source"
+      },
+      "kind": "speculation",
+      "location": {
+        "page": 1,
+        "paragraph_id": "p2"
+      },
+      "source_id": "synthetic-source",
+      "statement": "The investigators suggest SynA may alter downstream signaling under condition C."
+    }
+  ],
+  "result": {
+    "field_results": [
+      {
+        "comparator": "comparator D",
+        "condition": "condition C",
+        "evidence": {
+          "page": 1,
+          "paragraph_id": "p1",
+          "quote": "For SynA under condition C, versus comparator D, mean ± SD response was 12.4 nM.",
+          "source_id": "synthetic-source"
+        },
+        "experimental_condition": "condition C",
+        "field_id": "syn_response",
+        "notes": "SYNTHETIC example value; literal numeric extraction only.",
+        "paragraph_id": "p1",
+        "quote": "For SynA under condition C, versus comparator D, mean ± SD response was 12.4 nM.",
+        "scalar": "12.4",
+        "statistic": "mean ± SD",
+        "status": "reported",
+        "subject": "SynA",
+        "units": "mg/mL"
+      },
+      {
+        "comparator": "comparator D",
+        "condition": "condition C",
+        "evidence": null,
+        "experimental_condition": "condition C",
+        "field_id": "syn_unmeasured",
+        "notes": "SYNTHETIC full-corpus fixture has no requested second response; this is not zero.",
+        "paragraph_id": null,
+        "quote": null,
+        "scalar": null,
+        "statistic": null,
+        "status": "not_reported",
+        "subject": "SynA",
+        "units": null
+      }
+    ],
+    "fields": [
+      {
+        "comparator": "comparator D",
+        "condition": "condition C",
+        "evidence": {
+          "page": 1,
+          "paragraph_id": "p1",
+          "quote": "For SynA under condition C, versus comparator D, mean ± SD response was 12.4 nM.",
+          "source_id": "synthetic-source"
+        },
+        "experimental_condition": "condition C",
+        "field_id": "syn_response",
+        "notes": "SYNTHETIC example value; literal numeric extraction only.",
+        "paragraph_id": "p1",
+        "quote": "For SynA under condition C, versus comparator D, mean ± SD response was 12.4 nM.",
+        "scalar": "12.4",
+        "statistic": "mean ± SD",
+        "status": "reported",
+        "subject": "SynA",
+        "units": "mg/mL"
+      },
+      {
+        "comparator": "comparator D",
+        "condition": "condition C",
+        "evidence": null,
+        "experimental_condition": "condition C",
+        "field_id": "syn_unmeasured",
+        "notes": "SYNTHETIC full-corpus fixture has no requested second response; this is not zero.",
+        "paragraph_id": null,
+        "quote": null,
+        "scalar": null,
+        "statistic": null,
+        "status": "not_reported",
+        "subject": "SynA",
+        "units": null
+      }
+    ]
+  },
+  "sources": [
+    {
+      "source_id": "synthetic-source",
+      "title": "SYNTHETIC source text for validator testing"
+    }
+  ],
+  "status": "answered",
+  "uncertainties": [
+    {
+      "description": "SYNTHETIC absent measurement; absence is not evidence of a zero value.",
+      "field_id": "syn_unmeasured",
+      "kind": "not_reported"
+    }
+  ]
+}

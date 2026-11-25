@@ -1,0 +1,445 @@
+{
+  "case_id": "SYNTHETIC-MINIMAL-NOT-A-TEST-CASE",
+  "status": "answered",
+  "result": {
+    "fields": [
+      {
+        "field_id": "catalyst_A_yield",
+        "status": "reported",
+        "scalar": 82,
+        "units": "% yield",
+        "statistic": "mean of three independent runs; standard deviation = 2 percentage points",
+        "experimental_condition": "20 mg catalyst, 1.0 mmol substrate, 5 mL water, 80 °C for 6 h under 1 atm N2; yield measured by calibrated GC using an internal standard",
+        "condition": "20 mg catalyst, 1.0 mmol substrate, 5 mL water, 80 °C for 6 h under 1 atm N2; yield measured by calibrated GC using an internal standard",
+        "comparator": "catalyst B: 61% yield; mean of three independent runs; standard deviation = 3 percentage points; paired run under COND-REACTION",
+        "paragraph_id": "P2",
+        "quote": "Under these conditions, catalyst A gave 82% yield, whereas catalyst B gave 61% yield in a paired run; each value is the mean of three independent runs, and the standard deviations were 2 and 3 percentage points, respectively.",
+        "evidence": [
+          {
+            "source_id": "SRC-SYN-MIN",
+            "paragraph_id": "P2",
+            "page": null,
+            "quote": "Under these conditions, catalyst A gave 82% yield, whereas catalyst B gave 61% yield in a paired run; each value is the mean of three independent runs, and the standard deviations were 2 and 3 percentage points, respectively."
+          },
+          {
+            "source_id": "SRC-SYN-MIN",
+            "paragraph_id": "P3",
+            "page": null,
+            "quote": "These observations lead us to conclude that catalyst A is more active than catalyst B under the tested conditions."
+          },
+          {
+            "source_id": "SRC-SYN-MIN",
+            "paragraph_id": "P1",
+            "page": null,
+            "quote": "All reactions used 20 mg catalyst, 1.0 mmol substrate, 5 mL water, 80 °C for 6 h under 1 atm N2. Product yield was measured by calibrated GC using an internal standard."
+          }
+        ],
+        "notes": "The scalar is the current-paper observation; CL-CONC is the authors' bounded interpretation, not an extra measurement. Claim layers: CL-CONC=author_conclusion/author_conclusion."
+      },
+      {
+        "field_id": "desorption_mechanism",
+        "status": "reported",
+        "scalar": "Untested author hypothesis: faster intermediate desorption may explain the higher yield.",
+        "units": null,
+        "statistic": null,
+        "experimental_condition": "Prompted by the catalyst A/B comparison under COND-REACTION; the mechanism itself was not tested",
+        "condition": "Prompted by the catalyst A/B comparison under COND-REACTION; the mechanism itself was not tested",
+        "comparator": "No alternative mechanism was tested or reported",
+        "paragraph_id": "P5",
+        "quote": "We speculate that the higher yield may arise from faster intermediate desorption, but this mechanism was not tested.",
+        "evidence": [
+          {
+            "source_id": "SRC-SYN-MIN",
+            "paragraph_id": "P5",
+            "page": null,
+            "quote": "We speculate that the higher yield may arise from faster intermediate desorption, but this mechanism was not tested."
+          },
+          {
+            "source_id": "SRC-SYN-MIN",
+            "paragraph_id": "P1",
+            "page": null,
+            "quote": "All reactions used 20 mg catalyst, 1.0 mmol substrate, 5 mL water, 80 °C for 6 h under 1 atm N2. Product yield was measured by calibrated GC using an internal standard."
+          }
+        ],
+        "notes": "Reported means the hypothesis is present, not that the mechanism is established. Preserve speculate/may/not tested. Claim layers: CL-HYP=hypothesis_speculation/untested_hypothesis."
+      },
+      {
+        "field_id": "stability_beyond_6h",
+        "status": "not_reported",
+        "scalar": null,
+        "units": null,
+        "statistic": null,
+        "experimental_condition": "Catalyst A stability beyond 6 h under COND-REACTION",
+        "condition": "Catalyst A stability beyond 6 h under COND-REACTION",
+        "comparator": null,
+        "paragraph_id": "P4",
+        "quote": "did not measure stability beyond 6 h",
+        "evidence": [
+          {
+            "source_id": "SRC-SYN-MIN",
+            "paragraph_id": "P4",
+            "page": null,
+            "quote": "did not measure stability beyond 6 h"
+          },
+          {
+            "source_id": "SRC-SYN-MIN",
+            "paragraph_id": "P4",
+            "page": null,
+            "quote": "We tested only one substrate and did not measure stability beyond 6 h; therefore, broader substrate generality and long-term durability remain unknown."
+          }
+        ],
+        "notes": "Explicit limitation establishes absence for the requested duration in this synthetic source; scalar, units, and statistic remain null because no measurement was reported. Claim layers: CL-LIM=limitation/declared_limitation."
+      },
+      {
+        "field_id": "cited_related_catalyst_yield",
+        "status": "reported",
+        "scalar": 90,
+        "units": "% yield",
+        "statistic": null,
+        "experimental_condition": "Cited related catalyst at 100 °C; other experimental conditions not reported in the current excerpt",
+        "condition": "Cited related catalyst at 100 °C; other experimental conditions not reported in the current excerpt",
+        "comparator": "Not a controlled comparison with catalyst A: this is cited work at 100 °C, with other conditions unreported here.",
+        "paragraph_id": "P6",
+        "quote": "Chen et al. reported that a related catalyst could reach 90% yield at 100 °C",
+        "evidence": [
+          {
+            "source_id": "SRC-SYN-MIN",
+            "paragraph_id": "P6",
+            "page": null,
+            "quote": "Chen et al. reported that a related catalyst could reach 90% yield at 100 °C"
+          },
+          {
+            "source_id": "SRC-SYN-MIN",
+            "paragraph_id": "P6",
+            "page": null,
+            "quote": "Chen et al. reported that a related catalyst could reach 90% yield at 100 °C, suggesting that higher temperature might improve performance."
+          }
+        ],
+        "notes": "The value belongs to cited work and retains could/might modality; it is not a current-paper observation or like-for-like comparator. Claim layers: CL-PRIOR=prior_work_cited_claim/cited_hedged_claim."
+      }
+    ],
+    "field_results": [
+      {
+        "field_id": "catalyst_A_yield",
+        "status": "reported",
+        "scalar": 82,
+        "units": "% yield",
+        "statistic": "mean of three independent runs; standard deviation = 2 percentage points",
+        "experimental_condition": "20 mg catalyst, 1.0 mmol substrate, 5 mL water, 80 °C for 6 h under 1 atm N2; yield measured by calibrated GC using an internal standard",
+        "condition": "20 mg catalyst, 1.0 mmol substrate, 5 mL water, 80 °C for 6 h under 1 atm N2; yield measured by calibrated GC using an internal standard",
+        "comparator": "catalyst B: 61% yield; mean of three independent runs; standard deviation = 3 percentage points; paired run under COND-REACTION",
+        "paragraph_id": "P2",
+        "quote": "Under these conditions, catalyst A gave 82% yield, whereas catalyst B gave 61% yield in a paired run; each value is the mean of three independent runs, and the standard deviations were 2 and 3 percentage points, respectively.",
+        "evidence": [
+          {
+            "source_id": "SRC-SYN-MIN",
+            "paragraph_id": "P2",
+            "page": null,
+            "quote": "Under these conditions, catalyst A gave 82% yield, whereas catalyst B gave 61% yield in a paired run; each value is the mean of three independent runs, and the standard deviations were 2 and 3 percentage points, respectively."
+          },
+          {
+            "source_id": "SRC-SYN-MIN",
+            "paragraph_id": "P3",
+            "page": null,
+            "quote": "These observations lead us to conclude that catalyst A is more active than catalyst B under the tested conditions."
+          },
+          {
+            "source_id": "SRC-SYN-MIN",
+            "paragraph_id": "P1",
+            "page": null,
+            "quote": "All reactions used 20 mg catalyst, 1.0 mmol substrate, 5 mL water, 80 °C for 6 h under 1 atm N2. Product yield was measured by calibrated GC using an internal standard."
+          }
+        ],
+        "notes": "The scalar is the current-paper observation; CL-CONC is the authors' bounded interpretation, not an extra measurement. Claim layers: CL-CONC=author_conclusion/author_conclusion."
+      },
+      {
+        "field_id": "desorption_mechanism",
+        "status": "reported",
+        "scalar": "Untested author hypothesis: faster intermediate desorption may explain the higher yield.",
+        "units": null,
+        "statistic": null,
+        "experimental_condition": "Prompted by the catalyst A/B comparison under COND-REACTION; the mechanism itself was not tested",
+        "condition": "Prompted by the catalyst A/B comparison under COND-REACTION; the mechanism itself was not tested",
+        "comparator": "No alternative mechanism was tested or reported",
+        "paragraph_id": "P5",
+        "quote": "We speculate that the higher yield may arise from faster intermediate desorption, but this mechanism was not tested.",
+        "evidence": [
+          {
+            "source_id": "SRC-SYN-MIN",
+            "paragraph_id": "P5",
+            "page": null,
+            "quote": "We speculate that the higher yield may arise from faster intermediate desorption, but this mechanism was not tested."
+          },
+          {
+            "source_id": "SRC-SYN-MIN",
+            "paragraph_id": "P1",
+            "page": null,
+            "quote": "All reactions used 20 mg catalyst, 1.0 mmol substrate, 5 mL water, 80 °C for 6 h under 1 atm N2. Product yield was measured by calibrated GC using an internal standard."
+          }
+        ],
+        "notes": "Reported means the hypothesis is present, not that the mechanism is established. Preserve speculate/may/not tested. Claim layers: CL-HYP=hypothesis_speculation/untested_hypothesis."
+      },
+      {
+        "field_id": "stability_beyond_6h",
+        "status": "not_reported",
+        "scalar": null,
+        "units": null,
+        "statistic": null,
+        "experimental_condition": "Catalyst A stability beyond 6 h under COND-REACTION",
+        "condition": "Catalyst A stability beyond 6 h under COND-REACTION",
+        "comparator": null,
+        "paragraph_id": "P4",
+        "quote": "did not measure stability beyond 6 h",
+        "evidence": [
+          {
+            "source_id": "SRC-SYN-MIN",
+            "paragraph_id": "P4",
+            "page": null,
+            "quote": "did not measure stability beyond 6 h"
+          },
+          {
+            "source_id": "SRC-SYN-MIN",
+            "paragraph_id": "P4",
+            "page": null,
+            "quote": "We tested only one substrate and did not measure stability beyond 6 h; therefore, broader substrate generality and long-term durability remain unknown."
+          }
+        ],
+        "notes": "Explicit limitation establishes absence for the requested duration in this synthetic source; scalar, units, and statistic remain null because no measurement was reported. Claim layers: CL-LIM=limitation/declared_limitation."
+      },
+      {
+        "field_id": "cited_related_catalyst_yield",
+        "status": "reported",
+        "scalar": 90,
+        "units": "% yield",
+        "statistic": null,
+        "experimental_condition": "Cited related catalyst at 100 °C; other experimental conditions not reported in the current excerpt",
+        "condition": "Cited related catalyst at 100 °C; other experimental conditions not reported in the current excerpt",
+        "comparator": "Not a controlled comparison with catalyst A: this is cited work at 100 °C, with other conditions unreported here.",
+        "paragraph_id": "P6",
+        "quote": "Chen et al. reported that a related catalyst could reach 90% yield at 100 °C",
+        "evidence": [
+          {
+            "source_id": "SRC-SYN-MIN",
+            "paragraph_id": "P6",
+            "page": null,
+            "quote": "Chen et al. reported that a related catalyst could reach 90% yield at 100 °C"
+          },
+          {
+            "source_id": "SRC-SYN-MIN",
+            "paragraph_id": "P6",
+            "page": null,
+            "quote": "Chen et al. reported that a related catalyst could reach 90% yield at 100 °C, suggesting that higher temperature might improve performance."
+          }
+        ],
+        "notes": "The value belongs to cited work and retains could/might modality; it is not a current-paper observation or like-for-like comparator. Claim layers: CL-PRIOR=prior_work_cited_claim/cited_hedged_claim."
+      }
+    ]
+  },
+  "claims": [
+    {
+      "claim_id": "CL-CONC",
+      "kind": "author_conclusion",
+      "text": "The current authors conclude that catalyst A is more active than catalyst B only under the tested conditions.",
+      "epistemic_status": "author_conclusion",
+      "modality": "declarative",
+      "hedges": [],
+      "attribution": {
+        "speaker": "current synthetic-paper authors",
+        "origin": "author_current_paper"
+      },
+      "condition_ids": [
+        "COND-REACTION"
+      ],
+      "supporting_observation_ids": [
+        "OBS-A",
+        "OBS-B"
+      ],
+      "promotion_allowed": true,
+      "evidence": [
+        {
+          "source_id": "SRC-SYN-MIN",
+          "paragraph_id": "P3",
+          "page": null,
+          "quote": "These observations lead us to conclude that catalyst A is more active than catalyst B under the tested conditions."
+        }
+      ],
+      "source_id": "SRC-SYN-MIN",
+      "location": {
+        "paragraph_id": "P3",
+        "page": null
+      }
+    },
+    {
+      "claim_id": "CL-LIM",
+      "kind": "limitation",
+      "text": "Only one substrate was tested; stability beyond 6 h, broader generality, and long-term durability remain unknown.",
+      "epistemic_status": "declared_limitation",
+      "modality": "declarative",
+      "hedges": [],
+      "attribution": {
+        "speaker": "current synthetic-paper authors",
+        "origin": "author_current_paper"
+      },
+      "condition_ids": [],
+      "supporting_observation_ids": [],
+      "promotion_allowed": false,
+      "evidence": [
+        {
+          "source_id": "SRC-SYN-MIN",
+          "paragraph_id": "P4",
+          "page": null,
+          "quote": "We tested only one substrate and did not measure stability beyond 6 h; therefore, broader substrate generality and long-term durability remain unknown."
+        }
+      ],
+      "source_id": "SRC-SYN-MIN",
+      "location": {
+        "paragraph_id": "P4",
+        "page": null
+      }
+    },
+    {
+      "claim_id": "CL-HYP",
+      "kind": "hypothesis_speculation",
+      "text": "The authors speculate that faster intermediate desorption may explain the higher yield; the mechanism was not tested.",
+      "epistemic_status": "untested_hypothesis",
+      "modality": "speculative",
+      "hedges": [
+        "speculate",
+        "may",
+        "not tested"
+      ],
+      "attribution": {
+        "speaker": "current synthetic-paper authors",
+        "origin": "author_current_paper"
+      },
+      "condition_ids": [
+        "COND-REACTION"
+      ],
+      "supporting_observation_ids": [
+        "OBS-A"
+      ],
+      "promotion_allowed": false,
+      "evidence": [
+        {
+          "source_id": "SRC-SYN-MIN",
+          "paragraph_id": "P5",
+          "page": null,
+          "quote": "We speculate that the higher yield may arise from faster intermediate desorption, but this mechanism was not tested."
+        }
+      ],
+      "source_id": "SRC-SYN-MIN",
+      "location": {
+        "paragraph_id": "P5",
+        "page": null
+      }
+    },
+    {
+      "claim_id": "CL-METHOD",
+      "kind": "method_observation",
+      "text": "The current-paper method used calibrated GC with an internal standard to measure yield.",
+      "epistemic_status": "directly_reported_method",
+      "modality": "declarative",
+      "hedges": [],
+      "attribution": {
+        "speaker": "current synthetic-paper authors",
+        "origin": "author_current_paper"
+      },
+      "condition_ids": [
+        "COND-REACTION"
+      ],
+      "supporting_observation_ids": [
+        "OBS-METHOD"
+      ],
+      "promotion_allowed": false,
+      "evidence": [
+        {
+          "source_id": "SRC-SYN-MIN",
+          "paragraph_id": "P1",
+          "page": null,
+          "quote": "Product yield was measured by calibrated GC using an internal standard."
+        }
+      ],
+      "source_id": "SRC-SYN-MIN",
+      "location": {
+        "paragraph_id": "P1",
+        "page": null
+      }
+    },
+    {
+      "claim_id": "CL-PRIOR",
+      "kind": "prior_work_cited_claim",
+      "text": "Chen et al., as cited here, reported up to 90% yield for a related catalyst at 100 °C and suggested higher temperature might help.",
+      "epistemic_status": "cited_hedged_claim",
+      "modality": "reported_and_speculative",
+      "hedges": [
+        "could",
+        "suggesting",
+        "might"
+      ],
+      "attribution": {
+        "speaker": "Chen et al., as cited in the synthetic source",
+        "origin": "cited_work",
+        "citation": "Chen et al.; bibliographic details not supplied in this synthetic excerpt"
+      },
+      "condition_ids": [
+        "COND-PRIOR"
+      ],
+      "supporting_observation_ids": [],
+      "promotion_allowed": false,
+      "evidence": [
+        {
+          "source_id": "SRC-SYN-MIN",
+          "paragraph_id": "P6",
+          "page": null,
+          "quote": "Chen et al. reported that a related catalyst could reach 90% yield at 100 °C, suggesting that higher temperature might improve performance."
+        }
+      ],
+      "source_id": "SRC-SYN-MIN",
+      "location": {
+        "paragraph_id": "P6",
+        "page": null
+      }
+    }
+  ],
+  "uncertainties": [
+    {
+      "kind": "bibliographic_limit",
+      "claim_id": "CL-PRIOR",
+      "detail": "The excerpt supplies only 'Chen et al.' and no bibliographic record; the cited original was not independently checked."
+    },
+    {
+      "kind": "not_reported",
+      "field_id": "stability_beyond_6h",
+      "detail": "Explicit limitation establishes absence for the requested duration in this synthetic source; scalar, units, and statistic remain null because no measurement was reported. Claim layers: CL-LIM=limitation/declared_limitation."
+    },
+    {
+      "kind": "epistemic_boundary",
+      "claim_id": "CL-LIM",
+      "detail": "limitation; modality=declarative; no promotion to established current-author fact"
+    },
+    {
+      "kind": "epistemic_boundary",
+      "claim_id": "CL-HYP",
+      "detail": "hypothesis_speculation; modality=speculative; no promotion to established current-author fact"
+    },
+    {
+      "kind": "epistemic_boundary",
+      "claim_id": "CL-PRIOR",
+      "detail": "prior_work_cited_claim; modality=reported_and_speculative; no promotion to established current-author fact"
+    }
+  ],
+  "sources": [
+    {
+      "source_id": "SRC-SYN-MIN",
+      "title": "Synthetic catalyst discourse example",
+      "synthetic": true,
+      "input_relative_path": "source.txt"
+    }
+  ],
+  "change_records": [
+    {
+      "action": "validated_curation_to_graph",
+      "detail": "Generated only from explicit curated classifications, observations, conditions, and verbatim source evidence."
+    }
+  ]
+}

@@ -1,0 +1,789 @@
+{
+  "contract_version": "field-intent-contract/v1",
+  "case_id": "SYNTHETIC-FIELD-INTENT-001",
+  "synthetic": true,
+  "task_sha256": "e48298afd1a85beeb4a8b2d36da5e2ec11c21a919d8faec66badfda31058ba75",
+  "compilation_order": "QUESTION/SCHEMA -> acceptance tests -> source register -> candidate adjudication",
+  "literal_quote_policy": "A literal quote is evidence integrity only; it never establishes semantic correctness.",
+  "fields": [
+    {
+      "field_id": "F_YIELD_120C",
+      "field_kind": "value",
+      "question": "What yield did SYNTHETIC Catalyst X give at 120 °C in toluene?",
+      "metric_identity": "product yield",
+      "subject_entity": "SYNTHETIC Catalyst X",
+      "expected_value_form": "single numeric scalar",
+      "requested_unit": "%",
+      "statistic": "single reported value",
+      "required_condition": "temperature=120 °C AND solvent=toluene",
+      "comparator": "none",
+      "source_scope": [
+        "S_SYNTHETIC"
+      ],
+      "modality": "not_applicable",
+      "source_spec": {
+        "field_id": "F_YIELD_120C",
+        "question": "What yield did SYNTHETIC Catalyst X give at 120 °C in toluene?",
+        "metric_identity": "product yield",
+        "subject_entity": "SYNTHETIC Catalyst X",
+        "expected_value_form": "single numeric scalar",
+        "requested_unit": "%",
+        "statistic": "single reported value",
+        "required_condition": "temperature=120 °C AND solvent=toluene",
+        "comparator": "none",
+        "source_scope": [
+          "S_SYNTHETIC"
+        ]
+      },
+      "acceptance_tests": [
+        {
+          "test_id": "F_YIELD_120C::metric_identity",
+          "axis": "metric_identity",
+          "requirement": "The candidate is the requested metric, not a same-named or co-located different metric.",
+          "compiled_requirement": "product yield",
+          "evaluation": "agent_semantic_adjudication",
+          "required_for": [
+            "reported",
+            "source_conflict"
+          ],
+          "state_before_candidates": "pending"
+        },
+        {
+          "test_id": "F_YIELD_120C::subject_entity",
+          "axis": "subject_entity",
+          "requirement": "The candidate describes the requested subject/entity, not another arm, material, group, or time point.",
+          "compiled_requirement": "SYNTHETIC Catalyst X",
+          "evaluation": "agent_semantic_adjudication",
+          "required_for": [
+            "reported",
+            "source_conflict"
+          ],
+          "state_before_candidates": "pending"
+        },
+        {
+          "test_id": "F_YIELD_120C::expected_value_form",
+          "axis": "expected_value_form",
+          "requirement": "The candidate has the requested value form (for example scalar, range, text, or list) without silent reshaping.",
+          "compiled_requirement": "single numeric scalar",
+          "evaluation": "agent_semantic_adjudication",
+          "required_for": [
+            "reported",
+            "source_conflict"
+          ],
+          "state_before_candidates": "pending"
+        },
+        {
+          "test_id": "F_YIELD_120C::requested_unit",
+          "axis": "requested_unit",
+          "requirement": "The candidate preserves the requested unit; any conversion is explicitly requested and separately auditable.",
+          "compiled_requirement": "%",
+          "evaluation": "agent_semantic_adjudication",
+          "required_for": [
+            "reported",
+            "source_conflict"
+          ],
+          "state_before_candidates": "pending"
+        },
+        {
+          "test_id": "F_YIELD_120C::statistic",
+          "axis": "statistic",
+          "requirement": "The candidate is the requested statistic, not a raw observation, mean, SD, SE, CI, or other statistic substituted for it.",
+          "compiled_requirement": "single reported value",
+          "evaluation": "agent_semantic_adjudication",
+          "required_for": [
+            "reported",
+            "source_conflict"
+          ],
+          "state_before_candidates": "pending"
+        },
+        {
+          "test_id": "F_YIELD_120C::required_condition",
+          "axis": "required_condition",
+          "requirement": "All required conditions are satisfied together by the same candidate evidence; a same value under another condition is rejected.",
+          "compiled_requirement": "temperature=120 °C AND solvent=toluene",
+          "evaluation": "agent_semantic_adjudication",
+          "required_for": [
+            "reported",
+            "source_conflict"
+          ],
+          "state_before_candidates": "pending"
+        },
+        {
+          "test_id": "F_YIELD_120C::comparator",
+          "axis": "comparator",
+          "requirement": "The comparator/baseline/direction is the requested one, including an explicit no-comparator interpretation when applicable.",
+          "compiled_requirement": "none",
+          "evaluation": "agent_semantic_adjudication",
+          "required_for": [
+            "reported",
+            "source_conflict"
+          ],
+          "state_before_candidates": "pending"
+        },
+        {
+          "test_id": "F_YIELD_120C::source_scope",
+          "axis": "source_scope",
+          "requirement": "The candidate and search are inside the permitted source scope; out-of-scope text cannot establish the answer.",
+          "compiled_requirement": [
+            "S_SYNTHETIC"
+          ],
+          "evaluation": "agent_semantic_adjudication",
+          "required_for": [
+            "reported",
+            "source_conflict"
+          ],
+          "state_before_candidates": "pending"
+        },
+        {
+          "test_id": "F_YIELD_120C::modality",
+          "axis": "modality",
+          "requirement": "For a conclusion field, author conclusion, speculation, limitation, and reported fact are distinguished from the wording; otherwise modality is not applicable.",
+          "compiled_requirement": "not_applicable",
+          "evaluation": "agent_semantic_adjudication",
+          "required_for": [
+            "reported",
+            "source_conflict"
+          ],
+          "state_before_candidates": "pending"
+        },
+        {
+          "test_id": "F_YIELD_120C::verbatim_evidence",
+          "axis": "verbatim_evidence",
+          "requirement": "The exact quote is present in the identified paragraph and contains the verbatim value. This is necessary but never sufficient for acceptance.",
+          "compiled_requirement": "exact substring in exact registered source paragraph",
+          "evaluation": "compiler_plus_agent",
+          "required_for": [
+            "reported",
+            "source_conflict"
+          ],
+          "state_before_candidates": "pending"
+        }
+      ],
+      "blocking_issues": []
+    },
+    {
+      "field_id": "F_YIELD_SD_120C",
+      "field_kind": "value",
+      "question": "What standard deviation of yield was reported for SYNTHETIC Catalyst X at 120 °C in toluene?",
+      "metric_identity": "product yield variability",
+      "subject_entity": "SYNTHETIC Catalyst X",
+      "expected_value_form": "single numeric scalar",
+      "requested_unit": "percentage points",
+      "statistic": "standard deviation",
+      "required_condition": "temperature=120 °C AND solvent=toluene",
+      "comparator": "none",
+      "source_scope": [
+        "S_SYNTHETIC"
+      ],
+      "modality": "not_applicable",
+      "source_spec": {
+        "field_id": "F_YIELD_SD_120C",
+        "question": "What standard deviation of yield was reported for SYNTHETIC Catalyst X at 120 °C in toluene?",
+        "metric_identity": "product yield variability",
+        "subject_entity": "SYNTHETIC Catalyst X",
+        "expected_value_form": "single numeric scalar",
+        "requested_unit": "percentage points",
+        "statistic": "standard deviation",
+        "required_condition": "temperature=120 °C AND solvent=toluene",
+        "comparator": "none",
+        "source_scope": [
+          "S_SYNTHETIC"
+        ]
+      },
+      "acceptance_tests": [
+        {
+          "test_id": "F_YIELD_SD_120C::metric_identity",
+          "axis": "metric_identity",
+          "requirement": "The candidate is the requested metric, not a same-named or co-located different metric.",
+          "compiled_requirement": "product yield variability",
+          "evaluation": "agent_semantic_adjudication",
+          "required_for": [
+            "reported",
+            "source_conflict"
+          ],
+          "state_before_candidates": "pending"
+        },
+        {
+          "test_id": "F_YIELD_SD_120C::subject_entity",
+          "axis": "subject_entity",
+          "requirement": "The candidate describes the requested subject/entity, not another arm, material, group, or time point.",
+          "compiled_requirement": "SYNTHETIC Catalyst X",
+          "evaluation": "agent_semantic_adjudication",
+          "required_for": [
+            "reported",
+            "source_conflict"
+          ],
+          "state_before_candidates": "pending"
+        },
+        {
+          "test_id": "F_YIELD_SD_120C::expected_value_form",
+          "axis": "expected_value_form",
+          "requirement": "The candidate has the requested value form (for example scalar, range, text, or list) without silent reshaping.",
+          "compiled_requirement": "single numeric scalar",
+          "evaluation": "agent_semantic_adjudication",
+          "required_for": [
+            "reported",
+            "source_conflict"
+          ],
+          "state_before_candidates": "pending"
+        },
+        {
+          "test_id": "F_YIELD_SD_120C::requested_unit",
+          "axis": "requested_unit",
+          "requirement": "The candidate preserves the requested unit; any conversion is explicitly requested and separately auditable.",
+          "compiled_requirement": "percentage points",
+          "evaluation": "agent_semantic_adjudication",
+          "required_for": [
+            "reported",
+            "source_conflict"
+          ],
+          "state_before_candidates": "pending"
+        },
+        {
+          "test_id": "F_YIELD_SD_120C::statistic",
+          "axis": "statistic",
+          "requirement": "The candidate is the requested statistic, not a raw observation, mean, SD, SE, CI, or other statistic substituted for it.",
+          "compiled_requirement": "standard deviation",
+          "evaluation": "agent_semantic_adjudication",
+          "required_for": [
+            "reported",
+            "source_conflict"
+          ],
+          "state_before_candidates": "pending"
+        },
+        {
+          "test_id": "F_YIELD_SD_120C::required_condition",
+          "axis": "required_condition",
+          "requirement": "All required conditions are satisfied together by the same candidate evidence; a same value under another condition is rejected.",
+          "compiled_requirement": "temperature=120 °C AND solvent=toluene",
+          "evaluation": "agent_semantic_adjudication",
+          "required_for": [
+            "reported",
+            "source_conflict"
+          ],
+          "state_before_candidates": "pending"
+        },
+        {
+          "test_id": "F_YIELD_SD_120C::comparator",
+          "axis": "comparator",
+          "requirement": "The comparator/baseline/direction is the requested one, including an explicit no-comparator interpretation when applicable.",
+          "compiled_requirement": "none",
+          "evaluation": "agent_semantic_adjudication",
+          "required_for": [
+            "reported",
+            "source_conflict"
+          ],
+          "state_before_candidates": "pending"
+        },
+        {
+          "test_id": "F_YIELD_SD_120C::source_scope",
+          "axis": "source_scope",
+          "requirement": "The candidate and search are inside the permitted source scope; out-of-scope text cannot establish the answer.",
+          "compiled_requirement": [
+            "S_SYNTHETIC"
+          ],
+          "evaluation": "agent_semantic_adjudication",
+          "required_for": [
+            "reported",
+            "source_conflict"
+          ],
+          "state_before_candidates": "pending"
+        },
+        {
+          "test_id": "F_YIELD_SD_120C::modality",
+          "axis": "modality",
+          "requirement": "For a conclusion field, author conclusion, speculation, limitation, and reported fact are distinguished from the wording; otherwise modality is not applicable.",
+          "compiled_requirement": "not_applicable",
+          "evaluation": "agent_semantic_adjudication",
+          "required_for": [
+            "reported",
+            "source_conflict"
+          ],
+          "state_before_candidates": "pending"
+        },
+        {
+          "test_id": "F_YIELD_SD_120C::verbatim_evidence",
+          "axis": "verbatim_evidence",
+          "requirement": "The exact quote is present in the identified paragraph and contains the verbatim value. This is necessary but never sufficient for acceptance.",
+          "compiled_requirement": "exact substring in exact registered source paragraph",
+          "evaluation": "compiler_plus_agent",
+          "required_for": [
+            "reported",
+            "source_conflict"
+          ],
+          "state_before_candidates": "pending"
+        }
+      ],
+      "blocking_issues": []
+    },
+    {
+      "field_id": "F_SELECTIVITY_120C",
+      "field_kind": "value",
+      "question": "What selectivity did SYNTHETIC Catalyst X give at 120 °C in toluene?",
+      "metric_identity": "product selectivity",
+      "subject_entity": "SYNTHETIC Catalyst X",
+      "expected_value_form": "single numeric scalar",
+      "requested_unit": "%",
+      "statistic": "single reported value",
+      "required_condition": "temperature=120 °C AND solvent=toluene",
+      "comparator": "none",
+      "source_scope": [
+        "S_SYNTHETIC"
+      ],
+      "modality": "not_applicable",
+      "source_spec": {
+        "field_id": "F_SELECTIVITY_120C",
+        "question": "What selectivity did SYNTHETIC Catalyst X give at 120 °C in toluene?",
+        "metric_identity": "product selectivity",
+        "subject_entity": "SYNTHETIC Catalyst X",
+        "expected_value_form": "single numeric scalar",
+        "requested_unit": "%",
+        "statistic": "single reported value",
+        "required_condition": "temperature=120 °C AND solvent=toluene",
+        "comparator": "none",
+        "source_scope": [
+          "S_SYNTHETIC"
+        ]
+      },
+      "acceptance_tests": [
+        {
+          "test_id": "F_SELECTIVITY_120C::metric_identity",
+          "axis": "metric_identity",
+          "requirement": "The candidate is the requested metric, not a same-named or co-located different metric.",
+          "compiled_requirement": "product selectivity",
+          "evaluation": "agent_semantic_adjudication",
+          "required_for": [
+            "reported",
+            "source_conflict"
+          ],
+          "state_before_candidates": "pending"
+        },
+        {
+          "test_id": "F_SELECTIVITY_120C::subject_entity",
+          "axis": "subject_entity",
+          "requirement": "The candidate describes the requested subject/entity, not another arm, material, group, or time point.",
+          "compiled_requirement": "SYNTHETIC Catalyst X",
+          "evaluation": "agent_semantic_adjudication",
+          "required_for": [
+            "reported",
+            "source_conflict"
+          ],
+          "state_before_candidates": "pending"
+        },
+        {
+          "test_id": "F_SELECTIVITY_120C::expected_value_form",
+          "axis": "expected_value_form",
+          "requirement": "The candidate has the requested value form (for example scalar, range, text, or list) without silent reshaping.",
+          "compiled_requirement": "single numeric scalar",
+          "evaluation": "agent_semantic_adjudication",
+          "required_for": [
+            "reported",
+            "source_conflict"
+          ],
+          "state_before_candidates": "pending"
+        },
+        {
+          "test_id": "F_SELECTIVITY_120C::requested_unit",
+          "axis": "requested_unit",
+          "requirement": "The candidate preserves the requested unit; any conversion is explicitly requested and separately auditable.",
+          "compiled_requirement": "%",
+          "evaluation": "agent_semantic_adjudication",
+          "required_for": [
+            "reported",
+            "source_conflict"
+          ],
+          "state_before_candidates": "pending"
+        },
+        {
+          "test_id": "F_SELECTIVITY_120C::statistic",
+          "axis": "statistic",
+          "requirement": "The candidate is the requested statistic, not a raw observation, mean, SD, SE, CI, or other statistic substituted for it.",
+          "compiled_requirement": "single reported value",
+          "evaluation": "agent_semantic_adjudication",
+          "required_for": [
+            "reported",
+            "source_conflict"
+          ],
+          "state_before_candidates": "pending"
+        },
+        {
+          "test_id": "F_SELECTIVITY_120C::required_condition",
+          "axis": "required_condition",
+          "requirement": "All required conditions are satisfied together by the same candidate evidence; a same value under another condition is rejected.",
+          "compiled_requirement": "temperature=120 °C AND solvent=toluene",
+          "evaluation": "agent_semantic_adjudication",
+          "required_for": [
+            "reported",
+            "source_conflict"
+          ],
+          "state_before_candidates": "pending"
+        },
+        {
+          "test_id": "F_SELECTIVITY_120C::comparator",
+          "axis": "comparator",
+          "requirement": "The comparator/baseline/direction is the requested one, including an explicit no-comparator interpretation when applicable.",
+          "compiled_requirement": "none",
+          "evaluation": "agent_semantic_adjudication",
+          "required_for": [
+            "reported",
+            "source_conflict"
+          ],
+          "state_before_candidates": "pending"
+        },
+        {
+          "test_id": "F_SELECTIVITY_120C::source_scope",
+          "axis": "source_scope",
+          "requirement": "The candidate and search are inside the permitted source scope; out-of-scope text cannot establish the answer.",
+          "compiled_requirement": [
+            "S_SYNTHETIC"
+          ],
+          "evaluation": "agent_semantic_adjudication",
+          "required_for": [
+            "reported",
+            "source_conflict"
+          ],
+          "state_before_candidates": "pending"
+        },
+        {
+          "test_id": "F_SELECTIVITY_120C::modality",
+          "axis": "modality",
+          "requirement": "For a conclusion field, author conclusion, speculation, limitation, and reported fact are distinguished from the wording; otherwise modality is not applicable.",
+          "compiled_requirement": "not_applicable",
+          "evaluation": "agent_semantic_adjudication",
+          "required_for": [
+            "reported",
+            "source_conflict"
+          ],
+          "state_before_candidates": "pending"
+        },
+        {
+          "test_id": "F_SELECTIVITY_120C::verbatim_evidence",
+          "axis": "verbatim_evidence",
+          "requirement": "The exact quote is present in the identified paragraph and contains the verbatim value. This is necessary but never sufficient for acceptance.",
+          "compiled_requirement": "exact substring in exact registered source paragraph",
+          "evaluation": "compiler_plus_agent",
+          "required_for": [
+            "reported",
+            "source_conflict"
+          ],
+          "state_before_candidates": "pending"
+        }
+      ],
+      "blocking_issues": []
+    },
+    {
+      "field_id": "F_CONVERSION_120C",
+      "field_kind": "value",
+      "question": "What conversion did SYNTHETIC Catalyst X give at 120 °C in toluene?",
+      "metric_identity": "reactant conversion",
+      "subject_entity": "SYNTHETIC Catalyst X",
+      "expected_value_form": "single numeric scalar",
+      "requested_unit": "%",
+      "statistic": "single reported value",
+      "required_condition": "temperature=120 °C AND solvent=toluene",
+      "comparator": "none",
+      "source_scope": [
+        "S_SYNTHETIC"
+      ],
+      "modality": "not_applicable",
+      "source_spec": {
+        "field_id": "F_CONVERSION_120C",
+        "question": "What conversion did SYNTHETIC Catalyst X give at 120 °C in toluene?",
+        "metric_identity": "reactant conversion",
+        "subject_entity": "SYNTHETIC Catalyst X",
+        "expected_value_form": "single numeric scalar",
+        "requested_unit": "%",
+        "statistic": "single reported value",
+        "required_condition": "temperature=120 °C AND solvent=toluene",
+        "comparator": "none",
+        "source_scope": [
+          "S_SYNTHETIC"
+        ]
+      },
+      "acceptance_tests": [
+        {
+          "test_id": "F_CONVERSION_120C::metric_identity",
+          "axis": "metric_identity",
+          "requirement": "The candidate is the requested metric, not a same-named or co-located different metric.",
+          "compiled_requirement": "reactant conversion",
+          "evaluation": "agent_semantic_adjudication",
+          "required_for": [
+            "reported",
+            "source_conflict"
+          ],
+          "state_before_candidates": "pending"
+        },
+        {
+          "test_id": "F_CONVERSION_120C::subject_entity",
+          "axis": "subject_entity",
+          "requirement": "The candidate describes the requested subject/entity, not another arm, material, group, or time point.",
+          "compiled_requirement": "SYNTHETIC Catalyst X",
+          "evaluation": "agent_semantic_adjudication",
+          "required_for": [
+            "reported",
+            "source_conflict"
+          ],
+          "state_before_candidates": "pending"
+        },
+        {
+          "test_id": "F_CONVERSION_120C::expected_value_form",
+          "axis": "expected_value_form",
+          "requirement": "The candidate has the requested value form (for example scalar, range, text, or list) without silent reshaping.",
+          "compiled_requirement": "single numeric scalar",
+          "evaluation": "agent_semantic_adjudication",
+          "required_for": [
+            "reported",
+            "source_conflict"
+          ],
+          "state_before_candidates": "pending"
+        },
+        {
+          "test_id": "F_CONVERSION_120C::requested_unit",
+          "axis": "requested_unit",
+          "requirement": "The candidate preserves the requested unit; any conversion is explicitly requested and separately auditable.",
+          "compiled_requirement": "%",
+          "evaluation": "agent_semantic_adjudication",
+          "required_for": [
+            "reported",
+            "source_conflict"
+          ],
+          "state_before_candidates": "pending"
+        },
+        {
+          "test_id": "F_CONVERSION_120C::statistic",
+          "axis": "statistic",
+          "requirement": "The candidate is the requested statistic, not a raw observation, mean, SD, SE, CI, or other statistic substituted for it.",
+          "compiled_requirement": "single reported value",
+          "evaluation": "agent_semantic_adjudication",
+          "required_for": [
+            "reported",
+            "source_conflict"
+          ],
+          "state_before_candidates": "pending"
+        },
+        {
+          "test_id": "F_CONVERSION_120C::required_condition",
+          "axis": "required_condition",
+          "requirement": "All required conditions are satisfied together by the same candidate evidence; a same value under another condition is rejected.",
+          "compiled_requirement": "temperature=120 °C AND solvent=toluene",
+          "evaluation": "agent_semantic_adjudication",
+          "required_for": [
+            "reported",
+            "source_conflict"
+          ],
+          "state_before_candidates": "pending"
+        },
+        {
+          "test_id": "F_CONVERSION_120C::comparator",
+          "axis": "comparator",
+          "requirement": "The comparator/baseline/direction is the requested one, including an explicit no-comparator interpretation when applicable.",
+          "compiled_requirement": "none",
+          "evaluation": "agent_semantic_adjudication",
+          "required_for": [
+            "reported",
+            "source_conflict"
+          ],
+          "state_before_candidates": "pending"
+        },
+        {
+          "test_id": "F_CONVERSION_120C::source_scope",
+          "axis": "source_scope",
+          "requirement": "The candidate and search are inside the permitted source scope; out-of-scope text cannot establish the answer.",
+          "compiled_requirement": [
+            "S_SYNTHETIC"
+          ],
+          "evaluation": "agent_semantic_adjudication",
+          "required_for": [
+            "reported",
+            "source_conflict"
+          ],
+          "state_before_candidates": "pending"
+        },
+        {
+          "test_id": "F_CONVERSION_120C::modality",
+          "axis": "modality",
+          "requirement": "For a conclusion field, author conclusion, speculation, limitation, and reported fact are distinguished from the wording; otherwise modality is not applicable.",
+          "compiled_requirement": "not_applicable",
+          "evaluation": "agent_semantic_adjudication",
+          "required_for": [
+            "reported",
+            "source_conflict"
+          ],
+          "state_before_candidates": "pending"
+        },
+        {
+          "test_id": "F_CONVERSION_120C::verbatim_evidence",
+          "axis": "verbatim_evidence",
+          "requirement": "The exact quote is present in the identified paragraph and contains the verbatim value. This is necessary but never sufficient for acceptance.",
+          "compiled_requirement": "exact substring in exact registered source paragraph",
+          "evaluation": "compiler_plus_agent",
+          "required_for": [
+            "reported",
+            "source_conflict"
+          ],
+          "state_before_candidates": "pending"
+        }
+      ],
+      "blocking_issues": []
+    },
+    {
+      "field_id": "F_AUTHOR_OUTLOOK",
+      "field_kind": "conclusion",
+      "question": "What is the author's stated outlook for SYNTHETIC Catalyst X, preserving speculative modality?",
+      "metric_identity": "author outlook on catalyst promise",
+      "subject_entity": "SYNTHETIC Catalyst X",
+      "expected_value_form": "verbatim conclusion sentence",
+      "requested_unit": "not_applicable",
+      "statistic": "not_applicable",
+      "required_condition": "under the tested conditions; preserve hedging",
+      "comparator": "none",
+      "source_scope": [
+        "S_SYNTHETIC"
+      ],
+      "modality": "author_speculation",
+      "source_spec": {
+        "field_id": "F_AUTHOR_OUTLOOK",
+        "question": "What is the author's stated outlook for SYNTHETIC Catalyst X, preserving speculative modality?",
+        "field_kind": "conclusion",
+        "metric_identity": "author outlook on catalyst promise",
+        "subject_entity": "SYNTHETIC Catalyst X",
+        "expected_value_form": "verbatim conclusion sentence",
+        "requested_unit": "not_applicable",
+        "statistic": "not_applicable",
+        "required_condition": "under the tested conditions; preserve hedging",
+        "comparator": "none",
+        "source_scope": [
+          "S_SYNTHETIC"
+        ],
+        "modality": "author_speculation"
+      },
+      "acceptance_tests": [
+        {
+          "test_id": "F_AUTHOR_OUTLOOK::metric_identity",
+          "axis": "metric_identity",
+          "requirement": "The candidate is the requested metric, not a same-named or co-located different metric.",
+          "compiled_requirement": "author outlook on catalyst promise",
+          "evaluation": "agent_semantic_adjudication",
+          "required_for": [
+            "reported",
+            "source_conflict"
+          ],
+          "state_before_candidates": "pending"
+        },
+        {
+          "test_id": "F_AUTHOR_OUTLOOK::subject_entity",
+          "axis": "subject_entity",
+          "requirement": "The candidate describes the requested subject/entity, not another arm, material, group, or time point.",
+          "compiled_requirement": "SYNTHETIC Catalyst X",
+          "evaluation": "agent_semantic_adjudication",
+          "required_for": [
+            "reported",
+            "source_conflict"
+          ],
+          "state_before_candidates": "pending"
+        },
+        {
+          "test_id": "F_AUTHOR_OUTLOOK::expected_value_form",
+          "axis": "expected_value_form",
+          "requirement": "The candidate has the requested value form (for example scalar, range, text, or list) without silent reshaping.",
+          "compiled_requirement": "verbatim conclusion sentence",
+          "evaluation": "agent_semantic_adjudication",
+          "required_for": [
+            "reported",
+            "source_conflict"
+          ],
+          "state_before_candidates": "pending"
+        },
+        {
+          "test_id": "F_AUTHOR_OUTLOOK::requested_unit",
+          "axis": "requested_unit",
+          "requirement": "The candidate preserves the requested unit; any conversion is explicitly requested and separately auditable.",
+          "compiled_requirement": "not_applicable",
+          "evaluation": "agent_semantic_adjudication",
+          "required_for": [
+            "reported",
+            "source_conflict"
+          ],
+          "state_before_candidates": "pending"
+        },
+        {
+          "test_id": "F_AUTHOR_OUTLOOK::statistic",
+          "axis": "statistic",
+          "requirement": "The candidate is the requested statistic, not a raw observation, mean, SD, SE, CI, or other statistic substituted for it.",
+          "compiled_requirement": "not_applicable",
+          "evaluation": "agent_semantic_adjudication",
+          "required_for": [
+            "reported",
+            "source_conflict"
+          ],
+          "state_before_candidates": "pending"
+        },
+        {
+          "test_id": "F_AUTHOR_OUTLOOK::required_condition",
+          "axis": "required_condition",
+          "requirement": "All required conditions are satisfied together by the same candidate evidence; a same value under another condition is rejected.",
+          "compiled_requirement": "under the tested conditions; preserve hedging",
+          "evaluation": "agent_semantic_adjudication",
+          "required_for": [
+            "reported",
+            "source_conflict"
+          ],
+          "state_before_candidates": "pending"
+        },
+        {
+          "test_id": "F_AUTHOR_OUTLOOK::comparator",
+          "axis": "comparator",
+          "requirement": "The comparator/baseline/direction is the requested one, including an explicit no-comparator interpretation when applicable.",
+          "compiled_requirement": "none",
+          "evaluation": "agent_semantic_adjudication",
+          "required_for": [
+            "reported",
+            "source_conflict"
+          ],
+          "state_before_candidates": "pending"
+        },
+        {
+          "test_id": "F_AUTHOR_OUTLOOK::source_scope",
+          "axis": "source_scope",
+          "requirement": "The candidate and search are inside the permitted source scope; out-of-scope text cannot establish the answer.",
+          "compiled_requirement": [
+            "S_SYNTHETIC"
+          ],
+          "evaluation": "agent_semantic_adjudication",
+          "required_for": [
+            "reported",
+            "source_conflict"
+          ],
+          "state_before_candidates": "pending"
+        },
+        {
+          "test_id": "F_AUTHOR_OUTLOOK::modality",
+          "axis": "modality",
+          "requirement": "For a conclusion field, author conclusion, speculation, limitation, and reported fact are distinguished from the wording; otherwise modality is not applicable.",
+          "compiled_requirement": "author_speculation",
+          "evaluation": "agent_semantic_adjudication",
+          "required_for": [
+            "reported",
+            "source_conflict"
+          ],
+          "state_before_candidates": "pending"
+        },
+        {
+          "test_id": "F_AUTHOR_OUTLOOK::verbatim_evidence",
+          "axis": "verbatim_evidence",
+          "requirement": "The exact quote is present in the identified paragraph and contains the verbatim value. This is necessary but never sufficient for acceptance.",
+          "compiled_requirement": "exact substring in exact registered source paragraph",
+          "evaluation": "compiler_plus_agent",
+          "required_for": [
+            "reported",
+            "source_conflict"
+          ],
+          "state_before_candidates": "pending"
+        }
+      ],
+      "blocking_issues": []
+    }
+  ],
+  "contract_sha256": "37cb8680bc58438b9f359bf742193382d03b8b45d12ecfa661f1ed2d08ca3acf",
+  "amendments": []
+}

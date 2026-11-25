@@ -1,0 +1,186 @@
+{
+  "base_valid_result_sha256_after": "418c556ae5ed960dbc7d34007f330a543a4726379821c5a6a42b1bb1bdafd0a4",
+  "base_valid_result_sha256_before": "418c556ae5ed960dbc7d34007f330a543a4726379821c5a6a42b1bb1bdafd0a4",
+  "base_valid_result_unchanged": true,
+  "finalizer_actual_exit_status": 0,
+  "finalizer_reproduced_valid_bytes": true,
+  "finalizer_stdout": {
+    "actual_pass": true,
+    "candidate_sha256": "418c556ae5ed960dbc7d34007f330a543a4726379821c5a6a42b1bb1bdafd0a4",
+    "contract_errors": [],
+    "decoy_review_errors": [],
+    "existing_output_unchanged_on_rejection": false,
+    "exit_status": 0,
+    "final_result_written": true,
+    "mutation_controls_actual_pass": true,
+    "rejected_candidate_preserved_only_in_work": false,
+    "semantic_correctness_proven": false,
+    "semantic_limit": "Passing structural and mutation tests proves only these explicit validator behaviors on the synthetic fixture. It does not prove semantic correctness of this or any real extraction. An agent must perform decoy review against the original material."
+  },
+  "official_case": false,
+  "overall_actual_pass": true,
+  "records": [
+    {
+      "actual_exit_status": 1,
+      "actual_pass": true,
+      "base_valid_result_sha256": "418c556ae5ed960dbc7d34007f330a543a4726379821c5a6a42b1bb1bdafd0a4",
+      "corrupted_copy": "corrupted/duplicate_field.json",
+      "expected_rejection_code": "DUPLICATE_FIELD_ID",
+      "mutation": "duplicate_field",
+      "observed_error_codes": [
+        "DUPLICATE_FIELD_ID"
+      ]
+    },
+    {
+      "actual_exit_status": 1,
+      "actual_pass": true,
+      "base_valid_result_sha256": "418c556ae5ed960dbc7d34007f330a543a4726379821c5a6a42b1bb1bdafd0a4",
+      "corrupted_copy": "corrupted/false_not_reported.json",
+      "expected_rejection_code": "VALUE_ON_NOT_REPORTED",
+      "mutation": "false_not_reported",
+      "observed_error_codes": [
+        "VALUE_ON_NOT_REPORTED"
+      ]
+    },
+    {
+      "actual_exit_status": 1,
+      "actual_pass": true,
+      "base_valid_result_sha256": "418c556ae5ed960dbc7d34007f330a543a4726379821c5a6a42b1bb1bdafd0a4",
+      "corrupted_copy": "corrupted/hedged_claim_promoted.json",
+      "expected_rejection_code": "HEDGED_CLAIM_PROMOTED",
+      "mutation": "hedged_claim_promoted",
+      "observed_error_codes": [
+        "HEDGED_CLAIM_PROMOTED"
+      ]
+    },
+    {
+      "actual_exit_status": 1,
+      "actual_pass": true,
+      "base_valid_result_sha256": "418c556ae5ed960dbc7d34007f330a543a4726379821c5a6a42b1bb1bdafd0a4",
+      "corrupted_copy": "corrupted/missing_field.json",
+      "expected_rejection_code": "MISSING_FIELD_ID",
+      "mutation": "missing_field",
+      "observed_error_codes": [
+        "MISSING_FIELD_ID"
+      ]
+    },
+    {
+      "actual_exit_status": 1,
+      "actual_pass": true,
+      "base_valid_result_sha256": "418c556ae5ed960dbc7d34007f330a543a4726379821c5a6a42b1bb1bdafd0a4",
+      "corrupted_copy": "corrupted/quotation_paragraph_mismatch.json",
+      "expected_rejection_code": "QUOTE_NOT_IN_PARAGRAPH",
+      "mutation": "quotation_paragraph_mismatch",
+      "observed_error_codes": [
+        "QUOTE_NOT_IN_PARAGRAPH",
+        "SCALAR_ABSENT_FROM_QUOTE",
+        "STATISTIC_NOT_IN_QUOTE",
+        "UNIT_NOT_IN_QUOTE"
+      ]
+    },
+    {
+      "actual_exit_status": 1,
+      "actual_pass": true,
+      "base_valid_result_sha256": "418c556ae5ed960dbc7d34007f330a543a4726379821c5a6a42b1bb1bdafd0a4",
+      "corrupted_copy": "corrupted/scalar_absent_from_quote.json",
+      "expected_rejection_code": "SCALAR_ABSENT_FROM_QUOTE",
+      "mutation": "scalar_absent_from_quote",
+      "observed_error_codes": [
+        "SCALAR_ABSENT_FROM_QUOTE"
+      ]
+    },
+    {
+      "actual_exit_status": 1,
+      "actual_pass": true,
+      "base_valid_result_sha256": "418c556ae5ed960dbc7d34007f330a543a4726379821c5a6a42b1bb1bdafd0a4",
+      "corrupted_copy": "corrupted/stale_condition_alias.json",
+      "expected_rejection_code": "CONDITION_ALIAS_MISMATCH",
+      "mutation": "stale_condition_alias",
+      "observed_error_codes": [
+        "CONDITION_ALIAS_MISMATCH"
+      ]
+    },
+    {
+      "actual_exit_status": 1,
+      "actual_pass": true,
+      "base_valid_result_sha256": "418c556ae5ed960dbc7d34007f330a543a4726379821c5a6a42b1bb1bdafd0a4",
+      "corrupted_copy": "corrupted/stale_mirrored_fields.json",
+      "expected_rejection_code": "FIELD_RESULTS_NOT_MIRRORED",
+      "mutation": "stale_mirrored_fields",
+      "observed_error_codes": [
+        "FIELD_RESULTS_NOT_MIRRORED"
+      ]
+    },
+    {
+      "actual_exit_status": 1,
+      "actual_pass": true,
+      "base_valid_result_sha256": "418c556ae5ed960dbc7d34007f330a543a4726379821c5a6a42b1bb1bdafd0a4",
+      "corrupted_copy": "corrupted/statistic_dropped.json",
+      "expected_rejection_code": "STATISTIC_DROPPED",
+      "mutation": "statistic_dropped",
+      "observed_error_codes": [
+        "STATISTIC_DROPPED"
+      ]
+    },
+    {
+      "actual_exit_status": 1,
+      "actual_pass": true,
+      "base_valid_result_sha256": "418c556ae5ed960dbc7d34007f330a543a4726379821c5a6a42b1bb1bdafd0a4",
+      "corrupted_copy": "corrupted/unit_altered.json",
+      "expected_rejection_code": "UNIT_NOT_IN_QUOTE",
+      "mutation": "unit_altered",
+      "observed_error_codes": [
+        "UNIT_NOT_IN_QUOTE"
+      ]
+    },
+    {
+      "actual_exit_status": 1,
+      "actual_pass": true,
+      "base_valid_result_sha256": "418c556ae5ed960dbc7d34007f330a543a4726379821c5a6a42b1bb1bdafd0a4",
+      "corrupted_copy": "corrupted/unsupported_source_conflict.json",
+      "expected_rejection_code": "SOURCE_CONFLICT_REQUIRES_TWO_SOURCES",
+      "mutation": "unsupported_source_conflict",
+      "observed_error_codes": [
+        "CONFLICT_PRIMARY_QUOTE_AMBIGUOUS",
+        "SOURCE_CONFLICT_REQUIRES_TWO_SOURCES",
+        "VALUE_ON_SOURCE_CONFLICT"
+      ]
+    },
+    {
+      "actual_exit_status": 1,
+      "actual_pass": true,
+      "base_valid_result_sha256": "418c556ae5ed960dbc7d34007f330a543a4726379821c5a6a42b1bb1bdafd0a4",
+      "corrupted_copy": "corrupted/wrong_comparator.json",
+      "expected_rejection_code": "COMPARATOR_MISMATCH",
+      "mutation": "wrong_comparator",
+      "observed_error_codes": [
+        "COMPARATOR_MISMATCH"
+      ]
+    },
+    {
+      "actual_exit_status": 1,
+      "actual_pass": true,
+      "base_valid_result_sha256": "418c556ae5ed960dbc7d34007f330a543a4726379821c5a6a42b1bb1bdafd0a4",
+      "corrupted_copy": "corrupted/wrong_condition.json",
+      "expected_rejection_code": "CONDITION_MISMATCH",
+      "mutation": "wrong_condition",
+      "observed_error_codes": [
+        "CONDITION_MISMATCH"
+      ]
+    },
+    {
+      "actual_exit_status": 1,
+      "actual_pass": true,
+      "base_valid_result_sha256": "418c556ae5ed960dbc7d34007f330a543a4726379821c5a6a42b1bb1bdafd0a4",
+      "corrupted_copy": "corrupted/wrong_subject.json",
+      "expected_rejection_code": "SUBJECT_MISMATCH",
+      "mutation": "wrong_subject",
+      "observed_error_codes": [
+        "SUBJECT_MISMATCH"
+      ]
+    }
+  ],
+  "schema": "synthetic-cli-rejections/v1",
+  "semantic_limit": "Passing structural and mutation tests proves only these explicit validator behaviors on the synthetic fixture. It does not prove semantic correctness of this or any real extraction. An agent must perform decoy review against the original material.",
+  "synthetic": true
+}

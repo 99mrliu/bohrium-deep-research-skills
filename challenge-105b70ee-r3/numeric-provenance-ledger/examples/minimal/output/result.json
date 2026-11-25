@@ -1,0 +1,556 @@
+{
+  "case_id": "SYNTHETIC-NUMERIC-LEDGER-MINIMAL",
+  "status": "answered",
+  "result": {
+    "schema_version": "numeric-provenance-result/v1",
+    "fields": [
+      {
+        "field_id": "treatment_response_37c",
+        "status": "reported",
+        "scalar": "4.8 ± 0.3",
+        "units": "mV",
+        "statistic": null,
+        "experimental_condition": "37 °C",
+        "condition": "37 °C",
+        "comparator": null,
+        "paragraph_id": "p-treatment",
+        "quote": "Under 37 °C, the treated response was 4.8 ± 0.3 mV;",
+        "evidence": [
+          {
+            "source_id": "synthetic-main",
+            "page": 1,
+            "paragraph_id": "p-treatment",
+            "quote": "Under 37 °C, the treated response was 4.8 ± 0.3 mV;",
+            "statement_id": "synthetic-main:p-treatment:s01",
+            "token_ids": [
+              "N000004",
+              "N000005"
+            ],
+            "spans": [
+              {
+                "token_id": "N000004",
+                "start": 6,
+                "end": 11
+              },
+              {
+                "token_id": "N000005",
+                "start": 38,
+                "end": 50
+              }
+            ]
+          }
+        ],
+        "notes": "Selected the treated 37 °C statement, not the 25 °C control decoy (N000002).",
+        "ledger_ids": {
+          "value": [
+            "N000005"
+          ],
+          "condition": [
+            "N000004"
+          ],
+          "statistic": [],
+          "reference": []
+        }
+      },
+      {
+        "field_id": "recovery_half_time",
+        "status": "not_reported",
+        "scalar": null,
+        "units": null,
+        "statistic": null,
+        "experimental_condition": null,
+        "condition": null,
+        "comparator": null,
+        "paragraph_id": "p-absence",
+        "quote": "The study did not report the recovery half-time.",
+        "evidence": [
+          {
+            "source_id": "synthetic-main",
+            "page": 2,
+            "paragraph_id": "p-absence",
+            "quote": "The study did not report the recovery half-time.",
+            "statement_id": null,
+            "token_ids": [],
+            "spans": [
+              {
+                "start": 0,
+                "end": 48
+              }
+            ]
+          }
+        ],
+        "notes": "The requested measurement is explicitly absent in the scoped synthetic source; this is not zero or an unreadable value.",
+        "ledger_ids": {
+          "value": [],
+          "condition": [],
+          "statistic": [],
+          "reference": []
+        }
+      },
+      {
+        "field_id": "replicated_treatment_response_37c",
+        "status": "source_conflict",
+        "scalar": null,
+        "units": null,
+        "statistic": null,
+        "experimental_condition": "37 °C",
+        "condition": "37 °C",
+        "comparator": null,
+        "paragraph_id": null,
+        "quote": null,
+        "evidence": [
+          {
+            "source_id": "synthetic-main",
+            "page": 1,
+            "paragraph_id": "p-treatment",
+            "quote": "Under 37 °C, the treated response was 4.8 ± 0.3 mV;",
+            "statement_id": "synthetic-main:p-treatment:s01",
+            "token_ids": [
+              "N000004",
+              "N000005"
+            ],
+            "spans": [
+              {
+                "token_id": "N000004",
+                "start": 6,
+                "end": 11
+              },
+              {
+                "token_id": "N000005",
+                "start": 38,
+                "end": 50
+              }
+            ]
+          },
+          {
+            "source_id": "synthetic-replication",
+            "page": 4,
+            "paragraph_id": "r-treatment",
+            "quote": "Under 37 °C, the treated response was 5.0 ± 0.4 mV (Table 2).",
+            "statement_id": "synthetic-replication:r-treatment:s01",
+            "token_ids": [
+              "N000015",
+              "N000016",
+              "N000017"
+            ],
+            "spans": [
+              {
+                "token_id": "N000015",
+                "start": 6,
+                "end": 11
+              },
+              {
+                "token_id": "N000016",
+                "start": 38,
+                "end": 50
+              },
+              {
+                "token_id": "N000017",
+                "start": 52,
+                "end": 59
+              }
+            ]
+          }
+        ],
+        "notes": "Both sources use 37 °C and mV but report different exact central values and uncertainties; neither is preferred or averaged.",
+        "ledger_ids": {
+          "value": [
+            "N000005",
+            "N000016"
+          ],
+          "condition": [
+            "N000004",
+            "N000015"
+          ],
+          "statistic": [],
+          "reference": [
+            "N000017"
+          ]
+        },
+        "conflicts": [
+          {
+            "field_id": "replicated_treatment_response_37c.variant[0]",
+            "status": "reported",
+            "scalar": "4.8 ± 0.3",
+            "units": "mV",
+            "statistic": null,
+            "experimental_condition": "37 °C",
+            "condition": "37 °C",
+            "comparator": null,
+            "paragraph_id": "p-treatment",
+            "quote": "Under 37 °C, the treated response was 4.8 ± 0.3 mV;",
+            "evidence": [
+              {
+                "source_id": "synthetic-main",
+                "page": 1,
+                "paragraph_id": "p-treatment",
+                "quote": "Under 37 °C, the treated response was 4.8 ± 0.3 mV;",
+                "statement_id": "synthetic-main:p-treatment:s01",
+                "token_ids": [
+                  "N000004",
+                  "N000005"
+                ],
+                "spans": [
+                  {
+                    "token_id": "N000004",
+                    "start": 6,
+                    "end": 11
+                  },
+                  {
+                    "token_id": "N000005",
+                    "start": 38,
+                    "end": 50
+                  }
+                ]
+              }
+            ],
+            "notes": "Primary synthetic source value.",
+            "ledger_ids": {
+              "value": [
+                "N000005"
+              ],
+              "condition": [
+                "N000004"
+              ],
+              "statistic": [],
+              "reference": []
+            }
+          },
+          {
+            "field_id": "replicated_treatment_response_37c.variant[1]",
+            "status": "reported",
+            "scalar": "5.0 ± 0.4",
+            "units": "mV",
+            "statistic": null,
+            "experimental_condition": "37 °C",
+            "condition": "37 °C",
+            "comparator": null,
+            "paragraph_id": "r-treatment",
+            "quote": "Under 37 °C, the treated response was 5.0 ± 0.4 mV (Table 2).",
+            "evidence": [
+              {
+                "source_id": "synthetic-replication",
+                "page": 4,
+                "paragraph_id": "r-treatment",
+                "quote": "Under 37 °C, the treated response was 5.0 ± 0.4 mV (Table 2).",
+                "statement_id": "synthetic-replication:r-treatment:s01",
+                "token_ids": [
+                  "N000015",
+                  "N000016",
+                  "N000017"
+                ],
+                "spans": [
+                  {
+                    "token_id": "N000015",
+                    "start": 6,
+                    "end": 11
+                  },
+                  {
+                    "token_id": "N000016",
+                    "start": 38,
+                    "end": 50
+                  },
+                  {
+                    "token_id": "N000017",
+                    "start": 52,
+                    "end": 59
+                  }
+                ]
+              }
+            ],
+            "notes": "Synthetic replication value.",
+            "ledger_ids": {
+              "value": [
+                "N000016"
+              ],
+              "condition": [
+                "N000015"
+              ],
+              "statistic": [],
+              "reference": [
+                "N000017"
+              ]
+            }
+          }
+        ]
+      }
+    ],
+    "selection_sha256": "f0a695f4aa3207586a457bf7f7df22be908d649314f6d68f3e0f5eb5d656a6e4"
+  },
+  "claims": [
+    {
+      "kind": "numeric_field",
+      "field_id": "treatment_response_37c",
+      "quote": "Under 37 °C, the treated response was 4.8 ± 0.3 mV;",
+      "source_id": "synthetic-main",
+      "location": {
+        "page": 1,
+        "paragraph_id": "p-treatment"
+      },
+      "evidence": [
+        {
+          "source_id": "synthetic-main",
+          "page": 1,
+          "paragraph_id": "p-treatment",
+          "quote": "Under 37 °C, the treated response was 4.8 ± 0.3 mV;",
+          "statement_id": "synthetic-main:p-treatment:s01",
+          "token_ids": [
+            "N000004",
+            "N000005"
+          ],
+          "spans": [
+            {
+              "token_id": "N000004",
+              "start": 6,
+              "end": 11
+            },
+            {
+              "token_id": "N000005",
+              "start": 38,
+              "end": 50
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "kind": "source_conflict",
+      "field_id": "replicated_treatment_response_37c",
+      "quote": null,
+      "source_id": "synthetic-main",
+      "location": {
+        "page": 1,
+        "paragraph_id": "p-treatment"
+      },
+      "evidence": [
+        {
+          "source_id": "synthetic-main",
+          "page": 1,
+          "paragraph_id": "p-treatment",
+          "quote": "Under 37 °C, the treated response was 4.8 ± 0.3 mV;",
+          "statement_id": "synthetic-main:p-treatment:s01",
+          "token_ids": [
+            "N000004",
+            "N000005"
+          ],
+          "spans": [
+            {
+              "token_id": "N000004",
+              "start": 6,
+              "end": 11
+            },
+            {
+              "token_id": "N000005",
+              "start": 38,
+              "end": 50
+            }
+          ]
+        },
+        {
+          "source_id": "synthetic-replication",
+          "page": 4,
+          "paragraph_id": "r-treatment",
+          "quote": "Under 37 °C, the treated response was 5.0 ± 0.4 mV (Table 2).",
+          "statement_id": "synthetic-replication:r-treatment:s01",
+          "token_ids": [
+            "N000015",
+            "N000016",
+            "N000017"
+          ],
+          "spans": [
+            {
+              "token_id": "N000015",
+              "start": 6,
+              "end": 11
+            },
+            {
+              "token_id": "N000016",
+              "start": 38,
+              "end": 50
+            },
+            {
+              "token_id": "N000017",
+              "start": 52,
+              "end": 59
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "uncertainties": [
+    {
+      "field_id": "recovery_half_time",
+      "type": "not_reported",
+      "notes": "The requested measurement is explicitly absent in the scoped synthetic source; this is not zero or an unreadable value. Absence is a semantic reading of the stated coverage, not a zero and not unreadability.",
+      "evidence": [
+        {
+          "source_id": "synthetic-main",
+          "page": 2,
+          "paragraph_id": "p-absence",
+          "quote": "The study did not report the recovery half-time.",
+          "statement_id": null,
+          "token_ids": [],
+          "spans": [
+            {
+              "start": 0,
+              "end": 48
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "field_id": "replicated_treatment_response_37c",
+      "type": "source_conflict",
+      "notes": "Both sources use 37 °C and mV but report different exact central values and uncertainties; neither is preferred or averaged. No value was averaged, converted, or automatically preferred.",
+      "evidence": [
+        {
+          "source_id": "synthetic-main",
+          "page": 1,
+          "paragraph_id": "p-treatment",
+          "quote": "Under 37 °C, the treated response was 4.8 ± 0.3 mV;",
+          "statement_id": "synthetic-main:p-treatment:s01",
+          "token_ids": [
+            "N000004",
+            "N000005"
+          ],
+          "spans": [
+            {
+              "token_id": "N000004",
+              "start": 6,
+              "end": 11
+            },
+            {
+              "token_id": "N000005",
+              "start": 38,
+              "end": 50
+            }
+          ]
+        },
+        {
+          "source_id": "synthetic-replication",
+          "page": 4,
+          "paragraph_id": "r-treatment",
+          "quote": "Under 37 °C, the treated response was 5.0 ± 0.4 mV (Table 2).",
+          "statement_id": "synthetic-replication:r-treatment:s01",
+          "token_ids": [
+            "N000015",
+            "N000016",
+            "N000017"
+          ],
+          "spans": [
+            {
+              "token_id": "N000015",
+              "start": 6,
+              "end": 11
+            },
+            {
+              "token_id": "N000016",
+              "start": 38,
+              "end": 50
+            },
+            {
+              "token_id": "N000017",
+              "start": 52,
+              "end": 59
+            }
+          ]
+        }
+      ],
+      "alternatives": [
+        {
+          "scalar": "4.8 ± 0.3",
+          "units": "mV",
+          "statistic": null,
+          "experimental_condition": "37 °C",
+          "quote": "Under 37 °C, the treated response was 4.8 ± 0.3 mV;",
+          "evidence": [
+            {
+              "source_id": "synthetic-main",
+              "page": 1,
+              "paragraph_id": "p-treatment",
+              "quote": "Under 37 °C, the treated response was 4.8 ± 0.3 mV;",
+              "statement_id": "synthetic-main:p-treatment:s01",
+              "token_ids": [
+                "N000004",
+                "N000005"
+              ],
+              "spans": [
+                {
+                  "token_id": "N000004",
+                  "start": 6,
+                  "end": 11
+                },
+                {
+                  "token_id": "N000005",
+                  "start": 38,
+                  "end": 50
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "scalar": "5.0 ± 0.4",
+          "units": "mV",
+          "statistic": null,
+          "experimental_condition": "37 °C",
+          "quote": "Under 37 °C, the treated response was 5.0 ± 0.4 mV (Table 2).",
+          "evidence": [
+            {
+              "source_id": "synthetic-replication",
+              "page": 4,
+              "paragraph_id": "r-treatment",
+              "quote": "Under 37 °C, the treated response was 5.0 ± 0.4 mV (Table 2).",
+              "statement_id": "synthetic-replication:r-treatment:s01",
+              "token_ids": [
+                "N000015",
+                "N000016",
+                "N000017"
+              ],
+              "spans": [
+                {
+                  "token_id": "N000015",
+                  "start": 6,
+                  "end": 11
+                },
+                {
+                  "token_id": "N000016",
+                  "start": 38,
+                  "end": 50
+                },
+                {
+                  "token_id": "N000017",
+                  "start": 52,
+                  "end": 59
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "sources": [
+    {
+      "source_id": "synthetic-main",
+      "title": "SYNTHETIC typography and condition-binding example",
+      "doi": null
+    },
+    {
+      "source_id": "synthetic-replication",
+      "title": "SYNTHETIC conflicting replication",
+      "doi": null
+    }
+  ],
+  "change_records": [
+    {
+      "action": "built_only_from_semantic_ledger_id_selection",
+      "selection_sha256": "f0a695f4aa3207586a457bf7f7df22be908d649314f6d68f3e0f5eb5d656a6e4",
+      "ledger_sha256": "794455d899a13c17f550c3f74c6bebfe8d26b7d9cf62fe5ba882c95fbcf9b40d",
+      "numeric_conversion": false,
+      "similarity_ranking": false
+    }
+  ]
+}

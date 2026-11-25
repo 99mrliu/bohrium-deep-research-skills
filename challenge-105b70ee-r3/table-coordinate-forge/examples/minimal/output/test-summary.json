@@ -1,0 +1,20 @@
+{
+  "example_label": "SYNTHETIC EXAMPLE — never official results",
+  "commands": [
+    "python3 scripts/runtime.py --input-dir examples/minimal --work-dir examples/minimal/work --output-dir examples/minimal/output",
+    "python3 scripts/runtime.py --input-dir examples/minimal --work-dir examples/minimal/work --output-dir examples/minimal/output --bindings examples/minimal/curated-cell-bindings.json",
+    "python3 scripts/runtime.py --input-dir examples/minimal --work-dir examples/minimal/failure-work --output-dir examples/minimal/failure-output --bindings examples/minimal/failure-work/invalid-header-bindings.json"
+  ],
+  "geometry_pass_exit": 0,
+  "curated_pass_exit": 0,
+  "failure_test_exit": 2,
+  "observations": [
+    "Geometry-only pass preserved three null scalars with partial status.",
+    "Curated pass emitted exactly three unique fields: reported, reported, not_reported.",
+    "Page-2 value retained two effective yield-header cells and explicit condition evidence.",
+    "Markdown and SVG text previews contained the synthetic label and stable cell IDs; SVG parsed as XML.",
+    "Dropping 'at 24 h' from the expected header caused exit 2 and no value promotion."
+  ],
+  "result": "examples/minimal/output/result.json",
+  "failure_result": "examples/minimal/failure-output/result.json"
+}

@@ -1,0 +1,101 @@
+{
+  "schema_version": "table-coordinate-forge/reviewed-bindings-v1",
+  "label": "SYNTHETIC EXAMPLE — never official results",
+  "bindings": [
+    {
+      "field_id": "yield_A_25C_24h",
+      "status": "reported",
+      "source_id": "supplied-bbox-001",
+      "cell_id": "s001-seg001-r02-c03",
+      "scalar": "42.0",
+      "units": "%",
+      "statistic": null,
+      "experimental_condition": "Catalyst=A; Temp=25 °C; at 24 h",
+      "comparator": null,
+      "row_header_cell_ids": [
+        "s001-seg001-r02-c01",
+        "s001-seg001-r02-c02"
+      ],
+      "column_header_cell_ids": [
+        "s001-seg001-r01-c03"
+      ],
+      "expected_row_header_text": [
+        "A",
+        "25"
+      ],
+      "expected_column_header_text": [
+        "Yield (%) at 24 h"
+      ],
+      "condition_cell_ids": [
+        "s001-seg001-r01-c01",
+        "s001-seg001-r02-c01",
+        "s001-seg001-r01-c02",
+        "s001-seg001-r02-c02",
+        "s001-seg001-r01-c03"
+      ],
+      "expected_condition_text": [
+        "Catalyst",
+        "A",
+        "Temp (°C)",
+        "25",
+        "Yield (%) at 24 h"
+      ],
+      "notes": "SYNTHETIC EXAMPLE — never official results. Reviewed row A, temperature 25, percent yield header and 24 h timing against the coordinate preview."
+    },
+    {
+      "field_id": "yield_C_80C_24h",
+      "status": "reported",
+      "source_id": "supplied-bbox-001",
+      "cell_id": "s001-seg002-r02-c03",
+      "scalar": "51.3",
+      "units": "%",
+      "statistic": null,
+      "experimental_condition": "Catalyst=C; Temp=80 °C; at 24 h",
+      "comparator": null,
+      "row_header_cell_ids": [
+        "s001-seg002-r02-c01",
+        "s001-seg002-r02-c02"
+      ],
+      "column_header_cell_ids": [
+        "s001-seg001-r01-c03",
+        "s001-seg002-r01-c03"
+      ],
+      "expected_row_header_text": [
+        "C",
+        "80"
+      ],
+      "expected_column_header_text": [
+        "Yield (%) at 24 h",
+        "Yield (%) at 24 h (continued)"
+      ],
+      "condition_cell_ids": [
+        "s001-seg002-r01-c01",
+        "s001-seg002-r02-c01",
+        "s001-seg001-r01-c02",
+        "s001-seg002-r01-c02",
+        "s001-seg002-r02-c02",
+        "s001-seg001-r01-c03",
+        "s001-seg002-r01-c03"
+      ],
+      "expected_condition_text": [
+        "Catalyst (cont.)",
+        "C",
+        "Temp (°C)",
+        "Temp (°C) (continued)",
+        "80",
+        "Yield (%) at 24 h",
+        "Yield (%) at 24 h (continued)"
+      ],
+      "notes": "SYNTHETIC EXAMPLE — never official results. Reviewed row C on page 2 and retained both inherited and repeated continued headers, including 80 °C and 24 h."
+    },
+    {
+      "field_id": "selectivity_C_80C_24h",
+      "status": "not_reported",
+      "experimental_condition": "Catalyst=C; Temp=80 °C; at 24 h",
+      "statistic": null,
+      "comparator": null,
+      "reviewed_scope": "All six reconstructed header/data rows on synthetic PDF pages 1–2 (s001-seg001 and s001-seg002), including every continued-header path; available column headers are Catalyst, Temp (°C), and Yield (%) at 24 h only.",
+      "notes": "SYNTHETIC EXAMPLE — never official results. No selectivity column, row-spanning note, or cell supplying selectivity for catalyst C was present in the reviewed synthetic table; absence is not zero."
+    }
+  ]
+}

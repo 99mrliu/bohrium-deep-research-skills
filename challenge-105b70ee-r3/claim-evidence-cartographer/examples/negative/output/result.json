@@ -1,0 +1,131 @@
+{
+  "case_id": "SYNTHETIC-NEGATIVE-NO-PROMOTION",
+  "status": "insufficient_evidence",
+  "result": {
+    "fields": [
+      {
+        "field_id": "established_current_author_mechanism",
+        "status": "not_reported",
+        "scalar": null,
+        "units": null,
+        "statistic": null,
+        "experimental_condition": "Mechanism of additive X in the current study; explicitly not tested",
+        "condition": "Mechanism of additive X in the current study; explicitly not tested",
+        "comparator": null,
+        "paragraph_id": "N1",
+        "quote": "we did not test that mechanism in the present study",
+        "evidence": [
+          {
+            "source_id": "SRC-SYN-NEG",
+            "paragraph_id": "N1",
+            "page": null,
+            "quote": "we did not test that mechanism in the present study"
+          },
+          {
+            "source_id": "SRC-SYN-NEG",
+            "paragraph_id": "N1",
+            "page": null,
+            "quote": "Zhao et al. reported that additive X could suppress the unwanted pathway in their system, suggesting that the same mechanism might operate here; we did not test that mechanism in the present study."
+          }
+        ],
+        "notes": "The entire synthetic source was inspected. The cited hedged proposition addresses background, not an established current-author mechanism; missing does not mean zero or false. Claim layers: NEG-CITED=prior_work_cited_claim/cited_hedged_claim."
+      }
+    ],
+    "field_results": [
+      {
+        "field_id": "established_current_author_mechanism",
+        "status": "not_reported",
+        "scalar": null,
+        "units": null,
+        "statistic": null,
+        "experimental_condition": "Mechanism of additive X in the current study; explicitly not tested",
+        "condition": "Mechanism of additive X in the current study; explicitly not tested",
+        "comparator": null,
+        "paragraph_id": "N1",
+        "quote": "we did not test that mechanism in the present study",
+        "evidence": [
+          {
+            "source_id": "SRC-SYN-NEG",
+            "paragraph_id": "N1",
+            "page": null,
+            "quote": "we did not test that mechanism in the present study"
+          },
+          {
+            "source_id": "SRC-SYN-NEG",
+            "paragraph_id": "N1",
+            "page": null,
+            "quote": "Zhao et al. reported that additive X could suppress the unwanted pathway in their system, suggesting that the same mechanism might operate here; we did not test that mechanism in the present study."
+          }
+        ],
+        "notes": "The entire synthetic source was inspected. The cited hedged proposition addresses background, not an established current-author mechanism; missing does not mean zero or false. Claim layers: NEG-CITED=prior_work_cited_claim/cited_hedged_claim."
+      }
+    ]
+  },
+  "claims": [
+    {
+      "claim_id": "NEG-CITED",
+      "kind": "prior_work_cited_claim",
+      "text": "Zhao et al.'s cited result concerns their system; transfer of the mechanism to the current system is only suggested and remains untested here.",
+      "epistemic_status": "cited_hedged_claim",
+      "modality": "reported_and_speculative",
+      "hedges": [
+        "could",
+        "suggesting",
+        "might",
+        "did not test"
+      ],
+      "attribution": {
+        "speaker": "Zhao et al., as cited in the synthetic source",
+        "origin": "cited_work",
+        "citation": "Zhao et al.; bibliographic details not supplied in this synthetic excerpt"
+      },
+      "condition_ids": [],
+      "supporting_observation_ids": [],
+      "promotion_allowed": false,
+      "evidence": [
+        {
+          "source_id": "SRC-SYN-NEG",
+          "paragraph_id": "N1",
+          "page": null,
+          "quote": "Zhao et al. reported that additive X could suppress the unwanted pathway in their system, suggesting that the same mechanism might operate here; we did not test that mechanism in the present study."
+        }
+      ],
+      "source_id": "SRC-SYN-NEG",
+      "location": {
+        "paragraph_id": "N1",
+        "page": null
+      }
+    }
+  ],
+  "uncertainties": [
+    {
+      "kind": "non_promotion_boundary",
+      "claim_id": "NEG-CITED",
+      "detail": "The cited original is unavailable and no current-study mechanistic test is reported. No affirmative scalar is licensed."
+    },
+    {
+      "kind": "not_reported",
+      "field_id": "established_current_author_mechanism",
+      "detail": "The entire synthetic source was inspected. The cited hedged proposition addresses background, not an established current-author mechanism; missing does not mean zero or false. Claim layers: NEG-CITED=prior_work_cited_claim/cited_hedged_claim."
+    },
+    {
+      "kind": "epistemic_boundary",
+      "claim_id": "NEG-CITED",
+      "detail": "prior_work_cited_claim; modality=reported_and_speculative; no promotion to established current-author fact"
+    }
+  ],
+  "sources": [
+    {
+      "source_id": "SRC-SYN-NEG",
+      "title": "Synthetic cited-and-hedged negative example",
+      "synthetic": true,
+      "input_relative_path": "source.txt"
+    }
+  ],
+  "change_records": [
+    {
+      "action": "validated_curation_to_graph",
+      "detail": "Generated only from explicit curated classifications, observations, conditions, and verbatim source evidence."
+    }
+  ]
+}

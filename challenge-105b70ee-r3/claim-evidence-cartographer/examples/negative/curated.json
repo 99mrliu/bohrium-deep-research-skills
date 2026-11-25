@@ -1,0 +1,60 @@
+{
+  "schema_version": "claim-evidence-curation/1.0",
+  "conditions": [],
+  "observations": [],
+  "claims": [
+    {
+      "claim_id": "NEG-CITED",
+      "kind": "prior_work_cited_claim",
+      "text": "Zhao et al.'s cited result concerns their system; transfer of the mechanism to the current system is only suggested and remains untested here.",
+      "epistemic_status": "cited_hedged_claim",
+      "modality": "reported_and_speculative",
+      "hedges": ["could", "suggesting", "might", "did not test"],
+      "attribution": {
+        "speaker": "Zhao et al., as cited in the synthetic source",
+        "origin": "cited_work",
+        "citation": "Zhao et al.; bibliographic details not supplied in this synthetic excerpt"
+      },
+      "condition_ids": [],
+      "supporting_observation_ids": [],
+      "promotion_allowed": false,
+      "evidence": [
+        {
+          "source_id": "SRC-SYN-NEG",
+          "paragraph_id": "N1",
+          "page": null,
+          "quote": "Zhao et al. reported that additive X could suppress the unwanted pathway in their system, suggesting that the same mechanism might operate here; we did not test that mechanism in the present study."
+        }
+      ]
+    }
+  ],
+  "field_results": [
+    {
+      "field_id": "established_current_author_mechanism",
+      "status": "not_reported",
+      "scalar": null,
+      "units": null,
+      "statistic": null,
+      "experimental_condition": "Mechanism of additive X in the current study; explicitly not tested",
+      "comparator": null,
+      "claim_ids": ["NEG-CITED"],
+      "interpretation": "not_an_established_author_conclusion",
+      "evidence": [
+        {
+          "source_id": "SRC-SYN-NEG",
+          "paragraph_id": "N1",
+          "page": null,
+          "quote": "we did not test that mechanism in the present study"
+        }
+      ],
+      "notes": "The entire synthetic source was inspected. The cited hedged proposition addresses background, not an established current-author mechanism; missing does not mean zero or false."
+    }
+  ],
+  "uncertainties": [
+    {
+      "kind": "non_promotion_boundary",
+      "claim_id": "NEG-CITED",
+      "detail": "The cited original is unavailable and no current-study mechanistic test is reported. No affirmative scalar is licensed."
+    }
+  ]
+}
