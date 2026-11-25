@@ -1,0 +1,22 @@
+{
+  "case_id": "SYNTHETIC_EXAMPLE_NOT_OFFICIAL_CASE",
+  "label": "SYNTHETIC_EXAMPLE_NOT_OFFICIAL_CASE",
+  "number_region": "en-US",
+  "rounding": {"mode": "significant_figures", "digits": 6},
+  "unit_conversions": {
+    "temperature_c": {"target_unit": "K"},
+    "rate": {"target_unit": "µmol L^-1 s^-1"},
+    "interval_c": {"target_unit": "K"},
+    "pressure": {"target_unit": "kPa"},
+    "energy_unc": {"target_unit": "J"},
+    "mystery": {"target_unit": "mol/L"},
+    "missing_energy": {"target_unit": "J"},
+    "negative_interval_c": {"target_unit": "K"},
+    "duration_ms": {"target_unit": "s"},
+    "energy_grouped": {"target_unit": "J"},
+    "duration_min": {"target_unit": "s"}
+  },
+  "output_contract": {
+    "fields": ["case_id", "cleaned_data", "summary", "status", "sources", "uncertainty", "change_records", "review_queue", "artifacts", "official_score"]
+  }
+}

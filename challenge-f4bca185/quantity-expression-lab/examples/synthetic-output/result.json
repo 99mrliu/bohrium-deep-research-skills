@@ -1,0 +1,589 @@
+{
+  "artifacts": {
+    "audit.md": "audit.md",
+    "changes.jsonl": "changes.jsonl",
+    "cleaned.csv": "cleaned.csv",
+    "cleaned.json": "cleaned.json",
+    "quantity_ledger.jsonl": "quantity_ledger.jsonl",
+    "result.json": "result.json",
+    "review_queue.csv": "review_queue.csv"
+  },
+  "case_id": "SYNTHETIC_EXAMPLE_NOT_OFFICIAL_CASE",
+  "change_records": [
+    {
+      "after": "120 s",
+      "before": "2 min",
+      "case_id": "SYNTHETIC_EXAMPLE_NOT_OFFICIAL_CASE",
+      "field": "duration_min",
+      "formula_trace": {
+        "formula": "target = raw * (60) + (0) - (0)",
+        "interval_reversed_for_negative_multiplier": false,
+        "multiplier_source_scale_over_target_scale": "60",
+        "rounding": {
+          "digits_or_places": 6,
+          "mode": "significant_figures",
+          "tie_rule": "ROUND_HALF_EVEN"
+        },
+        "source_dimension": {
+          "time": 1
+        },
+        "source_offset_over_target_scale": "0",
+        "target_dimension": {
+          "time": 1
+        },
+        "target_offset_over_target_scale": "0",
+        "uncertainty_formula": "uncertainty_target = uncertainty_source * abs(multiplier)"
+      },
+      "raw_lexeme": "2 min",
+      "row_id": "nested-1",
+      "rule_ids": [
+        "QEC-PARSE-001",
+        "QEC-UNIT-002",
+        "QEC-ROUND-003"
+      ],
+      "source": "materials.json",
+      "source_locator": "$.materials[0].records[0].duration_min",
+      "uncertainty": null
+    },
+    {
+      "after": "298.15 K",
+      "before": "25 °C",
+      "case_id": "SYNTHETIC_EXAMPLE_NOT_OFFICIAL_CASE",
+      "field": "temperature_c",
+      "formula_trace": {
+        "formula": "target = raw * (1) + (273.15) - (0)",
+        "interval_reversed_for_negative_multiplier": false,
+        "multiplier_source_scale_over_target_scale": "1",
+        "rounding": {
+          "digits_or_places": 6,
+          "mode": "significant_figures",
+          "tie_rule": "ROUND_HALF_EVEN"
+        },
+        "source_dimension": {
+          "temperature": 1
+        },
+        "source_offset_over_target_scale": "273.15",
+        "target_dimension": {
+          "temperature": 1
+        },
+        "target_offset_over_target_scale": "0",
+        "uncertainty_formula": "uncertainty_target = uncertainty_source * abs(multiplier)"
+      },
+      "raw_lexeme": "25 °C",
+      "row_id": "r1",
+      "rule_ids": [
+        "QEC-PARSE-001",
+        "QEC-UNIT-002",
+        "QEC-ROUND-003"
+      ],
+      "source": "measurements.csv",
+      "source_locator": "$.line[2].temperature_c",
+      "uncertainty": null
+    },
+    {
+      "after": "16.6667 µmol L^-1 s^-1",
+      "before": "1 mmol L^-1 min^-1",
+      "case_id": "SYNTHETIC_EXAMPLE_NOT_OFFICIAL_CASE",
+      "field": "rate",
+      "formula_trace": {
+        "formula": "target = raw * (16.6666666666666666666666666666666666666666666666666666666667) + (0) - (0)",
+        "interval_reversed_for_negative_multiplier": false,
+        "multiplier_source_scale_over_target_scale": "16.6666666666666666666666666666666666666666666666666666666667",
+        "rounding": {
+          "digits_or_places": 6,
+          "mode": "significant_figures",
+          "tie_rule": "ROUND_HALF_EVEN"
+        },
+        "source_dimension": {
+          "amount": 1,
+          "length": -3,
+          "time": -1
+        },
+        "source_offset_over_target_scale": "0",
+        "target_dimension": {
+          "amount": 1,
+          "length": -3,
+          "time": -1
+        },
+        "target_offset_over_target_scale": "0",
+        "uncertainty_formula": "uncertainty_target = uncertainty_source * abs(multiplier)"
+      },
+      "raw_lexeme": "1 mmol L^-1 min^-1",
+      "row_id": "r2",
+      "rule_ids": [
+        "QEC-PARSE-001",
+        "QEC-UNIT-002",
+        "QEC-ROUND-003"
+      ],
+      "source": "measurements.csv",
+      "source_locator": "$.line[3].rate",
+      "uncertainty": null
+    },
+    {
+      "after": "283.15–293.15 K",
+      "before": "10–20 °C",
+      "case_id": "SYNTHETIC_EXAMPLE_NOT_OFFICIAL_CASE",
+      "field": "interval_c",
+      "formula_trace": {
+        "formula": "target = raw * (1) + (273.15) - (0)",
+        "interval_reversed_for_negative_multiplier": false,
+        "multiplier_source_scale_over_target_scale": "1",
+        "rounding": {
+          "digits_or_places": 6,
+          "mode": "significant_figures",
+          "tie_rule": "ROUND_HALF_EVEN"
+        },
+        "source_dimension": {
+          "temperature": 1
+        },
+        "source_offset_over_target_scale": "273.15",
+        "target_dimension": {
+          "temperature": 1
+        },
+        "target_offset_over_target_scale": "0",
+        "uncertainty_formula": "uncertainty_target = uncertainty_source * abs(multiplier)"
+      },
+      "raw_lexeme": "10–20 °C",
+      "row_id": "r3",
+      "rule_ids": [
+        "QEC-PARSE-001",
+        "QEC-UNIT-002",
+        "QEC-ROUND-003"
+      ],
+      "source": "measurements.csv",
+      "source_locator": "$.line[4].interval_c",
+      "uncertainty": null
+    },
+    {
+      "after": "101.325 kPa",
+      "before": "1.01325e5 Pa",
+      "case_id": "SYNTHETIC_EXAMPLE_NOT_OFFICIAL_CASE",
+      "field": "pressure",
+      "formula_trace": {
+        "formula": "target = raw * (0.001) + (0) - (0)",
+        "interval_reversed_for_negative_multiplier": false,
+        "multiplier_source_scale_over_target_scale": "0.001",
+        "rounding": {
+          "digits_or_places": 6,
+          "mode": "significant_figures",
+          "tie_rule": "ROUND_HALF_EVEN"
+        },
+        "source_dimension": {
+          "length": -1,
+          "mass": 1,
+          "time": -2
+        },
+        "source_offset_over_target_scale": "0",
+        "target_dimension": {
+          "length": -1,
+          "mass": 1,
+          "time": -2
+        },
+        "target_offset_over_target_scale": "0",
+        "uncertainty_formula": "uncertainty_target = uncertainty_source * abs(multiplier)"
+      },
+      "raw_lexeme": "1.01325e5 Pa",
+      "row_id": "r4",
+      "rule_ids": [
+        "QEC-PARSE-001",
+        "QEC-UNIT-002",
+        "QEC-ROUND-003"
+      ],
+      "source": "measurements.csv",
+      "source_locator": "$.line[5].pressure",
+      "uncertainty": null
+    },
+    {
+      "after": "2500±50 J",
+      "before": "2.50 ± 0.05 kJ",
+      "case_id": "SYNTHETIC_EXAMPLE_NOT_OFFICIAL_CASE",
+      "field": "energy_unc",
+      "formula_trace": {
+        "formula": "target = raw * (1000) + (0) - (0)",
+        "interval_reversed_for_negative_multiplier": false,
+        "multiplier_source_scale_over_target_scale": "1000",
+        "rounding": {
+          "digits_or_places": 6,
+          "mode": "significant_figures",
+          "tie_rule": "ROUND_HALF_EVEN"
+        },
+        "source_dimension": {
+          "length": 2,
+          "mass": 1,
+          "time": -2
+        },
+        "source_offset_over_target_scale": "0",
+        "target_dimension": {
+          "length": 2,
+          "mass": 1,
+          "time": -2
+        },
+        "target_offset_over_target_scale": "0",
+        "uncertainty_formula": "uncertainty_target = uncertainty_source * abs(multiplier)"
+      },
+      "raw_lexeme": "2.50 ± 0.05 kJ",
+      "row_id": "r5",
+      "rule_ids": [
+        "QEC-PARSE-001",
+        "QEC-UNIT-002",
+        "QEC-ROUND-003"
+      ],
+      "source": "measurements.csv",
+      "source_locator": "$.line[6].energy_unc",
+      "uncertainty": "50"
+    },
+    {
+      "after": "268.15–278.15 K",
+      "before": "−5–5 °C",
+      "case_id": "SYNTHETIC_EXAMPLE_NOT_OFFICIAL_CASE",
+      "field": "negative_interval_c",
+      "formula_trace": {
+        "formula": "target = raw * (1) + (273.15) - (0)",
+        "interval_reversed_for_negative_multiplier": false,
+        "multiplier_source_scale_over_target_scale": "1",
+        "rounding": {
+          "digits_or_places": 6,
+          "mode": "significant_figures",
+          "tie_rule": "ROUND_HALF_EVEN"
+        },
+        "source_dimension": {
+          "temperature": 1
+        },
+        "source_offset_over_target_scale": "273.15",
+        "target_dimension": {
+          "temperature": 1
+        },
+        "target_offset_over_target_scale": "0",
+        "uncertainty_formula": "uncertainty_target = uncertainty_source * abs(multiplier)"
+      },
+      "raw_lexeme": "−5–5 °C",
+      "row_id": "r8",
+      "rule_ids": [
+        "QEC-PARSE-001",
+        "QEC-UNIT-002",
+        "QEC-ROUND-003"
+      ],
+      "source": "measurements.csv",
+      "source_locator": "$.line[9].negative_interval_c",
+      "uncertainty": null
+    },
+    {
+      "after": "≈1.2 s",
+      "before": "≈1.2e3 ms",
+      "case_id": "SYNTHETIC_EXAMPLE_NOT_OFFICIAL_CASE",
+      "field": "duration_ms",
+      "formula_trace": {
+        "formula": "target = raw * (0.001) + (0) - (0)",
+        "interval_reversed_for_negative_multiplier": false,
+        "multiplier_source_scale_over_target_scale": "0.001",
+        "rounding": {
+          "digits_or_places": 6,
+          "mode": "significant_figures",
+          "tie_rule": "ROUND_HALF_EVEN"
+        },
+        "source_dimension": {
+          "time": 1
+        },
+        "source_offset_over_target_scale": "0",
+        "target_dimension": {
+          "time": 1
+        },
+        "target_offset_over_target_scale": "0",
+        "uncertainty_formula": "uncertainty_target = uncertainty_source * abs(multiplier)"
+      },
+      "raw_lexeme": "≈1.2e3 ms",
+      "row_id": "r9",
+      "rule_ids": [
+        "QEC-PARSE-001",
+        "QEC-UNIT-002",
+        "QEC-ROUND-003"
+      ],
+      "source": "measurements.csv",
+      "source_locator": "$.line[10].duration_ms",
+      "uncertainty": null
+    },
+    {
+      "after": "1234500 J",
+      "before": "1,234.5 kJ",
+      "case_id": "SYNTHETIC_EXAMPLE_NOT_OFFICIAL_CASE",
+      "field": "energy_grouped",
+      "formula_trace": {
+        "formula": "target = raw * (1000) + (0) - (0)",
+        "interval_reversed_for_negative_multiplier": false,
+        "multiplier_source_scale_over_target_scale": "1000",
+        "rounding": {
+          "digits_or_places": 6,
+          "mode": "significant_figures",
+          "tie_rule": "ROUND_HALF_EVEN"
+        },
+        "source_dimension": {
+          "length": 2,
+          "mass": 1,
+          "time": -2
+        },
+        "source_offset_over_target_scale": "0",
+        "target_dimension": {
+          "length": 2,
+          "mass": 1,
+          "time": -2
+        },
+        "target_offset_over_target_scale": "0",
+        "uncertainty_formula": "uncertainty_target = uncertainty_source * abs(multiplier)"
+      },
+      "raw_lexeme": "1,234.5 kJ",
+      "row_id": "r10",
+      "rule_ids": [
+        "QEC-PARSE-001",
+        "QEC-UNIT-002",
+        "QEC-ROUND-003"
+      ],
+      "source": "measurements.csv",
+      "source_locator": "$.line[11].energy_grouped",
+      "uncertainty": null
+    }
+  ],
+  "cleaned_data": [
+    {
+      "__quantity_review": "",
+      "__row_id": "nested-1",
+      "__source": "materials.json",
+      "duration_min": "120 s",
+      "example_label": "SYNTHETIC_EXAMPLE_NOT_OFFICIAL_CASE",
+      "row_id": "nested-1"
+    },
+    {
+      "__quantity_review": "",
+      "__row_id": "r1",
+      "__source": "measurements.csv",
+      "duration_ms": "",
+      "energy_grouped": "",
+      "energy_unc": "",
+      "example_label": "SYNTHETIC_EXAMPLE_NOT_OFFICIAL_CASE",
+      "interval_c": "",
+      "missing_energy": "",
+      "mystery": "",
+      "negative_interval_c": "",
+      "pressure": "",
+      "rate": "",
+      "row_id": "r1",
+      "temperature_c": "298.15 K"
+    },
+    {
+      "__quantity_review": "",
+      "__row_id": "r2",
+      "__source": "measurements.csv",
+      "duration_ms": "",
+      "energy_grouped": "",
+      "energy_unc": "",
+      "example_label": "SYNTHETIC_EXAMPLE_NOT_OFFICIAL_CASE",
+      "interval_c": "",
+      "missing_energy": "",
+      "mystery": "",
+      "negative_interval_c": "",
+      "pressure": "",
+      "rate": "16.6667 µmol L^-1 s^-1",
+      "row_id": "r2",
+      "temperature_c": ""
+    },
+    {
+      "__quantity_review": "",
+      "__row_id": "r3",
+      "__source": "measurements.csv",
+      "duration_ms": "",
+      "energy_grouped": "",
+      "energy_unc": "",
+      "example_label": "SYNTHETIC_EXAMPLE_NOT_OFFICIAL_CASE",
+      "interval_c": "283.15–293.15 K",
+      "missing_energy": "",
+      "mystery": "",
+      "negative_interval_c": "",
+      "pressure": "",
+      "rate": "",
+      "row_id": "r3",
+      "temperature_c": ""
+    },
+    {
+      "__quantity_review": "",
+      "__row_id": "r4",
+      "__source": "measurements.csv",
+      "duration_ms": "",
+      "energy_grouped": "",
+      "energy_unc": "",
+      "example_label": "SYNTHETIC_EXAMPLE_NOT_OFFICIAL_CASE",
+      "interval_c": "",
+      "missing_energy": "",
+      "mystery": "",
+      "negative_interval_c": "",
+      "pressure": "101.325 kPa",
+      "rate": "",
+      "row_id": "r4",
+      "temperature_c": ""
+    },
+    {
+      "__quantity_review": "",
+      "__row_id": "r5",
+      "__source": "measurements.csv",
+      "duration_ms": "",
+      "energy_grouped": "",
+      "energy_unc": "2500±50 J",
+      "example_label": "SYNTHETIC_EXAMPLE_NOT_OFFICIAL_CASE",
+      "interval_c": "",
+      "missing_energy": "",
+      "mystery": "",
+      "negative_interval_c": "",
+      "pressure": "",
+      "rate": "",
+      "row_id": "r5",
+      "temperature_c": ""
+    },
+    {
+      "__quantity_review": "unknown_unit",
+      "__row_id": "r6",
+      "__source": "measurements.csv",
+      "duration_ms": "",
+      "energy_grouped": "",
+      "energy_unc": "",
+      "example_label": "SYNTHETIC_EXAMPLE_NOT_OFFICIAL_CASE",
+      "interval_c": "",
+      "missing_energy": "",
+      "mystery": "12 furlong",
+      "negative_interval_c": "",
+      "pressure": "",
+      "rate": "",
+      "row_id": "r6",
+      "temperature_c": ""
+    },
+    {
+      "__quantity_review": "",
+      "__row_id": "r7",
+      "__source": "measurements.csv",
+      "duration_ms": "",
+      "energy_grouped": "",
+      "energy_unc": "",
+      "example_label": "SYNTHETIC_EXAMPLE_NOT_OFFICIAL_CASE",
+      "interval_c": "",
+      "missing_energy": "",
+      "mystery": "",
+      "negative_interval_c": "",
+      "pressure": "",
+      "rate": "",
+      "row_id": "r7",
+      "temperature_c": ""
+    },
+    {
+      "__quantity_review": "",
+      "__row_id": "r8",
+      "__source": "measurements.csv",
+      "duration_ms": "",
+      "energy_grouped": "",
+      "energy_unc": "",
+      "example_label": "SYNTHETIC_EXAMPLE_NOT_OFFICIAL_CASE",
+      "interval_c": "",
+      "missing_energy": "",
+      "mystery": "",
+      "negative_interval_c": "268.15–278.15 K",
+      "pressure": "",
+      "rate": "",
+      "row_id": "r8",
+      "temperature_c": ""
+    },
+    {
+      "__quantity_review": "",
+      "__row_id": "r9",
+      "__source": "measurements.csv",
+      "duration_ms": "≈1.2 s",
+      "energy_grouped": "",
+      "energy_unc": "",
+      "example_label": "SYNTHETIC_EXAMPLE_NOT_OFFICIAL_CASE",
+      "interval_c": "",
+      "missing_energy": "",
+      "mystery": "",
+      "negative_interval_c": "",
+      "pressure": "",
+      "rate": "",
+      "row_id": "r9",
+      "temperature_c": ""
+    },
+    {
+      "__quantity_review": "",
+      "__row_id": "r10",
+      "__source": "measurements.csv",
+      "duration_ms": "",
+      "energy_grouped": "1234500 J",
+      "energy_unc": "",
+      "example_label": "SYNTHETIC_EXAMPLE_NOT_OFFICIAL_CASE",
+      "interval_c": "",
+      "missing_energy": "",
+      "mystery": "",
+      "negative_interval_c": "",
+      "pressure": "",
+      "rate": "",
+      "row_id": "r10",
+      "temperature_c": ""
+    }
+  ],
+  "contract_unresolved": [
+    "output_contract.official_score is null: no declared producer for this key."
+  ],
+  "errors": [],
+  "official_score": null,
+  "review_queue": [
+    {
+      "case_id": "SYNTHETIC_EXAMPLE_NOT_OFFICIAL_CASE",
+      "code": "unknown_unit",
+      "field": "mystery",
+      "message": "Unregistered unit atom 'furlong'; no conversion was guessed.",
+      "raw_value": "12 furlong",
+      "row_id": "r6",
+      "source": "measurements.csv",
+      "source_locator": "$.line[7].mystery",
+      "status": "open"
+    }
+  ],
+  "row_count": 11,
+  "sources": [
+    {
+      "path": "case.json",
+      "role": "case",
+      "sha256": "f4b0694859b0e3e48a032a29c04e3ec29cb94d09a45d6fd9a3f254fdda7cc966"
+    },
+    {
+      "path": "materials.json",
+      "role": "material",
+      "sha256": "d0ca5a93b54dc44b01e75dbc095010c45148c0604e5cbcc56d31493d7a36df7b"
+    },
+    {
+      "path": "measurements.csv",
+      "role": "material",
+      "sha256": "e3ac601b504bff009ffc4812d93843d572bf839d9e1c3ba75a07e78737f63ed2"
+    },
+    {
+      "path": "task.md",
+      "role": "task",
+      "sha256": "b523cf865d4b73d6b473e2987959d8838ec026a82e78d52668c1065e2d9a2ec4"
+    }
+  ],
+  "status": "partial",
+  "summary": {
+    "converted_cells": 9,
+    "review_items": 1,
+    "rows": 11
+  },
+  "uncertainty": [
+    {
+      "case_id": "SYNTHETIC_EXAMPLE_NOT_OFFICIAL_CASE",
+      "code": "unknown_unit",
+      "field": "mystery",
+      "message": "Unregistered unit atom 'furlong'; no conversion was guessed.",
+      "raw_value": "12 furlong",
+      "row_id": "r6",
+      "source": "measurements.csv",
+      "source_locator": "$.line[7].mystery",
+      "status": "open"
+    },
+    {
+      "code": "unresolved_contract",
+      "message": "output_contract.official_score is null: no declared producer for this key."
+    }
+  ]
+}

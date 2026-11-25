@@ -1,0 +1,15 @@
+{
+  "artifact_marker": "SYNTHETIC_EXAMPLE_NOT_OFFICIAL_CASE",
+  "rules": [
+    {
+      "id": "declared-sex-map",
+      "type": "literal_map",
+      "field": "sex",
+      "case_sensitive": false,
+      "values": {
+        "f": "female",
+        "m": "male"
+      }
+    }
+  ]
+}

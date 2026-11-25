@@ -1,0 +1,12 @@
+example_marker,observation_id,duplicate_group,document_id,extraction_id,experiment_id,sample_id,material,metric,value,unit,temperature,pressure,solvent,atmosphere
+SYNTHETIC_EXAMPLE_NOT_OFFICIAL_CASE,obs-dup-001,,doc-A,ext-A,exp-A,sample-1,Dye A,band_gap,1.23,eV,298,1,Solvent A,inert
+SYNTHETIC_EXAMPLE_NOT_OFFICIAL_CASE,obs-dup-001,,doc-A,ext-A,exp-A,sample-1,Dye A,band_gap,1.2300,eV,298.0,1.0,Solvent A,inert
+SYNTHETIC_EXAMPLE_NOT_OFFICIAL_CASE,obs-extraction-002,,doc-A,ext-A2,exp-A,sample-1,Dye A,band_gap,1.23,eV,298,1,Solvent A,inert
+SYNTHETIC_EXAMPLE_NOT_OFFICIAL_CASE,obs-experiment-003,,doc-B,ext-B,exp-B,sample-1,Dye A,band_gap,1.23,eV,298,1,Solvent A,inert
+SYNTHETIC_EXAMPLE_NOT_OFFICIAL_CASE,obs-context-004,,doc-A,ext-C,exp-A,sample-1,Dye A,band_gap,1.23,eV,300,1,Solvent A,inert
+SYNTHETIC_EXAMPLE_NOT_OFFICIAL_CASE,obs-conflict-005,dg-conflict,doc-A,ext-D,exp-C,sample-2,Dye A,band_gap,2.00,eV,298,1,Solvent B,inert
+SYNTHETIC_EXAMPLE_NOT_OFFICIAL_CASE,obs-conflict-006,dg-conflict,doc-A,ext-D,exp-C,sample-2,Dye A,band_gap,2.00,eV,300,1,Solvent B,inert
+SYNTHETIC_EXAMPLE_NOT_OFFICIAL_CASE,obs-conflict-007,dg-value,doc-A,ext-E,exp-D,sample-3,Dye A,band_gap,3.0,eV,298,1,Solvent C,inert
+SYNTHETIC_EXAMPLE_NOT_OFFICIAL_CASE,obs-conflict-008,dg-value,doc-A,ext-E,exp-D,sample-3,Dye A,band_gap,3.1,eV,298,1,Solvent C,inert
+SYNTHETIC_EXAMPLE_NOT_OFFICIAL_CASE,obs-unresolved-009,,doc-C,ext-F,,sample-4,Dye A,band_gap,4.0,eV,298,1,Solvent D,inert
+SYNTHETIC_EXAMPLE_NOT_OFFICIAL_CASE,obs-unresolved-010,,doc-D,ext-G,,sample-4,Dye A,band_gap,4.0,eV,298,1,Solvent D,inert

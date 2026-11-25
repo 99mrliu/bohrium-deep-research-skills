@@ -1,0 +1,29 @@
+{
+  "case_id": "SYNTHETIC_EXAMPLE_NOT_OFFICIAL_CASE",
+  "example_marker": "SYNTHETIC_EXAMPLE_NOT_OFFICIAL_CASE",
+  "identity_contract": {
+    "row_id_field": "observation_id",
+    "identity_fields": ["observation_id"],
+    "candidate_identity_fields": ["observation_id", "duplicate_group"],
+    "transport_fields": [
+      "observation_id", "document_id", "extraction_id", "experiment_id",
+      "sample_id", "material", "metric", "value", "unit",
+      "temperature", "pressure", "solvent", "atmosphere"
+    ],
+    "allow_exact_transport_duplicates": true,
+    "condition_fields": ["temperature", "pressure", "solvent", "atmosphere"]
+  },
+  "synonyms": {
+    "material": {
+      "Dye A": ["DYE_A", "A Dye"]
+    }
+  },
+  "output_contract": {
+    "case_id": {"type": "string"},
+    "status": {"type": "string"},
+    "sources": {"type": "array"},
+    "cleaned_data": {"type": "array"},
+    "change_log": {"type": "array"},
+    "artifacts": {"type": "object"}
+  }
+}

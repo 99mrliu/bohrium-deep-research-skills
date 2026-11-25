@@ -1,0 +1,11 @@
+{
+  "artifact_marker": "SYNTHETIC_EXAMPLE_NOT_OFFICIAL_CASE",
+  "case": {
+    "output_contract": {
+      "required": ["statistics", "row_count", "unavailable_evidence"],
+      "fields": {
+        "unavailable_evidence": {"type": "string"}
+      }
+    }
+  }
+}

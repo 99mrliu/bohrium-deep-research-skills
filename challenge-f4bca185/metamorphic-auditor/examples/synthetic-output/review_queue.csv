@@ -1,0 +1,5 @@
+review_id,priority,severity,blocking_impact,minimal_audit_sample,check,source_locator,counterexample_id,change_id,reason,recommended_action
+RQ000001,1,HIGH,yes,yes,dedup_context_non_interference,materials/literature.csv::row=2,,CHG000005,Full normalized row and configured key/context are identical.,Human source-context review; automated invariants do not settle scientific identity or conflict.
+RQ000002,2,MEDIUM,no,yes,unit_conversion_recomputation,materials/literature.csv::row=1,,CHG000002,Recomputable declared conversion; not observational imputation.,Human source-context review; automated invariants do not settle scientific identity or conflict.
+RQ000003,3,MEDIUM,no,no,unit_conversion_recomputation,materials/literature.csv::row=2,,CHG000004,Recomputable declared conversion; not observational imputation.,Human source-context review; automated invariants do not settle scientific identity or conflict.
+RQ000004,4,MEDIUM,no,no,unit_conversion_recomputation,materials/literature.csv::row=3,,CHG000007,Recomputable declared conversion; not observational imputation.,Human source-context review; automated invariants do not settle scientific identity or conflict.

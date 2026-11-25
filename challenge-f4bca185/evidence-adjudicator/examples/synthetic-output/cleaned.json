@@ -1,0 +1,45 @@
+{
+  "case_records": [
+    {
+      "adjudication": {
+        "claim_ids": [
+          "E000001",
+          "E000002",
+          "E000003",
+          "E000004",
+          "E000005",
+          "E000006",
+          "E000007"
+        ],
+        "field_states": {
+          "/_example_marker": "corroborated",
+          "/extractor_note": "corroborated",
+          "/melting_point_K": "source_conflict",
+          "/purity": "corroborated",
+          "/sample_id": "corroborated",
+          "/unknown_unit": "unverifiable",
+          "/unsupported_label": "extractor_only"
+        }
+      },
+      "data": {
+        "_evidence_state": "partial",
+        "_example_marker": "SYNTHETIC_EXAMPLE_NOT_OFFICIAL_CASE",
+        "_record_id": "R000001",
+        "_review_fields": "/melting_point_K;/unknown_unit;/unsupported_label",
+        "_source_fields": "/_example_marker;/extractor_note;/purity;/sample_id",
+        "_unsupported_fields": "/melting_point_K;/unknown_unit;/unsupported_label",
+        "extractor_note": "a note",
+        "melting_point_K": "181",
+        "purity": "0.998",
+        "sample_id": "S-001",
+        "unknown_unit": "",
+        "unsupported_label": "speculative-blue"
+      },
+      "record_id": "R000001",
+      "record_locator": "2",
+      "record_source": "materials/extracted.csv"
+    }
+  ],
+  "example_marker": "SYNTHETIC_EXAMPLE_NOT_OFFICIAL_CASE",
+  "note": "Values retain extractor content unless a case-enabled normalization was applied after corroboration; adjudication states and unresolved fields are explicit."
+}

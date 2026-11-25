@@ -1,0 +1,36 @@
+{
+  "case_id": "SYNTHETIC_EXAMPLE_NOT_OFFICIAL_CASE",
+  "artifact_marker": "SYNTHETIC_EXAMPLE_NOT_OFFICIAL_CASE",
+  "data_file": "data.csv",
+  "output_columns": ["sample_id", "batch", "dose_g", "yield", "observed_range", "sex", "replicate", "note"],
+  "field_mappings": {
+    "Dose Text": "dose_g"
+  },
+  "range_fields": ["observed_range"],
+  "range_conventions": {
+    "decimal": ".",
+    "thousands": ","
+  },
+  "unit_targets": {
+    "dose_g": {
+      "target": "mg",
+      "decimal": ".",
+      "thousands": ","
+    }
+  },
+  "rules": [
+    {
+      "id": "trim-explicit-fields",
+      "type": "trim_whitespace",
+      "fields": ["sample_id", "batch", "note", "sex"]
+    }
+  ],
+  "output_contract": {
+    "required": ["statistics", "row_count"],
+    "fields": {
+      "statistics": {"type": "object"},
+      "row_count": {"type": "integer"},
+      "official_note": {"type": "string", "required": false}
+    }
+  }
+}

@@ -1,0 +1,79 @@
+{
+  "case_id": "SYNTHETIC_EXAMPLE_NOT_OFFICIAL_CASE",
+  "checks": [
+    {
+      "description": "Every raw row is exactly one of kept, duplicate, or rejected.",
+      "failure_count": 0,
+      "status": "pass",
+      "test_id": "row_conservation_disposition_partition"
+    },
+    {
+      "description": "Only outer-whitespace trimming and declared derivations may alter raw values.",
+      "failure_count": 0,
+      "status": "pass",
+      "test_id": "raw_value_immutability"
+    },
+    {
+      "description": "A missing raw value cannot become substantive without a declared derivation.",
+      "failure_count": 0,
+      "status": "pass",
+      "test_id": "no_fabricated_missing"
+    },
+    {
+      "description": "Declared unit conversions are independently recomputed with decimal arithmetic.",
+      "failure_count": 0,
+      "status": "pass",
+      "test_id": "unit_conversion_recomputation"
+    },
+    {
+      "description": "Only full-row duplicates inside the same configured context may be removed.",
+      "failure_count": 0,
+      "status": "pass",
+      "test_id": "dedup_context_non_interference"
+    },
+    {
+      "description": "Fresh normalization runs emit identical semantic records and changes.",
+      "failure_count": 0,
+      "status": "pass",
+      "test_id": "deterministic_rerun"
+    },
+    {
+      "description": "Input row/column permutations preserve semantic content and group counts.",
+      "failure_count": 0,
+      "status": "pass",
+      "test_id": "column_order_row_order_metamorphic_invariance"
+    },
+    {
+      "description": "Padding and irrelevant columns do not change normalized original fields.",
+      "failure_count": 0,
+      "status": "pass",
+      "test_id": "whitespace_noise_metamorphism"
+    },
+    {
+      "description": "JSON is strict, finite, complete, and agrees with CSV.",
+      "failure_count": 0,
+      "status": "pass",
+      "test_id": "json_finite_value_completeness"
+    },
+    {
+      "description": "Every counterexample and reviewable exclusion/derivation has a queue entry.",
+      "failure_count": 0,
+      "status": "pass",
+      "test_id": "review_coverage"
+    },
+    {
+      "description": "Each kept row resolves to exactly one existing raw source row.",
+      "failure_count": 0,
+      "status": "pass",
+      "test_id": "source_locator_validity"
+    }
+  ],
+  "counterexample_count": 0,
+  "counterexample_file": "counterexamples.jsonl",
+  "example_label": "SYNTHETIC_EXAMPLE_NOT_OFFICIAL_CASE",
+  "independent_reload": true,
+  "scientific_conflicts_resolved": false,
+  "scope_limit": "Process quality control only; no automated claim of scientific conflict resolution.",
+  "verification_status": "pass",
+  "verify_existing": true
+}

@@ -1,0 +1,145 @@
+{
+  "artifacts": {
+    "audit_md": "audit.md",
+    "changes_jsonl": "changes.jsonl",
+    "cleaned_csv": "cleaned.csv",
+    "cleaned_json": "cleaned.json",
+    "evidence_jsonl": "evidence.jsonl",
+    "result_json": "result.json",
+    "review_queue_csv": "review_queue.csv"
+  },
+  "case_id": "SYNTHETIC-EVIDENCE-001",
+  "change_log": [
+    {
+      "after": "a note",
+      "before": "a   note",
+      "change_id": "C000001",
+      "evidence_claim_id": "E000002",
+      "example_marker": "SYNTHETIC_EXAMPLE_NOT_OFFICIAL_CASE",
+      "field_path": "/extractor_note",
+      "reason": "Applied only case-enabled normalization to a corroborated value.",
+      "record_id": "R000001"
+    }
+  ],
+  "change_records": [
+    {
+      "after": "a note",
+      "before": "a   note",
+      "change_id": "C000001",
+      "evidence_claim_id": "E000002",
+      "example_marker": "SYNTHETIC_EXAMPLE_NOT_OFFICIAL_CASE",
+      "field_path": "/extractor_note",
+      "reason": "Applied only case-enabled normalization to a corroborated value.",
+      "record_id": "R000001"
+    }
+  ],
+  "cleaned_csv": "cleaned.csv",
+  "evidence_jsonl": "evidence.jsonl",
+  "example_marker": "SYNTHETIC_EXAMPLE_NOT_OFFICIAL_CASE",
+  "official_score": null,
+  "review_queue": [
+    {
+      "claim_id": "E000003",
+      "evidence_refs": [
+        {
+          "column": 184,
+          "end": 237,
+          "exact_substring": "181",
+          "kind": "text_substring",
+          "line": 3,
+          "source": "materials/method.md",
+          "start": 234
+        },
+        {
+          "column": "melting_point_K",
+          "exact_substring": "182",
+          "kind": "csv_cell",
+          "row_number": 2,
+          "source": "materials/reference.csv"
+        }
+      ],
+      "field_path": "/melting_point_K",
+      "observed_value": "181",
+      "reason": "Independent evidence contains a different value for the identified field.",
+      "record_id": "R000001",
+      "state": "source_conflict"
+    },
+    {
+      "claim_id": "E000006",
+      "evidence_refs": [
+        {
+          "column": "unknown_unit",
+          "exact_substring": "not reported",
+          "kind": "csv_cell",
+          "row_number": 2,
+          "source": "materials/reference.csv"
+        }
+      ],
+      "field_path": "/unknown_unit",
+      "observed_value": "",
+      "reason": "The extracted value is missing or null.",
+      "record_id": "R000001",
+      "state": "unverifiable"
+    },
+    {
+      "claim_id": "E000007",
+      "evidence_refs": [],
+      "field_path": "/unsupported_label",
+      "observed_value": "speculative-blue",
+      "reason": "No independent evidence supports this non-empty extractor value.",
+      "record_id": "R000001",
+      "state": "extractor_only"
+    }
+  ],
+  "sources": [
+    {
+      "kind": "case",
+      "page_locators": false,
+      "path": "case.json",
+      "readable": true,
+      "sha256": "529acf5e3c3c854b943b30766aa2381f36f5e7100db7b0cf3c94f655f9f72d72"
+    },
+    {
+      "kind": "csv",
+      "page_locators": false,
+      "path": "materials/extracted.csv",
+      "readable": true,
+      "sha256": "c0735c27b99f6ba5420b24fa1d1e39f281c21f4df117c30b9be50f11bac71280"
+    },
+    {
+      "kind": "md",
+      "page_locators": false,
+      "path": "materials/method.md",
+      "readable": true,
+      "sha256": "54330ddf729dc9c08e4a854024204a8bf8adb2ae9de526efd17dc154fa53d0af"
+    },
+    {
+      "kind": "csv",
+      "page_locators": false,
+      "path": "materials/reference.csv",
+      "readable": true,
+      "sha256": "21cf4befdb829f60a1d15f1de3d8bc318022db6a36de39f92949c77f990776dc"
+    },
+    {
+      "kind": "task",
+      "page_locators": false,
+      "path": "task.md",
+      "readable": true,
+      "sha256": "17b85bad35a88cdd357850acc039c723c0885b5d4972ff0f2f856857e35c8066"
+    }
+  ],
+  "status": "partial",
+  "summary": {
+    "source_conflict": 1,
+    "total_claims": 7
+  },
+  "uncertainty": [
+    "No evidence-backed value is defined for contract field: official_score",
+    "E000003 /melting_point_K: source_conflict",
+    "E000006 /unknown_unit: unverifiable",
+    "E000007 /unsupported_label: extractor_only"
+  ],
+  "unresolved_fields": [
+    "official_score"
+  ]
+}

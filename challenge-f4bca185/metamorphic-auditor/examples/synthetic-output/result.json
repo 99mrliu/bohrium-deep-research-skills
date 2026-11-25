@@ -1,0 +1,363 @@
+{
+  "artifacts": {
+    "audit.md": {
+      "bytes": 1977,
+      "path": "audit.md",
+      "sha256": "1ea9bf7eb6e405219b20a7cc3a52082b7da16b286e8bef41199d2e2c1577578c"
+    },
+    "changes.jsonl": {
+      "bytes": 2469,
+      "path": "changes.jsonl",
+      "sha256": "bf4cb68732f3dbac9ea5faf4e047a7475ec5fb53ef24be82f4b99042c3825af2"
+    },
+    "cleaned.csv": {
+      "bytes": 571,
+      "path": "cleaned.csv",
+      "sha256": "d49ab391f35187f7a4898deb345a6e775414eb34f7c4575bb19af1f6a2290005"
+    },
+    "cleaned.json": {
+      "bytes": 1541,
+      "path": "cleaned.json",
+      "sha256": "f57d55fe1221f690ca4588c105323f89989721b5cf5f5c3249c7e83314bea2e2"
+    },
+    "counterexamples.jsonl": {
+      "bytes": 0,
+      "path": "counterexamples.jsonl",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "result.json": {
+      "path": "result.json"
+    },
+    "review_queue.csv": {
+      "bytes": 1172,
+      "path": "review_queue.csv",
+      "sha256": "d07140c907fe36154a731595348be882ff23c7f0a18c367a98a77bdd6863bb03"
+    },
+    "verification.json": {
+      "bytes": 2708,
+      "path": "verification.json",
+      "sha256": "2705b1ebf25537f41bca77bd44c9b81c4521b6c0c6bcd93a76ac4d9759cceb69"
+    }
+  },
+  "audit": "audit.md",
+  "case_id": "SYNTHETIC_EXAMPLE_NOT_OFFICIAL_CASE",
+  "change_log": [
+    {
+      "change_id": "CHG000001",
+      "disposition": "kept",
+      "field": "title",
+      "new": "Alpha study",
+      "old": "  Alpha study  ",
+      "rationale": "Removed leading/trailing Unicode whitespace only.",
+      "review_required": false,
+      "source_id": "materials/literature.csv::row=1",
+      "source_locator": "materials/literature.csv::row=1",
+      "type": "outer_whitespace_trim"
+    },
+    {
+      "change_id": "CHG000002",
+      "conversion_id": "C_TO_K",
+      "disposition": "kept",
+      "field": "temp_K",
+      "new": "283.15",
+      "old": "",
+      "rationale": "Recomputable declared conversion; not observational imputation.",
+      "review_required": true,
+      "source_id": "materials/literature.csv::row=1",
+      "source_locator": "materials/literature.csv::row=1",
+      "type": "declared_unit_derivation"
+    },
+    {
+      "change_id": "CHG000003",
+      "disposition": "kept",
+      "field": "title",
+      "new": "Alpha study",
+      "old": "  Alpha study  ",
+      "rationale": "Removed leading/trailing Unicode whitespace only.",
+      "review_required": false,
+      "source_id": "materials/literature.csv::row=2",
+      "source_locator": "materials/literature.csv::row=2",
+      "type": "outer_whitespace_trim"
+    },
+    {
+      "change_id": "CHG000004",
+      "conversion_id": "C_TO_K",
+      "disposition": "kept",
+      "field": "temp_K",
+      "new": "283.15",
+      "old": "",
+      "rationale": "Recomputable declared conversion; not observational imputation.",
+      "review_required": true,
+      "source_id": "materials/literature.csv::row=2",
+      "source_locator": "materials/literature.csv::row=2",
+      "type": "declared_unit_derivation"
+    },
+    {
+      "change_id": "CHG000005",
+      "disposition": "duplicate",
+      "duplicate_of": "materials/literature.csv::row=1",
+      "rationale": "Full normalized row and configured key/context are identical.",
+      "review_required": true,
+      "source_id": "materials/literature.csv::row=2",
+      "source_locator": "materials/literature.csv::row=2",
+      "type": "exact_context_duplicate"
+    },
+    {
+      "change_id": "CHG000006",
+      "disposition": "kept",
+      "field": "title",
+      "new": "Alpha study",
+      "old": "  Alpha study  ",
+      "rationale": "Removed leading/trailing Unicode whitespace only.",
+      "review_required": false,
+      "source_id": "materials/literature.csv::row=3",
+      "source_locator": "materials/literature.csv::row=3",
+      "type": "outer_whitespace_trim"
+    },
+    {
+      "change_id": "CHG000007",
+      "conversion_id": "C_TO_K",
+      "disposition": "kept",
+      "field": "temp_K",
+      "new": "283.15",
+      "old": "",
+      "rationale": "Recomputable declared conversion; not observational imputation.",
+      "review_required": true,
+      "source_id": "materials/literature.csv::row=3",
+      "source_locator": "materials/literature.csv::row=3",
+      "type": "declared_unit_derivation"
+    }
+  ],
+  "change_records": [
+    {
+      "change_id": "CHG000001",
+      "disposition": "kept",
+      "field": "title",
+      "new": "Alpha study",
+      "old": "  Alpha study  ",
+      "rationale": "Removed leading/trailing Unicode whitespace only.",
+      "review_required": false,
+      "source_id": "materials/literature.csv::row=1",
+      "source_locator": "materials/literature.csv::row=1",
+      "type": "outer_whitespace_trim"
+    },
+    {
+      "change_id": "CHG000002",
+      "conversion_id": "C_TO_K",
+      "disposition": "kept",
+      "field": "temp_K",
+      "new": "283.15",
+      "old": "",
+      "rationale": "Recomputable declared conversion; not observational imputation.",
+      "review_required": true,
+      "source_id": "materials/literature.csv::row=1",
+      "source_locator": "materials/literature.csv::row=1",
+      "type": "declared_unit_derivation"
+    },
+    {
+      "change_id": "CHG000003",
+      "disposition": "kept",
+      "field": "title",
+      "new": "Alpha study",
+      "old": "  Alpha study  ",
+      "rationale": "Removed leading/trailing Unicode whitespace only.",
+      "review_required": false,
+      "source_id": "materials/literature.csv::row=2",
+      "source_locator": "materials/literature.csv::row=2",
+      "type": "outer_whitespace_trim"
+    },
+    {
+      "change_id": "CHG000004",
+      "conversion_id": "C_TO_K",
+      "disposition": "kept",
+      "field": "temp_K",
+      "new": "283.15",
+      "old": "",
+      "rationale": "Recomputable declared conversion; not observational imputation.",
+      "review_required": true,
+      "source_id": "materials/literature.csv::row=2",
+      "source_locator": "materials/literature.csv::row=2",
+      "type": "declared_unit_derivation"
+    },
+    {
+      "change_id": "CHG000005",
+      "disposition": "duplicate",
+      "duplicate_of": "materials/literature.csv::row=1",
+      "rationale": "Full normalized row and configured key/context are identical.",
+      "review_required": true,
+      "source_id": "materials/literature.csv::row=2",
+      "source_locator": "materials/literature.csv::row=2",
+      "type": "exact_context_duplicate"
+    },
+    {
+      "change_id": "CHG000006",
+      "disposition": "kept",
+      "field": "title",
+      "new": "Alpha study",
+      "old": "  Alpha study  ",
+      "rationale": "Removed leading/trailing Unicode whitespace only.",
+      "review_required": false,
+      "source_id": "materials/literature.csv::row=3",
+      "source_locator": "materials/literature.csv::row=3",
+      "type": "outer_whitespace_trim"
+    },
+    {
+      "change_id": "CHG000007",
+      "conversion_id": "C_TO_K",
+      "disposition": "kept",
+      "field": "temp_K",
+      "new": "283.15",
+      "old": "",
+      "rationale": "Recomputable declared conversion; not observational imputation.",
+      "review_required": true,
+      "source_id": "materials/literature.csv::row=3",
+      "source_locator": "materials/literature.csv::row=3",
+      "type": "declared_unit_derivation"
+    }
+  ],
+  "changes": "changes.jsonl",
+  "cleaned_csv": "cleaned.csv",
+  "cleaned_data": [
+    {
+      "_disposition": "kept",
+      "_source_file": "materials/literature.csv",
+      "_source_id": "materials/literature.csv::row=1",
+      "_source_row": "1",
+      "context": "ctxA",
+      "doi": "10.0000/alpha",
+      "notes": "NA",
+      "record_id": "r1",
+      "temp_C": "10",
+      "temp_K": "283.15",
+      "title": "Alpha study",
+      "year": "2020"
+    },
+    {
+      "_disposition": "kept",
+      "_source_file": "materials/literature.csv",
+      "_source_id": "materials/literature.csv::row=3",
+      "_source_row": "3",
+      "context": "ctxB",
+      "doi": "10.0000/alpha",
+      "notes": "NA",
+      "record_id": "r1",
+      "temp_C": "10",
+      "temp_K": "283.15",
+      "title": "Alpha study",
+      "year": "2020"
+    },
+    {
+      "_disposition": "kept",
+      "_source_file": "materials/literature.csv",
+      "_source_id": "materials/literature.csv::row=4",
+      "_source_row": "4",
+      "context": "ctxA",
+      "doi": "10.0000/beta",
+      "notes": "",
+      "record_id": "r4",
+      "temp_C": "20",
+      "temp_K": "293.15",
+      "title": "Beta study",
+      "year": "2021"
+    },
+    {
+      "_disposition": "kept",
+      "_source_file": "materials/literature.csv",
+      "_source_id": "materials/literature.csv::row=5",
+      "_source_row": "5",
+      "context": "ctxA",
+      "doi": "10.0000/gamma",
+      "notes": "missing observation",
+      "record_id": "r5",
+      "temp_C": "",
+      "temp_K": "",
+      "title": "Gamma study",
+      "year": "2022"
+    }
+  ],
+  "counterexamples": "counterexamples.jsonl",
+  "example_label": "SYNTHETIC_EXAMPLE_NOT_OFFICIAL_CASE",
+  "generated_candidate": false,
+  "official_submission_reference": null,
+  "raw_row_count": 5,
+  "result": "result.json",
+  "review_queue": [
+    {
+      "blocking_impact": "yes",
+      "change_id": "CHG000005",
+      "check": "dedup_context_non_interference",
+      "counterexample_id": "",
+      "minimal_audit_sample": "yes",
+      "priority": 1,
+      "reason": "Full normalized row and configured key/context are identical.",
+      "recommended_action": "Human source-context review; automated invariants do not settle scientific identity or conflict.",
+      "review_id": "RQ000001",
+      "severity": "HIGH",
+      "source_locator": "materials/literature.csv::row=2"
+    },
+    {
+      "blocking_impact": "no",
+      "change_id": "CHG000002",
+      "check": "unit_conversion_recomputation",
+      "counterexample_id": "",
+      "minimal_audit_sample": "yes",
+      "priority": 2,
+      "reason": "Recomputable declared conversion; not observational imputation.",
+      "recommended_action": "Human source-context review; automated invariants do not settle scientific identity or conflict.",
+      "review_id": "RQ000002",
+      "severity": "MEDIUM",
+      "source_locator": "materials/literature.csv::row=1"
+    },
+    {
+      "blocking_impact": "no",
+      "change_id": "CHG000004",
+      "check": "unit_conversion_recomputation",
+      "counterexample_id": "",
+      "minimal_audit_sample": "no",
+      "priority": 3,
+      "reason": "Recomputable declared conversion; not observational imputation.",
+      "recommended_action": "Human source-context review; automated invariants do not settle scientific identity or conflict.",
+      "review_id": "RQ000003",
+      "severity": "MEDIUM",
+      "source_locator": "materials/literature.csv::row=2"
+    },
+    {
+      "blocking_impact": "no",
+      "change_id": "CHG000007",
+      "check": "unit_conversion_recomputation",
+      "counterexample_id": "",
+      "minimal_audit_sample": "no",
+      "priority": 4,
+      "reason": "Recomputable declared conversion; not observational imputation.",
+      "recommended_action": "Human source-context review; automated invariants do not settle scientific identity or conflict.",
+      "review_id": "RQ000004",
+      "severity": "MEDIUM",
+      "source_locator": "materials/literature.csv::row=3"
+    }
+  ],
+  "sources": [
+    {
+      "kind": "case/task",
+      "path": "case.json",
+      "sha256": "dd4c6225027a443466a685be7af898a1c263dffea4182d8c297465b320ecef46"
+    },
+    {
+      "kind": "material",
+      "path": "materials/literature.csv",
+      "rows": 5,
+      "sha256": "113214a89215ee9cdf4888a1033067fa3ccfdb5ff111a5d2b2a100d218352e8e"
+    }
+  ],
+  "status": "partial",
+  "uncertainty": [
+    "Metamorphic and invariant checks establish process properties only; scientific conflicts require human/domain review.",
+    "Only declared unit conversions are recomputed; undeclared unit semantics remain uncertain.",
+    "Unknown output-contract fields are null and listed in unresolved_output_contract_fields.",
+    "Verification passed, but blocking human review (for example exact-context duplicate exclusion) keeps delivery status partial."
+  ],
+  "unresolved_output_contract_fields": [
+    "official_submission_reference"
+  ],
+  "verification": "verification.json",
+  "verification_status": "pass"
+}

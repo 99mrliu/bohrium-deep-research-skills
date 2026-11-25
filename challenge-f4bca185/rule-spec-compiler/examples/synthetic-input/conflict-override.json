@@ -1,0 +1,12 @@
+{
+  "artifact_marker": "SYNTHETIC_EXAMPLE_NOT_OFFICIAL_CASE",
+  "rules": [
+    {
+      "id": "SYNTHETIC_EXAMPLE_NOT_OFFICIAL_CASE-conflicting-numeric-convention",
+      "type": "parse_number",
+      "field": "yield",
+      "decimal": ",",
+      "thousands": "."
+    }
+  ]
+}

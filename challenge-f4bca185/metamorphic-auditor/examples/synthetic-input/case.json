@@ -1,0 +1,34 @@
+{
+  "case_id": "SYNTHETIC_EXAMPLE_NOT_OFFICIAL_CASE",
+  "example_label": "SYNTHETIC_EXAMPLE_NOT_OFFICIAL_CASE",
+  "title": "Synthetic process-control example; not an official competition case",
+  "unit_conversions": [
+    {
+      "id": "C_TO_K",
+      "source_field": "temp_C",
+      "target_field": "temp_K",
+      "from_unit": "degree Celsius",
+      "to_unit": "kelvin",
+      "factor": "1",
+      "offset": "273.15"
+    }
+  ],
+  "dedup": {
+    "enabled": true,
+    "keys": ["record_id", "doi"],
+    "context_keys": ["context"]
+  },
+  "output_contract": {
+    "cleaned_csv": {"type": "string", "description": "Tabular candidate"},
+    "cleaned_data": {"type": "array", "description": "Actual cleaned rows, not merely a path"},
+    "verification": {"type": "object"},
+    "counterexamples": {"type": "array"},
+    "changes": {"type": "array"},
+    "change_log": {"type": "array"},
+    "review_queue": {"type": "array"},
+    "artifacts": {"type": "object"},
+    "audit": {"type": "string"},
+    "result": {"type": "object"},
+    "official_submission_reference": {"type": "string", "description": "Deliberately unknown to demonstrate null plus unresolved"}
+  }
+}

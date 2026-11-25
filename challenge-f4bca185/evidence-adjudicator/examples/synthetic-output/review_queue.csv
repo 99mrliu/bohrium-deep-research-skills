@@ -1,0 +1,4 @@
+record_id,field_path,observed_value,state,reason,claim_id,evidence_refs,example_marker
+R000001,/melting_point_K,181,source_conflict,Independent evidence contains a different value for the identified field.,E000003,"[{""column"":184,""end"":237,""exact_substring"":""181"",""kind"":""text_substring"",""line"":3,""source"":""materials/method.md"",""start"":234},{""column"":""melting_point_K"",""exact_substring"":""182"",""kind"":""csv_cell"",""row_number"":2,""source"":""materials/reference.csv""}]",SYNTHETIC_EXAMPLE_NOT_OFFICIAL_CASE
+R000001,/unknown_unit,,unverifiable,The extracted value is missing or null.,E000006,"[{""column"":""unknown_unit"",""exact_substring"":""not reported"",""kind"":""csv_cell"",""row_number"":2,""source"":""materials/reference.csv""}]",SYNTHETIC_EXAMPLE_NOT_OFFICIAL_CASE
+R000001,/unsupported_label,speculative-blue,extractor_only,No independent evidence supports this non-empty extractor value.,E000007,[],SYNTHETIC_EXAMPLE_NOT_OFFICIAL_CASE

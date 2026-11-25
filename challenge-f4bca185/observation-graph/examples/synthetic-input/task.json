@@ -1,0 +1,15 @@
+{
+  "case_id": "SYNTHETIC_EXAMPLE_NOT_OFFICIAL_CASE",
+  "example_marker": "SYNTHETIC_EXAMPLE_NOT_OFFICIAL_CASE",
+  "instruction": "Build the observation identity graph, certify only exact transport duplicates, and retain every input row.",
+  "output_contract": {
+    "cleaned_csv": {"path": "cleaned.csv", "required": true},
+    "cleaned_json": {"path": "cleaned.json", "required": true},
+    "observation_graph": {"path": "observation_graph.jsonl", "required": true},
+    "duplicate_decisions": {"path": "duplicate_decisions.jsonl", "required": true},
+    "changes": {"path": "changes.jsonl", "required": true},
+    "review_queue": {"path": "review_queue.csv", "required": true},
+    "audit": {"path": "audit.md", "required": true},
+    "result": {"path": "result.json", "required": true}
+  }
+}

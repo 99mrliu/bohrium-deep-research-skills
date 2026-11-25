@@ -1,0 +1,35 @@
+{
+  "example_marker": "SYNTHETIC_EXAMPLE_NOT_OFFICIAL_CASE",
+  "metadata": {
+    "case_id": "SYNTHETIC-EVIDENCE-001"
+  },
+  "normalization": {
+    "apply": true,
+    "trim_whitespace": true,
+    "collapse_whitespace": true,
+    "unicode_nfkc": false,
+    "casefold": false
+  },
+  "output_contract": {
+    "fields": [
+      {"name": "case_id", "type": "string", "required": true},
+      {"name": "status", "type": "string", "required": true},
+      {"name": "cleaned_csv", "type": "string", "required": true},
+      {"name": "evidence_jsonl", "type": "string", "required": true},
+      {"name": "review_queue", "type": "array", "required": true},
+      {"name": "unresolved_fields", "type": "array"},
+      {"name": "official_score", "type": "number", "required": true},
+      {
+        "name": "summary",
+        "type": "object",
+        "fields": [
+          {"name": "total_claims", "type": "integer"},
+          {"name": "source_conflict", "type": "integer"}
+        ],
+        "required": ["total_claims", "source_conflict"]
+      }
+    ],
+    "required": ["case_id", "status", "cleaned_csv", "evidence_jsonl", "review_queue", "official_score", "summary"]
+  },
+  "adjudication_note": "SYNTHETIC_EXAMPLE_NOT_OFFICIAL_CASE. Use materials only; official_score is deliberately undefined and must remain null."
+}

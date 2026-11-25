@@ -1,0 +1,3 @@
+artifact_marker,review_id,code,severity,status,row_key,field,rule_ids,message,source,pointer
+SYNTHETIC_EXAMPLE_NOT_OFFICIAL_CASE,Q-SYNTHETIC-MARKER,EXAMPLE_MARKER,info,closed,,,,SYNTHETIC_EXAMPLE_NOT_OFFICIAL_CASE,,
+SYNTHETIC_EXAMPLE_NOT_OFFICIAL_CASE,Q-23705b588e8f47bc,RULE_CONFLICT,error,open,,yield,R-parse-number-ab0709dfd899;R-parse-number-fd9a32485e88,incompatible rules target yield; all are held,task.md,#L13/rules/0

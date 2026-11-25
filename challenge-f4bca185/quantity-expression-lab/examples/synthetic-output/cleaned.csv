@@ -1,0 +1,12 @@
+row_id,example_label,duration_min,temperature_c,rate,interval_c,pressure,energy_unc,mystery,missing_energy,negative_interval_c,duration_ms,energy_grouped,__row_id,__source,__quantity_review
+nested-1,SYNTHETIC_EXAMPLE_NOT_OFFICIAL_CASE,120 s,,,,,,,,,,,nested-1,materials.json,
+r1,SYNTHETIC_EXAMPLE_NOT_OFFICIAL_CASE,,298.15 K,,,,,,,,,,r1,measurements.csv,
+r2,SYNTHETIC_EXAMPLE_NOT_OFFICIAL_CASE,,,16.6667 µmol L^-1 s^-1,,,,,,,,,r2,measurements.csv,
+r3,SYNTHETIC_EXAMPLE_NOT_OFFICIAL_CASE,,,,283.15–293.15 K,,,,,,,,r3,measurements.csv,
+r4,SYNTHETIC_EXAMPLE_NOT_OFFICIAL_CASE,,,,,101.325 kPa,,,,,,,r4,measurements.csv,
+r5,SYNTHETIC_EXAMPLE_NOT_OFFICIAL_CASE,,,,,,2500±50 J,,,,,,r5,measurements.csv,
+r6,SYNTHETIC_EXAMPLE_NOT_OFFICIAL_CASE,,,,,,,12 furlong,,,,,r6,measurements.csv,unknown_unit
+r7,SYNTHETIC_EXAMPLE_NOT_OFFICIAL_CASE,,,,,,,,,,,,r7,measurements.csv,
+r8,SYNTHETIC_EXAMPLE_NOT_OFFICIAL_CASE,,,,,,,,,268.15–278.15 K,,,r8,measurements.csv,
+r9,SYNTHETIC_EXAMPLE_NOT_OFFICIAL_CASE,,,,,,,,,,≈1.2 s,,r9,measurements.csv,
+r10,SYNTHETIC_EXAMPLE_NOT_OFFICIAL_CASE,,,,,,,,,,,1234500 J,r10,measurements.csv,

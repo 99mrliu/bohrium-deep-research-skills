@@ -1,0 +1,42 @@
+SYNTHETIC_EXAMPLE_NOT_OFFICIAL_CASE
+== standard-library unit self-tests ==
+test_explicit_decimal_and_thousands (__main__.CompilerTests.test_explicit_decimal_and_thousands) ... ok
+test_identical_rules_merge_provenance (__main__.CompilerTests.test_identical_rules_merge_provenance) ... ok
+test_json_patch_and_invalid_operation (__main__.CompilerTests.test_json_patch_and_invalid_operation) ... ok
+test_json_record_wrappers (__main__.CompilerTests.test_json_record_wrappers) ... ok
+test_nonfinite_json_is_rejected (__main__.CompilerTests.test_nonfinite_json_is_rejected) ... ok
+test_output_contract_shapes (__main__.CompilerTests.test_output_contract_shapes) ... ok
+test_percent_requires_declaration (__main__.CompilerTests.test_percent_requires_declaration) ... ok
+test_plan_digest_is_canonical (__main__.CompilerTests.test_plan_digest_is_canonical) ... ok
+test_range_is_canonical_and_never_swapped (__main__.CompilerTests.test_range_is_canonical_and_never_swapped) ... ok
+test_rule_conflicts_hold_every_member (__main__.CompilerTests.test_rule_conflicts_hold_every_member) ... ok
+test_unit_conversion_is_declared_and_dimensional (__main__.CompilerTests.test_unit_conversion_is_declared_and_dimensional) ... ok
+
+----------------------------------------------------------------------
+Ran 11 tests in 0.001s
+
+OK
+== first full success run ==
+{"case_id":"SYNTHETIC_EXAMPLE_NOT_OFFICIAL_CASE","changes":21,"plan_sha256":"0d4c5069ec2cb93d34ebc412d23f205d81032518d74cc89fbf2a073345b84e3a","review_items":0,"rows":4,"status":"success"}
+== independent deterministic rerun ==
+{"case_id":"SYNTHETIC_EXAMPLE_NOT_OFFICIAL_CASE","changes":21,"plan_sha256":"0d4c5069ec2cb93d34ebc412d23f205d81032518d74cc89fbf2a073345b84e3a","review_items":0,"rows":4,"status":"success"}
+DETERMINISTIC audit.md 1d4ddde0d1aa6c4013d418b4a3024a59fb2f5b7595eaa69f61a376113121d733
+DETERMINISTIC changes.jsonl e655e295ab9612eaf4bcc82a1eba0409eed6126e595a658a6eb5a74e6e9ef4eb
+DETERMINISTIC cleaned.csv ec4261cef19446004c310693e39fe75204ac5311cb5fc47fe75846b658d60d2f
+DETERMINISTIC cleaned.json ef401a2b3eb433f8d7e15740b544ac9675997952658d0e49795d957d8b38c504
+DETERMINISTIC execution_plan.json d3e83a7e349a85c3a8f364efb5f16b7d1d35b2e277767e4e7fa1a99e350b3317
+DETERMINISTIC result.json 4eadb26ec5e84d8566faca0362825aa53cdd18014fc020aaa4024f6334328a2e
+DETERMINISTIC review_queue.csv 3bfe74085ecc7c394ecf893b6f6dc16283c4ec3d0fdfd9248d2f877960fa32c6
+DETERMINISTIC statistics.csv 697562619ba858fcf65c1b7ce569c6708cb07483df31ea46e2c1cd97c649f050
+DETERMINISM_OK 8 artifacts
+== incompatible-rule partial run (expected exit 0) ==
+{"case_id":"SYNTHETIC_EXAMPLE_NOT_OFFICIAL_CASE","changes":19,"plan_sha256":"c37d8ec6fdc2fb5146c7fcef923bed9da365550b60978bbae6a220c3c93ade94","review_items":1,"rows":4,"status":"partial"}
+CONFLICT_EXIT=0
+== unresolved required contract field (expected exit 0 and null) ==
+{"case_id":"SYNTHETIC_EXAMPLE_NOT_OFFICIAL_CASE","changes":21,"plan_sha256":"adc631a5fcce0f8c5fc36a865e095dec39ed4ee2e9465bc07a51421eee808c41","review_items":0,"rows":4,"status":"partial"}
+UNRESOLVED_EXIT=0
+== no-data conflict input-error run (expected exit 2) ==
+{"case_id":"SYNTHETIC_EXAMPLE_NOT_OFFICIAL_CASE","changes":0,"plan_sha256":"c37d8ec6fdc2fb5146c7fcef923bed9da365550b60978bbae6a220c3c93ade94","review_items":2,"rows":0,"status":"input_error"}
+FAILURE_EXIT=2
+INTEGRATION_ASSERTIONS_OK success/conflict-hold/failure/contract-null/plan-digest/markers/finite-values
+ALL_SYNTHETIC_CHECKS_PASSED
