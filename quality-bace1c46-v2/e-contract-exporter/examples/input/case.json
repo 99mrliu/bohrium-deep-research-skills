@@ -1,0 +1,11 @@
+{
+  "case_id": "SYNTH-DEMO-001",
+  "task": "（合成示例）评估两条虚构文献记录对某虚构命题的支持强度",
+  "output_contract": {
+    "fields": ["summary", "items", "evidence", "conclusion"]
+  },
+  "items": [
+    {"id": "P1", "title": "虚构论文甲：关于合成化合物 X 的体外活性观察"},
+    {"id": "P2", "title": "虚构论文乙：合成化合物 X 的重复实验失败报告"}
+  ]
+}

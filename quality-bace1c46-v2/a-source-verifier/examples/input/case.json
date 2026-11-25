@@ -1,0 +1,16 @@
+{
+  "case_id": "synthetic-demo-001",
+  "note": "SYNTHETIC DEMO — 全部为虚构材料，仅用于演示 a-source-verifier 流水线，非正式案例。",
+  "task": "对输入材料做来源真实性核验，输出 provenance ledger。",
+  "documents": [
+    "papers/alpha_paper.txt",
+    "papers/beta_paper.txt",
+    "snapshots/crossref_alpha.json",
+    "snapshots/europepmc_beta.json"
+  ],
+  "output_contract": {
+    "overall_quality_grade": "A|B|C|D，对案例文献质量的总体评级",
+    "per_source_trust": "每个来源的可信度列表",
+    "key_findings": "主要发现列表"
+  }
+}

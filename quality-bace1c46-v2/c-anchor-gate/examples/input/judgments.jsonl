@@ -1,0 +1,3 @@
+{"doc_id": "synthetic_paper", "claim_id": "C1", "judgment": "论文报告了合成半衰期 42.5 分钟，定位正确，应判 verified。", "quote": "a synthetic half-life of 42.5 minutes for QZ-117 at 25 degrees Celsius", "locator": "p1.¶4", "rationale": "摘录逐字复制自第 1 页第 4 段。"}
+{"doc_id": "synthetic_paper", "claim_id": "C2", "judgment": "论文给出速率常数 0.0163/min，但 locator 故意写成第 1 页，应被门控修复为第 2 页。", "quote": "The observed synthetic rate constant was 0.0163 per minute", "locator": "p1.¶2", "rationale": "摘录真实存在于第 2 页 Results 段，locator 标错，预期 repaired_locator。"}
+{"doc_id": "synthetic_paper", "claim_id": "C3", "judgment": "杜撰的声明：声称 QZ-117 在人体试验中达到 99% 抑制率，原文无此内容，应判 abstain_unverifiable。", "quote": "QZ-117 showed a 99% inhibition rate in human trials", "locator": "p2.¶2", "rationale": "该摘录为编造内容，用于测试门控拦截。"}

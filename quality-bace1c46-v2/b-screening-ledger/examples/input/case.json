@@ -1,0 +1,62 @@
+{
+  "case_id": "SYNTH-BACE1-001",
+  "question": "BACE1 inhibitors in early Alzheimer disease: efficacy evidence from randomized controlled trials (SYNTHETIC DEMO DATA, not real publications)",
+  "screening_brief": {
+    "include": "Randomized controlled trials of BACE1 inhibitors in patients with early Alzheimer disease, published 2015-2026, English.",
+    "exclude": "Narrative reviews, observational designs, in-vitro-only studies without clinical population, publications before 2015."
+  },
+  "output_contract": {
+    "required_fields": ["case_id", "status", "candidate_set", "evidence_records", "flow", "omissions", "uncertainties", "change_records"],
+    "notes": "result.json must mirror every declared field."
+  },
+  "snapshots": {
+    "records": [
+      {
+        "title": "LX-2201, an oral BACE1 inhibitor, in early Alzheimer disease: a 24-month randomized trial",
+        "authors": ["Synthetic, A.", "Demo, B."],
+        "year": 2022,
+        "doi": "10.0000/synth.0001",
+        "source": "crossref_snapshot",
+        "abstract": "In a 24-month randomized double-blind placebo-controlled trial, the oral BACE1 inhibitor LX-2201 reduced brain amyloid burden by 61 percent in patients with early Alzheimer disease, though cognitive decline was not significantly slowed."
+      },
+      {
+        "title": "The amyloid cascade hypothesis: three decades of debate",
+        "authors": ["Fabricated, C."],
+        "year": 2019,
+        "doi": "10.0000/synth.0002",
+        "source": "crossref_snapshot",
+        "abstract": "This narrative review surveys three decades of debate over the amyloid cascade hypothesis and its implications for therapeutic development in neurodegenerative disease."
+      },
+      {
+        "title": "The amyloid cascade hypothesis: three decades of debate",
+        "authors": ["Fabricated, C."],
+        "year": 2019,
+        "source": "europepmc_snapshot",
+        "abstract": "This narrative review surveys three decades of debate over the amyloid cascade hypothesis and its implications for therapeutic development in neurodegenerative disease."
+      },
+      {
+        "title": "CSF BACE1 activity and conversion to dementia: a five-year memory-clinic cohort",
+        "authors": ["Mock, D.", "Sample, E."],
+        "year": 2021,
+        "doi": "10.0000/synth.0004",
+        "source": "crossref_snapshot",
+        "abstract": "In a prospective observational cohort of 412 memory-clinic patients, baseline CSF BACE1 activity predicted conversion to dementia over five years of follow-up."
+      },
+      {
+        "title": "Characterization of secretase activity in post-mortem human brain",
+        "authors": ["Vintage, F."],
+        "year": 1998,
+        "source": "import_state_list",
+        "abstract": "Secretase activity in post-mortem human brain was characterized using chromogenic peptide substrates, suggesting a membrane-bound aspartyl protease."
+      },
+      {
+        "title": "Steady-state kinetics of a recombinant BACE1 ortholog",
+        "authors": ["Invitro, G."],
+        "year": 2020,
+        "doi": "10.0000/synth.0006",
+        "source": "europepmc_snapshot",
+        "abstract": "Recombinant BACE1 ortholog from an unspecified species was expressed and steady-state kinetic parameters were determined for a panel of fluorogenic substrates."
+      }
+    ]
+  }
+}

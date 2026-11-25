@@ -1,0 +1,19 @@
+{
+  "case_id": "SYNTH-DEMO-001",
+  "status": "partial",
+  "summary": "两条虚构记录结论相互冲突，总体支持强度：TBD",
+  "items": [
+    {"id": "P1", "conclusion": "弱支持", "confidence": "low"},
+    {"id": "P2", "conclusion": "反向证据", "confidence": "medium"}
+  ],
+  "evidence": [
+    {"item_id": "P1", "quote": "化合物 X 在 10 uM 下显示抑制迹象（合成数据）",
+     "source": "虚构论文甲", "locator": "第 3 页 表 1"},
+    {"item_id": "P2", "quote": "三次独立重复均未复现抑制效果（合成数据）",
+     "source": "虚构论文乙", "locator": "第 2 页 图 2"}
+  ],
+  "uncertainties": [
+    "两篇记录均为合成数据，无法核实实验条件是否一致"
+  ],
+  "change_records": []
+}

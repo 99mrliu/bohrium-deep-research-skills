@@ -1,0 +1,164 @@
+{
+  "scale_version": "1.0.0",
+  "scale_id": "d-grade-engine-scale",
+  "language": "zh",
+  "description": "文献研究质量评估分级量表（机器可读版）：5 个维度、4 个判定等级、3 个域、4 档总评。所有聚合规则以显式阈值表达，按顺序求值、首个命中生效。本文件与 references/grading_scale.md 必须保持一致。",
+  "levels": [
+    {
+      "id": "low_concern",
+      "severity": 0,
+      "name_zh": "低担忧",
+      "meaning_zh": "该维度方法学处理充分，未见实质性缺陷。"
+    },
+    {
+      "id": "some_concern",
+      "severity": 1,
+      "name_zh": "部分担忧",
+      "name_en": "some concerns",
+      "meaning_zh": "存在方法学疑点或信息不完整，但不足以判定为高风险。"
+    },
+    {
+      "id": "high_concern",
+      "severity": 2,
+      "name_zh": "高担忧",
+      "name_en": "high concern",
+      "meaning_zh": "存在明确且可能实质影响结论的方法学缺陷。"
+    },
+    {
+      "id": "insufficient_evidence",
+      "severity": 3,
+      "name_zh": "证据不足",
+      "meaning_zh": "文中信息不足以支持任何担忧等级判定；按弃权处理，且弃权沿聚合链向上传播，绝不参与平均。"
+    }
+  ],
+  "dimensions": [
+    {
+      "id": "design_adequacy",
+      "name_zh": "研究设计充分性",
+      "domain": "internal_validity",
+      "core": true
+    },
+    {
+      "id": "sample_sampling",
+      "name_zh": "样本与抽样",
+      "domain": "internal_validity",
+      "core": true
+    },
+    {
+      "id": "measurement_outcomes",
+      "name_zh": "测量与结局",
+      "domain": "inference_validity",
+      "core": true
+    },
+    {
+      "id": "statistical_analysis",
+      "name_zh": "统计分析",
+      "domain": "inference_validity",
+      "core": true
+    },
+    {
+      "id": "reporting_completeness",
+      "name_zh": "报告完整性",
+      "domain": "transparency",
+      "core": false
+    }
+  ],
+  "domains": [
+    {
+      "id": "internal_validity",
+      "name_zh": "内部效度",
+      "core": true,
+      "members": ["design_adequacy", "sample_sampling"]
+    },
+    {
+      "id": "inference_validity",
+      "name_zh": "测量与推断效度",
+      "core": true,
+      "members": ["measurement_outcomes", "statistical_analysis"]
+    },
+    {
+      "id": "transparency",
+      "name_zh": "透明性",
+      "core": false,
+      "members": ["reporting_completeness"]
+    }
+  ],
+  "domain_rules": [
+    {
+      "id": "R-DOM-01",
+      "if": {"any_member_level": "high_concern"},
+      "then": "high_concern",
+      "description_zh": "域内任一维度为高担忧 → 域级 = 高担忧"
+    },
+    {
+      "id": "R-DOM-02",
+      "if": {"any_member_level": "insufficient_evidence"},
+      "then": "insufficient_evidence",
+      "description_zh": "域内任一维度证据不足 → 域级 = 证据不足（弃权向域级传播）"
+    },
+    {
+      "id": "R-DOM-03",
+      "if": {"any_member_level": "some_concern"},
+      "then": "some_concern",
+      "description_zh": "域内任一维度为部分担忧（且无高担忧、无弃权）→ 域级 = 部分担忧"
+    },
+    {
+      "id": "R-DOM-04",
+      "if": {"all_member_level": "low_concern"},
+      "then": "low_concern",
+      "description_zh": "域内全部维度为低担忧 → 域级 = 低担忧"
+    }
+  ],
+  "overall_rules": [
+    {
+      "id": "R-OV-01",
+      "if": {"min_count_dimension_level": {"level": "insufficient_evidence", "min": 3}},
+      "then": "insufficient_evidence",
+      "description_zh": "5 个维度中 ≥3 个证据不足 → 总评 = 证据不足（弃权传播，不被平均稀释）"
+    },
+    {
+      "id": "R-OV-02",
+      "if": {"min_count_domain_level": {"level": "insufficient_evidence", "min": 2, "domains": "core"}},
+      "then": "insufficient_evidence",
+      "description_zh": "两个核心域均为证据不足 → 总评 = 证据不足"
+    },
+    {
+      "id": "R-OV-03",
+      "if": {"any_domain_level": "high_concern", "domains": "core"},
+      "then": "high",
+      "description_zh": "任一核心域为高担忧 → 总评 = 高（高风险）"
+    },
+    {
+      "id": "R-OV-04",
+      "if": {"any_domain_level": "high_concern", "domains": "non_core"},
+      "then": "moderate",
+      "description_zh": "仅非核心域（透明性）为高担忧 → 总评 = 中"
+    },
+    {
+      "id": "R-OV-05",
+      "if": {"any_domain_level": "some_concern", "domains": "all"},
+      "then": "moderate",
+      "description_zh": "任一域为部分担忧（且无核心域高担忧）→ 总评 = 中"
+    },
+    {
+      "id": "R-OV-06",
+      "if": {"any_domain_level": "insufficient_evidence", "domains": "all"},
+      "then": "moderate",
+      "description_zh": "存在证据不足的域但未达 R-OV-01/02 阈值 → 总评 = 中（保留弃权信号，标注不确定性）"
+    },
+    {
+      "id": "R-OV-07",
+      "if": {"all_domain_level": "low_concern", "domains": "all"},
+      "then": "low",
+      "description_zh": "全部域均为低担忧 → 总评 = 低"
+    }
+  ],
+  "fallback_rules": {
+    "domain": {"id": "R-DOM-FB", "then": "insufficient_evidence", "description_zh": "域内无有效判定或组合未覆盖 → 证据不足（防御性兜底）"},
+    "overall": {"id": "R-OV-FB", "then": "insufficient_evidence", "description_zh": "无任何总评规则命中 → 证据不足（防御性兜底）"}
+  },
+  "abstain_policy": {
+    "principle_zh": "insufficient_evidence 是弃权而非中性分：它沿 维度→域→总评 的聚合链向上传播，绝不参与数值平均，也不得被其他维度的低担忧所抵消。",
+    "propagation_chain": ["R-DOM-02", "R-OV-01", "R-OV-02", "R-OV-06"]
+  }
+}

@@ -1,0 +1,19 @@
+{
+  "case_id": "SYNTH-ANCHOR-001",
+  "task": "对合成示例论文给出质量判断，每条判断必须带逐字摘录与 p<页>.¶<段> 定位。",
+  "output_contract": {
+    "overall_quality_score": "number 0-5",
+    "verdict_summary": "string"
+  },
+  "quality_assessment": {
+    "overall_quality_score": 3.5,
+    "verdict_summary": "synthetic demo case; two claims anchored, one abstained"
+  },
+  "documents": [
+    {
+      "id": "synthetic_paper",
+      "title": "Synthetic Study of the Fictional Enzyme QZ-117 (fully synthetic test data)",
+      "path": "synthetic_paper.txt"
+    }
+  ]
+}
