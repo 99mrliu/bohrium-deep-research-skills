@@ -1,0 +1,48 @@
+{
+  "inventory_algorithm": "SHA-256 over actual input bytes; duplicate_of is the first path with the same digest",
+  "input_control_files_excluded": [
+    "case.json",
+    "claims-to-verify.json",
+    "task.md"
+  ],
+  "files": [
+    {
+      "file_id": "documents/paper_v1.txt",
+      "sha256": "80e079c90a61a5d98284cecb12f6c5578e78a8841b140cb6ed64ba6bf533a576",
+      "size_bytes": 344,
+      "text_readable": true,
+      "text_error": null,
+      "duplicate_of": null
+    },
+    {
+      "file_id": "documents/paper_v1_duplicate.txt",
+      "sha256": "80e079c90a61a5d98284cecb12f6c5578e78a8841b140cb6ed64ba6bf533a576",
+      "size_bytes": 344,
+      "text_readable": true,
+      "text_error": null,
+      "duplicate_of": "documents/paper_v1.txt"
+    },
+    {
+      "file_id": "documents/paper_v2.txt",
+      "sha256": "01f5c1c4663665985d62741d5a9a3d145f906690d732eb9ac6ccbc584ef8e442",
+      "size_bytes": 375,
+      "text_readable": true,
+      "text_error": null,
+      "duplicate_of": null
+    },
+    {
+      "file_id": "documents/supplement_v2.txt",
+      "sha256": "d070f4c83fda894eeb18f4232e3c87c06207308ef58cc1599e03e04fe98cdf74",
+      "size_bytes": 458,
+      "text_readable": true,
+      "text_error": null,
+      "duplicate_of": null
+    }
+  ],
+  "file_count": 4,
+  "duplicate_file_count": 1,
+  "case_id": "SYNTHETIC-minimal-version-reconciliation",
+  "case_labels": [
+    "SYNTHETIC"
+  ]
+}

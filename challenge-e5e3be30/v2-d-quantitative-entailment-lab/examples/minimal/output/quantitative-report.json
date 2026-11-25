@@ -1,0 +1,400 @@
+{
+  "schema_version": "1.0",
+  "case_id": "SYNTHETIC-QEL-001",
+  "synthetic": true,
+  "data_label": "SYNTHETIC",
+  "status": "success",
+  "role": "quantitative_entailment_evidence_only",
+  "policy": {
+    "verdicts": "Agent-only: supported/partially_supported/contradicted/insufficient_evidence",
+    "topic_relevance_is_not_support": true,
+    "unreported_is_not_contradiction": true,
+    "conflicts_are_retained_in_parallel": true,
+    "statistical_non_significance_is_not_zero_effect": true,
+    "no_raw_data_no_fabricated_exact_p_value": true
+  },
+  "confidence": 0.95,
+  "observations": [
+    {
+      "id": "obs_treatment",
+      "synthetic": true,
+      "role": "reported",
+      "kind": "proportion",
+      "events": 70,
+      "n": 100,
+      "unit": "participants",
+      "source_id": "paper",
+      "location": {
+        "section": "Results",
+        "paragraph": 1
+      },
+      "quote": "Treatment: 70 successes among 100 participants."
+    },
+    {
+      "id": "obs_control",
+      "synthetic": true,
+      "role": "reported",
+      "kind": "proportion",
+      "events": 60,
+      "n": 120,
+      "unit": "participants",
+      "source_id": "paper",
+      "location": {
+        "section": "Results",
+        "paragraph": 1
+      },
+      "quote": "Control: 60 successes among 120 participants.",
+      "reported_display": {
+        "value": 60.0,
+        "unit": "percent",
+        "quote": "displayed control rate: 60%."
+      }
+    },
+    {
+      "id": "obs_display_treatment",
+      "synthetic": true,
+      "role": "reported",
+      "kind": "proportion",
+      "events": 70,
+      "n": 100,
+      "unit": "participants",
+      "source_id": "paper",
+      "location": {
+        "section": "Results",
+        "paragraph": 2
+      },
+      "quote": "displayed treatment rate: 70%.",
+      "reported_display": {
+        "value": 70.0,
+        "unit": "percent",
+        "quote": "displayed treatment rate: 70%."
+      }
+    },
+    {
+      "id": "obs_latency",
+      "synthetic": true,
+      "role": "reported",
+      "kind": "mean",
+      "mean": 2500.0,
+      "sd": 300.0,
+      "n": 12,
+      "unit": "ms",
+      "source_id": "paper",
+      "location": {
+        "section": "Results",
+        "paragraph": 4
+      },
+      "quote": "Mean completion time was 2500 ms (SD 300 ms, n 12)."
+    }
+  ],
+  "derived": [
+    {
+      "id": "derived_C1_RAW_PP_1",
+      "claim_id": "C1_RAW_PP",
+      "role": "derived",
+      "data_label": "SYNTHETIC",
+      "metric": "percentage_point_difference",
+      "basis": "raw_counts",
+      "source_ids": [
+        "obs_treatment",
+        "obs_control"
+      ],
+      "formula": "100*(p1-p0)",
+      "substitution": "100*(70/100 - 60/120)",
+      "value": 19.999999999999996,
+      "unit": "percentage_point",
+      "display_percentage": null,
+      "warnings": [],
+      "verdict": null,
+      "verdict_policy": "Agent semantic adjudication required; numeric matching alone is not entailment.",
+      "comparison": {
+        "target": 20.0,
+        "target_unit": "percentage_point",
+        "calculated_minus_target": -3.552713678800501e-15,
+        "tolerance": {
+          "absolute": 1e-09,
+          "relative": 0.0,
+          "rule": "abs(calculated-target) <= max(absolute, relative*abs(target))",
+          "maximum_allowed_absolute_difference": 1e-09
+        },
+        "within_tolerance": true,
+        "entailment_comparison": "within_tolerance"
+      },
+      "statistical_test_id": "ztest_obs_treatment_obs_control"
+    },
+    {
+      "id": "derived_C1_RAW_PP_2",
+      "claim_id": "C1_RAW_PP",
+      "role": "derived",
+      "data_label": "SYNTHETIC",
+      "metric": "relative_change",
+      "basis": "raw_counts",
+      "source_ids": [
+        "obs_treatment",
+        "obs_control"
+      ],
+      "formula": "(p1-p0)/p0",
+      "substitution": "(70/100 - 60/120)/(60/120)",
+      "value": 0.3999999999999999,
+      "unit": "relative_fraction",
+      "display_percentage": 39.99999999999999,
+      "warnings": [],
+      "verdict": null,
+      "verdict_policy": "Agent semantic adjudication required; numeric matching alone is not entailment.",
+      "comparison": {
+        "target": 0.4,
+        "target_unit": "relative_fraction",
+        "calculated_minus_target": -1.1102230246251565e-16,
+        "tolerance": {
+          "absolute": 1e-09,
+          "relative": 0.0,
+          "rule": "abs(calculated-target) <= max(absolute, relative*abs(target))",
+          "maximum_allowed_absolute_difference": 1e-09
+        },
+        "within_tolerance": true,
+        "entailment_comparison": "within_tolerance"
+      },
+      "statistical_test_id": "ztest_obs_treatment_obs_control"
+    },
+    {
+      "id": "derived_C1_RAW_PP_3",
+      "claim_id": "C1_RAW_PP",
+      "role": "derived",
+      "data_label": "SYNTHETIC",
+      "metric": "proportion_ratio",
+      "basis": "raw_counts",
+      "source_ids": [
+        "obs_treatment",
+        "obs_control"
+      ],
+      "formula": "p1/p0",
+      "substitution": "(70/100)/(60/120)",
+      "value": 1.4,
+      "unit": "ratio",
+      "display_percentage": null,
+      "warnings": [],
+      "verdict": null,
+      "verdict_policy": "Agent semantic adjudication required; numeric matching alone is not entailment.",
+      "comparison": {
+        "target": 1.4,
+        "target_unit": "ratio",
+        "calculated_minus_target": 0.0,
+        "tolerance": {
+          "absolute": 1e-09,
+          "relative": 0.0,
+          "rule": "abs(calculated-target) <= max(absolute, relative*abs(target))",
+          "maximum_allowed_absolute_difference": 1e-09
+        },
+        "within_tolerance": true,
+        "entailment_comparison": "within_tolerance"
+      },
+      "statistical_test_id": "ztest_obs_treatment_obs_control"
+    },
+    {
+      "id": "derived_C2_DISPLAY_RELATIVE_1",
+      "claim_id": "C2_DISPLAY_RELATIVE",
+      "role": "derived",
+      "data_label": "SYNTHETIC",
+      "metric": "percentage_point_difference",
+      "basis": "reported_display",
+      "source_ids": [
+        "obs_display_treatment.reported_display",
+        "obs_control.reported_display"
+      ],
+      "formula": "100*(p1-p0)",
+      "substitution": "100*(70% - 60%)",
+      "value": 9.999999999999998,
+      "unit": "percentage_point",
+      "display_percentage": null,
+      "warnings": [],
+      "verdict": null,
+      "verdict_policy": "Agent semantic adjudication required; numeric matching alone is not entailment.",
+      "comparison": {
+        "target": 10.0,
+        "target_unit": "percentage_point",
+        "calculated_minus_target": -1.7763568394002505e-15,
+        "tolerance": {
+          "absolute": 1e-09,
+          "relative": 0.0,
+          "rule": "abs(calculated-target) <= max(absolute, relative*abs(target))",
+          "maximum_allowed_absolute_difference": 1e-09
+        },
+        "within_tolerance": true,
+        "entailment_comparison": "within_tolerance"
+      }
+    },
+    {
+      "id": "derived_C2_DISPLAY_RELATIVE_2",
+      "claim_id": "C2_DISPLAY_RELATIVE",
+      "role": "derived",
+      "data_label": "SYNTHETIC",
+      "metric": "relative_change",
+      "basis": "reported_display",
+      "source_ids": [
+        "obs_display_treatment.reported_display",
+        "obs_control.reported_display"
+      ],
+      "formula": "(p1-p0)/p0",
+      "substitution": "(70% - 60%)/(60%)",
+      "value": 0.16666666666666663,
+      "unit": "relative_fraction",
+      "display_percentage": 16.666666666666664,
+      "warnings": [],
+      "verdict": null,
+      "verdict_policy": "Agent semantic adjudication required; numeric matching alone is not entailment.",
+      "comparison": {
+        "target": 0.1,
+        "target_unit": "relative_fraction",
+        "calculated_minus_target": 0.06666666666666662,
+        "tolerance": {
+          "absolute": 1e-09,
+          "relative": 0.0,
+          "rule": "abs(calculated-target) <= max(absolute, relative*abs(target))",
+          "maximum_allowed_absolute_difference": 1e-09
+        },
+        "within_tolerance": false,
+        "entailment_comparison": "outside_tolerance"
+      }
+    },
+    {
+      "id": "derived_C3_REPORTED_EXACT_P_1",
+      "claim_id": "C3_REPORTED_EXACT_P",
+      "role": "derived",
+      "data_label": "SYNTHETIC",
+      "metric": "two_proportion_p_value",
+      "basis": "raw_counts",
+      "source_ids": [
+        "obs_treatment",
+        "obs_control"
+      ],
+      "formula": "see linked two-sided pooled z test",
+      "substitution": "raw counts only; display values are never used for the z test",
+      "value": 0.002662185508945006,
+      "unit": "probability",
+      "display_percentage": null,
+      "warnings": [
+        "normal-approximation derived p-value is not a source-reported exact p-value"
+      ],
+      "verdict": null,
+      "verdict_policy": "Agent semantic adjudication required; numeric matching alone is not entailment.",
+      "statistical_test_id": "ztest_obs_treatment_obs_control",
+      "comparison": {
+        "target": 0.000123,
+        "target_unit": "probability",
+        "calculated_minus_target": 0.002539185508945006,
+        "tolerance": {
+          "absolute": 1e-12,
+          "relative": 0.0,
+          "rule": "abs(calculated-target) <= max(absolute, relative*abs(target))",
+          "maximum_allowed_absolute_difference": 1e-12
+        },
+        "within_tolerance": false,
+        "entailment_comparison": "not_applicable_source_reporting_question",
+        "warning": "A recomputation cannot prove that the source printed an exact target; absence of a reported value is not a contradiction."
+      }
+    },
+    {
+      "id": "derived_C4_UNIT_CONVERSION_1",
+      "claim_id": "C4_UNIT_CONVERSION",
+      "role": "derived",
+      "data_label": "SYNTHETIC",
+      "metric": "unit_conversion",
+      "source_ids": [
+        "obs_latency"
+      ],
+      "formula": "value_in_s = value_in_ms * unit_factor(ms/s)",
+      "substitution": "2500 ms -> 2.5 s",
+      "value": 2.5,
+      "unit": "s",
+      "display_percentage": null,
+      "warnings": [],
+      "verdict": null,
+      "verdict_policy": "Agent semantic adjudication required; numeric matching alone is not entailment.",
+      "comparison": {
+        "target": 2.5,
+        "target_unit": "s",
+        "calculated_minus_target": 0.0,
+        "tolerance": {
+          "absolute": 1e-12,
+          "relative": 0.0,
+          "rule": "abs(calculated-target) <= max(absolute, relative*abs(target))",
+          "maximum_allowed_absolute_difference": 1e-12
+        },
+        "within_tolerance": true,
+        "entailment_comparison": "within_tolerance"
+      }
+    }
+  ],
+  "statistical_tests": [
+    {
+      "id": "ztest_obs_treatment_obs_control",
+      "role": "derived",
+      "method": "two-sided pooled two-proportion z test",
+      "source_ids": [
+        "obs_treatment",
+        "obs_control"
+      ],
+      "formula": "pooled=(x1+x0)/(n1+n0); z=(p1-p0)/sqrt(pooled*(1-pooled)*(1/n1+1/n0)); p_two_sided=erfc(abs(z)/sqrt(2))",
+      "substitution": "pooled=(70+60)/(100+120)",
+      "pooled_proportion": 0.5909090909090909,
+      "standard_error_null": 0.06657190234489459,
+      "z": 3.0042704647952423,
+      "p_two_sided_normal_approximation": 0.002662185508945006,
+      "alternative": "two_sided",
+      "exact_test": false,
+      "sparse_expected_cells": false,
+      "expected_cells_under_null": {
+        "n1_success": 59.09090909090909,
+        "n1_failure": 40.90909090909091,
+        "n0_success": 70.9090909090909,
+        "n0_failure": 49.090909090909086
+      },
+      "wilson_intervals": [
+        {
+          "role": "derived",
+          "method": "Wilson score interval (no continuity correction)",
+          "confidence": 0.95,
+          "z_critical": 1.959963984540054,
+          "lower": 0.6041514536665332,
+          "upper": 0.7810511470506724,
+          "formula": "center=(p+z^2/(2n))/(1+z^2/n); halfwidth=z*sqrt(p(1-p)/n+z^2/(4n^2))/(1+z^2/n)",
+          "source_ids": [
+            "obs_treatment"
+          ],
+          "group": "first",
+          "observed_proportion": 0.7,
+          "data_label": "SYNTHETIC"
+        },
+        {
+          "role": "derived",
+          "method": "Wilson score interval (no continuity correction)",
+          "confidence": 0.95,
+          "z_critical": 1.959963984540054,
+          "lower": 0.41193870541108385,
+          "upper": 0.5880612945889161,
+          "formula": "center=(p+z^2/(2n))/(1+z^2/n); halfwidth=z*sqrt(p(1-p)/n+z^2/(4n^2))/(1+z^2/n)",
+          "source_ids": [
+            "obs_control"
+          ],
+          "group": "second",
+          "observed_proportion": 0.5,
+          "data_label": "SYNTHETIC"
+        }
+      ],
+      "confidence": 0.95,
+      "warnings": [],
+      "interpretation_limit": "A non-significant result is not evidence that the effect is zero; a derived p-value does not prove the source reported it.",
+      "data_label": "SYNTHETIC"
+    }
+  ],
+  "warnings": [
+    {
+      "observation_id": "obs_control",
+      "type": "reported_display_conflicts_with_raw_counts",
+      "reported_display_proportion": 0.6,
+      "derived_proportion": 0.5,
+      "action": "retain both; do not silently overwrite either"
+    }
+  ],
+  "method_boundary": "Two-proportion p-values use a pooled normal approximation; Wilson intervals are per group. Neither is an exact small-sample test or an automatic semantic verdict."
+}

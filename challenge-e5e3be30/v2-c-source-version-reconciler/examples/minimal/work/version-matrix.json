@@ -1,0 +1,176 @@
+{
+  "columns": [
+    "document_id",
+    "version",
+    "date",
+    "kind",
+    "claim_statements",
+    "relations"
+  ],
+  "rows": [
+    {
+      "document_id": "doc-v1",
+      "work_title": "Synthetic Delta Calibration",
+      "doi": null,
+      "version": "v1",
+      "date": "2026-01-10",
+      "kind": "preprint",
+      "files": [
+        "documents/paper_v1.txt",
+        "documents/paper_v1_duplicate.txt"
+      ],
+      "sha256": "80e079c90a61a5d98284cecb12f6c5578e78a8841b140cb6ed64ba6bf533a576",
+      "relations": [],
+      "claim_statements": [
+        {
+          "claim_id": "SYNTHETIC-claim-main-revision",
+          "quote": "Main result. Under calibration mode C0, the fictional Delta model attains 80 percent accuracy.",
+          "quote_verified": true,
+          "outcome": "supported",
+          "condition": "calibration mode C0",
+          "supplement_only": false
+        }
+      ]
+    },
+    {
+      "document_id": "doc-v2",
+      "work_title": "Synthetic Delta Calibration",
+      "doi": null,
+      "version": "v2",
+      "date": "2026-02-10",
+      "kind": "preprint_revision",
+      "files": [
+        "documents/paper_v2.txt"
+      ],
+      "sha256": "01f5c1c4663665985d62741d5a9a3d145f906690d732eb9ac6ccbc584ef8e442",
+      "relations": [
+        {
+          "type": "revises",
+          "target_id": "doc-v1"
+        }
+      ],
+      "claim_statements": [
+        {
+          "claim_id": "SYNTHETIC-claim-main-revision",
+          "quote": "Main result. Under calibration mode C0, the fictional Delta model attains 82 percent accuracy; v2 replaces the earlier 80 percent value.",
+          "quote_verified": true,
+          "outcome": "contradicted",
+          "condition": "calibration mode C0",
+          "supplement_only": false
+        }
+      ]
+    },
+    {
+      "document_id": "doc-supplement-s2",
+      "work_title": "Supplement to Synthetic Delta Calibration v2",
+      "doi": null,
+      "version": "S2",
+      "date": "2026-02-10",
+      "kind": "supplement",
+      "files": [
+        "documents/supplement_v2.txt"
+      ],
+      "sha256": "d070f4c83fda894eeb18f4232e3c87c06207308ef58cc1599e03e04fe98cdf74",
+      "relations": [
+        {
+          "type": "supplements",
+          "target_id": "doc-v2"
+        }
+      ],
+      "claim_statements": [
+        {
+          "claim_id": "SYNTHETIC-claim-supplement-condition",
+          "quote": "Only when the optional high-memory flag H1 is enabled and the temperature is fixed at 10 degrees, the fictional Delta model attains 90 percent accuracy.",
+          "quote_verified": true,
+          "outcome": "supported",
+          "condition": "H1 enabled AND temperature fixed at 10 degrees",
+          "supplement_only": true
+        }
+      ]
+    }
+  ],
+  "by_document": {
+    "doc-v1": {
+      "document_id": "doc-v1",
+      "work_title": "Synthetic Delta Calibration",
+      "doi": null,
+      "version": "v1",
+      "date": "2026-01-10",
+      "kind": "preprint",
+      "files": [
+        "documents/paper_v1.txt",
+        "documents/paper_v1_duplicate.txt"
+      ],
+      "sha256": "80e079c90a61a5d98284cecb12f6c5578e78a8841b140cb6ed64ba6bf533a576",
+      "relations": [],
+      "claim_statements": [
+        {
+          "claim_id": "SYNTHETIC-claim-main-revision",
+          "quote": "Main result. Under calibration mode C0, the fictional Delta model attains 80 percent accuracy.",
+          "quote_verified": true,
+          "outcome": "supported",
+          "condition": "calibration mode C0",
+          "supplement_only": false
+        }
+      ]
+    },
+    "doc-v2": {
+      "document_id": "doc-v2",
+      "work_title": "Synthetic Delta Calibration",
+      "doi": null,
+      "version": "v2",
+      "date": "2026-02-10",
+      "kind": "preprint_revision",
+      "files": [
+        "documents/paper_v2.txt"
+      ],
+      "sha256": "01f5c1c4663665985d62741d5a9a3d145f906690d732eb9ac6ccbc584ef8e442",
+      "relations": [
+        {
+          "type": "revises",
+          "target_id": "doc-v1"
+        }
+      ],
+      "claim_statements": [
+        {
+          "claim_id": "SYNTHETIC-claim-main-revision",
+          "quote": "Main result. Under calibration mode C0, the fictional Delta model attains 82 percent accuracy; v2 replaces the earlier 80 percent value.",
+          "quote_verified": true,
+          "outcome": "contradicted",
+          "condition": "calibration mode C0",
+          "supplement_only": false
+        }
+      ]
+    },
+    "doc-supplement-s2": {
+      "document_id": "doc-supplement-s2",
+      "work_title": "Supplement to Synthetic Delta Calibration v2",
+      "doi": null,
+      "version": "S2",
+      "date": "2026-02-10",
+      "kind": "supplement",
+      "files": [
+        "documents/supplement_v2.txt"
+      ],
+      "sha256": "d070f4c83fda894eeb18f4232e3c87c06207308ef58cc1599e03e04fe98cdf74",
+      "relations": [
+        {
+          "type": "supplements",
+          "target_id": "doc-v2"
+        }
+      ],
+      "claim_statements": [
+        {
+          "claim_id": "SYNTHETIC-claim-supplement-condition",
+          "quote": "Only when the optional high-memory flag H1 is enabled and the temperature is fixed at 10 degrees, the fictional Delta model attains 90 percent accuracy.",
+          "quote_verified": true,
+          "outcome": "supported",
+          "condition": "H1 enabled AND temperature fixed at 10 degrees",
+          "supplement_only": true
+        }
+      ]
+    }
+  },
+  "comparison_rule": "Statements are displayed side by side. They are not pooled, ranked by recency, or treated as independent corroboration when file hashes match.",
+  "case_id": "SYNTHETIC-minimal-version-reconciliation"
+}

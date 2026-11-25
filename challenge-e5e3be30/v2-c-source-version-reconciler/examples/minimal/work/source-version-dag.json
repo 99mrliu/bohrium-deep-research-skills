@@ -1,0 +1,27 @@
+{
+  "validation": "acyclic; every relation target and bound file exists; hashes match the actual inputs",
+  "nodes": [
+    "doc-supplement-s2",
+    "doc-v1",
+    "doc-v2"
+  ],
+  "edges": [
+    {
+      "source": "doc-supplement-s2",
+      "target": "doc-v2",
+      "type": "supplements"
+    },
+    {
+      "source": "doc-v2",
+      "target": "doc-v1",
+      "type": "revises"
+    }
+  ],
+  "topological_order": [
+    "doc-supplement-s2",
+    "doc-v2",
+    "doc-v1"
+  ],
+  "authority_rule": "DAG order is structural only: newer/later documents do not automatically win.",
+  "case_id": "SYNTHETIC-minimal-version-reconciliation"
+}

@@ -1,0 +1,39 @@
+{
+  "SYNTHETIC": true,
+  "method_note": "The agent examined each exact quote in exactly one source version. outcome is a reviewed per-document outcome, not a pooled semantic judgment.",
+  "claim_decisions": [
+    {
+      "claim_id": "SYNTHETIC-claim-main-revision",
+      "rationale": "SYNTHETIC: v1 directly states 80 percent for C0, while v2 explicitly replaces it with 82 percent for C0. The version difference is retained in parallel; newer v2 is not treated as automatically authoritative.",
+      "evidence": [
+        {
+          "document_id": "doc-v1",
+          "quote": "Main result. Under calibration mode C0, the fictional Delta model attains 80 percent accuracy.",
+          "locator": "v1 main result; local page 1",
+          "outcome": "supported",
+          "review_note": "Supports the claimed unchanged 80 percent value only in v1."
+        },
+        {
+          "document_id": "doc-v2",
+          "quote": "Main result. Under calibration mode C0, the fictional Delta model attains 82 percent accuracy; v2 replaces the earlier 80 percent value.",
+          "locator": "v2 main result; local page 1",
+          "outcome": "contradicted",
+          "review_note": "Directly revises the 80 percent value in v2; this does not erase the historical v1 statement."
+        }
+      ]
+    },
+    {
+      "claim_id": "SYNTHETIC-claim-supplement-condition",
+      "rationale": "SYNTHETIC: the exact S2 supplement statement supports the 90 percent result only under both H1 and fixed 10-degree conditions. No main-document page or C0 condition is inherited.",
+      "evidence": [
+        {
+          "document_id": "doc-supplement-s2",
+          "quote": "Only when the optional high-memory flag H1 is enabled and the temperature is fixed at 10 degrees, the fictional Delta model attains 90 percent accuracy.",
+          "locator": "supplement S2, S-Table 1, local supplement page S-1",
+          "outcome": "supported",
+          "review_note": "This evidence is bound solely to S2, not to doc-v2 or doc-v1. Both conditions are retained."
+        }
+      ]
+    }
+  ]
+}

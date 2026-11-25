@@ -1,0 +1,17 @@
+[
+  {
+    "claim_id": "SYNTHETIC-claim-main-revision",
+    "claim": "Across v1 and v2, the Delta model retains the same 80 percent C0 accuracy.",
+    "version_scope": ["doc-v1", "doc-v2"],
+    "claim_class": "version_comparison",
+    "condition": "calibration mode C0"
+  },
+  {
+    "claim_id": "SYNTHETIC-claim-supplement-condition",
+    "claim": "With optional H1 enabled and temperature fixed at 10 degrees, Delta attains 90 percent accuracy.",
+    "version_scope": ["doc-supplement-s2"],
+    "claim_class": "supplement_condition",
+    "condition": "H1 enabled AND temperature fixed at 10 degrees",
+    "supplement_only": true
+  }
+]

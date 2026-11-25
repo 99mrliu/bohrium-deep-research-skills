@@ -1,0 +1,72 @@
+{
+  "synthetic": true,
+  "data_label": "SYNTHETIC",
+  "claims_are": "questions_not_facts",
+  "claims": [
+    {
+      "id": "C1_RAW_PP",
+      "question": "SYNTHETIC: Does recomputing 70/100 versus 60/120 give 20 percentage points, a 40% relative increase, and a proportion ratio of 1.4?",
+      "components": [
+        {
+          "metric": "percentage_point_difference",
+          "basis": "raw_counts",
+          "source_ids": ["obs_treatment", "obs_control"],
+          "target": {"value": 20, "unit": "percentage_point"},
+          "tolerance": {"absolute": 1e-9, "relative": 0}
+        },
+        {
+          "metric": "relative_change",
+          "basis": "raw_counts",
+          "source_ids": ["obs_treatment", "obs_control"],
+          "target": {"value": 0.40, "unit": "relative_fraction"},
+          "tolerance": {"absolute": 1e-9, "relative": 0}
+        },
+        {
+          "metric": "proportion_ratio",
+          "basis": "raw_counts",
+          "source_ids": ["obs_treatment", "obs_control"],
+          "target": {"value": 1.4, "unit": "ratio"},
+          "tolerance": {"absolute": 1e-9, "relative": 0}
+        }
+      ]
+    },
+    {
+      "id": "C2_DISPLAY_RELATIVE",
+      "question": "SYNTHETIC: For the paper's displayed 70% versus 60%, is the statement '10 percentage points, i.e. 10% relative improvement' correct in both parts?",
+      "components": [
+        {
+          "metric": "percentage_point_difference",
+          "basis": "reported_display",
+          "source_ids": ["obs_display_treatment", "obs_control"],
+          "target": {"value": 10, "unit": "percentage_point"},
+          "tolerance": {"absolute": 1e-9, "relative": 0}
+        },
+        {
+          "metric": "relative_change",
+          "basis": "reported_display",
+          "source_ids": ["obs_display_treatment", "obs_control"],
+          "target": {"value": 0.10, "unit": "relative_fraction"},
+          "tolerance": {"absolute": 1e-9, "relative": 0}
+        }
+      ]
+    },
+    {
+      "id": "C3_REPORTED_EXACT_P",
+      "question": "SYNTHETIC: Does the source paper itself report an exact two-sided p-value of 0.000123 for the raw-count comparison?",
+      "metric": "two_proportion_p_value",
+      "basis": "raw_counts",
+      "source_ids": ["obs_treatment", "obs_control"],
+      "target": {"value": 0.000123, "unit": "probability"},
+      "target_origin": "source_reported",
+      "tolerance": {"absolute": 1e-12, "relative": 0}
+    },
+    {
+      "id": "C4_UNIT_CONVERSION",
+      "question": "SYNTHETIC: Does the reported mean completion time of 2500 ms convert to 2.5 s?",
+      "metric": "unit_conversion",
+      "source_ids": ["obs_latency"],
+      "target": {"value": 2.5, "unit": "s"},
+      "tolerance": {"absolute": 1e-12, "relative": 0}
+    }
+  ]
+}

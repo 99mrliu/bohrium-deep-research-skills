@@ -1,0 +1,54 @@
+{
+  "case_id": "SYNTHETIC-QEL-001",
+  "sources": [
+    {
+      "id": "case",
+      "kind": "case",
+      "path": "case.json",
+      "sha256": "116845e6502562d43bfd2de34a2abe994bb7fe5403b6bb7fd7d5de40135ff250",
+      "bytes": 1471
+    },
+    {
+      "id": "claims",
+      "kind": "claims",
+      "path": "claims-to-verify.json",
+      "sha256": "9d41b7d15351ed92f25e8fe6094224a19c8a6889884ea6ef1b68b3779e421143",
+      "bytes": 2763
+    },
+    {
+      "id": "task",
+      "kind": "task",
+      "path": "task.md",
+      "sha256": "f1591890da0f98066bccdf2bc405ebfa290fe7d1b74bc432db2d01bbc5247383",
+      "bytes": 833
+    },
+    {
+      "id": "paper",
+      "kind": "paper",
+      "path": "paper.md",
+      "sha256": "68eaaede1b1de3b5dcbf952c06e5aa112e4115a2c357068bfa584d6564805c1a",
+      "bytes": 568
+    }
+  ],
+  "uncertainty": [
+    "All example observations, claims, calculations and plots marked SYNTHETIC are artificial, not empirical findings."
+  ],
+  "change_records": [
+    {
+      "at": "2026-11-25T02:31:05+00:00",
+      "action": "run_started"
+    },
+    {
+      "at": "2026-11-25T02:31:05+00:00",
+      "action": "early_partial_written"
+    },
+    {
+      "at": "2026-11-25T02:31:05+00:00",
+      "action": "quantitative_report_and_effect_svg_generated",
+      "derived_count": 7,
+      "statistical_test_count": 1
+    }
+  ],
+  "report_artifact": "quantitative-report.json",
+  "plot_artifact": "effect-plot.svg"
+}

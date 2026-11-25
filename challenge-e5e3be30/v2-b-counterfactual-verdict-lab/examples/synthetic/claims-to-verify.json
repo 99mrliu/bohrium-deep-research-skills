@@ -1,0 +1,79 @@
+{
+  "case_id": "SYNTHETIC-COUNTERFACTUAL-001",
+  "synthetic": true,
+  "questions_not_facts": true,
+  "claims": [
+    {
+      "claim_id": "c-neg",
+      "text": "Treatment B did not reduce mean recovery time in the longitudinal cohort.",
+      "semantic_signature": {
+        "negation": "negative",
+        "comparison_direction": "not_applicable",
+        "significance": "not_applicable",
+        "causal_correlation": "not_applicable",
+        "quantifier": "not_applicable",
+        "condition_scope": "longitudinal_cohort"
+      }
+    },
+    {
+      "claim_id": "c-comp",
+      "text": "Treatment A had a larger mean recovery-time reduction than placebo in adults.",
+      "semantic_signature": {
+        "negation": "affirmative",
+        "comparison_direction": "A_larger_than_placebo",
+        "significance": "not_applicable",
+        "causal_correlation": "not_applicable",
+        "quantifier": "not_applicable",
+        "condition_scope": "adults"
+      }
+    },
+    {
+      "claim_id": "c-sig",
+      "text": "The treatment A versus placebo recovery-time difference was not statistically significant.",
+      "semantic_signature": {
+        "negation": "not_applicable",
+        "comparison_direction": "not_applicable",
+        "significance": "not_significant",
+        "causal_correlation": "not_applicable",
+        "quantifier": "not_applicable",
+        "condition_scope": "adults"
+      }
+    },
+    {
+      "claim_id": "c-cause",
+      "text": "Baseline exercise was associated with shorter recovery in the observational subgroup.",
+      "semantic_signature": {
+        "negation": "affirmative",
+        "comparison_direction": "shorter_recovery",
+        "significance": "not_applicable",
+        "causal_correlation": "correlational",
+        "quantifier": "not_applicable",
+        "condition_scope": "observational_subgroup"
+      }
+    },
+    {
+      "claim_id": "c-quant",
+      "text": "Some participants reported improved sleep.",
+      "semantic_signature": {
+        "negation": "affirmative",
+        "comparison_direction": "not_applicable",
+        "significance": "not_applicable",
+        "causal_correlation": "not_applicable",
+        "quantifier": "existential",
+        "condition_scope": "all_40_diary_participants"
+      }
+    },
+    {
+      "claim_id": "c-scope",
+      "text": "Treatment C reduced mean recovery time in adults with mild symptoms.",
+      "semantic_signature": {
+        "negation": "affirmative",
+        "comparison_direction": "reduction_vs_placebo",
+        "significance": "not_applicable",
+        "causal_correlation": "causal",
+        "quantifier": "not_applicable",
+        "condition_scope": "mild_adults"
+      }
+    }
+  ]
+}

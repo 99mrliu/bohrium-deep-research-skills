@@ -1,0 +1,27 @@
+{
+  "case_id": "SYNTHETIC-RECALL-001",
+  "synthetic": true,
+  "output_contract": {
+    "type": "object",
+    "required": [
+      "case_id",
+      "claim_results",
+      "status",
+      "sources",
+      "uncertainty",
+      "change_records",
+      "no_evidence_certificates"
+    ],
+    "properties": {
+      "case_id": {"type": "string"},
+      "claim_results": {"type": "array"},
+      "status": {"type": "string"},
+      "sources": {"type": "array"},
+      "uncertainty": {"type": "array"},
+      "change_records": {"type": "array"},
+      "no_evidence_certificates": {"type": "array"},
+      "recall_coverage": {"type": "object"},
+      "run_note": {"type": "string"}
+    }
+  }
+}

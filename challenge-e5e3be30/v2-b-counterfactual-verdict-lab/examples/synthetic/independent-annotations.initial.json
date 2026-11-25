@@ -1,0 +1,127 @@
+{
+  "schema_version": 1,
+  "synthetic": true,
+  "annotation_method": "Each base claim and selected probe was independently adjudicated from the complete SYNTHETIC source context before transition comparison.",
+  "annotations": [
+    {
+      "id": "c-neg",
+      "text": "Treatment B did not reduce mean recovery time in the longitudinal cohort.",
+      "verdict": "supported",
+      "semantic_signature": {"negation": "negative", "comparison_direction": "not_applicable", "significance": "not_applicable", "causal_correlation": "not_applicable", "quantifier": "not_applicable", "condition_scope": "longitudinal_cohort"},
+      "evidence": [{"source_id": "paper", "locator": "Section 2, entire paragraph", "snippet": "mean recovery time increased by 0.4 days from baseline rather than decreasing", "stance": "supports"}],
+      "rationale": "The observed cohort mean moved in the opposite direction, directly supporting non-reduction.",
+      "uncertainty": [],
+      "conflicts": []
+    },
+    {
+      "id": "c-comp",
+      "text": "Treatment A had a larger mean recovery-time reduction than placebo in adults.",
+      "verdict": "supported",
+      "semantic_signature": {"negation": "affirmative", "comparison_direction": "A_larger_than_placebo", "significance": "not_applicable", "causal_correlation": "not_applicable", "quantifier": "not_applicable", "condition_scope": "adults"},
+      "evidence": [{"source_id": "paper", "locator": "Section 1, sentences 1-2", "snippet": "2.0 days with treatment A and 1.0 day with placebo", "stance": "supports"}],
+      "rationale": "The descriptive comparison is numeric and does not claim statistical significance.",
+      "uncertainty": ["The between-group difference is not statistically significant."],
+      "conflicts": []
+    },
+    {
+      "id": "c-sig",
+      "text": "The treatment A versus placebo recovery-time difference was not statistically significant.",
+      "verdict": "supported",
+      "semantic_signature": {"negation": "not_applicable", "comparison_direction": "not_applicable", "significance": "not_significant", "causal_correlation": "not_applicable", "quantifier": "not_applicable", "condition_scope": "adults"},
+      "evidence": [{"source_id": "paper", "locator": "Section 1, sentence 2", "snippet": "The between-group difference was not statistically significant (p = 0.42).", "stance": "supports"}],
+      "rationale": "The paper directly reports the non-significant comparison.",
+      "uncertainty": [],
+      "conflicts": []
+    },
+    {
+      "id": "c-cause",
+      "text": "Baseline exercise was associated with shorter recovery in the observational subgroup.",
+      "verdict": "supported",
+      "semantic_signature": {"negation": "affirmative", "comparison_direction": "shorter_recovery", "significance": "not_applicable", "causal_correlation": "correlational", "quantifier": "not_applicable", "condition_scope": "observational_subgroup"},
+      "evidence": [{"source_id": "paper", "locator": "Section 3, sentence 1", "snippet": "baseline exercise was associated with recovery 0.6 days shorter after adjustment for age", "stance": "supports"}],
+      "rationale": "The wording stays at the reported associational strength and observational subgroup.",
+      "uncertainty": ["The association must not be interpreted causally."],
+      "conflicts": []
+    },
+    {
+      "id": "c-quant",
+      "text": "Some participants reported improved sleep.",
+      "verdict": "supported",
+      "semantic_signature": {"negation": "affirmative", "comparison_direction": "not_applicable", "significance": "not_applicable", "causal_correlation": "not_applicable", "quantifier": "existential", "condition_scope": "all_40_diary_participants"},
+      "evidence": [{"source_id": "paper", "locator": "Section 4, sentence 1", "snippet": "Exactly 12 of 40 SYNTHETIC participants reported improved sleep.", "stance": "supports"}],
+      "rationale": "Twelve positive cases satisfy the existential claim.",
+      "uncertainty": [],
+      "conflicts": []
+    },
+    {
+      "id": "c-scope",
+      "text": "Treatment C reduced mean recovery time in adults with mild symptoms.",
+      "verdict": "supported",
+      "semantic_signature": {"negation": "affirmative", "comparison_direction": "reduction_vs_placebo", "significance": "not_applicable", "causal_correlation": "causal", "quantifier": "not_applicable", "condition_scope": "mild_adults"},
+      "evidence": [{"source_id": "paper", "locator": "Section 5, sentence 1", "snippet": "Among SYNTHETIC adults with mild symptoms, treatment C reduced mean recovery time by 1.1 days relative to placebo.", "stance": "supports"}],
+      "rationale": "The claim exactly preserves the studied mild-symptom subgroup and comparator.",
+      "uncertainty": ["The result does not cover moderate or severe symptoms."],
+      "conflicts": []
+    },
+    {
+      "id": "p-neg",
+      "text": "Treatment B reduced mean recovery time in the longitudinal cohort.",
+      "verdict": "contradicted",
+      "semantic_signature": {"negation": "affirmative", "comparison_direction": "not_applicable", "significance": "not_applicable", "causal_correlation": "not_applicable", "quantifier": "not_applicable", "condition_scope": "longitudinal_cohort"},
+      "evidence": [{"source_id": "paper", "locator": "Section 2, entire paragraph", "snippet": "mean recovery time increased by 0.4 days from baseline rather than decreasing", "stance": "opposes"}],
+      "rationale": "The observed increase directly contradicts a mean reduction.",
+      "uncertainty": [],
+      "conflicts": []
+    },
+    {
+      "id": "p-comp",
+      "text": "Treatment A had a smaller mean recovery-time reduction than placebo in adults.",
+      "verdict": "contradicted",
+      "semantic_signature": {"negation": "affirmative", "comparison_direction": "A_smaller_than_placebo", "significance": "not_applicable", "causal_correlation": "not_applicable", "quantifier": "not_applicable", "condition_scope": "adults"},
+      "evidence": [{"source_id": "paper", "locator": "Section 1, sentence 1", "snippet": "2.0 days with treatment A and 1.0 day with placebo", "stance": "opposes"}],
+      "rationale": "Two is numerically larger than one, not smaller.",
+      "uncertainty": [],
+      "conflicts": []
+    },
+    {
+      "id": "p-sig",
+      "text": "The treatment A versus placebo recovery-time difference was statistically significant.",
+      "verdict": "contradicted",
+      "semantic_signature": {"negation": "not_applicable", "comparison_direction": "not_applicable", "significance": "significant", "causal_correlation": "not_applicable", "quantifier": "not_applicable", "condition_scope": "adults"},
+      "evidence": [{"source_id": "paper", "locator": "Section 1, sentence 2", "snippet": "not statistically significant (p = 0.42)", "stance": "opposes"}],
+      "rationale": "The report directly rejects the asserted significance designation.",
+      "uncertainty": [],
+      "conflicts": []
+    },
+    {
+      "id": "p-cause",
+      "text": "Baseline exercise caused shorter recovery in the observational subgroup.",
+      "verdict": "contradicted",
+      "semantic_signature": {"negation": "affirmative", "comparison_direction": "shorter_recovery", "significance": "not_applicable", "causal_correlation": "causal", "quantifier": "not_applicable", "condition_scope": "observational_subgroup"},
+      "evidence": [{"source_id": "paper", "locator": "Section 3, entire paragraph", "snippet": "Participants were not randomized by exercise exposure, and the study did not identify or estimate a causal effect", "stance": "opposes"}],
+      "rationale": "INITIAL SYNTHETIC ERROR: lack of causal identification was misclassified as affirmative disproof of the causal proposition.",
+      "uncertainty": ["Requires original-source re-review if transition checking flags the verdict."],
+      "conflicts": []
+    },
+    {
+      "id": "p-quant",
+      "text": "All participants reported improved sleep.",
+      "verdict": "contradicted",
+      "semantic_signature": {"negation": "affirmative", "comparison_direction": "not_applicable", "significance": "not_applicable", "causal_correlation": "not_applicable", "quantifier": "universal", "condition_scope": "all_40_diary_participants"},
+      "evidence": [{"source_id": "paper", "locator": "Section 4, sentences 1-2", "snippet": "Exactly 12 of 40 SYNTHETIC participants reported improved sleep. The remaining 28 participants did not report improved sleep.", "stance": "opposes"}],
+      "rationale": "The bounded source explicitly provides 28 counterexamples to the universal claim.",
+      "uncertainty": [],
+      "conflicts": []
+    },
+    {
+      "id": "p-scope",
+      "text": "Treatment C reduced mean recovery time in adults regardless of symptom severity.",
+      "verdict": "insufficient_evidence",
+      "semantic_signature": {"negation": "affirmative", "comparison_direction": "reduction_vs_placebo", "significance": "not_applicable", "causal_correlation": "causal", "quantifier": "not_applicable", "condition_scope": "all_severity_adults"},
+      "evidence": [{"source_id": "paper", "locator": "Section 5, sentences 2-3", "snippet": "The study enrolled no adults with moderate or severe symptoms in this substudy and reported no pooled estimate across all symptom severities.", "stance": "neutral"}],
+      "rationale": "The broader population was not studied or pooled, but that non-reporting does not refute the broader claim.",
+      "uncertainty": ["Effects in moderate/severe groups and all-severity pooled effect are unreported."],
+      "conflicts": []
+    }
+  ]
+}

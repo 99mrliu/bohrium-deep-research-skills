@@ -1,0 +1,20 @@
+{
+  "schema_version": 1,
+  "synthetic": true,
+  "purpose": "SYNTHETIC negative fixture: one continuous replacement still hides two semantic operator changes and must exit 1.",
+  "probes": [
+    {
+      "probe_id": "p-neg",
+      "base_claim_id": "c-neg",
+      "probe_text": "Treatment B increased mean recovery time in the longitudinal cohort.",
+      "operator": "negation",
+      "risk_boost": 20,
+      "risk_flags": ["intentional_multi_operator_fixture"],
+      "base_signature": {"negation": "negative", "comparison_direction": "not_applicable", "significance": "not_applicable", "causal_correlation": "not_applicable", "quantifier": "not_applicable", "condition_scope": "longitudinal_cohort"},
+      "probe_signature": {"negation": "affirmative", "comparison_direction": "increase", "significance": "not_applicable", "causal_correlation": "not_applicable", "quantifier": "not_applicable", "condition_scope": "longitudinal_cohort"},
+      "edit_contract": {"find": "did not reduce", "replace": "increased"},
+      "semantic_relation": "same",
+      "expected_relation": "flip_to_contradicted"
+    }
+  ]
+}

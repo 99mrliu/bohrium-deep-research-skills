@@ -1,0 +1,90 @@
+{
+  "case_id": "SYNTHETIC-minimal-version-reconciliation",
+  "claims": [
+    {
+      "claim_id": "SYNTHETIC-claim-main-revision",
+      "claim": "Across v1 and v2, the Delta model retains the same 80 percent C0 accuracy.",
+      "status": "partially_supported",
+      "version_scope": [
+        "doc-v1",
+        "doc-v2"
+      ],
+      "evidence": [
+        {
+          "document_id": "doc-v1",
+          "version": "v1",
+          "quote": "Main result. Under calibration mode C0, the fictional Delta model attains 80 percent accuracy.",
+          "locator": "v1 main result; local page 1",
+          "quote_verified": true,
+          "outcome": "supported",
+          "matched_file_id": "documents/paper_v1.txt",
+          "quote_check_note": null,
+          "review_note": "Supports the claimed unchanged 80 percent value only in v1."
+        },
+        {
+          "document_id": "doc-v2",
+          "version": "v2",
+          "quote": "Main result. Under calibration mode C0, the fictional Delta model attains 82 percent accuracy; v2 replaces the earlier 80 percent value.",
+          "locator": "v2 main result; local page 1",
+          "quote_verified": true,
+          "outcome": "contradicted",
+          "matched_file_id": "documents/paper_v2.txt",
+          "quote_check_note": null,
+          "review_note": "Directly revises the 80 percent value in v2; this does not erase the historical v1 statement."
+        }
+      ],
+      "rationale": "SYNTHETIC: v1 directly states 80 percent for C0, while v2 explicitly replaces it with 82 percent for C0. The version difference is retained in parallel; newer v2 is not treated as automatically authoritative. Verdict applies only to version_scope=doc-v1, doc-v2; no version pooling.",
+      "condition": "calibration mode C0",
+      "documents_supported": [
+        "doc-v1"
+      ],
+      "documents_partial": [],
+      "documents_contradicted": [
+        "doc-v2"
+      ],
+      "documents_insufficient": [],
+      "documents_missing": [],
+      "per_document_outcomes": {
+        "doc-v1": "supported",
+        "doc-v2": "contradicted"
+      },
+      "claim_class": "version_comparison"
+    },
+    {
+      "claim_id": "SYNTHETIC-claim-supplement-condition",
+      "claim": "With optional H1 enabled and temperature fixed at 10 degrees, Delta attains 90 percent accuracy.",
+      "status": "supported",
+      "version_scope": [
+        "doc-supplement-s2"
+      ],
+      "evidence": [
+        {
+          "document_id": "doc-supplement-s2",
+          "version": "S2",
+          "quote": "Only when the optional high-memory flag H1 is enabled and the temperature is fixed at 10 degrees, the fictional Delta model attains 90 percent accuracy.",
+          "locator": "supplement S2, S-Table 1, local supplement page S-1",
+          "quote_verified": true,
+          "outcome": "supported",
+          "matched_file_id": "documents/supplement_v2.txt",
+          "quote_check_note": null,
+          "review_note": "This evidence is bound solely to S2, not to doc-v2 or doc-v1. Both conditions are retained."
+        }
+      ],
+      "rationale": "SYNTHETIC: the exact S2 supplement statement supports the 90 percent result only under both H1 and fixed 10-degree conditions. No main-document page or C0 condition is inherited. Verdict applies only to version_scope=doc-supplement-s2; no version pooling.",
+      "condition": "H1 enabled AND temperature fixed at 10 degrees",
+      "documents_supported": [
+        "doc-supplement-s2"
+      ],
+      "documents_partial": [],
+      "documents_contradicted": [],
+      "documents_insufficient": [],
+      "documents_missing": [],
+      "per_document_outcomes": {
+        "doc-supplement-s2": "supported"
+      },
+      "claim_class": "supplement_condition",
+      "supplement_only": true,
+      "scope_limitation": "Supplement-local evidence only; main-text pagination and conditions are not inherited."
+    }
+  ]
+}

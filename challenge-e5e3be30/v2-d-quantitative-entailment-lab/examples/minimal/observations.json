@@ -1,0 +1,65 @@
+{
+  "synthetic": true,
+  "data_label": "SYNTHETIC",
+  "observations": [
+    {
+      "id": "obs_treatment",
+      "synthetic": true,
+      "role": "reported",
+      "kind": "proportion",
+      "events": 70,
+      "n": 100,
+      "unit": "participants",
+      "source_id": "paper",
+      "location": {"section": "Results", "paragraph": 1},
+      "quote": "Treatment: 70 successes among 100 participants."
+    },
+    {
+      "id": "obs_control",
+      "synthetic": true,
+      "role": "reported",
+      "kind": "proportion",
+      "events": 60,
+      "n": 120,
+      "unit": "participants",
+      "source_id": "paper",
+      "location": {"section": "Results", "paragraph": 1},
+      "quote": "Control: 60 successes among 120 participants.",
+      "reported_display": {
+        "value": 60,
+        "unit": "percent",
+        "quote": "displayed control rate: 60%."
+      }
+    },
+    {
+      "id": "obs_display_treatment",
+      "synthetic": true,
+      "role": "reported",
+      "kind": "proportion",
+      "events": 70,
+      "n": 100,
+      "unit": "participants",
+      "source_id": "paper",
+      "location": {"section": "Results", "paragraph": 2},
+      "quote": "displayed treatment rate: 70%.",
+      "reported_display": {
+        "value": 70,
+        "unit": "percent",
+        "quote": "displayed treatment rate: 70%."
+      }
+    },
+    {
+      "id": "obs_latency",
+      "synthetic": true,
+      "role": "reported",
+      "kind": "mean",
+      "mean": 2500,
+      "sd": 300,
+      "n": 12,
+      "unit": "ms",
+      "source_id": "paper",
+      "location": {"section": "Results", "paragraph": 4},
+      "quote": "Mean completion time was 2500 ms (SD 300 ms, n 12)."
+    }
+  ]
+}

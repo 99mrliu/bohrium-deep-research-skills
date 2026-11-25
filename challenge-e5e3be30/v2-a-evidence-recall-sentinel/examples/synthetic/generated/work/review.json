@@ -1,0 +1,62 @@
+{
+  "label": "SYNTHETIC fixed simulated Agent review / 合成示例模拟裁决",
+  "claim_reviews": {
+    "S1": {
+      "verdict": "supported",
+      "rationale": "SYNTHETIC Agent semantic review: page 2 Table 2 explicitly reports grade 3 neutrophil count decreased in 4/20 (18.0%) of AST 7. The initial family made no hit; the synonym/table family recovered this candidate.",
+      "evidence_candidate_ids": [
+        "cand-4c46352b5115"
+      ],
+      "conflicts": [],
+      "uncertainty": "Demonstration only; no real-world clinical claim is made."
+    },
+    "S2": {
+      "verdict": "insufficient_evidence",
+      "rationale": "SYNTHETIC Agent semantic review: all candidates concern adults, other end points, or 24-month follow-up. None reports the requested pediatric 36-month rate. Non-reporting is not contradiction.",
+      "evidence_candidate_ids": [],
+      "conflicts": [],
+      "uncertainty": "Only the supplied three-page synthetic document was searched."
+    }
+  },
+  "candidate_reviews": {
+    "cand-a3d237afce3b": {
+      "status": "reviewed",
+      "relevant": false,
+      "exclusion_reason": "SYNTHETIC Agent: candidate lacks the requested adverse-event arm, grade, or numeric rate.",
+      "note": "Topical similarity alone is not support."
+    },
+    "cand-4c46352b5115": {
+      "status": "reviewed",
+      "relevant": true,
+      "exclusion_reason": null,
+      "note": "SYNTHETIC Agent: the table reports the queried arm, event grade, and rate using synonymous event wording."
+    },
+    "cand-083e30c82858": {
+      "status": "reviewed",
+      "relevant": false,
+      "exclusion_reason": "SYNTHETIC Agent: candidate lacks the requested adverse-event arm, grade, or numeric rate.",
+      "note": "Topical similarity alone is not support."
+    },
+    "cand-164009b41a82": {
+      "status": "reviewed",
+      "relevant": false,
+      "exclusion_reason": "SYNTHETIC Agent: this candidate does not report both the pediatric subgroup and the 36-month overall-survival end point.",
+      "note": "Topical similarity alone is not support."
+    },
+    "cand-6c478eadd545": {
+      "status": "reviewed",
+      "relevant": false,
+      "exclusion_reason": "SYNTHETIC Agent: this candidate does not report both the pediatric subgroup and the 36-month overall-survival end point.",
+      "note": "Topical similarity alone is not support."
+    },
+    "cand-b718e447554c": {
+      "status": "reviewed",
+      "relevant": false,
+      "exclusion_reason": "SYNTHETIC Agent: this candidate does not report both the pediatric subgroup and the 36-month overall-survival end point.",
+      "note": "Topical similarity alone is not support."
+    }
+  },
+  "result_overrides": {
+    "run_note": "SYNTHETIC / 合成示例，不是官方答案；所有结果由实际运行生成。"
+  }
+}

@@ -1,0 +1,245 @@
+{
+  "label": "SYNTHETIC",
+  "claims": [
+    {
+      "claim_id": "S1",
+      "question": "Did the trial report a Grade 3 neutropenia rate of 18% in the AST-7 arm?",
+      "query_families": [
+        {
+          "family_id": "S1-initial-narrow",
+          "kind": "entity",
+          "purpose": "Initial terminology deliberately misses the table synonym.",
+          "variants": [
+            {
+              "text": "Grade 3 neutropenia rate",
+              "channels": [
+                "exact_phrase"
+              ],
+              "variant_id": "S1-initial-narrow-q01"
+            },
+            {
+              "text": "AST-7 Grade 3 neutropenia",
+              "channels": [
+                "exact_phrase"
+              ],
+              "variant_id": "S1-initial-narrow-q02"
+            }
+          ]
+        },
+        {
+          "family_id": "S1-synonym-table-recovery",
+          "kind": "synonym",
+          "purpose": "Second query family recovers the adverse-event wording and table label.",
+          "variants": [
+            {
+              "text": "neutrophil count decreased",
+              "channels": [
+                "exact_phrase",
+                "token_overlap",
+                "numeric_match"
+              ],
+              "variant_id": "S1-synonym-table-recovery-q01"
+            },
+            {
+              "text": "Table 2 AST 7",
+              "channels": [
+                "exact_phrase",
+                "token_overlap",
+                "numeric_match"
+              ],
+              "variant_id": "S1-synonym-table-recovery-q02"
+            },
+            {
+              "text": "18.0%",
+              "channels": [
+                "exact_phrase",
+                "token_overlap",
+                "numeric_match"
+              ],
+              "variant_id": "S1-synonym-table-recovery-q03"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "claim_id": "S2",
+      "question": "Did the paper report the 36-month overall survival rate for the pediatric subgroup?",
+      "query_families": [
+        {
+          "family_id": "S2-entity",
+          "kind": "entity",
+          "variants": [
+            {
+              "text": "pediatric subgroup",
+              "channels": [
+                "exact_phrase",
+                "token_overlap",
+                "numeric_match"
+              ],
+              "variant_id": "S2-entity-q01"
+            },
+            {
+              "text": "overall survival",
+              "channels": [
+                "exact_phrase",
+                "token_overlap",
+                "numeric_match"
+              ],
+              "variant_id": "S2-entity-q02"
+            }
+          ]
+        },
+        {
+          "family_id": "S2-synonyms",
+          "kind": "synonym",
+          "variants": [
+            {
+              "text": "paediatric",
+              "channels": [
+                "exact_phrase",
+                "token_overlap",
+                "numeric_match"
+              ],
+              "variant_id": "S2-synonyms-q01"
+            },
+            {
+              "text": "children adolescents",
+              "channels": [
+                "exact_phrase",
+                "token_overlap",
+                "numeric_match"
+              ],
+              "variant_id": "S2-synonyms-q02"
+            },
+            {
+              "text": "OS subgroup",
+              "channels": [
+                "exact_phrase",
+                "token_overlap",
+                "numeric_match"
+              ],
+              "variant_id": "S2-synonyms-q03"
+            }
+          ]
+        },
+        {
+          "family_id": "S2-numeric",
+          "kind": "numeric",
+          "variants": [
+            {
+              "text": "36-month",
+              "channels": [
+                "exact_phrase",
+                "token_overlap",
+                "numeric_match"
+              ],
+              "variant_id": "S2-numeric-q01"
+            },
+            {
+              "text": "36 months",
+              "channels": [
+                "exact_phrase",
+                "token_overlap",
+                "numeric_match"
+              ],
+              "variant_id": "S2-numeric-q02"
+            }
+          ]
+        },
+        {
+          "family_id": "S2-figure-table",
+          "kind": "figure_table",
+          "variants": [
+            {
+              "text": "Kaplan-Meier pediatric",
+              "channels": [
+                "exact_phrase",
+                "token_overlap",
+                "numeric_match"
+              ],
+              "variant_id": "S2-figure-table-q01"
+            },
+            {
+              "text": "Figure overall survival",
+              "channels": [
+                "exact_phrase",
+                "token_overlap",
+                "numeric_match"
+              ],
+              "variant_id": "S2-figure-table-q02"
+            },
+            {
+              "text": "Table pediatric survival",
+              "channels": [
+                "exact_phrase",
+                "token_overlap",
+                "numeric_match"
+              ],
+              "variant_id": "S2-figure-table-q03"
+            }
+          ]
+        },
+        {
+          "family_id": "S2-restrictions",
+          "kind": "restriction",
+          "variants": [
+            {
+              "text": "36-month pediatric overall survival rate",
+              "channels": [
+                "exact_phrase",
+                "token_overlap",
+                "numeric_match"
+              ],
+              "variant_id": "S2-restrictions-q01"
+            },
+            {
+              "text": "children 36 months OS",
+              "channels": [
+                "exact_phrase",
+                "token_overlap",
+                "numeric_match"
+              ],
+              "variant_id": "S2-restrictions-q02"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "coverage": {
+    "page_ids": [
+      "source-001:p0001",
+      "source-001:p0002",
+      "source-001:p0003"
+    ],
+    "sources": [
+      {
+        "source_id": "source-001",
+        "path": "paper.txt",
+        "media_type": "text",
+        "page_count": 3,
+        "page_ids": [
+          "source-001:p0001",
+          "source-001:p0002",
+          "source-001:p0003"
+        ],
+        "characters": 1883,
+        "extraction": "UTF-8 direct read"
+      }
+    ]
+  },
+  "policy": {
+    "candidate_cap": null,
+    "semantic_verdicts_from_retrieval": false,
+    "resources": {
+      "max_requests": 64,
+      "max_seconds": 900,
+      "path": null
+    },
+    "usage": {
+      "local_conversion_requests": 0,
+      "network_requests": 0
+    }
+  }
+}

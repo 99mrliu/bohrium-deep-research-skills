@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="1240" height="664" viewBox="0 0 1240 664" role="img" aria-labelledby="title desc">
+<title id="title">Counterfactual verdict transition report</title>
+<desc id="desc">Text preview generated from independent annotation transitions, not prefabricated verdicts.</desc>
+<rect width="1240" height="664" fill="#f6f8fc"/>
+<text x="28" y="40" font-family="Arial, Helvetica, sans-serif" font-size="24" font-weight="700" fill="#172033">SYNTHETIC minimal-pair transitions</text>
+<text x="28" y="70" font-family="Arial, Helvetica, sans-serif" font-size="15" font-weight="400" fill="#172033">status=consistent  total=6  consistent=6  inconsistent=0</text>
+<text x="28" y="98" font-family="Arial, Helvetica, sans-serif" font-size="13" font-weight="400" fill="#4a5872">Verdicts originate in independent annotations; this SVG only renders the observed report.</text>
+<text x="28" y="132" font-family="Arial, Helvetica, sans-serif" font-size="13" font-weight="700" fill="#4a5872">probe / operator</text>
+<text x="380" y="132" font-family="Arial, Helvetica, sans-serif" font-size="13" font-weight="700" fill="#4a5872">expected relation</text>
+<text x="630" y="132" font-family="Arial, Helvetica, sans-serif" font-size="13" font-weight="700" fill="#4a5872">observed verdict transition</text>
+<text x="1000" y="132" font-family="Arial, Helvetica, sans-serif" font-size="13" font-weight="700" fill="#4a5872">calibration</text>
+<rect x="20" y="150" width="1200" height="70" rx="8" fill="#ffffff" stroke="#18794e" stroke-width="1"/>
+<text x="32" y="175" font-family="Arial, Helvetica, sans-serif" font-size="14" font-weight="700" fill="#172033">p-neg / negation</text>
+<text x="32" y="199" font-family="Arial, Helvetica, sans-serif" font-size="12" font-weight="400" fill="#4a5872">base=c-neg  semantic=same</text>
+<text x="380" y="187" font-family="Arial, Helvetica, sans-serif" font-size="14" font-weight="400" fill="#172033">flip_to_contradicted</text>
+<text x="630" y="187" data-observed-transition="supported-&gt;contradicted" font-family="Arial, Helvetica, sans-serif" font-size="14" fill="#172033">supported-&gt;contradicted</text>
+<text x="1000" y="187" font-family="Arial, Helvetica, sans-serif" font-size="14" font-weight="700" fill="#18794e">consistent</text>
+<rect x="20" y="232" width="1200" height="70" rx="8" fill="#ffffff" stroke="#18794e" stroke-width="1"/>
+<text x="32" y="257" font-family="Arial, Helvetica, sans-serif" font-size="14" font-weight="700" fill="#172033">p-comp / comparison_direction</text>
+<text x="32" y="281" font-family="Arial, Helvetica, sans-serif" font-size="12" font-weight="400" fill="#4a5872">base=c-comp  semantic=same</text>
+<text x="380" y="269" font-family="Arial, Helvetica, sans-serif" font-size="14" font-weight="400" fill="#172033">flip_to_contradicted</text>
+<text x="630" y="269" data-observed-transition="supported-&gt;contradicted" font-family="Arial, Helvetica, sans-serif" font-size="14" fill="#172033">supported-&gt;contradicted</text>
+<text x="1000" y="269" font-family="Arial, Helvetica, sans-serif" font-size="14" font-weight="700" fill="#18794e">consistent</text>
+<rect x="20" y="314" width="1200" height="70" rx="8" fill="#ffffff" stroke="#18794e" stroke-width="1"/>
+<text x="32" y="339" font-family="Arial, Helvetica, sans-serif" font-size="14" font-weight="700" fill="#172033">p-sig / significance</text>
+<text x="32" y="363" font-family="Arial, Helvetica, sans-serif" font-size="12" font-weight="400" fill="#4a5872">base=c-sig  semantic=same</text>
+<text x="380" y="351" font-family="Arial, Helvetica, sans-serif" font-size="14" font-weight="400" fill="#172033">flip_to_contradicted</text>
+<text x="630" y="351" data-observed-transition="supported-&gt;contradicted" font-family="Arial, Helvetica, sans-serif" font-size="14" fill="#172033">supported-&gt;contradicted</text>
+<text x="1000" y="351" font-family="Arial, Helvetica, sans-serif" font-size="14" font-weight="700" fill="#18794e">consistent</text>
+<rect x="20" y="396" width="1200" height="70" rx="8" fill="#ffffff" stroke="#18794e" stroke-width="1"/>
+<text x="32" y="421" font-family="Arial, Helvetica, sans-serif" font-size="14" font-weight="700" fill="#172033">p-cause / causal_correlation</text>
+<text x="32" y="445" font-family="Arial, Helvetica, sans-serif" font-size="12" font-weight="400" fill="#4a5872">base=c-cause  semantic=strengthen</text>
+<text x="380" y="433" font-family="Arial, Helvetica, sans-serif" font-size="14" font-weight="400" fill="#172033">become_insufficient</text>
+<text x="630" y="433" data-observed-transition="supported-&gt;insufficient_evidence" font-family="Arial, Helvetica, sans-serif" font-size="14" fill="#172033">supported-&gt;insufficient_evidence</text>
+<text x="1000" y="433" font-family="Arial, Helvetica, sans-serif" font-size="14" font-weight="700" fill="#18794e">consistent</text>
+<rect x="20" y="478" width="1200" height="70" rx="8" fill="#ffffff" stroke="#18794e" stroke-width="1"/>
+<text x="32" y="503" font-family="Arial, Helvetica, sans-serif" font-size="14" font-weight="700" fill="#172033">p-quant / quantifier</text>
+<text x="32" y="527" font-family="Arial, Helvetica, sans-serif" font-size="12" font-weight="400" fill="#4a5872">base=c-quant  semantic=strengthen</text>
+<text x="380" y="515" font-family="Arial, Helvetica, sans-serif" font-size="14" font-weight="400" fill="#172033">flip_to_contradicted</text>
+<text x="630" y="515" data-observed-transition="supported-&gt;contradicted" font-family="Arial, Helvetica, sans-serif" font-size="14" fill="#172033">supported-&gt;contradicted</text>
+<text x="1000" y="515" font-family="Arial, Helvetica, sans-serif" font-size="14" font-weight="700" fill="#18794e">consistent</text>
+<rect x="20" y="560" width="1200" height="70" rx="8" fill="#ffffff" stroke="#18794e" stroke-width="1"/>
+<text x="32" y="585" font-family="Arial, Helvetica, sans-serif" font-size="14" font-weight="700" fill="#172033">p-scope / condition_scope</text>
+<text x="32" y="609" font-family="Arial, Helvetica, sans-serif" font-size="12" font-weight="400" fill="#4a5872">base=c-scope  semantic=strengthen</text>
+<text x="380" y="597" font-family="Arial, Helvetica, sans-serif" font-size="14" font-weight="400" fill="#172033">become_insufficient</text>
+<text x="630" y="597" data-observed-transition="supported-&gt;insufficient_evidence" font-family="Arial, Helvetica, sans-serif" font-size="14" fill="#172033">supported-&gt;insufficient_evidence</text>
+<text x="1000" y="597" font-family="Arial, Helvetica, sans-serif" font-size="14" font-weight="700" fill="#18794e">consistent</text>
+<text x="28" y="646" font-family="Arial, Helvetica, sans-serif" font-size="13" font-weight="400" fill="#4a5872">A mismatch requires original-source re-review; it never auto-changes a verdict.</text>
+</svg>

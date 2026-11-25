@@ -1,0 +1,36 @@
+{
+  "SYNTHETIC": true,
+  "review_note": "Human/agent-reviewed example metadata. Titles, versions, dates, and relations come only from the fictional text. DOI is unknown, hence null.",
+  "documents": [
+    {
+      "document_id": "doc-v1",
+      "title": "Synthetic Delta Calibration",
+      "doi": null,
+      "version": "v1",
+      "date": "2026-01-10",
+      "kind": "preprint",
+      "files": ["documents/paper_v1.txt", "documents/paper_v1_duplicate.txt"],
+      "relations": []
+    },
+    {
+      "document_id": "doc-v2",
+      "title": "Synthetic Delta Calibration",
+      "doi": null,
+      "version": "v2",
+      "date": "2026-02-10",
+      "kind": "preprint_revision",
+      "files": ["documents/paper_v2.txt"],
+      "relations": [{"type": "revises", "target_id": "doc-v1"}]
+    },
+    {
+      "document_id": "doc-supplement-s2",
+      "title": "Supplement to Synthetic Delta Calibration v2",
+      "doi": null,
+      "version": "S2",
+      "date": "2026-02-10",
+      "kind": "supplement",
+      "files": ["documents/supplement_v2.txt"],
+      "relations": [{"type": "supplements", "target_id": "doc-v2"}]
+    }
+  ]
+}

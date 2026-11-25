@@ -1,0 +1,374 @@
+{
+  "case_id": "SYNTHETIC-QEL-001",
+  "claim_verdicts": [
+    {
+      "claim_id": "C1_RAW_PP",
+      "question": "SYNTHETIC: Does recomputing 70/100 versus 60/120 give 20 percentage points, a 40% relative increase, and a proportion ratio of 1.4?",
+      "verdict": "supported",
+      "verdict_origin": "agent",
+      "rationale": "SYNTHETIC: Raw-count recomputation gives 70% - 50% = 20 percentage points, (0.70-0.50)/0.50 = 40% relative change, and 0.70/0.50 = 1.4, all matching their targets within tolerance. The paired z test and Wilson limits are uncertainty evidence, not the basis for equating significance with truth.",
+      "evidence_ids": [
+        "derived_C1_RAW_PP_1",
+        "derived_C1_RAW_PP_2",
+        "derived_C1_RAW_PP_3",
+        "ztest_obs_treatment_obs_control"
+      ],
+      "source_ids": [
+        "obs_treatment",
+        "obs_control"
+      ],
+      "quantitative_evidence": [
+        {
+          "id": "derived_C1_RAW_PP_1",
+          "claim_id": "C1_RAW_PP",
+          "role": "derived",
+          "data_label": "SYNTHETIC",
+          "metric": "percentage_point_difference",
+          "basis": "raw_counts",
+          "source_ids": [
+            "obs_treatment",
+            "obs_control"
+          ],
+          "formula": "100*(p1-p0)",
+          "substitution": "100*(70/100 - 60/120)",
+          "value": 19.999999999999996,
+          "unit": "percentage_point",
+          "display_percentage": null,
+          "warnings": [],
+          "verdict": null,
+          "verdict_policy": "Agent semantic adjudication required; numeric matching alone is not entailment.",
+          "comparison": {
+            "target": 20.0,
+            "target_unit": "percentage_point",
+            "calculated_minus_target": -3.552713678800501e-15,
+            "tolerance": {
+              "absolute": 1e-09,
+              "relative": 0.0,
+              "rule": "abs(calculated-target) <= max(absolute, relative*abs(target))",
+              "maximum_allowed_absolute_difference": 1e-09
+            },
+            "within_tolerance": true,
+            "entailment_comparison": "within_tolerance"
+          },
+          "statistical_test_id": "ztest_obs_treatment_obs_control"
+        },
+        {
+          "id": "derived_C1_RAW_PP_2",
+          "claim_id": "C1_RAW_PP",
+          "role": "derived",
+          "data_label": "SYNTHETIC",
+          "metric": "relative_change",
+          "basis": "raw_counts",
+          "source_ids": [
+            "obs_treatment",
+            "obs_control"
+          ],
+          "formula": "(p1-p0)/p0",
+          "substitution": "(70/100 - 60/120)/(60/120)",
+          "value": 0.3999999999999999,
+          "unit": "relative_fraction",
+          "display_percentage": 39.99999999999999,
+          "warnings": [],
+          "verdict": null,
+          "verdict_policy": "Agent semantic adjudication required; numeric matching alone is not entailment.",
+          "comparison": {
+            "target": 0.4,
+            "target_unit": "relative_fraction",
+            "calculated_minus_target": -1.1102230246251565e-16,
+            "tolerance": {
+              "absolute": 1e-09,
+              "relative": 0.0,
+              "rule": "abs(calculated-target) <= max(absolute, relative*abs(target))",
+              "maximum_allowed_absolute_difference": 1e-09
+            },
+            "within_tolerance": true,
+            "entailment_comparison": "within_tolerance"
+          },
+          "statistical_test_id": "ztest_obs_treatment_obs_control"
+        },
+        {
+          "id": "derived_C1_RAW_PP_3",
+          "claim_id": "C1_RAW_PP",
+          "role": "derived",
+          "data_label": "SYNTHETIC",
+          "metric": "proportion_ratio",
+          "basis": "raw_counts",
+          "source_ids": [
+            "obs_treatment",
+            "obs_control"
+          ],
+          "formula": "p1/p0",
+          "substitution": "(70/100)/(60/120)",
+          "value": 1.4,
+          "unit": "ratio",
+          "display_percentage": null,
+          "warnings": [],
+          "verdict": null,
+          "verdict_policy": "Agent semantic adjudication required; numeric matching alone is not entailment.",
+          "comparison": {
+            "target": 1.4,
+            "target_unit": "ratio",
+            "calculated_minus_target": 0.0,
+            "tolerance": {
+              "absolute": 1e-09,
+              "relative": 0.0,
+              "rule": "abs(calculated-target) <= max(absolute, relative*abs(target))",
+              "maximum_allowed_absolute_difference": 1e-09
+            },
+            "within_tolerance": true,
+            "entailment_comparison": "within_tolerance"
+          },
+          "statistical_test_id": "ztest_obs_treatment_obs_control"
+        }
+      ]
+    },
+    {
+      "claim_id": "C2_DISPLAY_RELATIVE",
+      "question": "SYNTHETIC: For the paper's displayed 70% versus 60%, is the statement '10 percentage points, i.e. 10% relative improvement' correct in both parts?",
+      "verdict": "partially_supported",
+      "verdict_origin": "agent",
+      "rationale": "SYNTHETIC: The displayed 70% versus 60% does differ by 10 percentage points, but its relative increase is (0.70-0.60)/0.60 = 1/6 = 16.6667%, not 10%. Separately, raw 60/120 is 50%, so the display conflicts with the count-derived 20 percentage points and 40% relative change. Both are retained rather than silently reconciled.",
+      "evidence_ids": [
+        "derived_C2_DISPLAY_RELATIVE_1",
+        "derived_C2_DISPLAY_RELATIVE_2",
+        "derived_C1_RAW_PP_1",
+        "derived_C1_RAW_PP_2"
+      ],
+      "source_ids": [
+        "obs_display_treatment",
+        "obs_control",
+        "obs_treatment"
+      ],
+      "quantitative_evidence": [
+        {
+          "id": "derived_C2_DISPLAY_RELATIVE_1",
+          "claim_id": "C2_DISPLAY_RELATIVE",
+          "role": "derived",
+          "data_label": "SYNTHETIC",
+          "metric": "percentage_point_difference",
+          "basis": "reported_display",
+          "source_ids": [
+            "obs_display_treatment.reported_display",
+            "obs_control.reported_display"
+          ],
+          "formula": "100*(p1-p0)",
+          "substitution": "100*(70% - 60%)",
+          "value": 9.999999999999998,
+          "unit": "percentage_point",
+          "display_percentage": null,
+          "warnings": [],
+          "verdict": null,
+          "verdict_policy": "Agent semantic adjudication required; numeric matching alone is not entailment.",
+          "comparison": {
+            "target": 10.0,
+            "target_unit": "percentage_point",
+            "calculated_minus_target": -1.7763568394002505e-15,
+            "tolerance": {
+              "absolute": 1e-09,
+              "relative": 0.0,
+              "rule": "abs(calculated-target) <= max(absolute, relative*abs(target))",
+              "maximum_allowed_absolute_difference": 1e-09
+            },
+            "within_tolerance": true,
+            "entailment_comparison": "within_tolerance"
+          }
+        },
+        {
+          "id": "derived_C2_DISPLAY_RELATIVE_2",
+          "claim_id": "C2_DISPLAY_RELATIVE",
+          "role": "derived",
+          "data_label": "SYNTHETIC",
+          "metric": "relative_change",
+          "basis": "reported_display",
+          "source_ids": [
+            "obs_display_treatment.reported_display",
+            "obs_control.reported_display"
+          ],
+          "formula": "(p1-p0)/p0",
+          "substitution": "(70% - 60%)/(60%)",
+          "value": 0.16666666666666663,
+          "unit": "relative_fraction",
+          "display_percentage": 16.666666666666664,
+          "warnings": [],
+          "verdict": null,
+          "verdict_policy": "Agent semantic adjudication required; numeric matching alone is not entailment.",
+          "comparison": {
+            "target": 0.1,
+            "target_unit": "relative_fraction",
+            "calculated_minus_target": 0.06666666666666662,
+            "tolerance": {
+              "absolute": 1e-09,
+              "relative": 0.0,
+              "rule": "abs(calculated-target) <= max(absolute, relative*abs(target))",
+              "maximum_allowed_absolute_difference": 1e-09
+            },
+            "within_tolerance": false,
+            "entailment_comparison": "outside_tolerance"
+          }
+        }
+      ]
+    },
+    {
+      "claim_id": "C3_REPORTED_EXACT_P",
+      "question": "SYNTHETIC: Does the source paper itself report an exact two-sided p-value of 0.000123 for the raw-count comparison?",
+      "verdict": "insufficient_evidence",
+      "verdict_origin": "agent",
+      "rationale": "SYNTHETIC: The paper states that no exact p-value was printed. A pooled normal-approximation p-value derived from counts cannot verify that the source itself reported exactly 0.000123. This is an unreported-source-value question, not a contradiction and not an exact-test calculation.",
+      "evidence_ids": [
+        "derived_C3_REPORTED_EXACT_P_1",
+        "ztest_obs_treatment_obs_control"
+      ],
+      "source_ids": [
+        "obs_treatment",
+        "obs_control"
+      ],
+      "quantitative_evidence": [
+        {
+          "id": "derived_C3_REPORTED_EXACT_P_1",
+          "claim_id": "C3_REPORTED_EXACT_P",
+          "role": "derived",
+          "data_label": "SYNTHETIC",
+          "metric": "two_proportion_p_value",
+          "basis": "raw_counts",
+          "source_ids": [
+            "obs_treatment",
+            "obs_control"
+          ],
+          "formula": "see linked two-sided pooled z test",
+          "substitution": "raw counts only; display values are never used for the z test",
+          "value": 0.002662185508945006,
+          "unit": "probability",
+          "display_percentage": null,
+          "warnings": [
+            "normal-approximation derived p-value is not a source-reported exact p-value"
+          ],
+          "verdict": null,
+          "verdict_policy": "Agent semantic adjudication required; numeric matching alone is not entailment.",
+          "statistical_test_id": "ztest_obs_treatment_obs_control",
+          "comparison": {
+            "target": 0.000123,
+            "target_unit": "probability",
+            "calculated_minus_target": 0.002539185508945006,
+            "tolerance": {
+              "absolute": 1e-12,
+              "relative": 0.0,
+              "rule": "abs(calculated-target) <= max(absolute, relative*abs(target))",
+              "maximum_allowed_absolute_difference": 1e-12
+            },
+            "within_tolerance": false,
+            "entailment_comparison": "not_applicable_source_reporting_question",
+            "warning": "A recomputation cannot prove that the source printed an exact target; absence of a reported value is not a contradiction."
+          }
+        }
+      ]
+    },
+    {
+      "claim_id": "C4_UNIT_CONVERSION",
+      "question": "SYNTHETIC: Does the reported mean completion time of 2500 ms convert to 2.5 s?",
+      "verdict": "supported",
+      "verdict_origin": "agent",
+      "rationale": "SYNTHETIC: The unit conversion 2500 ms * (1 s / 1000 ms) = 2.5 s matches the target within tolerance; the original mean, SD, n, unit and quote remain separately stored.",
+      "evidence_ids": [
+        "derived_C4_UNIT_CONVERSION_1"
+      ],
+      "source_ids": [
+        "obs_latency"
+      ],
+      "quantitative_evidence": [
+        {
+          "id": "derived_C4_UNIT_CONVERSION_1",
+          "claim_id": "C4_UNIT_CONVERSION",
+          "role": "derived",
+          "data_label": "SYNTHETIC",
+          "metric": "unit_conversion",
+          "source_ids": [
+            "obs_latency"
+          ],
+          "formula": "value_in_s = value_in_ms * unit_factor(ms/s)",
+          "substitution": "2500 ms -> 2.5 s",
+          "value": 2.5,
+          "unit": "s",
+          "display_percentage": null,
+          "warnings": [],
+          "verdict": null,
+          "verdict_policy": "Agent semantic adjudication required; numeric matching alone is not entailment.",
+          "comparison": {
+            "target": 2.5,
+            "target_unit": "s",
+            "calculated_minus_target": 0.0,
+            "tolerance": {
+              "absolute": 1e-12,
+              "relative": 0.0,
+              "rule": "abs(calculated-target) <= max(absolute, relative*abs(target))",
+              "maximum_allowed_absolute_difference": 1e-12
+            },
+            "within_tolerance": true,
+            "entailment_comparison": "within_tolerance"
+          }
+        }
+      ]
+    }
+  ],
+  "status": "success",
+  "sources": [
+    {
+      "id": "case",
+      "kind": "case",
+      "path": "case.json",
+      "sha256": "116845e6502562d43bfd2de34a2abe994bb7fe5403b6bb7fd7d5de40135ff250",
+      "bytes": 1471
+    },
+    {
+      "id": "claims",
+      "kind": "claims",
+      "path": "claims-to-verify.json",
+      "sha256": "9d41b7d15351ed92f25e8fe6094224a19c8a6889884ea6ef1b68b3779e421143",
+      "bytes": 2763
+    },
+    {
+      "id": "task",
+      "kind": "task",
+      "path": "task.md",
+      "sha256": "f1591890da0f98066bccdf2bc405ebfa290fe7d1b74bc432db2d01bbc5247383",
+      "bytes": 833
+    },
+    {
+      "id": "paper",
+      "kind": "paper",
+      "path": "paper.md",
+      "sha256": "68eaaede1b1de3b5dcbf952c06e5aa112e4115a2c357068bfa584d6564805c1a",
+      "bytes": 568
+    }
+  ],
+  "uncertainty": [
+    "All example observations, claims, calculations and plots marked SYNTHETIC are artificial, not empirical findings."
+  ],
+  "change_records": [
+    {
+      "at": "2026-11-25T02:31:05+00:00",
+      "action": "run_started"
+    },
+    {
+      "at": "2026-11-25T02:31:05+00:00",
+      "action": "early_partial_written"
+    },
+    {
+      "at": "2026-11-25T02:31:05+00:00",
+      "action": "quantitative_report_and_effect_svg_generated",
+      "derived_count": 7,
+      "statistical_test_count": 1
+    },
+    {
+      "at": "2026-11-25T02:31:05+00:00",
+      "action": "agent_verdicts_integrated"
+    }
+  ],
+  "quantitative_report": "quantitative-report.json",
+  "summary": {
+    "contradicted": 0,
+    "insufficient_evidence": 1,
+    "partially_supported": 1,
+    "supported": 2,
+    "unresolved": 0
+  }
+}

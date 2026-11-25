@@ -1,0 +1,27 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1500" height="598" viewBox="0 0 1500 598">
+<rect width="100%" height="100%" fill="#ffffff"/>
+<text x="32" y="38" font-family="monospace" font-size="22" fill="#0f172a">SYNTHETIC — recall coverage by query family</text>
+<text x="32" y="66" font-family="monospace" font-size="14" fill="#475569">Bars count fused retrieval candidates, not supported claims. Every variant scanned every extracted page.</text>
+<text x="32" y="118" font-family="monospace" font-size="14" fill="#1e293b">S1 / S1-initial-narrow [entity]</text>
+<rect x="700" y="100" width="0" height="24" fill="#64748b"/>
+<text x="715" y="118" font-family="monospace" font-size="14" fill="#0f172a">0</text>
+<text x="32" y="182" font-family="monospace" font-size="14" fill="#1e293b">S1 / S1-synonym-table-recovery [synonym]</text>
+<rect x="700" y="164" width="600" height="24" fill="#0f766e"/>
+<text x="1315" y="182" font-family="monospace" font-size="14" fill="#0f172a">3</text>
+<text x="32" y="246" font-family="monospace" font-size="14" fill="#1e293b">S2 / S2-entity [entity]</text>
+<rect x="700" y="228" width="400" height="24" fill="#64748b"/>
+<text x="1115" y="246" font-family="monospace" font-size="14" fill="#0f172a">2</text>
+<text x="32" y="310" font-family="monospace" font-size="14" fill="#1e293b">S2 / S2-synonyms [synonym]</text>
+<rect x="700" y="292" width="0" height="24" fill="#0f766e"/>
+<text x="715" y="310" font-family="monospace" font-size="14" fill="#0f172a">0</text>
+<text x="32" y="374" font-family="monospace" font-size="14" fill="#1e293b">S2 / S2-numeric [numeric]</text>
+<rect x="700" y="356" width="0" height="24" fill="#a16207"/>
+<text x="715" y="374" font-family="monospace" font-size="14" fill="#0f172a">0</text>
+<text x="32" y="438" font-family="monospace" font-size="14" fill="#1e293b">S2 / S2-figure-table [figure_table]</text>
+<rect x="700" y="420" width="600" height="24" fill="#7c3aed"/>
+<text x="1315" y="438" font-family="monospace" font-size="14" fill="#0f172a">3</text>
+<text x="32" y="502" font-family="monospace" font-size="14" fill="#1e293b">S2 / S2-restrictions [restriction]</text>
+<rect x="700" y="484" width="400" height="24" fill="#be123c"/>
+<text x="1115" y="502" font-family="monospace" font-size="14" fill="#0f172a">2</text>
+<text x="32" y="574" font-family="monospace" font-size="12" fill="#64748b">Generated from retrieval-plan.json, search-audit.jsonl, and candidates.jsonl; SYNTHETIC.</text>
+</svg>

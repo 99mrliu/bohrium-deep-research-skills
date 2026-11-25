@@ -1,0 +1,20 @@
+{
+  "record_id": "review-p-cause-001",
+  "stage": "mandatory_original_source_re_review",
+  "target_id": "p-cause",
+  "before": {
+    "annotation_file": "independent-annotations.initial.json",
+    "verdict": "contradicted",
+    "rationale": "Initial annotation incorrectly treated absence of causal identification as disproof of causation."
+  },
+  "after": {
+    "annotation_file": "independent-annotations.reviewed.json",
+    "verdict": "insufficient_evidence",
+    "rationale": "The synthetic paper reports an adjusted association but no causal estimate; this fails to establish causation without contradicting it."
+  },
+  "source_locators": [
+    "paper.txt, Section 3, entire paragraph"
+  ],
+  "review_status": "resolved",
+  "reviewer_stage": "SYNTHETIC source-grounded reviewer"
+}

@@ -1,0 +1,248 @@
+{
+  "case_id": "SYNTHETIC-RECALL-001",
+  "claim_results": [
+    {
+      "claim_id": "S2",
+      "question": "Did the paper report the 36-month overall survival rate for the pediatric subgroup?",
+      "verdict": "insufficient_evidence",
+      "rationale": "SYNTHETIC Agent semantic review: all candidates concern adults, other end points, or 24-month follow-up. None reports the requested pediatric 36-month rate. Non-reporting is not contradiction.",
+      "evidence_candidate_ids": [],
+      "conflicts": [],
+      "uncertainty": "Only the supplied three-page synthetic document was searched.",
+      "no_evidence_certificate": {
+        "claim_id": "S2",
+        "status": "not_issued",
+        "valid": false,
+        "meaning": "No retrieved candidate semantically answers the question after review; absence of support is not contradiction.",
+        "query_families": [
+          {
+            "family_id": "S2-only-narrow-family",
+            "kind": "entity",
+            "variants": [
+              {
+                "variant_id": "S2-only-narrow-family-q01",
+                "query": "pediatric subgroup overall survival",
+                "channels": [
+                  "exact_phrase",
+                  "token_overlap",
+                  "numeric_match"
+                ]
+              }
+            ]
+          }
+        ],
+        "query_family_sufficiency": false,
+        "query_family_limitations": [
+          "fewer than two query families",
+          "fewer than three family kinds",
+          "no synonym family",
+          "numeric question lacks numeric family"
+        ],
+        "all_planned_variants_executed": true,
+        "full_document_scope": true,
+        "pages_expected": [
+          "source-001:p0001",
+          "source-001:p0002",
+          "source-001:p0003"
+        ],
+        "pages_scanned_per_variant": {
+          "S2-only-narrow-family-q01": [
+            "source-001:p0001",
+            "source-001:p0002",
+            "source-001:p0003"
+          ]
+        },
+        "document_sources": [
+          {
+            "source_id": "source-001",
+            "path": "paper.txt",
+            "media_type": "text",
+            "page_count": 3,
+            "page_ids": [
+              "source-001:p0001",
+              "source-001:p0002",
+              "source-001:p0003"
+            ],
+            "characters": 1883,
+            "extraction": "UTF-8 direct read"
+          }
+        ],
+        "candidate_count": 2,
+        "unreviewed_candidates": [],
+        "unexplained_unreviewed_candidates": [],
+        "unexplained_exclusions": [],
+        "candidate_dispositions": [
+          {
+            "candidate_id": "cand-164009b41a82",
+            "status": "reviewed",
+            "reason": "SYNTHETIC Agent: this candidate does not report both the pediatric subgroup and the 36-month overall-survival end point."
+          },
+          {
+            "candidate_id": "cand-6c478eadd545",
+            "status": "reviewed",
+            "reason": "SYNTHETIC Agent: this candidate does not report both the pediatric subgroup and the 36-month overall-survival end point."
+          }
+        ],
+        "conclusion": "insufficient_recall_audit_certificate_not_issued"
+      }
+    }
+  ],
+  "status": "partial",
+  "sources": [
+    {
+      "source_id": "source-001",
+      "path": "paper.txt",
+      "media_type": "text",
+      "page_count": 3,
+      "page_ids": [
+        "source-001:p0001",
+        "source-001:p0002",
+        "source-001:p0003"
+      ],
+      "characters": 1883,
+      "extraction": "UTF-8 direct read"
+    }
+  ],
+  "uncertainty": [
+    "SYNTHETIC pipeline initialized",
+    "S2: invalid no-evidence certificate (fewer than two query families; fewer than three family kinds; no synonym family; numeric question lacks numeric family)"
+  ],
+  "change_records": [
+    {
+      "stage": "skeleton",
+      "at": "2026-11-25T02:33:58.721134+00:00",
+      "detail": "Partial result written before source extraction or retrieval"
+    },
+    {
+      "stage": "sources_loaded",
+      "at": "2026-11-25T02:33:58.722425+00:00",
+      "detail": "Loaded 1 source(s), 3 page(s)"
+    },
+    {
+      "stage": "retrieval_complete",
+      "at": "2026-11-25T02:33:58.723867+00:00",
+      "detail": "Executed 1 query variants; generated 2 unreviewed candidates"
+    },
+    {
+      "stage": "Agent_review_applied",
+      "at": "2026-11-25T02:33:59.190661+00:00",
+      "detail": "Applied 1 claim review(s) and 2 candidate review(s)"
+    },
+    {
+      "stage": "validation_failed",
+      "at": "2026-11-25T02:33:59.190901+00:00",
+      "detail": "S2: invalid no-evidence certificate (fewer than two query families; fewer than three family kinds; no synonym family; numeric question lacks numeric family)"
+    }
+  ],
+  "no_evidence_certificates": [
+    {
+      "claim_id": "S2",
+      "status": "not_issued",
+      "valid": false,
+      "meaning": "No retrieved candidate semantically answers the question after review; absence of support is not contradiction.",
+      "query_families": [
+        {
+          "family_id": "S2-only-narrow-family",
+          "kind": "entity",
+          "variants": [
+            {
+              "variant_id": "S2-only-narrow-family-q01",
+              "query": "pediatric subgroup overall survival",
+              "channels": [
+                "exact_phrase",
+                "token_overlap",
+                "numeric_match"
+              ]
+            }
+          ]
+        }
+      ],
+      "query_family_sufficiency": false,
+      "query_family_limitations": [
+        "fewer than two query families",
+        "fewer than three family kinds",
+        "no synonym family",
+        "numeric question lacks numeric family"
+      ],
+      "all_planned_variants_executed": true,
+      "full_document_scope": true,
+      "pages_expected": [
+        "source-001:p0001",
+        "source-001:p0002",
+        "source-001:p0003"
+      ],
+      "pages_scanned_per_variant": {
+        "S2-only-narrow-family-q01": [
+          "source-001:p0001",
+          "source-001:p0002",
+          "source-001:p0003"
+        ]
+      },
+      "document_sources": [
+        {
+          "source_id": "source-001",
+          "path": "paper.txt",
+          "media_type": "text",
+          "page_count": 3,
+          "page_ids": [
+            "source-001:p0001",
+            "source-001:p0002",
+            "source-001:p0003"
+          ],
+          "characters": 1883,
+          "extraction": "UTF-8 direct read"
+        }
+      ],
+      "candidate_count": 2,
+      "unreviewed_candidates": [],
+      "unexplained_unreviewed_candidates": [],
+      "unexplained_exclusions": [],
+      "candidate_dispositions": [
+        {
+          "candidate_id": "cand-164009b41a82",
+          "status": "reviewed",
+          "reason": "SYNTHETIC Agent: this candidate does not report both the pediatric subgroup and the 36-month overall-survival end point."
+        },
+        {
+          "candidate_id": "cand-6c478eadd545",
+          "status": "reviewed",
+          "reason": "SYNTHETIC Agent: this candidate does not report both the pediatric subgroup and the 36-month overall-survival end point."
+        }
+      ],
+      "conclusion": "insufficient_recall_audit_certificate_not_issued"
+    }
+  ],
+  "recall_coverage": {
+    "claims": [
+      {
+        "claim_id": "S2",
+        "candidate_count": 2,
+        "families": [
+          {
+            "family_id": "S2-only-narrow-family",
+            "kind": "entity",
+            "variant_count": 1,
+            "candidate_count": 2,
+            "candidate_ids": [
+              "cand-164009b41a82",
+              "cand-6c478eadd545"
+            ]
+          }
+        ],
+        "query_variant_count": 1
+      }
+    ],
+    "unreviewed_candidates": []
+  },
+  "run_note": "SYNTHETIC / 合成示例，不是官方答案；所有结果由实际运行生成。",
+  "search_audit": {
+    "variant_count": 1,
+    "candidate_count": 2,
+    "every_variant_full_scope": true
+  },
+  "retrieval_plan": {
+    "claim_count": 1,
+    "query_variant_count": 1,
+    "full_document_pages": 3
+  }
+}

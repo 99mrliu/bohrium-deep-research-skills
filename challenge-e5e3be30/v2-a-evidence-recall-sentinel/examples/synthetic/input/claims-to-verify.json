@@ -1,0 +1,61 @@
+{
+  "label": "SYNTHETIC / 合成示例; questions below are not asserted facts",
+  "claims": [
+    {
+      "claim_id": "S1",
+      "question": "Did the trial report a Grade 3 neutropenia rate of 18% in the AST-7 arm?",
+      "query_families": [
+        {
+          "family_id": "S1-initial-narrow",
+          "kind": "entity",
+          "purpose": "Initial terminology deliberately misses the table synonym.",
+          "variants": [
+            {"text": "Grade 3 neutropenia rate", "channels": ["exact_phrase"]},
+            {"text": "AST-7 Grade 3 neutropenia", "channels": ["exact_phrase"]}
+          ]
+        },
+        {
+          "family_id": "S1-synonym-table-recovery",
+          "kind": "synonym",
+          "purpose": "Second query family recovers the adverse-event wording and table label.",
+          "variants": [
+            "neutrophil count decreased",
+            "Table 2 AST 7",
+            "18.0%"
+          ]
+        }
+      ]
+    },
+    {
+      "claim_id": "S2",
+      "question": "Did the paper report the 36-month overall survival rate for the pediatric subgroup?",
+      "query_families": [
+        {
+          "family_id": "S2-entity",
+          "kind": "entity",
+          "variants": ["pediatric subgroup", "overall survival"]
+        },
+        {
+          "family_id": "S2-synonyms",
+          "kind": "synonym",
+          "variants": ["paediatric", "children adolescents", "OS subgroup"]
+        },
+        {
+          "family_id": "S2-numeric",
+          "kind": "numeric",
+          "variants": ["36-month", "36 months"]
+        },
+        {
+          "family_id": "S2-figure-table",
+          "kind": "figure_table",
+          "variants": ["Kaplan-Meier pediatric", "Figure overall survival", "Table pediatric survival"]
+        },
+        {
+          "family_id": "S2-restrictions",
+          "kind": "restriction",
+          "variants": ["36-month pediatric overall survival rate", "children 36 months OS"]
+        }
+      ]
+    }
+  ]
+}

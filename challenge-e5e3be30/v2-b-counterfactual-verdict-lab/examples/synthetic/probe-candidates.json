@@ -1,0 +1,111 @@
+{
+  "schema_version": 1,
+  "synthetic": true,
+  "planning_note": "SYNTHETIC candidates prioritized before any probe verdict is consulted; six primary probes plus two lower-priority duplicates exercise bounded sampling.",
+  "probes": [
+    {
+      "probe_id": "p-neg",
+      "base_claim_id": "c-neg",
+      "probe_text": "Treatment B reduced mean recovery time in the longitudinal cohort.",
+      "operator": "negation",
+      "risk_boost": 20,
+      "risk_flags": ["polarity_sensitive"],
+      "base_signature": {"negation": "negative", "comparison_direction": "not_applicable", "significance": "not_applicable", "causal_correlation": "not_applicable", "quantifier": "not_applicable", "condition_scope": "longitudinal_cohort"},
+      "probe_signature": {"negation": "affirmative", "comparison_direction": "not_applicable", "significance": "not_applicable", "causal_correlation": "not_applicable", "quantifier": "not_applicable", "condition_scope": "longitudinal_cohort"},
+      "edit_contract": {"find": "did not reduce", "replace": "reduced"},
+      "semantic_relation": "same",
+      "expected_relation": "flip_to_contradicted"
+    },
+    {
+      "probe_id": "p-comp",
+      "base_claim_id": "c-comp",
+      "probe_text": "Treatment A had a smaller mean recovery-time reduction than placebo in adults.",
+      "operator": "comparison_direction",
+      "risk_boost": 20,
+      "risk_flags": ["lower_is_better"],
+      "base_signature": {"negation": "affirmative", "comparison_direction": "A_larger_than_placebo", "significance": "not_applicable", "causal_correlation": "not_applicable", "quantifier": "not_applicable", "condition_scope": "adults"},
+      "probe_signature": {"negation": "affirmative", "comparison_direction": "A_smaller_than_placebo", "significance": "not_applicable", "causal_correlation": "not_applicable", "quantifier": "not_applicable", "condition_scope": "adults"},
+      "edit_contract": {"find": "larger", "replace": "smaller"},
+      "semantic_relation": "same",
+      "expected_relation": "flip_to_contradicted"
+    },
+    {
+      "probe_id": "p-sig",
+      "base_claim_id": "c-sig",
+      "probe_text": "The treatment A versus placebo recovery-time difference was statistically significant.",
+      "operator": "significance",
+      "risk_boost": 20,
+      "risk_flags": ["reported_p_value"],
+      "base_signature": {"negation": "not_applicable", "comparison_direction": "not_applicable", "significance": "not_significant", "causal_correlation": "not_applicable", "quantifier": "not_applicable", "condition_scope": "adults"},
+      "probe_signature": {"negation": "not_applicable", "comparison_direction": "not_applicable", "significance": "significant", "causal_correlation": "not_applicable", "quantifier": "not_applicable", "condition_scope": "adults"},
+      "edit_contract": {"find": "was not statistically significant", "replace": "was statistically significant"},
+      "semantic_relation": "same",
+      "expected_relation": "flip_to_contradicted"
+    },
+    {
+      "probe_id": "p-cause",
+      "base_claim_id": "c-cause",
+      "probe_text": "Baseline exercise caused shorter recovery in the observational subgroup.",
+      "operator": "causal_correlation",
+      "risk_boost": 20,
+      "risk_flags": ["observational_design", "causal_overreach"],
+      "base_signature": {"negation": "affirmative", "comparison_direction": "shorter_recovery", "significance": "not_applicable", "causal_correlation": "correlational", "quantifier": "not_applicable", "condition_scope": "observational_subgroup"},
+      "probe_signature": {"negation": "affirmative", "comparison_direction": "shorter_recovery", "significance": "not_applicable", "causal_correlation": "causal", "quantifier": "not_applicable", "condition_scope": "observational_subgroup"},
+      "edit_contract": {"find": "was associated with", "replace": "caused"},
+      "semantic_relation": "strengthen",
+      "expected_relation": "become_insufficient"
+    },
+    {
+      "probe_id": "p-quant",
+      "base_claim_id": "c-quant",
+      "probe_text": "All participants reported improved sleep.",
+      "operator": "quantifier",
+      "risk_boost": 20,
+      "risk_flags": ["bounded_denominator"],
+      "base_signature": {"negation": "affirmative", "comparison_direction": "not_applicable", "significance": "not_applicable", "causal_correlation": "not_applicable", "quantifier": "existential", "condition_scope": "all_40_diary_participants"},
+      "probe_signature": {"negation": "affirmative", "comparison_direction": "not_applicable", "significance": "not_applicable", "causal_correlation": "not_applicable", "quantifier": "universal", "condition_scope": "all_40_diary_participants"},
+      "edit_contract": {"find": "Some", "replace": "All"},
+      "semantic_relation": "strengthen",
+      "expected_relation": "flip_to_contradicted"
+    },
+    {
+      "probe_id": "p-scope",
+      "base_claim_id": "c-scope",
+      "probe_text": "Treatment C reduced mean recovery time in adults regardless of symptom severity.",
+      "operator": "condition_scope",
+      "risk_boost": 20,
+      "risk_flags": ["subgroup_extrapolation"],
+      "base_signature": {"negation": "affirmative", "comparison_direction": "reduction_vs_placebo", "significance": "not_applicable", "causal_correlation": "causal", "quantifier": "not_applicable", "condition_scope": "mild_adults"},
+      "probe_signature": {"negation": "affirmative", "comparison_direction": "reduction_vs_placebo", "significance": "not_applicable", "causal_correlation": "causal", "quantifier": "not_applicable", "condition_scope": "all_severity_adults"},
+      "edit_contract": {"find": "with mild symptoms", "replace": "regardless of symptom severity"},
+      "semantic_relation": "strengthen",
+      "expected_relation": "become_insufficient"
+    },
+    {
+      "probe_id": "p-neg-secondary",
+      "base_claim_id": "c-neg",
+      "probe_text": "Treatment B reduced mean recovery time in the longitudinal cohort.",
+      "operator": "negation",
+      "risk_boost": 0,
+      "risk_flags": [],
+      "base_signature": {"negation": "negative", "comparison_direction": "not_applicable", "significance": "not_applicable", "causal_correlation": "not_applicable", "quantifier": "not_applicable", "condition_scope": "longitudinal_cohort"},
+      "probe_signature": {"negation": "affirmative", "comparison_direction": "not_applicable", "significance": "not_applicable", "causal_correlation": "not_applicable", "quantifier": "not_applicable", "condition_scope": "longitudinal_cohort"},
+      "edit_contract": {"find": "did not reduce", "replace": "reduced"},
+      "semantic_relation": "same",
+      "expected_relation": "flip_to_contradicted"
+    },
+    {
+      "probe_id": "p-cause-secondary",
+      "base_claim_id": "c-cause",
+      "probe_text": "Baseline exercise caused shorter recovery in the observational subgroup.",
+      "operator": "causal_correlation",
+      "risk_boost": 0,
+      "risk_flags": [],
+      "base_signature": {"negation": "affirmative", "comparison_direction": "shorter_recovery", "significance": "not_applicable", "causal_correlation": "correlational", "quantifier": "not_applicable", "condition_scope": "observational_subgroup"},
+      "probe_signature": {"negation": "affirmative", "comparison_direction": "shorter_recovery", "significance": "not_applicable", "causal_correlation": "causal", "quantifier": "not_applicable", "condition_scope": "observational_subgroup"},
+      "edit_contract": {"find": "was associated with", "replace": "caused"},
+      "semantic_relation": "strengthen",
+      "expected_relation": "become_insufficient"
+    }
+  ]
+}

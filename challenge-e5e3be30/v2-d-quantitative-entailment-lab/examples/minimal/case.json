@@ -1,0 +1,46 @@
+{
+  "case_id": "SYNTHETIC-QEL-001",
+  "synthetic": true,
+  "paper": "paper.md",
+  "output_contract": {
+    "type": "object",
+    "additionalProperties": false,
+    "required": [
+      "case_id",
+      "claim_verdicts",
+      "status",
+      "sources",
+      "uncertainty",
+      "change_records",
+      "quantitative_report",
+      "summary"
+    ],
+    "properties": {
+      "case_id": {"type": "string"},
+      "claim_verdicts": {
+        "type": "array",
+        "minItems": 4,
+        "items": {
+          "type": "object",
+          "required": ["claim_id", "question", "verdict", "verdict_origin", "rationale", "quantitative_evidence"],
+          "properties": {
+            "claim_id": {"type": "string"},
+            "question": {"type": "string"},
+            "verdict": {"type": "string", "enum": ["supported", "partially_supported", "contradicted", "insufficient_evidence"]},
+            "verdict_origin": {"type": "string", "const": "agent"},
+            "rationale": {"type": "string"},
+            "evidence_ids": {"type": "array"},
+            "source_ids": {"type": "array"},
+            "quantitative_evidence": {"type": "array"}
+          }
+        }
+      },
+      "status": {"type": "string", "enum": ["success", "partial", "failed"]},
+      "sources": {"type": "array"},
+      "uncertainty": {"type": "array"},
+      "change_records": {"type": "array"},
+      "quantitative_report": {"type": "string"},
+      "summary": {"type": "object"}
+    }
+  }
+}

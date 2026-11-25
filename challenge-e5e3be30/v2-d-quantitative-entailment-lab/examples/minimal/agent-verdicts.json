@@ -1,0 +1,35 @@
+{
+  "adjudicator": "agent",
+  "synthetic": true,
+  "data_label": "SYNTHETIC",
+  "verdicts": [
+    {
+      "claim_id": "C1_RAW_PP",
+      "verdict": "supported",
+      "rationale": "SYNTHETIC: Raw-count recomputation gives 70% - 50% = 20 percentage points, (0.70-0.50)/0.50 = 40% relative change, and 0.70/0.50 = 1.4, all matching their targets within tolerance. The paired z test and Wilson limits are uncertainty evidence, not the basis for equating significance with truth.",
+      "evidence_ids": ["derived_C1_RAW_PP_1", "derived_C1_RAW_PP_2", "derived_C1_RAW_PP_3", "ztest_obs_treatment_obs_control"],
+      "source_ids": ["obs_treatment", "obs_control"]
+    },
+    {
+      "claim_id": "C2_DISPLAY_RELATIVE",
+      "verdict": "partially_supported",
+      "rationale": "SYNTHETIC: The displayed 70% versus 60% does differ by 10 percentage points, but its relative increase is (0.70-0.60)/0.60 = 1/6 = 16.6667%, not 10%. Separately, raw 60/120 is 50%, so the display conflicts with the count-derived 20 percentage points and 40% relative change. Both are retained rather than silently reconciled.",
+      "evidence_ids": ["derived_C2_DISPLAY_RELATIVE_1", "derived_C2_DISPLAY_RELATIVE_2", "derived_C1_RAW_PP_1", "derived_C1_RAW_PP_2"],
+      "source_ids": ["obs_display_treatment", "obs_control", "obs_treatment"]
+    },
+    {
+      "claim_id": "C3_REPORTED_EXACT_P",
+      "verdict": "insufficient_evidence",
+      "rationale": "SYNTHETIC: The paper states that no exact p-value was printed. A pooled normal-approximation p-value derived from counts cannot verify that the source itself reported exactly 0.000123. This is an unreported-source-value question, not a contradiction and not an exact-test calculation.",
+      "evidence_ids": ["derived_C3_REPORTED_EXACT_P_1", "ztest_obs_treatment_obs_control"],
+      "source_ids": ["obs_treatment", "obs_control"]
+    },
+    {
+      "claim_id": "C4_UNIT_CONVERSION",
+      "verdict": "supported",
+      "rationale": "SYNTHETIC: The unit conversion 2500 ms * (1 s / 1000 ms) = 2.5 s matches the target within tolerance; the original mean, SD, n, unit and quote remain separately stored.",
+      "evidence_ids": ["derived_C4_UNIT_CONVERSION_1"],
+      "source_ids": ["obs_latency"]
+    }
+  ]
+}

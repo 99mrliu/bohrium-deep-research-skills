@@ -1,0 +1,34 @@
+{
+  "case_id": "SYNTHETIC-minimal-version-reconciliation",
+  "output_contract": {
+    "claims": [
+      {
+        "claim_id": "string",
+        "claim": "string",
+        "status": "supported|partially_supported|contradicted|insufficient_evidence",
+        "version_scope": ["document_id"],
+        "evidence": [
+          {
+            "document_id": "string",
+            "version": "string|null",
+            "quote": "string",
+            "locator": "string|null",
+            "quote_verified": "boolean",
+            "outcome": "supported|partially_supported|contradicted|insufficient_evidence"
+          }
+        ],
+        "rationale": "string",
+        "condition": "string|null"
+      }
+    ],
+    "version_matrix": "object keyed by document_id; arrays only where explicitly described by the generated schema",
+    "source_version_dag": {
+      "nodes": ["document_id"],
+      "edges": [
+        {"source": "document_id", "target": "document_id", "type": "relation_type"}
+      ]
+    }
+  },
+  "labels": ["SYNTHETIC"],
+  "note": "All documents and claims are fabricated solely for executable testing."
+}

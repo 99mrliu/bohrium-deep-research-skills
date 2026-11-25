@@ -1,0 +1,16 @@
+{
+  "label": "SYNTHETIC BAD CASE / 合成坏例：缺查询族，预期 finalize exit 1",
+  "claims": [
+    {
+      "claim_id": "S2",
+      "question": "Did the paper report the 36-month overall survival rate for the pediatric subgroup?",
+      "query_families": [
+        {
+          "family_id": "S2-only-narrow-family",
+          "kind": "entity",
+          "variants": ["pediatric subgroup overall survival"]
+        }
+      ]
+    }
+  ]
+}

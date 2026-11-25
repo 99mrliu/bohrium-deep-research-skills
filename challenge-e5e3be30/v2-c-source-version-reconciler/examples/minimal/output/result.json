@@ -1,0 +1,246 @@
+{
+  "case_id": "SYNTHETIC-minimal-version-reconciliation",
+  "status": "partial",
+  "sources": [
+    {
+      "document_id": "doc-v1",
+      "doi": null,
+      "title": "Synthetic Delta Calibration",
+      "version": "v1",
+      "date": "2026-01-10",
+      "kind": "preprint",
+      "files": [
+        "documents/paper_v1.txt",
+        "documents/paper_v1_duplicate.txt"
+      ],
+      "sha256": "80e079c90a61a5d98284cecb12f6c5578e78a8841b140cb6ed64ba6bf533a576",
+      "duplicate_files": [
+        "documents/paper_v1_duplicate.txt"
+      ],
+      "relations": [],
+      "unknown_fields": "null means unknown; never guessed"
+    },
+    {
+      "document_id": "doc-v2",
+      "doi": null,
+      "title": "Synthetic Delta Calibration",
+      "version": "v2",
+      "date": "2026-02-10",
+      "kind": "preprint_revision",
+      "files": [
+        "documents/paper_v2.txt"
+      ],
+      "sha256": "01f5c1c4663665985d62741d5a9a3d145f906690d732eb9ac6ccbc584ef8e442",
+      "duplicate_files": [],
+      "relations": [
+        {
+          "type": "revises",
+          "target_id": "doc-v1"
+        }
+      ],
+      "unknown_fields": "null means unknown; never guessed"
+    },
+    {
+      "document_id": "doc-supplement-s2",
+      "doi": null,
+      "title": "Supplement to Synthetic Delta Calibration v2",
+      "version": "S2",
+      "date": "2026-02-10",
+      "kind": "supplement",
+      "files": [
+        "documents/supplement_v2.txt"
+      ],
+      "sha256": "d070f4c83fda894eeb18f4232e3c87c06207308ef58cc1599e03e04fe98cdf74",
+      "duplicate_files": [],
+      "relations": [
+        {
+          "type": "supplements",
+          "target_id": "doc-v2"
+        }
+      ],
+      "unknown_fields": "null means unknown; never guessed"
+    }
+  ],
+  "uncertainty": [
+    "Verdicts are reviewed mappings with mechanical quote validation, not automatic semantic entailment."
+  ],
+  "change_records": [
+    {
+      "sequence": 1,
+      "phase": "initialize",
+      "change": "Partial result contract was established before evidence analysis."
+    },
+    {
+      "sequence": 2,
+      "phase": "inventory",
+      "change": "Hashed 4 material files; detected 1 duplicate copies."
+    },
+    {
+      "sequence": 3,
+      "phase": "metadata",
+      "change": "Validated immutable document/version bindings and the source-version DAG."
+    },
+    {
+      "sequence": 4,
+      "phase": "evidence",
+      "change": "Checked exact quotes separately for 2 claims; no cross-document quote reuse."
+    },
+    {
+      "sequence": 5,
+      "phase": "finalize",
+      "change": "Generated version matrix, provenance SVG, and version-scoped verdicts without pooling."
+    }
+  ],
+  "claims": [
+    {
+      "claim_id": "SYNTHETIC-claim-main-revision",
+      "claim": "Across v1 and v2, the Delta model retains the same 80 percent C0 accuracy.",
+      "status": "partially_supported",
+      "version_scope": [
+        "doc-v1",
+        "doc-v2"
+      ],
+      "evidence": [
+        {
+          "document_id": "doc-v1",
+          "version": "v1",
+          "quote": "Main result. Under calibration mode C0, the fictional Delta model attains 80 percent accuracy.",
+          "locator": "v1 main result; local page 1",
+          "quote_verified": true,
+          "outcome": "supported"
+        },
+        {
+          "document_id": "doc-v2",
+          "version": "v2",
+          "quote": "Main result. Under calibration mode C0, the fictional Delta model attains 82 percent accuracy; v2 replaces the earlier 80 percent value.",
+          "locator": "v2 main result; local page 1",
+          "quote_verified": true,
+          "outcome": "contradicted"
+        }
+      ],
+      "rationale": "SYNTHETIC: v1 directly states 80 percent for C0, while v2 explicitly replaces it with 82 percent for C0. The version difference is retained in parallel; newer v2 is not treated as automatically authoritative. Verdict applies only to version_scope=doc-v1, doc-v2; no version pooling.",
+      "condition": "calibration mode C0"
+    },
+    {
+      "claim_id": "SYNTHETIC-claim-supplement-condition",
+      "claim": "With optional H1 enabled and temperature fixed at 10 degrees, Delta attains 90 percent accuracy.",
+      "status": "supported",
+      "version_scope": [
+        "doc-supplement-s2"
+      ],
+      "evidence": [
+        {
+          "document_id": "doc-supplement-s2",
+          "version": "S2",
+          "quote": "Only when the optional high-memory flag H1 is enabled and the temperature is fixed at 10 degrees, the fictional Delta model attains 90 percent accuracy.",
+          "locator": "supplement S2, S-Table 1, local supplement page S-1",
+          "quote_verified": true,
+          "outcome": "supported"
+        }
+      ],
+      "rationale": "SYNTHETIC: the exact S2 supplement statement supports the 90 percent result only under both H1 and fixed 10-degree conditions. No main-document page or C0 condition is inherited. Verdict applies only to version_scope=doc-supplement-s2; no version pooling.",
+      "condition": "H1 enabled AND temperature fixed at 10 degrees"
+    }
+  ],
+  "version_matrix": {
+    "doc-v1": {
+      "document_id": "doc-v1",
+      "work_title": "Synthetic Delta Calibration",
+      "doi": null,
+      "version": "v1",
+      "date": "2026-01-10",
+      "kind": "preprint",
+      "files": [
+        "documents/paper_v1.txt",
+        "documents/paper_v1_duplicate.txt"
+      ],
+      "sha256": "80e079c90a61a5d98284cecb12f6c5578e78a8841b140cb6ed64ba6bf533a576",
+      "relations": [],
+      "claim_statements": [
+        {
+          "claim_id": "SYNTHETIC-claim-main-revision",
+          "quote": "Main result. Under calibration mode C0, the fictional Delta model attains 80 percent accuracy.",
+          "quote_verified": true,
+          "outcome": "supported",
+          "condition": "calibration mode C0",
+          "supplement_only": false
+        }
+      ]
+    },
+    "doc-v2": {
+      "document_id": "doc-v2",
+      "work_title": "Synthetic Delta Calibration",
+      "doi": null,
+      "version": "v2",
+      "date": "2026-02-10",
+      "kind": "preprint_revision",
+      "files": [
+        "documents/paper_v2.txt"
+      ],
+      "sha256": "01f5c1c4663665985d62741d5a9a3d145f906690d732eb9ac6ccbc584ef8e442",
+      "relations": [
+        {
+          "type": "revises",
+          "target_id": "doc-v1"
+        }
+      ],
+      "claim_statements": [
+        {
+          "claim_id": "SYNTHETIC-claim-main-revision",
+          "quote": "Main result. Under calibration mode C0, the fictional Delta model attains 82 percent accuracy; v2 replaces the earlier 80 percent value.",
+          "quote_verified": true,
+          "outcome": "contradicted",
+          "condition": "calibration mode C0",
+          "supplement_only": false
+        }
+      ]
+    },
+    "doc-supplement-s2": {
+      "document_id": "doc-supplement-s2",
+      "work_title": "Supplement to Synthetic Delta Calibration v2",
+      "doi": null,
+      "version": "S2",
+      "date": "2026-02-10",
+      "kind": "supplement",
+      "files": [
+        "documents/supplement_v2.txt"
+      ],
+      "sha256": "d070f4c83fda894eeb18f4232e3c87c06207308ef58cc1599e03e04fe98cdf74",
+      "relations": [
+        {
+          "type": "supplements",
+          "target_id": "doc-v2"
+        }
+      ],
+      "claim_statements": [
+        {
+          "claim_id": "SYNTHETIC-claim-supplement-condition",
+          "quote": "Only when the optional high-memory flag H1 is enabled and the temperature is fixed at 10 degrees, the fictional Delta model attains 90 percent accuracy.",
+          "quote_verified": true,
+          "outcome": "supported",
+          "condition": "H1 enabled AND temperature fixed at 10 degrees",
+          "supplement_only": true
+        }
+      ]
+    }
+  },
+  "source_version_dag": {
+    "nodes": [
+      "doc-supplement-s2",
+      "doc-v1",
+      "doc-v2"
+    ],
+    "edges": [
+      {
+        "source": "doc-supplement-s2",
+        "target": "doc-v2",
+        "type": "supplements"
+      },
+      {
+        "source": "doc-v2",
+        "target": "doc-v1",
+        "type": "revises"
+      }
+    ]
+  }
+}
