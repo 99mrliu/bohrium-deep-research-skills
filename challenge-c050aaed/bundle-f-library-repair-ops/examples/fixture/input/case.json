@@ -1,0 +1,16 @@
+{
+  "case_id": "synthetic-demo-repair-ops",
+  "synthetic": true,
+  "note": "SYNTHETIC EXAMPLE FIXTURE - fabricated tiny text files for demonstrating the skill interface; NOT an official challenge case and NOT real research data.",
+  "materials": "../materials",
+  "admin_notes": ["行政说明.txt"],
+  "output_contract": {
+    "inventory": "survey manifest of all input files with hashes",
+    "version_relations": "duplicate groups and version chains with basis",
+    "organized_library": "path to the organized copy-only layout",
+    "operations_log": "hash-chained journal of every executed action",
+    "verification": "post-run verify report",
+    "exceptions": "skips, conflicts, unmatched notes, recovery notes",
+    "status": "complete | partial | failed"
+  }
+}

@@ -1,0 +1,14 @@
+{
+  "case_id": "synthetic-demo-catalog-forge",
+  "synthetic": true,
+  "note": "SYNTHETIC EXAMPLE FIXTURE - fabricated tiny text files for demonstrating the skill interface; NOT an official challenge case and NOT real research data.",
+  "materials": "../materials",
+  "questions": "questions.json",
+  "output_contract": {
+    "inventory": "catalog.jsonl of all files with stable ids and hashes",
+    "version_relations": "alias/duplicate/version edges with evidence",
+    "answers": "answers.jsonl citing catalog records or honest abstentions",
+    "search_index": "queryable index artifact description",
+    "status": "complete | partial | failed"
+  }
+}
