@@ -1,0 +1,78 @@
+{
+  "schema_version": "claim-coverage-adjudication/v1",
+  "case_id": "SYNTH-COVERAGE-3ATOM",
+  "task_atoms": [
+    {
+      "atom_id": "atom-eq1",
+      "exact_requirement": "Transcribe formula eq1 exactly from MathML.",
+      "output_fields": ["answers.eq1"],
+      "claims": [{
+        "claim_id": "claim-eq1",
+        "answer": "y = a * x",
+        "claim_type": "formula",
+        "completion_status": "completed",
+        "output_fields": ["answers.eq1"],
+        "formula_source_id": "eq1",
+        "origin": "reported",
+        "evidence": [{
+          "excerpt_id": "ex-0004",
+          "source_file": "artifacts/formulas.xml",
+          "locator": "MathML element; lines 4-4; id=eq1",
+          "quote": "alttext=\"y = a * x\"",
+          "formula_source_id": "eq1",
+          "relation": "supports"
+        }],
+        "uncertainty": [],
+        "missing_objects": []
+      }]
+    },
+    {
+      "atom_id": "atom-eq2",
+      "exact_requirement": "Transcribe formula eq2 exactly from MathML.",
+      "output_fields": ["answers.eq2"],
+      "claims": [{
+        "claim_id": "claim-eq2",
+        "answer": "z = b / x",
+        "claim_type": "formula",
+        "completion_status": "completed",
+        "output_fields": ["answers.eq2"],
+        "formula_source_id": "eq2",
+        "origin": "reported",
+        "evidence": [{
+          "excerpt_id": "ex-0005",
+          "source_file": "artifacts/formulas.xml",
+          "locator": "MathML element; lines 5-5; id=eq2",
+          "quote": "<m:mfrac><m:mi>b</m:mi><m:mi>x</m:mi></m:mfrac>",
+          "formula_source_id": "eq2",
+          "relation": "supports"
+        }],
+        "uncertainty": [],
+        "missing_objects": []
+      }]
+    },
+    {
+      "atom_id": "atom-score",
+      "exact_requirement": "Report the held-out score explicitly stated in the notes.",
+      "output_fields": ["answers.held_out_score"],
+      "claims": [{
+        "claim_id": "claim-score",
+        "answer": "0.87 on the fixed toy split",
+        "claim_type": "numeric",
+        "completion_status": "completed",
+        "output_fields": ["answers.held_out_score"],
+        "origin": "reported",
+        "evidence": [{
+          "excerpt_id": "ex-0007",
+          "source_file": "artifacts/notes.txt",
+          "locator": "lines 3-4",
+          "quote": "For the fixed toy split, held-out score: 0.87.",
+          "relation": "supports"
+        }],
+        "uncertainty": [],
+        "missing_objects": []
+      }]
+    }
+  ],
+  "contradictions": [],
+  "missing_objects": []
+}

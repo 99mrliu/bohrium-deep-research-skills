@@ -1,0 +1,49 @@
+{
+  "case_id": "synthetic-algebra-certificate-001",
+  "status": "ready",
+  "paper": {
+    "title": "Synthetic examples only; no paper or evaluation case",
+    "formality": "not_formal_or_platform_data"
+  },
+  "steps": [
+    {
+      "id": "E1-valid-expansion",
+      "lhs": "(x + 1)**2",
+      "rhs": "x**2 + 2*x + 1",
+      "operation": "expand",
+      "justification": "Expand the square and preserve addition over the real numbers.",
+      "source_locator": "synthetic derivation fixture E1 (not a paper locator)",
+      "assumptions": ["x real"],
+      "domain": [],
+      "dependencies": [],
+      "origin": "paper_explicit",
+      "required": true
+    },
+    {
+      "id": "C2-invalid-cancellation-at-zero",
+      "lhs": "x**2/x",
+      "rhs": "x",
+      "operation": "cancel",
+      "justification": "Deliberately invalid reader step: cancel x without assuming x != 0.",
+      "source_locator": "synthetic derivation fixture C2 (deliberate invalid step)",
+      "assumptions": ["x real"],
+      "domain": [],
+      "dependencies": ["E1-valid-expansion"],
+      "origin": "reader_reconstruction",
+      "required": true
+    },
+    {
+      "id": "L3-invalid-real-log-power",
+      "lhs": "log(x**2)",
+      "rhs": "2*log(x)",
+      "operation": "log_rule",
+      "justification": "Deliberately invalid reader step over all real x: the logarithm-power rewrite needs x > 0 for this target.",
+      "source_locator": "synthetic derivation fixture L3 (deliberate invalid step)",
+      "assumptions": ["x real"],
+      "domain": [],
+      "dependencies": [],
+      "origin": "reader_reconstruction",
+      "required": true
+    }
+  ]
+}

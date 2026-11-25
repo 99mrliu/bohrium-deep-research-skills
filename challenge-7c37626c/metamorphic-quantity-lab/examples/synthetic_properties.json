@@ -1,0 +1,86 @@
+{
+  "document_id": "synthetic-independent-invariants-v1",
+  "provenance": "All properties and scenario values are invented for this executable synthetic example; none is a source-paper invariant.",
+  "properties": [
+    {
+      "property_id": "synthetic-mass-scale-invariance",
+      "kind": "scale_invariance",
+      "formula": "(mass * velocity**2) / (reference_mass * reference_speed**2)",
+      "scale_variable": "mass",
+      "scale_variables": ["mass", "reference_mass"],
+      "multipliers": [0.5, 2.0],
+      "output_unit": "1",
+      "tolerance": {"absolute": 1e-12, "relative": 1e-12, "rounding_absolute": 0.0},
+      "source": {"locator": "synthetic://metamorphic-quantity-lab/independent-invariants-v1#common-mass-rescaling"},
+      "independence_statement": "Authored from dimensional cancellation in a separately defined ratio; not derived from the claimed energy value 16 J."
+    },
+    {
+      "property_id": "synthetic-energy-speed-sweep",
+      "kind": "monotonic_direction_over_sweep",
+      "formula": "0.5 * mass * velocity**2",
+      "sweep_variable": "velocity",
+      "sweep_values": [
+        {"value": 1.0, "unit": "m/s", "scale": 1.0, "source": {"locator": "synthetic://metamorphic-quantity-lab/independent-invariants-v1#sweep-1"}},
+        {"value": 2.0, "unit": "m/s", "scale": 1.0, "source": {"locator": "synthetic://metamorphic-quantity-lab/independent-invariants-v1#sweep-2"}},
+        {"value": 3.0, "unit": "m/s", "scale": 1.0, "source": {"locator": "synthetic://metamorphic-quantity-lab/independent-invariants-v1#sweep-3"}},
+        {"value": 4.0, "unit": "m/s", "scale": 1.0, "source": {"locator": "synthetic://metamorphic-quantity-lab/independent-invariants-v1#sweep-4"}},
+        {"value": 5.0, "unit": "m/s", "scale": 1.0, "source": {"locator": "synthetic://metamorphic-quantity-lab/independent-invariants-v1#sweep-5"}}
+      ],
+      "expected_direction": "strictly_increasing",
+      "output_unit": "J",
+      "plot": true,
+      "tolerance": {"absolute": 1e-12, "relative": 1e-12, "rounding_absolute": 0.0},
+      "source": {"locator": "synthetic://metamorphic-quantity-lab/independent-invariants-v1#positive-speed-ordering"},
+      "independence_statement": "An ordering expectation over positive speed scenarios, authored before comparing the reported energy; it is not a restatement of the 16 J interval."
+    },
+    {
+      "property_id": "synthetic-zero-perturbation-limit",
+      "kind": "limit",
+      "formula": "0.5 * mass * (velocity + epsilon)**2",
+      "limit_variable": "epsilon",
+      "approach_values": [
+        {"value": 1.0, "unit": "m/s", "scale": 1.0, "source": {"locator": "synthetic://metamorphic-quantity-lab/independent-invariants-v1#epsilon-1"}},
+        {"value": 0.1, "unit": "m/s", "scale": 1.0, "source": {"locator": "synthetic://metamorphic-quantity-lab/independent-invariants-v1#epsilon-01"}},
+        {"value": 0.001, "unit": "m/s", "scale": 1.0, "source": {"locator": "synthetic://metamorphic-quantity-lab/independent-invariants-v1#epsilon-0001"}}
+      ],
+      "expected": {"value": 16.0, "unit": "J", "scale": 1.0, "source": {"locator": "synthetic://metamorphic-quantity-lab/independent-invariants-v1#zero-epsilon-expectation"}},
+      "tolerance": {"absolute": 0.005, "relative": 1e-9, "rounding_absolute": 0.005},
+      "source": {"locator": "synthetic://metamorphic-quantity-lab/independent-invariants-v1#zero-perturbation"},
+      "independence_statement": "A continuity check at zero perturbation; finite evaluations do not prove the mathematical limit or validate the model."
+    },
+    {
+      "property_id": "synthetic-mass-doubling-relation",
+      "kind": "expected_transformed_relation",
+      "mutations": [{"target": "mass", "kind": "scale", "factor": 2.0}],
+      "left_formula": "0.5 * mass * velocity**2",
+      "right_formula": "mass * velocity**2",
+      "output_unit": "J",
+      "tolerance": {"absolute": 1e-12, "relative": 1e-12, "rounding_absolute": 0.0},
+      "source": {"locator": "synthetic://metamorphic-quantity-lab/independent-invariants-v1#mass-doubling"},
+      "independence_statement": "An independently authored linearity relation under mass doubling; the right side is the independently expected doubled expression, not the reported numeric claim."
+    }
+  ],
+  "fault_injections": [
+    {
+      "fault_id": "synthetic-fault-kilo-unit-relabel",
+      "kind": "dimensional_prefix_mutation",
+      "target": "mass",
+      "replacement_unit": "g",
+      "expect": "detected"
+    },
+    {
+      "fault_id": "synthetic-fault-milli-unit-relabel",
+      "kind": "dimensional_prefix_mutation",
+      "target": "velocity",
+      "replacement_unit": "mm/s",
+      "expect": "detected"
+    },
+    {
+      "fault_id": "synthetic-fault-micro-unit-relabel",
+      "kind": "dimensional_prefix_mutation",
+      "target": "velocity",
+      "replacement_unit": "µm/s",
+      "expect": "detected"
+    }
+  ]
+}

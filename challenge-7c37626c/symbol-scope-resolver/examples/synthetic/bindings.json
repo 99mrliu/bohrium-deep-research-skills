@@ -1,0 +1,139 @@
+{
+  "schema_version": "symbol-scope-bindings-1",
+  "case_id": "SYNTHETIC-R-SCOPE-001",
+  "requested_status": "complete",
+  "symbol_bindings": [
+    {
+      "symbol_instance_id": "sym-000001",
+      "section_id": "doc-0001-sec-0001",
+      "canonical": "r",
+      "base_glyph": "r",
+      "scripts": {},
+      "meaning": "pore radius in the invented coating model",
+      "category": "direct_source_definition",
+      "selected_candidate_id": "cand-000001",
+      "evidence": {
+        "quote": "Here r denotes the pore radius, measured in nm.",
+        "locator": {
+          "document_id": "doc-0001",
+          "section_id": "doc-0001-sec-0001",
+          "paragraph_id": "p-000001",
+          "sentence_id": "s-000002",
+          "source_pointer": "/article[1]/body[1]/sec[1]/p[1]"
+        }
+      },
+      "unit": {
+        "value": "nm",
+        "provenance": "direct_source_definition",
+        "evidence_quote": "Here r denotes the pore radius, measured in nm.",
+        "locator": {
+          "document_id": "doc-0001",
+          "section_id": "doc-0001-sec-0001",
+          "paragraph_id": "p-000001",
+          "sentence_id": "s-000002",
+          "source_pointer": "/article[1]/body[1]/sec[1]/p[1]"
+        }
+      },
+      "range": null
+    },
+    {
+      "symbol_instance_id": "sym-000002",
+      "section_id": "doc-0001-sec-0002",
+      "canonical": "r",
+      "base_glyph": "r",
+      "scripts": {},
+      "meaning": "total resistance in the separate invented circuit model",
+      "category": "direct_source_definition",
+      "selected_candidate_id": "cand-000002",
+      "evidence": {
+        "quote": "In a separate thought experiment, r denotes the total resistance, while r_1 and r_2 denote its two branch contributions.",
+        "locator": {
+          "document_id": "doc-0001",
+          "section_id": "doc-0001-sec-0002",
+          "paragraph_id": "p-000003",
+          "sentence_id": "s-000004",
+          "source_pointer": "/article[1]/body[1]/sec[2]/p[1]"
+        }
+      },
+      "unit": {
+        "value": null,
+        "provenance": "not_reported",
+        "reason": "The local passage explicitly states no unit; ohms are not inferred."
+      },
+      "range": null
+    },
+    {
+      "symbol_instance_id": "sym-000003",
+      "section_id": "doc-0001-sec-0002",
+      "canonical": "r_{1}",
+      "base_glyph": "r",
+      "scripts": {"sub": "1"},
+      "meaning": "first branch contribution to the invented total resistance",
+      "category": "direct_source_definition",
+      "selected_candidate_id": "cand-000002",
+      "evidence": {
+        "quote": "In a separate thought experiment, r denotes the total resistance, while r_1 and r_2 denote its two branch contributions.",
+        "locator": {
+          "document_id": "doc-0001",
+          "section_id": "doc-0001-sec-0002",
+          "paragraph_id": "p-000003",
+          "sentence_id": "s-000004",
+          "source_pointer": "/article[1]/body[1]/sec[2]/p[1]"
+        }
+      },
+      "unit": {
+        "value": null,
+        "provenance": "not_reported",
+        "reason": "No local literal unit is available."
+      },
+      "range": null
+    },
+    {
+      "symbol_instance_id": "sym-000004",
+      "section_id": "doc-0001-sec-0002",
+      "canonical": "r_{2}",
+      "base_glyph": "r",
+      "scripts": {"sub": "2"},
+      "meaning": "second branch contribution to the invented total resistance",
+      "category": "direct_source_definition",
+      "selected_candidate_id": "cand-000002",
+      "evidence": {
+        "quote": "In a separate thought experiment, r denotes the total resistance, while r_1 and r_2 denote its two branch contributions.",
+        "locator": {
+          "document_id": "doc-0001",
+          "section_id": "doc-0001-sec-0002",
+          "paragraph_id": "p-000003",
+          "sentence_id": "s-000004",
+          "source_pointer": "/article[1]/body[1]/sec[2]/p[1]"
+        }
+      },
+      "unit": {
+        "value": null,
+        "provenance": "not_reported",
+        "reason": "No local literal unit is available."
+      },
+      "range": null
+    }
+  ],
+  "formula_coverage": [
+    {
+      "formula_id": "f-000001",
+      "covered": true,
+      "excluded": false,
+      "symbol_instance_ids": ["sym-000001"],
+      "reason": "The sole scoped r is bound using the coating-room source sentence."
+    },
+    {
+      "formula_id": "f-000002",
+      "covered": true,
+      "excluded": false,
+      "symbol_instance_ids": ["sym-000002", "sym-000003", "sym-000004"],
+      "reason": "Plain r and both fully scripted identities are separately bound in the circuit room."
+    }
+  ],
+  "limitations": [
+    "The resistance unit is intentionally unreported; no ohms value is supplied from inference or common knowledge."
+  ],
+  "notes": "Wholly invented example; no platform data. The two plain-r instances have separate local bindings.",
+  "output_fields": {}
+}

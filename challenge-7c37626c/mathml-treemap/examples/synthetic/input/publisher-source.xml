@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<article id="synthetic-article">
+  <body>
+    <sec id="synthetic-section">
+      <title>Invented nested expression</title>
+      <p>This prose and formula are synthetic test material.</p>
+      <disp-formula id="SYN-F01">
+        <label>(S1)</label>
+        <alternatives>
+          <math display="block" alttext="\frac{{E}_{k}^{2} + \mathit{velocity}}{\sqrt{z}} = \left[\begin{matrix}{a}_{1}^{2} &amp; b \\ c &amp; d\end{matrix}\right]">
+            <mrow>
+              <mfrac>
+                <mrow>
+                  <msubsup><mi>E</mi><mi>k</mi><mn>2</mn></msubsup>
+                  <mo>+</mo>
+                  <mi>velocity</mi>
+                </mrow>
+                <msqrt><mi>z</mi></msqrt>
+              </mfrac>
+              <mo>=</mo>
+              <mfenced open="[" close="]" separators=";">
+                <mtable>
+                  <mtr>
+                    <mtd><msubsup><mi>a</mi><mn>1</mn><mn>2</mn></msubsup></mtd>
+                    <mtd><mi>b</mi></mtd>
+                  </mtr>
+                  <mtr>
+                    <mtd><mi>c</mi></mtd>
+                    <mtd><mi>d</mi></mtd>
+                  </mtr>
+                </mtable>
+              </mfenced>
+            </mrow>
+          </math>
+          <tex-math>\frac{{E}_{k}^{2} + \mathit{velocity}}{\sqrt{z}} = \left[\begin{matrix}{a}_{1}^{2} &amp; b \\ c &amp; d\end{matrix}\right]</tex-math>
+        </alternatives>
+      </disp-formula>
+    </sec>
+  </body>
+</article>

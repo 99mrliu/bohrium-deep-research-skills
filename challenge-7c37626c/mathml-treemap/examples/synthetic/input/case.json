@@ -1,0 +1,28 @@
+{
+  "case_id": "SYNTHETIC-MATHML-001",
+  "publisher_source": "publisher-source.xml",
+  "formula_source": "source-formulas.xml",
+  "output_contract": {
+    "required_fields": [
+      "status",
+      "formula_analysis",
+      "variable_analysis",
+      "derivation_analysis",
+      "numeric_analysis",
+      "extraction_summary"
+    ],
+    "field_types": {
+      "status": "string",
+      "formula_analysis": "array",
+      "variable_analysis": "array",
+      "derivation_analysis": "array",
+      "numeric_analysis": "object",
+      "extraction_summary": "object"
+    },
+    "status_enum": [
+      "success",
+      "partial",
+      "insufficient_evidence"
+    ]
+  }
+}

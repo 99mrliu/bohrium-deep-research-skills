@@ -1,0 +1,23 @@
+{
+  "case_id": "SYNTH-COVERAGE-3ATOM",
+  "synthetic": true,
+  "note": "Wholly synthetic bundle example; not an official case or answer.",
+  "target_formulas": ["eq1", "eq2"],
+  "artifacts": {
+    "publisher_source_xml": "artifacts/toy.xml",
+    "source_formulas_xml": "artifacts/formulas.xml",
+    "notes": "artifacts/notes.txt"
+  },
+  "output_contract": {
+    "required_fields": ["case_id", "status", "answers", "evidence", "uncertainty", "artifacts"],
+    "field_types": {
+      "case_id": "string",
+      "status": "string",
+      "answers": "object",
+      "evidence": "array",
+      "uncertainty": "object",
+      "artifacts": "object"
+    },
+    "status_enum": ["success", "partial", "insufficient_evidence", "failed"]
+  }
+}

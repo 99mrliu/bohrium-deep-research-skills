@@ -1,0 +1,56 @@
+{
+  "schema_version": "claim-coverage-adjudication/v1",
+  "case_id": "SYNTH-C02-MISSING-OBJECTS",
+  "task_atoms": [
+    {
+      "atom_id": "atom-explicit-metric",
+      "exact_requirement": "Report the explicitly stated test metric.",
+      "output_fields": ["answers.reported_metric"],
+      "claims": [{
+        "claim_id": "claim-explicit-metric",
+        "answer": "test_accuracy = 0.913 on the held-out split",
+        "claim_type": "numeric",
+        "completion_status": "completed",
+        "output_fields": ["answers.reported_metric"],
+        "origin": "reported",
+        "evidence": [{
+          "excerpt_id": "ex-0003",
+          "source_file": "case.json",
+          "locator": "lines 1-17",
+          "quote": "{\"name\": \"test_accuracy\", \"value\": 0.913, \"condition\": \"held-out split\"}",
+          "relation": "supports"
+        }],
+        "uncertainty": [],
+        "missing_objects": []
+      }]
+    },
+    {
+      "atom_id": "atom-derivation-recalculation",
+      "exact_requirement": "Derive the formula and recalculate per-item predictions to verify the number.",
+      "output_fields": ["answers.derivation_and_recalculation"],
+      "claims": [{
+        "claim_id": "claim-derivation-recalculation",
+        "answer": "",
+        "claim_type": "derivation",
+        "completion_status": "insufficient_evidence",
+        "output_fields": ["answers.derivation_and_recalculation"],
+        "origin": "reported",
+        "evidence": [],
+        "uncertainty": ["The requested derivation and recalculation cannot be performed from a reported aggregate metric."],
+        "missing_objects": [
+          "formula representation",
+          "derivation objects and linked formulas",
+          "recalculable raw data or explicit numeric inputs",
+          "per-item predictions"
+        ]
+      }]
+    }
+  ],
+  "contradictions": [],
+  "missing_objects": [
+    "formula representation",
+    "derivation objects and linked formulas",
+    "recalculable raw data or explicit numeric inputs",
+    "per-item predictions"
+  ]
+}

@@ -1,0 +1,86 @@
+{
+  "schema_version": "algebra-certificate/v1",
+  "overall_status": "unavailable",
+  "success": false,
+  "sympy_available": false,
+  "sympy_error": "simulated by --simulate-no-sympy",
+  "case_id": "synthetic-algebra-certificate-001",
+  "paper": {
+    "title": "Synthetic examples only; no paper or evaluation case",
+    "formality": "not_formal_or_platform_data"
+  },
+  "source_status": "ready",
+  "step_count": 3,
+  "required_step_count": 3,
+  "steps": [
+    {
+      "index": 0,
+      "id": "E1-valid-expansion",
+      "origin": "paper_explicit",
+      "operation": "expand",
+      "justification": "Expand the square and preserve addition over the real numbers.",
+      "source_locator": "synthetic derivation fixture E1 (not a paper locator)",
+      "assumptions": [
+        "x real"
+      ],
+      "domain": [],
+      "dependencies": [],
+      "required": true,
+      "lhs": "(x + 1)**2",
+      "rhs": "x**2 + 2*x + 1",
+      "status": "undetermined",
+      "explanation": "SymPy unavailable; no mathematical check attempted: simulated by --simulate-no-sympy",
+      "domain_errors": [],
+      "assumption_errors": [],
+      "counterexample": null,
+      "symbolic_checks": []
+    },
+    {
+      "index": 1,
+      "id": "C2-invalid-cancellation-at-zero",
+      "origin": "reader_reconstruction",
+      "operation": "cancel",
+      "justification": "Deliberately invalid reader step: cancel x without assuming x != 0.",
+      "source_locator": "synthetic derivation fixture C2 (deliberate invalid step)",
+      "assumptions": [
+        "x real"
+      ],
+      "domain": [],
+      "dependencies": [
+        "E1-valid-expansion"
+      ],
+      "required": true,
+      "lhs": "x**2/x",
+      "rhs": "x",
+      "status": "undetermined",
+      "explanation": "SymPy unavailable; no mathematical check attempted: simulated by --simulate-no-sympy",
+      "domain_errors": [],
+      "assumption_errors": [],
+      "counterexample": null,
+      "symbolic_checks": []
+    },
+    {
+      "index": 2,
+      "id": "L3-invalid-real-log-power",
+      "origin": "reader_reconstruction",
+      "operation": "log_rule",
+      "justification": "Deliberately invalid reader step over all real x: the logarithm-power rewrite needs x > 0 for this target.",
+      "source_locator": "synthetic derivation fixture L3 (deliberate invalid step)",
+      "assumptions": [
+        "x real"
+      ],
+      "domain": [],
+      "dependencies": [],
+      "required": true,
+      "lhs": "log(x**2)",
+      "rhs": "2*log(x)",
+      "status": "undetermined",
+      "explanation": "SymPy unavailable; no mathematical check attempted: simulated by --simulate-no-sympy",
+      "domain_errors": [],
+      "assumption_errors": [],
+      "counterexample": null,
+      "symbolic_checks": []
+    }
+  ],
+  "certificate_summary": "overall=unavailable; symbolic_equal=0, falsified=0, undetermined=3, invalid_operation=0, missing_license=0; 3 total steps"
+}

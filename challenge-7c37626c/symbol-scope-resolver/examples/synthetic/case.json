@@ -1,0 +1,25 @@
+{
+  "case_id": "SYNTHETIC-R-SCOPE-001",
+  "xml_path": "source.xml",
+  "output_contract": {
+    "required_fields": [
+      "case_id",
+      "status",
+      "variables",
+      "formula_coverage",
+      "evidence",
+      "limitations",
+      "conflicts"
+    ],
+    "field_types": {
+      "case_id": "string",
+      "status": "string",
+      "variables": "array",
+      "formula_coverage": "array",
+      "evidence": "array",
+      "limitations": "array",
+      "conflicts": "array"
+    },
+    "status_enum": ["complete", "partial", "insufficient_evidence", "invalid"]
+  }
+}

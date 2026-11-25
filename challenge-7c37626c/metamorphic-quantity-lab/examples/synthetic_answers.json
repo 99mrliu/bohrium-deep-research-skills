@@ -1,0 +1,6 @@
+{
+  "reproduction": "Using only the explicitly synthetic sourced inputs, 0.5 × 2 kg × (4 m/s)^2 recomputes to 16 J. This lies inside the reported 15.995–16.005 J interval; the zero raw residual is below the separately reported absolute, relative, and rounding tolerance.",
+  "metamorphic_assessment": "All four authored checks passed: common mass-scale invariance, strictly increasing energy over the positive-speed sweep, the tested zero-perturbation approach, and the mass-doubling relation. These checks do not validate the invented model or its assumptions.",
+  "fault_diagnosis": "All three deliberate prefix relabeling mutations (kg→g, m/s→mm/s, and m/s→µm/s) transitioned the compatible claim to inconsistent and were detected. This diagnosis belongs only to the synthetic mutations and is not evidence against any paper or source.",
+  "limitations": "The formula and every identifier/value are invented. Compatibility and passing invariants establish only numerical behavior under the supplied checks. The finite limit sequence is not a proof, and independent invariants must not be derived from the claimed result."
+}

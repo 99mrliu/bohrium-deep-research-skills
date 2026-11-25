@@ -1,0 +1,52 @@
+{
+  "case_id": "synthetic-metamorphic-energy-001",
+  "source_provenance": {
+    "source_id": "synthetic://metamorphic-quantity-lab/invented-example-v1",
+    "description": "Entirely invented formula and numbers; no paper, experiment, or real-world source is represented."
+  },
+  "metamorphic_properties": "synthetic_properties.json",
+  "quantities": {
+    "mass": {
+      "mathml": "<math xmlns=\"http://www.w3.org/1998/Math/MathML\"><mrow><mn>2.0</mn><mo>×</mo><msup><mn>10</mn><mn>0</mn></msup></mrow></math>",
+      "unit": "kg",
+      "scale": 1.0,
+      "source": {"locator": "synthetic://metamorphic-quantity-lab/invented-example-v1#mass-mathml"}
+    },
+    "velocity": {
+      "value": 4.0,
+      "unit": "m/s",
+      "scale": 1.0,
+      "source": {"locator": "synthetic://metamorphic-quantity-lab/invented-example-v1#velocity"}
+    },
+    "reference_mass": {
+      "value": 3.0,
+      "unit": "kg",
+      "scale": 1.0,
+      "source": {"locator": "synthetic://metamorphic-quantity-lab/invented-example-v1#reference-mass"}
+    },
+    "reference_speed": {
+      "value": 3.0,
+      "unit": "m/s",
+      "scale": 1.0,
+      "source": {"locator": "synthetic://metamorphic-quantity-lab/invented-example-v1#reference-speed"}
+    }
+  },
+  "reported_claims": [
+    {
+      "claim_id": "synthetic-kinetic-energy-claim",
+      "formula": "0.5 * mass * velocity**2",
+      "reported": {
+        "lower": 15.995,
+        "upper": 16.005,
+        "scale": 1.0,
+        "unit": "J",
+        "rounding": {"step": 0.01}
+      },
+      "tolerance": {
+        "absolute": 1e-9,
+        "relative": 1e-9
+      },
+      "source": {"locator": "synthetic://metamorphic-quantity-lab/invented-example-v1#reported-compatible-interval"}
+    }
+  ]
+}

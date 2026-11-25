@@ -1,0 +1,37 @@
+{
+  "status": "partial",
+  "formula_analysis": [
+    {
+      "formula_key": "publisher-source_SYN-F01_0001",
+      "source_id": "SYN-F01",
+      "latex": "\\frac{{E}_{k}^{2} + \\mathit{velocity}}{\\sqrt{z}} = \\left[\\begin{matrix}{a}_{1}^{2} & b \\\\ c & d\\end{matrix}\\right]",
+      "interpretation": "An invented nested fractional expression is displayed equal to an invented fenced two-by-two matrix; no physical meaning is asserted.",
+      "latex_evidence": "See mathml/latex/publisher-source_SYN-F01_0001.tex and the canonical IR roundtrip report."
+    },
+    {
+      "formula_key": "source-formulas_SYN-F02_0001",
+      "source_id": "SYN-F02",
+      "latex": "\\sqrt[3]{27} = 3",
+      "interpretation": "The invented second expression states that the cube root of 27 is 3.",
+      "latex_evidence": "See mathml/latex/source-formulas_SYN-F02_0001.tex and its roundtrip report."
+    }
+  ],
+  "variable_analysis": [
+    {"symbol": "E", "role": "Invented identifier with subscript k and superscript 2; definition not supplied."},
+    {"symbol": "k", "role": "Invented subscript; definition not supplied."},
+    {"symbol": "velocity", "role": "Invented multi-character MathML mi kept as one identifier; units not supplied."},
+    {"symbol": "z", "role": "Invented radicand; definition and domain not supplied."},
+    {"symbol": "a, b, c, d", "role": "Invented matrix entries; definitions not supplied."}
+  ],
+  "derivation_analysis": [
+    {"status": "insufficient_evidence", "reason": "The synthetic source contains displayed identities but no derivation steps or justifications; none are inferred."}
+  ],
+  "numeric_analysis": {
+    "status": "success",
+    "subject": "SYN-F02 only",
+    "inputs": {"radicand": 27, "root_degree": 3},
+    "evaluation": 3,
+    "independent_check": "3^3 = 27",
+    "scope": "No values are assigned to symbols in SYN-F01."
+  }
+}

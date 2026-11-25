@@ -1,0 +1,9 @@
+{
+  "case_id": "SYNTHETIC-MATHML-UNSUPPORTED",
+  "source": "publisher-source.xml",
+  "output_contract": {
+    "required_fields": ["status", "formula_analysis"],
+    "field_types": {"status": "string", "formula_analysis": "array"},
+    "status_enum": ["success", "partial", "insufficient_evidence"]
+  }
+}

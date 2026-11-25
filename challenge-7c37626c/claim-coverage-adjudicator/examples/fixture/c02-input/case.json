@@ -1,0 +1,17 @@
+{
+  "case_id": "SYNTH-C02-MISSING-OBJECTS",
+  "synthetic": true,
+  "note": "Wholly synthetic metrics-only missing-formula branch; not an official case.",
+  "artifacts": {},
+  "reported_metrics": [
+    {"name": "test_accuracy", "value": 0.913, "condition": "held-out split"}
+  ],
+  "output_contract": {
+    "required_fields": ["case_id", "status", "answers", "evidence", "uncertainty", "artifacts"],
+    "field_types": {
+      "case_id": "string", "status": "string", "answers": "object",
+      "evidence": "array", "uncertainty": "object", "artifacts": "object"
+    },
+    "status_enum": ["success", "partial", "insufficient_evidence", "failed"]
+  }
+}
