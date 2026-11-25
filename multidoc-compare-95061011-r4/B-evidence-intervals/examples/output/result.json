@@ -1,0 +1,265 @@
+{
+  "case_id": "synthetic-evidence-intervals-001",
+  "change_records": [
+    {
+      "action": "indexed",
+      "content_sha256": "e57b713a4d0ea6c143d3ffa19929e64cf4cfe8a9eb4734878faaf07ea296da54",
+      "source_document_id": "fictional-alpha",
+      "stage": "index"
+    },
+    {
+      "action": "indexed",
+      "content_sha256": "3943e9a757a7611c15c0eb97a41af1b0a8a7d9c18e8709aec938f9c8a7a19801",
+      "source_document_id": "fictional-beta",
+      "stage": "index"
+    },
+    {
+      "action": "indexed",
+      "content_sha256": "86ed03517c98c0280dd09b946489f3f8bf00f9a381ccede7c5acb772566bfbdf",
+      "source_document_id": "fictional-gamma",
+      "stage": "index"
+    },
+    {
+      "action": "ignored_non_source",
+      "path": "/Users/liuhengshen/Desktop/bhr_product/bohrium/challenge-95061011/r4/B-evidence-intervals/examples/input/task.md",
+      "stage": "index"
+    },
+    {
+      "action": "accepted",
+      "count": 4,
+      "stage": "validate"
+    },
+    {
+      "action": "excluded",
+      "count": 0,
+      "stage": "validate"
+    },
+    {
+      "action": "matrix_rows",
+      "count": 4,
+      "stage": "render"
+    }
+  ],
+  "common_field_matrix": [
+    {
+      "budget": "initial concentration 40 mg/L, adsorbent dose 1 g/L, contact time 120 min, temperature 298 K",
+      "comparability": "noncomparable",
+      "comparison_id": "cmp-capacity",
+      "evidence_id": "alpha-main-128",
+      "evidence_status": "conflicted",
+      "field": "adsorption_capacity",
+      "material": "Aerogel A",
+      "metric": "adsorption_capacity",
+      "page": 1,
+      "paragraph_id": "fictional-alpha-p0004",
+      "pollutant": "methylene blue",
+      "source_document_id": "fictional-alpha",
+      "uncertainty": "The main result and a later author note disagree without explanation; both are retained and neither is selected.",
+      "unit": "mg/g",
+      "value": 128.0,
+      "value_type": "direct"
+    },
+    {
+      "budget": "initial concentration 40 mg/L, adsorbent dose 1 g/L, contact time 120 min, temperature 298 K",
+      "comparability": "noncomparable",
+      "comparison_id": "cmp-capacity",
+      "evidence_id": "alpha-note-132",
+      "evidence_status": "conflicted",
+      "field": "adsorption_capacity",
+      "material": "Aerogel A",
+      "metric": "adsorption_capacity",
+      "page": 1,
+      "paragraph_id": "fictional-alpha-p0005",
+      "pollutant": "methylene blue",
+      "source_document_id": "fictional-alpha",
+      "uncertainty": "The unexplained 132 mg/g note conflicts with the 128 mg/g main result and remains a separate conflicted record.",
+      "unit": "mg/g",
+      "value": 132.0,
+      "value_type": "direct"
+    },
+    {
+      "budget": "initial concentration 60 mg/L, solution volume 250 mL, contact time 90 min, temperature 298 K",
+      "comparability": "noncomparable",
+      "comparison_id": "cmp-capacity",
+      "evidence_id": "beta-derived-128",
+      "evidence_status": "confirmed",
+      "field": "adsorption_capacity",
+      "material": "Membrane B",
+      "metric": "adsorption_capacity",
+      "page": 1,
+      "paragraph_id": "fictional-beta-p0004",
+      "pollutant": "rhodamine B",
+      "source_document_id": "fictional-beta",
+      "uncertainty": "The value is a justified derived conversion, not a quoted capacity result; it remains noncomparable for pooling with different dyes and budgets.",
+      "unit": "mg/g",
+      "value": 128.0,
+      "value_type": "derived"
+    },
+    {
+      "budget": "initial concentration 50 mg/L, adsorbent dose 2 g/L, contact time 60 min, temperature 298 K",
+      "comparability": "noncomparable",
+      "comparison_id": "cmp-capacity",
+      "evidence_id": "gamma-capacity-absent",
+      "evidence_status": "not_reported",
+      "field": "adsorption_capacity",
+      "material": "Granule C",
+      "metric": "adsorption_capacity",
+      "page": "not_reported",
+      "paragraph_id": "not_reported",
+      "pollutant": "methyl orange",
+      "source_document_id": "fictional-gamma",
+      "uncertainty": "not_reported applies only to this complete indexed fictional document; no source paragraph or quotation is fabricated for an absent value.",
+      "unit": "mg/g",
+      "value": "not_reported",
+      "value_type": "absent"
+    }
+  ],
+  "comparison_scope": {
+    "common_fields": [
+      "source_document_id",
+      "paragraph_id",
+      "page",
+      "evidence_id",
+      "comparison_id",
+      "field",
+      "material",
+      "pollutant",
+      "metric",
+      "value",
+      "unit",
+      "budget",
+      "value_type",
+      "evidence_status",
+      "comparability",
+      "uncertainty"
+    ],
+    "comparisons": [
+      {
+        "budgets": [
+          "initial concentration 40 mg/L, adsorbent dose 1 g/L, contact time 120 min, temperature 298 K",
+          "initial concentration 60 mg/L, solution volume 250 mL, contact time 90 min, temperature 298 K",
+          "initial concentration 50 mg/L, adsorbent dose 2 g/L, contact time 60 min, temperature 298 K"
+        ],
+        "comparison_id": "cmp-capacity",
+        "field": "adsorption_capacity",
+        "materials": [
+          "Aerogel A",
+          "Membrane B",
+          "Granule C"
+        ],
+        "metric": "adsorption_capacity",
+        "pollutants": [
+          "methylene blue",
+          "rhodamine B",
+          "methyl orange"
+        ],
+        "task_id": "synthetic-compare-v1",
+        "units": [
+          "mg/g"
+        ]
+      }
+    ],
+    "pooling": "disabled; distinct datasets/materials/pollutants/budgets/metrics/units remain separate",
+    "task": "Compare adsorption_capacity across fictional experiments without cross-dataset pooling."
+  },
+  "limitations": [
+    "0 evidence record(s) excluded after validation.",
+    "not_reported is scoped to the indexed source, not a universal absence claim.",
+    "Inference and conflicted values are visible in the matrix but withheld from factual quantitative synthesis."
+  ],
+  "sources": [
+    {
+      "content_sha256": "e57b713a4d0ea6c143d3ffa19929e64cf4cfe8a9eb4734878faaf07ea296da54",
+      "file_name": "fictional-alpha.txt",
+      "media_type": "text",
+      "paragraph_count": 5,
+      "source_document_id": "fictional-alpha"
+    },
+    {
+      "content_sha256": "3943e9a757a7611c15c0eb97a41af1b0a8a7d9c18e8709aec938f9c8a7a19801",
+      "file_name": "fictional-beta.txt",
+      "media_type": "text",
+      "paragraph_count": 4,
+      "source_document_id": "fictional-beta"
+    },
+    {
+      "content_sha256": "86ed03517c98c0280dd09b946489f3f8bf00f9a381ccede7c5acb772566bfbdf",
+      "file_name": "fictional-gamma.txt",
+      "media_type": "text",
+      "paragraph_count": 3,
+      "source_document_id": "fictional-gamma"
+    }
+  ],
+  "status": "success",
+  "synthesis": {
+    "comparisons": [
+      {
+        "aggregation": {
+          "reason": "Record-level reporting only; no pooling across documents, datasets, materials, pollutants/dyes, metrics, units, or budgets.",
+          "value": "noncomparable"
+        },
+        "comparison_id": "cmp-capacity",
+        "records": [
+          {
+            "budget": "initial concentration 60 mg/L, solution volume 250 mL, contact time 90 min, temperature 298 K",
+            "comparability": "noncomparable",
+            "evidence_id": "beta-derived-128",
+            "field": "adsorption_capacity",
+            "material": "Membrane B",
+            "metric": "adsorption_capacity",
+            "paragraph_id": "fictional-beta-p0004",
+            "pollutant": "rhodamine B",
+            "source_document_id": "fictional-beta",
+            "unit": "mg/g",
+            "value": 128.0,
+            "value_type": "derived"
+          }
+        ],
+        "withheld": [
+          {
+            "comparability": "noncomparable",
+            "evidence_id": "alpha-main-128",
+            "paragraph_id": "fictional-alpha-p0004",
+            "reason": "conflicted",
+            "source_document_id": "fictional-alpha",
+            "value": 128.0
+          },
+          {
+            "comparability": "noncomparable",
+            "evidence_id": "alpha-note-132",
+            "paragraph_id": "fictional-alpha-p0005",
+            "reason": "conflicted",
+            "source_document_id": "fictional-alpha",
+            "value": 132.0
+          },
+          {
+            "comparability": "noncomparable",
+            "evidence_id": "gamma-capacity-absent",
+            "paragraph_id": "not_reported",
+            "reason": "not_reported",
+            "source_document_id": "fictional-gamma",
+            "value": "not_reported"
+          }
+        ]
+      }
+    ],
+    "excluded_quantitative_statuses": [
+      "inference",
+      "conflicted",
+      "not_reported",
+      "missing_evidence_record"
+    ],
+    "strategy": "Validated record-level comparison only; no arithmetic pooling.",
+    "validated_evidence_ids": [
+      "alpha-main-128",
+      "alpha-note-132",
+      "beta-derived-128",
+      "gamma-capacity-absent"
+    ]
+  },
+  "uncertainty": [
+    "alpha-main-128: The main result and a later author note disagree without explanation; both are retained and neither is selected.",
+    "alpha-note-132: The unexplained 132 mg/g note conflicts with the 128 mg/g main result and remains a separate conflicted record.",
+    "gamma-capacity-absent: not_reported applies only to this complete indexed fictional document; no source paragraph or quotation is fabricated for an absent value."
+  ]
+}

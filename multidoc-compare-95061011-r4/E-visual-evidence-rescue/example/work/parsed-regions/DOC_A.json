@@ -1,0 +1,179 @@
+{
+  "source_document_id": "DOC_A",
+  "paragraph_id": "DOC_A:caption-001",
+  "regions": [
+    {
+      "source_document_id": "DOC_A",
+      "page": 1,
+      "region_type": "table_row",
+      "region_id": "DOC_A:table-001-row-001",
+      "paragraph_id": "DOC_A:caption-001",
+      "text": "Alpha-7   methyl_orange   82                  50",
+      "table": {
+        "headers": [
+          "Material",
+          "Pollutant",
+          "Removal (%) {test}",
+          "Dose [mg]"
+        ],
+        "header_paths": [
+          [
+            "Material"
+          ],
+          [
+            "Pollutant"
+          ],
+          [
+            "Removal (%) {test}"
+          ],
+          [
+            "Dose [mg]"
+          ]
+        ],
+        "units": {
+          "Removal (%) {test}": "%",
+          "Dose [mg]": "mg"
+        },
+        "sample_splits": {
+          "Removal (%) {test}": "test"
+        },
+        "header_text": "Material  Pollutant       Removal (%) {test}  Dose [mg]"
+      },
+      "cells": [
+        {
+          "header": "Material",
+          "header_path": [
+            "Material"
+          ],
+          "value": "Alpha-7",
+          "source_value": "Alpha-7",
+          "units": null,
+          "sample_split": null,
+          "carried_from_previous_row": false
+        },
+        {
+          "header": "Pollutant",
+          "header_path": [
+            "Pollutant"
+          ],
+          "value": "methyl_orange",
+          "source_value": "methyl_orange",
+          "units": null,
+          "sample_split": null,
+          "carried_from_previous_row": false
+        },
+        {
+          "header": "Removal (%) {test}",
+          "header_path": [
+            "Removal (%) {test}"
+          ],
+          "value": "82",
+          "source_value": "82",
+          "units": "%",
+          "sample_split": "test",
+          "carried_from_previous_row": false
+        },
+        {
+          "header": "Dose [mg]",
+          "header_path": [
+            "Dose [mg]"
+          ],
+          "value": "50",
+          "source_value": "50",
+          "units": "mg",
+          "sample_split": null,
+          "carried_from_previous_row": false
+        }
+      ],
+      "multirow_context": {}
+    },
+    {
+      "source_document_id": "DOC_A",
+      "page": 1,
+      "region_type": "table_row",
+      "region_id": "DOC_A:table-001-row-002",
+      "paragraph_id": "DOC_A:caption-001",
+      "text": "crystal_violet  79                  50",
+      "table": {
+        "headers": [
+          "Material",
+          "Pollutant",
+          "Removal (%) {test}",
+          "Dose [mg]"
+        ],
+        "header_paths": [
+          [
+            "Material"
+          ],
+          [
+            "Pollutant"
+          ],
+          [
+            "Removal (%) {test}"
+          ],
+          [
+            "Dose [mg]"
+          ]
+        ],
+        "units": {
+          "Removal (%) {test}": "%",
+          "Dose [mg]": "mg"
+        },
+        "sample_splits": {
+          "Removal (%) {test}": "test"
+        },
+        "header_text": "Material  Pollutant       Removal (%) {test}  Dose [mg]"
+      },
+      "cells": [
+        {
+          "header": "Material",
+          "header_path": [
+            "Material"
+          ],
+          "value": "Alpha-7",
+          "source_value": "",
+          "units": null,
+          "sample_split": null,
+          "carried_from_previous_row": true
+        },
+        {
+          "header": "Pollutant",
+          "header_path": [
+            "Pollutant"
+          ],
+          "value": "crystal_violet",
+          "source_value": "crystal_violet",
+          "units": null,
+          "sample_split": null,
+          "carried_from_previous_row": false
+        },
+        {
+          "header": "Removal (%) {test}",
+          "header_path": [
+            "Removal (%) {test}"
+          ],
+          "value": "79",
+          "source_value": "79",
+          "units": "%",
+          "sample_split": "test",
+          "carried_from_previous_row": false
+        },
+        {
+          "header": "Dose [mg]",
+          "header_path": [
+            "Dose [mg]"
+          ],
+          "value": "50",
+          "source_value": "50",
+          "units": "mg",
+          "sample_split": null,
+          "carried_from_previous_row": false
+        }
+      ],
+      "multirow_context": {
+        "Material": "Alpha-7"
+      }
+    }
+  ],
+  "warning": "Draft geometry only: verify headers, multirow context, page and IDs before use."
+}

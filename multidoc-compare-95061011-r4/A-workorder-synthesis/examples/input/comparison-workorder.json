@@ -1,0 +1,68 @@
+{
+  "synthetic_example": true,
+  "requested_deliverables": [
+    "Direct answers to q1 through q4",
+    "comparison-matrix.md",
+    "integration-report.md",
+    "result.json"
+  ],
+  "document_scope": {
+    "in_scope": [
+      {"source_document_id": "SYN-A"},
+      {"source_document_id": "SYN-B"},
+      {"source_document_id": "SYN-C"}
+    ]
+  },
+  "explicit_questions": [
+    {
+      "question_id": "q1",
+      "question": "Determine comparability for the M-1 / D-1 protocol P-60 conclusion.",
+      "result_fields": ["comparability_verdict"],
+      "definition": "Judge task, metric, units, material, pollutant, and budget before pooling."
+    },
+    {
+      "question_id": "q2",
+      "question": "Give the unweighted arithmetic mean only for comparable 60-minute removal results, with separate exclusions retained.",
+      "result_fields": ["pooled_result_or_separate_values"]
+    },
+    {
+      "question_id": "q3",
+      "question": "Recommend two M-1 / D-1 confirmation runs and assess their combined cost against 600 USD.",
+      "result_fields": ["recommended_next_step", "budget_assessment"]
+    },
+    {
+      "question_id": "q4",
+      "question": "State unresolved replicate-variance evidence without inventing it.",
+      "result_fields": ["open_questions"]
+    }
+  ],
+  "output_contract": {
+    "fields": [
+      {
+        "name": "comparability_verdict",
+        "type": "object",
+        "description": "Document-specific comparability decision and basis."
+      },
+      {
+        "name": "pooled_result_or_separate_values",
+        "type": "object",
+        "description": "Requested mean if justified, with excluded values retained."
+      },
+      {
+        "name": "recommended_next_step",
+        "type": "object",
+        "description": "The two requested confirmation runs."
+      },
+      {
+        "name": "budget_assessment",
+        "type": "object",
+        "description": "Combined cost and cap decision."
+      },
+      {
+        "name": "open_questions",
+        "type": "array",
+        "description": "Unresolved case-specific questions, including variance availability."
+      }
+    ]
+  }
+}

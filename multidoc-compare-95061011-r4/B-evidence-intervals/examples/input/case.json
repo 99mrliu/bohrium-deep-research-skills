@@ -1,0 +1,19 @@
+{
+  "case_id": "synthetic-evidence-intervals-001",
+  "output_contract": {
+    "required_fields": {
+      "common_field_matrix": {
+        "type": "list"
+      },
+      "synthesis": {
+        "type": "dict"
+      },
+      "comparison_scope": {
+        "type": "dict"
+      },
+      "limitations": {
+        "type": "list"
+      }
+    }
+  }
+}

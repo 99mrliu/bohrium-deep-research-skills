@@ -1,0 +1,216 @@
+{
+  "case_id": "synthetic-conflict-mechanisms-001",
+  "status": "success",
+  "summary": "The records do not support a universal claim that magnetite-biochar improves dye adsorption. Paper B's acidic result complements the ambient literature by extending scope. Under matched reported ambient conditions, Papers A and B show opposite observed directions: this is a genuine_conflict and remains unresolved; batch preparation is only an untested candidate explanation. Paper C's ambient arm qualitatively corroborates Paper A, while its direct material-by-pH comparison supports bounded pH moderation. Paper C does not resolve the A-B replication conflict. The micropore explanation remains speculation. Statistical significance and budgets are unreported where stated, and no effect sizes, datasets, scopes, or dyes are pooled.",
+  "sources": [
+    {
+      "source_document_id": "paper-a",
+      "title": "Synthetic Paper A",
+      "source_path": "/Users/liuhengshen/Desktop/bhr_product/bohrium/challenge-95061011/r4/D-conflict-mechanisms/examples/input/sources/paper-a.txt",
+      "extracted_text_path": "/Users/liuhengshen/Desktop/bhr_product/bohrium/challenge-95061011/r4/D-conflict-mechanisms/examples/input/sources/paper-a.txt",
+      "sha256": "dc14314a14fdcaaa24a0cd3b7159ca28c71db95e41558b9a6092b98a4c3ca9d0",
+      "extraction": "explicit_paragraph_markers",
+      "paragraph_ids": [
+        "a-p1",
+        "a-p2",
+        "a-p3"
+      ]
+    },
+    {
+      "source_document_id": "paper-b",
+      "title": "Synthetic Paper B",
+      "source_path": "/Users/liuhengshen/Desktop/bhr_product/bohrium/challenge-95061011/r4/D-conflict-mechanisms/examples/input/sources/paper-b.txt",
+      "extracted_text_path": "/Users/liuhengshen/Desktop/bhr_product/bohrium/challenge-95061011/r4/D-conflict-mechanisms/examples/input/sources/paper-b.txt",
+      "sha256": "410ed0fa7e821073de25bb741f312daf9879d5904a5a3fa6a5c4d93a3a723ac2",
+      "extraction": "explicit_paragraph_markers",
+      "paragraph_ids": [
+        "b-p1",
+        "b-p2",
+        "b-p3",
+        "b-p4"
+      ]
+    },
+    {
+      "source_document_id": "paper-c",
+      "title": "Synthetic Paper C",
+      "source_path": "/Users/liuhengshen/Desktop/bhr_product/bohrium/challenge-95061011/r4/D-conflict-mechanisms/examples/input/sources/paper-c.txt",
+      "extracted_text_path": "/Users/liuhengshen/Desktop/bhr_product/bohrium/challenge-95061011/r4/D-conflict-mechanisms/examples/input/sources/paper-c.txt",
+      "sha256": "29e141dc8d7d7f02daec2d5a9bac56aac54c6f9f5cf4a20329a7f6c8a7158d2c",
+      "extraction": "explicit_paragraph_markers",
+      "paragraph_ids": [
+        "c-p1",
+        "c-p2",
+        "c-p3"
+      ]
+    }
+  ],
+  "uncertainty": [
+    "No quantitative pooling is performed; unreported and noncomparable values remain explicit.",
+    "budget unreported for paper-a",
+    "budget unreported for paper-b",
+    "budget unreported for paper-c",
+    "R2 is a genuine conflict whose causal explanation remains unresolved.",
+    "Alternative for M-PH-MODERATOR: Ionic strength or unmeasured surface-charge pathways may contribute; neither was independently tested.",
+    "M-PORE-SPECULATION: unresolved.",
+    "Alternative for M-PORE-SPECULATION: Surface charge, pore blocking, and bonding remain unmeasured alternatives.",
+    "M-BATCH-EXPLANATION: unresolved.",
+    "Alternative for M-BATCH-EXPLANATION: Unmeasured surface chemistry, pH history, or other procedural differences could explain the result."
+  ],
+  "change_records": [
+    {
+      "step": "source_preparation",
+      "record": {
+        "documents": [
+          {
+            "source_document_id": "paper-a",
+            "title": "Synthetic Paper A",
+            "source_path": "/Users/liuhengshen/Desktop/bhr_product/bohrium/challenge-95061011/r4/D-conflict-mechanisms/examples/input/sources/paper-a.txt",
+            "extracted_text_path": "/Users/liuhengshen/Desktop/bhr_product/bohrium/challenge-95061011/r4/D-conflict-mechanisms/examples/input/sources/paper-a.txt",
+            "sha256": "dc14314a14fdcaaa24a0cd3b7159ca28c71db95e41558b9a6092b98a4c3ca9d0",
+            "extraction": "explicit_paragraph_markers",
+            "paragraph_ids": [
+              "a-p1",
+              "a-p2",
+              "a-p3"
+            ]
+          },
+          {
+            "source_document_id": "paper-b",
+            "title": "Synthetic Paper B",
+            "source_path": "/Users/liuhengshen/Desktop/bhr_product/bohrium/challenge-95061011/r4/D-conflict-mechanisms/examples/input/sources/paper-b.txt",
+            "extracted_text_path": "/Users/liuhengshen/Desktop/bhr_product/bohrium/challenge-95061011/r4/D-conflict-mechanisms/examples/input/sources/paper-b.txt",
+            "sha256": "410ed0fa7e821073de25bb741f312daf9879d5904a5a3fa6a5c4d93a3a723ac2",
+            "extraction": "explicit_paragraph_markers",
+            "paragraph_ids": [
+              "b-p1",
+              "b-p2",
+              "b-p3",
+              "b-p4"
+            ]
+          },
+          {
+            "source_document_id": "paper-c",
+            "title": "Synthetic Paper C",
+            "source_path": "/Users/liuhengshen/Desktop/bhr_product/bohrium/challenge-95061011/r4/D-conflict-mechanisms/examples/input/sources/paper-c.txt",
+            "extracted_text_path": "/Users/liuhengshen/Desktop/bhr_product/bohrium/challenge-95061011/r4/D-conflict-mechanisms/examples/input/sources/paper-c.txt",
+            "sha256": "29e141dc8d7d7f02daec2d5a9bac56aac54c6f9f5cf4a20329a7f6c8a7158d2c",
+            "extraction": "explicit_paragraph_markers",
+            "paragraph_ids": [
+              "c-p1",
+              "c-p2",
+              "c-p3"
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "step": "evidence_scope_validation",
+      "record": {
+        "valid": true,
+        "errors": [],
+        "warnings": [
+          "budget unreported for paper-a",
+          "budget unreported for paper-b",
+          "budget unreported for paper-c"
+        ]
+      }
+    },
+    {
+      "step": "exact_key_clustering",
+      "record": {
+        "method": "exact agent-specified proposition_key only; no fuzzy/entity matching",
+        "clusters": [
+          {
+            "proposition_key": "mb-capacity-composite-vs-control-ambient",
+            "proposition_ids": [
+              "P-A-AMBIENT",
+              "P-B-AMBIENT",
+              "P-C-AMBIENT"
+            ]
+          },
+          {
+            "proposition_key": "mb-capacity-composite-vs-control-acidic-extension",
+            "proposition_ids": [
+              "P-B-ACIDIC"
+            ]
+          },
+          {
+            "proposition_key": "mb-capacity-ph-moderator",
+            "proposition_ids": [
+              "P-C-MODERATOR"
+            ]
+          },
+          {
+            "proposition_key": "mb-capacity-micropore-speculation",
+            "proposition_ids": [
+              "P-A-PORE-SPECULATION"
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "step": "atlas_and_matrix",
+      "record": {
+        "generated": [
+          "comparison-matrix.md",
+          "conflict-atlas.md",
+          "integrated-response.md"
+        ],
+        "quantitative_pooling": false
+      }
+    }
+  ],
+  "artifacts": [
+    {
+      "name": "comparison-matrix.md",
+      "path": "/Users/liuhengshen/Desktop/bhr_product/bohrium/challenge-95061011/r4/D-conflict-mechanisms/examples/output/comparison-matrix.md",
+      "exists": true,
+      "sha256": "b3933fb25aa5d14ef975adef62d3eb8e97287fce2faa3b1fcf4f10b1aa1564b4",
+      "bytes": 2150
+    },
+    {
+      "name": "conflict-atlas.md",
+      "path": "/Users/liuhengshen/Desktop/bhr_product/bohrium/challenge-95061011/r4/D-conflict-mechanisms/examples/output/conflict-atlas.md",
+      "exists": true,
+      "sha256": "6fe321d24d198248bfe4e6fcf010e67290cf7ac1382e492a20e0c419f0a3106d",
+      "bytes": 10684
+    },
+    {
+      "name": "integrated-response.md",
+      "path": "/Users/liuhengshen/Desktop/bhr_product/bohrium/challenge-95061011/r4/D-conflict-mechanisms/examples/output/integrated-response.md",
+      "exists": true,
+      "sha256": "0c22d3e33a25566850b7ea5b31caede79d86b0401bb68fc8723b517284bd4061",
+      "bytes": 760
+    },
+    {
+      "name": "result.json",
+      "path": "/Users/liuhengshen/Desktop/bhr_product/bohrium/challenge-95061011/r4/D-conflict-mechanisms/examples/output/result.json",
+      "exists": true,
+      "hash_note": "self-referential hash intentionally omitted"
+    }
+  ],
+  "output_contract": {
+    "artifacts": [
+      "comparison-matrix.md",
+      "conflict-atlas.md",
+      "integrated-response.md",
+      "result.json"
+    ],
+    "result_fields": [
+      "case_id",
+      "status",
+      "summary",
+      "sources",
+      "uncertainty",
+      "change_records",
+      "comparison_matrix",
+      "conflict_atlas"
+    ]
+  },
+  "comparison_matrix": "comparison-matrix.md",
+  "matrix": "comparison-matrix.md",
+  "conflict_atlas": "conflict-atlas.md",
+  "integrated_response": "integrated-response.md"
+}

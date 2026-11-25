@@ -1,0 +1,513 @@
+{
+  "case_id": "synthetic-estimand-case-001",
+  "comparison_matrix": "comparison-matrix.md",
+  "comparison_operations": "comparison-operations.md",
+  "status": "success",
+  "sources": [
+    {
+      "source_document_id": "paper-a",
+      "path": "corpus/paper-a.md",
+      "text_sha256": "dd72d6f2abe66f27f3c9273f623a6b3fc03277deb881ae18a4300ef26331f4cc",
+      "paragraph_ids": [
+        "p1",
+        "p2",
+        "p3"
+      ],
+      "estimand_ids": [
+        "a-decolorization"
+      ],
+      "coverage": "read_in_full"
+    },
+    {
+      "source_document_id": "paper-b",
+      "path": "corpus/paper-b.md",
+      "text_sha256": "11391f4efcbcb55209ebc0b8dce63b7e93860a661ef31cde0264e18a39ed4594",
+      "paragraph_ids": [
+        "p1",
+        "p2",
+        "p3"
+      ],
+      "estimand_ids": [
+        "b-adsorption"
+      ],
+      "coverage": "read_in_full"
+    },
+    {
+      "source_document_id": "paper-c",
+      "path": "corpus/paper-c.md",
+      "text_sha256": "01474c63cace9b585aa7f0611e739bd3712eb1cf8c0f0d74512e53812c331e0c",
+      "paragraph_ids": [
+        "p1",
+        "p2",
+        "p3"
+      ],
+      "estimand_ids": [
+        "c-decolorization-hours"
+      ],
+      "coverage": "read_in_full"
+    }
+  ],
+  "uncertainty": [
+    {
+      "code": "NOT_REPORTED",
+      "estimand_id": "b-adsorption",
+      "field": "budget.value",
+      "value": "not_reported"
+    },
+    {
+      "code": "NOT_REPORTED",
+      "estimand_id": "b-adsorption",
+      "field": "budget.unit",
+      "value": "not_reported"
+    },
+    {
+      "code": "OPERATION_BLOCKED",
+      "operation_id": "rank-a-b",
+      "operation": "RANK",
+      "reasons": [
+        "ESTIMAND_MISMATCH:budget,intervention,material,metric,outcome,pollutant,population",
+        "UNKNOWN:b-adsorption:budget.unit",
+        "UNKNOWN:b-adsorption:budget.value"
+      ],
+      "impact": "No result is produced for this operation; its gate evaluation and the overall comparison are complete."
+    },
+    {
+      "code": "OPERATION_BLOCKED",
+      "operation_id": "pool-a-b",
+      "operation": "POOL",
+      "reasons": [
+        "ESTIMAND_MISMATCH:budget,intervention,material,metric,outcome,pollutant,population",
+        "POOL_EXCHANGEABILITY_NOT_JUSTIFIED",
+        "UNKNOWN:b-adsorption:budget.unit",
+        "UNKNOWN:b-adsorption:budget.value"
+      ],
+      "impact": "No result is produced for this operation; its gate evaluation and the overall comparison are complete."
+    }
+  ],
+  "change_records": [
+    {
+      "sequence": 1,
+      "path": "comparison-matrix.md",
+      "action": "rendered",
+      "sha256": "4e99879a83b761701503d3960edd9c9a5f48f5593f5cfa9f848f8cf0d937edc6"
+    },
+    {
+      "sequence": 2,
+      "path": "comparison-operations.md",
+      "action": "rendered",
+      "sha256": "9cb7d913d59c3fb1c85cc7406b52c9ce6a855b43a8fbb1e7f98acb8e414ea341"
+    },
+    {
+      "sequence": 3,
+      "path": "result.json",
+      "action": "rendered",
+      "detail": "case_id and original output_contract keys rendered dynamically; source records were not edited"
+    }
+  ],
+  "strata": {
+    "d7bf440a3b00a4ed1a2e6b1e6a8f3ca88a6863190fa9a6e9ab6c9d4eb7ab999c": {
+      "canonical_key": "{\"budget\":{\"unit\":\"min\",\"value\":\"90\"},\"condition\":\"batch; room temperature\",\"intervention\":\"UV/H2O2 treatment\",\"material\":\"synthetic textile wastewater\",\"metric\":{\"definition\":\"percentage reduction in baseline-corrected UV-vis absorbance at the dye peak\",\"name\":\"decolorization_efficiency\"},\"outcome\":\"decolorization of dye from synthetic textile wastewater\",\"pollutant\":\"Reactive Red 195\",\"population\":\"batch photocatalytic test specimens\",\"scale\":\"percentage points on closed interval [0,100]\",\"task_id\":\"synthetic-decolorization-comparison-v1\",\"time\":{\"unit\":\"min\",\"value\":\"90\"},\"unit\":\"%\"}",
+      "estimand_ids": [
+        "a-decolorization"
+      ]
+    },
+    "e83713de09e51270f2783b20c8caaaad867afabf9b8d356d1c9395037c0a2de1": {
+      "canonical_key": "{\"budget\":{\"unit\":\"not_reported\",\"value\":\"not_reported\"},\"condition\":\"batch; room temperature\",\"intervention\":\"activated carbon adsorption\",\"material\":\"synthetic aqueous dye solution\",\"metric\":{\"definition\":\"percentage reduction in measured aqueous Methylene Blue concentration from initial concentration\",\"name\":\"adsorption_removal_fraction\"},\"outcome\":\"removal of dye from aqueous solution\",\"pollutant\":\"Methylene Blue\",\"population\":\"batch adsorption test specimens\",\"scale\":\"percentage points on closed interval [0,100]\",\"task_id\":\"synthetic-decolorization-comparison-v1\",\"time\":{\"unit\":\"min\",\"value\":\"90\"},\"unit\":\"%\"}",
+      "estimand_ids": [
+        "b-adsorption"
+      ]
+    },
+    "9acabc05254a4514a7453f0176adf8433e414a2e2e5ca6aeb834abb91a16b08c": {
+      "canonical_key": "{\"budget\":{\"unit\":\"h\",\"value\":\"1.5\"},\"condition\":\"batch; room temperature\",\"intervention\":\"UV/H2O2 treatment\",\"material\":\"synthetic textile wastewater\",\"metric\":{\"definition\":\"percentage reduction in baseline-corrected UV-vis absorbance at the dye peak\",\"name\":\"decolorization_efficiency\"},\"outcome\":\"decolorization of dye from synthetic textile wastewater\",\"pollutant\":\"Reactive Red 195\",\"population\":\"batch photocatalytic test specimens\",\"scale\":\"percentage points on closed interval [0,100]\",\"task_id\":\"synthetic-decolorization-comparison-v1\",\"time\":{\"unit\":\"h\",\"value\":\"1.5\"},\"unit\":\"%\"}",
+      "estimand_ids": [
+        "c-decolorization-hours"
+      ]
+    }
+  },
+  "operation_results": [
+    {
+      "operation_id": "describe-all",
+      "operation": "DESCRIBE",
+      "estimand_ids": [
+        "a-decolorization",
+        "b-adsorption",
+        "c-decolorization-hours"
+      ],
+      "allowed": true,
+      "comparability": "noncomparable",
+      "blocking_reasons": [],
+      "caveats": [
+        "Side-by-side description retains unlike dimensions: budget, intervention, material, metric, outcome, pollutant, population, time",
+        "Not-reported cells remain explicit: b-adsorption:budget.unit, b-adsorption:budget.value"
+      ],
+      "raw_stratum_fingerprints": [
+        "d7bf440a3b00a4ed1a2e6b1e6a8f3ca88a6863190fa9a6e9ab6c9d4eb7ab999c",
+        "e83713de09e51270f2783b20c8caaaad867afabf9b8d356d1c9395037c0a2de1",
+        "9acabc05254a4514a7453f0176adf8433e414a2e2e5ca6aeb834abb91a16b08c"
+      ],
+      "gated_stratum_fingerprints": [
+        "d7bf440a3b00a4ed1a2e6b1e6a8f3ca88a6863190fa9a6e9ab6c9d4eb7ab999c",
+        "e83713de09e51270f2783b20c8caaaad867afabf9b8d356d1c9395037c0a2de1",
+        "9acabc05254a4514a7453f0176adf8433e414a2e2e5ca6aeb834abb91a16b08c"
+      ],
+      "mismatches_after_requested_transforms": [
+        "budget",
+        "intervention",
+        "material",
+        "metric",
+        "outcome",
+        "pollutant",
+        "population",
+        "time"
+      ],
+      "transform_audit": [],
+      "rationale": "DESCRIBE permits unlike measures and unknown cells; no numeric synthesis is implied."
+    },
+    {
+      "operation_id": "direction-a-b",
+      "operation": "DIRECTION",
+      "estimand_ids": [
+        "a-decolorization",
+        "b-adsorption"
+      ],
+      "allowed": true,
+      "comparability": "noncomparable",
+      "blocking_reasons": [],
+      "caveats": [
+        "A decrease is qualitative only: absorbance-based decolorization of Reactive Red 195 and adsorption-based removal of Methylene Blue have different meanings and must not be ranked by effect size.",
+        "The unreported adsorbent-mass budget remains a limitation even for qualitative comparison.",
+        "Directions are qualitative only across dimensions: budget, intervention, material, metric, outcome, pollutant, population",
+        "Qualitative direction does not repair missing values: b-adsorption:budget.unit, b-adsorption:budget.value"
+      ],
+      "raw_stratum_fingerprints": [
+        "d7bf440a3b00a4ed1a2e6b1e6a8f3ca88a6863190fa9a6e9ab6c9d4eb7ab999c",
+        "e83713de09e51270f2783b20c8caaaad867afabf9b8d356d1c9395037c0a2de1"
+      ],
+      "gated_stratum_fingerprints": [
+        "d7bf440a3b00a4ed1a2e6b1e6a8f3ca88a6863190fa9a6e9ab6c9d4eb7ab999c",
+        "e83713de09e51270f2783b20c8caaaad867afabf9b8d356d1c9395037c0a2de1"
+      ],
+      "mismatches_after_requested_transforms": [
+        "budget",
+        "intervention",
+        "material",
+        "metric",
+        "outcome",
+        "pollutant",
+        "population"
+      ],
+      "transform_audit": [],
+      "rationale": "DIRECTION is gateable with explicit caveats and reported directions; effect sizes are not ranked.",
+      "directions": [
+        {
+          "estimand_id": "a-decolorization",
+          "direction": "decrease"
+        },
+        {
+          "estimand_id": "b-adsorption",
+          "direction": "decrease"
+        }
+      ]
+    },
+    {
+      "operation_id": "rank-a-b",
+      "operation": "RANK",
+      "estimand_ids": [
+        "a-decolorization",
+        "b-adsorption"
+      ],
+      "allowed": false,
+      "comparability": "noncomparable",
+      "blocking_reasons": [
+        "ESTIMAND_MISMATCH:budget,intervention,material,metric,outcome,pollutant,population",
+        "UNKNOWN:b-adsorption:budget.unit",
+        "UNKNOWN:b-adsorption:budget.value"
+      ],
+      "caveats": [],
+      "raw_stratum_fingerprints": [
+        "d7bf440a3b00a4ed1a2e6b1e6a8f3ca88a6863190fa9a6e9ab6c9d4eb7ab999c",
+        "e83713de09e51270f2783b20c8caaaad867afabf9b8d356d1c9395037c0a2de1"
+      ],
+      "gated_stratum_fingerprints": [
+        "d7bf440a3b00a4ed1a2e6b1e6a8f3ca88a6863190fa9a6e9ab6c9d4eb7ab999c",
+        "e83713de09e51270f2783b20c8caaaad867afabf9b8d356d1c9395037c0a2de1"
+      ],
+      "mismatches_after_requested_transforms": [
+        "budget",
+        "intervention",
+        "material",
+        "metric",
+        "outcome",
+        "pollutant",
+        "population"
+      ],
+      "transform_audit": [],
+      "rationale": "RANK requires one known estimand and compatible estimate scale after any requested exact transforms."
+    },
+    {
+      "operation_id": "pool-a-b",
+      "operation": "POOL",
+      "estimand_ids": [
+        "a-decolorization",
+        "b-adsorption"
+      ],
+      "allowed": false,
+      "comparability": "noncomparable",
+      "blocking_reasons": [
+        "ESTIMAND_MISMATCH:budget,intervention,material,metric,outcome,pollutant,population",
+        "POOL_EXCHANGEABILITY_NOT_JUSTIFIED",
+        "UNKNOWN:b-adsorption:budget.unit",
+        "UNKNOWN:b-adsorption:budget.value"
+      ],
+      "caveats": [
+        "Tiny paper set: exchangeability is not inferred from numerical similarity; pooling is normally inappropriate."
+      ],
+      "raw_stratum_fingerprints": [
+        "d7bf440a3b00a4ed1a2e6b1e6a8f3ca88a6863190fa9a6e9ab6c9d4eb7ab999c",
+        "e83713de09e51270f2783b20c8caaaad867afabf9b8d356d1c9395037c0a2de1"
+      ],
+      "gated_stratum_fingerprints": [
+        "d7bf440a3b00a4ed1a2e6b1e6a8f3ca88a6863190fa9a6e9ab6c9d4eb7ab999c",
+        "e83713de09e51270f2783b20c8caaaad867afabf9b8d356d1c9395037c0a2de1"
+      ],
+      "mismatches_after_requested_transforms": [
+        "budget",
+        "intervention",
+        "material",
+        "metric",
+        "outcome",
+        "pollutant",
+        "population"
+      ],
+      "transform_audit": [],
+      "rationale": "POOL is only a gate; no pooled estimate or heterogeneity statistic is calculated.",
+      "numeric_synthesis": "not_performed"
+    },
+    {
+      "operation_id": "transform-a-c",
+      "operation": "TRANSFORM",
+      "estimand_ids": [
+        "a-decolorization",
+        "c-decolorization-hours"
+      ],
+      "allowed": true,
+      "comparability": "noncomparable",
+      "blocking_reasons": [],
+      "caveats": [],
+      "raw_stratum_fingerprints": [
+        "d7bf440a3b00a4ed1a2e6b1e6a8f3ca88a6863190fa9a6e9ab6c9d4eb7ab999c",
+        "9acabc05254a4514a7453f0176adf8433e414a2e2e5ca6aeb834abb91a16b08c"
+      ],
+      "gated_stratum_fingerprints": [
+        "9acabc05254a4514a7453f0176adf8433e414a2e2e5ca6aeb834abb91a16b08c",
+        "9acabc05254a4514a7453f0176adf8433e414a2e2e5ca6aeb834abb91a16b08c"
+      ],
+      "mismatches_after_requested_transforms": [],
+      "transform_audit": [
+        {
+          "estimand_id": "a-decolorization",
+          "field": "time",
+          "conversion": "min_to_h",
+          "definition": "1 min = 1/60 h (exact)",
+          "reason": "Convert the 90 min observation horizon to the common 1.5 h horizon using the exact definition 1 min = 1/60 h.",
+          "before": {
+            "value": 90,
+            "unit": "min"
+          },
+          "after": {
+            "value": 1.5,
+            "unit": "h"
+          }
+        },
+        {
+          "estimand_id": "a-decolorization",
+          "field": "budget",
+          "conversion": "min_to_h",
+          "definition": "1 min = 1/60 h (exact)",
+          "reason": "Convert the 90 min exposure budget to the common 1.5 h exposure budget using the exact definition 1 min = 1/60 h.",
+          "before": {
+            "value": 90,
+            "unit": "min"
+          },
+          "after": {
+            "value": 1.5,
+            "unit": "h"
+          }
+        }
+      ],
+      "rationale": "TRANSFORM permits only documented exact conversions and requires post-conversion stratum identity."
+    },
+    {
+      "operation_id": "rank-a-c-after-transform",
+      "operation": "RANK",
+      "estimand_ids": [
+        "a-decolorization",
+        "c-decolorization-hours"
+      ],
+      "allowed": true,
+      "comparability": "noncomparable",
+      "blocking_reasons": [],
+      "caveats": [],
+      "raw_stratum_fingerprints": [
+        "d7bf440a3b00a4ed1a2e6b1e6a8f3ca88a6863190fa9a6e9ab6c9d4eb7ab999c",
+        "9acabc05254a4514a7453f0176adf8433e414a2e2e5ca6aeb834abb91a16b08c"
+      ],
+      "gated_stratum_fingerprints": [
+        "9acabc05254a4514a7453f0176adf8433e414a2e2e5ca6aeb834abb91a16b08c",
+        "9acabc05254a4514a7453f0176adf8433e414a2e2e5ca6aeb834abb91a16b08c"
+      ],
+      "mismatches_after_requested_transforms": [],
+      "transform_audit": [
+        {
+          "estimand_id": "a-decolorization",
+          "field": "time",
+          "conversion": "min_to_h",
+          "definition": "1 min = 1/60 h (exact)",
+          "reason": "Match the observation horizon exactly before ranking.",
+          "before": {
+            "value": 90,
+            "unit": "min"
+          },
+          "after": {
+            "value": 1.5,
+            "unit": "h"
+          }
+        },
+        {
+          "estimand_id": "a-decolorization",
+          "field": "budget",
+          "conversion": "min_to_h",
+          "definition": "1 min = 1/60 h (exact)",
+          "reason": "Match the exposure budget exactly before ranking.",
+          "before": {
+            "value": 90,
+            "unit": "min"
+          },
+          "after": {
+            "value": 1.5,
+            "unit": "h"
+          }
+        }
+      ],
+      "rationale": "RANK requires one known estimand and compatible estimate scale after any requested exact transforms."
+    }
+  ],
+  "estimand_register": [
+    {
+      "estimand_id": "a-decolorization",
+      "source_document_id": "paper-a",
+      "task_id": "synthetic-decolorization-comparison-v1",
+      "outcome": "decolorization of dye from synthetic textile wastewater",
+      "metric": {
+        "name": "decolorization_efficiency",
+        "definition": "percentage reduction in baseline-corrected UV-vis absorbance at the dye peak"
+      },
+      "population": "batch photocatalytic test specimens",
+      "material": "synthetic textile wastewater",
+      "pollutant": "Reactive Red 195",
+      "intervention": "UV/H2O2 treatment",
+      "condition": "batch; room temperature",
+      "budget": {
+        "value": 90,
+        "unit": "min"
+      },
+      "time": {
+        "value": 90,
+        "unit": "min"
+      },
+      "unit": "%",
+      "scale": "percentage points on closed interval [0,100]",
+      "estimate": {
+        "value": 92,
+        "unit": "%",
+        "direction": "decrease"
+      },
+      "evidence": [
+        {
+          "source_document_id": "paper-a",
+          "paragraph_id": "p2",
+          "quote": "In a batch test at room temperature, synthetic textile wastewater containing Reactive Red 195 received UV/H2O2 treatment; after a 90 min observation horizon with a 90 min exposure budget, the decolorization efficiency, defined as the percentage reduction in baseline-corrected UV-vis absorbance at the dye peak, was 92%."
+        }
+      ]
+    },
+    {
+      "estimand_id": "b-adsorption",
+      "source_document_id": "paper-b",
+      "task_id": "synthetic-decolorization-comparison-v1",
+      "outcome": "removal of dye from aqueous solution",
+      "metric": {
+        "name": "adsorption_removal_fraction",
+        "definition": "percentage reduction in measured aqueous Methylene Blue concentration from initial concentration"
+      },
+      "population": "batch adsorption test specimens",
+      "material": "synthetic aqueous dye solution",
+      "pollutant": "Methylene Blue",
+      "intervention": "activated carbon adsorption",
+      "condition": "batch; room temperature",
+      "budget": {
+        "value": "not_reported",
+        "unit": "not_reported"
+      },
+      "time": {
+        "value": 90,
+        "unit": "min"
+      },
+      "unit": "%",
+      "scale": "percentage points on closed interval [0,100]",
+      "estimate": {
+        "value": 92,
+        "unit": "%",
+        "direction": "decrease"
+      },
+      "evidence": [
+        {
+          "source_document_id": "paper-b",
+          "paragraph_id": "p2",
+          "quote": "In a batch test at room temperature, synthetic aqueous dye solution containing Methylene Blue contacted activated carbon; at a fixed 90 min observation horizon, the adsorption removal fraction, defined as the percentage reduction in measured aqueous Methylene Blue concentration from initial concentration, was 92%."
+        },
+        {
+          "source_document_id": "paper-b",
+          "paragraph_id": "p3",
+          "quote": "The adsorbent-mass budget was not reported; a decrease in aqueous dye concentration was the qualitative direction."
+        }
+      ]
+    },
+    {
+      "estimand_id": "c-decolorization-hours",
+      "source_document_id": "paper-c",
+      "task_id": "synthetic-decolorization-comparison-v1",
+      "outcome": "decolorization of dye from synthetic textile wastewater",
+      "metric": {
+        "name": "decolorization_efficiency",
+        "definition": "percentage reduction in baseline-corrected UV-vis absorbance at the dye peak"
+      },
+      "population": "batch photocatalytic test specimens",
+      "material": "synthetic textile wastewater",
+      "pollutant": "Reactive Red 195",
+      "intervention": "UV/H2O2 treatment",
+      "condition": "batch; room temperature",
+      "budget": {
+        "value": 1.5,
+        "unit": "h"
+      },
+      "time": {
+        "value": 1.5,
+        "unit": "h"
+      },
+      "unit": "%",
+      "scale": "percentage points on closed interval [0,100]",
+      "estimate": {
+        "value": 92,
+        "unit": "%",
+        "direction": "decrease"
+      },
+      "evidence": [
+        {
+          "source_document_id": "paper-c",
+          "paragraph_id": "p2",
+          "quote": "In a batch test at room temperature, synthetic textile wastewater containing Reactive Red 195 received UV/H2O2 treatment; after a 1.5 h observation horizon with a 1.5 h exposure budget, the decolorization efficiency, defined as the percentage reduction in baseline-corrected UV-vis absorbance at the dye peak, was 92%."
+        }
+      ]
+    }
+  ]
+}

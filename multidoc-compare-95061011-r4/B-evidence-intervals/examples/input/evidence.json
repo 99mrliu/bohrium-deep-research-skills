@@ -1,0 +1,260 @@
+{
+  "schema_version": "1.0",
+  "records": [
+    {
+      "evidence_id": "alpha-main-128",
+      "comparison_id": "cmp-capacity",
+      "task": "synthetic-compare-v1",
+      "source_document_id": "fictional-alpha",
+      "paragraph_id": "fictional-alpha-p0004",
+      "page": 1,
+      "field": "adsorption_capacity",
+      "material": "Aerogel A",
+      "pollutant": "methylene blue",
+      "metric": "adsorption_capacity",
+      "value": 128.0,
+      "value_literal": "128",
+      "unit": "mg/g",
+      "budget": "initial concentration 40 mg/L, adsorbent dose 1 g/L, contact time 120 min, temperature 298 K",
+      "value_type": "direct",
+      "status": "conflicted",
+      "comparability": "noncomparable",
+      "conflict_group": "alpha-capacity-revision",
+      "qualifier_evidence": {
+        "material": ["alpha-main-context"],
+        "pollutant": ["alpha-main-context"],
+        "metric": ["alpha-main-definition"],
+        "unit": ["alpha-main-definition"],
+        "budget": ["alpha-main-context"]
+      },
+      "source_spans": [
+        {
+          "span_id": "alpha-main-support",
+          "role": "support",
+          "source_document_id": "fictional-alpha",
+          "paragraph_id": "fictional-alpha-p0004",
+          "page": 1,
+          "start": 0,
+          "end": 62,
+          "quote": "For Experiment A, the adsorption_capacity result was 128 mg/g.",
+          "content_sha256": "7735dd86e0923dbcb7af4fe4dcf9cace9a7bf5c48f340e689f8f2d6fa525844c"
+        },
+        {
+          "span_id": "alpha-main-context",
+          "role": "context",
+          "source_document_id": "fictional-alpha",
+          "paragraph_id": "fictional-alpha-p0002",
+          "page": 1,
+          "start": 0,
+          "end": 174,
+          "quote": "Experiment A uses material Aerogel A for pollutant methylene blue. The budget is initial concentration 40 mg/L, adsorbent dose 1 g/L, contact time 120 min, temperature 298 K.",
+          "content_sha256": "31cc954e19bba89fe39feaca7b0f1fcc44dfe7bd7fc8af635a040b16ef3eae45"
+        },
+        {
+          "span_id": "alpha-main-definition",
+          "role": "definition",
+          "source_document_id": "fictional-alpha",
+          "paragraph_id": "fictional-alpha-p0003",
+          "page": 1,
+          "start": 0,
+          "end": 137,
+          "quote": "Metric definition: adsorption_capacity means the retained pollutant mass divided by dry adsorbent mass, expressed in mg/g at equilibrium.",
+          "content_sha256": "9dd6e0d37220e4c1089ce4f07c8b605c5d95ce269a74048c0849dc499b48f9c5"
+        }
+      ],
+      "derivation": null,
+      "search_scope": null,
+      "uncertainty": "The main result and a later author note disagree without explanation; both are retained and neither is selected."
+    },
+    {
+      "evidence_id": "alpha-note-132",
+      "comparison_id": "cmp-capacity",
+      "task": "synthetic-compare-v1",
+      "source_document_id": "fictional-alpha",
+      "paragraph_id": "fictional-alpha-p0005",
+      "page": 1,
+      "field": "adsorption_capacity",
+      "material": "Aerogel A",
+      "pollutant": "methylene blue",
+      "metric": "adsorption_capacity",
+      "value": 132.0,
+      "value_literal": "132",
+      "unit": "mg/g",
+      "budget": "initial concentration 40 mg/L, adsorbent dose 1 g/L, contact time 120 min, temperature 298 K",
+      "value_type": "direct",
+      "status": "conflicted",
+      "comparability": "noncomparable",
+      "conflict_group": "alpha-capacity-revision",
+      "qualifier_evidence": {
+        "material": ["alpha-note-context"],
+        "pollutant": ["alpha-note-context"],
+        "metric": ["alpha-note-definition"],
+        "unit": ["alpha-note-definition"],
+        "budget": ["alpha-note-context"]
+      },
+      "source_spans": [
+        {
+          "span_id": "alpha-note-support",
+          "role": "support",
+          "source_document_id": "fictional-alpha",
+          "paragraph_id": "fictional-alpha-p0005",
+          "page": 1,
+          "start": 0,
+          "end": 149,
+          "quote": "A later author note for Experiment A revised adsorption_capacity to 132 mg/g using the same reported conditions; the note did not explain the change.",
+          "content_sha256": "a264f1469059c51ed9205e6c0c27438bafef8e24081578c5cc0bb18b8a7ec2ae"
+        },
+        {
+          "span_id": "alpha-note-context",
+          "role": "context",
+          "source_document_id": "fictional-alpha",
+          "paragraph_id": "fictional-alpha-p0002",
+          "page": 1,
+          "start": 0,
+          "end": 174,
+          "quote": "Experiment A uses material Aerogel A for pollutant methylene blue. The budget is initial concentration 40 mg/L, adsorbent dose 1 g/L, contact time 120 min, temperature 298 K.",
+          "content_sha256": "31cc954e19bba89fe39feaca7b0f1fcc44dfe7bd7fc8af635a040b16ef3eae45"
+        },
+        {
+          "span_id": "alpha-note-definition",
+          "role": "definition",
+          "source_document_id": "fictional-alpha",
+          "paragraph_id": "fictional-alpha-p0003",
+          "page": 1,
+          "start": 0,
+          "end": 137,
+          "quote": "Metric definition: adsorption_capacity means the retained pollutant mass divided by dry adsorbent mass, expressed in mg/g at equilibrium.",
+          "content_sha256": "9dd6e0d37220e4c1089ce4f07c8b605c5d95ce269a74048c0849dc499b48f9c5"
+        }
+      ],
+      "derivation": null,
+      "search_scope": null,
+      "uncertainty": "The unexplained 132 mg/g note conflicts with the 128 mg/g main result and remains a separate conflicted record."
+    },
+    {
+      "evidence_id": "beta-derived-128",
+      "comparison_id": "cmp-capacity",
+      "task": "synthetic-compare-v1",
+      "source_document_id": "fictional-beta",
+      "paragraph_id": "fictional-beta-p0004",
+      "page": 1,
+      "field": "adsorption_capacity",
+      "material": "Membrane B",
+      "pollutant": "rhodamine B",
+      "metric": "adsorption_capacity",
+      "value": 128.0,
+      "value_literal": null,
+      "unit": "mg/g",
+      "budget": "initial concentration 60 mg/L, solution volume 250 mL, contact time 90 min, temperature 298 K",
+      "value_type": "derived",
+      "status": "confirmed",
+      "comparability": "noncomparable",
+      "conflict_group": null,
+      "qualifier_evidence": {
+        "material": ["beta-context"],
+        "pollutant": ["beta-context"],
+        "metric": ["beta-definition"],
+        "unit": ["beta-definition"],
+        "budget": ["beta-context"]
+      },
+      "source_spans": [
+        {
+          "span_id": "beta-support",
+          "role": "support",
+          "source_document_id": "fictional-beta",
+          "paragraph_id": "fictional-beta-p0004",
+          "page": 1,
+          "start": 0,
+          "end": 146,
+          "quote": "For Experiment B, the recovered solid retained 512 mg rhodamine B and the dry adsorbent mass was 4 g. No capacity value was printed in the source.",
+          "content_sha256": "4ff81783e1fd5bba2c08d472be395f8a323817c1a94297a623a912f568816c85"
+        },
+        {
+          "span_id": "beta-context",
+          "role": "context",
+          "source_document_id": "fictional-beta",
+          "paragraph_id": "fictional-beta-p0002",
+          "page": 1,
+          "start": 0,
+          "end": 173,
+          "quote": "Experiment B uses material Membrane B for pollutant rhodamine B. The budget is initial concentration 60 mg/L, solution volume 250 mL, contact time 90 min, temperature 298 K.",
+          "content_sha256": "9e82d98c95edc51bc640c1ddd53303ba5e9f49c7c2d142171a52158ecbbbc9f3"
+        },
+        {
+          "span_id": "beta-definition",
+          "role": "definition",
+          "source_document_id": "fictional-beta",
+          "paragraph_id": "fictional-beta-p0003",
+          "page": 1,
+          "start": 0,
+          "end": 165,
+          "quote": "Metric definition: adsorption_capacity is retained_mass / adsorbent_mass. The requested result unit is mg/g; retained_mass is measured in mg and adsorbent_mass in g.",
+          "content_sha256": "93ae05879dedd0ea7836106561c8338ec7e0b42b9cf38b5e84aca5a2b3dbad78"
+        }
+      ],
+      "derivation": {
+        "formula": "retained_mass / adsorbent_mass",
+        "result_unit": "mg/g",
+        "justification": "Both sourced operands describe Experiment B; mg divided by g gives the requested mg/g unit without changing the experimental budget.",
+        "operands": [
+          {
+            "name": "retained_mass",
+            "value": 512.0,
+            "value_literal": "512",
+            "unit": "mg",
+            "source_span_id": "beta-support"
+          },
+          {
+            "name": "adsorbent_mass",
+            "value": 4.0,
+            "value_literal": "4",
+            "unit": "g",
+            "source_span_id": "beta-support"
+          }
+        ]
+      },
+      "search_scope": null,
+      "uncertainty": "The value is a justified derived conversion, not a quoted capacity result; it remains noncomparable for pooling with different dyes and budgets."
+    },
+    {
+      "evidence_id": "gamma-capacity-absent",
+      "comparison_id": "cmp-capacity",
+      "task": "synthetic-compare-v1",
+      "source_document_id": "fictional-gamma",
+      "paragraph_id": null,
+      "page": null,
+      "field": "adsorption_capacity",
+      "material": "Granule C",
+      "pollutant": "methyl orange",
+      "metric": "adsorption_capacity",
+      "value": "not_reported",
+      "value_literal": null,
+      "unit": "mg/g",
+      "budget": "initial concentration 50 mg/L, adsorbent dose 2 g/L, contact time 60 min, temperature 298 K",
+      "value_type": "absent",
+      "status": "not_reported",
+      "comparability": "noncomparable",
+      "conflict_group": null,
+      "qualifier_evidence": {},
+      "source_spans": [],
+      "derivation": null,
+      "search_scope": {
+        "source_document_id": "fictional-gamma",
+        "paragraph_ids": [
+          "fictional-gamma-p0001",
+          "fictional-gamma-p0002",
+          "fictional-gamma-p0003"
+        ],
+        "queries": [
+          "adsorption_capacity",
+          "equilibrium capacity",
+          "q_e",
+          "mg/g",
+          "result"
+        ],
+        "corpus_sha256": "86ed03517c98c0280dd09b946489f3f8bf00f9a381ccede7c5acb772566bfbdf"
+      },
+      "uncertainty": "not_reported applies only to this complete indexed fictional document; no source paragraph or quotation is fabricated for an absent value."
+    }
+  ]
+}

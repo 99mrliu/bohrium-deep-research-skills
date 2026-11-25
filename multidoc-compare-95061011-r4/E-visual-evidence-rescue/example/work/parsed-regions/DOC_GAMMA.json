@@ -1,0 +1,92 @@
+{
+  "source_document_id": "DOC_GAMMA",
+  "paragraph_id": "DOC_GAMMA:p001",
+  "regions": [
+    {
+      "source_document_id": "DOC_GAMMA",
+      "page": 1,
+      "region_type": "table_row",
+      "region_id": "DOC_GAMMA:table-001-row-001",
+      "paragraph_id": "DOC_GAMMA:p001",
+      "text": "Gamma-9   methyl_orange   61                      25",
+      "table": {
+        "headers": [
+          "Material",
+          "Pollutant",
+          "Degradation (%) {test}",
+          "Dose [mg]"
+        ],
+        "header_paths": [
+          [
+            "Material"
+          ],
+          [
+            "Pollutant"
+          ],
+          [
+            "Degradation (%) {test}"
+          ],
+          [
+            "Dose [mg]"
+          ]
+        ],
+        "units": {
+          "Degradation (%) {test}": "%",
+          "Dose [mg]": "mg"
+        },
+        "sample_splits": {
+          "Degradation (%) {test}": "test"
+        },
+        "header_text": "Material  Pollutant       Degradation (%) {test}  Dose [mg]"
+      },
+      "cells": [
+        {
+          "header": "Material",
+          "header_path": [
+            "Material"
+          ],
+          "value": "Gamma-9",
+          "source_value": "Gamma-9",
+          "units": null,
+          "sample_split": null,
+          "carried_from_previous_row": false
+        },
+        {
+          "header": "Pollutant",
+          "header_path": [
+            "Pollutant"
+          ],
+          "value": "methyl_orange",
+          "source_value": "methyl_orange",
+          "units": null,
+          "sample_split": null,
+          "carried_from_previous_row": false
+        },
+        {
+          "header": "Degradation (%) {test}",
+          "header_path": [
+            "Degradation (%) {test}"
+          ],
+          "value": "61",
+          "source_value": "61",
+          "units": "%",
+          "sample_split": "test",
+          "carried_from_previous_row": false
+        },
+        {
+          "header": "Dose [mg]",
+          "header_path": [
+            "Dose [mg]"
+          ],
+          "value": "25",
+          "source_value": "25",
+          "units": "mg",
+          "sample_split": null,
+          "carried_from_previous_row": false
+        }
+      ],
+      "multirow_context": {}
+    }
+  ],
+  "warning": "Draft geometry only: verify headers, multirow context, page and IDs before use."
+}

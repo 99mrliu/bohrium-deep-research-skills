@@ -1,0 +1,154 @@
+{
+  "change_records": [
+    {
+      "action": "indexed",
+      "content_sha256": "e57b713a4d0ea6c143d3ffa19929e64cf4cfe8a9eb4734878faaf07ea296da54",
+      "source_document_id": "fictional-alpha",
+      "stage": "index"
+    },
+    {
+      "action": "indexed",
+      "content_sha256": "3943e9a757a7611c15c0eb97a41af1b0a8a7d9c18e8709aec938f9c8a7a19801",
+      "source_document_id": "fictional-beta",
+      "stage": "index"
+    },
+    {
+      "action": "indexed",
+      "content_sha256": "86ed03517c98c0280dd09b946489f3f8bf00f9a381ccede7c5acb772566bfbdf",
+      "source_document_id": "fictional-gamma",
+      "stage": "index"
+    },
+    {
+      "action": "ignored_non_source",
+      "path": "/Users/liuhengshen/Desktop/bhr_product/bohrium/challenge-95061011/r4/B-evidence-intervals/examples/input/task.md",
+      "stage": "index"
+    }
+  ],
+  "documents": [
+    {
+      "content_sha256": "e57b713a4d0ea6c143d3ffa19929e64cf4cfe8a9eb4734878faaf07ea296da54",
+      "file_name": "fictional-alpha.txt",
+      "media_type": "text",
+      "paragraphs": [
+        {
+          "content_sha256": "84c294111a8e9b8cc7d406fcd1ab063019b9e3124b346ed671e7aa5a99fcce25",
+          "end": 105,
+          "page": 1,
+          "paragraph_id": "fictional-alpha-p0001",
+          "start": 0,
+          "text": "Fictional Paper Alpha is a synthetic methods-and-results fixture. It does not describe a real experiment."
+        },
+        {
+          "content_sha256": "31cc954e19bba89fe39feaca7b0f1fcc44dfe7bd7fc8af635a040b16ef3eae45",
+          "end": 174,
+          "page": 1,
+          "paragraph_id": "fictional-alpha-p0002",
+          "start": 0,
+          "text": "Experiment A uses material Aerogel A for pollutant methylene blue. The budget is initial concentration 40 mg/L, adsorbent dose 1 g/L, contact time 120 min, temperature 298 K."
+        },
+        {
+          "content_sha256": "9dd6e0d37220e4c1089ce4f07c8b605c5d95ce269a74048c0849dc499b48f9c5",
+          "end": 137,
+          "page": 1,
+          "paragraph_id": "fictional-alpha-p0003",
+          "start": 0,
+          "text": "Metric definition: adsorption_capacity means the retained pollutant mass divided by dry adsorbent mass, expressed in mg/g at equilibrium."
+        },
+        {
+          "content_sha256": "7735dd86e0923dbcb7af4fe4dcf9cace9a7bf5c48f340e689f8f2d6fa525844c",
+          "end": 62,
+          "page": 1,
+          "paragraph_id": "fictional-alpha-p0004",
+          "start": 0,
+          "text": "For Experiment A, the adsorption_capacity result was 128 mg/g."
+        },
+        {
+          "content_sha256": "a264f1469059c51ed9205e6c0c27438bafef8e24081578c5cc0bb18b8a7ec2ae",
+          "end": 149,
+          "page": 1,
+          "paragraph_id": "fictional-alpha-p0005",
+          "start": 0,
+          "text": "A later author note for Experiment A revised adsorption_capacity to 132 mg/g using the same reported conditions; the note did not explain the change."
+        }
+      ],
+      "source_document_id": "fictional-alpha",
+      "source_path": "/Users/liuhengshen/Desktop/bhr_product/bohrium/challenge-95061011/r4/B-evidence-intervals/examples/input/sources/fictional-alpha.txt"
+    },
+    {
+      "content_sha256": "3943e9a757a7611c15c0eb97a41af1b0a8a7d9c18e8709aec938f9c8a7a19801",
+      "file_name": "fictional-beta.txt",
+      "media_type": "text",
+      "paragraphs": [
+        {
+          "content_sha256": "8915106239a4ac8928d638ce288f358e66f06637cdb621ce720ab9342345118c",
+          "end": 95,
+          "page": 1,
+          "paragraph_id": "fictional-beta-p0001",
+          "start": 0,
+          "text": "Fictional Paper Beta is a synthetic conversion fixture. It does not describe a real experiment."
+        },
+        {
+          "content_sha256": "9e82d98c95edc51bc640c1ddd53303ba5e9f49c7c2d142171a52158ecbbbc9f3",
+          "end": 173,
+          "page": 1,
+          "paragraph_id": "fictional-beta-p0002",
+          "start": 0,
+          "text": "Experiment B uses material Membrane B for pollutant rhodamine B. The budget is initial concentration 60 mg/L, solution volume 250 mL, contact time 90 min, temperature 298 K."
+        },
+        {
+          "content_sha256": "93ae05879dedd0ea7836106561c8338ec7e0b42b9cf38b5e84aca5a2b3dbad78",
+          "end": 165,
+          "page": 1,
+          "paragraph_id": "fictional-beta-p0003",
+          "start": 0,
+          "text": "Metric definition: adsorption_capacity is retained_mass / adsorbent_mass. The requested result unit is mg/g; retained_mass is measured in mg and adsorbent_mass in g."
+        },
+        {
+          "content_sha256": "4ff81783e1fd5bba2c08d472be395f8a323817c1a94297a623a912f568816c85",
+          "end": 146,
+          "page": 1,
+          "paragraph_id": "fictional-beta-p0004",
+          "start": 0,
+          "text": "For Experiment B, the recovered solid retained 512 mg rhodamine B and the dry adsorbent mass was 4 g. No capacity value was printed in the source."
+        }
+      ],
+      "source_document_id": "fictional-beta",
+      "source_path": "/Users/liuhengshen/Desktop/bhr_product/bohrium/challenge-95061011/r4/B-evidence-intervals/examples/input/sources/fictional-beta.txt"
+    },
+    {
+      "content_sha256": "86ed03517c98c0280dd09b946489f3f8bf00f9a381ccede7c5acb772566bfbdf",
+      "file_name": "fictional-gamma.txt",
+      "media_type": "text",
+      "paragraphs": [
+        {
+          "content_sha256": "c961d104fd8933e9df68abb809f25ff21fa967048399772cb268ae613142c26f",
+          "end": 103,
+          "page": 1,
+          "paragraph_id": "fictional-gamma-p0001",
+          "start": 0,
+          "text": "Fictional Paper Gamma is a synthetic negative-evidence fixture. It does not describe a real experiment."
+        },
+        {
+          "content_sha256": "b128048912461cfe5025c420306721b172ee78606f1ef99c5f19d97a1a157f66",
+          "end": 172,
+          "page": 1,
+          "paragraph_id": "fictional-gamma-p0002",
+          "start": 0,
+          "text": "Experiment C uses material Granule C for pollutant methyl orange. The budget is initial concentration 50 mg/L, adsorbent dose 2 g/L, contact time 60 min, temperature 298 K."
+        },
+        {
+          "content_sha256": "c55a3d6596dceed1151b959bc84769200fdfcccd0da7a665384f757a824bc52a",
+          "end": 166,
+          "page": 1,
+          "paragraph_id": "fictional-gamma-p0003",
+          "start": 0,
+          "text": "The methods mention adsorption_capacity only as a future measurement and specify the prospective unit mg/g. No result table or result sentence exists in this fixture."
+        }
+      ],
+      "source_document_id": "fictional-gamma",
+      "source_path": "/Users/liuhengshen/Desktop/bhr_product/bohrium/challenge-95061011/r4/B-evidence-intervals/examples/input/sources/fictional-gamma.txt"
+    }
+  ],
+  "errors": [],
+  "schema_version": "1.0"
+}

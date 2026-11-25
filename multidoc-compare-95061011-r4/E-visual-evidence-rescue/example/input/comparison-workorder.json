@@ -1,0 +1,387 @@
+{
+  "schema_version": "1.0",
+  "status": "partial",
+  "matrix_fields": [
+    {"field_id": "removal_efficiency"},
+    {"field_id": "operating_cost"},
+    {"field_id": "cycling_retention"}
+  ],
+  "documents": [
+    {
+      "source_document_id": "DOC_A",
+      "path": "documents/alpha.txt",
+      "regions": [
+        {
+          "source_document_id": "DOC_A",
+          "page": 1,
+          "region_type": "prose",
+          "region_id": null,
+          "paragraph_id": "DOC_A:p001",
+          "text": "A-CONTEXT: Removal was measured separately by dye on dataset A_batch_01. The dose is the experimental budget."
+        },
+        {
+          "source_document_id": "DOC_A",
+          "page": 1,
+          "region_type": "caption",
+          "region_id": "DOC_A:caption-001",
+          "paragraph_id": "DOC_A:caption-001",
+          "text": "A-CAPTION: Table 1 reports separate dye tests; do not average them.\nNo cycling retention or operating cost was reported."
+        },
+        {
+          "source_document_id": "DOC_A",
+          "page": 1,
+          "region_type": "table_row",
+          "region_id": "DOC_A:table-001-row-001",
+          "paragraph_id": "DOC_A:caption-001",
+          "text": "Alpha-7   methyl_orange   82                  50",
+          "table": {
+            "headers": ["Material", "Pollutant", "Removal (%) {test}", "Dose [mg]"],
+            "header_paths": [["Material"], ["Pollutant"], ["Removal (%) {test}"], ["Dose [mg]"]],
+            "units": {"Removal (%) {test}": "%", "Dose [mg]": "mg"},
+            "sample_splits": {"Removal (%) {test}": "test"},
+            "header_text": "Material  Pollutant       Removal (%) {test}  Dose [mg]"
+          },
+          "cells": [
+            {"header": "Material", "header_path": ["Material"], "value": "Alpha-7", "source_value": "Alpha-7", "units": null, "sample_split": null, "carried_from_previous_row": false},
+            {"header": "Pollutant", "header_path": ["Pollutant"], "value": "methyl_orange", "source_value": "methyl_orange", "units": null, "sample_split": null, "carried_from_previous_row": false},
+            {"header": "Removal (%) {test}", "header_path": ["Removal (%) {test}"], "value": "82", "source_value": "82", "units": "%", "sample_split": "test", "carried_from_previous_row": false},
+            {"header": "Dose [mg]", "header_path": ["Dose [mg]"], "value": "50", "source_value": "50", "units": "mg", "sample_split": null, "carried_from_previous_row": false}
+          ],
+          "multirow_context": {}
+        },
+        {
+          "source_document_id": "DOC_A",
+          "page": 1,
+          "region_type": "table_row",
+          "region_id": "DOC_A:table-001-row-002",
+          "paragraph_id": "DOC_A:caption-001",
+          "text": "          crystal_violet  79                  50",
+          "table": {
+            "headers": ["Material", "Pollutant", "Removal (%) {test}", "Dose [mg]"],
+            "header_paths": [["Material"], ["Pollutant"], ["Removal (%) {test}"], ["Dose [mg]"]],
+            "units": {"Removal (%) {test}": "%", "Dose [mg]": "mg"},
+            "sample_splits": {"Removal (%) {test}": "test"},
+            "header_text": "Material  Pollutant       Removal (%) {test}  Dose [mg]"
+          },
+          "cells": [
+            {"header": "Material", "header_path": ["Material"], "value": "Alpha-7", "source_value": "", "units": null, "sample_split": null, "carried_from_previous_row": true},
+            {"header": "Pollutant", "header_path": ["Pollutant"], "value": "crystal_violet", "source_value": "crystal_violet", "units": null, "sample_split": null, "carried_from_previous_row": false},
+            {"header": "Removal (%) {test}", "header_path": ["Removal (%) {test}"], "value": "79", "source_value": "79", "units": "%", "sample_split": "test", "carried_from_previous_row": false},
+            {"header": "Dose [mg]", "header_path": ["Dose [mg]"], "value": "50", "source_value": "50", "units": "mg", "sample_split": null, "carried_from_previous_row": false}
+          ],
+          "multirow_context": {"Material": "Alpha-7"}
+        }
+      ],
+      "extractions": [
+        {
+          "record_id": "A-REMOVAL-MO",
+          "field_id": "removal_efficiency",
+          "source_document_id": "DOC_A",
+          "paragraph_id": "DOC_A:caption-001",
+          "region_id": "DOC_A:table-001-row-001",
+          "status": "reported",
+          "value": 82,
+          "task": "batch_adsorption",
+          "metric": "removal_efficiency",
+          "units": "%",
+          "material": "Alpha-7",
+          "pollutant": "methyl_orange",
+          "budget": "50 mg",
+          "dataset_id": "A_batch_01",
+          "dye_id": "methyl_orange"
+        },
+        {
+          "record_id": "A-REMOVAL-CV",
+          "field_id": "removal_efficiency",
+          "source_document_id": "DOC_A",
+          "paragraph_id": "DOC_A:caption-001",
+          "region_id": "DOC_A:table-001-row-002",
+          "status": "reported",
+          "value": 79,
+          "task": "batch_adsorption",
+          "metric": "removal_efficiency",
+          "units": "%",
+          "material": "Alpha-7",
+          "pollutant": "crystal_violet",
+          "budget": "50 mg",
+          "dataset_id": "A_batch_01",
+          "dye_id": "crystal_violet"
+        },
+        {
+          "record_id": "A-COST-NR",
+          "field_id": "operating_cost",
+          "source_document_id": "DOC_A",
+          "paragraph_id": "DOC_A:caption-001",
+          "region_id": "DOC_A:caption-001",
+          "status": "not_reported",
+          "value": null,
+          "estimate": null,
+          "range": null,
+          "reason": "The report explicitly says operating cost was not reported; NR is not zero.",
+          "task": "batch_adsorption",
+          "metric": "operating_cost",
+          "units": "CNY/g",
+          "material": "Alpha-7",
+          "pollutant": "not_reported",
+          "budget": "50 mg",
+          "dataset_id": "A_batch_01",
+          "dye_id": "not_reported"
+        },
+        {
+          "record_id": "A-RETENTION-NR",
+          "field_id": "cycling_retention",
+          "source_document_id": "DOC_A",
+          "paragraph_id": "DOC_A:caption-001",
+          "region_id": "DOC_A:caption-001",
+          "status": "not_reported",
+          "value": null,
+          "estimate": null,
+          "range": null,
+          "reason": "No cycling retention experiment was reported.",
+          "task": "cycling_stability",
+          "metric": "retention_after_10_cycles",
+          "units": "%",
+          "material": "Alpha-7",
+          "pollutant": "not_reported",
+          "budget": "10 cycles",
+          "dataset_id": "not_reported",
+          "dye_id": "not_reported"
+        }
+      ]
+    },
+    {
+      "source_document_id": "DOC_B",
+      "path": "documents/beta.txt",
+      "regions": [
+        {
+          "source_document_id": "DOC_B",
+          "page": 1,
+          "region_type": "prose",
+          "region_id": null,
+          "paragraph_id": "DOC_B:p001",
+          "text": "B-CONTEXT: Dataset B_batch_02 contains one methyl_orange test. Cost cells marked NR are not zero."
+        },
+        {
+          "source_document_id": "DOC_B",
+          "page": 1,
+          "region_type": "caption",
+          "region_id": "DOC_B:caption-001",
+          "paragraph_id": "DOC_B:caption-001",
+          "text": "B-CAPTION: Table 1 is a single-dye adsorption test.\nCycling retention was not measured."
+        },
+        {
+          "source_document_id": "DOC_B",
+          "page": 1,
+          "region_type": "table_row",
+          "region_id": "DOC_B:table-001-row-001",
+          "paragraph_id": "DOC_B:caption-001",
+          "text": "Beta-4    methyl_orange   68                  NR            50",
+          "table": {
+            "headers": ["Material", "Pollutant", "Removal (%) {test}", "Cost [CNY/g]", "Dose [mg]"],
+            "header_paths": [["Material"], ["Pollutant"], ["Removal (%) {test}"], ["Cost [CNY/g]"], ["Dose [mg]"]],
+            "units": {"Removal (%) {test}": "%", "Cost [CNY/g]": "CNY/g", "Dose [mg]": "mg"},
+            "sample_splits": {"Removal (%) {test}": "test"},
+            "header_text": "Material  Pollutant       Removal (%) {test}  Cost [CNY/g]  Dose [mg]"
+          },
+          "cells": [
+            {"header": "Material", "header_path": ["Material"], "value": "Beta-4", "source_value": "Beta-4", "units": null, "sample_split": null, "carried_from_previous_row": false},
+            {"header": "Pollutant", "header_path": ["Pollutant"], "value": "methyl_orange", "source_value": "methyl_orange", "units": null, "sample_split": null, "carried_from_previous_row": false},
+            {"header": "Removal (%) {test}", "header_path": ["Removal (%) {test}"], "value": "68", "source_value": "68", "units": "%", "sample_split": "test", "carried_from_previous_row": false},
+            {"header": "Cost [CNY/g]", "header_path": ["Cost [CNY/g]"], "value": "NR", "source_value": "NR", "units": "CNY/g", "sample_split": null, "carried_from_previous_row": false},
+            {"header": "Dose [mg]", "header_path": ["Dose [mg]"], "value": "50", "source_value": "50", "units": "mg", "sample_split": null, "carried_from_previous_row": false}
+          ],
+          "multirow_context": {}
+        }
+      ],
+      "extractions": [
+        {
+          "record_id": "B-REMOVAL-MO",
+          "field_id": "removal_efficiency",
+          "source_document_id": "DOC_B",
+          "paragraph_id": "DOC_B:caption-001",
+          "region_id": "DOC_B:table-001-row-001",
+          "status": "reported",
+          "value": 68,
+          "task": "batch_adsorption",
+          "metric": "removal_efficiency",
+          "units": "%",
+          "material": "Beta-4",
+          "pollutant": "methyl_orange",
+          "budget": "50 mg",
+          "dataset_id": "B_batch_02",
+          "dye_id": "methyl_orange"
+        },
+        {
+          "record_id": "B-COST-NR",
+          "field_id": "operating_cost",
+          "source_document_id": "DOC_B",
+          "paragraph_id": "DOC_B:caption-001",
+          "region_id": "DOC_B:table-001-row-001",
+          "status": "not_reported",
+          "value": null,
+          "estimate": null,
+          "range": null,
+          "reason": "The aligned Cost [CNY/g] cell is NR; it is preserved as not_reported, not converted to zero.",
+          "task": "batch_adsorption",
+          "metric": "operating_cost",
+          "units": "CNY/g",
+          "material": "Beta-4",
+          "pollutant": "methyl_orange",
+          "budget": "50 mg",
+          "dataset_id": "B_batch_02",
+          "dye_id": "methyl_orange"
+        },
+        {
+          "record_id": "B-RETENTION-NR",
+          "field_id": "cycling_retention",
+          "source_document_id": "DOC_B",
+          "paragraph_id": "DOC_B:caption-001",
+          "region_id": "DOC_B:caption-001",
+          "status": "not_reported",
+          "value": null,
+          "estimate": null,
+          "range": null,
+          "reason": "The caption states cycling retention was not measured.",
+          "task": "cycling_stability",
+          "metric": "retention_after_10_cycles",
+          "units": "%",
+          "material": "Beta-4",
+          "pollutant": "not_reported",
+          "budget": "10 cycles",
+          "dataset_id": "not_reported",
+          "dye_id": "not_reported"
+        }
+      ]
+    },
+    {
+      "source_document_id": "DOC_GAMMA",
+      "path": "documents/gamma.txt",
+      "regions": [
+        {
+          "source_document_id": "DOC_GAMMA",
+          "page": 1,
+          "region_type": "prose",
+          "region_id": null,
+          "paragraph_id": "DOC_GAMMA:p001",
+          "text": "G-CONTEXT: The degradation experiment uses dataset C_photo_03 and is not directly comparable to adsorption removal."
+        },
+        {
+          "source_document_id": "DOC_GAMMA",
+          "page": 1,
+          "region_type": "caption",
+          "region_id": "DOC_GAMMA:caption-001",
+          "paragraph_id": "DOC_GAMMA:caption-001",
+          "text": "G-CAPTION: Figure 1, panel b, shows retention after 10 cycles. The caption gives no numeric retention value. Operating cost is unreported."
+        },
+        {
+          "source_document_id": "DOC_GAMMA",
+          "page": 1,
+          "region_type": "table_row",
+          "region_id": "DOC_GAMMA:table-001-row-001",
+          "paragraph_id": "DOC_GAMMA:p001",
+          "text": "Gamma-9   methyl_orange   61                      25",
+          "table": {
+            "headers": ["Material", "Pollutant", "Degradation (%) {test}", "Dose [mg]"],
+            "header_paths": [["Material"], ["Pollutant"], ["Degradation (%) {test}"], ["Dose [mg]"]],
+            "units": {"Degradation (%) {test}": "%", "Dose [mg]": "mg"},
+            "sample_splits": {"Degradation (%) {test}": "test"},
+            "header_text": "Material  Pollutant       Degradation (%) {test}  Dose [mg]"
+          },
+          "cells": [
+            {"header": "Material", "header_path": ["Material"], "value": "Gamma-9", "source_value": "Gamma-9", "units": null, "sample_split": null, "carried_from_previous_row": false},
+            {"header": "Pollutant", "header_path": ["Pollutant"], "value": "methyl_orange", "source_value": "methyl_orange", "units": null, "sample_split": null, "carried_from_previous_row": false},
+            {"header": "Degradation (%) {test}", "header_path": ["Degradation (%) {test}"], "value": "61", "source_value": "61", "units": "%", "sample_split": "test", "carried_from_previous_row": false},
+            {"header": "Dose [mg]", "header_path": ["Dose [mg]"], "value": "25", "source_value": "25", "units": "mg", "sample_split": null, "carried_from_previous_row": false}
+          ],
+          "multirow_context": {}
+        },
+        {
+          "source_document_id": "DOC_GAMMA",
+          "page": 1,
+          "region_type": "figure_panel",
+          "region_id": "DOC_GAMMA:figure-001-panel-b",
+          "paragraph_id": "DOC_GAMMA:caption-001",
+          "panel_labels": ["b"],
+          "text": "Panel b                 Retention (%)\n100 |\n 50 |             ----\n  0 |_________________\n       0 cycles       10 cycles"
+        }
+      ],
+      "extractions": [
+        {
+          "record_id": "G-DEGRADATION-NC",
+          "field_id": "removal_efficiency",
+          "source_document_id": "DOC_GAMMA",
+          "paragraph_id": "DOC_GAMMA:p001",
+          "region_id": "DOC_GAMMA:table-001-row-001",
+          "status": "noncomparable",
+          "value": null,
+          "estimate": null,
+          "range": null,
+          "reason": "The source reports photocatalytic degradation at 25 mg, not batch adsorption removal at 50 mg; 61% is therefore not reclassified as removal.",
+          "task": "photocatalytic_degradation",
+          "metric": "degradation_efficiency",
+          "units": "%",
+          "material": "Gamma-9",
+          "pollutant": "methyl_orange",
+          "budget": "25 mg",
+          "dataset_id": "C_photo_03",
+          "dye_id": "methyl_orange"
+        },
+        {
+          "record_id": "G-COST-NR",
+          "field_id": "operating_cost",
+          "source_document_id": "DOC_GAMMA",
+          "paragraph_id": "DOC_GAMMA:caption-001",
+          "region_id": "DOC_GAMMA:caption-001",
+          "status": "not_reported",
+          "value": null,
+          "estimate": null,
+          "range": null,
+          "reason": "Operating cost is explicitly unreported.",
+          "task": "photocatalytic_degradation",
+          "metric": "operating_cost",
+          "units": "CNY/g",
+          "material": "Gamma-9",
+          "pollutant": "methyl_orange",
+          "budget": "25 mg",
+          "dataset_id": "C_photo_03",
+          "dye_id": "methyl_orange"
+        },
+        {
+          "record_id": "G-RETENTION-EST",
+          "field_id": "cycling_retention",
+          "source_document_id": "DOC_GAMMA",
+          "paragraph_id": "DOC_GAMMA:caption-001",
+          "region_id": "DOC_GAMMA:figure-001-panel-b",
+          "status": "read_off_figure",
+          "value": null,
+          "estimate": 48,
+          "range": [45, 52],
+          "units": "%",
+          "uncertainty": {"note": "Approximate synthetic panel read-off from coarse layout-text marks; range is a visual uncertainty interval, not a source-reported confidence interval.", "method": "visual_range_not_exact"},
+          "visual_inspection": {"method": "synthetic_layout_text_review", "paths": ["documents/gamma.txt"], "notes": "Inspected the fictional text-only panel and its 0/50/100 ticks; no binary preview or OCR is claimed for this synthetic example."},
+          "task": "cycling_stability",
+          "metric": "retention_after_10_cycles",
+          "material": "Gamma-9",
+          "pollutant": "methyl_orange",
+          "budget": "10 cycles",
+          "dataset_id": "C_cycle_03",
+          "dye_id": "methyl_orange"
+        }
+      ]
+    }
+  ],
+  "sources": [
+    {"source_document_id": "DOC_A", "path": "documents/alpha.txt", "region_ids": ["DOC_A:caption-001", "DOC_A:table-001-row-001", "DOC_A:table-001-row-002"]},
+    {"source_document_id": "DOC_B", "path": "documents/beta.txt", "region_ids": ["DOC_B:caption-001", "DOC_B:table-001-row-001"]},
+    {"source_document_id": "DOC_GAMMA", "path": "documents/gamma.txt", "region_ids": ["DOC_GAMMA:caption-001", "DOC_GAMMA:table-001-row-001", "DOC_GAMMA:figure-001-panel-b"]}
+  ],
+  "uncertainty": [
+    {"record_id": "G-RETENTION-EST", "statement": "48% is a read_off_figure estimate with range 45–52%; it is not exact or caption-reported."},
+    {"statement": "NR cells and absent experiments remain not_reported. Gamma degradation remains noncomparable with adsorption removal."}
+  ],
+  "change_records": [
+    {"action": "dual_stream_ingest", "paths": ["../work/normal", "../work/layout"], "note": "UTF-8 synthetic text copied to normal and layout streams; form feeds retained."},
+    {"action": "layout_table_draft_and_agent_review", "paths": ["../work/parsed-regions"], "note": "Headers, units, sample splits, and the carried Alpha-7 material cell were inspected before assigning extraction records."},
+    {"action": "visual_inspection", "paths": ["documents/gamma.txt"], "region_id": "DOC_GAMMA:figure-001-panel-b", "note": "Synthetic text-only inspection; estimate/range and uncertainty recorded. No PNG/PDF preview is included."}
+  ]
+}

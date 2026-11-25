@@ -1,0 +1,44 @@
+{
+  "documents": [
+    {
+      "source_document_id": "paper-a",
+      "title": "Synthetic Paper A",
+      "source_path": "/Users/liuhengshen/Desktop/bhr_product/bohrium/challenge-95061011/r4/D-conflict-mechanisms/examples/input/sources/paper-a.txt",
+      "extracted_text_path": "/Users/liuhengshen/Desktop/bhr_product/bohrium/challenge-95061011/r4/D-conflict-mechanisms/examples/input/sources/paper-a.txt",
+      "sha256": "dc14314a14fdcaaa24a0cd3b7159ca28c71db95e41558b9a6092b98a4c3ca9d0",
+      "extraction": "explicit_paragraph_markers",
+      "paragraph_ids": [
+        "a-p1",
+        "a-p2",
+        "a-p3"
+      ]
+    },
+    {
+      "source_document_id": "paper-b",
+      "title": "Synthetic Paper B",
+      "source_path": "/Users/liuhengshen/Desktop/bhr_product/bohrium/challenge-95061011/r4/D-conflict-mechanisms/examples/input/sources/paper-b.txt",
+      "extracted_text_path": "/Users/liuhengshen/Desktop/bhr_product/bohrium/challenge-95061011/r4/D-conflict-mechanisms/examples/input/sources/paper-b.txt",
+      "sha256": "410ed0fa7e821073de25bb741f312daf9879d5904a5a3fa6a5c4d93a3a723ac2",
+      "extraction": "explicit_paragraph_markers",
+      "paragraph_ids": [
+        "b-p1",
+        "b-p2",
+        "b-p3",
+        "b-p4"
+      ]
+    },
+    {
+      "source_document_id": "paper-c",
+      "title": "Synthetic Paper C",
+      "source_path": "/Users/liuhengshen/Desktop/bhr_product/bohrium/challenge-95061011/r4/D-conflict-mechanisms/examples/input/sources/paper-c.txt",
+      "extracted_text_path": "/Users/liuhengshen/Desktop/bhr_product/bohrium/challenge-95061011/r4/D-conflict-mechanisms/examples/input/sources/paper-c.txt",
+      "sha256": "29e141dc8d7d7f02daec2d5a9bac56aac54c6f9f5cf4a20329a7f6c8a7158d2c",
+      "extraction": "explicit_paragraph_markers",
+      "paragraph_ids": [
+        "c-p1",
+        "c-p2",
+        "c-p3"
+      ]
+    }
+  ]
+}

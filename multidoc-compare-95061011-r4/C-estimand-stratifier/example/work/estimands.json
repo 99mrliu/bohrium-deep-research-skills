@@ -1,0 +1,122 @@
+{
+  "case_id": "synthetic-estimand-case-001",
+  "task_id": "synthetic-decolorization-comparison-v1",
+  "records": [
+    {
+      "estimand_id": "a-decolorization",
+      "source_document_id": "paper-a",
+      "task_id": "synthetic-decolorization-comparison-v1",
+      "outcome": "decolorization of dye from synthetic textile wastewater",
+      "metric": {
+        "name": "decolorization_efficiency",
+        "definition": "percentage reduction in baseline-corrected UV-vis absorbance at the dye peak"
+      },
+      "population": "batch photocatalytic test specimens",
+      "material": "synthetic textile wastewater",
+      "pollutant": "Reactive Red 195",
+      "intervention": "UV/H2O2 treatment",
+      "condition": "batch; room temperature",
+      "budget": {
+        "value": 90,
+        "unit": "min"
+      },
+      "time": {
+        "value": 90,
+        "unit": "min"
+      },
+      "unit": "%",
+      "scale": "percentage points on closed interval [0,100]",
+      "estimate": {
+        "value": 92,
+        "unit": "%",
+        "direction": "decrease"
+      },
+      "evidence": [
+        {
+          "source_document_id": "paper-a",
+          "paragraph_id": "p2",
+          "quote": "In a batch test at room temperature, synthetic textile wastewater containing Reactive Red 195 received UV/H2O2 treatment; after a 90 min observation horizon with a 90 min exposure budget, the decolorization efficiency, defined as the percentage reduction in baseline-corrected UV-vis absorbance at the dye peak, was 92%."
+        }
+      ]
+    },
+    {
+      "estimand_id": "b-adsorption",
+      "source_document_id": "paper-b",
+      "task_id": "synthetic-decolorization-comparison-v1",
+      "outcome": "removal of dye from aqueous solution",
+      "metric": {
+        "name": "adsorption_removal_fraction",
+        "definition": "percentage reduction in measured aqueous Methylene Blue concentration from initial concentration"
+      },
+      "population": "batch adsorption test specimens",
+      "material": "synthetic aqueous dye solution",
+      "pollutant": "Methylene Blue",
+      "intervention": "activated carbon adsorption",
+      "condition": "batch; room temperature",
+      "budget": {
+        "value": "not_reported",
+        "unit": "not_reported"
+      },
+      "time": {
+        "value": 90,
+        "unit": "min"
+      },
+      "unit": "%",
+      "scale": "percentage points on closed interval [0,100]",
+      "estimate": {
+        "value": 92,
+        "unit": "%",
+        "direction": "decrease"
+      },
+      "evidence": [
+        {
+          "source_document_id": "paper-b",
+          "paragraph_id": "p2",
+          "quote": "In a batch test at room temperature, synthetic aqueous dye solution containing Methylene Blue contacted activated carbon; at a fixed 90 min observation horizon, the adsorption removal fraction, defined as the percentage reduction in measured aqueous Methylene Blue concentration from initial concentration, was 92%."
+        },
+        {
+          "source_document_id": "paper-b",
+          "paragraph_id": "p3",
+          "quote": "The adsorbent-mass budget was not reported; a decrease in aqueous dye concentration was the qualitative direction."
+        }
+      ]
+    },
+    {
+      "estimand_id": "c-decolorization-hours",
+      "source_document_id": "paper-c",
+      "task_id": "synthetic-decolorization-comparison-v1",
+      "outcome": "decolorization of dye from synthetic textile wastewater",
+      "metric": {
+        "name": "decolorization_efficiency",
+        "definition": "percentage reduction in baseline-corrected UV-vis absorbance at the dye peak"
+      },
+      "population": "batch photocatalytic test specimens",
+      "material": "synthetic textile wastewater",
+      "pollutant": "Reactive Red 195",
+      "intervention": "UV/H2O2 treatment",
+      "condition": "batch; room temperature",
+      "budget": {
+        "value": 1.5,
+        "unit": "h"
+      },
+      "time": {
+        "value": 1.5,
+        "unit": "h"
+      },
+      "unit": "%",
+      "scale": "percentage points on closed interval [0,100]",
+      "estimate": {
+        "value": 92,
+        "unit": "%",
+        "direction": "decrease"
+      },
+      "evidence": [
+        {
+          "source_document_id": "paper-c",
+          "paragraph_id": "p2",
+          "quote": "In a batch test at room temperature, synthetic textile wastewater containing Reactive Red 195 received UV/H2O2 treatment; after a 1.5 h observation horizon with a 1.5 h exposure budget, the decolorization efficiency, defined as the percentage reduction in baseline-corrected UV-vis absorbance at the dye peak, was 92%."
+        }
+      ]
+    }
+  ]
+}

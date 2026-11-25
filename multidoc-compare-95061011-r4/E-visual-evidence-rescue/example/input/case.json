@@ -1,0 +1,12 @@
+{
+  "case_id": "synthetic-visual-evidence-001",
+  "output_contract": {
+    "comparison_matrix": {"type": "file", "required": true},
+    "source_region_ledger": {"type": "file", "required": true},
+    "status": {"type": "string"},
+    "sources": {"type": "array"},
+    "uncertainty": {"type": "array"},
+    "change_records": {"type": "array"},
+    "quality_summary": {"type": "object"}
+  }
+}

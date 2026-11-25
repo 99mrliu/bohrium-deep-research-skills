@@ -1,0 +1,92 @@
+{
+  "case_id": "synthetic-estimand-case-001",
+  "task_id": "synthetic-decolorization-comparison-v1",
+  "operation_requests": [
+    {
+      "operation_id": "describe-all",
+      "operation": "DESCRIBE",
+      "estimand_ids": [
+        "a-decolorization",
+        "b-adsorption",
+        "c-decolorization-hours"
+      ]
+    },
+    {
+      "operation_id": "direction-a-b",
+      "operation": "DIRECTION",
+      "estimand_ids": [
+        "a-decolorization",
+        "b-adsorption"
+      ],
+      "caveats": [
+        "A decrease is qualitative only: absorbance-based decolorization of Reactive Red 195 and adsorption-based removal of Methylene Blue have different meanings and must not be ranked by effect size.",
+        "The unreported adsorbent-mass budget remains a limitation even for qualitative comparison."
+      ]
+    },
+    {
+      "operation_id": "rank-a-b",
+      "operation": "RANK",
+      "estimand_ids": [
+        "a-decolorization",
+        "b-adsorption"
+      ]
+    },
+    {
+      "operation_id": "pool-a-b",
+      "operation": "POOL",
+      "estimand_ids": [
+        "a-decolorization",
+        "b-adsorption"
+      ]
+    },
+    {
+      "operation_id": "transform-a-c",
+      "operation": "TRANSFORM",
+      "estimand_ids": [
+        "a-decolorization",
+        "c-decolorization-hours"
+      ],
+      "transforms": [
+        {
+          "estimand_id": "a-decolorization",
+          "field": "time",
+          "conversion": "min_to_h",
+          "reason": "Convert the 90 min observation horizon to the common 1.5 h horizon using the exact definition 1 min = 1/60 h."
+        },
+        {
+          "estimand_id": "a-decolorization",
+          "field": "budget",
+          "conversion": "min_to_h",
+          "reason": "Convert the 90 min exposure budget to the common 1.5 h exposure budget using the exact definition 1 min = 1/60 h."
+        }
+      ]
+    },
+    {
+      "operation_id": "rank-a-c-after-transform",
+      "operation": "RANK",
+      "estimand_ids": [
+        "a-decolorization",
+        "c-decolorization-hours"
+      ],
+      "transforms": [
+        {
+          "estimand_id": "a-decolorization",
+          "field": "time",
+          "conversion": "min_to_h",
+          "reason": "Match the observation horizon exactly before ranking."
+        },
+        {
+          "estimand_id": "a-decolorization",
+          "field": "budget",
+          "conversion": "min_to_h",
+          "reason": "Match the exposure budget exactly before ranking."
+        }
+      ]
+    }
+  ],
+  "completion": {
+    "all_documents_reviewed": true,
+    "all_requested_operations_evaluated": true,
+    "all_output_contract_fields_addressed": true
+  }
+}

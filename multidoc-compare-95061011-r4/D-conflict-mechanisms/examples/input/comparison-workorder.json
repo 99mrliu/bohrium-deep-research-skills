@@ -1,0 +1,195 @@
+{
+  "case_id": "synthetic-conflict-mechanisms-001",
+  "documents": [
+    {"source_document_id": "paper-a", "path": "sources/paper-a.txt", "title": "Synthetic Paper A"},
+    {"source_document_id": "paper-b", "path": "sources/paper-b.txt", "title": "Synthetic Paper B"},
+    {"source_document_id": "paper-c", "path": "sources/paper-c.txt", "title": "Synthetic Paper C"}
+  ],
+  "common_matrix": {
+    "fields": ["task", "material", "pollutant", "metric", "units", "budget", "scope"],
+    "rows": [
+      {
+        "field_id": "task",
+        "cells": [
+          {"source_document_id": "paper-a", "paragraph_id": "a-p1", "value": "batch adsorption removal"},
+          {"source_document_id": "paper-b", "paragraph_id": "b-p1", "value": "batch adsorption removal"},
+          {"source_document_id": "paper-c", "paragraph_id": "c-p1", "value": "batch adsorption removal"}
+        ]
+      },
+      {
+        "field_id": "material",
+        "cells": [
+          {"source_document_id": "paper-a", "paragraph_id": "a-p1", "value": "magnetite-biochar composite vs pristine biochar"},
+          {"source_document_id": "paper-b", "paragraph_id": "b-p1", "value": "magnetite-biochar composite vs pristine biochar"},
+          {"source_document_id": "paper-c", "paragraph_id": "c-p1", "value": "magnetite-biochar composite vs pristine biochar"}
+        ]
+      },
+      {
+        "field_id": "pollutant",
+        "cells": [
+          {"source_document_id": "paper-a", "paragraph_id": "a-p1", "value": "methylene blue (dye)"},
+          {"source_document_id": "paper-b", "paragraph_id": "b-p1", "value": "methylene blue (dye)"},
+          {"source_document_id": "paper-c", "paragraph_id": "c-p1", "value": "methylene blue (dye)"}
+        ]
+      },
+      {
+        "field_id": "metric",
+        "cells": [
+          {"source_document_id": "paper-a", "paragraph_id": "a-p1", "value": "equilibrium adsorption capacity"},
+          {"source_document_id": "paper-b", "paragraph_id": "b-p1", "value": "equilibrium adsorption capacity"},
+          {"source_document_id": "paper-c", "paragraph_id": "c-p1", "value": "equilibrium adsorption capacity"}
+        ]
+      },
+      {
+        "field_id": "units",
+        "cells": [
+          {"source_document_id": "paper-a", "paragraph_id": "a-p1", "value": "mg/g"},
+          {"source_document_id": "paper-b", "paragraph_id": "b-p1", "value": "mg/g"},
+          {"source_document_id": "paper-c", "paragraph_id": "c-p1", "value": "mg/g"}
+        ]
+      },
+      {
+        "field_id": "budget",
+        "cells": [
+          {"source_document_id": "paper-a", "paragraph_id": "a-p1", "value": "unreported"},
+          {"source_document_id": "paper-b", "paragraph_id": "b-p1", "value": "unreported"},
+          {"source_document_id": "paper-c", "paragraph_id": "c-p1", "value": "unreported"}
+        ]
+      },
+      {
+        "field_id": "scope",
+        "cells": [
+          {"source_document_id": "paper-a", "paragraph_id": "a-p2", "value": "ambient: pH 7; 100 mg/L; 298 K; 120 min; 1 g/L; dataset A"},
+          {"source_document_id": "paper-b", "paragraph_id": "b-p2", "value": "acidic extension and ambient attempted replication; no cross-scope pooling"},
+          {"source_document_id": "paper-c", "paragraph_id": "c-p2", "value": "direct pH 3/7 x material comparison; other stated conditions fixed"}
+        ]
+      }
+    ]
+  },
+  "agent_specified_proposition_keys": [
+    "mb-capacity-composite-vs-control-ambient",
+    "mb-capacity-composite-vs-control-acidic-extension",
+    "mb-capacity-ph-moderator",
+    "mb-capacity-micropore-speculation"
+  ],
+  "evidence_records": [
+    {
+      "evidence_id": "A-E1", "source_document_id": "paper-a", "paragraph_id": "a-p2",
+      "evidence_kind": "observed_result", "finding": "Magnetite-biochar capacity was 120 mg/g versus 80 mg/g for pristine biochar in the stated ambient scope.",
+      "measurements": [{"arm": "magnetite-biochar", "value": 120, "unit": "mg/g"}, {"arm": "pristine biochar", "value": 80, "unit": "mg/g"}],
+      "direction": "increase", "direction_basis": "Reported ordered pair 120 versus 80 mg/g for the named comparison."
+    },
+    {
+      "evidence_id": "A-E2", "source_document_id": "paper-a", "paragraph_id": "a-p3",
+      "evidence_kind": "speculation", "finding": "The authors speculate that higher capacity occurs because magnetite increases micropore area; no mechanism variables were measured."
+    },
+    {
+      "evidence_id": "B-E1", "source_document_id": "paper-b", "paragraph_id": "b-p2",
+      "evidence_kind": "observed_result", "finding": "In the acidic extension, capacities were 52 and 50 mg/g; no equivalence test or uncertainty interval was reported.",
+      "measurements": [{"arm": "magnetite-biochar", "value": 52, "unit": "mg/g"}, {"arm": "pristine biochar", "value": 50, "unit": "mg/g"}]
+    },
+    {
+      "evidence_id": "B-E2", "source_document_id": "paper-b", "paragraph_id": "b-p3",
+      "evidence_kind": "observed_result", "finding": "In the ambient attempted replication, capacity was 65 mg/g for magnetite-biochar versus 90 mg/g for pristine biochar.",
+      "measurements": [{"arm": "magnetite-biochar", "value": 65, "unit": "mg/g"}, {"arm": "pristine biochar", "value": 90, "unit": "mg/g"}],
+      "direction": "decrease", "direction_basis": "Reported ordered pair 65 versus 90 mg/g for the named comparison."
+    },
+    {
+      "evidence_id": "B-E3", "source_document_id": "paper-b", "paragraph_id": "b-p4",
+      "evidence_kind": "author_interpretation", "finding": "Batch preparation and unmeasured surface chemistry are possible explanations, but no moderator was tested."
+    },
+    {
+      "evidence_id": "C-E1", "source_document_id": "paper-c", "paragraph_id": "c-p2",
+      "evidence_kind": "observed_result", "design": "direct_head_to_head", "finding": "A four-arm material-by-pH comparison directly tested pH moderation; ambient capacities were 118 versus 82 mg/g and acidic capacities were 51 versus 49 mg/g.",
+      "measurements": [{"arm": "magnetite-biochar, pH 7", "value": 118, "unit": "mg/g"}, {"arm": "pristine biochar, pH 7", "value": 82, "unit": "mg/g"}, {"arm": "magnetite-biochar, pH 3", "value": 51, "unit": "mg/g"}, {"arm": "pristine biochar, pH 3", "value": 49, "unit": "mg/g"}],
+      "direction": "increase", "direction_basis": "Within the pH 7 ambient arm, the reported ordered pair is 118 versus 82 mg/g; no direction is assigned to the acidic arm."
+    }
+  ],
+  "propositions": [
+    {
+      "proposition_id": "P-A-AMBIENT", "proposition_key": "mb-capacity-composite-vs-control-ambient",
+      "topic": "dye adsorption capacity", "comparison": "magnetite-biochar vs pristine biochar", "task": "batch adsorption removal",
+      "metric": {"name": "equilibrium adsorption capacity", "unit": "mg/g"}, "materials": ["magnetite-biochar", "pristine biochar"], "pollutants": ["methylene blue"], "dataset_id": "dataset-a", "claim_scope": "scoped",
+      "scope": {"pH": 7, "initial_concentration": {"value": 100, "unit": "mg/L"}, "temperature": {"value": 298, "unit": "K"}, "contact_time": {"value": 120, "unit": "min"}, "dose": {"value": 1, "unit": "g/L"}, "applicability": "ambient laboratory comparison only"},
+      "evidence_ids": ["A-E1"], "direction": "increase",
+      "strength": {"wording": "numerically larger capacity in this batch", "statistical_significance": "not_reported"},
+      "within_paper_limitations": ["Single independently prepared laboratory batch.", "No statistical significance test reported.", "No basis for generalization to other dyes or preparations."]
+    },
+    {
+      "proposition_id": "P-B-ACIDIC", "proposition_key": "mb-capacity-composite-vs-control-acidic-extension",
+      "topic": "dye adsorption capacity", "comparison": "magnetite-biochar vs pristine biochar", "task": "batch adsorption removal",
+      "metric": {"name": "equilibrium adsorption capacity", "unit": "mg/g"}, "materials": ["magnetite-biochar", "pristine biochar"], "pollutants": ["methylene blue"], "dataset_id": "dataset-b-acidic", "claim_scope": "scoped",
+      "scope": {"relation_role": "scope_extension", "pH": 3, "initial_concentration": {"value": 100, "unit": "mg/L"}, "temperature": {"value": 298, "unit": "K"}, "contact_time": {"value": 120, "unit": "min"}, "dose": {"value": 1, "unit": "g/L"}, "applicability": "acidic extension only"},
+      "evidence_ids": ["B-E1"],
+      "strength": {"wording": "small numerical separation without equivalence or uncertainty evidence", "statistical_significance": "not_reported"},
+      "within_paper_limitations": ["No equivalence test or uncertainty interval.", "Acidic scope cannot adjudicate the ambient result."]
+    },
+    {
+      "proposition_id": "P-B-AMBIENT", "proposition_key": "mb-capacity-composite-vs-control-ambient",
+      "topic": "dye adsorption capacity", "comparison": "magnetite-biochar vs pristine biochar", "task": "batch adsorption removal",
+      "metric": {"name": "equilibrium adsorption capacity", "unit": "mg/g"}, "materials": ["magnetite-biochar", "pristine biochar"], "pollutants": ["methylene blue"], "dataset_id": "dataset-b-ambient", "claim_scope": "scoped",
+      "scope": {"pH": 7, "initial_concentration": {"value": 100, "unit": "mg/L"}, "temperature": {"value": 298, "unit": "K"}, "contact_time": {"value": 120, "unit": "min"}, "dose": {"value": 1, "unit": "g/L"}, "applicability": "ambient attempted replication only"},
+      "evidence_ids": ["B-E2"], "direction": "decrease",
+      "strength": {"wording": "numerically lower composite capacity in this independent replication", "statistical_significance": "not_reported"},
+      "within_paper_limitations": ["Independent synthesis batch.", "No mechanism moderator tested.", "No statistical significance test reported."]
+    },
+    {
+      "proposition_id": "P-C-AMBIENT", "proposition_key": "mb-capacity-composite-vs-control-ambient",
+      "topic": "dye adsorption capacity", "comparison": "magnetite-biochar vs pristine biochar", "task": "batch adsorption removal",
+      "metric": {"name": "equilibrium adsorption capacity", "unit": "mg/g"}, "materials": ["magnetite-biochar", "pristine biochar"], "pollutants": ["methylene blue"], "dataset_id": "dataset-c", "claim_scope": "scoped",
+      "scope": {"pH": 7, "initial_concentration": {"value": 100, "unit": "mg/L"}, "temperature": {"value": 298, "unit": "K"}, "contact_time": {"value": 120, "unit": "min"}, "dose": {"value": 1, "unit": "g/L"}, "applicability": "ambient arm of direct material-by-pH comparison"},
+      "evidence_ids": ["C-E1"], "direction": "increase",
+      "strength": {"wording": "numerically larger ambient capacity within the direct comparison", "statistical_significance": "not_reported"},
+      "within_paper_limitations": ["One preparation protocol.", "No statistical significance test reported.", "Does not test the source of Paper B's divergence."]
+    },
+    {
+      "proposition_id": "P-C-MODERATOR", "proposition_key": "mb-capacity-ph-moderator",
+      "topic": "moderation of dye adsorption capacity", "comparison": "material type x pH", "task": "direct head-to-head moderator test",
+      "metric": {"name": "equilibrium adsorption capacity", "unit": "mg/g"}, "materials": ["magnetite-biochar", "pristine biochar"], "pollutants": ["methylene blue"], "dataset_id": "dataset-c", "claim_scope": "scoped",
+      "scope": {"pH_levels_tested": [3, 7], "held_constant": ["initial concentration 100 mg/L", "298 K", "120 min", "1 g/L"], "applicability": "tested material-by-pH domain only"},
+      "evidence_ids": ["C-E1"],
+      "strength": {"wording": "direct four-arm pattern consistent with pH moderation", "statistical_significance": "not_reported"},
+      "within_paper_limitations": ["Ionic strength not independently varied.", "Surface charge not measured.", "Bounded to tested materials and pH levels."]
+    },
+    {
+      "proposition_id": "P-A-PORE-SPECULATION", "proposition_key": "mb-capacity-micropore-speculation",
+      "topic": "proposed origin of capacity difference", "comparison": "micropore-area explanation vs alternatives", "task": "mechanism interpretation",
+      "metric": {"name": "mechanistic evidence", "unit": "not_applicable"}, "materials": ["magnetite-biochar", "pristine biochar"], "pollutants": ["methylene blue"], "dataset_id": "dataset-a", "claim_scope": "scoped",
+      "scope": {"applicability": "author hypothesis for Dataset A; no direct mechanism measurement"},
+      "evidence_ids": ["A-E2"],
+      "strength": {"wording": "explicitly speculative", "statistical_significance": "not_applicable"},
+      "within_paper_limitations": ["Micropore area not measured.", "Pore blocking, surface charge, and bonding not measured."]
+    }
+  ],
+  "conflict_relations": [
+    {"relation_id": "R1", "proposition_ids": ["P-A-AMBIENT", "P-B-ACIDIC"], "verdict": "complements", "rationale": "The acidic proposition explicitly extends scope; it does not negate or replicate the ambient estimand."},
+    {"relation_id": "R2", "proposition_ids": ["P-A-AMBIENT", "P-B-AMBIENT"], "verdict": "genuine_conflict", "rationale": "The task, comparison, pollutant, metric, units, and stated ambient conditions match, but observed directions are opposite. Batch causality remains unresolved."},
+    {"relation_id": "R3", "proposition_ids": ["P-A-AMBIENT", "P-C-AMBIENT"], "verdict": "corroborates", "rationale": "Both scoped ambient observations show the same ordered direction; this is qualitative corroboration, not pooled significance."}
+  ],
+  "mechanism_attributions": [
+    {
+      "mechanism_id": "M-PH-MODERATOR", "claim": "Within Paper C's tested domain, pH moderates the magnetite-biochar capacity benefit.", "status": "supported_by_direct_comparison",
+      "supporting_explanations": [{"explanation": "The direct four-arm material-by-pH comparison holds the stated non-pH conditions fixed and tests the moderator.", "evidence_refs": ["C-E1"], "tested_by": "C-D1"}],
+      "alternative_explanations": [{"explanation": "Ionic strength or unmeasured surface-charge pathways may contribute; neither was independently tested.", "evidence_refs": [], "status": "unresolved"}],
+      "direct_comparisons": [{"comparison_id": "C-D1", "source_document_id": "paper-c", "paragraph_id": "c-p2", "evidence_kind": "observed_result", "design": "direct_head_to_head", "moderator": "pH", "holds_constant": ["initial concentration", "temperature", "contact time", "dose", "preparation protocol"]}]
+    },
+    {
+      "mechanism_id": "M-PORE-SPECULATION", "claim": "Increased micropore area is a possible cause of the Dataset A capacity difference, not an established attribution.", "status": "unresolved",
+      "supporting_explanations": [{"explanation": "Paper A authors propose micropore area, explicitly as speculation.", "evidence_refs": ["A-E2"]}],
+      "alternative_explanations": [{"explanation": "Surface charge, pore blocking, and bonding remain unmeasured alternatives.", "evidence_refs": [], "status": "unresolved"}],
+      "direct_comparisons": []
+    },
+    {
+      "mechanism_id": "M-BATCH-EXPLANATION", "claim": "Independent synthesis batches might explain the A-versus-B ambient conflict, but condition differences alone do not establish that cause.", "status": "unresolved",
+      "supporting_explanations": [{"explanation": "Paper B identifies independent preparation as a candidate explanation only.", "evidence_refs": ["B-E3"]}],
+      "alternative_explanations": [{"explanation": "Unmeasured surface chemistry, pH history, or other procedural differences could explain the result.", "evidence_refs": [], "status": "unresolved"}],
+      "direct_comparisons": []
+    }
+  ],
+  "quantitative_synthesis_authorized": false,
+  "integrated_response": "The records do not support a universal claim that magnetite-biochar improves dye adsorption. Paper B's acidic result complements the ambient literature by extending scope. Under matched reported ambient conditions, Papers A and B show opposite observed directions: this is a genuine_conflict and remains unresolved; batch preparation is only an untested candidate explanation. Paper C's ambient arm qualitatively corroborates Paper A, while its direct material-by-pH comparison supports bounded pH moderation. Paper C does not resolve the A-B replication conflict. The micropore explanation remains speculation. Statistical significance and budgets are unreported where stated, and no effect sizes, datasets, scopes, or dyes are pooled.",
+  "output_contract": {
+    "artifacts": ["comparison-matrix.md", "conflict-atlas.md", "integrated-response.md", "result.json"],
+    "result_fields": ["case_id", "status", "summary", "sources", "uncertainty", "change_records", "comparison_matrix", "conflict_atlas"]
+  }
+}

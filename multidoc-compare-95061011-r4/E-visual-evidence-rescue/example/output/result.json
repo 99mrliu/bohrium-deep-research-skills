@@ -1,0 +1,102 @@
+{
+  "case_id": "synthetic-visual-evidence-001",
+  "comparison_matrix": "comparison-matrix.md",
+  "source_region_ledger": "source-regions.md",
+  "status": "partial",
+  "sources": [
+    {
+      "source_document_id": "DOC_A",
+      "path": "documents/alpha.txt",
+      "region_ids": [
+        "DOC_A:caption-001",
+        "DOC_A:table-001-row-001",
+        "DOC_A:table-001-row-002"
+      ]
+    },
+    {
+      "source_document_id": "DOC_B",
+      "path": "documents/beta.txt",
+      "region_ids": [
+        "DOC_B:caption-001",
+        "DOC_B:table-001-row-001"
+      ]
+    },
+    {
+      "source_document_id": "DOC_GAMMA",
+      "path": "documents/gamma.txt",
+      "region_ids": [
+        "DOC_GAMMA:caption-001",
+        "DOC_GAMMA:table-001-row-001",
+        "DOC_GAMMA:figure-001-panel-b"
+      ]
+    }
+  ],
+  "uncertainty": [
+    {
+      "record_id": "G-RETENTION-EST",
+      "statement": "48% is a read_off_figure estimate with range 45–52%; it is not exact or caption-reported."
+    },
+    {
+      "statement": "NR cells and absent experiments remain not_reported. Gamma degradation remains noncomparable with adsorption removal."
+    }
+  ],
+  "change_records": [
+    {
+      "action": "dual_stream_ingest",
+      "paths": [
+        "../work/normal",
+        "../work/layout"
+      ],
+      "note": "UTF-8 synthetic text copied to normal and layout streams; form feeds retained."
+    },
+    {
+      "action": "layout_table_draft_and_agent_review",
+      "paths": [
+        "../work/parsed-regions"
+      ],
+      "note": "Headers, units, sample splits, and the carried Alpha-7 material cell were inspected before assigning extraction records."
+    },
+    {
+      "action": "visual_inspection",
+      "paths": [
+        "documents/gamma.txt"
+      ],
+      "region_id": "DOC_GAMMA:figure-001-panel-b",
+      "note": "Synthetic text-only inspection; estimate/range and uncertainty recorded. No PNG/PDF preview is included."
+    }
+  ],
+  "quality_summary": {
+    "document_count": 3,
+    "extraction_status_counts": {
+      "noncomparable": 1,
+      "not_reported": 5,
+      "read_off_figure": 1,
+      "reported": 3
+    }
+  },
+  "artifacts": {
+    "comparison_matrix": "comparison-matrix.md",
+    "source_region_ledger": "source-regions.md"
+  },
+  "visual_inspection_index": [
+    {
+      "source_document_id": "DOC_GAMMA",
+      "paragraph_id": "DOC_GAMMA:caption-001",
+      "region_id": "DOC_GAMMA:figure-001-panel-b",
+      "record_id": "G-RETENTION-EST",
+      "visual_inspection": {
+        "method": "synthetic_layout_text_review",
+        "paths": [
+          "documents/gamma.txt"
+        ],
+        "notes": "Inspected the fictional text-only panel and its 0/50/100 ticks; no binary preview or OCR is claimed for this synthetic example."
+      }
+    }
+  ],
+  "validation": {
+    "status": "passed",
+    "region_count": 11,
+    "extraction_count": 10,
+    "pooling_performed": false
+  }
+}

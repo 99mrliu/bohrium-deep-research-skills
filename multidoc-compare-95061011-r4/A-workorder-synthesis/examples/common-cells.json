@@ -1,0 +1,184 @@
+{
+  "synthetic_example": true,
+  "documents": [
+    {"source_document_id": "SYN-A", "path": "corpus/syn-a.txt"},
+    {"source_document_id": "SYN-B", "path": "corpus/syn-b.txt"},
+    {"source_document_id": "SYN-C", "path": "corpus/syn-c.txt"}
+  ],
+  "cells": [
+    {
+      "cell_id": "a-context",
+      "question_id": "q1",
+      "dimension": "protocol identity",
+      "source_document_id": "SYN-A",
+      "paragraph_id": "SYN-A:p1",
+      "state": "reported",
+      "value": "M-1 / D-1 / stirred batch / P-60",
+      "quote": "Study A used material M-1 to remove dye D-1 in a stirred batch task under protocol P-60."
+    },
+    {
+      "cell_id": "a-performance",
+      "question_id": "q2",
+      "dimension": "60-minute removal",
+      "source_document_id": "SYN-A",
+      "paragraph_id": "SYN-A:p2",
+      "state": "reported",
+      "value": 70,
+      "quote": "At 60 minutes, removal was 70 percent under protocol P-60",
+      "task": "stirred batch removal under protocol P-60",
+      "metric": "removal_at_60_min",
+      "units": "percent",
+      "material": "M-1",
+      "pollutant": "D-1",
+      "budget": "shared screening cap 600 USD",
+      "dataset": "single-run screening A"
+    },
+    {
+      "cell_id": "a-budget",
+      "question_id": "q3",
+      "dimension": "confirmation cost and shared cap",
+      "source_document_id": "SYN-A",
+      "paragraph_id": "SYN-A:p3",
+      "state": "reported",
+      "value": {"confirmation_cost_usd": 240, "shared_cap_usd": 600},
+      "units": "USD",
+      "quote": "The confirmation run costs 240 USD against the shared 600 USD screening budget"
+    },
+    {
+      "cell_id": "a-variance",
+      "question_id": "q4",
+      "dimension": "replicate variance",
+      "source_document_id": "SYN-A",
+      "paragraph_id": "SYN-A:p3",
+      "state": "not_reported",
+      "value": "not_reported",
+      "units": "not_applicable",
+      "notes": "The dimension applies to the requested uncertainty assessment, but no variance estimate is supplied."
+    },
+    {
+      "cell_id": "b-context",
+      "question_id": "q1",
+      "dimension": "protocol identity",
+      "source_document_id": "SYN-B",
+      "paragraph_id": "SYN-B:p1",
+      "state": "reported",
+      "value": "M-1 / D-1 / stirred batch / P-60",
+      "quote": "Study B used material M-1 to remove dye D-1 in a stirred batch task under protocol P-60."
+    },
+    {
+      "cell_id": "b-performance",
+      "question_id": "q2",
+      "dimension": "60-minute removal",
+      "source_document_id": "SYN-B",
+      "paragraph_id": "SYN-B:p2",
+      "state": "reported",
+      "value": 82,
+      "quote": "At 60 minutes, removal was 82 percent under protocol P-60",
+      "task": "stirred batch removal under protocol P-60",
+      "metric": "removal_at_60_min",
+      "units": "percent",
+      "material": "M-1",
+      "pollutant": "D-1",
+      "budget": "shared screening cap 600 USD",
+      "dataset": "single-run screening B"
+    },
+    {
+      "cell_id": "b-budget",
+      "question_id": "q3",
+      "dimension": "confirmation cost and shared cap",
+      "source_document_id": "SYN-B",
+      "paragraph_id": "SYN-B:p3",
+      "state": "reported",
+      "value": {"confirmation_cost_usd": 300, "shared_cap_usd": 600},
+      "units": "USD",
+      "quote": "The confirmation run costs 300 USD against the shared 600 USD screening budget"
+    },
+    {
+      "cell_id": "b-variance",
+      "question_id": "q4",
+      "dimension": "replicate variance",
+      "source_document_id": "SYN-B",
+      "paragraph_id": "SYN-B:p3",
+      "state": "not_reported",
+      "value": "not_reported",
+      "units": "not_applicable",
+      "notes": "The dimension applies to the requested uncertainty assessment, but no variance estimate is supplied."
+    },
+    {
+      "cell_id": "c-context",
+      "question_id": "q1",
+      "dimension": "protocol identity",
+      "source_document_id": "SYN-C",
+      "paragraph_id": "SYN-C:p1",
+      "state": "reported",
+      "value": "M-1 / D-2 / stirred batch / P-60",
+      "quote": "Study C used material M-1 to remove dye D-2 in a stirred batch task under protocol P-60."
+    },
+    {
+      "cell_id": "c-performance",
+      "question_id": "q2",
+      "dimension": "60-minute removal",
+      "source_document_id": "SYN-C",
+      "paragraph_id": "SYN-C:p2",
+      "state": "reported",
+      "value": 90,
+      "quote": "At 60 minutes, removal was 90 percent under protocol P-60",
+      "task": "stirred batch removal under protocol P-60",
+      "metric": "removal_at_60_min",
+      "units": "percent",
+      "material": "M-1",
+      "pollutant": "D-2",
+      "budget": "shared screening cap 600 USD",
+      "dataset": "single-run screening C"
+    },
+    {
+      "cell_id": "c-budget",
+      "question_id": "q3",
+      "dimension": "confirmation cost and shared cap",
+      "source_document_id": "SYN-C",
+      "paragraph_id": "SYN-C:p3",
+      "state": "reported",
+      "value": {"confirmation_cost_usd": 200, "shared_cap_usd": 600},
+      "units": "USD",
+      "quote": "The confirmation run costs 200 USD against the shared 600 USD screening budget"
+    },
+    {
+      "cell_id": "c-variance",
+      "question_id": "q4",
+      "dimension": "replicate variance",
+      "source_document_id": "SYN-C",
+      "paragraph_id": "SYN-C:p3",
+      "state": "not_reported",
+      "value": "not_reported",
+      "units": "not_applicable",
+      "notes": "The dimension applies to the requested uncertainty assessment, but no variance estimate is supplied."
+    }
+  ],
+  "syntheses": [
+    {
+      "synthesis_id": "q2-a-b-descriptive-mean",
+      "question_id": "q2",
+      "kind": "quantitative",
+      "method": "arithmetic_mean",
+      "member_cell_ids": ["a-performance", "b-performance"],
+      "comparability_checks": {
+        "task": true,
+        "metric": true,
+        "units": true,
+        "material": true,
+        "pollutant": true,
+        "budget": true
+      },
+      "result": 76,
+      "units": "percent",
+      "statement": "For SYN-A and SYN-B only, the question-requested unweighted arithmetic mean is (70 + 82) / 2 = 76 percent removal at 60 minutes. This is a two-point descriptive mean, not a variance estimate."
+    }
+  ],
+  "excluded_from_synthesis": [
+    {
+      "cell_ids": ["c-performance"],
+      "state": "noncomparable",
+      "reason": "SYN-C reports dye D-2 rather than D-1; its reported 90 percent remains separate and is not an input to the D-1 mean."
+    }
+  ]
+}

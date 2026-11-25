@@ -1,0 +1,48 @@
+{
+  "task_id": "synthetic-compare-v1",
+  "task": "Compare adsorption_capacity across fictional experiments without cross-dataset pooling.",
+  "common_fields": [
+    "source_document_id",
+    "paragraph_id",
+    "page",
+    "evidence_id",
+    "comparison_id",
+    "field",
+    "material",
+    "pollutant",
+    "metric",
+    "value",
+    "unit",
+    "budget",
+    "value_type",
+    "evidence_status",
+    "comparability",
+    "uncertainty"
+  ],
+  "comparisons": [
+    {
+      "comparison_id": "cmp-capacity",
+      "task_id": "synthetic-compare-v1",
+      "field": "adsorption_capacity",
+      "metric": "adsorption_capacity",
+      "units": [
+        "mg/g"
+      ],
+      "materials": [
+        "Aerogel A",
+        "Membrane B",
+        "Granule C"
+      ],
+      "pollutants": [
+        "methylene blue",
+        "rhodamine B",
+        "methyl orange"
+      ],
+      "budgets": [
+        "initial concentration 40 mg/L, adsorbent dose 1 g/L, contact time 120 min, temperature 298 K",
+        "initial concentration 60 mg/L, solution volume 250 mL, contact time 90 min, temperature 298 K",
+        "initial concentration 50 mg/L, adsorbent dose 2 g/L, contact time 60 min, temperature 298 K"
+      ]
+    }
+  ]
+}

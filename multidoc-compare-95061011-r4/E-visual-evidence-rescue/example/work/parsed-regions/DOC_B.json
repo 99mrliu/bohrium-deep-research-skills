@@ -1,0 +1,108 @@
+{
+  "source_document_id": "DOC_B",
+  "paragraph_id": "DOC_B:caption-001",
+  "regions": [
+    {
+      "source_document_id": "DOC_B",
+      "page": 1,
+      "region_type": "table_row",
+      "region_id": "DOC_B:table-001-row-001",
+      "paragraph_id": "DOC_B:caption-001",
+      "text": "Beta-4    methyl_orange   68                  NR            50",
+      "table": {
+        "headers": [
+          "Material",
+          "Pollutant",
+          "Removal (%) {test}",
+          "Cost [CNY/g]",
+          "Dose [mg]"
+        ],
+        "header_paths": [
+          [
+            "Material"
+          ],
+          [
+            "Pollutant"
+          ],
+          [
+            "Removal (%) {test}"
+          ],
+          [
+            "Cost [CNY/g]"
+          ],
+          [
+            "Dose [mg]"
+          ]
+        ],
+        "units": {
+          "Removal (%) {test}": "%",
+          "Cost [CNY/g]": "CNY/g",
+          "Dose [mg]": "mg"
+        },
+        "sample_splits": {
+          "Removal (%) {test}": "test"
+        },
+        "header_text": "Material  Pollutant       Removal (%) {test}  Cost [CNY/g]  Dose [mg]"
+      },
+      "cells": [
+        {
+          "header": "Material",
+          "header_path": [
+            "Material"
+          ],
+          "value": "Beta-4",
+          "source_value": "Beta-4",
+          "units": null,
+          "sample_split": null,
+          "carried_from_previous_row": false
+        },
+        {
+          "header": "Pollutant",
+          "header_path": [
+            "Pollutant"
+          ],
+          "value": "methyl_orange",
+          "source_value": "methyl_orange",
+          "units": null,
+          "sample_split": null,
+          "carried_from_previous_row": false
+        },
+        {
+          "header": "Removal (%) {test}",
+          "header_path": [
+            "Removal (%) {test}"
+          ],
+          "value": "68",
+          "source_value": "68",
+          "units": "%",
+          "sample_split": "test",
+          "carried_from_previous_row": false
+        },
+        {
+          "header": "Cost [CNY/g]",
+          "header_path": [
+            "Cost [CNY/g]"
+          ],
+          "value": "NR",
+          "source_value": "NR",
+          "units": "CNY/g",
+          "sample_split": null,
+          "carried_from_previous_row": false
+        },
+        {
+          "header": "Dose [mg]",
+          "header_path": [
+            "Dose [mg]"
+          ],
+          "value": "50",
+          "source_value": "50",
+          "units": "mg",
+          "sample_split": null,
+          "carried_from_previous_row": false
+        }
+      ],
+      "multirow_context": {}
+    }
+  ],
+  "warning": "Draft geometry only: verify headers, multirow context, page and IDs before use."
+}

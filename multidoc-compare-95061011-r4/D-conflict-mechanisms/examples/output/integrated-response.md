@@ -1,0 +1,3 @@
+# Integrated response
+
+The records do not support a universal claim that magnetite-biochar improves dye adsorption. Paper B's acidic result complements the ambient literature by extending scope. Under matched reported ambient conditions, Papers A and B show opposite observed directions: this is a genuine_conflict and remains unresolved; batch preparation is only an untested candidate explanation. Paper C's ambient arm qualitatively corroborates Paper A, while its direct material-by-pH comparison supports bounded pH moderation. Paper C does not resolve the A-B replication conflict. The micropore explanation remains speculation. Statistical significance and budgets are unreported where stated, and no effect sizes, datasets, scopes, or dyes are pooled.

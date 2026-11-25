@@ -1,0 +1,173 @@
+{
+  "case_id": "SYNTHETIC-95061011-THREE-DOC-001",
+  "purpose": "Question/workorder-adaptive response plan; not an answer template.",
+  "requested_deliverables": [
+    "Direct answers to q1 through q4",
+    "comparison-matrix.md",
+    "integration-report.md",
+    "result.json"
+  ],
+  "explicit_questions": [
+    {
+      "question_id": "q1",
+      "question": "Determine comparability for the M-1 / D-1 protocol P-60 conclusion.",
+      "requested_result_fields": [
+        "comparability_verdict"
+      ],
+      "definition": "Judge task, metric, units, material, pollutant, and budget before pooling."
+    },
+    {
+      "question_id": "q2",
+      "question": "Give the unweighted arithmetic mean only for comparable 60-minute removal results, with separate exclusions retained.",
+      "requested_result_fields": [
+        "pooled_result_or_separate_values"
+      ],
+      "definition": null
+    },
+    {
+      "question_id": "q3",
+      "question": "Recommend two M-1 / D-1 confirmation runs and assess their combined cost against 600 USD.",
+      "requested_result_fields": [
+        "recommended_next_step",
+        "budget_assessment"
+      ],
+      "definition": null
+    },
+    {
+      "question_id": "q4",
+      "question": "State unresolved replicate-variance evidence without inventing it.",
+      "requested_result_fields": [
+        "open_questions"
+      ],
+      "definition": null
+    }
+  ],
+  "document_scope": [
+    "SYN-A",
+    "SYN-B",
+    "SYN-C"
+  ],
+  "contract_keys_exact": [
+    "comparability_verdict",
+    "pooled_result_or_separate_values",
+    "recommended_next_step",
+    "budget_assessment",
+    "open_questions"
+  ],
+  "field_definitions": [
+    {
+      "name": "comparability_verdict",
+      "specification": {
+        "name": "comparability_verdict",
+        "type": "object",
+        "description": "Document-specific comparability decision and basis."
+      }
+    },
+    {
+      "name": "pooled_result_or_separate_values",
+      "specification": {
+        "name": "pooled_result_or_separate_values",
+        "type": "object",
+        "description": "Requested mean if justified, with excluded values retained."
+      }
+    },
+    {
+      "name": "recommended_next_step",
+      "specification": {
+        "name": "recommended_next_step",
+        "type": "object",
+        "description": "The two requested confirmation runs."
+      }
+    },
+    {
+      "name": "budget_assessment",
+      "specification": {
+        "name": "budget_assessment",
+        "type": "object",
+        "description": "Combined cost and cap decision."
+      }
+    },
+    {
+      "name": "open_questions",
+      "specification": {
+        "name": "open_questions",
+        "type": "array",
+        "description": "Unresolved case-specific questions, including variance availability."
+      }
+    }
+  ],
+  "response_plan": [
+    {
+      "question_id": "q1",
+      "question": "Determine comparability for the M-1 / D-1 protocol P-60 conclusion.",
+      "requested_result_fields": [
+        "comparability_verdict"
+      ],
+      "definition": "Judge task, metric, units, material, pollutant, and budget before pooling.",
+      "document_ids": [
+        "SYN-A",
+        "SYN-B",
+        "SYN-C"
+      ],
+      "evidence_cell_ids": [],
+      "agent_answer_and_mapping": "TO_BE_COMPLETED_AFTER_READING_SOURCES"
+    },
+    {
+      "question_id": "q2",
+      "question": "Give the unweighted arithmetic mean only for comparable 60-minute removal results, with separate exclusions retained.",
+      "requested_result_fields": [
+        "pooled_result_or_separate_values"
+      ],
+      "definition": null,
+      "document_ids": [
+        "SYN-A",
+        "SYN-B",
+        "SYN-C"
+      ],
+      "evidence_cell_ids": [],
+      "agent_answer_and_mapping": "TO_BE_COMPLETED_AFTER_READING_SOURCES"
+    },
+    {
+      "question_id": "q3",
+      "question": "Recommend two M-1 / D-1 confirmation runs and assess their combined cost against 600 USD.",
+      "requested_result_fields": [
+        "recommended_next_step",
+        "budget_assessment"
+      ],
+      "definition": null,
+      "document_ids": [
+        "SYN-A",
+        "SYN-B",
+        "SYN-C"
+      ],
+      "evidence_cell_ids": [],
+      "agent_answer_and_mapping": "TO_BE_COMPLETED_AFTER_READING_SOURCES"
+    },
+    {
+      "question_id": "q4",
+      "question": "State unresolved replicate-variance evidence without inventing it.",
+      "requested_result_fields": [
+        "open_questions"
+      ],
+      "definition": null,
+      "document_ids": [
+        "SYN-A",
+        "SYN-B",
+        "SYN-C"
+      ],
+      "evidence_cell_ids": [],
+      "agent_answer_and_mapping": "TO_BE_COMPLETED_AFTER_READING_SOURCES"
+    }
+  ],
+  "agent_must_complete": [
+    "Map every explicit question and requested deliverable to exact contract keys; add mappings missing from this skeleton.",
+    "Read every in-scope source and record question-specific cells keyed by exact source_document_id and paragraph_id.",
+    "Choose reported/not_reported/not_applicable/unclear/noncomparable from source meaning, not from a fixed domain schema.",
+    "Quantitatively synthesize only after task, metric, units, material, pollutant, and budget are comparable; otherwise retain separate values.",
+    "Author response.fields, uncertainty, completion, and change_records; then run assemble_response.py."
+  ],
+  "source_task": {
+    "sha256": "7d1ae9167a264edc8ba7c69e170a01b62b40ffe057d93ba343391553b0eff689",
+    "text": "# SYNTHETIC minimal example — not an official case answer\n\nCompare all three fictitious documents. Answer exactly these questions:\n\n1. Which documents are comparable for the requested M-1 / D-1 protocol P-60 conclusion, and which must remain separate?\n2. If and only if comparability holds, calculate the unweighted arithmetic mean of 60-minute removal for the comparable pair; otherwise retain separate values.\n3. Recommend the two M-1 / D-1 confirmation runs and determine whether their combined cost fits the shared cap of 600 USD.\n4. Identify what remains unknown about replicate variance.\n\nProduce a readable evidence matrix, integration report, and result JSON. Do not treat the D-2 result as another observation of D-1.\n"
+  }
+}
