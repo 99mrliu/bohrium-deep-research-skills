@@ -1,0 +1,133 @@
+{
+  "segments": [
+    {
+      "id": "p001",
+      "issues": [],
+      "explained": [],
+      "n_source_sentences": 1,
+      "n_target_sentences": 1
+    },
+    {
+      "id": "p002",
+      "issues": [],
+      "explained": [],
+      "n_source_sentences": 1,
+      "n_target_sentences": 1
+    },
+    {
+      "id": "p003",
+      "issues": [
+        {
+          "class": "unit_convention",
+          "kind": "quantity",
+          "value": "0.3",
+          "from_unit": null,
+          "to_unit": "pctpt",
+          "confirm": true
+        },
+        {
+          "class": "missing",
+          "kind": "quantity",
+          "value": "0.01",
+          "unit": null
+        },
+        {
+          "class": "missing",
+          "kind": "citation",
+          "value": "1,2",
+          "unit": null
+        },
+        {
+          "class": "added",
+          "kind": "quantity",
+          "value": "0.1",
+          "unit": null
+        },
+        {
+          "class": "added",
+          "kind": "quantity",
+          "value": "20",
+          "unit": "%"
+        },
+        {
+          "class": "changed",
+          "kind": "statistic",
+          "from": "p<0.01",
+          "to": "p<0.1",
+          "unit": null
+        },
+        {
+          "class": "negation_lost",
+          "sentence_index": 3,
+          "source_snippet": "The drug did not increase the risk of major bleeding, and hypoglycemia occurred in 3.1% of treated participants."
+        },
+        {
+          "class": "qualifier_lost",
+          "sentence_index": 4,
+          "source_snippet": "Patients with preserved renal function may benefit most;"
+        }
+      ],
+      "explained": [],
+      "n_source_sentences": 7,
+      "n_target_sentences": 7
+    },
+    {
+      "id": "p004",
+      "issues": [],
+      "explained": [],
+      "n_source_sentences": 1,
+      "n_target_sentences": 1
+    },
+    {
+      "id": "p005",
+      "issues": [
+        {
+          "class": "unit_convention",
+          "kind": "quantity",
+          "value": "24",
+          "from_unit": null,
+          "to_unit": "weeks",
+          "confirm": true
+        },
+        {
+          "class": "missing",
+          "kind": "quantity",
+          "value": "0.72",
+          "unit": null
+        },
+        {
+          "class": "added",
+          "kind": "quantity",
+          "value": "0.27",
+          "unit": null
+        },
+        {
+          "class": "changed",
+          "kind": "statistic",
+          "from": "hr=0.72",
+          "to": "hr=0.27",
+          "unit": null
+        }
+      ],
+      "explained": [],
+      "n_source_sentences": 3,
+      "n_target_sentences": 3
+    },
+    {
+      "id": "p006",
+      "issues": [],
+      "explained": [],
+      "n_source_sentences": 4,
+      "n_target_sentences": 4
+    }
+  ],
+  "summary": {
+    "unit_convention": 2,
+    "missing": 3,
+    "added": 3,
+    "changed": 2,
+    "negation_lost": 1,
+    "qualifier_lost": 1,
+    "explained": 0
+  }
+}

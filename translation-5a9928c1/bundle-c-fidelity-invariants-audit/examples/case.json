@@ -1,0 +1,20 @@
+{
+  "case_id": "synthetic-fidelity-demo",
+  "task": "Translate the supplied SYNTHETIC clinical-trial excerpt to Chinese. Deliver a faithful complete translation, source-aligned bilingual pairs, and a fidelity audit of numbers, units, citations, negations and qualifiers. Synthetic example for the fidelity-invariants skill demo only; not an official case.",
+  "source_file": "source_en.txt",
+  "source_provenance": {
+    "paper": "SYNTHETIC clinical abstract authored for this skill example",
+    "note": "合成示例材料，含统计量、引用、图表编号、否定与限定表述；仅用于演示保真核验。"
+  },
+  "output_contract": {
+    "type": "object",
+    "required": ["case_id", "status", "translated_text", "bilingual", "uncertainties"],
+    "properties": {
+      "case_id": {"type": "string"},
+      "status": {"type": "string", "enum": ["success", "partial", "failed"]},
+      "translated_text": {"type": "string"},
+      "bilingual": {"type": "array"},
+      "uncertainties": {"type": "array"}
+    }
+  }
+}

@@ -1,0 +1,101 @@
+{
+  "source_chars": 672,
+  "source_sha256": "09e5b7a536f7844a9554db253c33717496321c0b801eacc2766d02f3fc15bedd",
+  "segments": [
+    {
+      "id": "p001",
+      "verdict": "verified",
+      "quote_sha256": "640f908e21ce194cb837759cbc073486c4b67377e57ef64d6765744c38382dd9",
+      "declared_start": 0,
+      "resolved_start": 0,
+      "span": [
+        0,
+        51
+      ],
+      "basis": "literal",
+      "note": "标题直译；Streaming 取流式",
+      "uncertainty": null
+    },
+    {
+      "id": "p002",
+      "verdict": "verified",
+      "quote_sha256": "d21b4a64a2d8656a0fdf7ab2e89a49164ac504686cfa2a3d442e87c209286330",
+      "declared_start": 53,
+      "resolved_start": 53,
+      "span": [
+        53,
+        61
+      ],
+      "basis": "literal",
+      "note": "章节标题直译",
+      "uncertainty": null
+    },
+    {
+      "id": "p003",
+      "verdict": "verified",
+      "quote_sha256": "1924e24e2d8ca9012e4fcfdb06226e63c699c37421c0a2268aa6b44d83212125",
+      "declared_start": 63,
+      "resolved_start": 63,
+      "span": [
+        63,
+        354
+      ],
+      "basis": "termbase",
+      "note": "regret 按强化学习惯例保留英文并给中文说明；SWE 首次出现给全称（滑动窗口估计量）",
+      "uncertainty": null
+    },
+    {
+      "id": "p004",
+      "verdict": "verified",
+      "quote_sha256": "8696622f344183c4f73993a175acb8daa6418a5cc29099e5d2d762cba2d6f7f2",
+      "declared_start": 356,
+      "resolved_start": 356,
+      "span": [
+        356,
+        363
+      ],
+      "basis": "literal",
+      "note": "章节标题直译",
+      "uncertainty": null
+    },
+    {
+      "id": "p005",
+      "verdict": "verified",
+      "quote_sha256": "e8e9ed60dd8f4abf97d5920a2bfbc43799bfd417ba492b950461d414111226c7",
+      "declared_start": 365,
+      "resolved_start": 365,
+      "span": [
+        365,
+        609
+      ],
+      "basis": "convention",
+      "note": "half-life 译为半衰期并按物理惯例给符号 h",
+      "uncertainty": null
+    },
+    {
+      "id": "p006",
+      "verdict": "verified",
+      "quote_sha256": "47307423c36f98ff2f2c6b1199f7f94551ff1ee89eafe589fec48c89a3715fc2",
+      "declared_start": 611,
+      "resolved_start": 611,
+      "span": [
+        611,
+        671
+      ],
+      "basis": "literal",
+      "note": "题注直译，Figure→图",
+      "uncertainty": null
+    }
+  ],
+  "coverage": {
+    "gaps": [],
+    "overlaps": [],
+    "covered_chars": 661
+  },
+  "counts": {
+    "verified": 6,
+    "failed": 0,
+    "gaps": 0,
+    "overlaps": 0
+  }
+}

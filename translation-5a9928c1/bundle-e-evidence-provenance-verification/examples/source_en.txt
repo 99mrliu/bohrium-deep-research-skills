@@ -1,0 +1,11 @@
+Consistent Estimators for Streaming Language Models
+
+Abstract
+
+Streaming language models must update without revisiting the full corpus. We prove that the sliding-window estimator (SWE) is consistent under drift bounded by Δ ≤ 0.1, and the regret grows as O(√T log T). The window size w trades memory against bias; in practice w = 512 works across tasks.
+
+Methods
+
+The SWE keeps a reservoir of w examples and reweights them by recency. When the feature � is corrupted by quantization noise, the estimator falls back to exponential decay with half-life h = 24 h. All hyperparameters follow the protocol of [4].
+
+Figure 1. Regret versus window size for three drift regimes.

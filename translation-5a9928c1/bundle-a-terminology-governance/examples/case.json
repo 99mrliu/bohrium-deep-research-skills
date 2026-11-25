@@ -1,0 +1,21 @@
+{
+  "case_id": "synthetic-terminology-demo",
+  "task": "Translate the supplied SYNTHETIC materials-science excerpt to Chinese. Deliver a faithful complete translation, source-aligned bilingual pairs, locked terminology and uncertainty notes. Synthetic example for the terminology-governance skill demo only; not an official case.",
+  "source_file": "source_en.txt",
+  "source_provenance": {
+    "paper": "SYNTHETIC excerpt authored for this skill example",
+    "note": "合成示例材料，不代表任何真实论文；仅用于演示术语治理流水线。"
+  },
+  "output_contract": {
+    "type": "object",
+    "required": ["case_id", "status", "translated_text", "bilingual", "terminology", "uncertainties"],
+    "properties": {
+      "case_id": {"type": "string"},
+      "status": {"type": "string", "enum": ["success", "partial", "failed"]},
+      "translated_text": {"type": "string"},
+      "bilingual": {"type": "array"},
+      "terminology": {"type": "array"},
+      "uncertainties": {"type": "array"}
+    }
+  }
+}

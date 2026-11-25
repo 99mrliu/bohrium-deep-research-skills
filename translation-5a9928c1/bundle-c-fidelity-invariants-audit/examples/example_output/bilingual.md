@@ -1,0 +1,33 @@
+# 双语对照（case=synthetic-fidelity-demo）
+
+## p001
+Glycemic Control with Estalia in Type 2 Diabetes: A Randomized Trial
+
+2 型糖尿病中 Estalia 的血糖控制：一项随机试验
+
+## p002
+Abstract
+
+摘要
+
+## p003
+In a randomized, double-blind trial, 214 adults with type 2 diabetes received estalia 10 mg or placebo once daily for 24 weeks. The primary endpoint was the change in HbA1c from baseline. HbA1c fell by 1.2 percentage points in the estalia group versus 0.3 points with placebo (p < 0.01). The drug did not increase the risk of major bleeding, and hypoglycemia occurred in 3.1% of treated participants. Patients with preserved renal function may benefit most; approximately 40% of the cohort had an eGFR above 90 mL/min/1.73 m². These findings are consistent with earlier reports [1, 2] and extend them to a treatment-naïve population [3].
+
+在一项随机双盲试验中，214 名 2 型糖尿病成人每日一次接受 estalia 10 mg 或安慰剂，持续 24 周。主要终点为 HbA1c 自基线的变化。estalia 组 HbA1c 下降 1.2 个百分点，安慰剂组下降 0.3 个百分点（p < 0.01）。该药物并未增加大出血风险，接受治疗的受试者中低血糖发生率为 3.1%。肾功能保留的患者可能获益最大；约 40% 的队列 eGFR 高于 90 mL/min/1.73 m²。这些发现与早期报告一致 [1, 2]，并将其扩展到初治人群 [3]。
+
+## p004
+Results
+
+结果
+
+## p005
+At week 24, the composite endpoint occurred in 8.4% of participants on estalia versus 11.2% on placebo (HR = 0.72, 95% CI 0.61–0.85, p < 0.01). Subgroup analysis showed no significant interaction by baseline BMI (interaction p = 0.42). Figure 2 shows the cumulative incidence curves, and baseline characteristics are listed in Table 1.
+
+在第 24 周，estalia 组复合终点发生率为 8.4%，安慰剂组为 11.2%（HR = 0.72，95% CI 0.61–0.85，p < 0.01）。亚组分析显示基线 BMI 无显著交互作用（交互作用 p = 0.42）。图 2 给出累积发病率曲线，基线特征列于表 1。
+
+## p006
+Figure 2. Cumulative incidence of the composite endpoint over 24 weeks.
+Table 1. Baseline characteristics of the intention-to-treat population.
+
+图 2. 24 周内复合终点的累积发病率。
+表 1. 意向治疗人群的基线特征。

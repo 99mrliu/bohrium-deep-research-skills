@@ -1,0 +1,20 @@
+{
+  "case_id": "synthetic-alignment-demo",
+  "task": "Translate the supplied SYNTHETIC two-page excerpt to Chinese, paragraph by paragraph, with paragraph-level bilingual alignment and completeness evidence. Synthetic example for the paragraph-alignment-ledger skill demo only; not an official case.",
+  "source_file": "source_paged.txt",
+  "source_provenance": {
+    "paper": "SYNTHETIC two-page excerpt authored for this skill example",
+    "note": "合成示例材料，含跨栏断词、段内换行、分页符与题注；仅用于演示分段与覆盖台账。"
+  },
+  "output_contract": {
+    "type": "object",
+    "required": ["case_id", "status", "translated_text", "bilingual", "uncertainties"],
+    "properties": {
+      "case_id": {"type": "string"},
+      "status": {"type": "string", "enum": ["success", "partial", "failed"]},
+      "translated_text": {"type": "string"},
+      "bilingual": {"type": "array"},
+      "uncertainties": {"type": "array"}
+    }
+  }
+}

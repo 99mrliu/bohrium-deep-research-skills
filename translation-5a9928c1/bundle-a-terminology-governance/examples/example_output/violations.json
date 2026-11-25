@@ -1,0 +1,49 @@
+{
+  "termbase_lock": "8ad726d67ab4f093b177170d0e35febccab62fc7aee3f83cf00f76898b4bf6eb",
+  "terms_audited": 5,
+  "violations": [
+    {
+      "term": "solid oxide fuel cell",
+      "class": "multiple_variants",
+      "detail": "locked '固体氧化物燃料电池' (1×) coexists with forbidden variant(s)",
+      "hits": [
+        {
+          "variant": "固态氧化物燃料电池",
+          "segment": "p005"
+        }
+      ]
+    }
+  ],
+  "human_confirm": [
+    {
+      "term": "grain boundary",
+      "class": "count_mismatch",
+      "detail": "14/15 occurrence(s) rendered; check untranslated instances",
+      "zones": {
+        "title": 1,
+        "abstract": 4,
+        "body": 4,
+        "caption": 2,
+        "conclusion": 3
+      }
+    },
+    {
+      "term": "yttria-stabilized zirconia",
+      "class": "count_mismatch",
+      "detail": "2/8 occurrence(s) rendered; check untranslated instances",
+      "zones": {
+        "title": 1,
+        "abstract": 1
+      }
+    },
+    {
+      "term": "solid oxide fuel cell",
+      "class": "count_mismatch",
+      "detail": "2/4 occurrence(s) rendered; check untranslated instances",
+      "zones": {
+        "abstract": 1
+      }
+    }
+  ],
+  "apply_lock": false
+}

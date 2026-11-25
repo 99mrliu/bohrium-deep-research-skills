@@ -1,0 +1,20 @@
+{
+  "case_id": "synthetic-evidence-demo",
+  "task": "Translate the supplied SYNTHETIC machine-learning excerpt to Chinese with per-paragraph source evidence (exact quote + offset), translation basis and honest uncertainty marking. Synthetic example for the evidence-provenance skill demo only; not an official case.",
+  "source_file": "source_en.txt",
+  "source_provenance": {
+    "paper": "SYNTHETIC ML excerpt authored for this skill example",
+    "note": "合成示例材料，含一处不可读符号；仅用于演示证据锚定与不确定性标注。"
+  },
+  "output_contract": {
+    "type": "object",
+    "required": ["case_id", "status", "translated_text", "bilingual", "uncertainties"],
+    "properties": {
+      "case_id": {"type": "string"},
+      "status": {"type": "string", "enum": ["success", "partial", "failed"]},
+      "translated_text": {"type": "string"},
+      "bilingual": {"type": "array"},
+      "uncertainties": {"type": "array"}
+    }
+  }
+}

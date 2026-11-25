@@ -1,0 +1,98 @@
+{
+  "case_id": "synthetic-evidence-demo",
+  "status": "success",
+  "translated_text": "流式语言模型的一致估计量\n\n摘要\n\n流式语言模型必须在不回访全量语料的前提下更新。我们证明：在漂移量 Δ ≤ 0.1 有界时，滑动窗口估计量（SWE）是一致的，且 regret 按 O(√T log T) 增长。窗口大小 w 在内存与偏差之间折中；实践中 w = 512 在各类任务上均适用。\n\n方法\n\nSWE 保留容量为 w 的样本库并按新近度重加权。当特征 � 被量化噪声破坏时，估计量退化为半衰期 h = 24 h 的指数衰减。全部超参数遵循文献 [4] 的方案。\n\n图 1. 三种漂移情形下 regret 随窗口大小的变化。",
+  "bilingual": [
+    {
+      "id": "p001",
+      "source": "Consistent Estimators for Streaming Language Models",
+      "target": "流式语言模型的一致估计量",
+      "evidence": {
+        "quote": "Consistent Estimators for Streaming Language Models",
+        "offset": 0,
+        "verdict": "verified"
+      },
+      "basis": "literal",
+      "note": "标题直译；Streaming 取流式"
+    },
+    {
+      "id": "p002",
+      "source": "Abstract",
+      "target": "摘要",
+      "evidence": {
+        "quote": "Abstract",
+        "offset": 53,
+        "verdict": "verified"
+      },
+      "basis": "literal",
+      "note": "章节标题直译"
+    },
+    {
+      "id": "p003",
+      "source": "Streaming language models must update without revisiting the full corpus. We prove that the sliding-window estimator (SWE) is consistent under drift bounded by Δ ≤ 0.1, and the regret grows as O(√T log T). The window size w trades memory against bias; in practice w = 512 works across tasks.",
+      "target": "流式语言模型必须在不回访全量语料的前提下更新。我们证明：在漂移量 Δ ≤ 0.1 有界时，滑动窗口估计量（SWE）是一致的，且 regret 按 O(√T log T) 增长。窗口大小 w 在内存与偏差之间折中；实践中 w = 512 在各类任务上均适用。",
+      "evidence": {
+        "quote": "Streaming language models must update without revisiting the full corpus. We prove that the sliding-window estimator (SWE) is consistent under drift bounded by Δ ≤ 0.1, and the regret grows as O(√T log T). The window size w trades memory against bias; in practice w = 512 works across tasks.",
+        "offset": 63,
+        "verdict": "verified"
+      },
+      "basis": "termbase",
+      "note": "regret 按强化学习惯例保留英文并给中文说明；SWE 首次出现给全称（滑动窗口估计量）"
+    },
+    {
+      "id": "p004",
+      "source": "Methods",
+      "target": "方法",
+      "evidence": {
+        "quote": "Methods",
+        "offset": 356,
+        "verdict": "verified"
+      },
+      "basis": "literal",
+      "note": "章节标题直译"
+    },
+    {
+      "id": "p005",
+      "source": "The SWE keeps a reservoir of w examples and reweights them by recency. When the feature � is corrupted by quantization noise, the estimator falls back to exponential decay with half-life h = 24 h. All hyperparameters follow the protocol of [4].",
+      "target": "SWE 保留容量为 w 的样本库并按新近度重加权。当特征 � 被量化噪声破坏时，估计量退化为半衰期 h = 24 h 的指数衰减。全部超参数遵循文献 [4] 的方案。",
+      "evidence": {
+        "quote": "The SWE keeps a reservoir of w examples and reweights them by recency. When the feature � is corrupted by quantization noise, the estimator falls back to exponential decay with half-life h = 24 h. All hyperparameters follow the protocol of [4].",
+        "offset": 365,
+        "verdict": "verified"
+      },
+      "basis": "convention",
+      "note": "half-life 译为半衰期并按物理惯例给符号 h"
+    },
+    {
+      "id": "p006",
+      "source": "Figure 1. Regret versus window size for three drift regimes.",
+      "target": "图 1. 三种漂移情形下 regret 随窗口大小的变化。",
+      "evidence": {
+        "quote": "Figure 1. Regret versus window size for three drift regimes.",
+        "offset": 611,
+        "verdict": "verified"
+      },
+      "basis": "literal",
+      "note": "题注直译，Figure→图"
+    }
+  ],
+  "uncertainties": [],
+  "evidence_map": {
+    "counts": {
+      "verified": 6,
+      "failed": 0,
+      "gaps": 0,
+      "overlaps": 0
+    },
+    "coverage": {
+      "gaps": 0,
+      "overlaps": 0,
+      "covered_chars": 661,
+      "source_chars": 672
+    }
+  },
+  "verification": {
+    "status": "success",
+    "register": []
+  }
+}
