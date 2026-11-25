@@ -18,7 +18,7 @@ python3 "$K/scripts/librepair.py" survey --root "$FIX/materials" \
 
 echo "== 2. plan (admin notes override heuristics) =="
 python3 "$K/scripts/librepair.py" plan --manifest "$WORK/manifest.json" \
-    --notes "$FIX/materials/行政说明.txt" --out "$WORK/plan.json"
+    --notes "$FIX/materials/ADMIN_NOTES.txt" --out "$WORK/plan.json"
 
 echo "== 3. apply (copy-only, journaled) =="
 python3 "$K/scripts/librepair.py" apply --plan "$WORK/plan.json" \

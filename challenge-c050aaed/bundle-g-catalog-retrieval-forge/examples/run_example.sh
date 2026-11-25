@@ -15,7 +15,7 @@ mkdir -p "$WORK" "$OUT"
 echo "== 1. catalog (read-only; sidecar metadata + admin notes) =="
 python3 "$K/scripts/catalogforge.py" catalog --root "$FIX/materials" \
     --meta "$FIX/materials/metadata.csv" \
-    --notes "$FIX/materials/行政说明.txt" \
+    --notes "$FIX/materials/ADMIN_NOTES.txt" \
     --out "$OUT/catalog.jsonl"
 
 echo "== 2. index (SQLite; FTS5 when available) =="
