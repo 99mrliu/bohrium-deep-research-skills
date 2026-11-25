@@ -1,0 +1,301 @@
+{
+  "audit": "evidence-audit-loop",
+  "case_id": "synthetic-perovskite-001",
+  "draft_file": "extraction.draft.json",
+  "iteration": 1,
+  "max_iterations": 2,
+  "metrics": {
+    "accepted": 27,
+    "address_validity_pct": 97.0,
+    "addresses_total": 33,
+    "addresses_valid": 32,
+    "attribution_accuracy_pct": 96.7,
+    "attribution_checked_items": 30,
+    "attribution_violations": 1,
+    "corpus_paragraphs_cited": 12,
+    "corpus_paragraphs_total": 24,
+    "items_total": 30,
+    "paragraph_coverage_pct": 50.0,
+    "quote_precision_pct": 93.9,
+    "quotes_total": 33,
+    "quotes_valid": 31,
+    "rejected": 0,
+    "repair": 3
+  },
+  "per_item": [
+    {
+      "codes": [],
+      "id": "e-conflict-pce",
+      "messages": [],
+      "op": "edge",
+      "verdict": "accept"
+    },
+    {
+      "codes": [],
+      "id": "e-involves-uvvis",
+      "messages": [],
+      "op": "edge",
+      "verdict": "accept"
+    },
+    {
+      "codes": [],
+      "id": "e-measures-pri",
+      "messages": [],
+      "op": "edge",
+      "verdict": "accept"
+    },
+    {
+      "codes": [],
+      "id": "e-measures-sec",
+      "messages": [],
+      "op": "edge",
+      "verdict": "accept"
+    },
+    {
+      "codes": [],
+      "id": "e-preparedby-mapbi3",
+      "messages": [],
+      "op": "edge",
+      "verdict": "accept"
+    },
+    {
+      "codes": [],
+      "id": "e-preparedby-tio2",
+      "messages": [],
+      "op": "edge",
+      "verdict": "accept"
+    },
+    {
+      "codes": [],
+      "id": "e-reports-pri",
+      "messages": [],
+      "op": "edge",
+      "verdict": "accept"
+    },
+    {
+      "codes": [],
+      "id": "e-reports-sec",
+      "messages": [],
+      "op": "edge",
+      "verdict": "accept"
+    },
+    {
+      "codes": [],
+      "id": "e-uses-mapbi3-pri",
+      "messages": [],
+      "op": "edge",
+      "verdict": "accept"
+    },
+    {
+      "codes": [],
+      "id": "e-uses-mapbi3-sec",
+      "messages": [],
+      "op": "edge",
+      "verdict": "accept"
+    },
+    {
+      "codes": [],
+      "id": "e-uses-tio2-pri",
+      "messages": [],
+      "op": "edge",
+      "verdict": "accept"
+    },
+    {
+      "codes": [
+        "ADDRESS_UNKNOWN"
+      ],
+      "id": "e-uses-tio2-sec",
+      "messages": [
+        "paragraph_id 'sec-p99' not found in source 'secondary'",
+        "quote not checkable (bad address)"
+      ],
+      "op": "edge",
+      "verdict": "repair"
+    },
+    {
+      "codes": [],
+      "id": "m-mapbi3-alias",
+      "messages": [],
+      "op": "merge",
+      "verdict": "accept"
+    },
+    {
+      "codes": [
+        "QUOTE_NOT_SUBSTRING"
+      ],
+      "id": "n-claim-pce-pri",
+      "messages": [
+        "quote is not an exact substring of primary/pri-p06"
+      ],
+      "op": "node",
+      "verdict": "repair"
+    },
+    {
+      "codes": [],
+      "id": "n-claim-pce-sec",
+      "messages": [],
+      "op": "node",
+      "verdict": "accept"
+    },
+    {
+      "codes": [],
+      "id": "n-dev-pri",
+      "messages": [],
+      "op": "node",
+      "verdict": "accept"
+    },
+    {
+      "codes": [],
+      "id": "n-dev-sec",
+      "messages": [],
+      "op": "node",
+      "verdict": "accept"
+    },
+    {
+      "codes": [],
+      "id": "n-mapbi3-pri",
+      "messages": [],
+      "op": "node",
+      "verdict": "accept"
+    },
+    {
+      "codes": [],
+      "id": "n-mapbi3-sec",
+      "messages": [],
+      "op": "node",
+      "verdict": "accept"
+    },
+    {
+      "codes": [],
+      "id": "n-method-spincoating",
+      "messages": [],
+      "op": "node",
+      "verdict": "accept"
+    },
+    {
+      "codes": [],
+      "id": "n-method-spray",
+      "messages": [],
+      "op": "node",
+      "verdict": "accept"
+    },
+    {
+      "codes": [],
+      "id": "n-method-uvvis",
+      "messages": [],
+      "op": "node",
+      "verdict": "accept"
+    },
+    {
+      "codes": [],
+      "id": "n-metric-pce",
+      "messages": [],
+      "op": "node",
+      "verdict": "accept"
+    },
+    {
+      "codes": [],
+      "id": "n-paper-pri",
+      "messages": [],
+      "op": "node",
+      "verdict": "accept"
+    },
+    {
+      "codes": [
+        "ROOT_META_MISATTRIBUTION"
+      ],
+      "id": "n-paper-sec",
+      "messages": [
+        "root bibliographic metadata (case.json title/doi) attributed to secondary source 'secondary'; root metadata belongs ONLY to the primary paper"
+      ],
+      "op": "node",
+      "verdict": "repair"
+    },
+    {
+      "codes": [],
+      "id": "n-researcher-chen",
+      "messages": [],
+      "op": "node",
+      "verdict": "accept"
+    },
+    {
+      "codes": [],
+      "id": "n-tio2-pri",
+      "messages": [],
+      "op": "node",
+      "verdict": "accept"
+    },
+    {
+      "codes": [],
+      "id": "n-tio2-sec",
+      "messages": [],
+      "op": "node",
+      "verdict": "accept"
+    },
+    {
+      "codes": [],
+      "id": "u-hysteresis",
+      "messages": [],
+      "op": "unreported",
+      "verdict": "accept"
+    },
+    {
+      "codes": [],
+      "id": "x-tio2-nonmerge",
+      "messages": [],
+      "op": "nonmerge",
+      "verdict": "accept"
+    }
+  ],
+  "uncited_paragraphs": [
+    "primary/pri-p02",
+    "primary/pri-p05",
+    "primary/pri-p07",
+    "primary/pri-p08",
+    "primary/pri-p10",
+    "primary/pri-p12",
+    "secondary/sec-p05",
+    "secondary/sec-p06",
+    "secondary/sec-p07",
+    "secondary/sec-p08",
+    "secondary/sec-p09",
+    "secondary/sec-p12"
+  ],
+  "verdicts": {
+    "accept": [
+      "e-conflict-pce",
+      "e-involves-uvvis",
+      "e-measures-pri",
+      "e-measures-sec",
+      "e-preparedby-mapbi3",
+      "e-preparedby-tio2",
+      "e-reports-pri",
+      "e-reports-sec",
+      "e-uses-mapbi3-pri",
+      "e-uses-mapbi3-sec",
+      "e-uses-tio2-pri",
+      "m-mapbi3-alias",
+      "n-claim-pce-sec",
+      "n-dev-pri",
+      "n-dev-sec",
+      "n-mapbi3-pri",
+      "n-mapbi3-sec",
+      "n-method-spincoating",
+      "n-method-spray",
+      "n-method-uvvis",
+      "n-metric-pce",
+      "n-paper-pri",
+      "n-researcher-chen",
+      "n-tio2-pri",
+      "n-tio2-sec",
+      "u-hysteresis",
+      "x-tio2-nonmerge"
+    ],
+    "reject": [],
+    "repair": [
+      "e-uses-tio2-sec",
+      "n-claim-pce-pri",
+      "n-paper-sec"
+    ]
+  }
+}

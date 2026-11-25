@@ -1,0 +1,37 @@
+{
+  "case_id": "synthetic-perovskite-001",
+  "notice": "SYNTHETIC example, not real papers. All content was invented for pipeline testing.",
+  "doi": "10.0000/synth.0001",
+  "title": "Ambient-Air Fabrication of Methylammonium Lead Iodide Perovskite Solar Cells",
+  "authors": ["L. Chen", "M. Ortiz", "K. Adeyemi"],
+  "output_contract": {
+    "case_id": "string",
+    "status": "string",
+    "graph": "object",
+    "queries": "array",
+    "evidence_notes": "array",
+    "unreported": "array",
+    "uncertainty": "array",
+    "audit_certificate": "object"
+  },
+  "query_specs": [
+    {
+      "query_id": "q1",
+      "type": "neighborhood",
+      "question": "MAPbI3 实体的一跳邻域包含哪些节点和边？证据是什么？",
+      "params": {"entity": "MAPbI3", "hops": 1}
+    },
+    {
+      "query_id": "q2",
+      "type": "edges_by_relation",
+      "question": "图中所有 measures 类型的边及其证据。",
+      "params": {"relation": "measures"}
+    },
+    {
+      "query_id": "q3",
+      "type": "conflict_check",
+      "question": "PCE 指标在两篇材料之间是否存在数值冲突？是否可判定为同一结论？",
+      "params": {"metric": "PCE"}
+    }
+  ]
+}

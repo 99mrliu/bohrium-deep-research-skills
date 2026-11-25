@@ -1,0 +1,170 @@
+{
+  "ontology_id": "b-ontology-guard-kg",
+  "version": "1.0.0",
+  "closed": true,
+  "description": "Closed ontology for literature knowledge-graph extraction (bundle B, semantic governance). Any entity type, relation type, qualifier key or polarity not listed here is a violation. SYNTHETIC-friendly: ontology itself is generic and contains no case content.",
+  "entity_types": {
+    "researcher": {
+      "description": "A named human author or researcher mentioned in the text.",
+      "merge_rule": "casefold(label) with whitespace collapsed; cross-paper merge allowed only with explicit merge op + reason",
+      "example": "J. Zhang"
+    },
+    "material": {
+      "description": "A chemical compound, composition or class of material.",
+      "merge_rule": "casefold(label) with spaces/hyphens stripped; formula/name alias pairs need explicit merge op + evidence",
+      "example": "MAPbI3"
+    },
+    "method": {
+      "description": "An experimental or computational procedure, technique or protocol.",
+      "merge_rule": "casefold(label) with spaces/hyphens stripped",
+      "example": "spin-coating"
+    },
+    "task": {
+      "description": "A research goal or application target (e.g. fabricating a stable solar cell).",
+      "merge_rule": "casefold(label) with whitespace collapsed",
+      "example": "damp-heat stability test"
+    },
+    "metric": {
+      "description": "A measurable quantity or figure of merit.",
+      "merge_rule": "casefold(label); abbreviation↔full-name pairs (e.g. PCE ↔ power conversion efficiency) need explicit merge op",
+      "example": "power conversion efficiency (PCE)"
+    },
+    "condition": {
+      "description": "A test/measurement condition (illumination, temperature, humidity, duration...).",
+      "merge_rule": "casefold(label) with whitespace collapsed; NEVER merge conditions with different parameter values",
+      "example": "85 C / 85% RH for 500 h"
+    },
+    "sample": {
+      "description": "A specific physical sample, device, layer or specimen. Identity is per-paper.",
+      "merge_rule": "NEVER auto-merge across papers; same name in two papers is a nonmerge candidate, not a merge",
+      "example": "mesoporous TiO2 electron-transport layer (device A)"
+    },
+    "dataset": {
+      "description": "A named dataset or corpus of measurements.",
+      "merge_rule": "casefold(label)",
+      "example": "NREL efficiency chart subset"
+    },
+    "claim": {
+      "description": "An assertion made by a paper, including numeric findings. Claims are never merged; conflicting numeric claims under different conditions stay separate nodes.",
+      "merge_rule": "never merge; contradictions are expressed via contradicts/compares edges",
+      "example": "the champion device reached PCE 21.1% under 1-sun illumination"
+    }
+  },
+  "relation_types": {
+    "uses": {
+      "domain": ["sample", "method"],
+      "range": ["material", "method", "dataset", "sample"],
+      "polarity": "neutral",
+      "required_qualifiers": [],
+      "optional_qualifiers": ["condition", "note"],
+      "description": "Subject employs/consumes/contains the object."
+    },
+    "compares": {
+      "domain": ["claim"],
+      "range": ["claim"],
+      "polarity": "neutral",
+      "required_qualifiers": ["metric"],
+      "optional_qualifiers": ["condition", "note"],
+      "description": "Two claims are compared on a metric, without a stated winner."
+    },
+    "outperforms": {
+      "domain": ["claim"],
+      "range": ["claim"],
+      "polarity": "positive",
+      "required_qualifiers": ["metric", "condition"],
+      "optional_qualifiers": ["note"],
+      "description": "Subject claim is strictly better than object claim on the given metric under the given condition. Direction matters."
+    },
+    "supports": {
+      "domain": ["claim"],
+      "range": ["claim"],
+      "polarity": "positive",
+      "required_qualifiers": [],
+      "optional_qualifiers": ["condition", "note"],
+      "description": "Subject claim provides direct evidence for object claim. Reviews/hearsay do NOT qualify; use reviews-cites instead."
+    },
+    "contradicts": {
+      "domain": ["claim"],
+      "range": ["claim"],
+      "polarity": "negative",
+      "required_qualifiers": [],
+      "optional_qualifiers": ["metric", "condition", "note"],
+      "description": "Subject claim conflicts with object claim under comparable conditions. Different-condition numeric differences are NOT contradictions; keep both claims and optionally link with compares."
+    },
+    "measures": {
+      "domain": ["sample", "method"],
+      "range": ["metric"],
+      "polarity": "neutral",
+      "required_qualifiers": ["condition"],
+      "optional_qualifiers": ["value", "unit", "note"],
+      "description": "Subject is measured/characterized on the object metric. If a numeric value qualifier is present, metric and condition are mandatory (rule NUMERIC_REQUIRES_METRIC_CONDITION)."
+    },
+    "reports": {
+      "domain": ["claim"],
+      "range": ["metric"],
+      "polarity": "neutral",
+      "required_qualifiers": ["value", "unit", "condition"],
+      "optional_qualifiers": ["note"],
+      "description": "A claim reports a numeric value for a metric under a condition. This is the only relation that carries a mandatory numeric value."
+    },
+    "reviews-cites": {
+      "domain": ["claim"],
+      "range": ["claim"],
+      "polarity": "neutral",
+      "required_qualifiers": ["context"],
+      "optional_qualifiers": ["note"],
+      "description": "Subject claim mentions/reviews/cites object claim from another paper. Citation context is required so review-hearsay is never confused with direct evidence."
+    },
+    "aliases": {
+      "domain": ["material", "method", "metric", "task", "dataset", "condition", "researcher"],
+      "range": ["material", "method", "metric", "task", "dataset", "condition", "researcher"],
+      "polarity": "neutral",
+      "required_qualifiers": [],
+      "optional_qualifiers": ["note"],
+      "same_type_required": true,
+      "description": "Subject and object are the same entity under different surface forms (abbreviation, alias, case variant). Subject and object node types MUST be identical (rule SAME_TYPE_REQUIRED)."
+    }
+  },
+  "qualifier_keys": {
+    "metric": {"value_type": "string", "description": "metric label or metric node id the edge is about"},
+    "condition": {"value_type": "string", "description": "condition label or condition node id"},
+    "value": {"value_type": "number", "description": "numeric value of a measurement; triggers NUMERIC_REQUIRES_METRIC_CONDITION"},
+    "unit": {"value_type": "string", "description": "unit string, linearized as plain text (e.g. '%', 'h')"},
+    "context": {"value_type": "string", "description": "citation context for reviews-cites, e.g. 'background-review', 'method-source'"},
+    "note": {"value_type": "string", "description": "free short note; must not carry content that belongs in typed qualifiers"}
+  },
+  "polarities": ["positive", "negative", "neutral"],
+  "global_rules": [
+    {"id": "NUMERIC_REQUIRES_METRIC_CONDITION", "description": "Any edge carrying a numeric 'value' qualifier MUST also carry non-empty 'metric' (or have a metric-typed object) and 'condition' qualifiers."},
+    {"id": "SAME_TYPE_REQUIRED", "description": "For relation 'aliases', subject and object entity types must be identical."},
+    {"id": "CLOSED_VOCABULARY", "description": "Entity types, relation types, qualifier keys and polarities outside this ontology are rejected."},
+    {"id": "EVIDENCE_REQUIRED", "description": "Every node/edge/merge/nonmerge/unreported item must carry evidence {source_id, paragraph_id, quote} where quote is an exact substring of the cited paragraph."}
+  ],
+  "error_codes": {
+    "BAD_JSON_LINE": "line is not a parseable JSON object",
+    "UNKNOWN_OP": "op is not one of node/edge/merge/nonmerge/unreported/note",
+    "BAD_SHAPE": "required fields missing or wrong JSON types",
+    "DUPLICATE_ID": "node or edge id already defined in this extraction",
+    "UNKNOWN_ENTITY_TYPE": "entity type not declared in ontology",
+    "UNKNOWN_RELATION": "relation type not declared in ontology",
+    "DOMAIN_MISMATCH": "subject entity type not in relation domain",
+    "RANGE_MISMATCH": "object entity type not in relation range",
+    "SAME_TYPE_REQUIRED": "aliases edge links nodes of different entity types",
+    "MISSING_QUALIFIER": "a required qualifier key is absent or empty",
+    "UNKNOWN_QUALIFIER": "qualifier key not declared in ontology",
+    "QUALIFIER_TYPE_MISMATCH": "qualifier value has wrong JSON type (e.g. value must be a number)",
+    "NUMERIC_REQUIRES_METRIC_CONDITION": "numeric value present without metric/condition",
+    "POLARITY_MISMATCH": "edge declares a polarity different from the relation's fixed polarity",
+    "UNKNOWN_NODE_REF": "edge/merge references a node id that does not exist",
+    "SELF_EDGE": "edge subject and object are the same node",
+    "EVIDENCE_MISSING": "evidence block missing or incomplete",
+    "ADDRESS_NOT_FOUND": "source_id or paragraph_id not present in the discovered corpus",
+    "QUOTE_NOT_SUBSTRING": "quote is not an exact substring of the cited paragraph text",
+    "MERGE_TARGET_UNKNOWN": "merge/nonmerge references unknown node id",
+    "REPAIR_BUDGET_EXHAUSTED": "more than one repair pass attempted"
+  },
+  "repair_policy": {
+    "max_repair_passes": 1,
+    "description": "Pass 1 validates the model draft. Violations go to quarantine.json with typed error codes. The model may then write ONE repair file containing corrected replacements for quarantined items (same ids). Pass 2 validates the repair; items still failing remain quarantined permanently (final=true). No third pass exists."
+  }
+}

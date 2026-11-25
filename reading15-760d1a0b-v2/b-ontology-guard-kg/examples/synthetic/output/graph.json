@@ -1,0 +1,414 @@
+{
+  "edge_count": 12,
+  "edges": [
+    {
+      "evidence": {
+        "paragraph_id": "p9",
+        "quote": "not directly comparable to the initial 21.1% reported by Zhang et al.",
+        "source_id": "SYN-SEC"
+      },
+      "id": "e09",
+      "object": "n06",
+      "polarity": null,
+      "qualifiers": {
+        "condition": "post-aging 1-sun vs initial 1-sun (different conditions)",
+        "metric": "power conversion efficiency (PCE)"
+      },
+      "relation": "compares",
+      "subject": "n13"
+    },
+    {
+      "evidence": {
+        "paragraph_id": "p7",
+        "quote": "the best device retained a PCE of 18.7%, measured under 1-sun illumination",
+        "source_id": "SYN-SEC"
+      },
+      "id": "e04",
+      "object": "n02",
+      "polarity": null,
+      "qualifiers": {
+        "condition": "after 500 h damp-heat (85 C, 85% RH)",
+        "unit": "%",
+        "value": 18.7
+      },
+      "relation": "measures",
+      "subject": "n11"
+    },
+    {
+      "evidence": {
+        "paragraph_id": "p7",
+        "quote": "The champion device reached a PCE of 21.1% in the initial 1-sun measurement",
+        "source_id": "SYN-PRI"
+      },
+      "id": "e-bad3",
+      "object": "n02",
+      "polarity": null,
+      "qualifiers": {
+        "condition": "1-sun initial measurement"
+      },
+      "relation": "measures",
+      "subject": "n21"
+    },
+    {
+      "evidence": {
+        "paragraph_id": "p7",
+        "quote": "reached a PCE of 21.1% in the initial 1-sun measurement",
+        "source_id": "SYN-PRI"
+      },
+      "id": "e05",
+      "object": "n02",
+      "polarity": null,
+      "qualifiers": {
+        "condition": "1-sun initial measurement",
+        "unit": "%",
+        "value": 21.1
+      },
+      "relation": "reports",
+      "subject": "n06"
+    },
+    {
+      "evidence": {
+        "paragraph_id": "p10",
+        "quote": "reached a PCE of 17.9%",
+        "source_id": "SYN-PRI"
+      },
+      "id": "e06",
+      "object": "n02",
+      "polarity": null,
+      "qualifiers": {
+        "condition": "identical 1-sun conditions",
+        "unit": "%",
+        "value": 17.9
+      },
+      "relation": "reports",
+      "subject": "n07"
+    },
+    {
+      "evidence": {
+        "paragraph_id": "p7",
+        "quote": "retained a PCE of 18.7%",
+        "source_id": "SYN-SEC"
+      },
+      "id": "e-bad2",
+      "object": "n02",
+      "polarity": null,
+      "qualifiers": {
+        "condition": "after 500 h damp-heat (85 C, 85% RH)",
+        "unit": "%",
+        "value": 18.7
+      },
+      "relation": "reports",
+      "subject": "n13"
+    },
+    {
+      "evidence": {
+        "paragraph_id": "p9",
+        "quote": "We attribute the high initial efficiency to the dense, pinhole-free MAPbI3 morphology",
+        "source_id": "SYN-PRI"
+      },
+      "id": "e-bad1",
+      "object": "n06",
+      "polarity": null,
+      "qualifiers": {},
+      "relation": "supports",
+      "subject": "n20"
+    },
+    {
+      "evidence": {
+        "paragraph_id": "p3",
+        "quote": "MAPbI3 films were deposited by one-step spin-coating",
+        "source_id": "SYN-PRI"
+      },
+      "id": "e03",
+      "object": "n01",
+      "polarity": null,
+      "qualifiers": {},
+      "relation": "uses",
+      "subject": "n03"
+    },
+    {
+      "evidence": {
+        "paragraph_id": "p4",
+        "quote": "glass/ITO/compact TiO2/mesoporous TiO2",
+        "source_id": "SYN-PRI"
+      },
+      "id": "e01",
+      "object": "n17",
+      "polarity": null,
+      "qualifiers": {},
+      "relation": "uses",
+      "subject": "n04"
+    },
+    {
+      "evidence": {
+        "paragraph_id": "p4",
+        "quote": "a compact TiO2 electron-transport layer deposited by spray pyrolysis",
+        "source_id": "SYN-SEC"
+      },
+      "id": "e02",
+      "object": "n17",
+      "polarity": null,
+      "qualifiers": {},
+      "relation": "uses",
+      "subject": "n11"
+    },
+    {
+      "evidence": {
+        "paragraph_id": "p4",
+        "quote": "mesoporous TiO2/MAPbI3/spiro-OMeTAD/Au",
+        "source_id": "SYN-PRI"
+      },
+      "id": "e14",
+      "object": "n01",
+      "polarity": null,
+      "qualifiers": {},
+      "relation": "uses",
+      "subject": "n21"
+    },
+    {
+      "evidence": {
+        "paragraph_id": "p4",
+        "quote": "glass/ITO/compact TiO2/mesoporous TiO2/MAPbI3",
+        "source_id": "SYN-PRI"
+      },
+      "id": "e15",
+      "object": "n04",
+      "polarity": null,
+      "qualifiers": {},
+      "relation": "uses",
+      "subject": "n21"
+    }
+  ],
+  "entity_types_present": [
+    "claim",
+    "condition",
+    "material",
+    "method",
+    "metric",
+    "researcher",
+    "sample",
+    "task"
+  ],
+  "node_count": 17,
+  "nodes": [
+    {
+      "evidence": {
+        "paragraph_id": "p3",
+        "quote": "MAPbI3 films were deposited by one-step spin-coating",
+        "source_id": "SYN-PRI"
+      },
+      "id": "n01",
+      "label": "MAPbI3",
+      "merged_ids": [
+        "n12"
+      ],
+      "merged_labels": [
+        "methylammonium lead iodide"
+      ],
+      "type": "material"
+    },
+    {
+      "evidence": {
+        "paragraph_id": "p1",
+        "quote": "power conversion efficiency (PCE)",
+        "source_id": "SYN-PRI"
+      },
+      "id": "n02",
+      "label": "power conversion efficiency (PCE)",
+      "merged_ids": [],
+      "merged_labels": [],
+      "type": "metric"
+    },
+    {
+      "evidence": {
+        "paragraph_id": "p3",
+        "quote": "deposited by one-step spin-coating from a DMF precursor solution",
+        "source_id": "SYN-PRI"
+      },
+      "id": "n03",
+      "label": "one-step spin-coating",
+      "merged_ids": [],
+      "merged_labels": [],
+      "type": "method"
+    },
+    {
+      "evidence": {
+        "paragraph_id": "p5",
+        "quote": "The mesoporous TiO2 layer of device A was sintered at 500 C",
+        "source_id": "SYN-PRI"
+      },
+      "id": "n04",
+      "label": "TiO2 electron-transport layer (mesoporous, device A)",
+      "merged_ids": [],
+      "merged_labels": [],
+      "type": "sample"
+    },
+    {
+      "evidence": {
+        "paragraph_id": "p7",
+        "quote": "The champion device reached a PCE of 21.1% in the initial 1-sun measurement",
+        "source_id": "SYN-PRI"
+      },
+      "id": "n06",
+      "label": "champion device reached PCE 21.1% at initial 1-sun measurement",
+      "merged_ids": [],
+      "merged_labels": [],
+      "type": "claim"
+    },
+    {
+      "evidence": {
+        "paragraph_id": "p10",
+        "quote": "The reference device without interface engineering reached a PCE of 17.9%",
+        "source_id": "SYN-PRI"
+      },
+      "id": "n07",
+      "label": "reference device without interface engineering reached PCE 17.9%",
+      "merged_ids": [],
+      "merged_labels": [],
+      "type": "claim"
+    },
+    {
+      "evidence": {
+        "paragraph_id": "p11",
+        "quote": "J. Zhang fabricated the devices",
+        "source_id": "SYN-PRI"
+      },
+      "id": "n08",
+      "label": "J. Zhang",
+      "merged_ids": [],
+      "merged_labels": [],
+      "type": "researcher"
+    },
+    {
+      "evidence": {
+        "paragraph_id": "p11",
+        "quote": "L. Chen measured the J-V curves",
+        "source_id": "SYN-PRI"
+      },
+      "id": "n09",
+      "label": "L. Chen",
+      "merged_ids": [
+        "n16"
+      ],
+      "merged_labels": [
+        "L. Chen"
+      ],
+      "type": "researcher"
+    },
+    {
+      "evidence": {
+        "paragraph_id": "p1",
+        "quote": "We study the damp-heat stability of methylammonium lead iodide solar cells",
+        "source_id": "SYN-SEC"
+      },
+      "id": "n10",
+      "label": "damp-heat stability assessment",
+      "merged_ids": [],
+      "merged_labels": [],
+      "type": "task"
+    },
+    {
+      "evidence": {
+        "paragraph_id": "p4",
+        "quote": "a compact TiO2 electron-transport layer deposited by spray pyrolysis",
+        "source_id": "SYN-SEC"
+      },
+      "id": "n11",
+      "label": "TiO2 electron-transport layer (compact, device B)",
+      "merged_ids": [],
+      "merged_labels": [],
+      "type": "sample"
+    },
+    {
+      "evidence": {
+        "paragraph_id": "p7",
+        "quote": "the best device retained a PCE of 18.7%, measured under 1-sun illumination",
+        "source_id": "SYN-SEC"
+      },
+      "id": "n13",
+      "label": "encapsulated devices retained PCE 18.7% after 500 h damp-heat",
+      "merged_ids": [],
+      "merged_labels": [],
+      "type": "claim"
+    },
+    {
+      "evidence": {
+        "paragraph_id": "p6",
+        "quote": "85 C and 85% relative humidity for 500 h",
+        "source_id": "SYN-SEC"
+      },
+      "id": "n14",
+      "label": "85 C / 85% RH for 500 h",
+      "merged_ids": [],
+      "merged_labels": [],
+      "type": "condition"
+    },
+    {
+      "evidence": {
+        "paragraph_id": "p6",
+        "quote": "under AM1.5G 1-sun illumination at a scan rate of 100 mV/s",
+        "source_id": "SYN-PRI"
+      },
+      "id": "n15",
+      "label": "AM1.5G 1-sun illumination",
+      "merged_ids": [],
+      "merged_labels": [],
+      "type": "condition"
+    },
+    {
+      "evidence": {
+        "paragraph_id": "p4",
+        "quote": "glass/ITO/compact TiO2/mesoporous TiO2/MAPbI3/spiro-OMeTAD/Au",
+        "source_id": "SYN-PRI"
+      },
+      "id": "n17",
+      "label": "TiO2",
+      "merged_ids": [],
+      "merged_labels": [],
+      "type": "material"
+    },
+    {
+      "evidence": {
+        "paragraph_id": "p3",
+        "quote": "Zhang et al. previously reported a PCE of 21.1% for MAPbI3 devices under 1-sun illumination",
+        "source_id": "SYN-SEC"
+      },
+      "id": "n18",
+      "label": "Zhang et al. previously reported PCE 21.1% under 1-sun (cited claim)",
+      "merged_ids": [],
+      "merged_labels": [],
+      "type": "claim"
+    },
+    {
+      "evidence": {
+        "paragraph_id": "p9",
+        "quote": "dense, pinhole-free MAPbI3 morphology observed by SEM",
+        "source_id": "SYN-PRI"
+      },
+      "id": "n20",
+      "label": "dense pinhole-free MAPbI3 morphology observed by SEM",
+      "merged_ids": [],
+      "merged_labels": [],
+      "type": "claim"
+    },
+    {
+      "evidence": {
+        "paragraph_id": "p4",
+        "quote": "The device architecture was glass/ITO/compact TiO2/mesoporous TiO2/MAPbI3/spiro-OMeTAD/Au",
+        "source_id": "SYN-PRI"
+      },
+      "id": "n21",
+      "label": "MAPbI3 solar cell champion device (device A)",
+      "merged_ids": [],
+      "merged_labels": [],
+      "type": "sample"
+    }
+  ],
+  "relations_present": [
+    "compares",
+    "measures",
+    "reports",
+    "supports",
+    "uses"
+  ]
+}

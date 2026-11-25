@@ -1,0 +1,37 @@
+{
+  "case_id": "SYNTH-DEMO-001",
+  "synthetic": true,
+  "notice": "SYNTHETIC example, not real papers. All DOIs, authors, numbers and findings are invented for pipeline demonstration only.",
+  "doi": "10.0000/synth.0001",
+  "title": "Interface Engineering Boosts Power Conversion Efficiency of MAPbI3 Perovskite Solar Cells",
+  "authors": ["A. Synthetic", "B. Example"],
+  "output_contract": {
+    "case_id": "string",
+    "status": "string",
+    "graph": "object",
+    "queries": "array",
+    "evidence_notes": "array",
+    "unreported": "array",
+    "uncertainty": "array"
+  },
+  "query_specs": [
+    {
+      "id": "q1",
+      "type": "neighborhood",
+      "params": {"node": "MAPbI3", "depth": 1},
+      "description": "Neighborhood of the absorber material MAPbI3 (depth 1): which samples use it, what it degrades into, and which claims cite it."
+    },
+    {
+      "id": "q2",
+      "type": "relation",
+      "params": {"relation": "measures"},
+      "description": "All edges of relation type 'measures': which characterization methods measure which metrics."
+    },
+    {
+      "id": "q3",
+      "type": "path",
+      "params": {"from": "champion MAPbI3 device", "to": "aged MAPbI3 device", "max_len": 3, "check_conflicts": true},
+      "description": "Path/contradiction check between the champion device (S1) and the damp-heat aged device (S2); competing PCE claims must survive as separate claims."
+    }
+  ]
+}

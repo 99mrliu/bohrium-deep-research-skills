@@ -1,0 +1,16 @@
+{
+  "exit_code": 0,
+  "notice": "run_meta is the ONLY artifact allowed to contain wall-clock data; excluded from deterministic comparisons.",
+  "platform": "darwin",
+  "python": "3.12.14",
+  "stage_seconds": {
+    "adjudicate": 0.0228,
+    "assemble": 0.0299,
+    "build_graph": 0.0239,
+    "candidates": 0.0224,
+    "discover": 0.0239,
+    "query": 0.0245,
+    "verify": 0.024
+  },
+  "total_seconds": 0.1942
+}

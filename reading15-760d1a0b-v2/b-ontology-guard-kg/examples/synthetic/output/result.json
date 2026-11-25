@@ -1,0 +1,934 @@
+{
+  "case_id": "SYNTHETIC-PSC-001",
+  "evidence_notes": [
+    "cross-paper merges applied with reasons; see merge_ledger.json",
+    "explicit non-merges recorded; see nonmerge_registry.json",
+    "1 extraction item(s) quarantined by ontology validation; see quarantine.json",
+    "numeric conflict preserved: PCE 21.1% (1-sun initial, SYN-PRI p7) vs PCE 18.7% (after 500 h damp-heat, SYN-SEC p7) are kept as two separate claims (n06, n13) linked by a compares edge (e09); NOT merged and NOT a contradiction because the measurement conditions differ"
+  ],
+  "graph": {
+    "edge_count": 12,
+    "edges": [
+      {
+        "evidence": {
+          "paragraph_id": "p9",
+          "quote": "not directly comparable to the initial 21.1% reported by Zhang et al.",
+          "source_id": "SYN-SEC"
+        },
+        "id": "e09",
+        "object": "n06",
+        "polarity": null,
+        "qualifiers": {
+          "condition": "post-aging 1-sun vs initial 1-sun (different conditions)",
+          "metric": "power conversion efficiency (PCE)"
+        },
+        "relation": "compares",
+        "subject": "n13"
+      },
+      {
+        "evidence": {
+          "paragraph_id": "p7",
+          "quote": "the best device retained a PCE of 18.7%, measured under 1-sun illumination",
+          "source_id": "SYN-SEC"
+        },
+        "id": "e04",
+        "object": "n02",
+        "polarity": null,
+        "qualifiers": {
+          "condition": "after 500 h damp-heat (85 C, 85% RH)",
+          "unit": "%",
+          "value": 18.7
+        },
+        "relation": "measures",
+        "subject": "n11"
+      },
+      {
+        "evidence": {
+          "paragraph_id": "p7",
+          "quote": "The champion device reached a PCE of 21.1% in the initial 1-sun measurement",
+          "source_id": "SYN-PRI"
+        },
+        "id": "e-bad3",
+        "object": "n02",
+        "polarity": null,
+        "qualifiers": {
+          "condition": "1-sun initial measurement"
+        },
+        "relation": "measures",
+        "subject": "n21"
+      },
+      {
+        "evidence": {
+          "paragraph_id": "p7",
+          "quote": "reached a PCE of 21.1% in the initial 1-sun measurement",
+          "source_id": "SYN-PRI"
+        },
+        "id": "e05",
+        "object": "n02",
+        "polarity": null,
+        "qualifiers": {
+          "condition": "1-sun initial measurement",
+          "unit": "%",
+          "value": 21.1
+        },
+        "relation": "reports",
+        "subject": "n06"
+      },
+      {
+        "evidence": {
+          "paragraph_id": "p10",
+          "quote": "reached a PCE of 17.9%",
+          "source_id": "SYN-PRI"
+        },
+        "id": "e06",
+        "object": "n02",
+        "polarity": null,
+        "qualifiers": {
+          "condition": "identical 1-sun conditions",
+          "unit": "%",
+          "value": 17.9
+        },
+        "relation": "reports",
+        "subject": "n07"
+      },
+      {
+        "evidence": {
+          "paragraph_id": "p7",
+          "quote": "retained a PCE of 18.7%",
+          "source_id": "SYN-SEC"
+        },
+        "id": "e-bad2",
+        "object": "n02",
+        "polarity": null,
+        "qualifiers": {
+          "condition": "after 500 h damp-heat (85 C, 85% RH)",
+          "unit": "%",
+          "value": 18.7
+        },
+        "relation": "reports",
+        "subject": "n13"
+      },
+      {
+        "evidence": {
+          "paragraph_id": "p9",
+          "quote": "We attribute the high initial efficiency to the dense, pinhole-free MAPbI3 morphology",
+          "source_id": "SYN-PRI"
+        },
+        "id": "e-bad1",
+        "object": "n06",
+        "polarity": null,
+        "qualifiers": {},
+        "relation": "supports",
+        "subject": "n20"
+      },
+      {
+        "evidence": {
+          "paragraph_id": "p3",
+          "quote": "MAPbI3 films were deposited by one-step spin-coating",
+          "source_id": "SYN-PRI"
+        },
+        "id": "e03",
+        "object": "n01",
+        "polarity": null,
+        "qualifiers": {},
+        "relation": "uses",
+        "subject": "n03"
+      },
+      {
+        "evidence": {
+          "paragraph_id": "p4",
+          "quote": "glass/ITO/compact TiO2/mesoporous TiO2",
+          "source_id": "SYN-PRI"
+        },
+        "id": "e01",
+        "object": "n17",
+        "polarity": null,
+        "qualifiers": {},
+        "relation": "uses",
+        "subject": "n04"
+      },
+      {
+        "evidence": {
+          "paragraph_id": "p4",
+          "quote": "a compact TiO2 electron-transport layer deposited by spray pyrolysis",
+          "source_id": "SYN-SEC"
+        },
+        "id": "e02",
+        "object": "n17",
+        "polarity": null,
+        "qualifiers": {},
+        "relation": "uses",
+        "subject": "n11"
+      },
+      {
+        "evidence": {
+          "paragraph_id": "p4",
+          "quote": "mesoporous TiO2/MAPbI3/spiro-OMeTAD/Au",
+          "source_id": "SYN-PRI"
+        },
+        "id": "e14",
+        "object": "n01",
+        "polarity": null,
+        "qualifiers": {},
+        "relation": "uses",
+        "subject": "n21"
+      },
+      {
+        "evidence": {
+          "paragraph_id": "p4",
+          "quote": "glass/ITO/compact TiO2/mesoporous TiO2/MAPbI3",
+          "source_id": "SYN-PRI"
+        },
+        "id": "e15",
+        "object": "n04",
+        "polarity": null,
+        "qualifiers": {},
+        "relation": "uses",
+        "subject": "n21"
+      }
+    ],
+    "entity_types_present": [
+      "claim",
+      "condition",
+      "material",
+      "method",
+      "metric",
+      "researcher",
+      "sample",
+      "task"
+    ],
+    "node_count": 17,
+    "nodes": [
+      {
+        "evidence": {
+          "paragraph_id": "p3",
+          "quote": "MAPbI3 films were deposited by one-step spin-coating",
+          "source_id": "SYN-PRI"
+        },
+        "id": "n01",
+        "label": "MAPbI3",
+        "merged_ids": [
+          "n12"
+        ],
+        "merged_labels": [
+          "methylammonium lead iodide"
+        ],
+        "type": "material"
+      },
+      {
+        "evidence": {
+          "paragraph_id": "p1",
+          "quote": "power conversion efficiency (PCE)",
+          "source_id": "SYN-PRI"
+        },
+        "id": "n02",
+        "label": "power conversion efficiency (PCE)",
+        "merged_ids": [],
+        "merged_labels": [],
+        "type": "metric"
+      },
+      {
+        "evidence": {
+          "paragraph_id": "p3",
+          "quote": "deposited by one-step spin-coating from a DMF precursor solution",
+          "source_id": "SYN-PRI"
+        },
+        "id": "n03",
+        "label": "one-step spin-coating",
+        "merged_ids": [],
+        "merged_labels": [],
+        "type": "method"
+      },
+      {
+        "evidence": {
+          "paragraph_id": "p5",
+          "quote": "The mesoporous TiO2 layer of device A was sintered at 500 C",
+          "source_id": "SYN-PRI"
+        },
+        "id": "n04",
+        "label": "TiO2 electron-transport layer (mesoporous, device A)",
+        "merged_ids": [],
+        "merged_labels": [],
+        "type": "sample"
+      },
+      {
+        "evidence": {
+          "paragraph_id": "p7",
+          "quote": "The champion device reached a PCE of 21.1% in the initial 1-sun measurement",
+          "source_id": "SYN-PRI"
+        },
+        "id": "n06",
+        "label": "champion device reached PCE 21.1% at initial 1-sun measurement",
+        "merged_ids": [],
+        "merged_labels": [],
+        "type": "claim"
+      },
+      {
+        "evidence": {
+          "paragraph_id": "p10",
+          "quote": "The reference device without interface engineering reached a PCE of 17.9%",
+          "source_id": "SYN-PRI"
+        },
+        "id": "n07",
+        "label": "reference device without interface engineering reached PCE 17.9%",
+        "merged_ids": [],
+        "merged_labels": [],
+        "type": "claim"
+      },
+      {
+        "evidence": {
+          "paragraph_id": "p11",
+          "quote": "J. Zhang fabricated the devices",
+          "source_id": "SYN-PRI"
+        },
+        "id": "n08",
+        "label": "J. Zhang",
+        "merged_ids": [],
+        "merged_labels": [],
+        "type": "researcher"
+      },
+      {
+        "evidence": {
+          "paragraph_id": "p11",
+          "quote": "L. Chen measured the J-V curves",
+          "source_id": "SYN-PRI"
+        },
+        "id": "n09",
+        "label": "L. Chen",
+        "merged_ids": [
+          "n16"
+        ],
+        "merged_labels": [
+          "L. Chen"
+        ],
+        "type": "researcher"
+      },
+      {
+        "evidence": {
+          "paragraph_id": "p1",
+          "quote": "We study the damp-heat stability of methylammonium lead iodide solar cells",
+          "source_id": "SYN-SEC"
+        },
+        "id": "n10",
+        "label": "damp-heat stability assessment",
+        "merged_ids": [],
+        "merged_labels": [],
+        "type": "task"
+      },
+      {
+        "evidence": {
+          "paragraph_id": "p4",
+          "quote": "a compact TiO2 electron-transport layer deposited by spray pyrolysis",
+          "source_id": "SYN-SEC"
+        },
+        "id": "n11",
+        "label": "TiO2 electron-transport layer (compact, device B)",
+        "merged_ids": [],
+        "merged_labels": [],
+        "type": "sample"
+      },
+      {
+        "evidence": {
+          "paragraph_id": "p7",
+          "quote": "the best device retained a PCE of 18.7%, measured under 1-sun illumination",
+          "source_id": "SYN-SEC"
+        },
+        "id": "n13",
+        "label": "encapsulated devices retained PCE 18.7% after 500 h damp-heat",
+        "merged_ids": [],
+        "merged_labels": [],
+        "type": "claim"
+      },
+      {
+        "evidence": {
+          "paragraph_id": "p6",
+          "quote": "85 C and 85% relative humidity for 500 h",
+          "source_id": "SYN-SEC"
+        },
+        "id": "n14",
+        "label": "85 C / 85% RH for 500 h",
+        "merged_ids": [],
+        "merged_labels": [],
+        "type": "condition"
+      },
+      {
+        "evidence": {
+          "paragraph_id": "p6",
+          "quote": "under AM1.5G 1-sun illumination at a scan rate of 100 mV/s",
+          "source_id": "SYN-PRI"
+        },
+        "id": "n15",
+        "label": "AM1.5G 1-sun illumination",
+        "merged_ids": [],
+        "merged_labels": [],
+        "type": "condition"
+      },
+      {
+        "evidence": {
+          "paragraph_id": "p4",
+          "quote": "glass/ITO/compact TiO2/mesoporous TiO2/MAPbI3/spiro-OMeTAD/Au",
+          "source_id": "SYN-PRI"
+        },
+        "id": "n17",
+        "label": "TiO2",
+        "merged_ids": [],
+        "merged_labels": [],
+        "type": "material"
+      },
+      {
+        "evidence": {
+          "paragraph_id": "p3",
+          "quote": "Zhang et al. previously reported a PCE of 21.1% for MAPbI3 devices under 1-sun illumination",
+          "source_id": "SYN-SEC"
+        },
+        "id": "n18",
+        "label": "Zhang et al. previously reported PCE 21.1% under 1-sun (cited claim)",
+        "merged_ids": [],
+        "merged_labels": [],
+        "type": "claim"
+      },
+      {
+        "evidence": {
+          "paragraph_id": "p9",
+          "quote": "dense, pinhole-free MAPbI3 morphology observed by SEM",
+          "source_id": "SYN-PRI"
+        },
+        "id": "n20",
+        "label": "dense pinhole-free MAPbI3 morphology observed by SEM",
+        "merged_ids": [],
+        "merged_labels": [],
+        "type": "claim"
+      },
+      {
+        "evidence": {
+          "paragraph_id": "p4",
+          "quote": "The device architecture was glass/ITO/compact TiO2/mesoporous TiO2/MAPbI3/spiro-OMeTAD/Au",
+          "source_id": "SYN-PRI"
+        },
+        "id": "n21",
+        "label": "MAPbI3 solar cell champion device (device A)",
+        "merged_ids": [],
+        "merged_labels": [],
+        "type": "sample"
+      }
+    ],
+    "relations_present": [
+      "compares",
+      "measures",
+      "reports",
+      "supports",
+      "uses"
+    ]
+  },
+  "merge_ledger": {
+    "merge_count": 2,
+    "merges": [
+      {
+        "drop": "n12",
+        "drop_label": "methylammonium lead iodide",
+        "entity_type": "material",
+        "evidence": {
+          "paragraph_id": "p2",
+          "quote": "Methylammonium lead iodide (MAPbI3) is the most widely studied perovskite absorber",
+          "source_id": "SYN-SEC"
+        },
+        "keep": "n01",
+        "keep_label": "MAPbI3",
+        "reason": "cross-paper alias pair: methylammonium lead iodide (secondary) is the same absorber material as MAPbI3 (primary); secondary defines the abbreviation at first mention"
+      },
+      {
+        "drop": "n16",
+        "drop_label": "L. Chen",
+        "entity_type": "researcher",
+        "evidence": {
+          "paragraph_id": "p10",
+          "quote": "L. Chen contributed to the aging experiments",
+          "source_id": "SYN-SEC"
+        },
+        "keep": "n09",
+        "keep_label": "L. Chen",
+        "reason": "same researcher L. Chen is a co-author contributor in both papers (J-V measurement in primary, aging experiments in secondary)"
+      }
+    ]
+  },
+  "nonmerge_registry": {
+    "nonmerge_count": 1,
+    "nonmerges": [
+      {
+        "a": "n04",
+        "a_label": "TiO2 electron-transport layer (mesoporous, device A)",
+        "b": "n11",
+        "b_label": "TiO2 electron-transport layer (compact, device B)",
+        "evidence": {
+          "paragraph_id": "p4",
+          "quote": "a sample distinct from mesoporous architectures",
+          "source_id": "SYN-SEC"
+        },
+        "reason": "same-name-different-object trap: both are TiO2 electron-transport layers, but n04 is the mesoporous sintered layer of device A (primary) while n11 is a compact spray-pyrolysis layer of device B (secondary); different physical samples, explicit NON-merge"
+      }
+    ]
+  },
+  "notice": "SYNTHETIC example, not real papers.",
+  "quarantine": {
+    "count": 1,
+    "description": "Items rejected by the closed-ontology validator, with typed error codes.",
+    "items": [
+      {
+        "error_codes": [
+          "QUOTE_NOT_SUBSTRING"
+        ],
+        "errors": [
+          {
+            "code": "QUOTE_NOT_SUBSTRING",
+            "message": "quote is not an exact substring of SYN-SEC/p3"
+          }
+        ],
+        "final": true,
+        "item": {
+          "evidence": {
+            "paragraph_id": "p3",
+            "quote": "world-record 21.1% PCE",
+            "source_id": "SYN-SEC"
+          },
+          "id": "e-bad4",
+          "object": "n06",
+          "op": "edge",
+          "qualifiers": {
+            "context": "background-review"
+          },
+          "relation": "reviews-cites",
+          "subject": "n18"
+        },
+        "key": "e-bad4",
+        "pass": 1,
+        "repair_pass": false
+      }
+    ],
+    "repair_budget": {
+      "max_repair_passes": 1,
+      "repair_passes_used": 1
+    }
+  },
+  "queries": [
+    {
+      "evidence": [
+        {
+          "edge_id": "e03",
+          "paragraph_id": "p3",
+          "quote": "MAPbI3 films were deposited by one-step spin-coating",
+          "source_id": "SYN-PRI"
+        },
+        {
+          "edge_id": "e14",
+          "paragraph_id": "p4",
+          "quote": "mesoporous TiO2/MAPbI3/spiro-OMeTAD/Au",
+          "source_id": "SYN-PRI"
+        }
+      ],
+      "query_id": "q1",
+      "seed_nodes": [
+        "n01"
+      ],
+      "spec": {
+        "depth": 1,
+        "entity": "MAPbI3",
+        "query_id": "q1",
+        "type": "neighborhood"
+      },
+      "status": "ok",
+      "subgraph": {
+        "edges": [
+          {
+            "evidence": {
+              "paragraph_id": "p3",
+              "quote": "MAPbI3 films were deposited by one-step spin-coating",
+              "source_id": "SYN-PRI"
+            },
+            "id": "e03",
+            "object": "n01",
+            "polarity": null,
+            "qualifiers": {},
+            "relation": "uses",
+            "subject": "n03"
+          },
+          {
+            "evidence": {
+              "paragraph_id": "p4",
+              "quote": "mesoporous TiO2/MAPbI3/spiro-OMeTAD/Au",
+              "source_id": "SYN-PRI"
+            },
+            "id": "e14",
+            "object": "n01",
+            "polarity": null,
+            "qualifiers": {},
+            "relation": "uses",
+            "subject": "n21"
+          }
+        ],
+        "nodes": [
+          {
+            "evidence": {
+              "paragraph_id": "p3",
+              "quote": "MAPbI3 films were deposited by one-step spin-coating",
+              "source_id": "SYN-PRI"
+            },
+            "id": "n01",
+            "label": "MAPbI3",
+            "merged_ids": [
+              "n12"
+            ],
+            "merged_labels": [
+              "methylammonium lead iodide"
+            ],
+            "type": "material"
+          },
+          {
+            "evidence": {
+              "paragraph_id": "p3",
+              "quote": "deposited by one-step spin-coating from a DMF precursor solution",
+              "source_id": "SYN-PRI"
+            },
+            "id": "n03",
+            "label": "one-step spin-coating",
+            "merged_ids": [],
+            "merged_labels": [],
+            "type": "method"
+          },
+          {
+            "evidence": {
+              "paragraph_id": "p4",
+              "quote": "The device architecture was glass/ITO/compact TiO2/mesoporous TiO2/MAPbI3/spiro-OMeTAD/Au",
+              "source_id": "SYN-PRI"
+            },
+            "id": "n21",
+            "label": "MAPbI3 solar cell champion device (device A)",
+            "merged_ids": [],
+            "merged_labels": [],
+            "type": "sample"
+          }
+        ]
+      },
+      "type": "neighborhood",
+      "undetermined": []
+    },
+    {
+      "evidence": [
+        {
+          "edge_id": "e-bad2",
+          "paragraph_id": "p7",
+          "quote": "retained a PCE of 18.7%",
+          "source_id": "SYN-SEC"
+        },
+        {
+          "edge_id": "e05",
+          "paragraph_id": "p7",
+          "quote": "reached a PCE of 21.1% in the initial 1-sun measurement",
+          "source_id": "SYN-PRI"
+        },
+        {
+          "edge_id": "e06",
+          "paragraph_id": "p10",
+          "quote": "reached a PCE of 17.9%",
+          "source_id": "SYN-PRI"
+        }
+      ],
+      "qualifier_filter": {
+        "unit": "%"
+      },
+      "query_id": "q2",
+      "relation": "reports",
+      "spec": {
+        "qualifier_filter": {
+          "unit": "%"
+        },
+        "query_id": "q2",
+        "relation": "reports",
+        "type": "edges_of_relation"
+      },
+      "status": "ok",
+      "subgraph": {
+        "edges": [
+          {
+            "evidence": {
+              "paragraph_id": "p7",
+              "quote": "reached a PCE of 21.1% in the initial 1-sun measurement",
+              "source_id": "SYN-PRI"
+            },
+            "id": "e05",
+            "object": "n02",
+            "polarity": null,
+            "qualifiers": {
+              "condition": "1-sun initial measurement",
+              "unit": "%",
+              "value": 21.1
+            },
+            "relation": "reports",
+            "subject": "n06"
+          },
+          {
+            "evidence": {
+              "paragraph_id": "p10",
+              "quote": "reached a PCE of 17.9%",
+              "source_id": "SYN-PRI"
+            },
+            "id": "e06",
+            "object": "n02",
+            "polarity": null,
+            "qualifiers": {
+              "condition": "identical 1-sun conditions",
+              "unit": "%",
+              "value": 17.9
+            },
+            "relation": "reports",
+            "subject": "n07"
+          },
+          {
+            "evidence": {
+              "paragraph_id": "p7",
+              "quote": "retained a PCE of 18.7%",
+              "source_id": "SYN-SEC"
+            },
+            "id": "e-bad2",
+            "object": "n02",
+            "polarity": null,
+            "qualifiers": {
+              "condition": "after 500 h damp-heat (85 C, 85% RH)",
+              "unit": "%",
+              "value": 18.7
+            },
+            "relation": "reports",
+            "subject": "n13"
+          }
+        ],
+        "nodes": [
+          {
+            "evidence": {
+              "paragraph_id": "p1",
+              "quote": "power conversion efficiency (PCE)",
+              "source_id": "SYN-PRI"
+            },
+            "id": "n02",
+            "label": "power conversion efficiency (PCE)",
+            "merged_ids": [],
+            "merged_labels": [],
+            "type": "metric"
+          },
+          {
+            "evidence": {
+              "paragraph_id": "p7",
+              "quote": "The champion device reached a PCE of 21.1% in the initial 1-sun measurement",
+              "source_id": "SYN-PRI"
+            },
+            "id": "n06",
+            "label": "champion device reached PCE 21.1% at initial 1-sun measurement",
+            "merged_ids": [],
+            "merged_labels": [],
+            "type": "claim"
+          },
+          {
+            "evidence": {
+              "paragraph_id": "p10",
+              "quote": "The reference device without interface engineering reached a PCE of 17.9%",
+              "source_id": "SYN-PRI"
+            },
+            "id": "n07",
+            "label": "reference device without interface engineering reached PCE 17.9%",
+            "merged_ids": [],
+            "merged_labels": [],
+            "type": "claim"
+          },
+          {
+            "evidence": {
+              "paragraph_id": "p7",
+              "quote": "the best device retained a PCE of 18.7%, measured under 1-sun illumination",
+              "source_id": "SYN-SEC"
+            },
+            "id": "n13",
+            "label": "encapsulated devices retained PCE 18.7% after 500 h damp-heat",
+            "merged_ids": [],
+            "merged_labels": [],
+            "type": "claim"
+          }
+        ]
+      },
+      "type": "edges_of_relation",
+      "undetermined": []
+    },
+    {
+      "claim_a_nodes": [
+        "n06"
+      ],
+      "claim_b_nodes": [
+        "n13"
+      ],
+      "conditions": {
+        "a": [
+          "1-sun initial measurement"
+        ],
+        "b": [
+          "after 500 h damp-heat (85 C, 85% RH)"
+        ]
+      },
+      "evidence": [
+        {
+          "edge_id": "e09",
+          "paragraph_id": "p9",
+          "quote": "not directly comparable to the initial 21.1% reported by Zhang et al.",
+          "source_id": "SYN-SEC"
+        }
+      ],
+      "query_id": "q3",
+      "spec": {
+        "claim_a": "champion device reached PCE 21.1%",
+        "claim_b": "retained PCE 18.7%",
+        "query_id": "q3",
+        "type": "contradiction_check"
+      },
+      "status": "ok",
+      "subgraph": {
+        "edges": [
+          {
+            "evidence": {
+              "paragraph_id": "p9",
+              "quote": "not directly comparable to the initial 21.1% reported by Zhang et al.",
+              "source_id": "SYN-SEC"
+            },
+            "id": "e09",
+            "object": "n06",
+            "polarity": null,
+            "qualifiers": {
+              "condition": "post-aging 1-sun vs initial 1-sun (different conditions)",
+              "metric": "power conversion efficiency (PCE)"
+            },
+            "relation": "compares",
+            "subject": "n13"
+          }
+        ],
+        "nodes": [
+          {
+            "evidence": {
+              "paragraph_id": "p7",
+              "quote": "The champion device reached a PCE of 21.1% in the initial 1-sun measurement",
+              "source_id": "SYN-PRI"
+            },
+            "id": "n06",
+            "label": "champion device reached PCE 21.1% at initial 1-sun measurement",
+            "merged_ids": [],
+            "merged_labels": [],
+            "type": "claim"
+          },
+          {
+            "evidence": {
+              "paragraph_id": "p7",
+              "quote": "the best device retained a PCE of 18.7%, measured under 1-sun illumination",
+              "source_id": "SYN-SEC"
+            },
+            "id": "n13",
+            "label": "encapsulated devices retained PCE 18.7% after 500 h damp-heat",
+            "merged_ids": [],
+            "merged_labels": [],
+            "type": "claim"
+          }
+        ]
+      },
+      "type": "contradiction_check",
+      "undetermined": [
+        "conditions differ (['1-sun initial measurement'] vs ['after 500 h damp-heat (85 C, 85% RH)']): numeric values must NOT be merged"
+      ],
+      "verdict": "compared_no_contradiction"
+    }
+  ],
+  "sources": {
+    "SYN-PRI": {
+      "authors": [
+        "J. Zhang",
+        "L. Chen",
+        "R. Okafor"
+      ],
+      "doi": "10.0000/synthetic.primary.001",
+      "file": "primary-material.json",
+      "paragraph_count": 12,
+      "role": "primary",
+      "title": "Interface engineering of MAPbI3 perovskite solar cells"
+    },
+    "SYN-SEC": {
+      "authors": [
+        "S. Patel",
+        "L. Chen"
+      ],
+      "doi": "10.0000/synthetic.secondary.001",
+      "file": "secondary-material.json",
+      "paragraph_count": 11,
+      "role": "secondary",
+      "title": "Damp-heat stability of methylammonium lead iodide photovoltaics"
+    }
+  },
+  "status": "success",
+  "uncertainty": [
+    "query q3: conditions differ (['1-sun initial measurement'] vs ['after 500 h damp-heat (85 C, 85% RH)']): numeric values must NOT be merged"
+  ],
+  "unreported": [
+    {
+      "evidence": {
+        "paragraph_id": "p8",
+        "quote": "The hysteresis index was not measured in this study.",
+        "source_id": "SYN-SEC"
+      },
+      "item": "hysteresis index",
+      "op": "unreported",
+      "reason": "the secondary paper explicitly states the hysteresis index was not measured"
+    }
+  ],
+  "validation_report": {
+    "cumulative_violations": {
+      "DOMAIN_MISMATCH": 1,
+      "MISSING_QUALIFIER": 1,
+      "NUMERIC_REQUIRES_METRIC_CONDITION": 1,
+      "QUOTE_NOT_SUBSTRING": 1,
+      "UNKNOWN_RELATION": 1
+    },
+    "current_quarantine_count": 1,
+    "ontology_id": "b-ontology-guard-kg",
+    "ontology_version": "1.0.0",
+    "passes": [
+      {
+        "accepted": 33,
+        "extraction_file": "extractions_draft.jsonl",
+        "items_parsed": 37,
+        "kind": "draft",
+        "lines_total": 41,
+        "pass": 1,
+        "quarantined": 4,
+        "violations_by_code": {
+          "DOMAIN_MISMATCH": 1,
+          "MISSING_QUALIFIER": 1,
+          "NUMERIC_REQUIRES_METRIC_CONDITION": 1,
+          "QUOTE_NOT_SUBSTRING": 1,
+          "UNKNOWN_RELATION": 1
+        }
+      },
+      {
+        "accepted": 3,
+        "extraction_file": "extractions_repair.jsonl",
+        "items_parsed": 3,
+        "kind": "repair",
+        "lines_total": 7,
+        "pass": 2,
+        "quarantined": 0,
+        "violations_by_code": {}
+      }
+    ],
+    "repair_budget": {
+      "max_repair_passes": 1,
+      "repair_passes_used": 1
+    },
+    "validated_counts": {
+      "edges": 12,
+      "merges": 2,
+      "nodes": 19,
+      "nonmerges": 1,
+      "notes": 1,
+      "unreported": 1
+    }
+  }
+}

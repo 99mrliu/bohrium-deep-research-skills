@@ -1,0 +1,7 @@
+# SYNTHETIC example, not real papers. The single bounded repair pass (pass 2).
+# It re-submits corrected versions of quarantined ids e-bad1..e-bad3.
+# e-bad4 is deliberately NOT repaired (its quote cannot be verified against the
+# paragraph), so it stays quarantined with final=true.
+{"op":"edge","id":"e-bad1","relation":"supports","subject":"n20","object":"n06","qualifiers":{},"evidence":{"source_id":"SYN-PRI","paragraph_id":"p9","quote":"We attribute the high initial efficiency to the dense, pinhole-free MAPbI3 morphology"}}
+{"op":"edge","id":"e-bad2","relation":"reports","subject":"n13","object":"n02","qualifiers":{"value":18.7,"unit":"%","condition":"after 500 h damp-heat (85 C, 85% RH)"},"evidence":{"source_id":"SYN-SEC","paragraph_id":"p7","quote":"retained a PCE of 18.7%"}}
+{"op":"edge","id":"e-bad3","relation":"measures","subject":"n21","object":"n02","qualifiers":{"condition":"1-sun initial measurement"},"evidence":{"source_id":"SYN-PRI","paragraph_id":"p7","quote":"The champion device reached a PCE of 21.1% in the initial 1-sun measurement"}}

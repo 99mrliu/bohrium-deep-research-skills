@@ -1,0 +1,82 @@
+{
+  "baseline_vs_final": {
+    "accepted_items_gain": 3,
+    "address_validity_gain_pp": 3.0,
+    "attribution_accuracy_gain_pp": 3.3,
+    "baseline_iteration": 1,
+    "final_iteration": 2,
+    "paragraph_coverage_gain_pp": 0.0,
+    "quote_precision_gain_pp": 6.1
+  },
+  "case_id": "synthetic-perovskite-001",
+  "certificate": "evidence-audit-loop",
+  "final_metrics": {
+    "accepted": 30,
+    "address_validity_pct": 100.0,
+    "addresses_total": 33,
+    "addresses_valid": 33,
+    "attribution_accuracy_pct": 100.0,
+    "attribution_checked_items": 30,
+    "attribution_violations": 0,
+    "corpus_paragraphs_cited": 12,
+    "corpus_paragraphs_total": 24,
+    "items_total": 30,
+    "paragraph_coverage_pct": 50.0,
+    "quote_precision_pct": 100.0,
+    "quotes_total": 33,
+    "quotes_valid": 33,
+    "rejected": 0,
+    "repair": 0
+  },
+  "interpretation": "Compare baseline (first audit of the raw model draft) with final (audit after the bounded repair loop). Positive *_gain_pp values are percentage-point quality gains attributable to the audit-repair loop; an unaudited baseline pipeline would have shipped the baseline numbers.",
+  "iterations": [
+    {
+      "draft_file": "extraction.draft.json",
+      "iteration": 1,
+      "metrics": {
+        "accepted": 27,
+        "address_validity_pct": 97.0,
+        "addresses_total": 33,
+        "addresses_valid": 32,
+        "attribution_accuracy_pct": 96.7,
+        "attribution_checked_items": 30,
+        "attribution_violations": 1,
+        "corpus_paragraphs_cited": 12,
+        "corpus_paragraphs_total": 24,
+        "items_total": 30,
+        "paragraph_coverage_pct": 50.0,
+        "quote_precision_pct": 93.9,
+        "quotes_total": 33,
+        "quotes_valid": 31,
+        "rejected": 0,
+        "repair": 3
+      }
+    },
+    {
+      "draft_file": "extraction.repaired.json",
+      "iteration": 2,
+      "metrics": {
+        "accepted": 30,
+        "address_validity_pct": 100.0,
+        "addresses_total": 33,
+        "addresses_valid": 33,
+        "attribution_accuracy_pct": 100.0,
+        "attribution_checked_items": 30,
+        "attribution_violations": 0,
+        "corpus_paragraphs_cited": 12,
+        "corpus_paragraphs_total": 24,
+        "items_total": 30,
+        "paragraph_coverage_pct": 50.0,
+        "quote_precision_pct": 100.0,
+        "quotes_total": 33,
+        "quotes_valid": 33,
+        "rejected": 0,
+        "repair": 0
+      }
+    }
+  ],
+  "iterations_run": 2,
+  "max_iterations": 2,
+  "quarantined_count": 0,
+  "verdict": "pass"
+}

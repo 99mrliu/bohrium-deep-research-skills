@@ -1,0 +1,135 @@
+{
+  "budget_checklist": [
+    {
+      "actual": 1,
+      "detail": "exactly one file: /app/work/extractions.jsonl",
+      "item": "model-written artifacts",
+      "plan": 1,
+      "status": "pass"
+    },
+    {
+      "detail": "scripts do all mechanical work; no per-entity model calls",
+      "item": "model request budget (<=3 of 64)",
+      "plan": "1 read+extract, optional 1 fix pass, optional 1 skim",
+      "status": "on-target"
+    },
+    {
+      "detail": "scripting is seconds (see run_meta.total_seconds); budget is dominated by the single extraction write",
+      "item": "time budget (<=900 s)",
+      "limit_seconds": 900,
+      "status": "pass"
+    },
+    {
+      "actual": 3,
+      "item": "queries executed (>=3)",
+      "minimum": 3,
+      "status": "pass"
+    },
+    {
+      "actual": 94.74,
+      "item": "quote precision",
+      "status": "review"
+    },
+    {
+      "item": "contract mirrored",
+      "keys": [
+        "case_id",
+        "evidence_notes",
+        "graph",
+        "queries",
+        "status",
+        "uncertainty",
+        "unreported"
+      ],
+      "null_keys": [],
+      "status": "pass"
+    },
+    {
+      "checkpoints": [
+        "checkpoint_discover.json",
+        "checkpoint_apply.json",
+        "checkpoint_verify.json",
+        "checkpoint_build.json",
+        "checkpoint_query.json",
+        "checkpoint_assemble.json"
+      ],
+      "item": "checkpoints resumable",
+      "status": "pass"
+    }
+  ],
+  "line_acceptance": {
+    "extractions_file": "/Users/liuhengshen/Desktop/bhr_product/760d1a0b-work/bundles/a-onepass-kg-runner/examples/synthetic/_work/extractions.jsonl",
+    "lines_read": 22,
+    "ops_accepted": 20,
+    "ops_skipped": 2,
+    "paragraph_coverage": {
+      "P1": {
+        "cited": 4,
+        "paragraphs": 10
+      },
+      "S1": {
+        "cited": 5,
+        "paragraphs": 10
+      }
+    },
+    "skipped_detail": [
+      {
+        "line": 21,
+        "raw": "{this line is intentionally malformed JSON to demonstrate the tolerant parser",
+        "reason": "malformed JSON: Expecting property name enclosed in double quotes: line 1 column 2 (char 1)"
+      },
+      {
+        "line": 22,
+        "raw": "{\"op\": \"hallucinate\", \"id\": \"n_unknown_op\", \"source_id\": \"P1\", \"paragraph_id\": \"p2\", \"quote\": \"unknown op types are skipped with a warning\"}",
+        "reason": "unknown op 'hallucinate' (known: node/edge/merge/nonmerge/unreported/note)"
+      }
+    ],
+    "verify_accepted": 19,
+    "verify_quote_precision": 94.74,
+    "verify_rejected": 1
+  },
+  "run_meta": {
+    "deterministic_outputs": [
+      "result.json",
+      "graph.json",
+      "graph.dot",
+      "queries inside result.json"
+    ],
+    "note": "timings live ONLY under run_meta and are excluded from deterministic comparisons; no wall-clock values elsewhere",
+    "stages": [
+      {
+        "seconds": 0.000224,
+        "stage": "discover",
+        "status": "ok"
+      },
+      {
+        "seconds": 0.000116,
+        "stage": "apply",
+        "status": "ok"
+      },
+      {
+        "seconds": 0.000144,
+        "stage": "verify",
+        "status": "ok"
+      },
+      {
+        "seconds": 0.000149,
+        "stage": "build",
+        "status": "ok"
+      },
+      {
+        "seconds": 0.000188,
+        "stage": "query",
+        "status": "ok"
+      },
+      {
+        "seconds": 0.002864,
+        "stage": "assemble",
+        "status": "ok"
+      }
+    ],
+    "total_seconds": 0.003685
+  },
+  "status": "success",
+  "status_reason": "pipeline completed; see run_report.json for stats"
+}

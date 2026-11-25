@@ -1,0 +1,28 @@
+{
+  "notice": "SYNTHETIC example, not real papers. This file SIMULATES the model's stage-3 targeted repairs: patches ONLY for ids present in repair_queue.json (produced by audit iteration 1).",
+  "stage": "stage3-model-repairs",
+  "repairs": [
+    {
+      "id": "n-paper-sec",
+      "patch": {
+        "label": "Damp-Heat Stability of MAPbI3 Perovskite Solar Cells",
+        "evidence": {"source_id": "secondary", "paragraph_id": "sec-p01",
+                     "quote": "We examine the operational stability of MAPbI3 perovskite solar cells under damp-heat stress"}
+      }
+    },
+    {
+      "id": "n-claim-pce-pri",
+      "patch": {
+        "evidence": {"source_id": "primary", "paragraph_id": "pri-p06",
+                     "quote": "a PCE of 21.1% at 1-sun illumination"}
+      }
+    },
+    {
+      "id": "e-uses-tio2-sec",
+      "patch": {
+        "evidence": {"source_id": "secondary", "paragraph_id": "sec-p03",
+                     "quote": "a mesoporous TiO2 scaffold deposited from a commercial Dyesol 18NR-T paste"}
+      }
+    }
+  ]
+}

@@ -1,0 +1,33 @@
+{
+  "quarantine": [
+    {
+      "id": "n_bad_quote_demo",
+      "line": 20,
+      "op": "node",
+      "reasons": [
+        "quote is NOT an exact substring of P1/p2"
+      ]
+    }
+  ],
+  "stats": {
+    "accepted": 19,
+    "ops_total": 20,
+    "paragraph_coverage": {
+      "P1": {
+        "cited": 4,
+        "paragraphs": 10
+      },
+      "S1": {
+        "cited": 5,
+        "paragraphs": 10
+      }
+    },
+    "quote_checked": 19,
+    "quote_ok": 18,
+    "quote_precision": 94.74,
+    "rejected": 1
+  },
+  "warnings": [
+    "1 ops rejected to quarantine (see verify_report)"
+  ]
+}

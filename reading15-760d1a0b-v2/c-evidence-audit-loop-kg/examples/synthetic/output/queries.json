@@ -1,0 +1,282 @@
+{
+  "case_id": "synthetic-perovskite-001",
+  "queries_executed": 3,
+  "queries_total": 3,
+  "results": [
+    {
+      "evidence": [
+        {
+          "paragraph_id": "pri-p01",
+          "quote": "methylammonium lead iodide perovskite solar cells",
+          "source_id": "primary"
+        },
+        {
+          "paragraph_id": "pri-p03",
+          "quote": "The absorber layer is methylammonium lead iodide",
+          "source_id": "primary"
+        },
+        {
+          "paragraph_id": "pri-p03",
+          "quote": "deposited by spin coating",
+          "source_id": "primary"
+        },
+        {
+          "paragraph_id": "pri-p03",
+          "quote": "deposited by spin coating from a DMF precursor solution",
+          "source_id": "primary"
+        },
+        {
+          "paragraph_id": "sec-p01",
+          "quote": "MAPbI3 perovskite solar cells under damp-heat stress",
+          "source_id": "secondary"
+        },
+        {
+          "paragraph_id": "sec-p02",
+          "quote": "MAPbI3 films were prepared following a two-step sequential deposition method",
+          "source_id": "secondary"
+        }
+      ],
+      "matched_seeds": [
+        "n-mapbi3-pri"
+      ],
+      "params": {
+        "entity": "MAPbI3",
+        "hops": 1
+      },
+      "query_id": "q1",
+      "question": "MAPbI3 实体的一跳邻域包含哪些节点和边？证据是什么？",
+      "status": "executed",
+      "subgraph": {
+        "edges": [
+          {
+            "id": "e-preparedby-mapbi3",
+            "object": "n-method-spincoating",
+            "relation": "prepared-by",
+            "subject": "n-mapbi3-pri"
+          },
+          {
+            "id": "e-uses-mapbi3-pri",
+            "object": "n-mapbi3-pri",
+            "relation": "uses",
+            "subject": "n-dev-pri"
+          },
+          {
+            "id": "e-uses-mapbi3-sec",
+            "object": "n-mapbi3-pri",
+            "relation": "uses",
+            "subject": "n-dev-sec"
+          }
+        ],
+        "nodes": [
+          {
+            "aliases": [
+              "ambient-air perovskite solar cells"
+            ],
+            "entity_type": "device",
+            "id": "n-dev-pri",
+            "label": "ambient-air perovskite solar cells"
+          },
+          {
+            "aliases": [
+              "damp-heat-tested MAPbI3 perovskite solar cells"
+            ],
+            "entity_type": "device",
+            "id": "n-dev-sec",
+            "label": "damp-heat-tested MAPbI3 perovskite solar cells"
+          },
+          {
+            "aliases": [
+              "MAPbI3",
+              "methylammonium lead iodide"
+            ],
+            "entity_type": "material",
+            "id": "n-mapbi3-pri",
+            "label": "methylammonium lead iodide"
+          },
+          {
+            "aliases": [
+              "spin coating"
+            ],
+            "entity_type": "method",
+            "id": "n-method-spincoating",
+            "label": "spin coating"
+          }
+        ]
+      },
+      "type": "neighborhood",
+      "undetermined": []
+    },
+    {
+      "evidence": [
+        {
+          "paragraph_id": "pri-p01",
+          "quote": "power conversion efficiency (PCE)",
+          "source_id": "primary"
+        },
+        {
+          "paragraph_id": "pri-p06",
+          "quote": "a PCE of 21.1% at 1-sun illumination",
+          "source_id": "primary"
+        },
+        {
+          "paragraph_id": "sec-p04",
+          "quote": "retained a PCE of 18.7%",
+          "source_id": "secondary"
+        },
+        {
+          "paragraph_id": "sec-p04",
+          "quote": "the champion device retained a PCE of 18.7%",
+          "source_id": "secondary"
+        }
+      ],
+      "matched_seeds": [],
+      "params": {
+        "relation": "measures"
+      },
+      "query_id": "q2",
+      "question": "图中所有 measures 类型的边及其证据。",
+      "status": "executed",
+      "subgraph": {
+        "edges": [
+          {
+            "id": "e-measures-pri",
+            "object": "n-metric-pce",
+            "relation": "measures",
+            "subject": "n-claim-pce-pri"
+          },
+          {
+            "id": "e-measures-sec",
+            "object": "n-metric-pce",
+            "relation": "measures",
+            "subject": "n-claim-pce-sec"
+          }
+        ],
+        "nodes": [
+          {
+            "aliases": [
+              "PCE of 21.1% (initial, 1-sun)"
+            ],
+            "entity_type": "claim",
+            "id": "n-claim-pce-pri",
+            "label": "PCE of 21.1% (initial, 1-sun)"
+          },
+          {
+            "aliases": [
+              "PCE of 18.7% (after 500 h damp-heat)"
+            ],
+            "entity_type": "claim",
+            "id": "n-claim-pce-sec",
+            "label": "PCE of 18.7% (after 500 h damp-heat)"
+          },
+          {
+            "aliases": [
+              "power conversion efficiency (PCE)"
+            ],
+            "entity_type": "metric",
+            "id": "n-metric-pce",
+            "label": "power conversion efficiency (PCE)"
+          }
+        ]
+      },
+      "type": "edges_by_relation",
+      "undetermined": []
+    },
+    {
+      "claims_by_value": {
+        "18.7%": [
+          "n-claim-pce-sec"
+        ],
+        "21.1%": [
+          "n-claim-pce-pri"
+        ]
+      },
+      "conflict_edges": [
+        "e-conflict-pce"
+      ],
+      "distinct_value_count": 2,
+      "evidence": [
+        {
+          "paragraph_id": "pri-p01",
+          "quote": "power conversion efficiency (PCE)",
+          "source_id": "primary"
+        },
+        {
+          "paragraph_id": "pri-p06",
+          "quote": "The champion device reached a PCE of 21.1% at 1-sun illumination",
+          "source_id": "primary"
+        },
+        {
+          "paragraph_id": "pri-p06",
+          "quote": "a PCE of 21.1% at 1-sun illumination",
+          "source_id": "primary"
+        },
+        {
+          "paragraph_id": "sec-p04",
+          "quote": "the champion device retained a PCE of 18.7%",
+          "source_id": "secondary"
+        }
+      ],
+      "matched_seeds": [
+        "n-metric-pce"
+      ],
+      "params": {
+        "metric": "PCE"
+      },
+      "query_id": "q3",
+      "question": "PCE 指标在两篇材料之间是否存在数值冲突？是否可判定为同一结论？",
+      "status": "executed",
+      "subgraph": {
+        "edges": [
+          {
+            "id": "e-conflict-pce",
+            "object": "n-claim-pce-sec",
+            "relation": "conflicts-with",
+            "subject": "n-claim-pce-pri"
+          },
+          {
+            "id": "e-measures-pri",
+            "object": "n-metric-pce",
+            "relation": "measures",
+            "subject": "n-claim-pce-pri"
+          },
+          {
+            "id": "e-measures-sec",
+            "object": "n-metric-pce",
+            "relation": "measures",
+            "subject": "n-claim-pce-sec"
+          }
+        ],
+        "nodes": [
+          {
+            "aliases": [
+              "PCE of 21.1% (initial, 1-sun)"
+            ],
+            "entity_type": "claim",
+            "id": "n-claim-pce-pri",
+            "label": "PCE of 21.1% (initial, 1-sun)"
+          },
+          {
+            "aliases": [
+              "PCE of 18.7% (after 500 h damp-heat)"
+            ],
+            "entity_type": "claim",
+            "id": "n-claim-pce-sec",
+            "label": "PCE of 18.7% (after 500 h damp-heat)"
+          },
+          {
+            "aliases": [
+              "power conversion efficiency (PCE)"
+            ],
+            "entity_type": "metric",
+            "id": "n-metric-pce",
+            "label": "power conversion efficiency (PCE)"
+          }
+        ]
+      },
+      "type": "conflict_check",
+      "undetermined": [
+        "metric 'PCE' has 2 distinct reported values ['18.7%', '21.1%'] under different conditions/papers; they are PRESERVED as separate claims and are not directly comparable — no single merged value is asserted"
+      ]
+    }
+  ]
+}

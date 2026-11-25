@@ -1,0 +1,76 @@
+{
+  "instruction": "Repair ONLY the items in this queue: fix the flagged fields (quote / paragraph_id / source attribution / merge discipline) and return patches keyed by item id. Do not touch accepted items.",
+  "items": [
+    {
+      "codes": [
+        "ADDRESS_UNKNOWN"
+      ],
+      "id": "e-uses-tio2-sec",
+      "item": {
+        "evidence": {
+          "paragraph_id": "sec-p99",
+          "quote": "a mesoporous TiO2 scaffold deposited from a commercial Dyesol 18NR-T paste",
+          "source_id": "secondary"
+        },
+        "id": "e-uses-tio2-sec",
+        "object": "n-tio2-sec",
+        "op": "edge",
+        "relation": "uses",
+        "subject": "n-dev-sec"
+      },
+      "messages": [
+        "paragraph_id 'sec-p99' not found in source 'secondary'",
+        "quote not checkable (bad address)"
+      ],
+      "op": "edge"
+    },
+    {
+      "codes": [
+        "QUOTE_NOT_SUBSTRING"
+      ],
+      "id": "n-claim-pce-pri",
+      "item": {
+        "attributes": {
+          "condition": "initial, 1-sun AM1.5G illumination",
+          "metric": "PCE",
+          "value": "21.1%"
+        },
+        "entity_type": "claim",
+        "evidence": {
+          "paragraph_id": "pri-p06",
+          "quote": "efficiency of 21.1 percent under one sun",
+          "source_id": "primary"
+        },
+        "id": "n-claim-pce-pri",
+        "label": "PCE of 21.1% (initial, 1-sun)",
+        "op": "node"
+      },
+      "messages": [
+        "quote is not an exact substring of primary/pri-p06"
+      ],
+      "op": "node"
+    },
+    {
+      "codes": [
+        "ROOT_META_MISATTRIBUTION"
+      ],
+      "id": "n-paper-sec",
+      "item": {
+        "entity_type": "paper",
+        "evidence": {
+          "paragraph_id": "sec-p10",
+          "quote": "MAPbI3 here refers to the same compound methylammonium lead iodide studied in earlier ambient-fabrication work.",
+          "source_id": "secondary"
+        },
+        "id": "n-paper-sec",
+        "label": "Ambient-Air Fabrication of Methylammonium Lead Iodide Perovskite Solar Cells",
+        "op": "node"
+      },
+      "messages": [
+        "root bibliographic metadata (case.json title/doi) attributed to secondary source 'secondary'; root metadata belongs ONLY to the primary paper"
+      ],
+      "op": "node"
+    }
+  ],
+  "iteration": 1
+}

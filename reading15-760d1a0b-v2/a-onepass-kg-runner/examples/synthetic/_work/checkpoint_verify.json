@@ -1,0 +1,180 @@
+{
+  "quarantine": [
+    {
+      "id": "n_bad_quote_demo",
+      "line": 20,
+      "op": "node",
+      "reasons": [
+        "quote is NOT an exact substring of P1/p2"
+      ]
+    }
+  ],
+  "seconds": 0.000144,
+  "stage": "verify",
+  "stats": {
+    "accepted": 19,
+    "ops_total": 20,
+    "paragraph_coverage": {
+      "P1": {
+        "cited": 4,
+        "paragraphs": 10
+      },
+      "S1": {
+        "cited": 5,
+        "paragraphs": 10
+      }
+    },
+    "quote_checked": 19,
+    "quote_ok": 18,
+    "quote_precision": 94.74,
+    "rejected": 1
+  },
+  "status": "ok",
+  "verdicts": [
+    {
+      "id": "n_mat_mapbi3_p1",
+      "line": 1,
+      "op": "node",
+      "reasons": [],
+      "verdict": "accept"
+    },
+    {
+      "id": "n_met_pce_p1",
+      "line": 2,
+      "op": "node",
+      "reasons": [],
+      "verdict": "accept"
+    },
+    {
+      "id": "n_mat_tio2_p1",
+      "line": 3,
+      "op": "node",
+      "reasons": [],
+      "verdict": "accept"
+    },
+    {
+      "id": "n_cl_pce211",
+      "line": 4,
+      "op": "node",
+      "reasons": [],
+      "verdict": "accept"
+    },
+    {
+      "id": "n_cl_stab204",
+      "line": 5,
+      "op": "node",
+      "reasons": [],
+      "verdict": "accept"
+    },
+    {
+      "id": "n_mat_mapbi3_s1",
+      "line": 6,
+      "op": "node",
+      "reasons": [],
+      "verdict": "accept"
+    },
+    {
+      "id": "n_mat_tio2_s1",
+      "line": 7,
+      "op": "node",
+      "reasons": [],
+      "verdict": "accept"
+    },
+    {
+      "id": "n_cl_retained187",
+      "line": 8,
+      "op": "node",
+      "reasons": [],
+      "verdict": "accept"
+    },
+    {
+      "id": "n_met_pce_s1",
+      "line": 9,
+      "op": "node",
+      "reasons": [],
+      "verdict": "accept"
+    },
+    {
+      "id": "e_uses_p1",
+      "line": 10,
+      "op": "edge",
+      "reasons": [],
+      "verdict": "accept"
+    },
+    {
+      "id": "e_achieves_p1",
+      "line": 11,
+      "op": "edge",
+      "reasons": [],
+      "verdict": "accept"
+    },
+    {
+      "id": "e_uses_s1",
+      "line": 12,
+      "op": "edge",
+      "reasons": [],
+      "verdict": "accept"
+    },
+    {
+      "id": "e_achieves_s1",
+      "line": 13,
+      "op": "edge",
+      "reasons": [],
+      "verdict": "accept"
+    },
+    {
+      "id": "e_contradicts",
+      "line": 14,
+      "op": "edge",
+      "reasons": [],
+      "verdict": "accept"
+    },
+    {
+      "id": "mg1",
+      "line": 15,
+      "op": "merge",
+      "reasons": [],
+      "verdict": "accept"
+    },
+    {
+      "id": "nm_tio2",
+      "line": 16,
+      "op": "nonmerge",
+      "reasons": [],
+      "verdict": "accept"
+    },
+    {
+      "id": "nm_claims",
+      "line": 17,
+      "op": "nonmerge",
+      "reasons": [],
+      "verdict": "accept"
+    },
+    {
+      "id": "u_hyst",
+      "line": 18,
+      "op": "unreported",
+      "reasons": [],
+      "verdict": "accept"
+    },
+    {
+      "id": "note1",
+      "line": 19,
+      "op": "note",
+      "reasons": [],
+      "verdict": "accept"
+    },
+    {
+      "id": "n_bad_quote_demo",
+      "line": 20,
+      "op": "node",
+      "reasons": [
+        "quote is NOT an exact substring of P1/p2"
+      ],
+      "verdict": "reject"
+    }
+  ],
+  "warnings": [
+    "1 ops rejected to quarantine (see verify_report)"
+  ]
+}

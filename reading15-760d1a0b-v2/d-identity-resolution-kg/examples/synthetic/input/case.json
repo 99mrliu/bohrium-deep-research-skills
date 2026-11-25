@@ -1,0 +1,37 @@
+{
+  "notice": "SYNTHETIC example, not real papers.",
+  "case_id": "SYNTH-IDENTITY-001",
+  "doi": "10.5555/synth.0001",
+  "title": "Synthetic Study A: Compact-TiO2 MAPbI3 Perovskite Solar Cells with 21.1% Initial Efficiency",
+  "authors": ["Alice Synth", "Bob Example"],
+  "output_contract": {
+    "case_id": "string",
+    "status": "string",
+    "graph": "object",
+    "queries": "array",
+    "evidence_notes": "array",
+    "unreported": "array",
+    "uncertainty": "array",
+    "identity_resolution": "object"
+  },
+  "query_specs": [
+    {
+      "query_id": "Q1",
+      "type": "neighborhood",
+      "params": {"entity": "MAPbI3", "hops": 1},
+      "description": "Neighborhood subgraph of the canonical MAPbI3 entity (1 hop), including attached claims."
+    },
+    {
+      "query_id": "Q2",
+      "type": "edges_by_relation",
+      "params": {"relation": "improves"},
+      "description": "All edges of relation type 'improves' with their evidence."
+    },
+    {
+      "query_id": "Q3",
+      "type": "conflict_check",
+      "params": {"entity": "MAPbI3", "metric": "PCE"},
+      "description": "Contradiction check: are there preserved conflicting PCE claims about MAPbI3 across the two papers?"
+    }
+  ]
+}

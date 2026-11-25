@@ -1,0 +1,37 @@
+{
+  "rejected": [
+    {
+      "line_no": 65,
+      "op": null,
+      "raw": "{this line is intentionally malformed json",
+      "reason": "Expecting property name enclosed in double quotes: line 1 column 2 (char 1)",
+      "reason_code": "MALFORMED_JSON"
+    },
+    {
+      "line_no": 67,
+      "op": "node",
+      "raw": "{\"op\": \"node\", \"id\": \"N99\", \"type\": \"metric\", \"label\": \"hysteresis index\", \"evidence\": [{\"source_id\": \"S1\", \"paragraph_id\": \"s1p99\", \"quote\": \"not present anywh",
+      "reason": "no paragraph S1/s1p99 in corpus",
+      "reason_code": "ADDRESS_NOT_FOUND"
+    }
+  ],
+  "schema": "e-kg-delivery-studio/1.0",
+  "stats": {
+    "accepted": 58,
+    "by_op": {
+      "edge": 27,
+      "merge": 1,
+      "node": 26,
+      "nonmerge": 1,
+      "note": 2,
+      "unreported": 1
+    },
+    "by_reason": {
+      "ADDRESS_NOT_FOUND": 1,
+      "MALFORMED_JSON": 1
+    },
+    "comment_or_blank": 7,
+    "rejected": 2,
+    "total_lines": 67
+  }
+}

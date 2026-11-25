@@ -1,0 +1,37 @@
+{
+  "notice": "SYNTHETIC example model artifact (simulates the small fact-extraction JSON the model would write), not real papers.",
+  "nodes": [
+    {"surface": "MAPbI3", "type": "material", "source_id": "S2", "paragraph_id": "s2-p03", "quote": "MAPbI3 films were prepared by sequential deposition on mesoporous TiO2 scaffolds infiltrated with the perovskite precursor."},
+    {"surface": "TiO2", "type": "material", "source_id": "S1", "paragraph_id": "s1-p03", "quote": "a compact TiO2 electron transport layer deposited by spray pyrolysis"},
+    {"surface": "TiO2", "type": "material", "source_id": "S2", "paragraph_id": "s2-p03", "quote": "mesoporous TiO2 scaffolds infiltrated with the perovskite precursor"},
+    {"surface": "spiro-OMeTAD", "type": "material", "source_id": "S1", "paragraph_id": "s1-p04", "quote": "followed by spiro-OMeTAD as the hole transport layer and a gold electrode"},
+    {"surface": "FTO", "type": "material", "source_id": "S1", "paragraph_id": "s1-p03", "quote": "fluorine-doped tin oxide (FTO) glass substrates"},
+    {"surface": "PCE", "type": "metric", "source_id": "S1", "paragraph_id": "s1-p01", "quote": "power conversion efficiency (PCE) of 21.1% under 1-sun AM1.5G illumination at initial scan"},
+    {"surface": "XRD", "type": "method", "source_id": "S1", "paragraph_id": "s1-p05", "quote": "X-ray diffraction (XRD) confirmed a phase-pure tetragonal MAPbI3 film"},
+    {"surface": "glass-glass encapsulation", "type": "method", "source_id": "S2", "paragraph_id": "s2-p05", "quote": "Devices were encapsulated with a glass-glass lamination using a UV-curable epoxy edge seal."}
+  ],
+  "edges": [
+    {"subject": "MAPbI3", "object": "spiro-OMeTAD", "relation": "uses", "source_id": "S1", "paragraph_id": "s1-p04", "quote": "The MAPbI3 absorber was deposited by a one-step spin-coating method, followed by spiro-OMeTAD as the hole transport layer and a gold electrode.", "qualifiers": {"role": "hole transport layer"}},
+    {"subject": "MAPbI3", "object": "FTO", "relation": "uses", "source_id": "S1", "paragraph_id": "s1-p03", "quote": "Devices were fabricated on fluorine-doped tin oxide (FTO) glass substrates with a compact TiO2 electron transport layer deposited by spray pyrolysis.", "qualifiers": {"role": "substrate"}},
+    {"subject": "MAPbI3", "object": "TiO2", "relation": "uses", "source_id": "S1", "paragraph_id": "s1-p03", "quote": "Devices were fabricated on fluorine-doped tin oxide (FTO) glass substrates with a compact TiO2 electron transport layer deposited by spray pyrolysis.", "qualifiers": {"role": "electron transport layer"}},
+    {"subject": "TiO2", "object": "interfacial recombination", "relation": "suppresses", "source_id": "S1", "paragraph_id": "s1-p09", "quote": "We attribute the high initial efficiency to the compact TiO2 layer, which suppresses interfacial recombination.", "qualifiers": {"attribution": "authors' attribution statement"}},
+    {"subject": "XRD", "object": "MAPbI3", "relation": "measures", "source_id": "S1", "paragraph_id": "s1-p05", "quote": "X-ray diffraction (XRD) confirmed a phase-pure tetragonal MAPbI3 film with no detectable PbI2 residue.", "qualifiers": {}},
+    {"subject": "MAPbI3", "object": "PbI2", "relation": "decomposes-into", "source_id": "S2", "paragraph_id": "s2-p08", "quote": "XRD patterns recorded after aging show the emergence of PbI2 peaks, indicating partial decomposition of the MAPbI3 absorber.", "qualifiers": {"conditions": "after 500 h damp-heat aging (protocol in s2-p06)"}},
+    {"subject": "glass-glass encapsulation", "object": "damp-heat stability", "relation": "improves", "source_id": "S2", "paragraph_id": "s2-p10", "quote": "Glass-glass encapsulation improves the damp-heat stability of MAPbI3 devices.", "qualifiers": {}}
+  ],
+  "claims": [
+    {"entity": "MAPbI3", "metric": "PCE", "value": 21.1, "unit": "%", "conditions": ["1-sun AM1.5G illumination", "initial scan"], "source_id": "S1", "paragraph_id": "s1-p01", "quote": "a certified power conversion efficiency (PCE) of 21.1% under 1-sun AM1.5G illumination at initial scan"},
+    {"entity": "MAPbI3", "metric": "PCE", "value": 18.7, "unit": "%", "conditions": ["after 500 h damp-heat aging at 85 °C and 85% relative humidity", "encapsulated device"], "source_id": "S2", "paragraph_id": "s2-p07", "quote": "the encapsulated MAPbI3 device retained a PCE of 18.7% after 500 h of damp-heat aging"},
+    {"entity": "MAPbI3", "metric": "PCE retention", "value": 95, "unit": "%", "conditions": ["after 200 h shelf storage in the dark", "encapsulated devices"], "source_id": "S1", "paragraph_id": "s1-p07", "quote": "Encapsulated devices retained 95% of their initial PCE after 200 h of shelf storage in the dark."},
+    {"entity": "MAPbI3", "metric": "open-circuit voltage", "value": 1.12, "unit": "V", "conditions": ["1-sun illumination"], "source_id": "S1", "paragraph_id": "s1-p06", "quote": "an open-circuit voltage of 1.12 V"},
+    {"entity": "MAPbI3", "metric": "fill factor", "value": 0.8, "unit": "", "conditions": ["1-sun illumination"], "source_id": "S1", "paragraph_id": "s1-p06", "quote": "a fill factor of 0.80 under 1-sun illumination"}
+  ],
+  "unreported": [
+    {"item": "hysteresis index", "reason": "stated as not measured in the primary study", "source_id": "S1", "paragraph_id": "s1-p08", "quote": "The hysteresis index was not measured in this study."}
+  ],
+  "notes": [
+    "s2-p02 mentions efficiencies above 21% as prior-work hearsay; NOT extracted as a measured claim (citation, not direct evidence).",
+    "s2-p09 is an explicit hypothesis about the mesoporous TiO2 scaffold; NOT extracted as a causal edge.",
+    "TiO2 in S1 (compact electron transport layer) and TiO2 in S2 (mesoporous scaffold) are kept as two distinct entities per adjudication P16."
+  ]
+}

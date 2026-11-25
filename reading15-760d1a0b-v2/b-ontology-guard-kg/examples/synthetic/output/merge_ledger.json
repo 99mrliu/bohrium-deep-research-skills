@@ -1,0 +1,31 @@
+{
+  "merge_count": 2,
+  "merges": [
+    {
+      "drop": "n12",
+      "drop_label": "methylammonium lead iodide",
+      "entity_type": "material",
+      "evidence": {
+        "paragraph_id": "p2",
+        "quote": "Methylammonium lead iodide (MAPbI3) is the most widely studied perovskite absorber",
+        "source_id": "SYN-SEC"
+      },
+      "keep": "n01",
+      "keep_label": "MAPbI3",
+      "reason": "cross-paper alias pair: methylammonium lead iodide (secondary) is the same absorber material as MAPbI3 (primary); secondary defines the abbreviation at first mention"
+    },
+    {
+      "drop": "n16",
+      "drop_label": "L. Chen",
+      "entity_type": "researcher",
+      "evidence": {
+        "paragraph_id": "p10",
+        "quote": "L. Chen contributed to the aging experiments",
+        "source_id": "SYN-SEC"
+      },
+      "keep": "n09",
+      "keep_label": "L. Chen",
+      "reason": "same researcher L. Chen is a co-author contributor in both papers (J-V measurement in primary, aging experiments in secondary)"
+    }
+  ]
+}

@@ -1,0 +1,28 @@
+{
+  "inventory": {
+    "case.json": "present",
+    "corpus-manifest.json": "present",
+    "material.json": "present",
+    "primary-material.json": "present",
+    "secondary-material.json": "present",
+    "secondary-publisher.xml": "missing",
+    "task.md": "present"
+  },
+  "manifest_check": [
+    {
+      "checks": [
+        "sha256 ok"
+      ],
+      "source_id": "SYN-PRI"
+    },
+    {
+      "checks": [
+        "sha256 ok"
+      ],
+      "source_id": "SYN-SEC"
+    }
+  ],
+  "paragraph_total": 23,
+  "source_count": 2,
+  "warnings": []
+}

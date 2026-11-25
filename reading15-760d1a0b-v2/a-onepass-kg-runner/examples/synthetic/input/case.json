@@ -1,0 +1,21 @@
+{
+  "notice": "SYNTHETIC example, not a real challenge case.",
+  "case_id": "synth-perovskite-001",
+  "doi": "10.0000/synthetic.001",
+  "title": "High-Efficiency Methylammonium Lead Iodide Perovskite Solar Cells with a Compact TiO2 Electron Transport Layer (SYNTHETIC)",
+  "authors": ["Alice Synth", "Bob Fabricated"],
+  "output_contract": {
+    "case_id": "string",
+    "status": "string",
+    "graph": "object",
+    "queries": "array",
+    "evidence_notes": "array",
+    "unreported": "array",
+    "uncertainty": "array"
+  },
+  "query_specs": [
+    {"query_id": "q1", "type": "neighborhood", "node": "methylammonium lead iodide", "hops": 1},
+    {"query_id": "q2", "type": "by-relation", "relation": "contradicts"},
+    {"query_id": "q3", "type": "conflict-check", "claims": ["n_cl_pce211", "n_cl_retained187"]}
+  ]
+}

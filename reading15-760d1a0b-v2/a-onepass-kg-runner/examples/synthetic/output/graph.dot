@@ -1,0 +1,28 @@
+digraph kg {
+  rankdir=LR;
+  node [shape=box, style=rounded, fontsize=9];
+  "n_cl_pce211" [label="n_cl_pce211|PCE of 21.1% at 1-sun initial measur"];
+  "n_cl_retained187" [label="n_cl_retained187|retained PCE of 18.7% after 500 h da"];
+  "n_cl_stab204" [label="n_cl_stab204|stabilized power output of 20.4% ove"];
+  "n_mat_mapbi3_p1" [label="n_mat_mapbi3_p1|methylammonium lead iodide"];
+  "n_mat_tio2_p1" [label="n_mat_tio2_p1|TiO2 (compact electron transport lay"];
+  "n_mat_tio2_s1" [label="n_mat_tio2_s1|TiO2 (mesoporous scaffold)"];
+  "n_met_pce_p1" [label="n_met_pce_p1|power conversion efficiency"];
+  "n_met_pce_s1" [label="n_met_pce_s1|power conversion efficiency"];
+  "paper_P1" [label="paper_P1|High-Efficiency Methylammonium Lead "];
+  "paper_S1" [label="paper_S1|Damp-Heat Stability of MAPbI3 Solar "];
+  "n_cl_pce211" -> "paper_P1" [label="reported-in"];
+  "n_cl_retained187" -> "paper_S1" [label="reported-in"];
+  "n_cl_stab204" -> "paper_P1" [label="reported-in"];
+  "n_mat_mapbi3_p1" -> "paper_P1" [label="reported-in"];
+  "n_mat_mapbi3_p1" -> "paper_S1" [label="reported-in"];
+  "n_mat_tio2_p1" -> "paper_P1" [label="reported-in"];
+  "n_mat_tio2_s1" -> "paper_S1" [label="reported-in"];
+  "n_met_pce_p1" -> "paper_P1" [label="reported-in"];
+  "n_met_pce_s1" -> "paper_S1" [label="reported-in"];
+  "n_mat_mapbi3_p1" -> "n_cl_pce211" [label="achieves"];
+  "n_mat_mapbi3_p1" -> "n_cl_retained187" [label="achieves"];
+  "n_cl_pce211" -> "n_cl_retained187" [label="contradicts"];
+  "n_mat_mapbi3_p1" -> "n_mat_tio2_p1" [label="uses"];
+  "n_mat_mapbi3_p1" -> "n_mat_tio2_s1" [label="uses"];
+}

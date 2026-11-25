@@ -1,0 +1,40 @@
+{
+  "count": 1,
+  "description": "Items rejected by the closed-ontology validator, with typed error codes.",
+  "items": [
+    {
+      "error_codes": [
+        "QUOTE_NOT_SUBSTRING"
+      ],
+      "errors": [
+        {
+          "code": "QUOTE_NOT_SUBSTRING",
+          "message": "quote is not an exact substring of SYN-SEC/p3"
+        }
+      ],
+      "final": true,
+      "item": {
+        "evidence": {
+          "paragraph_id": "p3",
+          "quote": "world-record 21.1% PCE",
+          "source_id": "SYN-SEC"
+        },
+        "id": "e-bad4",
+        "object": "n06",
+        "op": "edge",
+        "qualifiers": {
+          "context": "background-review"
+        },
+        "relation": "reviews-cites",
+        "subject": "n18"
+      },
+      "key": "e-bad4",
+      "pass": 1,
+      "repair_pass": false
+    }
+  ],
+  "repair_budget": {
+    "max_repair_passes": 1,
+    "repair_passes_used": 1
+  }
+}

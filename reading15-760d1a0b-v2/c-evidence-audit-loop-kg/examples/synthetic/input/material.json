@@ -1,0 +1,23 @@
+{
+  "notice": "SYNTHETIC example, not real papers. Aggregate index of the two synthetic sources; paragraph text lives in primary-material.json / secondary-material.json.",
+  "materials": [
+    {
+      "source_id": "primary",
+      "role": "primary",
+      "doi": "10.0000/synth.0001",
+      "title": "Ambient-Air Fabrication of Methylammonium Lead Iodide Perovskite Solar Cells",
+      "paragraph_count": 12,
+      "paragraph_ids": ["pri-p01", "pri-p02", "pri-p03", "pri-p04", "pri-p05", "pri-p06",
+                        "pri-p07", "pri-p08", "pri-p09", "pri-p10", "pri-p11", "pri-p12"]
+    },
+    {
+      "source_id": "secondary",
+      "role": "secondary",
+      "doi": "10.0000/synth.0002",
+      "title": "Damp-Heat Stability of MAPbI3 Perovskite Solar Cells",
+      "paragraph_count": 12,
+      "paragraph_ids": ["sec-p01", "sec-p02", "sec-p03", "sec-p04", "sec-p05", "sec-p06",
+                        "sec-p07", "sec-p08", "sec-p09", "sec-p10", "sec-p11", "sec-p12"]
+    }
+  ]
+}

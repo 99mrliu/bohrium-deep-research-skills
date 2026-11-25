@@ -1,0 +1,1053 @@
+{
+  "@context": {
+    "@vocab": "https://example.org/synthetic-kg#",
+    "label": "http://www.w3.org/2000/01/rdf-schema#label",
+    "paragraph_id": "https://example.org/synthetic-kg#paragraph_id",
+    "quote": "https://example.org/synthetic-kg#verbatimQuote",
+    "source_id": "https://example.org/synthetic-kg#source_id"
+  },
+  "@graph": [
+    {
+      "@id": "node/N01",
+      "@type": [
+        "Node",
+        "material"
+      ],
+      "aliases": [
+        "methylammonium lead iodide"
+      ],
+      "evidence": [
+        {
+          "paragraph_id": "s1p01",
+          "quote": "methylammonium lead iodide (MAPbI3)",
+          "source_id": "S1"
+        },
+        {
+          "paragraph_id": "s2p01",
+          "quote": "MAPbI3 solar cells built on mesoporous TiO2 scaffolds",
+          "source_id": "S2"
+        }
+      ],
+      "label": "MAPbI3",
+      "merged_from": [
+        "N02"
+      ]
+    },
+    {
+      "@id": "node/N03",
+      "@type": [
+        "Node",
+        "material"
+      ],
+      "aliases": [
+        "compact TiO2"
+      ],
+      "evidence": [
+        {
+          "paragraph_id": "s1p04",
+          "quote": "A compact TiO2 electron transport layer was deposited on FTO-coated glass by spray pyrolysis",
+          "source_id": "S1"
+        }
+      ],
+      "label": "compact TiO2 electron transport layer",
+      "merged_from": []
+    },
+    {
+      "@id": "node/N04",
+      "@type": [
+        "Node",
+        "material"
+      ],
+      "aliases": [],
+      "evidence": [
+        {
+          "paragraph_id": "s2p04",
+          "quote": "A mesoporous TiO2 scaffold was screen-printed from a commercial paste",
+          "source_id": "S2"
+        }
+      ],
+      "label": "mesoporous TiO2 scaffold",
+      "merged_from": []
+    },
+    {
+      "@id": "node/N05",
+      "@type": [
+        "Node",
+        "material"
+      ],
+      "aliases": [],
+      "evidence": [
+        {
+          "paragraph_id": "s1p05",
+          "quote": "a spiro-OMeTAD hole transport layer",
+          "source_id": "S1"
+        }
+      ],
+      "label": "spiro-OMeTAD hole transport layer",
+      "merged_from": []
+    },
+    {
+      "@id": "node/N06",
+      "@type": [
+        "Node",
+        "sample"
+      ],
+      "aliases": [],
+      "evidence": [
+        {
+          "paragraph_id": "s1p07",
+          "quote": "The champion device achieved a PCE of 21.1%",
+          "source_id": "S1"
+        }
+      ],
+      "label": "champion MAPbI3 device",
+      "merged_from": []
+    },
+    {
+      "@id": "node/N07",
+      "@type": [
+        "Node",
+        "sample"
+      ],
+      "aliases": [],
+      "evidence": [
+        {
+          "paragraph_id": "s1p08",
+          "quote": "SnO2-passivated control devices reached only 19.3% PCE",
+          "source_id": "S1"
+        }
+      ],
+      "label": "SnO2-passivated control device",
+      "merged_from": []
+    },
+    {
+      "@id": "node/N08",
+      "@type": [
+        "Node",
+        "sample"
+      ],
+      "aliases": [],
+      "evidence": [
+        {
+          "paragraph_id": "s2p07",
+          "quote": "The best aged device showed a PCE of 18.7%",
+          "source_id": "S2"
+        }
+      ],
+      "label": "aged MAPbI3 device",
+      "merged_from": []
+    },
+    {
+      "@id": "node/N09",
+      "@type": [
+        "Node",
+        "method"
+      ],
+      "aliases": [],
+      "evidence": [
+        {
+          "paragraph_id": "s1p04",
+          "quote": "spray pyrolysis at 450 °C",
+          "source_id": "S1"
+        }
+      ],
+      "label": "spray pyrolysis",
+      "merged_from": []
+    },
+    {
+      "@id": "node/N10",
+      "@type": [
+        "Node",
+        "method"
+      ],
+      "aliases": [],
+      "evidence": [
+        {
+          "paragraph_id": "s1p05",
+          "quote": "spin-coated from a DMF solution",
+          "source_id": "S1"
+        }
+      ],
+      "label": "spin coating",
+      "merged_from": []
+    },
+    {
+      "@id": "node/N11",
+      "@type": [
+        "Node",
+        "method"
+      ],
+      "aliases": [],
+      "evidence": [
+        {
+          "paragraph_id": "s2p05",
+          "quote": "MAPbI3 was infiltrated into the mesoporous scaffold by sequential spin coating",
+          "source_id": "S2"
+        }
+      ],
+      "label": "sequential spin coating infiltration",
+      "merged_from": []
+    },
+    {
+      "@id": "node/N12",
+      "@type": [
+        "Node",
+        "method"
+      ],
+      "aliases": [],
+      "evidence": [
+        {
+          "paragraph_id": "s1p06",
+          "quote": "Current density-voltage (J-V) characteristics were recorded with a class-AAA solar simulator",
+          "source_id": "S1"
+        }
+      ],
+      "label": "J-V measurement (class-AAA solar simulator)",
+      "merged_from": []
+    },
+    {
+      "@id": "node/N13",
+      "@type": [
+        "Node",
+        "method"
+      ],
+      "aliases": [],
+      "evidence": [
+        {
+          "paragraph_id": "s2p06",
+          "quote": "Damp-heat aging followed the spirit of IEC 61215",
+          "source_id": "S2"
+        }
+      ],
+      "label": "damp-heat aging test",
+      "merged_from": []
+    },
+    {
+      "@id": "node/N14",
+      "@type": [
+        "Node",
+        "metric"
+      ],
+      "aliases": [
+        "PCE"
+      ],
+      "evidence": [
+        {
+          "paragraph_id": "s1p01",
+          "quote": "power conversion efficiency (PCE)",
+          "source_id": "S1"
+        }
+      ],
+      "label": "power conversion efficiency (PCE)",
+      "merged_from": []
+    },
+    {
+      "@id": "node/N15",
+      "@type": [
+        "Node",
+        "metric"
+      ],
+      "aliases": [
+        "Voc"
+      ],
+      "evidence": [
+        {
+          "paragraph_id": "s1p03",
+          "quote": "open-circuit voltage (Voc)",
+          "source_id": "S1"
+        }
+      ],
+      "label": "open-circuit voltage (Voc)",
+      "merged_from": []
+    },
+    {
+      "@id": "node/N16",
+      "@type": [
+        "Node",
+        "metric"
+      ],
+      "aliases": [
+        "Jsc"
+      ],
+      "evidence": [
+        {
+          "paragraph_id": "s1p07",
+          "quote": "short-circuit current density (Jsc)",
+          "source_id": "S1"
+        }
+      ],
+      "label": "short-circuit current density (Jsc)",
+      "merged_from": []
+    },
+    {
+      "@id": "node/N17",
+      "@type": [
+        "Node",
+        "metric"
+      ],
+      "aliases": [
+        "FF"
+      ],
+      "evidence": [
+        {
+          "paragraph_id": "s1p07",
+          "quote": "fill factor (FF)",
+          "source_id": "S1"
+        }
+      ],
+      "label": "fill factor (FF)",
+      "merged_from": []
+    },
+    {
+      "@id": "node/N18",
+      "@type": [
+        "Node",
+        "condition"
+      ],
+      "aliases": [],
+      "evidence": [
+        {
+          "paragraph_id": "s1p06",
+          "quote": "1-sun AM1.5G",
+          "source_id": "S1"
+        }
+      ],
+      "label": "1-sun AM1.5G illumination",
+      "merged_from": []
+    },
+    {
+      "@id": "node/N19",
+      "@type": [
+        "Node",
+        "condition"
+      ],
+      "aliases": [],
+      "evidence": [
+        {
+          "paragraph_id": "s2p07",
+          "quote": "500 h at 85 °C and 85% relative humidity",
+          "source_id": "S2"
+        }
+      ],
+      "label": "85 °C / 85% RH damp-heat, 500 h",
+      "merged_from": []
+    },
+    {
+      "@id": "node/N20",
+      "@type": [
+        "Node",
+        "claim"
+      ],
+      "aliases": [],
+      "evidence": [
+        {
+          "paragraph_id": "s1p07",
+          "quote": "a PCE of 21.1%",
+          "source_id": "S1"
+        }
+      ],
+      "label": "champion PCE 21.1% (initial, 1-sun)",
+      "merged_from": []
+    },
+    {
+      "@id": "node/N21",
+      "@type": [
+        "Node",
+        "claim"
+      ],
+      "aliases": [],
+      "evidence": [
+        {
+          "paragraph_id": "s1p08",
+          "quote": "reached only 19.3% PCE",
+          "source_id": "S1"
+        }
+      ],
+      "label": "control PCE 19.3% (initial, 1-sun)",
+      "merged_from": []
+    },
+    {
+      "@id": "node/N22",
+      "@type": [
+        "Node",
+        "claim"
+      ],
+      "aliases": [],
+      "evidence": [
+        {
+          "paragraph_id": "s2p07",
+          "quote": "a PCE of 18.7% after 500 h",
+          "source_id": "S2"
+        }
+      ],
+      "label": "aged PCE 18.7% (after 500 h damp-heat)",
+      "merged_from": []
+    },
+    {
+      "@id": "node/N23",
+      "@type": [
+        "Node",
+        "material"
+      ],
+      "aliases": [],
+      "evidence": [
+        {
+          "paragraph_id": "s2p03",
+          "quote": "decomposition of MAPbI3 into PbI2",
+          "source_id": "S2"
+        }
+      ],
+      "label": "PbI2",
+      "merged_from": []
+    },
+    {
+      "@id": "node/N24",
+      "@type": [
+        "Node",
+        "claim"
+      ],
+      "aliases": [],
+      "evidence": [
+        {
+          "paragraph_id": "s2p02",
+          "quote": "initial PCE values above 21% under standard test conditions",
+          "source_id": "S2"
+        }
+      ],
+      "label": "prior reports: MAPbI3 initial PCE above 21% (review hearsay)",
+      "merged_from": []
+    },
+    {
+      "@id": "node/N25",
+      "@type": [
+        "Node",
+        "claim"
+      ],
+      "aliases": [],
+      "evidence": [
+        {
+          "paragraph_id": "s2p10",
+          "quote": "improve moisture tolerance by mechanically stabilizing the perovskite film",
+          "source_id": "S2"
+        }
+      ],
+      "label": "mesoporous TiO2 scaffold improves moisture tolerance",
+      "merged_from": []
+    },
+    {
+      "@id": "node/N26",
+      "@type": [
+        "Node",
+        "method"
+      ],
+      "aliases": [],
+      "evidence": [
+        {
+          "paragraph_id": "s2p04",
+          "quote": "screen-printed from a commercial paste and sintered at 500 °C",
+          "source_id": "S2"
+        }
+      ],
+      "label": "screen printing and sintering",
+      "merged_from": []
+    },
+    {
+      "@id": "edge/E01",
+      "@type": [
+        "Edge",
+        "uses"
+      ],
+      "evidence": [
+        {
+          "paragraph_id": "s1p05",
+          "quote": "The MAPbI3 precursor was spin-coated",
+          "source_id": "S1"
+        }
+      ],
+      "qualifiers": {},
+      "relation": "uses",
+      "source": {
+        "@id": "node/N06"
+      },
+      "target": {
+        "@id": "node/N01"
+      }
+    },
+    {
+      "@id": "edge/E02",
+      "@type": [
+        "Edge",
+        "uses"
+      ],
+      "evidence": [
+        {
+          "paragraph_id": "s1p04",
+          "quote": "used as the electron-selective contact",
+          "source_id": "S1"
+        }
+      ],
+      "qualifiers": {},
+      "relation": "uses",
+      "source": {
+        "@id": "node/N06"
+      },
+      "target": {
+        "@id": "node/N03"
+      }
+    },
+    {
+      "@id": "edge/E03",
+      "@type": [
+        "Edge",
+        "uses"
+      ],
+      "evidence": [
+        {
+          "paragraph_id": "s1p05",
+          "quote": "a spiro-OMeTAD hole transport layer",
+          "source_id": "S1"
+        }
+      ],
+      "qualifiers": {},
+      "relation": "uses",
+      "source": {
+        "@id": "node/N06"
+      },
+      "target": {
+        "@id": "node/N05"
+      }
+    },
+    {
+      "@id": "edge/E04",
+      "@type": [
+        "Edge",
+        "fabricated-by"
+      ],
+      "evidence": [
+        {
+          "paragraph_id": "s1p05",
+          "quote": "spin-coated from a DMF solution and annealed at 100 °C for 10 min",
+          "source_id": "S1"
+        }
+      ],
+      "qualifiers": {},
+      "relation": "fabricated-by",
+      "source": {
+        "@id": "node/N06"
+      },
+      "target": {
+        "@id": "node/N10"
+      }
+    },
+    {
+      "@id": "edge/E05",
+      "@type": [
+        "Edge",
+        "fabricated-by"
+      ],
+      "evidence": [
+        {
+          "paragraph_id": "s1p04",
+          "quote": "deposited on FTO-coated glass by spray pyrolysis",
+          "source_id": "S1"
+        }
+      ],
+      "qualifiers": {},
+      "relation": "fabricated-by",
+      "source": {
+        "@id": "node/N03"
+      },
+      "target": {
+        "@id": "node/N09"
+      }
+    },
+    {
+      "@id": "edge/E06",
+      "@type": [
+        "Edge",
+        "measures"
+      ],
+      "evidence": [
+        {
+          "paragraph_id": "s1p07",
+          "quote": "a Voc of 1.12 V",
+          "source_id": "S1"
+        }
+      ],
+      "qualifiers": {},
+      "relation": "measures",
+      "source": {
+        "@id": "node/N12"
+      },
+      "target": {
+        "@id": "node/N15"
+      }
+    },
+    {
+      "@id": "edge/E07",
+      "@type": [
+        "Edge",
+        "measures"
+      ],
+      "evidence": [
+        {
+          "paragraph_id": "s1p07",
+          "quote": "a short-circuit current density (Jsc) of 23.4 mA/cm2",
+          "source_id": "S1"
+        }
+      ],
+      "qualifiers": {},
+      "relation": "measures",
+      "source": {
+        "@id": "node/N12"
+      },
+      "target": {
+        "@id": "node/N16"
+      }
+    },
+    {
+      "@id": "edge/E08",
+      "@type": [
+        "Edge",
+        "measures"
+      ],
+      "evidence": [
+        {
+          "paragraph_id": "s1p07",
+          "quote": "a fill factor (FF) of 80.5%",
+          "source_id": "S1"
+        }
+      ],
+      "qualifiers": {},
+      "relation": "measures",
+      "source": {
+        "@id": "node/N12"
+      },
+      "target": {
+        "@id": "node/N17"
+      }
+    },
+    {
+      "@id": "edge/E09",
+      "@type": [
+        "Edge",
+        "measures"
+      ],
+      "evidence": [
+        {
+          "paragraph_id": "s1p07",
+          "quote": "a PCE of 21.1%",
+          "source_id": "S1"
+        }
+      ],
+      "qualifiers": {},
+      "relation": "measures",
+      "source": {
+        "@id": "node/N12"
+      },
+      "target": {
+        "@id": "node/N14"
+      }
+    },
+    {
+      "@id": "edge/E10",
+      "@type": [
+        "Edge",
+        "measures"
+      ],
+      "evidence": [
+        {
+          "paragraph_id": "s2p07",
+          "quote": "a PCE of 18.7% after 500 h",
+          "source_id": "S2"
+        }
+      ],
+      "qualifiers": {},
+      "relation": "measures",
+      "source": {
+        "@id": "node/N13"
+      },
+      "target": {
+        "@id": "node/N14"
+      }
+    },
+    {
+      "@id": "edge/E11",
+      "@type": [
+        "Edge",
+        "about"
+      ],
+      "evidence": [
+        {
+          "paragraph_id": "s1p07",
+          "quote": "The champion device achieved a PCE of 21.1%",
+          "source_id": "S1"
+        }
+      ],
+      "qualifiers": {},
+      "relation": "about",
+      "source": {
+        "@id": "node/N20"
+      },
+      "target": {
+        "@id": "node/N06"
+      }
+    },
+    {
+      "@id": "edge/E12",
+      "@type": [
+        "Edge",
+        "concerns"
+      ],
+      "evidence": [
+        {
+          "paragraph_id": "s1p07",
+          "quote": "a PCE of 21.1%",
+          "source_id": "S1"
+        }
+      ],
+      "qualifiers": {},
+      "relation": "concerns",
+      "source": {
+        "@id": "node/N20"
+      },
+      "target": {
+        "@id": "node/N14"
+      }
+    },
+    {
+      "@id": "edge/E13",
+      "@type": [
+        "Edge",
+        "under"
+      ],
+      "evidence": [
+        {
+          "paragraph_id": "s1p01",
+          "quote": "of 21.1% under 1-sun AM1.5G illumination",
+          "source_id": "S1"
+        }
+      ],
+      "qualifiers": {},
+      "relation": "under",
+      "source": {
+        "@id": "node/N20"
+      },
+      "target": {
+        "@id": "node/N18"
+      }
+    },
+    {
+      "@id": "edge/E14",
+      "@type": [
+        "Edge",
+        "about"
+      ],
+      "evidence": [
+        {
+          "paragraph_id": "s1p08",
+          "quote": "SnO2-passivated control devices reached only 19.3% PCE",
+          "source_id": "S1"
+        }
+      ],
+      "qualifiers": {},
+      "relation": "about",
+      "source": {
+        "@id": "node/N21"
+      },
+      "target": {
+        "@id": "node/N07"
+      }
+    },
+    {
+      "@id": "edge/E15",
+      "@type": [
+        "Edge",
+        "concerns"
+      ],
+      "evidence": [
+        {
+          "paragraph_id": "s1p08",
+          "quote": "19.3% PCE",
+          "source_id": "S1"
+        }
+      ],
+      "qualifiers": {},
+      "relation": "concerns",
+      "source": {
+        "@id": "node/N21"
+      },
+      "target": {
+        "@id": "node/N14"
+      }
+    },
+    {
+      "@id": "edge/E16",
+      "@type": [
+        "Edge",
+        "under"
+      ],
+      "evidence": [
+        {
+          "paragraph_id": "s1p08",
+          "quote": "under identical 1-sun test conditions",
+          "source_id": "S1"
+        }
+      ],
+      "qualifiers": {},
+      "relation": "under",
+      "source": {
+        "@id": "node/N21"
+      },
+      "target": {
+        "@id": "node/N18"
+      }
+    },
+    {
+      "@id": "edge/E17",
+      "@type": [
+        "Edge",
+        "about"
+      ],
+      "evidence": [
+        {
+          "paragraph_id": "s2p07",
+          "quote": "The best aged device showed a PCE of 18.7%",
+          "source_id": "S2"
+        }
+      ],
+      "qualifiers": {},
+      "relation": "about",
+      "source": {
+        "@id": "node/N22"
+      },
+      "target": {
+        "@id": "node/N08"
+      }
+    },
+    {
+      "@id": "edge/E18",
+      "@type": [
+        "Edge",
+        "concerns"
+      ],
+      "evidence": [
+        {
+          "paragraph_id": "s2p07",
+          "quote": "a PCE of 18.7%",
+          "source_id": "S2"
+        }
+      ],
+      "qualifiers": {},
+      "relation": "concerns",
+      "source": {
+        "@id": "node/N22"
+      },
+      "target": {
+        "@id": "node/N14"
+      }
+    },
+    {
+      "@id": "edge/E19",
+      "@type": [
+        "Edge",
+        "under"
+      ],
+      "evidence": [
+        {
+          "paragraph_id": "s2p07",
+          "quote": "after 500 h at 85 °C and 85% relative humidity",
+          "source_id": "S2"
+        }
+      ],
+      "qualifiers": {},
+      "relation": "under",
+      "source": {
+        "@id": "node/N22"
+      },
+      "target": {
+        "@id": "node/N19"
+      }
+    },
+    {
+      "@id": "edge/E20",
+      "@type": [
+        "Edge",
+        "outperforms"
+      ],
+      "evidence": [
+        {
+          "paragraph_id": "s1p08",
+          "quote": "reached only 19.3% PCE under identical 1-sun test conditions",
+          "source_id": "S1"
+        }
+      ],
+      "qualifiers": {},
+      "relation": "outperforms",
+      "source": {
+        "@id": "node/N20"
+      },
+      "target": {
+        "@id": "node/N21"
+      }
+    },
+    {
+      "@id": "edge/E21",
+      "@type": [
+        "Edge",
+        "uses"
+      ],
+      "evidence": [
+        {
+          "paragraph_id": "s2p04",
+          "quote": "A mesoporous TiO2 scaffold was screen-printed",
+          "source_id": "S2"
+        }
+      ],
+      "qualifiers": {},
+      "relation": "uses",
+      "source": {
+        "@id": "node/N08"
+      },
+      "target": {
+        "@id": "node/N04"
+      }
+    },
+    {
+      "@id": "edge/E22",
+      "@type": [
+        "Edge",
+        "uses"
+      ],
+      "evidence": [
+        {
+          "paragraph_id": "s2p05",
+          "quote": "MAPbI3 was infiltrated into the mesoporous scaffold",
+          "source_id": "S2"
+        }
+      ],
+      "qualifiers": {},
+      "relation": "uses",
+      "source": {
+        "@id": "node/N08"
+      },
+      "target": {
+        "@id": "node/N01"
+      }
+    },
+    {
+      "@id": "edge/E23",
+      "@type": [
+        "Edge",
+        "degrades-into"
+      ],
+      "evidence": [
+        {
+          "paragraph_id": "s2p03",
+          "quote": "Moisture-induced decomposition of MAPbI3 into PbI2",
+          "source_id": "S2"
+        }
+      ],
+      "qualifiers": {
+        "trigger": "moisture"
+      },
+      "relation": "degrades-into",
+      "source": {
+        "@id": "node/N01"
+      },
+      "target": {
+        "@id": "node/N23"
+      }
+    },
+    {
+      "@id": "edge/E24",
+      "@type": [
+        "Edge",
+        "reviews-cites"
+      ],
+      "evidence": [
+        {
+          "paragraph_id": "s2p02",
+          "quote": "Recent studies have reported MAPbI3 devices with initial PCE values above 21%",
+          "source_id": "S2"
+        }
+      ],
+      "qualifiers": {},
+      "relation": "reviews-cites",
+      "source": {
+        "@id": "node/N24"
+      },
+      "target": {
+        "@id": "node/N01"
+      }
+    },
+    {
+      "@id": "edge/E25",
+      "@type": [
+        "Edge",
+        "supports"
+      ],
+      "evidence": [
+        {
+          "paragraph_id": "s2p10",
+          "quote": "The mesoporous scaffold appears to improve moisture tolerance",
+          "source_id": "S2"
+        }
+      ],
+      "qualifiers": {},
+      "relation": "supports",
+      "source": {
+        "@id": "node/N22"
+      },
+      "target": {
+        "@id": "node/N25"
+      }
+    },
+    {
+      "@id": "edge/E26",
+      "@type": [
+        "Edge",
+        "fabricated-by"
+      ],
+      "evidence": [
+        {
+          "paragraph_id": "s2p04",
+          "quote": "screen-printed from a commercial paste and sintered at 500 °C",
+          "source_id": "S2"
+        }
+      ],
+      "qualifiers": {},
+      "relation": "fabricated-by",
+      "source": {
+        "@id": "node/N04"
+      },
+      "target": {
+        "@id": "node/N26"
+      }
+    },
+    {
+      "@id": "edge/E27",
+      "@type": [
+        "Edge",
+        "fabricated-by"
+      ],
+      "evidence": [
+        {
+          "paragraph_id": "s2p05",
+          "quote": "infiltrated into the mesoporous scaffold by sequential spin coating",
+          "source_id": "S2"
+        }
+      ],
+      "qualifiers": {},
+      "relation": "fabricated-by",
+      "source": {
+        "@id": "node/N08"
+      },
+      "target": {
+        "@id": "node/N11"
+      }
+    }
+  ],
+  "@id": "graph/SYNTH-DEMO-001",
+  "synthetic": true
+}

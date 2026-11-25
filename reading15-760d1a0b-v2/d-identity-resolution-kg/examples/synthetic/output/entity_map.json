@@ -1,0 +1,350 @@
+{
+  "atom_index": {
+    "2277tetrakisnndipmethoxyphenylamino99spirobifluorene|S2": "E0001",
+    "fluorinedopedtinoxide|S1": "E0002",
+    "fto|S1": "E0002",
+    "mapbi3|S1": "E0003",
+    "mapbi3|S2": "E0003",
+    "methylammoniumleadiodide|S1": "E0003",
+    "pbi2|S1": "E0004",
+    "pbi2|S2": "E0004",
+    "pce|S1": "E0005",
+    "pce|S2": "E0005",
+    "perovskitesolarcells|S1": "E0006",
+    "powerconversionefficiency|S1": "E0005",
+    "pscs|S1": "E0006",
+    "relativehumidity|S2": "E0007",
+    "rh|S2": "E0007",
+    "spiroometad|S1": "E0001",
+    "spiroometad|S2": "E0001",
+    "tio2|S1": "E0008",
+    "tio2|S2": "E0009",
+    "xraydiffraction|S1": "E0010",
+    "xrd|S1": "E0010",
+    "xrd|S2": "E0010"
+  },
+  "entities": [
+    {
+      "aliases": [
+        "2,2',7,7'-tetrakis(N,N-di-p-methoxyphenylamino)-9,9'-spirobifluorene",
+        "spiro-OMeTAD"
+      ],
+      "canonical_surface": "spiro-OMeTAD",
+      "cross_paper": true,
+      "entity_id": "E0001",
+      "member_keys": [
+        "2277tetrakisnndipmethoxyphenylamino99spirobifluorene",
+        "spiroometad"
+      ],
+      "mentions": [
+        {
+          "paragraph_id": "s1-p04",
+          "quote": "The MAPbI3 absorber was deposited by a one-step spin-coating method, followed by spiro-OMeTAD as the hole transport layer and a gold electrode.",
+          "source_id": "S1",
+          "surface": "spiro-OMeTAD"
+        },
+        {
+          "paragraph_id": "s2-p04",
+          "quote": "The hole transport material was 2,2',7,7'-tetrakis(N,N-di-p-methoxyphenylamino)-9,9'-spirobifluorene (spiro-OMeTAD), doped with Li-TFSI.",
+          "source_id": "S2",
+          "surface": "2,2',7,7'-tetrakis(N,N-di-p-methoxyphenylamino)-9,9'-spirobifluorene"
+        },
+        {
+          "paragraph_id": "s2-p04",
+          "quote": "The hole transport material was 2,2',7,7'-tetrakis(N,N-di-p-methoxyphenylamino)-9,9'-spirobifluorene (spiro-OMeTAD), doped with Li-TFSI.",
+          "source_id": "S2",
+          "surface": "spiro-OMeTAD"
+        }
+      ],
+      "source_ids": [
+        "S1",
+        "S2"
+      ],
+      "type": "material"
+    },
+    {
+      "aliases": [
+        "FTO",
+        "fluorine-doped tin oxide"
+      ],
+      "canonical_surface": "FTO",
+      "cross_paper": false,
+      "entity_id": "E0002",
+      "member_keys": [
+        "fluorinedopedtinoxide",
+        "fto"
+      ],
+      "mentions": [
+        {
+          "paragraph_id": "s1-p03",
+          "quote": "Devices were fabricated on fluorine-doped tin oxide (FTO) glass substrates with a compact TiO2 electron transport layer deposited by spray pyrolysis.",
+          "source_id": "S1",
+          "surface": "FTO"
+        },
+        {
+          "paragraph_id": "s1-p03",
+          "quote": "Devices were fabricated on fluorine-doped tin oxide (FTO) glass substrates with a compact TiO2 electron transport layer deposited by spray pyrolysis.",
+          "source_id": "S1",
+          "surface": "fluorine-doped tin oxide"
+        }
+      ],
+      "source_ids": [
+        "S1"
+      ],
+      "type": "unknown"
+    },
+    {
+      "aliases": [
+        "MAPbI3",
+        "methylammonium lead iodide"
+      ],
+      "canonical_surface": "MAPbI3",
+      "cross_paper": true,
+      "entity_id": "E0003",
+      "member_keys": [
+        "mapbi3",
+        "methylammoniumleadiodide"
+      ],
+      "mentions": [
+        {
+          "paragraph_id": "s1-p01",
+          "quote": "We report methylammonium lead iodide (MAPbI3) perovskite solar cells (PSCs) that reach a certified power conversion efficiency (PCE) of 21.1% under 1-sun AM1.5G illumination at initial scan.",
+          "source_id": "S1",
+          "surface": "MAPbI3"
+        },
+        {
+          "paragraph_id": "s1-p01",
+          "quote": "We report methylammonium lead iodide (MAPbI3) perovskite solar cells (PSCs) that reach a certified power conversion efficiency (PCE) of 21.1% under 1-sun AM1.5G illumination at initial scan.",
+          "source_id": "S1",
+          "surface": "methylammonium lead iodide"
+        },
+        {
+          "paragraph_id": "s2-p01",
+          "quote": "We examine the damp-heat stability of MAPbI3 perovskite solar cells and find that encapsulated devices retain a PCE of 18.7% after 500 h of aging at 85 °C and 85% relative humidity.",
+          "source_id": "S2",
+          "surface": "MAPbI3"
+        }
+      ],
+      "source_ids": [
+        "S1",
+        "S2"
+      ],
+      "type": "material"
+    },
+    {
+      "aliases": [
+        "PbI2"
+      ],
+      "canonical_surface": "PbI2",
+      "cross_paper": true,
+      "entity_id": "E0004",
+      "member_keys": [
+        "pbi2"
+      ],
+      "mentions": [
+        {
+          "paragraph_id": "s1-p05",
+          "quote": "X-ray diffraction (XRD) confirmed a phase-pure tetragonal MAPbI3 film with no detectable PbI2 residue.",
+          "source_id": "S1",
+          "surface": "PbI2"
+        },
+        {
+          "paragraph_id": "s2-p08",
+          "quote": "XRD patterns recorded after aging show the emergence of PbI2 peaks, indicating partial decomposition of the MAPbI3 absorber.",
+          "source_id": "S2",
+          "surface": "PbI2"
+        }
+      ],
+      "source_ids": [
+        "S1",
+        "S2"
+      ],
+      "type": "material"
+    },
+    {
+      "aliases": [
+        "PCE",
+        "power conversion efficiency"
+      ],
+      "canonical_surface": "PCE",
+      "cross_paper": true,
+      "entity_id": "E0005",
+      "member_keys": [
+        "pce",
+        "powerconversionefficiency"
+      ],
+      "mentions": [
+        {
+          "paragraph_id": "s1-p01",
+          "quote": "We report methylammonium lead iodide (MAPbI3) perovskite solar cells (PSCs) that reach a certified power conversion efficiency (PCE) of 21.1% under 1-sun AM1.5G illumination at initial scan.",
+          "source_id": "S1",
+          "surface": "PCE"
+        },
+        {
+          "paragraph_id": "s1-p01",
+          "quote": "We report methylammonium lead iodide (MAPbI3) perovskite solar cells (PSCs) that reach a certified power conversion efficiency (PCE) of 21.1% under 1-sun AM1.5G illumination at initial scan.",
+          "source_id": "S1",
+          "surface": "power conversion efficiency"
+        },
+        {
+          "paragraph_id": "s2-p01",
+          "quote": "We examine the damp-heat stability of MAPbI3 perovskite solar cells and find that encapsulated devices retain a PCE of 18.7% after 500 h of aging at 85 °C and 85% relative humidity.",
+          "source_id": "S2",
+          "surface": "PCE"
+        }
+      ],
+      "source_ids": [
+        "S1",
+        "S2"
+      ],
+      "type": "metric"
+    },
+    {
+      "aliases": [
+        "PSCs",
+        "perovskite solar cells"
+      ],
+      "canonical_surface": "PSCs",
+      "cross_paper": false,
+      "entity_id": "E0006",
+      "member_keys": [
+        "perovskitesolarcells",
+        "pscs"
+      ],
+      "mentions": [
+        {
+          "paragraph_id": "s1-p01",
+          "quote": "We report methylammonium lead iodide (MAPbI3) perovskite solar cells (PSCs) that reach a certified power conversion efficiency (PCE) of 21.1% under 1-sun AM1.5G illumination at initial scan.",
+          "source_id": "S1",
+          "surface": "PSCs"
+        },
+        {
+          "paragraph_id": "s1-p01",
+          "quote": "We report methylammonium lead iodide (MAPbI3) perovskite solar cells (PSCs) that reach a certified power conversion efficiency (PCE) of 21.1% under 1-sun AM1.5G illumination at initial scan.",
+          "source_id": "S1",
+          "surface": "perovskite solar cells"
+        }
+      ],
+      "source_ids": [
+        "S1"
+      ],
+      "type": "unknown"
+    },
+    {
+      "aliases": [
+        "RH",
+        "relative humidity"
+      ],
+      "canonical_surface": "RH",
+      "cross_paper": false,
+      "entity_id": "E0007",
+      "member_keys": [
+        "relativehumidity",
+        "rh"
+      ],
+      "mentions": [
+        {
+          "paragraph_id": "s2-p06",
+          "quote": "The damp-heat protocol held devices at 85 °C and 85% relative humidity (RH) without illumination.",
+          "source_id": "S2",
+          "surface": "RH"
+        },
+        {
+          "paragraph_id": "s2-p06",
+          "quote": "The damp-heat protocol held devices at 85 °C and 85% relative humidity (RH) without illumination.",
+          "source_id": "S2",
+          "surface": "relative humidity"
+        }
+      ],
+      "source_ids": [
+        "S2"
+      ],
+      "type": "unknown"
+    },
+    {
+      "aliases": [
+        "TiO2"
+      ],
+      "canonical_surface": "TiO2",
+      "cross_paper": false,
+      "entity_id": "E0008",
+      "member_keys": [
+        "tio2"
+      ],
+      "mentions": [
+        {
+          "paragraph_id": "s1-p03",
+          "quote": "Devices were fabricated on fluorine-doped tin oxide (FTO) glass substrates with a compact TiO2 electron transport layer deposited by spray pyrolysis.",
+          "source_id": "S1",
+          "surface": "TiO2"
+        }
+      ],
+      "source_ids": [
+        "S1"
+      ],
+      "type": "material"
+    },
+    {
+      "aliases": [
+        "TiO2"
+      ],
+      "canonical_surface": "TiO2",
+      "cross_paper": false,
+      "entity_id": "E0009",
+      "member_keys": [
+        "tio2"
+      ],
+      "mentions": [
+        {
+          "paragraph_id": "s2-p03",
+          "quote": "MAPbI3 films were prepared by sequential deposition on mesoporous TiO2 scaffolds infiltrated with the perovskite precursor.",
+          "source_id": "S2",
+          "surface": "TiO2"
+        }
+      ],
+      "source_ids": [
+        "S2"
+      ],
+      "type": "material"
+    },
+    {
+      "aliases": [
+        "X-ray diffraction",
+        "XRD"
+      ],
+      "canonical_surface": "XRD",
+      "cross_paper": true,
+      "entity_id": "E0010",
+      "member_keys": [
+        "xraydiffraction",
+        "xrd"
+      ],
+      "mentions": [
+        {
+          "paragraph_id": "s1-p05",
+          "quote": "X-ray diffraction (XRD) confirmed a phase-pure tetragonal MAPbI3 film with no detectable PbI2 residue.",
+          "source_id": "S1",
+          "surface": "X-ray diffraction"
+        },
+        {
+          "paragraph_id": "s1-p05",
+          "quote": "X-ray diffraction (XRD) confirmed a phase-pure tetragonal MAPbI3 film with no detectable PbI2 residue.",
+          "source_id": "S1",
+          "surface": "XRD"
+        },
+        {
+          "paragraph_id": "s2-p08",
+          "quote": "XRD patterns recorded after aging show the emergence of PbI2 peaks, indicating partial decomposition of the MAPbI3 absorber.",
+          "source_id": "S2",
+          "surface": "XRD"
+        }
+      ],
+      "source_ids": [
+        "S1",
+        "S2"
+      ],
+      "type": "method"
+    }
+  ],
+  "notice": "Generated by d-identity-resolution-kg. Deterministic artifact."
+}

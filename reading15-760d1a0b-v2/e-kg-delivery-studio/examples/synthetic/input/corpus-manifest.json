@@ -1,0 +1,25 @@
+{
+  "notice": "SYNTHETIC example, not real papers. Manifest used to cross-check per-source attribution.",
+  "sources": [
+    {
+      "source_id": "S1",
+      "role": "primary",
+      "doi": "10.0000/synth.0001",
+      "title": "Interface Engineering Boosts Power Conversion Efficiency of MAPbI3 Perovskite Solar Cells",
+      "authors": ["A. Synthetic", "B. Example"],
+      "file": "primary-material.json",
+      "sha256": "4cb90aa810a3a867425b7f26ef88be85848b0934ff1a643081d1b23aeb36c210",
+      "license": "SYNTHETIC demo data, CC0"
+    },
+    {
+      "source_id": "S2",
+      "role": "secondary",
+      "doi": "10.0000/synth.0002",
+      "title": "Damp-Heat Stability of MAPbI3 Photovoltaics with Mesoporous TiO2 Scaffolds",
+      "authors": ["C. Demo", "D. Fictional"],
+      "file": "secondary-material.json",
+      "sha256": "f339fa50a02bb0df42e794cae7d101e621e94909d1ba670e00827022db233cfe",
+      "license": "SYNTHETIC demo data, CC0"
+    }
+  ]
+}

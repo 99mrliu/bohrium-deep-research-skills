@@ -1,0 +1,28 @@
+edge_id,relation,source_id,source_label,target_id,target_label,qualifiers,evidence_refs
+E01,uses,N06,champion MAPbI3 device,N01,MAPbI3,{},S1:s1p05
+E02,uses,N06,champion MAPbI3 device,N03,compact TiO2 electron transport layer,{},S1:s1p04
+E03,uses,N06,champion MAPbI3 device,N05,spiro-OMeTAD hole transport layer,{},S1:s1p05
+E04,fabricated-by,N06,champion MAPbI3 device,N10,spin coating,{},S1:s1p05
+E05,fabricated-by,N03,compact TiO2 electron transport layer,N09,spray pyrolysis,{},S1:s1p04
+E06,measures,N12,J-V measurement (class-AAA solar simulator),N15,open-circuit voltage (Voc),{},S1:s1p07
+E07,measures,N12,J-V measurement (class-AAA solar simulator),N16,short-circuit current density (Jsc),{},S1:s1p07
+E08,measures,N12,J-V measurement (class-AAA solar simulator),N17,fill factor (FF),{},S1:s1p07
+E09,measures,N12,J-V measurement (class-AAA solar simulator),N14,power conversion efficiency (PCE),{},S1:s1p07
+E10,measures,N13,damp-heat aging test,N14,power conversion efficiency (PCE),{},S2:s2p07
+E11,about,N20,"champion PCE 21.1% (initial, 1-sun)",N06,champion MAPbI3 device,{},S1:s1p07
+E12,concerns,N20,"champion PCE 21.1% (initial, 1-sun)",N14,power conversion efficiency (PCE),{},S1:s1p07
+E13,under,N20,"champion PCE 21.1% (initial, 1-sun)",N18,1-sun AM1.5G illumination,{},S1:s1p01
+E14,about,N21,"control PCE 19.3% (initial, 1-sun)",N07,SnO2-passivated control device,{},S1:s1p08
+E15,concerns,N21,"control PCE 19.3% (initial, 1-sun)",N14,power conversion efficiency (PCE),{},S1:s1p08
+E16,under,N21,"control PCE 19.3% (initial, 1-sun)",N18,1-sun AM1.5G illumination,{},S1:s1p08
+E17,about,N22,aged PCE 18.7% (after 500 h damp-heat),N08,aged MAPbI3 device,{},S2:s2p07
+E18,concerns,N22,aged PCE 18.7% (after 500 h damp-heat),N14,power conversion efficiency (PCE),{},S2:s2p07
+E19,under,N22,aged PCE 18.7% (after 500 h damp-heat),N19,"85 °C / 85% RH damp-heat, 500 h",{},S2:s2p07
+E20,outperforms,N20,"champion PCE 21.1% (initial, 1-sun)",N21,"control PCE 19.3% (initial, 1-sun)",{},S1:s1p08
+E21,uses,N08,aged MAPbI3 device,N04,mesoporous TiO2 scaffold,{},S2:s2p04
+E22,uses,N08,aged MAPbI3 device,N01,MAPbI3,{},S2:s2p05
+E23,degrades-into,N01,MAPbI3,N23,PbI2,"{""trigger"": ""moisture""}",S2:s2p03
+E24,reviews-cites,N24,prior reports: MAPbI3 initial PCE above 21% (review hearsay),N01,MAPbI3,{},S2:s2p02
+E25,supports,N22,aged PCE 18.7% (after 500 h damp-heat),N25,mesoporous TiO2 scaffold improves moisture tolerance,{},S2:s2p10
+E26,fabricated-by,N04,mesoporous TiO2 scaffold,N26,screen printing and sintering,{},S2:s2p04
+E27,fabricated-by,N08,aged MAPbI3 device,N11,sequential spin coating infiltration,{},S2:s2p05

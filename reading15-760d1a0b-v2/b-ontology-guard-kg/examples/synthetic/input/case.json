@@ -1,0 +1,26 @@
+{
+  "case_id": "SYNTHETIC-PSC-001",
+  "notice": "SYNTHETIC example, not real papers.",
+  "doi": "10.0000/synthetic.primary.001",
+  "title": "Interface engineering of MAPbI3 perovskite solar cells",
+  "authors": ["J. Zhang", "L. Chen", "R. Okafor"],
+  "output_contract": {
+    "case_id": "string",
+    "status": "string",
+    "graph": "object",
+    "queries": "array",
+    "evidence_notes": "array",
+    "unreported": "array",
+    "uncertainty": "array",
+    "validation_report": "object",
+    "quarantine": "object"
+  },
+  "query_specs": [
+    {"query_id": "q1", "type": "neighborhood", "entity": "MAPbI3", "depth": 1},
+    {"query_id": "q2", "type": "edges_of_relation", "relation": "reports",
+     "qualifier_filter": {"unit": "%"}},
+    {"query_id": "q3", "type": "contradiction_check",
+     "claim_a": "champion device reached PCE 21.1%",
+     "claim_b": "retained PCE 18.7%"}
+  ]
+}

@@ -1,0 +1,1569 @@
+{
+  "artifacts": [
+    "edges.csv",
+    "evidence_index.json",
+    "graph.graphml",
+    "graph.jsonld",
+    "graph.svg",
+    "nodes.csv",
+    "query_q1.svg",
+    "query_q2.svg",
+    "query_q3.svg",
+    "report.html",
+    "report.md",
+    "verification_report.json"
+  ],
+  "case_id": "SYNTH-DEMO-001",
+  "change_records": [
+    "discover: corpus normalized from input dir",
+    "verify: 58 accepted / 2 rejected extraction lines",
+    "build: 1 merges applied, 1 non-merges recorded, 1 conflicts preserved",
+    "query: 3 query specs executed",
+    "render: 12 artifacts written",
+    "assemble: result.json mirrored against output_contract"
+  ],
+  "contract_notes": {},
+  "evidence_notes": [
+    "The s2p02 statement about MAPbI3 PCE above 21% is review hearsay (relation reviews-cites), recorded as such and NOT treated as a direct measurement by S2.",
+    "Root bibliographic metadata of case.json (doi 10.0000/synth.0001, title, authors) belongs ONLY to primary source S1 and is never attributed to secondary source S2.",
+    "verification: 58/67 extraction lines accepted, 2 rejected (ADDRESS_NOT_FOUND=1, MALFORMED_JSON=1)",
+    "rejected line 65 [MALFORMED_JSON]: Expecting property name enclosed in double quotes: line 1 column 2 (char 1)",
+    "rejected line 67 [ADDRESS_NOT_FOUND]: no paragraph S1/s1p99 in corpus"
+  ],
+  "graph": {
+    "conflicts": [
+      {
+        "claims": [
+          {
+            "claim_id": "N20",
+            "condition_ids": [
+              "N18"
+            ],
+            "conditions": [
+              "1-sun AM1.5G illumination"
+            ],
+            "label": "champion PCE 21.1% (initial, 1-sun)",
+            "value": "21.1%"
+          },
+          {
+            "claim_id": "N21",
+            "condition_ids": [
+              "N18"
+            ],
+            "conditions": [
+              "1-sun AM1.5G illumination"
+            ],
+            "label": "control PCE 19.3% (initial, 1-sun)",
+            "value": "19.3%"
+          },
+          {
+            "claim_id": "N22",
+            "condition_ids": [
+              "N19"
+            ],
+            "conditions": [
+              "85 °C / 85% RH damp-heat, 500 h"
+            ],
+            "label": "aged PCE 18.7% (after 500 h damp-heat)",
+            "value": "18.7%"
+          }
+        ],
+        "distinct_values": [
+          "18.7%",
+          "19.3%",
+          "21.1%"
+        ],
+        "metric_id": "N14",
+        "metric_label": "power conversion efficiency (PCE)",
+        "note": "Competing numeric values kept as separate claim nodes; conditions differ and are never merged into one conclusion.",
+        "resolution": "preserved"
+      }
+    ],
+    "edges": [
+      {
+        "evidence": [
+          {
+            "paragraph_id": "s1p05",
+            "quote": "The MAPbI3 precursor was spin-coated",
+            "section": "Methods",
+            "source_id": "S1"
+          }
+        ],
+        "id": "E01",
+        "qualifiers": {},
+        "relation": "uses",
+        "source": "N06",
+        "target": "N01"
+      },
+      {
+        "evidence": [
+          {
+            "paragraph_id": "s1p04",
+            "quote": "used as the electron-selective contact",
+            "section": "Methods",
+            "source_id": "S1"
+          }
+        ],
+        "id": "E02",
+        "qualifiers": {},
+        "relation": "uses",
+        "source": "N06",
+        "target": "N03"
+      },
+      {
+        "evidence": [
+          {
+            "paragraph_id": "s1p05",
+            "quote": "a spiro-OMeTAD hole transport layer",
+            "section": "Methods",
+            "source_id": "S1"
+          }
+        ],
+        "id": "E03",
+        "qualifiers": {},
+        "relation": "uses",
+        "source": "N06",
+        "target": "N05"
+      },
+      {
+        "evidence": [
+          {
+            "paragraph_id": "s1p05",
+            "quote": "spin-coated from a DMF solution and annealed at 100 °C for 10 min",
+            "section": "Methods",
+            "source_id": "S1"
+          }
+        ],
+        "id": "E04",
+        "qualifiers": {},
+        "relation": "fabricated-by",
+        "source": "N06",
+        "target": "N10"
+      },
+      {
+        "evidence": [
+          {
+            "paragraph_id": "s1p04",
+            "quote": "deposited on FTO-coated glass by spray pyrolysis",
+            "section": "Methods",
+            "source_id": "S1"
+          }
+        ],
+        "id": "E05",
+        "qualifiers": {},
+        "relation": "fabricated-by",
+        "source": "N03",
+        "target": "N09"
+      },
+      {
+        "evidence": [
+          {
+            "paragraph_id": "s1p07",
+            "quote": "a Voc of 1.12 V",
+            "section": "Results",
+            "source_id": "S1"
+          }
+        ],
+        "id": "E06",
+        "qualifiers": {},
+        "relation": "measures",
+        "source": "N12",
+        "target": "N15"
+      },
+      {
+        "evidence": [
+          {
+            "paragraph_id": "s1p07",
+            "quote": "a short-circuit current density (Jsc) of 23.4 mA/cm2",
+            "section": "Results",
+            "source_id": "S1"
+          }
+        ],
+        "id": "E07",
+        "qualifiers": {},
+        "relation": "measures",
+        "source": "N12",
+        "target": "N16"
+      },
+      {
+        "evidence": [
+          {
+            "paragraph_id": "s1p07",
+            "quote": "a fill factor (FF) of 80.5%",
+            "section": "Results",
+            "source_id": "S1"
+          }
+        ],
+        "id": "E08",
+        "qualifiers": {},
+        "relation": "measures",
+        "source": "N12",
+        "target": "N17"
+      },
+      {
+        "evidence": [
+          {
+            "paragraph_id": "s1p07",
+            "quote": "a PCE of 21.1%",
+            "section": "Results",
+            "source_id": "S1"
+          }
+        ],
+        "id": "E09",
+        "qualifiers": {},
+        "relation": "measures",
+        "source": "N12",
+        "target": "N14"
+      },
+      {
+        "evidence": [
+          {
+            "paragraph_id": "s2p07",
+            "quote": "a PCE of 18.7% after 500 h",
+            "section": "Results",
+            "source_id": "S2"
+          }
+        ],
+        "id": "E10",
+        "qualifiers": {},
+        "relation": "measures",
+        "source": "N13",
+        "target": "N14"
+      },
+      {
+        "evidence": [
+          {
+            "paragraph_id": "s1p07",
+            "quote": "The champion device achieved a PCE of 21.1%",
+            "section": "Results",
+            "source_id": "S1"
+          }
+        ],
+        "id": "E11",
+        "qualifiers": {},
+        "relation": "about",
+        "source": "N20",
+        "target": "N06"
+      },
+      {
+        "evidence": [
+          {
+            "paragraph_id": "s1p07",
+            "quote": "a PCE of 21.1%",
+            "section": "Results",
+            "source_id": "S1"
+          }
+        ],
+        "id": "E12",
+        "qualifiers": {},
+        "relation": "concerns",
+        "source": "N20",
+        "target": "N14"
+      },
+      {
+        "evidence": [
+          {
+            "paragraph_id": "s1p01",
+            "quote": "of 21.1% under 1-sun AM1.5G illumination",
+            "section": "Abstract",
+            "source_id": "S1"
+          }
+        ],
+        "id": "E13",
+        "qualifiers": {},
+        "relation": "under",
+        "source": "N20",
+        "target": "N18"
+      },
+      {
+        "evidence": [
+          {
+            "paragraph_id": "s1p08",
+            "quote": "SnO2-passivated control devices reached only 19.3% PCE",
+            "section": "Results",
+            "source_id": "S1"
+          }
+        ],
+        "id": "E14",
+        "qualifiers": {},
+        "relation": "about",
+        "source": "N21",
+        "target": "N07"
+      },
+      {
+        "evidence": [
+          {
+            "paragraph_id": "s1p08",
+            "quote": "19.3% PCE",
+            "section": "Results",
+            "source_id": "S1"
+          }
+        ],
+        "id": "E15",
+        "qualifiers": {},
+        "relation": "concerns",
+        "source": "N21",
+        "target": "N14"
+      },
+      {
+        "evidence": [
+          {
+            "paragraph_id": "s1p08",
+            "quote": "under identical 1-sun test conditions",
+            "section": "Results",
+            "source_id": "S1"
+          }
+        ],
+        "id": "E16",
+        "qualifiers": {},
+        "relation": "under",
+        "source": "N21",
+        "target": "N18"
+      },
+      {
+        "evidence": [
+          {
+            "paragraph_id": "s2p07",
+            "quote": "The best aged device showed a PCE of 18.7%",
+            "section": "Results",
+            "source_id": "S2"
+          }
+        ],
+        "id": "E17",
+        "qualifiers": {},
+        "relation": "about",
+        "source": "N22",
+        "target": "N08"
+      },
+      {
+        "evidence": [
+          {
+            "paragraph_id": "s2p07",
+            "quote": "a PCE of 18.7%",
+            "section": "Results",
+            "source_id": "S2"
+          }
+        ],
+        "id": "E18",
+        "qualifiers": {},
+        "relation": "concerns",
+        "source": "N22",
+        "target": "N14"
+      },
+      {
+        "evidence": [
+          {
+            "paragraph_id": "s2p07",
+            "quote": "after 500 h at 85 °C and 85% relative humidity",
+            "section": "Results",
+            "source_id": "S2"
+          }
+        ],
+        "id": "E19",
+        "qualifiers": {},
+        "relation": "under",
+        "source": "N22",
+        "target": "N19"
+      },
+      {
+        "evidence": [
+          {
+            "paragraph_id": "s1p08",
+            "quote": "reached only 19.3% PCE under identical 1-sun test conditions",
+            "section": "Results",
+            "source_id": "S1"
+          }
+        ],
+        "id": "E20",
+        "qualifiers": {},
+        "relation": "outperforms",
+        "source": "N20",
+        "target": "N21"
+      },
+      {
+        "evidence": [
+          {
+            "paragraph_id": "s2p04",
+            "quote": "A mesoporous TiO2 scaffold was screen-printed",
+            "section": "Methods",
+            "source_id": "S2"
+          }
+        ],
+        "id": "E21",
+        "qualifiers": {},
+        "relation": "uses",
+        "source": "N08",
+        "target": "N04"
+      },
+      {
+        "evidence": [
+          {
+            "paragraph_id": "s2p05",
+            "quote": "MAPbI3 was infiltrated into the mesoporous scaffold",
+            "section": "Methods",
+            "source_id": "S2"
+          }
+        ],
+        "id": "E22",
+        "qualifiers": {},
+        "relation": "uses",
+        "source": "N08",
+        "target": "N01"
+      },
+      {
+        "evidence": [
+          {
+            "paragraph_id": "s2p03",
+            "quote": "Moisture-induced decomposition of MAPbI3 into PbI2",
+            "section": "Introduction",
+            "source_id": "S2"
+          }
+        ],
+        "id": "E23",
+        "qualifiers": {
+          "trigger": "moisture"
+        },
+        "relation": "degrades-into",
+        "source": "N01",
+        "target": "N23"
+      },
+      {
+        "evidence": [
+          {
+            "paragraph_id": "s2p02",
+            "quote": "Recent studies have reported MAPbI3 devices with initial PCE values above 21%",
+            "section": "Introduction",
+            "source_id": "S2"
+          }
+        ],
+        "id": "E24",
+        "qualifiers": {},
+        "relation": "reviews-cites",
+        "source": "N24",
+        "target": "N01"
+      },
+      {
+        "evidence": [
+          {
+            "paragraph_id": "s2p10",
+            "quote": "The mesoporous scaffold appears to improve moisture tolerance",
+            "section": "Discussion",
+            "source_id": "S2"
+          }
+        ],
+        "id": "E25",
+        "qualifiers": {},
+        "relation": "supports",
+        "source": "N22",
+        "target": "N25"
+      },
+      {
+        "evidence": [
+          {
+            "paragraph_id": "s2p04",
+            "quote": "screen-printed from a commercial paste and sintered at 500 °C",
+            "section": "Methods",
+            "source_id": "S2"
+          }
+        ],
+        "id": "E26",
+        "qualifiers": {},
+        "relation": "fabricated-by",
+        "source": "N04",
+        "target": "N26"
+      },
+      {
+        "evidence": [
+          {
+            "paragraph_id": "s2p05",
+            "quote": "infiltrated into the mesoporous scaffold by sequential spin coating",
+            "section": "Methods",
+            "source_id": "S2"
+          }
+        ],
+        "id": "E27",
+        "qualifiers": {},
+        "relation": "fabricated-by",
+        "source": "N08",
+        "target": "N11"
+      }
+    ],
+    "merges": [
+      {
+        "drop": "N02",
+        "evidence": [
+          {
+            "paragraph_id": "s1p01",
+            "quote": "methylammonium lead iodide (MAPbI3)",
+            "section": "Abstract",
+            "source_id": "S1"
+          },
+          {
+            "paragraph_id": "s2p05",
+            "quote": "MAPbI3 was infiltrated",
+            "section": "Methods",
+            "source_id": "S2"
+          }
+        ],
+        "keep": "N01",
+        "key": "mapbi3",
+        "reason": "S2's 'MAPbI3' is the abbreviation defined in S1 as 'methylammonium lead iodide (MAPbI3)'; same absorber material across papers (alias merge)."
+      }
+    ],
+    "nodes": [
+      {
+        "aliases": [
+          "methylammonium lead iodide"
+        ],
+        "evidence": [
+          {
+            "paragraph_id": "s1p01",
+            "quote": "methylammonium lead iodide (MAPbI3)",
+            "section": "Abstract",
+            "source_id": "S1"
+          },
+          {
+            "paragraph_id": "s2p01",
+            "quote": "MAPbI3 solar cells built on mesoporous TiO2 scaffolds",
+            "section": "Abstract",
+            "source_id": "S2"
+          }
+        ],
+        "id": "N01",
+        "label": "MAPbI3",
+        "merged_from": [
+          "N02"
+        ],
+        "qualifiers": {},
+        "type": "material"
+      },
+      {
+        "aliases": [
+          "compact TiO2"
+        ],
+        "evidence": [
+          {
+            "paragraph_id": "s1p04",
+            "quote": "A compact TiO2 electron transport layer was deposited on FTO-coated glass by spray pyrolysis",
+            "section": "Methods",
+            "source_id": "S1"
+          }
+        ],
+        "id": "N03",
+        "label": "compact TiO2 electron transport layer",
+        "merged_from": [],
+        "qualifiers": {},
+        "type": "material"
+      },
+      {
+        "aliases": [],
+        "evidence": [
+          {
+            "paragraph_id": "s2p04",
+            "quote": "A mesoporous TiO2 scaffold was screen-printed from a commercial paste",
+            "section": "Methods",
+            "source_id": "S2"
+          }
+        ],
+        "id": "N04",
+        "label": "mesoporous TiO2 scaffold",
+        "merged_from": [],
+        "qualifiers": {},
+        "type": "material"
+      },
+      {
+        "aliases": [],
+        "evidence": [
+          {
+            "paragraph_id": "s1p05",
+            "quote": "a spiro-OMeTAD hole transport layer",
+            "section": "Methods",
+            "source_id": "S1"
+          }
+        ],
+        "id": "N05",
+        "label": "spiro-OMeTAD hole transport layer",
+        "merged_from": [],
+        "qualifiers": {},
+        "type": "material"
+      },
+      {
+        "aliases": [],
+        "evidence": [
+          {
+            "paragraph_id": "s1p07",
+            "quote": "The champion device achieved a PCE of 21.1%",
+            "section": "Results",
+            "source_id": "S1"
+          }
+        ],
+        "id": "N06",
+        "label": "champion MAPbI3 device",
+        "merged_from": [],
+        "qualifiers": {},
+        "type": "sample"
+      },
+      {
+        "aliases": [],
+        "evidence": [
+          {
+            "paragraph_id": "s1p08",
+            "quote": "SnO2-passivated control devices reached only 19.3% PCE",
+            "section": "Results",
+            "source_id": "S1"
+          }
+        ],
+        "id": "N07",
+        "label": "SnO2-passivated control device",
+        "merged_from": [],
+        "qualifiers": {},
+        "type": "sample"
+      },
+      {
+        "aliases": [],
+        "evidence": [
+          {
+            "paragraph_id": "s2p07",
+            "quote": "The best aged device showed a PCE of 18.7%",
+            "section": "Results",
+            "source_id": "S2"
+          }
+        ],
+        "id": "N08",
+        "label": "aged MAPbI3 device",
+        "merged_from": [],
+        "qualifiers": {},
+        "type": "sample"
+      },
+      {
+        "aliases": [],
+        "evidence": [
+          {
+            "paragraph_id": "s1p04",
+            "quote": "spray pyrolysis at 450 °C",
+            "section": "Methods",
+            "source_id": "S1"
+          }
+        ],
+        "id": "N09",
+        "label": "spray pyrolysis",
+        "merged_from": [],
+        "qualifiers": {},
+        "type": "method"
+      },
+      {
+        "aliases": [],
+        "evidence": [
+          {
+            "paragraph_id": "s1p05",
+            "quote": "spin-coated from a DMF solution",
+            "section": "Methods",
+            "source_id": "S1"
+          }
+        ],
+        "id": "N10",
+        "label": "spin coating",
+        "merged_from": [],
+        "qualifiers": {},
+        "type": "method"
+      },
+      {
+        "aliases": [],
+        "evidence": [
+          {
+            "paragraph_id": "s2p05",
+            "quote": "MAPbI3 was infiltrated into the mesoporous scaffold by sequential spin coating",
+            "section": "Methods",
+            "source_id": "S2"
+          }
+        ],
+        "id": "N11",
+        "label": "sequential spin coating infiltration",
+        "merged_from": [],
+        "qualifiers": {},
+        "type": "method"
+      },
+      {
+        "aliases": [],
+        "evidence": [
+          {
+            "paragraph_id": "s1p06",
+            "quote": "Current density-voltage (J-V) characteristics were recorded with a class-AAA solar simulator",
+            "section": "Methods",
+            "source_id": "S1"
+          }
+        ],
+        "id": "N12",
+        "label": "J-V measurement (class-AAA solar simulator)",
+        "merged_from": [],
+        "qualifiers": {},
+        "type": "method"
+      },
+      {
+        "aliases": [],
+        "evidence": [
+          {
+            "paragraph_id": "s2p06",
+            "quote": "Damp-heat aging followed the spirit of IEC 61215",
+            "section": "Methods",
+            "source_id": "S2"
+          }
+        ],
+        "id": "N13",
+        "label": "damp-heat aging test",
+        "merged_from": [],
+        "qualifiers": {},
+        "type": "method"
+      },
+      {
+        "aliases": [
+          "PCE"
+        ],
+        "evidence": [
+          {
+            "paragraph_id": "s1p01",
+            "quote": "power conversion efficiency (PCE)",
+            "section": "Abstract",
+            "source_id": "S1"
+          }
+        ],
+        "id": "N14",
+        "label": "power conversion efficiency (PCE)",
+        "merged_from": [],
+        "qualifiers": {},
+        "type": "metric"
+      },
+      {
+        "aliases": [
+          "Voc"
+        ],
+        "evidence": [
+          {
+            "paragraph_id": "s1p03",
+            "quote": "open-circuit voltage (Voc)",
+            "section": "Introduction",
+            "source_id": "S1"
+          }
+        ],
+        "id": "N15",
+        "label": "open-circuit voltage (Voc)",
+        "merged_from": [],
+        "qualifiers": {},
+        "type": "metric"
+      },
+      {
+        "aliases": [
+          "Jsc"
+        ],
+        "evidence": [
+          {
+            "paragraph_id": "s1p07",
+            "quote": "short-circuit current density (Jsc)",
+            "section": "Results",
+            "source_id": "S1"
+          }
+        ],
+        "id": "N16",
+        "label": "short-circuit current density (Jsc)",
+        "merged_from": [],
+        "qualifiers": {},
+        "type": "metric"
+      },
+      {
+        "aliases": [
+          "FF"
+        ],
+        "evidence": [
+          {
+            "paragraph_id": "s1p07",
+            "quote": "fill factor (FF)",
+            "section": "Results",
+            "source_id": "S1"
+          }
+        ],
+        "id": "N17",
+        "label": "fill factor (FF)",
+        "merged_from": [],
+        "qualifiers": {},
+        "type": "metric"
+      },
+      {
+        "aliases": [],
+        "evidence": [
+          {
+            "paragraph_id": "s1p06",
+            "quote": "1-sun AM1.5G",
+            "section": "Methods",
+            "source_id": "S1"
+          }
+        ],
+        "id": "N18",
+        "label": "1-sun AM1.5G illumination",
+        "merged_from": [],
+        "qualifiers": {},
+        "type": "condition"
+      },
+      {
+        "aliases": [],
+        "evidence": [
+          {
+            "paragraph_id": "s2p07",
+            "quote": "500 h at 85 °C and 85% relative humidity",
+            "section": "Results",
+            "source_id": "S2"
+          }
+        ],
+        "id": "N19",
+        "label": "85 °C / 85% RH damp-heat, 500 h",
+        "merged_from": [],
+        "qualifiers": {},
+        "type": "condition"
+      },
+      {
+        "aliases": [],
+        "evidence": [
+          {
+            "paragraph_id": "s1p07",
+            "quote": "a PCE of 21.1%",
+            "section": "Results",
+            "source_id": "S1"
+          }
+        ],
+        "id": "N20",
+        "label": "champion PCE 21.1% (initial, 1-sun)",
+        "merged_from": [],
+        "qualifiers": {
+          "metric": "PCE",
+          "timing": "as-fabricated initial",
+          "value": "21.1%"
+        },
+        "type": "claim"
+      },
+      {
+        "aliases": [],
+        "evidence": [
+          {
+            "paragraph_id": "s1p08",
+            "quote": "reached only 19.3% PCE",
+            "section": "Results",
+            "source_id": "S1"
+          }
+        ],
+        "id": "N21",
+        "label": "control PCE 19.3% (initial, 1-sun)",
+        "merged_from": [],
+        "qualifiers": {
+          "metric": "PCE",
+          "timing": "as-fabricated initial",
+          "value": "19.3%"
+        },
+        "type": "claim"
+      },
+      {
+        "aliases": [],
+        "evidence": [
+          {
+            "paragraph_id": "s2p07",
+            "quote": "a PCE of 18.7% after 500 h",
+            "section": "Results",
+            "source_id": "S2"
+          }
+        ],
+        "id": "N22",
+        "label": "aged PCE 18.7% (after 500 h damp-heat)",
+        "merged_from": [],
+        "qualifiers": {
+          "metric": "PCE",
+          "timing": "after 500 h aging",
+          "value": "18.7%"
+        },
+        "type": "claim"
+      },
+      {
+        "aliases": [],
+        "evidence": [
+          {
+            "paragraph_id": "s2p03",
+            "quote": "decomposition of MAPbI3 into PbI2",
+            "section": "Introduction",
+            "source_id": "S2"
+          }
+        ],
+        "id": "N23",
+        "label": "PbI2",
+        "merged_from": [],
+        "qualifiers": {},
+        "type": "material"
+      },
+      {
+        "aliases": [],
+        "evidence": [
+          {
+            "paragraph_id": "s2p02",
+            "quote": "initial PCE values above 21% under standard test conditions",
+            "section": "Introduction",
+            "source_id": "S2"
+          }
+        ],
+        "id": "N24",
+        "label": "prior reports: MAPbI3 initial PCE above 21% (review hearsay)",
+        "merged_from": [],
+        "qualifiers": {
+          "claim_nature": "review-hearsay",
+          "metric": "PCE",
+          "value": ">21%"
+        },
+        "type": "claim"
+      },
+      {
+        "aliases": [],
+        "evidence": [
+          {
+            "paragraph_id": "s2p10",
+            "quote": "improve moisture tolerance by mechanically stabilizing the perovskite film",
+            "section": "Discussion",
+            "source_id": "S2"
+          }
+        ],
+        "id": "N25",
+        "label": "mesoporous TiO2 scaffold improves moisture tolerance",
+        "merged_from": [],
+        "qualifiers": {},
+        "type": "claim"
+      },
+      {
+        "aliases": [],
+        "evidence": [
+          {
+            "paragraph_id": "s2p04",
+            "quote": "screen-printed from a commercial paste and sintered at 500 °C",
+            "section": "Methods",
+            "source_id": "S2"
+          }
+        ],
+        "id": "N26",
+        "label": "screen printing and sintering",
+        "merged_from": [],
+        "qualifiers": {},
+        "type": "method"
+      }
+    ],
+    "nonmerges": [
+      {
+        "a": "N03",
+        "b": "N04",
+        "evidence": [
+          {
+            "paragraph_id": "s1p04",
+            "quote": "compact TiO2 electron transport layer",
+            "section": "Methods",
+            "source_id": "S1"
+          },
+          {
+            "paragraph_id": "s2p04",
+            "quote": "mesoporous TiO2 scaffold",
+            "section": "Methods",
+            "source_id": "S2"
+          },
+          {
+            "paragraph_id": "s2p09",
+            "quote": "Devices built on compact TiO2 electron transport layers were not evaluated in this study",
+            "section": "Results",
+            "source_id": "S2"
+          }
+        ],
+        "normalized_key": "tio2",
+        "reason": "Both normalize to 'TiO2' but S1's is a compact spray-pyrolyzed electron transport layer while S2's is a mesoporous screen-printed scaffold; s2p09 states compact TiO2 was not evaluated in S2. Same name, different physical objects: explicit NON-merge."
+      }
+    ],
+    "stats": {
+      "conflicts": 1,
+      "edges": 27,
+      "merges": 1,
+      "nodes": 25,
+      "nonmerges": 1,
+      "unreported": 1
+    }
+  },
+  "queries": [
+    {
+      "conflict_check": [],
+      "description": "Neighborhood of the absorber material MAPbI3 (depth 1): which samples use it, what it degrades into, and which claims cite it.",
+      "edges": [
+        "E01",
+        "E22",
+        "E23",
+        "E24"
+      ],
+      "evidence": [
+        {
+          "item_id": "N01",
+          "item_kind": "node",
+          "paragraph_id": "s1p01",
+          "quote": "methylammonium lead iodide (MAPbI3)",
+          "section": "Abstract",
+          "source_id": "S1"
+        },
+        {
+          "item_id": "E01",
+          "item_kind": "edge",
+          "paragraph_id": "s1p05",
+          "quote": "The MAPbI3 precursor was spin-coated",
+          "section": "Methods",
+          "source_id": "S1"
+        },
+        {
+          "item_id": "N06",
+          "item_kind": "node",
+          "paragraph_id": "s1p07",
+          "quote": "The champion device achieved a PCE of 21.1%",
+          "section": "Results",
+          "source_id": "S1"
+        },
+        {
+          "item_id": "N01",
+          "item_kind": "node",
+          "paragraph_id": "s2p01",
+          "quote": "MAPbI3 solar cells built on mesoporous TiO2 scaffolds",
+          "section": "Abstract",
+          "source_id": "S2"
+        },
+        {
+          "item_id": "E24",
+          "item_kind": "edge",
+          "paragraph_id": "s2p02",
+          "quote": "Recent studies have reported MAPbI3 devices with initial PCE values above 21%",
+          "section": "Introduction",
+          "source_id": "S2"
+        },
+        {
+          "item_id": "N24",
+          "item_kind": "node",
+          "paragraph_id": "s2p02",
+          "quote": "initial PCE values above 21% under standard test conditions",
+          "section": "Introduction",
+          "source_id": "S2"
+        },
+        {
+          "item_id": "E23",
+          "item_kind": "edge",
+          "paragraph_id": "s2p03",
+          "quote": "Moisture-induced decomposition of MAPbI3 into PbI2",
+          "section": "Introduction",
+          "source_id": "S2"
+        },
+        {
+          "item_id": "N23",
+          "item_kind": "node",
+          "paragraph_id": "s2p03",
+          "quote": "decomposition of MAPbI3 into PbI2",
+          "section": "Introduction",
+          "source_id": "S2"
+        },
+        {
+          "item_id": "E22",
+          "item_kind": "edge",
+          "paragraph_id": "s2p05",
+          "quote": "MAPbI3 was infiltrated into the mesoporous scaffold",
+          "section": "Methods",
+          "source_id": "S2"
+        },
+        {
+          "item_id": "N08",
+          "item_kind": "node",
+          "paragraph_id": "s2p07",
+          "quote": "The best aged device showed a PCE of 18.7%",
+          "section": "Results",
+          "source_id": "S2"
+        }
+      ],
+      "id": "q1",
+      "messages": [],
+      "nodes": [
+        "N01",
+        "N06",
+        "N08",
+        "N23",
+        "N24"
+      ],
+      "params": {
+        "depth": 1,
+        "node": "MAPbI3"
+      },
+      "paths": [],
+      "status": "ok",
+      "type": "neighborhood",
+      "undetermined": [
+        {
+          "evidence": [
+            {
+              "paragraph_id": "s1p09",
+              "quote": "The hysteresis index was not measured in this study.",
+              "section": "Results",
+              "source_id": "S1"
+            },
+            {
+              "paragraph_id": "s2p11",
+              "quote": "hysteresis behavior was not assessed",
+              "section": "Conclusion",
+              "source_id": "S2"
+            }
+          ],
+          "item": "hysteresis index",
+          "reason": "unreported in the corpus: Neither paper reports a hysteresis index; S1 explicitly states it was not measured and S2 states hysteresis behavior was not assessed."
+        }
+      ]
+    },
+    {
+      "conflict_check": [],
+      "description": "All edges of relation type 'measures': which characterization methods measure which metrics.",
+      "edges": [
+        "E06",
+        "E07",
+        "E08",
+        "E09",
+        "E10"
+      ],
+      "evidence": [
+        {
+          "item_id": "N14",
+          "item_kind": "node",
+          "paragraph_id": "s1p01",
+          "quote": "power conversion efficiency (PCE)",
+          "section": "Abstract",
+          "source_id": "S1"
+        },
+        {
+          "item_id": "N15",
+          "item_kind": "node",
+          "paragraph_id": "s1p03",
+          "quote": "open-circuit voltage (Voc)",
+          "section": "Introduction",
+          "source_id": "S1"
+        },
+        {
+          "item_id": "N12",
+          "item_kind": "node",
+          "paragraph_id": "s1p06",
+          "quote": "Current density-voltage (J-V) characteristics were recorded with a class-AAA solar simulator",
+          "section": "Methods",
+          "source_id": "S1"
+        },
+        {
+          "item_id": "E09",
+          "item_kind": "edge",
+          "paragraph_id": "s1p07",
+          "quote": "a PCE of 21.1%",
+          "section": "Results",
+          "source_id": "S1"
+        },
+        {
+          "item_id": "E06",
+          "item_kind": "edge",
+          "paragraph_id": "s1p07",
+          "quote": "a Voc of 1.12 V",
+          "section": "Results",
+          "source_id": "S1"
+        },
+        {
+          "item_id": "E08",
+          "item_kind": "edge",
+          "paragraph_id": "s1p07",
+          "quote": "a fill factor (FF) of 80.5%",
+          "section": "Results",
+          "source_id": "S1"
+        },
+        {
+          "item_id": "E07",
+          "item_kind": "edge",
+          "paragraph_id": "s1p07",
+          "quote": "a short-circuit current density (Jsc) of 23.4 mA/cm2",
+          "section": "Results",
+          "source_id": "S1"
+        },
+        {
+          "item_id": "N17",
+          "item_kind": "node",
+          "paragraph_id": "s1p07",
+          "quote": "fill factor (FF)",
+          "section": "Results",
+          "source_id": "S1"
+        },
+        {
+          "item_id": "N16",
+          "item_kind": "node",
+          "paragraph_id": "s1p07",
+          "quote": "short-circuit current density (Jsc)",
+          "section": "Results",
+          "source_id": "S1"
+        },
+        {
+          "item_id": "N13",
+          "item_kind": "node",
+          "paragraph_id": "s2p06",
+          "quote": "Damp-heat aging followed the spirit of IEC 61215",
+          "section": "Methods",
+          "source_id": "S2"
+        },
+        {
+          "item_id": "E10",
+          "item_kind": "edge",
+          "paragraph_id": "s2p07",
+          "quote": "a PCE of 18.7% after 500 h",
+          "section": "Results",
+          "source_id": "S2"
+        }
+      ],
+      "id": "q2",
+      "messages": [],
+      "nodes": [
+        "N12",
+        "N13",
+        "N14",
+        "N15",
+        "N16",
+        "N17"
+      ],
+      "params": {
+        "relation": "measures"
+      },
+      "paths": [],
+      "status": "ok",
+      "type": "relation",
+      "undetermined": [
+        {
+          "evidence": [
+            {
+              "paragraph_id": "s1p09",
+              "quote": "The hysteresis index was not measured in this study.",
+              "section": "Results",
+              "source_id": "S1"
+            },
+            {
+              "paragraph_id": "s2p11",
+              "quote": "hysteresis behavior was not assessed",
+              "section": "Conclusion",
+              "source_id": "S2"
+            }
+          ],
+          "item": "hysteresis index",
+          "reason": "unreported in the corpus: Neither paper reports a hysteresis index; S1 explicitly states it was not measured and S2 states hysteresis behavior was not assessed."
+        }
+      ]
+    },
+    {
+      "conflict_check": [
+        {
+          "claims": [
+            {
+              "claim_id": "N20",
+              "condition_ids": [
+                "N18"
+              ],
+              "conditions": [
+                "1-sun AM1.5G illumination"
+              ],
+              "label": "champion PCE 21.1% (initial, 1-sun)",
+              "value": "21.1%"
+            },
+            {
+              "claim_id": "N21",
+              "condition_ids": [
+                "N18"
+              ],
+              "conditions": [
+                "1-sun AM1.5G illumination"
+              ],
+              "label": "control PCE 19.3% (initial, 1-sun)",
+              "value": "19.3%"
+            },
+            {
+              "claim_id": "N22",
+              "condition_ids": [
+                "N19"
+              ],
+              "conditions": [
+                "85 °C / 85% RH damp-heat, 500 h"
+              ],
+              "label": "aged PCE 18.7% (after 500 h damp-heat)",
+              "value": "18.7%"
+            }
+          ],
+          "distinct_values": [
+            "18.7%",
+            "19.3%",
+            "21.1%"
+          ],
+          "metric_id": "N14",
+          "metric_label": "power conversion efficiency (PCE)",
+          "note": "Competing numeric values kept as separate claim nodes; conditions differ and are never merged into one conclusion.",
+          "resolution": "preserved"
+        }
+      ],
+      "description": "Path/contradiction check between the champion device (S1) and the damp-heat aged device (S2); competing PCE claims must survive as separate claims.",
+      "edges": [
+        "E01",
+        "E11",
+        "E12",
+        "E13",
+        "E15",
+        "E16",
+        "E17",
+        "E18",
+        "E19",
+        "E20",
+        "E22"
+      ],
+      "evidence": [
+        {
+          "item_id": "N01",
+          "item_kind": "node",
+          "paragraph_id": "s1p01",
+          "quote": "methylammonium lead iodide (MAPbI3)",
+          "section": "Abstract",
+          "source_id": "S1"
+        },
+        {
+          "item_id": "E13",
+          "item_kind": "edge",
+          "paragraph_id": "s1p01",
+          "quote": "of 21.1% under 1-sun AM1.5G illumination",
+          "section": "Abstract",
+          "source_id": "S1"
+        },
+        {
+          "item_id": "N14",
+          "item_kind": "node",
+          "paragraph_id": "s1p01",
+          "quote": "power conversion efficiency (PCE)",
+          "section": "Abstract",
+          "source_id": "S1"
+        },
+        {
+          "item_id": "E01",
+          "item_kind": "edge",
+          "paragraph_id": "s1p05",
+          "quote": "The MAPbI3 precursor was spin-coated",
+          "section": "Methods",
+          "source_id": "S1"
+        },
+        {
+          "item_id": "N18",
+          "item_kind": "node",
+          "paragraph_id": "s1p06",
+          "quote": "1-sun AM1.5G",
+          "section": "Methods",
+          "source_id": "S1"
+        },
+        {
+          "item_id": "N06",
+          "item_kind": "node",
+          "paragraph_id": "s1p07",
+          "quote": "The champion device achieved a PCE of 21.1%",
+          "section": "Results",
+          "source_id": "S1"
+        },
+        {
+          "item_id": "N20",
+          "item_kind": "node",
+          "paragraph_id": "s1p07",
+          "quote": "a PCE of 21.1%",
+          "section": "Results",
+          "source_id": "S1"
+        },
+        {
+          "item_id": "E15",
+          "item_kind": "edge",
+          "paragraph_id": "s1p08",
+          "quote": "19.3% PCE",
+          "section": "Results",
+          "source_id": "S1"
+        },
+        {
+          "item_id": "N21",
+          "item_kind": "node",
+          "paragraph_id": "s1p08",
+          "quote": "reached only 19.3% PCE",
+          "section": "Results",
+          "source_id": "S1"
+        },
+        {
+          "item_id": "E20",
+          "item_kind": "edge",
+          "paragraph_id": "s1p08",
+          "quote": "reached only 19.3% PCE under identical 1-sun test conditions",
+          "section": "Results",
+          "source_id": "S1"
+        },
+        {
+          "item_id": "E16",
+          "item_kind": "edge",
+          "paragraph_id": "s1p08",
+          "quote": "under identical 1-sun test conditions",
+          "section": "Results",
+          "source_id": "S1"
+        },
+        {
+          "item_id": "N01",
+          "item_kind": "node",
+          "paragraph_id": "s2p01",
+          "quote": "MAPbI3 solar cells built on mesoporous TiO2 scaffolds",
+          "section": "Abstract",
+          "source_id": "S2"
+        },
+        {
+          "item_id": "E22",
+          "item_kind": "edge",
+          "paragraph_id": "s2p05",
+          "quote": "MAPbI3 was infiltrated into the mesoporous scaffold",
+          "section": "Methods",
+          "source_id": "S2"
+        },
+        {
+          "item_id": "N19",
+          "item_kind": "node",
+          "paragraph_id": "s2p07",
+          "quote": "500 h at 85 °C and 85% relative humidity",
+          "section": "Results",
+          "source_id": "S2"
+        },
+        {
+          "item_id": "N08",
+          "item_kind": "node",
+          "paragraph_id": "s2p07",
+          "quote": "The best aged device showed a PCE of 18.7%",
+          "section": "Results",
+          "source_id": "S2"
+        },
+        {
+          "item_id": "E18",
+          "item_kind": "edge",
+          "paragraph_id": "s2p07",
+          "quote": "a PCE of 18.7%",
+          "section": "Results",
+          "source_id": "S2"
+        },
+        {
+          "item_id": "N22",
+          "item_kind": "node",
+          "paragraph_id": "s2p07",
+          "quote": "a PCE of 18.7% after 500 h",
+          "section": "Results",
+          "source_id": "S2"
+        },
+        {
+          "item_id": "E19",
+          "item_kind": "edge",
+          "paragraph_id": "s2p07",
+          "quote": "after 500 h at 85 °C and 85% relative humidity",
+          "section": "Results",
+          "source_id": "S2"
+        }
+      ],
+      "id": "q3",
+      "messages": [],
+      "nodes": [
+        "N01",
+        "N06",
+        "N08",
+        "N14",
+        "N18",
+        "N19",
+        "N20",
+        "N21",
+        "N22"
+      ],
+      "params": {
+        "check_conflicts": true,
+        "from": "champion MAPbI3 device",
+        "max_len": 3,
+        "to": "aged MAPbI3 device"
+      },
+      "paths": [
+        {
+          "edges": [
+            "E01",
+            "E22"
+          ],
+          "nodes": [
+            "N06",
+            "N01",
+            "N08"
+          ]
+        }
+      ],
+      "status": "ok",
+      "type": "path",
+      "undetermined": [
+        {
+          "evidence": [
+            {
+              "paragraph_id": "s1p09",
+              "quote": "The hysteresis index was not measured in this study.",
+              "section": "Results",
+              "source_id": "S1"
+            },
+            {
+              "paragraph_id": "s2p11",
+              "quote": "hysteresis behavior was not assessed",
+              "section": "Conclusion",
+              "source_id": "S2"
+            }
+          ],
+          "item": "hysteresis index",
+          "reason": "unreported in the corpus: Neither paper reports a hysteresis index; S1 explicitly states it was not measured and S2 states hysteresis behavior was not assessed."
+        }
+      ]
+    }
+  ],
+  "schema": "e-kg-delivery-studio/1.0",
+  "sources": [
+    {
+      "authors": [
+        "A. Synthetic",
+        "B. Example"
+      ],
+      "doi": "10.0000/synth.0001",
+      "paragraph_count": 12,
+      "role": "primary",
+      "source_id": "S1",
+      "title": "Interface Engineering Boosts Power Conversion Efficiency of MAPbI3 Perovskite Solar Cells"
+    },
+    {
+      "authors": [
+        "C. Demo",
+        "D. Fictional"
+      ],
+      "doi": "10.0000/synth.0002",
+      "paragraph_count": 11,
+      "role": "secondary",
+      "source_id": "S2",
+      "title": "Damp-Heat Stability of MAPbI3 Photovoltaics with Mesoporous TiO2 Scaffolds"
+    }
+  ],
+  "status": "success",
+  "synthetic": true,
+  "uncertainty": [
+    "metric power conversion efficiency (PCE) has competing values 18.7%, 19.3%, 21.1% under different conditions; preserved as separate claims (resolution=preserved)"
+  ],
+  "unreported": [
+    {
+      "context": "Neither paper reports a hysteresis index; S1 explicitly states it was not measured and S2 states hysteresis behavior was not assessed.",
+      "evidence": [
+        {
+          "paragraph_id": "s1p09",
+          "quote": "The hysteresis index was not measured in this study.",
+          "section": "Results",
+          "source_id": "S1"
+        },
+        {
+          "paragraph_id": "s2p11",
+          "quote": "hysteresis behavior was not assessed",
+          "section": "Conclusion",
+          "source_id": "S2"
+        }
+      ],
+      "item": "hysteresis index"
+    }
+  ]
+}

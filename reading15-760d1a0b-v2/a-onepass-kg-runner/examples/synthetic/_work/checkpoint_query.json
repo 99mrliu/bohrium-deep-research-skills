@@ -1,0 +1,522 @@
+{
+  "answered": 3,
+  "executed": 3,
+  "queries": [
+    {
+      "evidence": [
+        {
+          "edge_id": "auto_reported_in_n_cl_pce211",
+          "paragraph_id": "p1",
+          "quote": "a power conversion efficiency (PCE) of 21.1% under standard 1-sun illumination at initial measurement",
+          "relation": "reported-in",
+          "source_id": "P1"
+        },
+        {
+          "edge_id": "auto_reported_in_n_cl_retained187",
+          "paragraph_id": "s6",
+          "quote": "retained 18.7% of its initial power conversion efficiency",
+          "relation": "reported-in",
+          "source_id": "S1"
+        },
+        {
+          "edge_id": "auto_reported_in_n_mat_mapbi3_p1",
+          "paragraph_id": "p1",
+          "quote": "perovskite solar cells based on methylammonium lead iodide that achieve a power conversion efficiency",
+          "relation": "reported-in",
+          "source_id": "P1"
+        },
+        {
+          "edge_id": "auto_reported_in_n_mat_mapbi3_s1",
+          "paragraph_id": "s1",
+          "quote": "damp-heat stability of MAPbI3 solar cells",
+          "relation": "reported-in",
+          "source_id": "S1"
+        },
+        {
+          "edge_id": "auto_reported_in_n_mat_tio2_p1",
+          "paragraph_id": "p3",
+          "quote": "A compact TiO2 electron transport layer was deposited on fluorine-doped tin oxide glass",
+          "relation": "reported-in",
+          "source_id": "P1"
+        },
+        {
+          "edge_id": "auto_reported_in_n_mat_tio2_s1",
+          "paragraph_id": "s3",
+          "quote": "A mesoporous TiO2 scaffold with a particle size of 20 nm",
+          "relation": "reported-in",
+          "source_id": "S1"
+        },
+        {
+          "edge_id": "e_achieves_p1",
+          "paragraph_id": "p1",
+          "quote": "based on methylammonium lead iodide that achieve a power conversion efficiency (PCE) of 21.1%",
+          "relation": "achieves",
+          "source_id": "P1"
+        },
+        {
+          "edge_id": "e_achieves_s1",
+          "paragraph_id": "s1",
+          "quote": "finding that the champion device retained 18.7% of its initial power conversion efficiency",
+          "relation": "achieves",
+          "source_id": "S1"
+        },
+        {
+          "edge_id": "e_contradicts",
+          "paragraph_id": "s6",
+          "quote": "retained 18.7% of its initial power conversion efficiency",
+          "relation": "contradicts",
+          "source_id": "S1"
+        },
+        {
+          "edge_id": "e_uses_p1",
+          "paragraph_id": "p3",
+          "quote": "the methylammonium lead iodide absorber was coated on top of this layer",
+          "relation": "uses",
+          "source_id": "P1"
+        },
+        {
+          "edge_id": "e_uses_s1",
+          "paragraph_id": "s7",
+          "quote": "showed full infiltration of MAPbI3 into the mesoporous scaffold",
+          "relation": "uses",
+          "source_id": "S1"
+        },
+        {
+          "node_id": "n_cl_pce211",
+          "paragraph_id": "p1",
+          "quote": "a power conversion efficiency (PCE) of 21.1% under standard 1-sun illumination at initial measurement",
+          "source_id": "P1"
+        },
+        {
+          "node_id": "n_cl_retained187",
+          "paragraph_id": "s6",
+          "quote": "retained 18.7% of its initial power conversion efficiency",
+          "source_id": "S1"
+        },
+        {
+          "node_id": "n_mat_mapbi3_p1",
+          "paragraph_id": "p1",
+          "quote": "perovskite solar cells based on methylammonium lead iodide that achieve a power conversion efficiency",
+          "source_id": "P1"
+        },
+        {
+          "node_id": "n_mat_tio2_p1",
+          "paragraph_id": "p3",
+          "quote": "A compact TiO2 electron transport layer was deposited on fluorine-doped tin oxide glass",
+          "source_id": "P1"
+        },
+        {
+          "node_id": "n_mat_tio2_s1",
+          "paragraph_id": "s3",
+          "quote": "A mesoporous TiO2 scaffold with a particle size of 20 nm",
+          "source_id": "S1"
+        }
+      ],
+      "query_id": "q1",
+      "result_subgraph": {
+        "edges": [
+          {
+            "auto": true,
+            "from": "n_cl_pce211",
+            "id": "auto_reported_in_n_cl_pce211",
+            "paragraph_id": "p1",
+            "quote": "a power conversion efficiency (PCE) of 21.1% under standard 1-sun illumination at initial measurement",
+            "source_id": "P1",
+            "to": "paper_P1",
+            "type": "reported-in"
+          },
+          {
+            "auto": true,
+            "from": "n_cl_retained187",
+            "id": "auto_reported_in_n_cl_retained187",
+            "paragraph_id": "s6",
+            "quote": "retained 18.7% of its initial power conversion efficiency",
+            "source_id": "S1",
+            "to": "paper_S1",
+            "type": "reported-in"
+          },
+          {
+            "auto": true,
+            "from": "n_mat_mapbi3_p1",
+            "id": "auto_reported_in_n_mat_mapbi3_p1",
+            "paragraph_id": "p1",
+            "quote": "perovskite solar cells based on methylammonium lead iodide that achieve a power conversion efficiency",
+            "source_id": "P1",
+            "to": "paper_P1",
+            "type": "reported-in"
+          },
+          {
+            "auto": true,
+            "from": "n_mat_mapbi3_p1",
+            "id": "auto_reported_in_n_mat_mapbi3_s1",
+            "merged": true,
+            "paragraph_id": "s1",
+            "quote": "damp-heat stability of MAPbI3 solar cells",
+            "source_id": "S1",
+            "to": "paper_S1",
+            "type": "reported-in"
+          },
+          {
+            "auto": true,
+            "from": "n_mat_tio2_p1",
+            "id": "auto_reported_in_n_mat_tio2_p1",
+            "paragraph_id": "p3",
+            "quote": "A compact TiO2 electron transport layer was deposited on fluorine-doped tin oxide glass",
+            "source_id": "P1",
+            "to": "paper_P1",
+            "type": "reported-in"
+          },
+          {
+            "auto": true,
+            "from": "n_mat_tio2_s1",
+            "id": "auto_reported_in_n_mat_tio2_s1",
+            "paragraph_id": "s3",
+            "quote": "A mesoporous TiO2 scaffold with a particle size of 20 nm",
+            "source_id": "S1",
+            "to": "paper_S1",
+            "type": "reported-in"
+          },
+          {
+            "auto": false,
+            "from": "n_mat_mapbi3_p1",
+            "id": "e_achieves_p1",
+            "note": null,
+            "paragraph_id": "p1",
+            "quote": "based on methylammonium lead iodide that achieve a power conversion efficiency (PCE) of 21.1%",
+            "source_id": "P1",
+            "to": "n_cl_pce211",
+            "type": "achieves"
+          },
+          {
+            "auto": false,
+            "from": "n_mat_mapbi3_p1",
+            "id": "e_achieves_s1",
+            "note": null,
+            "paragraph_id": "s1",
+            "quote": "finding that the champion device retained 18.7% of its initial power conversion efficiency",
+            "source_id": "S1",
+            "to": "n_cl_retained187",
+            "type": "achieves"
+          },
+          {
+            "auto": false,
+            "from": "n_cl_pce211",
+            "id": "e_contradicts",
+            "note": "same metric (PCE) but different conditions: 1-sun initial measurement vs after 500 h damp-heat; conflict preserved, not resolved",
+            "paragraph_id": "s6",
+            "quote": "retained 18.7% of its initial power conversion efficiency",
+            "source_id": "S1",
+            "to": "n_cl_retained187",
+            "type": "contradicts"
+          },
+          {
+            "auto": false,
+            "from": "n_mat_mapbi3_p1",
+            "id": "e_uses_p1",
+            "note": null,
+            "paragraph_id": "p3",
+            "quote": "the methylammonium lead iodide absorber was coated on top of this layer",
+            "source_id": "P1",
+            "to": "n_mat_tio2_p1",
+            "type": "uses"
+          },
+          {
+            "auto": false,
+            "from": "n_mat_mapbi3_p1",
+            "id": "e_uses_s1",
+            "note": null,
+            "paragraph_id": "s7",
+            "quote": "showed full infiltration of MAPbI3 into the mesoporous scaffold",
+            "source_id": "S1",
+            "to": "n_mat_tio2_s1",
+            "type": "uses"
+          }
+        ],
+        "nodes": [
+          {
+            "auto": false,
+            "id": "n_cl_pce211",
+            "merged_from": [],
+            "name": "PCE of 21.1% at 1-sun initial measurement",
+            "paragraph_id": "p1",
+            "qualifiers": {
+              "condition": "1-sun illumination, initial measurement",
+              "metric": "PCE",
+              "value": "21.1%"
+            },
+            "quote": "a power conversion efficiency (PCE) of 21.1% under standard 1-sun illumination at initial measurement",
+            "source_id": "P1",
+            "type": "claim"
+          },
+          {
+            "auto": false,
+            "id": "n_cl_retained187",
+            "merged_from": [],
+            "name": "retained PCE of 18.7% after 500 h damp-heat",
+            "paragraph_id": "s6",
+            "qualifiers": {
+              "condition": "after 500 h damp-heat at 85 °C and 85% relative humidity",
+              "metric": "PCE",
+              "value": "18.7% retained"
+            },
+            "quote": "retained 18.7% of its initial power conversion efficiency",
+            "source_id": "S1",
+            "type": "claim"
+          },
+          {
+            "auto": false,
+            "cross_paper": true,
+            "id": "n_mat_mapbi3_p1",
+            "merged_from": [
+              {
+                "id": "n_mat_mapbi3_s1",
+                "name": "MAPbI3",
+                "normalized_key": "material|mapbi3|methylammonium lead iodide",
+                "paragraph_id": "s1",
+                "quote": "damp-heat stability of MAPbI3 solar cells",
+                "reason": "Cross-paper alias: 'MAPbI3' used in S1 is the standard chemical abbreviation of 'methylammonium lead iodide' in P1; both name the same perovskite absorber material.",
+                "source_id": "S1"
+              }
+            ],
+            "name": "methylammonium lead iodide",
+            "paragraph_id": "p1",
+            "qualifiers": {},
+            "quote": "perovskite solar cells based on methylammonium lead iodide that achieve a power conversion efficiency",
+            "source_id": "P1",
+            "type": "material"
+          },
+          {
+            "auto": false,
+            "id": "n_mat_tio2_p1",
+            "merged_from": [],
+            "name": "TiO2 (compact electron transport layer)",
+            "paragraph_id": "p3",
+            "qualifiers": {},
+            "quote": "A compact TiO2 electron transport layer was deposited on fluorine-doped tin oxide glass",
+            "source_id": "P1",
+            "type": "material"
+          },
+          {
+            "auto": false,
+            "id": "n_mat_tio2_s1",
+            "merged_from": [],
+            "name": "TiO2 (mesoporous scaffold)",
+            "paragraph_id": "s3",
+            "qualifiers": {},
+            "quote": "A mesoporous TiO2 scaffold with a particle size of 20 nm",
+            "source_id": "S1",
+            "type": "material"
+          },
+          {
+            "authors": [
+              "Alice Synth",
+              "Bob Fabricated"
+            ],
+            "auto": true,
+            "doi": "10.0000/synthetic.001",
+            "id": "paper_P1",
+            "name": "High-Efficiency Methylammonium Lead Iodide Perovskite Solar Cells with a Compact TiO2 Electron Transport Layer (SYNTHETIC)",
+            "paragraph_id": null,
+            "quote": null,
+            "source_id": "P1",
+            "type": "paper"
+          },
+          {
+            "authors": [
+              "Carol Invented",
+              "Dan Placeholder"
+            ],
+            "auto": true,
+            "doi": "10.0000/synthetic.002",
+            "id": "paper_S1",
+            "name": "Damp-Heat Stability of MAPbI3 Solar Cells on Mesoporous TiO2 Scaffolds (SYNTHETIC)",
+            "paragraph_id": null,
+            "quote": null,
+            "source_id": "S1",
+            "type": "paper"
+          }
+        ]
+      },
+      "spec": {
+        "hops": 1,
+        "node": "methylammonium lead iodide",
+        "query_id": "q1",
+        "type": "neighborhood"
+      },
+      "status": "ok",
+      "type": "neighborhood",
+      "undetermined": []
+    },
+    {
+      "evidence": [
+        {
+          "edge_id": "e_contradicts",
+          "paragraph_id": "s6",
+          "quote": "retained 18.7% of its initial power conversion efficiency",
+          "relation": "contradicts",
+          "source_id": "S1"
+        },
+        {
+          "node_id": "n_cl_pce211",
+          "paragraph_id": "p1",
+          "quote": "a power conversion efficiency (PCE) of 21.1% under standard 1-sun illumination at initial measurement",
+          "source_id": "P1"
+        },
+        {
+          "node_id": "n_cl_retained187",
+          "paragraph_id": "s6",
+          "quote": "retained 18.7% of its initial power conversion efficiency",
+          "source_id": "S1"
+        }
+      ],
+      "query_id": "q2",
+      "result_subgraph": {
+        "edges": [
+          {
+            "auto": false,
+            "from": "n_cl_pce211",
+            "id": "e_contradicts",
+            "note": "same metric (PCE) but different conditions: 1-sun initial measurement vs after 500 h damp-heat; conflict preserved, not resolved",
+            "paragraph_id": "s6",
+            "quote": "retained 18.7% of its initial power conversion efficiency",
+            "source_id": "S1",
+            "to": "n_cl_retained187",
+            "type": "contradicts"
+          }
+        ],
+        "nodes": [
+          {
+            "auto": false,
+            "id": "n_cl_pce211",
+            "merged_from": [],
+            "name": "PCE of 21.1% at 1-sun initial measurement",
+            "paragraph_id": "p1",
+            "qualifiers": {
+              "condition": "1-sun illumination, initial measurement",
+              "metric": "PCE",
+              "value": "21.1%"
+            },
+            "quote": "a power conversion efficiency (PCE) of 21.1% under standard 1-sun illumination at initial measurement",
+            "source_id": "P1",
+            "type": "claim"
+          },
+          {
+            "auto": false,
+            "id": "n_cl_retained187",
+            "merged_from": [],
+            "name": "retained PCE of 18.7% after 500 h damp-heat",
+            "paragraph_id": "s6",
+            "qualifiers": {
+              "condition": "after 500 h damp-heat at 85 °C and 85% relative humidity",
+              "metric": "PCE",
+              "value": "18.7% retained"
+            },
+            "quote": "retained 18.7% of its initial power conversion efficiency",
+            "source_id": "S1",
+            "type": "claim"
+          }
+        ]
+      },
+      "spec": {
+        "query_id": "q2",
+        "relation": "contradicts",
+        "type": "by-relation"
+      },
+      "status": "ok",
+      "type": "by-relation",
+      "undetermined": []
+    },
+    {
+      "conditions": {
+        "n_cl_pce211": "1-sun illumination, initial measurement",
+        "n_cl_retained187": "after 500 h damp-heat at 85 °C and 85% relative humidity"
+      },
+      "evidence": [
+        {
+          "edge_id": "e_contradicts",
+          "paragraph_id": "s6",
+          "quote": "retained 18.7% of its initial power conversion efficiency",
+          "relation": "contradicts",
+          "source_id": "S1"
+        },
+        {
+          "node_id": "n_cl_pce211",
+          "paragraph_id": "p1",
+          "quote": "a power conversion efficiency (PCE) of 21.1% under standard 1-sun illumination at initial measurement",
+          "source_id": "P1"
+        },
+        {
+          "node_id": "n_cl_retained187",
+          "paragraph_id": "s6",
+          "quote": "retained 18.7% of its initial power conversion efficiency",
+          "source_id": "S1"
+        }
+      ],
+      "note": "competing claims kept as separate nodes; differing conditions: {\"n_cl_pce211\": \"1-sun illumination, initial measurement\", \"n_cl_retained187\": \"after 500 h damp-heat at 85 °C and 85% relative humidity\"}",
+      "query_id": "q3",
+      "resolution": "preserved",
+      "result_subgraph": {
+        "edges": [
+          {
+            "auto": false,
+            "from": "n_cl_pce211",
+            "id": "e_contradicts",
+            "note": "same metric (PCE) but different conditions: 1-sun initial measurement vs after 500 h damp-heat; conflict preserved, not resolved",
+            "paragraph_id": "s6",
+            "quote": "retained 18.7% of its initial power conversion efficiency",
+            "source_id": "S1",
+            "to": "n_cl_retained187",
+            "type": "contradicts"
+          }
+        ],
+        "nodes": [
+          {
+            "auto": false,
+            "id": "n_cl_pce211",
+            "merged_from": [],
+            "name": "PCE of 21.1% at 1-sun initial measurement",
+            "paragraph_id": "p1",
+            "qualifiers": {
+              "condition": "1-sun illumination, initial measurement",
+              "metric": "PCE",
+              "value": "21.1%"
+            },
+            "quote": "a power conversion efficiency (PCE) of 21.1% under standard 1-sun illumination at initial measurement",
+            "source_id": "P1",
+            "type": "claim"
+          },
+          {
+            "auto": false,
+            "id": "n_cl_retained187",
+            "merged_from": [],
+            "name": "retained PCE of 18.7% after 500 h damp-heat",
+            "paragraph_id": "s6",
+            "qualifiers": {
+              "condition": "after 500 h damp-heat at 85 °C and 85% relative humidity",
+              "metric": "PCE",
+              "value": "18.7% retained"
+            },
+            "quote": "retained 18.7% of its initial power conversion efficiency",
+            "source_id": "S1",
+            "type": "claim"
+          }
+        ]
+      },
+      "spec": {
+        "claims": [
+          "n_cl_pce211",
+          "n_cl_retained187"
+        ],
+        "query_id": "q3",
+        "type": "conflict-check"
+      },
+      "status": "conflict_preserved",
+      "type": "conflict-check",
+      "undetermined": []
+    }
+  ],
+  "seconds": 0.000188,
+  "stage": "query",
+  "status": "ok",
+  "warnings": []
+}

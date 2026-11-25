@@ -1,0 +1,877 @@
+{
+  "audit_certificate": {
+    "baseline_vs_final": {
+      "accepted_items_gain": 3,
+      "address_validity_gain_pp": 3.0,
+      "attribution_accuracy_gain_pp": 3.3,
+      "baseline_iteration": 1,
+      "final_iteration": 2,
+      "paragraph_coverage_gain_pp": 0.0,
+      "quote_precision_gain_pp": 6.1
+    },
+    "case_id": "synthetic-perovskite-001",
+    "certificate": "evidence-audit-loop",
+    "final_metrics": {
+      "accepted": 30,
+      "address_validity_pct": 100.0,
+      "addresses_total": 33,
+      "addresses_valid": 33,
+      "attribution_accuracy_pct": 100.0,
+      "attribution_checked_items": 30,
+      "attribution_violations": 0,
+      "corpus_paragraphs_cited": 12,
+      "corpus_paragraphs_total": 24,
+      "items_total": 30,
+      "paragraph_coverage_pct": 50.0,
+      "quote_precision_pct": 100.0,
+      "quotes_total": 33,
+      "quotes_valid": 33,
+      "rejected": 0,
+      "repair": 0
+    },
+    "interpretation": "Compare baseline (first audit of the raw model draft) with final (audit after the bounded repair loop). Positive *_gain_pp values are percentage-point quality gains attributable to the audit-repair loop; an unaudited baseline pipeline would have shipped the baseline numbers.",
+    "iterations": [
+      {
+        "draft_file": "extraction.draft.json",
+        "iteration": 1,
+        "metrics": {
+          "accepted": 27,
+          "address_validity_pct": 97.0,
+          "addresses_total": 33,
+          "addresses_valid": 32,
+          "attribution_accuracy_pct": 96.7,
+          "attribution_checked_items": 30,
+          "attribution_violations": 1,
+          "corpus_paragraphs_cited": 12,
+          "corpus_paragraphs_total": 24,
+          "items_total": 30,
+          "paragraph_coverage_pct": 50.0,
+          "quote_precision_pct": 93.9,
+          "quotes_total": 33,
+          "quotes_valid": 31,
+          "rejected": 0,
+          "repair": 3
+        }
+      },
+      {
+        "draft_file": "extraction.repaired.json",
+        "iteration": 2,
+        "metrics": {
+          "accepted": 30,
+          "address_validity_pct": 100.0,
+          "addresses_total": 33,
+          "addresses_valid": 33,
+          "attribution_accuracy_pct": 100.0,
+          "attribution_checked_items": 30,
+          "attribution_violations": 0,
+          "corpus_paragraphs_cited": 12,
+          "corpus_paragraphs_total": 24,
+          "items_total": 30,
+          "paragraph_coverage_pct": 50.0,
+          "quote_precision_pct": 100.0,
+          "quotes_total": 33,
+          "quotes_valid": 33,
+          "rejected": 0,
+          "repair": 0
+        }
+      }
+    ],
+    "iterations_run": 2,
+    "max_iterations": 2,
+    "quarantined_count": 0,
+    "verdict": "pass"
+  },
+  "case_id": "synthetic-perovskite-001",
+  "evidence_notes": [
+    "audit verdicts per item are in audit_report.json; failing items were repaired via repair_queue.json (bounded loop, max 2 iterations)",
+    "cross-paper merges require a normalized_key + explicit reason; explicit non-merges are recorded in graph.nonmerges",
+    "every node/edge carries source_id + paragraph_id (organizer JATS paragraph id; this package has no PDF page numbers) + a verbatim quote verified as an exact substring of the cited paragraph by scripts/audit.py",
+    "numeric conflicts under different conditions are preserved as separate claim nodes linked by conflicts-with edges (never merged)",
+    "rejected items (still failing after the final audit) are in quarantine.json and excluded from the graph"
+  ],
+  "graph": {
+    "audit_iteration": 2,
+    "built_from": "extraction.repaired.json",
+    "case_id": "synthetic-perovskite-001",
+    "dropped_edges": [],
+    "edges": [
+      {
+        "evidence": [
+          {
+            "paragraph_id": "pri-p06",
+            "quote": "The champion device reached a PCE of 21.1% at 1-sun illumination",
+            "source_id": "primary"
+          },
+          {
+            "paragraph_id": "sec-p04",
+            "quote": "the champion device retained a PCE of 18.7%",
+            "source_id": "secondary"
+          }
+        ],
+        "id": "e-conflict-pce",
+        "object": "n-claim-pce-sec",
+        "qualifiers": {
+          "condition_difference": "initial 1-sun (primary) vs after 500 h damp-heat 85 C / 85% RH (secondary); different devices in different papers; preserved, never merged"
+        },
+        "relation": "conflicts-with",
+        "subject": "n-claim-pce-pri"
+      },
+      {
+        "evidence": [
+          {
+            "paragraph_id": "pri-p09",
+            "quote": "We used UV-Vis spectroscopy to estimate an optical band gap of 1.55 eV",
+            "source_id": "primary"
+          }
+        ],
+        "id": "e-involves-uvvis",
+        "object": "n-method-uvvis",
+        "relation": "involves",
+        "subject": "n-paper-pri"
+      },
+      {
+        "evidence": [
+          {
+            "paragraph_id": "pri-p06",
+            "quote": "a PCE of 21.1% at 1-sun illumination",
+            "source_id": "primary"
+          }
+        ],
+        "id": "e-measures-pri",
+        "object": "n-metric-pce",
+        "relation": "measures",
+        "subject": "n-claim-pce-pri"
+      },
+      {
+        "evidence": [
+          {
+            "paragraph_id": "sec-p04",
+            "quote": "retained a PCE of 18.7%",
+            "source_id": "secondary"
+          }
+        ],
+        "id": "e-measures-sec",
+        "object": "n-metric-pce",
+        "relation": "measures",
+        "subject": "n-claim-pce-sec"
+      },
+      {
+        "evidence": [
+          {
+            "paragraph_id": "pri-p03",
+            "quote": "deposited by spin coating",
+            "source_id": "primary"
+          }
+        ],
+        "id": "e-preparedby-mapbi3",
+        "object": "n-method-spincoating",
+        "relation": "prepared-by",
+        "subject": "n-mapbi3-pri"
+      },
+      {
+        "evidence": [
+          {
+            "paragraph_id": "pri-p04",
+            "quote": "prepared by spray pyrolysis",
+            "source_id": "primary"
+          }
+        ],
+        "id": "e-preparedby-tio2",
+        "object": "n-method-spray",
+        "relation": "prepared-by",
+        "subject": "n-tio2-pri"
+      },
+      {
+        "evidence": [
+          {
+            "paragraph_id": "pri-p06",
+            "quote": "The champion device reached a PCE of 21.1% at 1-sun illumination",
+            "source_id": "primary"
+          }
+        ],
+        "id": "e-reports-pri",
+        "object": "n-claim-pce-pri",
+        "relation": "reports",
+        "subject": "n-paper-pri"
+      },
+      {
+        "evidence": [
+          {
+            "paragraph_id": "sec-p04",
+            "quote": "After 500 h of damp-heat aging, the champion device retained a PCE of 18.7%",
+            "source_id": "secondary"
+          }
+        ],
+        "id": "e-reports-sec",
+        "object": "n-claim-pce-sec",
+        "relation": "reports",
+        "subject": "n-paper-sec"
+      },
+      {
+        "evidence": [
+          {
+            "paragraph_id": "pri-p03",
+            "quote": "The absorber layer is methylammonium lead iodide",
+            "source_id": "primary"
+          }
+        ],
+        "id": "e-uses-mapbi3-pri",
+        "object": "n-mapbi3-pri",
+        "relation": "uses",
+        "subject": "n-dev-pri"
+      },
+      {
+        "evidence": [
+          {
+            "paragraph_id": "sec-p02",
+            "quote": "MAPbI3 films were prepared following a two-step sequential deposition method",
+            "source_id": "secondary"
+          }
+        ],
+        "id": "e-uses-mapbi3-sec",
+        "object": "n-mapbi3-pri",
+        "relation": "uses",
+        "subject": "n-dev-sec"
+      },
+      {
+        "evidence": [
+          {
+            "paragraph_id": "pri-p04",
+            "quote": "A compact TiO2 electron transport layer",
+            "source_id": "primary"
+          }
+        ],
+        "id": "e-uses-tio2-pri",
+        "object": "n-tio2-pri",
+        "relation": "uses",
+        "subject": "n-dev-pri"
+      },
+      {
+        "evidence": [
+          {
+            "paragraph_id": "sec-p03",
+            "quote": "a mesoporous TiO2 scaffold deposited from a commercial Dyesol 18NR-T paste",
+            "source_id": "secondary"
+          }
+        ],
+        "id": "e-uses-tio2-sec",
+        "object": "n-tio2-sec",
+        "relation": "uses",
+        "subject": "n-dev-sec"
+      }
+    ],
+    "merges": [
+      {
+        "evidence": [
+          {
+            "paragraph_id": "pri-p03",
+            "quote": "The absorber layer is methylammonium lead iodide",
+            "source_id": "primary"
+          },
+          {
+            "paragraph_id": "sec-p10",
+            "quote": "MAPbI3 here refers to the same compound methylammonium lead iodide",
+            "source_id": "secondary"
+          }
+        ],
+        "id": "m-mapbi3-alias",
+        "members": [
+          "n-mapbi3-pri",
+          "n-mapbi3-sec"
+        ],
+        "normalized_key": "mapbi3",
+        "reason": "alias pair across papers: full name in primary, abbreviation in secondary; sec-p10 explicitly equates the two names"
+      }
+    ],
+    "nodes": [
+      {
+        "aliases": [
+          "PCE of 21.1% (initial, 1-sun)"
+        ],
+        "attributes": {
+          "condition": "initial, 1-sun AM1.5G illumination",
+          "metric": "PCE",
+          "value": "21.1%"
+        },
+        "entity_type": "claim",
+        "evidence": [
+          {
+            "paragraph_id": "pri-p06",
+            "quote": "a PCE of 21.1% at 1-sun illumination",
+            "source_id": "primary"
+          }
+        ],
+        "id": "n-claim-pce-pri",
+        "label": "PCE of 21.1% (initial, 1-sun)"
+      },
+      {
+        "aliases": [
+          "PCE of 18.7% (after 500 h damp-heat)"
+        ],
+        "attributes": {
+          "condition": "after 500 h damp-heat at 85 C / 85% RH",
+          "metric": "PCE",
+          "value": "18.7%"
+        },
+        "entity_type": "claim",
+        "evidence": [
+          {
+            "paragraph_id": "sec-p04",
+            "quote": "the champion device retained a PCE of 18.7%",
+            "source_id": "secondary"
+          }
+        ],
+        "id": "n-claim-pce-sec",
+        "label": "PCE of 18.7% (after 500 h damp-heat)"
+      },
+      {
+        "aliases": [
+          "ambient-air perovskite solar cells"
+        ],
+        "entity_type": "device",
+        "evidence": [
+          {
+            "paragraph_id": "pri-p01",
+            "quote": "methylammonium lead iodide perovskite solar cells",
+            "source_id": "primary"
+          }
+        ],
+        "id": "n-dev-pri",
+        "label": "ambient-air perovskite solar cells"
+      },
+      {
+        "aliases": [
+          "damp-heat-tested MAPbI3 perovskite solar cells"
+        ],
+        "entity_type": "device",
+        "evidence": [
+          {
+            "paragraph_id": "sec-p01",
+            "quote": "MAPbI3 perovskite solar cells under damp-heat stress",
+            "source_id": "secondary"
+          }
+        ],
+        "id": "n-dev-sec",
+        "label": "damp-heat-tested MAPbI3 perovskite solar cells"
+      },
+      {
+        "aliases": [
+          "MAPbI3",
+          "methylammonium lead iodide"
+        ],
+        "entity_type": "material",
+        "evidence": [
+          {
+            "paragraph_id": "pri-p03",
+            "quote": "The absorber layer is methylammonium lead iodide",
+            "source_id": "primary"
+          },
+          {
+            "paragraph_id": "sec-p02",
+            "quote": "MAPbI3 films were prepared following a two-step sequential deposition method",
+            "source_id": "secondary"
+          }
+        ],
+        "id": "n-mapbi3-pri",
+        "label": "methylammonium lead iodide",
+        "merged_from": [
+          "n-mapbi3-pri",
+          "n-mapbi3-sec"
+        ]
+      },
+      {
+        "aliases": [
+          "spin coating"
+        ],
+        "entity_type": "method",
+        "evidence": [
+          {
+            "paragraph_id": "pri-p03",
+            "quote": "deposited by spin coating from a DMF precursor solution",
+            "source_id": "primary"
+          }
+        ],
+        "id": "n-method-spincoating",
+        "label": "spin coating"
+      },
+      {
+        "aliases": [
+          "spray pyrolysis"
+        ],
+        "entity_type": "method",
+        "evidence": [
+          {
+            "paragraph_id": "pri-p04",
+            "quote": "spray pyrolysis of titanium diisopropoxide bis(acetylacetonate)",
+            "source_id": "primary"
+          }
+        ],
+        "id": "n-method-spray",
+        "label": "spray pyrolysis"
+      },
+      {
+        "aliases": [
+          "UV-Vis spectroscopy"
+        ],
+        "entity_type": "method",
+        "evidence": [
+          {
+            "paragraph_id": "pri-p09",
+            "quote": "We used UV-Vis spectroscopy to estimate an optical band gap of 1.55 eV",
+            "source_id": "primary"
+          }
+        ],
+        "id": "n-method-uvvis",
+        "label": "UV-Vis spectroscopy"
+      },
+      {
+        "aliases": [
+          "power conversion efficiency (PCE)"
+        ],
+        "entity_type": "metric",
+        "evidence": [
+          {
+            "paragraph_id": "pri-p01",
+            "quote": "power conversion efficiency (PCE)",
+            "source_id": "primary"
+          }
+        ],
+        "id": "n-metric-pce",
+        "label": "power conversion efficiency (PCE)"
+      },
+      {
+        "aliases": [
+          "Ambient-Air Fabrication of Methylammonium Lead Iodide Perovskite Solar Cells"
+        ],
+        "entity_type": "paper",
+        "evidence": [
+          {
+            "paragraph_id": "pri-p01",
+            "quote": "We report ambient-air fabrication of methylammonium lead iodide perovskite solar cells",
+            "source_id": "primary"
+          }
+        ],
+        "id": "n-paper-pri",
+        "label": "Ambient-Air Fabrication of Methylammonium Lead Iodide Perovskite Solar Cells"
+      },
+      {
+        "aliases": [
+          "Damp-Heat Stability of MAPbI3 Perovskite Solar Cells"
+        ],
+        "entity_type": "paper",
+        "evidence": [
+          {
+            "paragraph_id": "sec-p01",
+            "quote": "We examine the operational stability of MAPbI3 perovskite solar cells under damp-heat stress",
+            "source_id": "secondary"
+          }
+        ],
+        "id": "n-paper-sec",
+        "label": "Damp-Heat Stability of MAPbI3 Perovskite Solar Cells"
+      },
+      {
+        "aliases": [
+          "L. Chen"
+        ],
+        "entity_type": "researcher",
+        "evidence": [
+          {
+            "paragraph_id": "pri-p11",
+            "quote": "L. Chen supervised the project",
+            "source_id": "primary"
+          }
+        ],
+        "id": "n-researcher-chen",
+        "label": "L. Chen"
+      },
+      {
+        "aliases": [
+          "TiO2"
+        ],
+        "attributes": {
+          "form": "compact electron transport layer"
+        },
+        "entity_type": "material",
+        "evidence": [
+          {
+            "paragraph_id": "pri-p04",
+            "quote": "A compact TiO2 electron transport layer was prepared by spray pyrolysis",
+            "source_id": "primary"
+          }
+        ],
+        "id": "n-tio2-pri",
+        "label": "TiO2"
+      },
+      {
+        "aliases": [
+          "TiO2"
+        ],
+        "attributes": {
+          "form": "mesoporous scaffold, Dyesol 18NR-T paste, lot 42"
+        },
+        "entity_type": "material",
+        "evidence": [
+          {
+            "paragraph_id": "sec-p03",
+            "quote": "a mesoporous TiO2 scaffold deposited from a commercial Dyesol 18NR-T paste",
+            "source_id": "secondary"
+          }
+        ],
+        "id": "n-tio2-sec",
+        "label": "TiO2"
+      }
+    ],
+    "nonmerges": [
+      {
+        "evidence": [
+          {
+            "paragraph_id": "pri-p04",
+            "quote": "A compact TiO2 electron transport layer was prepared by spray pyrolysis",
+            "source_id": "primary"
+          },
+          {
+            "paragraph_id": "sec-p11",
+            "quote": "TiO2 paste batch 18NR-T lot 42 was used for all devices in this study.",
+            "source_id": "secondary"
+          }
+        ],
+        "id": "x-tio2-nonmerge",
+        "members": [
+          "n-tio2-pri",
+          "n-tio2-sec"
+        ],
+        "reason": "same name 'TiO2' but different physical objects: spray-pyrolyzed compact electron transport layer (primary) vs screen-printed mesoporous scaffold from commercial Dyesol 18NR-T paste, batch lot 42 (secondary); same generic material term does not imply the same physical sample/layer"
+      }
+    ],
+    "notes": [],
+    "stats": {
+      "edge_count": 12,
+      "merge_count": 1,
+      "node_count": 14,
+      "nonmerge_count": 1,
+      "unreported_count": 1
+    },
+    "unreported": [
+      {
+        "evidence": [
+          {
+            "paragraph_id": "pri-p06",
+            "quote": "hysteresis index was not reported in this study",
+            "source_id": "primary"
+          }
+        ],
+        "id": "u-hysteresis",
+        "reason": "the primary study explicitly does not report the hysteresis index; do not infer a value",
+        "scope": "primary paper",
+        "topic": "hysteresis index"
+      }
+    ]
+  },
+  "queries": [
+    {
+      "evidence": [
+        {
+          "paragraph_id": "pri-p01",
+          "quote": "methylammonium lead iodide perovskite solar cells",
+          "source_id": "primary"
+        },
+        {
+          "paragraph_id": "pri-p03",
+          "quote": "The absorber layer is methylammonium lead iodide",
+          "source_id": "primary"
+        },
+        {
+          "paragraph_id": "pri-p03",
+          "quote": "deposited by spin coating",
+          "source_id": "primary"
+        },
+        {
+          "paragraph_id": "pri-p03",
+          "quote": "deposited by spin coating from a DMF precursor solution",
+          "source_id": "primary"
+        },
+        {
+          "paragraph_id": "sec-p01",
+          "quote": "MAPbI3 perovskite solar cells under damp-heat stress",
+          "source_id": "secondary"
+        },
+        {
+          "paragraph_id": "sec-p02",
+          "quote": "MAPbI3 films were prepared following a two-step sequential deposition method",
+          "source_id": "secondary"
+        }
+      ],
+      "matched_seeds": [
+        "n-mapbi3-pri"
+      ],
+      "params": {
+        "entity": "MAPbI3",
+        "hops": 1
+      },
+      "query_id": "q1",
+      "question": "MAPbI3 实体的一跳邻域包含哪些节点和边？证据是什么？",
+      "status": "executed",
+      "subgraph": {
+        "edges": [
+          {
+            "id": "e-preparedby-mapbi3",
+            "object": "n-method-spincoating",
+            "relation": "prepared-by",
+            "subject": "n-mapbi3-pri"
+          },
+          {
+            "id": "e-uses-mapbi3-pri",
+            "object": "n-mapbi3-pri",
+            "relation": "uses",
+            "subject": "n-dev-pri"
+          },
+          {
+            "id": "e-uses-mapbi3-sec",
+            "object": "n-mapbi3-pri",
+            "relation": "uses",
+            "subject": "n-dev-sec"
+          }
+        ],
+        "nodes": [
+          {
+            "aliases": [
+              "ambient-air perovskite solar cells"
+            ],
+            "entity_type": "device",
+            "id": "n-dev-pri",
+            "label": "ambient-air perovskite solar cells"
+          },
+          {
+            "aliases": [
+              "damp-heat-tested MAPbI3 perovskite solar cells"
+            ],
+            "entity_type": "device",
+            "id": "n-dev-sec",
+            "label": "damp-heat-tested MAPbI3 perovskite solar cells"
+          },
+          {
+            "aliases": [
+              "MAPbI3",
+              "methylammonium lead iodide"
+            ],
+            "entity_type": "material",
+            "id": "n-mapbi3-pri",
+            "label": "methylammonium lead iodide"
+          },
+          {
+            "aliases": [
+              "spin coating"
+            ],
+            "entity_type": "method",
+            "id": "n-method-spincoating",
+            "label": "spin coating"
+          }
+        ]
+      },
+      "type": "neighborhood",
+      "undetermined": []
+    },
+    {
+      "evidence": [
+        {
+          "paragraph_id": "pri-p01",
+          "quote": "power conversion efficiency (PCE)",
+          "source_id": "primary"
+        },
+        {
+          "paragraph_id": "pri-p06",
+          "quote": "a PCE of 21.1% at 1-sun illumination",
+          "source_id": "primary"
+        },
+        {
+          "paragraph_id": "sec-p04",
+          "quote": "retained a PCE of 18.7%",
+          "source_id": "secondary"
+        },
+        {
+          "paragraph_id": "sec-p04",
+          "quote": "the champion device retained a PCE of 18.7%",
+          "source_id": "secondary"
+        }
+      ],
+      "matched_seeds": [],
+      "params": {
+        "relation": "measures"
+      },
+      "query_id": "q2",
+      "question": "图中所有 measures 类型的边及其证据。",
+      "status": "executed",
+      "subgraph": {
+        "edges": [
+          {
+            "id": "e-measures-pri",
+            "object": "n-metric-pce",
+            "relation": "measures",
+            "subject": "n-claim-pce-pri"
+          },
+          {
+            "id": "e-measures-sec",
+            "object": "n-metric-pce",
+            "relation": "measures",
+            "subject": "n-claim-pce-sec"
+          }
+        ],
+        "nodes": [
+          {
+            "aliases": [
+              "PCE of 21.1% (initial, 1-sun)"
+            ],
+            "entity_type": "claim",
+            "id": "n-claim-pce-pri",
+            "label": "PCE of 21.1% (initial, 1-sun)"
+          },
+          {
+            "aliases": [
+              "PCE of 18.7% (after 500 h damp-heat)"
+            ],
+            "entity_type": "claim",
+            "id": "n-claim-pce-sec",
+            "label": "PCE of 18.7% (after 500 h damp-heat)"
+          },
+          {
+            "aliases": [
+              "power conversion efficiency (PCE)"
+            ],
+            "entity_type": "metric",
+            "id": "n-metric-pce",
+            "label": "power conversion efficiency (PCE)"
+          }
+        ]
+      },
+      "type": "edges_by_relation",
+      "undetermined": []
+    },
+    {
+      "claims_by_value": {
+        "18.7%": [
+          "n-claim-pce-sec"
+        ],
+        "21.1%": [
+          "n-claim-pce-pri"
+        ]
+      },
+      "conflict_edges": [
+        "e-conflict-pce"
+      ],
+      "distinct_value_count": 2,
+      "evidence": [
+        {
+          "paragraph_id": "pri-p01",
+          "quote": "power conversion efficiency (PCE)",
+          "source_id": "primary"
+        },
+        {
+          "paragraph_id": "pri-p06",
+          "quote": "The champion device reached a PCE of 21.1% at 1-sun illumination",
+          "source_id": "primary"
+        },
+        {
+          "paragraph_id": "pri-p06",
+          "quote": "a PCE of 21.1% at 1-sun illumination",
+          "source_id": "primary"
+        },
+        {
+          "paragraph_id": "sec-p04",
+          "quote": "the champion device retained a PCE of 18.7%",
+          "source_id": "secondary"
+        }
+      ],
+      "matched_seeds": [
+        "n-metric-pce"
+      ],
+      "params": {
+        "metric": "PCE"
+      },
+      "query_id": "q3",
+      "question": "PCE 指标在两篇材料之间是否存在数值冲突？是否可判定为同一结论？",
+      "status": "executed",
+      "subgraph": {
+        "edges": [
+          {
+            "id": "e-conflict-pce",
+            "object": "n-claim-pce-sec",
+            "relation": "conflicts-with",
+            "subject": "n-claim-pce-pri"
+          },
+          {
+            "id": "e-measures-pri",
+            "object": "n-metric-pce",
+            "relation": "measures",
+            "subject": "n-claim-pce-pri"
+          },
+          {
+            "id": "e-measures-sec",
+            "object": "n-metric-pce",
+            "relation": "measures",
+            "subject": "n-claim-pce-sec"
+          }
+        ],
+        "nodes": [
+          {
+            "aliases": [
+              "PCE of 21.1% (initial, 1-sun)"
+            ],
+            "entity_type": "claim",
+            "id": "n-claim-pce-pri",
+            "label": "PCE of 21.1% (initial, 1-sun)"
+          },
+          {
+            "aliases": [
+              "PCE of 18.7% (after 500 h damp-heat)"
+            ],
+            "entity_type": "claim",
+            "id": "n-claim-pce-sec",
+            "label": "PCE of 18.7% (after 500 h damp-heat)"
+          },
+          {
+            "aliases": [
+              "power conversion efficiency (PCE)"
+            ],
+            "entity_type": "metric",
+            "id": "n-metric-pce",
+            "label": "power conversion efficiency (PCE)"
+          }
+        ]
+      },
+      "type": "conflict_check",
+      "undetermined": [
+        "metric 'PCE' has 2 distinct reported values ['18.7%', '21.1%'] under different conditions/papers; they are PRESERVED as separate claims and are not directly comparable — no single merged value is asserted"
+      ]
+    }
+  ],
+  "run_meta": {
+    "generated_at_utc": "2026-11-25T03:20:02.752404+00:00",
+    "note": "wall-clock fields live only inside run_meta; all other artifacts are deterministic",
+    "pipeline": "c-evidence-audit-loop-kg"
+  },
+  "sources": [
+    "primary",
+    "secondary"
+  ],
+  "status": "success",
+  "status_reason": "all stages completed",
+  "uncertainty": [
+    "[q3] metric 'PCE' has 2 distinct reported values ['18.7%', '21.1%'] under different conditions/papers; they are PRESERVED as separate claims and are not directly comparable — no single merged value is asserted",
+    "paragraph coverage is 50.0%; uncited paragraphs are listed in audit_report.json -> uncited_paragraphs"
+  ],
+  "unreported": [
+    {
+      "evidence": [
+        {
+          "paragraph_id": "pri-p06",
+          "quote": "hysteresis index was not reported in this study",
+          "source_id": "primary"
+        }
+      ],
+      "id": "u-hysteresis",
+      "reason": "the primary study explicitly does not report the hysteresis index; do not infer a value",
+      "scope": "primary paper",
+      "topic": "hysteresis index"
+    }
+  ]
+}

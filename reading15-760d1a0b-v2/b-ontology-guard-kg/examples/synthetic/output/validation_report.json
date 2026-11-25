@@ -1,0 +1,52 @@
+{
+  "cumulative_violations": {
+    "DOMAIN_MISMATCH": 1,
+    "MISSING_QUALIFIER": 1,
+    "NUMERIC_REQUIRES_METRIC_CONDITION": 1,
+    "QUOTE_NOT_SUBSTRING": 1,
+    "UNKNOWN_RELATION": 1
+  },
+  "current_quarantine_count": 1,
+  "ontology_id": "b-ontology-guard-kg",
+  "ontology_version": "1.0.0",
+  "passes": [
+    {
+      "accepted": 33,
+      "extraction_file": "extractions_draft.jsonl",
+      "items_parsed": 37,
+      "kind": "draft",
+      "lines_total": 41,
+      "pass": 1,
+      "quarantined": 4,
+      "violations_by_code": {
+        "DOMAIN_MISMATCH": 1,
+        "MISSING_QUALIFIER": 1,
+        "NUMERIC_REQUIRES_METRIC_CONDITION": 1,
+        "QUOTE_NOT_SUBSTRING": 1,
+        "UNKNOWN_RELATION": 1
+      }
+    },
+    {
+      "accepted": 3,
+      "extraction_file": "extractions_repair.jsonl",
+      "items_parsed": 3,
+      "kind": "repair",
+      "lines_total": 7,
+      "pass": 2,
+      "quarantined": 0,
+      "violations_by_code": {}
+    }
+  ],
+  "repair_budget": {
+    "max_repair_passes": 1,
+    "repair_passes_used": 1
+  },
+  "validated_counts": {
+    "edges": 12,
+    "merges": 2,
+    "nodes": 19,
+    "nonmerges": 1,
+    "notes": 1,
+    "unreported": 1
+  }
+}

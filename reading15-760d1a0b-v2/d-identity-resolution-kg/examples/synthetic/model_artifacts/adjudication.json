@@ -1,0 +1,22 @@
+{
+  "notice": "SYNTHETIC example model artifact (simulates the tiny adjudication JSON the model would write), not real papers.",
+  "decisions": [
+    {"pair_id": "P01", "decision": "merge", "reason": "Full IUPAC name defined with abbreviation spiro-OMeTAD at first mention in S2.", "evidence": ["s2-p04"]},
+    {"pair_id": "P02", "decision": "merge", "reason": "Abbreviation FTO defined at first mention; same fluorine-doped tin oxide substrate.", "evidence": ["s1-p03"]},
+    {"pair_id": "P03", "decision": "merge", "reason": "Abbreviation MAPbI3 defined at first mention in the S1 abstract.", "evidence": ["s1-p01"]},
+    {"pair_id": "P04", "decision": "merge", "reason": "Abbreviation PSCs defined at first mention.", "evidence": ["s1-p01"]},
+    {"pair_id": "P05", "decision": "merge", "reason": "Abbreviation PCE defined at first mention.", "evidence": ["s1-p01"]},
+    {"pair_id": "P06", "decision": "merge", "reason": "Abbreviation RH defined at first mention.", "evidence": ["s2-p06"]},
+    {"pair_id": "P07", "decision": "merge", "reason": "Abbreviation XRD defined at first mention.", "evidence": ["s1-p05"]},
+    {"pair_id": "P08", "decision": "merge", "reason": "S1 uses spiro-OMeTAD as the hole transport layer; S2 defines the abbreviation for that same material.", "evidence": ["s1-p04", "s2-p04"]},
+    {"pair_id": "P09", "decision": "merge", "reason": "MAPbI3 in S2 is the same absorber material whose abbreviation is defined in S1.", "evidence": ["s1-p01", "s2-p01", "s2-p03"]},
+    {"pair_id": "P10", "decision": "merge", "reason": "Same metric; S2 uses PCE exactly as defined in S1.", "evidence": ["s1-p01", "s2-p01"]},
+    {"pair_id": "P11", "decision": "merge", "reason": "S2's XRD is the X-ray diffraction method defined in S1.", "evidence": ["s1-p05", "s2-p08"]},
+    {"pair_id": "P12", "decision": "merge", "reason": "Identical normalized key; both mentions are the MAPbI3 absorber in a perovskite device context.", "evidence": ["s1-p01", "s2-p01"]},
+    {"pair_id": "P13", "decision": "merge", "reason": "Identical key; both name the PbI2 residue/decomposition product of the MAPbI3 absorber.", "evidence": ["s1-p05", "s2-p08"]},
+    {"pair_id": "P14", "decision": "merge", "reason": "Identical key; PCE is the same metric in both papers.", "evidence": ["s1-p06", "s2-p07"]},
+    {"pair_id": "P15", "decision": "merge", "reason": "Trap flag reviewed: 'hole transport' (S1) and 'doped' (S2) describe the same hole transport material; S2 defines this exact abbreviation.", "evidence": ["s1-p04", "s2-p04"]},
+    {"pair_id": "P16", "decision": "nonmerge", "reason": "TiO2 in S1 is the compact electron transport layer of study A; TiO2 in S2 is the mesoporous scaffold of study B: same name, different physical samples/layers (same-key-different-context trap).", "evidence": ["s1-p03", "s2-p03", "s2-p09"]},
+    {"pair_id": "P17", "decision": "merge", "reason": "Identical key; same diffraction characterization method in both papers.", "evidence": ["s1-p05", "s2-p08"]}
+  ]
+}

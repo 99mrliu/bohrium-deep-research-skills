@@ -1,0 +1,277 @@
+{
+  "notice": "SYNTHETIC example, not real papers. This file SIMULATES the model's stage-1 extraction draft. It deliberately contains three flawed items (n-paper-sec: root-metadata misattribution; n-claim-pce-pri: quote is not a verbatim substring; e-uses-tio2-sec: non-existent paragraph_id) so the audit-repair-re-audit loop has measurable work to do.",
+  "stage": "stage1-model-draft",
+  "items": [
+    {
+      "id": "n-paper-pri",
+      "op": "node",
+      "entity_type": "paper",
+      "label": "Ambient-Air Fabrication of Methylammonium Lead Iodide Perovskite Solar Cells",
+      "evidence": {"source_id": "primary", "paragraph_id": "pri-p01",
+                   "quote": "We report ambient-air fabrication of methylammonium lead iodide perovskite solar cells"}
+    },
+    {
+      "id": "n-paper-sec",
+      "op": "node",
+      "entity_type": "paper",
+      "label": "Ambient-Air Fabrication of Methylammonium Lead Iodide Perovskite Solar Cells",
+      "evidence": {"source_id": "secondary", "paragraph_id": "sec-p10",
+                   "quote": "MAPbI3 here refers to the same compound methylammonium lead iodide studied in earlier ambient-fabrication work."}
+    },
+    {
+      "id": "n-mapbi3-pri",
+      "op": "node",
+      "entity_type": "material",
+      "label": "methylammonium lead iodide",
+      "evidence": {"source_id": "primary", "paragraph_id": "pri-p03",
+                   "quote": "The absorber layer is methylammonium lead iodide"}
+    },
+    {
+      "id": "n-mapbi3-sec",
+      "op": "node",
+      "entity_type": "material",
+      "label": "MAPbI3",
+      "evidence": {"source_id": "secondary", "paragraph_id": "sec-p02",
+                   "quote": "MAPbI3 films were prepared following a two-step sequential deposition method"}
+    },
+    {
+      "id": "n-tio2-pri",
+      "op": "node",
+      "entity_type": "material",
+      "label": "TiO2",
+      "attributes": {"form": "compact electron transport layer"},
+      "evidence": {"source_id": "primary", "paragraph_id": "pri-p04",
+                   "quote": "A compact TiO2 electron transport layer was prepared by spray pyrolysis"}
+    },
+    {
+      "id": "n-tio2-sec",
+      "op": "node",
+      "entity_type": "material",
+      "label": "TiO2",
+      "attributes": {"form": "mesoporous scaffold, Dyesol 18NR-T paste, lot 42"},
+      "evidence": {"source_id": "secondary", "paragraph_id": "sec-p03",
+                   "quote": "a mesoporous TiO2 scaffold deposited from a commercial Dyesol 18NR-T paste"}
+    },
+    {
+      "id": "n-dev-pri",
+      "op": "node",
+      "entity_type": "device",
+      "label": "ambient-air perovskite solar cells",
+      "evidence": {"source_id": "primary", "paragraph_id": "pri-p01",
+                   "quote": "methylammonium lead iodide perovskite solar cells"}
+    },
+    {
+      "id": "n-dev-sec",
+      "op": "node",
+      "entity_type": "device",
+      "label": "damp-heat-tested MAPbI3 perovskite solar cells",
+      "evidence": {"source_id": "secondary", "paragraph_id": "sec-p01",
+                   "quote": "MAPbI3 perovskite solar cells under damp-heat stress"}
+    },
+    {
+      "id": "n-metric-pce",
+      "op": "node",
+      "entity_type": "metric",
+      "label": "power conversion efficiency (PCE)",
+      "evidence": {"source_id": "primary", "paragraph_id": "pri-p01",
+                   "quote": "power conversion efficiency (PCE)"}
+    },
+    {
+      "id": "n-claim-pce-pri",
+      "op": "node",
+      "entity_type": "claim",
+      "label": "PCE of 21.1% (initial, 1-sun)",
+      "attributes": {"metric": "PCE", "value": "21.1%", "condition": "initial, 1-sun AM1.5G illumination"},
+      "evidence": {"source_id": "primary", "paragraph_id": "pri-p06",
+                   "quote": "efficiency of 21.1 percent under one sun"}
+    },
+    {
+      "id": "n-claim-pce-sec",
+      "op": "node",
+      "entity_type": "claim",
+      "label": "PCE of 18.7% (after 500 h damp-heat)",
+      "attributes": {"metric": "PCE", "value": "18.7%", "condition": "after 500 h damp-heat at 85 C / 85% RH"},
+      "evidence": {"source_id": "secondary", "paragraph_id": "sec-p04",
+                   "quote": "the champion device retained a PCE of 18.7%"}
+    },
+    {
+      "id": "n-method-spray",
+      "op": "node",
+      "entity_type": "method",
+      "label": "spray pyrolysis",
+      "evidence": {"source_id": "primary", "paragraph_id": "pri-p04",
+                   "quote": "spray pyrolysis of titanium diisopropoxide bis(acetylacetonate)"}
+    },
+    {
+      "id": "n-method-spincoating",
+      "op": "node",
+      "entity_type": "method",
+      "label": "spin coating",
+      "evidence": {"source_id": "primary", "paragraph_id": "pri-p03",
+                   "quote": "deposited by spin coating from a DMF precursor solution"}
+    },
+    {
+      "id": "n-method-uvvis",
+      "op": "node",
+      "entity_type": "method",
+      "label": "UV-Vis spectroscopy",
+      "evidence": {"source_id": "primary", "paragraph_id": "pri-p09",
+                   "quote": "We used UV-Vis spectroscopy to estimate an optical band gap of 1.55 eV"}
+    },
+    {
+      "id": "n-researcher-chen",
+      "op": "node",
+      "entity_type": "researcher",
+      "label": "L. Chen",
+      "evidence": {"source_id": "primary", "paragraph_id": "pri-p11",
+                   "quote": "L. Chen supervised the project"}
+    },
+    {
+      "id": "m-mapbi3-alias",
+      "op": "merge",
+      "members": ["n-mapbi3-pri", "n-mapbi3-sec"],
+      "normalized_key": "mapbi3",
+      "reason": "alias pair across papers: full name in primary, abbreviation in secondary; sec-p10 explicitly equates the two names",
+      "evidence": [
+        {"source_id": "primary", "paragraph_id": "pri-p03",
+         "quote": "The absorber layer is methylammonium lead iodide"},
+        {"source_id": "secondary", "paragraph_id": "sec-p10",
+         "quote": "MAPbI3 here refers to the same compound methylammonium lead iodide"}
+      ]
+    },
+    {
+      "id": "x-tio2-nonmerge",
+      "op": "nonmerge",
+      "members": ["n-tio2-pri", "n-tio2-sec"],
+      "reason": "same name 'TiO2' but different physical objects: spray-pyrolyzed compact electron transport layer (primary) vs screen-printed mesoporous scaffold from commercial Dyesol 18NR-T paste, batch lot 42 (secondary); same generic material term does not imply the same physical sample/layer",
+      "evidence": [
+        {"source_id": "primary", "paragraph_id": "pri-p04",
+         "quote": "A compact TiO2 electron transport layer was prepared by spray pyrolysis"},
+        {"source_id": "secondary", "paragraph_id": "sec-p11",
+         "quote": "TiO2 paste batch 18NR-T lot 42 was used for all devices in this study."}
+      ]
+    },
+    {
+      "id": "e-reports-pri",
+      "op": "edge",
+      "relation": "reports",
+      "subject": "n-paper-pri",
+      "object": "n-claim-pce-pri",
+      "evidence": {"source_id": "primary", "paragraph_id": "pri-p06",
+                   "quote": "The champion device reached a PCE of 21.1% at 1-sun illumination"}
+    },
+    {
+      "id": "e-reports-sec",
+      "op": "edge",
+      "relation": "reports",
+      "subject": "n-paper-sec",
+      "object": "n-claim-pce-sec",
+      "evidence": {"source_id": "secondary", "paragraph_id": "sec-p04",
+                   "quote": "After 500 h of damp-heat aging, the champion device retained a PCE of 18.7%"}
+    },
+    {
+      "id": "e-measures-pri",
+      "op": "edge",
+      "relation": "measures",
+      "subject": "n-claim-pce-pri",
+      "object": "n-metric-pce",
+      "evidence": {"source_id": "primary", "paragraph_id": "pri-p06",
+                   "quote": "a PCE of 21.1% at 1-sun illumination"}
+    },
+    {
+      "id": "e-measures-sec",
+      "op": "edge",
+      "relation": "measures",
+      "subject": "n-claim-pce-sec",
+      "object": "n-metric-pce",
+      "evidence": {"source_id": "secondary", "paragraph_id": "sec-p04",
+                   "quote": "retained a PCE of 18.7%"}
+    },
+    {
+      "id": "e-conflict-pce",
+      "op": "edge",
+      "relation": "conflicts-with",
+      "subject": "n-claim-pce-pri",
+      "object": "n-claim-pce-sec",
+      "qualifiers": {"condition_difference": "initial 1-sun (primary) vs after 500 h damp-heat 85 C / 85% RH (secondary); different devices in different papers; preserved, never merged"},
+      "evidence": [
+        {"source_id": "primary", "paragraph_id": "pri-p06",
+         "quote": "The champion device reached a PCE of 21.1% at 1-sun illumination"},
+        {"source_id": "secondary", "paragraph_id": "sec-p04",
+         "quote": "the champion device retained a PCE of 18.7%"}
+      ]
+    },
+    {
+      "id": "e-uses-tio2-pri",
+      "op": "edge",
+      "relation": "uses",
+      "subject": "n-dev-pri",
+      "object": "n-tio2-pri",
+      "evidence": {"source_id": "primary", "paragraph_id": "pri-p04",
+                   "quote": "A compact TiO2 electron transport layer"}
+    },
+    {
+      "id": "e-uses-tio2-sec",
+      "op": "edge",
+      "relation": "uses",
+      "subject": "n-dev-sec",
+      "object": "n-tio2-sec",
+      "evidence": {"source_id": "secondary", "paragraph_id": "sec-p99",
+                   "quote": "a mesoporous TiO2 scaffold deposited from a commercial Dyesol 18NR-T paste"}
+    },
+    {
+      "id": "e-preparedby-tio2",
+      "op": "edge",
+      "relation": "prepared-by",
+      "subject": "n-tio2-pri",
+      "object": "n-method-spray",
+      "evidence": {"source_id": "primary", "paragraph_id": "pri-p04",
+                   "quote": "prepared by spray pyrolysis"}
+    },
+    {
+      "id": "e-preparedby-mapbi3",
+      "op": "edge",
+      "relation": "prepared-by",
+      "subject": "n-mapbi3-pri",
+      "object": "n-method-spincoating",
+      "evidence": {"source_id": "primary", "paragraph_id": "pri-p03",
+                   "quote": "deposited by spin coating"}
+    },
+    {
+      "id": "e-uses-mapbi3-pri",
+      "op": "edge",
+      "relation": "uses",
+      "subject": "n-dev-pri",
+      "object": "n-mapbi3-pri",
+      "evidence": {"source_id": "primary", "paragraph_id": "pri-p03",
+                   "quote": "The absorber layer is methylammonium lead iodide"}
+    },
+    {
+      "id": "e-uses-mapbi3-sec",
+      "op": "edge",
+      "relation": "uses",
+      "subject": "n-dev-sec",
+      "object": "n-mapbi3-sec",
+      "evidence": {"source_id": "secondary", "paragraph_id": "sec-p02",
+                   "quote": "MAPbI3 films were prepared following a two-step sequential deposition method"}
+    },
+    {
+      "id": "e-involves-uvvis",
+      "op": "edge",
+      "relation": "involves",
+      "subject": "n-paper-pri",
+      "object": "n-method-uvvis",
+      "evidence": {"source_id": "primary", "paragraph_id": "pri-p09",
+                   "quote": "We used UV-Vis spectroscopy to estimate an optical band gap of 1.55 eV"}
+    },
+    {
+      "id": "u-hysteresis",
+      "op": "unreported",
+      "topic": "hysteresis index",
+      "scope": "primary paper",
+      "reason": "the primary study explicitly does not report the hysteresis index; do not infer a value",
+      "evidence": {"source_id": "primary", "paragraph_id": "pri-p06",
+                   "quote": "hysteresis index was not reported in this study"}
+    }
+  ]
+}

@@ -1,0 +1,17 @@
+{
+  "nonmerge_count": 1,
+  "nonmerges": [
+    {
+      "a": "n04",
+      "a_label": "TiO2 electron-transport layer (mesoporous, device A)",
+      "b": "n11",
+      "b_label": "TiO2 electron-transport layer (compact, device B)",
+      "evidence": {
+        "paragraph_id": "p4",
+        "quote": "a sample distinct from mesoporous architectures",
+        "source_id": "SYN-SEC"
+      },
+      "reason": "same-name-different-object trap: both are TiO2 electron-transport layers, but n04 is the mesoporous sintered layer of device A (primary) while n11 is a compact spray-pyrolysis layer of device B (secondary); different physical samples, explicit NON-merge"
+    }
+  ]
+}

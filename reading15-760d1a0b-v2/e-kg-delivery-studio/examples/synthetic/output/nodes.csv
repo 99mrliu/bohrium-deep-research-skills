@@ -1,0 +1,26 @@
+node_id,type,label,aliases,qualifiers,merged_from,evidence_refs
+N01,material,MAPbI3,methylammonium lead iodide,{},N02,S1:s1p01;S2:s2p01
+N03,material,compact TiO2 electron transport layer,compact TiO2,{},,S1:s1p04
+N04,material,mesoporous TiO2 scaffold,,{},,S2:s2p04
+N05,material,spiro-OMeTAD hole transport layer,,{},,S1:s1p05
+N06,sample,champion MAPbI3 device,,{},,S1:s1p07
+N07,sample,SnO2-passivated control device,,{},,S1:s1p08
+N08,sample,aged MAPbI3 device,,{},,S2:s2p07
+N09,method,spray pyrolysis,,{},,S1:s1p04
+N10,method,spin coating,,{},,S1:s1p05
+N11,method,sequential spin coating infiltration,,{},,S2:s2p05
+N12,method,J-V measurement (class-AAA solar simulator),,{},,S1:s1p06
+N13,method,damp-heat aging test,,{},,S2:s2p06
+N14,metric,power conversion efficiency (PCE),PCE,{},,S1:s1p01
+N15,metric,open-circuit voltage (Voc),Voc,{},,S1:s1p03
+N16,metric,short-circuit current density (Jsc),Jsc,{},,S1:s1p07
+N17,metric,fill factor (FF),FF,{},,S1:s1p07
+N18,condition,1-sun AM1.5G illumination,,{},,S1:s1p06
+N19,condition,"85 °C / 85% RH damp-heat, 500 h",,{},,S2:s2p07
+N20,claim,"champion PCE 21.1% (initial, 1-sun)",,"{""metric"": ""PCE"", ""timing"": ""as-fabricated initial"", ""value"": ""21.1%""}",,S1:s1p07
+N21,claim,"control PCE 19.3% (initial, 1-sun)",,"{""metric"": ""PCE"", ""timing"": ""as-fabricated initial"", ""value"": ""19.3%""}",,S1:s1p08
+N22,claim,aged PCE 18.7% (after 500 h damp-heat),,"{""metric"": ""PCE"", ""timing"": ""after 500 h aging"", ""value"": ""18.7%""}",,S2:s2p07
+N23,material,PbI2,,{},,S2:s2p03
+N24,claim,prior reports: MAPbI3 initial PCE above 21% (review hearsay),,"{""claim_nature"": ""review-hearsay"", ""metric"": ""PCE"", ""value"": "">21%""}",,S2:s2p02
+N25,claim,mesoporous TiO2 scaffold improves moisture tolerance,,{},,S2:s2p10
+N26,method,screen printing and sintering,,{},,S2:s2p04

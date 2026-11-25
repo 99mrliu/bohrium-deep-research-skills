@@ -1,0 +1,58 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="650" height="600" viewBox="0 0 650 600" font-family="monospace" font-size="10">
+<defs><marker id="arr" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M 0 0 L 10 5 L 0 10 z" fill="#555"/></marker></defs>
+<rect x="0" y="0" width="650" height="600" fill="#fafafa"/>
+<line x1="210" y1="520" x2="60" y2="80" stroke="#888" stroke-width="1" stroke-dasharray="4 3" marker-end="url(#arr)"/>
+<line x1="400" y1="520" x2="250" y2="80" stroke="#888" stroke-width="1" stroke-dasharray="4 3" marker-end="url(#arr)"/>
+<line x1="590" y1="520" x2="60" y2="80" stroke="#888" stroke-width="1" stroke-dasharray="4 3" marker-end="url(#arr)"/>
+<line x1="210" y1="300" x2="60" y2="80" stroke="#888" stroke-width="1" stroke-dasharray="4 3" marker-end="url(#arr)"/>
+<line x1="210" y1="300" x2="250" y2="80" stroke="#888" stroke-width="1" stroke-dasharray="4 3" marker-end="url(#arr)"/>
+<line x1="400" y1="300" x2="60" y2="80" stroke="#888" stroke-width="1" stroke-dasharray="4 3" marker-end="url(#arr)"/>
+<line x1="590" y1="300" x2="250" y2="80" stroke="#888" stroke-width="1" stroke-dasharray="4 3" marker-end="url(#arr)"/>
+<line x1="210" y1="410" x2="60" y2="80" stroke="#888" stroke-width="1" stroke-dasharray="4 3" marker-end="url(#arr)"/>
+<line x1="400" y1="410" x2="250" y2="80" stroke="#888" stroke-width="1" stroke-dasharray="4 3" marker-end="url(#arr)"/>
+<line x1="210" y1="300" x2="60" y2="520" stroke="#888" stroke-width="1" marker-end="url(#arr)"/>
+<line x1="210" y1="300" x2="250" y2="520" stroke="#888" stroke-width="1" marker-end="url(#arr)"/>
+<line x1="210" y1="520" x2="250" y2="520" stroke="#888" stroke-width="1" marker-end="url(#arr)"/>
+<line x1="210" y1="300" x2="250" y2="300" stroke="#888" stroke-width="1" marker-end="url(#arr)"/>
+<line x1="210" y1="300" x2="440" y2="300" stroke="#888" stroke-width="1" marker-end="url(#arr)"/>
+<rect x="60" y="500" width="150" height="40" rx="6" fill="#fbe0e0" stroke="#666"/>
+<text x="66" y="516" fill="#333">n_cl_pce211</text>
+<text x="66" y="530" fill="#555">PCE of 21.1% at 1-sun init</text>
+<text x="66" y="539" fill="#777">claim</text>
+<rect x="250" y="500" width="150" height="40" rx="6" fill="#fbe0e0" stroke="#666"/>
+<text x="256" y="516" fill="#333">n_cl_retained187</text>
+<text x="256" y="530" fill="#555">retained PCE of 18.7% afte</text>
+<text x="256" y="539" fill="#777">claim</text>
+<rect x="440" y="500" width="150" height="40" rx="6" fill="#fbe0e0" stroke="#666"/>
+<text x="446" y="516" fill="#333">n_cl_stab204</text>
+<text x="446" y="530" fill="#555">stabilized power output of</text>
+<text x="446" y="539" fill="#777">claim</text>
+<rect x="60" y="280" width="150" height="40" rx="6" fill="#e2f3e4" stroke="#666"/>
+<text x="66" y="296" fill="#333">n_mat_mapbi3_p1</text>
+<text x="66" y="310" fill="#555">methylammonium lead iodide</text>
+<text x="66" y="319" fill="#777">material</text>
+<rect x="250" y="280" width="150" height="40" rx="6" fill="#e2f3e4" stroke="#666"/>
+<text x="256" y="296" fill="#333">n_mat_tio2_p1</text>
+<text x="256" y="310" fill="#555">TiO2 (compact electron tra</text>
+<text x="256" y="319" fill="#777">material</text>
+<rect x="440" y="280" width="150" height="40" rx="6" fill="#e2f3e4" stroke="#666"/>
+<text x="446" y="296" fill="#333">n_mat_tio2_s1</text>
+<text x="446" y="310" fill="#555">TiO2 (mesoporous scaffold)</text>
+<text x="446" y="319" fill="#777">material</text>
+<rect x="60" y="390" width="150" height="40" rx="6" fill="#fdf3d7" stroke="#666"/>
+<text x="66" y="406" fill="#333">n_met_pce_p1</text>
+<text x="66" y="420" fill="#555">power conversion efficienc</text>
+<text x="66" y="429" fill="#777">metric</text>
+<rect x="250" y="390" width="150" height="40" rx="6" fill="#fdf3d7" stroke="#666"/>
+<text x="256" y="406" fill="#333">n_met_pce_s1</text>
+<text x="256" y="420" fill="#555">power conversion efficienc</text>
+<text x="256" y="429" fill="#777">metric</text>
+<rect x="60" y="60" width="150" height="40" rx="6" fill="#dbe9f6" stroke="#666"/>
+<text x="66" y="76" fill="#333">paper_P1</text>
+<text x="66" y="90" fill="#555">High-Efficiency Methylammo</text>
+<text x="66" y="99" fill="#777">paper</text>
+<rect x="250" y="60" width="150" height="40" rx="6" fill="#dbe9f6" stroke="#666"/>
+<text x="256" y="76" fill="#333">paper_S1</text>
+<text x="256" y="90" fill="#555">Damp-Heat Stability of MAP</text>
+<text x="256" y="99" fill="#777">paper</text>
+</svg>

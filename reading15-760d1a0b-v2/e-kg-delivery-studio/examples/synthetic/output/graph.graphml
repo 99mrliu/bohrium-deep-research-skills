@@ -1,0 +1,271 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<graphml xmlns="http://graphml.graphdrawing.org/xmlns">
+  <key id="n_type" for="node" attr.name="type" attr.type="string"/>
+  <key id="n_label" for="node" attr.name="label" attr.type="string"/>
+  <key id="n_ev" for="node" attr.name="evidence" attr.type="string"/>
+  <key id="e_rel" for="edge" attr.name="relation" attr.type="string"/>
+  <key id="e_qual" for="edge" attr.name="qualifiers" attr.type="string"/>
+  <key id="e_ev" for="edge" attr.name="evidence" attr.type="string"/>
+  <graph id="KG" edgedefault="directed">
+    <node id="N01">
+      <data key="n_type">material</data>
+      <data key="n_label">MAPbI3</data>
+      <data key="n_ev">S1:s1p01;S2:s2p01</data>
+    </node>
+    <node id="N03">
+      <data key="n_type">material</data>
+      <data key="n_label">compact TiO2 electron transport layer</data>
+      <data key="n_ev">S1:s1p04</data>
+    </node>
+    <node id="N04">
+      <data key="n_type">material</data>
+      <data key="n_label">mesoporous TiO2 scaffold</data>
+      <data key="n_ev">S2:s2p04</data>
+    </node>
+    <node id="N05">
+      <data key="n_type">material</data>
+      <data key="n_label">spiro-OMeTAD hole transport layer</data>
+      <data key="n_ev">S1:s1p05</data>
+    </node>
+    <node id="N06">
+      <data key="n_type">sample</data>
+      <data key="n_label">champion MAPbI3 device</data>
+      <data key="n_ev">S1:s1p07</data>
+    </node>
+    <node id="N07">
+      <data key="n_type">sample</data>
+      <data key="n_label">SnO2-passivated control device</data>
+      <data key="n_ev">S1:s1p08</data>
+    </node>
+    <node id="N08">
+      <data key="n_type">sample</data>
+      <data key="n_label">aged MAPbI3 device</data>
+      <data key="n_ev">S2:s2p07</data>
+    </node>
+    <node id="N09">
+      <data key="n_type">method</data>
+      <data key="n_label">spray pyrolysis</data>
+      <data key="n_ev">S1:s1p04</data>
+    </node>
+    <node id="N10">
+      <data key="n_type">method</data>
+      <data key="n_label">spin coating</data>
+      <data key="n_ev">S1:s1p05</data>
+    </node>
+    <node id="N11">
+      <data key="n_type">method</data>
+      <data key="n_label">sequential spin coating infiltration</data>
+      <data key="n_ev">S2:s2p05</data>
+    </node>
+    <node id="N12">
+      <data key="n_type">method</data>
+      <data key="n_label">J-V measurement (class-AAA solar simulator)</data>
+      <data key="n_ev">S1:s1p06</data>
+    </node>
+    <node id="N13">
+      <data key="n_type">method</data>
+      <data key="n_label">damp-heat aging test</data>
+      <data key="n_ev">S2:s2p06</data>
+    </node>
+    <node id="N14">
+      <data key="n_type">metric</data>
+      <data key="n_label">power conversion efficiency (PCE)</data>
+      <data key="n_ev">S1:s1p01</data>
+    </node>
+    <node id="N15">
+      <data key="n_type">metric</data>
+      <data key="n_label">open-circuit voltage (Voc)</data>
+      <data key="n_ev">S1:s1p03</data>
+    </node>
+    <node id="N16">
+      <data key="n_type">metric</data>
+      <data key="n_label">short-circuit current density (Jsc)</data>
+      <data key="n_ev">S1:s1p07</data>
+    </node>
+    <node id="N17">
+      <data key="n_type">metric</data>
+      <data key="n_label">fill factor (FF)</data>
+      <data key="n_ev">S1:s1p07</data>
+    </node>
+    <node id="N18">
+      <data key="n_type">condition</data>
+      <data key="n_label">1-sun AM1.5G illumination</data>
+      <data key="n_ev">S1:s1p06</data>
+    </node>
+    <node id="N19">
+      <data key="n_type">condition</data>
+      <data key="n_label">85 °C / 85% RH damp-heat, 500 h</data>
+      <data key="n_ev">S2:s2p07</data>
+    </node>
+    <node id="N20">
+      <data key="n_type">claim</data>
+      <data key="n_label">champion PCE 21.1% (initial, 1-sun)</data>
+      <data key="n_ev">S1:s1p07</data>
+    </node>
+    <node id="N21">
+      <data key="n_type">claim</data>
+      <data key="n_label">control PCE 19.3% (initial, 1-sun)</data>
+      <data key="n_ev">S1:s1p08</data>
+    </node>
+    <node id="N22">
+      <data key="n_type">claim</data>
+      <data key="n_label">aged PCE 18.7% (after 500 h damp-heat)</data>
+      <data key="n_ev">S2:s2p07</data>
+    </node>
+    <node id="N23">
+      <data key="n_type">material</data>
+      <data key="n_label">PbI2</data>
+      <data key="n_ev">S2:s2p03</data>
+    </node>
+    <node id="N24">
+      <data key="n_type">claim</data>
+      <data key="n_label">prior reports: MAPbI3 initial PCE above 21% (review hearsay)</data>
+      <data key="n_ev">S2:s2p02</data>
+    </node>
+    <node id="N25">
+      <data key="n_type">claim</data>
+      <data key="n_label">mesoporous TiO2 scaffold improves moisture tolerance</data>
+      <data key="n_ev">S2:s2p10</data>
+    </node>
+    <node id="N26">
+      <data key="n_type">method</data>
+      <data key="n_label">screen printing and sintering</data>
+      <data key="n_ev">S2:s2p04</data>
+    </node>
+    <edge id="E01" source="N06" target="N01">
+      <data key="e_rel">uses</data>
+      <data key="e_qual">{}</data>
+      <data key="e_ev">S1:s1p05</data>
+    </edge>
+    <edge id="E02" source="N06" target="N03">
+      <data key="e_rel">uses</data>
+      <data key="e_qual">{}</data>
+      <data key="e_ev">S1:s1p04</data>
+    </edge>
+    <edge id="E03" source="N06" target="N05">
+      <data key="e_rel">uses</data>
+      <data key="e_qual">{}</data>
+      <data key="e_ev">S1:s1p05</data>
+    </edge>
+    <edge id="E04" source="N06" target="N10">
+      <data key="e_rel">fabricated-by</data>
+      <data key="e_qual">{}</data>
+      <data key="e_ev">S1:s1p05</data>
+    </edge>
+    <edge id="E05" source="N03" target="N09">
+      <data key="e_rel">fabricated-by</data>
+      <data key="e_qual">{}</data>
+      <data key="e_ev">S1:s1p04</data>
+    </edge>
+    <edge id="E06" source="N12" target="N15">
+      <data key="e_rel">measures</data>
+      <data key="e_qual">{}</data>
+      <data key="e_ev">S1:s1p07</data>
+    </edge>
+    <edge id="E07" source="N12" target="N16">
+      <data key="e_rel">measures</data>
+      <data key="e_qual">{}</data>
+      <data key="e_ev">S1:s1p07</data>
+    </edge>
+    <edge id="E08" source="N12" target="N17">
+      <data key="e_rel">measures</data>
+      <data key="e_qual">{}</data>
+      <data key="e_ev">S1:s1p07</data>
+    </edge>
+    <edge id="E09" source="N12" target="N14">
+      <data key="e_rel">measures</data>
+      <data key="e_qual">{}</data>
+      <data key="e_ev">S1:s1p07</data>
+    </edge>
+    <edge id="E10" source="N13" target="N14">
+      <data key="e_rel">measures</data>
+      <data key="e_qual">{}</data>
+      <data key="e_ev">S2:s2p07</data>
+    </edge>
+    <edge id="E11" source="N20" target="N06">
+      <data key="e_rel">about</data>
+      <data key="e_qual">{}</data>
+      <data key="e_ev">S1:s1p07</data>
+    </edge>
+    <edge id="E12" source="N20" target="N14">
+      <data key="e_rel">concerns</data>
+      <data key="e_qual">{}</data>
+      <data key="e_ev">S1:s1p07</data>
+    </edge>
+    <edge id="E13" source="N20" target="N18">
+      <data key="e_rel">under</data>
+      <data key="e_qual">{}</data>
+      <data key="e_ev">S1:s1p01</data>
+    </edge>
+    <edge id="E14" source="N21" target="N07">
+      <data key="e_rel">about</data>
+      <data key="e_qual">{}</data>
+      <data key="e_ev">S1:s1p08</data>
+    </edge>
+    <edge id="E15" source="N21" target="N14">
+      <data key="e_rel">concerns</data>
+      <data key="e_qual">{}</data>
+      <data key="e_ev">S1:s1p08</data>
+    </edge>
+    <edge id="E16" source="N21" target="N18">
+      <data key="e_rel">under</data>
+      <data key="e_qual">{}</data>
+      <data key="e_ev">S1:s1p08</data>
+    </edge>
+    <edge id="E17" source="N22" target="N08">
+      <data key="e_rel">about</data>
+      <data key="e_qual">{}</data>
+      <data key="e_ev">S2:s2p07</data>
+    </edge>
+    <edge id="E18" source="N22" target="N14">
+      <data key="e_rel">concerns</data>
+      <data key="e_qual">{}</data>
+      <data key="e_ev">S2:s2p07</data>
+    </edge>
+    <edge id="E19" source="N22" target="N19">
+      <data key="e_rel">under</data>
+      <data key="e_qual">{}</data>
+      <data key="e_ev">S2:s2p07</data>
+    </edge>
+    <edge id="E20" source="N20" target="N21">
+      <data key="e_rel">outperforms</data>
+      <data key="e_qual">{}</data>
+      <data key="e_ev">S1:s1p08</data>
+    </edge>
+    <edge id="E21" source="N08" target="N04">
+      <data key="e_rel">uses</data>
+      <data key="e_qual">{}</data>
+      <data key="e_ev">S2:s2p04</data>
+    </edge>
+    <edge id="E22" source="N08" target="N01">
+      <data key="e_rel">uses</data>
+      <data key="e_qual">{}</data>
+      <data key="e_ev">S2:s2p05</data>
+    </edge>
+    <edge id="E23" source="N01" target="N23">
+      <data key="e_rel">degrades-into</data>
+      <data key="e_qual">{"trigger": "moisture"}</data>
+      <data key="e_ev">S2:s2p03</data>
+    </edge>
+    <edge id="E24" source="N24" target="N01">
+      <data key="e_rel">reviews-cites</data>
+      <data key="e_qual">{}</data>
+      <data key="e_ev">S2:s2p02</data>
+    </edge>
+    <edge id="E25" source="N22" target="N25">
+      <data key="e_rel">supports</data>
+      <data key="e_qual">{}</data>
+      <data key="e_ev">S2:s2p10</data>
+    </edge>
+    <edge id="E26" source="N04" target="N26">
+      <data key="e_rel">fabricated-by</data>
+      <data key="e_qual">{}</data>
+      <data key="e_ev">S2:s2p04</data>
+    </edge>
+    <edge id="E27" source="N08" target="N11">
+      <data key="e_rel">fabricated-by</data>
+      <data key="e_qual">{}</data>
+      <data key="e_ev">S2:s2p05</data>
+    </edge>
+  </graph>
+</graphml>
