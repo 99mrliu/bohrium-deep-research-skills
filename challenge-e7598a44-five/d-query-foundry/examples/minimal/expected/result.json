@@ -1,0 +1,1477 @@
+{
+  "case_id": "synth-foundry-001",
+  "summary": "查询族 40 个（phrase/and2/term）在 9 条快照记录上执行；纳入 6 / 待复核 0 / 排除 3；known-item 召回 2/3（K1=recalled；K2=recalled；K3=missing）",
+  "candidates": [
+    {
+      "rid": "R001",
+      "origin": "search_snapshot.json::$/records[0]",
+      "title": "Pre-sodiation strategies boost initial Coulombic efficiency of hard carbon anodes for sodium-ion batteries",
+      "year": 2022,
+      "doi": "10.0000/synth.2022.101",
+      "matched_qids": [
+        "QP1",
+        "QP2",
+        "QP3",
+        "QP4",
+        "QA1",
+        "QA2",
+        "QA3",
+        "QA4",
+        "QA5",
+        "QA6",
+        "QA7",
+        "QA8",
+        "QA9",
+        "QA10",
+        "QA11",
+        "QA12",
+        "QA13",
+        "QA14",
+        "QA15",
+        "QT1"
+      ]
+    },
+    {
+      "rid": "R002",
+      "origin": "search_snapshot.json::$/records[1]",
+      "title": "Electrolyte engineering raises initial Coulombic efficiency of sodium-ion hard carbon anodes",
+      "year": 2023,
+      "doi": "10.0000/synth.2023.102",
+      "matched_qids": [
+        "QP1",
+        "QP2",
+        "QP3",
+        "QP4",
+        "QA1",
+        "QA2",
+        "QA3",
+        "QA4",
+        "QA5",
+        "QA6",
+        "QA7",
+        "QA8",
+        "QA9",
+        "QA10",
+        "QA11",
+        "QA12",
+        "QA13",
+        "QA14",
+        "QA15",
+        "QT1"
+      ]
+    },
+    {
+      "rid": "R004",
+      "origin": "search_snapshot.json::$/records[3]",
+      "title": "Hard carbon anodes for sodium-ion batteries: pre-sodiation and initial Coulombic efficiency gains",
+      "year": 2024,
+      "doi": "10.0000/synth.2024.104",
+      "matched_qids": [
+        "QP1",
+        "QP2",
+        "QP3",
+        "QP4",
+        "QA1",
+        "QA2",
+        "QA3",
+        "QA4",
+        "QA5",
+        "QA6",
+        "QA7",
+        "QA8",
+        "QA9",
+        "QA10",
+        "QA11",
+        "QA12",
+        "QA13",
+        "QA14",
+        "QA15",
+        "QT1"
+      ]
+    },
+    {
+      "rid": "R005",
+      "origin": "search_snapshot.json::$/records[4]",
+      "title": "硬碳负极首周库伦效率的电解液调控研究",
+      "year": 2024,
+      "doi": "10.0000/synth.2024.105",
+      "matched_qids": [
+        "QT3",
+        "QT4",
+        "QT5",
+        "QT6",
+        "QT7",
+        "QT8",
+        "QT9",
+        "QT10",
+        "QT11",
+        "QT12",
+        "QT13",
+        "QT14",
+        "QT15",
+        "QT16",
+        "QT17"
+      ]
+    },
+    {
+      "rid": "R007",
+      "origin": "search_snapshot.json::$/records[6]",
+      "title": "Machine learning screening of lithium battery electrolytes",
+      "year": 2023,
+      "doi": "10.0000/synth.2023.107",
+      "matched_qids": [
+        "QP1",
+        "QA14"
+      ]
+    },
+    {
+      "rid": "R009",
+      "origin": "search_snapshot.json::$/records[8]",
+      "title": "Opinion: reported initial Coulombic efficiency gains in hard carbon anodes are largely measurement artifacts",
+      "year": 2023,
+      "doi": "10.0000/synth.2023.108",
+      "matched_qids": [
+        "QP1",
+        "QP2",
+        "QP3",
+        "QP4",
+        "QA1",
+        "QA2",
+        "QA3",
+        "QA4",
+        "QA5",
+        "QA6",
+        "QA7",
+        "QA8",
+        "QA9",
+        "QA10",
+        "QA11",
+        "QA12",
+        "QA13",
+        "QA14",
+        "QA15",
+        "QT1"
+      ]
+    }
+  ],
+  "query_report": {
+    "per_query": [
+      {
+        "qid": "QP1",
+        "family": "phrase",
+        "op": "phrase",
+        "terms": [
+          "sodium-ion"
+        ],
+        "hits": 8,
+        "known_item_hits": [
+          "K1",
+          "K2",
+          "K3"
+        ],
+        "noise_estimate": 5
+      },
+      {
+        "qid": "QP2",
+        "family": "phrase",
+        "op": "phrase",
+        "terms": [
+          "hard carbon"
+        ],
+        "hits": 7,
+        "known_item_hits": [
+          "K1",
+          "K2",
+          "K3"
+        ],
+        "noise_estimate": 4
+      },
+      {
+        "qid": "QP3",
+        "family": "phrase",
+        "op": "phrase",
+        "terms": [
+          "coulombic efficiency"
+        ],
+        "hits": 5,
+        "known_item_hits": [
+          "K1",
+          "K2"
+        ],
+        "noise_estimate": 3
+      },
+      {
+        "qid": "QP4",
+        "family": "phrase",
+        "op": "phrase",
+        "terms": [
+          "initial coulombic efficiency"
+        ],
+        "hits": 5,
+        "known_item_hits": [
+          "K1",
+          "K2"
+        ],
+        "noise_estimate": 3
+      },
+      {
+        "qid": "QA1",
+        "family": "and2",
+        "op": "and",
+        "terms": [
+          "initial coulombic efficiency",
+          "coulombic efficiency"
+        ],
+        "hits": 5,
+        "known_item_hits": [
+          "K1",
+          "K2"
+        ],
+        "noise_estimate": 3
+      },
+      {
+        "qid": "QA2",
+        "family": "and2",
+        "op": "and",
+        "terms": [
+          "initial coulombic efficiency",
+          "hard carbon"
+        ],
+        "hits": 5,
+        "known_item_hits": [
+          "K1",
+          "K2"
+        ],
+        "noise_estimate": 3
+      },
+      {
+        "qid": "QA3",
+        "family": "and2",
+        "op": "and",
+        "terms": [
+          "initial coulombic efficiency",
+          "sodium-ion"
+        ],
+        "hits": 5,
+        "known_item_hits": [
+          "K1",
+          "K2"
+        ],
+        "noise_estimate": 3
+      },
+      {
+        "qid": "QA4",
+        "family": "and2",
+        "op": "and",
+        "terms": [
+          "initial coulombic efficiency",
+          "initial"
+        ],
+        "hits": 5,
+        "known_item_hits": [
+          "K1",
+          "K2"
+        ],
+        "noise_estimate": 3
+      },
+      {
+        "qid": "QA5",
+        "family": "and2",
+        "op": "and",
+        "terms": [
+          "initial coulombic efficiency",
+          "anode"
+        ],
+        "hits": 5,
+        "known_item_hits": [
+          "K1",
+          "K2"
+        ],
+        "noise_estimate": 3
+      },
+      {
+        "qid": "QA6",
+        "family": "and2",
+        "op": "and",
+        "terms": [
+          "coulombic efficiency",
+          "hard carbon"
+        ],
+        "hits": 5,
+        "known_item_hits": [
+          "K1",
+          "K2"
+        ],
+        "noise_estimate": 3
+      },
+      {
+        "qid": "QA7",
+        "family": "and2",
+        "op": "and",
+        "terms": [
+          "coulombic efficiency",
+          "sodium-ion"
+        ],
+        "hits": 5,
+        "known_item_hits": [
+          "K1",
+          "K2"
+        ],
+        "noise_estimate": 3
+      },
+      {
+        "qid": "QA8",
+        "family": "and2",
+        "op": "and",
+        "terms": [
+          "coulombic efficiency",
+          "initial"
+        ],
+        "hits": 5,
+        "known_item_hits": [
+          "K1",
+          "K2"
+        ],
+        "noise_estimate": 3
+      },
+      {
+        "qid": "QA9",
+        "family": "and2",
+        "op": "and",
+        "terms": [
+          "coulombic efficiency",
+          "anode"
+        ],
+        "hits": 5,
+        "known_item_hits": [
+          "K1",
+          "K2"
+        ],
+        "noise_estimate": 3
+      },
+      {
+        "qid": "QA10",
+        "family": "and2",
+        "op": "and",
+        "terms": [
+          "hard carbon",
+          "sodium-ion"
+        ],
+        "hits": 7,
+        "known_item_hits": [
+          "K1",
+          "K2",
+          "K3"
+        ],
+        "noise_estimate": 4
+      },
+      {
+        "qid": "QA11",
+        "family": "and2",
+        "op": "and",
+        "terms": [
+          "hard carbon",
+          "initial"
+        ],
+        "hits": 6,
+        "known_item_hits": [
+          "K1",
+          "K2",
+          "K3"
+        ],
+        "noise_estimate": 3
+      },
+      {
+        "qid": "QA12",
+        "family": "and2",
+        "op": "and",
+        "terms": [
+          "hard carbon",
+          "anode"
+        ],
+        "hits": 7,
+        "known_item_hits": [
+          "K1",
+          "K2",
+          "K3"
+        ],
+        "noise_estimate": 4
+      },
+      {
+        "qid": "QA13",
+        "family": "and2",
+        "op": "and",
+        "terms": [
+          "sodium-ion",
+          "initial"
+        ],
+        "hits": 6,
+        "known_item_hits": [
+          "K1",
+          "K2",
+          "K3"
+        ],
+        "noise_estimate": 3
+      },
+      {
+        "qid": "QA14",
+        "family": "and2",
+        "op": "and",
+        "terms": [
+          "sodium-ion",
+          "anode"
+        ],
+        "hits": 8,
+        "known_item_hits": [
+          "K1",
+          "K2",
+          "K3"
+        ],
+        "noise_estimate": 5
+      },
+      {
+        "qid": "QA15",
+        "family": "and2",
+        "op": "and",
+        "terms": [
+          "initial",
+          "anode"
+        ],
+        "hits": 6,
+        "known_item_hits": [
+          "K1",
+          "K2",
+          "K3"
+        ],
+        "noise_estimate": 3
+      },
+      {
+        "qid": "QT1",
+        "family": "term",
+        "op": "term",
+        "terms": [
+          "ice"
+        ],
+        "hits": 5,
+        "known_item_hits": [
+          "K1",
+          "K2"
+        ],
+        "noise_estimate": 3
+      },
+      {
+        "qid": "QT2",
+        "family": "term",
+        "op": "term",
+        "terms": [
+          "于钠"
+        ],
+        "hits": 0,
+        "known_item_hits": [],
+        "noise_estimate": 0
+      },
+      {
+        "qid": "QT3",
+        "family": "term",
+        "op": "term",
+        "terms": [
+          "钠离"
+        ],
+        "hits": 1,
+        "known_item_hits": [],
+        "noise_estimate": 1
+      },
+      {
+        "qid": "QT4",
+        "family": "term",
+        "op": "term",
+        "terms": [
+          "离子"
+        ],
+        "hits": 1,
+        "known_item_hits": [],
+        "noise_estimate": 1
+      },
+      {
+        "qid": "QT5",
+        "family": "term",
+        "op": "term",
+        "terms": [
+          "子电"
+        ],
+        "hits": 1,
+        "known_item_hits": [],
+        "noise_estimate": 1
+      },
+      {
+        "qid": "QT6",
+        "family": "term",
+        "op": "term",
+        "terms": [
+          "电池"
+        ],
+        "hits": 1,
+        "known_item_hits": [],
+        "noise_estimate": 1
+      },
+      {
+        "qid": "QT7",
+        "family": "term",
+        "op": "term",
+        "terms": [
+          "池硬"
+        ],
+        "hits": 1,
+        "known_item_hits": [],
+        "noise_estimate": 1
+      },
+      {
+        "qid": "QT8",
+        "family": "term",
+        "op": "term",
+        "terms": [
+          "硬碳"
+        ],
+        "hits": 1,
+        "known_item_hits": [],
+        "noise_estimate": 1
+      },
+      {
+        "qid": "QT9",
+        "family": "term",
+        "op": "term",
+        "terms": [
+          "碳负"
+        ],
+        "hits": 1,
+        "known_item_hits": [],
+        "noise_estimate": 1
+      },
+      {
+        "qid": "QT10",
+        "family": "term",
+        "op": "term",
+        "terms": [
+          "负极"
+        ],
+        "hits": 1,
+        "known_item_hits": [],
+        "noise_estimate": 1
+      },
+      {
+        "qid": "QT11",
+        "family": "term",
+        "op": "term",
+        "terms": [
+          "极首"
+        ],
+        "hits": 1,
+        "known_item_hits": [],
+        "noise_estimate": 1
+      },
+      {
+        "qid": "QT12",
+        "family": "term",
+        "op": "term",
+        "terms": [
+          "首周"
+        ],
+        "hits": 1,
+        "known_item_hits": [],
+        "noise_estimate": 1
+      },
+      {
+        "qid": "QT13",
+        "family": "term",
+        "op": "term",
+        "terms": [
+          "周库"
+        ],
+        "hits": 1,
+        "known_item_hits": [],
+        "noise_estimate": 1
+      },
+      {
+        "qid": "QT14",
+        "family": "term",
+        "op": "term",
+        "terms": [
+          "库伦"
+        ],
+        "hits": 1,
+        "known_item_hits": [],
+        "noise_estimate": 1
+      },
+      {
+        "qid": "QT15",
+        "family": "term",
+        "op": "term",
+        "terms": [
+          "伦效"
+        ],
+        "hits": 1,
+        "known_item_hits": [],
+        "noise_estimate": 1
+      },
+      {
+        "qid": "QT16",
+        "family": "term",
+        "op": "term",
+        "terms": [
+          "效率"
+        ],
+        "hits": 1,
+        "known_item_hits": [],
+        "noise_estimate": 1
+      },
+      {
+        "qid": "QT17",
+        "family": "term",
+        "op": "term",
+        "terms": [
+          "提升"
+        ],
+        "hits": 1,
+        "known_item_hits": [],
+        "noise_estimate": 1
+      },
+      {
+        "qid": "QT18",
+        "family": "term",
+        "op": "term",
+        "terms": [
+          "升策"
+        ],
+        "hits": 0,
+        "known_item_hits": [],
+        "noise_estimate": 0
+      },
+      {
+        "qid": "QT19",
+        "family": "term",
+        "op": "term",
+        "terms": [
+          "策略"
+        ],
+        "hits": 0,
+        "known_item_hits": [],
+        "noise_estimate": 0
+      },
+      {
+        "qid": "QT20",
+        "family": "term",
+        "op": "term",
+        "terms": [
+          "验研"
+        ],
+        "hits": 0,
+        "known_item_hits": [],
+        "noise_estimate": 0
+      },
+      {
+        "qid": "QT21",
+        "family": "term",
+        "op": "term",
+        "terms": [
+          "究文"
+        ],
+        "hits": 0,
+        "known_item_hits": [],
+        "noise_estimate": 0
+      }
+    ],
+    "per_family": {
+      "phrase": {
+        "queries": 4,
+        "hits": 25,
+        "known_item_union": [
+          "K1",
+          "K2",
+          "K3"
+        ]
+      },
+      "and2": {
+        "queries": 15,
+        "hits": 85,
+        "known_item_union": [
+          "K1",
+          "K2",
+          "K3"
+        ]
+      },
+      "term": {
+        "queries": 21,
+        "hits": 20,
+        "known_item_union": [
+          "K1",
+          "K2"
+        ]
+      }
+    },
+    "note": "noise_estimate 为命中中不属于任何清单文献的条数（噪声上限估计，非清单文献未必不相关）",
+    "known_item_recall": "2/3"
+  },
+  "known_item_audit": [
+    {
+      "ref_id": "K1",
+      "title": "Pre-sodiation strategies boost initial Coulombic efficiency of hard carbon anodes for sodium-ion batteries",
+      "doi": "10.0000/synth.2022.101",
+      "status": "recalled",
+      "matched_rid": "R001",
+      "match_similarity": 1.0,
+      "disposition": "include",
+      "hit_queries": [
+        {
+          "qid": "QP1",
+          "family": "phrase",
+          "rank": 1,
+          "matched_terms": [
+            "sodium-ion"
+          ]
+        },
+        {
+          "qid": "QP2",
+          "family": "phrase",
+          "rank": 1,
+          "matched_terms": [
+            "hard carbon"
+          ]
+        },
+        {
+          "qid": "QP3",
+          "family": "phrase",
+          "rank": 1,
+          "matched_terms": [
+            "coulombic efficiency"
+          ]
+        },
+        {
+          "qid": "QP4",
+          "family": "phrase",
+          "rank": 1,
+          "matched_terms": [
+            "initial coulombic efficiency"
+          ]
+        },
+        {
+          "qid": "QA1",
+          "family": "and2",
+          "rank": 1,
+          "matched_terms": [
+            "coulombic efficiency",
+            "initial coulombic efficiency"
+          ]
+        },
+        {
+          "qid": "QA2",
+          "family": "and2",
+          "rank": 1,
+          "matched_terms": [
+            "hard carbon",
+            "initial coulombic efficiency"
+          ]
+        },
+        {
+          "qid": "QA3",
+          "family": "and2",
+          "rank": 1,
+          "matched_terms": [
+            "initial coulombic efficiency",
+            "sodium-ion"
+          ]
+        },
+        {
+          "qid": "QA4",
+          "family": "and2",
+          "rank": 1,
+          "matched_terms": [
+            "initial",
+            "initial coulombic efficiency"
+          ]
+        },
+        {
+          "qid": "QA5",
+          "family": "and2",
+          "rank": 1,
+          "matched_terms": [
+            "anode",
+            "initial coulombic efficiency"
+          ]
+        },
+        {
+          "qid": "QA6",
+          "family": "and2",
+          "rank": 1,
+          "matched_terms": [
+            "coulombic efficiency",
+            "hard carbon"
+          ]
+        },
+        {
+          "qid": "QA7",
+          "family": "and2",
+          "rank": 1,
+          "matched_terms": [
+            "coulombic efficiency",
+            "sodium-ion"
+          ]
+        },
+        {
+          "qid": "QA8",
+          "family": "and2",
+          "rank": 1,
+          "matched_terms": [
+            "coulombic efficiency",
+            "initial"
+          ]
+        },
+        {
+          "qid": "QA9",
+          "family": "and2",
+          "rank": 1,
+          "matched_terms": [
+            "anode",
+            "coulombic efficiency"
+          ]
+        },
+        {
+          "qid": "QA10",
+          "family": "and2",
+          "rank": 1,
+          "matched_terms": [
+            "hard carbon",
+            "sodium-ion"
+          ]
+        },
+        {
+          "qid": "QA11",
+          "family": "and2",
+          "rank": 1,
+          "matched_terms": [
+            "hard carbon",
+            "initial"
+          ]
+        },
+        {
+          "qid": "QA12",
+          "family": "and2",
+          "rank": 1,
+          "matched_terms": [
+            "anode",
+            "hard carbon"
+          ]
+        },
+        {
+          "qid": "QA13",
+          "family": "and2",
+          "rank": 1,
+          "matched_terms": [
+            "initial",
+            "sodium-ion"
+          ]
+        },
+        {
+          "qid": "QA14",
+          "family": "and2",
+          "rank": 1,
+          "matched_terms": [
+            "anode",
+            "sodium-ion"
+          ]
+        },
+        {
+          "qid": "QA15",
+          "family": "and2",
+          "rank": 1,
+          "matched_terms": [
+            "anode",
+            "initial"
+          ]
+        },
+        {
+          "qid": "QT1",
+          "family": "term",
+          "rank": 1,
+          "matched_terms": [
+            "ice"
+          ]
+        }
+      ],
+      "diagnosis": []
+    },
+    {
+      "ref_id": "K2",
+      "title": "Electrolyte engineering raises initial Coulombic efficiency of sodium-ion hard carbon anodes",
+      "doi": "10.0000/synth.2023.102",
+      "status": "recalled",
+      "matched_rid": "R002",
+      "match_similarity": 1.0,
+      "disposition": "include",
+      "hit_queries": [
+        {
+          "qid": "QP1",
+          "family": "phrase",
+          "rank": 2,
+          "matched_terms": [
+            "sodium-ion"
+          ]
+        },
+        {
+          "qid": "QP2",
+          "family": "phrase",
+          "rank": 2,
+          "matched_terms": [
+            "hard carbon"
+          ]
+        },
+        {
+          "qid": "QP3",
+          "family": "phrase",
+          "rank": 2,
+          "matched_terms": [
+            "coulombic efficiency"
+          ]
+        },
+        {
+          "qid": "QP4",
+          "family": "phrase",
+          "rank": 2,
+          "matched_terms": [
+            "initial coulombic efficiency"
+          ]
+        },
+        {
+          "qid": "QA1",
+          "family": "and2",
+          "rank": 2,
+          "matched_terms": [
+            "coulombic efficiency",
+            "initial coulombic efficiency"
+          ]
+        },
+        {
+          "qid": "QA2",
+          "family": "and2",
+          "rank": 2,
+          "matched_terms": [
+            "hard carbon",
+            "initial coulombic efficiency"
+          ]
+        },
+        {
+          "qid": "QA3",
+          "family": "and2",
+          "rank": 2,
+          "matched_terms": [
+            "initial coulombic efficiency",
+            "sodium-ion"
+          ]
+        },
+        {
+          "qid": "QA4",
+          "family": "and2",
+          "rank": 2,
+          "matched_terms": [
+            "initial",
+            "initial coulombic efficiency"
+          ]
+        },
+        {
+          "qid": "QA5",
+          "family": "and2",
+          "rank": 2,
+          "matched_terms": [
+            "anode",
+            "initial coulombic efficiency"
+          ]
+        },
+        {
+          "qid": "QA6",
+          "family": "and2",
+          "rank": 2,
+          "matched_terms": [
+            "coulombic efficiency",
+            "hard carbon"
+          ]
+        },
+        {
+          "qid": "QA7",
+          "family": "and2",
+          "rank": 2,
+          "matched_terms": [
+            "coulombic efficiency",
+            "sodium-ion"
+          ]
+        },
+        {
+          "qid": "QA8",
+          "family": "and2",
+          "rank": 2,
+          "matched_terms": [
+            "coulombic efficiency",
+            "initial"
+          ]
+        },
+        {
+          "qid": "QA9",
+          "family": "and2",
+          "rank": 2,
+          "matched_terms": [
+            "anode",
+            "coulombic efficiency"
+          ]
+        },
+        {
+          "qid": "QA10",
+          "family": "and2",
+          "rank": 2,
+          "matched_terms": [
+            "hard carbon",
+            "sodium-ion"
+          ]
+        },
+        {
+          "qid": "QA11",
+          "family": "and2",
+          "rank": 2,
+          "matched_terms": [
+            "hard carbon",
+            "initial"
+          ]
+        },
+        {
+          "qid": "QA12",
+          "family": "and2",
+          "rank": 2,
+          "matched_terms": [
+            "anode",
+            "hard carbon"
+          ]
+        },
+        {
+          "qid": "QA13",
+          "family": "and2",
+          "rank": 2,
+          "matched_terms": [
+            "initial",
+            "sodium-ion"
+          ]
+        },
+        {
+          "qid": "QA14",
+          "family": "and2",
+          "rank": 2,
+          "matched_terms": [
+            "anode",
+            "sodium-ion"
+          ]
+        },
+        {
+          "qid": "QA15",
+          "family": "and2",
+          "rank": 2,
+          "matched_terms": [
+            "anode",
+            "initial"
+          ]
+        },
+        {
+          "qid": "QT1",
+          "family": "term",
+          "rank": 2,
+          "matched_terms": [
+            "ice"
+          ]
+        }
+      ],
+      "diagnosis": []
+    },
+    {
+      "ref_id": "K3",
+      "title": "Pore-engineered hard carbon anodes for sodium-ion batteries with improved initial efficiency",
+      "doi": "10.0000/synth.2019.103",
+      "status": "missing",
+      "matched_rid": "R003",
+      "match_similarity": 1.0,
+      "disposition": "exclude",
+      "hit_queries": [
+        {
+          "qid": "QP1",
+          "family": "phrase",
+          "rank": 3,
+          "matched_terms": [
+            "sodium-ion"
+          ]
+        },
+        {
+          "qid": "QP2",
+          "family": "phrase",
+          "rank": 3,
+          "matched_terms": [
+            "hard carbon"
+          ]
+        },
+        {
+          "qid": "QA10",
+          "family": "and2",
+          "rank": 3,
+          "matched_terms": [
+            "hard carbon",
+            "sodium-ion"
+          ]
+        },
+        {
+          "qid": "QA11",
+          "family": "and2",
+          "rank": 3,
+          "matched_terms": [
+            "hard carbon",
+            "initial"
+          ]
+        },
+        {
+          "qid": "QA12",
+          "family": "and2",
+          "rank": 3,
+          "matched_terms": [
+            "anode",
+            "hard carbon"
+          ]
+        },
+        {
+          "qid": "QA13",
+          "family": "and2",
+          "rank": 3,
+          "matched_terms": [
+            "initial",
+            "sodium-ion"
+          ]
+        },
+        {
+          "qid": "QA14",
+          "family": "and2",
+          "rank": 3,
+          "matched_terms": [
+            "anode",
+            "sodium-ion"
+          ]
+        },
+        {
+          "qid": "QA15",
+          "family": "and2",
+          "rank": 3,
+          "matched_terms": [
+            "anode",
+            "initial"
+          ]
+        }
+      ],
+      "diagnosis": [
+        "year_gap: 记录年份 2019 在 RQ 年份窗 [2021, 2024] 之外，查询虽召回但被年份条款排除",
+        "term_gap: 标题术语未被查询族覆盖: batteries, engineered, improved, pore"
+      ]
+    }
+  ],
+  "screening_log": [
+    {
+      "rid": "R001",
+      "origin": "search_snapshot.json::$/records[0]",
+      "title": "Pre-sodiation strategies boost initial Coulombic efficiency of hard carbon anodes for sodium-ion batteries",
+      "year": 2022,
+      "doi": "10.0000/synth.2022.101",
+      "disposition": "include",
+      "reason_codes": [
+        "query_hits:20"
+      ],
+      "matched_qids": [
+        "QP1",
+        "QP2",
+        "QP3",
+        "QP4",
+        "QA1",
+        "QA2",
+        "QA3",
+        "QA4",
+        "QA5",
+        "QA6",
+        "QA7",
+        "QA8",
+        "QA9",
+        "QA10",
+        "QA11",
+        "QA12",
+        "QA13",
+        "QA14",
+        "QA15",
+        "QT1"
+      ],
+      "fixture": null
+    },
+    {
+      "rid": "R002",
+      "origin": "search_snapshot.json::$/records[1]",
+      "title": "Electrolyte engineering raises initial Coulombic efficiency of sodium-ion hard carbon anodes",
+      "year": 2023,
+      "doi": "10.0000/synth.2023.102",
+      "disposition": "include",
+      "reason_codes": [
+        "query_hits:20"
+      ],
+      "matched_qids": [
+        "QP1",
+        "QP2",
+        "QP3",
+        "QP4",
+        "QA1",
+        "QA2",
+        "QA3",
+        "QA4",
+        "QA5",
+        "QA6",
+        "QA7",
+        "QA8",
+        "QA9",
+        "QA10",
+        "QA11",
+        "QA12",
+        "QA13",
+        "QA14",
+        "QA15",
+        "QT1"
+      ],
+      "fixture": null
+    },
+    {
+      "rid": "R003",
+      "origin": "search_snapshot.json::$/records[2]",
+      "title": "Pore-engineered hard carbon anodes for sodium-ion batteries with improved initial efficiency",
+      "year": 2019,
+      "doi": "10.0000/synth.2019.103",
+      "disposition": "exclude",
+      "reason_codes": [
+        "year_out_of_window:2019!in:[2021, 2024]"
+      ],
+      "matched_qids": [
+        "QP1",
+        "QP2",
+        "QA10",
+        "QA11",
+        "QA12",
+        "QA13",
+        "QA14",
+        "QA15"
+      ],
+      "fixture": null
+    },
+    {
+      "rid": "R004",
+      "origin": "search_snapshot.json::$/records[3]",
+      "title": "Hard carbon anodes for sodium-ion batteries: pre-sodiation and initial Coulombic efficiency gains",
+      "year": 2024,
+      "doi": "10.0000/synth.2024.104",
+      "disposition": "include",
+      "reason_codes": [
+        "query_hits:20"
+      ],
+      "matched_qids": [
+        "QP1",
+        "QP2",
+        "QP3",
+        "QP4",
+        "QA1",
+        "QA2",
+        "QA3",
+        "QA4",
+        "QA5",
+        "QA6",
+        "QA7",
+        "QA8",
+        "QA9",
+        "QA10",
+        "QA11",
+        "QA12",
+        "QA13",
+        "QA14",
+        "QA15",
+        "QT1"
+      ],
+      "fixture": null
+    },
+    {
+      "rid": "R005",
+      "origin": "search_snapshot.json::$/records[4]",
+      "title": "硬碳负极首周库伦效率的电解液调控研究",
+      "year": 2024,
+      "doi": "10.0000/synth.2024.105",
+      "disposition": "include",
+      "reason_codes": [
+        "query_hits:15"
+      ],
+      "matched_qids": [
+        "QT3",
+        "QT4",
+        "QT5",
+        "QT6",
+        "QT7",
+        "QT8",
+        "QT9",
+        "QT10",
+        "QT11",
+        "QT12",
+        "QT13",
+        "QT14",
+        "QT15",
+        "QT16",
+        "QT17"
+      ],
+      "fixture": null
+    },
+    {
+      "rid": "R006",
+      "origin": "search_snapshot.json::$/records[5]",
+      "title": "Review of anode materials for sodium-ion batteries",
+      "year": 2022,
+      "doi": "10.0000/synth.2022.106",
+      "disposition": "exclude",
+      "reason_codes": [
+        "doctype_excluded:review"
+      ],
+      "matched_qids": [
+        "QP1",
+        "QP2",
+        "QA10",
+        "QA12",
+        "QA14"
+      ],
+      "fixture": null
+    },
+    {
+      "rid": "R007",
+      "origin": "search_snapshot.json::$/records[6]",
+      "title": "Machine learning screening of lithium battery electrolytes",
+      "year": 2023,
+      "doi": "10.0000/synth.2023.107",
+      "disposition": "include",
+      "reason_codes": [
+        "query_hits:2"
+      ],
+      "matched_qids": [
+        "QP1",
+        "QA14"
+      ],
+      "fixture": null
+    },
+    {
+      "rid": "R008",
+      "origin": "search_snapshot.json::$/records[7]",
+      "title": "Pre-sodiation strategies boost initial Coulombic efficiency of hard carbon anodes for sodium-ion batteries (duplicate export)",
+      "year": 2022,
+      "doi": "10.0000/synth.2022.101",
+      "disposition": "exclude",
+      "reason_codes": [
+        "fixture_duplicate_registered"
+      ],
+      "matched_qids": [
+        "QP1",
+        "QP2",
+        "QP3",
+        "QP4",
+        "QA1",
+        "QA2",
+        "QA3",
+        "QA4",
+        "QA5",
+        "QA6",
+        "QA7",
+        "QA8",
+        "QA9",
+        "QA10",
+        "QA11",
+        "QA12",
+        "QA13",
+        "QA14",
+        "QA15",
+        "QT1"
+      ],
+      "fixture": {
+        "synthetic_duplicate": true,
+        "duplicate_of": "records#1"
+      }
+    },
+    {
+      "rid": "R009",
+      "origin": "search_snapshot.json::$/records[8]",
+      "title": "Opinion: reported initial Coulombic efficiency gains in hard carbon anodes are largely measurement artifacts",
+      "year": 2023,
+      "doi": "10.0000/synth.2023.108",
+      "disposition": "include",
+      "reason_codes": [
+        "query_hits:20",
+        "fixture_conflict_opinion"
+      ],
+      "matched_qids": [
+        "QP1",
+        "QP2",
+        "QP3",
+        "QP4",
+        "QA1",
+        "QA2",
+        "QA3",
+        "QA4",
+        "QA5",
+        "QA6",
+        "QA7",
+        "QA8",
+        "QA9",
+        "QA10",
+        "QA11",
+        "QA12",
+        "QA13",
+        "QA14",
+        "QA15",
+        "QT1"
+      ],
+      "fixture": {
+        "conflict_opinion": true
+      }
+    }
+  ],
+  "omissions": [
+    "清单文献 K3 未被查询族召回到候选集: year_gap: 记录年份 2019 在 RQ 年份窗 [2021, 2024] 之外，查询虽召回但被年份条款排除; term_gap: 标题术语未被查询族覆盖: batteries, engineered, improved, pore",
+    "冲突意见夹具记录 R009 已登记为争议证据，不做学术裁决"
+  ],
+  "status": "partial",
+  "sources": [
+    {
+      "kind": "file",
+      "path": "search_snapshot.json"
+    },
+    {
+      "kind": "artifact",
+      "path": "candidates.json"
+    },
+    {
+      "kind": "artifact",
+      "path": "query-execution.json"
+    },
+    {
+      "kind": "artifact",
+      "path": "query-report.json"
+    },
+    {
+      "kind": "artifact",
+      "path": "known-item-audit.json"
+    },
+    {
+      "kind": "artifact",
+      "path": "screening-ledger.jsonl"
+    }
+  ],
+  "uncertainty": [
+    "清单文献 K3 未被查询族召回到候选集: year_gap: 记录年份 2019 在 RQ 年份窗 [2021, 2024] 之外，查询虽召回但被年份条款排除; term_gap: 标题术语未被查询族覆盖: batteries, engineered, improved, pore",
+    "冲突意见夹具记录 R009 已登记为争议证据，不做学术裁决"
+  ],
+  "method": "d-query-foundry: foundry(terms→variants→queries→execute→screen) → known_item_audit(recall diagnose) → finalize",
+  "generated_at": "2026-11-25T17:03:17+0800",
+  "field_notes": {}
+}

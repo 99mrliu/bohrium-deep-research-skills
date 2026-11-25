@@ -1,0 +1,585 @@
+{
+  "queries": [
+    {
+      "qid": "QP1",
+      "family": "phrase",
+      "op": "phrase",
+      "terms": [
+        "sodium-ion"
+      ],
+      "hits": 8,
+      "rids": [
+        "R001",
+        "R002",
+        "R003",
+        "R004",
+        "R006",
+        "R007",
+        "R008",
+        "R009"
+      ]
+    },
+    {
+      "qid": "QP2",
+      "family": "phrase",
+      "op": "phrase",
+      "terms": [
+        "hard carbon"
+      ],
+      "hits": 7,
+      "rids": [
+        "R001",
+        "R002",
+        "R003",
+        "R004",
+        "R006",
+        "R008",
+        "R009"
+      ]
+    },
+    {
+      "qid": "QP3",
+      "family": "phrase",
+      "op": "phrase",
+      "terms": [
+        "coulombic efficiency"
+      ],
+      "hits": 5,
+      "rids": [
+        "R001",
+        "R002",
+        "R004",
+        "R008",
+        "R009"
+      ]
+    },
+    {
+      "qid": "QP4",
+      "family": "phrase",
+      "op": "phrase",
+      "terms": [
+        "initial coulombic efficiency"
+      ],
+      "hits": 5,
+      "rids": [
+        "R001",
+        "R002",
+        "R004",
+        "R008",
+        "R009"
+      ]
+    },
+    {
+      "qid": "QA1",
+      "family": "and2",
+      "op": "and",
+      "terms": [
+        "initial coulombic efficiency",
+        "coulombic efficiency"
+      ],
+      "hits": 5,
+      "rids": [
+        "R001",
+        "R002",
+        "R004",
+        "R008",
+        "R009"
+      ]
+    },
+    {
+      "qid": "QA2",
+      "family": "and2",
+      "op": "and",
+      "terms": [
+        "initial coulombic efficiency",
+        "hard carbon"
+      ],
+      "hits": 5,
+      "rids": [
+        "R001",
+        "R002",
+        "R004",
+        "R008",
+        "R009"
+      ]
+    },
+    {
+      "qid": "QA3",
+      "family": "and2",
+      "op": "and",
+      "terms": [
+        "initial coulombic efficiency",
+        "sodium-ion"
+      ],
+      "hits": 5,
+      "rids": [
+        "R001",
+        "R002",
+        "R004",
+        "R008",
+        "R009"
+      ]
+    },
+    {
+      "qid": "QA4",
+      "family": "and2",
+      "op": "and",
+      "terms": [
+        "initial coulombic efficiency",
+        "initial"
+      ],
+      "hits": 5,
+      "rids": [
+        "R001",
+        "R002",
+        "R004",
+        "R008",
+        "R009"
+      ]
+    },
+    {
+      "qid": "QA5",
+      "family": "and2",
+      "op": "and",
+      "terms": [
+        "initial coulombic efficiency",
+        "anode"
+      ],
+      "hits": 5,
+      "rids": [
+        "R001",
+        "R002",
+        "R004",
+        "R008",
+        "R009"
+      ]
+    },
+    {
+      "qid": "QA6",
+      "family": "and2",
+      "op": "and",
+      "terms": [
+        "coulombic efficiency",
+        "hard carbon"
+      ],
+      "hits": 5,
+      "rids": [
+        "R001",
+        "R002",
+        "R004",
+        "R008",
+        "R009"
+      ]
+    },
+    {
+      "qid": "QA7",
+      "family": "and2",
+      "op": "and",
+      "terms": [
+        "coulombic efficiency",
+        "sodium-ion"
+      ],
+      "hits": 5,
+      "rids": [
+        "R001",
+        "R002",
+        "R004",
+        "R008",
+        "R009"
+      ]
+    },
+    {
+      "qid": "QA8",
+      "family": "and2",
+      "op": "and",
+      "terms": [
+        "coulombic efficiency",
+        "initial"
+      ],
+      "hits": 5,
+      "rids": [
+        "R001",
+        "R002",
+        "R004",
+        "R008",
+        "R009"
+      ]
+    },
+    {
+      "qid": "QA9",
+      "family": "and2",
+      "op": "and",
+      "terms": [
+        "coulombic efficiency",
+        "anode"
+      ],
+      "hits": 5,
+      "rids": [
+        "R001",
+        "R002",
+        "R004",
+        "R008",
+        "R009"
+      ]
+    },
+    {
+      "qid": "QA10",
+      "family": "and2",
+      "op": "and",
+      "terms": [
+        "hard carbon",
+        "sodium-ion"
+      ],
+      "hits": 7,
+      "rids": [
+        "R001",
+        "R002",
+        "R003",
+        "R004",
+        "R006",
+        "R008",
+        "R009"
+      ]
+    },
+    {
+      "qid": "QA11",
+      "family": "and2",
+      "op": "and",
+      "terms": [
+        "hard carbon",
+        "initial"
+      ],
+      "hits": 6,
+      "rids": [
+        "R001",
+        "R002",
+        "R003",
+        "R004",
+        "R008",
+        "R009"
+      ]
+    },
+    {
+      "qid": "QA12",
+      "family": "and2",
+      "op": "and",
+      "terms": [
+        "hard carbon",
+        "anode"
+      ],
+      "hits": 7,
+      "rids": [
+        "R001",
+        "R002",
+        "R003",
+        "R004",
+        "R006",
+        "R008",
+        "R009"
+      ]
+    },
+    {
+      "qid": "QA13",
+      "family": "and2",
+      "op": "and",
+      "terms": [
+        "sodium-ion",
+        "initial"
+      ],
+      "hits": 6,
+      "rids": [
+        "R001",
+        "R002",
+        "R003",
+        "R004",
+        "R008",
+        "R009"
+      ]
+    },
+    {
+      "qid": "QA14",
+      "family": "and2",
+      "op": "and",
+      "terms": [
+        "sodium-ion",
+        "anode"
+      ],
+      "hits": 8,
+      "rids": [
+        "R001",
+        "R002",
+        "R003",
+        "R004",
+        "R006",
+        "R007",
+        "R008",
+        "R009"
+      ]
+    },
+    {
+      "qid": "QA15",
+      "family": "and2",
+      "op": "and",
+      "terms": [
+        "initial",
+        "anode"
+      ],
+      "hits": 6,
+      "rids": [
+        "R001",
+        "R002",
+        "R003",
+        "R004",
+        "R008",
+        "R009"
+      ]
+    },
+    {
+      "qid": "QT1",
+      "family": "term",
+      "op": "term",
+      "terms": [
+        "ice"
+      ],
+      "hits": 5,
+      "rids": [
+        "R001",
+        "R002",
+        "R004",
+        "R008",
+        "R009"
+      ]
+    },
+    {
+      "qid": "QT2",
+      "family": "term",
+      "op": "term",
+      "terms": [
+        "于钠"
+      ],
+      "hits": 0,
+      "rids": []
+    },
+    {
+      "qid": "QT3",
+      "family": "term",
+      "op": "term",
+      "terms": [
+        "钠离"
+      ],
+      "hits": 1,
+      "rids": [
+        "R005"
+      ]
+    },
+    {
+      "qid": "QT4",
+      "family": "term",
+      "op": "term",
+      "terms": [
+        "离子"
+      ],
+      "hits": 1,
+      "rids": [
+        "R005"
+      ]
+    },
+    {
+      "qid": "QT5",
+      "family": "term",
+      "op": "term",
+      "terms": [
+        "子电"
+      ],
+      "hits": 1,
+      "rids": [
+        "R005"
+      ]
+    },
+    {
+      "qid": "QT6",
+      "family": "term",
+      "op": "term",
+      "terms": [
+        "电池"
+      ],
+      "hits": 1,
+      "rids": [
+        "R005"
+      ]
+    },
+    {
+      "qid": "QT7",
+      "family": "term",
+      "op": "term",
+      "terms": [
+        "池硬"
+      ],
+      "hits": 1,
+      "rids": [
+        "R005"
+      ]
+    },
+    {
+      "qid": "QT8",
+      "family": "term",
+      "op": "term",
+      "terms": [
+        "硬碳"
+      ],
+      "hits": 1,
+      "rids": [
+        "R005"
+      ]
+    },
+    {
+      "qid": "QT9",
+      "family": "term",
+      "op": "term",
+      "terms": [
+        "碳负"
+      ],
+      "hits": 1,
+      "rids": [
+        "R005"
+      ]
+    },
+    {
+      "qid": "QT10",
+      "family": "term",
+      "op": "term",
+      "terms": [
+        "负极"
+      ],
+      "hits": 1,
+      "rids": [
+        "R005"
+      ]
+    },
+    {
+      "qid": "QT11",
+      "family": "term",
+      "op": "term",
+      "terms": [
+        "极首"
+      ],
+      "hits": 1,
+      "rids": [
+        "R005"
+      ]
+    },
+    {
+      "qid": "QT12",
+      "family": "term",
+      "op": "term",
+      "terms": [
+        "首周"
+      ],
+      "hits": 1,
+      "rids": [
+        "R005"
+      ]
+    },
+    {
+      "qid": "QT13",
+      "family": "term",
+      "op": "term",
+      "terms": [
+        "周库"
+      ],
+      "hits": 1,
+      "rids": [
+        "R005"
+      ]
+    },
+    {
+      "qid": "QT14",
+      "family": "term",
+      "op": "term",
+      "terms": [
+        "库伦"
+      ],
+      "hits": 1,
+      "rids": [
+        "R005"
+      ]
+    },
+    {
+      "qid": "QT15",
+      "family": "term",
+      "op": "term",
+      "terms": [
+        "伦效"
+      ],
+      "hits": 1,
+      "rids": [
+        "R005"
+      ]
+    },
+    {
+      "qid": "QT16",
+      "family": "term",
+      "op": "term",
+      "terms": [
+        "效率"
+      ],
+      "hits": 1,
+      "rids": [
+        "R005"
+      ]
+    },
+    {
+      "qid": "QT17",
+      "family": "term",
+      "op": "term",
+      "terms": [
+        "提升"
+      ],
+      "hits": 1,
+      "rids": [
+        "R005"
+      ]
+    },
+    {
+      "qid": "QT18",
+      "family": "term",
+      "op": "term",
+      "terms": [
+        "升策"
+      ],
+      "hits": 0,
+      "rids": []
+    },
+    {
+      "qid": "QT19",
+      "family": "term",
+      "op": "term",
+      "terms": [
+        "策略"
+      ],
+      "hits": 0,
+      "rids": []
+    },
+    {
+      "qid": "QT20",
+      "family": "term",
+      "op": "term",
+      "terms": [
+        "验研"
+      ],
+      "hits": 0,
+      "rids": []
+    },
+    {
+      "qid": "QT21",
+      "family": "term",
+      "op": "term",
+      "terms": [
+        "究文"
+      ],
+      "hits": 0,
+      "rids": []
+    }
+  ],
+  "total_hits": 130
+}

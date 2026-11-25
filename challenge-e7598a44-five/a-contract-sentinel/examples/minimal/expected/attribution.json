@@ -1,0 +1,38 @@
+{
+  "status": "ok",
+  "origin": "case.json!attributed_papers",
+  "total": 3,
+  "matched": 2,
+  "ambiguous": 0,
+  "missing": 1,
+  "papers": [
+    {
+      "ref_id": "AP-1",
+      "title": "Grain boundary passivation in perovskite solar cells by guanidinium",
+      "doi": "10.0000/synth.2021.001",
+      "status": "matched",
+      "match": {
+        "rid": "search_export.json!$.records#1",
+        "similarity": 1.0,
+        "metadata_diff": []
+      }
+    },
+    {
+      "ref_id": "AP-2",
+      "title": "Efficiency stability trade-off in passivated perovskite photovoltaics",
+      "doi": "10.0000/synth.2022.002",
+      "status": "matched",
+      "match": {
+        "rid": "search_export.json!$.records#2",
+        "similarity": 1.0,
+        "metadata_diff": []
+      }
+    },
+    {
+      "ref_id": "AP-3",
+      "title": "A phantom study not present in the snapshot",
+      "doi": "10.0000/synth.2023.999",
+      "status": "missing"
+    }
+  ]
+}

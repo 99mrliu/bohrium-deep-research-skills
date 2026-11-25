@@ -1,0 +1,36 @@
+{
+  "verdict": "PASS",
+  "checks": [
+    {
+      "id": "X1",
+      "verdict": "PASS",
+      "detail": "manifest 登记的交付物: ['flow.svg', 'ledger.csv', 'report.md', 'result.json', 'review.html']"
+    },
+    {
+      "id": "X2",
+      "verdict": "PASS",
+      "detail": "哈希/字节不一致: 无，逐件一致"
+    },
+    {
+      "id": "X3",
+      "verdict": "PASS",
+      "detail": "ledger.csv 数据行 8 vs screening_log 8"
+    },
+    {
+      "id": "X4",
+      "verdict": "PASS",
+      "detail": "纳入记录 4 条，HTML 缺标题 0 条: 无"
+    },
+    {
+      "id": "X5",
+      "verdict": "PASS",
+      "detail": "stage 计数 6/6 读到；不一致: 无"
+    },
+    {
+      "id": "X6",
+      "verdict": "PASS",
+      "detail": "case_id一致=True；契约字段缺失=无；status='partial'（uncertainty 3 项）"
+    }
+  ],
+  "note": "PASS 才可交付；FAIL 时按失败项修复后重跑 build_review.py 与本脚本"
+}

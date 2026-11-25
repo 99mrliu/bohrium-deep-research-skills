@@ -1,0 +1,14 @@
+{
+  "case_id": "synth-forensics-001",
+  "research_question": "2019 至 2024 年间发表的关于锂金属负极与固态电解质界面稳定性提升的实验研究文献检索与筛选",
+  "output_contract": [
+    "case_id", "summary", "candidates", "integrity_report",
+    "quarantine_register", "screening_log", "omissions",
+    "status", "sources", "uncertainty"
+  ],
+  "attributed_papers": [
+    {"ref_id": "AP-1", "title": "Stabilizing the lithium metal solid electrolyte interface with alloy interlayers", "doi": "10.0000/synth.2021.101", "year": 2021, "first_author": "Ming Zhao", "venue": "Synth Solid State Lett"},
+    {"ref_id": "AP-2", "title": "Interface engineering for garnet electrolytes against lithium dendrite", "doi": "10.0000/synth.2022.102", "year": 2023, "first_author": "Wei Chen", "venue": "Synth Ionics"},
+    {"ref_id": "AP-3", "title": "A phantom interface study absent from the snapshot", "doi": "10.0000/synth.2024.999", "year": 2024, "first_author": "Nora Gui", "venue": "Synth Phantom"}
+  ]
+}

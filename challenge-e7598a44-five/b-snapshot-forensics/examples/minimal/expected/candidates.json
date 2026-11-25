@@ -1,0 +1,176 @@
+{
+  "criteria": {
+    "year_window": [
+      2019,
+      2024
+    ],
+    "terms": [
+      "2019",
+      "2024",
+      "anode",
+      "electrolyte",
+      "experiment",
+      "experimental",
+      "interface",
+      "interfacial",
+      "lithium",
+      "metal",
+      "solid",
+      "solid state",
+      "stability",
+      "stable",
+      "与固",
+      "与筛",
+      "于锂",
+      "关于",
+      "升的",
+      "发表",
+      "固态",
+      "定性",
+      "实验",
+      "属负",
+      "年间",
+      "态电",
+      "性提",
+      "提升",
+      "文献",
+      "极与",
+      "检索",
+      "献检",
+      "电解",
+      "界面",
+      "的关",
+      "的实",
+      "研究",
+      "稳定",
+      "究文",
+      "筛选",
+      "索与",
+      "表的",
+      "解质",
+      "负极",
+      "质界",
+      "金属",
+      "锂金",
+      "间发",
+      "面稳",
+      "验研"
+    ],
+    "crosslingual_expansion": [
+      {
+        "concept": "锂",
+        "terms": [
+          "lithium"
+        ]
+      },
+      {
+        "concept": "金属",
+        "terms": [
+          "metal"
+        ]
+      },
+      {
+        "concept": "负极",
+        "terms": [
+          "anode"
+        ]
+      },
+      {
+        "concept": "固态",
+        "terms": [
+          "solid state",
+          "solid"
+        ]
+      },
+      {
+        "concept": "电解质",
+        "terms": [
+          "electrolyte"
+        ]
+      },
+      {
+        "concept": "界面",
+        "terms": [
+          "interface",
+          "interfacial"
+        ]
+      },
+      {
+        "concept": "稳定",
+        "terms": [
+          "stability",
+          "stable"
+        ]
+      },
+      {
+        "concept": "实验",
+        "terms": [
+          "experiment",
+          "experimental"
+        ]
+      }
+    ],
+    "hit_threshold": 3
+  },
+  "counts": {
+    "included": 3,
+    "excluded": 2,
+    "uncertain": 1
+  },
+  "candidates": [
+    {
+      "rid": "extra_export.jsonl::L1",
+      "title": "Thin film coating improves solid electrolyte interface stability",
+      "year": 2024,
+      "doi": "10.0000/synth.2024.108",
+      "matched_terms": [
+        "anode",
+        "electrolyte",
+        "experiment",
+        "interface",
+        "lithium",
+        "metal",
+        "solid",
+        "stability"
+      ],
+      "source": "extra_export.jsonl"
+    },
+    {
+      "rid": "search_export.json::$.records[1]",
+      "title": "Stabilizing the lithium metal solid electrolyte interface with alloy interlayers",
+      "year": 2021,
+      "doi": "10.0000/synth.2021.101",
+      "matched_terms": [
+        "anode",
+        "electrolyte",
+        "experiment",
+        "experimental",
+        "interface",
+        "interfacial",
+        "lithium",
+        "metal",
+        "solid",
+        "solid state",
+        "stability"
+      ],
+      "source": "search_export.json"
+    },
+    {
+      "rid": "search_export.json::$.records[2]",
+      "title": "Interface engineering for garnet electrolytes against lithium dendrite",
+      "year": 2022,
+      "doi": "10.0000/synth.2022.102",
+      "matched_terms": [
+        "electrolyte",
+        "experiment",
+        "interface",
+        "lithium",
+        "metal",
+        "solid",
+        "stability",
+        "stable"
+      ],
+      "source": "search_export.json"
+    }
+  ]
+}

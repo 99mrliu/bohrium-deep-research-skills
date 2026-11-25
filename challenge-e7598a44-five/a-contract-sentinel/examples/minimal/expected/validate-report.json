@@ -1,0 +1,46 @@
+{
+  "gate": "pass",
+  "checks": [
+    {
+      "id": "C1",
+      "verdict": "PASS",
+      "detail": "result.json 存在且为 JSON 对象"
+    },
+    {
+      "id": "C2",
+      "verdict": "PASS",
+      "detail": "case_id='synth-minimal-001'（case.json: 'synth-minimal-001'）"
+    },
+    {
+      "id": "C3",
+      "verdict": "PASS",
+      "detail": "契约字段 8 个，缺失: 无"
+    },
+    {
+      "id": "C4",
+      "verdict": "PASS",
+      "detail": "空容器但未说明: 无"
+    },
+    {
+      "id": "C5",
+      "verdict": "PASS",
+      "detail": "status='partial'，uncertainty 项数=3"
+    },
+    {
+      "id": "C6",
+      "verdict": "PASS",
+      "detail": "sources 中失效文件引用: 无"
+    },
+    {
+      "id": "C7",
+      "verdict": "PASS",
+      "detail": "candidates 4 条；字段缺失 0；台账外 rid 无"
+    },
+    {
+      "id": "C8",
+      "verdict": "PASS",
+      "detail": "uncertainty 为非空字符串列表"
+    }
+  ],
+  "note": "gate=pass 才可交付；fail 时按 FAIL 项修复后重跑 pipeline.py 与本脚本"
+}

@@ -1,0 +1,29 @@
+{
+  "research_question": "2021 至 2024 年钙钛矿太阳能电池研究：晶界钝化对光电转换效率的影响、湿热环境下的运行稳定性、以及铅泄漏的生物毒性评估，三方面的证据充分性评估",
+  "subquestions": [
+    {
+      "sq_id": "SQ-1",
+      "question": "晶界钝化对钙钛矿太阳能电池光电转换效率的影响有哪些证据？",
+      "must_terms": ["perovskite"],
+      "any_terms": ["grain boundary", "passivation", "晶界", "钝化"],
+      "year_window": [2021, 2024],
+      "rationale": "RQ 第一分句；钝化/晶界是该机制的主题词，中英文并列以覆盖双语快照"
+    },
+    {
+      "sq_id": "SQ-2",
+      "question": "湿热环境下钙钛矿太阳能电池运行稳定性的证据有哪些？",
+      "must_terms": ["perovskite", "stability"],
+      "any_terms": ["damp heat", "humidity", "moisture", "湿热"],
+      "year_window": [2021, 2024],
+      "rationale": "RQ 第二分句；限定湿热类条件词，避免把所有稳定性研究都计入"
+    },
+    {
+      "sq_id": "SQ-3",
+      "question": "铅泄漏的生物毒性评估证据有哪些？",
+      "must_terms": ["lead", "toxicity"],
+      "any_terms": ["leakage", "bio", "铅", "毒性"],
+      "year_window": [2021, 2024],
+      "rationale": "RQ 第三分句；风险维度，预期快照覆盖弱，用于演示 starved 与 handoff"
+    }
+  ]
+}

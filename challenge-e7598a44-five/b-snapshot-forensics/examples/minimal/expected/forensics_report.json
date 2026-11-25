@@ -1,0 +1,86 @@
+{
+  "case_id": "synth-forensics-001",
+  "problems": [],
+  "files": [
+    {
+      "path": "case.json",
+      "format": "json",
+      "sha256": "18a265e6d5233c0cc9ed97266057ea57b1636d7bbe0b6d25594f593e9213a4ed",
+      "bytes": 1027,
+      "lines": 14,
+      "record_count": 0,
+      "key_histogram": {},
+      "anomalies": []
+    },
+    {
+      "path": "extra_export.jsonl",
+      "format": "jsonl",
+      "sha256": "982a76d6522bd918dc39aa6149e173faf273f84195a0b449d1caa885bb908ee7",
+      "bytes": 679,
+      "lines": 3,
+      "record_count": 2,
+      "key_histogram": {
+        "abstract": 2,
+        "authors": 2,
+        "doi": 2,
+        "title": 2,
+        "type": 2,
+        "venue": 2,
+        "year": 2
+      },
+      "anomalies": [
+        {
+          "kind": "unparseable_line",
+          "at": "L3",
+          "detail": "Expecting ',' delimiter: line 1 column 59 (char 58)"
+        }
+      ]
+    },
+    {
+      "path": "search_export.json",
+      "format": "json",
+      "sha256": "d789a50dab6f1dbd11090465c5cbcdac10087d8c2c9576ea1bb81375b287ea63",
+      "bytes": 2579,
+      "lines": 12,
+      "record_count": 7,
+      "key_histogram": {
+        "abstract": 7,
+        "authors": 7,
+        "doi": 7,
+        "type": 7,
+        "venue": 7,
+        "year": 7,
+        "title": 6,
+        "conflict_opinion": 1,
+        "duplicate_of": 1,
+        "synthetic_duplicate": 1
+      },
+      "anomalies": []
+    },
+    {
+      "path": "task.md",
+      "format": "md",
+      "sha256": "7492a1ae063ed8c08cbf61a2d99a2773e88884d0b10ccd96780798907cdc84d8",
+      "bytes": 433,
+      "lines": 6,
+      "note": "非快照数据格式，仅登记指纹，不解析记录",
+      "record_count": 0,
+      "key_histogram": {},
+      "anomalies": []
+    }
+  ],
+  "totals": {
+    "files_seen": 4,
+    "files_parsed": 2,
+    "records_parsed": 9,
+    "records_trusted": 6,
+    "records_quarantined": 3,
+    "quarantine_by_category": {
+      "fixture_synthetic_duplicate": 1,
+      "fixture_conflict_opinion": 1,
+      "malformed_no_title": 1
+    },
+    "anomaly_lines": 1,
+    "parse_failures": []
+  }
+}

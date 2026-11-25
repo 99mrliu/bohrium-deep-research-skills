@@ -1,0 +1,240 @@
+{
+  "case_id": "synth-coverage-001",
+  "status": "partial",
+  "summary": "测量 9 条快照记录 × 3 个子问题：sufficient 1 / thin 1 / starved 1；停止决定 handoff_to_human（存在零可用证据子问题 SQ-3（no_records）：有限快照内无法补足，需人工扩展检索源或书面确认接受该缺口）",
+  "candidates": [
+    {
+      "rid": "search_export.json!$.records#1",
+      "title": "Guanidinium grain boundary passivation raises perovskite solar cell efficiency",
+      "year": 2021,
+      "doi": "10.0000/synth.cc.001",
+      "supports": [
+        "SQ-1"
+      ]
+    },
+    {
+      "rid": "search_export.json!$.records#2",
+      "title": "Passivation of perovskite grain boundaries: efficiency gains quantified",
+      "year": 2022,
+      "doi": "10.0000/synth.cc.002",
+      "supports": [
+        "SQ-1"
+      ]
+    },
+    {
+      "rid": "search_export.json!$.records#3",
+      "title": "Grain boundary engineering boosts perovskite solar cell efficiency",
+      "year": 2024,
+      "doi": "10.0000/synth.cc.003",
+      "supports": [
+        "SQ-1"
+      ]
+    },
+    {
+      "rid": "search_export.json!$.records#5",
+      "title": "Damp heat stability of encapsulated perovskite modules",
+      "year": 2023,
+      "doi": "10.0000/synth.cc.005",
+      "supports": [
+        "SQ-2"
+      ]
+    },
+    {
+      "rid": "search_export.json!$.records#8",
+      "title": "Humidity stability of perovskite films with polymer encapsulation",
+      "year": null,
+      "doi": null,
+      "supports": [
+        "SQ-2"
+      ]
+    }
+  ],
+  "coverage_matrix": [
+    {
+      "sq_id": "SQ-1",
+      "question": "晶界钝化对钙钛矿太阳能电池光电转换效率的影响有哪些证据？",
+      "usable_hits": 3,
+      "conflicted_hits": 0,
+      "out_of_window_hits": 0,
+      "metadata_missing_hits": 0,
+      "raw_term_hits": 3,
+      "usable_rids": [
+        "search_export.json!$.records#1",
+        "search_export.json!$.records#2",
+        "search_export.json!$.records#3"
+      ],
+      "conflicted_rids": [],
+      "out_of_window_rids": [],
+      "metadata_missing_rids": [],
+      "evidence": [
+        {
+          "rid": "search_export.json!$.records#1",
+          "title": "Guanidinium grain boundary passivation raises perovskite solar cell efficiency",
+          "year": 2021,
+          "doi": "10.0000/synth.cc.001",
+          "matched_terms": [
+            "perovskite",
+            "grain boundary",
+            "passivation"
+          ]
+        },
+        {
+          "rid": "search_export.json!$.records#2",
+          "title": "Passivation of perovskite grain boundaries: efficiency gains quantified",
+          "year": 2022,
+          "doi": "10.0000/synth.cc.002",
+          "matched_terms": [
+            "perovskite",
+            "grain boundary",
+            "passivation"
+          ]
+        },
+        {
+          "rid": "search_export.json!$.records#3",
+          "title": "Grain boundary engineering boosts perovskite solar cell efficiency",
+          "year": 2024,
+          "doi": "10.0000/synth.cc.003",
+          "matched_terms": [
+            "perovskite",
+            "grain boundary",
+            "passivation"
+          ]
+        }
+      ],
+      "marginal_gain_round2": 0,
+      "sufficiency": "sufficient",
+      "gap": null
+    },
+    {
+      "sq_id": "SQ-2",
+      "question": "湿热环境下钙钛矿太阳能电池运行稳定性的证据有哪些？",
+      "usable_hits": 2,
+      "conflicted_hits": 1,
+      "out_of_window_hits": 1,
+      "metadata_missing_hits": 1,
+      "raw_term_hits": 4,
+      "usable_rids": [
+        "search_export.json!$.records#5",
+        "search_export.json!$.records#8"
+      ],
+      "conflicted_rids": [
+        "search_export.json!$.records#9"
+      ],
+      "out_of_window_rids": [
+        "search_export.json!$.records#7"
+      ],
+      "metadata_missing_rids": [
+        "search_export.json!$.records#8"
+      ],
+      "evidence": [
+        {
+          "rid": "search_export.json!$.records#5",
+          "title": "Damp heat stability of encapsulated perovskite modules",
+          "year": 2023,
+          "doi": "10.0000/synth.cc.005",
+          "matched_terms": [
+            "perovskite",
+            "stability",
+            "damp heat"
+          ]
+        },
+        {
+          "rid": "search_export.json!$.records#7",
+          "title": "Humidity stability of perovskite solar modules in outdoor fields",
+          "year": 2019,
+          "doi": "10.0000/synth.cc.007",
+          "matched_terms": [
+            "perovskite",
+            "stability",
+            "humidity"
+          ]
+        },
+        {
+          "rid": "search_export.json!$.records#8",
+          "title": "Humidity stability of perovskite films with polymer encapsulation",
+          "year": null,
+          "doi": null,
+          "matched_terms": [
+            "perovskite",
+            "stability",
+            "humidity"
+          ]
+        },
+        {
+          "rid": "search_export.json!$.records#9",
+          "title": "Conflicting opinion: damp-heat stability gains of perovskite are overstated",
+          "year": 2023,
+          "doi": "10.0000/synth.cc.009",
+          "matched_terms": [
+            "perovskite",
+            "stability",
+            "damp heat"
+          ]
+        }
+      ],
+      "marginal_gain_round2": 1,
+      "sufficiency": "thin",
+      "gap": null
+    },
+    {
+      "sq_id": "SQ-3",
+      "question": "铅泄漏的生物毒性评估证据有哪些？",
+      "usable_hits": 0,
+      "conflicted_hits": 0,
+      "out_of_window_hits": 0,
+      "metadata_missing_hits": 0,
+      "raw_term_hits": 0,
+      "usable_rids": [],
+      "conflicted_rids": [],
+      "out_of_window_rids": [],
+      "metadata_missing_rids": [],
+      "evidence": [],
+      "marginal_gain_round2": 0,
+      "sufficiency": "starved",
+      "gap": "no_records"
+    }
+  ],
+  "sufficiency": {
+    "SQ-1": "sufficient",
+    "SQ-2": "thin",
+    "SQ-3": "starved"
+  },
+  "stop_decision": {
+    "decision": "handoff_to_human",
+    "reason": "存在零可用证据子问题 SQ-3（no_records）：有限快照内无法补足，需人工扩展检索源或书面确认接受该缺口",
+    "per_sq_recommendation": {
+      "SQ-1": "accept",
+      "SQ-2": "accept_with_caveat",
+      "SQ-3": "needs_human"
+    }
+  },
+  "gaps": {
+    "SQ-1": null,
+    "SQ-2": null,
+    "SQ-3": "no_records"
+  },
+  "sources": [
+    {
+      "kind": "file",
+      "path": "search_export.json"
+    },
+    {
+      "kind": "artifact",
+      "path": "coverage_matrix.json"
+    },
+    {
+      "kind": "artifact",
+      "path": "stop_decision.json"
+    }
+  ],
+  "uncertainty": [
+    "子问题 SQ-2 证据薄弱（可用 2 条<3），按 thin 如实交付",
+    "子问题 SQ-2 的冲突意见夹具记录 search_export.json!$.records#9 仅登记为争议证据，不做学术裁决",
+    "子问题 SQ-2 有 1 条证据缺年份或 DOI，归属核验受限",
+    "子问题 SQ-3 零可用证据（缺口: no_records），已触发 handoff_to_human",
+    "停止决定 handoff_to_human：存在零可用证据子问题 SQ-3（no_records）：有限快照内无法补足，需人工扩展检索源或书面确认接受该缺口"
+  ],
+  "method": "c-coverage-compass: decompose→measure(sq×evidence)→grade→marginal-gain→stop",
+  "generated_at": "2026-11-25T17:06:37+0800",
+  "field_notes": {}
+}

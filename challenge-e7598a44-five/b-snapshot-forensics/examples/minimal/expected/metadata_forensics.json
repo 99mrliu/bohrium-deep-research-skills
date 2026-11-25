@@ -1,0 +1,74 @@
+{
+  "status": "ok",
+  "origin": "case.json!attributed_papers",
+  "total": 3,
+  "authentic": 1,
+  "mismatch": 1,
+  "absent": 1,
+  "papers": [
+    {
+      "ref_id": "AP-1",
+      "title": "Stabilizing the lithium metal solid electrolyte interface with alloy interlayers",
+      "doi": "10.0000/synth.2021.101",
+      "verdict": "authentic",
+      "matched_record": "search_export.json::$.records[1]",
+      "match_score": 1.0,
+      "matched_record_quarantined": false,
+      "field_checks": [
+        {
+          "field": "doi",
+          "verdict": "match"
+        },
+        {
+          "field": "year",
+          "verdict": "match"
+        },
+        {
+          "field": "first_author",
+          "verdict": "match"
+        },
+        {
+          "field": "venue",
+          "verdict": "match"
+        }
+      ]
+    },
+    {
+      "ref_id": "AP-2",
+      "title": "Interface engineering for garnet electrolytes against lithium dendrite",
+      "doi": "10.0000/synth.2022.102",
+      "verdict": "mismatch",
+      "matched_record": "search_export.json::$.records[2]",
+      "match_score": 1.0,
+      "matched_record_quarantined": false,
+      "field_checks": [
+        {
+          "field": "doi",
+          "verdict": "match"
+        },
+        {
+          "field": "year",
+          "verdict": "diff",
+          "ref": 2023,
+          "snapshot": 2022
+        },
+        {
+          "field": "first_author",
+          "verdict": "match"
+        },
+        {
+          "field": "venue",
+          "verdict": "match"
+        }
+      ],
+      "detail": "year: 清单 2023 vs 快照 2022"
+    },
+    {
+      "ref_id": "AP-3",
+      "title": "A phantom interface study absent from the snapshot",
+      "doi": "10.0000/synth.2024.999",
+      "verdict": "absent",
+      "detail": "快照全部记录中无 DOI 匹配且标题重叠 < 0.5"
+    }
+  ]
+}

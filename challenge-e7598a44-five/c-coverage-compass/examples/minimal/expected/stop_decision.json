@@ -1,0 +1,9 @@
+{
+  "decision": "handoff_to_human",
+  "reason": "存在零可用证据子问题 SQ-3（no_records）：有限快照内无法补足，需人工扩展检索源或书面确认接受该缺口",
+  "per_sq_recommendation": {
+    "SQ-1": "accept",
+    "SQ-2": "accept_with_caveat",
+    "SQ-3": "needs_human"
+  }
+}

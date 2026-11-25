@@ -1,0 +1,475 @@
+{
+  "case_id": "synth-review-001",
+  "summary": "识别 8 条记录；去重移除 1 条；纳入 4 / 待复核 1 / 排除 2；署名清单 3 篇（匹配 2 / 缺失 1）；复核交付物 5 件已生成并登记哈希",
+  "candidates": [
+    {
+      "rid": "R01",
+      "title": "Cycling stability of layered oxide cathodes for sodium-ion batteries via Mg doping",
+      "year": 2021,
+      "doi": "10.0000/synth.na.001",
+      "matched_terms": [
+        "batteries",
+        "cathode",
+        "cycling",
+        "layered oxide",
+        "sodium",
+        "sodium-ion",
+        "stability",
+        "cycle"
+      ],
+      "source": "search_export.json"
+    },
+    {
+      "rid": "R02",
+      "title": "Suppressing phase transitions in O3-type layered oxide cathode for Na-ion batteries",
+      "year": 2023,
+      "doi": "10.0000/synth.na.002",
+      "matched_terms": [
+        "batteries",
+        "cathode",
+        "layered oxide",
+        "na-ion",
+        "cycle",
+        "sodium",
+        "sodium-ion",
+        "stable"
+      ],
+      "source": "search_export.json"
+    },
+    {
+      "rid": "R07",
+      "title": "Cr doping improves layered oxide cathode stability in sodium-ion batteries",
+      "year": 2024,
+      "doi": "10.0000/synth.na.006",
+      "matched_terms": [
+        "batteries",
+        "cathode",
+        "layered oxide",
+        "sodium",
+        "sodium-ion",
+        "stability",
+        "cycle",
+        "cycling"
+      ],
+      "source": "search_export.json"
+    },
+    {
+      "rid": "R08",
+      "title": "Opinion: layered oxide cathodes show no practical stability gain for sodium-ion batteries",
+      "year": 2023,
+      "doi": "10.0000/synth.na.007",
+      "matched_terms": [
+        "batteries",
+        "cathode",
+        "layered oxide",
+        "sodium",
+        "sodium-ion",
+        "stability",
+        "cycling"
+      ],
+      "source": "search_export.json"
+    }
+  ],
+  "screening_log": [
+    {
+      "rid": "R01",
+      "decision": "include",
+      "reason": "term_score:15>=4",
+      "title": "Cycling stability of layered oxide cathodes for sodium-ion batteries via Mg doping",
+      "authors": [
+        "Lin Qiao",
+        "Peng Dai"
+      ],
+      "year": 2021,
+      "doi": "10.0000/synth.na.001",
+      "venue": "Synth Energy Mater",
+      "type": "article",
+      "matched_terms": [
+        "batteries",
+        "cathode",
+        "cycling",
+        "layered oxide",
+        "sodium",
+        "sodium-ion",
+        "stability",
+        "cycle"
+      ],
+      "src_file": "search_export.json",
+      "src_row": 1,
+      "fixture": {},
+      "note": ""
+    },
+    {
+      "rid": "R02",
+      "decision": "include",
+      "reason": "term_score:12>=4",
+      "title": "Suppressing phase transitions in O3-type layered oxide cathode for Na-ion batteries",
+      "authors": [
+        "Ming Zhao",
+        "Rui Tang"
+      ],
+      "year": 2023,
+      "doi": "10.0000/synth.na.002",
+      "venue": "J Synth Electrochem",
+      "type": "article",
+      "matched_terms": [
+        "batteries",
+        "cathode",
+        "layered oxide",
+        "na-ion",
+        "cycle",
+        "sodium",
+        "sodium-ion",
+        "stable"
+      ],
+      "src_file": "search_export.json",
+      "src_row": 2,
+      "fixture": {},
+      "note": ""
+    },
+    {
+      "rid": "R03",
+      "decision": "duplicate",
+      "reason": "duplicate_of:R01",
+      "title": "Cycling stability of layered oxide cathodes for sodium-ion batteries via Mg doping (duplicate export)",
+      "authors": [
+        "Lin Qiao",
+        "Peng Dai"
+      ],
+      "year": 2021,
+      "doi": "10.0000/synth.na.001",
+      "venue": "Synth Energy Mater",
+      "type": "article",
+      "matched_terms": [],
+      "src_file": "search_export.json",
+      "src_row": 3,
+      "fixture": {
+        "synthetic_duplicate": true,
+        "duplicate_of": "records#1"
+      },
+      "note": "输入夹具标记（duplicate_of,synthetic_duplicate），如实登记"
+    },
+    {
+      "rid": "R04",
+      "decision": "exclude",
+      "reason": "doctype_excluded:review",
+      "title": "Layered oxide cathodes for sodium-ion batteries: a review",
+      "authors": [
+        "Shan Yu"
+      ],
+      "year": 2022,
+      "doi": "10.0000/synth.na.003",
+      "venue": "Synth Rev Energy",
+      "type": "review",
+      "matched_terms": [
+        "batteries",
+        "cathode",
+        "layered oxide",
+        "sodium",
+        "sodium-ion",
+        "cycling",
+        "stability"
+      ],
+      "src_file": "search_export.json",
+      "src_row": 4,
+      "fixture": {},
+      "note": ""
+    },
+    {
+      "rid": "R05",
+      "decision": "exclude",
+      "reason": "year_out_of_window:2015!in:[2019, 2024]",
+      "title": "Early study of NaCoO2 cathode cycling",
+      "authors": [
+        "Tao Feng"
+      ],
+      "year": 2015,
+      "doi": "10.0000/synth.na.004",
+      "venue": "Synth Classics",
+      "type": "article",
+      "matched_terms": [
+        "cathode",
+        "cycling",
+        "cycle",
+        "layered oxide",
+        "sodium"
+      ],
+      "src_file": "search_export.json",
+      "src_row": 5,
+      "fixture": {},
+      "note": ""
+    },
+    {
+      "rid": "R06",
+      "decision": "borderline",
+      "reason": "weak_term_score:3<4",
+      "title": "Calendar aging of commercial rechargeable cells under float conditions",
+      "authors": [
+        "Wei Song"
+      ],
+      "year": 2022,
+      "doi": "10.0000/synth.na.005",
+      "venue": "Synth Test Rep",
+      "type": "article",
+      "matched_terms": [
+        "battery",
+        "sodium",
+        "sodium-ion"
+      ],
+      "src_file": "search_export.json",
+      "src_row": 6,
+      "fixture": {},
+      "note": ""
+    },
+    {
+      "rid": "R07",
+      "decision": "include",
+      "reason": "term_score:14>=4",
+      "title": "Cr doping improves layered oxide cathode stability in sodium-ion batteries",
+      "authors": [
+        "Yan Pei",
+        "Zhuo Han"
+      ],
+      "year": 2024,
+      "doi": "10.0000/synth.na.006",
+      "venue": "Synth Nano Lett",
+      "type": "article",
+      "matched_terms": [
+        "batteries",
+        "cathode",
+        "layered oxide",
+        "sodium",
+        "sodium-ion",
+        "stability",
+        "cycle",
+        "cycling"
+      ],
+      "src_file": "search_export.json",
+      "src_row": 7,
+      "fixture": {},
+      "note": ""
+    },
+    {
+      "rid": "R08",
+      "decision": "include",
+      "reason": "term_score:13>=4",
+      "title": "Opinion: layered oxide cathodes show no practical stability gain for sodium-ion batteries",
+      "authors": [
+        "Quan Deng"
+      ],
+      "year": 2023,
+      "doi": "10.0000/synth.na.007",
+      "venue": "Synth Opinion",
+      "type": "article",
+      "matched_terms": [
+        "batteries",
+        "cathode",
+        "layered oxide",
+        "sodium",
+        "sodium-ion",
+        "stability",
+        "cycling"
+      ],
+      "src_file": "search_export.json",
+      "src_row": 8,
+      "fixture": {
+        "conflict_opinion": true
+      },
+      "note": "输入夹具标记（conflict_opinion），如实登记，不做学术裁决"
+    }
+  ],
+  "attribution": [
+    {
+      "ref_id": "AP-1",
+      "title": "Cycling stability of layered oxide cathodes for sodium-ion batteries via Mg doping",
+      "doi": "10.0000/synth.na.001",
+      "status": "matched",
+      "record_rid": "R01",
+      "in_candidates": true
+    },
+    {
+      "ref_id": "AP-2",
+      "title": "Suppressing phase transitions in O3-type layered oxide cathode for Na-ion batteries",
+      "doi": "10.0000/synth.na.002",
+      "status": "matched",
+      "record_rid": "R02",
+      "in_candidates": true
+    },
+    {
+      "ref_id": "AP-3",
+      "title": "A phantom sodium cathode study absent from the snapshot",
+      "doi": "10.0000/synth.na.999",
+      "status": "missing"
+    }
+  ],
+  "deliverables": [
+    {
+      "name": "flow.svg",
+      "sha256": "f3f447c93fe84f2eb42d900480e8cdb79fc842fb7720150dd970d4ce5b9293aa",
+      "bytes": 2934
+    },
+    {
+      "name": "ledger.csv",
+      "sha256": "f59db1985ebdd788d53f28736f7f1be44094a95dbcc055925f5bfd135afe06af",
+      "bytes": 2260
+    },
+    {
+      "name": "report.md",
+      "sha256": "92106d75b8a785dc7d399afd4241d79adce5e263ea8c453b458694ec56408eaa",
+      "bytes": 2888
+    },
+    {
+      "name": "review.html",
+      "sha256": "9df7f107a7d72428687272538ea2df30d172d22ca8f725dbc634a9e9c2d12752",
+      "bytes": 6165
+    }
+  ],
+  "criteria": {
+    "year_window": [
+      2019,
+      2024
+    ],
+    "terms": [
+      "2019",
+      "2024",
+      "batteries",
+      "battery",
+      "cathode",
+      "cycle",
+      "cycling",
+      "layered oxide",
+      "na-ion",
+      "sodium",
+      "sodium-ion",
+      "stability",
+      "stable",
+      "与筛",
+      "于钠",
+      "关于",
+      "化物",
+      "升的",
+      "发表",
+      "子电",
+      "定性",
+      "实验",
+      "层状",
+      "年间",
+      "循环",
+      "性提",
+      "提升",
+      "文献",
+      "料循",
+      "材料",
+      "极材",
+      "检索",
+      "正极",
+      "氧化",
+      "池层",
+      "物正",
+      "状氧",
+      "献检",
+      "环稳",
+      "电池",
+      "的关",
+      "的实",
+      "研究",
+      "离子",
+      "稳定",
+      "究文",
+      "筛选",
+      "索与",
+      "表的",
+      "钠离",
+      "间发",
+      "验研"
+    ],
+    "crosslingual_expansion": [
+      {
+        "concept": "钠离子",
+        "terms": [
+          "sodium-ion",
+          "sodium",
+          "na-ion"
+        ]
+      },
+      {
+        "concept": "电池",
+        "terms": [
+          "battery",
+          "batteries"
+        ]
+      },
+      {
+        "concept": "层状氧化物",
+        "terms": [
+          "layered oxide"
+        ]
+      },
+      {
+        "concept": "正极",
+        "terms": [
+          "cathode"
+        ]
+      },
+      {
+        "concept": "循环",
+        "terms": [
+          "cycling",
+          "cycle"
+        ]
+      },
+      {
+        "concept": "稳定性",
+        "terms": [
+          "stability",
+          "stable"
+        ]
+      }
+    ],
+    "scoring": "score=2*标题命中术语数+1*仅摘要命中术语数; >=4 纳入, 1-3 待复核, 0 排除"
+  },
+  "omissions": [
+    "冲突意见夹具记录 R08 已登记为争议证据，本技能不做学术裁决",
+    "清单文献 AP-3 在快照中未找到匹配记录",
+    "1 条记录为 borderline，需在 review.html 中人工勾核"
+  ],
+  "sources": [
+    {
+      "kind": "file",
+      "path": "search_export.json"
+    },
+    {
+      "kind": "artifact",
+      "path": "ledger.csv"
+    },
+    {
+      "kind": "artifact",
+      "path": "report.md"
+    },
+    {
+      "kind": "artifact",
+      "path": "review.html"
+    },
+    {
+      "kind": "artifact",
+      "path": "flow.svg"
+    },
+    {
+      "kind": "artifact",
+      "path": "manifest.json"
+    },
+    {
+      "kind": "artifact",
+      "path": "export-check.json"
+    }
+  ],
+  "status": "partial",
+  "uncertainty": [
+    "冲突意见夹具记录 R08 已登记为争议证据，本技能不做学术裁决",
+    "清单文献 AP-3 在快照中未找到匹配记录",
+    "1 条记录为 borderline，需在 review.html 中人工勾核"
+  ],
+  "method": "e-review-studio: load→light-screen→render(ledger/report/html/svg)→manifest→check_exports",
+  "generated_at": "2026-11-25T17:07:02+0800",
+  "field_notes": {}
+}

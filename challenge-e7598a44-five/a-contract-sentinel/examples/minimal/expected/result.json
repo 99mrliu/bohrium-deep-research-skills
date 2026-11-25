@@ -1,0 +1,286 @@
+{
+  "case_id": "synth-minimal-001",
+  "summary": "解析 8 条记录，去重移除 1 条（含夹具标注合成重复 1 条）；纳入 4 / 排除 2 / 待复核 1；署名清单 3 篇（匹配 2/存疑 0/缺失 1）",
+  "candidates": [
+    {
+      "rid": "search_export.json!$.records#1",
+      "title": "Grain boundary passivation in perovskite solar cells by guanidinium",
+      "year": 2021,
+      "doi": "10.0000/synth.2021.001",
+      "matched_terms": [
+        "cell",
+        "efficiency",
+        "grain boundary",
+        "passivation",
+        "perovskite",
+        "power conversion",
+        "solar"
+      ],
+      "source": "search_export.json"
+    },
+    {
+      "rid": "search_export.json!$.records#2",
+      "title": "Efficiency stability trade-off in passivated perovskite photovoltaics",
+      "year": 2022,
+      "doi": "10.0000/synth.2022.002",
+      "matched_terms": [
+        "cell",
+        "efficiency",
+        "grain boundary",
+        "passivate",
+        "passivation",
+        "perovskite",
+        "photovoltaic",
+        "solar"
+      ],
+      "source": "search_export.json"
+    },
+    {
+      "rid": "search_export.json!$.records#7",
+      "title": "Grain boundary engineering boosts perovskite solar cell efficiency",
+      "year": 2024,
+      "doi": "10.0000/synth.2024.006",
+      "matched_terms": [
+        "cell",
+        "efficiency",
+        "grain boundary",
+        "passivation",
+        "perovskite",
+        "solar"
+      ],
+      "source": "search_export.json"
+    },
+    {
+      "rid": "search_export.json!$.records#8",
+      "title": "Conflicting opinion: passivation does not improve efficiency",
+      "year": 2023,
+      "doi": "10.0000/synth.2023.007",
+      "matched_terms": [
+        "cell",
+        "efficiency",
+        "grain boundary",
+        "passivation",
+        "perovskite",
+        "solar"
+      ],
+      "source": "search_export.json"
+    }
+  ],
+  "screening_log": [
+    {
+      "rid": "search_export.json!$.records#1",
+      "disposition": "include",
+      "reason_codes": [
+        "term_hits:7>=4"
+      ],
+      "matched_terms": [
+        "cell",
+        "efficiency",
+        "grain boundary",
+        "passivation",
+        "perovskite",
+        "power conversion",
+        "solar"
+      ],
+      "override_reason": null,
+      "title": "Grain boundary passivation in perovskite solar cells by guanidinium",
+      "year": 2021,
+      "doi": "10.0000/synth.2021.001",
+      "source": "search_export.json"
+    },
+    {
+      "rid": "search_export.json!$.records#2",
+      "disposition": "include",
+      "reason_codes": [
+        "term_hits:8>=4"
+      ],
+      "matched_terms": [
+        "cell",
+        "efficiency",
+        "grain boundary",
+        "passivate",
+        "passivation",
+        "perovskite",
+        "photovoltaic",
+        "solar"
+      ],
+      "override_reason": null,
+      "title": "Efficiency stability trade-off in passivated perovskite photovoltaics",
+      "year": 2022,
+      "doi": "10.0000/synth.2022.002",
+      "source": "search_export.json"
+    },
+    {
+      "rid": "search_export.json!$.records#4",
+      "disposition": "exclude",
+      "reason_codes": [
+        "doctype_excluded:review"
+      ],
+      "matched_terms": [
+        "perovskite"
+      ],
+      "override_reason": null,
+      "title": "Defect chemistry of halide perovskites: a review",
+      "year": 2023,
+      "doi": "10.0000/synth.2023.003",
+      "source": "search_export.json"
+    },
+    {
+      "rid": "search_export.json!$.records#5",
+      "disposition": "exclude",
+      "reason_codes": [
+        "year_out_of_window:2018!in:[2020, 2024]"
+      ],
+      "matched_terms": [
+        "cell",
+        "efficiency",
+        "passivate",
+        "passivation",
+        "perovskite",
+        "solar"
+      ],
+      "override_reason": null,
+      "title": "Passivation effects on perovskite solar cell efficiency measured outdoors",
+      "year": 2018,
+      "doi": "10.0000/synth.2018.004",
+      "source": "search_export.json"
+    },
+    {
+      "rid": "search_export.json!$.records#6",
+      "disposition": "uncertain",
+      "reason_codes": [
+        "weak_term_hits:2<4"
+      ],
+      "matched_terms": [
+        "battery",
+        "photovoltaic"
+      ],
+      "override_reason": null,
+      "title": "Machine learning for battery electrolyte screening",
+      "year": 2022,
+      "doi": "10.0000/synth.2022.005",
+      "source": "search_export.json"
+    },
+    {
+      "rid": "search_export.json!$.records#7",
+      "disposition": "include",
+      "reason_codes": [
+        "term_hits:6>=4"
+      ],
+      "matched_terms": [
+        "cell",
+        "efficiency",
+        "grain boundary",
+        "passivation",
+        "perovskite",
+        "solar"
+      ],
+      "override_reason": null,
+      "title": "Grain boundary engineering boosts perovskite solar cell efficiency",
+      "year": 2024,
+      "doi": "10.0000/synth.2024.006",
+      "source": "search_export.json"
+    },
+    {
+      "rid": "search_export.json!$.records#8",
+      "disposition": "include",
+      "reason_codes": [
+        "term_hits:6>=4",
+        "fixture_labelled:conflict_opinion"
+      ],
+      "matched_terms": [
+        "cell",
+        "efficiency",
+        "grain boundary",
+        "passivation",
+        "perovskite",
+        "solar"
+      ],
+      "override_reason": null,
+      "title": "Conflicting opinion: passivation does not improve efficiency",
+      "year": 2023,
+      "doi": "10.0000/synth.2023.007",
+      "source": "search_export.json"
+    }
+  ],
+  "duplicates": [
+    {
+      "kept": "search_export.json!$.records#1",
+      "dropped": "search_export.json!$.records#3",
+      "method": "doi",
+      "similarity": 1.0,
+      "synthetic_flag": true,
+      "note": "输入夹具标记的合成重复"
+    }
+  ],
+  "attribution": [
+    {
+      "ref_id": "AP-1",
+      "title": "Grain boundary passivation in perovskite solar cells by guanidinium",
+      "doi": "10.0000/synth.2021.001",
+      "status": "matched",
+      "match": {
+        "rid": "search_export.json!$.records#1",
+        "similarity": 1.0,
+        "metadata_diff": []
+      }
+    },
+    {
+      "ref_id": "AP-2",
+      "title": "Efficiency stability trade-off in passivated perovskite photovoltaics",
+      "doi": "10.0000/synth.2022.002",
+      "status": "matched",
+      "match": {
+        "rid": "search_export.json!$.records#2",
+        "similarity": 1.0,
+        "metadata_diff": []
+      }
+    },
+    {
+      "ref_id": "AP-3",
+      "title": "A phantom study not present in the snapshot",
+      "doi": "10.0000/synth.2023.999",
+      "status": "missing"
+    }
+  ],
+  "omissions": [
+    "冲突意见夹具记录 search_export.json!$.records#8 已登记为争议证据，本管线不做学术裁决",
+    "清单文献 AP-3 在快照中未找到匹配记录",
+    "1 条记录处置为 uncertain，需人工复核"
+  ],
+  "sources": [
+    {
+      "kind": "file",
+      "path": "search_export.json"
+    },
+    {
+      "kind": "artifact",
+      "path": "ledger.jsonl"
+    },
+    {
+      "kind": "artifact",
+      "path": "candidates.json"
+    },
+    {
+      "kind": "artifact",
+      "path": "screening_summary.json"
+    },
+    {
+      "kind": "artifact",
+      "path": "attribution.json"
+    },
+    {
+      "kind": "artifact",
+      "path": "validate-report.json"
+    }
+  ],
+  "status": "partial",
+  "uncertainty": [
+    "冲突意见夹具记录 search_export.json!$.records#8 已登记为争议证据，本管线不做学术裁决",
+    "清单文献 AP-3 在快照中未找到匹配记录",
+    "1 条记录处置为 uncertain，需人工复核"
+  ],
+  "method": "a-contract-sentinel: probe→ingest→dedupe→screen→attest→validate",
+  "generated_at": "2026-11-25T16:50:06+0800",
+  "field_notes": {}
+}

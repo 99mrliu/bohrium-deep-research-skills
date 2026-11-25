@@ -1,0 +1,342 @@
+{
+  "case_id": "synth-forensics-001",
+  "summary": "取证：4 个文件（sha256 已登记），解析 9 条记录；信任门放行 6 条、隔离 3 条（{\"fixture_synthetic_duplicate\": 1, \"fixture_conflict_opinion\": 1, \"malformed_no_title\": 1}）；清单法证 authentic 1 / mismatch 1 / absent 1；筛查：纳入 3 / 排除 2 / 待复核 1",
+  "candidates": [
+    {
+      "rid": "extra_export.jsonl::L1",
+      "title": "Thin film coating improves solid electrolyte interface stability",
+      "year": 2024,
+      "doi": "10.0000/synth.2024.108",
+      "matched_terms": [
+        "anode",
+        "electrolyte",
+        "experiment",
+        "interface",
+        "lithium",
+        "metal",
+        "solid",
+        "stability"
+      ],
+      "source": "extra_export.jsonl"
+    },
+    {
+      "rid": "search_export.json::$.records[1]",
+      "title": "Stabilizing the lithium metal solid electrolyte interface with alloy interlayers",
+      "year": 2021,
+      "doi": "10.0000/synth.2021.101",
+      "matched_terms": [
+        "anode",
+        "electrolyte",
+        "experiment",
+        "experimental",
+        "interface",
+        "interfacial",
+        "lithium",
+        "metal",
+        "solid",
+        "solid state",
+        "stability"
+      ],
+      "source": "search_export.json"
+    },
+    {
+      "rid": "search_export.json::$.records[2]",
+      "title": "Interface engineering for garnet electrolytes against lithium dendrite",
+      "year": 2022,
+      "doi": "10.0000/synth.2022.102",
+      "matched_terms": [
+        "electrolyte",
+        "experiment",
+        "interface",
+        "lithium",
+        "metal",
+        "solid",
+        "stability",
+        "stable"
+      ],
+      "source": "search_export.json"
+    }
+  ],
+  "screening_log": [
+    {
+      "rid": "extra_export.jsonl::L1",
+      "disposition": "include",
+      "reason_codes": [
+        "term_hits:8>=3"
+      ],
+      "matched_terms": [
+        "anode",
+        "electrolyte",
+        "experiment",
+        "interface",
+        "lithium",
+        "metal",
+        "solid",
+        "stability"
+      ],
+      "title": "Thin film coating improves solid electrolyte interface stability",
+      "year": 2024,
+      "doi": "10.0000/synth.2024.108",
+      "source_file": "extra_export.jsonl"
+    },
+    {
+      "rid": "extra_export.jsonl::L2",
+      "disposition": "uncertain",
+      "reason_codes": [
+        "weak_term_hits:1<3"
+      ],
+      "matched_terms": [
+        "interface"
+      ],
+      "title": "Computational screening of coating materials",
+      "year": 2021,
+      "doi": "10.0000/synth.2021.109",
+      "source_file": "extra_export.jsonl"
+    },
+    {
+      "rid": "search_export.json::$.records[1]",
+      "disposition": "include",
+      "reason_codes": [
+        "term_hits:11>=3"
+      ],
+      "matched_terms": [
+        "anode",
+        "electrolyte",
+        "experiment",
+        "experimental",
+        "interface",
+        "interfacial",
+        "lithium",
+        "metal",
+        "solid",
+        "solid state",
+        "stability"
+      ],
+      "title": "Stabilizing the lithium metal solid electrolyte interface with alloy interlayers",
+      "year": 2021,
+      "doi": "10.0000/synth.2021.101",
+      "source_file": "search_export.json"
+    },
+    {
+      "rid": "search_export.json::$.records[2]",
+      "disposition": "include",
+      "reason_codes": [
+        "term_hits:8>=3"
+      ],
+      "matched_terms": [
+        "electrolyte",
+        "experiment",
+        "interface",
+        "lithium",
+        "metal",
+        "solid",
+        "stability",
+        "stable"
+      ],
+      "title": "Interface engineering for garnet electrolytes against lithium dendrite",
+      "year": 2022,
+      "doi": "10.0000/synth.2022.102",
+      "source_file": "search_export.json"
+    },
+    {
+      "rid": "search_export.json::$.records[5]",
+      "disposition": "exclude",
+      "reason_codes": [
+        "year_out_of_window:2016!in:[2019, 2024]"
+      ],
+      "matched_terms": [
+        "electrolyte",
+        "interface",
+        "lithium",
+        "solid",
+        "solid state",
+        "stability"
+      ],
+      "title": "Early survey of polymer electrolytes for lithium batteries",
+      "year": 2016,
+      "doi": "10.0000/synth.2016.105",
+      "source_file": "search_export.json"
+    },
+    {
+      "rid": "search_export.json::$.records[6]",
+      "disposition": "exclude",
+      "reason_codes": [
+        "no_term_hits"
+      ],
+      "matched_terms": [],
+      "title": "Deep learning for urban traffic flow prediction",
+      "year": 2023,
+      "doi": "10.0000/synth.2023.106",
+      "source_file": "search_export.json"
+    }
+  ],
+  "integrity_report": {
+    "files": [
+      {
+        "path": "case.json",
+        "sha256": "18a265e6d5233c0cc9ed97266057ea57b1636d7bbe0b6d25594f593e9213a4ed",
+        "bytes": 1027,
+        "format": "json",
+        "record_count": 0,
+        "anomalies": 0,
+        "parse_error": null
+      },
+      {
+        "path": "extra_export.jsonl",
+        "sha256": "982a76d6522bd918dc39aa6149e173faf273f84195a0b449d1caa885bb908ee7",
+        "bytes": 679,
+        "format": "jsonl",
+        "record_count": 2,
+        "anomalies": 1,
+        "parse_error": null
+      },
+      {
+        "path": "search_export.json",
+        "sha256": "d789a50dab6f1dbd11090465c5cbcdac10087d8c2c9576ea1bb81375b287ea63",
+        "bytes": 2579,
+        "format": "json",
+        "record_count": 7,
+        "anomalies": 0,
+        "parse_error": null
+      },
+      {
+        "path": "task.md",
+        "sha256": "7492a1ae063ed8c08cbf61a2d99a2773e88884d0b10ccd96780798907cdc84d8",
+        "bytes": 433,
+        "format": "md",
+        "record_count": 0,
+        "anomalies": 0,
+        "parse_error": null
+      }
+    ],
+    "totals": {
+      "files_seen": 4,
+      "files_parsed": 2,
+      "records_parsed": 9,
+      "records_trusted": 6,
+      "records_quarantined": 3,
+      "quarantine_by_category": {
+        "fixture_synthetic_duplicate": 1,
+        "fixture_conflict_opinion": 1,
+        "malformed_no_title": 1
+      },
+      "anomaly_lines": 1,
+      "parse_failures": []
+    },
+    "quarantine_by_category": {
+      "fixture_synthetic_duplicate": 1,
+      "fixture_conflict_opinion": 1,
+      "malformed_no_title": 1
+    },
+    "metadata_forensics": {
+      "status": "ok",
+      "origin": "case.json!attributed_papers",
+      "total": 3,
+      "authentic": 1,
+      "mismatch": 1,
+      "absent": 1
+    },
+    "artifacts": {
+      "work": [
+        "forensics_report.json",
+        "trusted_records.jsonl",
+        "quarantine.jsonl",
+        "metadata_forensics.json"
+      ],
+      "out": [
+        "result.json",
+        "ledger.jsonl",
+        "candidates.json"
+      ]
+    }
+  },
+  "quarantine_register": [
+    {
+      "qid": "Q-001",
+      "rid": "search_export.json::$.records[3]",
+      "category": "fixture_synthetic_duplicate",
+      "fixture_flags": {
+        "synthetic_duplicate": true,
+        "duplicate_of": "search_export.json::records[1]"
+      },
+      "title": "Stabilizing the lithium metal solid electrolyte interface with alloy interlayers (duplicate export)",
+      "doi": "10.0000/synth.2021.101",
+      "disposition": "excluded_from_screening__registered_only",
+      "note": "输入夹具标记的合成重复，隔离登记，不参与筛查与计数"
+    },
+    {
+      "qid": "Q-002",
+      "rid": "search_export.json::$.records[4]",
+      "category": "fixture_conflict_opinion",
+      "fixture_flags": {
+        "conflict_opinion": true
+      },
+      "title": "Opinion: interface stability gains in solid state batteries are overstated",
+      "doi": "10.0000/synth.2023.104",
+      "disposition": "excluded_from_screening__registered_only",
+      "note": "输入夹具标记的冲突意见，登记为争议证据，不做学术裁决，需人工处理"
+    },
+    {
+      "qid": "Q-003",
+      "rid": "search_export.json::$.records[7]",
+      "category": "malformed_no_title",
+      "fixture_flags": {},
+      "title": null,
+      "doi": "10.0000/synth.2020.107",
+      "disposition": "excluded_from_screening__registered_only",
+      "note": "结构残缺（缺标题），无法核验身份，隔离待人工"
+    }
+  ],
+  "omissions": [
+    {
+      "rid": "search_export.json::$.records[3]",
+      "qid": "Q-001",
+      "reason": "输入夹具标记的合成重复，隔离登记，不参与筛查与计数"
+    },
+    {
+      "rid": "search_export.json::$.records[4]",
+      "qid": "Q-002",
+      "reason": "输入夹具标记的冲突意见，登记为争议证据，不做学术裁决，需人工处理"
+    },
+    {
+      "rid": "search_export.json::$.records[7]",
+      "qid": "Q-003",
+      "reason": "结构残缺（缺标题），无法核验身份，隔离待人工"
+    },
+    {
+      "ref_id": "AP-3",
+      "reason": "署名清单文献在快照中缺失"
+    }
+  ],
+  "status": "partial",
+  "sources": [
+    {
+      "kind": "file",
+      "path": "extra_export.jsonl",
+      "sha256": "982a76d6522bd918dc39aa6149e173faf273f84195a0b449d1caa885bb908ee7"
+    },
+    {
+      "kind": "file",
+      "path": "search_export.json",
+      "sha256": "d789a50dab6f1dbd11090465c5cbcdac10087d8c2c9576ea1bb81375b287ea63"
+    },
+    {
+      "kind": "artifact",
+      "path": "ledger.jsonl"
+    },
+    {
+      "kind": "artifact",
+      "path": "candidates.json"
+    }
+  ],
+  "uncertainty": [
+    "文件 extra_export.jsonl 异常行 L3 (unparseable_line): Expecting ',' delimiter: line 1 column 59 (char 58)",
+    "冲突意见夹具 Q-002（search_export.json::$.records[4]）已登记为争议证据，本技能不做学术裁决",
+    "清单文献 AP-2 元数据与快照不一致（mismatch）: year: 清单 2023 vs 快照 2022",
+    "清单文献 AP-3 在快照中缺失（absent）",
+    "1 条可信记录处置为 uncertain（弱命中），需人工复核"
+  ],
+  "method": "b-snapshot-forensics: forensics(指纹/解析/隔离/法证) → gated_screen(信任门后筛查+契约装配)",
+  "generated_at": "2026-11-25T17:00:19+0800",
+  "field_notes": {}
+}
