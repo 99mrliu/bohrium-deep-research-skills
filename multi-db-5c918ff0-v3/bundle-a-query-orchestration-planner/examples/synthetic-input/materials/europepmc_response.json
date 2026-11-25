@@ -1,0 +1,38 @@
+{
+  "version": "6.9",
+  "_note": "SYNTHETIC fixture: 虚构的 EuropePMC search 响应;hitCount 与 result 数一致(无截断)。",
+  "hitCount": 2,
+  "nextCursorMark": "AoIpRXhhbXBsZVN5bnRoZXRpY0N1cnNvcg==",
+  "request": {
+    "queryString": "(TITLE_ABS:\"Oryza sativa\" OR TITLE_ABS:\"rice root\") AND (TITLE_ABS:\"ZK-7\" OR TITLE_ABS:\"synthetic auxin analog\" OR TITLE_ABS:\"dose response\") AND (TITLE_ABS:\"root gravitropism\" OR TITLE_ABS:\"gravitropic curvature\") AND PUB_YEAR:[2015 TO 2026]",
+    "pageSize": 100,
+    "cursorMark": "*",
+    "sort": ""
+  },
+  "resultList": {
+    "result": [
+      {
+        "id": "38912077",
+        "source": "MED",
+        "pmid": "38912077",
+        "doi": "10.99977/zk7.0002",
+        "title": "Dose-dependent inhibition of gravitropic curvature in rice roots by the synthetic auxin analog ZK-7.",
+        "authorString": "Beltrame A, Haldane R.",
+        "journalTitle": "Annals of Computational Botany",
+        "pubYear": "2021",
+        "abstractText": "Synthetic abstract: ZK-7, a fictional synthetic auxin analog, reduced gravitropic curvature of Oryza sativa primary roots in a dose-dependent manner across 0.1-10 uM."
+      },
+      {
+        "id": "40128831",
+        "source": "MED",
+        "pmid": "40128831",
+        "doi": "10.99977/zk7.0005",
+        "title": "Transcriptomic response of Oryza sativa root tips to graded doses of the synthetic auxin analog ZK-7.",
+        "authorString": "Zharao M, Okonkwo-Ferreira L.",
+        "journalTitle": "Journal of Synthetic Plant Physiology",
+        "pubYear": "2024",
+        "abstractText": "Synthetic abstract: graded ZK-7 exposure reshaped auxin-responsive transcripts in rice root tips; gravitropic set-point angle shifted monotonically with dose."
+      }
+    ]
+  }
+}

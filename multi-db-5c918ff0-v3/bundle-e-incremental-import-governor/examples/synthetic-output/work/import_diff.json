@@ -1,0 +1,250 @@
+{
+  "baseline_established": false,
+  "case_id": "synthetic-import-gov-001",
+  "counts": {
+    "changed": 1,
+    "current_records": 10,
+    "inconsistent_state": 1,
+    "new": 2,
+    "previous_records": 11,
+    "unchanged": 7,
+    "union_size": 13,
+    "unverifiable_withdrawal": 1,
+    "withdrawn": 1
+  },
+  "entries": [
+    {
+      "class": "unchanged",
+      "content_fingerprint_current": "5a92b8af49cf298d4b8ae159e574a36d443b357511881db0eef948219666fb54",
+      "content_hash_previous": "5a92b8af49cf298d4b8ae159e574a36d443b357511881db0eef948219666fb54",
+      "evidence": {
+        "current": {
+          "locator": "message.items[0]",
+          "material": "materials/crossref_response.json"
+        },
+        "state_file": "materials/import_state.json",
+        "state_record_index": 0
+      },
+      "identifier": "10.99988/gov.0001",
+      "present_in_sources": [
+        "crossref"
+      ],
+      "source_db_claimed": "crossref"
+    },
+    {
+      "class": "unchanged",
+      "content_fingerprint_current": "1077e50a1213e1668133d3ea4198c0040ce96de6bbf6bc01002adf0eedd2c4a8",
+      "content_hash_previous": "1077e50a1213e1668133d3ea4198c0040ce96de6bbf6bc01002adf0eedd2c4a8",
+      "evidence": {
+        "current": {
+          "locator": "message.items[1]",
+          "material": "materials/crossref_response.json"
+        },
+        "state_file": "materials/import_state.json",
+        "state_record_index": 1
+      },
+      "identifier": "10.99988/gov.0002",
+      "present_in_sources": [
+        "crossref"
+      ],
+      "source_db_claimed": "crossref"
+    },
+    {
+      "class": "unchanged",
+      "content_fingerprint_current": "67599f686b0aac87a0dfd595b02f0f53bf3ecce935a34fcb708cfc533900a096",
+      "content_hash_previous": "67599f686b0aac87a0dfd595b02f0f53bf3ecce935a34fcb708cfc533900a096",
+      "evidence": {
+        "current": {
+          "locator": "message.items[2]",
+          "material": "materials/crossref_response.json"
+        },
+        "state_file": "materials/import_state.json",
+        "state_record_index": 2
+      },
+      "identifier": "10.99988/gov.0003",
+      "present_in_sources": [
+        "crossref"
+      ],
+      "source_db_claimed": "crossref"
+    },
+    {
+      "changed_fields_unavailable": false,
+      "class": "changed",
+      "content_fingerprint_current": "4a33dc67f4e5d52fa2382aabc3512a36b461132e2855a4c06dd92bf1f541472e",
+      "content_hash_previous": "53fbcecbec25abd88ddb65fff129eb78cacacf5add4c1530904d20f8e1f4580b",
+      "evidence": {
+        "current": {
+          "locator": "message.items[3]",
+          "material": "materials/crossref_response.json"
+        },
+        "state_file": "materials/import_state.json",
+        "state_record_index": 7
+      },
+      "field_diffs": [
+        {
+          "after": "2021",
+          "before": "2020",
+          "field": "year"
+        },
+        {
+          "after": "journal of bionic interface mechanics",
+          "before": "journal of bio-adhesion letters",
+          "field": "venue"
+        }
+      ],
+      "identifier": "10.99988/gov.0004",
+      "present_in_sources": [
+        "crossref"
+      ],
+      "source_db_claimed": "crossref"
+    },
+    {
+      "class": "new",
+      "content_fingerprint_current": "89914f332b06099fbc470ee51852e11cf5b27e98683a45e0788574f295711310",
+      "content_hash_previous": null,
+      "evidence": {
+        "current": {
+          "locator": "message.items[4]",
+          "material": "materials/crossref_response.json"
+        }
+      },
+      "identifier": "10.99988/gov.0005",
+      "present_in_sources": [
+        "crossref"
+      ],
+      "source_db_claimed": "crossref"
+    },
+    {
+      "class": "new",
+      "content_fingerprint_current": "dfd0d76825f3abeb515b85f5b197e0e55f8950034cd48e7e64903a8575dcb266",
+      "content_hash_previous": null,
+      "evidence": {
+        "current": {
+          "locator": "message.items[5]",
+          "material": "materials/crossref_response.json"
+        }
+      },
+      "identifier": "10.99988/gov.0006",
+      "present_in_sources": [
+        "crossref"
+      ],
+      "source_db_claimed": "crossref"
+    },
+    {
+      "class": "inconsistent_state",
+      "content_hash_previous": "47f61967b7e87f346a93de31be17067a104825b47c6e5129ff9f2bc085310650",
+      "detail": "状态行自相矛盾(identifier(10.99988/gov.0090) 与 fields.doi(10.99988/gov.0091) 冲突),且该标识符未出现于 crossref 响应;状态本身不可信,需人工裁定",
+      "evidence": {
+        "state_file": "materials/import_state.json",
+        "state_record_index": 10
+      },
+      "identifier": "10.99988/gov.0090",
+      "source_db_claimed": "crossref"
+    },
+    {
+      "class": "unchanged",
+      "content_fingerprint_current": "a9697abdeca17c611300e5d2dbc96b302c05acd68535fbc9f2c5c7be92d426ac",
+      "content_hash_previous": "a9697abdeca17c611300e5d2dbc96b302c05acd68535fbc9f2c5c7be92d426ac",
+      "evidence": {
+        "current": {
+          "locator": "resultList.result[0]",
+          "material": "materials/europepmc_response.json"
+        },
+        "state_file": "materials/import_state.json",
+        "state_record_index": 3
+      },
+      "identifier": "pmid:39000001",
+      "present_in_sources": [
+        "europepmc"
+      ],
+      "source_db_claimed": "europepmc"
+    },
+    {
+      "class": "unchanged",
+      "content_fingerprint_current": "ab44189410babfdaf062c64fab6b83013c89b4388f3e6e24aa54638e040b004f",
+      "content_hash_previous": "ab44189410babfdaf062c64fab6b83013c89b4388f3e6e24aa54638e040b004f",
+      "evidence": {
+        "current": {
+          "locator": "resultList.result[1]",
+          "material": "materials/europepmc_response.json"
+        },
+        "state_file": "materials/import_state.json",
+        "state_record_index": 4
+      },
+      "identifier": "pmid:39000002",
+      "present_in_sources": [
+        "europepmc"
+      ],
+      "source_db_claimed": "europepmc"
+    },
+    {
+      "class": "unchanged",
+      "content_fingerprint_current": "1c6fa01c0ec176d87231c8c354340edc8236f2018270fc5f8bbe95a55e6e4e41",
+      "content_hash_previous": "1c6fa01c0ec176d87231c8c354340edc8236f2018270fc5f8bbe95a55e6e4e41",
+      "evidence": {
+        "current": {
+          "locator": "resultList.result[2]",
+          "material": "materials/europepmc_response.json"
+        },
+        "state_file": "materials/import_state.json",
+        "state_record_index": 5
+      },
+      "identifier": "pmid:39000003",
+      "present_in_sources": [
+        "europepmc"
+      ],
+      "source_db_claimed": "europepmc"
+    },
+    {
+      "class": "unchanged",
+      "content_fingerprint_current": "6333bc7c240214c476529558381e1074f25f80f6f87675ef9f05580df5b7203f",
+      "content_hash_previous": "6333bc7c240214c476529558381e1074f25f80f6f87675ef9f05580df5b7203f",
+      "evidence": {
+        "current": {
+          "locator": "resultList.result[3]",
+          "material": "materials/europepmc_response.json"
+        },
+        "state_file": "materials/import_state.json",
+        "state_record_index": 6
+      },
+      "identifier": "pmid:39000004",
+      "present_in_sources": [
+        "europepmc"
+      ],
+      "source_db_claimed": "europepmc"
+    },
+    {
+      "class": "withdrawn",
+      "content_hash_previous": "fc598750e5388a65e480b2f6294f94df8bbc506e96eccc52132bca5bcfbdc060",
+      "detail": "来源库 europepmc 的响应在场,但该记录已不在其中;作为'导入治理事实'登记为撤回。是否为撤稿/删除的语义判定不属于本技能,应移交专门的撤回分析流程",
+      "evidence": {
+        "state_file": "materials/import_state.json",
+        "state_record_index": 8
+      },
+      "identifier": "pmid:39000009",
+      "source_db_claimed": "europepmc",
+      "subclass": "source_present_but_record_gone"
+    },
+    {
+      "class": "unverifiable_withdrawal",
+      "content_hash_previous": "d9d5552e47755682031e8964300d5a5d8f9c577829a6492bbb93ef4cf769b570",
+      "detail": "其来源库 publisher 的响应本次缺席,无法区分'记录被撤回'与'源未提供',不可核验",
+      "evidence": {
+        "state_file": "materials/import_state.json",
+        "state_record_index": 9
+      },
+      "identifier": "pub:JBA-1042",
+      "source_db_claimed": "publisher",
+      "subclass": "source_absent_too"
+    }
+  ],
+  "generated_by": "import_governor.py",
+  "sources_absent": [
+    "publisher"
+  ],
+  "sources_present": [
+    "crossref",
+    "europepmc"
+  ],
+  "state_dialect": "a"
+}

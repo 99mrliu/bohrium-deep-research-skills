@@ -1,0 +1,332 @@
+{
+  "baseline_established": false,
+  "dialect": "a",
+  "dialect_reason": "顶层含 records 数组(可选 watermarks 对象)",
+  "records": [
+    {
+      "aliases": [
+        [
+          "crossref",
+          "10.99988/gov.0001"
+        ],
+        [
+          "doi",
+          "10.99988/gov.0001"
+        ]
+      ],
+      "content_hash": "5a92b8af49cf298d4b8ae159e574a36d443b357511881db0eef948219666fb54",
+      "fields": {
+        "authors": [
+          "Lin Hao",
+          "Bergström Freja"
+        ],
+        "doi": "10.99988/gov.0001",
+        "pmid": null,
+        "title": "Synthetic gecko-inspired fibrillar adhesives under shear",
+        "venue": "Journal of Synthetic Adhesion",
+        "year": "2019"
+      },
+      "identifier": "10.99988/gov.0001",
+      "imported_at": "ingest-run-2025-09",
+      "source_db": "crossref",
+      "state_index": 0
+    },
+    {
+      "aliases": [
+        [
+          "crossref",
+          "10.99988/gov.0002"
+        ],
+        [
+          "doi",
+          "10.99988/gov.0002"
+        ]
+      ],
+      "content_hash": "1077e50a1213e1668133d3ea4198c0040ce96de6bbf6bc01002adf0eedd2c4a8",
+      "fields": {
+        "authors": [
+          "Okafor Chidi",
+          "Tanaka Rin"
+        ],
+        "doi": "10.99988/gov.0002",
+        "pmid": null,
+        "title": "Synthetic octopus-like suction cups for wet adhesion",
+        "venue": "Journal of Synthetic Adhesion",
+        "year": "2020"
+      },
+      "identifier": "10.99988/gov.0002",
+      "imported_at": "ingest-run-2025-09",
+      "source_db": "crossref",
+      "state_index": 1
+    },
+    {
+      "aliases": [
+        [
+          "crossref",
+          "10.99988/gov.0003"
+        ],
+        [
+          "doi",
+          "10.99988/gov.0003"
+        ]
+      ],
+      "content_hash": "67599f686b0aac87a0dfd595b02f0f53bf3ecce935a34fcb708cfc533900a096",
+      "fields": {
+        "authors": [
+          "Novak Petra"
+        ],
+        "doi": "10.99988/gov.0003",
+        "pmid": null,
+        "title": "Synthetic mussel-inspired catechol coatings: an adhesion study",
+        "venue": "Synthetic Interface Letters",
+        "year": "2021"
+      },
+      "identifier": "10.99988/gov.0003",
+      "imported_at": "ingest-run-2025-09",
+      "source_db": "crossref",
+      "state_index": 2
+    },
+    {
+      "aliases": [
+        [
+          "doi",
+          "10.99988/gov.0101"
+        ],
+        [
+          "europepmc",
+          "pmid:39000001"
+        ],
+        [
+          "pmid",
+          "39000001"
+        ]
+      ],
+      "content_hash": "a9697abdeca17c611300e5d2dbc96b302c05acd68535fbc9f2c5c7be92d426ac",
+      "fields": {
+        "authors": [
+          "Keller M",
+          "Zhou Y"
+        ],
+        "doi": "10.99988/gov.0101",
+        "pmid": "39000001",
+        "title": "Synthetic spider silk anchorages in adhesive hydrogels",
+        "venue": "Journal of Synthetic Bioadhesion",
+        "year": "2021"
+      },
+      "identifier": "pmid:39000001",
+      "imported_at": "ingest-run-2025-09",
+      "source_db": "europepmc",
+      "state_index": 3
+    },
+    {
+      "aliases": [
+        [
+          "europepmc",
+          "pmid:39000002"
+        ],
+        [
+          "pmid",
+          "39000002"
+        ]
+      ],
+      "content_hash": "ab44189410babfdaf062c64fab6b83013c89b4388f3e6e24aa54638e040b004f",
+      "fields": {
+        "authors": [
+          "Rossi G",
+          "Lindqvist P"
+        ],
+        "doi": null,
+        "pmid": "39000002",
+        "title": "Synthetic barnacle-inspired underwater adhesives",
+        "venue": "Journal of Synthetic Bioadhesion",
+        "year": "2022"
+      },
+      "identifier": "pmid:39000002",
+      "imported_at": "ingest-run-2025-09",
+      "source_db": "europepmc",
+      "state_index": 4
+    },
+    {
+      "aliases": [
+        [
+          "europepmc",
+          "pmid:39000003"
+        ],
+        [
+          "pmid",
+          "39000003"
+        ]
+      ],
+      "content_hash": "1c6fa01c0ec176d87231c8c354340edc8236f2018270fc5f8bbe95a55e6e4e41",
+      "fields": {
+        "authors": [
+          "Dubois C",
+          "Yamamoto H"
+        ],
+        "doi": null,
+        "pmid": "39000003",
+        "title": "Synthetic clingfish suction mechanics at rough interfaces",
+        "venue": "Synthetic Interface Letters",
+        "year": "2023"
+      },
+      "identifier": "pmid:39000003",
+      "imported_at": "ingest-run-2025-09",
+      "source_db": "europepmc",
+      "state_index": 5
+    },
+    {
+      "aliases": [
+        [
+          "europepmc",
+          "pmid:39000004"
+        ],
+        [
+          "pmid",
+          "39000004"
+        ]
+      ],
+      "content_hash": "6333bc7c240214c476529558381e1074f25f80f6f87675ef9f05580df5b7203f",
+      "fields": {
+        "authors": [
+          "Costa R",
+          "Nielsen T"
+        ],
+        "doi": null,
+        "pmid": "39000004",
+        "title": "Synthetic ivy-derived nanoparticle adhesives",
+        "venue": "Journal of Synthetic Bioadhesion",
+        "year": "2024"
+      },
+      "identifier": "pmid:39000004",
+      "imported_at": "ingest-run-2025-09",
+      "source_db": "europepmc",
+      "state_index": 6
+    },
+    {
+      "aliases": [
+        [
+          "crossref",
+          "10.99988/gov.0004"
+        ],
+        [
+          "doi",
+          "10.99988/gov.0004"
+        ]
+      ],
+      "content_hash": "53fbcecbec25abd88ddb65fff129eb78cacacf5add4c1530904d20f8e1f4580b",
+      "fields": {
+        "authors": [
+          "Garcia Luis",
+          "Wang Mei"
+        ],
+        "doi": "10.99988/gov.0004",
+        "pmid": null,
+        "title": "Synthetic beetle-inspired interlocking structures for dry adhesion",
+        "venue": "Journal of Bio-Adhesion Letters",
+        "year": "2020"
+      },
+      "identifier": "10.99988/gov.0004",
+      "imported_at": "ingest-run-2025-09",
+      "source_db": "crossref",
+      "state_index": 7
+    },
+    {
+      "aliases": [
+        [
+          "europepmc",
+          "pmid:39000009"
+        ],
+        [
+          "pmid",
+          "39000009"
+        ]
+      ],
+      "content_hash": "fc598750e5388a65e480b2f6294f94df8bbc506e96eccc52132bca5bcfbdc060",
+      "fields": {
+        "authors": [
+          "Fischer T",
+          "Hobart J"
+        ],
+        "doi": null,
+        "pmid": "39000009",
+        "title": "Synthetic limpet-inspired mineralized adhesive interfaces",
+        "venue": "Journal of Synthetic Bioadhesion",
+        "year": "2020"
+      },
+      "identifier": "pmid:39000009",
+      "imported_at": "ingest-run-2025-09",
+      "source_db": "europepmc",
+      "state_index": 8
+    },
+    {
+      "aliases": [
+        [
+          "publisher",
+          "pub:JBA-1042"
+        ]
+      ],
+      "content_hash": "d9d5552e47755682031e8964300d5a5d8f9c577829a6492bbb93ef4cf769b570",
+      "fields": {
+        "authors": [
+          "Moreau L"
+        ],
+        "doi": null,
+        "pmid": null,
+        "title": "Synthetic chameleon tongue adhesion dynamics",
+        "venue": "Journal of Bio-Adhesion Letters",
+        "year": "2021"
+      },
+      "identifier": "pub:JBA-1042",
+      "imported_at": "ingest-run-2025-09",
+      "source_db": "publisher",
+      "state_index": 9
+    },
+    {
+      "aliases": [
+        [
+          "crossref",
+          "10.99988/gov.0090"
+        ],
+        [
+          "doi",
+          "10.99988/gov.0090"
+        ],
+        [
+          "doi",
+          "10.99988/gov.0091"
+        ]
+      ],
+      "content_hash": "47f61967b7e87f346a93de31be17067a104825b47c6e5129ff9f2bc085310650",
+      "fields": {
+        "authors": [
+          "Lin H",
+          "Bergström F"
+        ],
+        "doi": "10.99988/gov.0091",
+        "pmid": null,
+        "title": "Synthetic gecko-inspired fibrillar adhesives under shear",
+        "venue": "Journal of Synthetic Adhesion",
+        "year": "2019"
+      },
+      "identifier": "10.99988/gov.0090",
+      "imported_at": "ingest-run-2025-09",
+      "source_db": "crossref",
+      "state_index": 10
+    }
+  ],
+  "source_file": "materials/import_state.json",
+  "source_sha256": "f1da607fc06ab524b244e9a547ac1125b2a01b9ecdd4c7347be5ecda4c0ade7b",
+  "stores_fields": true,
+  "watermarks": {
+    "crossref": {
+      "cursor": "AoJ9Z292LWN1cnNvci0wMDE=",
+      "offset": 20
+    },
+    "europepmc": {
+      "cursorMark": "AoEPMzkwMDAwMDA="
+    },
+    "publisher": {
+      "last_seq": 1042
+    }
+  }
+}

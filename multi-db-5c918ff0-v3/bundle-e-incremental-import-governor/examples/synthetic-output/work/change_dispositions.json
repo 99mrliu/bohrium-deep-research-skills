@@ -1,0 +1,26 @@
+{
+  "case_id": "synthetic-import-gov-001",
+  "generated_by": "MODEL (single batched review of changed/withdrawn/inconsistent entries)",
+  "dispositions": [
+    {
+      "identifier": "10.99988/gov.0004",
+      "disposition": "accept_change",
+      "rationale": "变更仅为出版方元数据更新:期刊更名(Bio-Adhesion Letters → Bionic Interface Mechanics)且年份 2020→2021,标题与作者完全一致,采纳当前响应的新值。"
+    },
+    {
+      "identifier": "pmid:39000009",
+      "disposition": "exclude_withdrawn",
+      "rationale": "EuropePMC 响应在场而该 PMID 已消失,作为导入治理事实从治理状态移除;是否构成撤稿的语义判定不属于本技能,应移交专门的撤回分析流程。"
+    },
+    {
+      "identifier": "10.99988/gov.0090",
+      "disposition": "escalate",
+      "rationale": "状态行自相矛盾(identifier 为 gov.0090 而自带 fields.doi 为 gov.0091),且两者均不在当前 crossref 响应中;脚本无权猜测,升级由组织者人工裁定。"
+    },
+    {
+      "identifier": "pub:JBA-1042",
+      "disposition": "keep_previous",
+      "rationale": "publisher 响应本次缺席,无法区分记录被撤回与源未提供;保留原记录并标注待下轮核验。"
+    }
+  ]
+}

@@ -1,0 +1,37 @@
+{
+  "_note": "SYNTHETIC ONLY：本文件是合成示例的参考答案。真实案例不存在真值文件；本文件仅在 --truth 显式传入时用于估计-真值对照，管线默认不读取。",
+  "true_total_distinct_papers": 20,
+  "true_captured": 15,
+  "true_unseen": 5,
+  "true_overlap_pattern": {
+    "111": 6,
+    "110": 3,
+    "101": 2,
+    "010": 1,
+    "001": 2,
+    "100": 1,
+    "000": 5
+  },
+  "membership": {
+    "P01": {"doi": "10.99977/rcr.2023.0001", "sources": ["crossref", "europepmc", "publisher"]},
+    "P02": {"doi": "10.99977/rcr.2022.0002", "sources": ["crossref", "europepmc", "publisher"]},
+    "P03": {"doi": "10.99977/rcr.2021.0003", "sources": ["crossref", "europepmc", "publisher"]},
+    "P04": {"doi": "10.99977/rcr.2023.0004", "sources": ["crossref", "europepmc", "publisher"]},
+    "P05": {"doi": "10.99977/rcr.2022.0005", "sources": ["crossref", "europepmc", "publisher"]},
+    "P06": {"doi": "10.99977/rcr.2021.0006", "sources": ["crossref", "europepmc", "publisher"]},
+    "P07": {"doi": "10.99977/rcr.2020.0007", "sources": ["crossref", "europepmc"]},
+    "P08": {"doi": "10.99977/rcr.2022.0008", "sources": ["crossref", "europepmc"]},
+    "P09": {"doi": "10.99977/rcr.2023.0009", "sources": ["crossref", "europepmc"]},
+    "P10": {"doi": "10.99977/rcr.2021.0010", "sources": ["crossref", "publisher"]},
+    "P11": {"doi": "10.99977/rcr.2020.0011", "sources": ["crossref", "publisher"]},
+    "P12": {"doi": "10.99977/rcr.2022.0012", "sources": ["europepmc"]},
+    "P13": {"doi": "10.99977/rcr.2023.0013", "sources": ["publisher"]},
+    "P14": {"doi": "10.99977/rcr.2021.0014", "sources": ["publisher"]},
+    "P15": {"doi": "10.99977/rcr.2020.0015", "sources": ["crossref"]},
+    "P16": {"doi": "10.99977/rcr.2024.0016", "sources": []},
+    "P17": {"doi": "10.99977/rcr.2024.0017", "sources": []},
+    "P18": {"doi": "10.99977/rcr.2024.0018", "sources": []},
+    "P19": {"doi": "10.99977/rcr.2024.0019", "sources": []},
+    "P20": {"doi": "10.99977/rcr.2024.0020", "sources": []}
+  }
+}

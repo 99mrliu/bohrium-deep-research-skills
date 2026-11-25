@@ -1,0 +1,25 @@
+{
+  "case_id": "synthetic-import-gov-001",
+  "_note": "SYNTHETIC teaching data;全部 DOI/PMID/作者/期刊均为虚构,不对应任何真实文献",
+  "research_question": "仿生粘附材料(壁虎/章鱼/贻贝等启发的合成粘附体系)的界面力学研究有哪些代表性进展?——本案例的考察重点是跨轮次增量导入治理,而非检索本身。",
+  "source_dbs": ["crossref", "europepmc", "publisher"],
+  "materials": [
+    "materials/crossref_response.json",
+    "materials/europepmc_response.json",
+    "materials/import_state.json"
+  ],
+  "output_contract": {
+    "fields": [
+      {"name": "import_classification_counts", "type": "object",
+       "description": "六路分类计数(new/changed/unchanged/withdrawn/unverifiable_withdrawal/inconsistent 及上一轮与当前记录数)"},
+      {"name": "changed_field_diffs", "type": "array",
+       "description": "变更记录的 field 级 before→after 清单"},
+      {"name": "watermark_proposal", "type": "object",
+       "description": "逐库水印推进提案(requires_approval=true,未写回)"},
+      {"name": "delta_report_path", "type": "string",
+       "description": "差异报告相对路径"},
+      {"name": "governance_summary", "type": "string",
+       "description": "本次增量导入治理的确定性摘要"}
+    ]
+  }
+}

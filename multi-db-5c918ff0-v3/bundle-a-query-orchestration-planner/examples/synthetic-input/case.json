@@ -1,0 +1,27 @@
+{
+  "case_id": "synthetic-query-orch-001",
+  "_note": "SYNTHETIC teaching data: 全部文献、DOI、响应均为虚构,仅演示接口与流程。",
+  "research_question": "合成生长素类似物 ZK-7 的剂量-效应关系如何影响水稻(Oryza sativa)根系的向地性反应?",
+  "source_dbs": ["crossref", "europepmc", "publisher"],
+  "materials": [
+    "materials/crossref_response.json",
+    "materials/europepmc_response.json",
+    "materials/reference_graph.json",
+    "materials/import_state.json"
+  ],
+  "materials_note": "publisher 材料故意缺席,用于演练覆盖缺口(gap)声明路径。",
+  "output_contract": {
+    "fields": [
+      {"name": "candidate_set", "type": "array",
+       "description": "在场响应中登记到的候选文献标识(未去重,带来源库标注)"},
+      {"name": "evidence_records", "type": "array",
+       "description": "面向研究问题的证据记录(属下游抽取职责)"},
+      {"name": "status_report", "type": "object",
+       "description": "运行状态报告(status/reason/各阶段退出码)"},
+      {"name": "method_notes", "type": "string",
+       "description": "方法说明(编排流程与边界)"},
+      {"name": "open_questions", "type": "array",
+       "description": "遗留问题清单(缺口库、截断响应的后续动作)"}
+    ]
+  }
+}

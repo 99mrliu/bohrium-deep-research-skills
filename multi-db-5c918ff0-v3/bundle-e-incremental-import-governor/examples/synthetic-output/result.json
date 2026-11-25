@@ -1,0 +1,213 @@
+{
+  "baseline_established": false,
+  "case_id": "synthetic-import-gov-001",
+  "change_records": [
+    {
+      "action": "accept_change",
+      "class": "changed",
+      "detail": "[{\"after\": \"2021\", \"before\": \"2020\", \"field\": \"year\"}, {\"after\": \"journal of bionic interface mechanics\", \"before\": \"journal of bio-adhesion letters\", \"field\": \"venue\"}]",
+      "identifier": "10.99988/gov.0004"
+    },
+    {
+      "action": "admit_new",
+      "class": "new",
+      "detail": "新记录纳入治理状态",
+      "identifier": "10.99988/gov.0005"
+    },
+    {
+      "action": "admit_new",
+      "class": "new",
+      "detail": "新记录纳入治理状态",
+      "identifier": "10.99988/gov.0006"
+    },
+    {
+      "action": "escalate",
+      "class": "inconsistent_state",
+      "detail": "escalate:待人工裁定,暂保留原记录",
+      "identifier": "10.99988/gov.0090"
+    },
+    {
+      "action": "exclude_withdrawn",
+      "class": "withdrawn",
+      "detail": "按撤回事实从治理状态移除;撤回语义判定移交专门流程",
+      "identifier": "pmid:39000009"
+    },
+    {
+      "action": "keep_previous",
+      "class": "unverifiable_withdrawal",
+      "detail": "keep_previous:保留原记录",
+      "identifier": "pub:JBA-1042"
+    }
+  ],
+  "changed_field_diffs": [
+    {
+      "after": "2021",
+      "before": "2020",
+      "field": "year",
+      "identifier": "10.99988/gov.0004"
+    },
+    {
+      "after": "journal of bionic interface mechanics",
+      "before": "journal of bio-adhesion letters",
+      "field": "venue",
+      "identifier": "10.99988/gov.0004"
+    }
+  ],
+  "checks": [
+    {
+      "detail": "全部必需键在场",
+      "name": "contract_keys_present",
+      "status": "PASS"
+    },
+    {
+      "detail": "六类之和 13 = 并集 13 = 条目数 13",
+      "name": "classification_partition",
+      "status": "PASS"
+    },
+    {
+      "detail": "previous - matched = 未匹配三类之和",
+      "name": "counts_arithmetic",
+      "status": "PASS"
+    },
+    {
+      "detail": "重跑 import_diff.json 字节一致(8440 字节)",
+      "name": "determinism_rerun",
+      "status": "PASS"
+    },
+    {
+      "detail": "无数值回归",
+      "name": "watermark_non_regression",
+      "status": "PASS"
+    },
+    {
+      "detail": "输入状态文件 sha256 与解析时一致",
+      "name": "input_state_not_modified",
+      "status": "PASS"
+    },
+    {
+      "detail": "全部在场材料已登记 sha256",
+      "name": "sources_hashed",
+      "status": "PASS"
+    }
+  ],
+  "counts": {
+    "changed": 1,
+    "current_records": 10,
+    "inconsistent": 1,
+    "new": 2,
+    "previous_records": 11,
+    "unchanged": 7,
+    "unverifiable_withdrawal": 1,
+    "withdrawn": 1
+  },
+  "delta_report_path": "delta_report.md",
+  "governance_summary": "本次对账:上一状态 11 条、当前响应 10 条、标识符并集 13 条;新增 2、不变 7、变更 1、撤回 1、不可核验撤回 1、状态不一致 1。水印提案 requires_approval=true,未经批准不写回。",
+  "import_classification_counts": {
+    "changed": 1,
+    "current_records": 10,
+    "inconsistent": 1,
+    "new": 2,
+    "previous_records": 11,
+    "unchanged": 7,
+    "unverifiable_withdrawal": 1,
+    "withdrawn": 1
+  },
+  "products": {
+    "delta_report": "delta_report.md",
+    "final_governed_state": "final_governed_state.json",
+    "work_artifacts": {
+      "current_state.json": "current_state.json",
+      "import_diff.json": "import_diff.json",
+      "previous_state.json": "previous_state.json",
+      "proposed_next_state.json": "proposed_next_state.json",
+      "selfcheck.json": "selfcheck.json",
+      "sniff_report.json": "sniff_report.json"
+    }
+  },
+  "skill_name": "incremental-import-governor",
+  "skill_version": "1.0.0",
+  "sources": [
+    {
+      "path": "case.json",
+      "role": "case",
+      "sha256": "3e1307dbd7b646a77f9a2d8ad4a74859cc71caa984a3fc69b736374de43e717b"
+    },
+    {
+      "path": "task.md",
+      "role": "task",
+      "sha256": "2c12c493ca0e7528106aa88669160654ae4b23fba057802c04e14ccc9766f3e9"
+    },
+    {
+      "path": "materials/crossref_response.json",
+      "role": "material",
+      "sha256": "f226a77382c3c591b00af6007f033569f1abce9ca28eff033ba18341cf58e12a"
+    },
+    {
+      "path": "materials/europepmc_response.json",
+      "role": "material",
+      "sha256": "d215bd232e402cca866dffcae6d12b99ac353da64a4b2dfdc79a133d024cdfd3"
+    },
+    {
+      "path": "materials/import_state.json",
+      "role": "material",
+      "sha256": "f1da607fc06ab524b244e9a547ac1125b2a01b9ecdd4c7347be5ecda4c0ade7b"
+    }
+  ],
+  "status": "success",
+  "uncertainty": [
+    {
+      "detail": "pub:JBA-1042:其来源库 publisher 的响应本次缺席,无法区分'记录被撤回'与'源未提供',不可核验",
+      "kind": "unverifiable_withdrawal"
+    },
+    {
+      "detail": "水印推进提案 requires_approval=true,本技能未写回组织者状态;水印提案:2 个库推进(crossref,europepmc),1 个库保持(publisher)。本提案 requires_approval=true,未经组织者显式批准绝不写回。",
+      "kind": "watermark_unapproved"
+    },
+    {
+      "detail": "10.99988/gov.0090:处置为 escalate,待人工线下裁定",
+      "kind": "escalated_pending_human"
+    }
+  ],
+  "unresolved_contract_fields": [],
+  "watermark_proposal": {
+    "applied": false,
+    "diff_summary": "水印提案:2 个库推进(crossref,europepmc),1 个库保持(publisher)。本提案 requires_approval=true,未经组织者显式批准绝不写回。",
+    "requires_approval": true,
+    "watermarks": {
+      "crossref": {
+        "action": "advance",
+        "evidence": "cursor←响应 next-cursor;offset←20+6",
+        "hold_reason": null,
+        "previous": {
+          "cursor": "AoJ9Z292LWN1cnNvci0wMDE=",
+          "offset": 20
+        },
+        "proposed": {
+          "cursor": "AoJ9Z292LWN1cnNvci0wMDI=",
+          "offset": 26
+        }
+      },
+      "europepmc": {
+        "action": "advance",
+        "evidence": "cursorMark←响应 nextCursorMark",
+        "hold_reason": null,
+        "previous": {
+          "cursorMark": "AoEPMzkwMDAwMDA="
+        },
+        "proposed": {
+          "cursorMark": "AoEPMzkwMDAwMDc="
+        }
+      },
+      "publisher": {
+        "action": "hold",
+        "evidence": null,
+        "hold_reason": "response_absent:本次材料中无 publisher 响应",
+        "previous": {
+          "last_seq": 1042
+        },
+        "proposed": null
+      }
+    }
+  },
+  "watermark_requires_approval": true
+}

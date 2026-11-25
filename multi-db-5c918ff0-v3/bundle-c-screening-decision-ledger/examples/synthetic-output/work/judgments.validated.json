@@ -1,0 +1,137 @@
+[
+  {
+    "basis": "title+abstract",
+    "criterion_ids": [
+      "I1",
+      "I2",
+      "I3",
+      "I4"
+    ],
+    "decision": "include",
+    "evidence_quote": "double-blind randomized controlled trial in 124 adults (aged 18-65) with chronic insomnia",
+    "evidence_status": "verbatim",
+    "rank": 1,
+    "rationale": "双盲 RCT，成人慢性失眠，NX-3 对比安慰剂，主结局为入睡潜伏期：四条纳入标准全部满足。",
+    "record_id": "rec-0001"
+  },
+  {
+    "basis": "title+abstract",
+    "criterion_ids": [
+      "I2"
+    ],
+    "decision": "exclude",
+    "evidence_quote": "children aged 6-12 years",
+    "evidence_status": "verbatim",
+    "rank": null,
+    "rationale": "人群为 6-12 岁儿童，违反 I2（≥18 岁成人）。",
+    "record_id": "rec-0002"
+  },
+  {
+    "basis": "title+abstract",
+    "criterion_ids": [
+      "I2"
+    ],
+    "decision": "borderline",
+    "evidence_quote": "participants aged 16 to 65 years",
+    "evidence_status": "verbatim",
+    "rank": null,
+    "rationale": "入组年龄 16 起，可能包含未成年人；是否违反 I2 需集中裁定。",
+    "record_id": "rec-0004"
+  },
+  {
+    "basis": "title+abstract",
+    "criterion_ids": [
+      "I1",
+      "I2",
+      "I3",
+      "I4"
+    ],
+    "decision": "include",
+    "evidence_quote": "randomly assigned 240 adults with chronic insomnia to NX-3 or matching placebo",
+    "evidence_status": "verbatim",
+    "rank": 2,
+    "rationale": "多中心 RCT，成人慢性失眠，NX-3 对比匹配安慰剂，主结局 sleep onset latency。",
+    "record_id": "rec-0005"
+  },
+  {
+    "basis": "title+abstract",
+    "criterion_ids": [
+      "I1",
+      "I2",
+      "I3",
+      "I4"
+    ],
+    "decision": "include",
+    "evidence_quote": "randomized controlled trial, 96 older adults (aged 60-80) with chronic insomnia received NX-3 or placebo",
+    "evidence_status": "verbatim",
+    "rank": 4,
+    "rationale": "老年成人 RCT，NX-3 对比安慰剂，结局含 sleep latency。",
+    "record_id": "rec-0006"
+  },
+  {
+    "basis": "title+abstract",
+    "criterion_ids": [
+      "I3"
+    ],
+    "decision": "exclude",
+    "evidence_quote": "no placebo arm was included",
+    "evidence_status": "verbatim",
+    "rank": null,
+    "rationale": "对照为唑吡坦且明确无安慰剂组，违反 I3。",
+    "record_id": "rec-0007"
+  },
+  {
+    "basis": "title+abstract",
+    "criterion_ids": [
+      "I1"
+    ],
+    "decision": "borderline",
+    "evidence_quote": "allocated to NX-3 or placebo by alternation",
+    "evidence_status": "verbatim",
+    "rank": null,
+    "rationale": "交替分配是否算 RCT 需集中裁定。",
+    "record_id": "rec-0008"
+  },
+  {
+    "basis": "title+abstract",
+    "criterion_ids": [
+      "I1",
+      "I2",
+      "I3",
+      "I4"
+    ],
+    "decision": "include",
+    "evidence_quote": "randomized controlled trial of NX-3 versus placebo",
+    "evidence_status": "verbatim",
+    "rank": 5,
+    "rationale": "成人慢性失眠且基线睡眠潜伏期 >30 分钟，NX-3 对比安慰剂 RCT，主终点 sleep latency。",
+    "record_id": "rec-0009"
+  },
+  {
+    "basis": "title+abstract",
+    "criterion_ids": [
+      "I4"
+    ],
+    "decision": "borderline",
+    "evidence_quote": "Sleep onset latency was recorded as an exploratory secondary outcome",
+    "evidence_status": "verbatim",
+    "rank": null,
+    "rationale": "入睡潜伏期仅为探索性次要结局，是否满足 I4 的“必须包含”需集中裁定。",
+    "record_id": "rec-0011"
+  },
+  {
+    "basis": "title+abstract",
+    "criterion_ids": [
+      "I1",
+      "I2",
+      "I3",
+      "I4"
+    ],
+    "decision": "include",
+    "evidence_quote": "110 adults with chronic insomnia took NX-3 or placebo at bedtime",
+    "evidence_status": "verbatim",
+    "rank": 3,
+    "rationale": "睡前给药 RCT，成人慢性失眠，NX-3 对比安慰剂，主结局 sleep latency。",
+    "record_id": "rec-0012"
+  }
+]

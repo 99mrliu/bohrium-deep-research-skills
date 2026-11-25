@@ -1,0 +1,52 @@
+{
+  "borderline_pending": 0,
+  "conservation_checks": [
+    {
+      "invariant": "identified - duplicates_removed == canonical_records",
+      "lhs": 12,
+      "ok": true,
+      "rhs": 12
+    },
+    {
+      "invariant": "records_screened + unjudged == canonical_records",
+      "lhs": 12,
+      "ok": true,
+      "rhs": 12
+    },
+    {
+      "invariant": "excluded + included + borderline_pending == records_screened",
+      "lhs": 12,
+      "ok": true,
+      "rhs": 12
+    }
+  ],
+  "conserved": true,
+  "counting_rule": "每个计数均为对 decision_ledger.jsonl 行的实际计数（identified/duplicates 来自 dedup_summary.json 的实际去重组数），无任何断言式数字。",
+  "duplicates_removed": 2,
+  "records_excluded": {
+    "per_criterion": {
+      "E1": 1,
+      "E2": 1,
+      "I1": 1,
+      "I2": 2,
+      "I3": 1
+    },
+    "per_stage": {
+      "borderline_resolution": 2,
+      "prescreen_script": 2,
+      "screen_model": 2
+    },
+    "total": 6
+  },
+  "records_identified": {
+    "per_source": {
+      "crossref": 6,
+      "europepmc": 5,
+      "publisher": 3
+    },
+    "total": 14
+  },
+  "records_included": 6,
+  "records_screened": 12,
+  "records_unjudged": 0
+}

@@ -1,0 +1,17 @@
+{
+  "case_id": "synthetic-query-orch-001",
+  "_note": "模型步骤产物(本示例中手工编写):研究问题的中性 facet 概念块。脚本不臆造本文件。",
+  "research_question": "合成生长素类似物 ZK-7 的剂量-效应关系如何影响水稻(Oryza sativa)根系的向地性反应?",
+  "facets": [
+    {"id": "F1", "role": "population", "label": "水稻根系",
+     "terms": ["Oryza sativa", "rice root"]},
+    {"id": "F2", "role": "intervention", "label": "合成生长素类似物 ZK-7 剂量-效应",
+     "terms": ["ZK-7", "synthetic auxin analog", "dose response"]},
+    {"id": "F3", "role": "outcome", "label": "根向地性反应",
+     "terms": ["root gravitropism", "gravitropic curvature"]}
+  ],
+  "time_window": {"from": "2015-01-01", "to": "2026-12-31"},
+  "publication_types": ["journal-article"],
+  "language_scope": ["en"],
+  "notes": "ZK-7 为虚构化合物;Europe PMC 对农学 population(F1)覆盖偏弱,计划需显式声明。"
+}

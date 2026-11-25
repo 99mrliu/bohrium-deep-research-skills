@@ -1,0 +1,22 @@
+{
+  "counts": {
+    "pairs_explicit": 1,
+    "pairs_pending": 0
+  },
+  "pairs": [
+    {
+      "basis": "explicit",
+      "evidence": [
+        "materials/crossref_response.json::$.message.items[3].relation[0]"
+      ],
+      "pair_id": "pair-01",
+      "preprint_doi": "10.99231/synth.004",
+      "preprint_record_id": "crossref:10.99231/synth.004",
+      "status": "explicit_resolved",
+      "vor_doi": "10.99231/synth.005",
+      "vor_record_id": "crossref:10.99231/synth.005"
+    }
+  ],
+  "pending_review": [],
+  "rule": "When a pair is confirmed, the candidate set counts ONE study with both identifiers; the VoR is preferred for citation fields; the preprint is kept as alternate_version. Explicit relation links auto-pair; bibliographic fallback NEVER auto-pairs — it waits in pending_review for a merge_version_pair / split_not_same disposition."
+}

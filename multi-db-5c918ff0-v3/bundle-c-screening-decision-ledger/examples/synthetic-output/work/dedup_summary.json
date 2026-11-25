@@ -1,0 +1,63 @@
+{
+  "canonical_records": 12,
+  "duplicate_groups": [
+    {
+      "absorbed": "raw-0007",
+      "absorbed_source": "europepmc",
+      "kept": "raw-0005",
+      "kept_record_id": "rec-0005",
+      "kept_source": "crossref",
+      "match": "doi"
+    },
+    {
+      "absorbed": "raw-0014",
+      "absorbed_source": "publisher",
+      "kept": "raw-0010",
+      "kept_record_id": "rec-0012",
+      "kept_source": "publisher",
+      "match": "bibliographic",
+      "note": "higher-priority source publisher replaced europepmc"
+    }
+  ],
+  "duplicates_removed": 2,
+  "identified_per_source": {
+    "crossref": 6,
+    "europepmc": 5,
+    "publisher": 3
+  },
+  "note": "去重仅用于喂流量计数：规范化 DOI 精确匹配优先，否则规范化标题+年份+第一作者姓氏全同；不做模糊合并。",
+  "quarantined_materials": [],
+  "sources_manifest": [
+    {
+      "kind": "crossref",
+      "material": "materials/crossref_response.json",
+      "records": 6,
+      "sha256": "6a0d5e57923a8825ccd46fbac061d89102b90f1ae6bfad0267a1add0efe1edf5"
+    },
+    {
+      "kind": "europepmc",
+      "material": "materials/europepmc_response.json",
+      "records": 5,
+      "sha256": "ac527b79f1a6bc74dbb1afaeb5ff5762da49c131488ef4e73bf5c08c8cc31809"
+    },
+    {
+      "kind": "import_state",
+      "material": "materials/import_state.json",
+      "records": 0,
+      "sha256": "e4d3af36a89418146874c7dae7d8a556fbf8ddd81887e3d798bd3bc5aa5ba0ba"
+    },
+    {
+      "kind": "publisher",
+      "material": "materials/publisher_records.json",
+      "records": 3,
+      "sha256": "f2e9945f239ab9154c8893f878156dcc8ececf4bbb11d0a78191a9629ca3b7f9"
+    },
+    {
+      "kind": "reference_graph",
+      "material": "materials/reference_graph.json",
+      "records": 0,
+      "sha256": "989d7a8fc3a87bd9fadfb9202e7ddf67916991a189c67e4c4e6c30bdaf3d6f93"
+    }
+  ],
+  "total_identified": 14
+}

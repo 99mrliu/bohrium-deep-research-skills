@@ -1,0 +1,349 @@
+{
+  "case_id": "synthetic-status-hyg-001",
+  "counts": {
+    "flagged": 1,
+    "import_inconsistent": 1,
+    "pairs_explicit": 1,
+    "pairs_pending": 0,
+    "records_scanned": 11,
+    "severe": 5,
+    "unverifiable": 1
+  },
+  "records": [
+    {
+      "disposition_note": "no status-bearing surface in materials; absence of evidence is NOT evidence of clean status",
+      "doi_norm": "10.99231/synth.001",
+      "final_disposition": "status_unverifiable",
+      "jsonpath_locator": "materials/crossref_response.json::$.message.items[0]",
+      "pair_membership": null,
+      "pmid": null,
+      "record_id": "crossref:10.99231/synth.001",
+      "signals": [],
+      "source_db": "crossref",
+      "source_path": "materials/crossref_response.json",
+      "status_class": "unverifiable",
+      "title": "Quantum lattice dynamics of the fictional ferroelectric alloy Ferrovite-3",
+      "year": 2021
+    },
+    {
+      "disposition_note": "该记录本身是撤回通告（relation is-retraction-of + update-to type=retraction），不是一项可采信的研究。",
+      "doi_norm": "10.99231/synth.002",
+      "final_disposition": "exclude_as_retracted",
+      "jsonpath_locator": "materials/crossref_response.json::$.message.items[1]",
+      "pair_membership": null,
+      "pmid": null,
+      "record_id": "crossref:10.99231/synth.002",
+      "signals": [
+        {
+          "code": "CROSSREF_IS_RETRACTION_OF",
+          "detail": "this record IS a retraction notice for 10.99231/synth.002t",
+          "evidence_locator": "materials/crossref_response.json::$.message.items[1].relation[0]",
+          "record_id": "crossref:10.99231/synth.002",
+          "severity": "severe"
+        },
+        {
+          "code": "CROSSREF_UPDATE_TO",
+          "detail": "Crossref update-to relation to 10.99231/synth.002t (update type retraction)",
+          "evidence_locator": "materials/crossref_response.json::$.message.items[1].update-to[0]",
+          "record_id": "crossref:10.99231/synth.002",
+          "severity": "flagged"
+        },
+        {
+          "code": "IMPORT_NOT_YET_IMPORTED",
+          "detail": "record present in responses but unknown to import_state (informational)",
+          "evidence_locator": null,
+          "record_id": "crossref:10.99231/synth.002",
+          "severity": "info"
+        }
+      ],
+      "source_db": "crossref",
+      "source_path": "materials/crossref_response.json",
+      "status_class": "severe",
+      "title": "Retraction notice: Erroneous crystal model of Ferrovite-3",
+      "year": 2023
+    },
+    {
+      "disposition_note": "被 10.99231/synth.002 明确撤回的原始论文，引用图节点亦标记 retracted；必须从候选池排除。",
+      "doi_norm": "10.99231/synth.002t",
+      "final_disposition": "exclude_as_retracted",
+      "jsonpath_locator": "materials/crossref_response.json::$.message.items[2]",
+      "pair_membership": null,
+      "pmid": null,
+      "record_id": "crossref:10.99231/synth.002t",
+      "signals": [
+        {
+          "code": "IMPORT_NOT_YET_IMPORTED",
+          "detail": "record present in responses but unknown to import_state (informational)",
+          "evidence_locator": null,
+          "record_id": "crossref:10.99231/synth.002t",
+          "severity": "info"
+        },
+        {
+          "code": "REFGRAPH_NODE_WITHDRAWN",
+          "detail": "reference graph node status='retracted' withdrawn=None",
+          "evidence_locator": "materials/reference_graph.json::$.nodes[0]",
+          "record_id": "crossref:10.99231/synth.002t",
+          "severity": "severe"
+        },
+        {
+          "code": "REFGRAPH_RETRACTION_EDGE",
+          "detail": "graph edge type='retracts' from 10.99231/synth.002",
+          "evidence_locator": "materials/reference_graph.json::$.edges[0]",
+          "record_id": "crossref:10.99231/synth.002t",
+          "severity": "severe"
+        },
+        {
+          "code": "TARGET_RETRACTED",
+          "detail": "retracted by notice crossref:10.99231/synth.002 (doi 10.99231/synth.002)",
+          "evidence_locator": "materials/crossref_response.json::$.message.items[1].relation[0]",
+          "record_id": "crossref:10.99231/synth.002t",
+          "severity": "severe"
+        }
+      ],
+      "source_db": "crossref",
+      "source_path": "materials/crossref_response.json",
+      "status_class": "severe",
+      "title": "Erroneous crystal model of Ferrovite-3",
+      "year": 2019
+    },
+    {
+      "disposition_note": "no adverse signal on any status surface",
+      "doi_norm": "10.99231/synth.004",
+      "final_disposition": "keep_clean",
+      "jsonpath_locator": "materials/crossref_response.json::$.message.items[3]",
+      "pair_membership": {
+        "pair_id": "pair-01",
+        "role": "preprint"
+      },
+      "pmid": null,
+      "record_id": "crossref:10.99231/synth.004",
+      "signals": [
+        {
+          "code": "CROSSREF_POSTED_CONTENT",
+          "detail": "type='posted-content' subtype='preprint' => preprint marker",
+          "evidence_locator": "materials/crossref_response.json::$.message.items[3]",
+          "record_id": "crossref:10.99231/synth.004",
+          "severity": "info"
+        },
+        {
+          "code": "CROSSREF_PREPRINT_RELATION",
+          "detail": "is-preprint-of -> 10.99231/synth.005",
+          "evidence_locator": "materials/crossref_response.json::$.message.items[3].relation[0]",
+          "record_id": "crossref:10.99231/synth.004",
+          "severity": "info"
+        },
+        {
+          "code": "IMPORT_NOT_YET_IMPORTED",
+          "detail": "record present in responses but unknown to import_state (informational)",
+          "evidence_locator": null,
+          "record_id": "crossref:10.99231/synth.004",
+          "severity": "info"
+        }
+      ],
+      "source_db": "crossref",
+      "source_path": "materials/crossref_response.json",
+      "status_class": "clean",
+      "title": "Phonon softening in Ferrovite-3 thin films",
+      "year": 2022
+    },
+    {
+      "disposition_note": "no adverse signal on any status surface",
+      "doi_norm": "10.99231/synth.005",
+      "final_disposition": "keep_clean",
+      "jsonpath_locator": "materials/crossref_response.json::$.message.items[4]",
+      "pair_membership": {
+        "pair_id": "pair-01",
+        "role": "vor"
+      },
+      "pmid": null,
+      "record_id": "crossref:10.99231/synth.005",
+      "signals": [
+        {
+          "code": "CROSSREF_PREPRINT_RELATION",
+          "detail": "has-preprint -> 10.99231/synth.004",
+          "evidence_locator": "materials/crossref_response.json::$.message.items[4].relation[0]",
+          "record_id": "crossref:10.99231/synth.005",
+          "severity": "info"
+        },
+        {
+          "code": "IMPORT_NOT_YET_IMPORTED",
+          "detail": "record present in responses but unknown to import_state (informational)",
+          "evidence_locator": null,
+          "record_id": "crossref:10.99231/synth.005",
+          "severity": "info"
+        }
+      ],
+      "source_db": "crossref",
+      "source_path": "materials/crossref_response.json",
+      "status_class": "clean",
+      "title": "Phonon softening in Ferrovite-3 thin films",
+      "year": 2023
+    },
+    {
+      "disposition_note": "no adverse signal on any status surface",
+      "doi_norm": "10.99231/synth.epmc3",
+      "final_disposition": "keep_clean",
+      "jsonpath_locator": "materials/europepmc_response.json::$.resultList.result[2]",
+      "pair_membership": null,
+      "pmid": "37000003",
+      "record_id": "europepmc:10.99231/synth.epmc3",
+      "signals": [],
+      "source_db": "europepmc",
+      "source_path": "materials/europepmc_response.json",
+      "status_class": "clean",
+      "title": "Catalytic oxidation pathways of SynthCat-9 derivatives.",
+      "year": 2024
+    },
+    {
+      "disposition_note": "EuropePMC pubTypeList 含 'Retraction of Publication'，该记录为撤回通告，按政策排除。",
+      "doi_norm": "10.99231/synth.epmcret1",
+      "final_disposition": "exclude_as_retracted",
+      "jsonpath_locator": "materials/europepmc_response.json::$.resultList.result[0]",
+      "pair_membership": null,
+      "pmid": "37000001",
+      "record_id": "europepmc:10.99231/synth.epmcret1",
+      "signals": [
+        {
+          "code": "EPMC_RETRACTION_OF_PUBLICATION",
+          "detail": "pubTypeList contains 'retraction of publication'",
+          "evidence_locator": "materials/europepmc_response.json::$.resultList.result[0].pubTypeList",
+          "record_id": "europepmc:10.99231/synth.epmcret1",
+          "severity": "severe"
+        },
+        {
+          "code": "IMPORT_NOT_YET_IMPORTED",
+          "detail": "record present in responses but unknown to import_state (informational)",
+          "evidence_locator": null,
+          "record_id": "europepmc:10.99231/synth.epmcret1",
+          "severity": "info"
+        }
+      ],
+      "source_db": "europepmc",
+      "source_path": "materials/europepmc_response.json",
+      "status_class": "severe",
+      "title": "Retraction: Ferroelectric domain switching in Ferrovite-3 single crystals.",
+      "year": 2023
+    },
+    {
+      "disposition_note": "no adverse signal on any status surface",
+      "doi_norm": "10.99231/synth.ppr1",
+      "final_disposition": "keep_clean",
+      "jsonpath_locator": "materials/europepmc_response.json::$.resultList.result[1]",
+      "pair_membership": null,
+      "pmid": "PPR900001",
+      "record_id": "europepmc:10.99231/synth.ppr1",
+      "signals": [
+        {
+          "code": "EPMC_PREPRINT",
+          "detail": "pubTypeList contains 'preprint'",
+          "evidence_locator": "materials/europepmc_response.json::$.resultList.result[1].pubTypeList",
+          "record_id": "europepmc:10.99231/synth.ppr1",
+          "severity": "info"
+        },
+        {
+          "code": "IMPORT_NOT_YET_IMPORTED",
+          "detail": "record present in responses but unknown to import_state (informational)",
+          "evidence_locator": null,
+          "record_id": "europepmc:10.99231/synth.ppr1",
+          "severity": "info"
+        }
+      ],
+      "source_db": "europepmc",
+      "source_path": "materials/europepmc_response.json",
+      "status_class": "clean",
+      "title": "Novel catalyst SynthCat-9 for low-temperature oxidation: a preprint.",
+      "year": 2024
+    },
+    {
+      "disposition_note": "仅为 expression_of_concern 而非撤回；保留进候选池但附注意标记，供下游在综述中披露。",
+      "doi_norm": "10.99231/synth.pub1",
+      "final_disposition": "keep_with_notice",
+      "jsonpath_locator": "materials/publisher_records.json::$[0]",
+      "pair_membership": null,
+      "pmid": null,
+      "record_id": "publisher:10.99231/synth.pub1",
+      "signals": [
+        {
+          "code": "IMPORT_NOT_YET_IMPORTED",
+          "detail": "record present in responses but unknown to import_state (informational)",
+          "evidence_locator": null,
+          "record_id": "publisher:10.99231/synth.pub1",
+          "severity": "info"
+        },
+        {
+          "code": "PUBLISHER_STATUS_NOTICE",
+          "detail": "publisher status='expression_of_concern'",
+          "evidence_locator": "materials/publisher_records.json::$[0].status",
+          "record_id": "publisher:10.99231/synth.pub1",
+          "severity": "flagged"
+        }
+      ],
+      "source_db": "publisher",
+      "source_path": "materials/publisher_records.json",
+      "status_class": "flagged",
+      "title": "Strain engineering of Ferrovite-3 superlattices",
+      "year": 2022
+    },
+    {
+      "disposition_note": "引用图节点 status=withdrawn 与出版商 status=published 冲突，以更严重的撤回证据为准，排除。",
+      "doi_norm": "10.99231/synth.pub2",
+      "final_disposition": "exclude_as_retracted",
+      "jsonpath_locator": "materials/publisher_records.json::$[1]",
+      "pair_membership": null,
+      "pmid": null,
+      "record_id": "publisher:10.99231/synth.pub2",
+      "signals": [
+        {
+          "code": "IMPORT_NOT_YET_IMPORTED",
+          "detail": "record present in responses but unknown to import_state (informational)",
+          "evidence_locator": null,
+          "record_id": "publisher:10.99231/synth.pub2",
+          "severity": "info"
+        },
+        {
+          "code": "REFGRAPH_NODE_WITHDRAWN",
+          "detail": "reference graph node status='withdrawn' withdrawn=None",
+          "evidence_locator": "materials/reference_graph.json::$.nodes[4]",
+          "record_id": "publisher:10.99231/synth.pub2",
+          "severity": "severe"
+        },
+        {
+          "code": "STATUS_SOURCE_CONFLICT",
+          "detail": "publisher declares status='published' but another source marks this record retracted/withdrawn",
+          "evidence_locator": "materials/publisher_records.json::$[1]",
+          "record_id": "publisher:10.99231/synth.pub2",
+          "severity": "flagged"
+        }
+      ],
+      "source_db": "publisher",
+      "source_path": "materials/publisher_records.json",
+      "status_class": "severe",
+      "title": "Defect chemistry of Ferrovite-3 under high pressure",
+      "year": 2020
+    },
+    {
+      "disposition_note": "policy default for severe status signals (model may override with rationale)",
+      "doi_norm": "10.99231/synth.pub3",
+      "final_disposition": "exclude_as_retracted",
+      "jsonpath_locator": "materials/publisher_records.json::$[2]",
+      "pair_membership": null,
+      "pmid": null,
+      "record_id": "publisher:10.99231/synth.pub3",
+      "signals": [
+        {
+          "code": "IMPORT_STATE_WITHDRAWN",
+          "detail": "import_state marks db='publisher' identifier='10.99231/synth.pub3' as 'withdrawn' — excluded from candidate pool",
+          "evidence_locator": "materials/import_state.json::$.records[3]",
+          "record_id": "publisher:10.99231/synth.pub3",
+          "severity": "severe"
+        }
+      ],
+      "source_db": "publisher",
+      "source_path": "materials/publisher_records.json",
+      "status_class": "severe",
+      "title": "Thermal transport in Ferrovite-3 nanowires",
+      "year": 2021
+    }
+  ],
+  "skill_name": "record-status-hygiene"
+}

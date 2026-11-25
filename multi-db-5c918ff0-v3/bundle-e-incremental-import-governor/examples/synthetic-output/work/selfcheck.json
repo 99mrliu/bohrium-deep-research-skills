@@ -1,0 +1,40 @@
+{
+  "checks": [
+    {
+      "detail": "全部必需键在场",
+      "name": "contract_keys_present",
+      "status": "PASS"
+    },
+    {
+      "detail": "六类之和 13 = 并集 13 = 条目数 13",
+      "name": "classification_partition",
+      "status": "PASS"
+    },
+    {
+      "detail": "previous - matched = 未匹配三类之和",
+      "name": "counts_arithmetic",
+      "status": "PASS"
+    },
+    {
+      "detail": "重跑 import_diff.json 字节一致(8440 字节)",
+      "name": "determinism_rerun",
+      "status": "PASS"
+    },
+    {
+      "detail": "无数值回归",
+      "name": "watermark_non_regression",
+      "status": "PASS"
+    },
+    {
+      "detail": "输入状态文件 sha256 与解析时一致",
+      "name": "input_state_not_modified",
+      "status": "PASS"
+    },
+    {
+      "detail": "全部在场材料已登记 sha256",
+      "name": "sources_hashed",
+      "status": "PASS"
+    }
+  ],
+  "ok": true
+}

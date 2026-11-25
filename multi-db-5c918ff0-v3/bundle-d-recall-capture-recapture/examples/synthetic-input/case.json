@@ -1,0 +1,19 @@
+{
+  "case_id": "synthetic-recall-cc-001",
+  "_note": "SYNTHETIC teaching data：虚构案例，DOI 前缀 10.99977 与全部标题/作者均为虚构，仅用于演示 capture-recapture 召回估计，非真实文献。",
+  "research_question": "固态锂电池界面稳定化研究的多数据库联合检索（虚构教学案例）：三个数据库合计漏检了多少条相关文献？用捕获-再捕获方法给出未检出数的点估计与置信区间，并给出可辩护的停止/遗漏陈述。",
+  "source_dbs": ["crossref", "europepmc", "publisher"],
+  "materials": [
+    "materials/crossref_response.json",
+    "materials/europepmc_response.json",
+    "materials/publisher_records.jsonl",
+    "materials/truth.json"
+  ],
+  "output_contract": {
+    "candidate_set": "list",
+    "recall_estimate_summary": "dict",
+    "omission_statement": "string",
+    "uncertainty_statement": "string",
+    "change_records": "list"
+  }
+}

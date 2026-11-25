@@ -1,0 +1,56 @@
+{
+  "status": "ok",
+  "message-type": "work-list",
+  "message-version": "1.0.0",
+  "_note": "SYNTHETIC fixture: 虚构的 Crossref works 响应;total-results 故意大于 items 以模拟单页截断。",
+  "message": {
+    "query": {
+      "bibliographic": "Oryza sativa rice root ZK-7 synthetic auxin analog dose response root gravitropism gravitropic curvature",
+      "filter": "from-pub-date:2015-01-01,until-pub-date:2026-12-31,type:journal-article",
+      "offset": 0,
+      "rows": 100
+    },
+    "total-results": 57,
+    "items-per-page": 100,
+    "items": [
+      {
+        "DOI": "10.99977/zk7.0001",
+        "type": "journal-article",
+        "title": ["Synthetic auxin analog ZK-7 modulates root gravitropism in Oryza sativa: a dose-response analysis"],
+        "author": [
+          {"given": "Meilin", "family": "Zharao"},
+          {"given": "Tobias", "family": "Quenford"}
+        ],
+        "container-title": ["Journal of Synthetic Plant Physiology"],
+        "published": {"date-parts": [[2019, 4, 12]]},
+        "publisher": "Fictional Academic Press",
+        "is-referenced-by-count": 41
+      },
+      {
+        "DOI": "10.99977/zk7.0002",
+        "type": "journal-article",
+        "title": ["Dose-dependent inhibition of gravitropic curvature in rice roots by the synthetic auxin analog ZK-7"],
+        "author": [
+          {"given": "Anaya", "family": "Beltrame"},
+          {"given": "Ruoqi", "family": "Haldane"}
+        ],
+        "container-title": ["Annals of Computational Botany"],
+        "published": {"date-parts": [[2021, 9, 3]]},
+        "publisher": "Fictional Academic Press",
+        "is-referenced-by-count": 18
+      },
+      {
+        "DOI": "10.99977/zk7.0004",
+        "type": "journal-article",
+        "title": ["Auxin analog screening platform reveals ZK-7 as a potent gravitropism modulator in cereal roots"],
+        "author": [
+          {"given": "Petra", "family": "Voss-Lindqvist"}
+        ],
+        "container-title": ["Synthetic Biology of Crops"],
+        "published": {"date-parts": [[2023, 1, 27]]},
+        "publisher": "Imaginary Scholarly Society",
+        "is-referenced-by-count": 7
+      }
+    ]
+  }
+}

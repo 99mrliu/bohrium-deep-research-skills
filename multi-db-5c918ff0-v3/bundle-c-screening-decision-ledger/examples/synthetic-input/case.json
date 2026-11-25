@@ -1,0 +1,20 @@
+{
+  "case_id": "synthetic-screen-ledger-001",
+  "_note": "SYNTHETIC teaching data — all papers, DOIs, PMIDs, authors, journals and the peptide NX-3 are fictional; safe for public release.",
+  "research_question": "合成肽 NX-3 对比安慰剂治疗成人慢性失眠的入睡潜伏期（sleep latency）疗效 —— 仅纳入随机对照试验（RCT），发表年份 2015-2025，研究对象为 ≥18 岁成人。",
+  "source_dbs": ["crossref", "europepmc", "publisher"],
+  "materials": [
+    "materials/crossref_response.json",
+    "materials/europepmc_response.json",
+    "materials/publisher_records.json",
+    "materials/reference_graph.json",
+    "materials/import_state.json"
+  ],
+  "output_contract": {
+    "candidate_set": {"type": "list", "description": "纳入记录（含 rank、判定理由与逐字证据）"},
+    "prisma_flow": {"type": "dict", "description": "PRISMA 风格流量计数（必须由账本重算）"},
+    "exclusion_reasons": {"type": "dict", "description": "按标准统计的排除原因计数"},
+    "screening_criteria": {"type": "list", "description": "编译自 task.md 的资格标准（含原文引用）"},
+    "borderline_resolutions": {"type": "dict", "description": "边界队列的裁定与待决清单"}
+  }
+}

@@ -1,0 +1,131 @@
+{
+  "candidates": [
+    {
+      "alternate_version": {
+        "doi": "10.99231/synth.004",
+        "record_id": "crossref:10.99231/synth.004",
+        "source_db": "crossref",
+        "version_role": "preprint"
+      },
+      "authors": [
+        "Tanaka",
+        "Haddad"
+      ],
+      "candidate_id": "cand-01",
+      "counts_as_studies": 1,
+      "doi": "10.99231/synth.005",
+      "notice": null,
+      "pmid": null,
+      "primary_record_id": "crossref:10.99231/synth.005",
+      "source_db": "crossref",
+      "status_class": "clean",
+      "title": "Phonon softening in Ferrovite-3 thin films",
+      "version_role": "version_of_record",
+      "year": 2023
+    },
+    {
+      "alternate_version": null,
+      "authors": [
+        "Beaumont",
+        "Okafor",
+        "Silva"
+      ],
+      "candidate_id": "cand-02",
+      "counts_as_studies": 1,
+      "doi": "10.99231/synth.epmc3",
+      "notice": null,
+      "pmid": "37000003",
+      "primary_record_id": "europepmc:10.99231/synth.epmc3",
+      "source_db": "europepmc",
+      "status_class": "clean",
+      "title": "Catalytic oxidation pathways of SynthCat-9 derivatives.",
+      "version_role": "single",
+      "year": 2024
+    },
+    {
+      "alternate_version": null,
+      "authors": [
+        "Beaumont",
+        "Okafor"
+      ],
+      "candidate_id": "cand-03",
+      "counts_as_studies": 1,
+      "doi": "10.99231/synth.ppr1",
+      "notice": null,
+      "pmid": "PPR900001",
+      "primary_record_id": "europepmc:10.99231/synth.ppr1",
+      "source_db": "europepmc",
+      "status_class": "clean",
+      "title": "Novel catalyst SynthCat-9 for low-temperature oxidation: a preprint.",
+      "version_role": "single",
+      "year": 2024
+    },
+    {
+      "alternate_version": null,
+      "authors": [
+        "Raman",
+        "Weber"
+      ],
+      "candidate_id": "cand-04",
+      "counts_as_studies": 1,
+      "doi": "10.99231/synth.pub1",
+      "notice": [
+        "PUBLISHER_STATUS_NOTICE"
+      ],
+      "pmid": null,
+      "primary_record_id": "publisher:10.99231/synth.pub1",
+      "source_db": "publisher",
+      "status_class": "flagged",
+      "title": "Strain engineering of Ferrovite-3 superlattices",
+      "version_role": "single",
+      "year": 2022
+    }
+  ],
+  "excluded": [
+    {
+      "disposition": "exclude_as_retracted",
+      "reason_codes": [
+        "CROSSREF_IS_RETRACTION_OF"
+      ],
+      "record_id": "crossref:10.99231/synth.002"
+    },
+    {
+      "disposition": "exclude_as_retracted",
+      "reason_codes": [
+        "REFGRAPH_NODE_WITHDRAWN",
+        "REFGRAPH_RETRACTION_EDGE",
+        "TARGET_RETRACTED"
+      ],
+      "record_id": "crossref:10.99231/synth.002t"
+    },
+    {
+      "disposition": "exclude_as_retracted",
+      "reason_codes": [
+        "EPMC_RETRACTION_OF_PUBLICATION"
+      ],
+      "record_id": "europepmc:10.99231/synth.epmcret1"
+    },
+    {
+      "disposition": "exclude_as_retracted",
+      "reason_codes": [
+        "REFGRAPH_NODE_WITHDRAWN"
+      ],
+      "record_id": "publisher:10.99231/synth.pub2"
+    },
+    {
+      "disposition": "exclude_as_retracted",
+      "reason_codes": [
+        "IMPORT_STATE_WITHDRAWN"
+      ],
+      "record_id": "publisher:10.99231/synth.pub3"
+    }
+  ],
+  "folded_preprints": {
+    "crossref:10.99231/synth.004": "crossref:10.99231/synth.005"
+  },
+  "rule": "When a pair is confirmed, the candidate set counts ONE study with both identifiers; the VoR is preferred for citation fields; the preprint is kept as alternate_version. Explicit relation links auto-pair; bibliographic fallback NEVER auto-pairs — it waits in pending_review for a merge_version_pair / split_not_same disposition.",
+  "studies_count": 4,
+  "unverifiable_not_included": [
+    "crossref:10.99231/synth.001"
+  ]
+}

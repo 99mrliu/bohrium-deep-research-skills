@@ -1,0 +1,164 @@
+{
+  "capability_reference": {
+    "path": "references/db-capabilities.md",
+    "sha256": "19d7029e8c64bc7230c48c6a618b75d5fc95960a5f808f6e7902b3810c0634c3",
+    "status": "constants-transcribed-from-file(sha256 已核对)"
+  },
+  "case_id": "synthetic-query-orch-001",
+  "facets": [
+    {
+      "id": "F1",
+      "label": "水稻根系",
+      "role": "population",
+      "terms": [
+        "Oryza sativa",
+        "rice root"
+      ]
+    },
+    {
+      "id": "F2",
+      "label": "合成生长素类似物 ZK-7 剂量-效应",
+      "role": "intervention",
+      "terms": [
+        "ZK-7",
+        "synthetic auxin analog",
+        "dose response"
+      ]
+    },
+    {
+      "id": "F3",
+      "label": "根向地性反应",
+      "role": "outcome",
+      "terms": [
+        "root gravitropism",
+        "gravitropic curvature"
+      ]
+    }
+  ],
+  "facets_source": "facets.json",
+  "offline_notice": "本计划仅供离线调度登记;评测环境无网络,绝不发起实时 API 调用",
+  "plans": [
+    {
+      "coverage_role": {
+        "strength_note": "跨学科书目元数据覆盖面最广,适合作为候选池骨架",
+        "strong_on": [
+          "F1",
+          "F2",
+          "F3"
+        ],
+        "weak_on": [],
+        "weakness_note": "无摘要/全文字段,outcome 类证据需下游核对原文"
+      },
+      "db": "crossref",
+      "degradation_chain": "若 crossref 响应缺失:不臆造、不跳过——在 coverage_declaration 登记 gap,facet F1,F2,F3 失去该库覆盖;result.status 降级为 partial 并在 uncertainty 中声明",
+      "pagination": {
+        "page_size": 100,
+        "start": "offset=0",
+        "style": "offset+rows;深分页建议 cursor(* 起翻)"
+      },
+      "planned": true,
+      "planned_query": "Oryza sativa rice root ZK-7 synthetic auxin analog dose response root gravitropism gravitropic curvature",
+      "query_params": {
+        "filter": "from-pub-date:2015-01-01,until-pub-date:2026-12-31,type:journal-article",
+        "offset": 0,
+        "query.bibliographic": "Oryza sativa rice root ZK-7 synthetic auxin analog dose response root gravitropism gravitropic curvature",
+        "rows": 100,
+        "select": [
+          "DOI",
+          "title",
+          "author",
+          "published",
+          "container-title",
+          "type"
+        ],
+        "sort": "relevance"
+      },
+      "quota_policy": {
+        "max_requests_per_run": 20,
+        "retry": "指数退避至多 3 次;尊重 Retry-After;礼貌池需 mailto",
+        "timeout_seconds": 30
+      },
+      "sort": "relevance"
+    },
+    {
+      "coverage_role": {
+        "strength_note": "生物医学摘要与受控词字段检索强,适合 intervention/outcome 概念块",
+        "strong_on": [
+          "F2",
+          "F3"
+        ],
+        "weak_on": [
+          "F1"
+        ],
+        "weakness_note": "学科偏向生物医学,农学/植物学等 population 覆盖偏弱"
+      },
+      "db": "europepmc",
+      "degradation_chain": "若 europepmc 响应缺失:不臆造、不跳过——在 coverage_declaration 登记 gap,facet F2,F3 失去该库覆盖;result.status 降级为 partial 并在 uncertainty 中声明",
+      "pagination": {
+        "page_size": 100,
+        "start": "cursorMark=*",
+        "style": "cursorMark(* 起翻,响应回传 nextCursorMark)"
+      },
+      "planned": true,
+      "planned_query": "(TITLE_ABS:\"Oryza sativa\" OR TITLE_ABS:\"rice root\") AND (TITLE_ABS:\"ZK-7\" OR TITLE_ABS:\"synthetic auxin analog\" OR TITLE_ABS:\"dose response\") AND (TITLE_ABS:\"root gravitropism\" OR TITLE_ABS:\"gravitropic curvature\") AND PUB_YEAR:[2015 TO 2026]",
+      "query_params": {
+        "cursorMark": "*",
+        "format": "json",
+        "pageSize": 100,
+        "query": "(TITLE_ABS:\"Oryza sativa\" OR TITLE_ABS:\"rice root\") AND (TITLE_ABS:\"ZK-7\" OR TITLE_ABS:\"synthetic auxin analog\" OR TITLE_ABS:\"dose response\") AND (TITLE_ABS:\"root gravitropism\" OR TITLE_ABS:\"gravitropic curvature\") AND PUB_YEAR:[2015 TO 2026]",
+        "sort": ""
+      },
+      "quota_policy": {
+        "max_requests_per_run": 20,
+        "retry": "指数退避至多 3 次",
+        "timeout_seconds": 30
+      },
+      "sort": "relevance(默认)"
+    },
+    {
+      "coverage_role": {
+        "strength_note": "出版社自有全文与优先出版(ahead-of-print)",
+        "strong_on": [
+          "F2"
+        ],
+        "weak_on": [],
+        "weakness_note": "语法/导出格式站点各异,计划只能给出中性关键词与注意事项"
+      },
+      "db": "publisher",
+      "degradation_chain": "若 publisher 响应缺失:不臆造、不跳过——在 coverage_declaration 登记 gap,facet F2 失去该库覆盖;result.status 降级为 partial 并在 uncertainty 中声明",
+      "pagination": {
+        "page_size": null,
+        "start": "n/a(导出/站点翻页)",
+        "style": "依导出文件或站点翻页而定,规划时仅登记意图"
+      },
+      "planned": true,
+      "planned_query": "Oryza sativa rice root ZK-7 synthetic auxin analog dose response root gravitropism gravitropic curvature",
+      "query_params": {
+        "keywords": [
+          "Oryza sativa",
+          "rice root",
+          "ZK-7",
+          "synthetic auxin analog",
+          "dose response",
+          "root gravitropism",
+          "gravitropic curvature"
+        ],
+        "note": "出版方站点语法不保证公开;以中性关键词块登记检索意图,实际语法需按目标站点另行适配;本计划仅作调度登记",
+        "time_window": {
+          "from": "2015-01-01",
+          "to": "2026-12-31"
+        }
+      },
+      "quota_policy": {
+        "max_requests_per_run": 5,
+        "retry": "保守:至多 1 次重试",
+        "timeout_seconds": 60
+      },
+      "sort": "站点默认(通常 relevance 或 date)"
+    }
+  ],
+  "time_window": {
+    "from": "2015-01-01",
+    "to": "2026-12-31"
+  }
+}

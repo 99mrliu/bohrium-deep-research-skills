@@ -1,0 +1,319 @@
+{
+  "case_id": "synthetic-screen-ledger-001",
+  "change_records": [
+    "parse: 嗅探并规范化材料，最小去重喂流量计数",
+    "criteria: 资格标准来自 task.md，由模型编译并经人工确认登记",
+    "prescreen: 机器可判标准由脚本预判并落账",
+    "judgments: 模型批量判定，引用经逐珠子串校验",
+    "ledger/flow/report: 计数全部由账本行重算"
+  ],
+  "checks": [
+    {
+      "check": "prisma_conservation",
+      "ok": true
+    },
+    {
+      "check": "every_exclude_has_criterion",
+      "ok": true
+    },
+    {
+      "check": "all_contract_fields_addressed",
+      "ok": true
+    },
+    {
+      "check": "no_borderline_pending",
+      "ok": true
+    }
+  ],
+  "contract": {
+    "borderline_resolutions": {
+      "pending": [],
+      "resolved": [
+        "rec-0004",
+        "rec-0008",
+        "rec-0011"
+      ]
+    },
+    "candidate_set": [
+      {
+        "criterion_ids": [
+          "I1",
+          "I2",
+          "I3",
+          "I4"
+        ],
+        "doi": "10.99977/nx3.2021.001",
+        "evidence_quote": "double-blind randomized controlled trial in 124 adults (aged 18-65) with chronic insomnia",
+        "pmid": null,
+        "rank": 1,
+        "rationale": "双盲 RCT，成人慢性失眠，NX-3 对比安慰剂，主结局为入睡潜伏期：四条纳入标准全部满足。",
+        "record_id": "rec-0001",
+        "sources": [
+          "crossref"
+        ],
+        "title": "Synthetic peptide NX-3 versus placebo for sleep latency in adults with chronic insomnia: a randomized controlled trial",
+        "year": 2021
+      },
+      {
+        "criterion_ids": [
+          "I1",
+          "I2",
+          "I3",
+          "I4"
+        ],
+        "doi": "10.99977/nx3.2022.005",
+        "evidence_quote": "randomly assigned 240 adults with chronic insomnia to NX-3 or matching placebo",
+        "pmid": "39100005",
+        "rank": 2,
+        "rationale": "多中心 RCT，成人慢性失眠，NX-3 对比匹配安慰剂，主结局 sleep onset latency。",
+        "record_id": "rec-0005",
+        "sources": [
+          "crossref",
+          "europepmc"
+        ],
+        "title": "NX-3 versus placebo on sleep onset latency in adults with chronic insomnia: a multicenter randomized controlled trial",
+        "year": 2022
+      },
+      {
+        "criterion_ids": [
+          "I1",
+          "I2",
+          "I3",
+          "I4"
+        ],
+        "doi": null,
+        "evidence_quote": "110 adults with chronic insomnia took NX-3 or placebo at bedtime",
+        "pmid": "39100004",
+        "rank": 3,
+        "rationale": "睡前给药 RCT，成人慢性失眠，NX-3 对比安慰剂，主结局 sleep latency。",
+        "record_id": "rec-0012",
+        "sources": [
+          "europepmc",
+          "publisher"
+        ],
+        "title": "Bedtime administration of NX-3 versus placebo and sleep latency in adults with chronic insomnia: a randomized controlled trial",
+        "year": 2023
+      },
+      {
+        "criterion_ids": [
+          "I1",
+          "I2",
+          "I3",
+          "I4"
+        ],
+        "doi": "10.99977/nx3.2020.006",
+        "evidence_quote": "randomized controlled trial, 96 older adults (aged 60-80) with chronic insomnia received NX-3 or placebo",
+        "pmid": null,
+        "rank": 4,
+        "rationale": "老年成人 RCT，NX-3 对比安慰剂，结局含 sleep latency。",
+        "record_id": "rec-0006",
+        "sources": [
+          "crossref"
+        ],
+        "title": "Effects of NX-3 versus placebo on sleep latency in older adults with chronic insomnia: a randomized controlled trial",
+        "year": 2020
+      },
+      {
+        "criterion_ids": [
+          "I1",
+          "I2",
+          "I3",
+          "I4"
+        ],
+        "doi": null,
+        "evidence_quote": "randomized controlled trial of NX-3 versus placebo",
+        "pmid": "39100006",
+        "rank": 5,
+        "rationale": "成人慢性失眠且基线睡眠潜伏期 >30 分钟，NX-3 对比安慰剂 RCT，主终点 sleep latency。",
+        "record_id": "rec-0009",
+        "sources": [
+          "europepmc"
+        ],
+        "title": "NX-3 versus placebo in adults with chronic insomnia and prolonged sleep latency: a randomized controlled trial.",
+        "year": 2024
+      },
+      {
+        "criterion_ids": [
+          "I4"
+        ],
+        "doi": "10.99977/nx3.2023.011",
+        "evidence_quote": "Sleep onset latency was recorded as an exploratory secondary outcome",
+        "pmid": null,
+        "rank": 6,
+        "rationale": "I4 要求结局指标“包含”入睡潜伏期，未限定必须为主要结局；该研究以活动记录仪测量了 sleep onset latency，判纳入。",
+        "record_id": "rec-0011",
+        "sources": [
+          "publisher"
+        ],
+        "title": "NX-3 versus placebo and sleep quality in adults with chronic insomnia: a randomized controlled trial",
+        "year": 2023
+      }
+    ],
+    "exclusion_reasons": {
+      "E1": 1,
+      "E2": 1,
+      "I1": 1,
+      "I2": 2,
+      "I3": 1
+    },
+    "prisma_flow": {
+      "borderline_pending": 0,
+      "conservation_checks": [
+        {
+          "invariant": "identified - duplicates_removed == canonical_records",
+          "lhs": 12,
+          "ok": true,
+          "rhs": 12
+        },
+        {
+          "invariant": "records_screened + unjudged == canonical_records",
+          "lhs": 12,
+          "ok": true,
+          "rhs": 12
+        },
+        {
+          "invariant": "excluded + included + borderline_pending == records_screened",
+          "lhs": 12,
+          "ok": true,
+          "rhs": 12
+        }
+      ],
+      "conserved": true,
+      "counting_rule": "每个计数均为对 decision_ledger.jsonl 行的实际计数（identified/duplicates 来自 dedup_summary.json 的实际去重组数），无任何断言式数字。",
+      "duplicates_removed": 2,
+      "records_excluded": {
+        "per_criterion": {
+          "E1": 1,
+          "E2": 1,
+          "I1": 1,
+          "I2": 2,
+          "I3": 1
+        },
+        "per_stage": {
+          "borderline_resolution": 2,
+          "prescreen_script": 2,
+          "screen_model": 2
+        },
+        "total": 6
+      },
+      "records_identified": {
+        "per_source": {
+          "crossref": 6,
+          "europepmc": 5,
+          "publisher": 3
+        },
+        "total": 14
+      },
+      "records_included": 6,
+      "records_screened": 12,
+      "records_unjudged": 0
+    },
+    "screening_criteria": [
+      {
+        "definition": "研究设计为随机对照试验（RCT）；准随机/交替分配不满足。",
+        "id": "I1",
+        "kind": "inclusion",
+        "source_quote": "研究设计必须为**随机对照试验（RCT）**"
+      },
+      {
+        "definition": "研究对象为 ≥18 岁成人且诊断为慢性失眠。",
+        "id": "I2",
+        "kind": "inclusion",
+        "source_quote": "研究对象必须为 **≥18 岁成人**且诊断为**慢性失眠**"
+      },
+      {
+        "definition": "干预对比为 NX-3 对比安慰剂；仅活性对照而无安慰剂组者不满足。",
+        "id": "I3",
+        "kind": "inclusion",
+        "source_quote": "干预对比必须为 **NX-3 对比安慰剂**"
+      },
+      {
+        "definition": "结局指标包含入睡潜伏期（sleep latency / sleep onset latency）。",
+        "id": "I4",
+        "kind": "inclusion",
+        "source_quote": "结局指标必须包含**入睡潜伏期（sleep latency / sleep onset latency）**"
+      },
+      {
+        "definition": "发表年份超出 2015–2025。",
+        "id": "E1",
+        "kind": "exclusion",
+        "machine": {
+          "max": 2025,
+          "min": 2015,
+          "type": "year_range"
+        },
+        "source_quote": "发表年份须在 **2015–2025** 之间，超出者排除。"
+      },
+      {
+        "definition": "文献类型为综述、社论或会议摘要。",
+        "id": "E2",
+        "kind": "exclusion",
+        "machine": {
+          "exclude_types": [
+            "review",
+            "editorial",
+            "conference abstract"
+          ],
+          "type": "document_type"
+        },
+        "source_quote": "文献类型为综述（review）、社论（editorial）或会议摘要者排除。"
+      }
+    ]
+  },
+  "counts": {
+    "borderline_pending": 0,
+    "duplicates_removed": 2,
+    "excluded": 6,
+    "identified": 14,
+    "included": 6,
+    "screened": 12
+  },
+  "products": {
+    "borderline_queue": "borderline_queue.json",
+    "candidate_set": "candidate_set.json",
+    "decision_ledger": "decision_ledger.jsonl",
+    "dedup_summary": "dedup_summary.json",
+    "normalized": "normalized.jsonl",
+    "prisma_flow_json": "prisma_flow.json",
+    "prisma_flow_md": "prisma_flow.md",
+    "screening_report": "screening_report.md"
+  },
+  "research_question": "合成肽 NX-3 对比安慰剂治疗成人慢性失眠的入睡潜伏期（sleep latency）疗效 —— 仅纳入随机对照试验（RCT），发表年份 2015-2025，研究对象为 ≥18 岁成人。",
+  "skill_name": "screening-decision-ledger",
+  "skill_version": "1.0.0",
+  "sources": [
+    {
+      "kind": "crossref",
+      "material": "materials/crossref_response.json",
+      "records": 6,
+      "sha256": "6a0d5e57923a8825ccd46fbac061d89102b90f1ae6bfad0267a1add0efe1edf5"
+    },
+    {
+      "kind": "europepmc",
+      "material": "materials/europepmc_response.json",
+      "records": 5,
+      "sha256": "ac527b79f1a6bc74dbb1afaeb5ff5762da49c131488ef4e73bf5c08c8cc31809"
+    },
+    {
+      "kind": "import_state",
+      "material": "materials/import_state.json",
+      "records": 0,
+      "sha256": "e4d3af36a89418146874c7dae7d8a556fbf8ddd81887e3d798bd3bc5aa5ba0ba"
+    },
+    {
+      "kind": "publisher",
+      "material": "materials/publisher_records.json",
+      "records": 3,
+      "sha256": "f2e9945f239ab9154c8893f878156dcc8ececf4bbb11d0a78191a9629ca3b7f9"
+    },
+    {
+      "kind": "reference_graph",
+      "material": "materials/reference_graph.json",
+      "records": 0,
+      "sha256": "989d7a8fc3a87bd9fadfb9202e7ddf67916991a189c67e4c4e6c30bdaf3d6f93"
+    }
+  ],
+  "status": "ok",
+  "uncertainty": [],
+  "unresolved_contract_fields": []
+}

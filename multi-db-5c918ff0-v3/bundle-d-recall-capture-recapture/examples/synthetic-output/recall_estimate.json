@@ -1,0 +1,201 @@
+{
+  "assumptions": [
+    "封闭总体：检索材料快照期间，相关文献总体不变（无新增/撤稿进入样本）",
+    "各库检出概率允许异质，但簇间的重叠结构携带关于未检出簇数量的信息",
+    "无行为响应：被某库检出不改变该记录被其他库检出的概率",
+    "身份归并正确：DOI/PMID 精确键与 标题+年份+第一作者姓 复合键的归并错误可忽略",
+    "Chao1 是下界估计：真实总数 ≥ 点估计的倾向成立，但不保证等于点估计",
+    "点估计 ≠ 真实总数：必须与观测事实（S_obs、f1、f2、n_i）成对呈现"
+  ],
+  "case_id": "synthetic-recall-cc-001",
+  "chao1": {
+    "N_hat": 16.6,
+    "S_obs": 15,
+    "ci95": [
+      15.2171,
+      26.7916
+    ],
+    "f1": 4,
+    "f2": 5,
+    "log_ci_factor": 7.3697,
+    "status": "ok",
+    "unseen_ci95": [
+      0.2171,
+      11.7916
+    ],
+    "unseen_estimate": 1.6,
+    "variance": 4.672,
+    "variant": "classic"
+  },
+  "conditional_coverage": {
+    "crossref": {
+      "crossref": null,
+      "europepmc": 0.75,
+      "publisher": 0.6667
+    },
+    "europepmc": {
+      "crossref": 0.9,
+      "europepmc": null,
+      "publisher": 0.6
+    },
+    "publisher": {
+      "crossref": 0.8,
+      "europepmc": 0.6,
+      "publisher": null
+    }
+  },
+  "descriptive_only": false,
+  "formula_inputs": {
+    "S_obs": 15,
+    "f1": 4,
+    "f2": 5,
+    "m_ij": {
+      "crossref|europepmc": 9,
+      "crossref|publisher": 8,
+      "europepmc|publisher": 6
+    },
+    "n_i": {
+      "crossref": 12,
+      "europepmc": 10,
+      "publisher": 10
+    },
+    "sources": [
+      "crossref",
+      "europepmc",
+      "publisher"
+    ]
+  },
+  "heterogeneity_warnings": [
+    "存在仅由模糊键（标题+年份+第一作者姓）连接的跨源簇: C007；若归并错误，重叠被高估、未检出被低估"
+  ],
+  "honesty_notes": [
+    "点估计 ≠ 真实总数；S_obs/f1/f2 等观测事实必须与估计成对呈现",
+    "Chao1 为下界估计：真实未检出数可能高于 unseen_estimate",
+    "m_ij=0 的库对 Chapman 无定义，已如实标注",
+    "仅由模糊键连接的跨源簇若归并错误会系统性低估未检出数"
+  ],
+  "method": "capture-recapture: 成对 Chapman(1951) + 多源 Chao1(Chao 1987)",
+  "pairwise_chapman": [
+    {
+      "N_hat": 13.3,
+      "ci95": [
+        12.076,
+        14.524
+      ],
+      "m_ij": 9,
+      "n_i": 12,
+      "n_j": 10,
+      "pair": [
+        "crossref",
+        "europepmc"
+      ],
+      "se": 0.6245,
+      "status": "ok",
+      "variance": 0.39
+    },
+    {
+      "N_hat": 14.8889,
+      "ci95": [
+        12.5596,
+        17.2182
+      ],
+      "m_ij": 8,
+      "n_i": 12,
+      "n_j": 10,
+      "pair": [
+        "crossref",
+        "publisher"
+      ],
+      "se": 1.1884,
+      "status": "ok",
+      "variance": 1.4123
+    },
+    {
+      "N_hat": 16.2857,
+      "ci95": [
+        11.9299,
+        20.6415
+      ],
+      "m_ij": 6,
+      "n_i": 10,
+      "n_j": 10,
+      "pair": [
+        "europepmc",
+        "publisher"
+      ],
+      "se": 2.2223,
+      "status": "ok",
+      "variance": 4.9388
+    }
+  ],
+  "per_source": [
+    {
+      "detections": 12,
+      "share_of_S_obs": 0.8,
+      "source": "crossref",
+      "unique_singletons": 1
+    },
+    {
+      "detections": 10,
+      "share_of_S_obs": 0.6667,
+      "source": "europepmc",
+      "unique_singletons": 1
+    },
+    {
+      "detections": 10,
+      "share_of_S_obs": 0.6667,
+      "source": "publisher",
+      "unique_singletons": 2
+    }
+  ],
+  "skill_name": "recall-capture-recapture",
+  "small_sample": {
+    "flag": false,
+    "reasons": []
+  },
+  "stopping_rule_numbers": {
+    "capped_by_unseen_ci95_upper": 11.7916,
+    "expected_unique_yield_of_similar_source": 2.8444,
+    "interpretation": "新增一个检出强度与现有库相近的来源，其独有贡献预期 约 2.8444 条；在封闭总体与 Chao1 下界假设下，任何新来源的独有新增以未检出估计的 95% CI 上界 11.7916 条为参考上限",
+    "mean_per_source_detections": 10.6667,
+    "singleton_rate": 0.2667
+  },
+  "truth_comparison": {
+    "_synthetic_only": true,
+    "chao1_N_hat": 16.6,
+    "chao1_abs_error": 3.4,
+    "chao1_error": -3.4,
+    "pairwise_chapman_vs_truth": [
+      {
+        "N_hat": 13.3,
+        "error": -6.7,
+        "pair": [
+          "crossref",
+          "europepmc"
+        ]
+      },
+      {
+        "N_hat": 14.8889,
+        "error": -5.1111,
+        "pair": [
+          "crossref",
+          "publisher"
+        ]
+      },
+      {
+        "N_hat": 16.2857,
+        "error": -3.7143,
+        "pair": [
+          "europepmc",
+          "publisher"
+        ]
+      }
+    ],
+    "true_total_distinct_papers": 20,
+    "true_total_within_chao1_ci95": true,
+    "true_unseen": 5,
+    "unseen_error": -3.4,
+    "unseen_estimate": 1.6,
+    "warning": "真实案例不存在真值文件；本对比仅用于合成示例的验证演示"
+  }
+}

@@ -1,0 +1,228 @@
+{
+  "artifacts": {
+    "candidate_pool.json": {
+      "path": "candidate_pool.json",
+      "sha256": "e2df7f5a8db6ed97543bd574d86f52dc1c9104fcfd58580bc359b8e86a9b35f2"
+    },
+    "result.json": {
+      "path": "result.json",
+      "sha256": null
+    },
+    "status_ledger.json": {
+      "path": "status_ledger.json",
+      "sha256": "c1dd01802a387f59338b748dab3a364abee6a66b55321a83853344aaa9541ef7"
+    },
+    "status_report.md": {
+      "path": "status_report.md",
+      "sha256": "aaa7600db21dbc058bd3f9681a6fc13cd39a321f0a0e248cfa9698cd3deb11a7"
+    },
+    "version_pairs.json": {
+      "path": "version_pairs.json",
+      "sha256": "4396d4ff78706b05d5df81a02806576ff77b6cf5db08103cd8e91b4f29ade162"
+    }
+  },
+  "candidate_pool": "candidate_pool.json",
+  "case_id": "synthetic-status-hyg-001",
+  "change_records": [
+    {
+      "action": "exclude_from_candidate_pool",
+      "reason": [
+        "CROSSREF_IS_RETRACTION_OF"
+      ],
+      "record_id": "crossref:10.99231/synth.002"
+    },
+    {
+      "action": "exclude_from_candidate_pool",
+      "reason": [
+        "REFGRAPH_NODE_WITHDRAWN",
+        "REFGRAPH_RETRACTION_EDGE",
+        "TARGET_RETRACTED"
+      ],
+      "record_id": "crossref:10.99231/synth.002t"
+    },
+    {
+      "action": "exclude_from_candidate_pool",
+      "reason": [
+        "EPMC_RETRACTION_OF_PUBLICATION"
+      ],
+      "record_id": "europepmc:10.99231/synth.epmcret1"
+    },
+    {
+      "action": "exclude_from_candidate_pool",
+      "reason": [
+        "REFGRAPH_NODE_WITHDRAWN"
+      ],
+      "record_id": "publisher:10.99231/synth.pub2"
+    },
+    {
+      "action": "exclude_from_candidate_pool",
+      "reason": [
+        "IMPORT_STATE_WITHDRAWN"
+      ],
+      "record_id": "publisher:10.99231/synth.pub3"
+    },
+    {
+      "action": "fold_version_pair",
+      "into": "crossref:10.99231/synth.005",
+      "reason": "preprint↔VoR 归并：候选集按一项研究计数，VoR 优先",
+      "record_id": "crossref:10.99231/synth.004"
+    },
+    {
+      "action": "withhold_unverifiable",
+      "reason": "无状态承载面，标 status_unverifiable 而非 clean",
+      "record_id": "crossref:10.99231/synth.001"
+    }
+  ],
+  "checks": [
+    {
+      "check": "contract_fields_present",
+      "passed": true
+    },
+    {
+      "check": "severe_records_excluded_from_pool",
+      "passed": true
+    },
+    {
+      "check": "every_severe_flagged_has_evidence",
+      "passed": true
+    }
+  ],
+  "counts": {
+    "flagged": 1,
+    "import_inconsistent": 1,
+    "pairs_explicit": 1,
+    "pairs_pending": 0,
+    "records_scanned": 11,
+    "severe": 5,
+    "unverifiable": 1
+  },
+  "curator_comment": null,
+  "engine_version": "1.0.0",
+  "import_reconciliation": {
+    "import_inconsistent": [
+      {
+        "db": "crossref",
+        "evidence_locator": "materials/import_state.json::$.records[1]",
+        "identifier": "10.99231/synth.404",
+        "matched_record_id": null,
+        "status": null,
+        "verdict": "import_inconsistent"
+      }
+    ],
+    "import_state_present": true,
+    "not_yet_imported": [
+      "crossref:10.99231/synth.002",
+      "crossref:10.99231/synth.002t",
+      "crossref:10.99231/synth.004",
+      "crossref:10.99231/synth.005",
+      "europepmc:10.99231/synth.epmcret1",
+      "europepmc:10.99231/synth.ppr1",
+      "publisher:10.99231/synth.pub1",
+      "publisher:10.99231/synth.pub2"
+    ],
+    "withdrawn_excluded": [
+      {
+        "db": "publisher",
+        "evidence_locator": "materials/import_state.json::$.records[3]",
+        "identifier": "10.99231/synth.pub3",
+        "matched_record_id": "publisher:10.99231/synth.pub3",
+        "status": "withdrawn",
+        "verdict": "withdrawn_excluded"
+      }
+    ]
+  },
+  "retraction_exclusions": [
+    {
+      "reason_codes": [
+        "CROSSREF_IS_RETRACTION_OF"
+      ],
+      "record_id": "crossref:10.99231/synth.002"
+    },
+    {
+      "reason_codes": [
+        "REFGRAPH_NODE_WITHDRAWN",
+        "REFGRAPH_RETRACTION_EDGE",
+        "TARGET_RETRACTED"
+      ],
+      "record_id": "crossref:10.99231/synth.002t"
+    },
+    {
+      "reason_codes": [
+        "EPMC_RETRACTION_OF_PUBLICATION"
+      ],
+      "record_id": "europepmc:10.99231/synth.epmcret1"
+    },
+    {
+      "reason_codes": [
+        "REFGRAPH_NODE_WITHDRAWN"
+      ],
+      "record_id": "publisher:10.99231/synth.pub2"
+    },
+    {
+      "reason_codes": [
+        "IMPORT_STATE_WITHDRAWN"
+      ],
+      "record_id": "publisher:10.99231/synth.pub3"
+    }
+  ],
+  "skill_name": "record-status-hygiene",
+  "sources": [
+    {
+      "exists": true,
+      "path": "materials/crossref_response.json",
+      "role": "crossref",
+      "sha256": "cd53474dc097d4a58b13830134d0cf60019e606780202b223886dbdfa9014097",
+      "sniffed_type": "crossref"
+    },
+    {
+      "exists": true,
+      "path": "materials/europepmc_response.json",
+      "role": "europepmc",
+      "sha256": "2837f817896badc432cd82bdc0e53a78fa4ffb7ce02ae27fb697fdaf7c7a943f",
+      "sniffed_type": "europepmc"
+    },
+    {
+      "exists": true,
+      "path": "materials/import_state.json",
+      "role": "import_state",
+      "sha256": "4a8a2d665473be0e70529791f32f066b1f1e16f5a1d21706edee236552d98288",
+      "sniffed_type": "import_state"
+    },
+    {
+      "exists": true,
+      "path": "materials/publisher_records.json",
+      "role": "publisher",
+      "sha256": "c1b3832577bd49ef56ea7dbec7d7cf8c693290bddb0bb8306a5fd129a6a2c88e",
+      "sniffed_type": "publisher"
+    },
+    {
+      "exists": true,
+      "path": "materials/reference_graph.json",
+      "role": "reference_graph",
+      "sha256": "c6b96821bab127fe8acec09cd65fadbc2334e5814ff24666f9ad05473937e208",
+      "sniffed_type": "reference_graph"
+    }
+  ],
+  "status": "partial",
+  "status_ledger": "status_ledger.json",
+  "uncertainty": [
+    {
+      "kind": "status_unverifiable",
+      "records": [
+        "crossref:10.99231/synth.001"
+      ],
+      "statement": "这些记录在材料内没有任何状态承载面（无 relation/pubTypeList/status/图节点）；查不到状态≠干净，未入候选池，需人工补证后才能采信。"
+    },
+    {
+      "kind": "import_inconsistent",
+      "records": [
+        "10.99231/synth.404"
+      ],
+      "statement": "import_state 声称已导入但所有在场响应中均不存在的标识符；该声明已被隔离，未影响候选池。"
+    }
+  ],
+  "unresolved_contract_fields": [
+    "curator_comment"
+  ],
+  "version_pairs": "version_pairs.json"
+}

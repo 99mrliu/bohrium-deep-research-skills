@@ -1,0 +1,30 @@
+{
+  "_note": "SYNTHETIC - hand-authored model dispositions for the teaching example. In real runs the model writes this file after reviewing the flagged ledger in ONE batched pass.",
+  "dispositions": [
+    {
+      "record_id": "crossref:10.99231/synth.002",
+      "disposition": "exclude_as_retracted",
+      "rationale": "该记录本身是撤回通告（relation is-retraction-of + update-to type=retraction），不是一项可采信的研究。"
+    },
+    {
+      "record_id": "crossref:10.99231/synth.002t",
+      "disposition": "exclude_as_retracted",
+      "rationale": "被 10.99231/synth.002 明确撤回的原始论文，引用图节点亦标记 retracted；必须从候选池排除。"
+    },
+    {
+      "record_id": "europepmc:10.99231/synth.epmcret1",
+      "disposition": "exclude_as_retracted",
+      "rationale": "EuropePMC pubTypeList 含 'Retraction of Publication'，该记录为撤回通告，按政策排除。"
+    },
+    {
+      "record_id": "publisher:10.99231/synth.pub2",
+      "disposition": "exclude_as_retracted",
+      "rationale": "引用图节点 status=withdrawn 与出版商 status=published 冲突，以更严重的撤回证据为准，排除。"
+    },
+    {
+      "record_id": "publisher:10.99231/synth.pub1",
+      "disposition": "keep_with_notice",
+      "rationale": "仅为 expression_of_concern 而非撤回；保留进候选池但附注意标记，供下游在综述中披露。"
+    }
+  ]
+}

@@ -1,0 +1,136 @@
+{
+  "candidate_set": [
+    {
+      "identifier": "10.99977/zk7.0001",
+      "source_db": "crossref",
+      "title": "Synthetic auxin analog ZK-7 modulates root gravitropism in Oryza sativa: a dose-response analysis"
+    },
+    {
+      "identifier": "10.99977/zk7.0002",
+      "source_db": "crossref",
+      "title": "Dose-dependent inhibition of gravitropic curvature in rice roots by the synthetic auxin analog ZK-7"
+    },
+    {
+      "identifier": "10.99977/zk7.0004",
+      "source_db": "crossref",
+      "title": "Auxin analog screening platform reveals ZK-7 as a potent gravitropism modulator in cereal roots"
+    },
+    {
+      "identifier": "10.99977/zk7.0002",
+      "source_db": "europepmc",
+      "title": "Dose-dependent inhibition of gravitropic curvature in rice roots by the synthetic auxin analog ZK-7."
+    },
+    {
+      "identifier": "10.99977/zk7.0005",
+      "source_db": "europepmc",
+      "title": "Transcriptomic response of Oryza sativa root tips to graded doses of the synthetic auxin analog ZK-7."
+    }
+  ],
+  "case_id": "synthetic-query-orch-001",
+  "change_records": [
+    {
+      "change": "parse: 嗅探材料 4 份(missing=0, quarantined=0)",
+      "seq": 1
+    },
+    {
+      "change": "plan: 编译查询计划 3 库",
+      "seq": 2
+    },
+    {
+      "change": "reconcile: 缺口 1,截断告警 1,候选登记 5",
+      "seq": 3
+    },
+    {
+      "change": "finalize: 契约字段 5,未决 1,status=partial",
+      "seq": 4
+    }
+  ],
+  "checks": {
+    "finalize": 0,
+    "parse": 0,
+    "plan": 0,
+    "reconcile": 0
+  },
+  "counts": {
+    "candidates_registered": 5,
+    "contract_fields": 5,
+    "contract_unresolved": 1,
+    "gaps": 1,
+    "materials_present": 4,
+    "materials_total": 4,
+    "planned_dbs": 3,
+    "records_observed": 13,
+    "truncation_flags": 1
+  },
+  "evidence_records": null,
+  "method_notes": "方法说明: 本结果由 query-orchestration-planner 生成——研究问题先由模型抽取为中性 facet 概念块(facets.json),脚本再按各库语法/分页/配额编译查询计划,并与在场离线材料对账;缺失库显式声明缺口,截断响应显式标记。候选集为在场响应的原始标识登记,未去重未合并;证据抽取、去重与综述属下游技能职责。",
+  "open_questions": [
+    "数据库 publisher 的响应缺失:需补采该库材料后重跑,或接受该覆盖缺口。",
+    "数据库 crossref 的响应为单页截断(total-results=57 而 items=3:响应为单页截断):如需全量候选需补采后续分页。"
+  ],
+  "product": {
+    "coverage_declaration": "coverage_declaration.json",
+    "query_ledger": "query_ledger.jsonl",
+    "query_plan": "query_plan.json"
+  },
+  "skill_name": "query-orchestration-planner",
+  "skill_version": "1.0.0",
+  "sources": [
+    {
+      "path": "materials/crossref_response.json",
+      "record_count": 3,
+      "sha256": "ebf3c956409c07e4de047120a7d4304e091b3569f0e694148a5b4ae423965594",
+      "sniffed_type": "crossref",
+      "truncation_detected": true
+    },
+    {
+      "path": "materials/europepmc_response.json",
+      "record_count": 2,
+      "sha256": "98f9620199a62cb54d38410960008b5a8f98532824008da9096614910d6322b7",
+      "sniffed_type": "europepmc",
+      "truncation_detected": false
+    },
+    {
+      "path": "materials/import_state.json",
+      "record_count": 4,
+      "sha256": "72390ee06ea377b17d705cc92e3174adf191740c44722e3995432d239b0d7268",
+      "sniffed_type": "import_state",
+      "truncation_detected": false
+    },
+    {
+      "path": "materials/reference_graph.json",
+      "record_count": 4,
+      "sha256": "b0888b57dc0c318be4d60a41668d3d4eae67776a97229b0d82dfb140f9d3e272",
+      "sniffed_type": "reference_graph",
+      "truncation_detected": false
+    }
+  ],
+  "status": "partial",
+  "status_reason": "数据库缺口: publisher;截断告警: crossref;契约字段未填充: evidence_records",
+  "status_report": {
+    "checks": {
+      "finalize": 0,
+      "parse": 0,
+      "plan": 0,
+      "reconcile": 0
+    },
+    "status": "partial",
+    "status_reason": "数据库缺口: publisher;截断告警: crossref"
+  },
+  "uncertainty": [
+    {
+      "detail": "诚实声明: 计划中包含数据库 publisher,但输入材料中不存在其响应文件;本技能不臆造该库结果,相关覆盖按缺口登记。",
+      "kind": "absent_db"
+    },
+    {
+      "detail": "crossref: total-results=57 而 items=3:响应为单页截断",
+      "kind": "truncation"
+    }
+  ],
+  "unresolved": [
+    {
+      "field": "evidence_records",
+      "reason": "该字段属下游(证据/去重/综述)职责,本技能不臆造填充,置 null 登记"
+    }
+  ]
+}

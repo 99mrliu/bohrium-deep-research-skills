@@ -1,0 +1,60 @@
+{
+  "case_id": "synthetic-query-orch-001",
+  "dbs": [
+    {
+      "db": "crossref",
+      "echo_overlap": 1.0,
+      "echo_text": "Oryza sativa rice root ZK-7 synthetic auxin analog dose response root gravitropism gravitropic curvature from-pub-date:2015-01-01,until-pub-date:2026-12-31,type:journal-article 100",
+      "material_files": [
+        "materials/crossref_response.json"
+      ],
+      "query_echo": "matched",
+      "response_present": "present",
+      "result_count": 3,
+      "truncation_detail": "total-results=57 而 items=3:响应为单页截断",
+      "truncation_detected": true
+    },
+    {
+      "db": "europepmc",
+      "echo_overlap": 1.0,
+      "echo_text": "(TITLE_ABS:\"Oryza sativa\" OR TITLE_ABS:\"rice root\") AND (TITLE_ABS:\"ZK-7\" OR TITLE_ABS:\"synthetic auxin analog\" OR TITLE_ABS:\"dose response\") AND (TITLE_ABS:\"root gravitropism\" OR TITLE_ABS:\"gravitropic curvature\") AND PUB_YEAR:[2015 TO 2026]",
+      "material_files": [
+        "materials/europepmc_response.json"
+      ],
+      "query_echo": "matched",
+      "response_present": "present",
+      "result_count": 2,
+      "truncation_detail": null,
+      "truncation_detected": false
+    },
+    {
+      "db": "publisher",
+      "gap": "诚实声明: 计划中包含数据库 publisher,但输入材料中不存在其响应文件;本技能不臆造该库结果,相关覆盖按缺口登记。",
+      "query_echo": "not_echoed",
+      "response_present": "absent"
+    }
+  ],
+  "gaps": [
+    {
+      "db": "publisher",
+      "declaration": "诚实声明: 计划中包含数据库 publisher,但输入材料中不存在其响应文件;本技能不臆造该库结果,相关覆盖按缺口登记。",
+      "impact": {
+        "detail": "publisher 响应缺失,上述 facet 仅由其余在场库支撑",
+        "facets_losing_coverage": [
+          "F2"
+        ]
+      },
+      "planned_query": "Oryza sativa rice root ZK-7 synthetic auxin analog dose response root gravitropism gravitropic curvature"
+    }
+  ],
+  "honesty_notice": "本声明仅基于离线材料与查询计划的对账;缺失库的结果绝不由模型臆造补齐。",
+  "missing_declared_materials": [],
+  "quarantined_materials": [],
+  "summary": "计划库 3 个;响应在场 2 个;缺口 1 个;截断告警 1 个",
+  "truncation_flags": [
+    {
+      "db": "crossref",
+      "detail": "total-results=57 而 items=3:响应为单页截断"
+    }
+  ]
+}

@@ -1,0 +1,46 @@
+{
+  "_note": "SYNTHETIC example — 模拟模型步骤 3 的产出：由 task.md 编译的资格标准。",
+  "derived_needs_confirmation": false,
+  "confirmation_note": "本合成示例假设人工已二次确认登记；真实运行中由模型编译的标准应置 true 并以 partial 如实上报，直至确认。",
+  "criteria": [
+    {
+      "id": "I1",
+      "kind": "inclusion",
+      "definition": "研究设计为随机对照试验（RCT）；准随机/交替分配不满足。",
+      "source_quote": "研究设计必须为**随机对照试验（RCT）**"
+    },
+    {
+      "id": "I2",
+      "kind": "inclusion",
+      "definition": "研究对象为 ≥18 岁成人且诊断为慢性失眠。",
+      "source_quote": "研究对象必须为 **≥18 岁成人**且诊断为**慢性失眠**"
+    },
+    {
+      "id": "I3",
+      "kind": "inclusion",
+      "definition": "干预对比为 NX-3 对比安慰剂；仅活性对照而无安慰剂组者不满足。",
+      "source_quote": "干预对比必须为 **NX-3 对比安慰剂**"
+    },
+    {
+      "id": "I4",
+      "kind": "inclusion",
+      "definition": "结局指标包含入睡潜伏期（sleep latency / sleep onset latency）。",
+      "source_quote": "结局指标必须包含**入睡潜伏期（sleep latency / sleep onset latency）**"
+    },
+    {
+      "id": "E1",
+      "kind": "exclusion",
+      "definition": "发表年份超出 2015–2025。",
+      "source_quote": "发表年份须在 **2015–2025** 之间，超出者排除。",
+      "machine": {"type": "year_range", "min": 2015, "max": 2025}
+    },
+    {
+      "id": "E2",
+      "kind": "exclusion",
+      "definition": "文献类型为综述、社论或会议摘要。",
+      "source_quote": "文献类型为综述（review）、社论（editorial）或会议摘要者排除。",
+      "machine": {"type": "document_type",
+                  "exclude_types": ["review", "editorial", "conference abstract"]}
+    }
+  ]
+}

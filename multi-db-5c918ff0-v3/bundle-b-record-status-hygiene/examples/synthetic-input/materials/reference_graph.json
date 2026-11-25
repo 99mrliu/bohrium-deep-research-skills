@@ -1,0 +1,14 @@
+{
+  "_comment": "Fictional retained citation/reference graph with curator status attributes.",
+  "nodes": [
+    {"id": "10.99231/synth.002t", "status": "retracted"},
+    {"id": "10.99231/synth.002", "status": "active"},
+    {"id": "10.99231/synth.004", "status": "active"},
+    {"id": "10.99231/synth.005", "status": "active"},
+    {"id": "10.99231/synth.pub2", "status": "withdrawn"}
+  ],
+  "edges": [
+    {"from": "10.99231/synth.002", "to": "10.99231/synth.002t", "type": "retracts"},
+    {"from": "10.99231/synth.005", "to": "10.99231/synth.001", "type": "cites"}
+  ]
+}

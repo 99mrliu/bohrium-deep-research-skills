@@ -1,0 +1,44 @@
+{
+  "applied": false,
+  "base_state_file": "materials/import_state.json",
+  "base_state_sha256": "f1da607fc06ab524b244e9a547ac1125b2a01b9ecdd4c7347be5ecda4c0ade7b",
+  "case_id": "synthetic-import-gov-001",
+  "diff_summary": "水印提案:2 个库推进(crossref,europepmc),1 个库保持(publisher)。本提案 requires_approval=true,未经组织者显式批准绝不写回。",
+  "generated_by": "import_governor.py",
+  "requires_approval": true,
+  "watermarks": {
+    "crossref": {
+      "action": "advance",
+      "evidence": "cursor←响应 next-cursor;offset←20+6",
+      "hold_reason": null,
+      "previous": {
+        "cursor": "AoJ9Z292LWN1cnNvci0wMDE=",
+        "offset": 20
+      },
+      "proposed": {
+        "cursor": "AoJ9Z292LWN1cnNvci0wMDI=",
+        "offset": 26
+      }
+    },
+    "europepmc": {
+      "action": "advance",
+      "evidence": "cursorMark←响应 nextCursorMark",
+      "hold_reason": null,
+      "previous": {
+        "cursorMark": "AoEPMzkwMDAwMDA="
+      },
+      "proposed": {
+        "cursorMark": "AoEPMzkwMDAwMDc="
+      }
+    },
+    "publisher": {
+      "action": "hold",
+      "evidence": null,
+      "hold_reason": "response_absent:本次材料中无 publisher 响应",
+      "previous": {
+        "last_seq": 1042
+      },
+      "proposed": null
+    }
+  }
+}

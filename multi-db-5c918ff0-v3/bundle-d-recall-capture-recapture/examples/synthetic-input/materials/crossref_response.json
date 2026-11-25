@@ -1,0 +1,103 @@
+{
+  "status": "ok",
+  "message-type": "work-list",
+  "_note": "SYNTHETIC Crossref 风格离线响应（虚构数据，DOI 前缀 10.99977）。含 12 篇唯一文献 + 1 条 P01 的库内重复（DOI 大小写变体）。",
+  "message": {
+    "total-results": 13,
+    "items": [
+      {
+        "DOI": "10.99977/rcr.2023.0001",
+        "title": ["Interfacial Stabilization of Sulfide Solid Electrolytes via Polymer Interlayers"],
+        "author": [{"given": "Wei", "family": "Zhang"}, {"given": "Hui", "family": "Li"}],
+        "container-title": ["Journal of Synthetic Solid State Ionics"],
+        "issued": {"date-parts": [[2023]]},
+        "volume": "18", "issue": "2", "page": "101-117"
+      },
+      {
+        "DOI": "10.99977/RCR.2023.0001",
+        "title": ["Interfacial Stabilization of Sulfide Solid Electrolytes via Polymer Interlayers"],
+        "author": [{"given": "Wei", "family": "Zhang"}, {"given": "Hui", "family": "Li"}],
+        "container-title": ["Journal of Synthetic Solid State Ionics"],
+        "issued": {"date-parts": [[2023]]},
+        "_note": "库内重复：与上一条仅 DOI 大小写不同，用于演练库内去重"
+      },
+      {
+        "DOI": "10.99977/rcr.2022.0002",
+        "title": ["Machine Learning Screening of Garnet-Type Electrolytes"],
+        "author": [{"given": "Na", "family": "Li"}, {"given": "Peng", "family": "Zhou"}],
+        "container-title": ["Synthetic Materials Informatics"],
+        "issued": {"date-parts": [[2022]]}
+      },
+      {
+        "DOI": "10.99977/rcr.2021.0003",
+        "title": ["Dendrite Suppression in Lithium Metal Anodes with Composite Coatings"],
+        "author": [{"given": "Chen", "family": "Wang"}],
+        "container-title": ["Synthetic Journal of Electrochemistry"],
+        "issued": {"date-parts": [[2021]]}
+      },
+      {
+        "DOI": "10.99977/rcr.2023.0004",
+        "title": ["Operando Imaging of Interface Evolution in Solid-State Cells"],
+        "author": [{"given": "Ana", "family": "Garcia"}, {"given": "Luis", "family": "Torres"}],
+        "container-title": ["Synthetic Nature Energy Letters"],
+        "issued": {"date-parts": [[2023]]}
+      },
+      {
+        "DOI": "10.99977/rcr.2022.0005",
+        "title": ["Ionic Conductivity Prediction with Graph Neural Networks"],
+        "author": [{"given": "Jisoo", "family": "Kim"}],
+        "container-title": ["Synthetic Computational Materials"],
+        "issued": {"date-parts": [[2022]]}
+      },
+      {
+        "DOI": "10.99977/rcr.2021.0006",
+        "title": ["Halide Electrolytes for High-Voltage Cathodes: A Review"],
+        "author": [{"given": "John", "family": "Smith"}, {"given": "Emma", "family": "Brown"}],
+        "container-title": ["Synthetic Reviews of Electrochemistry"],
+        "issued": {"date-parts": [[2021]]}
+      },
+      {
+        "DOI": "10.99977/rcr.2020.0007",
+        "title": ["Quantum Dot Sensitized Solid Electrolytes: A Retrospective Review"],
+        "author": [{"given": "Lin", "family": "Chen"}],
+        "container-title": ["Synthetic Journal of Applied Ionics"],
+        "issued": {"date-parts": [[2020]]}
+      },
+      {
+        "DOI": "10.99977/rcr.2022.0008",
+        "title": ["Stress-Strain Coupling at the Li/LLZO Interface"],
+        "author": [{"given": "Anna", "family": "Müller"}],
+        "container-title": ["Synthetic Mechanics of Energy Materials"],
+        "issued": {"date-parts": [[2022]]}
+      },
+      {
+        "DOI": "10.99977/rcr.2023.0009",
+        "title": ["Solvent-Free Processing of Composite Cathodes"],
+        "author": [{"given": "Rin", "family": "Tanaka"}],
+        "container-title": ["Synthetic Processing Letters"],
+        "issued": {"date-parts": [[2023]]}
+      },
+      {
+        "DOI": "10.99977/rcr.2021.0010",
+        "title": ["Atomic Layer Deposition of Protective Films on LPSCl"],
+        "author": [{"given": "Ming", "family": "Zhao"}],
+        "container-title": ["Synthetic Thin Films Quarterly"],
+        "issued": {"date-parts": [[2021]]}
+      },
+      {
+        "DOI": "10.99977/rcr.2020.0011",
+        "title": ["Cryogenic Milling of Sulfide Electrolyte Powders"],
+        "author": [{"given": "Petra", "family": "Novak"}],
+        "container-title": ["Synthetic Powder Technology"],
+        "issued": {"date-parts": [[2020]]}
+      },
+      {
+        "DOI": "10.99977/rcr.2020.0015",
+        "title": ["High-Throughput Impedance Mapping of Composite Electrolytes"],
+        "author": [{"given": "Bruno", "family": "Silva"}],
+        "container-title": ["Synthetic Measurement Science"],
+        "issued": {"date-parts": [[2020]]}
+      }
+    ]
+  }
+}

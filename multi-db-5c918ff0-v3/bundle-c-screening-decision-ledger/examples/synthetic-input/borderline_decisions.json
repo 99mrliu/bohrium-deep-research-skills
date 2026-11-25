@@ -1,0 +1,24 @@
+[
+  {
+    "record_id": "rec-0004",
+    "decision": "exclude",
+    "criterion_ids": ["I2"],
+    "evidence_quote": "participants aged 16 to 65 years",
+    "rationale": "入组年龄自 16 岁起，包含未成年人，违反 I2（≥18 岁成人）；判排除。"
+  },
+  {
+    "record_id": "rec-0008",
+    "decision": "exclude",
+    "criterion_ids": ["I1"],
+    "evidence_quote": "allocated to NX-3 or placebo by alternation",
+    "rationale": "按交替方式分配且未隐藏分组，不是真正的随机分配，不满足 I1（RCT）；判排除。"
+  },
+  {
+    "record_id": "rec-0011",
+    "decision": "include",
+    "criterion_ids": ["I4"],
+    "evidence_quote": "Sleep onset latency was recorded as an exploratory secondary outcome",
+    "rationale": "I4 要求结局指标“包含”入睡潜伏期，未限定必须为主要结局；该研究以活动记录仪测量了 sleep onset latency，判纳入。",
+    "rank": 6
+  }
+]

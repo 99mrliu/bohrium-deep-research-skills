@@ -1,0 +1,214 @@
+{
+  "auxiliary_files": [
+    {
+      "file": "truth.json",
+      "kind": "truth"
+    }
+  ],
+  "case_id": "synthetic-recall-cc-001",
+  "histories": [
+    {
+      "cluster_ids": [
+        "C001",
+        "C002",
+        "C003",
+        "C004",
+        "C005",
+        "C006"
+      ],
+      "count": 6,
+      "pattern": "111"
+    },
+    {
+      "cluster_ids": [
+        "C007",
+        "C008",
+        "C009"
+      ],
+      "count": 3,
+      "pattern": "110"
+    },
+    {
+      "cluster_ids": [
+        "C014",
+        "C015"
+      ],
+      "count": 2,
+      "pattern": "001"
+    },
+    {
+      "cluster_ids": [
+        "C010",
+        "C011"
+      ],
+      "count": 2,
+      "pattern": "101"
+    },
+    {
+      "cluster_ids": [
+        "C013"
+      ],
+      "count": 1,
+      "pattern": "010"
+    },
+    {
+      "cluster_ids": [
+        "C012"
+      ],
+      "count": 1,
+      "pattern": "100"
+    }
+  ],
+  "identity_resolution": {
+    "fuzzy_only_cross_source_clusters": [
+      "C007"
+    ],
+    "keys": [
+      "doi_exact",
+      "pmid_exact",
+      "norm_title+year+first_author_surname"
+    ],
+    "match_stats": {
+      "doi_edges": 18,
+      "fuzzy_edges": 19,
+      "pmid_edges": 0
+    },
+    "within_source_duplicate_records": 2
+  },
+  "material_files": [
+    {
+      "file": "crossref_response.json",
+      "kind": "crossref",
+      "records": 13,
+      "source": "crossref"
+    },
+    {
+      "file": "europepmc_response.json",
+      "kind": "europepmc",
+      "records": 10,
+      "source": "europepmc"
+    },
+    {
+      "file": "publisher_records.jsonl",
+      "kind": "publisher_jsonl",
+      "records": 11,
+      "source": "publisher"
+    }
+  ],
+  "matrix": [
+    {
+      "cluster_id": "C001",
+      "crossref": 1,
+      "europepmc": 1,
+      "pattern": "111",
+      "publisher": 1
+    },
+    {
+      "cluster_id": "C002",
+      "crossref": 1,
+      "europepmc": 1,
+      "pattern": "111",
+      "publisher": 1
+    },
+    {
+      "cluster_id": "C003",
+      "crossref": 1,
+      "europepmc": 1,
+      "pattern": "111",
+      "publisher": 1
+    },
+    {
+      "cluster_id": "C004",
+      "crossref": 1,
+      "europepmc": 1,
+      "pattern": "111",
+      "publisher": 1
+    },
+    {
+      "cluster_id": "C005",
+      "crossref": 1,
+      "europepmc": 1,
+      "pattern": "111",
+      "publisher": 1
+    },
+    {
+      "cluster_id": "C006",
+      "crossref": 1,
+      "europepmc": 1,
+      "pattern": "111",
+      "publisher": 1
+    },
+    {
+      "cluster_id": "C007",
+      "crossref": 1,
+      "europepmc": 1,
+      "pattern": "110",
+      "publisher": 0
+    },
+    {
+      "cluster_id": "C008",
+      "crossref": 1,
+      "europepmc": 1,
+      "pattern": "110",
+      "publisher": 0
+    },
+    {
+      "cluster_id": "C009",
+      "crossref": 1,
+      "europepmc": 1,
+      "pattern": "110",
+      "publisher": 0
+    },
+    {
+      "cluster_id": "C010",
+      "crossref": 1,
+      "europepmc": 0,
+      "pattern": "101",
+      "publisher": 1
+    },
+    {
+      "cluster_id": "C011",
+      "crossref": 1,
+      "europepmc": 0,
+      "pattern": "101",
+      "publisher": 1
+    },
+    {
+      "cluster_id": "C012",
+      "crossref": 1,
+      "europepmc": 0,
+      "pattern": "100",
+      "publisher": 0
+    },
+    {
+      "cluster_id": "C013",
+      "crossref": 0,
+      "europepmc": 1,
+      "pattern": "010",
+      "publisher": 0
+    },
+    {
+      "cluster_id": "C014",
+      "crossref": 0,
+      "europepmc": 0,
+      "pattern": "001",
+      "publisher": 1
+    },
+    {
+      "cluster_id": "C015",
+      "crossref": 0,
+      "europepmc": 0,
+      "pattern": "001",
+      "publisher": 1
+    }
+  ],
+  "n_clusters": 15,
+  "n_raw_records": 34,
+  "notes": [],
+  "skill_name": "recall-capture-recapture",
+  "sources": [
+    "crossref",
+    "europepmc",
+    "publisher"
+  ]
+}

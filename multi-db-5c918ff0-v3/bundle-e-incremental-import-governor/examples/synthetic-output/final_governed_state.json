@@ -1,0 +1,291 @@
+{
+  "applied_dispositions": [
+    {
+      "class": "changed",
+      "disposition": "accept_change",
+      "identifier": "10.99988/gov.0004",
+      "rationale": "变更仅为出版方元数据更新:期刊更名(Bio-Adhesion Letters → Bionic Interface Mechanics)且年份 2020→2021,标题与作者完全一致,采纳当前响应的新值。"
+    },
+    {
+      "class": "withdrawn",
+      "disposition": "exclude_withdrawn",
+      "identifier": "pmid:39000009",
+      "rationale": "EuropePMC 响应在场而该 PMID 已消失,作为导入治理事实从治理状态移除;是否构成撤稿的语义判定不属于本技能,应移交专门的撤回分析流程。"
+    },
+    {
+      "class": "inconsistent_state",
+      "disposition": "escalate",
+      "identifier": "10.99988/gov.0090",
+      "rationale": "状态行自相矛盾(identifier 为 gov.0090 而自带 fields.doi 为 gov.0091),且两者均不在当前 crossref 响应中;脚本无权猜测,升级由组织者人工裁定。"
+    },
+    {
+      "class": "unverifiable_withdrawal",
+      "disposition": "keep_previous",
+      "identifier": "pub:JBA-1042",
+      "rationale": "publisher 响应本次缺席,无法区分记录被撤回与源未提供;保留原记录并标注待下轮核验。"
+    }
+  ],
+  "case_id": "synthetic-import-gov-001",
+  "generated_by": "import_governor.py",
+  "note": "治理后的记录状态。水印保持上一状态原值 —— 推进提案见 proposed_next_state.json,requires_approval=true,本技能绝不静默写回组织者状态。",
+  "pending_review": [],
+  "records": [
+    {
+      "content_hash": "5a92b8af49cf298d4b8ae159e574a36d443b357511881db0eef948219666fb54",
+      "fields": {
+        "authors": [
+          "Lin Hao",
+          "Bergström Freja"
+        ],
+        "doi": "10.99988/gov.0001",
+        "pmid": null,
+        "title": "Synthetic gecko-inspired fibrillar adhesives under shear",
+        "venue": "Journal of Synthetic Adhesion",
+        "year": "2019"
+      },
+      "governance": {
+        "note": "指纹一致,原样保留",
+        "origin": "previous_state"
+      },
+      "identifier": "10.99988/gov.0001",
+      "source_db": "crossref"
+    },
+    {
+      "content_hash": "1077e50a1213e1668133d3ea4198c0040ce96de6bbf6bc01002adf0eedd2c4a8",
+      "fields": {
+        "authors": [
+          "Okafor Chidi",
+          "Tanaka Rin"
+        ],
+        "doi": "10.99988/gov.0002",
+        "pmid": null,
+        "title": "Synthetic octopus-like suction cups for wet adhesion",
+        "venue": "Journal of Synthetic Adhesion",
+        "year": "2020"
+      },
+      "governance": {
+        "note": "指纹一致,原样保留",
+        "origin": "previous_state"
+      },
+      "identifier": "10.99988/gov.0002",
+      "source_db": "crossref"
+    },
+    {
+      "content_hash": "67599f686b0aac87a0dfd595b02f0f53bf3ecce935a34fcb708cfc533900a096",
+      "fields": {
+        "authors": [
+          "Novak Petra"
+        ],
+        "doi": "10.99988/gov.0003",
+        "pmid": null,
+        "title": "Synthetic mussel-inspired catechol coatings: an adhesion study",
+        "venue": "Synthetic Interface Letters",
+        "year": "2021"
+      },
+      "governance": {
+        "note": "指纹一致,原样保留",
+        "origin": "previous_state"
+      },
+      "identifier": "10.99988/gov.0003",
+      "source_db": "crossref"
+    },
+    {
+      "content_hash": "4a33dc67f4e5d52fa2382aabc3512a36b461132e2855a4c06dd92bf1f541472e",
+      "fields": {
+        "authors": [
+          "Garcia Luis",
+          "Wang Mei"
+        ],
+        "doi": "10.99988/gov.0004",
+        "pmid": null,
+        "title": "Synthetic beetle-inspired interlocking structures for dry adhesion",
+        "venue": "Journal of Bionic Interface Mechanics",
+        "year": "2021"
+      },
+      "governance": {
+        "note": "accept_change:采纳当前值",
+        "origin": "current_response",
+        "rationale": "变更仅为出版方元数据更新:期刊更名(Bio-Adhesion Letters → Bionic Interface Mechanics)且年份 2020→2021,标题与作者完全一致,采纳当前响应的新值。"
+      },
+      "identifier": "10.99988/gov.0004",
+      "source_db": "crossref"
+    },
+    {
+      "content_hash": "89914f332b06099fbc470ee51852e11cf5b27e98683a45e0788574f295711310",
+      "fields": {
+        "authors": [
+          "Ahmed Sara"
+        ],
+        "doi": "10.99988/gov.0005",
+        "pmid": null,
+        "title": "Synthetic tree-frog toe pads and capillary adhesion",
+        "venue": "Journal of Synthetic Adhesion",
+        "year": "2022"
+      },
+      "governance": {
+        "note": "本轮新增,自动纳入治理状态",
+        "origin": "current_response"
+      },
+      "identifier": "10.99988/gov.0005",
+      "source_db": "crossref"
+    },
+    {
+      "content_hash": "dfd0d76825f3abeb515b85f5b197e0e55f8950034cd48e7e64903a8575dcb266",
+      "fields": {
+        "authors": [
+          "Petrov Ivan",
+          "Silva Ana"
+        ],
+        "doi": "10.99988/gov.0006",
+        "pmid": null,
+        "title": "Synthetic remora-inspired adhesive discs for robotics",
+        "venue": "Synthetic Robotics Review",
+        "year": "2023"
+      },
+      "governance": {
+        "note": "本轮新增,自动纳入治理状态",
+        "origin": "current_response"
+      },
+      "identifier": "10.99988/gov.0006",
+      "source_db": "crossref"
+    },
+    {
+      "content_hash": "47f61967b7e87f346a93de31be17067a104825b47c6e5129ff9f2bc085310650",
+      "fields": {
+        "authors": [
+          "Lin H",
+          "Bergström F"
+        ],
+        "doi": "10.99988/gov.0091",
+        "pmid": null,
+        "title": "Synthetic gecko-inspired fibrillar adhesives under shear",
+        "venue": "Journal of Synthetic Adhesion",
+        "year": "2019"
+      },
+      "governance": {
+        "class": "inconsistent_state",
+        "flag": "escalate",
+        "note": "escalate:待人工裁定,暂保留原记录",
+        "origin": "previous_state",
+        "rationale": "状态行自相矛盾(identifier 为 gov.0090 而自带 fields.doi 为 gov.0091),且两者均不在当前 crossref 响应中;脚本无权猜测,升级由组织者人工裁定。"
+      },
+      "identifier": "10.99988/gov.0090",
+      "source_db": "crossref"
+    },
+    {
+      "content_hash": "a9697abdeca17c611300e5d2dbc96b302c05acd68535fbc9f2c5c7be92d426ac",
+      "fields": {
+        "authors": [
+          "Keller M",
+          "Zhou Y"
+        ],
+        "doi": "10.99988/gov.0101",
+        "pmid": "39000001",
+        "title": "Synthetic spider silk anchorages in adhesive hydrogels",
+        "venue": "Journal of Synthetic Bioadhesion",
+        "year": "2021"
+      },
+      "governance": {
+        "note": "指纹一致,原样保留",
+        "origin": "previous_state"
+      },
+      "identifier": "pmid:39000001",
+      "source_db": "europepmc"
+    },
+    {
+      "content_hash": "ab44189410babfdaf062c64fab6b83013c89b4388f3e6e24aa54638e040b004f",
+      "fields": {
+        "authors": [
+          "Rossi G",
+          "Lindqvist P"
+        ],
+        "doi": null,
+        "pmid": "39000002",
+        "title": "Synthetic barnacle-inspired underwater adhesives",
+        "venue": "Journal of Synthetic Bioadhesion",
+        "year": "2022"
+      },
+      "governance": {
+        "note": "指纹一致,原样保留",
+        "origin": "previous_state"
+      },
+      "identifier": "pmid:39000002",
+      "source_db": "europepmc"
+    },
+    {
+      "content_hash": "1c6fa01c0ec176d87231c8c354340edc8236f2018270fc5f8bbe95a55e6e4e41",
+      "fields": {
+        "authors": [
+          "Dubois C",
+          "Yamamoto H"
+        ],
+        "doi": null,
+        "pmid": "39000003",
+        "title": "Synthetic clingfish suction mechanics at rough interfaces",
+        "venue": "Synthetic Interface Letters",
+        "year": "2023"
+      },
+      "governance": {
+        "note": "指纹一致,原样保留",
+        "origin": "previous_state"
+      },
+      "identifier": "pmid:39000003",
+      "source_db": "europepmc"
+    },
+    {
+      "content_hash": "6333bc7c240214c476529558381e1074f25f80f6f87675ef9f05580df5b7203f",
+      "fields": {
+        "authors": [
+          "Costa R",
+          "Nielsen T"
+        ],
+        "doi": null,
+        "pmid": "39000004",
+        "title": "Synthetic ivy-derived nanoparticle adhesives",
+        "venue": "Journal of Synthetic Bioadhesion",
+        "year": "2024"
+      },
+      "governance": {
+        "note": "指纹一致,原样保留",
+        "origin": "previous_state"
+      },
+      "identifier": "pmid:39000004",
+      "source_db": "europepmc"
+    },
+    {
+      "content_hash": "d9d5552e47755682031e8964300d5a5d8f9c577829a6492bbb93ef4cf769b570",
+      "fields": {
+        "authors": [
+          "Moreau L"
+        ],
+        "doi": null,
+        "pmid": null,
+        "title": "Synthetic chameleon tongue adhesion dynamics",
+        "venue": "Journal of Bio-Adhesion Letters",
+        "year": "2021"
+      },
+      "governance": {
+        "class": "unverifiable_withdrawal",
+        "flag": "keep_previous",
+        "note": "keep_previous:保留原记录",
+        "origin": "previous_state",
+        "rationale": "publisher 响应本次缺席,无法区分记录被撤回与源未提供;保留原记录并标注待下轮核验。"
+      },
+      "identifier": "pub:JBA-1042",
+      "source_db": "publisher"
+    }
+  ],
+  "watermark_status": "held_pending_approval",
+  "watermarks": {
+    "crossref": {
+      "cursor": "AoJ9Z292LWN1cnNvci0wMDE=",
+      "offset": 20
+    },
+    "europepmc": {
+      "cursorMark": "AoEPMzkwMDAwMDA="
+    },
+    "publisher": {
+      "last_seq": 1042
+    }
+  }
+}
